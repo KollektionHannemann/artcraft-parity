@@ -1,0 +1,665 @@
+{
+  "id": "filmcraft",
+  "name": "FilmCraft",
+  "adobe": "Premiere Pro",
+  "category": "Video",
+  "color": "#8f5cf5",
+  "repo_url": "https://github.com/storytold/filmcraft",
+  "roadmap_url": "https://github.com/storytold/filmcraft/blob/main/ROADMAP.md",
+  "checked_at": "2026-10-16T10:36:33+00:00",
+  "latest_commit": "48cae3e",
+  "latest_commit_date": "2026-10-13T02:40:02-04:00",
+  "latest_message": "Merge origin/main into #1389 (Italian beside Korean: 12 languages)",
+  "parsed": {
+    "stage": "alpha",
+    "next_stage": "beta",
+    "target": "Adobe Premiere Pro 2026 (26.5.2)",
+    "last_updated": "2026-10-11",
+    "metrics": {
+      "full": {
+        "label": "Full target (ready for real work)",
+        "pct": 56.0,
+        "range": null,
+        "hours": [
+          1450,
+          2600
+        ]
+      },
+      "mainstream": {
+        "label": "Mainstream practitioner",
+        "pct": 55.0,
+        "range": null,
+        "hours": [
+          500,
+          850
+        ]
+      },
+      "essentials": {
+        "label": "Essentials user",
+        "pct": 60.0,
+        "range": null,
+        "hours": [
+          180,
+          350
+        ]
+      },
+      "ready": {
+        "label": "Ready for real work",
+        "pct": 56.0,
+        "range": [
+          51.0,
+          61.0
+        ],
+        "hours": null
+      },
+      "breadth": {
+        "label": "Feature breadth",
+        "pct": 86.0,
+        "range": null,
+        "hours": null
+      }
+    },
+    "audiences": [
+      {
+        "audience": "mainstream",
+        "label": "Mainstream practitioner",
+        "pct": 55.0,
+        "range": null,
+        "hours": null
+      },
+      {
+        "audience": "essentials",
+        "label": "Essentials user",
+        "pct": 60.0,
+        "range": null,
+        "hours": null
+      },
+      {
+        "audience": "full",
+        "label": "Full target (ready for real work)",
+        "pct": 56.0,
+        "range": null,
+        "hours": [
+          1450,
+          2600
+        ]
+      },
+      {
+        "audience": "mainstream",
+        "label": "Mainstream practitioner",
+        "pct": 55.0,
+        "range": null,
+        "hours": [
+          500,
+          850
+        ]
+      },
+      {
+        "audience": "essentials",
+        "label": "Essentials user",
+        "pct": 60.0,
+        "range": null,
+        "hours": [
+          180,
+          350
+        ]
+      }
+    ],
+    "dimensions": [
+      {
+        "label": "Features (editing, effects, colour, audio, graphics, export settings)",
+        "pct": 66.0
+      },
+      {
+        "label": "UI / UX fidelity",
+        "pct": 60.0
+      },
+      {
+        "label": "File formats (containers, .prproj, interchange, captions, stills)",
+        "pct": 60.0
+      },
+      {
+        "label": "Codecs",
+        "pct": 60.0
+      },
+      {
+        "label": "Hardware acceleration",
+        "pct": 45.0
+      },
+      {
+        "label": "Localization",
+        "pct": 35.0
+      },
+      {
+        "label": "Performance",
+        "pct": 55.0
+      },
+      {
+        "label": "Stability",
+        "pct": 45.0
+      },
+      {
+        "label": "Platforms (macOS, Windows, Linux, FreeBSD, web)",
+        "pct": 60.0
+      },
+      {
+        "label": "Plugins and ecosystem",
+        "pct": 5.0
+      },
+      {
+        "label": "AI features",
+        "pct": 25.0
+      }
+    ],
+    "features": [
+      {
+        "label": "Editing, timeline, trimming, multicam",
+        "pct": 90.0
+      },
+      {
+        "label": "Effects and transitions",
+        "pct": 100.0
+      },
+      {
+        "label": "Media import and codecs",
+        "pct": 75.0
+      },
+      {
+        "label": "Audio",
+        "pct": 88.0
+      },
+      {
+        "label": "Panels and UI fidelity",
+        "pct": 88.0
+      },
+      {
+        "label": "Colour",
+        "pct": 90.0
+      },
+      {
+        "label": "Graphics, titles, captions",
+        "pct": 85.0
+      },
+      {
+        "label": "Export and delivery",
+        "pct": 80.0
+      },
+      {
+        "label": "Project files and interchange",
+        "pct": 70.0
+      },
+      {
+        "label": "Preferences and project management",
+        "pct": 80.0
+      }
+    ],
+    "upcoming": [
+      "No launch crashes, and CI on pull requests (macOS 12, Intel UHD, Windows 11 reports; no workflow runs the tests today). 40–80 h.",
+      "Open Premiere's .prproj, the beta blocker. 60–120 h.",
+      "10-bit / 4:2:2 camera media without hardware (H.264 High 10 / 4:2:2, HEVC 4:2:2; #626). 30–50 h.",
+      "Measure fidelity against Premiere and add cargo xtask parity. 50–90 h.",
+      "Real-world media corpus and workflow acceptance tests. 40–70 h.",
+      "Hardware acceleration, continued (#30): zero-copy upload, more effects on the GPU, Quick Sync / AMD encoders, VideoToolbox Main 10. 120–200 h.",
+      "UI fidelity: Program monitor transform handles, Effect Controls, docking. 120–200 h.",
+      "Plugin hosting (VST3 / AU, then OpenFX). Owner decision needed. 200–400 h."
+    ],
+    "progress": [
+      {
+        "date": "2026-10-10",
+        "text": "(changed media): Settings ▸ Media ▸ Automatically refresh growing files works: media files that change on disk while the project is open (a recording still being written, a render written over the file a clip uses) are read again every Refresh growing files every seconds and as soon as the window comes back to the front: the new length, picture and identity, without an undo step (media.refreshChanged, mediawatch)."
+      },
+      {
+        "date": "2026-10-10",
+        "text": "(re-measure): full parity re-measure against Premiere Pro 26.5.2: menu label diff 338 / 366 (92%), installed bundle listings (10 UI languages, exporter and codec frameworks), 188 open issues. Breadth ~86% (file formats now counted), ready ~55%, stage alpha; progress docs reorganized per the craftrules standard (target-app-parity, gaps, roadmap, codec, file-format, hardware, UI, localization)."
+      },
+      {
+        "date": "2026-10-10",
+        "text": "~75 community PRs merged: GPU export rendering (Auto) with Vignette, Video Limiter and Lumetri basic / creative / vignette on the GPU (#421); Linux NVDEC H.264 / HEVC decode (#549); text-to-speech narrations with Kokoro-82M (#278); Japanese for the whole interface (#449) and Ukrainian menus (#407); ALSA default-device fallback (#254, fixes #23); drop import into the timeline (#517); system appearance (#505); timecode scrub editing (#576); NVENC RGBA input (#486); marker CSV export (#454); many fixes (#526–#575)."
+      },
+      {
+        "date": "2026-10-09",
+        "text": "release 0.5.0. NVENC H.265 export on Windows, Main and Main 10 HDR (#328, #360); NVENC H.264 export (#386); VA-API H.264 / HEVC decode (#358); Source monitor playback (#423); multi-stream container audio, schema v13 (#361); New Sequence and Sequence Settings dialogs (#269, #355); Spanish for the panels (#238); background decoders and memory stress tests (#385, #381)."
+      },
+      {
+        "date": "2026-10-08",
+        "text": "(Source range dragging): implicit full-clip In/Out, video-only/audio-only/linked both controls, picture/waveform drag gestures and one-command undoable timeline placement. Shared Source/Program draggable frame-bounded handles and range translation, cancellation, Source marker/navigation routing and marked-range playback/looping."
+      },
+      {
+        "date": "2026-10-08",
+        "text": "(Source playback): normal forward playback for video/audio media and subclips in the Source monitor, an independent Source clock, Play/Pause and focused Space, frame stepping, device-clock audio with wall-clock fallback, seeking, and end-of-clip stopping. Windows desktop review verified a real video file and standalone WAV, including In/Out marking. Reverse/shuttle Source playback and source sequences remain unsupported; no parity percentage changed."
+      },
+      {
+        "date": "2026-10-08",
+        "text": "(night): HDR H.265 (HEVC Main 10, PQ and HLG, BT.2020, limited range) export on Windows through NVENC (#30): an HDR sequence now exports as real 10-bit HDR (rgbftoyuv42010 into P010 input buffers; VUI BT.2020 + PQ / HLG; the HDR10 mastering-display and content-light messages as SEI on every IDR for PQ, through the generic SEI payload array because NVENC 12.1 has no mastering-display field; colr / mdcv / clli in the sample entry), where the GPU reports 10-bit HEVC (new registerhdrprobe / hdravailable in the export crate; elsewhere, and on macOS, HDR sequences still tone-map to 8-bit SDR HEVC, and settings.sdr forces that). ffprobe reads hevc / Main 10 / hvc1 / yuv420p10le / bt2020 / smpte2084 or arib-std-b67 / bt2020nc / tv with the mastering-display and content-light side data for PQ; ffmpeg's decode equals ours code for code; the in-process round trip is at 71.1 dB luma PSNR on the 10-bit scale with 803 distinct levels on a ramp and the peak code 940 intact (RTX 5060). 8-bit SDR H.265 is unchanged."
+      },
+      {
+        "date": "2026-10-08",
+        "text": "H.265 (HEVC Main, 8-bit 4:2:0, SDR) export on Windows through NVENC (#30): the NVENC session, ring and NV12 path of the H.264 encoder now serve both codecs (the H.264 export is byte-for-byte unchanged); the format is available where the GPU has an HEVC encoder, choosing it is the opt-in, and hvcC is built from the SPS the encoder wrote. ffprobe reads hevc / Main / hvc1 / yuv420p / BT.709; our own HEVC decoder decodes it at 48.9 dB luma PSNR (RTX 5060). Main 10 and HDR remain."
+      },
+      {
+        "date": "2026-10-08",
+        "text": "(#285): filmcraft-cli no longer panics with \"Broken pipe\" when its stdout is closed early (filmcraft-cli commands | head): later output is dropped, the rest of the work (script lines, --save, --save-as) still runs, and the exit status still reports failures. Other stdout write errors are reported and make the exit status 1. No change to the checklist or estimates."
+      },
+      {
+        "date": "2026-10-06",
+        "text": "21 community PRs landed (#19, #28, #38, #39, #41–#60). Highlights: hardware decoding is now actually on in the desktop app (#41: register() sat inside a log::info! that never ran, so #33's VideoToolbox path only worked in the CLI and benchmarks); decode memory on long timelines cut sharply (frame pool, shared GOP-cache budget, positional file reads); exports are byte-identical across machines (#19); crash fix for odd track names over MCP (#44); ripple trim, ripple delete and speed changes move split-edit clips once (#56–#58); Japanese interface using an installed system font (#38; no fonts bundled); MCP annotations, resources, export progress and cancellation (#28)."
+      },
+      {
+        "date": "2026-10-05",
+        "text": "honest assessment added (checklist ~87% vs ready for real work ~50–60%). Hardware acceleration started (#30): blend modes on the GPU (#32); VideoToolbox decode + platform crate, the one crate allowed unsafe (#33). Community fixes landed: AIFF import, export start/end ranges, transitions following ripple trims, Slide moving linked audio (#5–#8)."
+      },
+      {
+        "date": "2026-10-04",
+        "text": "(later): interchange + MXF export (M11.4/M6.6): own compound-file container (crates/cfb), AAF Edit Protocol import/export (embedded/linked/consolidated audio, video mixdown, handles, breakout to mono), OMF 2.0 export (Bento), MXF OP1a/OP-Atom writer (DNxHR/ProRes/H.264/PCM) as export formats. 1605 tests."
+      },
+      {
+        "date": "2026-10-04",
+        "text": "MPEG-2 (M9.15): own MPEG-2/MPEG-1 video decoder (4:2:2, interlaced, field pictures; IEEE 1180 IDCT), MPEG TS/PS demux (AVCHD .mts, .m2ts, .ts, .mpg/.vob/.mod), own AC-3 decoder (ATSC A/52), MP2, LATM AAC, Blu-ray/DVD LPCM, MPEG-2 in MXF/MOV/MP4/MKV. 1562 tests."
+      },
+      {
+        "date": "2026-10-03",
+        "text": "(evening): Project panel and Media Browser (M12.7): Freeform view (stacks, arrangements), Icon view hover scrub with In/Out, list columns from all metadata, ten view presets, multiple Project panels; Media Browser with Favorites/drives/recent, back/forward, filters, thumbnails, Edit Columns, ingest, drag to timeline; all as project. / mediaBrowser. commands. 1513 tests."
+      },
+      {
+        "date": "2026-10-03",
+        "text": "(later): graphics & captions (M10.7): .fcgt graphics templates (export/install/apply/edit, 8 original built-ins; Adobe .mogrt refused), Essential Graphics Browse/Edit, rolls/crawls, responsive design pins and time, per-character styles, Upgrade Caption to Graphic / to Source Graphic, MCC/EBU STL/TTML/DFXP, Replace Fonts; schema v12. 1479 tests."
+      },
+      {
+        "date": "2026-10-03",
+        "text": "4K H.264 playback (M4.9): vectorised deblocking, branch-free CABAC bins and column-parallel inverse transforms cut H.264 decoding by 23 % (cycles per frame, bit-exact; 4K cold seeks −27 % CPU); opt-in draft decoding (Settings ▸ Playback) skips deblocking of non-reference pictures and uploads decimated planes while playing at 1/2–1/4, never for paused frames or exports; conformance runs 1, 3 and all threads. 4K plays 192/0 at load 100–140 (before: only at load ~90)."
+      },
+      {
+        "date": "2026-10-03",
+        "text": "4K VP9 / HEVC / AV1 playback (M4.10): VP9 frame threading (references published per superblock row, loop filter overlapping the next frames) plus a vectorised loop filter, column-parallel transforms and 16-bit MC cut VP9 work by 25 % single-threaded and 44 % with all cores (4K decode 8 → 27–34 fps at load ~200); HEVC −28 % (vectorised SAO, MC without per-block zeroing, batched bypass bins), AV1 −20 % (fixed-width MC, recycled planes); opt-in draft decoding for all three; bit-exact at 1, 3 and all threads. 4K VP9 and HEVC now play 192/0 at load ~200 (before: 0–58 of 192 shown)."
+      },
+      {
+        "date": "2026-10-03",
+        "text": "keyboard parity (M3.12: 143 new commands on Premiere's default keys, table validated against the registry), audio (M7.8: 5.1 tracks/submixes/Mix, 5.1 panner, BS.775 downmix, 5.1 WAV/MOV/AAC export, voice-over record with punch-in, Remix, Clip Mixer Latch/Touch/Write). 1432 tests."
+      },
+      {
+        "date": "2026-10-02",
+        "text": "(late): export parity (M6.5): built-in preset library + user presets, full Export-mode settings (loudness normalization, image/name/timecode overlays, captions, range), export queue, Quick Export, Premiere-style image-sequence export, filmcraft-cli export --preset; media import (M9.14): MXF OP1a/OP-Atom (new crates/mxf, H.264/DNx/ProRes/PCM, timecode), Ogg Opus (new crates/ogg), image sequences as clips, BWF timecode. 1373 tests."
+      },
+      {
+        "date": "2026-10-02",
+        "text": "(panels): complete Lumetri Scopes (new filmcraft-scopes crate: Vectorscope YUV/HLS, Histogram, Parade RGB/YUV/RGB-White, Waveform RGB/Luma/YC/YC no Chroma; wrench menu with presets, colour space, brightness, scale; < 1 ms per scope at 1080p; scopes.read returns the numbers); Metadata panel (editable log fields, undoable metadata.set), Timecode panel, Events panel (event log of failed commands, jobs, auto-save), Progress panel (jobs with Cancel), Reference Monitor (parked or ganged, picture or scopes)."
+      },
+      {
+        "date": "2026-10-02",
+        "text": "(evening): performance (M4.8): cargo xtask bench (decode, seek, playback, scrub, timeline UI, export, project I/O, memory; results in docs/performance.md) and perf.stats for agents; HEVC transform/SAO 2.5× cheaper; late frames skip non-reference pictures (4K CPU per displayed frame halved, cold seeks 20–45% faster); decoders stay bit-exact. 1270 tests."
+      },
+      {
+        "date": "2026-10-02",
+        "text": "(later): all 93 video effects (+Legacy/Obsolete bins), all 53 audio effects with Parametric/Graphic EQ, Multiband Compressor and Dynamics editor windows, all 84 video transitions (+21 Legacy), Settings dialog (16 categories, most wired), remaining menu items (Scene Edit Detection, Find, Normalize Mix Track, Simplify Sequence, Automate to Sequence, search bins, templates, Project Settings with scratch disks, ALE and selection-as-project export, system report); project schema v11. 1258 tests."
+      },
+      {
+        "date": "2026-10-02",
+        "text": "Premiere menu long tail: Sequence/Markers (gaps, split edits, through edits, subsequence, Delete Tracks, range/chapter markers, ripple sequence markers), Clip/Edit/File (Paste/Remove Attributes, subclips, Frame Hold Options, Time Interpolation with frame blending, Audio Channels, Breakout to Mono, Extract Audio, Replace With Clip, Remove Unused, Consolidate Duplicates), View/monitors (paused resolution, alpha/RGB display modes, comparison view, magnification, rulers, guides + templates, snapping), Graphics and Titles (vertical text, shape layers, align/distribute/arrange). Transcripts and text-based editing (Text panel, optional local Whisper). AV1 tile/frame/post-filter threading. Agent-friendly CLI (exec, inspect, describe, import, export, run -, --save, --bridge). Project schema v10."
+      },
+      {
+        "date": "2026-10-01",
+        "text": "(night): new README hero (Apollo 11 documentary edit, NASA public domain); agents never steal keyboard focus; masks + tracking, adjustment layers, effect presets; multicam + audio sync; DNxHD/DNxHR decode/encode; AV1 decoder bit-exact against libdav1d (all stages, film grain, superres, SVC)."
+      },
+      {
+        "date": "2026-10-01",
+        "text": "(M12 multicam): Synchronize / Merge Clips / Create Multi-Camera Source Sequence (sync by In, Out, timecode ± hours, clip markers, or audio: GCC-PHAT cross-correlation, offsets recovered to the sample on noisy multi-mic recordings), multi-camera clips (angle render, Switch Audio), Program monitor Multi-Camera view with live switching (keys 1–9, one undo step per pass), Ctrl+1–9 cuts, Enable / Flatten / Edit Cameras, project schema v7. Fixed: nested sequence audio was silent."
+      },
+      {
+        "date": "2026-10-01",
+        "text": "(evening): M11 done: offline media with our own slate and the Link Media dialog (fingerprint-checked relink, folder remap, search), proxies (create in background / attach / toggle; export stays full-res) with ingest settings, Project Manager (collect, consolidate + transcode). Fixed: GOP cache deadlock when a rayon decoder inside a parallel export re-entered the same source."
+      },
+      {
+        "date": "2026-10-01",
+        "text": "(M7.4): Essential Sound panel: Dialogue/Music/SFX/Ambience types, Loudness auto-match (BS.1770, exact to the target), Repair (noise, rumble, hum, new DeEsser and spectral DeReverb), Clarity (dynamics, EQ presets, Enhance Speech DSP chain), Creative reverb / stereo width, ducking that writes Volume keyframes, presets; all essentialSound. commands, effects visible and keyframable in Effect Controls."
+      },
+      {
+        "date": "2026-10-01",
+        "text": "(night): M8 colour: camera log curves and gamuts from published specs, colour-managed pipeline (PQ/HLG working spaces, Interpret Footage, BT.2390 tone mapping), HDR export signalling verified with ffprobe, LUTs (.cube/.3dl, tetrahedral CPU + WGSL, project library, Lumetri Input LUT / Look), Colour Match, Lumetri section bypass, HDR scopes."
+      },
+      {
+        "date": "2026-10-01",
+        "text": "(night): DNxHD/DNxHR decoder + encoder (SMPTE ST 2019-1) with MOV export; AV1 decoder (spec v1.0.0 + Errata 1, all decoding tools incl. film grain) bit-exact against libdav1d, wired into MP4/WebM/MKV import with key-frame-checked seeking."
+      },
+      {
+        "date": "2026-10-01",
+        "text": "(later): text engine (shaping, bidi, line breaking) + Type/Shape/Pen tools + graphic clips + graphics panel; Trim Monitor + dynamic trimming; Keyboard Shortcuts editor; audio mixer with automation. Fixed: MP4 muxer wrote unreadable all-empty sample tables; system font scan race."
+      },
+      {
+        "date": "2026-10-01",
+        "text": "Audio mixing (M7.2/M7.5/M7.6 basics): mixer graph with submixes, sends, inserts and latency compensation; Audio Track / Clip Mixer panels; Latch/Touch/Write automation recorded live; timeline track keyframes; Audio Gain dialog."
+      },
+      {
+        "date": "2026-10-01",
+        "text": "recovered from a machine crash with no lost work. Merged: VP9 decoder (profiles 0–3, bit-exact, WebM/MKV/MP4), Opus decoder (RFC 8251 range-exact; WebM/MKV/MP4), captions (SRT/VTT/SCC, burn-in), render bar + render previews, project schema versioning + atomic saves + auto-save + crash-recovery journal, test infrastructure (golden images, loudness oracle vs ffmpeg, headless scripted UI tests; fixed a GPU stale-texture bug), public contributor docs and licence files."
+      },
+      {
+        "date": "2026-09-30",
+        "text": "(evening): Opus decoder (RFC 6716/8251, range-exact on every conformance vector, ~80–110× realtime 48 kHz stereo) wired into WebM/MKV and MP4 import."
+      },
+      {
+        "date": "2026-09-30",
+        "text": "(afternoon): Matroska/WebM import; LUFS meters; clip audio effects on the DSP crate."
+      },
+      {
+        "date": "2026-09-30",
+        "text": "(midday): HEVC decoder, Matroska/WebM demuxer and audio DSP merged; HEVC import wired; asset rules (AGENTS.md, ATTRIBUTION.md, cargo xtask assets); README with hero screenshot and the Craft family."
+      },
+      {
+        "date": "2026-09-30",
+        "text": "(late morning): keyframe value/velocity graphs; xtask gates; H.264 MP4 export; Lumetri curves, wheels, looks, HSL secondary."
+      },
+      {
+        "date": "2026-09-30",
+        "text": "(early morning): H.264 decoder, ProRes, AAC; GPU compositor; MCP; Premiere 26 visual fidelity pass."
+      }
+    ]
+  },
+  "history": [
+    {
+      "commit": "3ad5a59",
+      "commit_full": "3ad5a593217410ed687abfaaf76b444aece0107d",
+      "commit_date": "2026-10-10T14:09:14-04:00",
+      "message": "Progress docs: target-app parity, gaps, alpha gate, readiness by audience (#700)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 56.0,
+      "full_range": null,
+      "full_hours": [
+        1450,
+        2600
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 60.0,
+      "breadth_pct": 86.0
+    },
+    {
+      "commit": "1996723",
+      "commit_full": "1996723225c840669c679ea871b3b356ac8244c3",
+      "commit_date": "2026-10-10T18:51:04-06:00",
+      "message": "UI.6: refresh shared UI integration against current main",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 56.0,
+      "full_range": null,
+      "full_hours": [
+        1450,
+        2600
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 60.0,
+      "breadth_pct": 86.0
+    },
+    {
+      "commit": "121ae69",
+      "commit_full": "121ae6958fb45897baa59fff603eb54e1e802254",
+      "commit_date": "2026-10-10T23:48:01+05:30",
+      "message": "Merge main: ROADMAP.md moved to the new docs layout",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 56.0,
+      "full_range": null,
+      "full_hours": [
+        1450,
+        2600
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 60.0,
+      "breadth_pct": 86.0
+    },
+    {
+      "commit": "73f9982",
+      "commit_full": "73f9982c0c781d92486c34230c8245a2c5edf146",
+      "commit_date": "2026-10-11T00:22:08+02:00",
+      "message": "#498: French (fr) interface translation",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 56.0,
+      "full_range": null,
+      "full_hours": [
+        1450,
+        2600
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 60.0,
+      "breadth_pct": 86.0
+    },
+    {
+      "commit": "c6d47e2",
+      "commit_full": "c6d47e20f0ad5ec0737b4ad8cc5492f1d618df7a",
+      "commit_date": "2026-10-11T02:17:58+02:00",
+      "message": "#859: complete the Brazilian Portuguese (pt-br) interface translation",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 56.0,
+      "full_range": null,
+      "full_hours": [
+        1450,
+        2600
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 60.0,
+      "breadth_pct": 86.0
+    },
+    {
+      "commit": "615b89a",
+      "commit_full": "615b89a36402ce0926498e862ef298970f2a726d",
+      "commit_date": "2026-10-11T02:41:31+02:00",
+      "message": "#867: Indonesian (id) interface translation",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 56.0,
+      "full_range": null,
+      "full_hours": [
+        1450,
+        2600
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 60.0,
+      "breadth_pct": 86.0
+    },
+    {
+      "commit": "239c460",
+      "commit_full": "239c46063dff576f719a6e4327272315feb36679",
+      "commit_date": "2026-10-11T16:24:11+02:00",
+      "message": "docs: German ships the menus (localization parity, ROADMAP)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 56.0,
+      "full_range": null,
+      "full_hours": [
+        1450,
+        2600
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 60.0,
+      "breadth_pct": 86.0
+    },
+    {
+      "commit": "aa6d8f4",
+      "commit_full": "aa6d8f42a483e77e55d1f2530271b454862e715f",
+      "commit_date": "2026-10-11T19:15:54-04:00",
+      "message": "Merge pull request #878 from vangel76/gap-indonesian",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 56.0,
+      "full_range": null,
+      "full_hours": [
+        1450,
+        2600
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 60.0,
+      "breadth_pct": 86.0
+    },
+    {
+      "commit": "6ead224",
+      "commit_full": "6ead2249a836d8c1e0a4dc12541cad72b5121c0d",
+      "commit_date": "2026-10-11T20:34:37-04:00",
+      "message": "Merge pull request #1073 from keller-lukas/docs/localization-parity-german",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 56.0,
+      "full_range": null,
+      "full_hours": [
+        1450,
+        2600
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 60.0,
+      "breadth_pct": 86.0
+    },
+    {
+      "commit": "c7f2b78",
+      "commit_full": "c7f2b781b0b5df5ab8c68d83d383410e8259fa3a",
+      "commit_date": "2026-10-11T21:09:23-04:00",
+      "message": "Merge main into #866 (Indonesian and the German menu docs landed meanwhile)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 56.0,
+      "full_range": null,
+      "full_hours": [
+        1450,
+        2600
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 60.0,
+      "breadth_pct": 86.0
+    },
+    {
+      "commit": "a6a7f95",
+      "commit_full": "a6a7f95579d320b9e6f1731f1264feeaecf83d33",
+      "commit_date": "2026-10-12T18:36:19+02:00",
+      "message": "Docs: update the progress docs for this change",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 56.0,
+      "full_range": null,
+      "full_hours": [
+        1450,
+        2600
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 60.0,
+      "breadth_pct": 86.0
+    },
+    {
+      "commit": "d2ae945",
+      "commit_full": "d2ae945c300fa3c13ae618e7501e59b38e12fbce",
+      "commit_date": "2026-10-12T18:56:50+02:00",
+      "message": "Add files via upload",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 56.0,
+      "full_range": null,
+      "full_hours": [
+        1450,
+        2600
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 60.0,
+      "breadth_pct": 86.0
+    },
+    {
+      "commit": "64a2391",
+      "commit_full": "64a2391ddc6418ed1e0b47993ac3ba5f81a235a3",
+      "commit_date": "2026-10-13T01:43:02-04:00",
+      "message": "Merge remote-tracking branch 'origin/main' into fix-1502",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 56.0,
+      "full_range": null,
+      "full_hours": [
+        1450,
+        2600
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 60.0,
+      "breadth_pct": 86.0
+    },
+    {
+      "commit": "c3f931d",
+      "commit_full": "c3f931d0c4f68f84017f665ee02380b0c7be2267",
+      "commit_date": "2026-10-13T02:04:44-04:00",
+      "message": "#1502: English fallback without a Hangul font (as for Chinese); doc comment back on available(); drop the old Korean ROADMAP row; Korean rows for strings added ",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 56.0,
+      "full_range": null,
+      "full_hours": [
+        1450,
+        2600
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 60.0,
+      "breadth_pct": 86.0
+    },
+    {
+      "commit": "6b2a36e",
+      "commit_full": "6b2a36e2dd773e9858bff8ce88b475f7db69184b",
+      "commit_date": "2026-10-13T02:04:51-04:00",
+      "message": "Merge remote-tracking branch 'origin/main' into fix-1389",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 56.0,
+      "full_range": null,
+      "full_hours": [
+        1450,
+        2600
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 60.0,
+      "breadth_pct": 86.0
+    },
+    {
+      "commit": "48cae3e",
+      "commit_full": "48cae3e5a3a5fae838ef70058698be74fcce2eab",
+      "commit_date": "2026-10-13T02:40:02-04:00",
+      "message": "Merge origin/main into #1389 (Italian beside Korean: 12 languages)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 56.0,
+      "full_range": null,
+      "full_hours": [
+        1450,
+        2600
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 60.0,
+      "breadth_pct": 86.0
+    },
+    {
+      "commit": "b97bb74",
+      "commit_full": "b97bb74330c35f0145e8abded296d254be769fbf",
+      "commit_date": "2026-10-13T08:44:01+09:00",
+      "message": "i18n: Korean (ko) interface catalog (#508)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 56.0,
+      "full_range": null,
+      "full_hours": [
+        1450,
+        2600
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 60.0,
+      "breadth_pct": 86.0
+    }
+  ]
+}

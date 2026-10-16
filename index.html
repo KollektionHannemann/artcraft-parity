@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ArtCraft Parity · Full target (ready for real work)</title>
+<meta name="description" content="Product parity of all ArtCraft Craft apps against their reference products, based on the ROADMAP.md files in the repositories.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #000;
+    --panel: #070707;
+    --panel-2: #0d0d0d;
+    --line: #1c1c1c;
+    --line-2: #2a2a2a;
+    --text: #f4f4f4;
+    --muted: #8c8c8c;
+    --faint: #555;
+    --good: #5fe39a;
+    --mid: #f5c04b;
+    --low: #ff6b6b;
+    --blue: #5b8cff;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); }
+  body {
+    font: 15px/1.5 "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased; min-height: 100vh;
+  }
+  a { color: inherit; text-decoration: none; }
+  button, input, select { font: inherit; }
+  .mono { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-transform: uppercase; letter-spacing: .08em; font-size: 11px; }
+  .muted { color: var(--muted); }
+
+  /* Top bar, as in the launcher */
+  .topbar { display: flex; align-items: stretch; border-bottom: 1px solid var(--line); background: #000; position: sticky; top: 0; z-index: 5; }
+  .wordmark { display: flex; align-items: center; gap: 12px; padding: 0 20px; border-right: 1px solid var(--line); font-weight: 800; letter-spacing: .18em; font-size: 14px; }
+  .wordmark .mark { width: 22px; height: 22px; display: grid; place-items: center; font-weight: 900; font-size: 15px; letter-spacing: 0; }
+  .tabs { display: flex; align-items: stretch; }
+  .tab { display: flex; align-items: center; padding: 0 16px; border-right: 1px solid var(--line); color: var(--muted); }
+  .tab.on { background: var(--text); color: #000; }
+  .spacer { flex: 1; }
+  .tabs .tab:last-child { border-right: 0; }
+  .topbar .tab:hover:not(.on) { color: var(--text); }
+
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 28px 24px 0; }
+
+  /* Overview */
+  .hero { display: grid; grid-template-columns: 1.1fr 1fr; border: 1px solid var(--line); margin-bottom: 22px; }
+  @media (max-width: 900px) { .hero { grid-template-columns: 1fr; } }
+  .hero > section { padding: 26px 26px 24px; }
+  .hero > section + section { border-left: 1px solid var(--line); }
+  @media (max-width: 900px) { .hero > section + section { border-left: 0; border-top: 1px solid var(--line); } }
+  .hero h1 { font-size: 46px; line-height: 1.02; letter-spacing: -.03em; margin: 10px 0 12px; font-weight: 800; }
+  .hero h1 em { font-style: normal; color: var(--blue); }
+  .hero p { margin: 0; color: var(--muted); max-width: 46ch; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 22px; border-top: 1px solid var(--line); }
+  .stats div { padding: 14px 0 0; }
+  .stats div + div { padding-left: 16px; border-left: 1px solid var(--line); }
+  .stats .v { font-size: 30px; font-weight: 700; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+  .stats .l { color: var(--muted); font-size: 12px; margin-top: 2px; }
+  .rank-title { display: flex; justify-content: space-between; margin-bottom: 14px; color: var(--muted); }
+  .rank-row { display: grid; grid-template-columns: 26px 118px 1fr 52px; gap: 12px; align-items: center; padding: 6px 0; border-top: 1px solid var(--line); font-size: 13.5px; }
+  .rank-row:first-of-type { border-top: 0; }
+  .rank-row:hover .rn { color: var(--c); }
+  .rank-row .rn { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .rank-row .rv { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+  .rank-row .ri { color: var(--faint); }
+
+  /* Bars */
+  .bar { height: 6px; background: #161616; position: relative; overflow: hidden; }
+  .bar i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--c, var(--blue)); }
+  .bar::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, transparent 0 calc(10% - 2px), #000 calc(10% - 2px) 10%); pointer-events: none; }
+
+  /* Toolbar */
+  .toolbar { display: flex; align-items: stretch; border: 1px solid var(--line); border-bottom: 0; flex-wrap: wrap; }
+  .seg { display: flex; }
+  .seg button { background: none; border: 0; border-right: 1px solid var(--line); color: var(--muted); padding: 12px 16px; cursor: pointer; }
+  .seg button:hover { color: var(--text); }
+  .seg button.on { background: var(--text); color: #000; }
+  .seg button b { font-weight: 600; color: inherit; margin-left: 6px; opacity: .7; }
+  .toolbar .spacer { border-left: 1px solid var(--line); }
+  .sel, .search { background: #000; color: var(--text); border: 0; border-left: 1px solid var(--line); padding: 12px 14px; outline: none; }
+  .sel { cursor: pointer; }
+  .search { min-width: 240px; }
+  .search::placeholder { color: var(--faint); }
+  .sel:focus, .search:focus { background: #0b0b0b; }
+
+  /* Card grid with hairlines, as in the launcher */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .card { background: var(--panel); padding: 20px 20px 18px; display: flex; flex-direction: column; gap: 14px; position: relative; cursor: pointer; transition: background .15s; }
+  .card:hover { background: var(--panel-2); }
+  .card-top { display: flex; align-items: center; justify-content: space-between; color: var(--muted); }
+  .card-top .links { display: flex; gap: 14px; }
+  .card-top .links a:hover { color: var(--text); }
+  .chip { display: inline-grid; place-items: center; min-width: 26px; height: 22px; padding: 0 6px; background: var(--c); color: #000; font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 11px; letter-spacing: .02em; }
+  .name { font-size: 30px; font-weight: 800; letter-spacing: -.03em; line-height: 1.05; margin: 2px 0 0; }
+  .name .c { color: var(--c); }
+  .sub { color: var(--muted); font-size: 13.5px; margin-top: 4px; }
+  .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag { display: inline-block; border: 1px solid var(--c); color: var(--c); padding: 2px 7px; }
+  .tag.plain { border-color: var(--line-2); color: var(--muted); }
+  .tag.new { background: var(--text); color: #000; border-color: var(--text); }
+  .tag.up { border-color: rgba(95,227,154,.5); color: var(--good); }
+  .tag.down { border-color: rgba(255,107,107,.5); color: var(--low); }
+  .full { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
+  .full-num { font-size: 64px; font-weight: 800; letter-spacing: -.04em; line-height: .9; font-variant-numeric: tabular-nums; }
+  .full-num span { font-size: 24px; color: var(--muted); margin-left: 3px; letter-spacing: 0; }
+  .full-lab { text-align: right; color: var(--muted); }
+  .spec { color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 14px; }
+  .spec b { color: var(--text); font-weight: 600; }
+  .spark { width: 100%; height: 36px; display: block; }
+  .btn { display: flex; align-items: center; justify-content: center; height: 40px; background: var(--text); color: #000; font-weight: 600; margin-top: auto; }
+  .btn:hover { background: #d9d9d9; }
+  .card:hover .btn { background: #d9d9d9; }
+
+  .statusbar { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin: 0 -24px; padding: 12px 24px; color: var(--muted); }
+  .statusbar a:hover { color: var(--text); }
+
+  .errors { border: 1px solid rgba(255,107,107,.4); color: #ffb3b3; padding: 12px 14px; margin: 0 0 18px; font-size: 13px; }
+  .empty { color: var(--muted); padding: 48px 0; text-align: center; grid-column: 1 / -1; background: var(--panel); }
+
+  /* Detail page */
+  .back { display: inline-flex; color: var(--muted); margin: 6px 0 22px; }
+  .back:hover { color: var(--text); }
+  .dhead { display: grid; grid-template-columns: auto 1fr auto; gap: 22px; align-items: end; border: 1px solid var(--line); border-bottom: 0; padding: 26px; background: var(--panel); }
+  @media (max-width: 800px) { .dhead { grid-template-columns: 1fr; } }
+  .dhead .chip { min-width: 40px; height: 32px; font-size: 14px; }
+  .dhead .name { font-size: 52px; margin: 8px 0 0; }
+  .dhead .target { color: var(--muted); margin-top: 8px; font-size: 14px; }
+  .dhead .tags { justify-content: flex-end; }
+  @media (max-width: 800px) { .dhead .tags { justify-content: flex-start; } }
+
+  .panel { border: 1px solid var(--line); background: var(--panel); }
+  .section-title { display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; border-bottom: 1px solid var(--line); color: var(--muted); }
+  .section-title b { color: var(--text); font-weight: 600; }
+  .body { padding: 20px; }
+  .hero-detail { display: grid; grid-template-columns: 1fr 1.5fr; border: 1px solid var(--line); border-bottom: 0; }
+  @media (max-width: 900px) { .hero-detail { grid-template-columns: 1fr; } }
+  .hero-detail > div { padding: 22px; }
+  .hero-detail > div + div { border-left: 1px solid var(--line); }
+  @media (max-width: 900px) { .hero-detail > div + div { border-left: 0; border-top: 1px solid var(--line); } }
+  .big-detail { font-size: 96px; font-weight: 800; letter-spacing: -.05em; line-height: .9; font-variant-numeric: tabular-nums; }
+  .big-detail span { font-size: 34px; color: var(--muted); margin-left: 4px; letter-spacing: 0; }
+  .kv { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 22px; border-top: 1px solid var(--line); }
+  .kv > div { padding: 12px 0; }
+  .kv > div:nth-child(even) { padding-left: 16px; border-left: 1px solid var(--line); }
+  .kv > div:nth-child(n+3) { border-top: 1px solid var(--line); }
+  .kv .v { font-size: 18px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .kv .l { color: var(--muted); font-size: 12px; margin-top: 2px; }
+  .chart { width: 100%; height: 260px; display: block; }
+  .chart text { fill: var(--muted); font-family: "JetBrains Mono", monospace; font-size: 10.5px; }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--line); border-top: 0; }
+  @media (max-width: 900px) { .two { grid-template-columns: 1fr; } }
+  .two > .panel { border: 0; }
+  .two > .panel + .panel { border-left: 1px solid var(--line); }
+  @media (max-width: 900px) { .two > .panel + .panel { border-left: 0; border-top: 1px solid var(--line); } }
+  .row { display: grid; grid-template-columns: minmax(150px, 1fr) 2fr 56px; gap: 14px; align-items: center; padding: 9px 0; border-top: 1px solid var(--line); font-size: 13.5px; }
+  .row:first-child { border-top: 0; padding-top: 0; }
+  .row .p { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+  .row .sub2 { grid-column: 1 / -1; color: var(--faint); font-size: 12px; margin-top: -4px; }
+  .row .bar { height: 4px; }
+  ul.plain { list-style: none; margin: 0; padding: 0; }
+  ul.plain li { padding: 10px 0; border-top: 1px solid var(--line); font-size: 13.5px; display: grid; grid-template-columns: 90px 1fr; gap: 14px; }
+  ul.plain li:first-child { border-top: 0; padding-top: 0; }
+  ul.plain time { color: var(--muted); font-variant-numeric: tabular-nums; }
+  ul.feed { max-height: 460px; overflow: auto; }
+  ul.up-list li { display: block; border-top: 1px solid var(--line); padding: 10px 0; }
+  ul.up-list li:first-child { border-top: 0; padding-top: 0; }
+  table.hist { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+  table.hist th, table.hist td { text-align: left; padding: 9px 8px; border-top: 1px solid var(--line); }
+  table.hist th { color: var(--muted); font-weight: 500; font-family: "JetBrains Mono", monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: .08em; border-top: 0; }
+  table.hist .num { text-align: right; }
+  .scroll { max-height: 460px; overflow: auto; }
+  .links { display: flex; gap: 0; border: 1px solid var(--line); flex-wrap: wrap; }
+  .links a { padding: 12px 16px; border-right: 1px solid var(--line); color: var(--muted); }
+  .links a:last-child { border-right: 0; }
+  .links a:hover { background: var(--text); color: #000; }
+  .note { color: var(--faint); font-size: 12.5px; margin: 14px 0 0; }
+  code { font-family: "JetBrains Mono", monospace; font-size: 12px; color: var(--muted); }
+  footer { color: var(--faint); font-size: 12.5px; padding: 26px 0 60px; line-height: 1.6; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="wordmark" href="#/"><span class="mark">▲</span>ARTCRAFT</a>
+  <nav class="tabs" aria-label="Navigation">
+    <a class="tab mono on" href="#/">Parity</a>
+    <a class="tab mono" href="https://getartcraft.com/apps" target="_blank" rel="noopener">Craft App Suite ↗</a>
+  </nav>
+  <div class="spacer"></div>
+  <a class="tab mono" href="https://github.com/storytold" target="_blank" rel="noopener">GitHub ↗</a>
+</header>
+
+<div class="wrap">
+  <main id="app"></main>
+  <div class="statusbar mono" id="statusbar">Loading data …</div>
+  <footer>
+    Source: <code>ROADMAP.md</code> of each repository under github.com/storytold. All percentages are self-assessments
+    by the project and have not been measured independently. "Full target (ready for real work)" describes the estimated
+    share of the target program that a professional can use day to day without limitation. This page is not affiliated
+    with ArtCraft.
+  </footer>
+</div>
+
+<script>
+(() => {
+  "use strict";
+
+  const STAGE = { "pre-alpha": "Pre-Alpha", "alpha": "Alpha", "beta": "Beta", "release": "Release", "1.0": "Release" };
+  const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const state = { overview: null, sort: "order", filter: "all", query: "" };
+  const app = document.getElementById("app");
+  const status = document.getElementById("statusbar");
+
+  /* ---------- Helpers ---------- */
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const nf = (v, d = 0) => (v == null || Number.isNaN(v)) ? "–" :
+    Number(v).toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d });
+  const pct = (v) => v == null ? "–" : nf(v, 0);
+  const pp = (v) => v == null ? "" : `${v > 0 ? "+" : ""}${nf(v, 1)} pp`;
+  const dateEN = (s) => {
+    if (!s) return "–";
+    const p = String(s).slice(0, 10).split("-");
+    return p.length === 3 ? `${Number(p[2])} ${MON[Number(p[1]) - 1]} ${p[0]}` : String(s);
+  };
+  const dateShort = (s) => dateEN(s).replace(/ \d{4}$/, "");
+  const hours = (h) => (!h || h.length < 2) ? "–" : `${nf(h[0])}–${nf(h[1])} h`;
+  const range = (r) => (!r || r.length < 2) ? "" : `${nf(r[0])}–${nf(r[1])} %`;
+  const stageLabel = (s) => s ? (STAGE[s] || s).toUpperCase() : "";
+  const stageKey = (s) => (s || "").includes("pre") ? "prealpha" : (s || "").startsWith("alpha") ? "alpha" : (s || "").replace(/[^a-z]/g, "");
+  const twoTone = (name) => {
+    const m = String(name).match(/^(.*?)(Craft)$/i);
+    return m ? `<span class="w">${esc(m[1])}</span><span class="c">${esc(m[2])}</span>` : esc(name);
+  };
+  const chipNo = (n) => String(n ?? "").padStart(2, "0");
+  const bar = (v) => `<div class="bar"><i style="width:${Math.max(0, Math.min(100, v ?? 0))}%"></i></div>`;
+
+  /* Mini trend for the cards */
+  function spark(series, c) {
+    const pts = (series || []).filter((p) => p.v != null);
+    if (pts.length < 2) return "";
+    const W = 300, H = 36, P = 2;
+    const ts = pts.map((p) => new Date(p.d).getTime());
+    const t0 = Math.min(...ts), t1 = Math.max(...ts);
+    const X = (t) => t1 === t0 ? W / 2 : P + (t - t0) / (t1 - t0) * (W - 2 * P);
+    const Y = (v) => H - P - Math.max(0, Math.min(100, v)) / 100 * (H - 2 * P);
+    const d = pts.map((p, i) => `${i ? "L" : "M"}${X(ts[i]).toFixed(1)},${Y(p.v).toFixed(1)}`).join(" ");
+    const last = pts[pts.length - 1];
+    return `<svg class="spark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">
+      <path d="${d}" fill="none" stroke="${c}" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+      <circle cx="${X(ts[ts.length - 1]).toFixed(1)}" cy="${Y(last.v).toFixed(1)}" r="2.5" fill="${c}"/>
+    </svg>`;
+  }
+
+  /* ---------- Overview ---------- */
+  function renderOverview() {
+    const ov = state.overview;
+    const all = ov.apps;
+    const withFull = all.filter((a) => a.full_pct != null);
+    const avg = withFull.length ? withFull.reduce((s, a) => s + a.full_pct, 0) / withFull.length : null;
+    const changed = all.filter((a) => a.changed_in_run).length;
+    const lastUpd = all.map((a) => a.last_updated).filter(Boolean).sort().pop();
+    const alpha = all.filter((a) => stageKey(a.stage) === "alpha").length;
+    const pre = all.filter((a) => stageKey(a.stage) === "prealpha").length;
+
+    const ranking = withFull.slice().sort((a, b) => b.full_pct - a.full_pct).map((a, i) => `
+      <a class="rank-row" href="#/app/${esc(a.id)}" style="--c:${a.color}">
+        <span class="ri">${chipNo(i + 1)}</span>
+        <span class="rn">${twoTone(a.name)}</span>
+        ${bar(a.full_pct)}
+        <span class="rv">${pct(a.full_pct)} %</span>
+      </a>`).join("");
+
+    const errors = (ov.errors || []).length
+      ? `<div class="errors">${ov.errors.map(esc).join("<br>")}</div>` : "";
+
+    app.innerHTML = `
+      ${errors}
+      <section class="hero">
+        <section>
+          <div class="mono muted">Product parity · Full target (ready for real work)</div>
+          <h1>Thirteen apps.<br><em>One benchmark.</em></h1>
+          <p>How far each Craft app is from its reference product, measured by what a professional can do day to day
+             without limitation. Updated from the ROADMAP files in the repositories.</p>
+          <div class="stats">
+            <div><div class="v">${pct(avg)} %</div><div class="l">Average full target</div></div>
+            <div><div class="v">${alpha}<span class="muted" style="font-size:18px"> / ${pre}</span></div><div class="l">Alpha / Pre-Alpha</div></div>
+            <div><div class="v">${changed}</div><div class="l">new roadmap in last run</div></div>
+          </div>
+        </section>
+        <section>
+          <div class="rank-title mono"><span>Ranking by full target</span><span>${withFull.length} apps</span></div>
+          ${ranking || '<p class="muted">No data yet.</p>'}
+        </section>
+      </section>
+
+      <div class="toolbar">
+        <div class="seg" role="group" aria-label="Filter">
+          ${[["all", "All", all.length], ["alpha", "Alpha", alpha], ["prealpha", "Pre-Alpha", pre]]
+            .map(([k, l, n]) => `<button class="mono ${state.filter === k ? "on" : ""}" data-filter="${k}">${l}<b>${n}</b></button>`).join("")}
+        </div>
+        <div class="spacer"></div>
+        <select class="sel mono" id="sort" aria-label="Sort by">
+          <option value="order" ${state.sort === "order" ? "selected" : ""}>Suite order</option>
+          <option value="full" ${state.sort === "full" ? "selected" : ""}>Full target</option>
+          <option value="breadth" ${state.sort === "breadth" ? "selected" : ""}>Feature breadth</option>
+          <option value="update" ${state.sort === "update" ? "selected" : ""}>Last updated</option>
+          <option value="name" ${state.sort === "name" ? "selected" : ""}>Name</option>
+        </select>
+        <input class="search" id="q" type="search" placeholder="Search apps" value="${esc(state.query)}" aria-label="Search apps">
+      </div>
+      <div class="grid" id="grid"></div>`;
+
+    app.querySelectorAll("[data-filter]").forEach((b) => b.addEventListener("click", () => {
+      state.filter = b.dataset.filter;
+      app.querySelectorAll("[data-filter]").forEach((x) => x.classList.toggle("on", x === b));
+      drawGrid();
+    }));
+    document.getElementById("sort").addEventListener("change", (e) => { state.sort = e.target.value; drawGrid(); });
+    document.getElementById("q").addEventListener("input", (e) => { state.query = e.target.value; drawGrid(); });
+
+    drawGrid();
+
+    const ts = ov.generated_at ? new Date(ov.generated_at) : null;
+    status.innerHTML = `<span>Last checked: ${ts ? dateEN(ov.generated_at) + " " + ts.toISOString().slice(11, 16) + " UTC" : "–"}</span>
+      <span>Latest roadmap: ${dateEN(lastUpd)}</span>
+      <span>${all.length} apps · Source: GitHub history</span>`;
+  }
+
+  function drawGrid() {
+    const ov = state.overview;
+    const q = state.query.trim().toLowerCase();
+    let apps = ov.apps.filter((a) =>
+      (state.filter === "all" || stageKey(a.stage) === state.filter) &&
+      (!q || [a.name, a.adobe, a.category].join(" ").toLowerCase().includes(q)));
+    const sorters = {
+      order: (a, b) => (a.order ?? 99) - (b.order ?? 99),
+      full: (a, b) => (b.full_pct ?? -1) - (a.full_pct ?? -1),
+      breadth: (a, b) => (b.breadth_pct ?? -1) - (a.breadth_pct ?? -1),
+      update: (a, b) => String(b.last_updated || "").localeCompare(String(a.last_updated || "")),
+      name: (a, b) => a.name.localeCompare(b.name, "en"),
+    };
+    apps = apps.slice().sort(sorters[state.sort] || sorters.order);
+
+    const grid = document.getElementById("grid");
+    grid.innerHTML = apps.map((a) => {
+      const c = a.color || "#5b8cff";
+      const delta = a.full_delta == null ? "" :
+        `<span class="tag ${a.full_delta >= 0 ? "up" : "down"}">${a.full_delta >= 0 ? "▲" : "▼"} ${pp(a.full_delta)}${a.full_delta_since ? " since " + dateShort(a.full_delta_since) : ""}</span>`;
+      return `
+      <article class="card" data-go="${esc(a.id)}" style="--c:${c}">
+        <div class="card-top mono">
+          <span class="chip">${chipNo(a.order)}</span>
+          <span class="links">
+            <a href="${esc(a.roadmap_url || "https://github.com/storytold/" + a.id + "/blob/main/ROADMAP.md")}" target="_blank" rel="noopener">Roadmap ↗</a>
+            <a href="https://github.com/storytold/${esc(a.id)}" target="_blank" rel="noopener">GitHub ↗</a>
+          </span>
+        </div>
+        <div>
+          <div class="name">${twoTone(a.name)}</div>
+          <div class="sub">${esc(a.category)} · Reference ${esc(a.adobe)}</div>
+        </div>
+        <div class="tags mono">
+          ${a.stage ? `<span class="tag" style="--c:${c}">${esc(stageLabel(a.stage))}</span>` : ""}
+          ${a.changed_in_run ? `<span class="tag new">New roadmap</span>` : ""}
+          ${delta}
+        </div>
+        <div class="full">
+          <div class="full-num">${pct(a.full_pct)}<span>%</span></div>
+          <div class="full-lab mono">Full target<br>ready for real work</div>
+        </div>
+        ${bar(a.full_pct)}
+        <div class="spec mono">
+          ${a.full_range ? `<span>Range <b>${range(a.full_range)}</b></span>` : ""}
+          <span>to ~95 %: <b>${hours(a.full_hours)}</b></span>
+          <span>Updated <b>${dateEN(a.last_updated)}</b></span>
+        </div>
+        ${spark(a.series, c)}
+        <a class="btn mono" href="#/app/${esc(a.id)}">Open details</a>
+      </article>`;
+    }).join("") || `<div class="empty mono">No matches</div>`;
+
+    grid.querySelectorAll("[data-go]").forEach((card) => card.addEventListener("click", (e) => {
+      if (e.target.closest("a")) return;
+      location.hash = `#/app/${card.dataset.go}`;
+    }));
+  }
+
+  /* ---------- Detail view ---------- */
+  function lineChart(history, c) {
+    const pts = (history || []).filter((h) => h.full_pct != null);
+    if (!pts.length) return `<p class="muted">No history available yet.</p>`;
+    const W = 720, H = 280, L = 46, R = 18, T = 16, B = 34;
+    const ts = pts.map((p) => new Date(p.commit_date).getTime());
+    const t0 = Math.min(...ts), t1 = Math.max(...ts);
+    const X = (t) => t1 === t0 ? (L + W - R) / 2 : L + (t - t0) / (t1 - t0) * (W - L - R);
+    const Y = (v) => T + (100 - v) / 100 * (H - T - B);
+    const grid = [0, 25, 50, 75, 100].map((g) => `
+      <line x1="${L}" x2="${W - R}" y1="${Y(g)}" y2="${Y(g)}" stroke="#1c1c1c"/>
+      <text x="${L - 10}" y="${Y(g) + 4}" text-anchor="end">${g}%</text>`).join("");
+    const path = pts.map((p, i) => `${i ? "L" : "M"}${X(ts[i]).toFixed(1)},${Y(p.full_pct).toFixed(1)}`).join(" ");
+    const area = `${path} L${X(ts[ts.length - 1]).toFixed(1)},${Y(0)} L${X(ts[0]).toFixed(1)},${Y(0)} Z`;
+    const dots = pts.map((p, i) => {
+      const changed = i === 0 || pts[i - 1].full_pct !== p.full_pct || i === pts.length - 1;
+      const x = X(ts[i]).toFixed(1), y = Y(p.full_pct).toFixed(1);
+      const tip = `<title>${esc(dateEN(p.commit_date))} · ${pct(p.full_pct)} %${p.stage ? " · " + esc(p.stage) : ""}${p.message ? "\n" + esc(p.message) : ""}</title>`;
+      return `<circle cx="${x}" cy="${y}" r="9" fill="transparent">${tip}</circle>` +
+        (changed ? `<circle cx="${x}" cy="${y}" r="3.5" fill="${c}" stroke="#000" stroke-width="1.5"/>` : "");
+    }).join("");
+    const xl = `<text x="${L}" y="${H - 10}">${esc(dateEN(new Date(t0).toISOString()))}</text>
+      <text x="${W - R}" y="${H - 10}" text-anchor="end">${esc(dateEN(new Date(t1).toISOString()))}</text>`;
+    return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Trend of the full-target estimate">
+      ${grid}
+      <path d="${area}" fill="${c}" opacity=".10"/>
+      <path d="${path}" fill="none" stroke="${c}" stroke-width="2"/>
+      ${dots}${xl}
+    </svg>`;
+  }
+
+  function renderDetail(id) {
+    const s = state.overview.apps.find((a) => a.id === id);
+    if (!s) { app.innerHTML = `<a class="back mono" href="#/">← Overview</a><p class="muted">Unknown app "${esc(id)}".</p>`; return; }
+    app.innerHTML = `<p class="muted mono" style="padding:40px 0">Loading details …</p>`;
+    fetch(`data/apps/${encodeURIComponent(id)}.json`, { cache: "no-cache" })
+      .then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+      .then((d) => drawDetail(d, s))
+      .catch((e) => { app.innerHTML = `<a class="back mono" href="#/">← Overview</a><p class="muted">Details could not be loaded (${esc(e.message)}).</p>`; });
+  }
+
+  function drawDetail(d, s) {
+    const c = d.color || s.color || "#5b8cff";
+    const p = d.parsed || {};
+    const m = p.metrics || {};
+    const hist = d.history || [];
+    const latest = hist[hist.length - 1] || {};
+    const full = m.full || {};
+    const fullNow = latest.full_pct ?? s.full_pct;
+    const delta = s.full_delta;
+
+    const aud = (key, label) => {
+      const e = m[key];
+      if (!e) return "";
+      return `<div class="row">
+        <span>${esc(label)}</span>
+        ${bar(e.pct)}
+        <span class="p">${pct(e.pct)} %</span>
+        ${e.range || e.hours ? `<span class="sub2 mono">${e.range ? "Range " + range(e.range) : ""}${e.range && e.hours ? " · " : ""}${e.hours ? hours(e.hours) + " to ~95 %" : ""}</span>` : ""}
+      </div>`;
+    };
+    const rows = (list) => (list || []).map((x) => `
+      <div class="row"><span>${esc(x.label)}</span>${bar(x.pct)}<span class="p">${pct(x.pct)} %</span></div>`).join("");
+
+    const feed = (p.progress || []).slice(0, 30).map((x) => `
+      <li><time class="mono">${esc(dateEN(x.date))}</time><span>${esc(x.text)}</span></li>`).join("");
+    const upcoming = (p.upcoming || []).map((u) => `<li>${esc(u)}</li>`).join("");
+
+    // Only revisions where the full-target value or the stage changed
+    const changes = [];
+    hist.forEach((h, i) => {
+      const prev = hist[i - 1];
+      if (!prev || prev.full_pct !== h.full_pct || prev.stage !== h.stage) changes.push({ h, prev });
+    });
+    const tableRows = changes.slice().reverse().slice(0, 60).map(({ h, prev }) => {
+      const dd = prev && prev.full_pct != null && h.full_pct != null ? h.full_pct - prev.full_pct : null;
+      return `<tr>
+        <td class="mono">${esc(dateEN(h.commit_date))}</td>
+        <td><code>${esc(h.commit)}</code></td>
+        <td class="mono">${esc(stageLabel(h.stage))}</td>
+        <td class="num">${pct(h.full_pct)} %</td>
+        <td class="num">${dd == null || dd === 0 ? "" : `<span class="tag ${dd > 0 ? "up" : "down"}">${pp(dd)}</span>`}</td>
+        <td class="num">${pct(h.mainstream_pct)} %</td>
+      </tr>`;
+    }).join("");
+
+    app.innerHTML = `
+      <a class="back mono" href="#/">← Overview</a>
+      <header class="dhead" style="--c:${c}">
+        <span class="chip">${chipNo(s.order)}</span>
+        <div>
+          <div class="name">${twoTone(d.name)}</div>
+          <div class="target">Reference: ${esc(p.target || d.adobe)}</div>
+        </div>
+        <div class="tags mono">
+          ${(p.stage || s.stage) ? `<span class="tag" style="--c:${c}">${esc(stageLabel(p.stage || s.stage))}</span>` : ""}
+          ${p.next_stage ? `<span class="tag plain">next stage ${esc(stageLabel(p.next_stage))}</span>` : ""}
+          ${s.changed_in_run ? `<span class="tag new">New roadmap</span>` : ""}
+        </div>
+      </header>
+
+      <section class="hero-detail">
+        <div>
+          <div class="mono muted">Full target (ready for real work)</div>
+          <div class="big-detail" style="margin-top:14px;color:var(--text)">${pct(fullNow)}<span>%</span></div>
+          <div style="margin-top:14px">${bar(fullNow)}</div>
+          <div class="kv">
+            <div><div class="v">${full.range ? range(full.range) : "–"}</div><div class="l">Estimate range</div></div>
+            <div><div class="v">${hours(full.hours || s.full_hours)}</div><div class="l">Agent hours to ~95 %</div></div>
+            <div><div class="v">${pct(m.breadth?.pct)} %</div><div class="l">Feature breadth</div></div>
+            <div><div class="v">${delta == null ? "–" : pp(delta)}</div><div class="l">${s.full_delta_since ? "since " + dateEN(s.full_delta_since) : "no change in value"}</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="mono muted" style="margin-bottom:10px">Trend of the full-target estimate</div>
+          ${lineChart(hist, c)}
+          <p class="note">One point per roadmap revision from the git history. Highlighted points mark changes in value;
+            hover over a circle to see the commit and date.</p>
+        </div>
+      </section>
+
+      <div class="two">
+        <section class="panel">
+          <div class="section-title mono"><b>01 / Audiences</b><span></span></div>
+          <div class="body">
+            ${aud("full", "Full target")}
+            ${aud("mainstream", "Mainstream professional")}
+            ${aud("essentials", "Occasional users")}
+            ${m.breadth ? aud("breadth", "Feature breadth") : ""}
+            ${!m.full ? `<p class="muted">No audience values found.</p>` : ""}
+          </div>
+        </section>
+        <section class="panel">
+          <div class="section-title mono"><b>02 / Dimensions</b><span>${(p.dimensions || []).length} areas</span></div>
+          <div class="body">${rows(p.dimensions) || '<p class="muted">No dimensions found.</p>'}</div>
+        </section>
+      </div>
+
+      <div class="two">
+        <section class="panel">
+          <div class="section-title mono"><b>03 / Features</b><span>${(p.features || []).length} areas</span></div>
+          <div class="body">${rows(p.features) || '<p class="muted">No feature table found.</p>'}</div>
+        </section>
+        <section class="panel">
+          <div class="section-title mono"><b>04 / Up next</b><span></span></div>
+          <div class="body">${upcoming ? `<ul class="plain up-list">${upcoming}</ul>` : `<p class="muted">No entries.</p>`}</div>
+        </section>
+      </div>
+
+      <div class="two">
+        <section class="panel">
+          <div class="section-title mono"><b>05 / Change log</b><span>from the roadmap</span></div>
+          <div class="body">
+            ${feed ? `<ul class="plain feed">${feed}</ul>` : `<p class="muted">No change log found.</p>`}
+          </div>
+        </section>
+        <section class="panel">
+          <div class="section-title mono"><b>06 / Value changes</b><span>${changes.length} of ${hist.length} revisions</span></div>
+          <div class="scroll">
+            <table class="hist">
+              <thead><tr><th>Date</th><th>Commit</th><th>Stage</th><th class="num">Full</th><th class="num">Δ</th><th class="num">Mainstream</th></tr></thead>
+              <tbody>${tableRows || '<tr><td colspan="6" class="muted">No revisions.</td></tr>'}</tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <section class="panel" style="border-top:0">
+        <div class="section-title mono"><b>07 / Sources</b><span>Last check ${dateEN(d.checked_at)}</span></div>
+        <div class="links mono">
+          <a href="${esc(d.roadmap_url)}" target="_blank" rel="noopener">ROADMAP.md ↗</a>
+          <a href="${esc(d.repo_url)}" target="_blank" rel="noopener">Repository ↗</a>
+          <a href="${esc(d.repo_url)}/commits/main/ROADMAP.md" target="_blank" rel="noopener">Commits of this file ↗</a>
+        </div>
+        <p class="note">Latest commit <code>${esc(d.latest_commit || "–")}</code> from ${dateEN(d.latest_commit_date)}${d.latest_message ? ": " + esc(d.latest_message) : ""}</p>
+      </section>`;
+
+    status.innerHTML = `<span>${esc(d.name)} · updated ${dateEN(p.last_updated || s.last_updated)}</span>
+      <span>Last check ${dateEN(d.checked_at)}</span><span>${hist.length} revisions</span>`;
+  }
+
+  /* ---------- Routing ---------- */
+  function route() {
+    if (!state.overview) return;
+    const h = decodeURIComponent(location.hash.replace(/^#\/?/, ""));
+    if (h.startsWith("app/")) renderDetail(h.slice(4));
+    else renderOverview();
+    window.scrollTo({ top: 0 });
+  }
+
+  fetch("data/overview.json", { cache: "no-cache" })
+    .then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+    .then((ov) => { state.overview = ov; route(); })
+    .catch((e) => {
+      app.innerHTML = `<p class="muted" style="padding:60px 0">Data could not be loaded (${esc(e.message)}).
+        Please open the page through a web server, not directly as a file.</p>`;
+      status.textContent = "No data";
+    });
+  window.addEventListener("hashchange", route);
+})();
+</script>
+</body>
+</html>

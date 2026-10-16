@@ -1,0 +1,395 @@
+{
+  "id": "effectcraft",
+  "name": "EffectCraft",
+  "adobe": "After Effects",
+  "category": "Motion",
+  "color": "#e8448a",
+  "repo_url": "https://github.com/storytold/effectcraft",
+  "roadmap_url": "https://github.com/storytold/effectcraft/blob/main/ROADMAP.md",
+  "checked_at": "2026-10-16T10:36:33+00:00",
+  "latest_commit": "c2f790b",
+  "latest_commit_date": "2026-10-15T16:35:49-06:00",
+  "latest_message": "refactor(pdf): share structure parsing through a bounded adapter",
+  "parsed": {
+    "stage": "alpha",
+    "next_stage": "beta",
+    "target": "Adobe After Effects 2026 (26.5.0.89)",
+    "last_updated": "2026-10-12",
+    "metrics": {
+      "full": {
+        "label": "Full target",
+        "pct": 45.0,
+        "range": null,
+        "hours": [
+          850,
+          1500
+        ]
+      },
+      "mainstream": {
+        "label": "Mainstream practitioner",
+        "pct": 47.0,
+        "range": null,
+        "hours": [
+          280,
+          530
+        ]
+      },
+      "essentials": {
+        "label": "Essentials user",
+        "pct": 52.0,
+        "range": null,
+        "hours": [
+          150,
+          300
+        ]
+      },
+      "ready": {
+        "label": "Ready for real work",
+        "pct": 45.0,
+        "range": [
+          40.0,
+          50.0
+        ],
+        "hours": null
+      },
+      "breadth": {
+        "label": "Feature breadth",
+        "pct": 91.0,
+        "range": null,
+        "hours": null
+      }
+    },
+    "audiences": [
+      {
+        "audience": "mainstream",
+        "label": "Mainstream practitioner",
+        "pct": 47.0,
+        "range": null,
+        "hours": null
+      },
+      {
+        "audience": "essentials",
+        "label": "Essentials user",
+        "pct": 52.0,
+        "range": null,
+        "hours": null
+      },
+      {
+        "audience": "full",
+        "label": "Full target",
+        "pct": 45.0,
+        "range": null,
+        "hours": [
+          850,
+          1500
+        ]
+      },
+      {
+        "audience": "mainstream",
+        "label": "Mainstream practitioner",
+        "pct": 47.0,
+        "range": null,
+        "hours": [
+          280,
+          530
+        ]
+      },
+      {
+        "audience": "essentials",
+        "label": "Essentials user",
+        "pct": 52.0,
+        "range": null,
+        "hours": [
+          150,
+          300
+        ]
+      }
+    ],
+    "dimensions": [
+      {
+        "label": "Features: breadth",
+        "pct": 91.0
+      },
+      {
+        "label": "Features: ready for real work",
+        "pct": 50.0
+      },
+      {
+        "label": "UI/UX fidelity",
+        "pct": 65.0
+      },
+      {
+        "label": "File formats",
+        "pct": 50.0
+      },
+      {
+        "label": "Hardware",
+        "pct": 40.0
+      },
+      {
+        "label": "Localization",
+        "pct": 18.0
+      },
+      {
+        "label": "Performance",
+        "pct": 35.0
+      },
+      {
+        "label": "Stability",
+        "pct": 45.0
+      },
+      {
+        "label": "Platforms",
+        "pct": 65.0
+      },
+      {
+        "label": "Ecosystem and plug-ins",
+        "pct": 20.0
+      },
+      {
+        "label": "AI features",
+        "pct": 35.0
+      }
+    ],
+    "features": [
+      {
+        "label": "Project, footage and import",
+        "pct": 92.0
+      },
+      {
+        "label": "Compositions, layers and compositing",
+        "pct": 98.0
+      },
+      {
+        "label": "Animation: keyframes, graph editor, motion paths, puppet",
+        "pct": 97.0
+      },
+      {
+        "label": "Expressions and scripting (detail)",
+        "pct": 93.0
+      },
+      {
+        "label": "Shapes, masks and roto",
+        "pct": 93.0
+      },
+      {
+        "label": "Text and typography",
+        "pct": 94.0
+      },
+      {
+        "label": "Effects and animation presets (detail)",
+        "pct": 85.0
+      },
+      {
+        "label": "3D (Classic and Advanced)",
+        "pct": 82.0
+      },
+      {
+        "label": "Tracking and AI-assisted tools",
+        "pct": 80.0
+      },
+      {
+        "label": "Preview and cache",
+        "pct": 92.0
+      },
+      {
+        "label": "Render queue and export",
+        "pct": 85.0
+      },
+      {
+        "label": "Audio",
+        "pct": 85.0
+      }
+    ],
+    "upcoming": [
+      "1 · Fix the open crash reports; run cargo xtask ci on every pull request (G3) · 15–30",
+      "2 · Fidelity harness against After Effects: rendered frames, a corpus case per P0/P1 feature (G1) · 60–100",
+      "3 · Real-user reliability on Linux and Windows; the open mask, effect, text and 3D bugs (G2) · 100–190",
+      "4 · .aep / .aepx import, after the owner's clean-room decision (G4) · 80–160",
+      "5 · Performance: benchmarks at 1080p / 4K, real-time cached playback, hardware video (G5) · 50–100",
+      "6 · Localization depth: effect names, all panels, Korean / Italian (G9) · 60–110"
+    ],
+    "progress": [
+      {
+        "date": "2026-10-12",
+        "text": "Roto Brush span edits report strokes outside a trimmed layer without panicking;"
+      },
+      {
+        "date": "2026-10-11",
+        "text": "Ukrainian panels caught up with the Chinese catalogs. The 95 rows the panel"
+      },
+      {
+        "date": "2026-10-10",
+        "text": "Full parity re-measure against After Effects 2026 26.5 (installed bundle, 26.2–26.5"
+      },
+      {
+        "date": "2026-10-10",
+        "text": "Spanish (#460) and Brazilian Portuguese (#217) menu translations."
+      },
+      {
+        "date": "2026-10-10",
+        "text": "Japanese now translates the interface below the menu bar too: crates/ui-egui/src/i18n/ui.rs has a Japanese table with the same 396 rows as the Chinese ones (panels, dialogs, buttons and tooltips; the shape test keeps the three catalogs listing the same source strings). Menus were already Japanese."
+      },
+      {
+        "date": "2026-10-09",
+        "text": "Ukrainian now covers all 396 current panel-catalog strings, including dialogs, buttons and tooltips, alongside its menu translation. The catalog keeps the same source keys and placeholder counts as the Chinese catalogs; missing or engine-generated text still falls back to English."
+      },
+      {
+        "date": "2026-10-09",
+        "text": "Settings ▸ General ▸ Language now translates the interface below the menu bar as well: panels, dialogs, buttons and tooltips read their text through crates/ui-egui/src/i18n/ui.rs, keyed by the English source string. Simplified and Traditional Chinese are complete (384 strings); Japanese rows can follow in the same file. A test fails when a converted panel gains a hard-coded string, and another keeps the catalog free of unused rows."
+      },
+      {
+        "date": "2026-10-08",
+        "text": "effectcraft-cli render --out resolves a relative path against the working directory, like --project (it used the project's folder, which doubled a path that already named it). Render Queue outputs set in a project are unchanged."
+      },
+      {
+        "date": "2026-10-08",
+        "text": "Long-press a grouped toolbar button to choose its tools, including Horizontal/Vertical Type; releasing the hold keeps the menu open. Existing point/paragraph text creation is unchanged."
+      },
+      {
+        "date": "2026-10-06",
+        "text": "Settings ▸ General ▸ Language persists English/Japanese menu labels (general.language); native UI reuses installed Japanese font fallback, with no bundled CJK font. Dialog and panel contents remain English."
+      },
+      {
+        "date": "2026-10-05",
+        "text": "Honest assessment (docs/gaps.md): breadth ≈ 99% by our own checklist, real use ≈ 30–50%; workstreams G1–G9."
+      },
+      {
+        "date": "2026-10-04",
+        "text": "Checklist audit at d39c0e8: 89 done / 3 partial / 0 missing of 92 features."
+      },
+      {
+        "date": "2026-10-01",
+        "text": "First commit."
+      }
+    ]
+  },
+  "history": [
+    {
+      "commit": "1e61b4e",
+      "commit_full": "1e61b4e04bbce3e6ed34ce91027970ad9d4b7ff4",
+      "commit_date": "2026-10-10T14:09:10-04:00",
+      "message": "Progress docs: target-app parity, gaps, alpha gate, readiness by audience (#617)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 45.0,
+      "full_range": null,
+      "full_hours": [
+        850,
+        1500
+      ],
+      "mainstream_pct": 47.0,
+      "essentials_pct": 52.0,
+      "breadth_pct": 91.0
+    },
+    {
+      "commit": "83ae621",
+      "commit_full": "83ae6218ef31f9451023b8d20a2ba39861982b77",
+      "commit_date": "2026-10-10T19:25:49-06:00",
+      "message": "UI.9: retain shared docking across upstream workspace changes",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 45.0,
+      "full_range": null,
+      "full_hours": [
+        850,
+        1500
+      ],
+      "mainstream_pct": 47.0,
+      "essentials_pct": 52.0,
+      "breadth_pct": 91.0
+    },
+    {
+      "commit": "8763fc0",
+      "commit_full": "8763fc0138285dd84b0a197fcee6c40678fd883a",
+      "commit_date": "2026-10-11T13:46:05+03:00",
+      "message": "Translate the 95 panel rows Ukrainian was missing",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 45.0,
+      "full_range": null,
+      "full_hours": [
+        850,
+        1500
+      ],
+      "mainstream_pct": 47.0,
+      "essentials_pct": 52.0,
+      "breadth_pct": 91.0
+    },
+    {
+      "commit": "5d9bab2",
+      "commit_full": "5d9bab268d5b5c726c7f285148111e206f1604a8",
+      "commit_date": "2026-10-12T14:40:10-07:00",
+      "message": "M6.7: reject Roto Brush span edits past trimmed strokes",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 45.0,
+      "full_range": null,
+      "full_hours": [
+        850,
+        1500
+      ],
+      "mainstream_pct": 47.0,
+      "essentials_pct": 52.0,
+      "breadth_pct": 91.0
+    },
+    {
+      "commit": "19e4fc7",
+      "commit_full": "19e4fc7c6024ec8f974ce1ded58d477cc4362694",
+      "commit_date": "2026-10-12T21:36:26+02:00",
+      "message": "docs: re-audit gaps.md and parity docs against main (2026-10-12)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 45.0,
+      "full_range": null,
+      "full_hours": [
+        850,
+        1500
+      ],
+      "mainstream_pct": 47.0,
+      "essentials_pct": 52.0,
+      "breadth_pct": 91.0
+    },
+    {
+      "commit": "3aac824",
+      "commit_full": "3aac824976405b21930b9610f775392742579c26",
+      "commit_date": "2026-10-13T04:29:08-04:00",
+      "message": "Merge pull request #1175 from storybored379/fix/roto-trim-span",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 45.0,
+      "full_range": null,
+      "full_hours": [
+        850,
+        1500
+      ],
+      "mainstream_pct": 47.0,
+      "essentials_pct": 52.0,
+      "breadth_pct": 91.0
+    },
+    {
+      "commit": "c2f790b",
+      "commit_full": "c2f790b1d967c658bfb7d4a2a682f6e17951eafe",
+      "commit_date": "2026-10-15T16:35:49-06:00",
+      "message": "refactor(pdf): share structure parsing through a bounded adapter",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 45.0,
+      "full_range": null,
+      "full_hours": [
+        850,
+        1500
+      ],
+      "mainstream_pct": 47.0,
+      "essentials_pct": 52.0,
+      "breadth_pct": 91.0
+    }
+  ]
+}

@@ -1,0 +1,2901 @@
+{
+  "id": "pdfcraft",
+  "name": "PdfCraft",
+  "adobe": "Acrobat Pro",
+  "category": "PDF",
+  "color": "#1ab394",
+  "repo_url": "https://github.com/storytold/pdfcraft",
+  "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
+  "checked_at": "2026-10-16T10:36:33+00:00",
+  "latest_commit": "5fdd820",
+  "latest_commit_date": "2026-10-15T19:16:48-06:00",
+  "latest_message": "fix(ui): validated signature display, snapshot tab reuse (#1895)",
+  "parsed": {
+    "stage": "alpha",
+    "next_stage": "beta",
+    "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
+    "last_updated": "2026-10-15",
+    "metrics": {
+      "full": {
+        "label": "Full Acrobat Pro (ready for real work)",
+        "pct": 50.0,
+        "range": null,
+        "hours": [
+          780,
+          1400
+        ]
+      },
+      "mainstream": {
+        "label": "Mainstream practitioner",
+        "pct": 55.0,
+        "range": null,
+        "hours": [
+          500,
+          900
+        ]
+      },
+      "essentials": {
+        "label": "Essentials user",
+        "pct": 66.0,
+        "range": null,
+        "hours": [
+          180,
+          330
+        ]
+      },
+      "ready": null,
+      "breadth": {
+        "label": "Feature breadth",
+        "pct": 67.0,
+        "range": null,
+        "hours": null
+      }
+    },
+    "audiences": [
+      {
+        "audience": "full",
+        "label": "Ready for real work, full Acrobat Pro",
+        "pct": 50.0,
+        "range": [
+          45.0,
+          53.0
+        ],
+        "hours": null
+      },
+      {
+        "audience": "mainstream",
+        "label": "Ready for real work, mainstream practitioner",
+        "pct": 55.0,
+        "range": [
+          50.0,
+          60.0
+        ],
+        "hours": null
+      },
+      {
+        "audience": "essentials",
+        "label": "Ready for real work, essentials user",
+        "pct": 66.0,
+        "range": [
+          60.0,
+          70.0
+        ],
+        "hours": null
+      },
+      {
+        "audience": "full",
+        "label": "Full Acrobat Pro (ready for real work)",
+        "pct": 50.0,
+        "range": null,
+        "hours": [
+          780,
+          1400
+        ]
+      },
+      {
+        "audience": "mainstream",
+        "label": "Mainstream practitioner",
+        "pct": 55.0,
+        "range": null,
+        "hours": [
+          500,
+          900
+        ]
+      },
+      {
+        "audience": "essentials",
+        "label": "Essentials user",
+        "pct": 66.0,
+        "range": null,
+        "hours": [
+          180,
+          330
+        ]
+      }
+    ],
+    "dimensions": [
+      {
+        "label": "Features (14 areas)",
+        "pct": 49.0
+      },
+      {
+        "label": "UI/UX fidelity",
+        "pct": 55.0
+      },
+      {
+        "label": "File formats and conversion",
+        "pct": 40.0
+      },
+      {
+        "label": "PDF specification and standards",
+        "pct": 60.0
+      },
+      {
+        "label": "Hardware",
+        "pct": 35.0
+      },
+      {
+        "label": "Localization",
+        "pct": 68.0
+      },
+      {
+        "label": "Performance",
+        "pct": 40.0
+      },
+      {
+        "label": "Stability",
+        "pct": 50.0
+      },
+      {
+        "label": "Platforms",
+        "pct": 70.0
+      },
+      {
+        "label": "Ecosystem and plug-ins",
+        "pct": 30.0
+      },
+      {
+        "label": "AI features",
+        "pct": 0.0
+      },
+      {
+        "label": "Total (weighted sum)",
+        "pct": 50.0
+      }
+    ],
+    "features": [
+      {
+        "label": "A Core model and fidelity",
+        "pct": 76.8
+      },
+      {
+        "label": "B View and navigation",
+        "pct": 62.5
+      },
+      {
+        "label": "C Content editing",
+        "pct": 53.3
+      },
+      {
+        "label": "D Organize pages",
+        "pct": 61.2
+      },
+      {
+        "label": "E Comments and review",
+        "pct": 77.7
+      },
+      {
+        "label": "F Forms and JavaScript",
+        "pct": 78.5
+      },
+      {
+        "label": "G Protect, redact, sanitize",
+        "pct": 58.5
+      },
+      {
+        "label": "H Digital signatures",
+        "pct": 62.2
+      },
+      {
+        "label": "I Scan and OCR",
+        "pct": 23.1
+      },
+      {
+        "label": "J Create and export",
+        "pct": 39.7
+      },
+      {
+        "label": "K Optimize and standards",
+        "pct": 34.5
+      },
+      {
+        "label": "L Print",
+        "pct": 39.7
+      },
+      {
+        "label": "M Accessibility",
+        "pct": 63.1
+      },
+      {
+        "label": "N Automation, preferences, misc",
+        "pct": 30.0
+      }
+    ],
+    "upcoming": [
+      "0 · Convert and share: Create PDF from Office, Word export that keeps layout (#773) · 32–55",
+      "1 · Backlog and platform: crash and wrong-result reports, Chinese UI face (#826) · 50–90",
+      "2 · Fidelity harness against Acrobat and the renderer decision (M2; owner decision on #841) · 110–190",
+      "3 · Editing existing content (M7) · 100–180",
+      "4 · OCR languages and Office export/import (M10) · 95–175",
+      "5 · Preflight and PDF/A/X/UA (M11) · 65–115",
+      "6 · Signatures for institutions: PKCS #11, timestamp servers, online LTV (M9) · 40–70",
+      "7 · Accessibility tagging (M12) · 40–70"
+    ],
+    "progress": [
+      {
+        "date": "2026-10-15",
+        "text": "(M2, gap 12): cargo xtask text-oracle scores reading order as well as word F1: the longest common subsequence of the two word sequences over the longer one. F1 is a bag of words and cannot see order at all -- measuring #2431, a change that moves text and nothing else, it called 26 of the 29 files whose output changed identical, where the order score separated 18 improvements from 6 regressions. Reports, does not gate; a disagreement with Poppler, not a verdict. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-15",
+        "text": "(M2, #2305 follow-up): WinAnsiEncoding 0xA0 and 0xAD and MacRomanEncoding 0xCA extract as the ordinary space and hyphen Annex D.2 names them, in the vendored hayro tables (patch 30) as well as crates/fonts, so search, copy and redaction see characters that were hidden behind U+00A0 and U+00AD. Across the pdf.js corpus the soft hyphens we extract fall 117 to 13 and the non-breaking spaces 30 to 26; the rest come from /ToUnicode. An explicit /Differences name keeps its glyph list value, as pdftotext does. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-15",
+        "text": "(M14, gap 24): misc.localization and misc.installers move from planned to partial. Localization: 22 catalogs ship, but Chinese shows tofu in releases, Telugu has no release font and Arabic is not mirrored. Installers: macOS and Windows releases are signed, Linux packages are not. The Acrobat menu diff itself remains open. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-15",
+        "text": "(M2, renderer speed): Three vendored hayro-interpret patches (31–33), pixel for pixel the same over the first three pages of every pdf.js corpus file. A sampled (Type 0) function keeps its samples in one flat array instead of a hash map rebuilt every time a shading using it is painted: bug1721218 (InDesign) draws in 0.49 s (was 1.34 s), and a 2,097,152-sample ramp painted 30 times in under a second (was 38 s). One decode of a JPEG or Flate image serves every size it is drawn at (only JPX decodes for a size), so zooming a 300-dpi scan in and out costs 35–40% less render work. Coons and tensor patch meshes copy their vertices' colours less: mesh-gradient pages draw 10–16% faster (page 8 of #1584's annual report 773 → 696 ms). Estimates unchanged."
+      },
+      {
+        "date": "2026-10-15",
+        "text": "(M3, #2166 part 1): Save asks before writing over a version of the file the document did not come from (something else wrote it since the open or the last save), with Save as… to keep it, and the changed-on-disk notice says what Reload and Save each do; a file that is open already comes to the front instead of opening twice; a running instance's autosaves are locked, so a second instance neither offers nor discards them. Part 2 (every writer checked and atomic) is #2182."
+      },
+      {
+        "date": "2026-10-15",
+        "text": "(M9, #1895): Preserve original signature artwork and show validation through a separate page overlay. Generic in-place appearance rewriting is deferred: neither a caption substring nor a unique drawing establishes an icon role. Signed regressions cover chamfered borders, mixed signer/caption text, image/text exports, both print modes and saves. Snapshot reuse and trust/cache refresh remain. Baked Not Verified captions are not replaced; #79 remains open. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-14",
+        "text": "(M14, Italian catalog): Italian gains the 201 entries the other catalogs had and the code looks up: the sentences the accessibility checker, preflight, signature validation and page-range parser word, certificate and calendar labels, digital-ID dialog messages and five plurals. It now has 2,528 entries. 64 keys other catalogs carry but no code looks up (tooltip texts with a fixed shortcut, older wordings, generic labels only Lithuanian has) were left out. AI-assisted, written from the meaning of the English; native review welcome. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-14",
+        "text": "(M1, #2166): No PDF leaves the engine unchecked and no writer truncates: new files from Combine, Extract, Split and Create, signed, timestamped and LTV-embedded files and the OCR batch output reopen with their pages before anyone writes them, as saves already did; the desktop app, the automation tools (with or without --root) and the CLI's edit, combine, extract and split all write through the one staging-file writer in pdfcraft-platform, so a failed write or --out naming the input never leaves a half-written file. Special files such as /dev/stdout are still written as given."
+      },
+      {
+        "date": "2026-10-14",
+        "text": "(M3 #2080 candidate): Existing per-tab page history gains explicit search jumps, rail buttons and control-channel commands. Continuous scrolling and automatic search refresh stay outside history; page-level restoration and estimates unchanged."
+      },
+      {
+        "date": "2026-10-14",
+        "text": "(M5, PR #1457 branch refresh): Merged upstream main and reconciled roadmap entries while preserving comment submission shortcuts. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-14",
+        "text": "(M9, signature appearance labels): A visible signature's labels (\"Digitally signed by\", \"Reason: \", …) follow the interface language when Helvetica can draw all of them, and fall back to English as a set otherwise, with a note under the preview; the preview shows the same labels and the signing time. A drawn label the font can't draw is refused naming the label and character, never written as ?. signdocument takes labels and appearance. Sign, automation and kittest regressions cover German, Chinese and the refusals. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-14",
+        "text": "(M4, page transitions read, §12.4.4): /Trans and /Dur are read into DocInfo::transitions and listed by docinfo, the data a full-screen presentation needs to play transitions and auto-advance; playing and editing them stay planned."
+      },
+      {
+        "date": "2026-10-14",
+        "text": "(M4, page transitions set, §12.4.4): pagetransitionset (one undoable edit) writes or removes /Trans and /Dur on chosen pages with the values checked first, the counterpart of reading them into DocInfo::transitions; playing them and the dialog stay planned."
+      },
+      {
+        "date": "2026-10-14",
+        "text": "(M12, transition geometry): pdfcraftrender::transition gives the picture of any of the twelve page transitions at a moment of its run (which parts of the old and new page to paint, where, how opaque), in page fractions, tested for every style and direction; the full-screen presentation will paint from it once it plays transitions."
+      },
+      {
+        "date": "2026-10-14",
+        "text": "(M3, Open in Full Screen mode honoured): a document with /PageMode /FullScreen now asks (Full Screen / Not now) before the app enters full screen, as Acrobat does; before, the setting was written and read but never acted on when opening."
+      },
+      {
+        "date": "2026-10-14",
+        "text": "(M3, control-click candidate): Coordinate clicks retain hover warmup and pair press/release in one input pass so slow frames do not turn a click into a hold. Text multi-click selection accepts the actual press event when egui has already cleared its origin. Regression cases cover slow-frame button activation, disabled controls and coalesced text selection; estimates unchanged."
+      },
+      {
+        "date": "2026-10-14",
+        "text": "(community, M7, #128 Hebrew in Add text): Add text and pageaddtext draw Hebrew with the craft-fonts Hebr face (Noto Sans Hebrew), through the same shaped path as Arabic and Thai: right-to-left display order with numbers and Latin in place, points and cantillation kept on their letter as one Type 3 glyph, ToUnicode and per-line ActualText so extraction, search and the editor get typing order. Builds without the face refuse Hebrew rather than write ?. Regular style only. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-14",
+        "text": "(M9, #1787): Changes after signing are judged by the role an object held when signed for a page's resources too: a rewritten font, XObject, graphics state or resources dictionary is page content however its new version is labelled, so a /FT or /Subtype /Widget added by the attacker no longer reads as a permitted form fill. A category dictionary that only gained a name is judged as before."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "(community, M3, #1569 review): Pixel-only Wayland wheel, wheel-tilt and continuous input use standalone moved events, so Ctrl zoom does not remain latched after the modifier is released (#991); vendored winit patch (13), with a policy test. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "(G14, Vietnamese localization): Added Vietnamese (vi, Tiếng Việt) as an interface and date language with a 2,591-entry catalog (pluralnone) covering 100% of the current localizable key union (plus theme/Appearance). Locale tags vi / vi-VN / viVN.UTF-8 resolve; calendar months use numeric Tháng 1…12 / tháng 1…12. Native-speaker community review recorded. The twelve-language localization mean moves from ≈59% to ≈68%; weighted readiness ≈49% → ≈50%. Status stays partial: engine/OS details, document contents, filenames, CLI/MCP and external help stay outside the catalog by design."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "(community, M14, #1553 review): Relative Fontconfig includes resolve beside each including config, including nested configuration selected through FONTCONFIGPATH. Directory includes accept only digit-prefixed .conf in lexical order. Isolated regressions reproduce both review findings; configuration size/count/depth limits, cycles, symlinked config and valid reset ordering are covered. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "(M2, page-label prefixes): Preserve literal leading and trailing whitespace in page-label prefixes without changing generic metadata normalization. Nine original public-inspection cases cover prefix spaces, encodings and empty-prefix controls. Existing empty-prefix fallback remains a compatibility policy, not a conformance claim. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "(M2, page-unit transform precision): Preserve small transform coefficients in page marks, added content and print output. Regression cases cover accepted page units of 4096 and 75000; existing page-unit interpretation and estimates are unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "(community, M2/M6, form-heavy documents): An image whose pixels hold at most 16 bits of samples (an 8-bit Separation or DeviceN spot-colour image, a 1-4-bit gray or indexed one) is converted once per possible pixel value instead of once per pixel (vendored hayro-interpret patch 28). A fillable character sheet whose 3304 × 4105 DeviceN background ran a PostScript tint transform per pixel drew each page in 3.8 s and 430 MB, on opening and again after every field was filled; it now draws in 0.11 s and 100 MB, pixel for pixel the same. The inspector places widgets without /P in one pass over the pages (a form of 8,000 such fields opened in 1.17 s), and the Fields panel pairs its rows with the form through one map a frame and draws only the rows in view (8,000 fields: about 15× less CPU a frame with the panel open). Regressions fail before each fix."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "(M4, #1910 Organize on the current page): Opening Organize Pages from the toolbar, tool panel, command or --organize selects the page being read and scrolls its cell into view, replacing a stale grid selection that did not include it. One UI regression covers a middle page, the last page and reopening after an earlier selection. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "(M5, signature pad undo): The Draw tab of Create signature/initials has an Undo button and Ctrl/Cmd+Z that take back the last stroke (#1963). Pad is UI-only, so no automation tool. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "(M2, raw crop and page-unit floor): The renderer applies its existing one-point minimum in physical points for non-nearly-zero raw crop dimensions on scaled pages. Five synthetic regressions cover inspection, crop origins and rotations, reciprocal rounding and bounded raster controls. Existing UserUnit policy, nearly-zero fallback, feature statuses and estimates are unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "(M5, text box font size, #1908): Comment Properties has a Font size control for text boxes, typewriter text and callouts (1-400 pt); it writes /DA and the rich-text strings, redraws the appearance and grows the box to fit. commentedit takes fontsize. Annot, tool and UI regressions. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "(M3, Single Page edge paging, #1924): In Single Page view a page taller than the window pans with the wheel, and one more notch (or a fresh trackpad swipe) at the bottom/top edge shows the next page at its top / the previous page at its bottom. A swipe that panned to the edge, momentum included, does not turn. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "(M3, #1980): Ctrl+Alt+Q in the digital ID email field no longer requests application exit. Quit requires exact Ctrl+Q/Cmd+Q modifiers and uses the existing unsaved-document confirmation. Synthetic keyboard regressions cover email input and clean/dirty quit requests; estimates unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "(M3, native-opening candidate): Chosen tools survive preparation, conversion and password retries; startup intake waits for pending preparation. Regression tests cover completion, cancellation and document identity. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "(community, M3, #531 touchpad momentum): On Wayland a two-finger swipe keeps gliding after the fingers lift and slows to a stop, measured from the gesture's last 0.1 s and decaying with a 0.35 s time constant through the #759 1:1 path. Any wheel input, click, key, zoom or edge ends it (fingers resting on the touchpad don't yet: the vendored winit binds no Wayland hold gestures); single-page paging, macOS (which sends its own momentum), the web, and Animation effects Off never glide. Unit tests for the physics and two headless view tests. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "(M3, native-open admission): Later prepared replies stay queued while a modal or native picker owns the foreground. Picker completion, cancellation and abandonment wake retained opens. Regressions cover recipient ownership, exactly-once admission, source/history preservation and one-shot repaint requests. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "(M6, choice indices): Multi-select choice fields write ascending /I option indices while preserving the caller's /V order. Synthetic forms and headless engine regressions cover reverse selection and save/reopen. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "(M6): XFDF field import and data-file extraction join all text nodes in a value, preserving text after XML comments and processing instructions. Synthetic regressions cover Unicode, CDATA, empty values and PDF save/reopen. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "(M7, picture right-click menu): The Edit text & images menu of a picture gains Cut Image, Redact Image (a redaction mark over the picture, applied from Redact a PDF), Create Link… and Recognize Text… (for that page), in all 21 catalogs. The menu was drawn only while the pointer was over the picture, so its items outside the picture (most of a logo's menu, and Delete below a page) could not be clicked; an open menu now stays drawn. Still missing from Acrobat's menu: Arrange (bring to front, send backward), Remove crop, Draw freehand and Edit image using… (opening an external editor)."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "(M2, inline-image boundaries): Unfiltered inline images with known sample layouts keep pixel bytes that look like the EI terminator when content is rewritten. Regression tests cover row padding, colour-space and parameter aliases, masks and malformed sizes; classic and packed saved PDFs retain the pixels in independent readers and renderers. Filtered and resource-defined layouts retain the existing tolerant heuristic. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "(M3, drawing markups): While a comment is being drawn, the pointer in a band along any edge of the view (or just past it) scrolls the view up, down, left or right, so points beyond what is shown can be reached. A polygon, cloud or run of connected lines takes back its last point with Backspace, Delete or Undo (the first point's removal cancels it). Edge scrolling has unit tests of its maths only; it has not been exercised end to end in the app by an automated test."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "(gap 6, #1319, #1305, #1324): Editing an XFA form keeps a radio item's stored text when it contains a space, so a later layout still selects it. Replace Pages on a split selection replaces those pages and leaves the gap; editing the dialog range still replaces the span. Marking a figure decorative rewrites only that figure's content stream, so a header, added text and unknown stream entries stay. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "(M6, XML field names): AcroForm XML data export constrains generated element names to XML 1.0 NCNames, so Latin-1 names such as Area² and Aµ produce readable data files. Original PDF field names travel through the existing xfdf:original attribute; previously valid tags, including Greek and CJK, keep their spelling. Saved-PDF regressions cover invalid prefixes, combining letters and normalized-name collisions. Estimates unchanged."
+      }
+    ]
+  },
+  "history": [
+    {
+      "commit": "798650e",
+      "commit_full": "798650e8a09607471dec48e1aa7949a4d37b9aec",
+      "commit_date": "2026-10-10T14:23:28-04:00",
+      "message": "Progress docs: target-app parity, gaps, alpha gate, readiness by audience (#873)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "40a57f0",
+      "commit_full": "40a57f0d1903aefb18fabaa6e97f283184cc44d4",
+      "commit_date": "2026-10-10T15:31:06-04:00",
+      "message": "M13: preserve desktop Action Wizard batch results (#886)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "7c386fa",
+      "commit_full": "7c386fa4acc59acb91665a8def9dd09758486294",
+      "commit_date": "2026-10-10T15:46:22-04:00",
+      "message": "M10.2: scan JPEG metadata beyond frame headers (#764)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "6116b00",
+      "commit_full": "6116b0034cdbc045da6c059fdb1ee989127d07c1",
+      "commit_date": "2026-10-10T16:25:24-04:00",
+      "message": "M9: name the Windows store certificates that can't sign (#179) (#761)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "8309c84",
+      "commit_full": "8309c84a59a2862d01111c17d67d224b3b6a9697",
+      "commit_date": "2026-10-10T16:28:29-04:00",
+      "message": "M12: XFA rows in areas get their instances, and areas stay out of data paths (#853)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "3906dcd",
+      "commit_full": "3906dcdff535c8e10b9ab9888c1849cc6ab52ffd",
+      "commit_date": "2026-10-10T16:31:41-04:00",
+      "message": "Exported images keep their transparency, JPEG cut-outs included (#645) (#763)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "86dd8d8",
+      "commit_full": "86dd8d828367f167d7e2fc9af306b10138f5c8ec",
+      "commit_date": "2026-10-10T16:37:04-04:00",
+      "message": "Fill colour for rectangle, oval and polygon comments (#686) (#793)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "2a02d5d",
+      "commit_full": "2a02d5ddab7ab629744a2da27b3b35508f6848ad",
+      "commit_date": "2026-10-10T16:39:23-04:00",
+      "message": "M14: localize displayed shortcut key names (#496) (#884)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "65e89ae",
+      "commit_full": "65e89aefb287ca574231dc283d1bf3f666682eca",
+      "commit_date": "2026-10-10T16:41:27-04:00",
+      "message": "M3, #740: column select (Alt/Option-drag, or Edit ▸ Column select) (#765)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "8196d6f",
+      "commit_full": "8196d6f45ad4249790a18066e3e91b38a0f3e35c",
+      "commit_date": "2026-10-10T17:13:52-04:00",
+      "message": "M14: interface size preference; Auto follows GNOME text scaling (#902)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "ecd9d15",
+      "commit_full": "ecd9d158ea4d80a5acc7ae84357a3b7cb853154a",
+      "commit_date": "2026-10-10T19:10:14-06:00",
+      "message": "UI: preserve shared document workspace on current main",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "33c14e0",
+      "commit_full": "33c14e07cfd742a82bf03baa6b103c01008fa68c",
+      "commit_date": "2026-10-11T00:23:35-04:00",
+      "message": "Print: Windows lists its printers and spools jobs (#847)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "bbbe600",
+      "commit_full": "bbbe60015c571ebfc39708ee07777b89e267122a",
+      "commit_date": "2026-10-11T01:15:23-04:00",
+      "message": "M10: Windows printing prints at actual size, off the UI thread (follow-up to #847) (#1007)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "c20f3af",
+      "commit_full": "c20f3aff606900dc3b7e444b972a728e9ac2b670",
+      "commit_date": "2026-10-11T07:29:54+02:00",
+      "message": "M10.5: Adopt shared craft-print system spooler",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "6614b37",
+      "commit_full": "6614b370b174a6df69c60c85e07ad1b23a5061be",
+      "commit_date": "2026-10-11T07:36:51+02:00",
+      "message": "M10.5: Preserve current main printing workers during spooler extraction",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "b752827",
+      "commit_full": "b7528271627ec658710a140adb8d10b213ebe30b",
+      "commit_date": "2026-10-11T11:56:06-04:00",
+      "message": "M7: watermark offset from the page centre (edit.watermark-appearance) (#1076)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "a7e24b9",
+      "commit_full": "a7e24b9512b429d7ffbb298dc1f9028141da3762",
+      "commit_date": "2026-10-11T11:58:28-04:00",
+      "message": "M12: XFA script time limits start when the engine is ready (#1081)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "dd065b3",
+      "commit_full": "dd065b39bb2db190255d3bb9e60d0f7a6e9c748c",
+      "commit_date": "2026-10-11T12:04:10-04:00",
+      "message": "M4, #569: Combine files takes images and text files (#1032)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "f1e3a04",
+      "commit_full": "f1e3a04587c6df6abdd25a4a7f41158276c7d3aa",
+      "commit_date": "2026-10-11T12:05:45-04:00",
+      "message": "Return renderer initialization errors to the OpenGL startup fallback (#1042)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "f117cde",
+      "commit_full": "f117cde040ba031aafb4888ad583b5bdfe4fd9df",
+      "commit_date": "2026-10-11T12:07:47-04:00",
+      "message": "Forms: encode appearances with the existing simple font (#1044)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "ee1ee70",
+      "commit_full": "ee1ee704639738edaade7fdb71609b77f87ecaac",
+      "commit_date": "2026-10-11T12:10:23-04:00",
+      "message": "Forms: keep the accepted value when Tab wraps to the same field (#1045)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "afb586e",
+      "commit_full": "afb586e2497e7754c8cefc031d524432d14124f5",
+      "commit_date": "2026-10-11T12:12:23-04:00",
+      "message": "CLI: reject malformed --root options before dispatch (#1048)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "db26eb2",
+      "commit_full": "db26eb266d534bbc4cbfdc73296cba08f47cd9a1",
+      "commit_date": "2026-10-11T12:21:02-04:00",
+      "message": "M14: Reuse form enumeration during document open (#1011)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "2a5e8e2",
+      "commit_full": "2a5e8e2aa254ba9a3989729e287d959c8b41aec4",
+      "commit_date": "2026-10-11T12:27:39-04:00",
+      "message": "M14: correct Taiwan Traditional Chinese accessibility and form terms (#1023)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "d9660d4",
+      "commit_full": "d9660d4e73d8ad697b90cbcb42dddcc8f864d5b6",
+      "commit_date": "2026-10-11T13:14:48-04:00",
+      "message": "Docs: sync the progress docs with issues closed on 2026-10-10 (#1064)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "4582f48",
+      "commit_full": "4582f48ec10606b98954d4a4326fff49c86764dc",
+      "commit_date": "2026-10-11T13:24:58-04:00",
+      "message": "automation: text_find stops reading pages once its limit is reached (#971) (#990)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "657173f",
+      "commit_full": "657173fac1f4b6b6666201716c4f1a0ebce0e010",
+      "commit_date": "2026-10-11T13:28:30-04:00",
+      "message": "M14: a chosen interface size is absolute, as in PhotoCraft (#1005)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "56c034b",
+      "commit_full": "56c034b0b336ad9ea05fda5cc738db759d184642",
+      "commit_date": "2026-10-11T13:47:51-04:00",
+      "message": "M9: visible digital signatures can show a drawn, typed or image graphic (#193) (#934)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "134b98b",
+      "commit_full": "134b98b0a8516ceee8de387779dc4696d549bb1b",
+      "commit_date": "2026-10-11T13:58:58-04:00",
+      "message": "M4: open Organize Pages as a selectable thumbnail overview (#1004)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "42cfc6a",
+      "commit_full": "42cfc6a8f22f1eff21506a6ff1e952f0f257db89",
+      "commit_date": "2026-10-11T14:08:27-04:00",
+      "message": "M14: scan PdfCraft page-content markers once per document refresh (#1016)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "f036d38",
+      "commit_full": "f036d3841b1f698aa6656f83e752f8fc775b4cf6",
+      "commit_date": "2026-10-11T14:49:32-04:00",
+      "message": "Print: architectural paper presets and PDF scale controls (#599 follow-up) (#1123)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "5df8f3b",
+      "commit_full": "5df8f3b33add135ea6625c85be3330478742dc54",
+      "commit_date": "2026-10-11T15:18:01-04:00",
+      "message": "Issue #995: unlock a restricted document with its permissions password (#1127)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "49217ae",
+      "commit_full": "49217aec6c616056d58c3258a60ab30bce0fd701",
+      "commit_date": "2026-10-11T15:23:49-04:00",
+      "message": "fix(theme): complete Linux System appearance tracking (#1017)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "e609722",
+      "commit_full": "e609722b36decde5a09022b84977d3e0c56429ed",
+      "commit_date": "2026-10-11T17:41:06-04:00",
+      "message": "M7: Hebrew in Edit text (reading order, writing order, Hebrew glyphs) (#521)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "b91d38c",
+      "commit_full": "b91d38c0738927ed195ed7b3646a34fbdfb68ba5",
+      "commit_date": "2026-10-11T17:53:55-04:00",
+      "message": "M14: text the fonts can't draw is kept and reported, never written as ? silently (#1112)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "8ee3673",
+      "commit_full": "8ee3673bd434c42daf162b04c725948af75ed130",
+      "commit_date": "2026-10-11T18:07:36-04:00",
+      "message": "M7: support shaped Thai text in Add Text and UI fallback fonts (#767)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "6091deb",
+      "commit_full": "6091deb829c57b2c018ac892a6e455a64c0f6ebf",
+      "commit_date": "2026-10-11T18:25:25-04:00",
+      "message": "M7: preserve overlapping text when dragging paragraphs (#594) (#1052)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "29dca46",
+      "commit_full": "29dca4608914a688423f94807c11260049b077a8",
+      "commit_date": "2026-10-11T18:27:48-04:00",
+      "message": "Bound text search result allocation (#1164)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "9622f29",
+      "commit_full": "9622f29d046055b5e7cd4b23598766a8e05f1cf6",
+      "commit_date": "2026-10-11T18:32:03-04:00",
+      "message": "M5: preserve comment identities during partial XFDF and FDF imports (#1144)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "0ef75d2",
+      "commit_full": "0ef75d294c3c645b704459d3e0f437dc90abcf4f",
+      "commit_date": "2026-10-11T18:34:16-04:00",
+      "message": "UI: checkboxes and radio buttons are outlined, and checkboxes are square (#1173)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "287fce8",
+      "commit_full": "287fce8f9cfc9c501164c6a3bcc2ad0b6c4ef690",
+      "commit_date": "2026-10-11T18:38:48-04:00",
+      "message": "M2: bound the total size of page-label prefixes (#1146)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "634f3d1",
+      "commit_full": "634f3d1144dc34b94ca1456790f7cab62019a4a0",
+      "commit_date": "2026-10-11T18:45:36-04:00",
+      "message": "Issue #1028: OCR can read pictures on pages that already have text (#1184)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "eb32e3a",
+      "commit_full": "eb32e3adf7c8100fffb3245df7ee95d3852a1b12",
+      "commit_date": "2026-10-11T19:21:24-04:00",
+      "message": "M2: keep doubled short text runs from interleaving (#1198)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "6d843a8",
+      "commit_full": "6d843a8e8b22e4442666eb9e12f506c40458af3d",
+      "commit_date": "2026-10-11T20:27:55-04:00",
+      "message": "Preserve source fonts in text editing and resize clipped artwork (#1116)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "7caaa35",
+      "commit_full": "7caaa35a81784dfe53b503b8c72772097fc1085e",
+      "commit_date": "2026-10-11T21:10:32-04:00",
+      "message": "Fix Word invoice layout and pagination (#773) (#1126)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "09287e5",
+      "commit_full": "09287e547fdd3172ff2d0ac74068b2753869b1f7",
+      "commit_date": "2026-10-11T21:16:34-04:00",
+      "message": "M5.7: Fill & Sign Scan tab for photographed signatures (#1110) (#1111)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "95434e9",
+      "commit_full": "95434e9115b73bfc1d0cee6f66db2ce96fe40510",
+      "commit_date": "2026-10-11T22:05:01+02:00",
+      "message": "M10.5: Preserve composed sheets with the shared scaling and duplex API",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "981a2e5",
+      "commit_full": "981a2e57c8681a531bafa77b38b80e403a58233d",
+      "commit_date": "2026-10-11T22:29:54+02:00",
+      "message": "M10.5: Integrate main and adopt the validated craft-print spooler",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "c5f1cb2",
+      "commit_full": "c5f1cb2d3f850a257f0de1e050fee6bb75a6ec3a",
+      "commit_date": "2026-10-12T00:23:30+02:00",
+      "message": "M10.5: Reconcile hosted CI and keep the Arabic golden in both font builds",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "00184a1",
+      "commit_full": "00184a10067e7b96833dda7ffb7d9990db6f9f86",
+      "commit_date": "2026-10-12T01:20:52+02:00",
+      "message": "M10.5: Preserve main duplex-driver warnings through craft-print",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "c52072b",
+      "commit_full": "c52072b678c9b3ed14b009ef83d4e74b33da0a09",
+      "commit_date": "2026-10-12T01:25:38-04:00",
+      "message": "Add editable page-range selection to Organize Pages (#1092) (#1174)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "1970935",
+      "commit_full": "1970935587d9a85656dfb943533701b5b600dff5",
+      "commit_date": "2026-10-12T01:28:01-04:00",
+      "message": "M14: edits let go of the previous working file before writing the next (gap 13) (#1279)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "78f7ee0",
+      "commit_full": "78f7ee04546eead4cec5f6a892c3ee7a6d40fea4",
+      "commit_date": "2026-10-12T01:28:15+02:00",
+      "message": "M10.5: Keep the adoption current with main progress and viewer fixes",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "05a8629",
+      "commit_full": "05a862995d7dfc733eeb11e9113a8582e1b4d3ca",
+      "commit_date": "2026-10-12T01:29:25-04:00",
+      "message": "Accessibility: show figure findings on the page (#1280)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "d0975b9",
+      "commit_full": "d0975b974d0db2fd54058f118695c3b57e9c253b",
+      "commit_date": "2026-10-12T01:32:40-04:00",
+      "message": "M5: quick-bar colour recolours the selected comment (#1191) (#1255)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "13637b8",
+      "commit_full": "13637b8440873846411ee3579e5e4b38aff1a95a",
+      "commit_date": "2026-10-12T01:38:32-04:00",
+      "message": "M7: transform private image crops across nested states and streams (#1269)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "2aea7dc",
+      "commit_full": "2aea7dcfeb64284882c23bd2d82e846e6e6f388f",
+      "commit_date": "2026-10-12T02:31:36-04:00",
+      "message": "M10: print from the web build through the browser's print dialog (gap 4) (#1243)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "c1d9894",
+      "commit_full": "c1d98946a9c2b72fdabb357d6fcabb9bdf186192",
+      "commit_date": "2026-10-12T02:34:19-04:00",
+      "message": "M7: open local GoToR PDF links natively (#1265)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "8cacb44",
+      "commit_full": "8cacb44728f7245da72dde4844856d917ce63f11",
+      "commit_date": "2026-10-12T02:46:40-04:00",
+      "message": "M3: follow Windows' Animation effects setting; add an Animation effects preference (#1235)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "fcf6e39",
+      "commit_full": "fcf6e39d466239db217e898a2f30144762fd6b06",
+      "commit_date": "2026-10-12T03:25:25-04:00",
+      "message": "M14: tune Windows low-DPI JetBrains Mono hinting (#1264)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "0e55d07",
+      "commit_full": "0e55d07b5fcc7d36747c7c56a6b98b1aabb9ce3e",
+      "commit_date": "2026-10-12T03:42:56-04:00",
+      "message": "M12: say when a form's scripts were turned off (#1251)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "51982db",
+      "commit_full": "51982db121dc17723140ebcc5c04c2055ee296bd",
+      "commit_date": "2026-10-12T05:42:27-04:00",
+      "message": "M3: match Greek final sigma in case-insensitive search (#1349)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "47d6128",
+      "commit_full": "47d612817aa4f24b1d81df285c8addb6471f997b",
+      "commit_date": "2026-10-12T05:43:12-04:00",
+      "message": "M8: Clean indirect and form tag references (#1351)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "d2d1b16",
+      "commit_full": "d2d1b16b210bc7d0c9a16c2c88ad7943f924f65e",
+      "commit_date": "2026-10-12T06:13:48-04:00",
+      "message": "M5: adjust Fill and Sign text size (#1285)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "186c1dc",
+      "commit_full": "186c1dc7676bb750566bc590a1d8f97201730bf2",
+      "commit_date": "2026-10-12T07:11:23-04:00",
+      "message": "M7: preserve Arabic text order in copy, search and editing (#1369)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "88d96c9",
+      "commit_full": "88d96c93a8dad2a86fb781ea9bfe9053c8f8a511",
+      "commit_date": "2026-10-12T07:12:02-04:00",
+      "message": "M2: snap shrunk interpolated images to whole pixels so scans stay sharp (#1377)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "2a00452",
+      "commit_full": "2a004529dd14d5de678dbb8d67077500acef4e11",
+      "commit_date": "2026-10-12T07:13:35-04:00",
+      "message": "M14: Preserve recovery snapshots without readable metadata (#1378)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "5cce1b2",
+      "commit_full": "5cce1b247fa9f95f4b55ed7537107bc63f0e7fe1",
+      "commit_date": "2026-10-12T08:16:42-04:00",
+      "message": "M10: edit OCR text on scanned pages so the change shows (#1397)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "2839152",
+      "commit_full": "2839152af172a03b4ccd7d669e1bc265001b04aa",
+      "commit_date": "2026-10-12T08:20:13-04:00",
+      "message": "M12: preview text structure proposals for auto-tagging (#1383)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "4bfd3c2",
+      "commit_full": "4bfd3c2729790f608fe65d1c4cdddb0e7119e765",
+      "commit_date": "2026-10-12T08:54:15-04:00",
+      "message": "M14: add Lithuanian interface and date localization (#1401)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "87b448b",
+      "commit_full": "87b448b664e1b3c960b479cc0f2c2e7a82c7ac71",
+      "commit_date": "2026-10-12T08:57:37-04:00",
+      "message": "M1: write a valid xref when an incremental save has no objects (#1339) (#1424)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "057e453",
+      "commit_full": "057e453a16c0750ff1c6a784003587f7d2247baa",
+      "commit_date": "2026-10-12T23:49:57-04:00",
+      "message": "Retire inherited resources (#1348)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "fcc1d9e",
+      "commit_full": "fcc1d9ead0f4c850a8c71637a90a92aa1f871004",
+      "commit_date": "2026-10-12T23:59:51-04:00",
+      "message": "M2: adapt Lab Bradford white points in LMS (#1417)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "c6128c0",
+      "commit_full": "c6128c039ac9f840e8c989650c4b90652f62b3a8",
+      "commit_date": "2026-10-13T00:01:50-04:00",
+      "message": "M7: keep a neighbouring line when replacing text (#1316) (#1427)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "13fbb2f",
+      "commit_full": "13fbb2f6fbf2fe60a917512ab9df169335741383",
+      "commit_date": "2026-10-13T00:07:32-04:00",
+      "message": "M0: label local builds in --version, About and the package release (#1529)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "890b83c",
+      "commit_full": "890b83c4c4ff19095b599f979141262869de6270",
+      "commit_date": "2026-10-13T01:02:05-04:00",
+      "message": "Add reviewable text-only PDF auto-tagging (#1440)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "9ed3abe",
+      "commit_full": "9ed3abe4907a127d36b12fbfeee71d7e26248da1",
+      "commit_date": "2026-10-13T01:09:36-04:00",
+      "message": "Keep undrawn comments and accurate search hits (#1317, #1327, #1302, #1315, #1340) (#1442)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "dfa43be",
+      "commit_full": "dfa43beb9fd17ce931f1f8d520520321f72d9129",
+      "commit_date": "2026-10-13T01:19:48-04:00",
+      "message": "M10: BigTIFF and strict GIF detection in Create PDF; XDP data in format parity (#1453)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "fff985f",
+      "commit_full": "fff985f30de7a38fc7b91c393f57b1baeccc6663",
+      "commit_date": "2026-10-13T01:42:57-04:00",
+      "message": "M5: keep stamps upright on rotated pages (#1398) (#1460)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "0dd5fdd",
+      "commit_full": "0dd5fdd5bd6ec7d82a71ce8f4c356b63b94326b4",
+      "commit_date": "2026-10-13T01:52:22-04:00",
+      "message": "M7: keep Arabic ActualText ligatures in their word (#1473)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "4cb8030",
+      "commit_full": "4cb803038da36a878215f089511739296fec5959",
+      "commit_date": "2026-10-13T02:16:21-04:00",
+      "message": "M3: confirm before opening absolute GoToR paths (#1364) (#1489)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "13a921a",
+      "commit_full": "13a921ae4abaebad0cdd246828bdb25fa7907aad",
+      "commit_date": "2026-10-13T02:27:26-04:00",
+      "message": "M2: keep byte boundaries in packed TIFF-predictor rows (#1499)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "5ebb53a",
+      "commit_full": "5ebb53a4a49e5a8be56becd1969eb44252a914ec",
+      "commit_date": "2026-10-13T02:34:12-04:00",
+      "message": "M4: preserve shared Type 3 glyph resources during extraction (#1500)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "e88dd72",
+      "commit_full": "e88dd728cbb7fe91df9a79d12cb1e8279d52e52c",
+      "commit_date": "2026-10-13T02:41:41-04:00",
+      "message": "M13: scan each directory once in CLI checks (#1501)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "7437bde",
+      "commit_full": "7437bde378f43856eada40af25b983812e615e8a",
+      "commit_date": "2026-10-13T03:04:13-04:00",
+      "message": "M3: draw a GNOME-style title bar on Wayland (#553) (#1530)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "b5467d9",
+      "commit_full": "b5467d93a0ffaa5e5e6658bccdf8655a3ba689c9",
+      "commit_date": "2026-10-13T12:18:41-06:00",
+      "message": "fix(ui): preserve native open actions and password prompts",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "3f044b6",
+      "commit_full": "3f044b6263aa6605c3aa44ca6d065e1ab37d13b6",
+      "commit_date": "2026-10-13T14:46:24-06:00",
+      "message": "fix(print): adopt native Windows spooler",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "dbef872",
+      "commit_full": "dbef872ed77b3a955d51b8eec61171d08cb6f423",
+      "commit_date": "2026-10-15T02:16:13-04:00",
+      "message": "M2: preserve precision when writing page transforms (#946)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "039706c",
+      "commit_full": "039706c4371d1fe0fb4d693a993212e885f4ed81",
+      "commit_date": "2026-10-15T02:16:35-04:00",
+      "message": "Clear image leftovers (#1151)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "b89cbd0",
+      "commit_full": "b89cbd004488a372a3e2ac204fe92c8fb36e0b50",
+      "commit_date": "2026-10-15T02:17:06-04:00",
+      "message": "M4: keep the last saved revision across undo (#1310, #1311, #1312) (#1435)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "3d7336f",
+      "commit_full": "3d7336fc41ac2718171519821a279b89e7a3f03c",
+      "commit_date": "2026-10-15T02:18:03-04:00",
+      "message": "M5: add comment and reply submission shortcuts (#1457)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "9bbd765",
+      "commit_full": "9bbd765ea4352d17834dc93e1371428cb45d646c",
+      "commit_date": "2026-10-15T02:19:13-04:00",
+      "message": "Keep page labels and focused navigation consistent across reloads (#1667)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "9c87565",
+      "commit_full": "9c875656de6967b54abe3e818dd102f7f13de609",
+      "commit_date": "2026-10-15T02:20:31-04:00",
+      "message": "fix(render, ui): form-heavy documents draw and fill fast (spot-colour images, widget placement, Fields panel) (#1691)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "db5b9b4",
+      "commit_full": "db5b9b436409b4d24eccfabf8963d2ed36da3a48",
+      "commit_date": "2026-10-15T02:21:11-04:00",
+      "message": "M14: add Vietnamese interface and date localization (#1712)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "0a054a4",
+      "commit_full": "0a054a425ce31846200de1b460d71250ec976003",
+      "commit_date": "2026-10-15T02:26:28-04:00",
+      "message": "M7: Add / Update / Remove menu on Header and footer, Watermark, Background (#1192) (#1857)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "6882275",
+      "commit_full": "6882275ee5d154528040983ec5d8e7642d0961c9",
+      "commit_date": "2026-10-15T02:28:56-04:00",
+      "message": "M3: touchpad swipes glide on after the fingers lift on Wayland (#531) (#1909)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "9f0ed4b",
+      "commit_full": "9f0ed4ba8620735c9554bf15e4ed9111d0e1fb23",
+      "commit_date": "2026-10-15T02:31:53-04:00",
+      "message": "feat(organize): Insert pages from file brings the file's bookmarks (#1947)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "f52c928",
+      "commit_full": "f52c92882d9b1aa95733107274cd64c6501fbb10",
+      "commit_date": "2026-10-15T02:32:38-04:00",
+      "message": "M9: signature labels follow the interface language, and one the font can't draw is refused, never written as ? (#1951)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "8bd200f",
+      "commit_full": "8bd200f6434deb0fe3f0a131d0fd5a498be88102",
+      "commit_date": "2026-10-15T02:33:01-04:00",
+      "message": "M3: retain native open replies behind dialogs and pickers (#1953)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "a4b7054",
+      "commit_full": "a4b705491995927142b910adf786b06e5c2e9caf",
+      "commit_date": "2026-10-15T02:34:52-04:00",
+      "message": "Issue #1910: Organize opens on the current page (#1975)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "bc5f6ca",
+      "commit_full": "bc5f6ca8ee0bd07ef789db9b5441f74697283425",
+      "commit_date": "2026-10-15T02:35:15-04:00",
+      "message": "M5: undo the last stroke in the signature Draw pad (#1963) (#1978)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "d3571c4",
+      "commit_full": "d3571c4019a2b8b74f9e7ac2ae80a85d53fe277d",
+      "commit_date": "2026-10-15T02:36:12-04:00",
+      "message": "M2: keep the raw crop minimum in physical points (#1982)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "75c9a9c",
+      "commit_full": "75c9a9c27b332ef071d3a2ba93af7c46ebe6163f",
+      "commit_date": "2026-10-15T02:36:35-04:00",
+      "message": "Comments: font size for text boxes in Comment Properties (#1908) (#1984)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "bb2b03f",
+      "commit_full": "bb2b03f2637b39f5cec3e8643058fe358b28049c",
+      "commit_date": "2026-10-15T02:37:07-04:00",
+      "message": "View: Single Page wheel turns to the next page at the edge of a zoomed-in page (#1924) (#1986)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "aa05061",
+      "commit_full": "aa050612c537368b57e746e7355894b5dad1e41d",
+      "commit_date": "2026-10-15T02:41:32-04:00",
+      "message": "M3: preserve Ctrl+Alt+Q input during digital ID creation (#1980) (#2055)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "8772db0",
+      "commit_full": "8772db0a6e7b564dff67cee8e80d6fbd0d73d7c9",
+      "commit_date": "2026-10-15T02:42:04-04:00",
+      "message": "M4: read page transitions and display times (/Trans, /Dur) into DocInfo (#2074)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "c0f76fc",
+      "commit_full": "c0f76fc73ae7240c9af71e834b9a37c816c763c4",
+      "commit_date": "2026-10-15T02:42:28-04:00",
+      "message": "M4: set page transitions and display times (/Trans, /Dur) through the engine and the tools (#2083)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "53267c6",
+      "commit_full": "53267c66d5bca5736947ff98685f2c38b1802cb8",
+      "commit_date": "2026-10-15T02:42:51-04:00",
+      "message": "M12: the geometry of page transitions (ISO 32000-2 table 164) (#2084)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "712ae9c",
+      "commit_full": "712ae9c36a11041054ca8e68ca559e3404def6ff",
+      "commit_date": "2026-10-15T02:43:17-04:00",
+      "message": "M3: a document that asks to open in Full Screen mode asks first (/PageMode /FullScreen) (#2086)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "3a4de17",
+      "commit_full": "3a4de17707a0ac2c2100ab842e4d8f7753946ea9",
+      "commit_date": "2026-10-15T02:44:14-04:00",
+      "message": "M3: preserve coordinate clicks across slow frames (#2100)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "a7fe7a2",
+      "commit_full": "a7fe7a20c4f4094ff1b755227e62c2cf8ceed2b9",
+      "commit_date": "2026-10-15T02:45:12-04:00",
+      "message": "M7: Hebrew in Add text (#128) (#2109)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "716a957",
+      "commit_full": "716a9571869fa419d76f17c70dea35fbdf6629a8",
+      "commit_date": "2026-10-15T02:45:35-04:00",
+      "message": "fix(sign): a signed page's resources are page content whatever keys a later revision writes (#1787) (#2115)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "1af7a38",
+      "commit_full": "1af7a38bd05aa5d87e75a2c290377d031729ebf2",
+      "commit_date": "2026-10-15T02:47:08-04:00",
+      "message": "Fix multi-select choice index ordering (#2144)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "c1146d0",
+      "commit_full": "c1146d0d8dcfae08a75e7bf5ec71968bee42c325",
+      "commit_date": "2026-10-15T02:47:33-04:00",
+      "message": "feat(ui): improve back and forward page navigation (#2080) (#2151)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "3f9cd3b",
+      "commit_full": "3f9cd3b87dc495c3b9e74290951d191a47ea9d1c",
+      "commit_date": "2026-10-15T02:48:09-04:00",
+      "message": "M1: every PDF leaves the engine checked, and every writer uses one staging-file writer (#2166) (#2182)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "3de8d56",
+      "commit_full": "3de8d56784944380a458b039d502af1c6ab4424f",
+      "commit_date": "2026-10-15T02:49:40-04:00",
+      "message": "M3: Save asks before writing over a changed file, one tab per file, locked autosaves (#2166) (#2218)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "89f0fa2",
+      "commit_full": "89f0fa2bd5783a8395db45bbff483fb72cccdd6c",
+      "commit_date": "2026-10-15T02:54:32-04:00",
+      "message": "M14: Italian catalog: complete the missing entries (#2320)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "c10e7b8",
+      "commit_full": "c10e7b8f0c4912a2033b2d1e8e63fdc883db6b15",
+      "commit_date": "2026-10-15T02:57:34-04:00",
+      "message": "Preserve literal spaces in page-label prefixes (#2355)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "71ceafd",
+      "commit_full": "71ceafd46789f4a2e2bafac98ea0a537b22906e7",
+      "commit_date": "2026-10-15T02:59:58-04:00",
+      "message": "M1: keep unknown trailer entries on a full save (#1338) (#1431)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "6b185cd",
+      "commit_full": "6b185cdc5bf34a7dea4b588cb788d88466c1d798",
+      "commit_date": "2026-10-15T03:00:45-04:00",
+      "message": "Add permission-aware selected-text Copy to Edit and context menus (#1244)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "db34952",
+      "commit_full": "db34952a94cb85e41077d8a626b682a32feaf2b2",
+      "commit_date": "2026-10-15T03:01:17-04:00",
+      "message": "M6: expose dropdown and list-box field alignment (#1208) (#1263)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "953ac14",
+      "commit_full": "953ac1483f4f8f1e3ac755571f50a55381b74581",
+      "commit_date": "2026-10-15T03:01:44-04:00",
+      "message": "M14: correct localization and installer parity statuses (gap 24) (#1211)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "2fa110e",
+      "commit_full": "2fa110e1856865e2cc5978409ed508197780f0a4",
+      "commit_date": "2026-10-15T03:02:16-04:00",
+      "message": "M1: repair exhausted xref hints without object-number overflow (#1337) (#1359)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "9b6dab1",
+      "commit_full": "9b6dab142fead265c33130b8d7770309772a508c",
+      "commit_date": "2026-10-15T03:04:29-04:00",
+      "message": "M10: Windows print jobs show per-sheet progress; printers list faster (follow-up to #944) (#1236)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "02a4d81",
+      "commit_full": "02a4d81a22a292462901f926045f41d20c7efb04",
+      "commit_date": "2026-10-15T03:05:21-04:00",
+      "message": "Keep selected form values and page content through later edits (#1319, #1305, #1324, #1306) (#1452)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "a790a04",
+      "commit_full": "a790a046a57ea03b9ade6016548160346ecfe569",
+      "commit_date": "2026-10-15T03:10:46-04:00",
+      "message": "M7: keep line breaks when editing a multi-line paragraph (#1443) (#1486)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "ae9fb42",
+      "commit_full": "ae9fb426882db4cc969f03259628906a49cc19b9",
+      "commit_date": "2026-10-15T03:19:50-04:00",
+      "message": "M3: scroll the view when drawing at an edge; take back a polygon's last point (#1549)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "95a972a",
+      "commit_full": "95a972a3e7689a32300135bcdbfc95faa1a7c765",
+      "commit_date": "2026-10-15T03:20:10-04:00",
+      "message": "M2: preserve known unfiltered inline-image sample boundaries (#1562)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "7aac682",
+      "commit_full": "7aac682ef889fd6129a8ae913356a56669b65de0",
+      "commit_date": "2026-10-15T03:47:20-04:00",
+      "message": "M7: Cut, Redact, Create Link and Recognize Text in the picture menu; keep the menu open (#1621)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "57c8de0",
+      "commit_full": "57c8de09abb3e7ca3d0e189581c4b4e331e03570",
+      "commit_date": "2026-10-15T03:47:41-04:00",
+      "message": "M6: preserve XFDF field text around XML comments (#1647)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "3805be7",
+      "commit_full": "3805be7669ea9ac4a4ed887859754f965fe5d7f5",
+      "commit_date": "2026-10-15T03:52:12-04:00",
+      "message": "M14: store XDG preferences in configuration directory (#1395) (#1536)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "d1bc200",
+      "commit_full": "d1bc2001156c8036d8bc97aaac1a41091975fd36",
+      "commit_date": "2026-10-15T03:52:33-04:00",
+      "message": "M7: grow text boxes and edit existing text (#1539)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "ac69c29",
+      "commit_full": "ac69c29823e785264ccb4091dcc9d6d739203722",
+      "commit_date": "2026-10-15T04:02:11-04:00",
+      "message": "M14: Fix(nixos): discover installed UI fallback fonts on NixOS (#1553)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "53b9bc1",
+      "commit_full": "53b9bc1059d7aa001e360614c655ff0cbae1467f",
+      "commit_date": "2026-10-15T04:02:35-04:00",
+      "message": "M6: preserve carriage returns in form CSV exports (#1563)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "e62d3db",
+      "commit_full": "e62d3db31bb35088610b0e64e127b2539aaa7f8a",
+      "commit_date": "2026-10-15T04:03:00-04:00",
+      "message": "M6: keep AcroForm XML field tags within the NCName grammar (#1588)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "afa8e18",
+      "commit_full": "afa8e1843cfed613f3d403119f6c2649bce824c9",
+      "commit_date": "2026-10-15T04:08:34-04:00",
+      "message": "M3: Wayland: stop retaining Ctrl zoom for pixel-only wheel input (#1569)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "99941da",
+      "commit_full": "99941daa5af17155becd2aec66d072ca0f4b8a14",
+      "commit_date": "2026-10-15T13:34:38-07:00",
+      "message": "docs(roadmap): record the day's two changes",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-15",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "f65f733",
+      "commit_full": "f65f7330418e8121ebe59c01003da899340ceee9",
+      "commit_date": "2026-10-15T17:50:29-06:00",
+      "message": "fix(render): faster sampled functions, image decodes across zoom levels and patch meshes (vendored hayro-interpret patches 31–33) (#2436)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-15",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    },
+    {
+      "commit": "5fdd820",
+      "commit_full": "5fdd820bdb1ab9705bd2c5d956d32d195140c7d8",
+      "commit_date": "2026-10-15T19:16:48-06:00",
+      "message": "fix(ui): validated signature display, snapshot tab reuse (#1895)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-15",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0
+    }
+  ]
+}

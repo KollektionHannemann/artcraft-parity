@@ -1,0 +1,4129 @@
+{
+  "id": "designcraft",
+  "name": "DesignCraft",
+  "adobe": "InDesign",
+  "category": "Layout",
+  "color": "#8bc53f",
+  "repo_url": "https://github.com/storytold/designcraft",
+  "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
+  "checked_at": "2026-10-16T10:36:33+00:00",
+  "latest_commit": "a7f3239",
+  "latest_commit_date": "2026-10-15T23:51:07-04:00",
+  "latest_message": "Merge pull request #1103 from skylartaylor/codex/windows-installer-latest-20261014-01",
+  "parsed": {
+    "stage": "pre-alpha",
+    "next_stage": "alpha",
+    "target": "Adobe InDesign 2026",
+    "last_updated": "2026-10-12",
+    "metrics": {
+      "full": {
+        "label": "Full target (ready for real work)",
+        "pct": 47.0,
+        "range": null,
+        "hours": [
+          1150,
+          1950
+        ]
+      },
+      "mainstream": {
+        "label": "Mainstream practitioner",
+        "pct": 42.0,
+        "range": null,
+        "hours": [
+          500,
+          850
+        ]
+      },
+      "essentials": {
+        "label": "Essentials user",
+        "pct": 54.0,
+        "range": null,
+        "hours": [
+          135,
+          250
+        ]
+      },
+      "ready": {
+        "label": "Ready for real work",
+        "pct": 47.0,
+        "range": null,
+        "hours": null
+      },
+      "breadth": {
+        "label": "Feature breadth",
+        "pct": 80.0,
+        "range": null,
+        "hours": null
+      }
+    },
+    "audiences": [
+      {
+        "audience": "mainstream",
+        "label": "Mainstream practitioner",
+        "pct": 42.0,
+        "range": null,
+        "hours": null
+      },
+      {
+        "audience": "essentials",
+        "label": "Essentials user",
+        "pct": 54.0,
+        "range": null,
+        "hours": null
+      },
+      {
+        "audience": "full",
+        "label": "Full target (ready for real work)",
+        "pct": 47.0,
+        "range": null,
+        "hours": [
+          1150,
+          1950
+        ]
+      },
+      {
+        "audience": "mainstream",
+        "label": "Mainstream practitioner",
+        "pct": 42.0,
+        "range": null,
+        "hours": [
+          500,
+          850
+        ]
+      },
+      {
+        "audience": "essentials",
+        "label": "Essentials user",
+        "pct": 54.0,
+        "range": null,
+        "hours": [
+          135,
+          250
+        ]
+      }
+    ],
+    "dimensions": [
+      {
+        "label": "Features (depth)",
+        "pct": 55.0
+      },
+      {
+        "label": "Typography and composition fidelity",
+        "pct": 45.0
+      },
+      {
+        "label": "File formats",
+        "pct": 40.0
+      },
+      {
+        "label": "UI/UX fidelity",
+        "pct": 45.0
+      },
+      {
+        "label": "Stability",
+        "pct": 45.0
+      },
+      {
+        "label": "Performance",
+        "pct": 65.0
+      },
+      {
+        "label": "Localization",
+        "pct": 45.0
+      },
+      {
+        "label": "Platforms",
+        "pct": 55.0
+      },
+      {
+        "label": "Hardware",
+        "pct": 45.0
+      },
+      {
+        "label": "Ecosystem (scripting, plug-ins)",
+        "pct": 15.0
+      },
+      {
+        "label": "AI features",
+        "pct": 15.0
+      }
+    ],
+    "features": [
+      {
+        "label": "Application shell & workspace",
+        "pct": 99.0
+      },
+      {
+        "label": "Documents, pages, spreads",
+        "pct": 100.0
+      },
+      {
+        "label": "Layers",
+        "pct": 100.0
+      },
+      {
+        "label": "Frames, shapes & paths",
+        "pct": 100.0
+      },
+      {
+        "label": "Transform",
+        "pct": 100.0
+      },
+      {
+        "label": "Fill, stroke, colour",
+        "pct": 100.0
+      },
+      {
+        "label": "Effects & transparency",
+        "pct": 100.0
+      },
+      {
+        "label": "Placing & links",
+        "pct": 93.0
+      },
+      {
+        "label": "Type & text frames",
+        "pct": 99.0
+      },
+      {
+        "label": "Typography",
+        "pct": 100.0
+      },
+      {
+        "label": "Styles",
+        "pct": 100.0
+      },
+      {
+        "label": "Tables",
+        "pct": 100.0
+      },
+      {
+        "label": "Long documents",
+        "pct": 100.0
+      },
+      {
+        "label": "Interactivity & digital",
+        "pct": 100.0
+      },
+      {
+        "label": "Output & production",
+        "pct": 92.0
+      },
+      {
+        "label": "XML & automation",
+        "pct": 100.0
+      },
+      {
+        "label": "View & navigation",
+        "pct": 100.0
+      },
+      {
+        "label": "Undo, history, saving",
+        "pct": 100.0
+      },
+      {
+        "label": "Accessibility",
+        "pct": 100.0
+      }
+    ],
+    "upcoming": [
+      "Alpha gate: Primary Text Frame page fixes: autoflow adds pages users can't delete (#165) (5–7 h)",
+      "Basic editing on every platform: copy/paste, context menus, caret formatting (30–50 h)",
+      "CI running cargo xtask ci on pull requests (4–8 h)",
+      "Open INDD through a clean-room converter, owner decision on #114 (20–60 h)",
+      "IDML real-file corpus and fixes (60–100 h)",
+      "Composition oracle against InDesign; optical kerning; overset rule (80–140 h)",
+      "Start on any GPU; find every installed font (25–50 h)"
+    ],
+    "progress": [
+      {
+        "date": "2026-10-13",
+        "text": "· Placed PDFs are drawn through pdfcraft's patched hayro crates: calculator functions whose idiv divides by zero or overflows, chains of stitching functions a hundred thousand deep, and mesh shadings with points far off the page, ten thousand overlapping triangles or forty thousand patches no longer panic, overflow the stack, run for over a minute or use more than 2 GiB of memory. A page with a /UserUnit, and its trim, bleed and art boxes, are sized in points. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Text threads by hand: click a selected text frame's in or out port to load"
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· macOS Dock Quit uses the same unsaved-document prompts as window and menu Quit. Repeated requests keep the current answers; Cancel retains every tab and unsaved recovery checkpoint, and completed Save/Don't Save answers exit through the ordinary event loop. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Orderly native exit writes the latest recovery state after finalizing current quit approvals; incomplete or stale plans keep their documents, and Undo to the saved state clears stale recovery. Unavailable or failed recovery is reported. Cancelable macOS Dock Quit remains open (#544). No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Recovered documents keep a checkpoint until saved, closed or reverted, including a second crash before autosave. Restarted document IDs and explicit recovery folders preserve other snapshots; failed republishing retains the original. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Book numbering and style updates prepare every chapter before saving. Only closed native chapters are changed; imported IDML remains a read-only style/PDF source. If a later disk write fails, the error names the completed chapters; the batch is not a whole-book transaction. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Desktop write callbacks and CLI raster exports use the atomic writer too; open readers retain the original bytes, while private Unix modes and symlink targets survive replacement. Permanent tests cover both actual callers. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Save As, library edits and book collection edits persist prospective values before changing live state; failed writes preserve the document and existing collections. Save a Copy rebases data-source paths for its destination without changing the open document. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· The Pen tool continues an open path from either end point, as in InDesign: the cursor shows it over an end point, a click there carries on drawing that path, a drag first reshapes the end point's direction lines, and the other end closes it. Object › Paths › Reverse Path (path.reverse); path.setAnchor; path.appendAnchor and path.close take a subpath. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Editing type on a path: the Type tool clicks, drags and double-clicks along the curve (the character under the pointer, not one on the straightened line), a click on the letters themselves hits the frame, and the caret and highlight bend with the path. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Type on a path has start and end brackets, as in InDesign: selected path type shows them across the path, and dragging either with the Selection or Direct Selection tool moves where the text starts or ends (text past the end bracket is overset). type.pathOptions {end}; IDML reads and writes EndBracket. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Window close and application/menu Quit ask about unsaved documents; later Cancel keeps every tab open, including earlier Don't Save choices. Approvals are rechecked after edits. Cancelable macOS Dock Quit remains open (#544). No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Each running app keeps recovery data in its own locked folder; current folder and lock ownership are checked before writes and cleanup. Failed isolation disables recovery with a warning instead of sharing document IDs. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Native engine saves and exports replace files atomically; failed writes retain the original, private staging preserves Unix permissions, and valid long filenames work. Desktop Services and CLI raster exports remain separate follow-ups. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Hyphenation Zone applies to the Single-line Composer only, as in InDesign. With the default Paragraph Composer, ragged text hyphenates where InDesign does (aper-natem), giving the same line breaks. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· The Tools panel's Fill/Stroke keys work: D (default fill and stroke), X (fill or stroke in front), Shift+X (swap per object, tints included) and / (Apply None), as color. commands; swap and default are one undo step (object.swapFillStroke, object.defaultFillStroke); the Color panel follows the proxy's fill/stroke choice. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Underlines and strikethroughs are drawn as one bar per stretch of text on screen, as in PDF export: a bar per letter left faint seams between the letters. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Properties › Transform shows rotation, shear and X/Y scale, and Rotate 90° and Flip Horizontal/Vertical buttons, as InDesign's does. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Edit › Step and Repeat has its InDesign dialog: Repeat (Count, or Rows and Columns with Create as a grid), Offset (Vertical, Horizontal, in ruler units) and Preview, which shows the copies while the dialog is open; Cancel takes them away and OK makes them as one undo step. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Double-clicking the Fill or Stroke box in the Tools panel opens the Color Picker with the selection's colour, as in InDesign (it opened the Swatches panel). No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· The Effects panel shows the level its settings apply to (\"Group: Color Dodge 100%\") and, as in InDesign, Isolate Blending and Knockout Group for a selected group. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· The Eyedropper samples a placed image: clicking the photo with text (or objects) selected fills them with the image's colour under the pointer, as an unnamed colour (color.sample), as in InDesign. Images on locked layers can be sampled. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Words in capitals hyphenate like capitalized words (FERRUM COM-MODI), as in InDesign; Hyphenate Capitalized Words off keeps them whole. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-11",
+        "text": "· Corner Options keep curved sides curved and round every corner point, including where an arc meets a line (a Pathfinder quarter circle with rounded corners stayed a triangle). No readiness percentage change."
+      },
+      {
+        "date": "2026-10-11",
+        "text": "· story.replaceRange, story.setText, notes, footnotes, endnotes, type on a path and table cells read \\r and \\r\\n as paragraph returns, as frame.create and text.insert already did. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-11",
+        "text": "· The View menu follows InDesign's: proofing first, then zoom, Rotate Spread, Screen Mode, Display Performance, rulers, Extras, Grids & Guides and Structure; the view items that sat at the end of the Type menu moved there. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-11",
+        "text": "· Properties gains InDesign's Pathfinder section (Add, Subtract, Intersect, Exclude Overlap, Minus Back) with several objects selected; section titles and icon buttons have accessible names. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-11",
+        "text": "· transform.move {copy}, Edit › Duplicate and Step and Repeat return the copies' ids, so a script can go on with them. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-11",
+        "text": "· object.fill and object.stroke refuse a swatch name the document doesn't have (it painted nothing) and suggest the name meant (Paper → [Paper]). No readiness percentage change."
+      },
+      {
+        "date": "2026-10-11",
+        "text": "(printing): file.printers and file.print use craft-libs/craft-print for CUPS and Windows. DesignCraft retains PDF export, page selection, spreads, marks and bleed; dry runs create no temporary PDF or print job. Windows selects matching or default driver paper and shrinks oversized sheets without enlarging smaller ones; queue duplex defaults are preserved. Headless tests exercise exported bytes, job settings, dry runs and refusals; shared native Windows CI passes, including paused-queue submission and cleanup. PostScript, production print controls and physical output validation remain open. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-10",
+        "text": "(UI.4–UI.5): Panel tabs can move into other groups, split the dock, float, resize and return to their saved locations through shared docking transactions. Layouts persist in custom workspaces; UI and control commands share the same validated action path. Shared pane geometry and widget-state theme application retain all five palettes and local fonts. Split panes send keyboard input only to the focused canvas and scope contextual toolbar IDs per pane. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-10",
+        "text": "· Version 0.6.0; releases add a Linux riscv64 tar.gz (cross-compiled, CLI"
+      },
+      {
+        "date": "2026-10-10",
+        "text": "· Readiness per audience: full ~47% (method aligned with the standard, was"
+      },
+      {
+        "date": "2026-10-10",
+        "text": "· Stage re-normalized to pre-alpha under craftrules' core-workflow gate: text"
+      },
+      {
+        "date": "2026-10-10",
+        "text": "· Full re-measure against InDesign 2026 21.6 (menu dump, bundle formats and"
+      },
+      {
+        "date": "2026-10-09",
+        "text": "· Version 0.5.0; many user reports triaged into issues (#160–#265)."
+      },
+      {
+        "date": "2026-10-08",
+        "text": "· Version 0.4.0."
+      },
+      {
+        "date": "2026-10-07",
+        "text": "· Community PRs: data merge, Brazilian Portuguese, PDF/X-4 flags, Office fonts"
+      },
+      {
+        "date": "2026-10-06",
+        "text": "· Snapping to parent items, Windows packaging, ARM64 workflow, control-channel"
+      },
+      {
+        "date": "2026-10-05",
+        "text": "· FreeBSD build; caret-boundary fixes."
+      }
+    ]
+  },
+  "history": [
+    {
+      "commit": "a127c6d",
+      "commit_full": "a127c6d5c3576972bbd60445f26d893db071eef3",
+      "commit_date": "2026-10-10T14:09:17-04:00",
+      "message": "Progress docs: target-app parity, gaps, alpha gate, readiness by audience (#355)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "a77bf8b",
+      "commit_full": "a77bf8bff5e0a1d7ffb8fb3a00c0d70060fa57c5",
+      "commit_date": "2026-10-10T18:00:07-06:00",
+      "message": "UI.9: reconcile upstream before shared UI landing",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "a9124a0",
+      "commit_full": "a9124a0517594ce9872f73637e7b841a4967bcf9",
+      "commit_date": "2026-10-10T19:33:30-04:00",
+      "message": "Release prep: version 0.6.0; Linux riscv64 tar.gz in releases (#398)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "9f7da3f",
+      "commit_full": "9f7da3f6abcce29186af9a8660158e60419d069d",
+      "commit_date": "2026-10-11T07:29:54+02:00",
+      "message": "M6: Adopt craft-print for CUPS and Windows PDF printing",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "95c8c9c",
+      "commit_full": "95c8c9cc5bc28605530e67e9d34b8cdd6331d8cc",
+      "commit_date": "2026-10-11T19:32:49-06:00",
+      "message": "fix(hyphenation): honor capitalized-word settings for uppercase words",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "5789caa",
+      "commit_full": "5789caaa6042b2e1b0743553fba0a84e974faf20",
+      "commit_date": "2026-10-11T21:54:43-06:00",
+      "message": "fix(objects): reject unknown fill and stroke swatches",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "835edae",
+      "commit_full": "835edae6594f10892142eda9c64141471a009d4c",
+      "commit_date": "2026-10-11T21:58:49-06:00",
+      "message": "feat(commands): return IDs from move, duplicate and repeat",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "3ec5cef",
+      "commit_full": "3ec5cef6a2f5c705820180443671cec9c4d4315f",
+      "commit_date": "2026-10-11T22:14:24+02:00",
+      "message": "M6: Adopt merged craft-print with scaling and queue duplex defaults",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "591cb57",
+      "commit_full": "591cb579b3bfcafd2e212ed9d7f3cce8581347c6",
+      "commit_date": "2026-10-11T23:18:46-07:00",
+      "message": "Swatches: Load Swatches refuses .ase files over 100,000 colors and merges in linear time",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "406f1b3",
+      "commit_full": "406f1b3d267fa17617a96d75324d0d709a875361",
+      "commit_date": "2026-10-12T05:09:40+00:00",
+      "message": "Sections: the section marker shows the section's marker text (#556)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "5cdcac4",
+      "commit_full": "5cdcac4aceb87ebe0a1f2e0e3cdffd2b4e9b3fb3",
+      "commit_date": "2026-10-12T09:19:36-06:00",
+      "message": "fix(save): replace files atomically",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "328b4d5",
+      "commit_full": "328b4d5a52f095a49b946a1e9189a65ba08dde79",
+      "commit_date": "2026-10-12T09:26:34-06:00",
+      "message": "fix(recovery): isolate recovery data between app instances",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "d020b4e",
+      "commit_full": "d020b4e85d89ddf120933107a24b23b33036c8a0",
+      "commit_date": "2026-10-12T09:31:24-06:00",
+      "message": "fix(ui): preserve documents when quitting is cancelled",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "2d2c6bb",
+      "commit_full": "2d2c6bbc839957465009efd2ff5bff93bede6f50",
+      "commit_date": "2026-10-12T11:08:31-06:00",
+      "message": "Links: placed text files can stay linked (Word, RTF, text)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "b9048a5",
+      "commit_full": "b9048a5b083176399ebb7d6bc9c9461e749bcc5a",
+      "commit_date": "2026-10-12T11:53:46-06:00",
+      "message": "fix(save): preserve live state when persistence fails",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "e198eb5",
+      "commit_full": "e198eb5d1dfb7fef562808820e20473b6c00f081",
+      "commit_date": "2026-10-12T12:04:39-06:00",
+      "message": "fix(export): replace desktop and CLI outputs atomically",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "9509b2b",
+      "commit_full": "9509b2bceabddbec0cda1c42da6761895456108f",
+      "commit_date": "2026-10-12T12:12:01-06:00",
+      "message": "fix(book): stage chapter updates before saving",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "8e151a2",
+      "commit_full": "8e151a2fd48ce2b1d0cebed6281af17ca7bd2006",
+      "commit_date": "2026-10-12T12:15:46-06:00",
+      "message": "fix(recovery): retain recovered checkpoints until save or close",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "c3859c8",
+      "commit_full": "c3859c828b4424dbef46f77010e15be3aa0ffcf8",
+      "commit_date": "2026-10-12T12:18:32-06:00",
+      "message": "fix(recovery): preserve documents on orderly app exit",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "b21111f",
+      "commit_full": "b21111f232223e333d372eab9c77a83895fe326d",
+      "commit_date": "2026-10-12T14:21:36+00:00",
+      "message": "Toolbox: Shift+X, D, X and / shortcuts for the Fill/Stroke proxy",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "4ac6e9a",
+      "commit_full": "4ac6e9a54060e52c264ab1c6f21900a04479977b",
+      "commit_date": "2026-10-12T14:28:58+00:00",
+      "message": "Engine: swap and default fill and stroke in one undo step",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "64f0ca8",
+      "commit_full": "64f0ca8fa6a38c484504871f9af9e142ad6dcf3d",
+      "commit_date": "2026-10-12T14:52:12-06:00",
+      "message": "fix(macos): make Dock Quit cancelable",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "d3c1d3d",
+      "commit_full": "d3c1d3d029bca183c02534f194fbfdf72ec40599",
+      "commit_date": "2026-10-12T15:21:00-06:00",
+      "message": "Merge remote-tracking branch 'origin/main' into linked-docx",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "d7d6f27",
+      "commit_full": "d7d6f27069fe62a347fb67baab0dfe92c3933d7c",
+      "commit_date": "2026-10-12T17:56:17+02:00",
+      "message": "feat(eyedropper): Sample a placed image's colour into the selection",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "45a2284",
+      "commit_full": "45a228426a9191322cb875e62ff2fa986f689060",
+      "commit_date": "2026-10-12T18:17:34+02:00",
+      "message": "feat(ui): Effects panel shows the level, Isolate Blending and Knockout Group",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "0ac0415",
+      "commit_full": "0ac04151c9a0ab63fa02bbe5b58a7fece07de20b",
+      "commit_date": "2026-10-12T18:26:48+02:00",
+      "message": "fix(engine): Every command that writes story text reads CR as a paragraph return",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "e0cf54e",
+      "commit_full": "e0cf54ec2b06414c88b30f6d29ea7d2498347ec9",
+      "commit_date": "2026-10-12T18:26:49+02:00",
+      "message": "fix(engine): note.edit reads CR as a paragraph return too",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "3651bcb",
+      "commit_full": "3651bcb10b54900c6b022d4c1b8ec85d854993f8",
+      "commit_date": "2026-10-12T18:26:49+02:00",
+      "message": "docs: Drop a duplicate progress-log line with raw line breaks",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "6880042",
+      "commit_full": "6880042c6a32dde23c3d9c560f1b36c204184ded",
+      "commit_date": "2026-10-12T18:29:01+02:00",
+      "message": "fix(compose): Hyphenation Zone applies to the Single-line Composer only",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "7ee66df",
+      "commit_full": "7ee66df165588af2db643128498a62be58852c0f",
+      "commit_date": "2026-10-12T18:29:02+02:00",
+      "message": "feat(ui): Step and Repeat dialog with Create as a grid and Preview",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "03d8b1e",
+      "commit_full": "03d8b1e61b23b455c04aa2b51adcb28ad22bb557",
+      "commit_date": "2026-10-12T18:29:05+02:00",
+      "message": "fix(ui): Double-clicking the Fill or Stroke box opens the Color Picker",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "8fd67c8",
+      "commit_full": "8fd67c8674cb17acdef2eb5f6b4b2b915ee578b5",
+      "commit_date": "2026-10-12T18:29:08+02:00",
+      "message": "feat(ui): Rotation, shear, scale, rotate and flip in Properties › Transform",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "1dc33dd",
+      "commit_full": "1dc33dd280d057f694b1d3661886069ddddead64",
+      "commit_date": "2026-10-12T18:29:09+02:00",
+      "message": "fix(render): One underline bar per stretch of text, no seams",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "fb296ea",
+      "commit_full": "fb296eacac425d643e0fc655f9a4e32b73266568",
+      "commit_date": "2026-10-12T18:29:10+02:00",
+      "message": "fix(ui): View items in the View menu, laid out like InDesign's",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "0022b3a",
+      "commit_full": "0022b3a89bdff6ad99a050d73152225281a46df3",
+      "commit_date": "2026-10-12T18:29:12+02:00",
+      "message": "feat(ui): Pathfinder section in Properties",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "a175245",
+      "commit_full": "a175245f95fcb946d793d967d3f1a96b096e053f",
+      "commit_date": "2026-10-12T18:29:13+02:00",
+      "message": "fix(geom): Corner Options keep curves and round every corner point",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "7515dfe",
+      "commit_full": "7515dfeaf50135f133fbe91cf5284206e06b1069",
+      "commit_date": "2026-10-12T20:59:17+00:00",
+      "message": "Word import: bullets and numbering from numbering.xml (#626)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "270dd46",
+      "commit_full": "270dd46b5062c8295a9103fedbe934ac83f99f27",
+      "commit_date": "2026-10-12T21:06:42+00:00",
+      "message": "Text: stroke behind fill (#619)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "c35515c",
+      "commit_full": "c35515c54daf282005faa41352a1688db8752874",
+      "commit_date": "2026-10-12T22:18:14+02:00",
+      "message": "feat(tools): The Pen continues an open path from either end point",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "cded7d9",
+      "commit_full": "cded7d997e961e47f2920703059753f43c57c5ac",
+      "commit_date": "2026-10-12T22:32:56+02:00",
+      "message": "feat(tools): Drag type-on-a-path start and end brackets",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "f96895f",
+      "commit_full": "f96895f400d54a984c2809a079417b44f9c3d77b",
+      "commit_date": "2026-10-12T23:35:58+02:00",
+      "message": "feat(text): Edit type on a path along the curve",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "a0330b0",
+      "commit_full": "a0330b03a0bbaa5b9b71df8938ab7ebf0d7a5529",
+      "commit_date": "2026-10-13T02:21:39-04:00",
+      "message": "Merge branch 'pr/585' into batch1",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "8a36af3",
+      "commit_full": "8a36af3af8959674227e554938210edeeb31dd8f",
+      "commit_date": "2026-10-13T02:21:53-04:00",
+      "message": "Merge branch 'pr/630' into batch1",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "8781691",
+      "commit_full": "878169130ee17732dffb22f184a15969f268252e",
+      "commit_date": "2026-10-13T02:21:53-04:00",
+      "message": "Merge branch 'pr/600' into batch1",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "d6d26d2",
+      "commit_full": "d6d26d2b38b878301481d7fe656a64432aaeb319",
+      "commit_date": "2026-10-13T02:23:11-04:00",
+      "message": "Merge branch 'pr/519' into batch1",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "d561341",
+      "commit_full": "d5613411ca12107d44d5dd73fb1a9f6dd6a2d53d",
+      "commit_date": "2026-10-13T02:23:11-04:00",
+      "message": "Merge branch 'pr/522' into batch1",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "160ae04",
+      "commit_full": "160ae04b8bc0f89e848472bc84a33ac9649c1809",
+      "commit_date": "2026-10-13T02:23:11-04:00",
+      "message": "Merge branch 'pr/527' into batch1",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "0a14d9f",
+      "commit_full": "0a14d9fb972b174ef764aaf93624aa3a4ea0b15c",
+      "commit_date": "2026-10-13T02:23:12-04:00",
+      "message": "Merge branch 'pr/539' into batch1",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "41ce560",
+      "commit_full": "41ce560ce3c0dd4f567b8f1747b4f75345a27a2b",
+      "commit_date": "2026-10-13T02:23:12-04:00",
+      "message": "Merge branch 'pr/541' into batch1",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "ea8dc95",
+      "commit_full": "ea8dc959d1f667d02c444908112d0b0bfa246e03",
+      "commit_date": "2026-10-13T02:23:12-04:00",
+      "message": "Merge branch 'pr/573' into batch1",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "bd9974a",
+      "commit_full": "bd9974a420545ebc27195a890b133db19b605745",
+      "commit_date": "2026-10-13T02:23:12-04:00",
+      "message": "Merge branch 'pr/552' into batch1",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "a390905",
+      "commit_full": "a390905beb03357fca75d2ea119edfda2d01cc77",
+      "commit_date": "2026-10-13T02:23:33-04:00",
+      "message": "Merge branch 'pr/647' into batch1",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "99c2294",
+      "commit_full": "99c229486d4e17172d8d3a913e6ac0287a3eb1ba",
+      "commit_date": "2026-10-13T02:23:57-04:00",
+      "message": "Merge branch 'pr/575' into batch1",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "d1452a3",
+      "commit_full": "d1452a3e3f60598a65f2640e37410aff5ab1ec16",
+      "commit_date": "2026-10-13T02:23:58-04:00",
+      "message": "Merge branch 'pr/524' into batch1",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "777d8c3",
+      "commit_full": "777d8c32518fcdfbdcc780c0caa1171133318ae2",
+      "commit_date": "2026-10-13T02:24:24-04:00",
+      "message": "Merge branch 'pr/572' into batch1",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "573e2da",
+      "commit_full": "573e2da84a02618056590dcf39e5d21af5faa1ee",
+      "commit_date": "2026-10-13T04:41:03-07:00",
+      "message": "Swatches: dropping an .ase file on the window loads its swatches",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "65bb4e3",
+      "commit_full": "65bb4e3f661fc6541432fbd99d7d40ea33ba4e49",
+      "commit_date": "2026-10-13T08:17:51+00:00",
+      "message": "fix(tables): keep each table anchor in its own paragraph",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "38bf116",
+      "commit_full": "38bf116604e40b45d3f51c92be5af3b939e9f94e",
+      "commit_date": "2026-10-13T09:25:53-06:00",
+      "message": "Merge remote-tracking branch 'origin/main' into linked-docx",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "eb89eef",
+      "commit_full": "eb89eef4ad7100cb6c20392b3e4dd0d5393f1043",
+      "commit_date": "2026-10-13T09:33:11+02:00",
+      "message": "docs: CMYK blending on screen",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "6f4fa3e",
+      "commit_full": "6f4fa3e56da61b4fafacdf6e01887c87711217d6",
+      "commit_date": "2026-10-13T09:33:12+02:00",
+      "message": "fix(render): A group's gradient feather fades the group, on screen and in PDF",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "6f47f10",
+      "commit_full": "6f47f10b4b24a83b5e29d32eb42c7179c2a6ac50",
+      "commit_date": "2026-10-13T09:33:13+02:00",
+      "message": "fix(render): Blend modes don't blend with the paper",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "722ebf4",
+      "commit_full": "722ebf4829a515bb72748259fa34bad43d4bd8df",
+      "commit_date": "2026-10-13T09:33:16+02:00",
+      "message": "Repaint a moved text frame's whole text box",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "7192c2e",
+      "commit_full": "7192c2e13684e985f8fb2787d3bffe8b4f859976",
+      "commit_date": "2026-10-13T09:56:25+02:00",
+      "message": "feat(eyedropper): A sampled colour goes to the stroke when the Stroke box is in front",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "39ec501",
+      "commit_full": "39ec5013517d085caab5d1998eb154aa14bbb907",
+      "commit_date": "2026-10-13T10:12:43+02:00",
+      "message": "fix(edit): copy a selected graphic on its own; delete leaves the frame",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "f55b94f",
+      "commit_full": "f55b94f3ff32c88bcd99b1eed7ef20cd86b458f8",
+      "commit_date": "2026-10-13T10:21:39+02:00",
+      "message": "fix(type): Create Outlines makes one compound path per line",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "96e9f37",
+      "commit_full": "96e9f371acdde103172e74122454e85d16db3fa0",
+      "commit_date": "2026-10-13T12:02:57+02:00",
+      "message": "fix(render): effects apply to frames with pasted-in content",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "e3ee342",
+      "commit_full": "e3ee342a4addab0c92e0715dee694a605987b120",
+      "commit_date": "2026-10-13T12:12:16+00:00",
+      "message": "feat(ui): drag a dialog by its title to move it",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "c9a0998",
+      "commit_full": "c9a09989c8cccb8f23be576892bbeec6ec52428b",
+      "commit_date": "2026-10-13T12:28:23+00:00",
+      "message": "feat(ui): a dragged dialog may go partly off-screen",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "7a89954",
+      "commit_full": "7a89954937937b371b29aa6d089de5cccc086105",
+      "commit_date": "2026-10-13T12:52:10-07:00",
+      "message": "Placed PDFs: render with pdfcraft's patched hayro crates",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "d227ee8",
+      "commit_full": "d227ee84e9c4bd98edb4614330da92b2e635814c",
+      "commit_date": "2026-10-13T13:00:34+00:00",
+      "message": "fix(script): only a well-formed `$N` reference is replaced; `$$` is a literal `$` (#749)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "efd2310",
+      "commit_full": "efd2310c83c6936307153415e494c8704670cf09",
+      "commit_date": "2026-10-13T13:20:47-06:00",
+      "message": "refactor(pdf): share writer backend (PDFW)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "06762c3",
+      "commit_full": "06762c3bfc80bf7523a9e7a3ff149801e0dd7ca6",
+      "commit_date": "2026-10-13T14:17:13+00:00",
+      "message": "fix(idml): export keeps overridden parent items and their local copies' links (#725)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "d6f4c01",
+      "commit_full": "d6f4c0133a025b2a251baa6621995288af874b4e",
+      "commit_date": "2026-10-13T14:18:20+00:00",
+      "message": "fix(compose): text recomposes when the baseline grid, a wrap layer's visibility or section numbering changes (#718)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "c91b9af",
+      "commit_full": "c91b9af16d9e26981b16cae25e3631d9adafebd4",
+      "commit_date": "2026-10-13T14:19:45+00:00",
+      "message": "fix(epub): EPUB and HTML export include tables, footnotes and endnotes (#724)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "f606992",
+      "commit_full": "f60699278264d63ce3b9df918bb297373dd24cc8",
+      "commit_date": "2026-10-13T14:19:57+00:00",
+      "message": "fix(properties): links to other panels open them when panel docking is on (#736)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "4eb786e",
+      "commit_full": "4eb786e8803f75b75d091ed982feb41c096f4279",
+      "commit_date": "2026-10-13T14:22:58+00:00",
+      "message": "fix(recovery): an explicit recovery folder never overwrites or deletes another run's checkpoints (#715)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "debec75",
+      "commit_full": "debec751660391a0d53df6c8f28106669cfdd55c",
+      "commit_date": "2026-10-13T14:23:08+00:00",
+      "message": "fix(textimport): Word table cells skip deleted text and field codes; Normal comes in as its own style (#721, #722)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "a59919b",
+      "commit_full": "a59919bd2456ea638b9e552220bcad6829d1e63f",
+      "commit_date": "2026-10-13T14:36:40+02:00",
+      "message": "feat(ui): Text Wrap panel with four offsets, link and Invert",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "f8474fa",
+      "commit_full": "f8474fa1c891b3c9dee6cbce89968f37fc06f723",
+      "commit_date": "2026-10-13T14:44:29+02:00",
+      "message": "Merge branch 'main' into feat/pptx-export",
+      "stage": null,
+      "next_stage": null,
+      "last_updated": null,
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "368958e",
+      "commit_full": "368958ee2f8509d031767ea05d2ebeccdcb056b2",
+      "commit_date": "2026-10-13T14:51:52+00:00",
+      "message": "fix(macos): a menu-bar command runs at once instead of on the next input (#784)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "7a30e54",
+      "commit_full": "7a30e5427e754e49e2f8a4f148db7ef96853c56f",
+      "commit_date": "2026-10-13T15:58:05+02:00",
+      "message": "fix(render): radial gradients stretch with the object's box, as in InDesign",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "2d07bc5",
+      "commit_full": "2d07bc5295ef71ec3dffbb6e52f67e0833291cc4",
+      "commit_date": "2026-10-13T17:28:38-04:00",
+      "message": "fix: refresh canvas when switching parent editing",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "370dca2",
+      "commit_full": "370dca2ca24fce5545a87280cfa0b7ef2277b742",
+      "commit_date": "2026-10-13T19:11:58+02:00",
+      "message": "feat(render): gradient strokes, on screen, in PDF and in the Gradient panel",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "ac54c8f",
+      "commit_full": "ac54c8faf7a6e85d6ca5572e8e2177f210d7bca8",
+      "commit_date": "2026-10-13T19:30:55+02:00",
+      "message": "feat(text): gradient swatches on text, laid across the frame as in InDesign",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "0a34316",
+      "commit_full": "0a34316b82ea3f66b624eaa8a11648ec3d2c70c7",
+      "commit_date": "2026-10-13T20:16:51+02:00",
+      "message": "feat(ui): Window menu in InDesign's order; Window > Workspace with Essentials Classic",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "27302d8",
+      "commit_full": "27302d8ea33b44460bca8642584a2bb32da111a8",
+      "commit_date": "2026-10-13T20:18:40+09:00",
+      "message": "fix: Linksパネルにリンク元パスを表示 #569",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "dc712ba",
+      "commit_full": "dc712baeca972c6732af9e0af33aac4f156afb61",
+      "commit_date": "2026-10-13T20:38:38+02:00",
+      "message": "fix(color): gradients between process colours blend as inks, as InDesign shows them",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "129adfa",
+      "commit_full": "129adfa42921d166b962e7b554e32aa2ba8bb90d",
+      "commit_date": "2026-10-13T20:41:56+00:00",
+      "message": "Layout: Table of Contents dialog with entry styles, page number position and IDML TOC styles (#755)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "08386d0",
+      "commit_full": "08386d03b115dc1bd20ebf4f3c99158b5334a186",
+      "commit_date": "2026-10-13T21:15:35+02:00",
+      "message": "feat(ui): Object > Fitting with InDesign's shortcuts",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "0f4f382",
+      "commit_full": "0f4f382b0eb6336312e381686af97958e9108b67",
+      "commit_date": "2026-10-13T21:41:46-06:00",
+      "message": "feat(text): improve editing, snapping, and threading",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "5024ed8",
+      "commit_full": "5024ed8870a4c4cba5f1b6ca20a5914e55237944",
+      "commit_date": "2026-10-13T21:55:44+00:00",
+      "message": "#732: bound control-channel click and drag event queues",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "c68cb35",
+      "commit_full": "c68cb357e9e0449fa18d817d6e8260f37e6c32b5",
+      "commit_date": "2026-10-14T00:18:33-06:00",
+      "message": "fix(pdf): preserve writer integration with main (PDFW)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "cc13e80",
+      "commit_full": "cc13e80c9d3ebfe3453b8fcb3aad0165aa6b027e",
+      "commit_date": "2026-10-14T00:29:55+02:00",
+      "message": "feat(tools): Page tool selects pages; handles preview the liquid rule, Alt-drag resizes",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "59b6125",
+      "commit_full": "59b6125af1c5402d6950ab8a92ff28125373a2f0",
+      "commit_date": "2026-10-14T00:51:47+02:00",
+      "message": "feat(ui): Control panel for the Page tool; Controlled by Parent; Show Parent Page Overlay",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "8f71219",
+      "commit_full": "8f71219533f325779c678835dc8c4bca5c26f446",
+      "commit_date": "2026-10-14T01:21:51+02:00",
+      "message": "feat(tools): Page tool pins and locks objects on object-based pages, on the canvas",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "9da44a0",
+      "commit_full": "9da44a042ff0d4d3eff1a5c5bb7a8dd234995960",
+      "commit_date": "2026-10-14T01:29:44+02:00",
+      "message": "feat(ui): Liquid Layout panel in InDesign's layout; Create Alternate Layout in the Layout menu",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "db19963",
+      "commit_full": "db19963bad7969fb6832483c8ae1fe6c79508c09",
+      "commit_date": "2026-10-14T01:37:30+02:00",
+      "message": "feat(ui): the Page tool draws liquid guides from the rulers",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "43a46c0",
+      "commit_full": "43a46c04bf8cd8c8a48a347f6deaa9613223aa54",
+      "commit_date": "2026-10-14T01:54:43-04:00",
+      "message": "Merge PR #843",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "3939b82",
+      "commit_full": "3939b825d3a5ff6709079b6e6fcdf6a8605dd3d3",
+      "commit_date": "2026-10-14T02:02:16+02:00",
+      "message": "feat(ui): Pages panel duplicates pages by Alt-drag and the New Page button; Edit page size",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "8156e57",
+      "commit_full": "8156e575bc1b403e6c62054fca132e4a35ff927e",
+      "commit_date": "2026-10-14T02:15:27+02:00",
+      "message": "feat(ui): Pages panel menu in InDesign's order",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "69f7787",
+      "commit_full": "69f77874e798ea6dfff50635d9bfdc9bd6112a38",
+      "commit_date": "2026-10-14T09:09:16+02:00",
+      "message": "Merge remote-tracking branch 'origin/main' into codex/outlines-per-line",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "7f1d9f2",
+      "commit_full": "7f1d9f2b2eff5437b6a346750c703e03b2bb08dd",
+      "commit_date": "2026-10-14T09:10:24+02:00",
+      "message": "Merge remote-tracking branch 'origin/main' into codex/copy-placed-graphic",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "6f3f32a",
+      "commit_full": "6f3f32a4451ca08fdf64462fbab21f6d4aa4fbd3",
+      "commit_date": "2026-10-14T09:10:42+02:00",
+      "message": "Merge remote-tracking branch 'origin/main' into codex/effects-on-pasted-into",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "2a293c1",
+      "commit_full": "2a293c1b3a79ab30d47ac1443d755200ca56ab5f",
+      "commit_date": "2026-10-14T09:11:16+02:00",
+      "message": "Merge remote-tracking branch 'origin/main' into codex/wrap-panel-offsets",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "1faaebe",
+      "commit_full": "1faaebef252329b7d2a9a282d49e0c641b86f7a7",
+      "commit_date": "2026-10-14T09:12:03+02:00",
+      "message": "Merge remote-tracking branch 'origin/main' into codex/gradient-text",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "f6cbcac",
+      "commit_full": "f6cbcac5ed7c65d275cb9d7914b29159a3d70306",
+      "commit_date": "2026-10-14T09:12:35+02:00",
+      "message": "Merge remote-tracking branch 'origin/main' into codex/essentials-classic-workspace",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "ed6bcae",
+      "commit_full": "ed6bcae8778fb2b94469f9e1ab1b82ef3ef43b69",
+      "commit_date": "2026-10-14T09:12:51+02:00",
+      "message": "Merge remote-tracking branch 'origin/main' into codex/gradient-cmyk-blend",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "25dadce",
+      "commit_full": "25dadce9c83ddede13845038f23ac03e8878bb3a",
+      "commit_date": "2026-10-14T09:13:08+02:00",
+      "message": "Merge remote-tracking branch 'origin/main' into codex/fitting-shortcuts",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "16d8027",
+      "commit_full": "16d8027d89083fc863cc1f653bbda67644edfeed",
+      "commit_date": "2026-10-14T09:13:24+02:00",
+      "message": "Merge remote-tracking branch 'origin/main' into codex/page-tool-liquid-guides",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "65dbf3c",
+      "commit_full": "65dbf3c3a214e7391b541e97922b9848ced3d167",
+      "commit_date": "2026-10-14T09:37:32+02:00",
+      "message": "Merge remote-tracking branch 'origin/main' into codex/page-tool",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "3f1eb00",
+      "commit_full": "3f1eb00bb30a8f5a3e5c86416b09a40d4401d4a1",
+      "commit_date": "2026-10-14T09:38:16+02:00",
+      "message": "Merge branch 'codex/page-tool' into codex/page-tool-control-panel",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "7d601b5",
+      "commit_full": "7d601b5903a59f05204594c47c9543162142d938",
+      "commit_date": "2026-10-14T09:38:25+02:00",
+      "message": "Integration: #864 drops the Controlled by Parent rule from the menus and the Objects Move with Page checkbox (neither has an effect yet)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "70a50e7",
+      "commit_full": "70a50e70b988c42a1ddd88c007c46013051193fe",
+      "commit_date": "2026-10-14T09:38:32+02:00",
+      "message": "Merge branch 'codex/page-tool-control-panel' into codex/liquid-layout-panel",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "2a9e29f",
+      "commit_full": "2a9e29f6ff53aace2369b0c3bf2283393d57b909",
+      "commit_date": "2026-10-14T09:39:24+02:00",
+      "message": "Merge branch 'codex/page-tool-control-panel' into codex/liquid-object-pins",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "15fccae",
+      "commit_full": "15fccae6b819df0c281a80541b5da65175344897",
+      "commit_date": "2026-10-14T09:39:45+02:00",
+      "message": "Merge remote-tracking branch 'origin/main' into codex/pages-panel-duplicate",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "02ddeb8",
+      "commit_full": "02ddeb86da238641822c6ccc1065a2eab88f9fe0",
+      "commit_date": "2026-10-14T09:43:10+02:00",
+      "message": "Merge branch 'codex/pages-panel-duplicate' into codex/pages-panel-menu",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "23e1680",
+      "commit_full": "23e1680e7d6c23d120ca347bf84c51eb7e682a18",
+      "commit_date": "2026-10-14T10:27:38+02:00",
+      "message": "feat(ui): Swatches panel header like InDesign's; swatches go to the fill or stroke in front",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "52e0aaa",
+      "commit_full": "52e0aaa2d632f4e69818b9f62f79dfaf98988e07",
+      "commit_date": "2026-10-14T10:32:47+02:00",
+      "message": "Merge remote-tracking branch 'origin/main' into codex/radial-gradient-ellipse",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "5f00aa7",
+      "commit_full": "5f00aa7bb301bbe4dd875c8e15815d15d82aa567",
+      "commit_date": "2026-10-14T10:33:30+02:00",
+      "message": "Merge remote-tracking branch 'origin/main' into codex/gradient-strokes",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "999d058",
+      "commit_full": "999d0583a38190105aba7a08a20135ca81f90b49",
+      "commit_date": "2026-10-14T11:21:54-06:00",
+      "message": "Merge remote-tracking branch 'origin/main' into linked-docx",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "188c4f7",
+      "commit_full": "188c4f7007f0bb05dfc198d7dae478e4149f796e",
+      "commit_date": "2026-10-14T12:03:58+02:00",
+      "message": "Facing pages take their side from their section's page numbers",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "f4aa93f",
+      "commit_full": "f4aa93f17d0b92a93f387b99d4f64ec4b35f3d21",
+      "commit_date": "2026-10-14T12:38:39+02:00",
+      "message": "Type menu in InDesign's order; Character ⌘T, Paragraph ⌥⌘T and Current Page Number ⌥⇧⌘N",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "24e86db",
+      "commit_full": "24e86db86418ade0eb35f0ad3a14b09fd7a12ce2",
+      "commit_date": "2026-10-14T12:39:58-04:00",
+      "message": "Merge PR #855",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "d67fb28",
+      "commit_full": "d67fb28456565f22432e7ac9af3d9260df28a0b2",
+      "commit_date": "2026-10-14T12:39:58-04:00",
+      "message": "Merge PR #840",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "e8a3cda",
+      "commit_full": "e8a3cda237872f0f6e1164983b51d7e86b57caae",
+      "commit_date": "2026-10-14T12:39:58-04:00",
+      "message": "Merge PR #836",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "a6e7e2a",
+      "commit_full": "a6e7e2a0c72376503f78d064e5070485731f2529",
+      "commit_date": "2026-10-14T12:39:58-04:00",
+      "message": "Merge PR #838",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "c1a1970",
+      "commit_full": "c1a1970168d066a904011541d8cf2e10f9f1059c",
+      "commit_date": "2026-10-14T12:39:58-04:00",
+      "message": "Merge PR #862",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "23aeddb",
+      "commit_full": "23aeddb354c7176865011b8e3d5dda1571c3df97",
+      "commit_date": "2026-10-14T12:39:58-04:00",
+      "message": "Merge PR #864",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "b8d975b",
+      "commit_full": "b8d975b0948cf6e77df11dfd2050a5199799efb7",
+      "commit_date": "2026-10-14T12:39:59-04:00",
+      "message": "Merge PR #866",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "c8a8a18",
+      "commit_full": "c8a8a1868d135297f3cb3f26eadb9dcb987d90c6",
+      "commit_date": "2026-10-14T12:39:59-04:00",
+      "message": "Merge PR #867",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "50a6b60",
+      "commit_full": "50a6b60072cb200a5b60b75da6b8a7e119eb40eb",
+      "commit_date": "2026-10-14T12:39:59-04:00",
+      "message": "Merge PR #868",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "4f19383",
+      "commit_full": "4f193834bd18d33f817d5ad4cae211e08bc793ca",
+      "commit_date": "2026-10-14T12:40:07-04:00",
+      "message": "Merge PR #870 (with #869)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "0df9238",
+      "commit_full": "0df9238c733c346be5987a538bc56300ae6d7951",
+      "commit_date": "2026-10-14T12:56:09-04:00",
+      "message": "Merge PR #850",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "d07cbbe",
+      "commit_full": "d07cbbe94c2762865eaefeff4ebfd1dbada180a0",
+      "commit_date": "2026-10-14T12:58:52-04:00",
+      "message": "Merge PR #859 (with main's 255-click limit kept inside its event budget)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "4554426",
+      "commit_full": "455442615b1c8b7613ab9d702dbaf604a70df5fd",
+      "commit_date": "2026-10-14T16:29:10+02:00",
+      "message": "Color parsing: bare CMYK is always 0..100, so C 1 is a 1 % tint (fixes #910)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "cbba1fe",
+      "commit_full": "cbba1fe7e1cc1e148e0e862090938f704b86e0ab",
+      "commit_date": "2026-10-14T18:15:14+02:00",
+      "message": "Tools panel as InDesign's: Gradient Feather a tool of its own; two-column layout; View Options; Apply Color and Apply Gradient",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "694e662",
+      "commit_full": "694e662547273b4ecf2564501ec0a7e7bb10466e",
+      "commit_date": "2026-10-14T18:18:19-06:00",
+      "message": "fix(pdf): reconcile shared writer with main (PDFW)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "adc03ee",
+      "commit_full": "adc03eedf048d7da49e95faa72683b40ba48f245",
+      "commit_date": "2026-10-14T18:41:35+09:00",
+      "message": "Merge upstream main into fix/links-source-path-569",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "11b1566",
+      "commit_full": "11b1566c099aff00974010a756bc8204c240a106",
+      "commit_date": "2026-10-14T19:22:54+02:00",
+      "message": "Type tool: a press over a locked empty frame draws a new text frame instead of converting it",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "524166f",
+      "commit_full": "524166f562fa112a229d6d03027e4b2b3c728373",
+      "commit_date": "2026-10-14T19:49:04+02:00",
+      "message": "Margins and Columns and Create Guides laid out as InDesign's",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "d330940",
+      "commit_full": "d3309401f5a5d412023fc245c31caa802b6f74cb",
+      "commit_date": "2026-10-14T20:30:21+02:00",
+      "message": "Show 100% black as rich black on screen by default, as InDesign does",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "19bacaa",
+      "commit_full": "19bacaadd7f8e9c1fd532466a405da2a08322b8e",
+      "commit_date": "2026-10-14T20:55:04+04:00",
+      "message": "i18n: Georgian (ka) interface language",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "d5d8621",
+      "commit_full": "d5d86217808234adfc69a0e238ded4d1116559cb",
+      "commit_date": "2026-10-14T21:22:17+02:00",
+      "message": "Pathfinder keeps the frontmost object, as InDesign does",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "bb96f14",
+      "commit_full": "bb96f1455f20c52bfd4fe0ec0910a642d25a7cd1",
+      "commit_date": "2026-10-14T21:32:57+02:00",
+      "message": "Fill with Placeholder Text in paragraphs, as InDesign does",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "f268e17",
+      "commit_full": "f268e17986d31f6973a4f3f218f923f114867fb1",
+      "commit_date": "2026-10-14T22:05:10-04:00",
+      "message": "Merge PR #559",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "0c3e140",
+      "commit_full": "0c3e140be363d4ce122e2ebdef0580f1ee547a21",
+      "commit_date": "2026-10-14T22:05:10-04:00",
+      "message": "Merge PR #567",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "7a9570b",
+      "commit_full": "7a9570b56ee79ffc10e67b4ebb7e6ac7e9a0afd7",
+      "commit_date": "2026-10-14T22:05:10-04:00",
+      "message": "Merge PR #570",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "b379a5f",
+      "commit_full": "b379a5f0a5b8660ff13be2e1184fcd2faff70e1e",
+      "commit_date": "2026-10-14T22:05:10-04:00",
+      "message": "Merge PR #577",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "4cd3a8f",
+      "commit_full": "4cd3a8fa5e621a2e186f61027c2d71d7b9f8f8f8",
+      "commit_date": "2026-10-14T22:05:11-04:00",
+      "message": "Merge PR #648",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "3cdda36",
+      "commit_full": "3cdda36680bddce20e92ed7b7fae04b6dd35cad9",
+      "commit_date": "2026-10-14T22:05:11-04:00",
+      "message": "Merge PR #657",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "8d25412",
+      "commit_full": "8d254120e7f285a7ef9b6df4b2ec60c0a1fa63cc",
+      "commit_date": "2026-10-14T22:05:11-04:00",
+      "message": "Merge PR #658",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "412ce96",
+      "commit_full": "412ce96ff0fa6b17c5cda407dbc283ddca1e1491",
+      "commit_date": "2026-10-14T22:05:11-04:00",
+      "message": "Merge PR #691",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "63c3e36",
+      "commit_full": "63c3e36644ebbbe0d63c562f3691c29b84a8b4a3",
+      "commit_date": "2026-10-14T22:05:11-04:00",
+      "message": "Merge PR #698",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "ab115db",
+      "commit_full": "ab115db1000e56293bb9c03a31f7019b4c0e6f20",
+      "commit_date": "2026-10-14T22:05:11-04:00",
+      "message": "Merge PR #703",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "02dd8ad",
+      "commit_full": "02dd8ade8dfb8e6e1fb91568d500a602e72244af",
+      "commit_date": "2026-10-14T22:05:11-04:00",
+      "message": "Merge PR #704",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "650aaf3",
+      "commit_full": "650aaf34408792d8b19fe3244a888f1a98d7aa54",
+      "commit_date": "2026-10-14T22:05:11-04:00",
+      "message": "Merge PR #751",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "7b76b28",
+      "commit_full": "7b76b28a54796fbfb32bcef85a475a899b900503",
+      "commit_date": "2026-10-14T22:05:11-04:00",
+      "message": "Merge PR #759",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "9f5e8ce",
+      "commit_full": "9f5e8cebf1b6514aff93d4e310007b0457bedd90",
+      "commit_date": "2026-10-14T22:05:11-04:00",
+      "message": "Merge PR #760",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "4bd1fba",
+      "commit_full": "4bd1fbab3796a03353401cc74d220c65fa936b62",
+      "commit_date": "2026-10-14T22:05:11-04:00",
+      "message": "Merge PR #765",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "a666a9f",
+      "commit_full": "a666a9f00a384a67dd3f12d8e19e53c77a0d0151",
+      "commit_date": "2026-10-14T22:05:11-04:00",
+      "message": "Merge PR #793",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "a593ae0",
+      "commit_full": "a593ae07af84fe2eef679420354ad6a15600b2a2",
+      "commit_date": "2026-10-14T22:05:11-04:00",
+      "message": "Merge PR #795",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "3adc568",
+      "commit_full": "3adc568fc3c44e0695171d02d68a338f9cef2816",
+      "commit_date": "2026-10-14T22:05:11-04:00",
+      "message": "Merge PR #799",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "e6660ef",
+      "commit_full": "e6660efb7a7f01f0432ee9f36322c0ec59ef9837",
+      "commit_date": "2026-10-14T22:05:11-04:00",
+      "message": "Merge PR #801",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "9449d6c",
+      "commit_full": "9449d6c29397a77872caa9fa12ddfaefe72912d7",
+      "commit_date": "2026-10-14T22:05:12-04:00",
+      "message": "Merge PR #832",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "f433333",
+      "commit_full": "f4333338b3bb2c3d97238a1c210715a500e59019",
+      "commit_date": "2026-10-14T22:05:12-04:00",
+      "message": "Merge PR #889",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "5839d5c",
+      "commit_full": "5839d5c7a45989deb5c71a346b83e936917cdbc8",
+      "commit_date": "2026-10-14T22:05:12-04:00",
+      "message": "Merge PR #894",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "b14b1fd",
+      "commit_full": "b14b1fd80539182c63db5415e4ba9b99e305ec80",
+      "commit_date": "2026-10-14T22:05:12-04:00",
+      "message": "Merge PR #913",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "79a5c52",
+      "commit_full": "79a5c52e9ddc462eb77111eaf87d0eb57dec2fff",
+      "commit_date": "2026-10-14T22:05:12-04:00",
+      "message": "Merge PR #933",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "cb3fbde",
+      "commit_full": "cb3fbde5de53c5f99e94f6def677c8ddc68853c3",
+      "commit_date": "2026-10-14T22:05:12-04:00",
+      "message": "Merge PR #940",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "88fee01",
+      "commit_full": "88fee015cebcd0fbf963168abbbba1d623628260",
+      "commit_date": "2026-10-14T22:05:13-04:00",
+      "message": "Merge PR #958",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "eb874d4",
+      "commit_full": "eb874d41fe28cff0de99035d227042470c0224ee",
+      "commit_date": "2026-10-14T22:05:13-04:00",
+      "message": "Merge PR #968",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "8cbef21",
+      "commit_full": "8cbef21444aca8cfec4c8bb67711e3f66d798ea2",
+      "commit_date": "2026-10-14T22:05:13-04:00",
+      "message": "Merge PR #974",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "35563d0",
+      "commit_full": "35563d0f2f6971a44ff3a4aa998320a5d20ea551",
+      "commit_date": "2026-10-14T22:05:13-04:00",
+      "message": "Merge PR #978",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "ed3acb0",
+      "commit_full": "ed3acb0f823d3f90da59bcd32993179fda0a7bc5",
+      "commit_date": "2026-10-14T22:05:13-04:00",
+      "message": "Merge PR #979",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "a948ab2",
+      "commit_full": "a948ab288460fba7ddbcfc26731624a864e9e990",
+      "commit_date": "2026-10-14T22:13:49+02:00",
+      "message": "Pathfinder panel laid out as InDesign's, with Join Path and Convert Point",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "e6d6aff",
+      "commit_full": "e6d6affb375169b22544dd75722976aea198cd46",
+      "commit_date": "2026-10-14T22:33:52-04:00",
+      "message": "Merge PR #796",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "2dbf60b",
+      "commit_full": "2dbf60be6ff23af853ddeb2dd6657d679e704d5a",
+      "commit_date": "2026-10-14T22:33:55-04:00",
+      "message": "Merge PR #925",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "f9b4660",
+      "commit_full": "f9b4660ca2865342a5580d8b50e8938b33a085ed",
+      "commit_date": "2026-10-14T22:33:58-04:00",
+      "message": "Merge PR #976",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "7ed5697",
+      "commit_full": "7ed56979c7ea98dc627bf9e07ab228d54edfcc82",
+      "commit_date": "2026-10-14T22:33:58-04:00",
+      "message": "Merge PR #977",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "ee498ac",
+      "commit_full": "ee498ac68f26df68594100dabc3a18dce6327ffc",
+      "commit_date": "2026-10-14T22:38:58-04:00",
+      "message": "Merge PR #973",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "bd02325",
+      "commit_full": "bd023252b24499b751871a17fd086db0ae4932a5",
+      "commit_date": "2026-10-14T22:43:39-04:00",
+      "message": "Merge PR #798",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "072ae1d",
+      "commit_full": "072ae1d94817a5edd826182771ee6028bb165eff",
+      "commit_date": "2026-10-14T22:43:41-04:00",
+      "message": "Merge PR #975",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "af45138",
+      "commit_full": "af45138718ac9af28c0ad4d047397e52fb217297",
+      "commit_date": "2026-10-14T22:54:18-04:00",
+      "message": "Merge PR #588",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "d4a65a5",
+      "commit_full": "d4a65a5ea5da475f79e2d5d254e63852a469c153",
+      "commit_date": "2026-10-14T22:56:29-04:00",
+      "message": "Merge PR #688",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "0923c82",
+      "commit_full": "0923c8247a4c763b0dae71ea520965eb9bb39306",
+      "commit_date": "2026-10-14T22:57:54-04:00",
+      "message": "Merge PR #797",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "2805b3d",
+      "commit_full": "2805b3d0412bcb9110f4ef8480a54ad779759eac",
+      "commit_date": "2026-10-14T23:00:55-04:00",
+      "message": "Merge PR #764",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "528264a",
+      "commit_full": "528264a4a9bd9a6d12981f41a85a5dfe70e1fcfe",
+      "commit_date": "2026-10-14T23:07:06-04:00",
+      "message": "Merge PR #823 (with main's radial ellipse: linear gradients go through #823's linear_axis)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "47e9e57",
+      "commit_full": "47e9e576d45740637d79f59621596aa25bbab78b",
+      "commit_date": "2026-10-14T23:07:27-04:00",
+      "message": "Merge PR #610 (linked text files read through crate::io, so the automation roots apply)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "94d0c57",
+      "commit_full": "94d0c5723662d475f0f595e1418640687a8fe1a0",
+      "commit_date": "2026-10-14T23:14:44-04:00",
+      "message": "Merge PR #937",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "939d567",
+      "commit_full": "939d5676cb5ef970650f6aa1704611097fd8f202",
+      "commit_date": "2026-10-14T23:17:18+02:00",
+      "message": "Color panel: the Tint field keeps typed text and applies it on Enter or leaving the field",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "e7d8d5b",
+      "commit_full": "e7d8d5be62d33039b3146c40613bcdcfd3ed6b5f",
+      "commit_date": "2026-10-14T23:17:31-04:00",
+      "message": "Merge PR #960",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "d35887f",
+      "commit_full": "d35887f494804b8e37c81e9b0e1fc00c54f6a039",
+      "commit_date": "2026-10-14T23:31:39-04:00",
+      "message": "Merge PR #825 (gradient text paint goes through #657's stroke-behind-fill painting)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "4b88d7d",
+      "commit_full": "4b88d7d29c6d3a60bd6529ee4ea5d5469532bbba",
+      "commit_date": "2026-10-14T23:31:51-04:00",
+      "message": "Merge PR #959",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "450503f",
+      "commit_full": "450503f538ef4f82273b0dae7699248d622e4f63",
+      "commit_date": "2026-10-14T23:36:46-04:00",
+      "message": "Merge EPUB/docx/datamerge cluster",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "84dbba0",
+      "commit_full": "84dbba029faea972714b315a605c0858eb7eb497",
+      "commit_date": "2026-10-14T23:54:49-04:00",
+      "message": "Merge IDML/text cluster",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "d52ef6b",
+      "commit_full": "d52ef6b6b9ce9539134c109ba1d9df07dbab3cc5",
+      "commit_date": "2026-10-15T00:18:55+02:00",
+      "message": "A line is set when its baseline fits in the frame, as in InDesign",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "6132b60",
+      "commit_full": "6132b60e9b19f319b81154622c6d997d2ec02b02",
+      "commit_date": "2026-10-15T00:35:26-04:00",
+      "message": "Merge PR #170",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": null,
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "33e93c9",
+      "commit_full": "33e93c93a65161404fc2a3a7ee578740796ea2cb",
+      "commit_date": "2026-10-15T00:35:27-04:00",
+      "message": "Merge PR #311",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": null,
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "6b9b920",
+      "commit_full": "6b9b9205e4d2d6f41b580302e4ac4c988591f392",
+      "commit_date": "2026-10-15T00:35:27-04:00",
+      "message": "Merge PR #472",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": null,
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "85d7c16",
+      "commit_full": "85d7c161613df14c53759c0094b4ed0b8d9c945f",
+      "commit_date": "2026-10-15T00:49:33+02:00",
+      "message": "IDML: InDesign's default CJK leading model only with a Japanese composer",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "099fbd2",
+      "commit_full": "099fbd23ee2179dd460a3e9e23652fb063baa346",
+      "commit_date": "2026-10-15T00:54:34+02:00",
+      "message": "IDML: import and export ruler guides",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "6fe0770",
+      "commit_full": "6fe0770f476bc1977681098852ec3157f6c956bd",
+      "commit_date": "2026-10-15T01:20:50+02:00",
+      "message": "Flex Layout: containers that lay out their objects, as InDesign 2026's",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "89f6adb",
+      "commit_full": "89f6adb6fbc3d9d5a19d0be177c19daede7794d0",
+      "commit_date": "2026-10-15T01:25:04+02:00",
+      "message": "Find Font: a style that differs only in spacing isn't missing",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "ccf4f4a",
+      "commit_full": "ccf4f4aee4bd2af0bd1b132388dbc04e11c11df9",
+      "commit_date": "2026-10-15T01:40:50+02:00",
+      "message": "An empty last paragraph isn't overset text, as in InDesign",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "9792aa0",
+      "commit_full": "9792aa025e6336493d81a0c37d301fbf76840937",
+      "commit_date": "2026-10-15T03:38:25+04:00",
+      "message": "Merge upstream main into ka-language",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "a7f3239",
+      "commit_full": "a7f3239cfb54415c218e87bf706a47c146c0f197",
+      "commit_date": "2026-10-15T23:51:07-04:00",
+      "message": "Merge pull request #1103 from skylartaylor/codex/windows-installer-latest-20261014-01",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": null,
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "bdfb77b",
+      "commit_full": "bdfb77baf25d08e3f998d8fd40497a5ba222c6ee",
+      "commit_date": "2026-10-16T03:46:50+02:00",
+      "message": "feat(installer): unify Windows setup and completion screens (INSTALLER-UI)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-12",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0
+    }
+  ]
+}

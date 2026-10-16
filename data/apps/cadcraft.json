@@ -1,0 +1,404 @@
+{
+  "id": "cadcraft",
+  "name": "CADCraft",
+  "adobe": "AutoCAD",
+  "category": "CAD",
+  "color": "#20b2c8",
+  "repo_url": "https://github.com/storytold/cadcraft",
+  "roadmap_url": "https://github.com/storytold/cadcraft/blob/main/ROADMAP.md",
+  "checked_at": "2026-10-16T10:36:33+00:00",
+  "latest_commit": "e773d93",
+  "latest_commit_date": "2026-10-13T05:37:45-04:00",
+  "latest_message": "HATCHEDIT: refuse an explicit bad scale or angle before editing anything (#724) (#777)",
+  "parsed": {
+    "stage": "pre-alpha",
+    "next_stage": "alpha",
+    "target": "Autodesk AutoCAD 2027",
+    "last_updated": "2026-10-10",
+    "metrics": {
+      "full": {
+        "label": "Full target (ready for real work)",
+        "pct": 38.0,
+        "range": null,
+        "hours": [
+          1150,
+          1850
+        ]
+      },
+      "mainstream": {
+        "label": "Mainstream practitioner (2D drafter)",
+        "pct": 28.0,
+        "range": null,
+        "hours": [
+          570,
+          880
+        ]
+      },
+      "essentials": {
+        "label": "Essentials user",
+        "pct": 46.0,
+        "range": null,
+        "hours": [
+          140,
+          225
+        ]
+      },
+      "ready": {
+        "label": "Ready for real work",
+        "pct": 38.0,
+        "range": null,
+        "hours": null
+      },
+      "breadth": {
+        "label": "Feature breadth (AutoCAD for Mac menu items with a live command)",
+        "pct": 50.0,
+        "range": null,
+        "hours": null
+      }
+    },
+    "audiences": [
+      {
+        "audience": "mainstream",
+        "label": "Mainstream practitioner (2D drafter)",
+        "pct": 28.0,
+        "range": null,
+        "hours": null
+      },
+      {
+        "audience": "essentials",
+        "label": "Essentials user",
+        "pct": 46.0,
+        "range": null,
+        "hours": null
+      },
+      {
+        "audience": "full",
+        "label": "Full target (ready for real work)",
+        "pct": 38.0,
+        "range": null,
+        "hours": [
+          1150,
+          1850
+        ]
+      },
+      {
+        "audience": "mainstream",
+        "label": "Mainstream practitioner (2D drafter)",
+        "pct": 28.0,
+        "range": null,
+        "hours": [
+          570,
+          880
+        ]
+      },
+      {
+        "audience": "essentials",
+        "label": "Essentials user",
+        "pct": 46.0,
+        "range": null,
+        "hours": [
+          140,
+          225
+        ]
+      }
+    ],
+    "dimensions": [
+      {
+        "label": "Features (depth, weighted by use)",
+        "pct": 41.0
+      },
+      {
+        "label": "UI/UX fidelity",
+        "pct": 43.0
+      },
+      {
+        "label": "File formats",
+        "pct": 30.0
+      },
+      {
+        "label": "Hardware",
+        "pct": 45.0
+      },
+      {
+        "label": "Localization",
+        "pct": 5.0
+      },
+      {
+        "label": "Performance",
+        "pct": 60.0
+      },
+      {
+        "label": "Stability",
+        "pct": 35.0
+      },
+      {
+        "label": "Platforms",
+        "pct": 75.0
+      },
+      {
+        "label": "Ecosystem and automation",
+        "pct": 10.0
+      },
+      {
+        "label": "AI features",
+        "pct": 20.0
+      }
+    ],
+    "features": [
+      {
+        "label": "Draw (2D)",
+        "pct": 60.0
+      },
+      {
+        "label": "Modify",
+        "pct": 50.0
+      },
+      {
+        "label": "Geometry precision",
+        "pct": 40.0
+      },
+      {
+        "label": "Layers and properties",
+        "pct": 70.0
+      },
+      {
+        "label": "Dimensions",
+        "pct": 45.0
+      },
+      {
+        "label": "Text and MTEXT",
+        "pct": 35.0
+      },
+      {
+        "label": "Leaders, tables, fields",
+        "pct": 25.0
+      },
+      {
+        "label": "Hatch and gradients",
+        "pct": 35.0
+      },
+      {
+        "label": "Blocks, attributes, xrefs, groups",
+        "pct": 25.0
+      },
+      {
+        "label": "Layouts, viewports, plotting",
+        "pct": 35.0
+      },
+      {
+        "label": "Inquiry and utilities",
+        "pct": 30.0
+      },
+      {
+        "label": "Parametric constraints",
+        "pct": 50.0
+      },
+      {
+        "label": "3D modelling and rendering",
+        "pct": 2.0
+      },
+      {
+        "label": "Collaboration and cloud",
+        "pct": 5.0
+      }
+    ],
+    "upcoming": [
+      "Gate and land: fix fmt on main, run cargo xtask ci on every PR, land the 47 open PRs (15–25 h).",
+      "Stop losing data on save; native MULTILEADER; save DWG/DXF at a chosen version (30–45 h).",
+      "Real-file DWG/DXF corpus and a black-box check in AutoCAD (10–15 h + owner).",
+      "Precision input: object snap tracking, extension/parallel snaps, FROM/M2P/TK, snap overrides,",
+      "Unstub prompt options in TRIM/EXTEND, OFFSET, ROTATE, PLINE, SPLINE, MTEXT, MLEADER (15–25 h).",
+      "Autosave, recovery, AUDIT, RECOVER (10–15 h).",
+      "Exact ellipse/spline geometry and correct polyline offsets (30–50 h).",
+      "Xrefs, block editor, groups, then dynamic blocks (80–120 h)."
+    ],
+    "progress": [
+      {
+        "date": "2026-10-12",
+        "text": "TRIM: a pick after a closed polyline's last cut keeps only the complementary run instead of an extra circuit of the outline (#726)"
+      },
+      {
+        "date": "2026-10-12",
+        "text": "HATCHEDIT refuses an explicit bad scale or angle before it edits anything, so a rejected request leaves the drawing, undo and redo as they were (#724)"
+      },
+      {
+        "date": "2026-10-10",
+        "text": "Merged main: Ukrainian interface (#36, first string catalog), Dynamic Input pointer boxes with Tab and relative entry (#60), press-drag selection windows (#63), WIPEOUT and hatch gradients kept through DXF/DWG save (#147, #162), SETVAR DIM as style overrides (#129), UNITS dialog (#38), close-window save prompt (#47), DIMANGULAR on circles (#20), cargo fmt fixed on main. UI/UX 40% → 43% (dynamic input 15% → 45%), localization 3% → 5%; ready for real work ≈ 37% → 38% (weighted 37.2% → 37.7%), mainstream 27% → 28%, essentials 45% → 46%. Beta is now ~37 points away; hours unchanged within rounding."
+      },
+      {
+        "date": "2026-10-10",
+        "text": "Added mainstream practitioner (≈ 27%) and essentials user (≈ 45%) numbers; ready for real work unchanged at ≈ 37%. User evidence: 2 praise comments, 0 \"switched from AutoCAD\" reports, 27 of 37 open issues on the core path."
+      },
+      {
+        "date": "2026-10-10",
+        "text": "Stage re-normalized from alpha to pre-alpha under the craftrules core-workflow gate: drafting with tracking, blocks, plotting and lossless DWG save fail; dimensioning passes. Alpha is ≈ 125–190 h away."
+      },
+      {
+        "date": "2026-10-10",
+        "text": "Full re-measure against AutoCAD 2027 for Mac in the craftrules progress-docs format: menu breadth 245/491 (50%), ready for real work ≈ 37%, stage alpha. Remaining estimates rose (≈ 570 h → 1,300–2,100 h) on new evidence: behaviour audits found tracking/extension/parallel snaps and dynamic input are not real, saves drop unmodelled content, DWG saves as R2000, and the old estimate had no localization, ecosystem, stability, platform or AI rows. New docs: target-app-parity, gaps, roadmap, architecture, localization, file-format, hardware, UI and geometry parity; docs/parity.md became docs/parity-checklist.md."
+      },
+      {
+        "date": "2026-10-10",
+        "text": "About 60 community PRs merged in a day: DXF fidelity (transparency, LWPOLYLINE elevation, frozen VP layers, dimension text rotation, arc-length dims, non-ASCII escapes), CJK font fallback, Save/Don't Save on close, Light/System themes, F2 history, trackpad pan, Linux XWayland drag-and-drop, correctness fixes across draw/modify/constraints. Release v0.4.0."
+      },
+      {
+        "date": "2026-10-08",
+        "text": "Releases v0.1.0–v0.3.0: Flatpak, AppImage updates, signed macOS universal, Windows x64/x86/arm64, Linux, FreeBSD and web builds."
+      },
+      {
+        "date": "2026-10-07",
+        "text": "Old assessment: menu breadth 233/491 (47%), ≈ 29% weighted parity, 2D drafting ≈ 55%, ≈ 570 h remaining; milestones as reported then: M1 ~85%, M2 ~65%, M3 ~75%, M4 ~50%, M5 ~35%, M6 ~55%, M7 ~55%, M8 ~20%, M9 ~60%, M10 ~70%, M11 0%, M12 ~25%, M13 ~10%."
+      },
+      {
+        "date": "2026-10-07",
+        "text": "First version built in one session (≈ 6.9 h elapsed, ≈ 11.5 agent-hours): M0 vertical slice, dimensions, hatch, blocks, DWG bridge, layouts and PDF plotting, GPU canvas, R-tree, constraints, Layer Properties Manager, QSELECT, release pipeline."
+      }
+    ]
+  },
+  "history": [
+    {
+      "commit": "3ea7de1",
+      "commit_full": "3ea7de193824b732760f88d25ed5f261a8ab2bd7",
+      "commit_date": "2026-10-10T14:13:04-04:00",
+      "message": "Progress docs: target-app parity, gaps, alpha gate, readiness by audience (#205)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 38.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1850
+      ],
+      "mainstream_pct": 28.0,
+      "essentials_pct": 46.0,
+      "breadth_pct": 50.0
+    },
+    {
+      "commit": "58a8494",
+      "commit_full": "58a8494f98c036c9b7f82f40e1d7b5b4b513921b",
+      "commit_date": "2026-10-10T18:31:07-06:00",
+      "message": "UI: retain shared workspace while merging current main",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 38.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1850
+      ],
+      "mainstream_pct": 28.0,
+      "essentials_pct": 46.0,
+      "breadth_pct": 50.0
+    },
+    {
+      "commit": "b3a7362",
+      "commit_full": "b3a73626b290082f6f3dd1c1e47b63b576a6ff53",
+      "commit_date": "2026-10-11T11:19:47-04:00",
+      "message": "SAVEAS version and binary DXF, default save version (fixes #421) (#431)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 38.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1850
+      ],
+      "mainstream_pct": 28.0,
+      "essentials_pct": 46.0,
+      "breadth_pct": 50.0
+    },
+    {
+      "commit": "d7f3e48",
+      "commit_full": "d7f3e48362b5bca1fcf7c55672a9088dcc6135e1",
+      "commit_date": "2026-10-11T14:36:40-04:00",
+      "message": "Add German (de) interface language (#573)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 38.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1850
+      ],
+      "mainstream_pct": 28.0,
+      "essentials_pct": 46.0,
+      "breadth_pct": 50.0
+    },
+    {
+      "commit": "b2ba585",
+      "commit_full": "b2ba58525152bd2a55132c08a2ff7a1142e3240b",
+      "commit_date": "2026-10-13T04:34:46-04:00",
+      "message": "TRIM: a pick after a closed polyline's last cut keeps only the complementary run (#726) (#771)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 38.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1850
+      ],
+      "mainstream_pct": 28.0,
+      "essentials_pct": 46.0,
+      "breadth_pct": 50.0
+    },
+    {
+      "commit": "ecdb8f9",
+      "commit_full": "ecdb8f96b252378553e2de5209c616621658be17",
+      "commit_date": "2026-10-13T04:36:40-04:00",
+      "message": "i18n: Italian interface catalog (it.tsv) (#789)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 38.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1850
+      ],
+      "mainstream_pct": 28.0,
+      "essentials_pct": 46.0,
+      "breadth_pct": 50.0
+    },
+    {
+      "commit": "9464945",
+      "commit_full": "9464945f82278ff0d1c3905e0cb7a2d1efedc6eb",
+      "commit_date": "2026-10-13T04:37:31-04:00",
+      "message": "REFEDIT, REFSET and REFCLOSE: edit block references in place (#818)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 38.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1850
+      ],
+      "mainstream_pct": 28.0,
+      "essentials_pct": 46.0,
+      "breadth_pct": 50.0
+    },
+    {
+      "commit": "e773d93",
+      "commit_full": "e773d93164d12b58348637a6317894a118f2d06b",
+      "commit_date": "2026-10-13T05:37:45-04:00",
+      "message": "HATCHEDIT: refuse an explicit bad scale or angle before editing anything (#724) (#777)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 38.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1850
+      ],
+      "mainstream_pct": 28.0,
+      "essentials_pct": 46.0,
+      "breadth_pct": 50.0
+    }
+  ]
+}

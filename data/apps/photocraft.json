@@ -1,0 +1,338 @@
+{
+  "id": "photocraft",
+  "name": "PhotoCraft",
+  "adobe": "Photoshop",
+  "category": "Image",
+  "color": "#3d6cf0",
+  "repo_url": "https://github.com/storytold/photocraft",
+  "roadmap_url": "https://github.com/storytold/photocraft/blob/main/ROADMAP.md",
+  "checked_at": "2026-10-16T10:36:33+00:00",
+  "latest_commit": "2388d82",
+  "latest_commit_date": "2026-10-14T01:58:22-04:00",
+  "latest_message": "Docs: oracle floor, open issues, workspace size and layer filters match main (#5376) (#5382)",
+  "parsed": {
+    "stage": "alpha",
+    "next_stage": "beta",
+    "target": "Adobe Photoshop 2026",
+    "last_updated": "2026-10-13",
+    "metrics": {
+      "full": {
+        "label": "Full target (ready for real work)",
+        "pct": 45.0,
+        "range": null,
+        "hours": [
+          2300,
+          4100
+        ]
+      },
+      "mainstream": {
+        "label": "Mainstream practitioner",
+        "pct": 43.0,
+        "range": null,
+        "hours": [
+          1700,
+          2800
+        ]
+      },
+      "essentials": {
+        "label": "Essentials user",
+        "pct": 61.0,
+        "range": null,
+        "hours": [
+          400,
+          700
+        ]
+      },
+      "ready": {
+        "label": "Ready for real work",
+        "pct": 45.0,
+        "range": [
+          40.0,
+          50.0
+        ],
+        "hours": null
+      },
+      "breadth": {
+        "label": "Feature breadth",
+        "pct": 76.0,
+        "range": null,
+        "hours": null
+      }
+    },
+    "audiences": [
+      {
+        "audience": "mainstream",
+        "label": "Mainstream practitioner",
+        "pct": 43.0,
+        "range": [
+          38.0,
+          48.0
+        ],
+        "hours": null
+      },
+      {
+        "audience": "essentials",
+        "label": "Essentials user",
+        "pct": 61.0,
+        "range": [
+          55.0,
+          67.0
+        ],
+        "hours": null
+      },
+      {
+        "audience": "full",
+        "label": "Full target (ready for real work)",
+        "pct": 45.0,
+        "range": null,
+        "hours": [
+          2300,
+          4100
+        ]
+      },
+      {
+        "audience": "mainstream",
+        "label": "Mainstream practitioner",
+        "pct": 43.0,
+        "range": null,
+        "hours": [
+          1700,
+          2800
+        ]
+      },
+      {
+        "audience": "essentials",
+        "label": "Essentials user",
+        "pct": 61.0,
+        "range": null,
+        "hours": [
+          400,
+          700
+        ]
+      }
+    ],
+    "dimensions": [
+      {
+        "label": "Features (depth)",
+        "pct": 55.0
+      },
+      {
+        "label": "UI/UX fidelity (tools, handles, modifiers, brush feel, panels)",
+        "pct": 40.0
+      },
+      {
+        "label": "File formats",
+        "pct": 60.0
+      },
+      {
+        "label": "Hardware (GPU, pen, displays)",
+        "pct": 50.0
+      },
+      {
+        "label": "Localization",
+        "pct": 55.0
+      },
+      {
+        "label": "Performance",
+        "pct": 25.0
+      },
+      {
+        "label": "Stability",
+        "pct": 45.0
+      },
+      {
+        "label": "Platforms",
+        "pct": 80.0
+      },
+      {
+        "label": "Ecosystem / plug-ins / scripting",
+        "pct": 15.0
+      },
+      {
+        "label": "AI features",
+        "pct": 10.0
+      }
+    ],
+    "features": [
+      {
+        "label": "Layers, masks, blend modes, smart objects, styles",
+        "pct": 65.0
+      },
+      {
+        "label": "Selections, Select and Mask, channels",
+        "pct": 55.0
+      },
+      {
+        "label": "Painting and brush engine",
+        "pct": 55.0
+      },
+      {
+        "label": "Retouching (healing, clone, patch, remove, content-aware)",
+        "pct": 50.0
+      },
+      {
+        "label": "Transform, warp, puppet, liquify",
+        "pct": 55.0
+      },
+      {
+        "label": "Adjustments and filters",
+        "pct": 70.0
+      },
+      {
+        "label": "Type",
+        "pct": 40.0
+      },
+      {
+        "label": "Vector shapes and paths",
+        "pct": 55.0
+      },
+      {
+        "label": "Colour management and modes",
+        "pct": 70.0
+      },
+      {
+        "label": "Camera Raw and computational photo",
+        "pct": 45.0
+      },
+      {
+        "label": "Automation, actions, scripting",
+        "pct": 45.0
+      },
+      {
+        "label": "File I/O",
+        "pct": 60.0
+      },
+      {
+        "label": "Print, export, Save for Web",
+        "pct": 50.0
+      },
+      {
+        "label": "Video / timeline, data-driven graphics",
+        "pct": 30.0
+      },
+      {
+        "label": "Workspace, panels, preferences",
+        "pct": 40.0
+      },
+      {
+        "label": "AI / generative",
+        "pct": 10.0
+      }
+    ],
+    "upcoming": [
+      "1 · PSD that Photoshop trusts: Save As corruption, Photoshop re-open check, Photoshop-oracle floor 145 → 200+ of 258 · 150–250 h",
+      "2 · Performance budgets: the 22 over-budget scenarios and the 150-layer GPU crash · 200–350 h",
+      "3 · User bug backlog to under 100 open · 250–400 h",
+      "4 · Brush and transform feel (brush-parity, ui-parity rows) · 160–290 h",
+      "5 · The 12 missing tools · 60–100 h"
+    ],
+    "progress": [
+      {
+        "date": "2026-10-10",
+        "text": "Full re-measure against Photoshop 2026 27.11.0 (installed bundle inspected): breadth ~76%, ready ~45%, alpha. Progress docs reorganized to the craftrules standard (parity.md → parity-checklist.md, parity-estimate.md merged into target-app-parity.md). 0.6.0 released."
+      },
+      {
+        "date": "2026-10-09",
+        "text": "Remove tool, Rotate View, crop rotation; OpenRaster and Paint.NET; 39 Affinity documents in the corpus"
+      },
+      {
+        "date": "2026-10-08",
+        "text": "0.5.0. Affinity import; Magnetic Lasso, Pattern Stamp, Mixer Brush, Pencil, Patch, Vertical Type on the toolbar"
+      },
+      {
+        "date": "2026-10-07",
+        "text": "0.3.0. 10 UI languages; shortcut audit 214 → 0 failures; TIFF decode 10× faster"
+      },
+      {
+        "date": "2026-10-05",
+        "text": "0.2.0, first signed and notarized release. Honest assessment: ready for real work 25–35%"
+      },
+      {
+        "date": "2026-10-03",
+        "text": "Menu breadth 625/625"
+      },
+      {
+        "date": "2026-10-01",
+        "text": "Menu breadth 224 → 532 of 625 in a day"
+      },
+      {
+        "date": "2026-09-30",
+        "text": "First commit"
+      }
+    ]
+  },
+  "history": [
+    {
+      "commit": "939c8f2",
+      "commit_full": "939c8f2c70a0646319c462eb1b21b8eaf50eb7c8",
+      "commit_date": "2026-10-10T15:09:04-04:00",
+      "message": "Progress docs: target-app parity, gaps, alpha gate, readiness by audience (#2696)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 45.0,
+      "full_range": null,
+      "full_hours": [
+        2300,
+        4100
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 61.0,
+      "breadth_pct": 76.0
+    },
+    {
+      "commit": "ade5799",
+      "commit_full": "ade57991654f7ca5829705c83d1120b128361f9e",
+      "commit_date": "2026-10-11T10:06:18-04:00",
+      "message": "Mirror the shell for right-to-left UI languages (DIST-220-4) (#3114)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 45.0,
+      "full_range": null,
+      "full_hours": [
+        2300,
+        4100
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 61.0,
+      "breadth_pct": 76.0
+    },
+    {
+      "commit": "d8d8d9f",
+      "commit_full": "d8d8d9f3d2e3bcb02b75a88cb543b486c5338e24",
+      "commit_date": "2026-10-11T11:09:38-04:00",
+      "message": "Tools: Convert Point tool in the Pen flyout (#3204) (#3211)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 45.0,
+      "full_range": null,
+      "full_hours": [
+        2300,
+        4100
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 61.0,
+      "breadth_pct": 76.0
+    },
+    {
+      "commit": "2388d82",
+      "commit_full": "2388d821655a5f6081bd5e50f498426c0854ce1a",
+      "commit_date": "2026-10-14T01:58:22-04:00",
+      "message": "Docs: oracle floor, open issues, workspace size and layer filters match main (#5376) (#5382)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 45.0,
+      "full_range": null,
+      "full_hours": [
+        2300,
+        4100
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 61.0,
+      "breadth_pct": 76.0
+    }
+  ]
+}

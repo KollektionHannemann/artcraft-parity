@@ -1,0 +1,2155 @@
+{
+  "id": "figcraft",
+  "name": "FigCraft",
+  "adobe": "Figma",
+  "category": "Interface",
+  "color": "#2bc48a",
+  "repo_url": "https://github.com/storytold/figcraft",
+  "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
+  "checked_at": "2026-10-16T10:36:33+00:00",
+  "latest_commit": "f40c600",
+  "latest_commit_date": "2026-10-16T07:55:52+07:00",
+  "latest_message": "Docs: roadmap rows for the community fixes from #478 up (#591, #598, #602) and #589 (#605)",
+  "parsed": {
+    "stage": "alpha",
+    "next_stage": "beta",
+    "target": "Figma Design (desktop app 126.10.7)",
+    "last_updated": "2026-10-16",
+    "metrics": {
+      "full": {
+        "label": "Full target (ready for real work)",
+        "pct": 53.0,
+        "range": null,
+        "hours": [
+          268,
+          522
+        ]
+      },
+      "mainstream": {
+        "label": "Mainstream practitioner",
+        "pct": 50.0,
+        "range": null,
+        "hours": [
+          120,
+          229
+        ]
+      },
+      "essentials": {
+        "label": "Essentials user",
+        "pct": 59.0,
+        "range": null,
+        "hours": [
+          55,
+          100
+        ]
+      },
+      "ready": {
+        "label": "Ready for real work",
+        "pct": 53.0,
+        "range": null,
+        "hours": null
+      },
+      "breadth": {
+        "label": "Feature breadth",
+        "pct": 85.0,
+        "range": null,
+        "hours": null
+      }
+    },
+    "audiences": [
+      {
+        "audience": "essentials",
+        "label": "Essentials user",
+        "pct": 59.0,
+        "range": null,
+        "hours": null
+      },
+      {
+        "audience": "mainstream",
+        "label": "Mainstream practitioner",
+        "pct": 50.0,
+        "range": null,
+        "hours": null
+      },
+      {
+        "audience": "full",
+        "label": "Full target (ready for real work)",
+        "pct": 53.0,
+        "range": null,
+        "hours": [
+          268,
+          522
+        ]
+      },
+      {
+        "audience": "mainstream",
+        "label": "Mainstream practitioner",
+        "pct": 50.0,
+        "range": null,
+        "hours": [
+          120,
+          229
+        ]
+      },
+      {
+        "audience": "essentials",
+        "label": "Essentials user",
+        "pct": 59.0,
+        "range": null,
+        "hours": [
+          55,
+          100
+        ]
+      }
+    ],
+    "dimensions": [
+      {
+        "label": "Features (depth)",
+        "pct": 63.0
+      },
+      {
+        "label": "UI/UX fidelity",
+        "pct": 58.0
+      },
+      {
+        "label": "File formats",
+        "pct": 60.0
+      },
+      {
+        "label": "Collaboration",
+        "pct": 13.0
+      },
+      {
+        "label": "Stability",
+        "pct": 55.0
+      },
+      {
+        "label": "Performance",
+        "pct": 60.0
+      },
+      {
+        "label": "Hardware",
+        "pct": 60.0
+      },
+      {
+        "label": "Localization",
+        "pct": 39.0
+      },
+      {
+        "label": "Platforms",
+        "pct": 75.0
+      },
+      {
+        "label": "Ecosystem / plugins",
+        "pct": 38.0
+      },
+      {
+        "label": "AI features",
+        "pct": 0.0
+      }
+    ],
+    "features": [
+      {
+        "label": "Canvas & navigation",
+        "pct": 98.0
+      },
+      {
+        "label": "Selection & transform",
+        "pct": 97.0
+      },
+      {
+        "label": "Layers panel",
+        "pct": 99.0
+      },
+      {
+        "label": "Shapes & vector",
+        "pct": 99.0
+      },
+      {
+        "label": "Paint",
+        "pct": 90.0
+      },
+      {
+        "label": "Strokes",
+        "pct": 95.0
+      },
+      {
+        "label": "Effects",
+        "pct": 100.0
+      },
+      {
+        "label": "Frames, groups, sections, masks",
+        "pct": 97.0
+      },
+      {
+        "label": "Auto layout & constraints",
+        "pct": 98.0
+      },
+      {
+        "label": "Text",
+        "pct": 90.0
+      },
+      {
+        "label": "Components & variants",
+        "pct": 96.0
+      },
+      {
+        "label": "Styles & variables",
+        "pct": 95.0
+      },
+      {
+        "label": "Prototyping",
+        "pct": 92.0
+      },
+      {
+        "label": "Import/export",
+        "pct": 86.0
+      },
+      {
+        "label": "Dev Mode / inspect",
+        "pct": 96.0
+      },
+      {
+        "label": "Comments, versions, misc",
+        "pct": 87.0
+      },
+      {
+        "label": "Multiplayer & sharing",
+        "pct": 17.0
+      },
+      {
+        "label": "Plugins & widgets",
+        "pct": 60.0
+      },
+      {
+        "label": "Team libraries",
+        "pct": 70.0
+      },
+      {
+        "label": "Figma Draw extras",
+        "pct": 88.0
+      },
+      {
+        "label": "AI features",
+        "pct": 0.0
+      }
+    ],
+    "upcoming": [
+      ".fig import's tail: fixes from real files, connector labels, table cells, filled areas with their own fills (the best-effort import, editable vector networks, the other layer kinds and variable prototype actions landed 2026-10-11): 5–10 h; then checking the rest of the experimental .fig export (landed 2026-10-12; written files open and draw in other software) on effects, images, prototypes and real files: 5–15 h.",
+      "Real-file corpus and measured fidelity: 15–30 h.",
+      "Tool-by-tool interaction pass against Figma: 40–60 h.",
+      "Languages: native reviews of the es, fr, de, pt-BR, ja and ko drafts (people), Latin American Spanish (1–2 h), then Simplified Chinese (3–5 h).",
+      "Multiplayer (M9): accounts and teams on top of the live sessions and the standalone server (transport, hosting, invite links that open the app, document sync, presence with remote text carets, cursor chat and spotlight, per-user undo, reconnect with offline edits, collision-free ids for styles, variables and comments, the browser client, figcraft-server with persistence and share links to edit or view, team libraries on the server landed): 42–84 h."
+    ],
+    "progress": [
+      {
+        "date": "2026-10-14",
+        "text": "· Corner handles win over the corner-radius handles (M1, #292): a press on the inner half of a corner handle's square picked the radius handle 10 px in, so the drag neither resized nor (dragging outward) rounded anything. Inside the drawn square the corner now resizes both sides (in ratio with Shift or the link); further in the radius handle still answers. Regression test in the transform behaviour suite. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-14",
+        "text": "· Home screen recent files as cards (M7): each card shows the picture its file carries on its first page's colour, the file's icon, name and \"Edited ... ago\"; sort by name, creation or last change either way; a table view; a click selects, a double-click or Enter opens, arrow keys move; Open, Show in folder and Remove from recents on right-click. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-14",
+        "text": "· SVG/PDF export depth (M0.9, #208): visible descendants deeper than 256 levels below an exported root are refused before bounds or drawing, including masks and raster fallbacks. SVG has a checked API; the engine and CLI report the limit and suggest selecting an inner layer. Existing destination files survive refusal. Boundary, inner-root, hidden-subtree, multi-root/page and command/CLI regressions cover the change. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "· Vector edit mode regions (M4): with the Move tool, the filled area under the pointer is hatched with \"/\" lines in the selection colour, clipped by the area's own fill rule so holes stay clear; the hatch goes near points (3.5 px) and segments (2 px), and its spacing follows octave folding (8 px at every power-of-two zoom), fixed to the shape. A click selects the area with its points (they move with it but keep the unselected look), Shift adds or removes one, a press on a selected area drags the whole selection as one undo step, and a click on an empty spot clears the areas and stays in edit mode. vector.edit.select {regions} and vector.edit.state (regions, regionVertices, regionHover); vectorregionstests and regionstests. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "· MCP/control transport hardening (#201): 32 MiB incoming frames are bounded while reading; oversized frames return an error and close without draining. The opt-in loopback control listener caps active workers at 8, applies 60 s socket read/write inactivity timeouts and caps both request queues at 8, discarding timed-out requests including those deferred to hidden windows. Reader, queue, idle-client and blocked-writer regressions cover the limits. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "· Attached MCP (M0.9, #194): a transport failure no longer replays a request that may already have edited the document. The caller gets an outcome-unknown error and must inspect before retrying; the next explicit call reconnects. Loopback tests cover a lost mutation reply, a single applied edit, reconnect and a connection failure before sending. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "· Constrain proportions in the Layout panel (M1, #220): with the W/H link on, typing a width or height scales the other side by the layer's own ratio; the property edit dropped the ratio, so the link only worked while dragging resize handles. Both sides in one edit stay as typed, the w/h aliases work the same, each layer of a multi-selection keeps its own ratio, and a zero side has no ratio to keep. Regression test in the transform behaviour suite. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "· Repeat last command (M1, #181): repeated edits keep the underlying command and parameters, so repeated nudges accumulate with one undo step each. A stored self-reference is refused instead of recursing. Regression tests cover three repeats, their undo steps, and missing or self-referencing commands. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "· Component playground (M3): with an instance, a component or a component set selected, the Inspect tab shows a Playground: a preview of the component and a control for each variant, boolean and text property. What is tried there changes the preview and the code in the Code section, never the file (no undo step, the canvas instance stays as it is); Reset goes back to the component's or the instance's own values. component.playground {id?, properties?, language?, path?} gives the same to scripts: the properties with their values, the code, and a PNG on request (playgroundtests). Left: instance-swap and slot properties in the playground (the command takes an instance swap; the panel has no control for it), a code connect template's snippet with the tried values. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "· Auto layout, on-canvas handles of automatic gaps (M2): the handle between spread rows or columns (and between items with an auto gap) shows the distance the layout gives the gap instead of the stored value, and dragging it makes the gap a fixed one from there, as typing a gap in the panel does; one undo step (gaphandletests). Before, the drag changed a value that had no effect. The documentation is silent on dragging an automatic gap. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "· Variables inside styles (M3): a shared style can bind variables to fields of its value (style.bind {style, field, variable?}: a paint style's colours and gradient stops, an effect style's colour, radius, spread and offsets, a grid style's size, count, gutter and offset, a text style's font size, line height, letter spacing, family and style). Every layer using the style shows those fields resolved in its own modes and stays linked when a variable or a mode changes; the style keeps them resolved in the default modes. A style made from a layer keeps that layer's bindings; a new value drops bindings to what is gone. The style editor binds from its property rows (paint colour, shadow colour, blur radius, grid size) and detaches from the variable's chip; the style picker marks styles that use variables. .fig export and import carry the bindings on the style, REST layers hand theirs to the style they use. Left: binding text style fields and the other effect and grid fields from the editor (commands only), library variables in the picker, a style's library copy. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "· Effects on groups, inner shadows and background blur (M3): a group is no outline of its own, so its inner shadows are cast inwards from around what its layers draw together (their pixels, over them: no shade at a seam between two layers) and its background blur and glass show the backdrop through the outlines of its layers (under them). Canvas and PNG; SVG embeds a group with an inner shadow as a render and its background blur as an image under the layers; PDF places both as images, the blur matching the PNG. Where the group holds one shape the pixels match that shape, or a frame filled like it, carrying the effect (groupeffectstests in render, svg and pdf). Offsets and spreads of a group's inner shadow go by whole pixels. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "· Text made by commands on a dark page (M1): in the app, text.create and node.create {type: text} that name no fill give white text on a dark page, by the same rule as the Text tool (the page's colour decides, also inside a frame); a named fill, fills or fillStyle is kept. Sessions without an interface (CLI, MCP, exports) still make black text everywhere. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "· Frames and groups, a one-step convert (M1): object.convertToGroup and object.convertToFrame (the Design panel's type menu on a frame or a group) change the layer in place, its layers staying where they are on the page. A frame turned into a group loses what only a frame has (auto layout, with the positions it gave kept and fill children fixed; fills, strokes, corner radius, clipping, layout grids, guides, scrolling) and takes its layers' box; a group turned into a frame keeps its box, with no fill and no clipping. Instances, main components, layers inside instances and empty frames are refused with the reason, all or nothing; one undo step. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "· Prototyping, delays on mouse triggers and manual overlay offsets (M5): mouse enter, leave, down and up wait delayMs before their actions run (once while waiting; dropped when the screen or overlay they were on goes away; a pointer that leaves early doesn't cancel, the documentation is silent), and a manual overlay sits at offset: [x, y] from the top-left of the layer that opens it (without one, right below it, as before). Delay and X/Y fields in the interaction editor, the player on its own clock, REST import (delay, overlayRelativePosition), .fig import and export (the export's field for mouse delays is unchecked against other software). Numbers unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "· Auto layout, wrapped-line alignment (M2): a wrapping layout's lines (rows of a horizontal one, columns of a vertical one) are packed where the cross alignment says (start, centre, end; before, they always sat at the start), stretch when every child fills across the flow, or take the free space between them (contentAlign: spaceBetween, the Design panel's Row/Column gap mode, the alignment pad lighting the whole cross axis). Read from REST JSON and .fig, written to .fig, align-content in CSS, an instance override with the other alignment settings. 13 hand-computed layout cases and command tests. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "· .fig export: instance sizes, variables, styles (gap 1): instances write what they change from"
+      },
+      {
+        "date": "2026-10-13",
+        "text": "· Starter templates and first-run help: eight templates built in code (mobile app, landing page,"
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Your online files: a file shared or published online stays yours after its tab closes or the app"
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Everyday editing partials: number fields (scrub rates with Shift and Alt, arrow keys by the nudge"
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Sharing with a join code: Share ▸ Online (through the server in Preferences, built in) or"
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Text metrics measured: our example documents, re-saved by other software, were read back and"
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Live sessions are per document: every open file has its own session or none, several run at"
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· A public figcraft-server: openpublish = true lets anyone publish without the server key"
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· .fig export opens elsewhere (gap 1): written files were checked by opening them in other"
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Experimental .fig export (gap 1): file.export {format: \"fig\"}, File ▸ Export… ▸ .fig"
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Keyboard shortcut parity (gap 4): a table test with a row for each of the 129"
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Plugin directory on figcraft-server (gap 6): publish a plugin folder with the server key"
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Plugin widgets and the panel tail (gap 6, plugin API 3; older plugins run unchanged): a widget"
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Layers and Assets panels behaviour suite (gap 4): several layers dropped together land"
+      },
+      {
+        "date": "2026-10-12",
+        "text": "· Vector multi-edit and the vector edit tail (gap 9): several vector layers in edit"
+      },
+      {
+        "date": "2026-10-11",
+        "text": "· Canvas navigation, guides and grids behaviour suite (gap 4): zoom, panning, the pixel"
+      },
+      {
+        "date": "2026-10-11",
+        "text": "· Export and inspect behaviour suite (gap 4): exports cover what a layer paints (shadows"
+      },
+      {
+        "date": "2026-10-11",
+        "text": "· .fig import's tail (gap 1): vectors open as editable vector networks with their"
+      },
+      {
+        "date": "2026-10-11",
+        "text": "· Paint and effects behaviour suite: every documented rule for fills, blend modes,"
+      },
+      {
+        "date": "2026-10-11",
+        "text": "· .fig import, best effort (gap 1): file.open, file.import, drag and drop, the CLI and"
+      },
+      {
+        "date": "2026-10-11",
+        "text": "· Gamut warnings (gap 18): the colour picker of a Display P3 file flags colours"
+      },
+      {
+        "date": "2026-10-11",
+        "text": "· Several windows (gap 18): File ▸ New window, Open in new window on a tab or a"
+      },
+      {
+        "date": "2026-10-11",
+        "text": "· Hosting figcraft-server: the desktop app and figcraft-cli open wss:// links (rustls,"
+      },
+      {
+        "date": "2026-10-11",
+        "text": "· Plugin panels and settings (gap 6, ABI v2; v1 plugins run unchanged): a plugin shows a panel of"
+      }
+    ]
+  },
+  "history": [
+    {
+      "commit": "9715951",
+      "commit_full": "97159514b4a345e1a7c7d57fb848cd0c1ce36f23",
+      "commit_date": "2026-10-10T14:29:24-04:00",
+      "message": "Progress docs: target-app parity, gaps, alpha gate, readiness by audience (#100)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        375,
+        705
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 53.0,
+      "breadth_pct": 78.0
+    },
+    {
+      "commit": "4d7a918",
+      "commit_full": "4d7a9187ff26480d922da92348b0753c5e0989e4",
+      "commit_date": "2026-10-11T02:40:59+07:00",
+      "message": "M9: live sessions: host from the app, invite links, live cursors and presence (#104)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        375,
+        705
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 53.0,
+      "breadth_pct": 78.0
+    },
+    {
+      "commit": "94ff3d4",
+      "commit_full": "94ff3d4df65b240dd2114598fecf14b722fa4eb4",
+      "commit_date": "2026-10-11T03:19:24+07:00",
+      "message": "M9: collaboration: per-user undo, rejections, reconnect (#105)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-10",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        375,
+        705
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 53.0,
+      "breadth_pct": 78.0
+    },
+    {
+      "commit": "4354157",
+      "commit_full": "435415770fb39f130d4013b62c44e276e1930dea",
+      "commit_date": "2026-10-11T09:10:59+07:00",
+      "message": "M9: live sessions in the browser; join links and dialog polish (#106)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        375,
+        705
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 53.0,
+      "breadth_pct": 78.0
+    },
+    {
+      "commit": "1444754",
+      "commit_full": "1444754f666061fecf27e9970e9b8178325df4d6",
+      "commit_date": "2026-10-11T09:29:30+07:00",
+      "message": "M9: collaboration polish: unique ids for styles, variables and comments; live text carets (#107)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        375,
+        705
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 53.0,
+      "breadth_pct": 78.0
+    },
+    {
+      "commit": "08d9186",
+      "commit_full": "08d91869cbbfcf77a23193c4df6ca331d0fa3942",
+      "commit_date": "2026-10-11T10:04:25+07:00",
+      "message": "M4: live boolean editing, arc fields, shape builder on strokes, one-sided widths (#111)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        370,
+        695
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 53.0,
+      "breadth_pct": 79.0
+    },
+    {
+      "commit": "07fa4d9",
+      "commit_full": "07fa4d92ed01b1011b3ae73dfad87aa4ec5f26cd",
+      "commit_date": "2026-10-11T10:19:03+07:00",
+      "message": "M9: standalone collaboration server with share links and permissions (#112)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        370,
+        695
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 53.0,
+      "breadth_pct": 79.0
+    },
+    {
+      "commit": "ee82cdd",
+      "commit_full": "ee82cdd1384c687f57f9cdbefa1d3f6b230c729c",
+      "commit_date": "2026-10-11T10:49:16+07:00",
+      "message": "M3: extended variable collections, variables import/export, gradient stop and variant bindings (#114)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        365,
+        690
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 53.0,
+      "breadth_pct": 79.0
+    },
+    {
+      "commit": "ecb3656",
+      "commit_full": "ecb3656c690cd9d66b6a1a2e7631aad0b8eaa607",
+      "commit_date": "2026-10-11T11:26:57+07:00",
+      "message": "M1: open recent, outlines for the selection, mask outlines (#115)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        365,
+        690
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 53.0,
+      "breadth_pct": 79.0
+    },
+    {
+      "commit": "5b321a7",
+      "commit_full": "5b321a779c3f8c9d6b834831d5eb326a32c765f8",
+      "commit_date": "2026-10-11T11:51:37+07:00",
+      "message": "M6: animated GIF fills and TIFF images (#116)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        365,
+        690
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 53.0,
+      "breadth_pct": 79.0
+    },
+    {
+      "commit": "7f9f2a0",
+      "commit_full": "7f9f2a087368d224d0ed67e3a995aa8002455113",
+      "commit_date": "2026-10-11T12:45:38+07:00",
+      "message": "M9: branches: create, update from main, review and merge (#119)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        365,
+        690
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 53.0,
+      "breadth_pct": 79.0
+    },
+    {
+      "commit": "09600d6",
+      "commit_full": "09600d6da24e7d4328b939571f5089da1be9620a",
+      "commit_date": "2026-10-11T13:05:46+07:00",
+      "message": "M9: team libraries on the server; swap library (#117)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        360,
+        680
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 53.0,
+      "breadth_pct": 79.0
+    },
+    {
+      "commit": "f62cb4b",
+      "commit_full": "f62cb4b1f6fe17a64b413ff4ffcbad92e0f5f4f5",
+      "commit_date": "2026-10-11T13:25:33+07:00",
+      "message": "M4: text on a path and pattern fills (#118)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        360,
+        680
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 53.0,
+      "breadth_pct": 79.0
+    },
+    {
+      "commit": "cb5435d",
+      "commit_full": "cb5435d5ffcdc301ea99c29dda40674396f78572",
+      "commit_date": "2026-10-11T13:43:48+07:00",
+      "message": "M4: stretch and scatter brushes, pen pressure (#120)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        360,
+        680
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 53.0,
+      "breadth_pct": 79.0
+    },
+    {
+      "commit": "13ab3f1",
+      "commit_full": "13ab3f150fadcbb001aae8109b7a9cb306c861b4",
+      "commit_date": "2026-10-11T14:02:37+07:00",
+      "message": "M6: code connect: link components to real code (#122)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        355,
+        675
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 53.0,
+      "breadth_pct": 79.0
+    },
+    {
+      "commit": "09a3b74",
+      "commit_full": "09a3b7446607d8a988125fd395d946dbbdaa1e90",
+      "commit_date": "2026-10-11T14:25:25+07:00",
+      "message": "M8: canvas fixes: boolean hit testing, group drags, frame outlines and slices view, a flaky idle test (#123)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        355,
+        675
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 53.0,
+      "breadth_pct": 79.0
+    },
+    {
+      "commit": "a003e3d",
+      "commit_full": "a003e3de4f3c3352e6d1237dba75ddb25adaa60a",
+      "commit_date": "2026-10-11T14:45:19+07:00",
+      "message": "M7: plugin panels and settings (#124)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        345,
+        660
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 53.0,
+      "breadth_pct": 79.0
+    },
+    {
+      "commit": "76df2d4",
+      "commit_full": "76df2d4136452e66db32f5add187a79660df3be6",
+      "commit_date": "2026-10-11T15:52:27+07:00",
+      "message": "M9: hosting figcraft-server: wss in the desktop app, server releases, deployment guide (#125)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        345,
+        660
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 53.0,
+      "breadth_pct": 79.0
+    },
+    {
+      "commit": "a2e2012",
+      "commit_full": "a2e2012fdceda490b339b6f8bc771970e1843619",
+      "commit_date": "2026-10-11T16:21:16+07:00",
+      "message": "M7: localization layer (#128)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        330,
+        635
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 53.0,
+      "breadth_pct": 79.0
+    },
+    {
+      "commit": "f49142d",
+      "commit_full": "f49142dad99495e2277c73e0dedc6b9ca0b70990",
+      "commit_date": "2026-10-11T16:50:06+07:00",
+      "message": "M1: several windows (#126)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        330,
+        635
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 53.0,
+      "breadth_pct": 79.0
+    },
+    {
+      "commit": "24e4572",
+      "commit_full": "24e457240e8f50683727a719c9d41c87ebd41a3b",
+      "commit_date": "2026-10-11T17:20:10+07:00",
+      "message": "M5: Display P3: gamut warning and soft-proof sRGB (#127)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        330,
+        635
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 53.0,
+      "breadth_pct": 79.0
+    },
+    {
+      "commit": "d01d18c",
+      "commit_full": "d01d18cd8884d2c44ef007c7f4f422b20f8b0642",
+      "commit_date": "2026-10-11T17:53:11+07:00",
+      "message": "M2: auto layout behaviour suite and fixes (#130)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        327,
+        629
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 53.0,
+      "breadth_pct": 79.0
+    },
+    {
+      "commit": "10a9b7b",
+      "commit_full": "10a9b7b165f6f12113ae70d278928cf21df61347",
+      "commit_date": "2026-10-11T18:20:38+07:00",
+      "message": "M8: Windows QA fixes (#131)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        327,
+        629
+      ],
+      "mainstream_pct": 43.0,
+      "essentials_pct": 53.0,
+      "breadth_pct": 79.0
+    },
+    {
+      "commit": "2f49fcc",
+      "commit_full": "2f49fcc4903c4f5145119c7cc9df8fee0cebb877",
+      "commit_date": "2026-10-11T18:59:59+07:00",
+      "message": "M6: .fig import (best effort) (#132)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        305,
+        584
+      ],
+      "mainstream_pct": 46.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "894f25c",
+      "commit_full": "894f25c4c40973dbd634c0d5c4f920dd24c4299e",
+      "commit_date": "2026-10-11T20:30:38+07:00",
+      "message": "M1: selection and transform behaviour suite and fixes (#133)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        305,
+        584
+      ],
+      "mainstream_pct": 46.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "f665765",
+      "commit_full": "f665765128db93ddd18ad9f5d93b33172aaae30e",
+      "commit_date": "2026-10-11T22:09:46+07:00",
+      "message": "M4: text behaviour suite: metrics, line height, CJK (#134)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        305,
+        584
+      ],
+      "mainstream_pct": 46.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "cc30a26",
+      "commit_full": "cc30a261e7bec5fac3ef14a3246c8e2bdd176d69",
+      "commit_date": "2026-10-11T23:10:41+07:00",
+      "message": "M1: layers panel keyboard (box selection, F2 rename, context menu) and stroke styles (#135)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        305,
+        584
+      ],
+      "mainstream_pct": 46.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "5923e7d",
+      "commit_full": "5923e7dfcfc243ee63116b043d7e92e0b932d96a",
+      "commit_date": "2026-10-12T00:11:43+07:00",
+      "message": "M3: embedded image colour profiles (#136)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        305,
+        584
+      ],
+      "mainstream_pct": 46.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "62db8d4",
+      "commit_full": "62db8d4e36a90343ed7aae4f566fa1712b9dc1f7",
+      "commit_date": "2026-10-12T00:57:43+07:00",
+      "message": "M3: components behaviour suite and fixes",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        300,
+        576
+      ],
+      "mainstream_pct": 47.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "b65cc2e",
+      "commit_full": "b65cc2e4feeef50725f046a443653b193a9f40dc",
+      "commit_date": "2026-10-12T00:57:43+07:00",
+      "message": "M5: prototyping behaviour suite and fixes",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        298,
+        573
+      ],
+      "mainstream_pct": 48.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "f3012ce",
+      "commit_full": "f3012ce6e437b5f0f6b318c42bc64727c66df18c",
+      "commit_date": "2026-10-12T00:57:43+07:00",
+      "message": "M3: styles and variables behaviour suite and fixes",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        300,
+        576
+      ],
+      "mainstream_pct": 48.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "e917d3c",
+      "commit_full": "e917d3c2e6e6bdbbd973701359763ebd3d23c170",
+      "commit_date": "2026-10-12T00:57:43+07:00",
+      "message": "M1: frames, groups, sections and masks behaviour suite and fixes",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        299,
+        575
+      ],
+      "mainstream_pct": 48.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "a260207",
+      "commit_full": "a2602071d7319963debbe00440f5a9ba09a3b3b7",
+      "commit_date": "2026-10-12T01:32:04+07:00",
+      "message": "M3: paint and effects behaviour suite and fixes",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        299,
+        575
+      ],
+      "mainstream_pct": 48.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 80.0
+    },
+    {
+      "commit": "2a54adb",
+      "commit_full": "2a54adb762572a5eb201e24c4a5e59719dd1ad3d",
+      "commit_date": "2026-10-12T01:32:04+07:00",
+      "message": "M4: shapes and vector behaviour suite and fixes",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 51.0,
+      "full_range": null,
+      "full_hours": [
+        299,
+        575
+      ],
+      "mainstream_pct": 49.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 82.0
+    },
+    {
+      "commit": "df6bc0a",
+      "commit_full": "df6bc0a319392c3ebbb1bba92383798744643ee6",
+      "commit_date": "2026-10-12T01:32:04+07:00",
+      "message": "M6: .fig import: editable vector networks and more layer kinds",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 51.0,
+      "full_range": null,
+      "full_hours": [
+        296,
+        570
+      ],
+      "mainstream_pct": 49.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 82.0
+    },
+    {
+      "commit": "8b2607d",
+      "commit_full": "8b2607de8e32c2f361a8956dd91e1140dabc3cdb",
+      "commit_date": "2026-10-12T01:32:04+07:00",
+      "message": "M7: export and inspect behaviour suite and fixes",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 51.0,
+      "full_range": null,
+      "full_hours": [
+        296,
+        570
+      ],
+      "mainstream_pct": 49.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 82.0
+    },
+    {
+      "commit": "f2c2221",
+      "commit_full": "f2c22213d6b990112211c81587c19f137ca39f34",
+      "commit_date": "2026-10-12T01:32:04+07:00",
+      "message": "M1: canvas navigation, guides and grids behaviour suite and fixes",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-11",
+      "full_pct": 51.0,
+      "full_range": null,
+      "full_hours": [
+        296,
+        570
+      ],
+      "mainstream_pct": 49.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 82.0
+    },
+    {
+      "commit": "1caf771",
+      "commit_full": "1caf771e8285c1b3707097ed2cbd01f86e5aa404",
+      "commit_date": "2026-10-12T02:09:10+07:00",
+      "message": "M8: comments and version history behaviour suite and fixes",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 51.0,
+      "full_range": null,
+      "full_hours": [
+        296,
+        569
+      ],
+      "mainstream_pct": 49.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 82.0
+    },
+    {
+      "commit": "bf82f7e",
+      "commit_full": "bf82f7ebf9e5f1be1a1e379bb709b380abe66f20",
+      "commit_date": "2026-10-12T02:09:10+07:00",
+      "message": "M4: text lists, hanging punctuation and decoration styles",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 51.0,
+      "full_range": null,
+      "full_hours": [
+        296,
+        569
+      ],
+      "mainstream_pct": 49.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 82.0
+    },
+    {
+      "commit": "970eb00",
+      "commit_full": "970eb001f1ad5d5b3dac44edd0a545af01c6e656",
+      "commit_date": "2026-10-12T02:09:10+07:00",
+      "message": "Docs: recompute headline percentages from the area table",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 51.0,
+      "full_range": null,
+      "full_hours": [
+        296,
+        569
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 84.0
+    },
+    {
+      "commit": "c50bbd0",
+      "commit_full": "c50bbd08bde732c59a58705fcdfc7e2fa0fda730",
+      "commit_date": "2026-10-12T02:30:25+07:00",
+      "message": "M8: branch version history and finer list merges",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 51.0,
+      "full_range": null,
+      "full_hours": [
+        296,
+        569
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 84.0
+    },
+    {
+      "commit": "8a983f4",
+      "commit_full": "8a983f42cead4edf9deec857e39558fee8417937",
+      "commit_date": "2026-10-12T02:30:25+07:00",
+      "message": "M3: extended collections tail",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 51.0,
+      "full_range": null,
+      "full_hours": [
+        296,
+        569
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 84.0
+    },
+    {
+      "commit": "7e467c2",
+      "commit_full": "7e467c2b8228df10df8ce6995f32c60cf22183ab",
+      "commit_date": "2026-10-12T02:30:25+07:00",
+      "message": "M7: dev resources links",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 51.0,
+      "full_range": null,
+      "full_hours": [
+        296,
+        569
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 84.0
+    },
+    {
+      "commit": "a5a7066",
+      "commit_full": "a5a706674c1d0a1d91f15eaba0b7ca453002ecab",
+      "commit_date": "2026-10-12T02:52:18+07:00",
+      "message": "M4: vector multi-edit and edit tail",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 52.0,
+      "full_range": null,
+      "full_hours": [
+        294,
+        566
+      ],
+      "mainstream_pct": 49.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 84.0
+    },
+    {
+      "commit": "626a9ea",
+      "commit_full": "626a9eac0840fc1a18052c21595d171dcbd8a0e5",
+      "commit_date": "2026-10-12T03:47:34+07:00",
+      "message": "M1: layers and assets panels behaviour suite and fixes",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 52.0,
+      "full_range": null,
+      "full_hours": [
+        294,
+        566
+      ],
+      "mainstream_pct": 49.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 84.0
+    },
+    {
+      "commit": "1f6e75e",
+      "commit_full": "1f6e75e0b6b26be5fddbca02d6f9b1f15069e24b",
+      "commit_date": "2026-10-12T03:47:34+07:00",
+      "message": "M8: cursor chat and spotlight in live sessions",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 52.0,
+      "full_range": null,
+      "full_hours": [
+        291,
+        560
+      ],
+      "mainstream_pct": 49.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 84.0
+    },
+    {
+      "commit": "1e0b513",
+      "commit_full": "1e0b51398adf16df190896480c056e965afe0d39",
+      "commit_date": "2026-10-12T04:19:58+07:00",
+      "message": "M9: French, German and Brazilian Portuguese draft catalogs",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 52.0,
+      "full_range": null,
+      "full_hours": [
+        286,
+        550
+      ],
+      "mainstream_pct": 49.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 84.0
+    },
+    {
+      "commit": "207373b",
+      "commit_full": "207373be15943f654988ed7f1b0c102e2e4c5410",
+      "commit_date": "2026-10-12T04:41:28+07:00",
+      "message": "M11: plugin widgets and the plugin panel tail",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 52.0,
+      "full_range": null,
+      "full_hours": [
+        281,
+        540
+      ],
+      "mainstream_pct": 49.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 84.0
+    },
+    {
+      "commit": "159de3c",
+      "commit_full": "159de3ce43efa6d3ac3705cbfa96ff9755c71fd0",
+      "commit_date": "2026-10-12T04:41:28+07:00",
+      "message": "M9: Japanese and Korean draft catalogs and CJK UI fonts",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        273,
+        530
+      ],
+      "mainstream_pct": 49.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 84.0
+    },
+    {
+      "commit": "def6f84",
+      "commit_full": "def6f84b22b1c74f11f298bcda115186088334af",
+      "commit_date": "2026-10-12T05:28:53+07:00",
+      "message": "M11: plugin directory on figcraft-server",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        271,
+        526
+      ],
+      "mainstream_pct": 49.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 84.0
+    },
+    {
+      "commit": "119b8c7",
+      "commit_full": "119b8c74414dff59cd02d7984fdd1767ae685814",
+      "commit_date": "2026-10-12T05:28:53+07:00",
+      "message": "M5: prototyping tail: gamepad triggers, widgets in prototypes, mode lookups",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        271,
+        526
+      ],
+      "mainstream_pct": 49.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 84.0
+    },
+    {
+      "commit": "08df188",
+      "commit_full": "08df188e1a4cbb5fb21b84b6354158e067cca057",
+      "commit_date": "2026-10-12T05:57:48+07:00",
+      "message": "M9: Latin American Spanish overlay",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        270,
+        525
+      ],
+      "mainstream_pct": 49.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 84.0
+    },
+    {
+      "commit": "9f13cb4",
+      "commit_full": "9f13cb4ba2097f4fe5e43ba38d632134ca63878f",
+      "commit_date": "2026-10-12T05:57:48+07:00",
+      "message": "M9: Simplified Chinese draft catalog",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 49.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 84.0
+    },
+    {
+      "commit": "8d5f8a0",
+      "commit_full": "8d5f8a0978d1cd34ccb67dfa0863c706b360d39f",
+      "commit_date": "2026-10-12T06:49:02+07:00",
+      "message": "M1: keyboard shortcut parity suite and bindings",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 49.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 84.0
+    },
+    {
+      "commit": "c420721",
+      "commit_full": "c42072159701a2e53bc6d5573193e005170bab3a",
+      "commit_date": "2026-10-12T07:19:57+07:00",
+      "message": "M6: experimental .fig export",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "faf2e78",
+      "commit_full": "faf2e78c9d96161135840cd9e02769845be1675c",
+      "commit_date": "2026-10-12T11:40:03+07:00",
+      "message": "M9: install.sh, backup timer and docs for a public figcraft-server",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "7edc61b",
+      "commit_full": "7edc61b8d2ee20cc33cde386a3e4704228952582",
+      "commit_date": "2026-10-12T11:40:03+07:00",
+      "message": "M9: harden open hosting against resource exhaustion",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "0e6dc68",
+      "commit_full": "0e6dc6871b75945d88bf4832fbca29b9e35def66",
+      "commit_date": "2026-10-12T17:54:18+07:00",
+      "message": "M7: .fig export that opens and draws in other software",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "94349d8",
+      "commit_full": "94349d86b023727b6d539e929fac354985f24066",
+      "commit_date": "2026-10-12T17:54:18+07:00",
+      "message": "M9: live sessions per document",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "f77d9a4",
+      "commit_full": "f77d9a467e73570aa2f4a4d770c93064c2f33a8f",
+      "commit_date": "2026-10-12T17:54:18+07:00",
+      "message": "M3: text metrics: whole-pixel line heights, advances on a 1024-per-em grid, letter spacing between glyphs only",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "6720ea4",
+      "commit_full": "6720ea4a2193e08a491c63f793b46004fe6f954b",
+      "commit_date": "2026-10-12T19:42:28+07:00",
+      "message": "M9: share with a join code: online through the built-in server or on the local network",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "8f6a123",
+      "commit_full": "8f6a123f2958525f1de78b1c2d3850d4edc726fe",
+      "commit_date": "2026-10-12T19:42:28+07:00",
+      "message": "M9: share with a join code: stop sharing keeps the file",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "39e9e87",
+      "commit_full": "39e9e87b749b56b213b18e4573759308829e741a",
+      "commit_date": "2026-10-13T00:29:41+07:00",
+      "message": "M1: number fields: scrub rates, arrow steps, arithmetic, relative edits of mixed values",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "501e4a6",
+      "commit_full": "501e4a6737aaeb67e522dda934a767aa520ae5d4",
+      "commit_date": "2026-10-13T01:41:14+07:00",
+      "message": "M9: online files: the app remembers the files it put online",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "31815f1",
+      "commit_full": "31815f1d131c8e7ef73385d761f5b2954ca83dd2",
+      "commit_date": "2026-10-13T01:41:14+07:00",
+      "message": "M9: online files: crash recovery never drops an unsent edit",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-12",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "5be3012",
+      "commit_full": "5be3012e9b3948f4c159c28eaa48b9f0eb218ba1",
+      "commit_date": "2026-10-13T03:01:19+07:00",
+      "message": "M11: starter templates: docs and the essentials assessment",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "3efff16",
+      "commit_full": "3efff16df229162186bdfc245ac26c3f38e32f9d",
+      "commit_date": "2026-10-13T10:05:39+07:00",
+      "message": "M7: .fig export: stroke reach as a share of the weight; docs",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "c910060",
+      "commit_full": "c910060f360e58b44b46aa4246754b2d5334010e",
+      "commit_date": "2026-10-13T10:05:39+07:00",
+      "message": "M7: .fig export: one-sided stroke widths as outlines, bound layer fields name their field; docs",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "a2a0f80",
+      "commit_full": "a2a0f80252f3ceeb616b17c48f3ea6c812e0c2fa",
+      "commit_date": "2026-10-13T13:36:54+07:00",
+      "message": "M2: auto layout: wrapped-line alignment",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "5548284",
+      "commit_full": "5548284c65f85da2850acbec08a726c5f160271c",
+      "commit_date": "2026-10-13T13:36:54+07:00",
+      "message": "M5: prototyping: delays on mouse triggers, manual overlay offsets",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "2c35c7b",
+      "commit_full": "2c35c7bd21bed0b74c75005ba1e480d11f8853a4",
+      "commit_date": "2026-10-13T13:36:54+07:00",
+      "message": "M1: frames and groups: one-step convert",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "fca70a6",
+      "commit_full": "fca70a60639dd96776062a4b94bc27dcb0072c14",
+      "commit_date": "2026-10-13T13:36:54+07:00",
+      "message": "M1: text made by commands in the app is readable on dark pages",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "d7f7624",
+      "commit_full": "d7f76246d36b7e2b654042391b940c5f653b125d",
+      "commit_date": "2026-10-13T13:36:54+07:00",
+      "message": "M3: effects on groups: inner shadows and background blur",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "a399ff8",
+      "commit_full": "a399ff8934c9c9fd37c69de2da3a9956d58d57a6",
+      "commit_date": "2026-10-13T13:36:54+07:00",
+      "message": "M3: variables inside styles",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "e02ad43",
+      "commit_full": "e02ad435b383a60ac8e9296e759e5a7503ebc3cf",
+      "commit_date": "2026-10-13T13:36:54+07:00",
+      "message": "M2: auto layout: dragging an automatic gap's handle fixes the gap",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "e56856f",
+      "commit_full": "e56856f4016c76fbc862ac2fb4fd3fb43a68f396",
+      "commit_date": "2026-10-13T13:36:54+07:00",
+      "message": "M3: component playground: variant, boolean and text properties",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "d30255b",
+      "commit_full": "d30255bf62eba7badd2874413f3f7ed9872a072f",
+      "commit_date": "2026-10-14T03:26:16+07:00",
+      "message": "fix(engine): preserve the underlying repeat command (#212)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "db55720",
+      "commit_full": "db55720c934c3867abfe6cbb0f78963baa069c20",
+      "commit_date": "2026-10-14T07:31:19+07:00",
+      "message": "fix(engine): keep proportions when a linked width or height is typed (#222)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "7a9a67a",
+      "commit_full": "7a9a67a8c38d3e016f5e3c4f8024a356148c7b0c",
+      "commit_date": "2026-10-14T09:30:55+07:00",
+      "message": "Docs: roadmap entries for the community fixes in #211, #213, #214, #216 and #218 (#230)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "4964910",
+      "commit_full": "4964910cc9a854d47978fb9c36c0620ac35d912c",
+      "commit_date": "2026-10-14T10:34:14+03:00",
+      "message": "M7: follow system theme from the first frame",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "6267ae5",
+      "commit_full": "6267ae563889849983b77887c638b88857c620a9",
+      "commit_date": "2026-10-14T11:17:17+07:00",
+      "message": "Vector edit mode: hover, hatch, select and drag filled regions (#243)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "52d013e",
+      "commit_full": "52d013e1db454424d232897afac42ac44be2b12f",
+      "commit_date": "2026-10-14T11:35:04+07:00",
+      "message": "Docs: roadmap entries for the community fixes in #221, #226, #228, #229, #231 to #238 and #240 to #242 (#246)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "bcedfeb",
+      "commit_full": "bcedfeba1079829fd96c3b38077cfcc76e03bb09",
+      "commit_date": "2026-10-14T12:00:20+07:00",
+      "message": "M7: recent files as thumbnail cards on the home screen (#249)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "e92792e",
+      "commit_full": "e92792e3e89dc7f19c9e2b7f1234770f503de06e",
+      "commit_date": "2026-10-14T14:36:39+02:00",
+      "message": "M1: a press on a corner handle resizes instead of picking the corner-radius handle (fixes #292)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "5454bdc",
+      "commit_full": "5454bdc2449b1fc8fa9fc826ebc8a4d3f758e2f7",
+      "commit_date": "2026-10-15T08:29:11-07:00",
+      "message": "M7: skip special files when scanning system fonts",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-15",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "ee2640d",
+      "commit_full": "ee2640d18e1ac307b05e829cb332509124dc1735",
+      "commit_date": "2026-10-15T10:34:20+02:00",
+      "message": "Swedish interface translation (sv)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "8959030",
+      "commit_full": "89590302554108ccfbfdb78dab6722d64e65795e",
+      "commit_date": "2026-10-15T15:10:11+07:00",
+      "message": "Merge #262: M7: follow system theme from the first frame (@VanTan666)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "55db465",
+      "commit_full": "55db465d8e136fbc7f554804ad37b499a642ebc9",
+      "commit_date": "2026-10-15T19:28:46+03:00",
+      "message": "M7: scrub typography spacing from leading icons (#373)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-15",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "b640069",
+      "commit_full": "b640069961f7a3a3fbd17297bdc8252d3a6a1cb9",
+      "commit_date": "2026-10-15T21:48:25+02:00",
+      "message": "M7: drop files anywhere to open them",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-15",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "f8458b7",
+      "commit_full": "f8458b70a8d7d1d59d2c39a53206ae254e3f873a",
+      "commit_date": "2026-10-16T00:28:10+05:00",
+      "message": "Reduce blank canvas strips during panning with bounded overscan",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-15",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "9552e53",
+      "commit_full": "9552e530be42174d12aad2278c271484b2d8f663",
+      "commit_date": "2026-10-16T01:30:10+07:00",
+      "message": "Swedish: command labels that only repeated the command id show in English",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "97b10b6",
+      "commit_full": "97b10b637d415aa57c1907d4f73c239584c3f570",
+      "commit_date": "2026-10-16T01:35:12+07:00",
+      "message": "Merge branch 'pr-482' into batch/t5",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "466fd24",
+      "commit_full": "466fd249fe759319fa821c93fedf02958c7ea307",
+      "commit_date": "2026-10-16T01:36:18+07:00",
+      "message": "Merge branch 'pr-579' into batch/t5",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-15",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "46316c9",
+      "commit_full": "46316c9895cb8178bcba80bfe92ee4c440e87203",
+      "commit_date": "2026-10-16T02:26:29+07:00",
+      "message": "Merge remote-tracking branch 'origin/main' into rb-568",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-15",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "049f97a",
+      "commit_full": "049f97a4c3e63cdb648ad788364b994692308341",
+      "commit_date": "2026-10-16T03:46:48+07:00",
+      "message": "Merge branch 'pr-597' into batch/t7",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-15",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "f948e08",
+      "commit_full": "f948e08fbc3f4618e7e6ac4b1c87584bea6a6d26",
+      "commit_date": "2026-10-16T05:04:09+07:00",
+      "message": "Merge remote-tracking branch 'origin/main' into fix-601",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-15",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    },
+    {
+      "commit": "f40c600",
+      "commit_full": "f40c600e67e12b55de12eb10ad22aad79ad22a20",
+      "commit_date": "2026-10-16T07:55:52+07:00",
+      "message": "Docs: roadmap rows for the community fixes from #478 up (#591, #598, #602) and #589 (#605)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-16",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0
+    }
+  ]
+}

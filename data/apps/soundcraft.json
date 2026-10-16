@@ -1,0 +1,821 @@
+{
+  "id": "soundcraft",
+  "name": "SoundCraft",
+  "adobe": "Pro Tools",
+  "category": "Audio",
+  "color": "#1cb8c9",
+  "repo_url": "https://github.com/storytold/soundcraft",
+  "roadmap_url": "https://github.com/storytold/soundcraft/blob/main/ROADMAP.md",
+  "checked_at": "2026-10-16T10:36:33+00:00",
+  "latest_commit": "b32d7bd",
+  "latest_commit_date": "2026-10-13T06:45:33-04:00",
+  "latest_message": "Merge main into #410; put the mix.instrument note in the Instruments row's 'have' cell",
+  "parsed": {
+    "stage": "pre-alpha",
+    "next_stage": "alpha",
+    "target": "Avid Pro Tools Ultimate 2026.4.1",
+    "last_updated": "2026-10-10",
+    "metrics": {
+      "full": {
+        "label": "Full target (ready for real work)",
+        "pct": 40.0,
+        "range": null,
+        "hours": [
+          950,
+          1450
+        ]
+      },
+      "mainstream": {
+        "label": "Mainstream practitioner",
+        "pct": 36.0,
+        "range": null,
+        "hours": [
+          380,
+          600
+        ]
+      },
+      "essentials": {
+        "label": "Essentials user",
+        "pct": 57.0,
+        "range": null,
+        "hours": [
+          110,
+          200
+        ]
+      },
+      "ready": {
+        "label": "Ready for real work",
+        "pct": 40.0,
+        "range": null,
+        "hours": null
+      },
+      "breadth": {
+        "label": "Feature breadth",
+        "pct": 70.0,
+        "range": null,
+        "hours": null
+      }
+    },
+    "audiences": [
+      {
+        "audience": "mainstream",
+        "label": "Mainstream practitioner (tracking/mixing engineer)",
+        "pct": 36.0,
+        "range": null,
+        "hours": null
+      },
+      {
+        "audience": "essentials",
+        "label": "Essentials user (song or podcast, defaults)",
+        "pct": 57.0,
+        "range": null,
+        "hours": null
+      },
+      {
+        "audience": "full",
+        "label": "Full target (ready for real work)",
+        "pct": 40.0,
+        "range": null,
+        "hours": [
+          950,
+          1450
+        ]
+      },
+      {
+        "audience": "mainstream",
+        "label": "Mainstream practitioner",
+        "pct": 36.0,
+        "range": null,
+        "hours": [
+          380,
+          600
+        ]
+      },
+      {
+        "audience": "essentials",
+        "label": "Essentials user",
+        "pct": 57.0,
+        "range": null,
+        "hours": [
+          110,
+          200
+        ]
+      }
+    ],
+    "dimensions": [
+      {
+        "label": "Features",
+        "pct": 45.0
+      },
+      {
+        "label": "UI/UX fidelity",
+        "pct": 55.0
+      },
+      {
+        "label": "File formats",
+        "pct": 40.0
+      },
+      {
+        "label": "Hardware (interfaces, MIDI, surfaces, sync)",
+        "pct": 12.0
+      },
+      {
+        "label": "Localization",
+        "pct": 12.0
+      },
+      {
+        "label": "Performance",
+        "pct": 35.0
+      },
+      {
+        "label": "Stability",
+        "pct": 45.0
+      },
+      {
+        "label": "Platforms",
+        "pct": 65.0
+      },
+      {
+        "label": "Ecosystem / plugins",
+        "pct": 30.0
+      },
+      {
+        "label": "AI features",
+        "pct": 5.0
+      }
+    ],
+    "features": [
+      {
+        "label": "Recording and monitoring",
+        "pct": 75.0
+      },
+      {
+        "label": "Editing",
+        "pct": 92.0
+      },
+      {
+        "label": "Mixing and routing",
+        "pct": 85.0
+      },
+      {
+        "label": "Automation",
+        "pct": 80.0
+      },
+      {
+        "label": "Built-in plugins and AudioSuite",
+        "pct": 40.0
+      },
+      {
+        "label": "Third-party plugin hosting",
+        "pct": 70.0
+      },
+      {
+        "label": "MIDI and instruments",
+        "pct": 70.0
+      },
+      {
+        "label": "Score and notation",
+        "pct": 60.0
+      },
+      {
+        "label": "Elastic Audio, TCE, Beat Detective",
+        "pct": 70.0
+      },
+      {
+        "label": "Surround and immersive",
+        "pct": 55.0
+      },
+      {
+        "label": "Video and post",
+        "pct": 60.0
+      },
+      {
+        "label": "Session, file management, interchange",
+        "pct": 55.0
+      },
+      {
+        "label": "Collaboration and cloud (Avid services)",
+        "pct": 0.0
+      },
+      {
+        "label": "Agent control",
+        "pct": 100.0
+      }
+    ],
+    "upcoming": [
+      "Alpha blocker: audio interfaces: device and buffer-size choice, duplex stream, ASIO; record to disk (G-01, G-06). 35–55 h.",
+      "Alpha blocker: MIDI devices: record from keyboards, play instruments live, output (G-02). 20–35 h.",
+      "Alpha blocker: AAF/OMF import and export (G-03). 50–90 h.",
+      "macOS plugin entitlement (#153), then AU editors (G-05). 1 h for the entitlement (needed for the mix row), then 15–25 h.",
+      "Land the open bug-fix PRs and clear the correctness backlog (G-04). 15–25 h.",
+      "PR CI running cargo xtask ci on three OSes (G-14). 5–10 h.",
+      "Fidelity harness against Pro Tools (G-07). 20–30 h."
+    ],
+    "progress": [
+      {
+        "date": "2026-10-12",
+        "text": "soundcraft-cli convert rejects an unparsable or zero --rate and an unknown --bit-depth (exit 1, nothing written) instead of converting with a default (#256)"
+      },
+      {
+        "date": "2026-10-12",
+        "text": "Timecode labels with huge fields no longer overflow: frame counts are computed in 128 bits and clamp, so setup.currenttimecode and session.formattime saturate instead of failing (#248)"
+      },
+      {
+        "date": "2026-10-12",
+        "text": "session.formattime with the smallest bar number no longer fails with an internal error: the bar offset saturates (#249)"
+      },
+      {
+        "date": "2026-10-12",
+        "text": "(Mix in a separate window): Window › Mix in Separate Window shows the Mix window in its own native window, so Edit and Mix can be on screen at once (e.g. one per monitor), as in Pro Tools. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-10",
+        "text": "(UI docking): Tracks and Groups, Clips, MIDI Editor, Memory Locations, and Undo History use movable panels. Edit and Mix retain separate arrangements; Clips and MIDI Editor belong to Edit. Transport, plug-in, and specialist utility windows retain their existing hosts. Panel moves and reset are available as UI commands, and saved UI preferences retain arrangements. Common toolbar and track record-enable buttons share interaction, accessible labels and keyboard focus through craft-ui, retaining blue tool selection and red record-arm states. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-10",
+        "text": "— Stage re-normalized to pre-alpha by the core-workflow gate (interface recording, MIDI recording and session interchange fail). Full re-measure against Pro Tools Ultimate 2026.4.1 and the standard"
+      },
+      {
+        "date": "2026-10-09",
+        "text": "— Light theme and live system appearance, clip-gain fader and nudge, missing-media"
+      },
+      {
+        "date": "2026-10-08",
+        "text": "— v0.2.x–v0.3.0 released (Flatpak, AppImage zsync); VST3 quit crash fixed;"
+      },
+      {
+        "date": "2026-10-07",
+        "text": "— Repository published; About window credits; release CI on macOS runners."
+      },
+      {
+        "date": "2026-10-06",
+        "text": "— Video track, Audio Unit hosting, plugin state and editors, Renderer; Mix"
+      },
+      {
+        "date": "2026-10-05",
+        "text": "— Foundation crates, Edit and Mix windows, playback, CLI/MCP, parity report,"
+      }
+    ]
+  },
+  "history": [
+    {
+      "commit": "330a698",
+      "commit_full": "330a6983973dc2043bb1fa0f0ba67fa07ae50685",
+      "commit_date": "2026-10-10T14:08:49-04:00",
+      "message": "Progress docs: target-app parity, gaps, alpha gate, readiness by audience (#155)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "5589d97",
+      "commit_full": "5589d97257be4fd95d6544d310e529f3a3e2a994",
+      "commit_date": "2026-10-10T18:14:05-06:00",
+      "message": "UI.9: reconcile upstream before shared UI landing",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "434c600",
+      "commit_full": "434c60047df4ac6b26f891448cd9e0e709682810",
+      "commit_date": "2026-10-12T17:44:36+02:00",
+      "message": "clap-host: host embedded plugin editors on Windows",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "8c73d9c",
+      "commit_full": "8c73d9c8b365feaa10e3cce16f17d409115e8938",
+      "commit_date": "2026-10-12T18:15:38+02:00",
+      "message": "Docs: update the progress docs for this change",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "a1e9660",
+      "commit_full": "a1e9660e600ffd85d70e1ac2d82e88cbb4dbf100",
+      "commit_date": "2026-10-12T18:22:41+02:00",
+      "message": "Audio device settings: system, devices, sample rate, buffer size; opt-in ASIO",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "ec41f80",
+      "commit_full": "ec41f804ff13cd73252af2217a576c4fb4998023",
+      "commit_date": "2026-10-12T18:26:37+02:00",
+      "message": "Docs: update the progress docs for this change",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "6d626ad",
+      "commit_full": "6d626adf9f22e4f804bbd1ba77297be6296a6ca1",
+      "commit_date": "2026-10-12T18:31:37+02:00",
+      "message": "Docs: update the progress docs for this change",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "992d715",
+      "commit_full": "992d71549359c3c8639074a84c7b5bc092f61973",
+      "commit_date": "2026-10-12T18:58:10+02:00",
+      "message": "Docs: Mix in a separate window",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "f4233dc",
+      "commit_full": "f4233dc8f79cf7ba424212e4f4cde8396b9f5349",
+      "commit_date": "2026-10-13T04:30:18-04:00",
+      "message": "Merge main into #259",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "7c061de",
+      "commit_full": "7c061de73756149d8b347c817f074f0b8df33143",
+      "commit_date": "2026-10-13T04:30:18-04:00",
+      "message": "Merge main into #261",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "c7a4c54",
+      "commit_full": "c7a4c544c099dcfd01803dc8d3f9d8588c68d613",
+      "commit_date": "2026-10-13T04:33:02-04:00",
+      "message": "Merge pull request #261 from Silvertree2010/fix/cli-convert-validation",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "b0daf32",
+      "commit_full": "b0daf3213e395be51543a2918aa51e89a784e428",
+      "commit_date": "2026-10-13T06:08:18-04:00",
+      "message": "Merge main into #315",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "edd1787",
+      "commit_full": "edd1787353890536501be54676806e0655b80e75",
+      "commit_date": "2026-10-13T06:13:17-04:00",
+      "message": "Merge main into #322",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "c2f0527",
+      "commit_full": "c2f052715d335d630ab0d5390103dd148ee84278",
+      "commit_date": "2026-10-13T06:16:54-04:00",
+      "message": "Merge main into #319",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "20927d7",
+      "commit_full": "20927d768467800a909bc60bae02a66f293014f6",
+      "commit_date": "2026-10-13T06:25:56-04:00",
+      "message": "Merge #315's latest into the landing branch",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "94390f4",
+      "commit_full": "94390f49fa0ba5215dc35e341727b5e340e52e84",
+      "commit_date": "2026-10-13T06:25:57-04:00",
+      "message": "Merge #319's latest into the landing branch",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "1dcd6aa",
+      "commit_full": "1dcd6aa06471831fed66a3161cb6927651f108fc",
+      "commit_date": "2026-10-13T06:25:57-04:00",
+      "message": "Merge #322's latest into the landing branch",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "844830b",
+      "commit_full": "844830bf6f89ad090c40f8240b04f8a73144f022",
+      "commit_date": "2026-10-13T06:31:36-04:00",
+      "message": "Merge main into #322",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "afa850d",
+      "commit_full": "afa850d6972646f3590fd7f141884d551010f537",
+      "commit_date": "2026-10-13T06:32:14-04:00",
+      "message": "Merge main into #319",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "6d4f9a4",
+      "commit_full": "6d4f9a41a5dc61b633891f9253695c73b6eec492",
+      "commit_date": "2026-10-13T06:44:55-04:00",
+      "message": "Merge main into #409",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "14862a5",
+      "commit_full": "14862a51399a480e599d133855f3ab3ebc5884ee",
+      "commit_date": "2026-10-13T06:45:20-04:00",
+      "message": "Merge main into #408",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "b32d7bd",
+      "commit_full": "b32d7bd9265b811723e134cf6c951727b4ef48df",
+      "commit_date": "2026-10-13T06:45:33-04:00",
+      "message": "Merge main into #410; put the mix.instrument note in the Instruments row's 'have' cell",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "3498db9",
+      "commit_full": "3498db9e51f48a3de99505107edece43992cded2",
+      "commit_date": "2026-10-13T11:01:34+02:00",
+      "message": "Docs: update the progress docs for this change",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "c4573d7",
+      "commit_full": "c4573d7fc8ce36f0cce96dc55606d29112f1d021",
+      "commit_date": "2026-10-13T11:11:12+02:00",
+      "message": "Docs: update the progress docs for this change",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "dd3ef4b",
+      "commit_full": "dd3ef4b11a6d8d0a36fe99885550f0e806f2bf8f",
+      "commit_date": "2026-10-13T11:17:57+02:00",
+      "message": "Docs: update the progress docs for this change",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "7eb643f",
+      "commit_full": "7eb643fc5eb11a3bced8bc90f12a6713999fceb4",
+      "commit_date": "2026-10-13T11:44:15+02:00",
+      "message": "clap-host: host embedded plugin editors on Windows",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "fbee545",
+      "commit_full": "fbee545a5e4a6df20de46a303ca8a531c03145fe",
+      "commit_date": "2026-10-13T11:44:51+02:00",
+      "message": "ROADMAP: no blank line inside the progress log (rebase leftover)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "0a2492b",
+      "commit_full": "0a2492b6105dfaef5bd72e7f0d3df29a46733315",
+      "commit_date": "2026-10-13T11:46:55+02:00",
+      "message": "Audio device settings: system, devices, sample rate, buffer size; opt-in ASIO",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "0e6f5ac",
+      "commit_full": "0e6f5accb456a2a76eedf73e3c10088274ffffe2",
+      "commit_date": "2026-10-13T11:47:30+02:00",
+      "message": "ROADMAP: no blank line inside the progress log (rebase leftover)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "6d91060",
+      "commit_full": "6d910609e1f68dc9923d40160b954077f7ccfb49",
+      "commit_date": "2026-10-13T11:47:42+02:00",
+      "message": "Docs: Mix in a separate window",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    },
+    {
+      "commit": "3b7a1f2",
+      "commit_full": "3b7a1f2b336472e1806455887fdf99ff67c15584",
+      "commit_date": "2026-10-13T11:47:49+02:00",
+      "message": "ROADMAP: no blank line inside the progress log (rebase leftover)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-10",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0
+    }
+  ]
+}
