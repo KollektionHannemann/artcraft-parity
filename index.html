@@ -307,7 +307,7 @@
           <div class="stats">
             <div><div class="v">${pct(avg)} %</div><div class="l">Average full target</div></div>
             <div><div class="v">${alpha}<span class="muted" style="font-size:18px"> / ${pre}</span></div><div class="l">Alpha / Pre-Alpha</div></div>
-            <div><div class="v">${changed}</div><div class="l">new roadmap in last run</div></div>
+            <div><div class="v">${changed}</div><div class="l">roadmap revised in the last 7 days</div></div>
           </div>
         </section>
         <section>
@@ -344,7 +344,7 @@
     drawGrid();
 
     const ts = ov.generated_at ? new Date(ov.generated_at) : null;
-    status.innerHTML = `<span>Last checked: ${ts ? dateEN(ov.generated_at) + " " + ts.toISOString().slice(11, 16) + " UTC" : "–"}</span>
+    status.innerHTML = `<span>Checked every 30 min · Data last changed: ${ts ? dateEN(ov.generated_at) + " " + ts.toISOString().slice(11, 16) + " UTC" : "–"}</span>
       <span>Latest roadmap: ${dateEN(lastUpd)}</span>
       <span>${all.length} apps · Source: GitHub history</span>`;
   }
@@ -578,7 +578,7 @@
       </div>
 
       <section class="panel" style="border-top:0">
-        <div class="section-title mono"><b>07 / Sources</b><span>Last check ${dateEN(d.checked_at)}</span></div>
+        <div class="section-title mono"><b>07 / Sources</b><span>Last change ${dateEN(d.updated_at)}</span></div>
         <div class="links mono">
           <a href="${esc(d.roadmap_url)}" target="_blank" rel="noopener">ROADMAP.md ↗</a>
           <a href="${esc(d.repo_url)}" target="_blank" rel="noopener">Repository ↗</a>
@@ -588,7 +588,7 @@
       </section>`;
 
     status.innerHTML = `<span>${esc(d.name)} · updated ${dateEN(p.last_updated || s.last_updated)}</span>
-      <span>Last check ${dateEN(d.checked_at)}</span><span>${hist.length} revisions</span>`;
+      <span>Last change ${dateEN(d.updated_at)}</span><span>${hist.length} revisions</span>`;
   }
 
   /* ---------- Routing ---------- */

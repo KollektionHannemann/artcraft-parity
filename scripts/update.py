@@ -2,15 +2,18 @@
 """Checks the ROADMAP.md of each Craft app for changes and updates the data files.
 
 Each run:
-  1. Discovery: lists the public repositories of the GitHub account. Repositories that are not
-     yet tracked, have a ROADMAP.md and whose roadmap contains a full-target row are added to apps.json.
-  2. History: partial clones (commits and trees only, no file contents) are cached under .cache/repos/.
-     Every unknown commit that changed ROADMAP.md is parsed and appended to data/history/<app>.json.
-  3. Output: the latest state produces data/overview.json and data/apps/<app>.json.
+  1. Discovery: lists the public repositories of the GitHub account. Repositories that are not yet tracked,
+     have a ROADMAP.md and whose roadmap contains a full-target row are added to apps.json.
+  2. History: partial clones (commits and trees only) are cached under .cache/repos/. Every unknown commit that
+     changed ROADMAP.md is parsed and appended to data/history/<app>.json.
+  3. Output: the latest state produces data/overview.json and data/apps/<app>.json. Files are only written when
+     their content changed, so unchanged runs produce no commits.
+  4. Events: new apps and new roadmap revisions are written to .cache/events.json (read by scripts/notify.py)
+     and appended to data/changelog.json.
 
 Usage:
   python3 scripts/update.py                 # regular run
-  python3 scripts/update.py --backfill 500  # build the history from scratch
+  python3 scripts/update.py --backfill 500  # build the history from scratch (no notifications)
 
 Set GITHUB_TOKEN to raise the GitHub API rate limit (GitHub Actions provides it automatically).
 """
@@ -38,8 +41,14 @@ DATA = ROOT / "data"
 HISTORY = DATA / "history"
 APPS_DIR = DATA / "apps"
 STATE = DATA / "state.json"
-CACHE = ROOT / ".cache" / "repos"
-RECENT_DAYS = 14  # how long a newly discovered app is highlighted on the dashboard
+STATUS = DATA / "status.json"
+CHANGELOG = DATA / "changelog.json"
+CACHE = ROOT / ".cache"
+EVENTS_FILE = CACHE / "events.json"
+REPOS_CACHE = CACHE / "repos"
+RECENT_DAYS = 14   # how long a newly discovered app is highlighted on the dashboard
+RECHECK_DAYS = 1   # how often a repository without a Craft roadmap is checked again
+ROADMAP_RECENT_DAYS = 7  # how long an app keeps the "New roadmap" marker after a revision
 PALETTE = ["#3d6cf0", "#ff6a4d", "#8f5cf5", "#f5a524", "#1ab394", "#e8448a", "#8bc53f",
            "#2bc48a", "#3f63e8", "#1cb8c9", "#ff7a1a", "#20b2c8", "#22a85a"]
 VENDORS = {"adobe", "microsoft", "autodesk", "avid"}
@@ -51,6 +60,16 @@ def now_iso():
 
 def today_utc() -> date:
     return datetime.now(timezone.utc).date()
+
+
+def parse_commit_date(s: str) -> datetime:
+    return datetime.fromisoformat(s)
+
+
+def roadmap_recent(history) -> bool:
+    """True if any roadmap revision of the app is within ROADMAP_RECENT_DAYS."""
+    cutoff = datetime.now(timezone.utc).timestamp() - ROADMAP_RECENT_DAYS * 86400
+    return any(parse_commit_date(h["commit_date"]).timestamp() >= cutoff for h in history)
 
 
 def is_recent(added) -> bool:
@@ -130,24 +149,29 @@ def reference_name(target) -> str:
     return " ".join(words) or "Unknown"
 
 
-def discover_new_apps(errors: list) -> list:
+def discover_new_apps(state: dict, errors: list) -> list:
     try:
         repos = list_repos()
     except (urllib.error.URLError, RuntimeError, json.JSONDecodeError) as exc:
         errors.append(f"discovery: repository list not available ({exc})")
         return []
 
+    checked = state.setdefault("discovery_checked", {})
     known = {a["id"] for a in CONFIG["apps"]} | IGNORED
     added = []
     for r in repos:
         name = r["name"]
         if name in known or r.get("fork") or r.get("archived"):
             continue
+        last = checked.get(name)
+        if last and (today_utc() - date.fromisoformat(last)).days < RECHECK_DAYS:
+            continue  # checked recently without result
         try:
             text = fetch_raw(name, r.get("default_branch") or BRANCH)
         except (urllib.error.URLError, OSError) as exc:
             errors.append(f"discovery: {name} could not be checked ({exc})")
             continue
+        checked[name] = today_utc().isoformat()
         if text is None:
             continue  # no roadmap, not an app we track
         parsed = parse_roadmap(text)
@@ -181,8 +205,8 @@ def git(*args, cwd=None) -> str:
 
 def ensure_clone(repo: str) -> Path:
     """Create a partial bare clone or bring an existing one up to date."""
-    CACHE.mkdir(parents=True, exist_ok=True)
-    gdir = CACHE / f"{repo}.git"
+    REPOS_CACHE.mkdir(parents=True, exist_ok=True)
+    gdir = REPOS_CACHE / f"{repo}.git"
     url = f"https://github.com/{ORG}/{repo}.git"
     if not gdir.exists():
         git("clone", "--bare", "--filter=blob:none", "--quiet", url, str(gdir))
@@ -229,42 +253,37 @@ def metric_point(parsed: dict, commit: dict) -> dict:
     }
 
 
-def load_json(path: Path, default):
-    if path.exists():
-        return json.loads(path.read_text(encoding="utf-8"))
-    return default
-
-
-def save_json(path: Path, data):
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-
-
 def update_history(app: dict, limit: int, errors: list, state: dict) -> dict:
     repo = app["id"]
     history_path = HISTORY / f"{repo}.json"
     history = load_json(history_path, [])
+    initial = not history  # app without any history yet (new app or first build)
     skipped_map = state.setdefault("skipped", {})
     try:
         gdir = ensure_clone(repo)
         commits = list_commits(gdir, limit)
     except RuntimeError as exc:
         errors.append(f"{repo}: git access failed ({exc})")
-        return {"id": repo, "changed": False, "new_revisions": 0, "history": history, "gdir": None}
+        return {"id": repo, "changed": False, "new_revisions": 0, "history": history,
+                "gdir": None, "added_points": [], "event_points": [], "initial": initial}
 
     if not commits:
         errors.append(f"{repo}: no commits found for {PATH}")
-        return {"id": repo, "changed": False, "new_revisions": 0, "history": history, "gdir": gdir}
+        return {"id": repo, "changed": False, "new_revisions": 0, "history": history,
+                "gdir": gdir, "added_points": [], "event_points": [], "initial": initial}
 
     hist_shas = {h["commit_full"] for h in history}
     if repo not in skipped_map:
-        # First run with state tracking. For an app that already has history, commits without a
-        # data point count as skipped. A new app has no history, so everything gets parsed.
+        # First run with state tracking. For an app with history, commits without a data point count
+        # as skipped. An app without history has nothing to compare against, so everything gets parsed.
         skipped_map[repo] = [c["sha"] for c in commits if c["sha"] not in hist_shas] if history else []
     skipped = set(skipped_map[repo])
     known_before = hist_shas | skipped
     new_commits = [c for c in commits if c["sha"] not in known_before]
 
+    newest_before = max((parse_commit_date(h["commit_date"]) for h in history), default=None)
+    added_points = []   # every new data point (stored in history)
+    event_points = []   # the subset that should notify (newer than anything we had before)
     for c in reversed(new_commits):  # append in chronological order
         try:
             parsed = parse_roadmap(read_roadmap_at(gdir, c["sha"]))
@@ -274,16 +293,18 @@ def update_history(app: dict, limit: int, errors: list, state: dict) -> dict:
         point = metric_point(parsed, c)
         if point["full_pct"] is None:
             if c["sha"] == commits[0]["sha"]:
-                # Warn if the newest revision has no full-target row (format changed?)
                 errors.append(f"{repo}: newest roadmap has no recognizable full-target row, please check the parser")
             skipped.add(c["sha"])  # remember, so it is not parsed again
             continue
+        point["previous_full_pct"] = history[-1]["full_pct"] if history else None
         history.append(point)
+        added_points.append(point)
+        if newest_before is not None and parse_commit_date(c["date"]) > newest_before:
+            event_points.append(point)
 
     history.sort(key=lambda h: h["commit_date"])
     save_json(history_path, history)
     skipped_map[repo] = sorted(skipped)
-    # "changed" only if the newest commit was not known before and history existed already
     changed = bool(known_before) and commits[0]["sha"] not in known_before
     return {
         "id": repo,
@@ -292,6 +313,9 @@ def update_history(app: dict, limit: int, errors: list, state: dict) -> dict:
         "latest": commits[0],
         "history": history,
         "gdir": gdir,
+        "added_points": added_points,
+        "event_points": event_points,
+        "initial": initial,
     }
 
 
@@ -308,34 +332,74 @@ def value_change(history):
     return round(cur - history[i - 1]["full_pct"], 1), history[i]["commit_date"][:10]
 
 
+# ---------- JSON helpers ----------
+
+def load_json(path: Path, default):
+    if path.exists():
+        return json.loads(path.read_text(encoding="utf-8"))
+    return default
+
+
+def save_json(path: Path, data):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def save_if_changed(path: Path, body: dict, stamp_key: str) -> bool:
+    """Write body plus a timestamp only if the content (ignoring the timestamp) changed."""
+    old = load_json(path, None)
+    if old is not None and {k: v for k, v in old.items() if k != stamp_key} == body:
+        return False
+    out = dict(body)
+    out[stamp_key] = now_iso()
+    save_json(path, out)
+    return True
+
+
 # ---------- Main ----------
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--backfill", type=int, default=0,
-                    help="Commit limit per app (default: 200)")
+    ap.add_argument("--backfill", type=int, default=0, help="Commit limit per app (default: 200)")
     args = ap.parse_args()
     limit = args.backfill or 200
+    emit_events = not args.backfill  # a manual backfill should not ping anyone
 
-    DATA.mkdir(exist_ok=True)
-    APPS_DIR.mkdir(parents=True, exist_ok=True)
-    HISTORY.mkdir(parents=True, exist_ok=True)
+    for d in (DATA, APPS_DIR, HISTORY, CACHE):
+        d.mkdir(parents=True, exist_ok=True)
 
     errors: list = []
+    events: list = []
     state = load_json(STATE, {"skipped": {}})
-    checked_at = now_iso()
+    now = now_iso()
 
-    added = discover_new_apps(errors)
+    added = discover_new_apps(state, errors)
     for a in added:
         print(f"new app discovered: {a['name']} ({a['id']})", file=sys.stderr)
+        events.append({"type": "new_app", "id": a["id"], "name": a["name"], "adobe": a["adobe"]})
 
     overview_apps = []
     for app in CONFIG["apps"]:
         repo = app["id"]
         res = update_history(app, limit, errors, state)
         history = res["history"]
-        print(f"{repo:12} new revisions: {res['new_revisions']:3}  history: {len(history):3}",
-              file=sys.stderr)
+        print(f"{repo:12} new revisions: {res['new_revisions']:3}  history: {len(history):3}", file=sys.stderr)
+
+        # Roadmap events only for apps that already had history (not for a new app's first build)
+        if emit_events and not res["initial"]:
+            for p in res["event_points"]:
+                events.append({
+                    "type": "roadmap_update",
+                    "id": repo,
+                    "name": app["name"],
+                    "commit": p["commit"],
+                    "commit_url": f"https://github.com/{ORG}/{repo}/commit/{p['commit_full']}",
+                    "date": p["commit_date"][:10],
+                    "message": p["message"],
+                    "full_before": p.get("previous_full_pct"),
+                    "full_after": p["full_pct"],
+                    "stage": p["stage"],
+                })
 
         latest_point = history[-1] if history else None
         parsed_latest = None
@@ -346,7 +410,7 @@ def main():
                 errors.append(f"{repo}: detail parse failed ({exc})")
 
         latest = res.get("latest") or {}
-        save_json(APPS_DIR / f"{repo}.json", {
+        detail = {
             "id": repo,
             "name": app["name"],
             "adobe": app["adobe"],
@@ -355,13 +419,13 @@ def main():
             "added": app.get("added"),
             "repo_url": f"https://github.com/{ORG}/{repo}",
             "roadmap_url": f"https://github.com/{ORG}/{repo}/blob/{BRANCH}/{PATH}",
-            "checked_at": checked_at,
             "latest_commit": latest.get("sha", "")[:7] or None,
             "latest_commit_date": latest.get("date"),
             "latest_message": latest.get("message"),
             "parsed": parsed_latest,
             "history": history,
-        })
+        }
+        save_if_changed(APPS_DIR / f"{repo}.json", detail, "updated_at")
 
         lp = latest_point or {}
         delta, delta_since = value_change(history)
@@ -388,8 +452,7 @@ def main():
             "breadth_pct": lp.get("breadth_pct"),
             "last_updated": lp.get("last_updated") or (latest.get("date") or "")[:10] or None,
             "latest_commit_date": latest.get("date"),
-            "changed_in_run": res["changed"],
-            "new_revisions": res["new_revisions"],
+            "changed_in_run": roadmap_recent(history),  # revision within ROADMAP_RECENT_DAYS
             "history_len": len(history),
         })
 
@@ -397,15 +460,29 @@ def main():
     overview_apps.sort(key=lambda a: (a["full_pct"] is None, -(a["full_pct"] or 0)))
     recent = [{"id": a["id"], "name": a["name"], "adobe": a["adobe"], "added": a["added"]}
               for a in overview_apps if a["is_new"]]
-    save_json(DATA / "overview.json", {
-        "generated_at": checked_at,
+    overview_changed = save_if_changed(DATA / "overview.json", {
         "source": f"https://github.com/{ORG}",
         "recent_additions": recent,
         "apps": overview_apps,
         "errors": errors,
-    })
-    print(f"done: {len(overview_apps)} apps, {len(added)} newly discovered, {len(errors)} notices",
-          file=sys.stderr)
+    }, "generated_at")
+
+    # Heartbeat: one status commit per day keeps the repository active (GitHub pauses schedules
+    # in public repositories after 60 days without activity). Runs with changes write it anyway.
+    status = load_json(STATUS, {})
+    heartbeat_due = status.get("heartbeat_date") != today_utc().isoformat()
+    if events or added or heartbeat_due or overview_changed:
+        save_json(STATUS, {"heartbeat_date": today_utc().isoformat(), "checked_at": now,
+                           "events_in_last_run": len(events)})
+
+    save_json(EVENTS_FILE, events)
+    if events:
+        log = load_json(CHANGELOG, [])
+        log = (log + [{"checked_at": now, **e} for e in events])[-500:]
+        save_json(CHANGELOG, log)
+
+    print(f"done: {len(overview_apps)} apps, {len(added)} newly discovered, "
+          f"{len(events)} events, {len(errors)} notices", file=sys.stderr)
     for e in errors:
         print("  -", e, file=sys.stderr)
 

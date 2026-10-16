@@ -20,7 +20,8 @@ Keep it that way.
 | `scripts/update.py` | Discovers new repos, reads git history, writes all data files |
 | `scripts/roadmap_parser.py` | Parses one `ROADMAP.md` into metrics, dimensions, features, upcoming items and the change log |
 | `data/` | **Generated.** `overview.json`, `apps/*.json`, `history/*.json`, `state.json`. Do not hand-edit |
-| `.github/workflows/update.yml` | Runs `update.py` every 6 hours (cron `17 */6 * * *`) and commits `data/` and `apps.json` |
+| `.github/workflows/update.yml` | Runs `update.py` every 30 minutes, commits `data/` and `apps.json`, then runs `notify.py` |
+| `scripts/notify.py` | Opens a notification issue (mentions `notify` from `apps.json`) and optionally sends ntfy push |
 | `docs/` | Screenshots used in the README |
 
 ## Commands
@@ -49,6 +50,11 @@ python3 -m http.server 8000                # serve the dashboard; fetch() does n
   - `apps`: one entry per app, sorted by full target. `changed_in_run` is true only if the newest commit was new in this run.
   - `recent_additions`: apps discovered within `RECENT_DAYS` (14). Drives the banner on the overview.
   - `errors`: notices shown at the top of the overview. Discovery, git and parser problems all end up here.
+- `.cache/events.json`: events of the current run only (new apps, roadmap revisions). Read by `notify.py`. Not committed.
+- `data/changelog.json`: the persistent log of those events.
+- `data/status.json`: a heartbeat written once per day, so the repository stays active. GitHub pauses scheduled workflows in
+  public repositories after 60 days without activity.
+- Timestamps (`generated_at`, `updated_at`) change only when the content of a file changes. Unchanged runs produce no commit.
 
 ## Changing the parser
 
@@ -86,8 +92,7 @@ python3 -m http.server 8000                # serve the dashboard; fetch() does n
 - **Full target is the headline metric.** Other numbers support it. Do not reorder the UI to put them first.
 - **No external JS libraries.** Charts are inline SVG.
 - **Be careful with the GitHub API.** Avoid per-commit API calls. Use the partial git clones.
-- **Don't hand-edit `data/`.** The Action commits it every 6 hours, including a timestamp, so the history has regular
-  commits even when nothing changed. This is intentional, because it keeps the scheduled workflow active.
+- **Don't hand-edit `data/`.** The Action commits it when something changed, and once a day as heartbeat.
 - Before pushing from a local clone, run `git pull --rebase`. The bot commits data between your changes.
 
 ## Gotchas
@@ -102,6 +107,8 @@ python3 -m http.server 8000                # serve the dashboard; fetch() does n
 
 ## When you change behavior
 
-- Update `README.md` (sections "How it works", "Automatic discovery of new apps", "Repository structure").
+- Update `README.md` (sections "How it works", "Automatic discovery of new apps", "Notifications", "Repository structure").
+- Events must only cover revisions newer than the stored data (`event_points` in `update_history()`). Historical
+  backfill must never notify. Keep `emit_events` in `main()` for `--backfill` runs.
 - If you change what `overview.json` or `<app>.json` contains, update `index.html` in the same change. The UI reads these
   files directly and silently shows `–` for missing keys.

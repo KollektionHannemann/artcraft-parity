@@ -2,11 +2,12 @@ name: Update roadmap parity
 
 on:
   schedule:
-    - cron: "17 */6 * * *"   # every 6 hours
+    - cron: "*/30 * * * *"   # every 30 minutes
   workflow_dispatch:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: roadmap-tracker
@@ -22,7 +23,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Check roadmaps, discover new apps and update data
+      - name: Check roadmaps, discover new apps, update data
         run: python3 scripts/update.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -38,3 +39,9 @@ jobs:
             git commit -m "Update roadmap data ($(date -u +%Y-%m-%d\ %H:%M) UTC)"
             git push
           fi
+
+      - name: Notify about new apps and roadmap updates
+        run: python3 scripts/notify.py
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
