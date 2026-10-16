@@ -1,6 +1,6 @@
 <div align="center">
 
-# ArtCraft Parity
+# ArtCraft Parity Tracker
 
 **How close are the ArtCraft Craft apps to the products they replace?**
 
