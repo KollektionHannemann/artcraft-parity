@@ -123,6 +123,13 @@
   .errors { border: 1px solid rgba(255,107,107,.4); color: #ffb3b3; padding: 12px 14px; margin: 0 0 18px; font-size: 13px; }
   .empty { color: var(--muted); padding: 48px 0; text-align: center; grid-column: 1 / -1; background: var(--panel); }
 
+  /* New-app banner */
+  .banner { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; border: 1px solid var(--blue); background: rgba(91,140,255,.08); padding: 14px 18px; margin-bottom: 18px; color: var(--text); }
+  .banner:hover { background: rgba(91,140,255,.14); }
+  .banner strong { font-size: 16px; }
+  .banner .muted { font-size: 13.5px; }
+  .banner .mono:last-child { margin-left: auto; color: var(--blue); }
+
   /* Detail page */
   .back { display: inline-flex; color: var(--muted); margin: 6px 0 22px; }
   .back:hover { color: var(--text); }
@@ -279,9 +286,17 @@
 
     const errors = (ov.errors || []).length
       ? `<div class="errors">${ov.errors.map(esc).join("<br>")}</div>` : "";
+    const banner = (ov.recent_additions || []).map((r) => `
+      <a class="banner" href="#/app/${esc(r.id)}">
+        <span class="mono">New app added</span>
+        <strong>${esc(r.name)}</strong>
+        <span class="muted">Reference ${esc(r.adobe)} · discovered ${dateEN(r.added)} · tracked from its ROADMAP.md</span>
+        <span class="mono">Open →</span>
+      </a>`).join("");
 
     app.innerHTML = `
       ${errors}
+      ${banner}
       <section class="hero">
         <section>
           <div class="mono muted">Product parity · Full target (ready for real work)</div>
@@ -368,6 +383,7 @@
         </div>
         <div class="tags mono">
           ${a.stage ? `<span class="tag" style="--c:${c}">${esc(stageLabel(a.stage))}</span>` : ""}
+          ${a.is_new ? `<span class="tag new">New app</span>` : ""}
           ${a.changed_in_run ? `<span class="tag new">New roadmap</span>` : ""}
           ${delta}
         </div>
@@ -489,6 +505,7 @@
         <div class="tags mono">
           ${(p.stage || s.stage) ? `<span class="tag" style="--c:${c}">${esc(stageLabel(p.stage || s.stage))}</span>` : ""}
           ${p.next_stage ? `<span class="tag plain">next stage ${esc(stageLabel(p.next_stage))}</span>` : ""}
+          ${s.is_new ? `<span class="tag new">New app</span>` : ""}
           ${s.changed_in_run ? `<span class="tag new">New roadmap</span>` : ""}
         </div>
       </header>

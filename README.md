@@ -7,8 +7,8 @@
 A live dashboard that tracks the product parity of all 13 Craft apps against their reference products,
 built from the `ROADMAP.md` files in the [storytold](https://github.com/storytold) repositories.
 
-[![Update workflow](https://github.com/KollektionHannemann/artcraft-parity/actions/workflows/update.yml/badge.svg)](https://github.com/KollektionHannemann/artcraft-parity/actions/workflows/update.yml)
-[![Live dashboard](https://img.shields.io/badge/live-GitHub%20Pages-5b8cff)](https://kollektionhannemann.github.io/artcraft-parity/)
+[![Update workflow](https://github.com/KollektivHannemann/artcraft-paritaet/actions/workflows/update.yml/badge.svg)](https://github.com/KollektivHannemann/artcraft-paritaet/actions/workflows/update.yml)
+[![Live dashboard](https://img.shields.io/badge/live-GitHub%20Pages-5b8cff)](https://kollektivhannemann.github.io/artcraft-paritaet/)
 
 </div>
 
@@ -28,7 +28,7 @@ built from the `ROADMAP.md` files in the [storytold](https://github.com/storytol
 
 ## Current snapshot
 
-Values from the roadmap files as of 16 Oct 2026. The [live dashboard](https://kollektionhannemann.github.io/artcraft-parity/)
+Values from the roadmap files as of 16 Oct 2026. The [live dashboard](https://kollektivhannemann.github.io/artcraft-paritaet/)
 always shows the latest state.
 
 | # | App | Reference | Stage | Full target | Range | Hours to ~95 % |
@@ -66,13 +66,27 @@ range and the hours until the project reaches ~95 %. Each project's roadmap expl
 4. The results are written to `data/overview.json` and `data/apps/<app>.json`. `index.html` reads these files.
    It is a plain HTML, CSS and JavaScript page with no build step.
 
+## Automatic discovery of new apps
+
+Every run checks the public repositories of the GitHub account for new Craft apps:
+
+- A repository is **added automatically** if it is not yet tracked, is not a fork or archived, has a `ROADMAP.md`,
+  and that roadmap contains a full-target row. Repositories with a roadmap of a different kind (for example product
+  goals) are skipped.
+- The new app is appended to `apps.json` and tracked from then on. Its `added` date is recorded.
+- For 14 days after discovery, the dashboard shows a banner on the overview page and a *New app* tag on the card.
+- Repositories listed under `ignored_repos` in `apps.json` are never added. The account's `artcraft` and `craft-launcher`
+  repositories are ignored by default.
+
+Discovery needs the GitHub API. In GitHub Actions, the built-in token is passed automatically.
+
 ## Repository structure
 
 | Path | Content |
 |---|---|
 | `index.html` | The dashboard: overview, ranking and detail view |
-| `apps.json` | Apps with reference product, category, color and suite order |
-| `scripts/update.py` | Checks the repositories and writes the data files |
+| `apps.json` | Tracked apps (reference product, category, color, suite order) and `ignored_repos` |
+| `scripts/update.py` | Discovers new apps, checks roadmap revisions and writes the data files |
 | `scripts/roadmap_parser.py` | Parses a `ROADMAP.md` into metrics, dimensions, features and the change log |
 | `data/overview.json` | Data for the overview page |
 | `data/apps/<app>.json` | Current state and history per app |
