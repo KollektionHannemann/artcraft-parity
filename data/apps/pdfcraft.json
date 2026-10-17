@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/pdfcraft",
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
-  "latest_commit": "a9d7774",
-  "latest_commit_date": "2026-10-17T13:37:34+02:00",
-  "latest_message": "Merge branch 'main' into fix/xml-form-text-nodes",
+  "latest_commit": "046ca7b",
+  "latest_commit_date": "2026-10-17T14:38:13-06:00",
+  "latest_message": "Merge remote-tracking branch 'origin/main' into pr1917",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -238,6 +238,10 @@
       },
       {
         "date": "2026-10-15",
+        "text": "(M6, #1917 refresh): Integrated upstream 99941daa while retaining the XML/XFDF attribute whitespace correction and all upstream progress. Only independent documentation conflicts required resolution; focused production and test files are unchanged from the previously green CI head. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-15",
         "text": "(M2, gap 12): cargo xtask text-oracle scores reading order as well as word F1: the longest common subsequence of the two word sequences over the longer one. F1 is a bag of words and cannot see order at all -- measuring #2431, a change that moves text and nothing else, it called 26 of the 29 files whose output changed identical, where the order score separated 18 improvements from 6 regressions. Reports, does not gate; a disagreement with Poppler, not a verdict. Estimates unchanged."
       },
       {
@@ -318,6 +322,10 @@
       },
       {
         "date": "2026-10-13",
+        "text": "(M6, data exchange fidelity): XML and XFDF exports preserve tabs and line breaks in field names and comment metadata using character references. Saved-PDF regressions cover distinct names that XML would normalize to the same attribute value, restored field values and replacement of the original comment identities. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-13",
         "text": "(community, M14, #1553 review): Relative Fontconfig includes resolve beside each including config, including nested configuration selected through FONTCONFIGPATH. Directory includes accept only digit-prefixed .conf in lexical order. Isolated regressions reproduce both review findings; configuration size/count/depth limits, cycles, symlinked config and valid reset ordering are covered. Estimates unchanged."
       },
       {
@@ -383,14 +391,6 @@
       {
         "date": "2026-10-12",
         "text": "(M2, inline-image boundaries): Unfiltered inline images with known sample layouts keep pixel bytes that look like the EI terminator when content is rewritten. Regression tests cover row padding, colour-space and parameter aliases, masks and malformed sizes; classic and packed saved PDFs retain the pixels in independent readers and renderers. Filtered and resource-defined layouts retain the existing tolerant heuristic. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-12",
-        "text": "(M3, drawing markups): While a comment is being drawn, the pointer in a band along any edge of the view (or just past it) scrolls the view up, down, left or right, so points beyond what is shown can be reached. A polygon, cloud or run of connected lines takes back its last point with Backspace, Delete or Undo (the first point's removal cancels it). Edge scrolling has unit tests of its maths only; it has not been exercised end to end in the app by an automated test."
-      },
-      {
-        "date": "2026-10-12",
-        "text": "(gap 6, #1319, #1305, #1324): Editing an XFA form keeps a radio item's stored text when it contains a space, so a later layout still selects it. Replace Pages on a split selection replaces those pages and leaves the gap; editing the dialog range still replaces the span. Marking a figure decorative rewrites only that figure's content stream, so a header, added text and unknown stream entries stay. Estimates unchanged."
       }
     ]
   },
@@ -1944,6 +1944,25 @@
       "breadth_pct": 67.0
     },
     {
+      "commit": "b85d519",
+      "commit_full": "b85d5199938aec0ceff7012688ff82e1852db482",
+      "commit_date": "2026-10-13T14:16:44Z",
+      "message": "M6: preserve whitespace in XML and XFDF attributes",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-13",
+      "full_pct": 49.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "previous_full_pct": 50.0
+    },
+    {
       "commit": "3f044b6",
       "commit_full": "3f044b6263aa6605c3aa44ca6d065e1ab37d13b6",
       "commit_date": "2026-10-13T14:46:24-06:00",
@@ -2898,10 +2917,48 @@
       "breadth_pct": 67.0
     },
     {
+      "commit": "f1177bb",
+      "commit_full": "f1177bb2876b2a94463ed1cf05939e0633a3e3d1",
+      "commit_date": "2026-10-15T22:01:42+02:00",
+      "message": "M6: refresh XML whitespace fix and record parity evidence",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-14",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "previous_full_pct": 49.0
+    },
+    {
       "commit": "14c3d95",
       "commit_full": "14c3d951e7a942dbcc3003fb68c4635d66825250",
       "commit_date": "2026-10-15T23:04:14+02:00",
       "message": "M6: preserve complete plain XML form values",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-15",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "previous_full_pct": 50.0
+    },
+    {
+      "commit": "6e44acf",
+      "commit_full": "6e44acf8c7bd9ce5e37a7e04f5f81dbf84a6cbb9",
+      "commit_date": "2026-10-15T23:15:55+02:00",
+      "message": "Merge current main into PR #1917",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-15",
@@ -2934,7 +2991,45 @@
       "essentials_pct": 66.0,
       "breadth_pct": 67.0,
       "previous_full_pct": 50.0
+    },
+    {
+      "commit": "2f532ea",
+      "commit_full": "2f532ea68d67ddb7931c73dae2b8d2582eab0a31",
+      "commit_date": "2026-10-17T13:42:05+02:00",
+      "message": "Merge branch 'main' into fix/xfdf-preserve-attribute-whitespace",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-15",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "previous_full_pct": 50.0
+    },
+    {
+      "commit": "046ca7b",
+      "commit_full": "046ca7b9474ed042acac7ab317045726af967a47",
+      "commit_date": "2026-10-17T14:38:13-06:00",
+      "message": "Merge remote-tracking branch 'origin/main' into pr1917",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-15",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "previous_full_pct": 50.0
     }
   ],
-  "updated_at": "2026-10-17T20:48:31+00:00"
+  "updated_at": "2026-10-17T21:47:13+00:00"
 }
