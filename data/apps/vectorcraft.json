@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/vectorcraft",
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
-  "latest_commit": "403b335",
-  "latest_commit_date": "2026-10-16T15:27:53+07:00",
-  "latest_message": "Effects: Effect › Sketch › Halftone Pattern redraws an object through a halftone screen of dots, rings or lines",
+  "latest_commit": "2d0da14",
+  "latest_commit_date": "2026-10-17T12:26:12+07:00",
+  "latest_message": "Cursors: 36 more tool states get cursors of their own, listed in cursors.toml",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -253,6 +253,10 @@
       {
         "date": "2026-10-16",
         "text": "About 160 community PRs landed, each through the full gate. Crashes and hostile files: damaged PDF dictionaries and arrays no longer crash import (#2133, #2240, #2244, #2271), area type with huge row or column counts opens (#2109), hostile mesh edges are bounded (#2051). New: Dimension tool (#1788), legacy version 7 .ai save (#1794), Object › Intertwine (#2095), Apple Pencil and touch input on the web (#1740), Sample Color from Screen (#2257), Drop Shadow Darkness (#2252), Smart Blur edge modes (#2154), Scribble variations (#2180), Free Distort corners in its dialog (#2134), Rotate View presets (#2106), tritanopia proofing (#2234), Layers panel filters (#2087), Hide Template (#2117), File › Automate Batch through the Actions panel (#1938), dataset and graph CSV (#1929, #1941), Reset Tracking and Kerning (#2274), Alt+Enter copies in Transform fields (#2236), Shift+Tab panels (#2254), Control bar isolation, Recolor and image Replace (#2258, #2079, #2081). Revolve renders smooth with Cap on by default (#1193); Image Trace keeps tiny parts, thin outlines and shared corners, and Grayscale gradients are grey (#2012, #2025, #2263, #2264, #2265, #1879). Import: many .ai, EPS and PDF fidelity fixes (#2014–#2016, #2029, #2030, #2044, #2046, #2050–#2052, #2058, #2129, #2199, #2202, #2218), images up to 1 GB decoded (#2060), .ai/.ait/.svgz files paste from a file manager (#2148, #2201). Fixes across fields (arithmetic #2069, #2209, #2022; caret #1403), New Document (#2158, #2176), menus (#2232), shortcuts (#2235, #2146), Transform Each axes (#2227), Paste in Place (#1926), Color Picker tab order (#1937, #1939) and more. Languages: Bulgarian, Greek, Swedish and Finnish complete under the tests, pt-br completed. Details per PR in the PRs; headline numbers unchanged (estimated)."
+      },
+      {
+        "date": "2026-10-15",
+        "text": "Cursors: 36 more tool states get cursors of their own. Node editing follows the public manual (Direct Selection's anchor squares, Reshape Segment, Group Selection's plus, the arrow hollow on a snap, the Alt-copy arrowheads), the Anchor Point caret, the Curvature pen and Free Transform's side-shear arrows are drawn; Lasso, the freehand, symbolism and other tools borrow a drawn cursor until theirs is drawn. crates/tools/src/cursors.toml lists every cursor for whoever draws them, and cargo xtask cursors warns about one missing from it. Scores unchanged."
       },
       {
         "date": "2026-10-14",
@@ -3802,7 +3806,29 @@
       "mainstream_pct": 65.0,
       "essentials_pct": 75.0,
       "breadth_pct": 88.0
+    },
+    {
+      "commit": "2d0da14",
+      "commit_full": "2d0da1472fbd20b2717646fdf3d03eae09fd7662",
+      "commit_date": "2026-10-17T12:26:12+07:00",
+      "message": "Cursors: 36 more tool states get cursors of their own, listed in cursors.toml",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-16",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "previous_full_pct": 62.0
     }
   ],
-  "updated_at": "2026-10-16T16:28:07+00:00"
+  "updated_at": "2026-10-17T05:50:32+00:00"
 }
