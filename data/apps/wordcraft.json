@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "df28b78",
-  "latest_commit_date": "2026-10-15T11:47:00-06:00",
-  "latest_message": "refactor(pdf): reconcile shared writer with current main (PDFW)",
+  "latest_commit": "2f6311c",
+  "latest_commit_date": "2026-10-17T17:00:10-06:00",
+  "latest_message": "M15: keep inherited proofing choices in Language dialog (#2717) (#2736)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
-    "last_updated": "2026-10-14",
+    "last_updated": "2026-10-17",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -245,6 +245,10 @@
     ],
     "progress": [
       {
+        "date": "2026-10-17",
+        "text": "Language dialog keeps inherited proofing language and no-proof choices (#2717). Opening and accepting unchanged no longer replaces style-derived values with English US and proofing enabled."
+      },
+      {
         "date": "2026-10-14",
         "text": "DOCX row table border exceptions render and survive saving. Explicit cell borders win; a row exception does not change other rows."
       },
@@ -399,10 +403,6 @@
       {
         "date": "2026-10-14",
         "text": "Open DrawingML freeform paths draw a:tailEnd at the final path segment"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Word XML Document (Flat OPC) reading is bounded everywhere in the file (#1353): nesting and elements are capped as the XML tree reader caps a part's, every child of the package and every part's data count against the part count and size limits (a repeated part name too), and data is checked before it's copied; base64 written as CDATA or with character references reads as the same bytes, and an entity in it is an error instead of bytes gone missing"
       }
     ]
   },
@@ -5536,7 +5536,26 @@
       "mainstream_pct": 55.0,
       "essentials_pct": 63.0,
       "breadth_pct": 80.0
+    },
+    {
+      "commit": "2f6311c",
+      "commit_full": "2f6311cc37776dad81998f4e4e50114476c2882c",
+      "commit_date": "2026-10-17T17:00:10-06:00",
+      "message": "M15: keep inherited proofing choices in Language dialog (#2717) (#2736)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-17",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
     }
   ],
-  "updated_at": "2026-10-16T16:28:44+00:00"
+  "updated_at": "2026-10-17T23:06:53+00:00"
 }
