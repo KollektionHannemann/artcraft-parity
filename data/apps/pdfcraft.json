@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/pdfcraft",
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
-  "latest_commit": "5fdd820",
-  "latest_commit_date": "2026-10-15T19:16:48-06:00",
-  "latest_message": "fix(ui): validated signature display, snapshot tab reuse (#1895)",
+  "latest_commit": "a9d7774",
+  "latest_commit_date": "2026-10-17T13:37:34+02:00",
+  "latest_message": "Merge branch 'main' into fix/xml-form-text-nodes",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -234,6 +234,10 @@
     "progress": [
       {
         "date": "2026-10-15",
+        "text": "(M6, AcroForm XML text): Plain AcroForm XML imports retain all direct text around comments and processing instructions, including CDATA and character references. Synthetic regressions verify exact values and unknown catalog data after incremental and full save/reopen. Nested-element and XFA interpretation are unchanged. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-15",
         "text": "(M2, gap 12): cargo xtask text-oracle scores reading order as well as word F1: the longest common subsequence of the two word sequences over the longer one. F1 is a bag of words and cannot see order at all -- measuring #2431, a change that moves text and nothing else, it called 26 of the 29 files whose output changed identical, where the order score separated 18 improvements from 6 regressions. Reports, does not gate; a disagreement with Poppler, not a verdict. Estimates unchanged."
       },
       {
@@ -387,10 +391,6 @@
       {
         "date": "2026-10-12",
         "text": "(gap 6, #1319, #1305, #1324): Editing an XFA form keeps a radio item's stored text when it contains a space, so a later layout still selects it. Replace Pages on a split selection replaces those pages and leaves the gap; editing the dialog range still replaces the span. Marking a figure decorative rewrites only that figure's content stream, so a header, added text and unknown stream entries stay. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-12",
-        "text": "(M6, XML field names): AcroForm XML data export constrains generated element names to XML 1.0 NCNames, so Latin-1 names such as Area² and Aµ produce readable data files. Original PDF field names travel through the existing xfdf:original attribute; previously valid tags, including Greek and CJK, keep their spelling. Saved-PDF regressions cover invalid prefixes, combining letters and normalized-name collisions. Estimates unchanged."
       }
     ]
   },
@@ -2896,7 +2896,45 @@
       "mainstream_pct": 55.0,
       "essentials_pct": 66.0,
       "breadth_pct": 67.0
+    },
+    {
+      "commit": "14c3d95",
+      "commit_full": "14c3d951e7a942dbcc3003fb68c4635d66825250",
+      "commit_date": "2026-10-15T23:04:14+02:00",
+      "message": "M6: preserve complete plain XML form values",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-15",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "previous_full_pct": 50.0
+    },
+    {
+      "commit": "a9d7774",
+      "commit_full": "a9d7774bbcdff9cee110f07eb799ff33a55f571b",
+      "commit_date": "2026-10-17T13:37:34+02:00",
+      "message": "Merge branch 'main' into fix/xml-form-text-nodes",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-15",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "previous_full_pct": 50.0
     }
   ],
-  "updated_at": "2026-10-16T16:28:10+00:00"
+  "updated_at": "2026-10-17T20:48:31+00:00"
 }
