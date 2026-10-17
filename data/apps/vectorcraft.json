@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/vectorcraft",
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
-  "latest_commit": "2d0da14",
-  "latest_commit_date": "2026-10-17T12:26:12+07:00",
-  "latest_message": "Cursors: 36 more tool states get cursors of their own, listed in cursors.toml",
+  "latest_commit": "ae82ed6",
+  "latest_commit_date": "2026-10-17T14:30:04+07:00",
+  "latest_message": "Docs: the ROADMAP records the community PRs landed on 2026-10-17",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Adobe Illustrator 2026 (30.x)",
-    "last_updated": "2026-10-16",
+    "last_updated": "2026-10-17",
     "metrics": {
       "full": {
         "label": "Full Illustrator (ready for real work; decides the stage)",
@@ -246,6 +246,10 @@
       "Then: type core and advanced type (G4), the Illustrator 2026 additions (G13), 3D (G3)."
     ],
     "progress": [
+      {
+        "date": "2026-10-17",
+        "text": "About 75 community PRs landed in three batches, each through the full gate, plus our fixes on top. Crashes and hostile input: an image's RGBA size is checked from its header before decoding, without overflowing, in the renderer, sampling, recoloring and Crop Image (#2442, #2468, #2407), PDF Add Around and huge art are clamped (#2440), graph axis labels past i64, + in hex colours and XML ids are handled (#2610, #2470, #2447), Document Raster Effects resolutions open in range (#2579), Batch names stay in their folder (#2504). Regressions: floating panel groups are opaque again while the docked card keeps its rounded corners (#2499), the Wayland pointer returns over panels (#2502). New: MCP cancels long exports, answers while one runs and reports progress (#2546), docinspect takes ids, kind and paging (#2543), raster export of a page rectangle (#2511), text.create returns bounds (#2478), PDF presets and ICC profiles persist (#2547), screen-reader names for widgets (#2611), Expand on Intertwine (#2622, fixes #2540), Duplicate/Copy/Cut of several artboards (#2567), print presets by name (#2607), TSV data sets (#2608), planar TIFF (#2598), Alt-click a swatch onto a gradient stop (#2623), Shift-click ranges in Links, Graphic Styles and Libraries (#2612, #2613, #2618), Space+Shift rotates the view (#2601), Presentation Mode keys (#2583), Small Caps and super/subscript buttons (#2508). Fidelity: editable vector art from Illustrator EPS (#2571), .ai Drop Shadow Darkness (#2513), overprint preview with Darken (#2514), Generic CMYK black round-trips (#2503), PNG sRGB chunk (#2519), kerning at a caret (#2518), tab widths in justified area type (#2487), Transform copies keep their own gradients (#2486), smooth Zig Zag (#2475), Live Corners round up to their neighbours (#2484), kerning across style runs (#2554), SVG letter spacing on justified lines (#2574), Dimension tool snapping (#2482), gradient chips (#2495), Transform panel flips and percentages (#2400, #2404). Languages: Dutch, Danish and Indonesian complete (#2393), Simplified Chinese status and error messages (#2578), translated file filters and presets (#2590). Headline numbers unchanged (estimated)."
+      },
       {
         "date": "2026-10-16",
         "text": "Symbol Options › Export Type (Graphic or Movie Clip, default Movie Clip) with Registration; symbol.options / symbol.list (G5)."
@@ -3828,7 +3832,29 @@
       "essentials_pct": 75.0,
       "breadth_pct": 88.0,
       "previous_full_pct": 62.0
+    },
+    {
+      "commit": "ae82ed6",
+      "commit_full": "ae82ed65006245447f29473642da729c5144724c",
+      "commit_date": "2026-10-17T14:30:04+07:00",
+      "message": "Docs: the ROADMAP records the community PRs landed on 2026-10-17",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-17",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "previous_full_pct": 62.0
     }
   ],
-  "updated_at": "2026-10-17T05:50:32+00:00"
+  "updated_at": "2026-10-17T07:50:46+00:00"
 }
