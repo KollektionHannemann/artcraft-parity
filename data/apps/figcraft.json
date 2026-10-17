@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "f40c600",
-  "latest_commit_date": "2026-10-16T07:55:52+07:00",
-  "latest_message": "Docs: roadmap rows for the community fixes from #478 up (#591, #598, #602) and #589 (#605)",
+  "latest_commit": "40c744d",
+  "latest_commit_date": "2026-10-17T13:03:49+07:00",
+  "latest_message": "M1: convert frames to sections and sections to frames (#719) (#721)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Figma Design (desktop app 126.10.7)",
-    "last_updated": "2026-10-16",
+    "last_updated": "2026-10-17",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -243,6 +243,10 @@
     ],
     "progress": [
       {
+        "date": "2026-10-17",
+        "text": "· Frames and sections convert into each other (M1, #719): object.convertToSection turns a frame on the page or in a section into a section in place (same box, name, fill and layers, which stay where they are; what only a frame has goes: auto layout, clipping, layout grids, guides, scrolling), and object.convertToFrame now also turns a section into a frame that keeps its fill and doesn't clip, so the look stays. Nested frames, instances, main components and sections holding sections are refused with the reason; one undo step each. Both are in the canvas context menu (Convert to section / Convert to frame) and in Spanish. Numbers unchanged."
+      },
+      {
         "date": "2026-10-14",
         "text": "· Corner handles win over the corner-radius handles (M1, #292): a press on the inner half of a corner handle's square picked the radius handle 10 px in, so the drag neither resized nor (dragging outward) rounded anything. Inside the drawn square the corner now resizes both sides (in ratio with Shift or the link); further in the radius handle still answers. Regression test in the transform behaviour suite. Numbers unchanged."
       },
@@ -397,10 +401,6 @@
       {
         "date": "2026-10-11",
         "text": "· Hosting figcraft-server: the desktop app and figcraft-cli open wss:// links (rustls,"
-      },
-      {
-        "date": "2026-10-11",
-        "text": "· Plugin panels and settings (gap 6, ABI v2; v1 plugins run unchanged): a plugin shows a panel of"
       }
     ]
   },
@@ -2150,7 +2150,26 @@
       "mainstream_pct": 50.0,
       "essentials_pct": 59.0,
       "breadth_pct": 85.0
+    },
+    {
+      "commit": "40c744d",
+      "commit_full": "40c744da1092fce41803da7f7ef884cac8d68aab",
+      "commit_date": "2026-10-17T13:03:49+07:00",
+      "message": "M1: convert frames to sections and sections to frames (#719) (#721)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-17",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "previous_full_pct": 53.0
     }
   ],
-  "updated_at": "2026-10-16T16:28:43+00:00"
+  "updated_at": "2026-10-17T06:12:50+00:00"
 }
