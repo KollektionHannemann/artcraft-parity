@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "fdd4eb5",
-  "latest_commit_date": "2026-10-17T19:16:10+07:00",
-  "latest_message": "Docs: roadmap rows for the community fixes from #524 up (#727, #728, #733, #735, #736, #729) (#744)",
+  "latest_commit": "b8f97a5",
+  "latest_commit_date": "2026-10-17T20:29:32+07:00",
+  "latest_message": "M8: the control channel answers while the window is minimized (#720) (#751)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -244,6 +244,10 @@
     "progress": [
       {
         "date": "2026-10-17",
+        "text": "· Control channel while the window is minimised (M8, #720): a minimised or covered window answers every request that acts on the app's state (edits, ui.inspect, ui.pointer, ui.key, ui.type, ui.set, app.quit…) without drawing, and what needs a drawn frame (ui.screenshot, ui.input, window.new) is an error at once; before, those waited up to 60 s and held up every later request on the connection (an attached agent's inspectui or window screenshot stalled until the window came back). Measured on Windows 11, minimised: requests ~100 ms each (eframe wakes a minimised window at most ten times a second; ~2 ms on screen), a window screenshot fails in ~100 ms instead of 60 s, idle CPU 0. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-17",
         "text": "· Number variables on text content (M3, #629): the Typography section's variable picker also lists number variables for a text layer's content, as the engine already accepted (the text shows the number, e.g. 42.5, and follows the variable). Other text fields keep their own types. Numbers unchanged."
       },
       {
@@ -397,10 +401,6 @@
       {
         "date": "2026-10-11",
         "text": "· Gamut warnings (gap 18): the colour picker of a Display P3 file flags colours"
-      },
-      {
-        "date": "2026-10-11",
-        "text": "· Several windows (gap 18): File ▸ New window, Open in new window on a tab or a"
       }
     ]
   },
@@ -2207,7 +2207,26 @@
       "essentials_pct": 59.0,
       "breadth_pct": 85.0,
       "previous_full_pct": 53.0
+    },
+    {
+      "commit": "b8f97a5",
+      "commit_full": "b8f97a5f4f4c354ff218c17782979d0d342f66b3",
+      "commit_date": "2026-10-17T20:29:32+07:00",
+      "message": "M8: the control channel answers while the window is minimized (#720) (#751)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-17",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "previous_full_pct": 53.0
     }
   ],
-  "updated_at": "2026-10-17T12:58:16+00:00"
+  "updated_at": "2026-10-17T13:49:30+00:00"
 }
