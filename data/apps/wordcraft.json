@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "c9a5191",
-  "latest_commit_date": "2026-10-18T10:29:17-04:00",
-  "latest_message": "i18n: French interface catalog completed (2,615 entries) with native-speaker review (#2492)",
+  "latest_commit": "c91c179",
+  "latest_commit_date": "2026-10-18T11:48:17-04:00",
+  "latest_message": "#2108: File › Print scales pages to another paper size (#2699)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -246,11 +246,39 @@
     "progress": [
       {
         "date": "2026-10-18",
+        "text": "Symbols keep their font (#2036): a w:sym or Insert › Symbol character in Wingdings, Symbol or Webdings remembers its symbol font apart from the text's font, so selecting all and changing the font (or Clear Formatting) no longer turns the symbols into boxes; saved back to DOCX as w:sym, so Word shows them too. Typed text and the Format Painter don't pick up the symbol font."
+      },
+      {
+        "date": "2026-10-18",
         "text": "Split Cells and Convert Text to Table dialogs (#2592), matched to Word: Split Cells starts from the selection (twice its columns, its rows; Merge cells before split offered for several cells or one cell merged across columns); table.split gains rows and mergeFirst, a merged cell splits into 1 to its height rows (its height or 1 × 1 unmerges it, more is refused with Word's message) and column splits make equal parts without moving other rows' grid lines. Convert Text to Table guesses columns live, shows the row count, and offers Initial column width (Auto or up to 22 in, kept as each column's preferred width), AutoFit to contents/window and Paragraphs/Commas/Tabs/Other separators; table.fromText gains paragraph/other + char, columns, autofit and width."
       },
       {
         "date": "2026-10-18",
         "text": "Different First Page works from page 1 (#2826): Insert › Header and Edit Header with the caret on page 1, and a double-click there while another header is being edited, go into page 1's own header instead of the default one page 1 no longer shows."
+      },
+      {
+        "date": "2026-10-17",
+        "text": "Edit Recipient List finds records (#1576): a Find in list box hides rows with no cell containing the text (any case) and counts the matches, and \"Show only records that will be merged\" hides the rows the filter leaves out; both only change the view. Rows are striped, and edits and removes go to the right record however the grid is narrowed"
+      },
+      {
+        "date": "2026-10-17",
+        "text": "Restrict Editing holds for structure too (#1327): an exception inside a table cell no longer lets table, row or cell formatting change the protected rest of the table; formatting limited to styles refuses Paste Formatting, table shading, borders, cell alignment, cell margins, text direction, table-style edits and locked table styles; loading, filtering or sorting recipients no longer rewrites merge-field results in a protected document."
+      },
+      {
+        "date": "2026-10-17",
+        "text": "Ribbon hover hints: a disabled control says why (the command's own reason), split-button arrows, menu buttons and the font, size and outline boxes have hints, and hints show on keyboard focus (#1086)."
+      },
+      {
+        "date": "2026-10-17",
+        "text": "Insert › Drop Cap is a menu (None, Dropped, In margin, Drop Cap Options…); the dialog sets position, font, lines to drop and distance; letters in the margin; DOCX keeps them (#2601)."
+      },
+      {
+        "date": "2026-10-17",
+        "text": "SECTIONPAGES includes shared continuous-section pages. A native original control confirms a section starting on page 1 and continuing on page 2 reports 2."
+      },
+      {
+        "date": "2026-10-17",
+        "text": "File › Print's Scale to paper size (#2108): pick Letter, Legal, A4 or any Layout › Size paper and every page is scaled to it and centred, the paper turned to each page's orientation, in the preview, the print job (with the spooler's media) and Save these pages as PDF; the document keeps its page size. paper param on ui.print/file.printPdf"
       },
       {
         "date": "2026-10-17",
@@ -275,6 +303,14 @@
       {
         "date": "2026-10-17",
         "text": "Language dialog keeps inherited proofing language and no-proof choices (#2717). Opening and accepting unchanged no longer replaces style-derived values with English US and proofing enabled."
+      },
+      {
+        "date": "2026-10-17",
+        "text": "Saving into a folder that refuses a temporary file (macOS privacy protection, read-only folders, #2138) never overwrites an existing document in place: it is left untouched and the error says to use Save As to another folder or allow WordCraft access to the folder (System Settings › Privacy & Security › Files and Folders on macOS). A new file is created directly. Unit tests on Linux; not yet confirmed on a Mac"
+      },
+      {
+        "date": "2026-10-16",
+        "text": "wordcraft-cli run --script FILE.json (- for stdin) runs a JSON list of commands, then saves to one or more outputs (docx and pdf in one run); errors name the command number and id and nothing is saved, #1963"
       },
       {
         "date": "2026-10-16",
@@ -322,6 +358,26 @@
       },
       {
         "date": "2026-10-16",
+        "text": "Footnote and endnote editing keeps the body and active note text at normal opacity (#2545), without changing document colours or print/PDF output."
+      },
+      {
+        "date": "2026-10-16",
+        "text": "A picture watermark in a header that starts with a table is drawn centred on the page behind the body text, on every page, instead of in the header's cell at the top of the page (#1775); layoutInCell=\"0\" and VML o:allowincell=\"f\" survive save and reopen"
+      },
+      {
+        "date": "2026-10-16",
+        "text": "An otherwise empty section starting a new page retains its paragraph line before a continuous section, matching an original native Word control."
+      },
+      {
+        "date": "2026-10-16",
+        "text": "Equations from Word files keep all their content (#1273): math straight in the body or a table cell, math behind mc:AlternateContent Requires=\"m\", runs inside hyperlinks, simple fields and markup-compatibility blocks within an equation, and w:sym/Symbol-font characters in math; operators, delimiters and accents the math font lacks come from a fallback font. Every ECMA-376 §22.1 element is pinned by a coverage test."
+      },
+      {
+        "date": "2026-10-16",
+        "text": "Captions and title pages (#1230): Insert Caption… on the right-click menu of pictures, shapes, text boxes and charts, the caption going under (or over) the object in its own cell or text box; Page Setup's Different First Page and Different Odd & Even Pages check boxes, so a title page can go without its page number"
+      },
+      {
+        "date": "2026-10-16",
         "text": "Save Changes gives assistive technology a named alert dialog with the loss warning and any save failure; visual layout and save policy unchanged (#1015). Native screen-reader verification remains pending."
       },
       {
@@ -347,62 +403,6 @@
       {
         "date": "2026-10-16",
         "text": "Indonesian proofing (#498): id-ID spelling reads the installed Hunspell idID dictionary (hunspell-id on Debian/Ubuntu, LibreOffice's dict-id, or the Dictionaries folder), suggestions use its MAP/REP/TRY/KEY tables, generic repeated-word (offering anak-anak) and spacing checks explain in Indonesian; Review › Language, Set Proofing Language and File › Options › Proofing offer Indonesian. No dictionary data bundled; hyphenation keeps the English fallback; parity estimates unchanged"
-      },
-      {
-        "date": "2026-10-16",
-        "text": "French interface catalog completed: 402 entries added (equation gallery, built-in style and table-style names, citation styles, paper sizes, watermarks, Bookmark / Go To / Print dialogs), 2,615 in all, with a native-speaker review of the terminology; no French proofing yet"
-      },
-      {
-        "date": "2026-10-16",
-        "text": "Text with the legacy Outline, Shadow, Emboss or Engrave font effects (w:outline, w:shadow, w:emboss, w:imprint) is drawn with them on screen and in PDFs, no longer as plain text: hollow outlined letters, or a grey copy behind the letters; the PDF keeps the text (#2534)"
-      },
-      {
-        "date": "2026-10-16",
-        "text": "Opening a DOCX no longer copies its pictures: each picture, and each embedded object or macro part kept for saving, was copied out of the unzipped package, so a document with pictures held them twice while it opened and left the package's copies behind as freed memory. The document now shares the package's bytes: a 92 MB document with 20 pictures opens in about 90 MB less (866 → 772 MB in the app on macOS; the command line's peak, 319 → 231 MB)"
-      },
-      {
-        "date": "2026-10-16",
-        "text": "Copying one equation on its own also puts it in the clipboard's MathML formats, which Microsoft documents Word reading first when it pastes math. Whether it pastes into Word as an editable equation hasn't been confirmed yet; testers welcome (#1297)"
-      },
-      {
-        "date": "2026-10-15",
-        "text": "Find opens Navigation on Results; editing the query restores Results after manual Headings/Pages navigation. Typed and selected-text searches retain document contents (#2096)."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "Table rows with an at-least height start the next page whole when less than their minimum is left on a page that already holds something, so one-row-per-page booklets keep their pages; rows taller than a page split from the top of the next page and repeated header rows go with the row (#1742)"
-      },
-      {
-        "date": "2026-10-15",
-        "text": "AutoCorrect follows Turkish and Azerbaijani case mapping: istanbul → İstanbul, ılık → Ilık, İNgilizce → İngilizce with no combining dot (#1923)"
-      },
-      {
-        "date": "2026-10-15",
-        "text": "Backspace with a whole table selected removes it, as in Word, and selected whole rows or columns go the same way; Delete clears them and keeps the table. A selection that covers a table and the paragraph before or after it removes the table, also when it starts inside the table or the table is nested (#1844)"
-      },
-      {
-        "date": "2026-10-15",
-        "text": "Image size limits are checked before allocating (#1321): a picture whose header declares more RGBA bytes than the 512 MiB budget is refused before decoding (render and PDF share one helper in wordcraft-geom), and page rasters are capped at 100 million pixels in total, scaled down rather than only per side."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "Saved DOCX files keep the order of mixed right-to-left and left-to-right text in Word: Hebrew around a Latin name, numbers, brackets or an e-mail address no longer changes places, and Word reports the Hebrew as Hebrew rather than Arabic (#1543)."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "Web: typing in Cyrillic or another non-Latin script no longer repeats text. WordCraft now honours the input method's request to erase around the caret before retyping (#1480). Chrome can still move the hidden text field's caret, so later letters may still land out of order. That cause is still open"
-      },
-      {
-        "date": "2026-10-15",
-        "text": "Equations: typing Vdd or x^ab and pressing Space keeps dd and ab whole in the subscript or superscript, like V(dd), as Word for Mac does; Linear format shows the bare form"
-      },
-      {
-        "date": "2026-10-15",
-        "text": "Plain text pasted from another program keeps the formatting of the paragraph it lands in: Paste inserts it as Keep Text Only does, so every pasted line, empty lines too, becomes a paragraph with that paragraph's direction, style, alignment, indents and list, and the text after the caret keeps them. The lines after the first had default formatting, so pasting several lines into a right-to-left paragraph turned all but the first left-to-right"
-      },
-      {
-        "date": "2026-10-15",
-        "text": "Additive paragraph spacing retains the full before-space after a section page break; ordinary overlapping spacing is unchanged."
       }
     ]
   },
@@ -6771,7 +6771,406 @@
       "essentials_pct": 63.0,
       "breadth_pct": 80.0,
       "previous_full_pct": 60.0
+    },
+    {
+      "commit": "70fc00c",
+      "commit_full": "70fc00c80ffd30d75f2a0fb9ec2a69aaaa9f76d7",
+      "commit_date": "2026-10-18T11:33:00-04:00",
+      "message": "Symbols keep their symbol font when the text font changes (#2036) (#2037)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "e50850d",
+      "commit_full": "e50850d4dd7c07f1881db44fdbcded3feb1f2741",
+      "commit_date": "2026-10-18T11:33:46-04:00",
+      "message": "RTF: formatting and paragraph-mark revisions are read and written (gap 19) (#2088)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "0f5e945",
+      "commit_full": "0f5e945a69c0ebbc3a200f7ab6dc783739b06935",
+      "commit_date": "2026-10-18T11:34:10-04:00",
+      "message": "#1945: Hide the Quick Access Toolbar and show it again (#2089)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "aed0b71",
+      "commit_full": "aed0b71786f26fef2817d816db956efa067fafb6",
+      "commit_date": "2026-10-18T11:34:26-04:00",
+      "message": "#1878: Rulers thin out with the zoom and span the caret's page (#2093)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "872b2bc",
+      "commit_full": "872b2bc99d5ebf196a6bba639c8c84a0fab88846",
+      "commit_date": "2026-10-18T11:34:42-04:00",
+      "message": "DOCX: ink inside groups and drawing canvases survives saving (gap 2) (#2097)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "95b5c71",
+      "commit_full": "95b5c71f806150808567e328414cebb5c20f5359",
+      "commit_date": "2026-10-18T11:38:04-04:00",
+      "message": "Save writes the chosen file when its folder refuses a temporary file (macOS privacy protection) (#2138) (#2167)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "61a6268",
+      "commit_full": "61a626820e81257f91435655708aabbe8db65859",
+      "commit_date": "2026-10-18T11:39:21-04:00",
+      "message": "#1552: no spelling squiggle under the word being typed (#2183)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "63ee34c",
+      "commit_full": "63ee34c5574d093db782a977f6f61305c36c78c7",
+      "commit_date": "2026-10-18T11:40:55-04:00",
+      "message": "#2105: Highlight No Color sticks to the button (#2208)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "1005c59",
+      "commit_full": "1005c59bfc5393dea56cf4d964cf284105ffb84d",
+      "commit_date": "2026-10-18T11:41:58-04:00",
+      "message": "fix(ui): keep note editing text readable (#2545) (#2562)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "6dd7c3b",
+      "commit_full": "6dd7c3bc3a2cc374b65698d40f464a950572a59f",
+      "commit_date": "2026-10-18T11:42:13-04:00",
+      "message": "#1963: wordcraft-cli runs commands from a script file (#2566)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "5fdd0a0",
+      "commit_full": "5fdd0a0e89b67aff736c1c47c11fef6b00a3d573",
+      "commit_date": "2026-10-18T11:43:55-04:00",
+      "message": "Watermarks in header table cells drawn behind the text (#1775) (#2580)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "87cab84",
+      "commit_full": "87cab84e4aeb4eaa01e7af9e38032dd74b8785a7",
+      "commit_date": "2026-10-18T11:44:12-04:00",
+      "message": "#1086: ribbon tooltips show why a control is disabled (#2623)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "beedd1b",
+      "commit_full": "beedd1b30d73e59b6e976819abd4f2c7783cea85",
+      "commit_date": "2026-10-18T11:44:30-04:00",
+      "message": "Drop Cap Options dialog (#2601) (#2602)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "473df38",
+      "commit_full": "473df388f34867e78ce855e01546a0ee9c141c85",
+      "commit_date": "2026-10-18T11:44:45-04:00",
+      "message": "Keep the line in an empty section starting a page (#2609)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "dec2445",
+      "commit_full": "dec24458cf7f18d0fa63122a749efd0bb8548de1",
+      "commit_date": "2026-10-18T11:45:01-04:00",
+      "message": "#1273: equations from Word files keep all their content (#2613)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "8c812bf",
+      "commit_full": "8c812bf1d67d0195dc07e9fd55e09bce01a3de77",
+      "commit_date": "2026-10-18T11:45:24-04:00",
+      "message": "#1230: Insert Caption on pictures and shapes; Different First Page in Page Setup (#2615)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "6e30349",
+      "commit_full": "6e30349bbb085e18a00f4a33364148f11e7133a7",
+      "commit_date": "2026-10-18T11:45:40-04:00",
+      "message": "#1327: protection checks cover tables, Paste Formatting and recipient refresh (#2618)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "866b48a",
+      "commit_full": "866b48ac55f7eb76d46cf214efe78a88eac057a7",
+      "commit_date": "2026-10-18T11:45:59-04:00",
+      "message": "Recipient list: find box and merged-only view (#1576) (#2621)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "60617d9",
+      "commit_full": "60617d9a712da12e2c5eca4179158a5cb99f97c1",
+      "commit_date": "2026-10-18T11:47:03-04:00",
+      "message": "371: count shared section pages in fields (#2654)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "5909ab6",
+      "commit_full": "5909ab642a37634d92f70e662e9f4ddf12504a2d",
+      "commit_date": "2026-10-18T11:47:30-04:00",
+      "message": "T372: wrap body around page-relative footer tables (#2659)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "c91c179",
+      "commit_full": "c91c1793a3089d1c202a51eb3d81f469dc7b3176",
+      "commit_date": "2026-10-18T11:48:17-04:00",
+      "message": "#2108: File › Print scales pages to another paper size (#2699)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
     }
   ],
-  "updated_at": "2026-10-18T14:49:21+00:00"
+  "updated_at": "2026-10-18T15:48:42+00:00"
 }
