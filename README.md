@@ -38,6 +38,27 @@ its releases. It reads the repositories every 30 minutes and can be installed as
 
 ![Detail view for FigCraft](docs/detail.png)
 
+## Tracked apps
+
+The Craft apps are open-source alternatives to commercial desktop software. The tracker follows each one against its
+reference product.
+
+| App | Open-source alternative to | Category |
+|---|---|---|
+| [PhotoCraft](https://github.com/storytold/photocraft) | Photoshop | Image |
+| [VectorCraft](https://github.com/storytold/vectorcraft) | Illustrator | Vector |
+| [FilmCraft](https://github.com/storytold/filmcraft) | Premiere Pro | Video |
+| [LightCraft](https://github.com/storytold/lightcraft) | Lightroom | Photo |
+| [PdfCraft](https://github.com/storytold/pdfcraft) | Acrobat Pro | PDF |
+| [EffectCraft](https://github.com/storytold/effectcraft) | After Effects | Motion |
+| [DesignCraft](https://github.com/storytold/designcraft) | InDesign | Layout |
+| [FigCraft](https://github.com/storytold/figcraft) | Figma | Interface |
+| [WordCraft](https://github.com/storytold/wordcraft) | Word | Text |
+| [SoundCraft](https://github.com/storytold/soundcraft) | Pro Tools | Audio |
+| [DeckCraft](https://github.com/storytold/deckcraft) | PowerPoint | Presentation |
+| [CADCraft](https://github.com/storytold/cadcraft) | AutoCAD | CAD |
+| [GridCraft](https://github.com/storytold/gridcraft) | Excel | Spreadsheet |
+
 ## Update types
 
 The tracker keeps three kinds of update apart. One commit can belong to more than one; each is counted once per kind.
@@ -176,7 +197,8 @@ touched. The icons are drawn by `scripts/make_icons.py`.
 | `data/changelog.json` | Log of new apps and roadmap revisions (last 500 events) |
 | `data/status.json` | Daily heartbeat, which keeps the repository active |
 | `.github/workflows/update.yml` | Check every 30 minutes, commit changed data, send notifications |
-| `docs/` | Screenshots used in this README |
+| `docs/` | Screenshots used in this README, and `social.png`, the link preview image |
+| `robots.txt`, `sitemap.xml` | Hints for search engines |
 
 ## Run locally
 
