@@ -162,7 +162,8 @@
   .seg button { background: none; border: 0; border-right: 1px solid var(--line); color: var(--muted); padding: 12px 16px; cursor: pointer; }
   .seg button:hover { color: var(--text); }
   .seg button.on { color: var(--text); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
-  .seg button b { font-weight: 600; color: inherit; margin-left: 6px; opacity: .7; }
+  .seg button b { font-weight: 600; color: inherit; opacity: .7; }
+  .seg button.on b { opacity: 1; }
   .sortlab { display: flex; align-items: center; padding: 0 14px; border-left: 1px solid var(--line); color: var(--faint); }
   #showlab { border-left: 0; }
   .sel, .search { background: #000; color: var(--text); border: 0; padding: 12px 14px; outline: none; }
@@ -763,7 +764,7 @@
       <div class="toolbar">
         <div class="seg" role="group" aria-label="Filter by stage">
           ${[["all", "All", all.length], ["alpha", "Alpha", alpha], ["prealpha", "Pre-Alpha", pre]]
-            .map(([k, l, n]) => `<button class="mono ${state.filter === k ? "on" : ""}" data-filter="${k}" aria-pressed="${state.filter === k}">${l}<b>${n}</b></button>`).join("")}
+            .map(([k, l, n]) => `<button class="mono ${state.filter === k ? "on" : ""}" data-filter="${k}" aria-pressed="${state.filter === k}">${l}: <b>${n}</b></button>`).join("")}
         </div>
         <span class="sortlab mono" id="showlab">Show</span>
         <div class="seg view" role="group" aria-labelledby="showlab">
