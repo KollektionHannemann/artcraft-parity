@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/pdfcraft",
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
-  "latest_commit": "7b39552",
-  "latest_commit_date": "2026-10-17T15:58:13-06:00",
-  "latest_message": "Merge remote-tracking branch 'origin/main' into pr2267",
+  "latest_commit": "d8b2705",
+  "latest_commit_date": "2026-10-17T22:10:22-06:00",
+  "latest_message": "Clear replacement text (#1350)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
-    "last_updated": "2026-10-15",
+    "last_updated": "2026-10-18",
     "metrics": {
       "full": {
         "label": "Full Acrobat Pro (ready for real work)",
@@ -233,6 +233,10 @@
     ],
     "progress": [
       {
+        "date": "2026-10-18",
+        "text": "(M8, #1350): Integrated current main while preserving content-stream comment boundaries. Hidden-text cleanup retires unused named replacement descriptions on rewritten pages and forms, including inherited/shared resource holders, without removing descriptions still used by surviving content. Synthetic saved-byte and preservation regressions cover the cleanup. Estimates unchanged."
+      },
+      {
         "date": "2026-10-15",
         "text": "(M6, AcroForm XML text): Plain AcroForm XML imports retain all direct text around comments and processing instructions, including CDATA and character references. Synthetic regressions verify exact values and unknown catalog data after incremental and full save/reopen. Nested-element and XFA interpretation are unchanged. Estimates unchanged."
       },
@@ -387,10 +391,6 @@
       {
         "date": "2026-10-13",
         "text": "(M6, choice indices): Multi-select choice fields write ascending /I option indices while preserving the caller's /V order. Synthetic forms and headless engine regressions cover reverse selection and save/reopen. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-12",
-        "text": "(M6): XFDF field import and data-file extraction join all text nodes in a value, preserving text after XML comments and processing instructions. Synthetic regressions cover Unicode, CDATA, empty values and PDF save/reopen. Estimates unchanged."
       }
     ]
   },
@@ -3143,7 +3143,26 @@
       "essentials_pct": 66.0,
       "breadth_pct": 67.0,
       "previous_full_pct": 50.0
+    },
+    {
+      "commit": "d8b2705",
+      "commit_full": "d8b27058252da24a08df8ff06c23418ac4fb97a1",
+      "commit_date": "2026-10-17T22:10:22-06:00",
+      "message": "Clear replacement text (#1350)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "previous_full_pct": 50.0
     }
   ],
-  "updated_at": "2026-10-17T23:41:27+00:00"
+  "updated_at": "2026-10-18T04:15:40+00:00"
 }
