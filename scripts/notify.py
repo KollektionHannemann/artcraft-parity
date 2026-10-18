@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Sends a notification for the events of the last update run (.cache/events.json).
 
+Only new apps and roadmap revisions that change the full-target value notify. Every other revision
+is still recorded in data/changelog.json by update.py, but does not open an issue.
+
 Channels:
   1. GitHub issue in this repository that mentions the account from apps.json ("notify").
      The mention makes GitHub send an email notification to that account.
@@ -35,6 +38,19 @@ def plural(n: int, word: str) -> str:
     return f"{n} {word}" + ("" if n == 1 else "s")
 
 
+def pct(v) -> str:
+    return f"{v:g} %" if v is not None else "–"
+
+
+def full_target_changed(e: dict) -> bool:
+    return e.get("full_before") != e.get("full_after")
+
+
+def notifiable(events: list) -> list:
+    return [e for e in events
+            if e["type"] == "new_app" or (e["type"] == "roadmap_update" and full_target_changed(e))]
+
+
 def build(events: list):
     new = [e for e in events if e["type"] == "new_app"]
     upd = [e for e in events if e["type"] == "roadmap_update"]
@@ -43,7 +59,7 @@ def build(events: list):
     if new:
         parts.append(plural(len(new), "new app"))
     if upd:
-        parts.append(plural(len(upd), "roadmap update"))
+        parts.append(plural(len(upd), "full-target change"))
     title = "ArtCraft Parity: " + ", ".join(parts)
 
     account = CONFIG.get("notify", OWNER)
@@ -54,13 +70,10 @@ def build(events: list):
             lines.append(f"- **{e['name']}** (reference: {e['adobe']}), added to tracking as `{e['id']}`")
         lines.append("")
     if upd:
-        lines.append("### Roadmap updates")
+        lines.append("### Full-target changes")
         for e in upd:
             before, after = e.get("full_before"), e.get("full_after")
-            if before is not None and after is not None and before != after:
-                change = f"{before:g} % → {after:g} %"
-            else:
-                change = f"{after:g} %" if after is not None else "no full-target value"
+            change = f"{pct(before)} → {pct(after)}"
             stage = f" · {e['stage']}" if e.get("stage") else ""
             lines.append(f"- **{e['name']}** · {e['date']} · {change}{stage} · "
                          f"[`{e['commit']}`]({e['commit_url']}) {e['message']}")
@@ -92,6 +105,11 @@ def main():
     events = json.loads(EVENTS.read_text(encoding="utf-8")) if EVENTS.exists() else []
     if not events:
         print("no events in this run, nothing to send")
+        return
+    total = len(events)
+    events = notifiable(events)
+    if not events:
+        print(f"{total} events in this run, none changes the full target, nothing to send")
         return
     title, body = build(events)
     if DRY_RUN:

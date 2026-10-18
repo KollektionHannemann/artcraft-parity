@@ -23,8 +23,8 @@ built from the `ROADMAP.md` files in the [storytold](https://github.com/storytol
   dimensions, feature areas, next steps, the project's own change log, and a table of value changes.
 - **Automatic checks:** a GitHub Action checks the repositories every 30 minutes. New apps and new roadmap revisions
   are picked up automatically, and the dashboard marks them.
-- **Notifications:** when a new app appears or a roadmap is revised, the workflow opens a GitHub issue that mentions
-  the account, so you receive an email. Optionally, a push notification is sent through ntfy.sh.
+- **Notifications:** when a new app appears or the full-target value of an app changes, the workflow opens a GitHub
+  issue that mentions the account, so you receive an email. Optionally, a push notification is sent through ntfy.sh.
 
 ![Detail view for VectorCraft](docs/detail.png)
 
@@ -70,10 +70,12 @@ range and the hours until the project reaches ~95 %. Each project's roadmap expl
 
 ## Notifications
 
-Every run collects events: new apps and roadmap revisions that are newer than the data already stored. If there are
-events, the workflow:
+Every run collects events: new apps and roadmap revisions that are newer than the data already stored. All of them are
+logged in `data/changelog.json`. Only new apps and revisions that change the full-target value notify. A revision that
+leaves the full target unchanged (most of them) is logged, but sends nothing. If there are notifying events, the
+workflow:
 
-1. opens an issue in this repository titled, for example, `ArtCraft Parity: 1 new app, 2 roadmap updates`. The
+1. opens an issue in this repository titled, for example, `ArtCraft Parity: 1 new app, 2 full-target changes`. The
    issue mentions your account, so GitHub sends you an email;
 2. optionally sends a push notification through [ntfy.sh](https://ntfy.sh) if the repository secret `NTFY_TOPIC` is set.
    Subscribe to the same topic in the ntfy app on your phone.

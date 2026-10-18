@@ -21,7 +21,7 @@ Keep it that way.
 | `scripts/roadmap_parser.py` | Parses one `ROADMAP.md` into metrics, dimensions, features, upcoming items and the change log |
 | `data/` | **Generated.** `overview.json`, `apps/*.json`, `history/*.json`, `state.json`. Do not hand-edit |
 | `.github/workflows/update.yml` | Runs `update.py` every 30 minutes, commits `data/` and `apps.json`, then runs `notify.py` |
-| `scripts/notify.py` | Opens a notification issue (mentions `notify` from `apps.json`) and optionally sends ntfy push |
+| `scripts/notify.py` | Opens a notification issue (mentions `notify` from `apps.json`) and optionally sends ntfy push. Notifies only for new apps and full-target changes |
 | `docs/` | Screenshots used in the README |
 
 ## Commands
@@ -51,7 +51,8 @@ python3 -m http.server 8000                # serve the dashboard; fetch() does n
   - `recent_additions`: apps discovered within `RECENT_DAYS` (14). Drives the banner on the overview.
   - `errors`: notices shown at the top of the overview. Discovery, git and parser problems all end up here.
 - `.cache/events.json`: events of the current run only (new apps, roadmap revisions). Read by `notify.py`. Not committed.
-- `data/changelog.json`: the persistent log of those events.
+- `data/changelog.json`: the persistent log of those events. It keeps every revision. The filter to full-target changes
+  (`full_before != full_after`) happens in `notify.py` only, so do not filter events in `update.py`.
 - `data/status.json`: a heartbeat written once per day, so the repository stays active. GitHub pauses scheduled workflows in
   public repositories after 60 days without activity.
 - Timestamps (`generated_at`, `updated_at`) change only when the content of a file changes. Unchanged runs produce no commit.
