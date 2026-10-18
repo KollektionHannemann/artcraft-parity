@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "2f6311c",
-  "latest_commit_date": "2026-10-17T17:00:10-06:00",
-  "latest_message": "M15: keep inherited proofing choices in Language dialog (#2717) (#2736)",
+  "latest_commit": "2e06216",
+  "latest_commit_date": "2026-10-18T03:50:15-04:00",
+  "latest_message": "Text effects: legacy outline, shadow, emboss and imprint are drawn (#2534) (#2548)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
-    "last_updated": "2026-10-17",
+    "last_updated": "2026-10-18",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -245,8 +245,68 @@
     ],
     "progress": [
       {
+        "date": "2026-10-18",
+        "text": "Split Cells and Convert Text to Table dialogs (#2592), matched to Word: Split Cells starts from the selection (twice its columns, its rows; Merge cells before split offered for several cells or one cell merged across columns); table.split gains rows and mergeFirst, a merged cell splits into 1 to its height rows (its height or 1 × 1 unmerges it, more is refused with Word's message) and column splits make equal parts without moving other rows' grid lines. Convert Text to Table guesses columns live, shows the row count, and offers Initial column width (Auto or up to 22 in, kept as each column's preferred width), AutoFit to contents/window and Paragraphs/Commas/Tabs/Other separators; table.fromText gains paragraph/other + char, columns, autofit and width."
+      },
+      {
+        "date": "2026-10-18",
+        "text": "Different First Page works from page 1 (#2826): Insert › Header and Edit Header with the caret on page 1, and a double-click there while another header is being edited, go into page 1's own header instead of the default one page 1 no longer shows."
+      },
+      {
+        "date": "2026-10-17",
+        "text": "Paste from LibreOffice: a paragraph indented on both sides (HTML <blockquote> on the clipboard) pastes as an indented Normal paragraph with LibreOffice's margins, not centred and italic in the Quote style (#1270)."
+      },
+      {
+        "date": "2026-10-17",
+        "text": "DrawingML shape outlines retain explicit preset/custom dashes on screen and in PDF, including zero-width path strokes."
+      },
+      {
+        "date": "2026-10-17",
+        "text": "Missing Arial Unicode MS tries Arial and its proportional substitutes before code-font heuristics."
+      },
+      {
+        "date": "2026-10-17",
+        "text": "DOCX glossary documents (building blocks) open into the model: Insert › Quick Parts and AutoText list and insert the document's own entries, and saving an entry with \"in\": \"document\" keeps it in the file (undoable). An untouched glossary is saved back byte for byte; an edited one is written from the model"
+      },
+      {
+        "date": "2026-10-17",
+        "text": "A table inserted in a right-to-left paragraph is a right-to-left table, like Word, so Tab moves right to left through its cells (#2634)"
+      },
+      {
         "date": "2026-10-17",
         "text": "Language dialog keeps inherited proofing language and no-proof choices (#2717). Opening and accepting unchanged no longer replaces style-derived values with English US and proofing enabled."
+      },
+      {
+        "date": "2026-10-16",
+        "text": "Web Layout text fills the window width and re-wraps once a resize settles, or at once on a zoom, instead of a fixed 800 pt column; Draft and Outline keep their 800 pt column (#1876)."
+      },
+      {
+        "date": "2026-10-16",
+        "text": "Create Source: the automatic Tag is three letters of the first author and the last two digits of the year (Smi20), with 1, 2… added when taken, as Word for Mac 16.113.4 does (user-checked). Editing Author or Year keeps the Tag, as in Word, and the citations in the text show the new author and year (#2094; the reporter expected the Tag to follow)."
+      },
+      {
+        "date": "2026-10-16",
+        "text": "Font list entries of fonts with a very tall ascent (Amiri, Amiri Quran) sit in their row like the others instead of low or cut in half (#2570)"
+      },
+      {
+        "date": "2026-10-16",
+        "text": "Read Mode draws documents cleanly (#1772): the arrows, Page Up/Down and Escape work as soon as it opens (the canvas kept a stable widget id, so it no longer lost the keyboard), only whole columns show, centred, at any column width, text size or window size, and the columns end above the page-turn bar instead of under it."
+      },
+      {
+        "date": "2026-10-16",
+        "text": "Comment and revision balloons are readable in the dark theme (#2045): they were drawn on a fixed white card under light text; the card, markup area and author colours are now theme tokens with a contrast test."
+      },
+      {
+        "date": "2026-10-16",
+        "text": "Indonesian proofing (#498): id-ID spelling reads the installed Hunspell idID dictionary (hunspell-id on Debian/Ubuntu, LibreOffice's dict-id, or the Dictionaries folder), suggestions use its MAP/REP/TRY/KEY tables, generic repeated-word (offering anak-anak) and spacing checks explain in Indonesian; Review › Language, Set Proofing Language and File › Options › Proofing offer Indonesian. No dictionary data bundled; hyphenation keeps the English fallback; parity estimates unchanged"
+      },
+      {
+        "date": "2026-10-16",
+        "text": "Text with the legacy Outline, Shadow, Emboss or Engrave font effects (w:outline, w:shadow, w:emboss, w:imprint) is drawn with them on screen and in PDFs, no longer as plain text: hollow outlined letters, or a grey copy behind the letters; the PDF keeps the text (#2534)"
+      },
+      {
+        "date": "2026-10-16",
+        "text": "Copying one equation on its own also puts it in the clipboard's MathML formats, which Microsoft documents Word reading first when it pastes math. Whether it pastes into Word as an editable equation hasn't been confirmed yet; testers welcome (#1297)"
       },
       {
         "date": "2026-10-14",
@@ -343,66 +403,6 @@
       {
         "date": "2026-10-14",
         "text": "Alignment guides: moving a picture, shape or text box snaps its edges or centre to the page's edges and centre, the margins and the other floating objects on the page, with a thin line across the page for each guide while dragging; Alt moves freely; File › Options › Advanced › Editing turns them off (ui.alignmentGuides). Our own design: Word for Mac shows no guides"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "ODT files open with their sections (#1379): a paragraph that switches to another page style starts a new section on a new page, with that page's size, orientation, margins and columns and, when the file asks, page numbering restarting; a two-column text:section becomes a continuous two-column section. Before, the whole document was one portrait section, so landscape pages, columns and restarts were lost on open and on save to DOCX"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Hebrew and Arabic in exported PDFs copy and search as whole words (#1383): right-to-left glyphs are written left to right as they appear, the order Chrome and Edge (PDFium) and poppler read text back from (checked by hand), instead of in reading order, which they reversed (שלום came back as םולש, Arabic in pieces). Lam-alef stays whole and vowel marks follow their letters, though Chrome and poppler can still break a fully vowelled word with spaces. The page looks the same. Readers that take glyphs strictly in file order get only plain Hebrew runs right, through /ReversedChars; screen readers are unverified"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "HTML import (#1381): header cells (<th>) are bold unless their own CSS says otherwise, and text-align on a cell, its row, row group or table aligns the cell's paragraphs (a paragraph's own alignment wins), so wordcraft-cli convert page.html out.docx writes the bold header and w:jc right-aligned cells. HTML, Markdown and plain text, which give no page size, open on the region's paper (A4 in Italy, Letter in the US) like a new blank document, in the app and in wordcraft-cli; documents with their own page size keep it"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Custom page sizes (#1433): Layout › Size ends with More Paper Sizes…, which opens Page Setup's new Paper group — a Paper size list (the named sizes, or Custom size) and Width and Height in the measurement unit; OK sets the size only when it changed, and a wider-than-tall size comes out landscape. layout.size now clamps each side to Word's 0.1\"–22\" and refuses a page the margins don't fit (the margins rule: 36 pt of text room), and Page Setup checks the size and margins together before applying either"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "A paragraph that runs on into the next column or onto the next page wraps around the shapes there (#1374): its continued lines are broken again for that column's wrap areas instead of running through a shape there (or around one left on the page before); the lines before, and the paragraph's own floating objects, stay where they were. Paragraphs with nothing new to wrap around are not laid out again"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "RTF import keeps sections (#1378): a file with portrait and landscape parts, a two-column stretch or a page-numbering restart opens with one section each, as in Word, instead of one landscape section for the whole document. Each keeps its page size and orientation, margins, header/footer distance, columns, break type (continuous, next page, odd/even, column), page-number restart, start and format, title page and its own headers and footers; a section without its own links to the previous one's"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "The system Save As dialog's file-type list names every format (Word Document, PDF, OpenDocument Text, Rich Text Format…) instead of one \"Documents\" entry, with the document's own format first (#1399)"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Colour emoji show on the page (#1269): 🧠, ✅ and other emoji were blank on screen and in renderpage (only PDF export had them). Glyphs from colour fonts are now drawn in the font's own colours: bitmap emoji (Apple Color Emoji, Noto Color Emoji) and COLR fonts (Segoe UI Emoji, newer Noto builds, with gradients). A dark page doesn't invert them, the same as pictures"
-      },
-      {
-        "date": "2026-10-14",
-        "text": ".doc tables keep their cell shading (#1380), from Word 97 through Word 365, so a dark header row with white text is readable again, and lose the extra empty column at the right of every row; a table no longer takes the previous table's columns, borders or alignment. Rows merged across the table (a legend) come with #1123"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Table deletes, Change Case and Unlink Fields respect Track Changes and locked content controls (#1329): with tracking on, Delete Table, Rows, Columns and Cells mark the cells' text deleted and keep the table (like Word), and Change Case is a tracked deletion and insertion, so Reject All restores the original; all of them refuse to delete a control locked against deletion or change content locked against editing"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Draw: Ink to Shape recognises arrows. A line and a V-shaped head drawn in one stroke (shaft first or head first, any direction) becomes a straight arrow connector with the head at the tip, in the stroke's colour and width; a lone V, a line with one barb and scribbles stay as they are. Our own recogniser: Word for Mac has no Ink to Shape to compare. Two-stroke arrows and arrows with a closed triangle head not yet."
-      },
-      {
-        "date": "2026-10-14",
-        "text": "A picture or icon inserted by a command (wordcraft-cli run, MCP, control channel) leaves the caret after it, so the next text.newParagraph or text.insert no longer deletes it, and two inserted in a row are both kept; Picture Format commands still act on it, and a picture the user inserts or pastes in the app is still selected (#965)"
-      },
-      {
-        "date": "2026-10-14",
-        "text": ".doc notes, headers and text boxes read their text once (#1319): a story table that steps back no longer has many footnotes, endnotes, headers or text boxes copy the same text into a part each; a story starting inside an earlier one is dropped (a header or footer left empty is linked to the previous section's), so the stories together never hold more than the file's text"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "ODT and .doc pictures stay within their byte budget (#1334): an ODT picture entry is inflated once however many frames point at it, and only when the size it declares fits in what is left (one inflating past that uses the budget up); a .doc inline picture that can't be read or doesn't fit is no longer decoded and copied again for every anchor on it, and is decoded only within what is left"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Open DrawingML freeform paths draw a:tailEnd at the final path segment"
       }
     ]
   },
@@ -5555,7 +5555,330 @@
       "essentials_pct": 63.0,
       "breadth_pct": 80.0,
       "previous_full_pct": 60.0
+    },
+    {
+      "commit": "16622f0",
+      "commit_full": "16622f0853401f073f334d67b036ee3c20db3f83",
+      "commit_date": "2026-10-18T03:20:37-04:00",
+      "message": "#1876: Web Layout text fills the window width (#2539)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-17",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "8c1a39b",
+      "commit_full": "8c1a39ba95418d761f4e6bab830f4150a7b55811",
+      "commit_date": "2026-10-18T03:20:56-04:00",
+      "message": "A new source's Tag follows Word's format; editing keeps the Tag (#2094) (#2571)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-17",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "aa665b1",
+      "commit_full": "aa665b16a95317d1824e87f2c341bbc2d04aa255",
+      "commit_date": "2026-10-18T03:21:14-04:00",
+      "message": "#2592: Split Cells and Convert Text to Table dialogs (#2593)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "b2b8ad8",
+      "commit_full": "b2b8ad8f523ce3200585424842bb837479a4eb9f",
+      "commit_date": "2026-10-18T03:21:48-04:00",
+      "message": "Font list: entries of tall-ascent fonts are no longer cut off (#2570) (#2598)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "df9c29f",
+      "commit_full": "df9c29f6733d632b3c8cd024315a2febb2fbdd36",
+      "commit_date": "2026-10-18T03:22:26-04:00",
+      "message": "Read Mode keeps the keyboard and shows whole, unobscured columns (#1772) (#2591)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "55bef52",
+      "commit_full": "55bef52d3888b1ec15a91a69339e17072554c9ef",
+      "commit_date": "2026-10-18T03:22:46-04:00",
+      "message": "Comments readable in the dark theme (#2045) (#2563)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "4442390",
+      "commit_full": "4442390213cb824bc767d19a7fa56175d5db24f3",
+      "commit_date": "2026-10-18T03:23:25-04:00",
+      "message": "DOCX: keep the glossary document (building blocks) (#2631)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "4950690",
+      "commit_full": "495069047933c7c2cc9ea073a3b6d189eaa94b1d",
+      "commit_date": "2026-10-18T03:42:52-04:00",
+      "message": "#498: Indonesian (id-ID) spelling proofing (#2576)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "4d8204c",
+      "commit_full": "4d8204c2f249e3a17c25cfea7c61982cf3078f0f",
+      "commit_date": "2026-10-18T03:43:47-04:00",
+      "message": "#2634: a table inserted in right-to-left text is right to left, so Tab moves left (#2688)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "f6115ea",
+      "commit_full": "f6115ea7fac21a212efc221499248fc6a5d17cf7",
+      "commit_date": "2026-10-18T03:44:23-04:00",
+      "message": "Update ROADMAP.md (#2020)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "a3fcb9e",
+      "commit_full": "a3fcb9ed470d931f91bf4e75cc6124acc7553461",
+      "commit_date": "2026-10-18T03:45:37-04:00",
+      "message": "Fonts: keep Arial Unicode MS fallbacks proportional (#2657)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "81098c5",
+      "commit_full": "81098c52f6fdc39a10f61a3830134ca9cc2b1d5c",
+      "commit_date": "2026-10-18T03:45:57-04:00",
+      "message": "CLI: allow explicit field updates during conversion (#2014)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "ce38b0c",
+      "commit_full": "ce38b0c3724fdd802d559e3c430c84ced155fe73",
+      "commit_date": "2026-10-18T03:46:15-04:00",
+      "message": "#1297: copied equations go in the MathML clipboard formats Word reads (#2614)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "da11d66",
+      "commit_full": "da11d6634b0bbb5a52aad9a17ce63f03f06ec32a",
+      "commit_date": "2026-10-18T03:46:35-04:00",
+      "message": "Shapes: preserve DrawingML outline dashes (#2661)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "abb36ac",
+      "commit_full": "abb36aceb231078135bcf0161d24722debccb81b",
+      "commit_date": "2026-10-18T03:46:54-04:00",
+      "message": "#1270: pasted HTML blockquote is an indented paragraph, not Quote (#2737)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "8fb4d44",
+      "commit_full": "8fb4d44d2ccafae9bef1b57d4bdd469dd2bdb73c",
+      "commit_date": "2026-10-18T03:47:13-04:00",
+      "message": "Different First Page: page 1's header can be edited and inserted (#2826) (#2833)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "2e06216",
+      "commit_full": "2e062168f06da0b5aaa407e09d4c8456eaef6ab0",
+      "commit_date": "2026-10-18T03:50:15-04:00",
+      "message": "Text effects: legacy outline, shadow, emboss and imprint are drawn (#2534) (#2548)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
     }
   ],
-  "updated_at": "2026-10-17T23:06:53+00:00"
+  "updated_at": "2026-10-18T07:50:36+00:00"
 }

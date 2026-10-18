@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/pdfcraft",
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
-  "latest_commit": "d8b2705",
-  "latest_commit_date": "2026-10-17T22:10:22-06:00",
-  "latest_message": "Clear replacement text (#1350)",
+  "latest_commit": "f8d7eb1",
+  "latest_commit_date": "2026-10-18T03:11:54-04:00",
+  "latest_message": "M3: prevent oversized page textures after replacement (#3149) (#3182)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -234,6 +234,10 @@
     "progress": [
       {
         "date": "2026-10-18",
+        "text": "(M3, #3149): Page replacement cancels render demand collected for the previous geometry; all viewer raster upload paths reject empty or oversized textures before cache eviction. Synthetic regressions reproduce the reported 1880×2350 upload at a 2048 limit, retain cached images and unsaved edits, and resume bounded backdrops and tiles. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-18",
         "text": "(M8, #1350): Integrated current main while preserving content-stream comment boundaries. Hidden-text cleanup retires unused named replacement descriptions on rewritten pages and forms, including inherited/shared resource holders, without removing descriptions still used by surviving content. Synthetic saved-byte and preservation regressions cover the cleanup. Estimates unchanged."
       },
       {
@@ -387,10 +391,6 @@
       {
         "date": "2026-10-13",
         "text": "(M3, native-open admission): Later prepared replies stay queued while a modal or native picker owns the foreground. Picker completion, cancellation and abandonment wake retained opens. Regressions cover recipient ownership, exactly-once admission, source/history preservation and one-shot repaint requests. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-13",
-        "text": "(M6, choice indices): Multi-select choice fields write ascending /I option indices while preserving the caller's /V order. Synthetic forms and headless engine regressions cover reverse selection and save/reopen. Estimates unchanged."
       }
     ]
   },
@@ -3162,7 +3162,26 @@
       "essentials_pct": 66.0,
       "breadth_pct": 67.0,
       "previous_full_pct": 50.0
+    },
+    {
+      "commit": "f8d7eb1",
+      "commit_full": "f8d7eb13523372e87fad13d7a1743da11fb44d61",
+      "commit_date": "2026-10-18T03:11:54-04:00",
+      "message": "M3: prevent oversized page textures after replacement (#3149) (#3182)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "previous_full_pct": 50.0
     }
   ],
-  "updated_at": "2026-10-18T04:15:40+00:00"
+  "updated_at": "2026-10-18T07:50:25+00:00"
 }
