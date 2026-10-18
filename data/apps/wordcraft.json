@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "8fcaa66",
-  "latest_commit_date": "2026-10-18T04:43:32-04:00",
-  "latest_message": "Turkish case mapping: i/İ and ı/I capitalise correctly (#1923) (#2009)",
+  "latest_commit": "4362e66",
+  "latest_commit_date": "2026-10-18T04:57:27-04:00",
+  "latest_message": "Word's Spike: Ctrl+F3 collects cuts, Ctrl+Shift+F3 inserts them (#2507)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -278,6 +278,26 @@
       },
       {
         "date": "2026-10-16",
+        "text": "The Spike, as in Word: Ctrl+F3 (⌘F3 on macOS) cuts the selection and adds it to the end of the Spike, each piece followed by a paragraph mark; Ctrl+Shift+F3 (⌘⇧F3) inserts everything collected, in order and with its formatting, and empties the Spike. The clipboard is left alone; each is one undo step. The Spike is the AutoText entry \"Spike\", so Insert › Quick Parts inserts it without emptying it. It lasts for the session (Word keeps it in Normal.dotm)"
+      },
+      {
+        "date": "2026-10-16",
+        "text": "DOCX two lines in one and horizontal in vertical (w:eastAsianLayout: id, combine, brackets, vert, vertCompress) are read and kept on save, in runs and character styles, instead of being dropped. Layout doesn't apply them yet."
+      },
+      {
+        "date": "2026-10-16",
+        "text": "Read Aloud speaks Russian, Ukrainian, Greek, Arabic, Hebrew, CJK and Thai text with a voice for its language instead of spelling out letters (#1843): the sentence's language comes from its run's tag (w:bidi for right-to-left text) or, when that disagrees with the script, from its letters, even when English letters outnumber them; Windows reads the text as UTF-8 and picks an installed voice of that language, macOS say -v and Linux espeak -v get the same language. The user's own voice stays whenever it already speaks the language (English documents read exactly as before), and a voice espeak lacks falls back to the default voice instead of silence. Not run on Windows or macOS here."
+      },
+      {
+        "date": "2026-10-16",
+        "text": "Hint-reliant CJK fonts execute TrueType contour assembly; Windows DFKai-SB no longer loses strokes. Synthetic local-font regression; no font binaries bundled."
+      },
+      {
+        "date": "2026-10-16",
+        "text": "Ctrl/⌘+wheel only zooms: a coast or wheel notch still gliding no longer scrolls the page on top of the zoom, which keeps the page point under the pointer (#1743)."
+      },
+      {
+        "date": "2026-10-16",
         "text": "Releasing a table drag with the mouse (column or row border, move handle, selection areas) leaves the view where it is instead of scrolling back to the caret (#1738)"
       },
       {
@@ -383,26 +403,6 @@
       {
         "date": "2026-10-15",
         "text": "Lists (#1683): a bullet stored as a private-use character its font can't draw (the font isn't installed) shows the level's default bullet (• ○ ▪); it used to be whatever an installed icon font has at that code, such as Font Awesome's Twitter logo"
-      },
-      {
-        "date": "2026-10-15",
-        "text": "The web app keeps its preferences between visits (#2132): theme (dark mode), interface size, editing options and the rest of what the desktop app saves in ui.json are kept in the browser's localStorage, written as soon as they change"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "DOCX row table border exceptions render and survive saving. Explicit cell borders win; a row exception does not change other rows."
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Tab stops edited on the ruler: the corner selector picks Left/Center/Right/Decimal/Bar, a click sets a stop (Alt skips the snap), dragging moves it with a guide line and position tooltip, dragging off the ruler clears it; markers draw per kind and mirror for RTL; one para.tabs call and one undo step per gesture"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Consistent preferred cell widths override a stale table grid when both totals agree, for fixed and AutoFit tables. Conflicting widths, spans and percentages remain unchanged."
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Legacy VML freeforms (v:shape with its own path), such as the rule lines in many older headers, are read as freeform shapes: they show on screen and in PDFs and are saved back as DrawingML custom geometry instead of vanishing"
       }
     ]
   },
@@ -6296,7 +6296,102 @@
       "essentials_pct": 63.0,
       "breadth_pct": 80.0,
       "previous_full_pct": 60.0
+    },
+    {
+      "commit": "7c95f02",
+      "commit_full": "7c95f02050e3b405df30d29c19afcc1df70dc574",
+      "commit_date": "2026-10-18T04:53:42-04:00",
+      "message": "#1743: Ctrl+wheel zoom no longer scrolls the document (#2386)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "fa755e9",
+      "commit_full": "fa755e9de415e18001e16833887dd1c43eed0098",
+      "commit_date": "2026-10-18T04:54:20-04:00",
+      "message": "Fonts: restore missing strokes in hint-reliant Chinese fonts (#2389)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "3a2cea6",
+      "commit_full": "3a2cea6ca4190b3ed4fcc2cdba48a892bc799aad",
+      "commit_date": "2026-10-18T04:55:18-04:00",
+      "message": "#1843: Read Aloud speaks Russian text with a Russian voice (#2430)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "86ad3dd",
+      "commit_full": "86ad3ddb63d7427f7e64e9b5a6dd66e8bce10935",
+      "commit_date": "2026-10-18T04:56:48-04:00",
+      "message": "DOCX: two lines in one and horizontal in vertical (`w:eastAsianLayout`) survive a save (#2486)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "4362e66",
+      "commit_full": "4362e6624d3fb8bffc75266b621bfd48a09ae796",
+      "commit_date": "2026-10-18T04:57:27-04:00",
+      "message": "Word's Spike: Ctrl+F3 collects cuts, Ctrl+Shift+F3 inserts them (#2507)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
     }
   ],
-  "updated_at": "2026-10-18T08:51:40+00:00"
+  "updated_at": "2026-10-18T09:12:36+00:00"
 }
