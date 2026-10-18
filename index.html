@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ArtCraft Tracker</title>
-<meta name="description" content="Unofficial community tracker: product parity, development activity and releases of the Craft apps, read from their GitHub repositories every 30 minutes.">
+<meta name="description" content="Unofficial community tracker: how ready each Craft app is for real work, its product parity, development activity and releases, read from their GitHub repositories every 30 minutes.">
 <meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
 <link rel="manifest" href="manifest.webmanifest">
@@ -163,14 +163,17 @@
   .seg button:hover { color: var(--text); }
   .seg button.on { background: var(--text); color: #000; }
   .seg button b { font-weight: 600; color: inherit; margin-left: 6px; opacity: .7; }
-  .sortlab { display: flex; align-items: center; padding: 0 0 0 14px; border-left: 1px solid var(--line); color: var(--faint); }
+  .sortlab { display: flex; align-items: center; padding: 0 14px; border-left: 1px solid var(--line); color: var(--faint); }
+  #showlab { border-left: 0; }
   .sel, .search { background: #000; color: var(--text); border: 0; padding: 12px 14px; outline: none; }
   .sel { cursor: pointer; }
   .search { min-width: 220px; border-left: 1px solid var(--line); }
   .search::placeholder { color: var(--faint); }
   .sel:focus-visible, .search:focus-visible { background: #0b0b0b; outline: 1px solid var(--line-2); outline-offset: -1px; }
   @media (max-width: 720px) {
-    .seg { flex: 1 1 100%; border-bottom: 1px solid var(--line); }
+    .seg { flex: 1 1 auto; border-bottom: 1px solid var(--line); }
+    .seg:first-child { flex-basis: 100%; }
+    #showlab { border-bottom: 1px solid var(--line); }
     .seg button { flex: 1; padding: 11px 8px; }
     .seg button:last-child { border-right: 0; }
     .toolbar .spacer { display: none; }
@@ -403,7 +406,7 @@
   <footer>
     ArtCraft Tracker is an unofficial community project. It isn't affiliated with, endorsed by or reviewed by ArtCraft.
     App names belong to their owners, and the reference products are trademarks of their respective owners.
-    Parity values are each project's own estimate, taken from the <code>ROADMAP.md</code> of its repository under
+    "Ready for real work" and product parity are each project's own estimates, taken from the <code>ROADMAP.md</code> of its repository under
     github.com/storytold. Activity and releases come from the repositories' git history and GitHub Releases. None of
     this is an independent measurement.
     Visits are counted anonymously with <a href="https://www.goatcounter.com" target="_blank" rel="noopener">GoatCounter</a>, which sets no cookies and stores no personal data.
@@ -424,12 +427,18 @@
   };
   const DAY = 86400000;
   const FRESH_DAYS = 7;
+  /* The headline metric is "Ready for real work" (the roadmaps' full target). Product parity is the roadmaps'
+     feature breadth: whether the reference product's features exist, not whether they are ready for daily work. */
+  const METRICS = {
+    ready: { key: "full_pct", label: "Ready for real work", short: "Ready", lab: "Ready for<br>real work" },
+    breadth: { key: "breadth_pct", label: "Product parity", short: "Parity", lab: "Product parity<br>feature breadth" },
+  };
   const SORTS = [
-    ["parity_change", "Latest parity change"],
-    ["full", "Product parity"],
+    ["parity_change", "Latest change"],
+    ["full", "Ready for real work"],
+    ["breadth", "Product parity"],
     ["activity", "Activity"],
     ["release", "Latest release"],
-    ["breadth", "Feature breadth"],
     ["order", "Suite order"],
     ["name", "Name"],
   ];
@@ -441,8 +450,11 @@
   const state = {
     overview: null, status: null, run: null, fromCache: false, loadedAt: 0, renderSeq: 0,
     sort: store.get("tracker.sort", "parity_change"), filter: "all", query: "",
-    rank: store.get("tracker.rank", "parity"), animated: false, chartScale: store.get("tracker.scale", "fit"),
+    rank: store.get("tracker.rank", "ready"), animated: false, chartScale: store.get("tracker.scale", "fit"),
+    metric: store.get("tracker.metric", "ready"),
   };
+  if (!METRICS[state.metric]) state.metric = "ready";
+  if (!["ready", "breadth", "activity"].includes(state.rank)) state.rank = "ready";
   if (!SORTS.some(([k]) => k === state.sort)) state.sort = "parity_change";
   const app = document.getElementById("app");
   const status = document.getElementById("statusbar");
@@ -492,7 +504,7 @@
   const plural = (n, w, pl) => `${nf(n)} ${n === 1 ? w : (pl || w + "s")}`;
   const clamp = (v) => Math.max(0, Math.min(100, v ?? 0));
   const bar = (v, mark = false) =>
-    `<div class="bar" role="img" aria-label="${pct(v)} percent"><i data-w="${clamp(v)}" style="width:${state.animated || reduceMotion ? clamp(v) : 0}%"></i>${mark ? '<span class="m95" title="95 % parity"></span>' : ""}</div>`;
+    `<div class="bar" role="img" aria-label="${pct(v)} percent"><i data-w="${clamp(v)}" style="width:${state.animated || reduceMotion ? clamp(v) : 0}%"></i>${mark ? '<span class="m95" title="95 % ready for real work"></span>' : ""}</div>`;
   const releaseKind = (k) => ({ major: "Major release", minor: "Minor release", patch: "Patch release" }[k] || "Release");
   const ghUrl = (u) => /^https:\/\/github\.com\//.test(String(u || "")) ? u : null;  // links from data: GitHub only
   const commitUrl = (id, sha) => `https://github.com/storytold/${encodeURIComponent(id)}/commit/${encodeURIComponent(sha)}`;
@@ -520,9 +532,9 @@
     const s = milestoneState(m);
     if (!s) return "";
     const thr = pct(m.threshold);
-    if (s.kind === "unknown") return `<span class="tag gold" title="Already at or above ${thr} % in the first revision with a value, so the date it was reached is unknown">${thr} % before tracking</span>`;
+    if (s.kind === "unknown") return `<span class="tag gold" title="Already ${thr} % ready for real work or more in the first revision with a value, so the date it was reached is unknown">${thr} % before tracking</span>`;
     const label = short ? `★ ${thr} %` : `★ ${thr} % on ${dateEN(m.reached_at, false)}`;
-    return `<span class="tag gold" title="First reported ${thr} % or more on ${esc(stamp(m.reached_at))} (commit ${esc(m.commit)})${m.above_now ? "" : ". It's below that now."}">${label}${m.above_now ? "" : " · now below"}</span>`;
+    return `<span class="tag gold" title="First reported ${thr} % ready for real work or more on ${esc(stamp(m.reached_at))} (commit ${esc(m.commit)})${m.above_now ? "" : ". It's below that now."}">${label}${m.above_now ? "" : " · now below"}</span>`;
   }
 
   function parityLine(a) {
@@ -626,9 +638,9 @@
     const since = ov.apps.map((a) => a.parity?.tracked_since).filter(Boolean).sort()[0];
     const item = (e, why) => {
       const c = byId[e.id]?.color || "#fff";
-      let type = "Parity", what = "";
-      if (e.type === "parity") what = `${esc(e.name)} ${e.delta > 0 ? "reached" : "dropped to"} ${pct(e.to)} % parity <span class="${e.delta > 0 ? "up" : "down"}">(${pp(e.delta)})</span>`;
-      if (e.type === "milestone") { type = "Milestone"; what = `${esc(e.name)} reached ${pct(e.value)} % parity`; }
+      let type = "Ready", what = "";
+      if (e.type === "parity") what = `${esc(e.name)} is ${pct(e.to)} % ready for real work <span class="${e.delta > 0 ? "up" : "down"}">(${pp(e.delta)})</span>`;
+      if (e.type === "milestone") { type = "Milestone"; what = `${esc(e.name)} is ${pct(e.value)} % ready for real work`; }
       if (e.type === "release") { type = "Release"; what = `${esc(e.name)} ${esc(e.tag)}${e.prerelease ? " (pre-release)" : ""}`; }
       if (e.type === "new_app") { type = "New app"; what = `${esc(e.name)} is now tracked`; }
       return `<a href="#/app/${esc(e.id)}" style="--c:${c}">
@@ -640,8 +652,8 @@
     const left = parity
       ? item(parity, parity.type === "milestone"
         ? `First revision at or above ${pct(parity.threshold)} %`
-        : `${plural(nChanges, "parity change")} across all apps since ${dateEN(since, false)}`)
-      : `<div><span class="etype mono">Parity</span><span class="what">No parity changes yet</span><span class="why">Every app has kept its value since ${dateEN(since, false)}</span></div>`;
+        : `The headline value changed ${plural(nChanges, "time")} across all apps since ${dateEN(since, false)}`)
+      : `<div><span class="etype mono">Ready</span><span class="what">No changes to "ready for real work" yet</span><span class="why">Every app has kept its value since ${dateEN(since, false)}</span></div>`;
     let right = `<div><span class="etype mono">Release</span><span class="what">No releases yet</span><span class="why"></span></div>`;
     if (other) {
       right = item(other, other.type === "release"
@@ -652,6 +664,15 @@
   }
 
   function ranking(withFull) {
+    if (state.rank === "breadth") {
+      return state.overview.apps.filter((a) => a.breadth_pct != null).slice().sort(sorters.breadth).map((a, i) => `
+        <a class="rank-row" href="#/app/${esc(a.id)}" style="--c:${a.color}" title="Product parity (feature breadth); ${pct(a.full_pct)} % ready for real work">
+          <span class="ri">${chipNo(i + 1)}</span>
+          <span class="rn">${twoTone(a.name)}</span>
+          ${bar(a.breadth_pct)}
+          <span class="rv">${pct(a.breadth_pct)} %</span>
+        </a>`).join("");
+    }
     if (state.rank === "activity") {
       return state.overview.apps.filter((a) => a.activity).slice().sort(sorters.activity).map((a, i) => `
         <a class="rank-row" href="#/app/${esc(a.id)}" style="--c:${a.color}" title="${esc(plural(a.activity.changes_7d, "code change"))} in 7 days, on ${a.activity.active_days_7d} of 7 days">
@@ -693,7 +714,7 @@
     const fresh = all.filter((a) => milestoneState(a.milestone)?.kind === "fresh").map((a) => `
       <a class="ms-banner" href="#/app/${esc(a.id)}" style="--c:${a.color}">
         <span class="mono" style="color:var(--gold)">★ Milestone</span>
-        <strong>${esc(a.name)} reached ${pct(a.milestone.value)} % product parity</strong>
+        <strong>${esc(a.name)} is ${pct(a.milestone.value)} % ready for real work</strong>
         <span class="muted">${dateEN(a.milestone.reached_at)} · first time at ${pct(thr)} % or more</span>
         <span class="mono">Open →</span>
       </a>`).join("");
@@ -703,18 +724,19 @@
       <section class="hero">
         <section>
           <div class="eyebrow mono muted">
-            <span>Product parity · ${all.length} Craft apps</span>
+            <span>Ready for real work · ${all.length} Craft apps</span>
             <details class="info"><summary>What's this?</summary><div>
-              <p><b style="color:var(--text)">Product parity</b> is how much of its reference product (Photoshop, Illustrator, Word and others) a Craft app covers for professional, everyday work. Each project rates itself in its ROADMAP.md, in the row "Full target (ready for real work)".</p>
-              <p>${pct(thr)} % counts as reaching parity. The values are self-assessments, not independent tests.</p>
+              <p><b style="color:var(--text)">Ready for real work</b> is how much of its reference product (Photoshop, Illustrator, Word and others) a professional could replace with the Craft app today. It's the row "Full target (ready for real work)" in each ROADMAP.md, and the number this page is about.</p>
+              <p><b style="color:var(--text)">Product parity</b> is the feature breadth: how many of the reference product's features exist at all, ready or not. You can switch to it above the cards.</p>
+              <p>${pct(thr)} % ready for real work counts as the milestone. All values are the projects' self-assessments, not independent tests.</p>
             </div></details>
           </div>
-          <h1>Tracking every Craft app<br><em>on its way to parity.</em></h1>
-          <p>How close each app is to the product it rebuilds, how actively it's being built, and what changed last.</p>
+          <h1>Tracking every Craft app<br><em>until it's ready for real work.</em></h1>
+          <p>How close each app is to replacing the product it rebuilds, how actively it's being built, and what changed last.</p>
           <p class="mono" id="hero-checked" style="margin-top:14px;font-size:10.5px;max-width:none">${heroChecked()}</p>
           <div class="stats">
-            <div><div class="v">${pct(avg)} %</div><div class="l">Average parity</div></div>
-            <div><div class="v">${nChanges}</div><div class="l">Parity changes since ${dateEN(since, false)}</div></div>
+            <div><div class="v">${pct(avg)} %</div><div class="l">Average ready for real work</div></div>
+            <div><div class="v">${nChanges}</div><div class="l">Value changes since ${dateEN(since, false)}</div></div>
             <div><div class="v">${buzzing}<span class="muted" style="font-size:18px"> / ${all.length}</span></div><div class="l">Apps buzzing now</div></div>
           </div>
         </section>
@@ -722,8 +744,8 @@
           <div class="rank-title mono">
             <span>Ranking</span>
             <span class="mini-seg" role="group" aria-label="Rank by">
-              <button class="mono ${state.rank === "parity" ? "on" : ""}" data-rank="parity" aria-pressed="${state.rank === "parity"}">Parity</button>
-              <button class="mono ${state.rank === "activity" ? "on" : ""}" data-rank="activity" aria-pressed="${state.rank === "activity"}">Activity</button>
+              ${[["ready", "Ready"], ["breadth", "Parity"], ["activity", "Activity"]].map(([k, l]) =>
+                `<button class="mono ${state.rank === k ? "on" : ""}" data-rank="${k}" aria-pressed="${state.rank === k}" title="${k === "ready" ? "Ready for real work" : k === "breadth" ? "Product parity (feature breadth)" : "Activity"}">${l}</button>`).join("")}
             </span>
           </div>
           <div id="ranking">${ranking(withFull) || '<p class="muted">No data yet.</p>'}</div>
@@ -736,6 +758,10 @@
           ${[["all", "All", all.length], ["alpha", "Alpha", alpha], ["prealpha", "Pre-Alpha", pre]]
             .map(([k, l, n]) => `<button class="mono ${state.filter === k ? "on" : ""}" data-filter="${k}" aria-pressed="${state.filter === k}">${l}<b>${n}</b></button>`).join("")}
         </div>
+        <span class="sortlab mono" id="showlab">Show</span>
+        <div class="seg view" role="group" aria-labelledby="showlab">
+          ${Object.entries(METRICS).map(([k, m]) => `<button class="mono ${state.metric === k ? "on" : ""}" data-metric="${k}" aria-pressed="${state.metric === k}">${m.label}</button>`).join("")}
+        </div>
         <div class="spacer"></div>
         <label class="sortlab mono" for="sort">Sort</label>
         <select class="sel mono" id="sort">
@@ -747,9 +773,10 @@
 
       <section class="about" aria-label="About the numbers">
         <div>
-          <h3 class="mono">Product parity</h3>
-          <p>The share of the reference product a professional can use every day, as each project estimates it ("Full target, ready for real work"). This is the headline number.</p>
-          <p>A <b>parity change</b> is a new value, up or down. Publishing the same value again doesn't count.</p>
+          <h3 class="mono">Ready for real work</h3>
+          <p>The share of the reference product a professional could replace with the app in daily work, as each project estimates it ("Full target, ready for real work"). This is the headline number.</p>
+          <p><b>Product parity</b> is the feature breadth: how much of the reference product exists, finished or not. It's usually much higher.</p>
+          <p>A <b>change</b> is a new "ready for real work" value, up or down. Publishing the same value again doesn't count.</p>
         </div>
         <div>
           <h3 class="mono">Activity</h3>
@@ -758,8 +785,8 @@
         </div>
         <div>
           <h3 class="mono">Updates</h3>
-          <p><b>Parity</b>: the value changed. <b>Roadmap</b>: the text or another estimate in ROADMAP.md changed (formatting-only edits are left out). <b>Release</b>: a published GitHub release. <b>Code</b>: the code changes merged that day.</p>
-          <p>Activity measures effort, not progress. Most changes don't move parity.</p>
+          <p><b>Ready</b>: the "ready for real work" value changed. <b>Roadmap</b>: the text or another estimate in ROADMAP.md changed (formatting-only edits are left out). <b>Release</b>: a published GitHub release. <b>Code</b>: the code changes merged that day.</p>
+          <p>Activity measures effort, not progress. Most changes don't move "ready for real work".</p>
         </div>
       </section>`;
 
@@ -767,6 +794,12 @@
       state.filter = b.dataset.filter;
       app.querySelectorAll("[data-filter]").forEach((x) => { x.classList.toggle("on", x === b); x.setAttribute("aria-pressed", String(x === b)); });
       drawGrid(true);
+    }));
+    app.querySelectorAll("[data-metric]").forEach((b) => b.addEventListener("click", () => {
+      state.metric = b.dataset.metric;
+      store.set("tracker.metric", state.metric);
+      app.querySelectorAll("[data-metric]").forEach((x) => { x.classList.toggle("on", x === b); x.setAttribute("aria-pressed", String(x === b)); });
+      drawGrid(false);
     }));
     app.querySelectorAll("[data-rank]").forEach((b) => b.addEventListener("click", () => {
       state.rank = b.dataset.rank;
@@ -813,9 +846,11 @@
     const ru = a.roadmap?.last_update;
     const lc = a.parity?.last_change;
     const msS = milestoneState(a.milestone);
-    const ruLabel = (k) => k === "estimates" ? "Estimates revised" : k === "parity" ? "New parity value" : "Text updated";
+    const ruLabel = (k) => k === "estimates" ? "Estimates revised" : k === "parity" ? "New value" : "Text updated";
+    const M = METRICS[state.metric];
+    const shown = a[M.key];
     const what = [
-      ["Parity", lc ? `<b class="${lc.delta > 0 ? "up" : "down"}">${pp(lc.delta)}</b> to ${pct(lc.to)} % · ${when(lc.ts)}<span class="m">${esc(lc.message)}</span>`
+      ["Ready", lc ? `<b class="${lc.delta > 0 ? "up" : "down"}">${pp(lc.delta)}</b> to ${pct(lc.to)} % · ${when(lc.ts)}<span class="m">${esc(lc.message)}</span>`
         : `Unchanged since ${dateEN(a.parity?.tracked_since, false)}<span class="m">First value read ${dateEN(a.parity?.tracked_since)}</span>`],
       ["Roadmap", ru ? `${ruLabel(ru.kind)} · ${when(ru.ts)}<span class="m">${esc(ru.message)}</span>` : "No revisions yet"],
       ["Code", act?.last_code_change ? `${plural(act.changes_7d, "change")} in 7 days · latest ${when(act.last_code_change.ts)}<span class="m">${esc(act.last_code_change.subject)}</span>` : "No code changes found"],
@@ -841,11 +876,12 @@
           ${milestoneTag(a.milestone, true)}
         </div>
         <div class="full">
-          <div class="full-num" data-v="${a.full_pct ?? ""}">${pct(a.full_pct)}<span>%</span></div>
-          <div class="full-lab mono">Product<br>parity</div>
+          <div class="full-num" data-v="${shown ?? ""}">${pct(shown)}<span>%</span></div>
+          <div class="full-lab mono">${M.lab}</div>
         </div>
-        ${bar(a.full_pct, true)}
-        <div class="pline">${parityLine(a)}</div>
+        ${bar(shown, state.metric === "ready")}
+        <div class="pline">${state.metric === "ready" ? parityLine(a)
+          : `<span>Ready for real work <b>${pct(a.full_pct)} %</b></span>${a.parity?.last_change ? `<span class="${a.parity.last_change.delta > 0 ? "up" : "down"}">${pp(a.parity.last_change.delta)} ${when(a.parity.last_change.ts)}</span>` : "<span></span>"}`}</div>
         <div class="aline">
           ${level(act)}
           <span title="Code changes per day, last 14 days">${act ? cells(act.window) : ""}</span>
@@ -945,14 +981,16 @@
 
   /* Parity as a step line: a value holds until a later revision changes it.
      "Fit" zooms the y axis to the data (span of at least 10 points) and labels the range; "0–100" shows the full scale. */
-  function lineChart(history, c, scale, threshold) {
-    const pts = (history || []).filter((h) => h.full_pct != null);
+  function lineChart(history, c, scale, threshold, metric = "ready") {
+    const key = METRICS[metric].key;
+    const pts = (history || []).filter((h) => h[key] != null);
     if (!pts.length) return `<p class="muted">No history yet.</p>`;
+    if (metric !== "ready") threshold = null;  // the milestone belongs to "ready for real work"
     const W = 720, H = 280, L = 44, R = 46, T = 18, B = 34;
     const ts = pts.map((p) => ms(p.ts || p.commit_date));
     const t0 = ts[0];
     const t1 = Math.max(ts[ts.length - 1], Math.min(Date.now(), ts[ts.length - 1] + 30 * DAY), t0 + DAY);
-    const vals = pts.map((p) => p.full_pct);
+    const vals = pts.map((p) => p[key]);
     let lo = 0, hi = 100, step = 25;
     if (scale === "fit") {
       const mn = Math.min(...vals), mx = Math.max(...vals);
@@ -970,7 +1008,7 @@
       grid += `<line x1="${L}" x2="${W - R}" y1="${Y(g).toFixed(1)}" y2="${Y(g).toFixed(1)}" stroke="#1c1c1c"/>
         <text x="${L - 8}" y="${(Y(g) + 4).toFixed(1)}" text-anchor="end">${g}%</text>`;
     }
-    const thrLine = threshold >= lo && threshold <= hi
+    const thrLine = threshold != null && threshold >= lo && threshold <= hi
       ? `<line x1="${L}" x2="${W - R}" y1="${Y(threshold)}" y2="${Y(threshold)}" stroke="#e8c46a" stroke-dasharray="3 4" opacity=".6"/>` : "";
     let d = `M${X(ts[0]).toFixed(1)},${Y(vals[0]).toFixed(1)}`;
     for (let i = 1; i < pts.length; i++) d += ` H${X(ts[i]).toFixed(1)} V${Y(vals[i]).toFixed(1)}`;
@@ -993,7 +1031,7 @@
         <text x="${X(t).toFixed(1)}" y="${H - 12}" text-anchor="middle">${esc(dayUTC(new Date(t).toISOString(), false))}</text>`;
     }
     const zoomed = lo > 0 || hi < 100;
-    return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Product parity over time, from ${pct(vals[0])} to ${pct(last)} percent${zoomed ? `, axis from ${lo} to ${hi} percent` : ""}">
+    return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(METRICS[metric].label)} over time, from ${pct(vals[0])} to ${pct(last)} percent${zoomed ? `, axis from ${lo} to ${hi} percent` : ""}">
       ${grid}${thrLine}
       <line x1="${L}" x2="${W - R}" y1="${H - B}" y2="${H - B}" stroke="#2a2a2a"/>
       <path d="${area}" fill="${c}" opacity=".10"/>
@@ -1077,10 +1115,10 @@
     for (const g of buildTimeline(d)) {
       const items = [];
       if (want("parity")) {
-        g.parity.slice().reverse().forEach((h) => items.push(`<div class="tl"><span class="etype mono parity" style="--c:${c}">Parity</span>
+        g.parity.slice().reverse().forEach((h) => items.push(`<div class="tl"><span class="etype mono parity" style="--c:${c}">Ready</span>
           <span class="t"><b>${pct(h.full_prev)} → ${pct(h.full_pct)} % <span class="${h.full_pct > h.full_prev ? "up" : "down"}">(${pp(h.full_pct - h.full_prev)})</span></b>${h.label_changed ? ` <span class="tag plain mono" title="The row label changed in the same revision, so the method may have changed too">label changed</span>` : ""}
           <span class="m">${esc(timeEN(h.ts))} · <a href="${commitUrl(d.id, h.commit_full)}" target="_blank" rel="noopener"><code>${esc(h.commit)}</code></a> ${esc(h.message)}</span></span></div>`));
-        if (g.first) items.push(`<div class="tl"><span class="etype mono">Tracked</span><span class="t"><b>First parity value: ${pct(g.first.full_pct)} %</b><span class="m">The roadmap reports the full target from this revision on</span></span></div>`);
+        if (g.first) items.push(`<div class="tl"><span class="etype mono">Tracked</span><span class="t"><b>First value: ${pct(g.first.full_pct)} % ready for real work</b><span class="m">The roadmap reports it from this revision on</span></span></div>`);
       }
       if (want("release")) g.release.forEach((r) => items.push(`<div class="tl"><span class="etype mono release">Release</span>
         <span class="t"><b>${ghUrl(r.url) ? `<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.tag)} ↗</a>` : esc(r.tag)}</b> · ${releaseKind(r.kind)}${r.prerelease ? " (pre-release)" : ""}
@@ -1147,12 +1185,12 @@
     const feed = (p.progress || []).slice(0, 30).map((x) => `<li><time class="mono">${esc(dateEN(x.date))}</time><span>${esc(x.text)}</span></li>`).join("");
     const upcoming = (p.upcoming || []).map((u) => `<li>${esc(u)}</li>`).join("");
 
-    // The four kinds of update side by side; the newest of parity, roadmap and release is marked
+    // The four kinds of update side by side; the newest of "ready", roadmap and release is marked
     const nowCells = [
-      ["parity", "Parity change", par.last_change?.ts,
+      ["parity", "Ready for real work", par.last_change?.ts,
         par.last_change ? `<span class="${par.last_change.delta > 0 ? "up" : "down"}">${pp(par.last_change.delta)}</span> to ${pct(par.last_change.to)} %` : "None yet",
         par.last_change ? esc(par.last_change.message) : `Unchanged since ${dateEN(par.tracked_since)}`],
-      ["roadmap", "Roadmap update", ru?.ts, ru ? (ru.kind === "estimates" ? "Estimates revised" : ru.kind === "parity" ? "New parity value" : "Text updated") : "None yet", ru ? esc(ru.message) : ""],
+      ["roadmap", "Roadmap update", ru?.ts, ru ? (ru.kind === "estimates" ? "Estimates revised" : ru.kind === "parity" ? "New value" : "Text updated") : "None yet", ru ? esc(ru.message) : ""],
       ["code", "Code activity", act?.last_code_change?.ts, act ? `${LEVELS[act.level]?.label || "–"} · ${plural(act.changes_7d, "change")} in 7 days` : "Unknown", act?.last_code_change ? esc(act.last_code_change.subject) : ""],
       ["release", "Release", r0?.ts, r0 ? `${esc(r0.tag)} · ${releaseKind(r0.kind).replace(" release", "").toLowerCase()}` : "None yet", r0?.changes ? `${plural(r0.changes, "change")} in the notes` : ""],
     ];
@@ -1195,26 +1233,28 @@
 
       <section class="hero-detail">
         <div>
-          <div class="mono muted">Product parity</div>
+          <div class="mono muted">Ready for real work</div>
           <div class="big-detail" style="margin-top:14px">${pct(fullNow)}<span>%</span></div>
           <div style="margin-top:14px">${bar(fullNow, true)}</div>
           <div class="kv">
             <div><div class="v">${hours(m.full?.hours || s.full_hours)}</div><div class="l">Agent hours to ~95 % (estimate)</div></div>
-            <div><div class="v">${pct(m.breadth?.pct)} %</div><div class="l">Feature breadth</div></div>
+            <div><div class="v">${pct(m.breadth?.pct)} %</div><div class="l">Product parity (feature breadth)</div></div>
             <div><div class="v">${sinceStart == null ? "–" : sinceStart === 0 ? "±0 pp" : pp(sinceStart)}</div><div class="l">Since the first value (${dateEN(par.tracked_since, false)})</div></div>
-            <div><div class="v">${nf(par.changes ?? 0)}</div><div class="l">Parity changes in ${plural(hist.length, "revision")}</div></div>
+            <div><div class="v">${nf(par.changes ?? 0)}</div><div class="l">Value changes in ${plural(hist.length, "revision")}</div></div>
           </div>
           ${par.truncated ? `<p class="note">History is incomplete: older revisions weren't read.</p>` : ""}
         </div>
         <div>
           <div class="chart-head">
-            <span class="mono muted">Product parity over time</span>
+            <span class="mini-seg" role="group" aria-label="Chart value">
+              ${Object.entries(METRICS).map(([k, mm]) => `<button class="mono ${state.metric === k ? "on" : ""}" data-cmetric="${k}" aria-pressed="${state.metric === k}">${mm.label}</button>`).join("")}
+            </span>
             <span class="mini-seg" role="group" aria-label="Chart scale">
               <button class="mono ${state.chartScale === "fit" ? "on" : ""}" data-scale="fit" aria-pressed="${state.chartScale === "fit"}">Fit</button>
               <button class="mono ${state.chartScale === "full" ? "on" : ""}" data-scale="full" aria-pressed="${state.chartScale === "full"}">0–100</button>
             </span>
           </div>
-          <div id="pchart">${lineChart(hist, c, state.chartScale, thr)}</div>
+          <div id="pchart">${lineChart(hist, c, state.chartScale, thr, state.metric)}</div>
           <p class="note">Dots mark new values, and the line holds between them. "Fit" zooms the axis to the data and says so. "0–100" shows the whole scale. The roadmap first reported a value on ${dateEN(par.tracked_since)}.</p>
         </div>
       </section>
@@ -1237,7 +1277,7 @@
         <section class="panel">
           <div class="section-title mono"><b>02 / Updates</b>
             <span class="filters" role="group" aria-label="Show updates">
-              ${[["all", "All"], ["parity", "Parity"], ["roadmap", "Roadmap"], ["release", "Releases"], ["code", "Code"]]
+              ${[["all", "All"], ["parity", "Ready"], ["roadmap", "Roadmap"], ["release", "Releases"], ["code", "Code"]]
                 .map(([k, l]) => `<button class="mono ${k === "all" ? "on" : ""}" data-tl="${k}" aria-pressed="${k === "all"}">${l}</button>`).join("")}
             </span>
           </div>
@@ -1314,12 +1354,18 @@
       state.chartScale = b.dataset.scale;
       store.set("tracker.scale", state.chartScale);
       app.querySelectorAll("[data-scale]").forEach((x) => { x.classList.toggle("on", x === b); x.setAttribute("aria-pressed", String(x === b)); });
-      document.getElementById("pchart").innerHTML = lineChart(hist, c, state.chartScale, thr);
+      document.getElementById("pchart").innerHTML = lineChart(hist, c, state.chartScale, thr, state.metric);
+    }));
+    app.querySelectorAll("[data-cmetric]").forEach((b) => b.addEventListener("click", () => {
+      state.metric = b.dataset.cmetric;
+      store.set("tracker.metric", state.metric);
+      app.querySelectorAll("[data-cmetric]").forEach((x) => { x.classList.toggle("on", x === b); x.setAttribute("aria-pressed", String(x === b)); });
+      document.getElementById("pchart").innerHTML = lineChart(hist, c, state.chartScale, thr, state.metric);
     }));
     celebrate(app);
 
     status.innerHTML = `<span>${esc(d.name)} · roadmap dated ${dateEN(p.last_updated || s.roadmap?.self_reported)}</span>
-      <span>${plural(hist.length, "roadmap revision")} · ${plural(par.changes ?? 0, "parity change")}</span>`;
+      <span>${plural(hist.length, "roadmap revision")} · ${plural(par.changes ?? 0, "value change")}</span>`;
   }
 
   /* ---------- Routing ---------- */

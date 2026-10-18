@@ -2,11 +2,11 @@
 
 # ArtCraft Tracker
 
-**How close is each Craft app to the product it rebuilds, and how fast is it moving?**
+**How ready is each Craft app for real work, and how fast is it moving?**
 
-An unofficial community dashboard that tracks product parity, development activity and releases of the
-[storytold](https://github.com/storytold) Craft apps against their reference products. It reads the repositories
-every 30 minutes and can be installed as a web app.
+An unofficial community dashboard for the [storytold](https://github.com/storytold) Craft apps. For each app it shows
+how ready it is for real work compared with its reference product, its product parity, its development activity and
+its releases. It reads the repositories every 30 minutes and can be installed as a web app.
 
 [![Update workflow](https://github.com/KollektionHannemann/artcraft-parity/actions/workflows/update.yml/badge.svg?branch=main)](https://github.com/KollektionHannemann/artcraft-parity/actions/workflows/update.yml)
 [![Live dashboard](https://img.shields.io/badge/live-GitHub%20Pages-5b8cff)](https://kollektionhannemann.github.io/artcraft-parity/)
@@ -17,20 +17,24 @@ every 30 minutes and can be installed as a web app.
 
 ## What it shows
 
-- **Product parity** per app, the headline number: the project's own estimate of how much of the reference product a
-  professional can use day to day ("Full target (ready for real work)" in each `ROADMAP.md`).
-- **Latest update** on the start page: the newest parity change or milestone, and the newest release.
+- **Ready for real work** per app, the headline number: the project's own estimate of how much of the reference product
+  a professional could replace with the app in daily work ("Full target (ready for real work)" in each `ROADMAP.md`).
+- **Product parity** as a second view: the roadmaps' feature breadth, how many of the reference product's features
+  exist at all, ready or not (VectorCraft: 88 % product parity, 62 % ready for real work). "Show" above the cards, the
+  ranking and the detail chart switch between both; sorting works by either.
+- **Latest update** on the start page: the newest change of "ready for real work" or milestone, and the newest release.
 - **Activity level** per app (Buzzing, Active, Quiet, Cold), from the code changes merged in the last 14 days.
-- **Cards** sorted by the latest parity change by default; other sorts are parity, activity, latest release, feature
-  breadth, suite order and name. "What changed" on each card opens the latest parity change, roadmap update, code
-  change and release.
-- **Detail view** per app: the four kinds of update side by side, a parity chart (zoomed or 0–100), daily code
+- **Cards** sorted by the latest change of "ready for real work" by default; other sorts are ready for real work,
+  product parity, activity, latest release, suite order and name. "What changed" on each card opens the latest value
+  change, roadmap update, code change and release.
+- **Detail view** per app: the four kinds of update side by side, a chart of ready for real work or product parity
+  (zoomed or 0–100), daily code
   activity, one timeline for all update types with filters, releases, audiences, dimensions, features and the
   roadmap's own progress log.
-- **95 % milestone:** the first time an app reports at least 95 %, it gets a short celebration and a gold outline for
+- **95 % milestone:** the first time an app reports at least 95 % ready for real work, it gets a short celebration and a gold outline for
   seven days, then a permanent marker.
 - **Installable web app** with offline support; offline copies are always labelled as saved data.
-- **Notifications** for new apps and parity changes, as a GitHub issue and optionally as an ntfy push.
+- **Notifications** for new apps and changes of "ready for real work", as a GitHub issue and optionally as an ntfy push.
 
 ![Detail view for FigCraft](docs/detail.png)
 
@@ -40,7 +44,7 @@ The tracker keeps three kinds of update apart. One commit can belong to more tha
 
 | Type | What it is | Source |
 |---|---|---|
-| **Parity update** | The full-target value changed, up or down. Republishing the same value is not one. | `ROADMAP.md` on the main branch |
+| **Ready update** | The "ready for real work" (full-target) value changed, up or down. Republishing the same value is not one. | `ROADMAP.md` on the main branch |
 | **Roadmap update** | The roadmap changed without a new value. Each revision is classified as *estimates* (another number changed: audiences, hours, dimensions, features, stage), *content* (the text changed) or *editorial* (only formatting or the header date changed). Editorial revisions are hidden in the UI. | `ROADMAP.md` on the main branch |
 | **Repository update** | Code changes merged into main, and published releases. | first-parent git history, GitHub Releases |
 
@@ -52,7 +56,7 @@ Findings from the real repositories that shaped this model (October 2026):
 - The repositories are 9 to 19 days old, and the roadmaps have reported the full target only since 10 Oct 2026.
   Longer windows (30/90/180 days) carry no information yet, so activity uses 7 and 14 days.
 - Of about 1,900 roadmap revisions on main, 5 changed the full target. Almost all others add progress-log lines,
-  which is why a roadmap change is usually not a parity change.
+  which is why a roadmap change usually leaves "ready for real work" unchanged.
 - `git log -- ROADMAP.md` without `--first-parent` also returns commits inside merged branches. Their values were
   never published on main, and their dates are when they were written. The tracker reads the main line only.
 - About 93 % of the changesets on main touch code; there are no bot accounts. Releases are tagged across the suite

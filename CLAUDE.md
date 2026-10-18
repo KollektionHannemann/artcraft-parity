@@ -7,7 +7,9 @@ Guidance for Claude Code when working in this repository.
 **ArtCraft Tracker**, an unofficial community dashboard that tracks the product parity of the ArtCraft "Craft" apps
 (github.com/storytold) against their reference products (Photoshop, Illustrator, Premiere Pro, Word, Excel, AutoCAD,
 Pro Tools, and others), plus their development activity and releases. Parity numbers come from the `ROADMAP.md` file of
-each repository. The metric of record is **"Full target (ready for real work)"**, shown in the UI as "Product parity".
+each repository. The metric of record is **"Full target (ready for real work)"**, shown in the UI as
+**"Ready for real work"** (short "Ready"). "Product parity" in the UI means the roadmaps' **feature breadth**
+(`breadth_pct`), a second view the user can switch to. Never label the headline value "parity".
 The site is an installable web app (manifest + service worker).
 
 Deployed with GitHub Pages from `KollektionHannemann/artcraft-parity`. The UI and all documentation are in English.
@@ -66,7 +68,7 @@ python3 scripts/make_icons.py              # redraw icons after changing the mar
     `roadmap` (`last_update`, `revisions_7d`), `activity` (`level`, `score`, `window` = 14 daily code counts ending today),
     `release`, `milestone` (`reached_at` is the commit time of the first revision at or above 95 %, `null` if the first
     known revision was already there), compact `series`.
-  - `latest_events`: parity changes, milestones, releases and new apps across all apps, newest first.
+  - `latest_events`: full-target changes (`type: "parity"`), milestones, releases and new apps, newest first.
   - `recent_additions`: apps discovered within `RECENT_DAYS` (14). Drives the banner on the overview.
   - `errors`: notices shown at the top of the overview. Discovery, git and parser problems all end up here.
 - `apps/<app>.json`: detail data, including `activity.days` (daily code/other counts for 180 days with sample subjects)
@@ -114,7 +116,9 @@ python3 scripts/make_icons.py              # redraw icons after changing the mar
 - **Visual style** follows the ArtCraft launcher and website: black background, 1 px hairlines, mono uppercase labels,
   white primary buttons, numbered chips, two-tone app names ("Photo" in white, "Craft" in the app color).
   Do not use ArtCraft logos or the engraved app icons.
-- **Full target is the headline metric** ("Product parity" in the UI). Other numbers support it. Do not reorder the UI
+- **Full target is the headline metric** ("Ready for real work" in the UI). Product parity (feature breadth) is an
+  option, never the default. Events, the default sort, notifications and the 95 % milestone use the full target only.
+  Other numbers support it. Do not reorder the UI
   to put them first. Activity is effort, not progress: keep it visually separate (neutral cells on cards, never the
   parity bar style). Parity ranges stay in the data but are not shown; hour estimates stay ranges.
 - **Branding:** the product is "ArtCraft Tracker" with its own mark (open triangle filled to a level line) and the
