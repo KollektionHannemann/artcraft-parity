@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "2e06216",
-  "latest_commit_date": "2026-10-18T03:50:15-04:00",
-  "latest_message": "Text effects: legacy outline, shadow, emboss and imprint are drawn (#2534) (#2548)",
+  "latest_commit": "72cea2d",
+  "latest_commit_date": "2026-10-18T04:04:12-04:00",
+  "latest_message": "#1885: dialog close box fills red on hover, whole box clickable (#2090)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -309,6 +309,34 @@
         "text": "Copying one equation on its own also puts it in the clipboard's MathML formats, which Microsoft documents Word reading first when it pastes math. Whether it pastes into Word as an editable equation hasn't been confirmed yet; testers welcome (#1297)"
       },
       {
+        "date": "2026-10-15",
+        "text": "Find opens Navigation on Results; editing the query restores Results after manual Headings/Pages navigation. Typed and selected-text searches retain document contents (#2096)."
+      },
+      {
+        "date": "2026-10-15",
+        "text": "Dialog close control: a Windows-style box at the title bar's right end, the whole box clickable, red on hover, in both themes (#1885)"
+      },
+      {
+        "date": "2026-10-15",
+        "text": "Font box: a Recently Used Fonts section at the top of the list (the fonts applied lately, most recent first, ten at most, kept between runs), then All Fonts, as in Word (#2068)"
+      },
+      {
+        "date": "2026-10-15",
+        "text": "A missing Thai document font (TH Sarabun New, Angsana New, Cordia New, the UPC families…) is substituted by one Thai face for the whole run, Latin letters and digits included, as Word substitutes Cordia New; Thai no longer sits in one font next to larger Latin in another (#1549)"
+      },
+      {
+        "date": "2026-10-15",
+        "text": "Layout › Columns with text selected puts only that text in columns, as in Word (#2024): a continuous section break goes where the selection starts and one where it ends (splitting a paragraph there; none at the document's start or end, or where a section already begins or ends), and the columns go on the section between, one undo step; More Columns… offers \"Selected text\" and picks it. Before, the whole section took the columns"
+      },
+      {
+        "date": "2026-10-15",
+        "text": "Lists (#1683): a bullet stored as a private-use character its font can't draw (the font isn't installed) shows the level's default bullet (• ○ ▪); it used to be whatever an installed icon font has at that code, such as Font Awesome's Twitter logo"
+      },
+      {
+        "date": "2026-10-15",
+        "text": "The web app keeps its preferences between visits (#2132): theme (dark mode), interface size, editing options and the rest of what the desktop app saves in ui.json are kept in the browser's localStorage, written as soon as they change"
+      },
+      {
         "date": "2026-10-14",
         "text": "DOCX row table border exceptions render and survive saving. Explicit cell borders win; a row exception does not change other rows."
       },
@@ -375,34 +403,6 @@
       {
         "date": "2026-10-14",
         "text": "\"Do you want to save changes?\" answers from the keyboard after typing too (#1597): Save takes focus from the page when the prompt opens, so the arrow keys and Tab move between Save, Don't Save and Cancel instead of the caret behind it, and Enter answers"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Copied text keeps its formatting in other programs (#1523): Copy and Cut put HTML beside the plain text on the system clipboard for every selection, not only one holding an equation, so a browser, mail client or another word processor pastes bold, italic, fonts and sizes. RTF on the clipboard is not written yet"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Text copied out of an exported PDF reads as shown (#1473): All Caps and Small Caps text comes out in capitals, as from Word's PDFs, and plain text after it keeps its own case (before, a capital first drawn for a lowercase letter made later capitals extract lowercase)"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Web: Save in the \"save changes?\" prompt before New or Open now waits for the browser's save picker: the new or opened document replaces yours only once the file is written and closed. Cancelling the picker, or a write that fails, keeps your document open with its edits and undo, still unsaved, and the prompt comes back with the reason; a save that ends after another document has replaced it no longer runs the New/Open on that one or marks it unsaved, and New/Open while a picker save is still in flight ask first (#1315)"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "File › Info › Inspect Document finds hidden text the way Word does (#1344): hidden by direct formatting, a character style or a paragraph style, in the body, headers, footers, footnotes and endnotes, comments and text boxes, and Remove All deletes all of it (and nothing visible) in one undo step, whole hidden paragraphs and the notes of hidden references included. The result lists anything it couldn't reach (residual), so a sanitised file is never reported clean by mistake"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "ODT files keep their tracked changes (gap 19): insertions and deletions made in LibreOffice open as revisions with their author and date, deleted paragraph breaks and text inserted then deleted included, so Accept All and Reject All give the right text; saving to ODT writes them back, and the Track Changes setting goes both ways"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "RTF keeps tracked changes (gap 19): insertions and deletions open as tracked changes with their authors and dates (\\revtbl, \\revised, \\deleted, \\revdttm) instead of plain text, so deleted text no longer reappears as normal text; saving to RTF writes them back, and Accept All / Reject All work after reopening"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Alignment guides: moving a picture, shape or text box snaps its edges or centre to the page's edges and centre, the margins and the other floating objects on the page, with a thin line across the page for each guide while dragging; Alt moves freely; File › Options › Advanced › Editing turns them off (ui.alignmentGuides). Our own design: Word for Mac shows no guides"
       }
     ]
   },
@@ -5878,7 +5878,159 @@
       "essentials_pct": 63.0,
       "breadth_pct": 80.0,
       "previous_full_pct": 60.0
+    },
+    {
+      "commit": "edee285",
+      "commit_full": "edee285c363d70cd2fd605dfbfb5505f40fdd069",
+      "commit_date": "2026-10-18T03:50:50-04:00",
+      "message": "docs: fix ROADMAP tables (progress-log separator under its header, stray progress row out of the headline table)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "d8b11c6",
+      "commit_full": "d8b11c69d3de233e38d484d01c19167d56d12ffe",
+      "commit_date": "2026-10-18T03:59:01-04:00",
+      "message": "Columns on selected text go in their own section (#2024) (#2071)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "1cc3d19",
+      "commit_full": "1cc3d190a76228796778854f2cc1b1d7b2937e45",
+      "commit_date": "2026-10-18T04:00:07-04:00",
+      "message": "Fix Find navigation to show search results (#2096) (#2118)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "1c8c352",
+      "commit_full": "1c8c352cf53e41c9d41b38532af80736738ac756",
+      "commit_date": "2026-10-18T04:02:18-04:00",
+      "message": "#1549: one Thai face for a run in a missing Thai font (#2175)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "04eadcb",
+      "commit_full": "04eadcb2ca3622fa4c215ed876c30a797d91dcc1",
+      "commit_date": "2026-10-18T04:02:57-04:00",
+      "message": "#2068: Recently Used Fonts at the top of the font list (#2192)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "a30a186",
+      "commit_full": "a30a1866e2bf7ab8f82b9e342c59926968418225",
+      "commit_date": "2026-10-18T04:03:16-04:00",
+      "message": "Web: keep preferences such as dark mode between visits (#2132) (#2205)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "ab57696",
+      "commit_full": "ab57696ba704aa206afa1279073a4d4586aff9de",
+      "commit_date": "2026-10-18T04:03:35-04:00",
+      "message": "Draw undrawable private-use list bullets as the level's default bullet, not an icon-font glyph (#1683) (#2206)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "72cea2d",
+      "commit_full": "72cea2daf486af65a70376b302c9119dc584a9da",
+      "commit_date": "2026-10-18T04:04:12-04:00",
+      "message": "#1885: dialog close box fills red on hover, whole box clickable (#2090)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
     }
   ],
-  "updated_at": "2026-10-18T07:50:36+00:00"
+  "updated_at": "2026-10-18T08:11:26+00:00"
 }
