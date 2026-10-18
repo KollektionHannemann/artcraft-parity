@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "72cea2d",
-  "latest_commit_date": "2026-10-18T04:04:12-04:00",
-  "latest_message": "#1885: dialog close box fills red on hover, whole box clickable (#2090)",
+  "latest_commit": "8fcaa66",
+  "latest_commit_date": "2026-10-18T04:43:32-04:00",
+  "latest_message": "Turkish case mapping: i/İ and ı/I capitalise correctly (#1923) (#2009)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -278,6 +278,14 @@
       },
       {
         "date": "2026-10-16",
+        "text": "Releasing a table drag with the mouse (column or row border, move handle, selection areas) leaves the view where it is instead of scrolling back to the caret (#1738)"
+      },
+      {
+        "date": "2026-10-16",
+        "text": "Hebrew in fields and quotes (#1670): a STYLEREF (or any field) showing right-to-left text such as \"פרק א\" reads right to left in headers and the body instead of reversed; smart quotes in Hebrew pinned to Word's logical-order result (“ before, ” after, ” in acronyms like צה\"ל)"
+      },
+      {
+        "date": "2026-10-16",
         "text": "Web Layout text fills the window width and re-wraps once a resize settles, or at once on a zoom, instead of a fixed 800 pt column; Draft and Outline keep their 800 pt column (#1876)."
       },
       {
@@ -314,6 +322,42 @@
       },
       {
         "date": "2026-10-15",
+        "text": "AutoCorrect follows Turkish and Azerbaijani case mapping: istanbul → İstanbul, ılık → Ilık, İNgilizce → İngilizce with no combining dot (#1923)"
+      },
+      {
+        "date": "2026-10-15",
+        "text": "Backspace with a whole table selected removes it, as in Word, and selected whole rows or columns go the same way; Delete clears them and keeps the table. A selection that covers a table and the paragraph before or after it removes the table, also when it starts inside the table or the table is nested (#1844)"
+      },
+      {
+        "date": "2026-10-15",
+        "text": "Image size limits are checked before allocating (#1321): a picture whose header declares more RGBA bytes than the 512 MiB budget is refused before decoding (render and PDF share one helper in wordcraft-geom), and page rasters are capped at 100 million pixels in total, scaled down rather than only per side."
+      },
+      {
+        "date": "2026-10-15",
+        "text": "Saved DOCX files keep the order of mixed right-to-left and left-to-right text in Word: Hebrew around a Latin name, numbers, brackets or an e-mail address no longer changes places, and Word reports the Hebrew as Hebrew rather than Arabic (#1543)."
+      },
+      {
+        "date": "2026-10-15",
+        "text": "Web: typing in Cyrillic or another non-Latin script no longer repeats text. WordCraft now honours the input method's request to erase around the caret before retyping (#1480). Chrome can still move the hidden text field's caret, so later letters may still land out of order. That cause is still open"
+      },
+      {
+        "date": "2026-10-15",
+        "text": "The font family caches are bounded (4096 families for text, 1024 for math, names over 256 bytes aren't remembered), so a document naming thousands of missing fonts can't grow memory; equation fonts are looked up again after a font is added or removed instead of keeping the old choice (#1354)"
+      },
+      {
+        "date": "2026-10-15",
+        "text": "AutoCorrect recognizes --> as → (#2223), respecting replacement settings and undo without changing paragraph-start arrow bullets."
+      },
+      {
+        "date": "2026-10-15",
+        "text": "Numbered headings (#1793): the Multilevel List gallery offers four lists linked to Heading 1–9 (1 / 1.1 / 1.1.1, Article I. / Section 1.01 / (a), I. / A. / 1., Chapter 1; list.multilevelPreset). The heading styles carry the numbers, so paragraphs already in a Heading style keep their style and level, any other selected paragraph (Normal, Quote, Title) becomes Heading 1 (checked in Word), a new Heading 2 is numbered 2.1 by itself and body text stays unnumbered; Numbering or typing 1.  keeps a heading a heading"
+      },
+      {
+        "date": "2026-10-15",
+        "text": "Reversing an automatic sentence capital (Undo, or Backspace and retype) adds the word before it to AutoCorrect's First Letter exceptions, as Word does; \"Automatically add words to list\" switches for First Letter and INitial CAps (#1857)."
+      },
+      {
+        "date": "2026-10-15",
         "text": "Dialog close control: a Windows-style box at the title bar's right end, the whole box clickable, red on hover, in both themes (#1885)"
       },
       {
@@ -327,6 +371,14 @@
       {
         "date": "2026-10-15",
         "text": "Layout › Columns with text selected puts only that text in columns, as in Word (#2024): a continuous section break goes where the selection starts and one where it ends (splitting a paragraph there; none at the document's start or end, or where a section already begins or ends), and the columns go on the section between, one undo step; More Columns… offers \"Selected text\" and picks it. Before, the whole section took the columns"
+      },
+      {
+        "date": "2026-10-15",
+        "text": "Track Changes Options › Moves (gap #5): Moved from and Moved to each have a mark and a colour (by default green double strikethrough and double underline, as before and as in Word for Mac), saved per user; review.trackingOptions takes moveFromMark, moveFromColor, moveToMark, moveToColor, and trackMoves, the document's Track moves setting: off, a tracked cut and paste is an ordinary deletion and insertion. DOCX w:doNotTrackMoves round-trips"
+      },
+      {
+        "date": "2026-10-15",
+        "text": "Draw: Ink to Shape makes two-stroke arrows and arrows with a closed triangle head. A line plus a separate head stroke (an open V or a small closed triangle, drawn after the line or before it) whose apex sits at one of the line's ends becomes one straight arrow connector, and the head stroke goes, in one undo step; this works while drawing with Ink to Shape on and on lasso-selected strokes with Convert to Shapes. A shaft with a small triangle drawn round its tip in the same stroke is an arrow too; a triangle without a shaft stays a triangle. Our own design (Word for Mac has no Ink to Shape)."
       },
       {
         "date": "2026-10-15",
@@ -351,58 +403,6 @@
       {
         "date": "2026-10-14",
         "text": "Legacy VML freeforms (v:shape with its own path), such as the rule lines in many older headers, are read as freeform shapes: they show on screen and in PDFs and are saved back as DrawingML custom geometry instead of vanishing"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Field instructions spanning paragraphs no longer add blank lines during pagination; empty result paragraphs still take a line."
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Page-break-only list paragraphs no longer print stray bullets or numbers. The next item keeps its number, matching the reference export."
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Grouped flowChartOr shapes draw their circle and crossing spokes, as in Word"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Deleting a comment removes its anchors from headers, footers, notes and text boxes too, not just the body, and deletes the whole thread below it, replies to replies included; no anchor or reply is left pointing at a deleted comment (#1345)"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Legacy DOC DIB conversion checks the BMP header and copy before allocation, uses the caller's decode allowance, and caps PNG output while encoding; a BMP fallback is kept when it fits. A generated 1-pixel regression covers 57/58/512-byte limits. Resource-exhaustion consequences remain unmeasured. Related: #1334 and #1554"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "A file name that isn't valid Unicode, such as a Latin-1 café.docx, no longer crashes wordcraft-cli or the app (#1440). The app and the CLI's convert, info, text, inspect, render, zotero and run --file open such a file, and saving it without a new name (run --file … --cmd file.save, or Save in the app) writes back to it. Any other such argument is an error naming it, an output name included; the app exits with status 2 on a --control port that isn't valid Unicode"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "File › Print translated in all 18 interface languages — printer list, duplex, grayscale, discovery/submission feedback and print commands (18 strings that shipped English-only with the craft-print integration; written from the English meaning, pending native-speaker review like the rest of the catalogs)"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "All Caps and Small Caps draw ß as SS, as Word does (#1581): \"Straße\" in All Caps reads STRASSE, not STRASE, and other letters whose capital is two characters (ﬀ, ŉ) draw in full. The ß is still one character: the caret never stops between the two S, and a click on them lands before or after it"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "layout.pageSetup with a section checks its values like Margins, Size and Columns (#1582): non-finite numbers and margins that leave no room for text are refused with nothing changed; page sides, column count and gap, header/footer distances and line-numbering values are clamped to the same ranges"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Text wrap (#1376): in the narrow strip beside a square-wrapped picture, a word that doesn't fit moves on whole to the next row; it used to be split across the strip (\"docu\" / \"mentazione\")"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "DOCX files with legacy VML preset shapes show them (#1377): Word's right arrow (x0000t13) and the other presets appear with their fill, outline and size, drawn as WordCraft draws the same DrawingML preset (the nearest shape when it has no exact one), and saving keeps them as DrawingML shapes; before, they were dropped"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Lists numbered with Russian letters (russianLower, russianUpper) show а), б), в) … я), then аа), бб), as in Word, instead of 1), 2), 3); the 29-letter sequence (no ё, й, ъ or ь) was observed in Word"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "\"Do you want to save changes?\" answers from the keyboard after typing too (#1597): Save takes focus from the page when the prompt opens, so the arrow keys and Tab move between Save, Don't Save and Cancel instead of the caret behind it, and Enter answers"
       }
     ]
   },
@@ -6030,7 +6030,273 @@
       "essentials_pct": 63.0,
       "breadth_pct": 80.0,
       "previous_full_pct": 60.0
+    },
+    {
+      "commit": "1d37043",
+      "commit_full": "1d370431287e14ad152a7999a47b45bbce0af5c0",
+      "commit_date": "2026-10-18T04:21:42-04:00",
+      "message": "AutoCorrect: reversing a capitalisation adds an automatic exception, as in Word (#1857) (#2227)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "e7f5d32",
+      "commit_full": "e7f5d32c35b28e841f6f4446f4b7a3bbd2ccf9e4",
+      "commit_date": "2026-10-18T04:22:12-04:00",
+      "message": "Numbered headings: heading-linked multilevel list presets keep the heading styles (#1793) (#2239)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "6311f9d",
+      "commit_full": "6311f9d4117b7209b1396fde1627da3888373738",
+      "commit_date": "2026-10-18T04:22:50-04:00",
+      "message": "AutoCorrect: replace the double-hyphen arrow (#2223) (#2263)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "1f0aeb4",
+      "commit_full": "1f0aeb4626f981ffb5102597391c9403fc369c49",
+      "commit_date": "2026-10-18T04:24:15-04:00",
+      "message": "Ink to Shape: two-stroke arrows and closed-triangle heads (gap 12) (#1778)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "c5a9c95",
+      "commit_full": "c5a9c954f760aeeec7d84dc3e12b7db1750a7602",
+      "commit_date": "2026-10-18T04:24:34-04:00",
+      "message": "Track Changes Options: Moves (move tracking, Moved from/to marks and colours) (gap 5) (#1779)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "6d83d13",
+      "commit_full": "6d83d13257825fabd9eb203041bd3e0b39d8f38e",
+      "commit_date": "2026-10-18T04:24:53-04:00",
+      "message": "Update Field works in headers, footers, notes and text boxes; printing updates every field (#1706) (#1780)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "eff1444",
+      "commit_full": "eff1444f0856ba23e1aef029bb05b6ae8e116477",
+      "commit_date": "2026-10-18T04:41:10-04:00",
+      "message": "Fonts: bounded family caches; math follows font changes (#1354) (#1929)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "82bf806",
+      "commit_full": "82bf8061180d3ee3f7c9628143acbd98352b5cb6",
+      "commit_date": "2026-10-18T04:41:39-04:00",
+      "message": "Web: input-method rewrites erase before retyping, so non-Latin typing no longer repeats (part of #1480) (#1949)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "c9f3da2",
+      "commit_full": "c9f3da2fc50c718e0ca3534be03fa0fd4825a477",
+      "commit_date": "2026-10-18T04:41:59-04:00",
+      "message": "DOCX: mixed Hebrew/Latin keeps its order in Word (runs split by direction, w:rtl and language) (#1543) (#1950)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "3787af0",
+      "commit_full": "3787af0a6709151db9b07fa79de8a39afdbcad77",
+      "commit_date": "2026-10-18T04:42:17-04:00",
+      "message": "Rendering and PDF check image limits before allocating (#1321) (#2001)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "da8b7b7",
+      "commit_full": "da8b7b7feb6a1f742202540fe0ad38b48073f89c",
+      "commit_date": "2026-10-18T04:42:35-04:00",
+      "message": "Tables: Backspace removes a selected table, rows or columns; Delete clears them (part of #1844) (#2005)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "0254f3a",
+      "commit_full": "0254f3afc74f2c5a1a8365eac0600e1031efdc68",
+      "commit_date": "2026-10-18T04:42:54-04:00",
+      "message": "Hebrew: field results like STYLEREF draw right to left; smart quotes match Word (#1670) (#2007)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "559f166",
+      "commit_full": "559f16601d8f52d62c986b0cd84beaf5be84cb00",
+      "commit_date": "2026-10-18T04:43:13-04:00",
+      "message": "A mouse drag on a table no longer scrolls the view to the caret (#1738) (#2008)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "8fcaa66",
+      "commit_full": "8fcaa66e19320e3b3ccf337cc48d370752734002",
+      "commit_date": "2026-10-18T04:43:32-04:00",
+      "message": "Turkish case mapping: i/İ and ı/I capitalise correctly (#1923) (#2009)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
     }
   ],
-  "updated_at": "2026-10-18T08:11:26+00:00"
+  "updated_at": "2026-10-18T08:51:40+00:00"
 }
