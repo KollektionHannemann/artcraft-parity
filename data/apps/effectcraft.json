@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/effectcraft",
   "roadmap_url": "https://github.com/storytold/effectcraft/blob/main/ROADMAP.md",
-  "latest_commit": "0c39995",
-  "latest_commit_date": "2026-10-16T18:13:08+05:00",
-  "latest_message": "Convert a shape layer's parametric path to a bezier path (#932)",
+  "latest_commit": "a594abf",
+  "latest_commit_date": "2026-10-18T09:35:51-04:00",
+  "latest_message": "Merge pull request #1652",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -268,11 +268,607 @@
       }
     ]
   },
+  "parity": {
+    "tracked_since": "2026-10-10T18:09:10Z",
+    "changes": 0,
+    "truncated": false,
+    "last_change": null
+  },
+  "roadmap": {
+    "revisions": 7,
+    "revisions_7d": 5,
+    "last_revision": {
+      "ts": "2026-10-18T13:35:51Z",
+      "kind": "content",
+      "commit": "a594abf",
+      "commit_full": "a594abf4f7072ba4eb7f1532a39616c1022621c1",
+      "message": "Merge pull request #1652"
+    },
+    "last_update": {
+      "ts": "2026-10-18T13:35:51Z",
+      "kind": "content",
+      "commit": "a594abf",
+      "commit_full": "a594abf4f7072ba4eb7f1532a39616c1022621c1",
+      "message": "Merge pull request #1652"
+    },
+    "self_reported": "2026-10-12"
+  },
+  "milestone": null,
+  "activity": {
+    "level": "buzzing",
+    "score": 22.2,
+    "active_days_7d": 6,
+    "changes_7d": 377,
+    "changes_14d": 546,
+    "housekeeping_7d": 13,
+    "last_code_change": {
+      "ts": "2026-10-18T15:12:44Z",
+      "commit": "22072d9",
+      "commit_full": "22072d9f25846dbf8a3bf10105fdb51c3c0db4c1",
+      "subject": "Merge pull request #1317"
+    },
+    "last_commit_ts": "2026-10-18T15:12:44Z",
+    "repo_since": "2026-10-01T16:48:39Z",
+    "window": [
+      25,
+      24,
+      24,
+      23,
+      58,
+      12,
+      3,
+      132,
+      111,
+      0,
+      5,
+      70,
+      4,
+      55
+    ],
+    "days": [
+      {
+        "d": "2026-10-01",
+        "code": 10,
+        "other": 2,
+        "samples": [
+          {
+            "commit": "dee1618",
+            "subject": "engine: explicit layer/prop params bypass selection-based enablement"
+          },
+          {
+            "commit": "3a59a84",
+            "subject": "M0.9–M0.10: egui frontend (AE-style panels, viewer, timeline, effect controls, dialogs), desktop app with control channel, host wiring; cargo fmt"
+          },
+          {
+            "commit": "e2ba01a",
+            "subject": "Merge expressions engine (boa)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-02",
+        "code": 33,
+        "other": 11,
+        "samples": [
+          {
+            "commit": "935cf69",
+            "subject": "Release fixes: CLI --version, ALSA on Linux, web build via xtask, xtask version"
+          },
+          {
+            "commit": "5af4196",
+            "subject": "Signed release pipeline (macOS/Windows/Linux/Web); README community note"
+          },
+          {
+            "commit": "81a8e71",
+            "subject": "Merge branch 'worktree-agent-a8807cba49d60c29f'"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-03",
+        "code": 41,
+        "other": 4,
+        "samples": [
+          {
+            "commit": "8ea5b86",
+            "subject": "Merge branch 'worktree-agent-acd022ffe72ec3783'"
+          },
+          {
+            "commit": "bbe29e7",
+            "subject": "Merge branch 'worktree-agent-aab5c21557d20742c'"
+          },
+          {
+            "commit": "081ce79",
+            "subject": "Merge M13.14 agent-interface audit + lazy open (worktree-agent-a5f8967ebd42ce98b)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-04",
+        "code": 38,
+        "other": 2,
+        "samples": [
+          {
+            "commit": "4b37443",
+            "subject": "Docs after M3 and M4, plus three fixes the review found (never-crash, web restore, guard test) (#39)"
+          },
+          {
+            "commit": "339a05d",
+            "subject": "Never crash: deny panic lints in the already-clean crates and apps (#37)"
+          },
+          {
+            "commit": "7f1e2df",
+            "subject": "Never crash: Opus and VP9 encoders without expect() (#24)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-05",
+        "code": 25,
+        "other": 6,
+        "samples": [
+          {
+            "commit": "dd56ae5",
+            "subject": "Fix #44: double-click the Project panel's empty area to import (#81)"
+          },
+          {
+            "commit": "fdfbca5",
+            "subject": "Fix #43: the AppImage's window shows the EffectCraft icon on Wayland (#80)"
+          },
+          {
+            "commit": "72e60dc",
+            "subject": "Fix #45: the Project panel's details stay inside the panel (#79)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-06",
+        "code": 24,
+        "other": 2,
+        "samples": [
+          {
+            "commit": "2fadd14",
+            "subject": "Docs: user issues #85–#117 in gaps, parity, ROADMAP and README (#134)"
+          },
+          {
+            "commit": "1ea493f",
+            "subject": "Viewer: drop Project items, files and effects onto the comp (#85, #88) (#133)"
+          },
+          {
+            "commit": "78f49e0",
+            "subject": "Timeline: Project items land where they are dropped (#89) (#131)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-07",
+        "code": 24,
+        "other": 4,
+        "samples": [
+          {
+            "commit": "e38a92e",
+            "subject": "Web: replaced files reach reused workers, failed worker starts fail their job, failed storage writes retry (#215, #216, #218) (#224)"
+          },
+          {
+            "commit": "2d40171",
+            "subject": "Puppet: dragging pins keeps the layer under the Puppet cached (#212) (#222)"
+          },
+          {
+            "commit": "ff163d4",
+            "subject": "Timeline, shapes and masks: Add menu, Change Renderer, toolbar Fill / Stroke, Alt+Shift+P reveal, mask selection, linked feather, Project selection box (#203, #"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-08",
+        "code": 23,
+        "other": 7,
+        "samples": [
+          {
+            "commit": "d60cb71",
+            "subject": "G2: add context menus to blank Project and Timeline areas (#210)"
+          },
+          {
+            "commit": "929a9c0",
+            "subject": "Effects: Fractal Noise's Soft Linear has no lattice creases (#259) (#278)"
+          },
+          {
+            "commit": "e283b25",
+            "subject": "Import: a 3D model doesn't ask how to interpret its alpha (#264) (#296)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-09",
+        "code": 58,
+        "other": 4,
+        "samples": [
+          {
+            "commit": "30aaddf",
+            "subject": "Arabic, Hebrew, Indic and Thai names; FLAC preview opens once and off the UI thread (#394, #408) (#459)"
+          },
+          {
+            "commit": "921f0db",
+            "subject": "Effects: CC Particle World follows the comp camera (#397) (#454)"
+          },
+          {
+            "commit": "e9032c5",
+            "subject": "Timeline: every property has a pick whip in the Parent & Link column (#363) (#452)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-10",
+        "code": 12,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "2ec87e9",
+            "subject": "Community batch: pointer-wrap test texture deltas, device-lost dialog (#675)"
+          },
+          {
+            "commit": "21681e9",
+            "subject": "Issue fixes: GPU device loss, motion-path vertex tools, rename focus, macOS sheet dialogs, MCP file confinement, desktop shortcut (#674)"
+          },
+          {
+            "commit": "ca89a97",
+            "subject": "Community batch: font folders, empty-Timeline drop, AE auto-Bezier tangents, clippy 1.95 (#668)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-11",
+        "code": 3,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "9a7d3e7",
+            "subject": "Share docking transactions and preserve viewer lifecycle (#689)"
+          },
+          {
+            "commit": "f953cd2",
+            "subject": "Release prep: 0.8.0 and a Linux riscv64 release build (#669)"
+          },
+          {
+            "commit": "4b58cd2",
+            "subject": "Issue fixes: drag render pile-up, CC Smear/Tiler past text bounds, relative footage paths, GIF playback test (#676)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-12",
+        "code": 132,
+        "other": 4,
+        "samples": [
+          {
+            "commit": "470ea7a",
+            "subject": "Release 0.9.2: install the wasm-bindgen CLI for the web release build"
+          },
+          {
+            "commit": "bfea3d1",
+            "subject": "i18n: Czech entries for the extrusion Front/Bevel/Side/Back Color submenus"
+          },
+          {
+            "commit": "af671f6",
+            "subject": "i18n: add Czech (cs) interface language (#987)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-13",
+        "code": 111,
+        "other": 2,
+        "samples": [
+          {
+            "commit": "549e9d8",
+            "subject": "Footage: the missing-footage toast names the real menu item, Relink Missing Footage… (#1106)"
+          },
+          {
+            "commit": "7a92136",
+            "subject": "# Conflicts: (#1106)"
+          },
+          {
+            "commit": "91ee7bf",
+            "subject": "cargo fmt"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-14",
+        "code": 0,
+        "other": 1,
+        "samples": []
+      },
+      {
+        "d": "2026-10-15",
+        "code": 5,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "c2f790b",
+            "subject": "refactor(pdf): share structure parsing through a bounded adapter"
+          },
+          {
+            "commit": "0311bdc",
+            "subject": "fix(automation): avoid replaying edits after lost replies"
+          },
+          {
+            "commit": "26ed1a3",
+            "subject": "fix(pdf): prevent overflow in EPS integer arithmetic"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-16",
+        "code": 70,
+        "other": 3,
+        "samples": [
+          {
+            "commit": "8f02f52",
+            "subject": "pdf: endchar takes its width by operand parity like the stems and rmoveto (#1478)"
+          },
+          {
+            "commit": "d676de9",
+            "subject": "pdf: a soft mask at an unsupported bit depth is ignored, not fatal (#1565)"
+          },
+          {
+            "commit": "b9fddd3",
+            "subject": "#1611: layer context menu has Layer Styles (#1640)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-17",
+        "code": 4,
+        "other": 2,
+        "samples": [
+          {
+            "commit": "45c9d22",
+            "subject": "Release: install resvg for the macOS DMG background in CI"
+          },
+          {
+            "commit": "bba7abd",
+            "subject": "Build: gate tests_services with a plain cfg(test) so clippy treats it as test code"
+          },
+          {
+            "commit": "2d805d1",
+            "subject": "Import templates and open originals within their own folders (#1748)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-18",
+        "code": 55,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "22072d9",
+            "subject": "Merge pull request #1317"
+          },
+          {
+            "commit": "033890f",
+            "subject": "Merge pull request #1802"
+          },
+          {
+            "commit": "f3f24ef",
+            "subject": "Land batch: fix clippy lints and the #1424 test after #1413 changed layer_menu"
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [
+    {
+      "tag": "v0.11.1",
+      "name": "EffectCraft v0.11.1",
+      "ts": "2026-10-18T00:05:17Z",
+      "url": "https://github.com/storytold/effectcraft/releases/tag/v0.11.1",
+      "changes": 80,
+      "new_contributors": 11,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.10.0",
+      "name": "EffectCraft v0.10.0",
+      "ts": "2026-10-14T16:16:19Z",
+      "url": "https://github.com/storytold/effectcraft/releases/tag/v0.10.0",
+      "changes": 101,
+      "new_contributors": 12,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.9.2",
+      "name": "EffectCraft v0.9.2",
+      "ts": "2026-10-12T21:22:55Z",
+      "url": "https://github.com/storytold/effectcraft/releases/tag/v0.9.2",
+      "changes": 123,
+      "new_contributors": 14,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.8.0",
+      "name": "EffectCraft v0.8.0",
+      "ts": "2026-10-11T02:10:32Z",
+      "url": "https://github.com/storytold/effectcraft/releases/tag/v0.8.0",
+      "changes": 92,
+      "new_contributors": 24,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.7.0",
+      "name": "EffectCraft v0.7.0",
+      "ts": "2026-10-10T02:51:24Z",
+      "url": "https://github.com/storytold/effectcraft/releases/tag/v0.7.0",
+      "changes": 51,
+      "new_contributors": 15,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.6.0",
+      "name": "EffectCraft v0.6.0",
+      "ts": "2026-10-08T14:41:40Z",
+      "url": "https://github.com/storytold/effectcraft/releases/tag/v0.6.0",
+      "changes": 32,
+      "new_contributors": 1,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.4.0",
+      "name": "EffectCraft v0.4.0",
+      "ts": "2026-10-07T09:30:16Z",
+      "url": "https://github.com/storytold/effectcraft/releases/tag/v0.4.0",
+      "changes": 32,
+      "new_contributors": 5,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.3.1",
+      "name": "EffectCraft v0.3.1",
+      "ts": "2026-10-06T12:37:20Z",
+      "url": "https://github.com/storytold/effectcraft/releases/tag/v0.3.1",
+      "changes": 6,
+      "new_contributors": 2,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "patch"
+    },
+    {
+      "tag": "v0.3.0",
+      "name": "EffectCraft v0.3.0",
+      "ts": "2026-10-06T02:03:48Z",
+      "url": "https://github.com/storytold/effectcraft/releases/tag/v0.3.0",
+      "changes": 21,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.2.0",
+      "name": "EffectCraft v0.2.0",
+      "ts": "2026-10-05T07:11:27Z",
+      "url": "https://github.com/storytold/effectcraft/releases/tag/v0.2.0",
+      "changes": 44,
+      "new_contributors": 2,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.1.1",
+      "name": "EffectCraft v0.1.1",
+      "ts": "2026-10-03T14:24:20Z",
+      "url": "https://github.com/storytold/effectcraft/releases/tag/v0.1.1",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "patch"
+    },
+    {
+      "tag": "v0.1.0",
+      "name": "EffectCraft v0.1.0",
+      "ts": "2026-10-02T22:31:37Z",
+      "url": "https://github.com/storytold/effectcraft/releases/tag/v0.1.0",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": null
+    }
+  ],
   "history": [
     {
       "commit": "1e61b4e",
       "commit_full": "1e61b4e04bbce3e6ed34ce91027970ad9d4b7ff4",
       "commit_date": "2026-10-10T14:09:10-04:00",
+      "ts": "2026-10-10T18:09:10Z",
       "message": "Progress docs: target-app parity, gaps, alpha gate, readiness by audience (#617)",
       "stage": "alpha",
       "next_stage": "beta",
@@ -283,15 +879,20 @@
         850,
         1500
       ],
+      "full_label": "Full target",
+      "target": "Adobe After Effects 2026 (26.5.0.89)",
       "mainstream_pct": 47.0,
       "essentials_pct": 52.0,
-      "breadth_pct": 91.0
+      "breadth_pct": 91.0,
+      "full_prev": null,
+      "kind": "first"
     },
     {
-      "commit": "83ae621",
-      "commit_full": "83ae6218ef31f9451023b8d20a2ba39861982b77",
-      "commit_date": "2026-10-10T19:25:49-06:00",
-      "message": "UI.9: retain shared docking across upstream workspace changes",
+      "commit": "9a7d3e7",
+      "commit_full": "9a7d3e76991d5372448033b473dc12c2480a6a04",
+      "commit_date": "2026-10-10T20:10:35-06:00",
+      "ts": "2026-10-11T02:10:35Z",
+      "message": "Share docking transactions and preserve viewer lifecycle (#689)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-10",
@@ -301,15 +902,20 @@
         850,
         1500
       ],
+      "full_label": "Full target",
+      "target": "Adobe After Effects 2026 (26.5.0.89)",
       "mainstream_pct": 47.0,
       "essentials_pct": 52.0,
-      "breadth_pct": 91.0
+      "breadth_pct": 91.0,
+      "full_prev": 45.0,
+      "kind": "content"
     },
     {
-      "commit": "8763fc0",
-      "commit_full": "8763fc0138285dd84b0a197fcee6c40678fd883a",
-      "commit_date": "2026-10-11T13:46:05+03:00",
-      "message": "Translate the 95 panel rows Ukrainian was missing",
+      "commit": "5be3b8f",
+      "commit_full": "5be3b8f9b24bf8a6b58151303838e2ed0b97c8ab",
+      "commit_date": "2026-10-12T03:22:49-04:00",
+      "ts": "2026-10-12T07:22:49Z",
+      "message": "Translate the 95 panel rows Ukrainian was missing (#782)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-10",
@@ -319,15 +925,20 @@
         850,
         1500
       ],
+      "full_label": "Full target",
+      "target": "Adobe After Effects 2026 (26.5.0.89)",
       "mainstream_pct": 47.0,
       "essentials_pct": 52.0,
-      "breadth_pct": 91.0
+      "breadth_pct": 91.0,
+      "full_prev": 45.0,
+      "kind": "content"
     },
     {
-      "commit": "5d9bab2",
-      "commit_full": "5d9bab268d5b5c726c7f285148111e206f1604a8",
-      "commit_date": "2026-10-12T14:40:10-07:00",
-      "message": "M6.7: reject Roto Brush span edits past trimmed strokes",
+      "commit": "ad83f9a",
+      "commit_full": "ad83f9ae1ac7bb9b927ad097cbfd531dde071eec",
+      "commit_date": "2026-10-13T04:28:22-04:00",
+      "ts": "2026-10-13T08:28:22Z",
+      "message": "# Conflicts: (#1114)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-12",
@@ -337,33 +948,20 @@
         850,
         1500
       ],
+      "full_label": "Full target",
+      "target": "Adobe After Effects 2026 (26.5.0.89)",
       "mainstream_pct": 47.0,
       "essentials_pct": 52.0,
-      "breadth_pct": 91.0
-    },
-    {
-      "commit": "19e4fc7",
-      "commit_full": "19e4fc7c6024ec8f974ce1ded58d477cc4362694",
-      "commit_date": "2026-10-12T21:36:26+02:00",
-      "message": "docs: re-audit gaps.md and parity docs against main (2026-10-12)",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-12",
-      "full_pct": 45.0,
-      "full_range": null,
-      "full_hours": [
-        850,
-        1500
-      ],
-      "mainstream_pct": 47.0,
-      "essentials_pct": 52.0,
-      "breadth_pct": 91.0
+      "breadth_pct": 91.0,
+      "full_prev": 45.0,
+      "kind": "estimates"
     },
     {
       "commit": "3aac824",
       "commit_full": "3aac824976405b21930b9610f775392742579c26",
       "commit_date": "2026-10-13T04:29:08-04:00",
-      "message": "Merge pull request #1175 from storybored379/fix/roto-trim-span",
+      "ts": "2026-10-13T08:29:08Z",
+      "message": "# Conflicts: (#1175)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-12",
@@ -373,14 +971,19 @@
         850,
         1500
       ],
+      "full_label": "Full target",
+      "target": "Adobe After Effects 2026 (26.5.0.89)",
       "mainstream_pct": 47.0,
       "essentials_pct": 52.0,
-      "breadth_pct": 91.0
+      "breadth_pct": 91.0,
+      "full_prev": 45.0,
+      "kind": "content"
     },
     {
       "commit": "c2f790b",
       "commit_full": "c2f790b1d967c658bfb7d4a2a682f6e17951eafe",
       "commit_date": "2026-10-15T16:35:49-06:00",
+      "ts": "2026-10-15T22:35:49Z",
       "message": "refactor(pdf): share structure parsing through a bounded adapter",
       "stage": "alpha",
       "next_stage": "beta",
@@ -391,15 +994,20 @@
         850,
         1500
       ],
+      "full_label": "Full target",
+      "target": "Adobe After Effects 2026 (26.5.0.89)",
       "mainstream_pct": 47.0,
       "essentials_pct": 52.0,
-      "breadth_pct": 91.0
+      "breadth_pct": 91.0,
+      "full_prev": 45.0,
+      "kind": "content"
     },
     {
-      "commit": "0c39995",
-      "commit_full": "0c39995d0f4b02294314056dd08f2f8f6d93fbe9",
-      "commit_date": "2026-10-16T18:13:08+05:00",
-      "message": "Convert a shape layer's parametric path to a bezier path (#932)",
+      "commit": "a594abf",
+      "commit_full": "a594abf4f7072ba4eb7f1532a39616c1022621c1",
+      "commit_date": "2026-10-18T09:35:51-04:00",
+      "ts": "2026-10-18T13:35:51Z",
+      "message": "Merge pull request #1652",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-12",
@@ -409,11 +1017,14 @@
         850,
         1500
       ],
+      "full_label": "Full target",
+      "target": "Adobe After Effects 2026 (26.5.0.89)",
       "mainstream_pct": 47.0,
       "essentials_pct": 52.0,
       "breadth_pct": 91.0,
-      "previous_full_pct": 45.0
+      "full_prev": 45.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-18T14:10:58+00:00"
+  "updated_at": "2026-10-18T17:55:58+00:00"
 }

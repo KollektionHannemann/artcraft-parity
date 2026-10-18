@@ -399,11 +399,406 @@
       }
     ]
   },
+  "parity": {
+    "tracked_since": "2026-10-10T18:09:21Z",
+    "changes": 0,
+    "truncated": false,
+    "last_change": null
+  },
+  "roadmap": {
+    "revisions": 77,
+    "revisions_7d": 74,
+    "last_revision": {
+      "ts": "2026-10-18T15:21:26Z",
+      "kind": "content",
+      "commit": "0981e6e",
+      "commit_full": "0981e6e675540dbf6f8d90f0a0b1d491ff570278",
+      "message": "Merge pull request #871 from marcoarnulfo/feat/alignto"
+    },
+    "last_update": {
+      "ts": "2026-10-18T15:21:26Z",
+      "kind": "content",
+      "commit": "0981e6e",
+      "commit_full": "0981e6e675540dbf6f8d90f0a0b1d491ff570278",
+      "message": "Merge pull request #871 from marcoarnulfo/feat/alignto"
+    },
+    "self_reported": "2026-10-14"
+  },
+  "milestone": null,
+  "activity": {
+    "level": "active",
+    "score": 19.4,
+    "active_days_7d": 7,
+    "changes_7d": 346,
+    "changes_14d": 392,
+    "housekeeping_7d": 17,
+    "last_code_change": {
+      "ts": "2026-10-18T15:21:27Z",
+      "commit": "868016e",
+      "commit_full": "868016ee2fe907ba1c810746d9f5d2f24affec8c",
+      "subject": "Merge pull request #882 from marcoarnulfo/fix/show-anim-steps"
+    },
+    "last_commit_ts": "2026-10-18T15:32:28Z",
+    "repo_since": "2026-10-06T02:13:02Z",
+    "window": [
+      0,
+      16,
+      0,
+      2,
+      11,
+      17,
+      0,
+      29,
+      77,
+      192,
+      16,
+      6,
+      2,
+      24
+    ],
+    "days": [
+      {
+        "d": "2026-10-06",
+        "code": 16,
+        "other": 4,
+        "samples": [
+          {
+            "commit": "942a2c8",
+            "subject": "Release: ALSA build/runtime deps (Linux, FreeBSD, deb/rpm); vendor Flatpak crate sources on a plain runner"
+          },
+          {
+            "commit": "ae9d525",
+            "subject": "Rename SlideCraft to DeckCraft: crates, apps, binaries, app id, file extension (.deckcraft; .slidecraft files still open), packaging, docs; ROADMAP alpha and pa"
+          },
+          {
+            "commit": "4927856",
+            "subject": "Media playback: module order"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-07",
+        "code": 0,
+        "other": 1,
+        "samples": []
+      },
+      {
+        "d": "2026-10-08",
+        "code": 2,
+        "other": 6,
+        "samples": [
+          {
+            "commit": "db67e01",
+            "subject": "Release: Windows arm64, Flatpak aarch64, AppImage zsync updates, README Downloads (#9)"
+          },
+          {
+            "commit": "a4bb8fe",
+            "subject": "About: contributor and model credits compiled in (grab bag + table, self-submitted names) (#3)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-09",
+        "code": 11,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "4b09f35",
+            "subject": "feat(text, fonts): UAX #9 BiDi and Arabic complex script typography engine (#4)"
+          },
+          {
+            "commit": "57545a9",
+            "subject": "Tables: rows grow to fit their text, cell text in the PDF text layer (#13) (#14)"
+          },
+          {
+            "commit": "fa9a94a",
+            "subject": "Morph: shapes move, resize and blend; Words and Characters options morph text (#5)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-10",
+        "code": 17,
+        "other": 2,
+        "samples": [
+          {
+            "commit": "a98df49",
+            "subject": "Release prep: 0.5.0 and Linux riscv64 release build (#102)"
+          },
+          {
+            "commit": "f448576",
+            "subject": "Progress docs: target-app parity, gaps, alpha gate, readiness by audience (#89)"
+          },
+          {
+            "commit": "d556ff9",
+            "subject": "Fields: date fields show today's date in their own format (#36)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-11",
+        "code": 0,
+        "other": 1,
+        "samples": []
+      },
+      {
+        "d": "2026-10-12",
+        "code": 29,
+        "other": 3,
+        "samples": [
+          {
+            "commit": "8159db8",
+            "subject": "Render tests: the arch top bound allows Linux's fallback font (#323)"
+          },
+          {
+            "commit": "55a53f8",
+            "subject": "Fonts: missing fonts draw as PowerPoint draws them, and Windows family names resolve (#322)"
+          },
+          {
+            "commit": "f8d54d7",
+            "subject": "Pictures: WMF and EMF draw, with the metafile reader ported from WordCraft (#317)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-13",
+        "code": 77,
+        "other": 6,
+        "samples": [
+          {
+            "commit": "8ee082f",
+            "subject": "Render: 3-D shapes' faces are lit even without a bevel"
+          },
+          {
+            "commit": "238157d",
+            "subject": "Render: 3-D cameras turn shapes (affine approximation)"
+          },
+          {
+            "commit": "4e2cbae",
+            "subject": "Geom: moon, magnetic disk and drum by the standard"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-14",
+        "code": 192,
+        "other": 4,
+        "samples": [
+          {
+            "commit": "ea90459",
+            "subject": "Fix flaky test: the missing-Recent test waits for the background open (#291 after #488)"
+          },
+          {
+            "commit": "afe4a40",
+            "subject": "Merge PR #438 integrated on land-r9: an exhausted id space refuses growth instead of duplicating ids (#407)"
+          },
+          {
+            "commit": "b1ca123",
+            "subject": "Engine: text.delete and text.move are registered once (the newer docs win); a test keeps command ids unique"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-15",
+        "code": 16,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "9859da3",
+            "subject": "Use the shared PDF writer and report font embedding failures (#708)"
+          },
+          {
+            "commit": "a15d93a",
+            "subject": "Fix up #747 and #772 from review: docs keep their status headers (log rows stay), no milestone renaming; the bullet test no longer saves screenshots; clippy's a"
+          },
+          {
+            "commit": "561902d",
+            "subject": "Merge PR #772 from hajdukste: Text: show gray list markers before typing"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-16",
+        "code": 6,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "1dc6972",
+            "subject": "Clamp huge index in table.insertRowBelow/insertColumnRight (#866)"
+          },
+          {
+            "commit": "1b64de3",
+            "subject": "Format: .txt and .md outline includes table cell text (#814) (#816)"
+          },
+          {
+            "commit": "ad6be08",
+            "subject": "Don't paste HTML text as bold when <b> sets font-weight:normal (#798)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-17",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "a178b99",
+            "subject": "PPTX: preserve separate click steps in trigger sequences (#849)"
+          },
+          {
+            "commit": "2cf4535",
+            "subject": "Close the control port on the first line that isn't a request (#939)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-18",
+        "code": 24,
+        "other": 2,
+        "samples": [
+          {
+            "commit": "868016e",
+            "subject": "Merge pull request #882 from marcoarnulfo/fix/show-anim-steps"
+          },
+          {
+            "commit": "0981e6e",
+            "subject": "Merge pull request #871 from marcoarnulfo/feat/alignto"
+          },
+          {
+            "commit": "006bbe1",
+            "subject": "Merge pull request #864 from marcoarnulfo/feat/ppsx-starts-show"
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [
+    {
+      "tag": "v0.8.0",
+      "name": "DeckCraft v0.8.0",
+      "ts": "2026-10-18T03:51:17Z",
+      "url": "https://github.com/storytold/deckcraft/releases/tag/v0.8.0",
+      "changes": 303,
+      "new_contributors": 28,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.7.0",
+      "name": "DeckCraft v0.7.0",
+      "ts": "2026-10-14T15:04:51Z",
+      "url": "https://github.com/storytold/deckcraft/releases/tag/v0.7.0",
+      "changes": 50,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.6.1",
+      "name": "DeckCraft v0.6.1",
+      "ts": "2026-10-12T18:22:34Z",
+      "url": "https://github.com/storytold/deckcraft/releases/tag/v0.6.1",
+      "changes": 2,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.5.0",
+      "name": "DeckCraft v0.5.0",
+      "ts": "2026-10-11T01:17:33Z",
+      "url": "https://github.com/storytold/deckcraft/releases/tag/v0.5.0",
+      "changes": 18,
+      "new_contributors": 5,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.4.0",
+      "name": "DeckCraft v0.4.0",
+      "ts": "2026-10-10T02:51:18Z",
+      "url": "https://github.com/storytold/deckcraft/releases/tag/v0.4.0",
+      "changes": 12,
+      "new_contributors": 8,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.3.0",
+      "name": "DeckCraft v0.3.0",
+      "ts": "2026-10-08T14:41:56Z",
+      "url": "https://github.com/storytold/deckcraft/releases/tag/v0.3.0",
+      "changes": 4,
+      "new_contributors": 1,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.1.0",
+      "name": "DeckCraft v0.1.0",
+      "ts": "2026-10-08T00:23:17Z",
+      "url": "https://github.com/storytold/deckcraft/releases/tag/v0.1.0",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": null
+    }
+  ],
   "history": [
     {
       "commit": "f448576",
       "commit_full": "f44857624e25c6eb05ffcee2b8eebd8cc37ea326",
       "commit_date": "2026-10-10T14:09:21-04:00",
+      "ts": "2026-10-10T18:09:21Z",
       "message": "Progress docs: target-app parity, gaps, alpha gate, readiness by audience (#89)",
       "stage": "alpha",
       "next_stage": "beta",
@@ -414,32 +809,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "c871c5f",
-      "commit_full": "c871c5f634fdedfa6e055c1a6d832d1e808d1913",
-      "commit_date": "2026-10-11T23:00:33+02:00",
-      "message": "Export: animated GIF of the deck (Export… dialog, CLI, MCP) (#171)",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-11",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": null,
+      "kind": "first"
     },
     {
       "commit": "dedb208",
       "commit_full": "dedb20890bc6a5250c135f0d525d9b9c58e2ad8c",
       "commit_date": "2026-10-12T18:12:58-04:00",
+      "ts": "2026-10-12T22:12:58Z",
       "message": "Text: WordArt transforms (prstTxWarp) draw, and their adjusts round-trip (#312)",
       "stage": "alpha",
       "next_stage": "beta",
@@ -450,14 +832,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "f94f3c1",
       "commit_full": "f94f3c12d189653621a37ecf31efaddab9f9a9dc",
       "commit_date": "2026-10-12T21:47:05-04:00",
+      "ts": "2026-10-13T01:47:05Z",
       "message": "Canvas: objects off the slide show and can be grabbed around it, as in PowerPoint (#270) (#329)",
       "stage": "alpha",
       "next_stage": "beta",
@@ -468,14 +855,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "ea3b115",
       "commit_full": "ea3b1159d5a4aa1318aabfa9d0bb7ee9308b82bd",
       "commit_date": "2026-10-12T22:03:42-04:00",
+      "ts": "2026-10-13T02:03:42Z",
       "message": "Korean, Japanese and Chinese: input-method composition and interface text (#101) (#331)",
       "stage": "alpha",
       "next_stage": "beta",
@@ -486,14 +878,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "9d571ef",
       "commit_full": "9d571ef644f1678fcf72969f34abfb1dbfff7ee5",
       "commit_date": "2026-10-12T22:05:44-04:00",
+      "ts": "2026-10-13T02:05:44Z",
       "message": "Selection Pane: reorder by drag and drop, groups, Show/Hide All and Lock, as in PowerPoint (#133) (#332)",
       "stage": "alpha",
       "next_stage": "beta",
@@ -504,14 +901,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "6334d68",
       "commit_full": "6334d689d2d245acebe7d9e3cc793741e7094474",
       "commit_date": "2026-10-12T22:09:50-04:00",
+      "ts": "2026-10-13T02:09:50Z",
       "message": "Text: Ctrl+arrows, Ctrl+Backspace/Delete and other text keys work like PowerPoint (#268) (#333)",
       "stage": "alpha",
       "next_stage": "beta",
@@ -522,14 +924,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "e28851d",
       "commit_full": "e28851d2f1e561decbf220e237ac2f4a1f3223bb",
       "commit_date": "2026-10-12T22:40:56-04:00",
+      "ts": "2026-10-13T02:40:56Z",
       "message": "Pictures: WMF/EMF text, pattern and hatch brushes draw; ActiveX previews show (#336)",
       "stage": "alpha",
       "next_stage": "beta",
@@ -540,14 +947,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "c4f3557",
       "commit_full": "c4f355773d9806b8e24acef1446b9623baec997d",
       "commit_date": "2026-10-12T22:44:18-04:00",
+      "ts": "2026-10-13T02:44:18Z",
       "message": "Docs: update the progress docs for this change",
       "stage": "alpha",
       "next_stage": "beta",
@@ -558,32 +970,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "717e855",
-      "commit_full": "717e855cec895543c2b369d9939a9d738f8ab47a",
-      "commit_date": "2026-10-12T23:41:42+03:00",
-      "message": "deckcraft-cli help explains the CLI to an agent",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "1660982",
       "commit_full": "1660982e58ee48fd9f9bef6dc2620d78ada04613",
       "commit_date": "2026-10-12T23:56:02-04:00",
+      "ts": "2026-10-13T03:56:02Z",
       "message": "File tab: PowerPoint's File view (Home, New, Open, Info, Save As, Print, Export, Close) (#76) (#344)",
       "stage": "alpha",
       "next_stage": "beta",
@@ -594,32 +993,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "426fd71",
-      "commit_full": "426fd71bd28beb318a760c24667fc7839f40f676",
-      "commit_date": "2026-10-13T00:19:51+03:00",
-      "message": "ROADMAP status line names the progress-log entry",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-12",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "d5e3055",
       "commit_full": "d5e30557eb9a846cd3eda43aa1552d88e25339b3",
       "commit_date": "2026-10-13T05:31:13-04:00",
+      "ts": "2026-10-13T09:31:13Z",
       "message": "Transitions like PowerPoint: measured frame by frame and retuned (#366)",
       "stage": "alpha",
       "next_stage": "beta",
@@ -630,14 +1016,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "5ca1dad",
       "commit_full": "5ca1dad2810e7b0f33bac787aab7ace08282ca87",
       "commit_date": "2026-10-13T06:48:43-04:00",
+      "ts": "2026-10-13T10:48:43Z",
       "message": "Docs: progress log for the wild text cases",
       "stage": "alpha",
       "next_stage": "beta",
@@ -648,14 +1039,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "525ec7b",
       "commit_full": "525ec7b1a9769c0f73fac66ca564027c3f436229",
       "commit_date": "2026-10-13T06:48:43-04:00",
+      "ts": "2026-10-13T10:48:43Z",
       "message": "Docs: keep the progress table in one piece",
       "stage": "alpha",
       "next_stage": "beta",
@@ -666,14 +1062,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "editorial"
     },
     {
       "commit": "e614f0d",
       "commit_full": "e614f0d6d6264219a42bcc5bfdfda18c1cf63bff",
       "commit_date": "2026-10-13T08:16:41-04:00",
+      "ts": "2026-10-13T12:16:41Z",
       "message": "Docs: record the wild shape rendering fixes and partial 3-D rendering",
       "stage": "alpha",
       "next_stage": "beta",
@@ -684,14 +1085,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "457406a",
       "commit_full": "457406a7a5b62425e915926c8ccb0984e61a198c",
       "commit_date": "2026-10-13T08:16:41-04:00",
+      "ts": "2026-10-13T12:16:41Z",
       "message": "Docs: keep the progress table in one piece",
       "stage": "alpha",
       "next_stage": "beta",
@@ -702,123 +1108,20 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "editorial"
     },
     {
-      "commit": "8788f99",
-      "commit_full": "8788f994ef42002c899c1623472912de08ba3bb9",
-      "commit_date": "2026-10-13T10:40:59+03:00",
-      "message": "Charts: keep the embedded workbook when a chart is saved unchanged (#335)",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-13",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "daf612b",
-      "commit_full": "daf612b8fd9b527f39e200fe4618749829c0b8f4",
-      "commit_date": "2026-10-13T11:24:04+02:00",
-      "message": "Progress docs: SmartArt text on its dsp:txXfrm rectangle",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-12",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "8c5f101",
-      "commit_full": "8c5f101e683e2a4f1e006fc2a0f9efb3d1bddbe4",
-      "commit_date": "2026-10-13T11:26:11+02:00",
-      "message": "Progress docs: drag the frame of edited text to move the box",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-12",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "09d6a6c",
-      "commit_full": "09d6a6c71561419786fec6136159370d7318cf3e",
-      "commit_date": "2026-10-13T11:26:29+02:00",
-      "message": "Progress docs: right click selects the shape under the pointer",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-12",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "71ddbc5",
-      "commit_full": "71ddbc59dc3c71108a091fe47ba0560948340497",
-      "commit_date": "2026-10-13T11:27:10+02:00",
-      "message": "Progress docs: Export button in the title bar",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-12",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "8392081",
-      "commit_full": "8392081976aca3fe485c1d6046da971d4fd19104",
-      "commit_date": "2026-10-13T11:30:13+02:00",
-      "message": "Progress docs: table cell editing and border resizing",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-12",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "7d5dd85",
-      "commit_full": "7d5dd8520918f55c4bd61adb68d586a38484b345",
-      "commit_date": "2026-10-13T13:39:33-06:00",
-      "message": "UI-FONTS: continue fallback selection past ineligible faces",
+      "commit": "44df1eb",
+      "commit_full": "44df1ebcb09f71fecee6a73fbfacb0e8730b60f6",
+      "commit_date": "2026-10-14T12:53:32-04:00",
+      "ts": "2026-10-14T16:53:32Z",
+      "message": "Merge PR #436 from Silvertree2010: Colour menus: an Eyedropper that takes a colour from the slide (#367)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-10",
@@ -828,1112 +1131,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "c536c6e",
-      "commit_full": "c536c6e905fc788dcc78b74998254652c4d52762",
-      "commit_date": "2026-10-13T13:39:33-06:00",
-      "message": "PDFW2: adopt shared PDF writer with explicit embedding errors",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "12dd392",
-      "commit_full": "12dd39270568dcd7ce5c90df3db78e569238cbe8",
-      "commit_date": "2026-10-13T16:41:57+02:00",
-      "message": "Docs: update the progress docs for this change",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "4fee026",
-      "commit_full": "4fee02636adfa22c0738c760f5ea0e9a4c249442",
-      "commit_date": "2026-10-13T17:57:34+03:00",
-      "message": "Metafile: clip EMF and WMF drawing to rectangle regions",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "82dcd86",
-      "commit_full": "82dcd86c887b188e5c9bfc4edf596ec0449d946b",
-      "commit_date": "2026-10-13T18:22:48+03:00",
-      "message": "Pptx: read and write embedded fonts",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "525b7ed",
-      "commit_full": "525b7ed3f9376aba067759ed309fdaa6d2e6bb99",
-      "commit_date": "2026-10-13T18:31:02+03:00",
-      "message": "Palette: skip commands that need a value",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "0b35b74",
-      "commit_full": "0b35b74c4d715dd7b257ad3991ead210ac86947d",
-      "commit_date": "2026-10-13T18:35:32+03:00",
-      "message": "Show: a laser pointer that leaves no ink",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "1baf1f5",
-      "commit_full": "1baf1f5569565944f77b1c6be2775b77c2c9f419",
-      "commit_date": "2026-10-13T18:45:38+02:00",
-      "message": "Copy and Cut buttons and menus put the text on the system clipboard (#431)",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "69d4893",
-      "commit_full": "69d4893689191ebd62fe4e184c3c31dd8753cce0",
-      "commit_date": "2026-10-13T19:25:04+06:00",
-      "message": "Comments: threads and resolved state survive a .pptx round trip (#70)",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "78a99ad",
-      "commit_full": "78a99ad1cfc662295c88b4a618a72f751da7a5b0",
-      "commit_date": "2026-10-13T19:43:15+06:00",
-      "message": "Start screen: a missing Recent file is marked, its error shows, and entries can be removed (#172)",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "6873a25",
-      "commit_full": "6873a25635641500a8e525f63c8c63e0887a4aa2",
-      "commit_date": "2026-10-13T20:16:51+03:00",
-      "message": "Codecs: a hostile number is a format error, not an overflow",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-13",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "8bab5c2",
-      "commit_full": "8bab5c20535b2871b8e568a9f2dde2a0e99fedc2",
-      "commit_date": "2026-10-13T20:53:10+03:00",
-      "message": "Web: keep a picked file on the document and slide that asked for it",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-13",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "5d4bfc0",
-      "commit_full": "5d4bfc08466064a5c1b4e400944f6840df23283d",
-      "commit_date": "2026-10-13T20:57:08+03:00",
-      "message": "Media: keep playback with the document and the clip",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "e70fce9",
-      "commit_full": "e70fce996bd26caa31e0c4d0d64bc1c4ed6bf87b",
-      "commit_date": "2026-10-13T21:13:25+06:00",
-      "message": "Model: an exhausted id space refuses growth instead of duplicating ids (#407)",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "641fa36",
-      "commit_full": "641fa36a8eb2577a4df11326227f66ce96622cc9",
-      "commit_date": "2026-10-13T21:24:26+00:00",
-      "message": "Media.seek: preserve decoded frames and EOF across video seeks",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-13",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "8ba97e6",
-      "commit_full": "8ba97e61beb17167067bfb787cd9e12e3d4701a0",
-      "commit_date": "2026-10-13T21:58:25+06:00",
-      "message": "Slide show: Honeycomb's hexagons cover the whole slide again (#420)",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "283b30f",
-      "commit_full": "283b30f12d0c1fb5b828e4803f19a5337e7d46e9",
-      "commit_date": "2026-10-13T21:58:35+03:00",
-      "message": "UI: WordArt Transform gallery applies a text warp",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-13",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "6a85afa",
-      "commit_full": "6a85afa236767bb006e79ddcae565cda444492d4",
-      "commit_date": "2026-10-13T22:34:29+03:00",
-      "message": "Pptx: round-trip an owned corpus and keep notes-master text",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-13",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "a7bc932",
-      "commit_full": "a7bc932cc84b5ffe0de72da6799e3f486f009023",
-      "commit_date": "2026-10-13T22:38:16+03:00",
-      "message": "UI: WordArt adjust handles drag a text warp",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-13",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "10ad8d7",
-      "commit_full": "10ad8d7ba7487d847a7709b3059638ae668129dd",
-      "commit_date": "2026-10-13T22:44:42+03:00",
-      "message": "UI: keep editor slides on the Retina pixel grid",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "034b312",
-      "commit_full": "034b312a644ffb2639bc11efe8439bbcfb081aa2",
-      "commit_date": "2026-10-13T23:08:31+03:00",
-      "message": "Round-trip tables, charts, animation, media, sections and masters",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-13",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "37559f7",
-      "commit_full": "37559f793cc3075f366b760e8d1f9eb0dae6e25d",
-      "commit_date": "2026-10-13T23:14:52+03:00",
-      "message": "UI: Grid Options sets spacing, snap and the on-screen grid",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-13",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "f9d5a43",
-      "commit_full": "f9d5a431740d74c1da59487cd7651c4037ca1e0d",
-      "commit_date": "2026-10-13T23:43:03+03:00",
-      "message": "Round-trip comments, links, shows, groups and inherited placeholders",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-13",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "4dbea32",
-      "commit_full": "4dbea3256f8ae6d38e8e90fc51604e6677135358",
-      "commit_date": "2026-10-13T23:52:40+03:00",
-      "message": "UI: View › New Window opens a second window",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-13",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "184b76e",
-      "commit_full": "184b76e2a72416b73c4e35313def163ddba90456",
-      "commit_date": "2026-10-14T00:04:22+03:00",
-      "message": "Round-trip text effects, layout, fills, bevels and connectors",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-13",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "b89c9ca",
-      "commit_full": "b89c9cafd7c4fc2c1082910a8c593653a38b8cb0",
-      "commit_date": "2026-10-14T00:21:42+03:00",
-      "message": "UI: preview slide animations on the editor canvas",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-13",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "c94b5c8",
-      "commit_full": "c94b5c8d1ea05adf8374d2d4b3162b69aa697ba3",
-      "commit_date": "2026-10-14T00:35:12+03:00",
-      "message": "PPTX: round-trip 3-D models and animation bounce end",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "afd058a",
-      "commit_full": "afd058a8fff663c402ccc5781c99d81215cdfb2b",
-      "commit_date": "2026-10-14T00:50:34+03:00",
-      "message": "UI: sections in the Slide Sorter",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "8fd04eb",
-      "commit_full": "8fd04ebd92c05901f5d6e09491480659ea4f14dd",
-      "commit_date": "2026-10-14T00:58:20+03:00",
-      "message": "PPTX: round-trip chart trendlines",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "0cbee85",
-      "commit_full": "0cbee85ea8b849cd0d76eedf0dfbaed1aca75228",
-      "commit_date": "2026-10-14T01:12:38+03:00",
-      "message": "File: six original starter decks",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "7686416",
-      "commit_full": "768641615afa017ba239f868543fb0cd1b401a59",
-      "commit_date": "2026-10-14T01:29:51+03:00",
-      "message": "Render: draw chart trendlines",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "1a0ffc6",
-      "commit_full": "1a0ffc6413c61594ab2d57e3e745bedfcbf28e7b",
-      "commit_date": "2026-10-14T01:56:23+03:00",
-      "message": "Draw: pen pressure scales ink width",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "eb7e346",
-      "commit_full": "eb7e346ea1f9b2865e3048b827e4c4aff96488a6",
-      "commit_date": "2026-10-14T02:08:14+03:00",
-      "message": "Text: underline an IME composition in a table cell",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "304bf06",
-      "commit_full": "304bf062905f34f933fe50d701b7ea446b1390fc",
-      "commit_date": "2026-10-14T02:31:54+03:00",
-      "message": "Insert: Lucide icon gallery as stroked shapes",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "68ab3a4",
-      "commit_full": "68ab3a4839e01e77caf96a39a7f8e21fd24f6f95",
-      "commit_date": "2026-10-14T02:41:28+03:00",
-      "message": "UI: Font dialog sets character formatting in one step",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "e4022e6",
-      "commit_full": "e4022e67025505e732747e8dd5e87a6c7e60357c",
-      "commit_date": "2026-10-14T02:59:40+03:00",
-      "message": "UI: Paragraph dialog sets alignment, indents and spacing",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "bd017b8",
-      "commit_full": "bd017b861d0550429409c4751aed2dfbd2802b2f",
-      "commit_date": "2026-10-14T03:20:35+03:00",
-      "message": "UI: Size and Position dialog sets geometry in one step",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "4575d19",
-      "commit_full": "4575d19ac76869200eb563cde2d38bfb4a703eb9",
-      "commit_date": "2026-10-14T03:43:28+03:00",
-      "message": "UI: Photo Album dialog inserts pictures as slides",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "ba71a40",
-      "commit_full": "ba71a40a39f4d1501251670fec431f8aee202a0d",
-      "commit_date": "2026-10-14T03:48:39+03:00",
-      "message": "Canvas: a trackpad swipe turns the page",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "dac0d05",
-      "commit_full": "dac0d054feed859e0164dfbf15d4de8b6a0a5f27",
-      "commit_date": "2026-10-14T03:53:53+03:00",
-      "message": "Show: See All Slides and zoom",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "f5fd324",
-      "commit_full": "f5fd32489221582bf364f1bca93c45b89abb80a2",
-      "commit_date": "2026-10-14T04:06:50+03:00",
-      "message": "Show: presenter timer pause, reset and notes size",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "dbffbab",
-      "commit_full": "dbffbab59d796345f864f16607053b39300f827f",
-      "commit_date": "2026-10-14T04:16:00+03:00",
-      "message": "UI: Edit Photo Album reflows the album in one step",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "dfee72e",
-      "commit_full": "dfee72e74257bbb12f6f0035c34f2d7b46f7f380",
-      "commit_date": "2026-10-14T04:19:36+03:00",
-      "message": "Show: play a custom show",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "2702b48",
-      "commit_full": "2702b48530a17057626472cdc66f5b65b724f41e",
-      "commit_date": "2026-10-14T04:26:02+03:00",
-      "message": "Show: show the slide number while typing it",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "f0647e1",
-      "commit_full": "f0647e1bd83e2d2b25b5ac96174612e24a3dcd1d",
-      "commit_date": "2026-10-14T04:37:49+03:00",
-      "message": "Review: previous and next comment",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "b6aa6ab",
-      "commit_full": "b6aa6ab4e4c547190e8cc9de69c8d7b53139d17a",
-      "commit_date": "2026-10-14T04:41:01+03:00",
-      "message": "UI: Date and Time dialog inserts a format in one step",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "9f5de92",
-      "commit_full": "9f5de924ad29f5c0aad8e853b00ae6315cafd419",
-      "commit_date": "2026-10-14T04:53:21+03:00",
-      "message": "View: Zoom dialog applies a percent or Fit",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "a9e7747",
-      "commit_full": "a9e7747ea5262dff2b10b675ac1c07f35b153058",
-      "commit_date": "2026-10-14T04:55:33+03:00",
-      "message": "Canvas: a two-finger twist rotates the selection",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "c2e770a",
-      "commit_full": "c2e770ab53609003bc7e19f7794d1817cd4bedd3",
-      "commit_date": "2026-10-14T05:07:12+03:00",
-      "message": "Show: Show Media Controls hides the playback bar",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "29c24aa",
-      "commit_full": "29c24aa07cf9bc3a481b6c44e8468608e0e5adc4",
-      "commit_date": "2026-10-14T05:19:44+03:00",
-      "message": "UI: Alt Text's decorative checkbox follows the selection",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "5398c23",
-      "commit_full": "5398c2397c91be146d86a8a15619de437f6355d9",
-      "commit_date": "2026-10-14T05:20:31+03:00",
-      "message": "Merge remote-tracking branch 'origin/main' into m-pptx-chart-workbook",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-13",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "65e465a",
-      "commit_full": "65e465a61161957dafb15f253a6ea69b95ff7edf",
-      "commit_date": "2026-10-14T05:24:47+03:00",
-      "message": "UI: Create New Theme Colors dialog edits the theme in one step",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "d04df05",
-      "commit_full": "d04df05249bf03596cd409d4bc481aac86132240",
-      "commit_date": "2026-10-14T05:35:37+03:00",
-      "message": "Export: record slide resolution in PNG and JPEG pictures",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "8c0147c",
-      "commit_full": "8c0147cfa7a9d74e3a77bf411fcefc5475a1841d",
-      "commit_date": "2026-10-14T05:40:06+03:00",
-      "message": "UI: Hyperlink dialog follows the selection",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "0fcaabc",
-      "commit_full": "0fcaabc37077a56242fc6a254a978eab0efef844",
-      "commit_date": "2026-10-14T05:45:53+03:00",
-      "message": "UI: Create New Theme Fonts dialog edits the theme in one step",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "256612b",
-      "commit_full": "256612b232fc7d219d24dd924cd8b7c5fa5331c5",
-      "commit_date": "2026-10-14T05:54:32+03:00",
-      "message": "UI: Trim Media dialog follows the selection",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "1e62923",
-      "commit_full": "1e6292306ae0d965084b50fa63029d4ef747f10a",
-      "commit_date": "2026-10-14T06:08:40+03:00",
-      "message": "UI: Format Background picture fill sets transparency and tiling",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "2f3a525",
-      "commit_full": "2f3a5255682f1467480995f5ef242b6b73dd424b",
-      "commit_date": "2026-10-14T06:16:14+03:00",
-      "message": "UI: Format Shape fill transparency follows the selection",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "26d8bfd",
-      "commit_full": "26d8bfdd3a6affb01f1761c797a09d7533168750",
-      "commit_date": "2026-10-14T06:21:07+03:00",
-      "message": "UI: Design Effects applies a theme effect scheme",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "5d9f47c",
-      "commit_full": "5d9f47c81a1ca099dec563c23e37dd685bb1f9b7",
-      "commit_date": "2026-10-14T06:37:49+03:00",
-      "message": "Clipboard: rich text and pictures for other apps",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "fa4b80e",
-      "commit_full": "fa4b80ed654b6190fcbfa4c7706ebe1a8373f934",
-      "commit_date": "2026-10-14T06:40:11+03:00",
-      "message": "UI: Slide Master Preserve and Title or Footers placeholders",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "ba290f1",
-      "commit_full": "ba290f171ea9faceddd988461a7fa9d594dea409",
-      "commit_date": "2026-10-14T07:04:45+02:00",
-      "message": "Fix presenter-view keyboard navigation and end-screen controls",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "3635bdc",
       "commit_full": "3635bdc8bae839b7d988c0a079d8f1bd49c57049",
       "commit_date": "2026-10-14T12:53:34-04:00",
+      "ts": "2026-10-14T16:53:34Z",
       "message": "Merge PR #713 from nagasakimark: Slide show: click-triggered animations, per-slide state and hit testing",
       "stage": "alpha",
       "next_stage": "beta",
@@ -1944,14 +1154,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "5d406be",
       "commit_full": "5d406be3b0e5f1effeaa2a772829ef80c20c5a15",
       "commit_date": "2026-10-14T12:53:42-04:00",
+      "ts": "2026-10-14T16:53:42Z",
       "message": "Merge PR #460 from albayazid: Slide show: Honeycomb's hexagons cover the whole slide again (#420)",
       "stage": "alpha",
       "next_stage": "beta",
@@ -1962,14 +1177,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "903cf09",
       "commit_full": "903cf0930bd3ead45fcbc370cb1be9d110943140",
       "commit_date": "2026-10-14T12:53:42-04:00",
+      "ts": "2026-10-14T16:53:42Z",
       "message": "Merge PR #463 from Zetenypapp: Copy and Cut buttons and menus put the text on the system clipboard (#431)",
       "stage": "alpha",
       "next_stage": "beta",
@@ -1980,14 +1200,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "b9b0fdb",
       "commit_full": "b9b0fdbab02ce499de38c6fb7bf6e95373c8b940",
       "commit_date": "2026-10-14T12:53:42-04:00",
+      "ts": "2026-10-14T16:53:42Z",
       "message": "Merge PR #587 from MMexicann: Media: preserve video frames and EOF across seeks",
       "stage": "alpha",
       "next_stage": "beta",
@@ -1998,14 +1223,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "1171e92",
       "commit_full": "1171e92308603c8e2250c3acd8c804afdf01c9d2",
       "commit_date": "2026-10-14T12:54:05-04:00",
+      "ts": "2026-10-14T16:54:05Z",
       "message": "Merge PR #707 from lambertoo: Fix keyboard navigation when Presenter View has focus",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2016,14 +1246,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "b7cb533",
       "commit_full": "b7cb5331d72939515ac972e89811c30b78a008a2",
       "commit_date": "2026-10-14T12:57:22-04:00",
+      "ts": "2026-10-14T16:57:22Z",
       "message": "Merge PR #242 from pierrevbc: SmartArt: text is laid out on its text rectangle (dsp:txXfrm), not in columns",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2034,14 +1269,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "b6721fe",
       "commit_full": "b6721fe32f0b84c62c94b7957c7c1163eb7bf2c2",
       "commit_date": "2026-10-14T12:57:22-04:00",
+      "ts": "2026-10-14T16:57:22Z",
       "message": "Merge PR #246 from pierrevbc: Title bar: Export button next to Save",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2052,14 +1292,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "af1c669",
       "commit_full": "af1c6696ca27b289bc60be01f7e84f83448d032d",
       "commit_date": "2026-10-14T12:57:23-04:00",
+      "ts": "2026-10-14T16:57:23Z",
       "message": "Merge PR #280 from albayazid: Comments: threads and resolved state survive a .pptx round trip (#70)",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2070,14 +1315,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "44f4b03",
       "commit_full": "44f4b037e26328f7c8ed9cefd6362503d5a2575d",
       "commit_date": "2026-10-14T12:58:01-04:00",
+      "ts": "2026-10-14T16:58:01Z",
       "message": "Merge PR #244 from pierrevbc: Canvas: right click selects the shape under the pointer",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2088,14 +1338,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "2718221",
       "commit_full": "271822164f48cc037693eace7e427e78c38e3571",
       "commit_date": "2026-10-14T13:08:42-04:00",
+      "ts": "2026-10-14T17:08:42Z",
       "message": "Merge PR #437 from NikitkaRa: Metafile: clip EMF and WMF drawing to rectangle regions",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2106,14 +1361,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "78b6c29",
       "commit_full": "78b6c2982fef5ba265a313b0841fd1f2c04cd879",
       "commit_date": "2026-10-14T13:08:43-04:00",
+      "ts": "2026-10-14T17:08:43Z",
       "message": "Merge PR #439 from NikitkaRa: Pptx: read and write embedded fonts",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2124,14 +1384,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "994d9a4",
       "commit_full": "994d9a4b6668b26408118fd21080ad0eec7622e1",
       "commit_date": "2026-10-14T13:08:43-04:00",
+      "ts": "2026-10-14T17:08:43Z",
       "message": "Merge PR #467 from NikitkaRa: Parsers: check hostile numeric fields before arithmetic (#426)",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2142,14 +1407,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "e12f40a",
       "commit_full": "e12f40a05a68fed38b45edbe613d76c125e46bfc",
       "commit_date": "2026-10-14T13:08:48-04:00",
+      "ts": "2026-10-14T17:08:48Z",
       "message": "Merge PR #511 from NikitkaRa: UI: WordArt Transform gallery applies a text warp",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2160,14 +1430,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "c9e071c",
       "commit_full": "c9e071c355d4eb56414b8fa2f78c86c6d83a98b2",
       "commit_date": "2026-10-14T13:08:48-04:00",
+      "ts": "2026-10-14T17:08:48Z",
       "message": "Merge PR #517 from NikitkaRa: PPTX: owned corpus round-trip, keep notes-master header and footer",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2178,14 +1453,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "4dea355",
       "commit_full": "4dea355f02b31c1a4f017081c0ca119c94a45e76",
       "commit_date": "2026-10-14T13:08:53-04:00",
+      "ts": "2026-10-14T17:08:53Z",
       "message": "Merge PR #554 from NikitkaRa: Pptx: round-trip comments, links, shows, groups and inherited placeholders",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2196,14 +1476,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "f4c1827",
       "commit_full": "f4c182795f458ef93977721937a87f9e62628964",
       "commit_date": "2026-10-14T13:08:54-04:00",
+      "ts": "2026-10-14T17:08:54Z",
       "message": "Merge PR #562 from NikitkaRa: Pptx: round-trip text effects, layout, fills, bevels and connectors",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2214,14 +1499,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "15b9ae0",
       "commit_full": "15b9ae02678a64725d2768e7986158668e272a46",
       "commit_date": "2026-10-14T13:08:56-04:00",
+      "ts": "2026-10-14T17:08:56Z",
       "message": "Merge PR #578 from NikitkaRa: PPTX: round-trip 3-D models and animation bounce end",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2232,14 +1522,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "0bab72a",
       "commit_full": "0bab72aff2e96b859d869afc6c09c6d026f0baa3",
       "commit_date": "2026-10-14T13:08:57-04:00",
+      "ts": "2026-10-14T17:08:57Z",
       "message": "Merge PR #590 from NikitkaRa: PPTX: round-trip chart trendlines",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2250,14 +1545,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "a87f845",
       "commit_full": "a87f84526fcbf6ad00edb798c1522f1d5c84f3bb",
       "commit_date": "2026-10-14T13:09:01-04:00",
+      "ts": "2026-10-14T17:09:01Z",
       "message": "Merge PR #625 from NikitkaRa: Insert: a gallery of Lucide icons as stroked shapes",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2268,14 +1568,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "9eed1b4",
       "commit_full": "9eed1b45322cc3126dc84c8bb14348a4e42d7d04",
       "commit_date": "2026-10-14T13:09:03-04:00",
+      "ts": "2026-10-14T17:09:03Z",
       "message": "Merge PR #641 from NikitkaRa: UI: Size and Position dialog sets geometry in one step",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2286,14 +1591,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "a5ce62f",
       "commit_full": "a5ce62fe28092de10b73955b8339f43cc6e80033",
       "commit_date": "2026-10-14T13:09:06-04:00",
+      "ts": "2026-10-14T17:09:06Z",
       "message": "Merge PR #672 from NikitkaRa: Review: previous and next comment",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2304,14 +1614,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "32a2d9e",
       "commit_full": "32a2d9e6bdc5d1ad72d910148d0b4781d6ae8664",
       "commit_date": "2026-10-14T13:21:19-04:00",
+      "ts": "2026-10-14T17:21:19Z",
       "message": "Merge PR #560 from NikitkaRa: UI: View › New Window opens a second window",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2322,14 +1637,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "0f7dc3d",
       "commit_full": "0f7dc3d336b77bb77cd41af21cb4ae12fb47d814",
       "commit_date": "2026-10-14T13:21:23-04:00",
+      "ts": "2026-10-14T17:21:23Z",
       "message": "Merge PR #593 from NikitkaRa: File: six original starter decks",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2340,14 +1660,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "5c0630c",
       "commit_full": "5c0630cba30cd2fd38fe9368f80c2bbc30344f5b",
       "commit_date": "2026-10-14T13:21:53-04:00",
+      "ts": "2026-10-14T17:21:53Z",
       "message": "Merge PR #586 from NikitkaRa: UI: sections in the Slide Sorter",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2358,14 +1683,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "6af2b0e",
       "commit_full": "6af2b0ee2188ad4dc9d03ce297a67a2cc063fba7",
       "commit_date": "2026-10-14T13:23:32-04:00",
+      "ts": "2026-10-14T17:23:32Z",
       "message": "Merge PR #618 from NikitkaRa: Text: underline an IME composition in a table cell",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2376,14 +1706,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "2834166",
       "commit_full": "28341669046983a26c62edfa8fdd53ae717291ab",
       "commit_date": "2026-10-14T13:26:02-04:00",
+      "ts": "2026-10-14T17:26:02Z",
       "message": "Merge PR #647 from NikitkaRa: UI: Photo Album dialog inserts pictures as slides",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2394,14 +1729,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "a205d66",
       "commit_full": "a205d665b09687e99757ea605415aafe049708b0",
       "commit_date": "2026-10-14T13:26:02-04:00",
+      "ts": "2026-10-14T17:26:02Z",
       "message": "Merge PR #658 from NikitkaRa: UI: Edit Photo Album reflows the album in one step",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2412,14 +1752,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "d534343",
       "commit_full": "d534343d6e7a60800e718470a76baeb2097d82b1",
       "commit_date": "2026-10-14T13:26:11-04:00",
+      "ts": "2026-10-14T17:26:11Z",
       "message": "Merge PR #683 from NikitkaRa: UI: Create New Theme Colors dialog edits the theme in one step",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2430,68 +1775,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "085ba98",
-      "commit_full": "085ba98d477062184a6234e5d8ce1c0aba642931",
-      "commit_date": "2026-10-14T13:29:06-04:00",
-      "message": "Merge PR #533 from NikitkaRa: Pptx: round-trip tables, charts, animation, media, sections and masters",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "e0ec02d",
-      "commit_full": "e0ec02d62c37757db5550c78aded0ba06d4550ca",
-      "commit_date": "2026-10-14T13:30:10-04:00",
-      "message": "Merge PR #689 from NikitkaRa: UI: Hyperlink dialog follows the selection",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "18be662",
-      "commit_full": "18be662a2a2c704555361e5fc193eb0c574f1ea9",
-      "commit_date": "2026-10-14T13:30:31-04:00",
-      "message": "Merge PR #668 from NikitkaRa: UI: Date and Time dialog inserts a format in one step",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "62fe857",
       "commit_full": "62fe8571f6fcd3e52588e613f20ae95a482bed19",
       "commit_date": "2026-10-14T13:33:36-04:00",
+      "ts": "2026-10-14T17:33:36Z",
       "message": "Merge PR #687 from NikitkaRa: UI: Create New Theme Fonts dialog edits the theme in one step",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2502,14 +1798,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "5b017f4",
       "commit_full": "5b017f459086c181621e574236fc3ee894580ede",
       "commit_date": "2026-10-14T13:36:55-04:00",
+      "ts": "2026-10-14T17:36:55Z",
       "message": "Merge PR #682 from NikitkaRa: UI: Alt Text's decorative checkbox follows the selection",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2520,32 +1821,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "8d429a2",
-      "commit_full": "8d429a23e93bc74d646283ba650908f2b72ce790",
-      "commit_date": "2026-10-14T13:44:40-04:00",
-      "message": "Merge PR #483 from NikitkaRa: Media: keep playback with the document and the clip (#415)",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "0ed74b6",
       "commit_full": "0ed74b684ad06b253ab9427eef471d0a6b626f33",
       "commit_date": "2026-10-14T13:44:43-04:00",
+      "ts": "2026-10-14T17:44:43Z",
       "message": "Merge the SmartArt and dialog PRs integrated on land-r1 (#596 #601 #606 #610 #613 #617 #621 #623 #627 #634 #557 #689 #668)",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2556,158 +1844,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "ee99156",
-      "commit_full": "ee991563c9c14032413818df454176fa59c54f9d",
-      "commit_date": "2026-10-14T13:45:58-04:00",
-      "message": "Merge PR #441 from NikitkaRa: Show: a laser pointer that leaves no ink",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "d6d7e91",
-      "commit_full": "d6d7e91c478a173d0e29ffdb9144aa65e4e4a39a",
-      "commit_date": "2026-10-14T13:46:55-04:00",
-      "message": "Merge PR #679 from NikitkaRa: Show: Show Media Controls hides the playback bar",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "8f0640a",
-      "commit_full": "8f0640a7b263afd3cc43e36145778a9cdfc19e8f",
-      "commit_date": "2026-10-14T13:47:08-04:00",
-      "message": "Merge PR #603 from NikitkaRa: Render: draw chart trendlines",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "6c605be",
-      "commit_full": "6c605be58207ed273abfdd7f76bbc97f70ca0e26",
-      "commit_date": "2026-10-14T13:47:54-04:00",
-      "message": "Merge PR #649 from NikitkaRa: Show: See All Slides and zoom",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "3e89fbb",
-      "commit_full": "3e89fbbaa6d82d03095ef94d84b4ecc7bea092e1",
-      "commit_date": "2026-10-14T13:48:31-04:00",
-      "message": "Merge PR #656 from NikitkaRa: Presenter view: pause and reset the timer, and notes size",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "e740154",
-      "commit_full": "e74015490b9cec7683e087b0181e5a458008ffc6",
-      "commit_date": "2026-10-14T13:49:10-04:00",
-      "message": "Merge PR #660 from NikitkaRa: Show: play a custom show",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "bc62c58",
-      "commit_full": "bc62c58b17c3d04dfa817afd5e2e2cd005c86bcd",
-      "commit_date": "2026-10-14T13:49:49-04:00",
-      "message": "Merge PR #664 from NikitkaRa: Show: show the slide number while typing it",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "f9c1000",
-      "commit_full": "f9c1000e356ad0bdfb6d57709c830783d3895968",
-      "commit_date": "2026-10-14T13:51:53-04:00",
-      "message": "Fix up merged PRs: rustfmt; drop doc rows the union merge left twice",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "912598f",
       "commit_full": "912598fa464d037f10d65f169dbfd56c83943b7a",
       "commit_date": "2026-10-14T13:54:33-04:00",
+      "ts": "2026-10-14T17:54:33Z",
       "message": "Merge PR #675 from NikitkaRa: View: Zoom dialog applies a percent or Fit",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2718,14 +1867,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "b3c9cc0",
       "commit_full": "b3c9cc099cc260d77647014f915e39c0093c3650",
       "commit_date": "2026-10-14T13:56:41-04:00",
+      "ts": "2026-10-14T17:56:41Z",
       "message": "Merge the PPTX writer, notes/handout master, PDF and slide-show PRs integrated on land-r3 (#518 #531 #535 #533 #572 #573 #577 #580 #583 #592 #685 #528 #483 #490",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2736,14 +1890,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "estimates"
     },
     {
       "commit": "1e80cd5",
       "commit_full": "1e80cd5547a2f8a2edd752d49b1886d243f8b9aa",
       "commit_date": "2026-10-14T14:01:08-04:00",
+      "ts": "2026-10-14T18:01:08Z",
       "message": "Merge PR #440 from NikitkaRa: Palette: skip commands that need a value",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2754,14 +1913,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "2009242",
       "commit_full": "200924205550a7720298e13573003ecfe44d4d51",
       "commit_date": "2026-10-14T14:02:59-04:00",
+      "ts": "2026-10-14T18:02:59Z",
       "message": "Merge PR #684 from NikitkaRa: Export: a PNG or JPEG slide records 144 dpi at the default 2× size",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2772,14 +1936,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "7266b30",
       "commit_full": "7266b300180c2e9432de22ebead151daafeb8874",
       "commit_date": "2026-10-14T14:04:24-04:00",
+      "ts": "2026-10-14T18:04:24Z",
       "message": "Merge PR #698 from NikitkaRa: UI: Design Effects applies a theme effect scheme",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2790,14 +1959,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "a4fa978",
       "commit_full": "a4fa97890380d2df380dfebe294bc7d544e966b1",
       "commit_date": "2026-10-14T14:06:42-04:00",
+      "ts": "2026-10-14T18:06:42Z",
       "message": "Merge PR #703 from NikitkaRa: UI: Slide Master Preserve and Title or Footers placeholders",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2808,14 +1982,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "3a8927e",
       "commit_full": "3a8927e3f3f67bf3908e1998c6259f83350986c5",
       "commit_date": "2026-10-14T14:11:53-04:00",
+      "ts": "2026-10-14T18:11:53Z",
       "message": "Merge PR #691 from NikitkaRa: UI: Trim Media dialog follows the selection",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2826,14 +2005,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "0c2c433",
       "commit_full": "0c2c433adecd43b08ea1223c95450e5b71efa39b",
       "commit_date": "2026-10-14T14:17:35-04:00",
+      "ts": "2026-10-14T18:17:35Z",
       "message": "Merge the chart and EMF+ metafile PRs integrated on land-r2 (#532 #537 #591 #594 #598 #602 #603 #638 #640 #662 #666 #669 #690 #582 #588 #633 #635)",
       "stage": "alpha",
       "next_stage": "beta",
@@ -2844,15 +2028,20 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
-      "commit": "80d3ad5",
-      "commit_full": "80d3ad5f2424a643360b7bb98413160d941f1f7f",
-      "commit_date": "2026-10-14T14:26:59-04:00",
-      "message": "Merge PR #243 from pierrevbc: Canvas: drag the frame of a text box being edited to move it",
+      "commit": "f800ace",
+      "commit_full": "f800acee47ebea878d2edd5d4b2b05d7f5d1282d",
+      "commit_date": "2026-10-14T14:58:48-04:00",
+      "ts": "2026-10-14T18:58:48Z",
+      "message": "Merge the startup, clipboard, animation-preview and UI PRs integrated on land-r5 (#644 #652 #655 #702 #571 #539 #674 #648 #697 #479 #369 #368)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-14",
@@ -2862,338 +2051,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "f6cf99b",
-      "commit_full": "f6cf99bf875d59d899021e7186bb19f93c98bc6a",
-      "commit_date": "2026-10-14T14:27:28-04:00",
-      "message": "Merge PR #291 from albayazid: Start screen: a missing Recent file is marked, its error shows, and entries can be removed (#172)",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "be445fb",
-      "commit_full": "be445fb083c436916a37593b86f40ee05d58f6b2",
-      "commit_date": "2026-10-14T14:27:38-04:00",
-      "message": "Merge PR #630 from NikitkaRa: UI: Font dialog sets character formatting in one step",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "12df77e",
-      "commit_full": "12df77ed1991a782302fa26b8d856f9eb94fe248",
-      "commit_date": "2026-10-14T14:30:55-04:00",
-      "message": "Merge PR #637 from NikitkaRa: UI: Paragraph dialog sets alignment, indents and spacing",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "b590cb0",
-      "commit_full": "b590cb0b0b34fc3cfaa2144d52470c9fd6333f15",
-      "commit_date": "2026-10-14T14:36:13-04:00",
-      "message": "Merge PR #303 from hoblin: deckcraft-cli help explains the CLI to an agent",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "2d4c4e7",
-      "commit_full": "2d4c4e75d8c68d91ee0a896394e117d12251d35f",
-      "commit_date": "2026-10-14T14:39:01-04:00",
-      "message": "Merge PR #536 from NikitkaRa: UI: Grid Options sets spacing, snap and the on-screen grid",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "38e95d8",
-      "commit_full": "38e95d8c152c686e3b27f2d35f0f40f8bb1a222a",
-      "commit_date": "2026-10-14T14:39:36-04:00",
-      "message": "Merge PR #702 from NikitkaRa: Clipboard: rich text and pictures for Pages and Keynote",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "7dcfe0f",
-      "commit_full": "7dcfe0f989ffe4fb573162a39a349e07f1887069",
-      "commit_date": "2026-10-14T14:40:18-04:00",
-      "message": "Fix up merged PRs: a textless shape still copies as the objects marker so Ctrl+V pastes it (#182), not as a picture (#702)",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "79b3e36",
-      "commit_full": "79b3e3693f95cca59ab86e5a04dea08170ebcb90",
-      "commit_date": "2026-10-14T14:40:51-04:00",
-      "message": "Merge PR #571 from NikitkaRa: UI: preview slide animations on the editor canvas",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "b3ec401",
-      "commit_full": "b3ec4013e60324ed4a5cfe5b4981690e1a22b81c",
-      "commit_date": "2026-10-14T14:41:34-04:00",
-      "message": "Merge PR #230 from pierrevbc: Tables: caret in the edited cell, click-to-place, drag borders to resize",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "6f38c95",
-      "commit_full": "6f38c958b65f0df5bcdc93246fe84264223259e1",
-      "commit_date": "2026-10-14T14:42:12-04:00",
-      "message": "Merge PR #674 from NikitkaRa: Canvas: a two-finger twist rotates the selection",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "bd607f3",
-      "commit_full": "bd607f333a38ddb38750e50a575be2191c999ef9",
-      "commit_date": "2026-10-14T14:42:43-04:00",
-      "message": "Merge PR #648 from NikitkaRa: Canvas: a trackpad swipe turns the page",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "4416bc1",
-      "commit_full": "4416bc170acd4c3d372a145334a0a7aa6225a78b",
-      "commit_date": "2026-10-14T14:43:08-04:00",
-      "message": "Merge PR #697 from NikitkaRa: UI: Format Shape fill transparency follows the selection",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "5fbdb6c",
-      "commit_full": "5fbdb6c79e7025d8d6304de0bbc1ea1f788a13cc",
-      "commit_date": "2026-10-14T14:43:55-04:00",
-      "message": "Merge PR #479 from NikitkaRa: Web: keep a picked file on the document and slide that asked for it",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "b267a92",
-      "commit_full": "b267a921cd9ca8e189d4a161c799898413f2e0b6",
-      "commit_date": "2026-10-14T14:46:54-04:00",
-      "message": "Merge PR #519 from NikitkaRa: UI: WordArt adjust handles drag a text warp",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "c354f02",
-      "commit_full": "c354f02279650b6c5633e95ca85df6a34f417620",
-      "commit_date": "2026-10-14T14:52:34-04:00",
-      "message": "Merge PR #177 from Mathiasko: Export: animated GIF of the deck (Export… dialog, CLI, MCP) (#171)",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "f8949f2",
-      "commit_full": "f8949f28cd44b4e58364862573e978edb3caa244",
-      "commit_date": "2026-10-14T14:55:58-04:00",
-      "message": "Merge PR #692 from NikitkaRa: UI: Format Background picture fill sets transparency and tiling",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "95cb3be",
-      "commit_full": "95cb3be9e6d85b52acd4ad33d68fbc26279a80c3",
-      "commit_date": "2026-10-14T14:58:19-04:00",
-      "message": "Merge PR #522 from NikitkaRa: UI: keep editor slides on the Retina pixel grid",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "c448a3d",
-      "commit_full": "c448a3dba9b965f9421494e09ee83920a67ea76a",
-      "commit_date": "2026-10-14T15:05:32-04:00",
-      "message": "Fix up merged PRs: progress docs without the rows the union merges duplicated",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "estimates"
     },
     {
       "commit": "b56d579",
       "commit_full": "b56d5792b0aee7b66892eab8aed69a5dc07be326",
       "commit_date": "2026-10-14T15:06:35-04:00",
+      "ts": "2026-10-14T19:06:35Z",
       "message": "Merge the format, canvas and dialog PRs integrated on land-r4 (#567 #569 #630 #637 #536 #559 #519 #506 #549 #556 #525)",
       "stage": "alpha",
       "next_stage": "beta",
@@ -3204,32 +2074,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "91eb9d8",
-      "commit_full": "91eb9d88846447db9a1b1b15a58c95fbcce4bab0",
-      "commit_date": "2026-10-14T15:14:21-04:00",
-      "message": "Merge the landing branch into land-r6",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "b9851d9",
       "commit_full": "b9851d9329d25f63a50a895284eac878272fb196",
       "commit_date": "2026-10-14T15:18:04-04:00",
+      "ts": "2026-10-14T19:18:04Z",
       "message": "Merge PR #611 from NikitkaRa: Draw: pen pressure scales ink width",
       "stage": "alpha",
       "next_stage": "beta",
@@ -3240,15 +2097,20 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
-      "commit": "b6a4343",
-      "commit_full": "b6a4343ec5caa9636ab456a0564ccd29d24bfd0a",
-      "commit_date": "2026-10-14T15:23:07-04:00",
-      "message": "Merge PR #355 from NikitkaRa: Charts: keep the embedded workbook when a chart is saved unchanged (#335)",
+      "commit": "34f4c1b",
+      "commit_full": "34f4c1b1df82ed9b95eb8470f4fcaaf447d24a60",
+      "commit_date": "2026-10-14T15:24:58-04:00",
+      "ts": "2026-10-14T19:24:58Z",
+      "message": "Merge the older community PRs integrated on land-r6 (#204 #243 #291 #345 #258 #303 #230 #168 #177 #692 #522 #466)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-14",
@@ -3258,15 +2120,20 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
-      "commit": "d66833b",
-      "commit_full": "d66833b7c23ee74c3084862524fa6b0d8ddbaeed",
-      "commit_date": "2026-10-14T15:23:16-04:00",
-      "message": "Fix up merged PRs: land-r6's changes fitted to the landing branch",
+      "commit": "1370e78",
+      "commit_full": "1370e78e09f94d786be73592a73905b7bd6394df",
+      "commit_date": "2026-10-14T15:59:30-04:00",
+      "ts": "2026-10-14T19:59:30Z",
+      "message": "Merge the land-fix PRs integrated on land-r8 (#355 #509 #513 #508 #488)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-14",
@@ -3276,32 +2143,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "bb15c0a",
-      "commit_full": "bb15c0a0338eed1a0d26f6d00a6f4fd757bf5e3b",
-      "commit_date": "2026-10-14T15:53:57-04:00",
-      "message": "Merge the landing branch into land-r8",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "4517dd4",
       "commit_full": "4517dd4e882db10080924219af15dc41f9914f37",
       "commit_date": "2026-10-14T16:13:37-04:00",
+      "ts": "2026-10-14T20:13:37Z",
       "message": "Docs: fold the rows and headers the PR merges duplicated; parity summary regenerated",
       "stage": "alpha",
       "next_stage": "beta",
@@ -3312,32 +2166,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "67e1ab6",
-      "commit_full": "67e1ab63737cdd45629a47866c3e66a72bc86a67",
-      "commit_date": "2026-10-14T16:24:26-04:00",
-      "message": "Merge PR #438 from albayazid: Model: an exhausted id space refuses growth instead of duplicating ids (#407)",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "estimates"
     },
     {
       "commit": "afe4a40",
       "commit_full": "afe4a408b93fc521dabd85dd4832725fc0daaf02",
       "commit_date": "2026-10-14T16:25:59-04:00",
+      "ts": "2026-10-14T20:25:59Z",
       "message": "Merge PR #438 integrated on land-r9: an exhausted id space refuses growth instead of duplicating ids (#407)",
       "stage": "alpha",
       "next_stage": "beta",
@@ -3348,33 +2189,20 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
-      "commit": "887ea1e",
-      "commit_full": "887ea1e7068eaadc85429bc267957975aff85acb",
-      "commit_date": "2026-10-14T17:22:23+09:00",
-      "message": "Slide show: click-triggered animations, per-slide state and hit testing",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "51de1ad",
-      "commit_full": "51de1ad2cf7741c0b866e747c390c548b4e128ef",
-      "commit_date": "2026-10-14T17:58:53-07:00",
-      "message": "Text (#93): show gray markers on empty list paragraphs",
+      "commit": "e4fd7a2",
+      "commit_full": "e4fd7a29ccf6d2fc53535367f8f3d97106782019",
+      "commit_date": "2026-10-14T21:59:39-04:00",
+      "ts": "2026-10-15T01:59:39Z",
+      "message": "Merge PR #760 from albayazid: Text: anchorCtr centres the drawn text block - right-aligned text stayed glued to the box edge (#736)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-14",
@@ -3384,50 +2212,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "0cbe475",
-      "commit_full": "0cbe475f131500c67889305407874fdf7116f23c",
-      "commit_date": "2026-10-14T19:44:21-06:00",
-      "message": "fix(pdf): reconcile writer with notes and handout masters (PDFW)",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "09c7f60",
-      "commit_full": "09c7f6056732188db1cf8302d5a8c58e44bc0db5",
-      "commit_date": "2026-10-14T21:00:04-06:00",
-      "message": "PDFW2: integrate current main with shared PDF writing",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "a74191d",
       "commit_full": "a74191dba42f7ddbd049f2f8063693b7df6662b5",
       "commit_date": "2026-10-14T21:59:44-04:00",
+      "ts": "2026-10-15T01:59:44Z",
       "message": "Merge PR #747 from MMexicann: MCP: validate reply IDs and bounded response frames (#718)",
       "stage": "alpha",
       "next_stage": "beta",
@@ -3438,14 +2235,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "561902d",
       "commit_full": "561902d0b362595417e0c8865bb9aba81773e5ed",
       "commit_date": "2026-10-14T21:59:44-04:00",
+      "ts": "2026-10-15T01:59:44Z",
       "message": "Merge PR #772 from hajdukste: Text: show gray list markers before typing",
       "stage": "alpha",
       "next_stage": "beta",
@@ -3456,14 +2258,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
-      "breadth_pct": 62.0
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "a15d93a",
       "commit_full": "a15d93acdd5fdf3739c616ee40d4b51177fae8ef",
       "commit_date": "2026-10-14T22:00:48-04:00",
+      "ts": "2026-10-15T02:00:48Z",
       "message": "Fix up #747 and #772 from review: docs keep their status headers (log rows stay), no milestone renaming; the bullet test no longer saves screenshots; clippy's a",
       "stage": "alpha",
       "next_stage": "beta",
@@ -3474,88 +2281,20 @@
         340,
         600
       ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "f4ce764",
-      "commit_full": "f4ce764d1c9d267b4ce9c8d9c2bf2b3d386ad604",
-      "commit_date": "2026-10-14T22:24:15+02:00",
-      "message": "M13.1: validate remote MCP replies (#718)",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "40e05ab",
-      "commit_full": "40e05abd45584c13731c6b1dffa8489f6fd35627",
-      "commit_date": "2026-10-15T04:41:37+06:00",
-      "message": "Text: anchorCtr centres the drawn text block - right-aligned text stayed glued to the box edge (#736)",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "59d5893",
-      "commit_full": "59d5893793613767a2bfc0a81632b93a3b9d6699",
-      "commit_date": "2026-10-15T18:53:01+06:00",
-      "message": "Format: .txt and .md outline includes table cell text (#814)",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0
-    },
-    {
-      "commit": "c8dc372",
-      "commit_full": "c8dc372519a9790cce9fc9cb64e8729800ebbe37",
-      "commit_date": "2026-10-15T22:31:32+02:00",
-      "message": "M6.1: preserve PPTX trigger click steps",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
       "breadth_pct": 62.0,
-      "previous_full_pct": 55.0
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
-      "commit": "367c348",
-      "commit_full": "367c3488c5ed5fd571161fbad476f6fb10eb4e22",
-      "commit_date": "2026-10-16T02:06:42+02:00",
-      "message": "Text: AutoFormat superscripts ordinals (1st, 22nd) as you type",
+      "commit": "9859da3",
+      "commit_full": "9859da39255c0262cd592bb57101d7f2fa961f72",
+      "commit_date": "2026-10-14T21:20:34-06:00",
+      "ts": "2026-10-15T03:20:34Z",
+      "message": "Use the shared PDF writer and report font embedding failures (#708)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-14",
@@ -3565,16 +2304,20 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
       "breadth_pct": 62.0,
-      "previous_full_pct": 55.0
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
-      "commit": "e755d3e",
-      "commit_full": "e755d3eeb1955a1cd7e78928ded009b58a7b689e",
-      "commit_date": "2026-10-16T05:44:02+02:00",
-      "message": "Opening a .ppsx from the command line starts the slide show (#862)",
+      "commit": "1b64de3",
+      "commit_full": "1b64de3499a849d6504bfc230cfe6de79159acd1",
+      "commit_date": "2026-10-15T22:48:23-06:00",
+      "ts": "2026-10-16T04:48:23Z",
+      "message": "Format: .txt and .md outline includes table cell text (#814) (#816)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-14",
@@ -3584,16 +2327,20 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
       "breadth_pct": 62.0,
-      "previous_full_pct": 55.0
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
-      "commit": "8c41140",
-      "commit_full": "8c41140abe776ad049258db08d65166ef933cc72",
-      "commit_date": "2026-10-16T07:47:16+02:00",
-      "message": "Arrange: Align to Slide and Align Selected Objects in the Align menu, as in PowerPoint",
+      "commit": "a178b99",
+      "commit_full": "a178b9955bd5e31a993a97685eefd07ddadd1478",
+      "commit_date": "2026-10-17T14:18:58-06:00",
+      "ts": "2026-10-17T20:18:58Z",
+      "message": "PPTX: preserve separate click steps in trigger sequences (#849)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-14",
@@ -3603,16 +2350,20 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
       "breadth_pct": 62.0,
-      "previous_full_pct": 55.0
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
-      "commit": "392734a",
-      "commit_full": "392734a135ed51ee5dd7cf8d0751efb1c302577e",
-      "commit_date": "2026-10-16T16:42:42+02:00",
-      "message": "Export: transparent background docs and clearer refusal (#784)",
+      "commit": "dfa9144",
+      "commit_full": "dfa91441e6bafa7a6ccf2f8792b4ee14930e18dc",
+      "commit_date": "2026-10-18T11:17:05-04:00",
+      "ts": "2026-10-18T15:17:05Z",
+      "message": "# Conflicts: (#802)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-14",
@@ -3622,130 +2373,20 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
       "breadth_pct": 62.0,
-      "previous_full_pct": 55.0
-    },
-    {
-      "commit": "2a4adf3",
-      "commit_full": "2a4adf30248d9d601f5c61f13d7395823417cebc",
-      "commit_date": "2026-10-17T13:29:55+02:00",
-      "message": "Merge branch 'main' into fix/pptx-trigger-click-steps",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0,
-      "previous_full_pct": 55.0
-    },
-    {
-      "commit": "368e074",
-      "commit_full": "368e07493cb9229be4721d556ff8a536fab35215",
-      "commit_date": "2026-10-18T09:18:46Z",
-      "message": "PPTX: a slide that can't be read is reported, not dropped in silence (#203)",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0,
-      "previous_full_pct": 55.0
-    },
-    {
-      "commit": "a773fcf",
-      "commit_full": "a773fcfce9c95b40fc32c46e3eb91fd2ad9b6e03",
-      "commit_date": "2026-10-18T09:59:58+02:00",
-      "message": "Canvas: a shape in front of edited text takes the click (#931)",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0,
-      "previous_full_pct": 55.0
-    },
-    {
-      "commit": "f4afe6d",
-      "commit_full": "f4afe6d2df66e73078a6562952350f9a31d8ec98",
-      "commit_date": "2026-10-18T10:01:46+02:00",
-      "message": "Edit Points: turning a shape into a freeform is one undo step",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0,
-      "previous_full_pct": 55.0
-    },
-    {
-      "commit": "5e8c1bc",
-      "commit_full": "5e8c1bcc5164f02ce297e1c80c66e02341a84d39",
-      "commit_date": "2026-10-18T10:04:22+02:00",
-      "message": "Open: give shapes that repeat an id in a .deckcraft file fresh ones",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0,
-      "previous_full_pct": 55.0
-    },
-    {
-      "commit": "daae74b",
-      "commit_full": "daae74b57e61aa486d07fd3ffca51c61a6df7203",
-      "commit_date": "2026-10-18T10:07:58+02:00",
-      "message": "Open: cap absurd effect sizes from a file at what Format Shape allows",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-14",
-      "full_pct": 55.0,
-      "full_range": null,
-      "full_hours": [
-        340,
-        600
-      ],
-      "mainstream_pct": 53.0,
-      "essentials_pct": 62.0,
-      "breadth_pct": 62.0,
-      "previous_full_pct": 55.0
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "26371b0",
       "commit_full": "26371b062961b123df577e7c15b153965ba816ed",
       "commit_date": "2026-10-18T11:17:06-04:00",
-      "message": "Merge pull request #947 from Zetenypapp/fix/huge-effect-sizes",
+      "ts": "2026-10-18T15:17:06Z",
+      "message": "# Conflicts: (#947)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-14",
@@ -3755,16 +2396,20 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
       "breadth_pct": 62.0,
-      "previous_full_pct": 55.0
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "4fcf593",
       "commit_full": "4fcf593bacea96639b79b1e3476f006fe8692e6e",
       "commit_date": "2026-10-18T11:17:06-04:00",
-      "message": "Merge pull request #948 from Zetenypapp/fix/duplicate-shape-ids",
+      "ts": "2026-10-18T15:17:06Z",
+      "message": "# Conflicts: (#948)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-14",
@@ -3774,15 +2419,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
       "breadth_pct": 62.0,
-      "previous_full_pct": 55.0
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "389c2c2",
       "commit_full": "389c2c2921d24745a24cf1c5b52db8ea5cf21d09",
       "commit_date": "2026-10-18T11:17:19-04:00",
+      "ts": "2026-10-18T15:17:19Z",
       "message": "Merge pull request #885 from switch87/feat/784-transparent-png-export",
       "stage": "alpha",
       "next_stage": "beta",
@@ -3793,16 +2442,20 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
       "breadth_pct": 62.0,
-      "previous_full_pct": 55.0
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "ef6e8cd",
       "commit_full": "ef6e8cdc2f41e8f1cbd550587fcd4643c3c09213",
       "commit_date": "2026-10-18T11:18:17-04:00",
-      "message": "Merge pull request #946 from Zetenypapp/fix/edit-points-undo",
+      "ts": "2026-10-18T15:18:17Z",
+      "message": "# Conflicts: (#946)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-14",
@@ -3812,16 +2465,20 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
       "breadth_pct": 62.0,
-      "previous_full_pct": 55.0
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "0b6705c",
       "commit_full": "0b6705c12c3f81920a18d02afca962c3db60c02f",
       "commit_date": "2026-10-18T11:18:18-04:00",
-      "message": "Merge pull request #943 from Zetenypapp/fix/click-in-front-931",
+      "ts": "2026-10-18T15:18:18Z",
+      "message": "# Conflicts: (#943)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-14",
@@ -3831,15 +2488,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
       "breadth_pct": 62.0,
-      "previous_full_pct": 55.0
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "dfe40a1",
       "commit_full": "dfe40a17bf8abfbc7fa78dcef47ac604553bd67e",
       "commit_date": "2026-10-18T11:18:18-04:00",
+      "ts": "2026-10-18T15:18:18Z",
       "message": "Merge pull request #856 from marcoarnulfo/feat/autoformat-ordinals",
       "stage": "alpha",
       "next_stage": "beta",
@@ -3850,15 +2511,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
       "breadth_pct": 62.0,
-      "previous_full_pct": 55.0
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "006bbe1",
       "commit_full": "006bbe11369508e2a1a07b8eb9f771c4b9ceb5ef",
       "commit_date": "2026-10-18T11:21:26-04:00",
+      "ts": "2026-10-18T15:21:26Z",
       "message": "Merge pull request #864 from marcoarnulfo/feat/ppsx-starts-show",
       "stage": "alpha",
       "next_stage": "beta",
@@ -3869,15 +2534,19 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
       "breadth_pct": 62.0,
-      "previous_full_pct": 55.0
+      "full_prev": 55.0,
+      "kind": "content"
     },
     {
       "commit": "0981e6e",
       "commit_full": "0981e6e675540dbf6f8d90f0a0b1d491ff570278",
       "commit_date": "2026-10-18T11:21:26-04:00",
+      "ts": "2026-10-18T15:21:26Z",
       "message": "Merge pull request #871 from marcoarnulfo/feat/alignto",
       "stage": "alpha",
       "next_stage": "beta",
@@ -3888,11 +2557,14 @@
         340,
         600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
       "mainstream_pct": 53.0,
       "essentials_pct": 62.0,
       "breadth_pct": 62.0,
-      "previous_full_pct": 55.0
+      "full_prev": 55.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-18T15:48:49+00:00"
+  "updated_at": "2026-10-18T17:56:44+00:00"
 }

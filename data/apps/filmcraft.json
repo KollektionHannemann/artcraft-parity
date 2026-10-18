@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/filmcraft",
   "roadmap_url": "https://github.com/storytold/filmcraft/blob/main/ROADMAP.md",
-  "latest_commit": "48cae3e",
-  "latest_commit_date": "2026-10-13T02:40:02-04:00",
-  "latest_message": "Merge origin/main into #1389 (Italian beside Korean: 12 languages)",
+  "latest_commit": "753c9a9",
+  "latest_commit_date": "2026-10-13T02:58:42-04:00",
+  "latest_message": "Ita Tranlsate (#1389)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -205,6 +205,10 @@
     ],
     "progress": [
       {
+        "date": "2026-10-12",
+        "text": "Transform's motion-blur shutter on adjustment layers uses the sequence frame rate instead of 24 fps, so a 360° shutter in a 60 fps sequence spans one frame, not 2.5 (#1088)"
+      },
+      {
         "date": "2026-10-10",
         "text": "(changed media): Settings ▸ Media ▸ Automatically refresh growing files works: media files that change on disk while the project is open (a recording still being written, a render written over the file a clip uses) are read again every Refresh growing files every seconds and as soon as the window comes back to the front: the new length, picture and identity, without an undo step (media.refreshChanged, mediawatch)."
       },
@@ -354,11 +358,576 @@
       }
     ]
   },
+  "parity": {
+    "tracked_since": "2026-10-10T18:09:14Z",
+    "changes": 0,
+    "truncated": false,
+    "last_change": null
+  },
+  "roadmap": {
+    "revisions": 10,
+    "revisions_7d": 5,
+    "last_revision": {
+      "ts": "2026-10-13T06:58:42Z",
+      "kind": "content",
+      "commit": "753c9a9",
+      "commit_full": "753c9a99e7069886f5c5a1160a3354ca2d1b8654",
+      "message": "Ita Tranlsate (#1389)"
+    },
+    "last_update": {
+      "ts": "2026-10-13T06:58:42Z",
+      "kind": "content",
+      "commit": "753c9a9",
+      "commit_full": "753c9a99e7069886f5c5a1160a3354ca2d1b8654",
+      "message": "Ita Tranlsate (#1389)"
+    },
+    "self_reported": "2026-10-11"
+  },
+  "milestone": null,
+  "activity": {
+    "level": "active",
+    "score": 17.0,
+    "active_days_7d": 6,
+    "changes_7d": 188,
+    "changes_14d": 603,
+    "housekeeping_7d": 8,
+    "last_code_change": {
+      "ts": "2026-10-18T07:21:32Z",
+      "commit": "48088e3",
+      "commit_full": "48088e3a8e50bd4a7a71d1ebdfde0835b01a3051",
+      "subject": "#1922: Audio Clip Mixer strips narrow to fit the panel, and scroll when they cannot (#1927)"
+    },
+    "last_commit_ts": "2026-10-18T07:21:32Z",
+    "repo_since": "2026-09-30T09:22:00Z",
+    "window": [
+      3,
+      25,
+      55,
+      11,
+      61,
+      198,
+      62,
+      85,
+      73,
+      3,
+      1,
+      0,
+      1,
+      25
+    ],
+    "days": [
+      {
+        "d": "2026-09-30",
+        "code": 38,
+        "other": 6,
+        "samples": [
+          {
+            "commit": "dc9e393",
+            "subject": "M7.3: clip audio effects run on filmcraft-audio-dsp (Amplify, Dynamics, Hard Limiter, Delay, Parametric EQ, High/Low/Bandpass, DeNoise, DeHummer, Studio Reverb,"
+          },
+          {
+            "commit": "de7e843",
+            "subject": "M7.1: BS.1770 loudness in Audio Meters (momentary/short-term/integrated LUFS, true peak) fed with contiguous programme audio; matches ffmpeg ebur128"
+          },
+          {
+            "commit": "c6cfa8d",
+            "subject": "M9.10: Matroska/WebM import (H.264/HEVC/ProRes/MJPEG video; AAC/FLAC/MP3/Vorbis/PCM audio); GOP random access shared by MP4 and MKV sources (codecs::gop)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-01",
+        "code": 32,
+        "other": 5,
+        "samples": [
+          {
+            "commit": "dc9c5fd",
+            "subject": "Merge branch 'main' into worktree-agent-a98dbfec8c9b949c7"
+          },
+          {
+            "commit": "645cfd9",
+            "subject": "Merge branch 'main' into worktree-agent-a98dbfec8c9b949c7"
+          },
+          {
+            "commit": "f0c7054",
+            "subject": "M9.7: AV1 inter-GOP seek tests in MP4/WebM, decode perf bench, docs and roadmap"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-02",
+        "code": 10,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "9dde810",
+            "subject": "Merge main into M6.5 export parity"
+          },
+          {
+            "commit": "c59d211",
+            "subject": "M6.5: export parity — presets, Export mode settings, queue, Quick Export, image sequences"
+          },
+          {
+            "commit": "0fafd53",
+            "subject": "M4.8: rename FrameServer::cache_entries (main added cache_usage)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-03",
+        "code": 15,
+        "other": 4,
+        "samples": [
+          {
+            "commit": "879be68",
+            "subject": "Merge branch 'worktree-agent-af7195a2c4c71a574' into integrate2"
+          },
+          {
+            "commit": "666eeab",
+            "subject": "M4.10: merge main"
+          },
+          {
+            "commit": "8e6b273",
+            "subject": "M4.10: merge main"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-04",
+        "code": 26,
+        "other": 2,
+        "samples": [
+          {
+            "commit": "694e405",
+            "subject": "Never crash: deny the panicking lints in the already-clean crates and apps (#27)"
+          },
+          {
+            "commit": "72edec5",
+            "subject": "ui-egui: never crash (panels without expect/unreachable) (#26)"
+          },
+          {
+            "commit": "bc57ebe",
+            "subject": "engine: last-resort guard around commands and background jobs (#25)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-05",
+        "code": 3,
+        "other": 3,
+        "samples": [
+          {
+            "commit": "ada55eb",
+            "subject": "GPU2: standard effects on the GPU compositor (#30) (#35)"
+          },
+          {
+            "commit": "e9a01db",
+            "subject": "HW1: platform crate + VideoToolbox H.264/HEVC hardware decode (#30) (#33)"
+          },
+          {
+            "commit": "98792af",
+            "subject": "GPU1: blend modes on the GPU compositor (#30) (#32)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-06",
+        "code": 25,
+        "other": 2,
+        "samples": [
+          {
+            "commit": "771b614",
+            "subject": "Fonts: use craft-fonts as an optional build input (Japanese UI and title fallback) (#81)"
+          },
+          {
+            "commit": "5c8471c",
+            "subject": "MEM1–MEM4 + HW1: clip memory on a timeline from 12 GB to 1.9 GB; hardware decode actually on (#41)"
+          },
+          {
+            "commit": "3736190",
+            "subject": "i18n: Japanese interface language (uses an installed system font) (#38)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-07",
+        "code": 55,
+        "other": 2,
+        "samples": [
+          {
+            "commit": "a4536bc",
+            "subject": "Windows: NVENC H.264 hardware encoding for Export (opt-in) (#180)"
+          },
+          {
+            "commit": "7148331",
+            "subject": "Windows: VP9 + AV1 hardware decode (Media Foundation / DXVA) (#162)"
+          },
+          {
+            "commit": "13f71e3",
+            "subject": "Engine: file.import refreshes the offline-missing list (#110) (#175)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-08",
+        "code": 11,
+        "other": 5,
+        "samples": [
+          {
+            "commit": "86a531a",
+            "subject": "Release: FreeBSD, Flatpak (x86_64 + aarch64) and AppImage zsync; README Downloads (#267)"
+          },
+          {
+            "commit": "5812509",
+            "subject": "Speed/Duration opens its dialog; dragging an effect parameter is one undo step (#201) (#213)"
+          },
+          {
+            "commit": "87c4d15",
+            "subject": "About: contributor and model credits compiled in (grab bag + table, self-submitted names) (#215)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-09",
+        "code": 61,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "7b6c134",
+            "subject": "Fix Chinese glyph rendering in native timeline and UI labels (#363)"
+          },
+          {
+            "commit": "cb03d34",
+            "subject": "feat(media, engine): implement multi-stream container audio support and schema v13 (#361)"
+          },
+          {
+            "commit": "ef6391d",
+            "subject": "CI: gpu Push test uses as_chunks (clippy on Rust 1.99) (#428)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-10",
+        "code": 198,
+        "other": 3,
+        "samples": [
+          {
+            "commit": "2ff3f5e",
+            "subject": "Release prep: 0.6.0 and a Linux riscv64 release build (#830)"
+          },
+          {
+            "commit": "2a9f39d",
+            "subject": "#814: AAC Audio export (audio-only .m4a, or ADTS .aac) (#825)"
+          },
+          {
+            "commit": "c47e883",
+            "subject": "#821: import Targa and DPX stills and image sequences (#826)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-11",
+        "code": 62,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "156086d",
+            "subject": "Export FCP7 XML markers on source media (#946)"
+          },
+          {
+            "commit": "e86b5e6",
+            "subject": "Escape cancels a drag in progress: drag-and-drop, value drags, color pickers and dialogs (#608)"
+          },
+          {
+            "commit": "a8cc702",
+            "subject": "#395: Arabic and Hebrew in the interface: fallback fonts, captions in reading order (#1140)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-12",
+        "code": 85,
+        "other": 4,
+        "samples": [
+          {
+            "commit": "71438c6",
+            "subject": "Release 0.7.2: install the wasm-bindgen CLI for the web release build"
+          },
+          {
+            "commit": "78fe010",
+            "subject": "fix(timeline): 縦スクロールバーを横バーと同じ幅に揃える (#1189)"
+          },
+          {
+            "commit": "5f05761",
+            "subject": "fix(timeline): 波形をクリップ背景の暗い同系色で表示する (#1183)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-13",
+        "code": 73,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "cee1feb",
+            "subject": "#1432: mpegts: bounds-check frame_info, cap chunks, units and allocations, drop non-PES data (#1433)"
+          },
+          {
+            "commit": "753c9a9",
+            "subject": "Ita Tranlsate (#1389)"
+          },
+          {
+            "commit": "fae7f8a",
+            "subject": "i18n: translate Ripple Delete Head Frame (#1427) so the catalog coverage tests pass"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-14",
+        "code": 3,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "9ed9650",
+            "subject": "fix(media): preserve Unicode prefixes in image-sequence filenames"
+          },
+          {
+            "commit": "0b432e3",
+            "subject": "fix(interchange): avoid UTF-8 slice panics in file URLs"
+          },
+          {
+            "commit": "39a8b65",
+            "subject": "fix(timeline): preserve individual linked clip selections"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-15",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "8309f21",
+            "subject": "fix(export): prevent nested renderer-pool deadlocks"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-16",
+        "code": 0,
+        "other": 2,
+        "samples": []
+      },
+      {
+        "d": "2026-10-17",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "38ac719",
+            "subject": "Follow stored media paths only on this computer or the project's share (#2304)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-18",
+        "code": 25,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "48088e3",
+            "subject": "#1922: Audio Clip Mixer strips narrow to fit the panel, and scroll when they cannot (#1927)"
+          },
+          {
+            "commit": "4dc8021",
+            "subject": "captions: pin the setStyle margin contract with a regression test; clearer track error (#1542) (#1655)"
+          },
+          {
+            "commit": "9bc4b6b",
+            "subject": "#1544: an export started without wait says where to follow it (jobs.list, jobs.cancel) (#2125)"
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [
+    {
+      "tag": "v0.9.0",
+      "name": "FilmCraft v0.9.0",
+      "ts": "2026-10-18T03:55:32Z",
+      "url": "https://github.com/storytold/filmcraft/releases/tag/v0.9.0",
+      "changes": 7,
+      "new_contributors": 1,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.8.0",
+      "name": "FilmCraft v0.8.0",
+      "ts": "2026-10-14T16:28:45Z",
+      "url": "https://github.com/storytold/filmcraft/releases/tag/v0.8.0",
+      "changes": 70,
+      "new_contributors": 12,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.7.2",
+      "name": "FilmCraft v0.7.2",
+      "ts": "2026-10-12T21:22:57Z",
+      "url": "https://github.com/storytold/filmcraft/releases/tag/v0.7.2",
+      "changes": 136,
+      "new_contributors": 16,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.6.0",
+      "name": "FilmCraft v0.6.0",
+      "ts": "2026-10-11T00:28:54Z",
+      "url": "https://github.com/storytold/filmcraft/releases/tag/v0.6.0",
+      "changes": 188,
+      "new_contributors": 35,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.5.0",
+      "name": "FilmCraft v0.5.0",
+      "ts": "2026-10-10T02:51:29Z",
+      "url": "https://github.com/storytold/filmcraft/releases/tag/v0.5.0",
+      "changes": 65,
+      "new_contributors": 19,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.4.0",
+      "name": "FilmCraft v0.4.0",
+      "ts": "2026-10-08T14:41:28Z",
+      "url": "https://github.com/storytold/filmcraft/releases/tag/v0.4.0",
+      "changes": 94,
+      "new_contributors": 16,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.2.1",
+      "name": "FilmCraft v0.2.1",
+      "ts": "2026-10-06T12:18:26Z",
+      "url": "https://github.com/storytold/filmcraft/releases/tag/v0.2.1",
+      "changes": 11,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "patch"
+    },
+    {
+      "tag": "v0.2.0",
+      "name": "FilmCraft v0.2.0",
+      "ts": "2026-10-05T07:02:01Z",
+      "url": "https://github.com/storytold/filmcraft/releases/tag/v0.2.0",
+      "changes": 26,
+      "new_contributors": 2,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.1.1",
+      "name": "FilmCraft v0.1.1",
+      "ts": "2026-10-03T14:24:18Z",
+      "url": "https://github.com/storytold/filmcraft/releases/tag/v0.1.1",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "patch"
+    },
+    {
+      "tag": "v0.1.0",
+      "name": "FilmCraft v0.1.0",
+      "ts": "2026-10-02T22:31:33Z",
+      "url": "https://github.com/storytold/filmcraft/releases/tag/v0.1.0",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": null
+    }
+  ],
   "history": [
     {
       "commit": "3ad5a59",
       "commit_full": "3ad5a593217410ed687abfaaf76b444aece0107d",
       "commit_date": "2026-10-10T14:09:14-04:00",
+      "ts": "2026-10-10T18:09:14Z",
       "message": "Progress docs: target-app parity, gaps, alpha gate, readiness by audience (#700)",
       "stage": "alpha",
       "next_stage": "beta",
@@ -369,15 +938,20 @@
         1450,
         2600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe Premiere Pro 2026 (26.5.2)",
       "mainstream_pct": 55.0,
       "essentials_pct": 60.0,
-      "breadth_pct": 86.0
+      "breadth_pct": 86.0,
+      "full_prev": null,
+      "kind": "first"
     },
     {
-      "commit": "1996723",
-      "commit_full": "1996723225c840669c679ea871b3b356ac8244c3",
-      "commit_date": "2026-10-10T18:51:04-06:00",
-      "message": "UI.6: refresh shared UI integration against current main",
+      "commit": "843faef",
+      "commit_full": "843faef795e911820c5a094373046aefd269d9d6",
+      "commit_date": "2026-10-10T17:09:45-04:00",
+      "ts": "2026-10-10T21:09:45Z",
+      "message": "Media: Automatically refresh growing files works (and catches re-renders) (#625)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-10",
@@ -387,15 +961,20 @@
         1450,
         2600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe Premiere Pro 2026 (26.5.2)",
       "mainstream_pct": 55.0,
       "essentials_pct": 60.0,
-      "breadth_pct": 86.0
+      "breadth_pct": 86.0,
+      "full_prev": 56.0,
+      "kind": "content"
     },
     {
-      "commit": "121ae69",
-      "commit_full": "121ae6958fb45897baa59fff603eb54e1e802254",
-      "commit_date": "2026-10-10T23:48:01+05:30",
-      "message": "Merge main: ROADMAP.md moved to the new docs layout",
+      "commit": "4a81aa1",
+      "commit_full": "4a81aa17423444088d769d7b64b37bb9ddf571ee",
+      "commit_date": "2026-10-10T18:35:20-04:00",
+      "ts": "2026-10-10T22:35:20Z",
+      "message": "#498: French (fr) interface translation (#804)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-10",
@@ -405,15 +984,20 @@
         1450,
         2600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe Premiere Pro 2026 (26.5.2)",
       "mainstream_pct": 55.0,
       "essentials_pct": 60.0,
-      "breadth_pct": 86.0
+      "breadth_pct": 86.0,
+      "full_prev": 56.0,
+      "kind": "content"
     },
     {
-      "commit": "73f9982",
-      "commit_full": "73f9982c0c781d92486c34230c8245a2c5edf146",
-      "commit_date": "2026-10-11T00:22:08+02:00",
-      "message": "#498: French (fr) interface translation",
+      "commit": "4e2d0bc",
+      "commit_full": "4e2d0bc2d3646f9cf27ef7aa8b2095c6858c7efe",
+      "commit_date": "2026-10-10T19:46:53-06:00",
+      "ts": "2026-10-11T01:46:53Z",
+      "message": "Share docking transactions and preserve FilmCraft panel behavior (#881)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-10",
@@ -423,69 +1007,20 @@
         1450,
         2600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe Premiere Pro 2026 (26.5.2)",
       "mainstream_pct": 55.0,
       "essentials_pct": 60.0,
-      "breadth_pct": 86.0
-    },
-    {
-      "commit": "c6d47e2",
-      "commit_full": "c6d47e20f0ad5ec0737b4ad8cc5492f1d618df7a",
-      "commit_date": "2026-10-11T02:17:58+02:00",
-      "message": "#859: complete the Brazilian Portuguese (pt-br) interface translation",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 56.0,
-      "full_range": null,
-      "full_hours": [
-        1450,
-        2600
-      ],
-      "mainstream_pct": 55.0,
-      "essentials_pct": 60.0,
-      "breadth_pct": 86.0
-    },
-    {
-      "commit": "615b89a",
-      "commit_full": "615b89a36402ce0926498e862ef298970f2a726d",
-      "commit_date": "2026-10-11T02:41:31+02:00",
-      "message": "#867: Indonesian (id) interface translation",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-10",
-      "full_pct": 56.0,
-      "full_range": null,
-      "full_hours": [
-        1450,
-        2600
-      ],
-      "mainstream_pct": 55.0,
-      "essentials_pct": 60.0,
-      "breadth_pct": 86.0
-    },
-    {
-      "commit": "239c460",
-      "commit_full": "239c46063dff576f719a6e4327272315feb36679",
-      "commit_date": "2026-10-11T16:24:11+02:00",
-      "message": "docs: German ships the menus (localization parity, ROADMAP)",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-11",
-      "full_pct": 56.0,
-      "full_range": null,
-      "full_hours": [
-        1450,
-        2600
-      ],
-      "mainstream_pct": 55.0,
-      "essentials_pct": 60.0,
-      "breadth_pct": 86.0
+      "breadth_pct": 86.0,
+      "full_prev": 56.0,
+      "kind": "content"
     },
     {
       "commit": "aa6d8f4",
       "commit_full": "aa6d8f42a483e77e55d1f2530271b454862e715f",
       "commit_date": "2026-10-11T19:15:54-04:00",
-      "message": "Merge pull request #878 from vangel76/gap-indonesian",
+      "ts": "2026-10-11T23:15:54Z",
+      "message": "#867: Indonesian (id) interface translation (#878)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-10",
@@ -495,15 +1030,20 @@
         1450,
         2600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe Premiere Pro 2026 (26.5.2)",
       "mainstream_pct": 55.0,
       "essentials_pct": 60.0,
-      "breadth_pct": 86.0
+      "breadth_pct": 86.0,
+      "full_prev": 56.0,
+      "kind": "content"
     },
     {
       "commit": "6ead224",
       "commit_full": "6ead2249a836d8c1e0a4dc12541cad72b5121c0d",
       "commit_date": "2026-10-11T20:34:37-04:00",
-      "message": "Merge pull request #1073 from keller-lukas/docs/localization-parity-german",
+      "ts": "2026-10-12T00:34:37Z",
+      "message": "docs: German in the localization parity table (follow-up to #630) (#1073)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-11",
@@ -513,15 +1053,20 @@
         1450,
         2600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe Premiere Pro 2026 (26.5.2)",
       "mainstream_pct": 55.0,
       "essentials_pct": 60.0,
-      "breadth_pct": 86.0
+      "breadth_pct": 86.0,
+      "full_prev": 56.0,
+      "kind": "content"
     },
     {
-      "commit": "c7f2b78",
-      "commit_full": "c7f2b781b0b5df5ab8c68d83d383410e8259fa3a",
-      "commit_date": "2026-10-11T21:09:23-04:00",
-      "message": "Merge main into #866 (Indonesian and the German menu docs landed meanwhile)",
+      "commit": "217c66c",
+      "commit_full": "217c66c95a5e3e8498842bdefb4166e03e1a4607",
+      "commit_date": "2026-10-11T21:12:31-04:00",
+      "ts": "2026-10-12T01:12:31Z",
+      "message": "#859: complete the Brazilian Portuguese (pt-br) interface translation (#866)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-11",
@@ -531,15 +1076,20 @@
         1450,
         2600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe Premiere Pro 2026 (26.5.2)",
       "mainstream_pct": 55.0,
       "essentials_pct": 60.0,
-      "breadth_pct": 86.0
+      "breadth_pct": 86.0,
+      "full_prev": 56.0,
+      "kind": "content"
     },
     {
-      "commit": "a6a7f95",
-      "commit_full": "a6a7f95579d320b9e6f1731f1264feeaecf83d33",
-      "commit_date": "2026-10-12T18:36:19+02:00",
-      "message": "Docs: update the progress docs for this change",
+      "commit": "dc5e488",
+      "commit_full": "dc5e4884548ceb464fa160a5b1f694ac599f1e46",
+      "commit_date": "2026-10-13T00:48:09-04:00",
+      "ts": "2026-10-13T04:48:09Z",
+      "message": "Transform shutter: use the sequence frame rate on adjustment layers (#1088) (#1287)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-11",
@@ -549,15 +1099,20 @@
         1450,
         2600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe Premiere Pro 2026 (26.5.2)",
       "mainstream_pct": 55.0,
       "essentials_pct": 60.0,
-      "breadth_pct": 86.0
+      "breadth_pct": 86.0,
+      "full_prev": 56.0,
+      "kind": "content"
     },
     {
-      "commit": "d2ae945",
-      "commit_full": "d2ae945c300fa3c13ae618e7501e59b38e12fbce",
-      "commit_date": "2026-10-12T18:56:50+02:00",
-      "message": "Add files via upload",
+      "commit": "5e1ded3",
+      "commit_full": "5e1ded3301765bd6f7fdf8626758a79d056094f1",
+      "commit_date": "2026-10-13T02:34:38-04:00",
+      "ts": "2026-10-13T06:34:38Z",
+      "message": "i18n: Korean (ko) interface catalog (#508) (#1502)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-11",
@@ -567,15 +1122,20 @@
         1450,
         2600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe Premiere Pro 2026 (26.5.2)",
       "mainstream_pct": 55.0,
       "essentials_pct": 60.0,
-      "breadth_pct": 86.0
+      "breadth_pct": 86.0,
+      "full_prev": 56.0,
+      "kind": "content"
     },
     {
-      "commit": "64a2391",
-      "commit_full": "64a2391ddc6418ed1e0b47993ac3ba5f81a235a3",
-      "commit_date": "2026-10-13T01:43:02-04:00",
-      "message": "Merge remote-tracking branch 'origin/main' into fix-1502",
+      "commit": "753c9a9",
+      "commit_full": "753c9a99e7069886f5c5a1160a3354ca2d1b8654",
+      "commit_date": "2026-10-13T02:58:42-04:00",
+      "ts": "2026-10-13T06:58:42Z",
+      "message": "Ita Tranlsate (#1389)",
       "stage": "alpha",
       "next_stage": "beta",
       "last_updated": "2026-10-11",
@@ -585,82 +1145,14 @@
         1450,
         2600
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe Premiere Pro 2026 (26.5.2)",
       "mainstream_pct": 55.0,
       "essentials_pct": 60.0,
-      "breadth_pct": 86.0
-    },
-    {
-      "commit": "c3f931d",
-      "commit_full": "c3f931d0c4f68f84017f665ee02380b0c7be2267",
-      "commit_date": "2026-10-13T02:04:44-04:00",
-      "message": "#1502: English fallback without a Hangul font (as for Chinese); doc comment back on available(); drop the old Korean ROADMAP row; Korean rows for strings added ",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-11",
-      "full_pct": 56.0,
-      "full_range": null,
-      "full_hours": [
-        1450,
-        2600
-      ],
-      "mainstream_pct": 55.0,
-      "essentials_pct": 60.0,
-      "breadth_pct": 86.0
-    },
-    {
-      "commit": "6b2a36e",
-      "commit_full": "6b2a36e2dd773e9858bff8ce88b475f7db69184b",
-      "commit_date": "2026-10-13T02:04:51-04:00",
-      "message": "Merge remote-tracking branch 'origin/main' into fix-1389",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-11",
-      "full_pct": 56.0,
-      "full_range": null,
-      "full_hours": [
-        1450,
-        2600
-      ],
-      "mainstream_pct": 55.0,
-      "essentials_pct": 60.0,
-      "breadth_pct": 86.0
-    },
-    {
-      "commit": "48cae3e",
-      "commit_full": "48cae3e5a3a5fae838ef70058698be74fcce2eab",
-      "commit_date": "2026-10-13T02:40:02-04:00",
-      "message": "Merge origin/main into #1389 (Italian beside Korean: 12 languages)",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-11",
-      "full_pct": 56.0,
-      "full_range": null,
-      "full_hours": [
-        1450,
-        2600
-      ],
-      "mainstream_pct": 55.0,
-      "essentials_pct": 60.0,
-      "breadth_pct": 86.0
-    },
-    {
-      "commit": "b97bb74",
-      "commit_full": "b97bb74330c35f0145e8abded296d254be769fbf",
-      "commit_date": "2026-10-13T08:44:01+09:00",
-      "message": "i18n: Korean (ko) interface catalog (#508)",
-      "stage": "alpha",
-      "next_stage": "beta",
-      "last_updated": "2026-10-11",
-      "full_pct": 56.0,
-      "full_range": null,
-      "full_hours": [
-        1450,
-        2600
-      ],
-      "mainstream_pct": 55.0,
-      "essentials_pct": 60.0,
-      "breadth_pct": 86.0
+      "breadth_pct": 86.0,
+      "full_prev": 56.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-16T16:28:08+00:00"
+  "updated_at": "2026-10-18T17:55:39+00:00"
 }

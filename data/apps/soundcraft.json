@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/soundcraft",
   "roadmap_url": "https://github.com/storytold/soundcraft/blob/main/ROADMAP.md",
-  "latest_commit": "b32d7bd",
-  "latest_commit_date": "2026-10-13T06:45:33-04:00",
-  "latest_message": "Merge main into #410; put the mix.instrument note in the Instruments row's 'have' cell",
+  "latest_commit": "cf755b8",
+  "latest_commit_date": "2026-10-13T06:53:58-04:00",
+  "latest_message": "Engine: mix.instrument takes the instrument's parameters and refuses unknown fields (#265) (#410)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -213,6 +213,30 @@
     ],
     "progress": [
       {
+        "date": "2026-10-13",
+        "text": "mix.instrument takes the built-in instrument's parameters in params (validated, clamped) and refuses any other field, so a synth setting written beside plugin is an error instead of being accepted and ignored (#265)"
+      },
+      {
+        "date": "2026-10-13",
+        "text": "A bounce of a bus that an aux returns onto lines up with the timeline: the aux insert's lookahead is compensated like the main mix's (it left the bus late and cut the end off), and tracks routed to that bus wait for it too (#246)"
+      },
+      {
+        "date": "2026-10-13",
+        "text": "Delay compensation covers the inserts of the master faders: a bounce of the main mix with a Maximizer on the master lines up with the same mix without it (it came out 71 samples late) (#351)"
+      },
+      {
+        "date": "2026-10-12",
+        "text": "(audio device settings): Setup › Playback Engine chooses the audio system, output and input device, sample rate and buffer size, kept per machine with the preferences; 16/32-bit integer devices are converted; ASIO is available behind the opt-in asio build feature (verified with an SSL 2+ at 128 samples). Channel routing, one duplex clock and latency compensation remain (G-01). No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "(Mix in a separate window): Window › Mix in Separate Window shows the Mix window in its own native window, so Edit and Mix can be on screen at once (e.g. one per monitor), as in Pro Tools. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "(plugin editors on Windows): VST3 editors and embedded CLAP editors open in a SoundCraft host window on Windows (owned by the app window, resized on request, closed from its title bar); verified with a JUCE VST3 compressor and a CLAP effect. No readiness percentage change."
+      },
+      {
         "date": "2026-10-12",
         "text": "soundcraft-cli convert rejects an unparsable or zero --rate and an unknown --bit-depth (exit 1, nothing written) instead of converting with a default (#256)"
       },
@@ -226,7 +250,15 @@
       },
       {
         "date": "2026-10-12",
+        "text": "(plugin editors on Windows): VST3 editors and embedded CLAP editors open in a SoundCraft host window on Windows (owned by the app window, resized on request, closed from its title bar); verified with a JUCE VST3 compressor and a CLAP effect. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
         "text": "(Mix in a separate window): Window › Mix in Separate Window shows the Mix window in its own native window, so Edit and Mix can be on screen at once (e.g. one per monitor), as in Pro Tools. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-12",
+        "text": "(audio device settings): Setup › Playback Engine chooses the audio system, output and input device, sample rate and buffer size, kept per machine with the preferences; 16/32-bit integer devices are converted; ASIO is available behind the opt-in asio build feature (verified with an SSL 2+ at 128 samples). Channel routing, one duplex clock and latency compensation remain (G-01). No readiness percentage change."
       },
       {
         "date": "2026-10-10",
@@ -258,11 +290,354 @@
       }
     ]
   },
+  "parity": {
+    "tracked_since": "2026-10-10T18:08:49Z",
+    "changes": 0,
+    "truncated": false,
+    "last_change": null
+  },
+  "roadmap": {
+    "revisions": 11,
+    "revisions_7d": 9,
+    "last_revision": {
+      "ts": "2026-10-13T10:53:58Z",
+      "kind": "content",
+      "commit": "cf755b8",
+      "commit_full": "cf755b8cd231f3f8c6dc2868eea3d98593882842",
+      "message": "Engine: mix.instrument takes the instrument's parameters and refuses unknown fields (#265) (#410)"
+    },
+    "last_update": {
+      "ts": "2026-10-13T10:53:58Z",
+      "kind": "content",
+      "commit": "cf755b8",
+      "commit_full": "cf755b8cd231f3f8c6dc2868eea3d98593882842",
+      "message": "Engine: mix.instrument takes the instrument's parameters and refuses unknown fields (#265) (#410)"
+    },
+    "self_reported": "2026-10-10"
+  },
+  "milestone": null,
+  "activity": {
+    "level": "active",
+    "score": 9.2,
+    "active_days_7d": 5,
+    "changes_7d": 123,
+    "changes_14d": 221,
+    "housekeeping_7d": 12,
+    "last_code_change": {
+      "ts": "2026-10-17T18:13:57Z",
+      "commit": "3a1167f",
+      "commit_full": "3a1167ffd51bb51078eda53ea49e73e1a3a503e5",
+      "subject": "Follow stored paths only on this computer or the session's share (#726)"
+    },
+    "last_commit_ts": "2026-10-18T14:39:50Z",
+    "repo_since": "2026-10-06T00:08:04Z",
+    "window": [
+      0,
+      41,
+      0,
+      3,
+      17,
+      23,
+      14,
+      25,
+      95,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    "days": [
+      {
+        "d": "2026-10-06",
+        "code": 41,
+        "other": 7,
+        "samples": [
+          {
+            "commit": "cdefc57",
+            "subject": "Video track, Audio Unit hosting, plugin state and editors, Renderer and UI Customization"
+          },
+          {
+            "commit": "c125a79",
+            "subject": "Mix window views: Mic Preamps (input gain), Instruments, Object/Bed"
+          },
+          {
+            "commit": "0751dd3",
+            "subject": "Score export and print, clip group files, Merge Markers, path dialogs for every file command"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-07",
+        "code": 0,
+        "other": 1,
+        "samples": []
+      },
+      {
+        "d": "2026-10-08",
+        "code": 3,
+        "other": 5,
+        "samples": [
+          {
+            "commit": "8115ba9",
+            "subject": "Release: Flatpak x86_64/aarch64, AppImage zsync updates, README Downloads (#13)"
+          },
+          {
+            "commit": "ef47ab5",
+            "subject": "Fix the Windows build of vst3-host; bump version to 0.2.1"
+          },
+          {
+            "commit": "4627084",
+            "subject": "About: contributor and model credits compiled in (grab bag + table, self-submitted names) (#8)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-09",
+        "code": 17,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "21f9b07",
+            "subject": "Add a selectable Light theme (#32)"
+          },
+          {
+            "commit": "5f2ce94",
+            "subject": "macOS: move application menus to the system menu bar (#10)"
+          },
+          {
+            "commit": "03972e2",
+            "subject": "Default Windows startup to DirectX 12 (#34)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-10",
+        "code": 23,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "4410486",
+            "subject": "Release 0.5.0: linux-riscv64 tarball, version bump (#165)"
+          },
+          {
+            "commit": "330a698",
+            "subject": "Progress docs: target-app parity, gaps, alpha gate, readiness by audience (#155)"
+          },
+          {
+            "commit": "3bc2d92",
+            "subject": "Give same-named clip exports their own files. (#122)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-11",
+        "code": 14,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "99b3ffe",
+            "subject": "Credit Vikram Bhaskaran by real name and display name. (#135)"
+          },
+          {
+            "commit": "3731299",
+            "subject": "Convert only the selected volume automation into clip gain. (#134)"
+          },
+          {
+            "commit": "7442bc9",
+            "subject": "Compensate for an aux insert's latency on the same block that measures it. (#133)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-12",
+        "code": 25,
+        "other": 4,
+        "samples": [
+          {
+            "commit": "acb08ff",
+            "subject": "Add a built-in Sampler instrument (#108)"
+          },
+          {
+            "commit": "525f00b",
+            "subject": "Ask before discarding unsaved changes; Save opens Save As for new sessions (#157)"
+          },
+          {
+            "commit": "48c3f65",
+            "subject": "Clip > Rename opens its dialog; Undo and Redo name their step; the Window menu's keys work (#160)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-13",
+        "code": 95,
+        "other": 3,
+        "samples": [
+          {
+            "commit": "c0cb993",
+            "subject": "Drag across checkboxes to check or uncheck several (#399) (#413)"
+          },
+          {
+            "commit": "cf755b8",
+            "subject": "Engine: mix.instrument takes the instrument's parameters and refuses unknown fields (#265) (#410)"
+          },
+          {
+            "commit": "9ad9eb8",
+            "subject": "Mix: a bus bounce compensates the aux returns onto it (#246) (#408)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-14",
+        "code": 1,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "01fd2d0",
+            "subject": "Narrow Mix strips always use the short section names"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-16",
+        "code": 1,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "ba467b2",
+            "subject": "fix(engine): compile Windows tests (#571)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-17",
+        "code": 1,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "3a1167f",
+            "subject": "Follow stored paths only on this computer or the session's share (#726)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-18",
+        "code": 0,
+        "other": 2,
+        "samples": []
+      }
+    ]
+  },
+  "releases": [
+    {
+      "tag": "v0.8.0",
+      "name": "SoundCraft v0.8.0",
+      "ts": "2026-10-17T23:16:47Z",
+      "url": "https://github.com/storytold/soundcraft/releases/tag/v0.8.0",
+      "changes": 3,
+      "new_contributors": 1,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.7.0",
+      "name": "SoundCraft v0.7.0",
+      "ts": "2026-10-14T16:16:07Z",
+      "url": "https://github.com/storytold/soundcraft/releases/tag/v0.7.0",
+      "changes": 105,
+      "new_contributors": 15,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.6.1",
+      "name": "SoundCraft v0.6.1",
+      "ts": "2026-10-12T15:57:05Z",
+      "url": "https://github.com/storytold/soundcraft/releases/tag/v0.6.1",
+      "changes": 42,
+      "new_contributors": 7,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.5.0",
+      "name": "SoundCraft v0.5.0",
+      "ts": "2026-10-11T00:39:19Z",
+      "url": "https://github.com/storytold/soundcraft/releases/tag/v0.5.0",
+      "changes": 13,
+      "new_contributors": 1,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.4.0",
+      "name": "SoundCraft v0.4.0",
+      "ts": "2026-10-10T02:51:45Z",
+      "url": "https://github.com/storytold/soundcraft/releases/tag/v0.4.0",
+      "changes": 26,
+      "new_contributors": 11,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.3.0",
+      "name": "SoundCraft v0.3.0",
+      "ts": "2026-10-08T14:41:51Z",
+      "url": "https://github.com/storytold/soundcraft/releases/tag/v0.3.0",
+      "changes": 4,
+      "new_contributors": 1,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": null
+    }
+  ],
   "history": [
     {
       "commit": "330a698",
       "commit_full": "330a6983973dc2043bb1fa0f0ba67fa07ae50685",
       "commit_date": "2026-10-10T14:08:49-04:00",
+      "ts": "2026-10-10T18:08:49Z",
       "message": "Progress docs: target-app parity, gaps, alpha gate, readiness by audience (#155)",
       "stage": "pre-alpha",
       "next_stage": "alpha",
@@ -273,15 +648,20 @@
         950,
         1450
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
       "mainstream_pct": 36.0,
       "essentials_pct": 57.0,
-      "breadth_pct": 70.0
+      "breadth_pct": 70.0,
+      "full_prev": null,
+      "kind": "first"
     },
     {
-      "commit": "5589d97",
-      "commit_full": "5589d97257be4fd95d6544d310e529f3a3e2a994",
-      "commit_date": "2026-10-10T18:14:05-06:00",
-      "message": "UI.9: reconcile upstream before shared UI landing",
+      "commit": "7414719",
+      "commit_full": "7414719f3760de1c9359ec9723351a7232442e61",
+      "commit_date": "2026-10-10T19:47:00-06:00",
+      "ts": "2026-10-11T01:47:00Z",
+      "message": "Add shared docking with SoundCraft theme and MIDI sizing (#167)",
       "stage": "pre-alpha",
       "next_stage": "alpha",
       "last_updated": "2026-10-10",
@@ -291,15 +671,20 @@
         950,
         1450
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
       "mainstream_pct": 36.0,
       "essentials_pct": 57.0,
-      "breadth_pct": 70.0
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
     },
     {
-      "commit": "434c600",
-      "commit_full": "434c60047df4ac6b26f891448cd9e0e709682810",
-      "commit_date": "2026-10-12T17:44:36+02:00",
-      "message": "clap-host: host embedded plugin editors on Windows",
+      "commit": "12d9f4d",
+      "commit_full": "12d9f4dde6632fe4fa2c69f786fb4b156e8b714c",
+      "commit_date": "2026-10-13T04:29:45-04:00",
+      "ts": "2026-10-13T08:29:45Z",
+      "message": "Compute timecode frame counts in i128 and clamp (#248) (#260)",
       "stage": "pre-alpha",
       "next_stage": "alpha",
       "last_updated": "2026-10-10",
@@ -309,15 +694,20 @@
         950,
         1450
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
       "mainstream_pct": 36.0,
       "essentials_pct": 57.0,
-      "breadth_pct": 70.0
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
     },
     {
-      "commit": "8c73d9c",
-      "commit_full": "8c73d9c8b365feaa10e3cce16f17d409115e8938",
-      "commit_date": "2026-10-12T18:15:38+02:00",
-      "message": "Docs: update the progress docs for this change",
+      "commit": "16335b8",
+      "commit_full": "16335b8259d50f29821509a3d519d46c93d708ca",
+      "commit_date": "2026-10-13T04:32:58-04:00",
+      "ts": "2026-10-13T08:32:58Z",
+      "message": "Saturate the bar offset for bars before 1 (#249) (#259)",
       "stage": "pre-alpha",
       "next_stage": "alpha",
       "last_updated": "2026-10-10",
@@ -327,123 +717,20 @@
         950,
         1450
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
       "mainstream_pct": 36.0,
       "essentials_pct": 57.0,
-      "breadth_pct": 70.0
-    },
-    {
-      "commit": "a1e9660",
-      "commit_full": "a1e9660e600ffd85d70e1ac2d82e88cbb4dbf100",
-      "commit_date": "2026-10-12T18:22:41+02:00",
-      "message": "Audio device settings: system, devices, sample rate, buffer size; opt-in ASIO",
-      "stage": "pre-alpha",
-      "next_stage": "alpha",
-      "last_updated": "2026-10-10",
-      "full_pct": 40.0,
-      "full_range": null,
-      "full_hours": [
-        950,
-        1450
-      ],
-      "mainstream_pct": 36.0,
-      "essentials_pct": 57.0,
-      "breadth_pct": 70.0
-    },
-    {
-      "commit": "ec41f80",
-      "commit_full": "ec41f804ff13cd73252af2217a576c4fb4998023",
-      "commit_date": "2026-10-12T18:26:37+02:00",
-      "message": "Docs: update the progress docs for this change",
-      "stage": "pre-alpha",
-      "next_stage": "alpha",
-      "last_updated": "2026-10-10",
-      "full_pct": 40.0,
-      "full_range": null,
-      "full_hours": [
-        950,
-        1450
-      ],
-      "mainstream_pct": 36.0,
-      "essentials_pct": 57.0,
-      "breadth_pct": 70.0
-    },
-    {
-      "commit": "6d626ad",
-      "commit_full": "6d626adf9f22e4f804bbd1ba77297be6296a6ca1",
-      "commit_date": "2026-10-12T18:31:37+02:00",
-      "message": "Docs: update the progress docs for this change",
-      "stage": "pre-alpha",
-      "next_stage": "alpha",
-      "last_updated": "2026-10-10",
-      "full_pct": 40.0,
-      "full_range": null,
-      "full_hours": [
-        950,
-        1450
-      ],
-      "mainstream_pct": 36.0,
-      "essentials_pct": 57.0,
-      "breadth_pct": 70.0
-    },
-    {
-      "commit": "992d715",
-      "commit_full": "992d71549359c3c8639074a84c7b5bc092f61973",
-      "commit_date": "2026-10-12T18:58:10+02:00",
-      "message": "Docs: Mix in a separate window",
-      "stage": "pre-alpha",
-      "next_stage": "alpha",
-      "last_updated": "2026-10-10",
-      "full_pct": 40.0,
-      "full_range": null,
-      "full_hours": [
-        950,
-        1450
-      ],
-      "mainstream_pct": 36.0,
-      "essentials_pct": 57.0,
-      "breadth_pct": 70.0
-    },
-    {
-      "commit": "f4233dc",
-      "commit_full": "f4233dc8f79cf7ba424212e4f4cde8396b9f5349",
-      "commit_date": "2026-10-13T04:30:18-04:00",
-      "message": "Merge main into #259",
-      "stage": "pre-alpha",
-      "next_stage": "alpha",
-      "last_updated": "2026-10-10",
-      "full_pct": 40.0,
-      "full_range": null,
-      "full_hours": [
-        950,
-        1450
-      ],
-      "mainstream_pct": 36.0,
-      "essentials_pct": 57.0,
-      "breadth_pct": 70.0
-    },
-    {
-      "commit": "7c061de",
-      "commit_full": "7c061de73756149d8b347c817f074f0b8df33143",
-      "commit_date": "2026-10-13T04:30:18-04:00",
-      "message": "Merge main into #261",
-      "stage": "pre-alpha",
-      "next_stage": "alpha",
-      "last_updated": "2026-10-10",
-      "full_pct": 40.0,
-      "full_range": null,
-      "full_hours": [
-        950,
-        1450
-      ],
-      "mainstream_pct": 36.0,
-      "essentials_pct": 57.0,
-      "breadth_pct": 70.0
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
     },
     {
       "commit": "c7a4c54",
       "commit_full": "c7a4c544c099dcfd01803dc8d3f9d8588c68d613",
       "commit_date": "2026-10-13T04:33:02-04:00",
-      "message": "Merge pull request #261 from Silvertree2010/fix/cli-convert-validation",
+      "ts": "2026-10-13T08:33:02Z",
+      "message": "Reject invalid --rate and --bit-depth in convert (#256) (#261)",
       "stage": "pre-alpha",
       "next_stage": "alpha",
       "last_updated": "2026-10-10",
@@ -453,15 +740,20 @@
         950,
         1450
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
       "mainstream_pct": 36.0,
       "essentials_pct": 57.0,
-      "breadth_pct": 70.0
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
     },
     {
-      "commit": "b0daf32",
-      "commit_full": "b0daf3213e395be51543a2918aa51e89a784e428",
-      "commit_date": "2026-10-13T06:08:18-04:00",
-      "message": "Merge main into #315",
+      "commit": "13316cf",
+      "commit_full": "13316cf60ebe10c8e6af1d4db59682ca70e805e8",
+      "commit_date": "2026-10-13T06:31:24-04:00",
+      "ts": "2026-10-13T10:31:24Z",
+      "message": "Plugin editor windows on Windows (VST3 and embedded CLAP) (#315)",
       "stage": "pre-alpha",
       "next_stage": "alpha",
       "last_updated": "2026-10-10",
@@ -471,15 +763,20 @@
         950,
         1450
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
       "mainstream_pct": 36.0,
       "essentials_pct": 57.0,
-      "breadth_pct": 70.0
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
     },
     {
-      "commit": "edd1787",
-      "commit_full": "edd1787353890536501be54676806e0655b80e75",
-      "commit_date": "2026-10-13T06:13:17-04:00",
-      "message": "Merge main into #322",
+      "commit": "7c9a188",
+      "commit_full": "7c9a18878b4d0ef12e61f03368f7139f97126eca",
+      "commit_date": "2026-10-13T06:32:11-04:00",
+      "ts": "2026-10-13T10:32:11Z",
+      "message": "Mix in a separate window: Edit and Mix on screen at once (#322)",
       "stage": "pre-alpha",
       "next_stage": "alpha",
       "last_updated": "2026-10-10",
@@ -489,15 +786,20 @@
         950,
         1450
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
       "mainstream_pct": 36.0,
       "essentials_pct": 57.0,
-      "breadth_pct": 70.0
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
     },
     {
-      "commit": "c2f0527",
-      "commit_full": "c2f052715d335d630ab0d5390103dd148ee84278",
-      "commit_date": "2026-10-13T06:16:54-04:00",
-      "message": "Merge main into #319",
+      "commit": "8e360b3",
+      "commit_full": "8e360b336bc9f22bdebfc40a7e17ee8f59d714e2",
+      "commit_date": "2026-10-13T06:32:41-04:00",
+      "ts": "2026-10-13T10:32:41Z",
+      "message": "Audio device settings (system, devices, rate, buffer) and opt-in ASIO (#319)",
       "stage": "pre-alpha",
       "next_stage": "alpha",
       "last_updated": "2026-10-10",
@@ -507,15 +809,20 @@
         950,
         1450
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
       "mainstream_pct": 36.0,
       "essentials_pct": 57.0,
-      "breadth_pct": 70.0
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
     },
     {
-      "commit": "20927d7",
-      "commit_full": "20927d768467800a909bc60bae02a66f293014f6",
-      "commit_date": "2026-10-13T06:25:56-04:00",
-      "message": "Merge #315's latest into the landing branch",
+      "commit": "fca7285",
+      "commit_full": "fca728501f58cfe1b9bc09a9d1ee85bfc1e3d222",
+      "commit_date": "2026-10-13T06:53:50-04:00",
+      "ts": "2026-10-13T10:53:50Z",
+      "message": "Mix: delay compensation covers the master faders' inserts (#351) (#409)",
       "stage": "pre-alpha",
       "next_stage": "alpha",
       "last_updated": "2026-10-10",
@@ -525,15 +832,20 @@
         950,
         1450
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
       "mainstream_pct": 36.0,
       "essentials_pct": 57.0,
-      "breadth_pct": 70.0
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
     },
     {
-      "commit": "94390f4",
-      "commit_full": "94390f49fa0ba5215dc35e341727b5e340e52e84",
-      "commit_date": "2026-10-13T06:25:57-04:00",
-      "message": "Merge #319's latest into the landing branch",
+      "commit": "9ad9eb8",
+      "commit_full": "9ad9eb88e40c16ffb8ce68a54319e77f734b4e8a",
+      "commit_date": "2026-10-13T06:53:54-04:00",
+      "ts": "2026-10-13T10:53:54Z",
+      "message": "Mix: a bus bounce compensates the aux returns onto it (#246) (#408)",
       "stage": "pre-alpha",
       "next_stage": "alpha",
       "last_updated": "2026-10-10",
@@ -543,15 +855,20 @@
         950,
         1450
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
       "mainstream_pct": 36.0,
       "essentials_pct": 57.0,
-      "breadth_pct": 70.0
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
     },
     {
-      "commit": "1dcd6aa",
-      "commit_full": "1dcd6aa06471831fed66a3161cb6927651f108fc",
-      "commit_date": "2026-10-13T06:25:57-04:00",
-      "message": "Merge #322's latest into the landing branch",
+      "commit": "cf755b8",
+      "commit_full": "cf755b8cd231f3f8c6dc2868eea3d98593882842",
+      "commit_date": "2026-10-13T06:53:58-04:00",
+      "ts": "2026-10-13T10:53:58Z",
+      "message": "Engine: mix.instrument takes the instrument's parameters and refuses unknown fields (#265) (#410)",
       "stage": "pre-alpha",
       "next_stage": "alpha",
       "last_updated": "2026-10-10",
@@ -561,262 +878,14 @@
         950,
         1450
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
       "mainstream_pct": 36.0,
       "essentials_pct": 57.0,
-      "breadth_pct": 70.0
-    },
-    {
-      "commit": "844830b",
-      "commit_full": "844830bf6f89ad090c40f8240b04f8a73144f022",
-      "commit_date": "2026-10-13T06:31:36-04:00",
-      "message": "Merge main into #322",
-      "stage": "pre-alpha",
-      "next_stage": "alpha",
-      "last_updated": "2026-10-10",
-      "full_pct": 40.0,
-      "full_range": null,
-      "full_hours": [
-        950,
-        1450
-      ],
-      "mainstream_pct": 36.0,
-      "essentials_pct": 57.0,
-      "breadth_pct": 70.0
-    },
-    {
-      "commit": "afa850d",
-      "commit_full": "afa850d6972646f3590fd7f141884d551010f537",
-      "commit_date": "2026-10-13T06:32:14-04:00",
-      "message": "Merge main into #319",
-      "stage": "pre-alpha",
-      "next_stage": "alpha",
-      "last_updated": "2026-10-10",
-      "full_pct": 40.0,
-      "full_range": null,
-      "full_hours": [
-        950,
-        1450
-      ],
-      "mainstream_pct": 36.0,
-      "essentials_pct": 57.0,
-      "breadth_pct": 70.0
-    },
-    {
-      "commit": "6d4f9a4",
-      "commit_full": "6d4f9a41a5dc61b633891f9253695c73b6eec492",
-      "commit_date": "2026-10-13T06:44:55-04:00",
-      "message": "Merge main into #409",
-      "stage": "pre-alpha",
-      "next_stage": "alpha",
-      "last_updated": "2026-10-10",
-      "full_pct": 40.0,
-      "full_range": null,
-      "full_hours": [
-        950,
-        1450
-      ],
-      "mainstream_pct": 36.0,
-      "essentials_pct": 57.0,
-      "breadth_pct": 70.0
-    },
-    {
-      "commit": "14862a5",
-      "commit_full": "14862a51399a480e599d133855f3ab3ebc5884ee",
-      "commit_date": "2026-10-13T06:45:20-04:00",
-      "message": "Merge main into #408",
-      "stage": "pre-alpha",
-      "next_stage": "alpha",
-      "last_updated": "2026-10-10",
-      "full_pct": 40.0,
-      "full_range": null,
-      "full_hours": [
-        950,
-        1450
-      ],
-      "mainstream_pct": 36.0,
-      "essentials_pct": 57.0,
-      "breadth_pct": 70.0
-    },
-    {
-      "commit": "b32d7bd",
-      "commit_full": "b32d7bd9265b811723e134cf6c951727b4ef48df",
-      "commit_date": "2026-10-13T06:45:33-04:00",
-      "message": "Merge main into #410; put the mix.instrument note in the Instruments row's 'have' cell",
-      "stage": "pre-alpha",
-      "next_stage": "alpha",
-      "last_updated": "2026-10-10",
-      "full_pct": 40.0,
-      "full_range": null,
-      "full_hours": [
-        950,
-        1450
-      ],
-      "mainstream_pct": 36.0,
-      "essentials_pct": 57.0,
-      "breadth_pct": 70.0
-    },
-    {
-      "commit": "3498db9",
-      "commit_full": "3498db9e51f48a3de99505107edece43992cded2",
-      "commit_date": "2026-10-13T11:01:34+02:00",
-      "message": "Docs: update the progress docs for this change",
-      "stage": "pre-alpha",
-      "next_stage": "alpha",
-      "last_updated": "2026-10-10",
-      "full_pct": 40.0,
-      "full_range": null,
-      "full_hours": [
-        950,
-        1450
-      ],
-      "mainstream_pct": 36.0,
-      "essentials_pct": 57.0,
-      "breadth_pct": 70.0
-    },
-    {
-      "commit": "c4573d7",
-      "commit_full": "c4573d7fc8ce36f0cce96dc55606d29112f1d021",
-      "commit_date": "2026-10-13T11:11:12+02:00",
-      "message": "Docs: update the progress docs for this change",
-      "stage": "pre-alpha",
-      "next_stage": "alpha",
-      "last_updated": "2026-10-10",
-      "full_pct": 40.0,
-      "full_range": null,
-      "full_hours": [
-        950,
-        1450
-      ],
-      "mainstream_pct": 36.0,
-      "essentials_pct": 57.0,
-      "breadth_pct": 70.0
-    },
-    {
-      "commit": "dd3ef4b",
-      "commit_full": "dd3ef4b11a6d8d0a36fe99885550f0e806f2bf8f",
-      "commit_date": "2026-10-13T11:17:57+02:00",
-      "message": "Docs: update the progress docs for this change",
-      "stage": "pre-alpha",
-      "next_stage": "alpha",
-      "last_updated": "2026-10-10",
-      "full_pct": 40.0,
-      "full_range": null,
-      "full_hours": [
-        950,
-        1450
-      ],
-      "mainstream_pct": 36.0,
-      "essentials_pct": 57.0,
-      "breadth_pct": 70.0
-    },
-    {
-      "commit": "7eb643f",
-      "commit_full": "7eb643fc5eb11a3bced8bc90f12a6713999fceb4",
-      "commit_date": "2026-10-13T11:44:15+02:00",
-      "message": "clap-host: host embedded plugin editors on Windows",
-      "stage": "pre-alpha",
-      "next_stage": "alpha",
-      "last_updated": "2026-10-10",
-      "full_pct": 40.0,
-      "full_range": null,
-      "full_hours": [
-        950,
-        1450
-      ],
-      "mainstream_pct": 36.0,
-      "essentials_pct": 57.0,
-      "breadth_pct": 70.0
-    },
-    {
-      "commit": "fbee545",
-      "commit_full": "fbee545a5e4a6df20de46a303ca8a531c03145fe",
-      "commit_date": "2026-10-13T11:44:51+02:00",
-      "message": "ROADMAP: no blank line inside the progress log (rebase leftover)",
-      "stage": "pre-alpha",
-      "next_stage": "alpha",
-      "last_updated": "2026-10-10",
-      "full_pct": 40.0,
-      "full_range": null,
-      "full_hours": [
-        950,
-        1450
-      ],
-      "mainstream_pct": 36.0,
-      "essentials_pct": 57.0,
-      "breadth_pct": 70.0
-    },
-    {
-      "commit": "0a2492b",
-      "commit_full": "0a2492b6105dfaef5bd72e7f0d3df29a46733315",
-      "commit_date": "2026-10-13T11:46:55+02:00",
-      "message": "Audio device settings: system, devices, sample rate, buffer size; opt-in ASIO",
-      "stage": "pre-alpha",
-      "next_stage": "alpha",
-      "last_updated": "2026-10-10",
-      "full_pct": 40.0,
-      "full_range": null,
-      "full_hours": [
-        950,
-        1450
-      ],
-      "mainstream_pct": 36.0,
-      "essentials_pct": 57.0,
-      "breadth_pct": 70.0
-    },
-    {
-      "commit": "0e6f5ac",
-      "commit_full": "0e6f5accb456a2a76eedf73e3c10088274ffffe2",
-      "commit_date": "2026-10-13T11:47:30+02:00",
-      "message": "ROADMAP: no blank line inside the progress log (rebase leftover)",
-      "stage": "pre-alpha",
-      "next_stage": "alpha",
-      "last_updated": "2026-10-10",
-      "full_pct": 40.0,
-      "full_range": null,
-      "full_hours": [
-        950,
-        1450
-      ],
-      "mainstream_pct": 36.0,
-      "essentials_pct": 57.0,
-      "breadth_pct": 70.0
-    },
-    {
-      "commit": "6d91060",
-      "commit_full": "6d910609e1f68dc9923d40160b954077f7ccfb49",
-      "commit_date": "2026-10-13T11:47:42+02:00",
-      "message": "Docs: Mix in a separate window",
-      "stage": "pre-alpha",
-      "next_stage": "alpha",
-      "last_updated": "2026-10-10",
-      "full_pct": 40.0,
-      "full_range": null,
-      "full_hours": [
-        950,
-        1450
-      ],
-      "mainstream_pct": 36.0,
-      "essentials_pct": 57.0,
-      "breadth_pct": 70.0
-    },
-    {
-      "commit": "3b7a1f2",
-      "commit_full": "3b7a1f2b336472e1806455887fdf99ff67c15584",
-      "commit_date": "2026-10-13T11:47:49+02:00",
-      "message": "ROADMAP: no blank line inside the progress log (rebase leftover)",
-      "stage": "pre-alpha",
-      "next_stage": "alpha",
-      "last_updated": "2026-10-10",
-      "full_pct": 40.0,
-      "full_range": null,
-      "full_hours": [
-        950,
-        1450
-      ],
-      "mainstream_pct": 36.0,
-      "essentials_pct": 57.0,
-      "breadth_pct": 70.0
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-16T16:28:44+00:00"
+  "updated_at": "2026-10-18T17:56:39+00:00"
 }

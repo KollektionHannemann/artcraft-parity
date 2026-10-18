@@ -255,11 +255,354 @@
       }
     ]
   },
+  "parity": {
+    "tracked_since": "2026-10-10T18:13:04Z",
+    "changes": 0,
+    "truncated": false,
+    "last_change": null
+  },
+  "roadmap": {
+    "revisions": 8,
+    "revisions_7d": 4,
+    "last_revision": {
+      "ts": "2026-10-13T09:37:45Z",
+      "kind": "content",
+      "commit": "e773d93",
+      "commit_full": "e773d93164d12b58348637a6317894a118f2d06b",
+      "message": "HATCHEDIT: refuse an explicit bad scale or angle before editing anything (#724) (#777)"
+    },
+    "last_update": {
+      "ts": "2026-10-13T09:37:45Z",
+      "kind": "content",
+      "commit": "e773d93",
+      "commit_full": "e773d93164d12b58348637a6317894a118f2d06b",
+      "message": "HATCHEDIT: refuse an explicit bad scale or angle before editing anything (#724) (#777)"
+    },
+    "self_reported": "2026-10-10"
+  },
+  "milestone": null,
+  "activity": {
+    "level": "active",
+    "score": 9.5,
+    "active_days_7d": 4,
+    "changes_7d": 135,
+    "changes_14d": 457,
+    "housekeeping_7d": 14,
+    "last_code_change": {
+      "ts": "2026-10-17T18:14:01Z",
+      "commit": "ff6cc8b",
+      "commit_full": "ff6cc8b3fc61046a74df5c9daeea542946e55be8",
+      "subject": "Bound control-port input, and follow stored paths only on this computer or the drawing's share (#1518)"
+    },
+    "last_commit_ts": "2026-10-18T14:39:39Z",
+    "repo_since": "2026-10-06T00:15:47Z",
+    "window": [
+      0,
+      13,
+      0,
+      2,
+      1,
+      191,
+      115,
+      29,
+      104,
+      0,
+      0,
+      1,
+      1,
+      0
+    ],
+    "days": [
+      {
+        "d": "2026-10-06",
+        "code": 13,
+        "other": 4,
+        "samples": [
+          {
+            "commit": "1c86787",
+            "subject": "Merge branch 'worktree-agent-a2f28e507557a5b11'"
+          },
+          {
+            "commit": "a599137",
+            "subject": "README screenshots, alpha/parity assessment in ROADMAP, MLEADER written to DXF as LEADER + MTEXT"
+          },
+          {
+            "commit": "12d5f5d",
+            "subject": "Merge branch 'worktree-agent-a8983b474d3226b17'"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-07",
+        "code": 0,
+        "other": 1,
+        "samples": []
+      },
+      {
+        "d": "2026-10-08",
+        "code": 2,
+        "other": 5,
+        "samples": [
+          {
+            "commit": "7c7c1f9",
+            "subject": "Release: Flatpak x86_64/aarch64, AppImage zsync updates, README Downloads (#16)"
+          },
+          {
+            "commit": "ef1b55d",
+            "subject": "About: contributor and model credits compiled in (grab bag + table, self-submitted names) (#3)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-09",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "86f3199",
+            "subject": "macOS DMG: branded window background and icon layout (#13)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-10",
+        "code": 191,
+        "other": 5,
+        "samples": [
+          {
+            "commit": "fc4220e",
+            "subject": "Plot styles: named styles (STB), PLOTSTYLE, STYLESMANAGER and table files (part of #410) (#418)"
+          },
+          {
+            "commit": "58a3497",
+            "subject": "Groups: GROUP, UNGROUP and GROUPEDIT commands; erased members leave their groups (part of #417) (#422)"
+          },
+          {
+            "commit": "87d1e28",
+            "subject": "MLEADER: spline and no-leader types, block content (fixes #408) (#419)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-11",
+        "code": 115,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "135c928",
+            "subject": "Hatches: draw the pattern definition stored in the file; scale library patterns in metric drawings (#643)"
+          },
+          {
+            "commit": "9477f37",
+            "subject": "File-format follow-ups: version-gated MULTILEADER and DIMSTYLE groups, kept $DWGCODEPAGE, PURGE multiline styles (#632)"
+          },
+          {
+            "commit": "3701501",
+            "subject": "Linux: Theme > System follows the desktop's light/dark setting (#641)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-12",
+        "code": 29,
+        "other": 4,
+        "samples": [
+          {
+            "commit": "4cb9e8a",
+            "subject": "Release 0.6.1: check out craft-fonts in release builds"
+          },
+          {
+            "commit": "890f7f1",
+            "subject": "Performance: reuse nearby snap geometry for tracking acquisition (#698)"
+          },
+          {
+            "commit": "4bb3acb",
+            "subject": "Add Chinese language support to preferences (#684)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-13",
+        "code": 104,
+        "other": 5,
+        "samples": [
+          {
+            "commit": "e707ab4",
+            "subject": "cargo fmt after the #903 merge"
+          },
+          {
+            "commit": "8cd0d46",
+            "subject": "Zoom and pan regenerate in the background instead of freezing the window (#903)"
+          },
+          {
+            "commit": "1e075f7",
+            "subject": "Arabic (العربية) UI translation: language switching + font fallback (#798)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-14",
+        "code": 0,
+        "other": 1,
+        "samples": []
+      },
+      {
+        "d": "2026-10-16",
+        "code": 1,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "be3ce73",
+            "subject": "fix(engine): preserve rectangle area with ortho enabled (#1117)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-17",
+        "code": 1,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "ff6cc8b",
+            "subject": "Bound control-port input, and follow stored paths only on this computer or the drawing's share (#1518)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-18",
+        "code": 0,
+        "other": 2,
+        "samples": []
+      }
+    ]
+  },
+  "releases": [
+    {
+      "tag": "v0.8.0",
+      "name": "CADCraft v0.8.0",
+      "ts": "2026-10-17T23:35:10Z",
+      "url": "https://github.com/storytold/cadcraft/releases/tag/v0.8.0",
+      "changes": 3,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.7.0",
+      "name": "CADCraft v0.7.0",
+      "ts": "2026-10-14T15:29:49Z",
+      "url": "https://github.com/storytold/cadcraft/releases/tag/v0.7.0",
+      "changes": 102,
+      "new_contributors": 20,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.6.2",
+      "name": "CADCraft v0.6.2",
+      "ts": "2026-10-12T16:40:01Z",
+      "url": "https://github.com/storytold/cadcraft/releases/tag/v0.6.2",
+      "changes": 153,
+      "new_contributors": 20,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.5.0",
+      "name": "CADCraft v0.5.0",
+      "ts": "2026-10-11T00:11:33Z",
+      "url": "https://github.com/storytold/cadcraft/releases/tag/v0.5.0",
+      "changes": 180,
+      "new_contributors": 11,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.4.0",
+      "name": "CADCraft v0.4.0",
+      "ts": "2026-10-10T02:51:15Z",
+      "url": "https://github.com/storytold/cadcraft/releases/tag/v0.4.0",
+      "changes": 1,
+      "new_contributors": 1,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.3.0",
+      "name": "CADCraft v0.3.0",
+      "ts": "2026-10-08T14:41:49Z",
+      "url": "https://github.com/storytold/cadcraft/releases/tag/v0.3.0",
+      "changes": 2,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.1.0",
+      "name": "CADCraft v0.1.0",
+      "ts": "2026-10-08T03:07:48Z",
+      "url": "https://github.com/storytold/cadcraft/releases/tag/v0.1.0",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": null
+    }
+  ],
   "history": [
     {
       "commit": "3ea7de1",
       "commit_full": "3ea7de193824b732760f88d25ed5f261a8ab2bd7",
       "commit_date": "2026-10-10T14:13:04-04:00",
+      "ts": "2026-10-10T18:13:04Z",
       "message": "Progress docs: target-app parity, gaps, alpha gate, readiness by audience (#205)",
       "stage": "pre-alpha",
       "next_stage": "alpha",
@@ -270,15 +613,20 @@
         1150,
         1850
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Autodesk AutoCAD 2027",
       "mainstream_pct": 28.0,
       "essentials_pct": 46.0,
-      "breadth_pct": 50.0
+      "breadth_pct": 50.0,
+      "full_prev": null,
+      "kind": "first"
     },
     {
-      "commit": "58a8494",
-      "commit_full": "58a8494f98c036c9b7f82f40e1d7b5b4b513921b",
-      "commit_date": "2026-10-10T18:31:07-06:00",
-      "message": "UI: retain shared workspace while merging current main",
+      "commit": "50ffb76",
+      "commit_full": "50ffb767c7277067a959135209a4cfce5af5d5e8",
+      "commit_date": "2026-10-10T18:54:11-06:00",
+      "ts": "2026-10-11T00:54:11Z",
+      "message": "Add shared workspace docking to CADCraft (#456)",
       "stage": "pre-alpha",
       "next_stage": "alpha",
       "last_updated": "2026-10-10",
@@ -288,14 +636,19 @@
         1150,
         1850
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Autodesk AutoCAD 2027",
       "mainstream_pct": 28.0,
       "essentials_pct": 46.0,
-      "breadth_pct": 50.0
+      "breadth_pct": 50.0,
+      "full_prev": 38.0,
+      "kind": "content"
     },
     {
       "commit": "b3a7362",
       "commit_full": "b3a73626b290082f6f3dd1c1e47b63b576a6ff53",
       "commit_date": "2026-10-11T11:19:47-04:00",
+      "ts": "2026-10-11T15:19:47Z",
       "message": "SAVEAS version and binary DXF, default save version (fixes #421) (#431)",
       "stage": "pre-alpha",
       "next_stage": "alpha",
@@ -306,14 +659,19 @@
         1150,
         1850
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Autodesk AutoCAD 2027",
       "mainstream_pct": 28.0,
       "essentials_pct": 46.0,
-      "breadth_pct": 50.0
+      "breadth_pct": 50.0,
+      "full_prev": 38.0,
+      "kind": "content"
     },
     {
       "commit": "d7f3e48",
       "commit_full": "d7f3e48362b5bca1fcf7c55672a9088dcc6135e1",
       "commit_date": "2026-10-11T14:36:40-04:00",
+      "ts": "2026-10-11T18:36:40Z",
       "message": "Add German (de) interface language (#573)",
       "stage": "pre-alpha",
       "next_stage": "alpha",
@@ -324,14 +682,19 @@
         1150,
         1850
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Autodesk AutoCAD 2027",
       "mainstream_pct": 28.0,
       "essentials_pct": 46.0,
-      "breadth_pct": 50.0
+      "breadth_pct": 50.0,
+      "full_prev": 38.0,
+      "kind": "content"
     },
     {
       "commit": "b2ba585",
       "commit_full": "b2ba58525152bd2a55132c08a2ff7a1142e3240b",
       "commit_date": "2026-10-13T04:34:46-04:00",
+      "ts": "2026-10-13T08:34:46Z",
       "message": "TRIM: a pick after a closed polyline's last cut keeps only the complementary run (#726) (#771)",
       "stage": "pre-alpha",
       "next_stage": "alpha",
@@ -342,14 +705,19 @@
         1150,
         1850
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Autodesk AutoCAD 2027",
       "mainstream_pct": 28.0,
       "essentials_pct": 46.0,
-      "breadth_pct": 50.0
+      "breadth_pct": 50.0,
+      "full_prev": 38.0,
+      "kind": "content"
     },
     {
       "commit": "ecdb8f9",
       "commit_full": "ecdb8f96b252378553e2de5209c616621658be17",
       "commit_date": "2026-10-13T04:36:40-04:00",
+      "ts": "2026-10-13T08:36:40Z",
       "message": "i18n: Italian interface catalog (it.tsv) (#789)",
       "stage": "pre-alpha",
       "next_stage": "alpha",
@@ -360,14 +728,19 @@
         1150,
         1850
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Autodesk AutoCAD 2027",
       "mainstream_pct": 28.0,
       "essentials_pct": 46.0,
-      "breadth_pct": 50.0
+      "breadth_pct": 50.0,
+      "full_prev": 38.0,
+      "kind": "content"
     },
     {
       "commit": "9464945",
       "commit_full": "9464945f82278ff0d1c3905e0cb7a2d1efedc6eb",
       "commit_date": "2026-10-13T04:37:31-04:00",
+      "ts": "2026-10-13T08:37:31Z",
       "message": "REFEDIT, REFSET and REFCLOSE: edit block references in place (#818)",
       "stage": "pre-alpha",
       "next_stage": "alpha",
@@ -378,14 +751,19 @@
         1150,
         1850
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Autodesk AutoCAD 2027",
       "mainstream_pct": 28.0,
       "essentials_pct": 46.0,
-      "breadth_pct": 50.0
+      "breadth_pct": 50.0,
+      "full_prev": 38.0,
+      "kind": "content"
     },
     {
       "commit": "e773d93",
       "commit_full": "e773d93164d12b58348637a6317894a118f2d06b",
       "commit_date": "2026-10-13T05:37:45-04:00",
+      "ts": "2026-10-13T09:37:45Z",
       "message": "HATCHEDIT: refuse an explicit bad scale or angle before editing anything (#724) (#777)",
       "stage": "pre-alpha",
       "next_stage": "alpha",
@@ -396,10 +774,14 @@
         1150,
         1850
       ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Autodesk AutoCAD 2027",
       "mainstream_pct": 28.0,
       "essentials_pct": 46.0,
-      "breadth_pct": 50.0
+      "breadth_pct": 50.0,
+      "full_prev": 38.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-16T16:28:46+00:00"
+  "updated_at": "2026-10-18T17:56:46+00:00"
 }
