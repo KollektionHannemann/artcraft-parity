@@ -571,6 +571,16 @@ class PipelineTest(unittest.TestCase):
         self.assertEqual((self.overview_app()["release"]["tag"], self.overview_app()["release"]["source"]),
                          ("v0.1.0", "tag"))
 
+    def test_aging_data_changes_files_only_at_midnight(self):
+        r = self.repos["testcraft"]
+        r.commit(NOW - timedelta(days=9), "rev", {"ROADMAP.md": roadmap(50), "src/a.rs": "1"})
+        r.commit(NOW - timedelta(days=7, minutes=-30), "log", {"ROADMAP.md": roadmap(50, progress=[("2026-10-11", "x")])})
+        self.run_update()
+        before = {p: p.read_bytes() for p in (self.root / "data").rglob("*.json")}
+        self.run_update(now=NOW + timedelta(hours=1))  # a revision crosses "7 days ago" within the same day
+        after = {p: p.read_bytes() for p in (self.root / "data").rglob("*.json")}
+        self.assertEqual(before, after)
+
     def test_unchanged_run_writes_nothing(self):
         self.base_history()
         self.run_update()

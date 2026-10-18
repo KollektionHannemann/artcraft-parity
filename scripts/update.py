@@ -531,10 +531,10 @@ def roadmap_summary(history: list, now: datetime) -> dict:
         return None if not h else {"ts": h["ts"], "kind": h["kind"], "commit": h["commit"],
                                    "commit_full": h["commit_full"], "message": h["message"]}
     substantive = [h for h in history if h.get("kind") in ("parity", "estimates", "content")]
-    cutoff = now - timedelta(days=7)
+    first_day = now.date() - timedelta(days=6)  # whole UTC days, so the count only moves at midnight
     return {
         "revisions": len(history),
-        "revisions_7d": sum(1 for h in substantive if parse_ts(h["ts"]) >= cutoff),
+        "revisions_7d": sum(1 for h in substantive if parse_ts(h["ts"]).date() >= first_day),
         "last_revision": ref(history[-1] if history else None),
         "last_update": ref(substantive[-1] if substantive else None),
         "self_reported": history[-1].get("last_updated") if history else None,
