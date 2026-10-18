@@ -218,7 +218,13 @@
   .what-row:first-child { border-top: 0; padding-top: 0; }
   .what-row .k { color: var(--faint); padding-top: 2px; }
   .what-row .v { min-width: 0; }
-  .what-row .m { color: var(--muted); display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  /* Long commit and PR titles: one line that scrolls sideways instead of being cut off */
+  .what-row .m { color: var(--muted); display: block; white-space: nowrap; overflow-x: auto; overflow-y: hidden;
+    overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: var(--line-2) transparent; padding-bottom: 4px; }
+  .what-row .m.fade-end { -webkit-mask-image: linear-gradient(90deg, #000 82%, transparent); mask-image: linear-gradient(90deg, #000 82%, transparent); }
+  .what-row .m::-webkit-scrollbar { height: 3px; }
+  .what-row .m::-webkit-scrollbar-thumb { background: var(--line-2); }
+  .what-row .m:hover::-webkit-scrollbar-thumb, .what-row .m:focus-visible::-webkit-scrollbar-thumb { background: var(--muted); }
   .btn { display: flex; align-items: center; justify-content: center; height: 40px; background: var(--text); color: #000; font-weight: 600; margin-top: auto; }
   .btn:hover, .card:hover .btn { background: #d9d9d9; }
 
@@ -430,7 +436,7 @@
   /* The headline metric is "Ready for real work" (the roadmaps' full target). Product parity is the roadmaps'
      feature breadth: whether the reference product's features exist, not whether they are ready for daily work. */
   const METRICS = {
-    ready: { key: "full_pct", label: "Ready for real work", short: "Ready", lab: "Ready for<br>real work" },
+    ready: { key: "full_pct", label: "Ready for real work", short: "Ready", lab: "" },  // the default needs no label
     breadth: { key: "breadth_pct", label: "Product parity", short: "Parity", lab: "Product parity<br>feature breadth" },
   };
   const SORTS = [
@@ -724,7 +730,7 @@
       <section class="hero">
         <section>
           <div class="eyebrow mono muted">
-            <span>Ready for real work · ${all.length} Craft apps</span>
+            <span>${all.length} Craft apps</span>
             <details class="info"><summary>What's this?</summary><div>
               <p><b style="color:var(--text)">Ready for real work</b> is how much of its reference product (Photoshop, Illustrator, Word and others) a professional could replace with the Craft app today. It's the row "Full target (ready for real work)" in each ROADMAP.md, and the number this page is about.</p>
               <p><b style="color:var(--text)">Product parity</b> is the feature breadth: how many of the reference product's features exist at all, ready or not. You can switch to it above the cards.</p>
@@ -850,11 +856,11 @@
     const M = METRICS[state.metric];
     const shown = a[M.key];
     const what = [
-      ["Ready", lc ? `<b class="${lc.delta > 0 ? "up" : "down"}">${pp(lc.delta)}</b> to ${pct(lc.to)} % · ${when(lc.ts)}<span class="m">${esc(lc.message)}</span>`
-        : `Unchanged since ${dateEN(a.parity?.tracked_since, false)}<span class="m">First value read ${dateEN(a.parity?.tracked_since)}</span>`],
-      ["Roadmap", ru ? `${ruLabel(ru.kind)} · ${when(ru.ts)}<span class="m">${esc(ru.message)}</span>` : "No revisions yet"],
-      ["Code", act?.last_code_change ? `${plural(act.changes_7d, "change")} in 7 days · latest ${when(act.last_code_change.ts)}<span class="m">${esc(act.last_code_change.subject)}</span>` : "No code changes found"],
-      ["Release", r ? `${esc(r.tag)} · ${when(r.ts)}<span class="m">${releaseKind(r.kind)}${r.changes ? ", " + plural(r.changes, "change") : ""}</span>` : "No releases yet"],
+      ["Ready", lc ? `<b class="${lc.delta > 0 ? "up" : "down"}">${pp(lc.delta)}</b> to ${pct(lc.to)} % · ${when(lc.ts)}<span class="m" tabindex="0">${esc(lc.message)}</span>`
+        : `Unchanged since ${dateEN(a.parity?.tracked_since, false)}<span class="m" tabindex="0">First value read ${dateEN(a.parity?.tracked_since)}</span>`],
+      ["Roadmap", ru ? `${ruLabel(ru.kind)} · ${when(ru.ts)}<span class="m" tabindex="0">${esc(ru.message)}</span>` : "No revisions yet"],
+      ["Code", act?.last_code_change ? `${plural(act.changes_7d, "change")} in 7 days · latest ${when(act.last_code_change.ts)}<span class="m" tabindex="0">${esc(act.last_code_change.subject)}</span>` : "No code changes found"],
+      ["Release", r ? `${esc(r.tag)} · ${when(r.ts)}<span class="m" tabindex="0">${releaseKind(r.kind)}${r.changes ? ", " + plural(r.changes, "change") : ""}</span>` : "No releases yet"],
     ].map(([k, v]) => `<div class="what-row"><span class="k mono">${k}</span><span class="v">${v}</span></div>`).join("");
     return `
       <article class="card${msS?.kind === "fresh" ? " ms-fresh" : ""}" data-go="${esc(a.id)}" style="--c:${c}">
@@ -877,7 +883,7 @@
         </div>
         <div class="full">
           <div class="full-num" data-v="${shown ?? ""}">${pct(shown)}<span>%</span></div>
-          <div class="full-lab mono">${M.lab}</div>
+          ${M.lab ? `<div class="full-lab mono">${M.lab}</div>` : ""}
         </div>
         ${bar(shown, state.metric === "ready")}
         <div class="pline">${state.metric === "ready" ? parityLine(a)
@@ -909,6 +915,14 @@
     grid.innerHTML = apps.map(card).join("") || `<div class="empty mono">No matches</div>`;
     open.forEach((id) => grid.querySelector(`[data-go="${CSS.escape(id)}"] details.what`)?.setAttribute("open", ""));
 
+    // Scrollable title lines fade out at the right edge while there is more to read
+    const fade = (m) => m.classList.toggle("fade-end", m.scrollLeft + m.clientWidth < m.scrollWidth - 2);
+    grid.querySelectorAll("details.what").forEach((d) => {
+      const lines = d.querySelectorAll(".what-row .m");
+      lines.forEach((m) => m.addEventListener("scroll", () => fade(m), { passive: true }));
+      d.addEventListener("toggle", () => { if (d.open) lines.forEach(fade); });
+      if (d.open) requestAnimationFrame(() => lines.forEach(fade));
+    });
     grid.querySelectorAll("[data-go]").forEach((el) => {
       el.addEventListener("click", (e) => {
         if (e.target.closest("a, summary, details")) return;
