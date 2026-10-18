@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "1cea0f7",
-  "latest_commit_date": "2026-10-18T09:37:37-04:00",
-  "latest_message": "Equations: a script runs until a space or operator, as in Word (V_dd, x_2a) (#1609) (#1951)",
+  "latest_commit": "d6f20f9",
+  "latest_commit_date": "2026-10-18T09:57:47-04:00",
+  "latest_message": "Tables: at-least rows taller than a page start on a fresh page; header rows follow (#1742) (#2004)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -342,6 +342,10 @@
       },
       {
         "date": "2026-10-15",
+        "text": "Table rows with an at-least height start the next page whole when less than their minimum is left on a page that already holds something, so one-row-per-page booklets keep their pages; rows taller than a page split from the top of the next page and repeated header rows go with the row (#1742)"
+      },
+      {
+        "date": "2026-10-15",
         "text": "AutoCorrect follows Turkish and Azerbaijani case mapping: istanbul → İstanbul, ılık → Ilık, İNgilizce → İngilizce with no combining dot (#1923)"
       },
       {
@@ -399,10 +403,6 @@
       {
         "date": "2026-10-15",
         "text": "Track Changes Options › Moves (gap #5): Moved from and Moved to each have a mark and a colour (by default green double strikethrough and double underline, as before and as in Word for Mac), saved per user; review.trackingOptions takes moveFromMark, moveFromColor, moveToMark, moveToColor, and trackMoves, the document's Track moves setting: off, a tracked cut and paste is an ordinary deletion and insertion. DOCX w:doNotTrackMoves round-trips"
-      },
-      {
-        "date": "2026-10-15",
-        "text": "Draw: Ink to Shape makes two-stroke arrows and arrows with a closed triangle head. A line plus a separate head stroke (an open V or a small closed triangle, drawn after the line or before it) whose apex sits at one of the line's ends becomes one straight arrow connector, and the head stroke goes, in one undo step; this works while drawing with Ink to Shape on and on lasso-selected strokes with Convert to Shapes. A shaft with a small triangle drawn round its tip in the same stroke is an arrow too; a triangle without a shaft stays a triangle. Our own design (Word for Mac has no Ink to Shape)."
       }
     ]
   },
@@ -6429,7 +6429,121 @@
       "essentials_pct": 63.0,
       "breadth_pct": 80.0,
       "previous_full_pct": 60.0
+    },
+    {
+      "commit": "69c2414",
+      "commit_full": "69c24146155a126b699fe6a1dc248d7cf2e66159",
+      "commit_date": "2026-10-18T09:55:11-04:00",
+      "message": "Fonts: bold Arial Black is not emboldened again, as in Word (#1750)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "7f4b649",
+      "commit_full": "7f4b649f6f99a76204ea09ca67e702b16edda77e",
+      "commit_date": "2026-10-18T09:55:42-04:00",
+      "message": "RTF export: sections are saved (gap 19) (#1776)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "b8279c4",
+      "commit_full": "b8279c4da50a9126ff7d79690ab5f25abfee5752",
+      "commit_date": "2026-10-18T09:56:48-04:00",
+      "message": "#1960: add editable table cell margins dialog (#1988)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "11f1d0a",
+      "commit_full": "11f1d0aee64079c0e6a654c34f0656e633a61592",
+      "commit_date": "2026-10-18T09:57:15-04:00",
+      "message": "Lowercase list items no longer get a grammar underline (#1741) (#1783)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "3348e93",
+      "commit_full": "3348e9314087865c353f83263e8616d32268fd35",
+      "commit_date": "2026-10-18T09:57:31-04:00",
+      "message": "ASK and SET fields show nothing (#1765) (#1785)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "d6f20f9",
+      "commit_full": "d6f20f93fd22deb441b2216ecfd65acb15ea8b64",
+      "commit_date": "2026-10-18T09:57:47-04:00",
+      "message": "Tables: at-least rows taller than a page start on a fresh page; header rows follow (#1742) (#2004)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
     }
   ],
-  "updated_at": "2026-10-18T13:49:44+00:00"
+  "updated_at": "2026-10-18T14:11:04+00:00"
 }

@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/pdfcraft",
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
-  "latest_commit": "f8d7eb1",
-  "latest_commit_date": "2026-10-18T03:11:54-04:00",
-  "latest_message": "M3: prevent oversized page textures after replacement (#3149) (#3182)",
+  "latest_commit": "1952a88",
+  "latest_commit_date": "2026-10-18T09:54:00-04:00",
+  "latest_message": "fix(cli): use laid-out pages for dynamic XFA forms (#2813)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -241,6 +241,18 @@
         "text": "(M8, #1350): Integrated current main while preserving content-stream comment boundaries. Hidden-text cleanup retires unused named replacement descriptions on rewritten pages and forms, including inherited/shared resource holders, without removing descriptions still used by surviving content. Synthetic saved-byte and preservation regressions cover the cleanup. Estimates unchanged."
       },
       {
+        "date": "2026-10-16",
+        "text": "(M3, #2781): The Pages panel follows the current page, as Acrobat's page thumbnails do: going to a page whose thumbnail is out of sight (scrolling, Page Down, Go to page, a bookmark) scrolls the panel just enough to show it. A thumbnail already in view, or clicked, leaves the panel where it is, and a page change while the user scrolls the panel or drags thumbnails does not move it. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-16",
+        "text": "(M12, #1645): CLI info, text and render use the engine's dynamic XFA layout rather than placeholder pages. Synthetic two-page and encrypted-form regressions cover counts, text, pixels, copy permissions and unchanged input bytes. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-15",
+        "text": "(M7, Edit text caret): In a text region that mixes sizes (a 24 pt title over 12 pt lines), the inline editor's caret on a small row was as tall as the region's first size and reached into the row below: egui draws the caret at least one row of the text field's font tall, and that font had the paragraph's first size. The field's font is now half the region's smallest size, so each row's own height decides. Kittest regression; checked in the app on a real document. Estimates unchanged."
+      },
+      {
         "date": "2026-10-15",
         "text": "(M6, AcroForm XML text): Plain AcroForm XML imports retain all direct text around comments and processing instructions, including CDATA and character references. Synthetic regressions verify exact values and unknown catalog data after incremental and full save/reopen. Nested-element and XFA interpretation are unchanged. Estimates unchanged."
       },
@@ -259,6 +271,10 @@
       {
         "date": "2026-10-15",
         "text": "(M2, #2305 follow-up): WinAnsiEncoding 0xA0 and 0xAD and MacRomanEncoding 0xCA extract as the ordinary space and hyphen Annex D.2 names them, in the vendored hayro tables (patch 30) as well as crates/fonts, so search, copy and redaction see characters that were hidden behind U+00A0 and U+00AD. Across the pdf.js corpus the soft hyphens we extract fall 117 to 13 and the non-breaking spaces 30 to 26; the rest come from /ToUnicode. An explicit /Differences name keeps its glyph list value, as pdftotext does. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-15",
+        "text": "(M14, #2383 candidate): Device-limit requests now clamp unsupported maxima and minimum alignments before enabling the adapter's full 2D texture extent. This addresses the reported V3D request of 16 shader variables on an adapter supporting 15. Synthetic regressions fail before the clamp and pass afterward, along with the existing HiDPI case and Windows GPU-required application tests. Raspberry Pi startup remains unverified; milestone and overall estimates are unchanged."
       },
       {
         "date": "2026-10-15",
@@ -338,6 +354,10 @@
       },
       {
         "date": "2026-10-13",
+        "text": "(M3, typed zoom): The right rail's zoom percentage is an editable field: type 150, 150% or 62.5 % and press Enter, Escape discards, and nonsense keeps the current zoom. The control channel's zoom option shares its parser, which now refuses zero, negative and non-finite values."
+      },
+      {
+        "date": "2026-10-13",
         "text": "(M6, data exchange fidelity): XML and XFDF exports preserve tabs and line breaks in field names and comment metadata using character references. Saved-PDF regressions cover distinct names that XML would normalize to the same attribute value, restored field values and replacement of the original comment identities. Estimates unchanged."
       },
       {
@@ -371,26 +391,6 @@
       {
         "date": "2026-10-13",
         "text": "(M5, text box font size, #1908): Comment Properties has a Font size control for text boxes, typewriter text and callouts (1-400 pt); it writes /DA and the rich-text strings, redraws the appearance and grows the box to fit. commentedit takes fontsize. Annot, tool and UI regressions. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-13",
-        "text": "(M3, Single Page edge paging, #1924): In Single Page view a page taller than the window pans with the wheel, and one more notch (or a fresh trackpad swipe) at the bottom/top edge shows the next page at its top / the previous page at its bottom. A swipe that panned to the edge, momentum included, does not turn. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-13",
-        "text": "(M3, #1980): Ctrl+Alt+Q in the digital ID email field no longer requests application exit. Quit requires exact Ctrl+Q/Cmd+Q modifiers and uses the existing unsaved-document confirmation. Synthetic keyboard regressions cover email input and clean/dirty quit requests; estimates unchanged."
-      },
-      {
-        "date": "2026-10-13",
-        "text": "(M3, native-opening candidate): Chosen tools survive preparation, conversion and password retries; startup intake waits for pending preparation. Regression tests cover completion, cancellation and document identity. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-13",
-        "text": "(community, M3, #531 touchpad momentum): On Wayland a two-finger swipe keeps gliding after the fingers lift and slows to a stop, measured from the gesture's last 0.1 s and decaying with a 0.35 s time constant through the #759 1:1 path. Any wheel input, click, key, zoom or edge ends it (fingers resting on the touchpad don't yet: the vendored winit binds no Wayland hold gestures); single-page paging, macOS (which sends its own momentum), the web, and Animation effects Off never glide. Unit tests for the physics and two headless view tests. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-13",
-        "text": "(M3, native-open admission): Later prepared replies stay queued while a modal or native picker owns the foreground. Picker completion, cancellation and abandonment wake retained opens. Regressions cover recipient ownership, exactly-once admission, source/history preservation and one-shot repaint requests. Estimates unchanged."
       }
     ]
   },
@@ -3181,7 +3181,102 @@
       "essentials_pct": 66.0,
       "breadth_pct": 67.0,
       "previous_full_pct": 50.0
+    },
+    {
+      "commit": "6ce3bc1",
+      "commit_full": "6ce3bc198bda36ef8246d875b97b72c495473c81",
+      "commit_date": "2026-10-18T09:50:42-04:00",
+      "message": "fix(gpu): request adapter-supported device limits (#2383) (#2433)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "previous_full_pct": 50.0
+    },
+    {
+      "commit": "2c49894",
+      "commit_full": "2c4989413fc100b4110f828e1b27d9ec0c2869de",
+      "commit_date": "2026-10-18T09:51:52-04:00",
+      "message": "M7: the Edit text caret is as tall as the row it is on (#2462)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "previous_full_pct": 50.0
+    },
+    {
+      "commit": "b68b3c1",
+      "commit_full": "b68b3c111967049afc357652bb34fbcae91841ad",
+      "commit_date": "2026-10-18T09:52:40-04:00",
+      "message": "M3: the Pages panel follows the current page (#2785)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "previous_full_pct": 50.0
+    },
+    {
+      "commit": "6525140",
+      "commit_full": "652514095535d91f59ff4f8e4cbce5f6c5f2c2d7",
+      "commit_date": "2026-10-18T09:53:24-04:00",
+      "message": "M3: type an exact zoom into the rail's zoom field (#1755)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "previous_full_pct": 50.0
+    },
+    {
+      "commit": "1952a88",
+      "commit_full": "1952a88801252fe4d9ff106a780d9e86930b9088",
+      "commit_date": "2026-10-18T09:54:00-04:00",
+      "message": "fix(cli): use laid-out pages for dynamic XFA forms (#2813)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "previous_full_pct": 50.0
     }
   ],
-  "updated_at": "2026-10-18T07:50:25+00:00"
+  "updated_at": "2026-10-18T14:10:57+00:00"
 }
