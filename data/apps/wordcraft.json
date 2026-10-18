@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "d6f20f9",
-  "latest_commit_date": "2026-10-18T09:57:47-04:00",
-  "latest_message": "Tables: at-least rows taller than a page start on a fresh page; header rows follow (#1742) (#2004)",
+  "latest_commit": "c9a5191",
+  "latest_commit_date": "2026-10-18T10:29:17-04:00",
+  "latest_message": "i18n: French interface catalog completed (2,615 entries) with native-speaker review (#2492)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -278,7 +278,15 @@
       },
       {
         "date": "2026-10-16",
+        "text": "Strict OOXML line heights render as Word renders them (#2329): w:line=\"13.90pt\" under lineRule=\"auto\" is a height read through twips (13.90 × 20 = 278; the 1.1583 multiple Word shows), not the 13.9 multiple the bare transitional number counts, so a Word 2024 file with 13.9 lines of line spacing opens at Word's 1 page with matching baselines instead of 10"
+      },
+      {
+        "date": "2026-10-16",
         "text": "The Spike, as in Word: Ctrl+F3 (⌘F3 on macOS) cuts the selection and adds it to the end of the Spike, each piece followed by a paragraph mark; Ctrl+Shift+F3 (⌘⇧F3) inserts everything collected, in order and with its formatting, and empties the Spike. The clipboard is left alone; each is one undo step. The Spike is the AutoText entry \"Spike\", so Insert › Quick Parts inserts it without emptying it. It lasts for the session (Word keeps it in Normal.dotm)"
+      },
+      {
+        "date": "2026-10-16",
+        "text": "Update Field is offered on a table of contents after a save and reopen, and repeated save and update adds no blank line (#2182; the flow in that report already worked since #1197)"
       },
       {
         "date": "2026-10-16",
@@ -306,6 +314,18 @@
       },
       {
         "date": "2026-10-16",
+        "text": "Zero-extent drawing anchors contribute no inline font height."
+      },
+      {
+        "date": "2026-10-16",
+        "text": "Control-channel keyboard and text input reaches the focused widget while the native window is inactive, without activating it; normal widget targets, dialogs and document protection remain in force (#2420)"
+      },
+      {
+        "date": "2026-10-16",
+        "text": "Save Changes gives assistive technology a named alert dialog with the loss warning and any save failure; visual layout and save policy unchanged (#1015). Native screen-reader verification remains pending."
+      },
+      {
+        "date": "2026-10-16",
         "text": "Web Layout text fills the window width and re-wraps once a resize settles, or at once on a zoom, instead of a fixed 800 pt column; Draft and Outline keep their 800 pt column (#1876)."
       },
       {
@@ -330,7 +350,15 @@
       },
       {
         "date": "2026-10-16",
+        "text": "French interface catalog completed: 402 entries added (equation gallery, built-in style and table-style names, citation styles, paper sizes, watermarks, Bookmark / Go To / Print dialogs), 2,615 in all, with a native-speaker review of the terminology; no French proofing yet"
+      },
+      {
+        "date": "2026-10-16",
         "text": "Text with the legacy Outline, Shadow, Emboss or Engrave font effects (w:outline, w:shadow, w:emboss, w:imprint) is drawn with them on screen and in PDFs, no longer as plain text: hollow outlined letters, or a grey copy behind the letters; the PDF keeps the text (#2534)"
+      },
+      {
+        "date": "2026-10-16",
+        "text": "Opening a DOCX no longer copies its pictures: each picture, and each embedded object or macro part kept for saving, was copied out of the unzipped package, so a document with pictures held them twice while it opened and left the package's copies behind as freed memory. The document now shares the package's bytes: a 92 MB document with 20 pictures opens in about 90 MB less (866 → 772 MB in the app on macOS; the command line's peak, 319 → 231 MB)"
       },
       {
         "date": "2026-10-16",
@@ -370,39 +398,11 @@
       },
       {
         "date": "2026-10-15",
-        "text": "The font family caches are bounded (4096 families for text, 1024 for math, names over 256 bytes aren't remembered), so a document naming thousands of missing fonts can't grow memory; equation fonts are looked up again after a font is added or removed instead of keeping the old choice (#1354)"
+        "text": "Plain text pasted from another program keeps the formatting of the paragraph it lands in: Paste inserts it as Keep Text Only does, so every pasted line, empty lines too, becomes a paragraph with that paragraph's direction, style, alignment, indents and list, and the text after the caret keeps them. The lines after the first had default formatting, so pasting several lines into a right-to-left paragraph turned all but the first left-to-right"
       },
       {
         "date": "2026-10-15",
-        "text": "AutoCorrect recognizes --> as → (#2223), respecting replacement settings and undo without changing paragraph-start arrow bullets."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "Numbered headings (#1793): the Multilevel List gallery offers four lists linked to Heading 1–9 (1 / 1.1 / 1.1.1, Article I. / Section 1.01 / (a), I. / A. / 1., Chapter 1; list.multilevelPreset). The heading styles carry the numbers, so paragraphs already in a Heading style keep their style and level, any other selected paragraph (Normal, Quote, Title) becomes Heading 1 (checked in Word), a new Heading 2 is numbered 2.1 by itself and body text stays unnumbered; Numbering or typing 1.  keeps a heading a heading"
-      },
-      {
-        "date": "2026-10-15",
-        "text": "Reversing an automatic sentence capital (Undo, or Backspace and retype) adds the word before it to AutoCorrect's First Letter exceptions, as Word does; \"Automatically add words to list\" switches for First Letter and INitial CAps (#1857)."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "Dialog close control: a Windows-style box at the title bar's right end, the whole box clickable, red on hover, in both themes (#1885)"
-      },
-      {
-        "date": "2026-10-15",
-        "text": "Font box: a Recently Used Fonts section at the top of the list (the fonts applied lately, most recent first, ten at most, kept between runs), then All Fonts, as in Word (#2068)"
-      },
-      {
-        "date": "2026-10-15",
-        "text": "A missing Thai document font (TH Sarabun New, Angsana New, Cordia New, the UPC families…) is substituted by one Thai face for the whole run, Latin letters and digits included, as Word substitutes Cordia New; Thai no longer sits in one font next to larger Latin in another (#1549)"
-      },
-      {
-        "date": "2026-10-15",
-        "text": "Layout › Columns with text selected puts only that text in columns, as in Word (#2024): a continuous section break goes where the selection starts and one where it ends (splitting a paragraph there; none at the document's start or end, or where a section already begins or ends), and the columns go on the section between, one undo step; More Columns… offers \"Selected text\" and picks it. Before, the whole section took the columns"
-      },
-      {
-        "date": "2026-10-15",
-        "text": "Track Changes Options › Moves (gap #5): Moved from and Moved to each have a mark and a colour (by default green double strikethrough and double underline, as before and as in Word for Mac), saved per user; review.trackingOptions takes moveFromMark, moveFromColor, moveToMark, moveToColor, and trackMoves, the document's Track moves setting: off, a tracked cut and paste is an ordinary deletion and insertion. DOCX w:doNotTrackMoves round-trips"
+        "text": "Additive paragraph spacing retains the full before-space after a section page break; ordinary overlapping spacing is unchanged."
       }
     ]
   },
@@ -6543,7 +6543,235 @@
       "essentials_pct": 63.0,
       "breadth_pct": 80.0,
       "previous_full_pct": 60.0
+    },
+    {
+      "commit": "5c4408f",
+      "commit_full": "5c4408f3412bc6c1deb96da5bafa2cc95c40af87",
+      "commit_date": "2026-10-18T10:23:43-04:00",
+      "message": "Paste: plain text keeps the formatting of the paragraph it lands in (#2423) (#2424)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "28d6260",
+      "commit_full": "28d6260a8196397aba2f6d140e2c9fc333592f5d",
+      "commit_date": "2026-10-18T10:24:26-04:00",
+      "message": "#1789: Add Font imports every selected font file (#2404)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "d7bd5bc",
+      "commit_full": "d7bd5bcd3c748038d17e8795283780dc9872c30b",
+      "commit_date": "2026-10-18T10:24:41-04:00",
+      "message": "Layout: preserve additive spacing after section breaks (task 243) (#2433)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "a14948a",
+      "commit_full": "a14948a23df71bc9f502cbec9a725ce2cb8372ed",
+      "commit_date": "2026-10-18T10:25:14-04:00",
+      "message": "DOCX: strict line heights with a unit are points under auto (#2329) (#2439)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "57dfacf",
+      "commit_full": "57dfacfc0797472b35f812ae90552220bd28818f",
+      "commit_date": "2026-10-18T10:26:01-04:00",
+      "message": "Layout: preserve equation baselines under exact line spacing (#2435)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "9726d6f",
+      "commit_full": "9726d6f1cb8881a4fb6b1682015d88ba6577edd9",
+      "commit_date": "2026-10-18T10:26:16-04:00",
+      "message": "fix(ui): offer Save As for imported Word files (#2448)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "ca45f97",
+      "commit_full": "ca45f97aceb12760f092fd2a20109b62b39c51b1",
+      "commit_date": "2026-10-18T10:26:32-04:00",
+      "message": "Layout: exclude floating anchors from line font metrics (task 256) (#2462)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "8107581",
+      "commit_full": "8107581df221409e89e63d4ba5ca8993dec3df0d",
+      "commit_date": "2026-10-18T10:26:56-04:00",
+      "message": "Opening a DOCX no longer copies its pictures (#2441)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "09b822f",
+      "commit_full": "09b822fdbeff231bd9a15d37e6b4311beee365b8",
+      "commit_date": "2026-10-18T10:27:11-04:00",
+      "message": "Update Field after save and reopen of a table of contents; no extra blank line per cycle (#2182) (#2553)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "1595343",
+      "commit_full": "1595343fa0d8a78f7cf548c7f5a734f6a2093bd7",
+      "commit_date": "2026-10-18T10:28:20-04:00",
+      "message": "fix(ui): expose save confirmation context to screen readers (#2489)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "ff39a5c",
+      "commit_full": "ff39a5c357ccb5e413ba8bc6a31f51814821f36e",
+      "commit_date": "2026-10-18T10:28:37-04:00",
+      "message": "fix(ui): deliver control input in inactive windows (#2420) (#2530)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
+    },
+    {
+      "commit": "c9a5191",
+      "commit_full": "c9a5191b70804a892c3a8fb6b37fb9e40fa8d6d7",
+      "commit_date": "2026-10-18T10:29:17-04:00",
+      "message": "i18n: French interface catalog completed (2,615 entries) with native-speaker review (#2492)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "previous_full_pct": 60.0
     }
   ],
-  "updated_at": "2026-10-18T14:11:04+00:00"
+  "updated_at": "2026-10-18T14:49:21+00:00"
 }
