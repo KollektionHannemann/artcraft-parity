@@ -218,13 +218,14 @@
   .what-row:first-child { border-top: 0; padding-top: 0; }
   .what-row .k { color: var(--faint); padding-top: 2px; }
   .what-row .v { min-width: 0; }
-  /* Long commit and PR titles: one line that scrolls sideways instead of being cut off */
+  /* Long commit and PR titles: one line that runs as an endless ticker band and can be scrolled by hand.
+     The scrollbar is always hidden. */
   .what-row .m { color: var(--muted); display: block; white-space: nowrap; overflow-x: auto; overflow-y: hidden;
-    overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: var(--line-2) transparent; padding-bottom: 4px; }
+    overscroll-behavior-x: contain; scrollbar-width: none; }
+  .what-row .m::-webkit-scrollbar { display: none; }
   .what-row .m.fade-end { -webkit-mask-image: linear-gradient(90deg, #000 82%, transparent); mask-image: linear-gradient(90deg, #000 82%, transparent); }
-  .what-row .m::-webkit-scrollbar { height: 3px; }
-  .what-row .m::-webkit-scrollbar-thumb { background: var(--line-2); }
-  .what-row .m:hover::-webkit-scrollbar-thumb, .what-row .m:focus-visible::-webkit-scrollbar-thumb { background: var(--muted); }
+  .what-row .m.band { -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 86%, transparent); mask-image: linear-gradient(90deg, transparent, #000 4%, #000 86%, transparent); }
+  .what-row .m .tk { display: inline-block; padding-right: 3em; }
   .btn { display: flex; align-items: center; justify-content: center; height: 40px; background: var(--text); color: #000; font-weight: 600; margin-top: auto; }
   .btn:hover, .card:hover .btn { background: #d9d9d9; }
 
@@ -900,16 +901,34 @@
       </article>`;
   }
 
-  /* Title ticker: a line too long for the card scrolls slowly to its end and back, pausing at both ends.
-     It runs only while its "What changed" panel is open, stops while the line is hovered, touched or
-     focused (so it can be read or scrolled by hand), and never runs with prefers-reduced-motion. */
+  /* Title ticker: a line too long for the card runs as an endless band, always in one direction. The text is
+     followed by a copy (hidden from screen readers), and the band jumps back by one copy width at the seam,
+     so the end runs straight into the start. It runs only while its "What changed" panel is open, stops while
+     the line is hovered, touched or focused (it can still be scrolled by hand), and never runs with
+     prefers-reduced-motion. */
   const tickers = new Map();
   let tickerFrame = 0;
-  const TICK_SPEED = 32, TICK_PAUSE = 1600;  // px per second, ms at each end
+  const TICK_SPEED = 32, TICK_DELAY = 1200, TICK_RESUME = 800;  // px per second, ms before start, ms after a pause
+
+  function band(m) {
+    if (m.dataset.band) return true;
+    if (m.scrollWidth - m.clientWidth <= 2) return false;
+    const html = m.innerHTML;
+    m.innerHTML = `<span class="tk">${html}</span><span class="tk" aria-hidden="true">${html}</span>`;
+    m.dataset.band = "1";
+    m.classList.remove("fade-end");
+    m.classList.add("band");
+    return true;
+  }
+  const loop = (m) => m.firstElementChild?.offsetWidth || 0;  // one copy plus the gap
+  function wrapBand(m) {  // manual scrolling past the seam continues on the copy, seamlessly
+    const L = loop(m);
+    if (m.dataset.band && L && m.scrollLeft >= L) m.scrollLeft -= L;
+  }
 
   function ticker(m, on) {
-    if (!on || reduceMotion || m.scrollWidth - m.clientWidth <= 2) { tickers.delete(m); return; }
-    if (!tickers.has(m)) tickers.set(m, { pos: m.scrollLeft, dir: 1, wait: performance.now() + TICK_PAUSE, last: 0, hold: false });
+    if (!on || reduceMotion || !band(m)) { tickers.delete(m); return; }
+    if (!tickers.has(m)) tickers.set(m, { pos: m.scrollLeft, wait: performance.now() + TICK_DELAY, last: 0, hold: false });
     if (!tickerFrame) tickerFrame = requestAnimationFrame(tickAll);
   }
 
@@ -917,13 +936,13 @@
     tickerFrame = 0;
     for (const [m, s] of tickers) {
       if (!m.isConnected) { tickers.delete(m); continue; }
-      const max = m.scrollWidth - m.clientWidth;
       const dt = s.last ? Math.min(64, t - s.last) : 0;
       s.last = t;
-      if (s.hold || t < s.wait || max <= 2) continue;
-      s.pos = Math.max(0, Math.min(max, s.pos + s.dir * TICK_SPEED * dt / 1000));
+      const L = loop(m);
+      if (s.hold || t < s.wait || !L) continue;
+      s.pos += TICK_SPEED * dt / 1000;
+      if (s.pos >= L) s.pos -= L;
       m.scrollLeft = s.pos;
-      if (s.pos >= max || s.pos <= 0) { s.dir = s.pos >= max ? -1 : 1; s.wait = t + TICK_PAUSE; }
     }
     if (tickers.size) tickerFrame = requestAnimationFrame(tickAll);
   }
@@ -932,7 +951,7 @@
     const hold = () => { const s = tickers.get(m); if (s) s.hold = true; };
     const resume = () => {
       const s = tickers.get(m);
-      if (s) { s.hold = false; s.pos = m.scrollLeft; s.wait = performance.now() + TICK_PAUSE; }
+      if (s) { s.hold = false; s.pos = m.scrollLeft; s.wait = performance.now() + TICK_RESUME; }
     };
     m.addEventListener("pointerenter", (e) => { if (e.pointerType === "mouse") hold(); });
     m.addEventListener("pointerleave", (e) => { if (e.pointerType === "mouse") resume(); });
@@ -957,12 +976,15 @@
     grid.innerHTML = apps.map(card).join("") || `<div class="empty mono">No matches</div>`;
     open.forEach((id) => grid.querySelector(`[data-go="${CSS.escape(id)}"] details.what`)?.setAttribute("open", ""));
 
-    // Scrollable title lines fade out at the right edge while there is more to read, and glide through
-    // on their own while the panel is open
-    const fade = (m) => m.classList.toggle("fade-end", m.scrollLeft + m.clientWidth < m.scrollWidth - 2);
+    // Title lines too long for the card run as a ticker band while the panel is open; without motion
+    // (reduced motion) they fade out at the right edge while there is more to read
+    const fade = (m) => { if (!m.dataset.band) m.classList.toggle("fade-end", m.scrollLeft + m.clientWidth < m.scrollWidth - 2); };
     grid.querySelectorAll("details.what").forEach((d) => {
       const lines = [...d.querySelectorAll(".what-row .m")];
-      lines.forEach((m) => { m.addEventListener("scroll", () => fade(m), { passive: true }); holdOnInteract(m); });
+      lines.forEach((m) => {
+        m.addEventListener("scroll", () => { wrapBand(m); fade(m); }, { passive: true });
+        holdOnInteract(m);
+      });
       const sync = () => { lines.forEach(fade); lines.forEach((m) => ticker(m, d.open)); };
       d.addEventListener("toggle", sync);
       if (d.open) requestAnimationFrame(sync);

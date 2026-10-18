@@ -125,7 +125,8 @@ python3 scripts/make_icons.py              # redraw icons after changing the mar
   "Unofficial community project" badge in the top bar. Never use the official ArtCraft logos or app icons.
 - **Animations** run once per page load (count-up, bar fill, sort FLIP, milestone sparkle once per session) and
   respect `prefers-reduced-motion`. Nothing blinks. The one loop is the title ticker in an open "What changed"
-  panel: too-long titles glide to the end and back, pause on hover, touch or focus, and stop when the panel closes.
+  panel: too-long titles run as an endless one-way band (text plus an `aria-hidden` copy, wrapped at the seam), with
+  the scrollbar hidden. They pause on hover, touch or focus, stay scrollable by hand, and stop when the panel closes.
 - **No external JS libraries.** Charts are inline SVG.
 - **Be careful with the GitHub API.** Avoid per-commit API calls. Use the partial git clones. The only per-repo call is
   the Releases list (13 calls per run).
