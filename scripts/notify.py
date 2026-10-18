@@ -75,8 +75,9 @@ def build(events: list):
             before, after = e.get("full_before"), e.get("full_after")
             change = f"{pct(before)} → {pct(after)}"
             stage = f" · {e['stage']}" if e.get("stage") else ""
+            message = e["message"].replace("@", "@\u200b")  # a handle in a commit message must not ping anyone
             lines.append(f"- **{e['name']}** · {e['date']} · {change}{stage} · "
-                         f"[`{e['commit']}`]({e['commit_url']}) {e['message']}")
+                         f"[`{e['commit']}`]({e['commit_url']}) {message}")
         lines.append("")
     lines.append(f"Dashboard: https://{OWNER.lower()}.github.io/{REPO_NAME}/")
     return title, "\n".join(lines)

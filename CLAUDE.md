@@ -4,9 +4,11 @@ Guidance for Claude Code when working in this repository.
 
 ## What this project is
 
-A static dashboard that tracks the product parity of the ArtCraft "Craft" apps (github.com/storytold) against their
-reference products (Photoshop, Illustrator, Premiere Pro, Word, Excel, AutoCAD, Pro Tools, and others). All numbers come
-from the `ROADMAP.md` file of each repository. The metric of record is **"Full target (ready for real work)"**.
+**ArtCraft Tracker**, an unofficial community dashboard that tracks the product parity of the ArtCraft "Craft" apps
+(github.com/storytold) against their reference products (Photoshop, Illustrator, Premiere Pro, Word, Excel, AutoCAD,
+Pro Tools, and others), plus their development activity and releases. Parity numbers come from the `ROADMAP.md` file of
+each repository. The metric of record is **"Full target (ready for real work)"**, shown in the UI as "Product parity".
+The site is an installable web app (manifest + service worker).
 
 Deployed with GitHub Pages from `KollektionHannemann/artcraft-parity`. The UI and all documentation are in English.
 Keep it that way.
@@ -15,44 +17,66 @@ Keep it that way.
 
 | Path | Purpose |
 |---|---|
-| `index.html` | The whole UI: HTML, CSS and JS in one file, no build step. Loads `data/overview.json` and `data/apps/<id>.json` via `fetch()` |
+| `index.html` | The whole UI: HTML, CSS and JS in one file, no build step. Loads `data/overview.json`, `data/status.json` and `data/apps/<id>.json` via `fetch()`, and the latest workflow run from the GitHub API ("Last checked") |
+| `manifest.webmanifest`, `sw.js`, `icons/` | Web app. `sw.js` is network first for HTML/JSON and marks offline copies with `x-tracker-cache: offline`. Bump `VERSION` in `sw.js` when the shell file list changes |
 | `apps.json` | Source of truth for tracked apps, plus `ignored_repos` |
-| `scripts/update.py` | Discovers new repos, reads git history, writes all data files |
+| `scripts/update.py` | Discovers new repos, reads the first-parent git history, classifies revisions, computes activity, reads releases, writes all data files |
 | `scripts/roadmap_parser.py` | Parses one `ROADMAP.md` into metrics, dimensions, features, upcoming items and the change log |
 | `data/` | **Generated.** `overview.json`, `apps/*.json`, `history/*.json`, `state.json`. Do not hand-edit |
 | `.github/workflows/update.yml` | Runs `update.py` every 30 minutes, commits `data/` and `apps.json`, then runs `notify.py` |
 | `scripts/notify.py` | Opens a notification issue (mentions `notify` from `apps.json`) and optionally sends ntfy push. Notifies only for new apps and full-target changes |
+| `scripts/make_icons.py` | Draws the tracker mark (stdlib PNG writer) and writes `icons/`. Keep its geometry in sync with `<symbol id="logo">` in `index.html` |
+| `tests/test_pipeline.py` | End-to-end tests: builds local git repos with fixed dates and runs `update.main()` against them |
 | `docs/` | Screenshots used in the README |
 
 ## Commands
 
 ```bash
 python3 scripts/update.py                  # regular run: discovery, new commits only
-python3 scripts/update.py --backfill 500   # rebuild history from scratch (slow: fetches blobs)
+python3 scripts/update.py --backfill 2000  # rebuild history from scratch, no events (about 1 min, blobs fetched in batches)
 python3 -m http.server 8000                # serve the dashboard; fetch() does not work from file://
+python3 -m unittest discover -s tests -v   # pipeline tests (about 2 min)
+python3 scripts/make_icons.py              # redraw icons after changing the mark
 ```
 
 - Python 3.10+, standard library only. Do not add pip dependencies.
 - Git is required. Partial clones are cached in `.cache/repos/` (git-ignored).
-- There is no test suite. Verify changes by:
-  1. `node --check` on the extracted `<script>` block of `index.html`.
-  2. Loading the page in jsdom against the generated data and checking that cards, detail views and filters render
-     without errors. Playwright with Chromium also works for screenshots.
-  3. Running the parser against the current roadmaps (see "Changing the parser").
+- Verify changes by:
+  1. `python3 -m unittest discover -s tests` (pipeline, events, activity, releases, milestones, backfill).
+  2. `node --check` on the extracted `<script>` block of `index.html`, and `node --check sw.js`.
+  3. Loading the page in a browser against the generated data: cards, sorts, detail views, timeline filters, mobile
+     width (no horizontal scroll at 390 px). The app's built-in preview browser cannot register service workers; test
+     the PWA and offline mode in Chrome (stop the local server to go offline; DevTools network emulation does not
+     apply to service-worker fetches).
+  4. Running the parser against the current roadmaps (see "Changing the parser").
+- Set `GITHUB_TOKEN` locally (`GITHUB_TOKEN=$(gh auth token)`) or discovery and releases hit the 60/h API limit.
 
 ## Data model
 
-- `history/<app>.json`: one point per roadmap revision that yielded a full-target value. Keys include `commit_full`,
-  `commit_date`, `full_pct`, `full_range`, `full_hours`, `stage`, `mainstream_pct`, `essentials_pct`, `breadth_pct`.
-- `state.json` → `skipped.<app>`: commits that produced no full-target value. They are not parsed again. Removing an entry
-  forces a re-parse of that commit on the next run.
+- `history/<app>.json`: one point per **first-parent** roadmap revision that yielded a full-target value, in main-line
+  order (never sort by the `commit_date` string: offsets differ). Keys include `commit_full`, `commit_date` (original
+  offset), `ts` (UTC, `Z`), `full_pct`, `full_prev`, `kind`, `full_range`, `full_hours`, `full_label`, `target`, `stage`,
+  `mainstream_pct`, `essentials_pct`, `breadth_pct`, `scores_hash`, `text_hash`. `kind` is recomputed every run by
+  `annotate()` from the point before: `first`, `parity`, `estimates`, `content` or `editorial`.
+- `state.json`: `schema` (bump `SCHEMA` in `update.py` to rebuild every history once, without events), `skipped.<app>`
+  (commits without a full-target value, not parsed again), `truncated.<app>`, `releases.<app>` (last known release list; the ETag is kept in `.cache/release-etags.json`, never
+  in `state.json`, because GitHub changes it with every download).
 - `overview.json`:
-  - `apps`: one entry per app, sorted by full target. `changed_in_run` is true only if the newest commit was new in this run.
+  - `apps`: one entry per app, sorted by full target. Per app: `parity` (`tracked_since`, `changes`, `last_change`),
+    `roadmap` (`last_update`, `revisions_7d`), `activity` (`level`, `score`, `window` = 14 daily code counts ending today),
+    `release`, `milestone` (`reached_at` is the commit time of the first revision at or above 95 %, `null` if the first
+    known revision was already there), compact `series`.
+  - `latest_events`: parity changes, milestones, releases and new apps across all apps, newest first.
   - `recent_additions`: apps discovered within `RECENT_DAYS` (14). Drives the banner on the overview.
   - `errors`: notices shown at the top of the overview. Discovery, git and parser problems all end up here.
-- `.cache/events.json`: events of the current run only (new apps, roadmap revisions). Read by `notify.py`. Not committed.
+- `apps/<app>.json`: detail data, including `activity.days` (daily code/other counts for 180 days with sample subjects)
+  and `releases` (version, `ts`, `kind` = major/minor/patch, `changes` = PRs listed in the notes, `platforms`).
+- `.cache/events.json`: events of the current run only (new apps, roadmap revisions with `kind`). Read by `notify.py`.
+  Not committed.
 - `data/changelog.json`: the persistent log of those events. It keeps every revision. The filter to full-target changes
   (`full_before != full_after`) happens in `notify.py` only, so do not filter events in `update.py`.
+- Activity, the 14-day window and `revisions_7d` depend on the date, so `overview.json` changes once a day even
+  without new commits. Do not add values that change on every run (exact ages, download counts): each would commit.
 - `data/status.json`: a heartbeat written once per day, so the repository stays active. GitHub pauses scheduled workflows in
   public repositories after 60 days without activity.
 - Timestamps (`generated_at`, `updated_at`) change only when the content of a file changes. Unchanged runs produce no commit.
@@ -90,9 +114,16 @@ python3 -m http.server 8000                # serve the dashboard; fetch() does n
 - **Visual style** follows the ArtCraft launcher and website: black background, 1 px hairlines, mono uppercase labels,
   white primary buttons, numbered chips, two-tone app names ("Photo" in white, "Craft" in the app color).
   Do not use ArtCraft logos or the engraved app icons.
-- **Full target is the headline metric.** Other numbers support it. Do not reorder the UI to put them first.
+- **Full target is the headline metric** ("Product parity" in the UI). Other numbers support it. Do not reorder the UI
+  to put them first. Activity is effort, not progress: keep it visually separate (neutral cells on cards, never the
+  parity bar style). Parity ranges stay in the data but are not shown; hour estimates stay ranges.
+- **Branding:** the product is "ArtCraft Tracker" with its own mark (open triangle filled to a level line) and the
+  "Unofficial community project" badge in the top bar. Never use the official ArtCraft logos or app icons.
+- **Animations** run once per page load (count-up, bar fill, sort FLIP, milestone sparkle once per session) and
+  respect `prefers-reduced-motion`. Nothing loops or blinks.
 - **No external JS libraries.** Charts are inline SVG.
-- **Be careful with the GitHub API.** Avoid per-commit API calls. Use the partial git clones.
+- **Be careful with the GitHub API.** Avoid per-commit API calls. Use the partial git clones. The only per-repo call is
+  the Releases list (13 calls per run).
 - **Don't hand-edit `data/`.** The Action commits it when something changed, and once a day as heartbeat.
 - Before pushing from a local clone, run `git pull --rebase`. The bot commits data between your changes.
 
@@ -102,6 +133,9 @@ python3 -m http.server 8000                # serve the dashboard; fetch() does n
 - macOS `sed -i` requires an empty suffix: `sed -i '' ...`.
 - The GitHub Pages site and the bot commits share the `main` branch. A new Pages deployment happens on every push.
 - Google Fonts are blocked in some sandboxes. The resulting console error is harmless.
+- Python 3.10 `datetime.fromisoformat` rejects a trailing `Z`. Always parse timestamps with `parse_ts()`.
+- `git log -- ROADMAP.md` without `--first-parent` returns commits from merged branches with their authoring dates. They
+  were never states of main; that produced false value changes before. Keep `--first-parent --diff-merges=first-parent`.
 - The first run for a newly discovered app parses the full history, because it has no state yet. This is handled by
   `if history else []` in `update_history()`. Keep that logic when you refactor.
 - Scheduled GitHub Actions runs can start several minutes late, and sometimes more under load.

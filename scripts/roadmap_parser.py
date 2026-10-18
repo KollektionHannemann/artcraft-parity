@@ -92,7 +92,12 @@ def parse_roadmap(text: str) -> dict:
     nxt = re.search(r"next:\s*([a-z-]+)", head, re.I)
     next_stage = nxt.group(1).lower() if nxt else None
 
-    dates = [date.fromisoformat(d) for d in re.findall(r"Last updated:\**\s*(\d{4}-\d{2}-\d{2})", head)]
+    dates = []
+    for d in re.findall(r"Last updated:\**\s*(\d{4}-\d{2}-\d{2})", head):
+        try:
+            dates.append(date.fromisoformat(d))
+        except ValueError:
+            pass  # a typo such as 2026-02-30 must not break the whole revision
     last_updated = max(dates).isoformat() if dates else None
     tgt = re.search(r"Target:\**\s*([^·\n]+)", head)
     target = clean(tgt.group(1)).rstrip(".") if tgt else None

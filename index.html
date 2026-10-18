@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ArtCraft Parity · Full target (ready for real work)</title>
-<meta name="description" content="Product parity of all ArtCraft Craft apps against their reference products, based on the ROADMAP.md files in the repositories.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ArtCraft Tracker</title>
+<meta name="description" content="Unofficial community tracker: product parity, development activity and releases of the Craft apps, read from their GitHub repositories every 30 minutes.">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Tracker">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -17,11 +26,13 @@
     --line-2: #2a2a2a;
     --text: #f4f4f4;
     --muted: #8c8c8c;
-    --faint: #555;
+    --faint: #7a7a7a;
     --good: #5fe39a;
-    --mid: #f5c04b;
     --low: #ff6b6b;
+    --warn: #f5c04b;
+    --gold: #e8c46a;
     --blue: #5b8cff;
+    --ease: cubic-bezier(.2, .7, .2, 1);
     color-scheme: dark;
   }
   * { box-sizing: border-box; }
@@ -31,49 +42,119 @@
     -webkit-font-smoothing: antialiased; min-height: 100vh;
   }
   a { color: inherit; text-decoration: none; }
-  button, input, select { font: inherit; }
+  button, input, select { font: inherit; color: inherit; }
+  :focus-visible { outline: 1px solid var(--text); outline-offset: 2px; }
   .mono { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; text-transform: uppercase; letter-spacing: .08em; font-size: 11px; }
   .muted { color: var(--muted); }
+  .faint { color: var(--faint); }
+  .num { font-variant-numeric: tabular-nums; }
 
-  /* Top bar, as in the launcher */
-  .topbar { display: flex; align-items: stretch; border-bottom: 1px solid var(--line); background: #000; position: sticky; top: 0; z-index: 5; }
-  .wordmark { display: flex; align-items: center; gap: 12px; padding: 0 20px; border-right: 1px solid var(--line); font-weight: 800; letter-spacing: .18em; font-size: 14px; }
-  .wordmark .mark { width: 22px; height: 22px; display: grid; place-items: center; font-weight: 900; font-size: 15px; letter-spacing: 0; }
-  .tabs { display: flex; align-items: stretch; }
-  .tab { display: flex; align-items: center; padding: 0 16px; border-right: 1px solid var(--line); color: var(--muted); }
-  .tab.on { background: var(--text); color: #000; }
+  /* Top bar */
+  .topbar { display: flex; align-items: stretch; min-height: 48px; border-bottom: 1px solid var(--line); background: #000; position: sticky; top: 0; z-index: 10; }
+  .wordmark { display: flex; align-items: center; gap: 10px; padding: 0 18px; border-right: 1px solid var(--line); font-weight: 800; letter-spacing: .16em; font-size: 13.5px; white-space: nowrap; }
+  .wordmark svg { width: 22px; height: 22px; display: block; flex: none; }
+  .wordmark .t { color: var(--muted); font-weight: 700; }
+  .community { display: flex; align-items: center; gap: 8px; padding: 0 16px; border-right: 1px solid var(--line); color: var(--muted); white-space: nowrap; }
+  .community i { width: 7px; height: 7px; border: 1px solid var(--muted); transform: rotate(45deg); flex: none; }
+  .tab { display: flex; align-items: center; gap: 8px; padding: 0 16px; border-left: 1px solid var(--line); color: var(--muted); white-space: nowrap; }
+  .topbar a.tab:hover { color: var(--text); }
   .spacer { flex: 1; }
-  .tabs .tab:last-child { border-right: 0; }
-  .topbar .tab:hover:not(.on) { color: var(--text); }
+  .checked .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--good); flex: none; }
+  .checked.stale .dot { background: var(--warn); }
+  .checked.off .dot { background: var(--low); }
+  @media (max-width: 860px) { .hide-md { display: none; } }
+  @media (max-width: 560px) {
+    .topbar { flex-wrap: wrap; }
+    .wordmark { flex: 1; border-right: 0; padding: 12px 16px; }
+    .wordmark { flex: 1 1 auto; }
+    .checked { border-left: 0; padding: 0 16px 0 0; }
+    .checked .lbl { display: none; }
+    .community { order: 3; flex: 1 1 100%; border-right: 0; border-top: 1px solid var(--line); padding: 9px 16px; }
+  }
 
   .wrap { max-width: 1240px; margin: 0 auto; padding: 28px 24px 0; }
+  #app { min-height: 100vh; }  /* content renders after fetch(); keep the footer from jumping */
+  @media (max-width: 560px) { .wrap { padding: 18px 16px 0; } }
 
-  /* Overview */
-  .hero { display: grid; grid-template-columns: 1.1fr 1fr; border: 1px solid var(--line); margin-bottom: 22px; }
+  .offline { display: none; border: 1px solid rgba(245,192,75,.45); color: #f7d58a; padding: 10px 14px; margin-bottom: 18px; font-size: 13.5px; }
+  .offline.on { display: block; }
+
+  /* Hero */
+  .hero { display: grid; grid-template-columns: 1.1fr 1fr; border: 1px solid var(--line); }
   @media (max-width: 900px) { .hero { grid-template-columns: 1fr; } }
-  .hero > section { padding: 26px 26px 24px; }
+  .hero > section { padding: 26px 26px 24px; min-width: 0; }
   .hero > section + section { border-left: 1px solid var(--line); }
   @media (max-width: 900px) { .hero > section + section { border-left: 0; border-top: 1px solid var(--line); } }
-  .hero h1 { font-size: 46px; line-height: 1.02; letter-spacing: -.03em; margin: 10px 0 12px; font-weight: 800; }
-  .hero h1 em { font-style: normal; color: var(--blue); }
-  .hero p { margin: 0; color: var(--muted); max-width: 46ch; }
-  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 22px; border-top: 1px solid var(--line); }
-  .stats div { padding: 14px 0 0; }
-  .stats div + div { padding-left: 16px; border-left: 1px solid var(--line); }
+  @media (max-width: 560px) { .hero > section { padding: 20px 16px; } }
+  .eyebrow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .hero h1 { font-size: 46px; line-height: 1.02; letter-spacing: -.03em; margin: 12px 0 14px; font-weight: 800; text-wrap: balance; }
+  .hero h1 em { font-style: normal; color: var(--muted); }
+  @media (max-width: 560px) { .hero h1 { font-size: 34px; } }
+  .hero p { margin: 0; color: var(--muted); max-width: 52ch; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 22px; border-top: 1px solid var(--line); }
+  .stats > div { padding: 14px 0 0; min-width: 0; }
+  .stats > div + div { padding-left: 16px; border-left: 1px solid var(--line); }
   .stats .v { font-size: 30px; font-weight: 700; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
   .stats .l { color: var(--muted); font-size: 12px; margin-top: 2px; }
-  .rank-title { display: flex; justify-content: space-between; margin-bottom: 14px; color: var(--muted); }
-  .rank-row { display: grid; grid-template-columns: 26px 118px 1fr 52px; gap: 12px; align-items: center; padding: 6px 0; border-top: 1px solid var(--line); font-size: 13.5px; }
+  @media (max-width: 560px) { .stats .v { font-size: 24px; } .stats > div + div { padding-left: 10px; } }
+
+  /* Info disclosure ("What's this?") */
+  details.info { display: inline-block; position: relative; }
+  details.info > summary { list-style: none; cursor: pointer; color: var(--muted); border: 1px solid var(--line-2); padding: 1px 7px; }
+  details.info > summary::-webkit-details-marker { display: none; }
+  details.info > summary:hover, details.info[open] > summary { color: var(--text); border-color: var(--muted); }
+  details.info > div { position: absolute; z-index: 6; top: calc(100% + 8px); left: 0; width: min(380px, 80vw); background: var(--panel-2); border: 1px solid var(--line-2); padding: 14px 16px; font-size: 13.5px; color: var(--text); text-transform: none; letter-spacing: 0; font-family: "Inter", system-ui, sans-serif; line-height: 1.5; }
+  details.info > div p { margin: 0 0 8px; color: var(--muted); max-width: none; }
+  details.info > div p:last-child { margin: 0; }
+
+  /* Ranking */
+  .rank-title { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; color: var(--muted); }
+  .mini-seg { display: inline-flex; border: 1px solid var(--line-2); }
+  .mini-seg button { background: none; border: 0; color: var(--muted); padding: 3px 9px; cursor: pointer; }
+  .mini-seg button + button { border-left: 1px solid var(--line-2); }
+  .mini-seg button.on { background: var(--text); color: #000; }
+  .rank-row { display: grid; grid-template-columns: 26px 118px 1fr 64px; gap: 12px; align-items: center; padding: 6px 0; border-top: 1px solid var(--line); font-size: 13.5px; }
   .rank-row:first-of-type { border-top: 0; }
   .rank-row:hover .rn { color: var(--c); }
   .rank-row .rn { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .rank-row .rv { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+  .rank-row .rv { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowrap; }
+  .rank-row .rv.lv { font-weight: 500; }
   .rank-row .ri { color: var(--faint); }
+  @media (max-width: 560px) { .rank-row { grid-template-columns: 22px 96px 1fr 58px; gap: 8px; } }
 
-  /* Bars */
+  /* Parity bars: always the app colour */
   .bar { height: 6px; background: #161616; position: relative; overflow: hidden; }
-  .bar i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--c, var(--blue)); }
+  .bar i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--c, var(--blue)); transition: width .9s var(--ease); }
   .bar::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(90deg, transparent 0 calc(10% - 2px), #000 calc(10% - 2px) 10%); pointer-events: none; }
+  .bar .m95 { position: absolute; top: 0; bottom: 0; left: 95%; width: 2px; background: var(--muted); opacity: .7; z-index: 1; }
+
+  /* Activity: 14 neutral cells (never the app colour, so they can't be mistaken for parity) */
+  .cells { display: inline-grid; grid-auto-flow: column; grid-auto-columns: 4px; gap: 2px; height: 12px; vertical-align: middle; }
+  .cells i { display: block; background: #b5b5b5; border-radius: 1px; }
+  .lvl { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); }
+  .lvl b { font-weight: 600; color: var(--text); }
+  .lvl.cold b, .lvl.quiet b { color: var(--muted); }
+  .sig { display: inline-grid; grid-auto-flow: column; gap: 1.5px; align-items: end; height: 10px; }
+  .sig i { width: 2.5px; background: var(--line-2); }
+  .sig i:nth-child(1) { height: 3px; } .sig i:nth-child(2) { height: 5px; } .sig i:nth-child(3) { height: 7.5px; } .sig i:nth-child(4) { height: 10px; }
+  .sig.l1 i:nth-child(-n+1), .sig.l2 i:nth-child(-n+2), .sig.l3 i:nth-child(-n+3), .sig.l4 i { background: var(--text); }
+
+  /* "Latest" strip */
+  .latest { display: grid; grid-template-columns: 1.4fr 1fr; border: 1px solid var(--line); border-top: 0; margin-bottom: 22px; }
+  @media (max-width: 900px) { .latest { grid-template-columns: 1fr; } }
+  .latest > a, .latest > div { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; padding: 16px 20px; min-width: 0; }
+  .latest > * + * { border-left: 1px solid var(--line); }
+  @media (max-width: 900px) { .latest > * + * { border-left: 0; border-top: 1px solid var(--line); } }
+  @media (max-width: 560px) { .latest > a, .latest > div { padding: 14px 16px; grid-template-columns: 1fr; } }
+  .latest a:hover { background: var(--panel-2); }
+  .latest .what { font-size: 16px; font-weight: 600; letter-spacing: -.01em; }
+  .latest .why { color: var(--muted); font-size: 13px; grid-column: 2; }
+  @media (max-width: 560px) { .latest .why { grid-column: 1; } }
+  .etype { display: inline-flex; align-items: center; justify-content: center; height: 22px; padding: 0 8px; border: 1px solid var(--line-2); color: var(--muted); white-space: nowrap; align-self: start; justify-self: start; }
+  .etype.parity { background: var(--c, var(--text)); border-color: var(--c, var(--text)); color: #000; }
+  .etype.milestone { border-color: var(--gold); color: var(--gold); }
+  .etype.release { border-color: var(--muted); color: var(--text); }
+  .up { color: var(--good); } .down { color: var(--low); }
 
   /* Toolbar */
   .toolbar { display: flex; align-items: stretch; border: 1px solid var(--line); border-bottom: 0; flex-wrap: wrap; }
@@ -82,107 +163,202 @@
   .seg button:hover { color: var(--text); }
   .seg button.on { background: var(--text); color: #000; }
   .seg button b { font-weight: 600; color: inherit; margin-left: 6px; opacity: .7; }
-  .toolbar .spacer { border-left: 1px solid var(--line); }
-  .sel, .search { background: #000; color: var(--text); border: 0; border-left: 1px solid var(--line); padding: 12px 14px; outline: none; }
+  .sortlab { display: flex; align-items: center; padding: 0 0 0 14px; border-left: 1px solid var(--line); color: var(--faint); }
+  .sel, .search { background: #000; color: var(--text); border: 0; padding: 12px 14px; outline: none; }
   .sel { cursor: pointer; }
-  .search { min-width: 240px; }
+  .search { min-width: 220px; border-left: 1px solid var(--line); }
   .search::placeholder { color: var(--faint); }
-  .sel:focus, .search:focus { background: #0b0b0b; }
+  .sel:focus-visible, .search:focus-visible { background: #0b0b0b; outline: 1px solid var(--line-2); outline-offset: -1px; }
+  @media (max-width: 720px) {
+    .seg { flex: 1 1 100%; border-bottom: 1px solid var(--line); }
+    .seg button { flex: 1; padding: 11px 8px; }
+    .seg button:last-child { border-right: 0; }
+    .toolbar .spacer { display: none; }
+    .sortlab { border-left: 0; }
+    .sel { flex: 1; }
+    .search { flex: 1 1 100%; min-width: 0; border-left: 0; border-top: 1px solid var(--line); }
+  }
 
-  /* Card grid with hairlines, as in the launcher */
+  /* Cards */
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
-  .card { background: var(--panel); padding: 20px 20px 18px; display: flex; flex-direction: column; gap: 14px; position: relative; cursor: pointer; transition: background .15s; }
+  @media (max-width: 380px) { .grid { grid-template-columns: 1fr; } }
+  .card { background: var(--panel); padding: 20px 20px 18px; display: flex; flex-direction: column; gap: 14px; position: relative; cursor: pointer; transition: background .15s; min-width: 0; }
   .card:hover { background: var(--panel-2); }
   .card-top { display: flex; align-items: center; justify-content: space-between; color: var(--muted); }
-  .card-top .links { display: flex; gap: 14px; }
-  .card-top .links a:hover { color: var(--text); }
+  .clinks { display: flex; gap: 14px; }
+  .clinks a:hover { color: var(--text); }
   .chip { display: inline-grid; place-items: center; min-width: 26px; height: 22px; padding: 0 6px; background: var(--c); color: #000; font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 11px; letter-spacing: .02em; }
   .name { font-size: 30px; font-weight: 800; letter-spacing: -.03em; line-height: 1.05; margin: 2px 0 0; }
   .name .c { color: var(--c); }
   .sub { color: var(--muted); font-size: 13.5px; margin-top: 4px; }
-  .tags { display: flex; gap: 6px; flex-wrap: wrap; }
-  .tag { display: inline-block; border: 1px solid var(--c); color: var(--c); padding: 2px 7px; }
+  .tags { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+  .tag { display: inline-block; border: 1px solid var(--c); color: var(--c); padding: 2px 7px; white-space: nowrap; }
   .tag.plain { border-color: var(--line-2); color: var(--muted); }
   .tag.new { background: var(--text); color: #000; border-color: var(--text); }
-  .tag.up { border-color: rgba(95,227,154,.5); color: var(--good); }
-  .tag.down { border-color: rgba(255,107,107,.5); color: var(--low); }
+  .tag.gold { border-color: var(--gold); color: var(--gold); }
   .full { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; }
   .full-num { font-size: 64px; font-weight: 800; letter-spacing: -.04em; line-height: .9; font-variant-numeric: tabular-nums; }
   .full-num span { font-size: 24px; color: var(--muted); margin-left: 3px; letter-spacing: 0; }
   .full-lab { text-align: right; color: var(--muted); }
-  .spec { color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 14px; }
-  .spec b { color: var(--text); font-weight: 600; }
-  .spark { width: 100%; height: 36px; display: block; }
+  .pline { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 13px; margin-top: -4px; }
+  .pline b { font-weight: 600; }
+  .aline { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding-top: 12px; border-top: 1px solid var(--line); }
+
+  details.what { border-top: 1px solid var(--line); margin: 0 -20px; }
+  details.what > summary { list-style: none; display: flex; justify-content: space-between; padding: 11px 20px; color: var(--muted); cursor: pointer; }
+  details.what > summary::-webkit-details-marker { display: none; }
+  details.what > summary::after { content: "+"; font-size: 14px; line-height: 1; }
+  details.what[open] > summary::after { content: "−"; }
+  details.what > summary:hover { color: var(--text); }
+  .what-list { padding: 0 20px 6px; }
+  .what-row { display: grid; grid-template-columns: 74px 1fr; gap: 10px; padding: 8px 0; border-top: 1px solid var(--line); font-size: 13px; }
+  .what-row:first-child { border-top: 0; padding-top: 0; }
+  .what-row .k { color: var(--faint); padding-top: 2px; }
+  .what-row .v { min-width: 0; }
+  .what-row .m { color: var(--muted); display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .btn { display: flex; align-items: center; justify-content: center; height: 40px; background: var(--text); color: #000; font-weight: 600; margin-top: auto; }
-  .btn:hover { background: #d9d9d9; }
-  .card:hover .btn { background: #d9d9d9; }
+  .btn:hover, .card:hover .btn { background: #d9d9d9; }
 
-  .statusbar { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin: 0 -24px; padding: 12px 24px; color: var(--muted); }
-  .statusbar a:hover { color: var(--text); }
+  /* Milestone */
+  .card.ms-fresh, .dhead.ms-fresh { box-shadow: inset 0 0 0 1px rgba(232,196,106,.6); }
+  .ms-banner { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; border: 1px solid rgba(232,196,106,.55); background: rgba(232,196,106,.06); padding: 14px 18px; margin-bottom: 18px; }
+  .ms-banner:hover { background: rgba(232,196,106,.1); }
+  .ms-banner strong { font-size: 16px; }
+  .ms-banner .mono:last-child { margin-left: auto; color: var(--gold); }
+  .burst { position: absolute; pointer-events: none; width: 6px; height: 6px; background: var(--gold); border-radius: 1px; z-index: 4; }
+  .sheen { position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,.55), transparent); transform: translateX(-100%); z-index: 2; pointer-events: none; }
 
+  .statusbar { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin: 22px -24px 0; padding: 12px 24px; color: var(--muted); }
+  @media (max-width: 560px) { .statusbar { margin: 22px -16px 0; padding: 12px 16px; } }
   .errors { border: 1px solid rgba(255,107,107,.4); color: #ffb3b3; padding: 12px 14px; margin: 0 0 18px; font-size: 13px; }
   .empty { color: var(--muted); padding: 48px 0; text-align: center; grid-column: 1 / -1; background: var(--panel); }
-
-  /* New-app banner */
   .banner { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; border: 1px solid var(--blue); background: rgba(91,140,255,.08); padding: 14px 18px; margin-bottom: 18px; color: var(--text); }
   .banner:hover { background: rgba(91,140,255,.14); }
   .banner strong { font-size: 16px; }
   .banner .muted { font-size: 13.5px; }
   .banner .mono:last-child { margin-left: auto; color: var(--blue); }
 
+  /* "About the numbers" */
+  .about { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-top: 0; }
+  @media (max-width: 900px) { .about { grid-template-columns: 1fr; } }
+  .about > div { padding: 20px 22px; font-size: 13.5px; color: var(--muted); }
+  .about > div + div { border-left: 1px solid var(--line); }
+  @media (max-width: 900px) { .about > div + div { border-left: 0; border-top: 1px solid var(--line); } }
+  .about h3 { margin: 0 0 8px; color: var(--text); font-size: 11px; }
+  .about p { margin: 0 0 8px; }
+  .about b { color: var(--text); font-weight: 600; }
+  .about dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; }
+  .about dt { color: var(--text); }
+  .about dd { margin: 0; }
+
   /* Detail page */
   .back { display: inline-flex; color: var(--muted); margin: 6px 0 22px; }
   .back:hover { color: var(--text); }
-  .dhead { display: grid; grid-template-columns: auto 1fr auto; gap: 22px; align-items: end; border: 1px solid var(--line); border-bottom: 0; padding: 26px; background: var(--panel); }
-  @media (max-width: 800px) { .dhead { grid-template-columns: 1fr; } }
-  .dhead .chip { min-width: 40px; height: 32px; font-size: 14px; }
+  .dhead { display: grid; grid-template-columns: auto 1fr auto; gap: 22px; align-items: end; border: 1px solid var(--line); border-bottom: 0; padding: 26px; background: var(--panel); position: relative; }
+  @media (max-width: 800px) { .dhead { grid-template-columns: 1fr; padding: 20px 16px; gap: 14px; } }
+  .dhead .chip { min-width: 40px; height: 32px; font-size: 14px; justify-self: start; }
   .dhead .name { font-size: 52px; margin: 8px 0 0; }
+  @media (max-width: 560px) { .dhead .name { font-size: 38px; } }
   .dhead .target { color: var(--muted); margin-top: 8px; font-size: 14px; }
   .dhead .tags { justify-content: flex-end; }
   @media (max-width: 800px) { .dhead .tags { justify-content: flex-start; } }
 
+  .now { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); border-bottom: 0; }
+  @media (max-width: 900px) { .now { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px) { .now { grid-template-columns: 1fr; } }
+  .now > div { padding: 16px 20px; min-width: 0; border-left: 1px solid var(--line); }
+  .now > div:first-child { border-left: 0; }
+  @media (max-width: 900px) { .now > div:nth-child(odd) { border-left: 0; } .now > div:nth-child(n+3) { border-top: 1px solid var(--line); } }
+  @media (max-width: 520px) { .now > div { border-left: 0; padding: 14px 16px; } .now > div + div { border-top: 1px solid var(--line); } }
+  .now .k { color: var(--faint); margin-bottom: 6px; }
+  .now .v { font-weight: 600; font-size: 15px; }
+  .now .m { color: var(--muted); font-size: 13px; margin-top: 3px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .now .newest { box-shadow: inset 0 2px 0 var(--c); }
+
   .panel { border: 1px solid var(--line); background: var(--panel); }
-  .section-title { display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; border-bottom: 1px solid var(--line); color: var(--muted); }
+  .section-title { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding: 14px 20px; border-bottom: 1px solid var(--line); color: var(--muted); }
   .section-title b { color: var(--text); font-weight: 600; }
   .body { padding: 20px; }
+  @media (max-width: 560px) { .body { padding: 16px; } .section-title { padding: 12px 16px; } }
   .hero-detail { display: grid; grid-template-columns: 1fr 1.5fr; border: 1px solid var(--line); border-bottom: 0; }
   @media (max-width: 900px) { .hero-detail { grid-template-columns: 1fr; } }
-  .hero-detail > div { padding: 22px; }
+  .hero-detail > div { padding: 22px; min-width: 0; }
+  @media (max-width: 560px) { .hero-detail > div { padding: 18px 16px; } }
   .hero-detail > div + div { border-left: 1px solid var(--line); }
   @media (max-width: 900px) { .hero-detail > div + div { border-left: 0; border-top: 1px solid var(--line); } }
   .big-detail { font-size: 96px; font-weight: 800; letter-spacing: -.05em; line-height: .9; font-variant-numeric: tabular-nums; }
   .big-detail span { font-size: 34px; color: var(--muted); margin-left: 4px; letter-spacing: 0; }
-  .kv { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 22px; border-top: 1px solid var(--line); }
-  .kv > div { padding: 12px 0; }
+  .kv { display: grid; grid-template-columns: 1fr 1fr; margin-top: 22px; border-top: 1px solid var(--line); }
+  .kv > div { padding: 12px 0; min-width: 0; }
   .kv > div:nth-child(even) { padding-left: 16px; border-left: 1px solid var(--line); }
   .kv > div:nth-child(n+3) { border-top: 1px solid var(--line); }
   .kv .v { font-size: 18px; font-weight: 600; font-variant-numeric: tabular-nums; }
   .kv .l { color: var(--muted); font-size: 12px; margin-top: 2px; }
-  .chart { width: 100%; height: 260px; display: block; }
+  .chart-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 10px; flex-wrap: wrap; }
+  .chart { width: 100%; height: auto; display: block; }
   .chart text { fill: var(--muted); font-family: "JetBrains Mono", monospace; font-size: 10.5px; }
 
-  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--line); border-top: 0; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line); border-top: 0; }
   @media (max-width: 900px) { .two { grid-template-columns: 1fr; } }
+  .two > * { min-width: 0; }
   .two > .panel { border: 0; }
-  .two > .panel + .panel { border-left: 1px solid var(--line); }
-  @media (max-width: 900px) { .two > .panel + .panel { border-left: 0; border-top: 1px solid var(--line); } }
-  .row { display: grid; grid-template-columns: minmax(150px, 1fr) 2fr 56px; gap: 14px; align-items: center; padding: 9px 0; border-top: 1px solid var(--line); font-size: 13.5px; }
+  .two > * + * { border-left: 1px solid var(--line); }
+  @media (max-width: 900px) { .two > * + * { border-left: 0; border-top: 1px solid var(--line); } }
+  .stack > .panel { border: 0; }
+  .stack > .panel + .panel { border-top: 1px solid var(--line); }
+  .row { display: grid; grid-template-columns: minmax(130px, 1fr) 2fr 56px; gap: 14px; align-items: center; padding: 9px 0; border-top: 1px solid var(--line); font-size: 13.5px; }
   .row:first-child { border-top: 0; padding-top: 0; }
   .row .p { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
   .row .sub2 { grid-column: 1 / -1; color: var(--faint); font-size: 12px; margin-top: -4px; }
   .row .bar { height: 4px; }
+  @media (max-width: 560px) { .row { grid-template-columns: 1fr 1fr 48px; gap: 10px; } }
   ul.plain { list-style: none; margin: 0; padding: 0; }
   ul.plain li { padding: 10px 0; border-top: 1px solid var(--line); font-size: 13.5px; display: grid; grid-template-columns: 90px 1fr; gap: 14px; }
   ul.plain li:first-child { border-top: 0; padding-top: 0; }
   ul.plain time { color: var(--muted); font-variant-numeric: tabular-nums; }
   ul.feed { max-height: 460px; overflow: auto; }
-  ul.up-list li { display: block; border-top: 1px solid var(--line); padding: 10px 0; }
-  ul.up-list li:first-child { border-top: 0; padding-top: 0; }
-  table.hist { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
-  table.hist th, table.hist td { text-align: left; padding: 9px 8px; border-top: 1px solid var(--line); }
-  table.hist th { color: var(--muted); font-weight: 500; font-family: "JetBrains Mono", monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: .08em; border-top: 0; }
-  table.hist .num { text-align: right; }
-  .scroll { max-height: 460px; overflow: auto; }
+  ul.up-list li { display: block; }
+
+  /* Activity figures */
+  .afig { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); margin-top: 16px; }
+  .afig > div { padding: 12px 0 0; }
+  .afig > div + div { padding-left: 14px; border-left: 1px solid var(--line); }
+  .afig .v { font-size: 18px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .afig .l { color: var(--muted); font-size: 12px; }
+  @media (max-width: 560px) { .afig { grid-template-columns: 1fr 1fr; } .afig > div:nth-child(3) { border-left: 0; padding-left: 0; } .afig > div:nth-child(n+3) { border-top: 1px solid var(--line); margin-top: 12px; } }
+
+  /* Releases */
+  table.rel { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+  table.rel th, table.rel td { text-align: left; padding: 9px 8px; border-top: 1px solid var(--line); vertical-align: top; }
+  table.rel th { color: var(--muted); font-weight: 500; font-family: "JetBrains Mono", monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: .08em; border-top: 0; }
+  table.rel td.r, table.rel th.r { text-align: right; }
+  table.rel a:hover { text-decoration: underline; }
+  @media (max-width: 560px) { table.rel .hide-sm { display: none; } }
+
+  /* Timeline */
+  .filters { display: flex; flex-wrap: wrap; gap: 6px; }
+  .filters button { background: none; border: 1px solid var(--line-2); color: var(--muted); padding: 4px 10px; cursor: pointer; }
+  .filters button.on { background: var(--text); border-color: var(--text); color: #000; }
+  .tl-day { display: grid; grid-template-columns: 96px 1fr; gap: 16px; padding: 14px 0; border-top: 1px solid var(--line); }
+  .tl-day:first-child { border-top: 0; padding-top: 0; }
+  @media (max-width: 560px) { .tl-day { grid-template-columns: 1fr; gap: 8px; } }
+  .tl-day > time { color: var(--muted); padding-top: 3px; }
+  .tl-items { display: grid; gap: 10px; min-width: 0; }
+  .tl { display: grid; grid-template-columns: 92px 1fr; gap: 12px; align-items: start; font-size: 13.5px; min-width: 0; }
+  .tl .etype { width: 100%; justify-self: stretch; }
+  .tl .t { min-width: 0; }
+  .tl .t b { font-weight: 600; }
+  .tl .t .m { color: var(--muted); display: block; overflow-wrap: anywhere; }
+  .tl .t .m.clamp { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .tl a:hover { text-decoration: underline; }
+  .tl details > summary { cursor: pointer; color: var(--muted); list-style: none; }
+  .tl details > summary::-webkit-details-marker { display: none; }
+  .tl details > summary:hover { color: var(--text); }
+  .tl details ul { margin: 6px 0 0; padding: 0 0 0 14px; color: var(--muted); }
+  .tl details li { margin: 3px 0; overflow-wrap: anywhere; }
+  .more { display: block; width: 100%; margin-top: 14px; background: none; border: 1px solid var(--line-2); color: var(--muted); padding: 10px; cursor: pointer; }
+  .more:hover { color: var(--text); border-color: var(--muted); }
+
   .links { display: flex; gap: 0; border: 1px solid var(--line); flex-wrap: wrap; }
   .links a { padding: 12px 16px; border-right: 1px solid var(--line); color: var(--muted); }
   .links a:last-child { border-right: 0; }
@@ -190,27 +366,46 @@
   .note { color: var(--faint); font-size: 12.5px; margin: 14px 0 0; }
   code { font-family: "JetBrains Mono", monospace; font-size: 12px; color: var(--muted); }
   footer { color: var(--faint); font-size: 12.5px; padding: 26px 0 60px; line-height: 1.6; }
+  footer a { text-decoration: underline; text-decoration-color: var(--line-2); }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  }
 </style>
 </head>
 <body>
 <header class="topbar">
-  <a class="wordmark" href="#/"><span class="mark">▲</span>ARTCRAFT</a>
-  <nav class="tabs" aria-label="Navigation">
-    <a class="tab mono on" href="#/">Parity</a>
-    <a class="tab mono" href="https://getartcraft.com/apps" target="_blank" rel="noopener">Craft App Suite ↗</a>
-  </nav>
+  <a class="wordmark" href="#/" aria-label="ArtCraft Tracker, overview">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><use href="#logo"/></svg>
+    <span>ARTCRAFT <span class="t">TRACKER</span></span>
+  </a>
+  <span class="community mono" title="An independent project by the community. Not made, endorsed or reviewed by ArtCraft."><i></i>Unofficial community project</span>
   <div class="spacer"></div>
-  <a class="tab mono" href="https://github.com/storytold" target="_blank" rel="noopener">GitHub ↗</a>
+  <a class="tab mono checked" id="checked" href="#/">Checking …</a>
+  <a class="tab mono hide-md" href="https://getartcraft.com/apps" target="_blank" rel="noopener">Craft apps ↗</a>
+  <a class="tab mono hide-md" id="src-link" href="https://github.com/KollektionHannemann/artcraft-parity" target="_blank" rel="noopener">Source ↗</a>
 </header>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- Tracker mark: an open triangle filled up to a level line. Drawn for this project, not an ArtCraft logo. -->
+    <symbol id="logo" viewBox="0 0 64 64">
+      <path d="M32 7 L59 55 H5 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="miter"/>
+      <path d="M23.7 33 H40.3 L49.6 49.5 H14.4 Z" fill="currentColor"/>
+    </symbol>
+  </defs>
+</svg>
+
 <div class="wrap">
+  <div class="offline" id="offline" role="status"></div>
   <main id="app"></main>
   <div class="statusbar mono" id="statusbar">Loading data …</div>
   <footer>
-    Source: <code>ROADMAP.md</code> of each repository under github.com/storytold. All percentages are self-assessments
-    by the project and have not been measured independently. "Full target (ready for real work)" describes the estimated
-    share of the target program that a professional can use day to day without limitation. This page is not affiliated
-    with ArtCraft.
+    ArtCraft Tracker is an unofficial community project. It isn't affiliated with, endorsed by or reviewed by ArtCraft.
+    App names belong to their owners, and the reference products are trademarks of their respective owners.
+    Parity values are each project's own estimate, taken from the <code>ROADMAP.md</code> of its repository under
+    github.com/storytold. Activity and releases come from the repositories' git history and GitHub Releases. None of
+    this is an independent measurement.
     Visits are counted anonymously with <a href="https://www.goatcounter.com" target="_blank" rel="noopener">GoatCounter</a>, which sets no cookies and stores no personal data.
   </footer>
 </div>
@@ -221,9 +416,37 @@
 
   const STAGE = { "pre-alpha": "Pre-Alpha", "alpha": "Alpha", "beta": "Beta", "release": "Release", "1.0": "Release" };
   const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  const state = { overview: null, sort: "order", filter: "all", query: "" };
+  const LEVELS = {
+    buzzing: { label: "Buzzing", bars: 4, help: "Code changes on at least 5 of the last 7 days, in high volume" },
+    active: { label: "Active", bars: 3, help: "Code changes on at least 2 of the last 7 days" },
+    quiet: { label: "Quiet", bars: 1, help: "Some code changes in the last 14 days, few of them recent" },
+    cold: { label: "Cold", bars: 0, help: "No code changes in the last 14 days" },
+  };
+  const DAY = 86400000;
+  const FRESH_DAYS = 7;
+  const SORTS = [
+    ["parity_change", "Latest parity change"],
+    ["full", "Product parity"],
+    ["activity", "Activity"],
+    ["release", "Latest release"],
+    ["breadth", "Feature breadth"],
+    ["order", "Suite order"],
+    ["name", "Name"],
+  ];
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const store = {
+    get(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : v; } catch (e) { return d; } },
+    set(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* storage blocked */ } },
+  };
+  const state = {
+    overview: null, status: null, run: null, fromCache: false, loadedAt: 0, renderSeq: 0,
+    sort: store.get("tracker.sort", "parity_change"), filter: "all", query: "",
+    rank: store.get("tracker.rank", "parity"), animated: false, chartScale: store.get("tracker.scale", "fit"),
+  };
+  if (!SORTS.some(([k]) => k === state.sort)) state.sort = "parity_change";
   const app = document.getElementById("app");
   const status = document.getElementById("statusbar");
+  const offline = document.getElementById("offline");
 
   /* ---------- Helpers ---------- */
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
@@ -231,15 +454,34 @@
   const nf = (v, d = 0) => (v == null || Number.isNaN(v)) ? "–" :
     Number(v).toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d });
   const pct = (v) => v == null ? "–" : nf(v, 0);
-  const pp = (v) => v == null ? "" : `${v > 0 ? "+" : ""}${nf(v, 1)} pp`;
-  const dateEN = (s) => {
+  const pp = (v) => v == null ? "" : `${v > 0 ? "+" : v < 0 ? "−" : "±"}${nf(Math.abs(v), Number.isInteger(v) ? 0 : 1)} pp`;
+  const ms = (s) => s ? new Date(s).getTime() : NaN;
+  const dateEN = (s, year = true) => {
     if (!s) return "–";
-    const p = String(s).slice(0, 10).split("-");
-    return p.length === 3 ? `${Number(p[2])} ${MON[Number(p[1]) - 1]} ${p[0]}` : String(s);
+    const d = new Date(String(s).length === 10 ? s + "T12:00:00Z" : s);
+    if (Number.isNaN(d.getTime())) return String(s);
+    return `${d.getDate()} ${MON[d.getMonth()]}${year ? " " + d.getFullYear() : ""}`;
   };
-  const dateShort = (s) => dateEN(s).replace(/ \d{4}$/, "");
+  const dayUTC = (s, year = true) => {
+    const p = String(s).slice(0, 10).split("-");
+    return p.length === 3 ? `${Number(p[2])} ${MON[Number(p[1]) - 1]}${year ? " " + p[0] : ""}` : String(s);
+  };
+  const timeEN = (s) => { const d = new Date(s); return `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`; };
+  const stamp = (s) => s ? `${dateEN(s)}, ${timeEN(s)}` : "–";
+  const ago = (s, now = Date.now()) => {
+    const t = ms(s);
+    if (Number.isNaN(t)) return "–";
+    const m = Math.round((now - t) / 60000);
+    if (m < 1) return "just now";
+    if (m < 60) return `${m} min ago`;
+    const h = Math.round(m / 60);
+    if (h < 24) return `${h} h ago`;
+    const d = Math.round(h / 24);
+    if (d < 8) return d === 1 ? "yesterday" : `${d} days ago`;
+    return dateEN(s, new Date(t).getFullYear() !== new Date(now).getFullYear());
+  };
+  const when = (s) => `<time datetime="${esc(s)}" title="${esc(stamp(s))}">${esc(ago(s))}</time>`;
   const hours = (h) => (!h || h.length < 2) ? "–" : `${nf(h[0])}–${nf(h[1])} h`;
-  const range = (r) => (!r || r.length < 2) ? "" : `${nf(r[0])}–${nf(r[1])} %`;
   const stageLabel = (s) => s ? (STAGE[s] || s).toUpperCase() : "";
   const stageKey = (s) => (s || "").includes("pre") ? "prealpha" : (s || "").startsWith("alpha") ? "alpha" : (s || "").replace(/[^a-z]/g, "");
   const twoTone = (name) => {
@@ -247,207 +489,635 @@
     return m ? `<span class="w">${esc(m[1])}</span><span class="c">${esc(m[2])}</span>` : esc(name);
   };
   const chipNo = (n) => String(n ?? "").padStart(2, "0");
-  const bar = (v) => `<div class="bar"><i style="width:${Math.max(0, Math.min(100, v ?? 0))}%"></i></div>`;
+  const plural = (n, w, pl) => `${nf(n)} ${n === 1 ? w : (pl || w + "s")}`;
+  const clamp = (v) => Math.max(0, Math.min(100, v ?? 0));
+  const bar = (v, mark = false) =>
+    `<div class="bar" role="img" aria-label="${pct(v)} percent"><i data-w="${clamp(v)}" style="width:${state.animated || reduceMotion ? clamp(v) : 0}%"></i>${mark ? '<span class="m95" title="95 % parity"></span>' : ""}</div>`;
+  const releaseKind = (k) => ({ major: "Major release", minor: "Minor release", patch: "Patch release" }[k] || "Release");
+  const ghUrl = (u) => /^https:\/\/github\.com\//.test(String(u || "")) ? u : null;  // links from data: GitHub only
+  const commitUrl = (id, sha) => `https://github.com/storytold/${encodeURIComponent(id)}/commit/${encodeURIComponent(sha)}`;
 
-  /* Mini trend for the cards */
-  function spark(series, c) {
-    const pts = (series || []).filter((p) => p.v != null);
-    if (pts.length < 2) return "";
-    const W = 300, H = 36, P = 2;
-    const ts = pts.map((p) => new Date(p.d).getTime());
-    const t0 = Math.min(...ts), t1 = Math.max(...ts);
-    const X = (t) => t1 === t0 ? W / 2 : P + (t - t0) / (t1 - t0) * (W - 2 * P);
-    const Y = (v) => H - P - Math.max(0, Math.min(100, v)) / 100 * (H - 2 * P);
-    const d = pts.map((p, i) => `${i ? "L" : "M"}${X(ts[i]).toFixed(1)},${Y(p.v).toFixed(1)}`).join(" ");
-    const last = pts[pts.length - 1];
-    return `<svg class="spark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-hidden="true">
-      <path d="${d}" fill="none" stroke="${c}" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
-      <circle cx="${X(ts[ts.length - 1]).toFixed(1)}" cy="${Y(last.v).toFixed(1)}" r="2.5" fill="${c}"/>
-    </svg>`;
+  function cells(win) {
+    const w = (win || []).slice(-14);
+    const max = Math.max(1, ...w.map((n) => Math.log2(1 + n)));
+    return `<span class="cells" aria-hidden="true">${w.map((n) =>
+      `<i style="opacity:${n ? (0.2 + 0.8 * Math.log2(1 + n) / max).toFixed(2) : 0.1}"></i>`).join("")}</span>`;
+  }
+  function level(act) {
+    const L = LEVELS[act?.level];
+    if (!L) return `<span class="lvl mono">No activity data</span>`;
+    return `<span class="lvl mono ${esc(act.level)}" title="${esc(L.help)}"><span class="sig l${L.bars}" aria-hidden="true"><i></i><i></i><i></i><i></i></span><b>${L.label}</b></span>`;
+  }
+
+  /* Milestone: fresh for FRESH_DAYS after the commit that first reported the threshold */
+  function milestoneState(m, now = Date.now()) {
+    if (!m) return null;
+    if (!m.date_known) return { kind: "unknown", m };
+    const age = (now - ms(m.reached_at)) / DAY;
+    return { kind: age >= 0 && age < FRESH_DAYS ? "fresh" : "past", m, age };
+  }
+  function milestoneTag(m, short = false) {
+    const s = milestoneState(m);
+    if (!s) return "";
+    const thr = pct(m.threshold);
+    if (s.kind === "unknown") return `<span class="tag gold" title="Already at or above ${thr} % in the first revision with a value, so the date it was reached is unknown">${thr} % before tracking</span>`;
+    const label = short ? `★ ${thr} %` : `★ ${thr} % on ${dateEN(m.reached_at, false)}`;
+    return `<span class="tag gold" title="First reported ${thr} % or more on ${esc(stamp(m.reached_at))} (commit ${esc(m.commit)})${m.above_now ? "" : ". It's below that now."}">${label}${m.above_now ? "" : " · now below"}</span>`;
+  }
+
+  function parityLine(a) {
+    const lc = a.parity?.last_change;
+    if (lc) return `<span><b class="${lc.delta > 0 ? "up" : "down"}">${lc.delta > 0 ? "▲" : "▼"} ${pp(lc.delta)}</b> from ${pct(lc.from)} %</span>${when(lc.ts)}`;
+    const since = a.parity?.tracked_since;
+    return `<span>Unchanged since ${since ? dateEN(since, false) : "tracking began"}</span><span></span>`;
+  }
+
+  /* ---------- Data ---------- */
+  async function getJSON(url) {
+    const r = await fetch(url, { cache: "no-cache" });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    if (r.headers.get("x-tracker-cache") === "offline") state.fromCache = true;
+    return r.json();
+  }
+
+  async function load() {
+    state.fromCache = false;
+    const [ov, st] = await Promise.all([getJSON("data/overview.json"), getJSON("data/status.json").catch(() => null)]);
+    state.overview = ov;
+    state.status = st;
+    state.loadedAt = Date.now();
+    if (ov.tracker_repo) document.getElementById("src-link").href = `https://github.com/${ov.tracker_repo}`;
+    showOffline();
+    loadLastRun();
+  }
+
+  /* "Last checked" is the newest successful run of the update workflow. A run without changes commits
+     nothing, so the data files can't say it. One unauthenticated API call, cached for five minutes. */
+  async function loadLastRun() {
+    const repo = state.overview?.tracker_repo;
+    if (!repo || !navigator.onLine) return renderChecked();
+    const key = "tracker.run";
+    try {
+      const cached = JSON.parse(sessionStorage.getItem(key) || "null");
+      if (cached && Date.now() - cached.at < 300000) { state.run = cached.run; return renderChecked(); }
+    } catch (e) { /* storage blocked */ }
+    try {
+      const r = await fetch(`https://api.github.com/repos/${repo}/actions/workflows/update.yml/runs?status=success&per_page=1`,
+        { headers: { Accept: "application/vnd.github+json" } });
+      if (!r.ok) throw new Error(String(r.status));
+      const run = (await r.json()).workflow_runs?.[0];
+      state.run = run ? { at: run.updated_at, url: run.html_url } : null;
+      try { sessionStorage.setItem(key, JSON.stringify({ at: Date.now(), run: state.run })); } catch (e) { /* ignore */ }
+    } catch (e) { state.run = null; }
+    renderChecked();
+  }
+
+  function checkedInfo() {
+    const ov = state.overview || {};
+    const run = state.run?.at, beat = state.status?.checked_at;
+    const last = [run, beat].filter(Boolean).sort((a, b) => ms(a) - ms(b)).pop() || null;
+    return { last, exact: !!run && last === run, data: ov.generated_at, url: state.run?.url };
+  }
+
+  function renderChecked() {
+    const el = document.getElementById("checked");
+    const { last, exact, data, url } = checkedInfo();
+    el.classList.remove("stale", "off");
+    el.removeAttribute("target");
+    if (state.fromCache || !navigator.onLine) {
+      el.classList.add("off");
+      el.innerHTML = `<span class="dot"></span>Offline`;
+      el.title = `Showing saved data. Data last changed ${stamp(data)}.`;
+    } else if (!last) {
+      el.innerHTML = `<span class="dot"></span>Data ${esc(ago(data))}`;
+      el.title = `Data last changed ${stamp(data)}`;
+    } else {
+      const stale = Date.now() - ms(last) > 75 * 60000;
+      if (stale) el.classList.add("stale");
+      el.innerHTML = `<span class="dot"></span><span class="lbl">Checked </span>${esc(ago(last))}`;
+      el.title = `${exact ? "Last successful check" : "Last recorded check"}: ${stamp(last)}. Data last changed: ${stamp(data)}.` +
+        (stale ? " Checks run every 30 minutes, but GitHub can start them late." : "");
+      if (url) { el.href = url; el.target = "_blank"; el.rel = "noopener"; }
+    }
+    const hc = document.getElementById("hero-checked");
+    if (hc) hc.innerHTML = heroChecked();
+  }
+
+  function heroChecked() {
+    const { last, data } = checkedInfo();
+    if (state.fromCache || !navigator.onLine) return `Offline · saved data from ${esc(stamp(data))}`;
+    return `${last ? `Last checked ${esc(ago(last))}` : "Checked every 30 minutes"} · data changed ${esc(ago(data))}`;
+  }
+
+  function showOffline() {
+    const off = state.fromCache || !navigator.onLine;
+    offline.classList.toggle("on", off);
+    offline.innerHTML = off ? `<b>You're offline.</b> These numbers were saved ${esc(stamp(state.overview?.generated_at))} and may be out of date. They reload when you're back online.` : "";
+    renderChecked();
   }
 
   /* ---------- Overview ---------- */
-  function renderOverview() {
-    const ov = state.overview;
-    const all = ov.apps;
-    const withFull = all.filter((a) => a.full_pct != null);
-    const avg = withFull.length ? withFull.reduce((s, a) => s + a.full_pct, 0) / withFull.length : null;
-    const changed = all.filter((a) => a.changed_in_run).length;
-    const lastUpd = all.map((a) => a.last_updated).filter(Boolean).sort().pop();
-    const alpha = all.filter((a) => stageKey(a.stage) === "alpha").length;
-    const pre = all.filter((a) => stageKey(a.stage) === "prealpha").length;
+  function latestStrip(ov) {
+    const ev = ov.latest_events || [];
+    const byId = Object.fromEntries(ov.apps.map((a) => [a.id, a]));
+    const parity = ev.find((e) => e.type === "parity" || e.type === "milestone");
+    const other = ev.find((e) => e.type === "release" || e.type === "new_app");
+    const nChanges = ov.apps.reduce((s, a) => s + (a.parity?.changes || 0), 0);
+    const since = ov.apps.map((a) => a.parity?.tracked_since).filter(Boolean).sort()[0];
+    const item = (e, why) => {
+      const c = byId[e.id]?.color || "#fff";
+      let type = "Parity", what = "";
+      if (e.type === "parity") what = `${esc(e.name)} ${e.delta > 0 ? "reached" : "dropped to"} ${pct(e.to)} % parity <span class="${e.delta > 0 ? "up" : "down"}">(${pp(e.delta)})</span>`;
+      if (e.type === "milestone") { type = "Milestone"; what = `${esc(e.name)} reached ${pct(e.value)} % parity`; }
+      if (e.type === "release") { type = "Release"; what = `${esc(e.name)} ${esc(e.tag)}${e.prerelease ? " (pre-release)" : ""}`; }
+      if (e.type === "new_app") { type = "New app"; what = `${esc(e.name)} is now tracked`; }
+      return `<a href="#/app/${esc(e.id)}" style="--c:${c}">
+        <span class="etype mono ${e.type}">${type}</span>
+        <span class="what">${what}</span>
+        <span class="why">${when(e.ts)} · ${why}</span>
+      </a>`;
+    };
+    const left = parity
+      ? item(parity, parity.type === "milestone"
+        ? `First revision at or above ${pct(parity.threshold)} %`
+        : `${plural(nChanges, "parity change")} across all apps since ${dateEN(since, false)}`)
+      : `<div><span class="etype mono">Parity</span><span class="what">No parity changes yet</span><span class="why">Every app has kept its value since ${dateEN(since, false)}</span></div>`;
+    let right = `<div><span class="etype mono">Release</span><span class="what">No releases yet</span><span class="why"></span></div>`;
+    if (other) {
+      right = item(other, other.type === "release"
+        ? `${releaseKind(other.kind)}${other.changes ? `, ${plural(other.changes, "change")} in the notes` : ""}`
+        : `Reference ${esc(other.adobe || "")}`);
+    }
+    return `<section class="latest" aria-label="Latest updates">${left}${right}</section>`;
+  }
 
-    const ranking = withFull.slice().sort((a, b) => b.full_pct - a.full_pct).map((a, i) => `
+  function ranking(withFull) {
+    if (state.rank === "activity") {
+      return state.overview.apps.filter((a) => a.activity).slice().sort(sorters.activity).map((a, i) => `
+        <a class="rank-row" href="#/app/${esc(a.id)}" style="--c:${a.color}" title="${esc(plural(a.activity.changes_7d, "code change"))} in 7 days, on ${a.activity.active_days_7d} of 7 days">
+          <span class="ri">${chipNo(i + 1)}</span>
+          <span class="rn">${twoTone(a.name)}</span>
+          ${cells(a.activity.window)}
+          <span class="rv lv mono">${esc(LEVELS[a.activity.level]?.label || "")}</span>
+        </a>`).join("");
+    }
+    return withFull.slice().sort((a, b) => b.full_pct - a.full_pct || a.order - b.order).map((a, i) => `
       <a class="rank-row" href="#/app/${esc(a.id)}" style="--c:${a.color}">
         <span class="ri">${chipNo(i + 1)}</span>
         <span class="rn">${twoTone(a.name)}</span>
         ${bar(a.full_pct)}
         <span class="rv">${pct(a.full_pct)} %</span>
       </a>`).join("");
+  }
 
-    const errors = (ov.errors || []).length
-      ? `<div class="errors">${ov.errors.map(esc).join("<br>")}</div>` : "";
+  function renderOverview() {
+    const ov = state.overview;
+    const all = ov.apps;
+    const withFull = all.filter((a) => a.full_pct != null);
+    const avg = withFull.length ? withFull.reduce((s, a) => s + a.full_pct, 0) / withFull.length : null;
+    const alpha = all.filter((a) => stageKey(a.stage) === "alpha").length;
+    const pre = all.filter((a) => stageKey(a.stage) === "prealpha").length;
+    const nChanges = all.reduce((s, a) => s + (a.parity?.changes || 0), 0);
+    const since = all.map((a) => a.parity?.tracked_since).filter(Boolean).sort()[0];
+    const buzzing = all.filter((a) => a.activity?.level === "buzzing").length;
+    const thr = ov.milestone_pct ?? 95;
+
+    const errors = (ov.errors || []).length ? `<div class="errors">${ov.errors.map(esc).join("<br>")}</div>` : "";
     const banner = (ov.recent_additions || []).map((r) => `
       <a class="banner" href="#/app/${esc(r.id)}">
-        <span class="mono">New app added</span>
+        <span class="mono">New app</span>
         <strong>${esc(r.name)}</strong>
-        <span class="muted">Reference ${esc(r.adobe)} · discovered ${dateEN(r.added)} · tracked from its ROADMAP.md</span>
+        <span class="muted">Reference ${esc(r.adobe)} · found ${dateEN(r.added)} · tracked from its ROADMAP.md</span>
+        <span class="mono">Open →</span>
+      </a>`).join("");
+    const fresh = all.filter((a) => milestoneState(a.milestone)?.kind === "fresh").map((a) => `
+      <a class="ms-banner" href="#/app/${esc(a.id)}" style="--c:${a.color}">
+        <span class="mono" style="color:var(--gold)">★ Milestone</span>
+        <strong>${esc(a.name)} reached ${pct(a.milestone.value)} % product parity</strong>
+        <span class="muted">${dateEN(a.milestone.reached_at)} · first time at ${pct(thr)} % or more</span>
         <span class="mono">Open →</span>
       </a>`).join("");
 
     app.innerHTML = `
-      ${errors}
-      ${banner}
+      ${errors}${fresh}${banner}
       <section class="hero">
         <section>
-          <div class="mono muted">Product parity · Full target (ready for real work)</div>
-          <h1>Thirteen apps.<br><em>One benchmark.</em></h1>
-          <p>How far each Craft app is from its reference product, measured by what a professional can do day to day
-             without limitation. Updated from the ROADMAP files in the repositories.</p>
+          <div class="eyebrow mono muted">
+            <span>Product parity · ${all.length} Craft apps</span>
+            <details class="info"><summary>What's this?</summary><div>
+              <p><b style="color:var(--text)">Product parity</b> is how much of its reference product (Photoshop, Illustrator, Word and others) a Craft app covers for professional, everyday work. Each project rates itself in its ROADMAP.md, in the row "Full target (ready for real work)".</p>
+              <p>${pct(thr)} % counts as reaching parity. The values are self-assessments, not independent tests.</p>
+            </div></details>
+          </div>
+          <h1>Tracking every Craft app<br><em>on its way to parity.</em></h1>
+          <p>How close each app is to the product it rebuilds, how actively it's being built, and what changed last.</p>
+          <p class="mono" id="hero-checked" style="margin-top:14px;font-size:10.5px;max-width:none">${heroChecked()}</p>
           <div class="stats">
-            <div><div class="v">${pct(avg)} %</div><div class="l">Average full target</div></div>
-            <div><div class="v">${alpha}<span class="muted" style="font-size:18px"> / ${pre}</span></div><div class="l">Alpha / Pre-Alpha</div></div>
-            <div><div class="v">${changed}</div><div class="l">roadmap revised in the last 7 days</div></div>
+            <div><div class="v">${pct(avg)} %</div><div class="l">Average parity</div></div>
+            <div><div class="v">${nChanges}</div><div class="l">Parity changes since ${dateEN(since, false)}</div></div>
+            <div><div class="v">${buzzing}<span class="muted" style="font-size:18px"> / ${all.length}</span></div><div class="l">Apps buzzing now</div></div>
           </div>
         </section>
         <section>
-          <div class="rank-title mono"><span>Ranking by full target</span><span>${withFull.length} apps</span></div>
-          ${ranking || '<p class="muted">No data yet.</p>'}
+          <div class="rank-title mono">
+            <span>Ranking</span>
+            <span class="mini-seg" role="group" aria-label="Rank by">
+              <button class="mono ${state.rank === "parity" ? "on" : ""}" data-rank="parity" aria-pressed="${state.rank === "parity"}">Parity</button>
+              <button class="mono ${state.rank === "activity" ? "on" : ""}" data-rank="activity" aria-pressed="${state.rank === "activity"}">Activity</button>
+            </span>
+          </div>
+          <div id="ranking">${ranking(withFull) || '<p class="muted">No data yet.</p>'}</div>
         </section>
       </section>
+      ${latestStrip(ov)}
 
       <div class="toolbar">
-        <div class="seg" role="group" aria-label="Filter">
+        <div class="seg" role="group" aria-label="Filter by stage">
           ${[["all", "All", all.length], ["alpha", "Alpha", alpha], ["prealpha", "Pre-Alpha", pre]]
-            .map(([k, l, n]) => `<button class="mono ${state.filter === k ? "on" : ""}" data-filter="${k}">${l}<b>${n}</b></button>`).join("")}
+            .map(([k, l, n]) => `<button class="mono ${state.filter === k ? "on" : ""}" data-filter="${k}" aria-pressed="${state.filter === k}">${l}<b>${n}</b></button>`).join("")}
         </div>
         <div class="spacer"></div>
-        <select class="sel mono" id="sort" aria-label="Sort by">
-          <option value="order" ${state.sort === "order" ? "selected" : ""}>Suite order</option>
-          <option value="full" ${state.sort === "full" ? "selected" : ""}>Full target</option>
-          <option value="breadth" ${state.sort === "breadth" ? "selected" : ""}>Feature breadth</option>
-          <option value="update" ${state.sort === "update" ? "selected" : ""}>Last updated</option>
-          <option value="name" ${state.sort === "name" ? "selected" : ""}>Name</option>
+        <label class="sortlab mono" for="sort">Sort</label>
+        <select class="sel mono" id="sort">
+          ${SORTS.map(([k, l]) => `<option value="${k}" ${state.sort === k ? "selected" : ""}>${l}</option>`).join("")}
         </select>
         <input class="search" id="q" type="search" placeholder="Search apps" value="${esc(state.query)}" aria-label="Search apps">
       </div>
-      <div class="grid" id="grid"></div>`;
+      <div class="grid" id="grid"></div>
+
+      <section class="about" aria-label="About the numbers">
+        <div>
+          <h3 class="mono">Product parity</h3>
+          <p>The share of the reference product a professional can use every day, as each project estimates it ("Full target, ready for real work"). This is the headline number.</p>
+          <p>A <b>parity change</b> is a new value, up or down. Publishing the same value again doesn't count.</p>
+        </div>
+        <div>
+          <h3 class="mono">Activity</h3>
+          <p>Code changes merged into the main branch, per day, over the last 14 days. Docs, roadmap edits, CI files and version bumps don't count. A busy day weighs less than a steady week, and the level drops when work pauses.</p>
+          <dl>${Object.values(LEVELS).map((l) => `<dt class="mono">${l.label}</dt><dd>${l.help}</dd>`).join("")}</dl>
+        </div>
+        <div>
+          <h3 class="mono">Updates</h3>
+          <p><b>Parity</b>: the value changed. <b>Roadmap</b>: the text or another estimate in ROADMAP.md changed (formatting-only edits are left out). <b>Release</b>: a published GitHub release. <b>Code</b>: the code changes merged that day.</p>
+          <p>Activity measures effort, not progress. Most changes don't move parity.</p>
+        </div>
+      </section>`;
 
     app.querySelectorAll("[data-filter]").forEach((b) => b.addEventListener("click", () => {
       state.filter = b.dataset.filter;
-      app.querySelectorAll("[data-filter]").forEach((x) => x.classList.toggle("on", x === b));
-      drawGrid();
+      app.querySelectorAll("[data-filter]").forEach((x) => { x.classList.toggle("on", x === b); x.setAttribute("aria-pressed", String(x === b)); });
+      drawGrid(true);
     }));
-    document.getElementById("sort").addEventListener("change", (e) => { state.sort = e.target.value; drawGrid(); });
-    document.getElementById("q").addEventListener("input", (e) => { state.query = e.target.value; drawGrid(); });
+    app.querySelectorAll("[data-rank]").forEach((b) => b.addEventListener("click", () => {
+      state.rank = b.dataset.rank;
+      store.set("tracker.rank", state.rank);
+      app.querySelectorAll("[data-rank]").forEach((x) => { x.classList.toggle("on", x === b); x.setAttribute("aria-pressed", String(x === b)); });
+      document.getElementById("ranking").innerHTML = ranking(withFull);
+    }));
+    document.getElementById("sort").addEventListener("change", (e) => {
+      state.sort = e.target.value;
+      store.set("tracker.sort", state.sort);
+      drawGrid(true);
+    });
+    document.getElementById("q").addEventListener("input", (e) => { state.query = e.target.value; drawGrid(false); });
 
-    drawGrid();
+    drawGrid(false);
+    introAnimation();
 
-    const ts = ov.generated_at ? new Date(ov.generated_at) : null;
-    status.innerHTML = `<span>Checked every 30 min · Data last changed: ${ts ? dateEN(ov.generated_at) + " " + ts.toISOString().slice(11, 16) + " UTC" : "–"}</span>
-      <span>Latest roadmap: ${dateEN(lastUpd)}</span>
-      <span>${all.length} apps · Source: GitHub history</span>`;
+    status.innerHTML = `<span>Checked every 30 min · data changed ${esc(stamp(ov.generated_at))}</span>
+      <span>${all.length} apps · source: GitHub repositories of storytold</span>`;
   }
 
-  function drawGrid() {
+  const byName = (a, b) => a.name.localeCompare(b.name, "en");
+  const sorters = {
+    parity_change: (a, b) => {
+      const ta = ms(a.parity?.last_change?.ts), tb = ms(b.parity?.last_change?.ts);
+      const ha = !Number.isNaN(ta), hb = !Number.isNaN(tb);
+      if (ha !== hb) return ha ? -1 : 1;  // apps with a change come first
+      if (ha && ta !== tb) return tb - ta;
+      return (b.full_pct ?? -1) - (a.full_pct ?? -1) || byName(a, b);
+    },
+    full: (a, b) => (b.full_pct ?? -1) - (a.full_pct ?? -1) || byName(a, b),
+    activity: (a, b) => (b.activity?.score ?? -1) - (a.activity?.score ?? -1) ||
+      (b.activity?.changes_14d ?? 0) - (a.activity?.changes_14d ?? 0) || byName(a, b),
+    release: (a, b) => (ms(b.release?.ts) || 0) - (ms(a.release?.ts) || 0) || byName(a, b),
+    breadth: (a, b) => (b.breadth_pct ?? -1) - (a.breadth_pct ?? -1) || byName(a, b),
+    order: (a, b) => (a.order ?? 99) - (b.order ?? 99),
+    name: byName,
+  };
+
+  function card(a) {
+    const c = a.color || "#5b8cff";
+    const act = a.activity;
+    const r = a.release;
+    const ru = a.roadmap?.last_update;
+    const lc = a.parity?.last_change;
+    const msS = milestoneState(a.milestone);
+    const ruLabel = (k) => k === "estimates" ? "Estimates revised" : k === "parity" ? "New parity value" : "Text updated";
+    const what = [
+      ["Parity", lc ? `<b class="${lc.delta > 0 ? "up" : "down"}">${pp(lc.delta)}</b> to ${pct(lc.to)} % · ${when(lc.ts)}<span class="m">${esc(lc.message)}</span>`
+        : `Unchanged since ${dateEN(a.parity?.tracked_since, false)}<span class="m">First value read ${dateEN(a.parity?.tracked_since)}</span>`],
+      ["Roadmap", ru ? `${ruLabel(ru.kind)} · ${when(ru.ts)}<span class="m">${esc(ru.message)}</span>` : "No revisions yet"],
+      ["Code", act?.last_code_change ? `${plural(act.changes_7d, "change")} in 7 days · latest ${when(act.last_code_change.ts)}<span class="m">${esc(act.last_code_change.subject)}</span>` : "No code changes found"],
+      ["Release", r ? `${esc(r.tag)} · ${when(r.ts)}<span class="m">${releaseKind(r.kind)}${r.changes ? ", " + plural(r.changes, "change") : ""}</span>` : "No releases yet"],
+    ].map(([k, v]) => `<div class="what-row"><span class="k mono">${k}</span><span class="v">${v}</span></div>`).join("");
+    return `
+      <article class="card${msS?.kind === "fresh" ? " ms-fresh" : ""}" data-go="${esc(a.id)}" style="--c:${c}">
+        <div class="card-top mono">
+          <span class="chip">${chipNo(a.order)}</span>
+          <span class="clinks">
+            <a href="${esc("https://github.com/storytold/" + a.id + "/blob/main/ROADMAP.md")}" target="_blank" rel="noopener">Roadmap ↗</a>
+            <a href="https://github.com/storytold/${esc(a.id)}" target="_blank" rel="noopener">GitHub ↗</a>
+          </span>
+        </div>
+        <div>
+          <h2 class="name">${twoTone(a.name)}</h2>
+          <div class="sub">${esc(a.category)} · Reference ${esc(a.adobe)}</div>
+        </div>
+        <div class="tags mono">
+          ${a.stage ? `<span class="tag">${esc(stageLabel(a.stage))}</span>` : ""}
+          ${r ? `<span class="tag plain" title="Latest release, ${esc(stamp(r.ts))}">${esc(r.tag)}</span>` : ""}
+          ${a.is_new ? `<span class="tag new">New app</span>` : ""}
+          ${milestoneTag(a.milestone, true)}
+        </div>
+        <div class="full">
+          <div class="full-num" data-v="${a.full_pct ?? ""}">${pct(a.full_pct)}<span>%</span></div>
+          <div class="full-lab mono">Product<br>parity</div>
+        </div>
+        ${bar(a.full_pct, true)}
+        <div class="pline">${parityLine(a)}</div>
+        <div class="aline">
+          ${level(act)}
+          <span title="Code changes per day, last 14 days">${act ? cells(act.window) : ""}</span>
+        </div>
+        <details class="what">
+          <summary class="mono">What changed</summary>
+          <div class="what-list">${what}</div>
+        </details>
+        <a class="btn mono" href="#/app/${esc(a.id)}">Open details</a>
+      </article>`;
+  }
+
+  function drawGrid(animate) {
     const ov = state.overview;
     const q = state.query.trim().toLowerCase();
     let apps = ov.apps.filter((a) =>
       (state.filter === "all" || stageKey(a.stage) === state.filter) &&
       (!q || [a.name, a.adobe, a.category].join(" ").toLowerCase().includes(q)));
-    const sorters = {
-      order: (a, b) => (a.order ?? 99) - (b.order ?? 99),
-      full: (a, b) => (b.full_pct ?? -1) - (a.full_pct ?? -1),
-      breadth: (a, b) => (b.breadth_pct ?? -1) - (a.breadth_pct ?? -1),
-      update: (a, b) => String(b.last_updated || "").localeCompare(String(a.last_updated || "")),
-      name: (a, b) => a.name.localeCompare(b.name, "en"),
-    };
-    apps = apps.slice().sort(sorters[state.sort] || sorters.order);
+    apps = apps.slice().sort(sorters[state.sort] || sorters.parity_change);
 
     const grid = document.getElementById("grid");
-    grid.innerHTML = apps.map((a) => {
-      const c = a.color || "#5b8cff";
-      const delta = a.full_delta == null ? "" :
-        `<span class="tag ${a.full_delta >= 0 ? "up" : "down"}">${a.full_delta >= 0 ? "▲" : "▼"} ${pp(a.full_delta)}${a.full_delta_since ? " since " + dateShort(a.full_delta_since) : ""}</span>`;
-      return `
-      <article class="card" data-go="${esc(a.id)}" style="--c:${c}">
-        <div class="card-top mono">
-          <span class="chip">${chipNo(a.order)}</span>
-          <span class="links">
-            <a href="${esc(a.roadmap_url || "https://github.com/storytold/" + a.id + "/blob/main/ROADMAP.md")}" target="_blank" rel="noopener">Roadmap ↗</a>
-            <a href="https://github.com/storytold/${esc(a.id)}" target="_blank" rel="noopener">GitHub ↗</a>
-          </span>
-        </div>
-        <div>
-          <div class="name">${twoTone(a.name)}</div>
-          <div class="sub">${esc(a.category)} · Reference ${esc(a.adobe)}</div>
-        </div>
-        <div class="tags mono">
-          ${a.stage ? `<span class="tag" style="--c:${c}">${esc(stageLabel(a.stage))}</span>` : ""}
-          ${a.is_new ? `<span class="tag new">New app</span>` : ""}
-          ${a.changed_in_run ? `<span class="tag new">New roadmap</span>` : ""}
-          ${delta}
-        </div>
-        <div class="full">
-          <div class="full-num">${pct(a.full_pct)}<span>%</span></div>
-          <div class="full-lab mono">Full target<br>ready for real work</div>
-        </div>
-        ${bar(a.full_pct)}
-        <div class="spec mono">
-          ${a.full_range ? `<span>Range <b>${range(a.full_range)}</b></span>` : ""}
-          <span>to ~95 %: <b>${hours(a.full_hours)}</b></span>
-          <span>Updated <b>${dateEN(a.last_updated)}</b></span>
-        </div>
-        ${spark(a.series, c)}
-        <a class="btn mono" href="#/app/${esc(a.id)}">Open details</a>
-      </article>`;
-    }).join("") || `<div class="empty mono">No matches</div>`;
+    const before = new Map();
+    if (animate && !reduceMotion) grid.querySelectorAll("[data-go]").forEach((el) => before.set(el.dataset.go, el.getBoundingClientRect()));
+    const open = new Set([...grid.querySelectorAll("details.what[open]")].map((d) => d.closest("[data-go]").dataset.go));
+    grid.innerHTML = apps.map(card).join("") || `<div class="empty mono">No matches</div>`;
+    open.forEach((id) => grid.querySelector(`[data-go="${CSS.escape(id)}"] details.what`)?.setAttribute("open", ""));
 
-    grid.querySelectorAll("[data-go]").forEach((card) => card.addEventListener("click", (e) => {
-      if (e.target.closest("a")) return;
-      location.hash = `#/app/${card.dataset.go}`;
-    }));
+    grid.querySelectorAll("[data-go]").forEach((el) => {
+      el.addEventListener("click", (e) => {
+        if (e.target.closest("a, summary, details")) return;
+        location.hash = `#/app/${el.dataset.go}`;
+      });
+      const r0 = before.get(el.dataset.go);
+      if (r0) {  // FLIP: slide each card from its old position to the new one
+        const r1 = el.getBoundingClientRect();
+        const dx = r0.left - r1.left, dy = r0.top - r1.top;
+        if (dx || dy) el.animate([{ transform: `translate(${dx}px,${dy}px)` }, { transform: "none" }], { duration: 320, easing: "cubic-bezier(.2,.7,.2,1)" });
+      }
+    });
+    celebrate(grid);
+  }
+
+  /* Bars render empty until the first view has shown them filling up; after that they render at full width */
+  function fillBars() {
+    requestAnimationFrame(() => app.querySelectorAll(".bar i[data-w]").forEach((i) => { i.style.width = i.dataset.w + "%"; }));
+  }
+
+  /* Count the numbers up and fill the bars, once per page load (not on re-renders or data refreshes) */
+  function introAnimation() {
+    if (state.animated) return;
+    state.animated = true;
+    fillBars();
+    if (reduceMotion) return;
+    requestAnimationFrame(() => {
+      const nums = [...app.querySelectorAll(".full-num[data-v]")].filter((el) => el.dataset.v !== "");
+      const t0 = performance.now(), dur = 900;
+      nums.forEach((el) => { el.firstChild.nodeValue = "0"; });
+      const tick = (t) => {
+        const k = Math.min(1, Math.max(0, (t - t0) / dur)), e = 1 - Math.pow(1 - k, 3);
+        nums.forEach((el) => { el.firstChild.nodeValue = nf(Number(el.dataset.v) * e, 0); });
+        if (k < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
+  }
+
+  /* Fresh milestone: one short sparkle per app and browser session, then a calm gold outline for 7 days */
+  function celebrate(root) {
+    if (reduceMotion) return;
+    root.querySelectorAll(".card.ms-fresh, .dhead.ms-fresh").forEach((el) => {
+      const key = `tracker.cele.${el.dataset.go || el.dataset.id}`;
+      try { if (sessionStorage.getItem(key)) return; sessionStorage.setItem(key, "1"); } catch (e) { /* storage blocked */ }
+      const host = el.querySelector(".bar") || el;
+      const s = document.createElement("span");
+      s.className = "sheen";
+      host.appendChild(s);
+      s.animate([{ transform: "translateX(-100%)" }, { transform: "translateX(100%)" }], { duration: 1200, delay: 700, easing: "ease-in-out" }).onfinish = () => s.remove();
+      const num = el.querySelector(".full-num, .name");
+      if (!num) return;
+      const box = el.getBoundingClientRect(), n = num.getBoundingClientRect();
+      const ox = n.left - box.left + Math.min(n.width, 140) * 0.6, oy = n.top - box.top + n.height * 0.4;
+      for (let i = 0; i < 14; i++) {
+        const p = document.createElement("span");
+        p.className = "burst";
+        p.style.left = ox + "px"; p.style.top = oy + "px";
+        el.appendChild(p);
+        const a = (Math.PI * 2 * i) / 14 + Math.random() * 0.3, d = 40 + Math.random() * 46;
+        p.animate([
+          { transform: "translate(0,0) rotate(0) scale(1)", opacity: 1 },
+          { transform: `translate(${Math.cos(a) * d}px,${Math.sin(a) * d - 10}px) rotate(${180 + i * 25}deg) scale(.4)`, opacity: 0 },
+        ], { duration: 1100 + Math.random() * 400, delay: 650, easing: "cubic-bezier(.15,.7,.3,1)", fill: "both" }).onfinish = () => p.remove();
+      }
+    });
   }
 
   /* ---------- Detail view ---------- */
-  function lineChart(history, c) {
+
+  /* Parity as a step line: a value holds until a later revision changes it.
+     "Fit" zooms the y axis to the data (span of at least 10 points) and labels the range; "0–100" shows the full scale. */
+  function lineChart(history, c, scale, threshold) {
     const pts = (history || []).filter((h) => h.full_pct != null);
-    if (!pts.length) return `<p class="muted">No history available yet.</p>`;
-    const W = 720, H = 280, L = 46, R = 18, T = 16, B = 34;
-    const ts = pts.map((p) => new Date(p.commit_date).getTime());
-    const t0 = Math.min(...ts), t1 = Math.max(...ts);
-    const X = (t) => t1 === t0 ? (L + W - R) / 2 : L + (t - t0) / (t1 - t0) * (W - L - R);
-    const Y = (v) => T + (100 - v) / 100 * (H - T - B);
-    const grid = [0, 25, 50, 75, 100].map((g) => `
-      <line x1="${L}" x2="${W - R}" y1="${Y(g)}" y2="${Y(g)}" stroke="#1c1c1c"/>
-      <text x="${L - 10}" y="${Y(g) + 4}" text-anchor="end">${g}%</text>`).join("");
-    const path = pts.map((p, i) => `${i ? "L" : "M"}${X(ts[i]).toFixed(1)},${Y(p.full_pct).toFixed(1)}`).join(" ");
-    const area = `${path} L${X(ts[ts.length - 1]).toFixed(1)},${Y(0)} L${X(ts[0]).toFixed(1)},${Y(0)} Z`;
-    const dots = pts.map((p, i) => {
-      const changed = i === 0 || pts[i - 1].full_pct !== p.full_pct || i === pts.length - 1;
-      const x = X(ts[i]).toFixed(1), y = Y(p.full_pct).toFixed(1);
-      const tip = `<title>${esc(dateEN(p.commit_date))} · ${pct(p.full_pct)} %${p.stage ? " · " + esc(p.stage) : ""}${p.message ? "\n" + esc(p.message) : ""}</title>`;
-      return `<circle cx="${x}" cy="${y}" r="9" fill="transparent">${tip}</circle>` +
-        (changed ? `<circle cx="${x}" cy="${y}" r="3.5" fill="${c}" stroke="#000" stroke-width="1.5"/>` : "");
+    if (!pts.length) return `<p class="muted">No history yet.</p>`;
+    const W = 720, H = 280, L = 44, R = 46, T = 18, B = 34;
+    const ts = pts.map((p) => ms(p.ts || p.commit_date));
+    const t0 = ts[0];
+    const t1 = Math.max(ts[ts.length - 1], Math.min(Date.now(), ts[ts.length - 1] + 30 * DAY), t0 + DAY);
+    const vals = pts.map((p) => p.full_pct);
+    let lo = 0, hi = 100, step = 25;
+    if (scale === "fit") {
+      const mn = Math.min(...vals), mx = Math.max(...vals);
+      const span = Math.max(10, (mx - mn) * 1.6);
+      const mid = (mn + mx) / 2;
+      step = span <= 12 ? 2 : span <= 30 ? 5 : 10;
+      lo = Math.max(0, Math.floor((mid - span / 2) / step) * step);
+      hi = Math.min(100, Math.ceil((mid + span / 2) / step) * step);
+      if (hi - lo < 10) { if (lo === 0) hi = 10; else lo = hi - 10; }
+    }
+    const X = (t) => L + (t - t0) / (t1 - t0) * (W - L - R);
+    const Y = (v) => T + (hi - v) / (hi - lo) * (H - T - B);
+    let grid = "";
+    for (let g = lo; g <= hi + 1e-9; g += step) {
+      grid += `<line x1="${L}" x2="${W - R}" y1="${Y(g).toFixed(1)}" y2="${Y(g).toFixed(1)}" stroke="#1c1c1c"/>
+        <text x="${L - 8}" y="${(Y(g) + 4).toFixed(1)}" text-anchor="end">${g}%</text>`;
+    }
+    const thrLine = threshold >= lo && threshold <= hi
+      ? `<line x1="${L}" x2="${W - R}" y1="${Y(threshold)}" y2="${Y(threshold)}" stroke="#e8c46a" stroke-dasharray="3 4" opacity=".6"/>` : "";
+    let d = `M${X(ts[0]).toFixed(1)},${Y(vals[0]).toFixed(1)}`;
+    for (let i = 1; i < pts.length; i++) d += ` H${X(ts[i]).toFixed(1)} V${Y(vals[i]).toFixed(1)}`;
+    const xEnd = X(t1);
+    d += ` H${xEnd.toFixed(1)}`;
+    const area = `${d} V${Y(lo).toFixed(1)} H${X(ts[0]).toFixed(1)} Z`;
+    const marks = pts.map((p, i) => {
+      if (i && vals[i - 1] === vals[i]) return "";
+      const x = X(ts[i]).toFixed(1), y = Y(vals[i]).toFixed(1);
+      const tip = `<title>${esc(stamp(p.ts || p.commit_date))} · ${pct(vals[i])} %${i ? ` (${pp(vals[i] - vals[i - 1])})` : ", first value"}${p.message ? "\n" + esc(p.message) : ""}</title>`;
+      return `<g><circle cx="${x}" cy="${y}" r="10" fill="transparent">${tip}</circle><circle cx="${x}" cy="${y}" r="3.5" fill="${c}" stroke="#000" stroke-width="1.5"/></g>`;
     }).join("");
-    const xl = `<text x="${L}" y="${H - 10}">${esc(dateEN(new Date(t0).toISOString()))}</text>
-      <text x="${W - R}" y="${H - 10}" text-anchor="end">${esc(dateEN(new Date(t1).toISOString()))}</text>`;
-    return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Trend of the full-target estimate">
-      ${grid}
+    const last = vals[vals.length - 1];
+    const spanDays = (t1 - t0) / DAY;
+    const every = spanDays <= 16 ? 2 : spanDays <= 45 ? 7 : spanDays <= 120 ? 14 : 30;
+    const start = new Date(t0); start.setUTCHours(0, 0, 0, 0);
+    let xl = "";
+    for (let t = start.getTime() + DAY; t <= t1; t += every * DAY) {
+      xl += `<line x1="${X(t).toFixed(1)}" x2="${X(t).toFixed(1)}" y1="${H - B}" y2="${H - B + 4}" stroke="#2a2a2a"/>
+        <text x="${X(t).toFixed(1)}" y="${H - 12}" text-anchor="middle">${esc(dayUTC(new Date(t).toISOString(), false))}</text>`;
+    }
+    const zoomed = lo > 0 || hi < 100;
+    return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Product parity over time, from ${pct(vals[0])} to ${pct(last)} percent${zoomed ? `, axis from ${lo} to ${hi} percent` : ""}">
+      ${grid}${thrLine}
+      <line x1="${L}" x2="${W - R}" y1="${H - B}" y2="${H - B}" stroke="#2a2a2a"/>
       <path d="${area}" fill="${c}" opacity=".10"/>
-      <path d="${path}" fill="none" stroke="${c}" stroke-width="2"/>
-      ${dots}${xl}
+      <path d="${d}" fill="none" stroke="${c}" stroke-width="2"/>
+      ${marks}
+      <text x="${(xEnd + 6).toFixed(1)}" y="${(Y(last) + 4).toFixed(1)}" style="fill:${c}">${pct(last)}%</text>
+      ${xl}
+      ${zoomed ? `<text x="${L}" y="${T - 6}" style="font-size:9.5px">Axis zoomed to ${lo}–${hi} %</text>` : ""}
     </svg>`;
+  }
+
+  /* Code changes per day: vertical bars, so they don't read like the horizontal parity bars */
+  function activityChart(act, c) {
+    const days = act?.days || [];
+    if (!days.length) return `<p class="muted">No changes in the last 180 days.</p>`;
+    const today = new Date(); today.setUTCHours(0, 0, 0, 0);
+    const born = act.repo_since ? ms(act.repo_since.slice(0, 10) + "T00:00:00Z") : -Infinity;
+    // From the first day with data, or 14 days back, but never before the repository existed
+    const first = Math.max(born, Math.min(ms(days[0].d + "T00:00:00Z"), today.getTime() - 13 * DAY));
+    const n = Math.round((today.getTime() - first) / DAY) + 1;
+    const map = Object.fromEntries(days.map((x) => [x.d, x]));
+    const series = [];
+    for (let i = n - 1; i >= 0; i--) {
+      const key = new Date(today.getTime() - i * DAY).toISOString().slice(0, 10);
+      series.push({ key, code: map[key]?.code || 0, other: map[key]?.other || 0 });
+    }
+    const W = 1180, H = 170, L = 44, R = 10, T = 10, B = 26;  // full-width panel: a wide box keeps the labels small
+    const max = Math.max(1, ...series.map((s) => s.code));
+    const bw = (W - L - R) / series.length;
+    const Y = (v) => T + (1 - v / max) * (H - T - B);
+    const bars = series.map((s, i) => {
+      const x = L + i * bw, h = Y(0) - Y(s.code);
+      return `<rect x="${(x + bw * 0.12).toFixed(1)}" y="${Y(s.code).toFixed(1)}" width="${Math.max(1, bw * 0.76).toFixed(1)}" height="${Math.max(s.code ? 1 : 0, h).toFixed(1)}" fill="${c}" opacity="${i >= series.length - 14 ? 0.95 : 0.5}"><title>${esc(dayUTC(s.key))}: ${plural(s.code, "code change")}${s.other ? `, ${s.other} other` : ""}</title></rect>`;
+    }).join("");
+    const labels = [0, Math.floor(series.length / 2), series.length - 1].map((i) =>
+      `<text x="${(L + i * bw + bw / 2).toFixed(1)}" y="${H - 8}" text-anchor="${i === 0 ? "start" : i === series.length - 1 ? "end" : "middle"}">${esc(dayUTC(series[i].key, false))}</text>`).join("");
+    return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Code changes per day, most recently ${plural(series[series.length - 1].code, "change")} today">
+      <line x1="${L}" x2="${W - R}" y1="${Y(max)}" y2="${Y(max)}" stroke="#1c1c1c"/>
+      <text x="${L - 8}" y="${Y(max) + 4}" text-anchor="end">${nf(max)}</text>
+      <text x="${L - 8}" y="${Y(0) + 4}" text-anchor="end">0</text>
+      <line x1="${L}" x2="${W - R}" y1="${Y(0)}" y2="${Y(0)}" stroke="#2a2a2a"/>
+      ${bars}${labels}
+    </svg>`;
+  }
+
+  function longestPause(act) {
+    const days = (act?.days || []).filter((x) => x.code > 0).map((x) => ms(x.d + "T00:00:00Z"));
+    if (!days.length) return null;
+    let best = 0;
+    for (let i = 1; i < days.length; i++) best = Math.max(best, Math.round((days[i] - days[i - 1]) / DAY) - 1);
+    const today = new Date(); today.setUTCHours(0, 0, 0, 0);
+    return Math.max(best, Math.round((today.getTime() - days[days.length - 1]) / DAY));
+  }
+
+  /* One timeline for all update types, grouped by UTC day. A day's roadmap revisions are folded into one row. */
+  function buildTimeline(d) {
+    const days = new Map();
+    const day = (ts) => {
+      const k = String(ts).slice(0, 10);
+      if (!days.has(k)) days.set(k, { key: k, parity: [], roadmap: [], release: [], code: null, first: null, editorial: 0, target: [] });
+      return days.get(k);
+    };
+    for (const h of d.history || []) {
+      const g = day(h.ts || h.commit_date);
+      if (h.kind === "parity") g.parity.push(h);
+      else if (h.kind === "first") g.first = h;
+      else if (h.kind === "content" || h.kind === "estimates") g.roadmap.push(h);
+      else g.editorial++;
+      if (h.target_changed) g.target.push(h);
+    }
+    for (const r of d.releases || []) day(r.ts).release.push(r);
+    for (const a of d.activity?.days || []) if (a.code) day(a.d).code = a;
+    return [...days.values()].sort((a, b) => b.key.localeCompare(a.key));
+  }
+
+  function timelineHTML(d, filter, limit) {
+    const c = d.color;
+    const rows = [];
+    let editorial = 0;
+    const want = (t) => filter === "all" || filter === t;
+    for (const g of buildTimeline(d)) {
+      const items = [];
+      if (want("parity")) {
+        g.parity.slice().reverse().forEach((h) => items.push(`<div class="tl"><span class="etype mono parity" style="--c:${c}">Parity</span>
+          <span class="t"><b>${pct(h.full_prev)} → ${pct(h.full_pct)} % <span class="${h.full_pct > h.full_prev ? "up" : "down"}">(${pp(h.full_pct - h.full_prev)})</span></b>${h.label_changed ? ` <span class="tag plain mono" title="The row label changed in the same revision, so the method may have changed too">label changed</span>` : ""}
+          <span class="m">${esc(timeEN(h.ts))} · <a href="${commitUrl(d.id, h.commit_full)}" target="_blank" rel="noopener"><code>${esc(h.commit)}</code></a> ${esc(h.message)}</span></span></div>`));
+        if (g.first) items.push(`<div class="tl"><span class="etype mono">Tracked</span><span class="t"><b>First parity value: ${pct(g.first.full_pct)} %</b><span class="m">The roadmap reports the full target from this revision on</span></span></div>`);
+      }
+      if (want("release")) g.release.forEach((r) => items.push(`<div class="tl"><span class="etype mono release">Release</span>
+        <span class="t"><b>${ghUrl(r.url) ? `<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.tag)} ↗</a>` : esc(r.tag)}</b> · ${releaseKind(r.kind)}${r.prerelease ? " (pre-release)" : ""}
+        <span class="m">${esc(timeEN(r.ts))}${r.changes ? ` · ${plural(r.changes, "change")} in the notes` : ""}${r.new_contributors ? ` · ${plural(r.new_contributors, "new contributor")}` : ""}${r.platforms?.length ? ` · ${esc(r.platforms.join(", "))}` : ""}</span></span></div>`));
+      if (want("roadmap")) {
+        g.target.forEach((h) => items.push(`<div class="tl"><span class="etype mono">Reference</span><span class="t"><b>Reference product changed</b><span class="m">${esc(h.target_changed)} → ${esc(h.target)}</span></span></div>`));
+        if (g.roadmap.length) {
+          const est = g.roadmap.filter((h) => h.kind === "estimates").length;
+          const list = g.roadmap.slice().reverse();
+          items.push(`<div class="tl"><span class="etype mono">Roadmap</span><span class="t">
+            <b>${list.length === 1 ? "Roadmap revised" : `Roadmap revised ${list.length}×`}</b>${est ? ` · ${est === list.length ? "estimates changed" : `estimates changed in ${est}`}` : ""}
+            ${list.length === 1 ? `<span class="m">${esc(timeEN(list[0].ts))} · ${esc(list[0].message)}</span>` :
+              `<details><summary class="m">Latest: ${esc(list[0].message)} <span class="mono">+${list.length - 1}</span></summary><ul>${list.map((h) =>
+                `<li>${esc(timeEN(h.ts))} · ${h.kind === "estimates" ? "<b>estimates</b> · " : ""}<a href="${commitUrl(d.id, h.commit_full)}" target="_blank" rel="noopener">${esc(h.message)}</a></li>`).join("")}</ul></details>`}
+          </span></div>`);
+        }
+        editorial += g.editorial;
+      }
+      if (want("code") && g.code) items.push(`<div class="tl"><span class="etype mono">Code</span><span class="t">
+        <b>${plural(g.code.code, "code change")}</b>${g.code.other ? `<span class="muted"> · ${nf(g.code.other)} docs, CI or release</span>` : ""}
+        <span class="m clamp">${g.code.samples.map((x) => esc(x.subject)).join(" · ")}${g.code.code > g.code.samples.length ? " …" : ""}</span></span></div>`);
+      if (items.length) rows.push(`<div class="tl-day"><time class="mono" datetime="${g.key}">${esc(dayUTC(g.key))}</time><div class="tl-items">${items.join("")}</div></div>`);
+    }
+    return (rows.slice(0, limit).join("") || `<p class="muted">Nothing of this type yet.</p>`) +
+      (rows.length > limit ? `<button class="more mono" data-more>Show older (${plural(rows.length - limit, "day")})</button>` : "") +
+      (editorial ? `<p class="note">${plural(editorial, "formatting-only revision")} not shown.</p>` : "");
   }
 
   function renderDetail(id) {
     const s = state.overview.apps.find((a) => a.id === id);
     if (!s) { app.innerHTML = `<a class="back mono" href="#/">← Overview</a><p class="muted">Unknown app "${esc(id)}".</p>`; return; }
     app.innerHTML = `<p class="muted mono" style="padding:40px 0">Loading details …</p>`;
-    fetch(`data/apps/${encodeURIComponent(id)}.json`, { cache: "no-cache" })
-      .then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
-      .then((d) => drawDetail(d, s))
-      .catch((e) => { app.innerHTML = `<a class="back mono" href="#/">← Overview</a><p class="muted">Details could not be loaded (${esc(e.message)}).</p>`; });
+    const seq = ++state.renderSeq;  // ignore a slow response once the user has moved on
+    const current = () => seq === state.renderSeq;
+    getJSON(`data/apps/${encodeURIComponent(id)}.json`)
+      .then((d) => { if (current()) { drawDetail(d, s); showOffline(); } })
+      .catch((e) => { if (!current()) return; app.innerHTML = `<a class="back mono" href="#/">← Overview</a><p class="muted">Details could not be loaded (${esc(e.message)}).${state.fromCache || !navigator.onLine ? " You're offline, and this app hasn't been saved for offline use yet. Open it once while online to keep a copy." : ""}</p>`; });
   }
 
   function drawDetail(d, s) {
@@ -456,159 +1126,234 @@
     const m = p.metrics || {};
     const hist = d.history || [];
     const latest = hist[hist.length - 1] || {};
-    const full = m.full || {};
     const fullNow = latest.full_pct ?? s.full_pct;
-    const delta = s.full_delta;
+    const par = d.parity || s.parity || {};
+    const act = d.activity;
+    const rels = d.releases || [];
+    const r0 = rels.find((r) => !r.prerelease) || rels[0];
+    const ru = d.roadmap?.last_update;
+    const thr = state.overview.milestone_pct ?? 95;
+    const msS = milestoneState(d.milestone);
+    const firstVal = hist[0]?.full_pct;
+    const sinceStart = firstVal != null && fullNow != null ? fullNow - firstVal : null;
 
     const aud = (key, label) => {
       const e = m[key];
       if (!e) return "";
-      return `<div class="row">
-        <span>${esc(label)}</span>
-        ${bar(e.pct)}
-        <span class="p">${pct(e.pct)} %</span>
-        ${e.range || e.hours ? `<span class="sub2 mono">${e.range ? "Range " + range(e.range) : ""}${e.range && e.hours ? " · " : ""}${e.hours ? hours(e.hours) + " to ~95 %" : ""}</span>` : ""}
-      </div>`;
+      return `<div class="row"><span>${esc(label)}</span>${bar(e.pct)}<span class="p">${pct(e.pct)} %</span>
+        ${e.hours ? `<span class="sub2 mono">${hours(e.hours)} of agent work to ~95 %</span>` : ""}</div>`;
     };
-    const rows = (list) => (list || []).map((x) => `
-      <div class="row"><span>${esc(x.label)}</span>${bar(x.pct)}<span class="p">${pct(x.pct)} %</span></div>`).join("");
-
-    const feed = (p.progress || []).slice(0, 30).map((x) => `
-      <li><time class="mono">${esc(dateEN(x.date))}</time><span>${esc(x.text)}</span></li>`).join("");
+    const rows = (list) => (list || []).map((x) => `<div class="row"><span>${esc(x.label)}</span>${bar(x.pct)}<span class="p">${pct(x.pct)} %</span></div>`).join("");
+    const feed = (p.progress || []).slice(0, 30).map((x) => `<li><time class="mono">${esc(dateEN(x.date))}</time><span>${esc(x.text)}</span></li>`).join("");
     const upcoming = (p.upcoming || []).map((u) => `<li>${esc(u)}</li>`).join("");
 
-    // Only revisions where the full-target value or the stage changed
-    const changes = [];
-    hist.forEach((h, i) => {
-      const prev = hist[i - 1];
-      if (!prev || prev.full_pct !== h.full_pct || prev.stage !== h.stage) changes.push({ h, prev });
-    });
-    const tableRows = changes.slice().reverse().slice(0, 60).map(({ h, prev }) => {
-      const dd = prev && prev.full_pct != null && h.full_pct != null ? h.full_pct - prev.full_pct : null;
-      return `<tr>
-        <td class="mono">${esc(dateEN(h.commit_date))}</td>
-        <td><code>${esc(h.commit)}</code></td>
-        <td class="mono">${esc(stageLabel(h.stage))}</td>
-        <td class="num">${pct(h.full_pct)} %</td>
-        <td class="num">${dd == null || dd === 0 ? "" : `<span class="tag ${dd > 0 ? "up" : "down"}">${pp(dd)}</span>`}</td>
-        <td class="num">${pct(h.mainstream_pct)} %</td>
-      </tr>`;
-    }).join("");
+    // The four kinds of update side by side; the newest of parity, roadmap and release is marked
+    const nowCells = [
+      ["parity", "Parity change", par.last_change?.ts,
+        par.last_change ? `<span class="${par.last_change.delta > 0 ? "up" : "down"}">${pp(par.last_change.delta)}</span> to ${pct(par.last_change.to)} %` : "None yet",
+        par.last_change ? esc(par.last_change.message) : `Unchanged since ${dateEN(par.tracked_since)}`],
+      ["roadmap", "Roadmap update", ru?.ts, ru ? (ru.kind === "estimates" ? "Estimates revised" : ru.kind === "parity" ? "New parity value" : "Text updated") : "None yet", ru ? esc(ru.message) : ""],
+      ["code", "Code activity", act?.last_code_change?.ts, act ? `${LEVELS[act.level]?.label || "–"} · ${plural(act.changes_7d, "change")} in 7 days` : "Unknown", act?.last_code_change ? esc(act.last_code_change.subject) : ""],
+      ["release", "Release", r0?.ts, r0 ? `${esc(r0.tag)} · ${releaseKind(r0.kind).replace(" release", "").toLowerCase()}` : "None yet", r0?.changes ? `${plural(r0.changes, "change")} in the notes` : ""],
+    ];
+    const newest = nowCells.filter((x) => x[2] && x[0] !== "code").sort((a, b) => ms(b[2]) - ms(a[2]))[0]?.[0];
+    const nowHTML = nowCells.map(([k, label, ts, v, mm]) => `<div class="${k === newest ? "newest" : ""}">
+      <div class="k mono">${label}${k === newest ? " · latest" : ""}</div>
+      <div class="v">${v}${ts ? ` <span class="muted" style="font-weight:400">· ${when(ts)}</span>` : ""}</div>
+      ${mm ? `<div class="m">${mm}</div>` : ""}</div>`).join("");
+
+    const relRows = rels.slice(0, 8).map((r) => `<tr>
+      <td>${ghUrl(r.url) ? `<a href="${esc(r.url)}" target="_blank" rel="noopener"><b>${esc(r.tag)}</b></a>` : `<b>${esc(r.tag)}</b>`}${r.prerelease ? ' <span class="tag plain mono">pre</span>' : ""}</td>
+      <td class="mono">${esc(dateEN(r.ts))}</td>
+      <td>${esc(releaseKind(r.kind).replace(" release", ""))}</td>
+      <td class="r">${r.changes ? nf(r.changes) : "–"}</td>
+      <td class="hide-sm muted">${esc((r.platforms || []).join(", ") || "–")}</td></tr>`).join("");
+    const stable = rels.filter((r) => !r.prerelease).map((r) => ms(r.ts));
+    const gaps = stable.length > 2 ? stable.slice(0, -1).map((t, i) => (t - stable[i + 1]) / DAY).sort((a, b) => a - b) : null;
+    const medianGap = gaps ? gaps[Math.floor(gaps.length / 2)] : null;
+    const pause = longestPause(act);
 
     app.innerHTML = `
       <a class="back mono" href="#/">← Overview</a>
-      <header class="dhead" style="--c:${c}">
+      <div style="--c:${c}">
+      <header class="dhead${msS?.kind === "fresh" ? " ms-fresh" : ""}" data-id="${esc(d.id)}">
         <span class="chip">${chipNo(s.order)}</span>
         <div>
-          <div class="name">${twoTone(d.name)}</div>
+          <h1 class="name">${twoTone(d.name)}</h1>
           <div class="target">Reference: ${esc(p.target || d.adobe)}</div>
         </div>
         <div class="tags mono">
-          ${(p.stage || s.stage) ? `<span class="tag" style="--c:${c}">${esc(stageLabel(p.stage || s.stage))}</span>` : ""}
-          ${p.next_stage ? `<span class="tag plain">next stage ${esc(stageLabel(p.next_stage))}</span>` : ""}
+          ${(p.stage || s.stage) ? `<span class="tag">${esc(stageLabel(p.stage || s.stage))}</span>` : ""}
+          ${p.next_stage ? `<span class="tag plain">next: ${esc(stageLabel(p.next_stage))}</span>` : ""}
+          ${r0 ? `<span class="tag plain">${esc(r0.tag)}</span>` : ""}
           ${s.is_new ? `<span class="tag new">New app</span>` : ""}
-          ${s.changed_in_run ? `<span class="tag new">New roadmap</span>` : ""}
+          ${milestoneTag(d.milestone)}
         </div>
       </header>
 
+      <section class="now" aria-label="Latest updates">${nowHTML}</section>
+
       <section class="hero-detail">
         <div>
-          <div class="mono muted">Full target (ready for real work)</div>
-          <div class="big-detail" style="margin-top:14px;color:var(--text)">${pct(fullNow)}<span>%</span></div>
-          <div style="margin-top:14px">${bar(fullNow)}</div>
+          <div class="mono muted">Product parity</div>
+          <div class="big-detail" style="margin-top:14px">${pct(fullNow)}<span>%</span></div>
+          <div style="margin-top:14px">${bar(fullNow, true)}</div>
           <div class="kv">
-            <div><div class="v">${full.range ? range(full.range) : "–"}</div><div class="l">Estimate range</div></div>
-            <div><div class="v">${hours(full.hours || s.full_hours)}</div><div class="l">Agent hours to ~95 %</div></div>
+            <div><div class="v">${hours(m.full?.hours || s.full_hours)}</div><div class="l">Agent hours to ~95 % (estimate)</div></div>
             <div><div class="v">${pct(m.breadth?.pct)} %</div><div class="l">Feature breadth</div></div>
-            <div><div class="v">${delta == null ? "–" : pp(delta)}</div><div class="l">${s.full_delta_since ? "since " + dateEN(s.full_delta_since) : "no change in value"}</div></div>
+            <div><div class="v">${sinceStart == null ? "–" : sinceStart === 0 ? "±0 pp" : pp(sinceStart)}</div><div class="l">Since the first value (${dateEN(par.tracked_since, false)})</div></div>
+            <div><div class="v">${nf(par.changes ?? 0)}</div><div class="l">Parity changes in ${plural(hist.length, "revision")}</div></div>
           </div>
+          ${par.truncated ? `<p class="note">History is incomplete: older revisions weren't read.</p>` : ""}
         </div>
         <div>
-          <div class="mono muted" style="margin-bottom:10px">Trend of the full-target estimate</div>
-          ${lineChart(hist, c)}
-          <p class="note">One point per roadmap revision from the git history. Highlighted points mark changes in value;
-            hover over a circle to see the commit and date.</p>
+          <div class="chart-head">
+            <span class="mono muted">Product parity over time</span>
+            <span class="mini-seg" role="group" aria-label="Chart scale">
+              <button class="mono ${state.chartScale === "fit" ? "on" : ""}" data-scale="fit" aria-pressed="${state.chartScale === "fit"}">Fit</button>
+              <button class="mono ${state.chartScale === "full" ? "on" : ""}" data-scale="full" aria-pressed="${state.chartScale === "full"}">0–100</button>
+            </span>
+          </div>
+          <div id="pchart">${lineChart(hist, c, state.chartScale, thr)}</div>
+          <p class="note">Dots mark new values, and the line holds between them. "Fit" zooms the axis to the data and says so. "0–100" shows the whole scale. The roadmap first reported a value on ${dateEN(par.tracked_since)}.</p>
+        </div>
+      </section>
+
+      <section class="panel" style="border-bottom:0">
+        <div class="section-title mono"><b>01 / Activity</b>${level(act)}</div>
+        <div class="body">
+          ${activityChart(act, c)}
+          <div class="afig">
+            <div><div class="v">${act ? nf(act.changes_7d) : "–"}</div><div class="l">Code changes, 7 days</div></div>
+            <div><div class="v">${act ? `${act.active_days_7d} / 7` : "–"}</div><div class="l">Days with code changes</div></div>
+            <div><div class="v">${act ? nf(act.housekeeping_7d) : "–"}</div><div class="l">Docs, CI, release, 7 days</div></div>
+            <div><div class="v">${pause == null ? "–" : plural(pause, "day")}</div><div class="l">Longest pause</div></div>
+          </div>
+          <p class="note">Changes merged into main (pull requests and direct commits) per UTC day.${act?.repo_since ? ` The repository started on ${dateEN(act.repo_since)}.` : ""} Activity measures effort, not progress.</p>
         </div>
       </section>
 
       <div class="two">
         <section class="panel">
-          <div class="section-title mono"><b>01 / Audiences</b><span></span></div>
-          <div class="body">
-            ${aud("full", "Full target")}
-            ${aud("mainstream", "Mainstream professional")}
-            ${aud("essentials", "Occasional users")}
-            ${m.breadth ? aud("breadth", "Feature breadth") : ""}
-            ${!m.full ? `<p class="muted">No audience values found.</p>` : ""}
+          <div class="section-title mono"><b>02 / Updates</b>
+            <span class="filters" role="group" aria-label="Show updates">
+              ${[["all", "All"], ["parity", "Parity"], ["roadmap", "Roadmap"], ["release", "Releases"], ["code", "Code"]]
+                .map(([k, l]) => `<button class="mono ${k === "all" ? "on" : ""}" data-tl="${k}" aria-pressed="${k === "all"}">${l}</button>`).join("")}
+            </span>
           </div>
+          <div class="body" id="timeline"></div>
         </section>
+        <div class="stack">
+          <section class="panel">
+            <div class="section-title mono"><b>03 / Releases</b><span>${medianGap != null ? `about every ${plural(Math.max(1, Math.round(medianGap)), "day")}` : ""}</span></div>
+            <div class="body">
+              ${relRows ? `<table class="rel"><thead><tr><th>Version</th><th>Date</th><th>Type</th><th class="r">Changes</th><th class="hide-sm">Platforms</th></tr></thead><tbody>${relRows}</tbody></table>
+                <p class="note">Type is the version step from the previous stable release. Changes are the pull requests listed in the release notes.</p>` : `<p class="muted">No releases yet.</p>`}
+            </div>
+          </section>
+          <section class="panel">
+            <div class="section-title mono"><b>04 / Audiences</b><span></span></div>
+            <div class="body">
+              ${aud("full", "Full target")}
+              ${aud("mainstream", "Mainstream professional")}
+              ${aud("essentials", "Occasional user")}
+              ${m.breadth ? aud("breadth", "Feature breadth") : ""}
+              ${!m.full ? `<p class="muted">No audience values found.</p>` : ""}
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="two">
         <section class="panel">
-          <div class="section-title mono"><b>02 / Dimensions</b><span>${(p.dimensions || []).length} areas</span></div>
+          <div class="section-title mono"><b>05 / Dimensions</b><span>${(p.dimensions || []).length} areas</span></div>
           <div class="body">${rows(p.dimensions) || '<p class="muted">No dimensions found.</p>'}</div>
         </section>
-      </div>
-
-      <div class="two">
         <section class="panel">
-          <div class="section-title mono"><b>03 / Features</b><span>${(p.features || []).length} areas</span></div>
+          <div class="section-title mono"><b>06 / Features</b><span>${(p.features || []).length} areas</span></div>
           <div class="body">${rows(p.features) || '<p class="muted">No feature table found.</p>'}</div>
         </section>
-        <section class="panel">
-          <div class="section-title mono"><b>04 / Up next</b><span></span></div>
-          <div class="body">${upcoming ? `<ul class="plain up-list">${upcoming}</ul>` : `<p class="muted">No entries.</p>`}</div>
-        </section>
       </div>
 
       <div class="two">
         <section class="panel">
-          <div class="section-title mono"><b>05 / Change log</b><span>from the roadmap</span></div>
-          <div class="body">
-            ${feed ? `<ul class="plain feed">${feed}</ul>` : `<p class="muted">No change log found.</p>`}
-          </div>
+          <div class="section-title mono"><b>07 / Up next</b><span>from the roadmap</span></div>
+          <div class="body">${upcoming ? `<ul class="plain up-list">${upcoming}</ul>` : `<p class="muted">No entries.</p>`}</div>
         </section>
         <section class="panel">
-          <div class="section-title mono"><b>06 / Value changes</b><span>${changes.length} of ${hist.length} revisions</span></div>
-          <div class="scroll">
-            <table class="hist">
-              <thead><tr><th>Date</th><th>Commit</th><th>Stage</th><th class="num">Full</th><th class="num">Δ</th><th class="num">Mainstream</th></tr></thead>
-              <tbody>${tableRows || '<tr><td colspan="6" class="muted">No revisions.</td></tr>'}</tbody>
-            </table>
-          </div>
+          <div class="section-title mono"><b>08 / Progress log</b><span>from the roadmap</span></div>
+          <div class="body">${feed ? `<ul class="plain feed">${feed}</ul>` : `<p class="muted">No progress log found.</p>`}</div>
         </section>
       </div>
 
       <section class="panel" style="border-top:0">
-        <div class="section-title mono"><b>07 / Sources</b><span>Last change ${dateEN(d.updated_at)}</span></div>
+        <div class="section-title mono"><b>09 / Sources</b><span>data changed ${esc(stamp(d.updated_at))}</span></div>
         <div class="links mono">
           <a href="${esc(d.roadmap_url)}" target="_blank" rel="noopener">ROADMAP.md ↗</a>
           <a href="${esc(d.repo_url)}" target="_blank" rel="noopener">Repository ↗</a>
-          <a href="${esc(d.repo_url)}/commits/main/ROADMAP.md" target="_blank" rel="noopener">Commits of this file ↗</a>
+          <a href="${esc(d.repo_url)}/releases" target="_blank" rel="noopener">Releases ↗</a>
+          <a href="${esc(d.repo_url)}/commits/main/ROADMAP.md" target="_blank" rel="noopener">Roadmap history ↗</a>
         </div>
-        <p class="note">Latest commit <code>${esc(d.latest_commit || "–")}</code> from ${dateEN(d.latest_commit_date)}${d.latest_message ? ": " + esc(d.latest_message) : ""}</p>
-      </section>`;
+      </section>
+      </div>`;
 
-    status.innerHTML = `<span>${esc(d.name)} · updated ${dateEN(p.last_updated || s.last_updated)}</span>
-      <span>Last change ${dateEN(d.updated_at)}</span><span>${hist.length} revisions</span>`;
+    let tlFilter = "all", tlLimit = 10;
+    const drawTL = () => {
+      const el = document.getElementById("timeline");
+      el.innerHTML = timelineHTML(d, tlFilter, tlLimit);
+      el.querySelector("[data-more]")?.addEventListener("click", () => { tlLimit += 14; drawTL(); });
+    };
+    app.querySelectorAll("[data-tl]").forEach((b) => b.addEventListener("click", () => {
+      tlFilter = b.dataset.tl; tlLimit = 10;
+      app.querySelectorAll("[data-tl]").forEach((x) => { x.classList.toggle("on", x === b); x.setAttribute("aria-pressed", String(x === b)); });
+      drawTL();
+    }));
+    drawTL();
+    if (!state.animated) { state.animated = true; fillBars(); }
+    app.querySelectorAll("[data-scale]").forEach((b) => b.addEventListener("click", () => {
+      state.chartScale = b.dataset.scale;
+      store.set("tracker.scale", state.chartScale);
+      app.querySelectorAll("[data-scale]").forEach((x) => { x.classList.toggle("on", x === b); x.setAttribute("aria-pressed", String(x === b)); });
+      document.getElementById("pchart").innerHTML = lineChart(hist, c, state.chartScale, thr);
+    }));
+    celebrate(app);
+
+    status.innerHTML = `<span>${esc(d.name)} · roadmap dated ${dateEN(p.last_updated || s.roadmap?.self_reported)}</span>
+      <span>${plural(hist.length, "roadmap revision")} · ${plural(par.changes ?? 0, "parity change")}</span>`;
   }
 
   /* ---------- Routing ---------- */
   function route() {
     if (!state.overview) return;
-    const h = decodeURIComponent(location.hash.replace(/^#\/?/, ""));
+    let h = "";
+    try { h = decodeURIComponent(location.hash.replace(/^#\/?/, "")); } catch (e) { h = ""; }  // malformed hash
+    state.renderSeq++;
     if (h.startsWith("app/")) renderDetail(h.slice(4));
     else renderOverview();
     window.scrollTo({ top: 0 });
   }
 
-  fetch("data/overview.json", { cache: "no-cache" })
-    .then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
-    .then((ov) => { state.overview = ov; route(); })
-    .catch((e) => {
-      app.innerHTML = `<p class="muted" style="padding:60px 0">Data could not be loaded (${esc(e.message)}).
-        Please open the page through a web server, not directly as a file.</p>`;
-      status.textContent = "No data";
-    });
+  function refresh() {
+    return load().then(() => { state.animated = true; route(); }).catch(() => showOffline());
+  }
+
   window.addEventListener("hashchange", route);
+  window.addEventListener("online", refresh);
+  window.addEventListener("offline", showOffline);
+  document.addEventListener("visibilitychange", () => {  // an installed app may stay open for days: reload stale data
+    if (document.visibilityState === "visible" && state.overview && Date.now() - state.loadedAt > 10 * 60000) refresh();
+  });
+  setInterval(renderChecked, 60000);
+
+  load().then(route).catch((e) => {
+    app.innerHTML = `<p class="muted" style="padding:60px 0">Data could not be loaded (${esc(e.message)}).
+      ${navigator.onLine ? "Open the page through a web server, not directly as a file." : "You're offline, and no saved copy exists yet."}</p>`;
+    status.textContent = "No data";
+  });
+
+  if ("serviceWorker" in navigator && (location.protocol === "https:" || ["localhost", "127.0.0.1"].includes(location.hostname))) {
+    window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+  }
 })();
 </script>
   <script data-goatcounter="https://kollektionhannemann.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>

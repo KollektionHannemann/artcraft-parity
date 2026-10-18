@@ -1,90 +1,135 @@
 <div align="center">
 
-# ArtCraft Parity
+# ArtCraft Tracker
 
-**How close are the ArtCraft Craft apps to the products they replace?**
+**How close is each Craft app to the product it rebuilds, and how fast is it moving?**
 
-A live dashboard that tracks the product parity of all 13 Craft apps against their reference products,
-built from the `ROADMAP.md` files in the [storytold](https://github.com/storytold) repositories.
+An unofficial community dashboard that tracks product parity, development activity and releases of the
+[storytold](https://github.com/storytold) Craft apps against their reference products. It reads the repositories
+every 30 minutes and can be installed as a web app.
 
 [![Update workflow](https://github.com/KollektionHannemann/artcraft-parity/actions/workflows/update.yml/badge.svg?branch=main)](https://github.com/KollektionHannemann/artcraft-parity/actions/workflows/update.yml)
 [![Live dashboard](https://img.shields.io/badge/live-GitHub%20Pages-5b8cff)](https://kollektionhannemann.github.io/artcraft-parity/)
 
 </div>
 
-![Overview of the ArtCraft Parity dashboard](docs/overview.png)
+![Overview of the ArtCraft Tracker](docs/overview.png)
 
 ## What it shows
 
-- **Full target (ready for real work)** for every app: the project's estimate of how much of the target program a
-  professional can use day to day without limitation. This is the main metric.
-- **Ranking and filters** by stage, with search and sorting by suite order, full target, feature breadth, or last update.
-- **Detail view** per app: trend over every roadmap revision, audience values (full, mainstream, occasional users),
-  dimensions, feature areas, next steps, the project's own change log, and a table of value changes.
-- **Automatic checks:** a GitHub Action checks the repositories every 30 minutes. New apps and new roadmap revisions
-  are picked up automatically, and the dashboard marks them.
-- **Notifications:** when a new app appears or the full-target value of an app changes, the workflow opens a GitHub
-  issue that mentions the account, so you receive an email. Optionally, a push notification is sent through ntfy.sh.
+- **Product parity** per app, the headline number: the project's own estimate of how much of the reference product a
+  professional can use day to day ("Full target (ready for real work)" in each `ROADMAP.md`).
+- **Latest update** on the start page: the newest parity change or milestone, and the newest release.
+- **Activity level** per app (Buzzing, Active, Quiet, Cold), from the code changes merged in the last 14 days.
+- **Cards** sorted by the latest parity change by default; other sorts are parity, activity, latest release, feature
+  breadth, suite order and name. "What changed" on each card opens the latest parity change, roadmap update, code
+  change and release.
+- **Detail view** per app: the four kinds of update side by side, a parity chart (zoomed or 0–100), daily code
+  activity, one timeline for all update types with filters, releases, audiences, dimensions, features and the
+  roadmap's own progress log.
+- **95 % milestone:** the first time an app reports at least 95 %, it gets a short celebration and a gold outline for
+  seven days, then a permanent marker.
+- **Installable web app** with offline support; offline copies are always labelled as saved data.
+- **Notifications** for new apps and parity changes, as a GitHub issue and optionally as an ntfy push.
 
-![Detail view for VectorCraft](docs/detail.png)
+![Detail view for FigCraft](docs/detail.png)
 
-## Current snapshot
+## Update types
 
-Values from the roadmap files as of 16 Oct 2026. The [live dashboard](https://kollektionhannemann.github.io/artcraft-parity/)
-always shows the latest state.
+The tracker keeps three kinds of update apart. One commit can belong to more than one; each is counted once per kind.
 
-| # | App | Reference | Stage | Full target | Range | Hours to ~95 % |
-|---|---|---|---|---|---|---|
-| 1 | VectorCraft | Illustrator | Alpha | **62 %** | 57–67 % | 340–560 h |
-| 2 | LightCraft | Lightroom | Alpha | **61 %** | – | 1,000–1,800 h |
-| 3 | WordCraft | Word | Alpha | **60 %** | – | 650–1,100 h |
-| 4 | FilmCraft | Premiere Pro | Alpha | **56 %** | – | 1,450–2,600 h |
-| 5 | DeckCraft | PowerPoint | Alpha | **55 %** | – | 340–600 h |
-| 6 | FigCraft | Figma | Alpha | **53 %** | – | 268–522 h |
-| 7 | PdfCraft | Acrobat Pro | Alpha | **50 %** | – | 780–1,400 h |
-| 8 | GridCraft | Excel | Alpha | **50 %** | – | 650–1,050 h |
-| 9 | DesignCraft | InDesign | Pre-Alpha | **47 %** | – | 1,150–1,950 h |
-| 10 | PhotoCraft | Photoshop | Alpha | **45 %** | – | 2,300–4,100 h |
-| 11 | EffectCraft | After Effects | Alpha | **45 %** | – | 850–1,500 h |
-| 12 | SoundCraft | Pro Tools | Pre-Alpha | **40 %** | – | 950–1,450 h |
-| 13 | CADCraft | AutoCAD | Pre-Alpha | **38 %** | – | 1,150–1,850 h |
+| Type | What it is | Source |
+|---|---|---|
+| **Parity update** | The full-target value changed, up or down. Republishing the same value is not one. | `ROADMAP.md` on the main branch |
+| **Roadmap update** | The roadmap changed without a new value. Each revision is classified as *estimates* (another number changed: audiences, hours, dimensions, features, stage), *content* (the text changed) or *editorial* (only formatting or the header date changed). Editorial revisions are hidden in the UI. | `ROADMAP.md` on the main branch |
+| **Repository update** | Code changes merged into main, and published releases. | first-parent git history, GitHub Releases |
 
-Average full target across all apps: **51 %**. Values are the projects' own self-assessments, not independent measurements.
+Every point keeps its commit and its commit time (`ts`, UTC). The time a run noticed it is kept separately
+(`checked_at` in the change log).
 
-## The metric
+Findings from the real repositories that shaped this model (October 2026):
 
-"Full target (ready for real work)" is the share of the target program that a professional can use day to day
-without limitation, as estimated in each project's `ROADMAP.md`. The dashboard shows it together with the estimate
-range and the hours until the project reaches ~95 %. Each project's roadmap explains its own method.
+- The repositories are 9 to 19 days old, and the roadmaps have reported the full target only since 10 Oct 2026.
+  Longer windows (30/90/180 days) carry no information yet, so activity uses 7 and 14 days.
+- Of about 1,900 roadmap revisions on main, 5 changed the full target. Almost all others add progress-log lines,
+  which is why a roadmap change is usually not a parity change.
+- `git log -- ROADMAP.md` without `--first-parent` also returns commits inside merged branches. Their values were
+  never published on main, and their dates are when they were written. The tracker reads the main line only.
+- About 93 % of the changesets on main touch code; there are no bot accounts. Releases are tagged across the suite
+  within minutes of each other and come with notes that list every merged pull request.
+
+## Activity
+
+Activity measures effort, not progress. It counts **code changesets** on the main branch: pull-request merges and
+direct commits, each once. Changesets that only touch documentation, the roadmap, CI files, dotfiles or lockfiles,
+and version bumps such as "Release 0.9.0", don't count.
+
+```
+score = Σ over the last 14 UTC days of 0.5^(age in days / 3.5) × log2(1 + code changesets that day)
+```
+
+| Level | Rule |
+|---|---|
+| Buzzing | score ≥ 20 and code changes on at least 5 of the last 7 days |
+| Active | score ≥ 8 and code changes on at least 2 of the last 7 days |
+| Quiet | some code change in the last 14 days |
+| Cold | no code change in the last 14 days |
+
+Why this shape: the logarithm keeps one huge day from outweighing a steady week (300 merges on one day score about
+as much as 3 a day for a week), the half-life of 3.5 days lets the level fall during a pause (Buzzing → Active after
+about 4 idle days, Quiet after a week, Cold after two), and the day requirement stops a single burst from reaching
+the top levels. A README commit after two quiet weeks stays Cold; one code fix makes the app Quiet. The ranking by
+activity sorts by score, then by changesets in 14 days, then by name.
+
+Limits: changesets are not equal in size or value, a squash merge and a 40-commit merge both count once, and the
+score says nothing about quality or about parity. Thresholds were set against the real histories and are constants
+at the top of `scripts/update.py`.
+
+## Releases
+
+Each run asks the GitHub Releases API once per repository (13 calls per run, well within the 1,000 per hour of the
+workflow token). For each release the tracker keeps the version, publish time, link, platforms (from the asset names), the number of
+pull requests listed in the notes and the version step from the previous stable release (major, minor, patch).
+Pre-releases are shown but never used as the base of a version step. If the API is unreachable, git tags are used.
+Download counts are not stored, because they change on every run.
+
+The roadmap's reference product (`Target:`, for example "Adobe Illustrator 2026 (30.x)") is stored with each revision;
+when it changes, the timeline shows it.
 
 ## How it works
 
-1. `scripts/update.py` clones each repository as a partial clone (commits and trees only, no file contents).
-   It does not use the GitHub API, so there are no rate limits.
-2. Every commit that changed `ROADMAP.md` is read. New commits are parsed and appended to `data/history/<app>.json`.
-   Commits that contain no full-target value are remembered in `data/state.json` and not parsed again.
-3. `scripts/roadmap_parser.py` maps the table labels of each roadmap (for example "Full target (ready for real work)")
-   to metrics. It does not depend on line numbers, so it tolerates formatting differences between apps.
-4. The results are written to `data/overview.json` and `data/apps/<app>.json`. `index.html` reads these files.
-   It is a plain HTML, CSS and JavaScript page with no build step.
+1. `scripts/update.py` keeps partial clones of each repository (commits and trees only). Reading the history needs no
+   API calls; file contents are fetched only for new roadmap revisions, in one batch.
+2. New first-parent revisions of `ROADMAP.md` are parsed and appended to `data/history/<app>.json`, then every
+   revision gets its kind from the one before it. Revisions without a full-target value are remembered in
+   `data/state.json` and not parsed again.
+3. The changesets of the last 180 days are classified by the files they touch and condensed into the activity level.
+   Merge commits are shown with their pull-request title.
+4. Releases come from the GitHub Releases API (see above); the last known list stays in `data/state.json` in case
+   the API is unreachable.
+5. `data/overview.json` and `data/apps/<app>.json` are written only when their content changed, so a run without
+   changes makes no commit. `index.html` reads them directly.
+
+"Last checked" in the dashboard is the newest successful run of the workflow, read from the GitHub API in the
+browser. A run without changes commits nothing, so the data files can't tell. If the API is not reachable, the page
+falls back to the last recorded check in `data/status.json`.
 
 ## Notifications
 
 Every run collects events: new apps and roadmap revisions that are newer than the data already stored. All of them are
-logged in `data/changelog.json`. Only new apps and revisions that change the full-target value notify. A revision that
-leaves the full target unchanged (most of them) is logged, but sends nothing. If there are notifying events, the
-workflow:
+logged in `data/changelog.json`. Only new apps and revisions that change the full-target value notify. If there are
+notifying events, the workflow:
 
 1. opens an issue in this repository titled, for example, `ArtCraft Parity: 1 new app, 2 full-target changes`. The
    issue mentions your account, so GitHub sends you an email;
 2. optionally sends a push notification through [ntfy.sh](https://ntfy.sh) if the repository secret `NTFY_TOPIC` is set.
    Subscribe to the same topic in the ntfy app on your phone.
 
-Several changes detected in one run are grouped into one issue. Historical revisions that were already stored when the
-tracker was set up do not notify.
+Several changes detected in one run are grouped into one issue. Rebuilding the history (`--backfill`, or the one-time
+rebuild after a data schema change) never notifies.
 
-To add the ntfy push, pick a random topic name (for example `artcraft-parity-7f3k2`), subscribe to it in the ntfy app,
-and add it under *Settings → Secrets and variables → Actions → New repository secret* with the name `NTFY_TOPIC`.
+To add the ntfy push, pick a random topic name, subscribe to it in the ntfy app, and add it under
+*Settings → Secrets and variables → Actions → New repository secret* with the name `NTFY_TOPIC`.
 
 ## Automatic discovery of new apps
 
@@ -98,41 +143,56 @@ Every run checks the public repositories of the GitHub account for new Craft app
 - Repositories listed under `ignored_repos` in `apps.json` are never added. The account's `artcraft` and `craft-launcher`
   repositories are ignored by default.
 
-Discovery needs the GitHub API. In GitHub Actions, the built-in token is passed automatically.
+Discovery and releases need the GitHub API. In GitHub Actions, the built-in token is passed automatically.
+
+## Web app
+
+`manifest.webmanifest`, `sw.js` and `icons/` make the site installable. The service worker loads the page and the
+data from the network first and keeps the last good copy for offline use. A copy served offline is marked, and the
+page then shows an offline notice with the time the data was saved. When the connection is back, the page reloads
+the data. Icons and the manifest are cached first. Requests to other sites (GitHub API, fonts, analytics) are not
+touched. The icons are drawn by `scripts/make_icons.py`.
 
 ## Repository structure
 
 | Path | Content |
 |---|---|
-| `index.html` | The dashboard: overview, ranking and detail view |
+| `index.html` | The dashboard: overview, ranking, cards and detail view |
+| `manifest.webmanifest`, `sw.js`, `icons/` | Web app manifest, service worker and icons |
 | `apps.json` | Tracked apps (reference product, category, color, suite order) and `ignored_repos` |
-| `scripts/update.py` | Discovers new apps, checks roadmap revisions and writes the data files |
+| `scripts/update.py` | Discovery, roadmap history, activity, releases, data files and events |
 | `scripts/roadmap_parser.py` | Parses a `ROADMAP.md` into metrics, dimensions, features and the change log |
-| `data/overview.json` | Data for the overview page |
-| `data/apps/<app>.json` | Current state and history per app |
-| `data/history/<app>.json` | One entry per roadmap revision from the git history |
-| `data/state.json` | Commits without a full-target value, so they are not processed again |
-| `.github/workflows/update.yml` | Check every 30 minutes, commit changed data, send notifications |
 | `scripts/notify.py` | Opens the notification issue and sends the optional ntfy message |
+| `scripts/make_icons.py` | Draws the tracker mark and writes the icons |
+| `tests/test_pipeline.py` | End-to-end tests against local git repositories |
+| `data/overview.json` | Data for the overview page, including the latest events across all apps |
+| `data/apps/<app>.json` | Current state, history, activity and releases per app |
+| `data/history/<app>.json` | One entry per roadmap revision on the main line |
+| `data/state.json` | Skipped revisions, the last known release lists and the data schema version |
 | `data/changelog.json` | Log of new apps and roadmap revisions (last 500 events) |
 | `data/status.json` | Daily heartbeat, which keeps the repository active |
+| `.github/workflows/update.yml` | Check every 30 minutes, commit changed data, send notifications |
 | `docs/` | Screenshots used in this README |
 
 ## Run locally
 
 ```bash
-# once: build the full history (takes a few minutes)
-python3 scripts/update.py --backfill 500
-
-# regular update: only new commits are processed
 python3 scripts/update.py
-
-# view the dashboard (fetch() needs a web server, not file://)
-python3 -m http.server 8000
-# then open http://localhost:8000
 ```
 
-Requirements: Python 3.10 or newer and Git.
+```bash
+python3 -m http.server 8000
+```
+
+Then open http://localhost:8000 (`fetch()` needs a web server, not `file://`). To rebuild the history from scratch,
+run `python3 scripts/update.py --backfill 2000`; it sends no notifications. Set `GITHUB_TOKEN` locally to avoid the
+unauthenticated API limit of 60 requests per hour.
+
+```bash
+python3 -m unittest discover -s tests -v
+```
+
+Requirements: Python 3.10 or newer and Git. No other dependencies.
 
 ## Publish with GitHub Pages
 
@@ -142,19 +202,19 @@ Requirements: Python 3.10 or newer and Git.
    commit data.
 4. Run *Actions → Update roadmap parity → Run workflow* once. After that, it runs on its own.
 
-A ready-made script for the GitHub CLI is included in the project archive as `setup-github.sh`.
-
 ## Limitations
 
+- All parity values are self-assessments by the projects. Activity and releases are signals from the git history,
+  not measurements of features.
 - The parser relies on table labels. If a roadmap renames the full-target row, the dashboard shows a notice instead of
-  silently dropping the value.
-- The history starts with the first commit that contains `ROADMAP.md`. Earlier versions do not exist.
-- Several revisions on the same day appear as separate points, because each commit is documented.
-- The values are the projects' own estimates and can change a lot when a project changes its method.
+  silently dropping the value. A renamed row in a parity revision is flagged as a possible method change.
+- History starts with the first revision that reports the full target. If the history was cut off (see
+  `parity.truncated`), the detail view says so; a milestone already reached before that has no date.
+- Changesets are counted, not weighed. A large refactor and a one-line fix count the same.
 
 ## Disclaimer
 
-This is an independent, unofficial project. It is not affiliated with or endorsed by ArtCraft or Storyteller.ai.
-Product names such as Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat, After Effects, InDesign, Figma, Word,
-PowerPoint, Excel, AutoCAD and Pro Tools are trademarks of their respective owners. The dashboard uses no ArtCraft
-logos or icons.
+This is an independent, unofficial community project. It is not affiliated with or endorsed by ArtCraft or
+Storyteller.ai. Product names such as Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat, After Effects,
+InDesign, Figma, Word, PowerPoint, Excel, AutoCAD and Pro Tools are trademarks of their respective owners. The tracker
+uses its own mark and no ArtCraft logos or icons.
