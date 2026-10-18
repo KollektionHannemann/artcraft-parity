@@ -900,6 +900,48 @@
       </article>`;
   }
 
+  /* Title ticker: a line too long for the card scrolls slowly to its end and back, pausing at both ends.
+     It runs only while its "What changed" panel is open, stops while the line is hovered, touched or
+     focused (so it can be read or scrolled by hand), and never runs with prefers-reduced-motion. */
+  const tickers = new Map();
+  let tickerFrame = 0;
+  const TICK_SPEED = 32, TICK_PAUSE = 1600;  // px per second, ms at each end
+
+  function ticker(m, on) {
+    if (!on || reduceMotion || m.scrollWidth - m.clientWidth <= 2) { tickers.delete(m); return; }
+    if (!tickers.has(m)) tickers.set(m, { pos: m.scrollLeft, dir: 1, wait: performance.now() + TICK_PAUSE, last: 0, hold: false });
+    if (!tickerFrame) tickerFrame = requestAnimationFrame(tickAll);
+  }
+
+  function tickAll(t) {
+    tickerFrame = 0;
+    for (const [m, s] of tickers) {
+      if (!m.isConnected) { tickers.delete(m); continue; }
+      const max = m.scrollWidth - m.clientWidth;
+      const dt = s.last ? Math.min(64, t - s.last) : 0;
+      s.last = t;
+      if (s.hold || t < s.wait || max <= 2) continue;
+      s.pos = Math.max(0, Math.min(max, s.pos + s.dir * TICK_SPEED * dt / 1000));
+      m.scrollLeft = s.pos;
+      if (s.pos >= max || s.pos <= 0) { s.dir = s.pos >= max ? -1 : 1; s.wait = t + TICK_PAUSE; }
+    }
+    if (tickers.size) tickerFrame = requestAnimationFrame(tickAll);
+  }
+
+  function holdOnInteract(m) {
+    const hold = () => { const s = tickers.get(m); if (s) s.hold = true; };
+    const resume = () => {
+      const s = tickers.get(m);
+      if (s) { s.hold = false; s.pos = m.scrollLeft; s.wait = performance.now() + TICK_PAUSE; }
+    };
+    m.addEventListener("pointerenter", (e) => { if (e.pointerType === "mouse") hold(); });
+    m.addEventListener("pointerleave", (e) => { if (e.pointerType === "mouse") resume(); });
+    m.addEventListener("pointerdown", hold);
+    m.addEventListener("focus", hold);
+    m.addEventListener("blur", resume);
+    m.addEventListener("touchend", () => setTimeout(resume, 2500), { passive: true });
+  }
+
   function drawGrid(animate) {
     const ov = state.overview;
     const q = state.query.trim().toLowerCase();
@@ -915,13 +957,15 @@
     grid.innerHTML = apps.map(card).join("") || `<div class="empty mono">No matches</div>`;
     open.forEach((id) => grid.querySelector(`[data-go="${CSS.escape(id)}"] details.what`)?.setAttribute("open", ""));
 
-    // Scrollable title lines fade out at the right edge while there is more to read
+    // Scrollable title lines fade out at the right edge while there is more to read, and glide through
+    // on their own while the panel is open
     const fade = (m) => m.classList.toggle("fade-end", m.scrollLeft + m.clientWidth < m.scrollWidth - 2);
     grid.querySelectorAll("details.what").forEach((d) => {
-      const lines = d.querySelectorAll(".what-row .m");
-      lines.forEach((m) => m.addEventListener("scroll", () => fade(m), { passive: true }));
-      d.addEventListener("toggle", () => { if (d.open) lines.forEach(fade); });
-      if (d.open) requestAnimationFrame(() => lines.forEach(fade));
+      const lines = [...d.querySelectorAll(".what-row .m")];
+      lines.forEach((m) => { m.addEventListener("scroll", () => fade(m), { passive: true }); holdOnInteract(m); });
+      const sync = () => { lines.forEach(fade); lines.forEach((m) => ticker(m, d.open)); };
+      d.addEventListener("toggle", sync);
+      if (d.open) requestAnimationFrame(sync);
     });
     grid.querySelectorAll("[data-go]").forEach((el) => {
       el.addEventListener("click", (e) => {
