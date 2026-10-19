@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/vectorcraft",
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
-  "latest_commit": "2c52bed",
-  "latest_commit_date": "2026-10-19T23:12:28+07:00",
-  "latest_message": "Exports: say that an encrypted PDF still differs, and test the clock fallback (#2961)",
+  "latest_commit": "035f1cb",
+  "latest_commit_date": "2026-10-20T00:02:15+07:00",
+  "latest_message": "Rulers: an inch is divided in half, not in ten (#2951)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -248,6 +248,18 @@
     "progress": [
       {
         "date": "2026-10-18",
+        "text": "Exported and saved files can repeat their bytes: PNG, PDF, EPS, legacy .ai, packaged zips and .vectorcraft saves recorded the wall-clock time they were made in, so the same commands run twice gave different bytes though the pixels matched. SOURCEDATEEPOCH now stands in for the clock in everything a file records, as the reproducible-builds specification defines it; a date a command is given still wins, and a malformed value is ignored rather than refusing the export. The recovery heartbeat and the seed PDF encryption draws on keep the real clock (#2880). Headline numbers unchanged."
+      },
+      {
+        "date": "2026-10-18",
+        "text": "Inch rulers divide the inch in half, not in ten. Zooming in stepped an inch ruler through 0.2, 0.1 and 0.05 of an inch, marks an inch ruler does not carry; below an inch the steps are binary fractions now, 1/2 down to 1/16, with the unlabelled ticks between them binary too (down to 1/128, so the 32nds, 64ths and 128ths appear as the report expects), while the metric units, points, pixels and picas keep their tenths. A label carries the decimals its step needs, so a sixteenth reads 0.0625 rather than the rounded 0.06, with trailing zeros dropped (#2827). Headline numbers unchanged."
+      },
+      {
+        "date": "2026-10-18",
+        "text": "Inch rulers divide the inch in half, not in ten. Zooming in stepped an inch ruler through 0.2, 0.1 and 0.05 of an inch, marks an inch ruler does not carry; below an inch the steps are binary fractions now (1/2 to 1/128) and the minor ticks between them are binary too, while the metric units, points, pixels and picas keep their tenths. A label carries the decimals its step needs, so a sixteenth reads 0.0625 rather than the rounded 0.06, with trailing zeros dropped (#2827). Headline numbers unchanged."
+      },
+      {
+        "date": "2026-10-18",
         "text": "Exported and saved files can repeat their bytes: PNG, PDF, EPS, legacy .ai, packaged zips and .vectorcraft saves recorded the wall-clock time they were made in, so the same commands run twice gave different bytes though the pixels matched. SOURCEDATEEPOCH now stands in for the clock in everything a file records, as the reproducible-builds specification defines it; a date a command is given still wins, and a malformed value is ignored rather than refusing the export. The recovery heartbeat and the seed PDF encryption draws on keep the real clock, so a password-protected PDF still differs between runs (#2880). Headline numbers unchanged."
       },
       {
@@ -393,18 +405,6 @@
       {
         "date": "2026-10-09",
         "text": "Radial Blur, Smart Blur, Unsharp Mask (gap 2 begins); 340 commits, the busiest day"
-      },
-      {
-        "date": "2026-10-08",
-        "text": "v0.5.0–v0.7.0; community contributions: Pen and shape-tool modifiers, Layers, Artboards, Japanese composition, Hebrew/Arabic type, interface languages, saved selections"
-      },
-      {
-        "date": "2026-10-07",
-        "text": "v0.4.0; issue fixes; Layers panel rework"
-      },
-      {
-        "date": "2026-10-06",
-        "text": "M8 transform and distort fidelity pass (M8.1–M8.20)"
       }
     ]
   },
@@ -415,39 +415,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 171,
-    "revisions_7d": 35,
+    "revisions": 172,
+    "revisions_7d": 36,
     "last_revision": {
-      "ts": "2026-10-19T16:12:28Z",
+      "ts": "2026-10-19T17:02:15Z",
       "kind": "content",
-      "commit": "2c52bed",
-      "commit_full": "2c52bed0b5d9e07e96ccbe3fc709e5af2a2a7ca8",
-      "message": "Exports: say that an encrypted PDF still differs, and test the clock fallback (#2961)"
+      "commit": "035f1cb",
+      "commit_full": "035f1cb2f61c3b0c5e4c6642f0cfb889e54721c5",
+      "message": "Rulers: an inch is divided in half, not in ten (#2951)"
     },
     "last_update": {
-      "ts": "2026-10-19T16:12:28Z",
+      "ts": "2026-10-19T17:02:15Z",
       "kind": "content",
-      "commit": "2c52bed",
-      "commit_full": "2c52bed0b5d9e07e96ccbe3fc709e5af2a2a7ca8",
-      "message": "Exports: say that an encrypted PDF still differs, and test the clock fallback (#2961)"
+      "commit": "035f1cb",
+      "commit_full": "035f1cb2f61c3b0c5e4c6642f0cfb889e54721c5",
+      "message": "Rulers: an inch is divided in half, not in ten (#2951)"
     },
     "self_reported": "2026-10-18"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 32.9,
+    "score": 33.0,
     "active_days_7d": 7,
-    "changes_7d": 709,
-    "changes_14d": 1404,
+    "changes_7d": 711,
+    "changes_14d": 1406,
     "housekeeping_7d": 23,
     "last_code_change": {
-      "ts": "2026-10-19T16:43:53Z",
-      "commit": "9d4675e",
-      "commit_full": "9d4675e7d4a8eb1588b1d921f072a464ab767e09",
-      "subject": "DXF: export circular paths as native CIRCLE and ARC entities (#2962)"
+      "ts": "2026-10-19T17:02:15Z",
+      "commit": "035f1cb",
+      "commit_full": "035f1cb2f61c3b0c5e4c6642f0cfb889e54721c5",
+      "subject": "Rulers: an inch is divided in half, not in ten (#2951)"
     },
-    "last_commit_ts": "2026-10-19T16:43:53Z",
+    "last_commit_ts": "2026-10-19T17:02:15Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       43,
@@ -463,7 +463,7 @@
       57,
       196,
       90,
-      25
+      27
     ],
     "days": [
       {
@@ -816,20 +816,20 @@
       },
       {
         "d": "2026-10-19",
-        "code": 25,
+        "code": 27,
         "other": 0,
         "samples": [
           {
+            "commit": "035f1cb",
+            "subject": "Rulers: an inch is divided in half, not in ten (#2951)"
+          },
+          {
+            "commit": "e52b071",
+            "subject": "Keep status-bar messages and readouts stable (#3107)"
+          },
+          {
             "commit": "9d4675e",
             "subject": "DXF: export circular paths as native CIRCLE and ARC entities (#2962)"
-          },
-          {
-            "commit": "d5dfbf4",
-            "subject": "Preserve cached canvas scale during viewport resizing (#3106)"
-          },
-          {
-            "commit": "1f80c28",
-            "subject": "Batch follow-ups: #3004 test prints, #3095 catalog rows, #3042 doc banners (#3131)"
           }
         ]
       }
@@ -5487,7 +5487,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "035f1cb",
+      "commit_full": "035f1cb2f61c3b0c5e4c6642f0cfb889e54721c5",
+      "commit_date": "2026-10-20T00:02:15+07:00",
+      "ts": "2026-10-19T17:02:15Z",
+      "message": "Rulers: an inch is divided in half, not in ten (#2951)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-19T16:59:22+00:00"
+  "updated_at": "2026-10-19T17:23:29+00:00"
 }

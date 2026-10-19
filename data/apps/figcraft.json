@@ -441,18 +441,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.0,
+    "score": 18.6,
     "active_days_7d": 7,
-    "changes_7d": 87,
-    "changes_14d": 292,
+    "changes_7d": 89,
+    "changes_14d": 294,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-10-19T16:59:18Z",
-      "commit": "ba496ed",
-      "commit_full": "ba496eddcab23314ea6683d6f104a3e93022a88d",
-      "subject": "M3: an explicit paint edit detaches the variable bound to what it changed (#811)"
+      "ts": "2026-10-19T17:23:28Z",
+      "commit": "7ca8c80",
+      "commit_full": "7ca8c80a8fb5bb34bd26f0878d22814f362d1775",
+      "subject": "M3: removing auto layout drops its gap and padding bindings (#810) (#814)"
     },
-    "last_commit_ts": "2026-10-19T16:59:18Z",
+    "last_commit_ts": "2026-10-19T17:23:28Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       0,
@@ -468,7 +468,7 @@
       4,
       18,
       13,
-      3
+      5
     ],
     "days": [
       {
@@ -663,20 +663,20 @@
       },
       {
         "d": "2026-10-19",
-        "code": 3,
+        "code": 5,
         "other": 0,
         "samples": [
           {
+            "commit": "7ca8c80",
+            "subject": "M3: removing auto layout drops its gap and padding bindings (#810) (#814)"
+          },
+          {
+            "commit": "409de1a",
+            "subject": "M3: explicit edits of bound scalar fields detach their variable (#809) (#871)"
+          },
+          {
             "commit": "ba496ed",
             "subject": "M3: an explicit paint edit detaches the variable bound to what it changed (#811)"
-          },
-          {
-            "commit": "ec512a7",
-            "subject": "M1: wrap errors name the command that was run (#807)"
-          },
-          {
-            "commit": "44a504d",
-            "subject": "Community batch 20: automation roots for the CLI and links, web file opening, CI bump (4 PRs) (#883)"
           }
         ]
       }
@@ -2967,5 +2967,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-19T16:59:34+00:00"
+  "updated_at": "2026-10-19T17:23:47+00:00"
 }

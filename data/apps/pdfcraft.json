@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/pdfcraft",
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
-  "latest_commit": "32abf71",
-  "latest_commit_date": "2026-10-19T12:57:52-04:00",
-  "latest_message": "Text: tracked glyphs retain their word boundaries (#3477)",
+  "latest_commit": "aebb333",
+  "latest_commit_date": "2026-10-19T13:02:58-04:00",
+  "latest_message": "docs: base the XFA page area Acrobat observations on a synthetic form (#2574) (#3431)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -238,11 +238,23 @@
       },
       {
         "date": "2026-10-19",
+        "text": "(M3, #3387): Save-prompt shortcuts yield to later consent and utility dialogs; a synthetic UI regression checks that an edited document stays open. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-19",
         "text": "(M3, #3360): Switching between Read and the docking workspace retains the current document’s scroll position at fixed zoom, including within-page position; separate tabs retain their own offsets. Estimates unchanged."
       },
       {
         "date": "2026-10-19",
         "text": "(M7, tracked text): Editable paragraphs and object labels distinguish repeated glyph tracking from word gaps in TJ arrays and separately positioned glyphs. Synthetic regressions cover character spacing, horizontal scaling, rotated baselines, larger word gaps, and rows of one-glyph words or cells (inferred tracking is capped at half an em, so a b c and digit or Y/N columns keep their spaces). Estimates unchanged."
+      },
+      {
+        "date": "2026-10-19",
+        "text": "(M12, XFA, #2574): The Acrobat observations behind the line above were first made on a public real-world form, which the Privacy rule does not allow; they are replaced by ones made on a synthetic form (three breakBefore pageArea sections, then a page area with occur min=\"1\" max=\"1\", with and without relevant=\"-print\"). Acrobat Pro shows the closing page last in both and prints it in both, blank only with relevant=\"-print\": confirmed. The synthetic form also shows a difference not fixed yet: Acrobat opens it as 5 pages, with an empty first body page before the first section, where PdfCraft lays out 4. Two more synthetic forms narrow it down: with breakBefore targetType=\"pageArea\" on the first section, with or without startNew, Acrobat opens an empty body page first; without a break on the first section it lays out 4, as PdfCraft does (so startNew is not the cause). Not fixed yet: layout.rs skips a break while the page is still empty. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-18",
+        "text": "(M10, #3120): Export to Word, PowerPoint, HTML and RTF reads text from form XObjects nested as deep as the renderer draws them (50 levels), and up to 50 000 forms a page (the renderer's budget for nested ones); it stopped at 12 levels and 4 096 forms and left the rest out silently. A page past those limits is listed in docexportoffice's truncatedpages, with a warning. Estimates unchanged."
       },
       {
         "date": "2026-10-18",
@@ -314,7 +326,7 @@
       },
       {
         "date": "2026-10-15",
-        "text": "(M12, XFA, #2574): A pageArea with no <occur> repeats without limit instead of taking a subform's default of one use, so a later page area with occur max=\"1\" is no longer drawn (with a copy of its fields) over every body page. A page area's occur min is honoured too: one the body never reached gets the pages it still needs after the body (the once-only closing page of the public ISCIII form, with its button, is page 7 of 7). Acrobat Pro shows the form as 7 pages with that page last, as here; when printing, Acrobat keeps that page but leaves it blank (relevant=\"-print\" on the page area), which PdfCraft does not do yet. Synthetic regression tests. Estimates unchanged."
+        "text": "(M12, XFA, #2574): A pageArea with no <occur> repeats without limit instead of taking a subform's default of one use, so a later page area with occur max=\"1\" is no longer drawn (with a copy of its fields) over every body page. A page area's occur min is honoured too: one the body never reached gets the pages it still needs after the body (the once-only closing page of a form, with its button, comes last). Acrobat Pro also puts that page last, and when printing keeps it but leaves it blank (relevant=\"-print\" on the page area), which PdfCraft does not do yet; both re-observed on a synthetic fixture, see the 2026-10-19 line. Synthetic regression tests. Estimates unchanged."
       },
       {
         "date": "2026-10-15",
@@ -379,18 +391,6 @@
       {
         "date": "2026-10-14",
         "text": "(M4, page transitions read, §12.4.4): /Trans and /Dur are read into DocInfo::transitions and listed by docinfo, the data a full-screen presentation needs to play transitions and auto-advance; playing and editing them stay planned."
-      },
-      {
-        "date": "2026-10-14",
-        "text": "(M4, page transitions set, §12.4.4): pagetransitionset (one undoable edit) writes or removes /Trans and /Dur on chosen pages with the values checked first, the counterpart of reading them into DocInfo::transitions; playing them and the dialog stay planned."
-      },
-      {
-        "date": "2026-10-14",
-        "text": "(M12, transition geometry): pdfcraftrender::transition gives the picture of any of the twelve page transitions at a moment of its run (which parts of the old and new page to paint, where, how opaque), in page fractions, tested for every style and direction; the full-screen presentation will paint from it once it plays transitions."
-      },
-      {
-        "date": "2026-10-14",
-        "text": "(M3, Open in Full Screen mode honoured): a document with /PageMode /FullScreen now asks (Full Screen / Not now) before the app enters full screen, as Acrobat does; before, the setting was written and read but never acted on when opening."
       }
     ]
   },
@@ -410,39 +410,39 @@
     }
   },
   "roadmap": {
-    "revisions": 150,
-    "revisions_7d": 85,
+    "revisions": 153,
+    "revisions_7d": 88,
     "last_revision": {
-      "ts": "2026-10-19T16:57:52Z",
+      "ts": "2026-10-19T17:02:58Z",
       "kind": "content",
-      "commit": "32abf71",
-      "commit_full": "32abf71049bc6559da8032ef5e312ad32a306dce",
-      "message": "Text: tracked glyphs retain their word boundaries (#3477)"
+      "commit": "aebb333",
+      "commit_full": "aebb3335826b8403f5cbefd6e2c214b4ac22ec4d",
+      "message": "docs: base the XFA page area Acrobat observations on a synthetic form (#2574) (#3431)"
     },
     "last_update": {
-      "ts": "2026-10-19T16:57:52Z",
+      "ts": "2026-10-19T17:02:58Z",
       "kind": "content",
-      "commit": "32abf71",
-      "commit_full": "32abf71049bc6559da8032ef5e312ad32a306dce",
-      "message": "Text: tracked glyphs retain their word boundaries (#3477)"
+      "commit": "aebb333",
+      "commit_full": "aebb3335826b8403f5cbefd6e2c214b4ac22ec4d",
+      "message": "docs: base the XFA page area Acrobat observations on a synthetic form (#2574) (#3431)"
     },
     "self_reported": "2026-10-18"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 24.8,
+    "score": 25.4,
     "active_days_7d": 7,
-    "changes_7d": 351,
-    "changes_14d": 950,
+    "changes_7d": 360,
+    "changes_14d": 959,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-19T16:58:15Z",
-      "commit": "a30dde2",
-      "commit_full": "a30dde2225925abe55366c02cb9532a1c9d0c645",
-      "subject": "M6: the date picker follows a whole date typed while it is open (#3393)"
+      "ts": "2026-10-19T17:03:54Z",
+      "commit": "459379e",
+      "commit_full": "459379ef9b127648cc30c0b2fe2b20c2b2375f04",
+      "subject": "Edit text: refuse a rewrite of text that is a clipping path (#3447)"
     },
-    "last_commit_ts": "2026-10-19T16:58:15Z",
+    "last_commit_ts": "2026-10-19T17:03:54Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       14,
@@ -458,7 +458,7 @@
       3,
       5,
       56,
-      15
+      24
     ],
     "days": [
       {
@@ -824,20 +824,20 @@
       },
       {
         "d": "2026-10-19",
-        "code": 15,
+        "code": 24,
         "other": 1,
         "samples": [
           {
-            "commit": "a30dde2",
-            "subject": "M6: the date picker follows a whole date typed while it is open (#3393)"
+            "commit": "459379e",
+            "subject": "Edit text: refuse a rewrite of text that is a clipping path (#3447)"
           },
           {
-            "commit": "caaf058",
-            "subject": "M6: a secured form's notice bar still says it is a form (#3404)"
+            "commit": "e503324",
+            "subject": "Add fills and border widths to text boxes and callouts (#3366)"
           },
           {
-            "commit": "32abf71",
-            "subject": "Text: tracked glyphs retain their word boundaries (#3477)"
+            "commit": "e45d5dc",
+            "subject": "Tests: the parser-cancel test guards against a hang, not a 2 s limit (#1970) (#3462)"
           }
         ]
       }
@@ -4465,7 +4465,76 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "84bd488",
+      "commit_full": "84bd488db377425aa73265d474f301f28f0b8325",
+      "commit_date": "2026-10-19T13:01:58-04:00",
+      "ts": "2026-10-19T17:01:58Z",
+      "message": "M3: keep save shortcuts behind other dialogs (#3387)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "5602fbb",
+      "commit_full": "5602fbba12d74bc28bbfa101e4061d5d0e3a6f3c",
+      "commit_date": "2026-10-19T13:02:44-04:00",
+      "ts": "2026-10-19T17:02:44Z",
+      "message": "M10: Office export follows forms 50 deep and up to 50 000 a page and says where it stops (#3120) (#3426)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "aebb333",
+      "commit_full": "aebb3335826b8403f5cbefd6e2c214b4ac22ec4d",
+      "commit_date": "2026-10-19T13:02:58-04:00",
+      "ts": "2026-10-19T17:02:58Z",
+      "message": "docs: base the XFA page area Acrobat observations on a synthetic form (#2574) (#3431)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-19T16:59:29+00:00"
+  "updated_at": "2026-10-19T17:23:39+00:00"
 }
