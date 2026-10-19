@@ -583,9 +583,7 @@
 
   function parityLine(a) {
     const lc = a.parity?.last_change;
-    if (lc) return `<span><b class="${lc.delta > 0 ? "up" : "down"}">${lc.delta > 0 ? "▲" : "▼"} ${pp(lc.delta)}</b> from ${pct(lc.from)} %</span>${when(lc.ts)}`;
-    const since = a.parity?.tracked_since;
-    return `<span>Unchanged since ${since ? dateEN(since, false) : "tracking began"}</span><span></span>`;
+    return `<span>Product parity <b>${pct(a.breadth_pct)} %</b></span>${lc ? `<span class="${lc.delta > 0 ? "up" : "down"}">${pp(lc.delta)} ${when(lc.ts)}</span>` : "<span></span>"}`;
   }
 
   /* ---------- Data ---------- */
