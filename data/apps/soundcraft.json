@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/soundcraft",
   "roadmap_url": "https://github.com/storytold/soundcraft/blob/main/ROADMAP.md",
-  "latest_commit": "cf755b8",
-  "latest_commit_date": "2026-10-13T06:53:58-04:00",
-  "latest_message": "Engine: mix.instrument takes the instrument's parameters and refuses unknown fields (#265) (#410)",
+  "latest_commit": "3776e33",
+  "latest_commit_date": "2026-10-19T03:10:04-04:00",
+  "latest_message": "Fix mono device playback dropping right-channel audio (#719)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
     "target": "Avid Pro Tools Ultimate 2026.4.1",
-    "last_updated": "2026-10-10",
+    "last_updated": "2026-10-18",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -213,6 +213,30 @@
     ],
     "progress": [
       {
+        "date": "2026-10-18",
+        "text": "Mono audio devices receive the average of the stereo channels before output clipping, retaining right-only audio. Surround mixes use the same average after their ITU stereo fold-down. Regression tests cover channel balance, polarity cancellation, clipping, centered mono tracks, each 5.1 channel and several callback sizes. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-16",
+        "text": "Master fader volume automation uses each render block's actual last sample, matching track faders. Breakpoints in the next block no longer pull the preceding block's level toward them, and ramps reach their last-sample value. Regression tests cover nonzero starts, one-sample callbacks and several block sizes. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-16",
+        "text": "Aux, folder and master latency calculations exclude inserts already taken out for producing NaN or infinity, matching audio tracks. Subsequent blocks no longer compensate for an insert that is bypassed after failure. Regression tests check impulse timing, healthy insert latency and reset/retry at 64- and 512-sample blocks. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-14",
+        "text": "MCP batch rejects more than 1000 calls before executing any command, instead of silently running only the first 1000 (#460). No readiness percentage change."
+      },
+      {
+        "date": "2026-10-13",
+        "text": "WAV: an empty data chunk followed by metadata (LIST, bext) reads as no audio; a recording that was never finalised (sizes left at 0) still gives what was written (#466)"
+      },
+      {
+        "date": "2026-10-13",
+        "text": "Sampler: a ping-pong loop keeps its phase and direction when a step is wider than the loop (a narrow loop with high transposition), instead of reflecting once and dropping the rest of the travel (#463)"
+      },
+      {
         "date": "2026-10-13",
         "text": "mix.instrument takes the built-in instrument's parameters in params (validated, clamped) and refuses any other field, so a synth setting written beside plugin is an error instead of being accepted and ignored (#265)"
       },
@@ -297,39 +321,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 11,
-    "revisions_7d": 9,
+    "revisions": 17,
+    "revisions_7d": 15,
     "last_revision": {
-      "ts": "2026-10-13T10:53:58Z",
+      "ts": "2026-10-19T07:10:04Z",
       "kind": "content",
-      "commit": "cf755b8",
-      "commit_full": "cf755b8cd231f3f8c6dc2868eea3d98593882842",
-      "message": "Engine: mix.instrument takes the instrument's parameters and refuses unknown fields (#265) (#410)"
+      "commit": "3776e33",
+      "commit_full": "3776e3338f947a141d82504670981e3dce856807",
+      "message": "Fix mono device playback dropping right-channel audio (#719)"
     },
     "last_update": {
-      "ts": "2026-10-13T10:53:58Z",
+      "ts": "2026-10-19T07:10:04Z",
       "kind": "content",
-      "commit": "cf755b8",
-      "commit_full": "cf755b8cd231f3f8c6dc2868eea3d98593882842",
-      "message": "Engine: mix.instrument takes the instrument's parameters and refuses unknown fields (#265) (#410)"
+      "commit": "3776e33",
+      "commit_full": "3776e3338f947a141d82504670981e3dce856807",
+      "message": "Fix mono device playback dropping right-channel audio (#719)"
     },
-    "self_reported": "2026-10-10"
+    "self_reported": "2026-10-18"
   },
   "milestone": null,
   "activity": {
-    "level": "quiet",
-    "score": 7.6,
-    "active_days_7d": 4,
-    "changes_7d": 98,
-    "changes_14d": 221,
-    "housekeeping_7d": 9,
+    "level": "active",
+    "score": 13.3,
+    "active_days_7d": 5,
+    "changes_7d": 152,
+    "changes_14d": 275,
+    "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-10-17T18:13:57Z",
-      "commit": "3a1167f",
-      "commit_full": "3a1167ffd51bb51078eda53ea49e73e1a3a503e5",
-      "subject": "Follow stored paths only on this computer or the session's share (#726)"
+      "ts": "2026-10-19T07:14:49Z",
+      "commit": "25d52c6",
+      "commit_full": "25d52c646aea780c8076ff966076f994ad256221",
+      "subject": "Fix main: rustfmt the clip group overlap test (#779)"
     },
-    "last_commit_ts": "2026-10-18T18:31:49Z",
+    "last_commit_ts": "2026-10-19T07:14:49Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
       41,
@@ -345,7 +369,7 @@
       1,
       1,
       0,
-      0
+      54
     ],
     "days": [
       {
@@ -525,6 +549,25 @@
         "code": 0,
         "other": 3,
         "samples": []
+      },
+      {
+        "d": "2026-10-19",
+        "code": 54,
+        "other": 2,
+        "samples": [
+          {
+            "commit": "25d52c6",
+            "subject": "Fix main: rustfmt the clip group overlap test (#779)"
+          },
+          {
+            "commit": "3776e33",
+            "subject": "Fix mono device playback dropping right-channel audio (#719)"
+          },
+          {
+            "commit": "01622f1",
+            "subject": "Fix stale aux and master latency after insert failures (#672)"
+          }
+        ]
       }
     ]
   },
@@ -885,7 +928,145 @@
       "breadth_pct": 70.0,
       "full_prev": 40.0,
       "kind": "content"
+    },
+    {
+      "commit": "4b1ba55",
+      "commit_full": "4b1ba55bfad9bb3960a7ad4651a4d5a08aec096e",
+      "commit_date": "2026-10-19T02:31:10-04:00",
+      "ts": "2026-10-19T06:31:10Z",
+      "message": "fix(mcp): reject oversized batches before execution (#497)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-14",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
+    },
+    {
+      "commit": "b537e82",
+      "commit_full": "b537e82bd9abf32692ca91f31cfafc5e841aeb54",
+      "commit_date": "2026-10-19T03:09:16-04:00",
+      "ts": "2026-10-19T07:09:16Z",
+      "message": "Fix master fader automation leaking across render-block boundaries (#667)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-16",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
+    },
+    {
+      "commit": "5b9f6e5",
+      "commit_full": "5b9f6e502822d93dbe2537bede5bdef1320884a6",
+      "commit_date": "2026-10-19T03:09:19-04:00",
+      "ts": "2026-10-19T07:09:19Z",
+      "message": "WAV: an empty data chunk followed by metadata has no frames (#466) (#498)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-16",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
+    },
+    {
+      "commit": "60f4342",
+      "commit_full": "60f434269790ec8616763d5b3b6dab3f92e42ade",
+      "commit_date": "2026-10-19T03:09:45-04:00",
+      "ts": "2026-10-19T07:09:45Z",
+      "message": "Sampler: a ping-pong loop keeps its phase for steps wider than the loop (#463) (#500)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-16",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
+    },
+    {
+      "commit": "01622f1",
+      "commit_full": "01622f15bd9bc060b78d41025b5d43db16da5099",
+      "commit_date": "2026-10-19T03:09:55-04:00",
+      "ts": "2026-10-19T07:09:55Z",
+      "message": "Fix stale aux and master latency after insert failures (#672)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-16",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
+    },
+    {
+      "commit": "3776e33",
+      "commit_full": "3776e3338f947a141d82504670981e3dce856807",
+      "commit_date": "2026-10-19T03:10:04-04:00",
+      "ts": "2026-10-19T07:10:04Z",
+      "message": "Fix mono device playback dropping right-channel audio (#719)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-18",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-19T00:08:41+00:00"
+  "updated_at": "2026-10-19T07:19:20+00:00"
 }

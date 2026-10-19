@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "61e565c",
-  "latest_commit_date": "2026-10-18T17:10:01-04:00",
-  "latest_message": "fix(ui): keep recent fonts visible after an unmatched query (#2068) (#2929)",
+  "latest_commit": "117aea3",
+  "latest_commit_date": "2026-10-19T03:08:47-04:00",
+  "latest_message": "Navigation pane: a long heading wraps within the pane instead of ending in an ellipsis (#3015) (#3029)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -245,6 +245,14 @@
     ],
     "progress": [
       {
+        "date": "2026-10-19",
+        "text": "Save As, Export and Open no longer do nothing on Linux desktops whose file chooser portal fails to show its dialog (#2999): a \"cancel\" quicker than anyone could make one asks again without the parent window, then opens the built-in file browser."
+      },
+      {
+        "date": "2026-10-18",
+        "text": "Long navigation headings wrap onto further lines inside the resizable pane instead of ending in an ellipsis: the row grows with the text and the pane keeps its width (#759, #3015)."
+      },
+      {
         "date": "2026-10-18",
         "text": "Clearing a font query with no matches keeps Recently Used Fonts visible at the top of a scrollable list. The initial scroll position no longer skips its heading; measured keyboard scrolling is unchanged (#2068)."
       },
@@ -395,14 +403,6 @@
       {
         "date": "2026-10-16",
         "text": "Save Changes gives assistive technology a named alert dialog with the loss warning and any save failure; visual layout and save policy unchanged (#1015). Native screen-reader verification remains pending."
-      },
-      {
-        "date": "2026-10-16",
-        "text": "Web Layout text fills the window width and re-wraps once a resize settles, or at once on a zoom, instead of a fixed 800 pt column; Draft and Outline keep their 800 pt column (#1876)."
-      },
-      {
-        "date": "2026-10-16",
-        "text": "Create Source: the automatic Tag is three letters of the first author and the last two digits of the year (Smi20), with 1, 2… added when taken, as Word for Mac 16.113.4 does (user-checked). Editing Author or Year keeps the Tag, as in Word, and the citations in the text show the new author and year (#2094; the reporter expected the Tag to follow)."
       }
     ]
   },
@@ -413,39 +413,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 370,
-    "revisions_7d": 224,
+    "revisions": 372,
+    "revisions_7d": 226,
     "last_revision": {
-      "ts": "2026-10-18T21:10:01Z",
+      "ts": "2026-10-19T07:08:47Z",
       "kind": "content",
-      "commit": "61e565c",
-      "commit_full": "61e565cd1c4bf05228438be38da3e5d873aa24d0",
-      "message": "fix(ui): keep recent fonts visible after an unmatched query (#2068) (#2929)"
+      "commit": "117aea3",
+      "commit_full": "117aea31a8e61bd3e306e9210800cdc42897e3c1",
+      "message": "Navigation pane: a long heading wraps within the pane instead of ending in an ellipsis (#3015) (#3029)"
     },
     "last_update": {
-      "ts": "2026-10-18T21:10:01Z",
+      "ts": "2026-10-19T07:08:47Z",
       "kind": "content",
-      "commit": "61e565c",
-      "commit_full": "61e565cd1c4bf05228438be38da3e5d873aa24d0",
-      "message": "fix(ui): keep recent fonts visible after an unmatched query (#2068) (#2929)"
+      "commit": "117aea3",
+      "commit_full": "117aea31a8e61bd3e306e9210800cdc42897e3c1",
+      "message": "Navigation pane: a long heading wraps within the pane instead of ending in an ellipsis (#3015) (#3029)"
     },
     "self_reported": "2026-10-18"
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 18.8,
-    "active_days_7d": 4,
-    "changes_7d": 537,
-    "changes_14d": 931,
+    "level": "buzzing",
+    "score": 23.2,
+    "active_days_7d": 5,
+    "changes_7d": 558,
+    "changes_14d": 952,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-10-18T21:11:52Z",
-      "commit": "d588e0b",
-      "commit_full": "d588e0b87329975d0b06a9cf91e4d7d2ebacb0f8",
-      "subject": "Limit table row deferral to genuine widow splits (#2925)"
+      "ts": "2026-10-19T07:08:47Z",
+      "commit": "117aea3",
+      "commit_full": "117aea31a8e61bd3e306e9210800cdc42897e3c1",
+      "subject": "Navigation pane: a long heading wraps within the pane instead of ending in an ellipsis (#3015) (#3029)"
     },
-    "last_commit_ts": "2026-10-18T21:11:52Z",
+    "last_commit_ts": "2026-10-19T07:08:47Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       17,
@@ -461,7 +461,7 @@
       0,
       2,
       239,
-      0
+      21
     ],
     "days": [
       {
@@ -668,6 +668,25 @@
           {
             "commit": "2d0169e",
             "subject": "A Word 2003 XML or web page saved as .doc opens by what it holds (#2853) (#2942)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-19",
+        "code": 21,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "117aea3",
+            "subject": "Navigation pane: a long heading wraps within the pane instead of ending in an ellipsis (#3015) (#3029)"
+          },
+          {
+            "commit": "fdf791a",
+            "subject": "#3045: the empty window's ribbon tabs stay live, so File reaches the Start screen (#3064)"
+          },
+          {
+            "commit": "dbc5c34",
+            "subject": "Size the text cursor by the font, not the line spacing (#2920) (#3011)"
           }
         ]
       }
@@ -9304,7 +9323,53 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "6950c22",
+      "commit_full": "6950c22d736df8e3ee9668eff7fa561bc93dfd0e",
+      "commit_date": "2026-10-19T03:04:59-04:00",
+      "ts": "2026-10-19T07:04:59Z",
+      "message": "#2999: a file dialog that \"cancels\" at once asks again without a parent, then shows the built-in browser (#3030)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "117aea3",
+      "commit_full": "117aea31a8e61bd3e306e9210800cdc42897e3c1",
+      "commit_date": "2026-10-19T03:08:47-04:00",
+      "ts": "2026-10-19T07:08:47Z",
+      "message": "Navigation pane: a long heading wraps within the pane instead of ending in an ellipsis (#3015) (#3029)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-19T00:08:39+00:00"
+  "updated_at": "2026-10-19T07:19:20+00:00"
 }

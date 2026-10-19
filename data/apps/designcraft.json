@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/designcraft",
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
-  "latest_commit": "c2609f9",
-  "latest_commit_date": "2026-10-16T10:08:19-04:00",
-  "latest_message": "Integration batch: 197 PRs on main (#1139)",
+  "latest_commit": "443ea46",
+  "latest_commit_date": "2026-10-19T02:53:01-04:00",
+  "latest_message": "Fonts: Type › Reload Fonts reads fonts changed on disk again (#328, #547) (#1163)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -237,6 +237,30 @@
     ],
     "progress": [
       {
+        "date": "2026-10-18",
+        "text": "· View › Screen Mode: Bleed and Slug do what they say. Both were selectable from the toolbar, the View menu and view.screenMode but drew the canvas exactly as Normal did, guides and all; they are preview modes now, and what each page shows reaches the bleed box or the slug box instead of stopping at the trim. The slug guide is drawn as well, in the Slug colour from Preferences › Guides & Pasteboard, which nothing had read. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-17",
+        "text": "· File › Package writes the document's and the IDML's links relative to the package (Links/logo.png, file:Links/logo.png), so a package holds no path from the machine that made it; opening a document resolves them to the files beside it. Links › Copy Link(s) To still links by full path. (#340). No readiness percentage change."
+      },
+      {
+        "date": "2026-10-17",
+        "text": "· Object strokes reject malformed types and unknown type fields before changing the document; command help lists every stroke kind and its required fields. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-17",
+        "text": "· Docs: documented a persistent source CLI install with Cargo, MCP-client PATH setup and bare-name server registration in docs/mcp.md. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-16",
+        "text": "· Type › Reload Fonts (font.reload): fonts installed, edited or removed while DesignCraft runs are read again without a restart, and the open documents recompose with them (#328, #547). An edited font file is noticed by its length and modification time; bundled, added and document fonts stay as they are. InDesign does this by itself, so noticing changes automatically is still open (gap 6). No readiness percentage change."
+      },
+      {
+        "date": "2026-10-16",
+        "text": "· Parents can be deleted from their Pages-panel context menu or layout.parents.delete {id}. Applied-page and based-on references are cleared, local override copies survive, and Undo restores the parent. Addresses the deletion portion of #956; no readiness percentage change."
+      },
+      {
         "date": "2026-10-16",
         "text": "· Threading: the loaded text cursor threads into a text frame inside a group (it hit the group and showed it could not thread); a plain click still selects the group (#1075). Gap 27 closed. No readiness percentage change."
       },
@@ -371,30 +395,6 @@
       {
         "date": "2026-10-15",
         "text": "· Measures in inches show four decimals, as InDesign's fields do (A4 is 8.2677 × 11.6929 in, a 1p0 gutter 0.1667 in); other units keep three."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "· Ruler menus as InDesign's: right-clicking where the rulers meet sets the units of both; each ruler's menu lists InDesign's units and Hide Rulers, the horizontal one Delete All Guides on Spread."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "· Properties › Edit Page works as InDesign's: the Page tool on the page in view, and Properties shows that page alone (Page Size: page, preset, orientation, W/H; Margins and Columns; Quick Actions) with Back. It opened Document Setup, which changes every page."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "· Deleting pages that contain objects asks first, as InDesign does (\"The affected page contains objects. Delete the page anyway?\", with Don't show again), from the Pages panel, Layout › Pages › Delete Page and Properties."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "· A page scrolled or jumped to shows its paper while its render is on its way, as in InDesign, instead of the black of its shadow."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "· Tab, Shift+Tab and Presentation hide the icon column's panel flyout and the classic floating panels too, as InDesign hides floating panels."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "· Layers panel: an object's row is renamed with a slow double-click (a second click on the selected row), as in InDesign; a quick double-click only selects it."
       }
     ]
   },
@@ -405,39 +405,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 92,
-    "revisions_7d": 76,
+    "revisions": 99,
+    "revisions_7d": 83,
     "last_revision": {
-      "ts": "2026-10-16T14:08:19Z",
+      "ts": "2026-10-19T06:53:01Z",
       "kind": "content",
-      "commit": "c2609f9",
-      "commit_full": "c2609f921bb65825a9d41e9882a2f0b712276989",
-      "message": "Integration batch: 197 PRs on main (#1139)"
+      "commit": "443ea46",
+      "commit_full": "443ea4640ca368fcf0241b04813bd3817acd5df8",
+      "message": "Fonts: Type › Reload Fonts reads fonts changed on disk again (#328, #547) (#1163)"
     },
     "last_update": {
-      "ts": "2026-10-16T14:08:19Z",
+      "ts": "2026-10-19T06:53:01Z",
       "kind": "content",
-      "commit": "c2609f9",
-      "commit_full": "c2609f921bb65825a9d41e9882a2f0b712276989",
-      "message": "Integration batch: 197 PRs on main (#1139)"
+      "commit": "443ea46",
+      "commit_full": "443ea4640ca368fcf0241b04813bd3817acd5df8",
+      "message": "Fonts: Type › Reload Fonts reads fonts changed on disk again (#328, #547) (#1163)"
     },
     "self_reported": "2026-10-13"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 12.9,
-    "active_days_7d": 5,
-    "changes_7d": 190,
-    "changes_14d": 342,
-    "housekeeping_7d": 6,
+    "score": 17.9,
+    "active_days_7d": 6,
+    "changes_7d": 222,
+    "changes_14d": 374,
+    "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-10-17T19:57:26Z",
-      "commit": "5aeb4dd",
-      "commit_full": "5aeb4dd743067e5a6d797d0f613448a06d141a09",
-      "subject": "Follow paths stored in documents only on this computer or the document's share (#1236)"
+      "ts": "2026-10-19T06:53:01Z",
+      "commit": "443ea46",
+      "commit_full": "443ea4640ca368fcf0241b04813bd3817acd5df8",
+      "subject": "Fonts: Type › Reload Fonts reads fonts changed on disk again (#328, #547) (#1163)"
     },
-    "last_commit_ts": "2026-10-18T18:31:22Z",
+    "last_commit_ts": "2026-10-19T06:53:01Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       34,
@@ -453,7 +453,7 @@
       4,
       3,
       0,
-      0
+      32
     ],
     "days": [
       {
@@ -768,6 +768,25 @@
         "code": 0,
         "other": 3,
         "samples": []
+      },
+      {
+        "d": "2026-10-19",
+        "code": 32,
+        "other": 2,
+        "samples": [
+          {
+            "commit": "443ea46",
+            "subject": "Fonts: Type › Reload Fonts reads fonts changed on disk again (#328, #547) (#1163)"
+          },
+          {
+            "commit": "af7bd3c",
+            "subject": "fix: allow deleting parent pages (#956) (#1136)"
+          },
+          {
+            "commit": "bad330b",
+            "subject": "Package: link the packaged document and IDML relative to the package (fixes #340) (#1242)"
+          }
+        ]
       }
     ]
   },
@@ -3059,7 +3078,168 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "020f6c7",
+      "commit_full": "020f6c787d9de20bc37ebc899c520a4b7f87c959",
+      "commit_date": "2026-10-19T02:48:54-04:00",
+      "ts": "2026-10-19T06:48:54Z",
+      "message": "Docs: install the CLI and register it with MCP clients (#1300)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "89bfb16",
+      "commit_full": "89bfb16a208743d70db4138999cc2eb6e68f07b9",
+      "commit_date": "2026-10-19T02:49:37-04:00",
+      "ts": "2026-10-19T06:49:37Z",
+      "message": "docs: fix broken parity checklist link (#1230)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "14603a5",
+      "commit_full": "14603a56e1463cfac5c871f2b6f59640e9de9dec",
+      "commit_date": "2026-10-19T02:51:41-04:00",
+      "ts": "2026-10-19T06:51:41Z",
+      "message": "Object: reject malformed stroke types (#1299)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "dceac88",
+      "commit_full": "dceac88f2c971c8e7415a4fe057c64e3b0c9f8e8",
+      "commit_date": "2026-10-19T02:52:10-04:00",
+      "ts": "2026-10-19T06:52:10Z",
+      "message": "View: Bleed and Slug screen modes show their area; draw the slug guide (#1271)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "bad330b",
+      "commit_full": "bad330b2182a93a728a84ac5d9d56b10e47d0275",
+      "commit_date": "2026-10-19T02:52:24-04:00",
+      "ts": "2026-10-19T06:52:24Z",
+      "message": "Package: link the packaged document and IDML relative to the package (fixes #340) (#1242)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "af7bd3c",
+      "commit_full": "af7bd3cc6e6809243b06027b551de3e8ead970ca",
+      "commit_date": "2026-10-19T02:52:39-04:00",
+      "ts": "2026-10-19T06:52:39Z",
+      "message": "fix: allow deleting parent pages (#956) (#1136)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "443ea46",
+      "commit_full": "443ea4640ca368fcf0241b04813bd3817acd5df8",
+      "commit_date": "2026-10-19T02:53:01-04:00",
+      "ts": "2026-10-19T06:53:01Z",
+      "message": "Fonts: Type › Reload Fonts reads fonts changed on disk again (#328, #547) (#1163)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-19T00:08:35+00:00"
+  "updated_at": "2026-10-19T07:19:18+00:00"
 }

@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/cadcraft",
   "roadmap_url": "https://github.com/storytold/cadcraft/blob/main/ROADMAP.md",
-  "latest_commit": "e773d93",
-  "latest_commit_date": "2026-10-13T05:37:45-04:00",
-  "latest_message": "HATCHEDIT: refuse an explicit bad scale or angle before editing anything (#724) (#777)",
+  "latest_commit": "323f462",
+  "latest_commit_date": "2026-10-19T03:02:49-04:00",
+  "latest_message": "Add Greek (el) interface localization (#1307)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
     "target": "Autodesk AutoCAD 2027",
-    "last_updated": "2026-10-10",
+    "last_updated": "2026-10-14",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -214,6 +214,10 @@
     ],
     "progress": [
       {
+        "date": "2026-10-14",
+        "text": "HATCHEDIT adds boundaries from internal points or closed objects and removes selected loops in the dialog, command line and JSON command; associative links and undo are covered by tests."
+      },
+      {
         "date": "2026-10-12",
         "text": "TRIM: a pick after a closed polyline's last cut keeps only the complementary run instead of an extra circuit of the outline (#726)"
       },
@@ -262,39 +266,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 8,
-    "revisions_7d": 4,
+    "revisions": 10,
+    "revisions_7d": 6,
     "last_revision": {
-      "ts": "2026-10-13T09:37:45Z",
+      "ts": "2026-10-19T07:02:49Z",
       "kind": "content",
-      "commit": "e773d93",
-      "commit_full": "e773d93164d12b58348637a6317894a118f2d06b",
-      "message": "HATCHEDIT: refuse an explicit bad scale or angle before editing anything (#724) (#777)"
+      "commit": "323f462",
+      "commit_full": "323f4629eb28f52d09ef37ee806a5bd21396f499",
+      "message": "Add Greek (el) interface localization (#1307)"
     },
     "last_update": {
-      "ts": "2026-10-13T09:37:45Z",
+      "ts": "2026-10-19T07:02:49Z",
       "kind": "content",
-      "commit": "e773d93",
-      "commit_full": "e773d93164d12b58348637a6317894a118f2d06b",
-      "message": "HATCHEDIT: refuse an explicit bad scale or angle before editing anything (#724) (#777)"
+      "commit": "323f462",
+      "commit_full": "323f4629eb28f52d09ef37ee806a5bd21396f499",
+      "message": "Add Greek (el) interface localization (#1307)"
     },
-    "self_reported": "2026-10-10"
+    "self_reported": "2026-10-14"
   },
   "milestone": null,
   "activity": {
-    "level": "quiet",
-    "score": 7.8,
-    "active_days_7d": 3,
-    "changes_7d": 106,
-    "changes_14d": 457,
-    "housekeeping_7d": 11,
+    "level": "active",
+    "score": 14.2,
+    "active_days_7d": 4,
+    "changes_7d": 188,
+    "changes_14d": 539,
+    "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-10-17T18:14:01Z",
-      "commit": "ff6cc8b",
-      "commit_full": "ff6cc8b3fc61046a74df5c9daeea542946e55be8",
-      "subject": "Bound control-port input, and follow stored paths only on this computer or the drawing's share (#1518)"
+      "ts": "2026-10-19T07:02:53Z",
+      "commit": "0b32c2e",
+      "commit_full": "0b32c2e6a14c761835ea62c01e7b20845971d781",
+      "subject": "i18n(hu): the ViewCube pill's key is now WCS (after #1558)"
     },
-    "last_commit_ts": "2026-10-18T18:30:54Z",
+    "last_commit_ts": "2026-10-19T07:02:53Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       13,
@@ -310,7 +314,7 @@
       1,
       1,
       0,
-      0
+      82
     ],
     "days": [
       {
@@ -473,6 +477,25 @@
         "code": 0,
         "other": 3,
         "samples": []
+      },
+      {
+        "d": "2026-10-19",
+        "code": 82,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "0b32c2e",
+            "subject": "i18n(hu): the ViewCube pill's key is now WCS (after #1558)"
+          },
+          {
+            "commit": "323f462",
+            "subject": "Add Greek (el) interface localization (#1307)"
+          },
+          {
+            "commit": "c02027a",
+            "subject": "Bound CAL unary minus/plus and ^ chain recursion (#1586)"
+          }
+        ]
       }
     ]
   },
@@ -781,7 +804,53 @@
       "breadth_pct": 50.0,
       "full_prev": 38.0,
       "kind": "content"
+    },
+    {
+      "commit": "4125b35",
+      "commit_full": "4125b351cde093badf4da36c689a39eb189fead0",
+      "commit_date": "2026-10-19T02:54:28-04:00",
+      "ts": "2026-10-19T06:54:28Z",
+      "message": "Add HATCHEDIT boundary add and remove (#1156)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-14",
+      "full_pct": 38.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1850
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Autodesk AutoCAD 2027",
+      "mainstream_pct": 28.0,
+      "essentials_pct": 46.0,
+      "breadth_pct": 50.0,
+      "full_prev": 38.0,
+      "kind": "content"
+    },
+    {
+      "commit": "323f462",
+      "commit_full": "323f4629eb28f52d09ef37ee806a5bd21396f499",
+      "commit_date": "2026-10-19T03:02:49-04:00",
+      "ts": "2026-10-19T07:02:49Z",
+      "message": "Add Greek (el) interface localization (#1307)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-14",
+      "full_pct": 38.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1850
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Autodesk AutoCAD 2027",
+      "mainstream_pct": 28.0,
+      "essentials_pct": 46.0,
+      "breadth_pct": 50.0,
+      "full_prev": 38.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-19T00:08:46+00:00"
+  "updated_at": "2026-10-19T07:19:23+00:00"
 }
