@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/pdfcraft",
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
-  "latest_commit": "6733e07",
-  "latest_commit_date": "2026-10-19T02:49:34-04:00",
-  "latest_message": "Keep long menus usable in short windows (#3374)",
+  "latest_commit": "32abf71",
+  "latest_commit_date": "2026-10-19T12:57:52-04:00",
+  "latest_message": "Text: tracked glyphs retain their word boundaries (#3477)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -241,6 +241,10 @@
         "text": "(M3, #3360): Switching between Read and the docking workspace retains the current document’s scroll position at fixed zoom, including within-page position; separate tabs retain their own offsets. Estimates unchanged."
       },
       {
+        "date": "2026-10-19",
+        "text": "(M7, tracked text): Editable paragraphs and object labels distinguish repeated glyph tracking from word gaps in TJ arrays and separately positioned glyphs. Synthetic regressions cover character spacing, horizontal scaling, rotated baselines, larger word gaps, and rows of one-glyph words or cells (inferred tracking is capped at half an em, so a b c and digit or Y/N columns keep their spaces). Estimates unchanged."
+      },
+      {
         "date": "2026-10-18",
         "text": "(M6, #2892): Push-button normal labels are editable per widget through Options and formsetprops, independently of field names; rendering, undo/redo and incremental/full save/reopen are covered. Estimates unchanged."
       },
@@ -387,10 +391,6 @@
       {
         "date": "2026-10-14",
         "text": "(M3, Open in Full Screen mode honoured): a document with /PageMode /FullScreen now asks (Full Screen / Not now) before the app enters full screen, as Acrobat does; before, the setting was written and read but never acted on when opening."
-      },
-      {
-        "date": "2026-10-14",
-        "text": "(M3, control-click candidate): Coordinate clicks retain hover warmup and pair press/release in one input pass so slow frames do not turn a click into a hold. Text multi-click selection accepts the actual press event when egui has already cleared its origin. Regression cases cover slow-frame button activation, disabled controls and coalesced text selection; estimates unchanged."
       }
     ]
   },
@@ -410,39 +410,39 @@
     }
   },
   "roadmap": {
-    "revisions": 149,
-    "revisions_7d": 84,
+    "revisions": 150,
+    "revisions_7d": 85,
     "last_revision": {
-      "ts": "2026-10-19T06:49:34Z",
+      "ts": "2026-10-19T16:57:52Z",
       "kind": "content",
-      "commit": "6733e07",
-      "commit_full": "6733e073ef499558850ee46add0dc1663b716eaa",
-      "message": "Keep long menus usable in short windows (#3374)"
+      "commit": "32abf71",
+      "commit_full": "32abf71049bc6559da8032ef5e312ad32a306dce",
+      "message": "Text: tracked glyphs retain their word boundaries (#3477)"
     },
     "last_update": {
-      "ts": "2026-10-19T06:49:34Z",
+      "ts": "2026-10-19T16:57:52Z",
       "kind": "content",
-      "commit": "6733e07",
-      "commit_full": "6733e073ef499558850ee46add0dc1663b716eaa",
-      "message": "Keep long menus usable in short windows (#3374)"
+      "commit": "32abf71",
+      "commit_full": "32abf71049bc6559da8032ef5e312ad32a306dce",
+      "message": "Text: tracked glyphs retain their word boundaries (#3477)"
     },
     "self_reported": "2026-10-18"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 24.5,
+    "score": 24.8,
     "active_days_7d": 7,
-    "changes_7d": 348,
-    "changes_14d": 947,
-    "housekeeping_7d": 12,
+    "changes_7d": 351,
+    "changes_14d": 950,
+    "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-19T16:05:04Z",
-      "commit": "e397efa",
-      "commit_full": "e397efa85451be00f8d56df7649807fe31e019c7",
-      "subject": "M8: redaction's structure-tree walks start from the parent and ID trees too (#2447, #3302) (#3285)"
+      "ts": "2026-10-19T16:58:15Z",
+      "commit": "a30dde2",
+      "commit_full": "a30dde2225925abe55366c02cb9532a1c9d0c645",
+      "subject": "M6: the date picker follows a whole date typed while it is open (#3393)"
     },
-    "last_commit_ts": "2026-10-19T16:05:04Z",
+    "last_commit_ts": "2026-10-19T16:58:15Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       14,
@@ -458,7 +458,7 @@
       3,
       5,
       56,
-      12
+      15
     ],
     "days": [
       {
@@ -824,20 +824,20 @@
       },
       {
         "d": "2026-10-19",
-        "code": 12,
-        "other": 0,
+        "code": 15,
+        "other": 1,
         "samples": [
           {
-            "commit": "e397efa",
-            "subject": "M8: redaction's structure-tree walks start from the parent and ID trees too (#2447, #3302) (#3285)"
+            "commit": "a30dde2",
+            "subject": "M6: the date picker follows a whole date typed while it is open (#3393)"
           },
           {
-            "commit": "43550c4",
-            "subject": "M2: a JP2 image in a colour space the decoder refuses is drawn by its component count (#3306) (#3363)"
+            "commit": "caaf058",
+            "subject": "M6: a secured form's notice bar still says it is a form (#3404)"
           },
           {
-            "commit": "cbbeb61",
-            "subject": "fix(parse): accept spaces between stream and its line break (#3378)"
+            "commit": "32abf71",
+            "subject": "Text: tracked glyphs retain their word boundaries (#3477)"
           }
         ]
       }
@@ -4442,7 +4442,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "32abf71",
+      "commit_full": "32abf71049bc6559da8032ef5e312ad32a306dce",
+      "commit_date": "2026-10-19T12:57:52-04:00",
+      "ts": "2026-10-19T16:57:52Z",
+      "message": "Text: tracked glyphs retain their word boundaries (#3477)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-19T16:20:43+00:00"
+  "updated_at": "2026-10-19T16:59:29+00:00"
 }

@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "117aea3",
-  "latest_commit_date": "2026-10-19T03:08:47-04:00",
-  "latest_message": "Navigation pane: a long heading wraps within the pane instead of ending in an ellipsis (#3015) (#3029)",
+  "latest_commit": "b8debb3",
+  "latest_commit_date": "2026-10-19T12:53:44-04:00",
+  "latest_message": "Content controls: typed text takes the control's formatting, in any language (#3116)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
-    "last_updated": "2026-10-18",
+    "last_updated": "2026-10-19",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -246,6 +246,14 @@
     "progress": [
       {
         "date": "2026-10-19",
+        "text": "Restrict Editing: with Filling in forms enforced, inserting content controls, their Properties and Remove Content Control are refused, as in Word (it greys them out), so a form's fields stay as they are and only their content is filled in."
+      },
+      {
+        "date": "2026-10-19",
+        "text": "Content controls: text typed over a placeholder takes the control's own run properties (w:sdtPr/w:rPr, ECMA-376 §17.5.2.27), as in Word, and the placeholder style is recognised by its built-in name \"Placeholder Text\" whatever its localized id (German Word: Platzhaltertext), so entries in forms from localized Word no longer stay grey."
+      },
+      {
+        "date": "2026-10-19",
         "text": "Save As, Export and Open no longer do nothing on Linux desktops whose file chooser portal fails to show its dialog (#2999): a \"cancel\" quicker than anyone could make one asks again without the parent window, then opens the built-in file browser."
       },
       {
@@ -395,14 +403,6 @@
       {
         "date": "2026-10-16",
         "text": "Equations from Word files keep all their content (#1273): math straight in the body or a table cell, math behind mc:AlternateContent Requires=\"m\", runs inside hyperlinks, simple fields and markup-compatibility blocks within an equation, and w:sym/Symbol-font characters in math; operators, delimiters and accents the math font lacks come from a fallback font. Every ECMA-376 §22.1 element is pinned by a coverage test."
-      },
-      {
-        "date": "2026-10-16",
-        "text": "Captions and title pages (#1230): Insert Caption… on the right-click menu of pictures, shapes, text boxes and charts, the caption going under (or over) the object in its own cell or text box; Page Setup's Different First Page and Different Odd & Even Pages check boxes, so a title page can go without its page number"
-      },
-      {
-        "date": "2026-10-16",
-        "text": "Save Changes gives assistive technology a named alert dialog with the loss warning and any save failure; visual layout and save policy unchanged (#1015). Native screen-reader verification remains pending."
       }
     ]
   },
@@ -413,39 +413,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 372,
-    "revisions_7d": 226,
+    "revisions": 374,
+    "revisions_7d": 228,
     "last_revision": {
-      "ts": "2026-10-19T07:08:47Z",
+      "ts": "2026-10-19T16:53:44Z",
       "kind": "content",
-      "commit": "117aea3",
-      "commit_full": "117aea31a8e61bd3e306e9210800cdc42897e3c1",
-      "message": "Navigation pane: a long heading wraps within the pane instead of ending in an ellipsis (#3015) (#3029)"
+      "commit": "b8debb3",
+      "commit_full": "b8debb3050a398c5b19ee3080291524e3864e21c",
+      "message": "Content controls: typed text takes the control's formatting, in any language (#3116)"
     },
     "last_update": {
-      "ts": "2026-10-19T07:08:47Z",
+      "ts": "2026-10-19T16:53:44Z",
       "kind": "content",
-      "commit": "117aea3",
-      "commit_full": "117aea31a8e61bd3e306e9210800cdc42897e3c1",
-      "message": "Navigation pane: a long heading wraps within the pane instead of ending in an ellipsis (#3015) (#3029)"
+      "commit": "b8debb3",
+      "commit_full": "b8debb3050a398c5b19ee3080291524e3864e21c",
+      "message": "Content controls: typed text takes the control's formatting, in any language (#3116)"
     },
-    "self_reported": "2026-10-18"
+    "self_reported": "2026-10-19"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 23.2,
+    "score": 23.7,
     "active_days_7d": 5,
-    "changes_7d": 558,
-    "changes_14d": 952,
+    "changes_7d": 566,
+    "changes_14d": 960,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-10-19T07:08:47Z",
-      "commit": "117aea3",
-      "commit_full": "117aea31a8e61bd3e306e9210800cdc42897e3c1",
-      "subject": "Navigation pane: a long heading wraps within the pane instead of ending in an ellipsis (#3015) (#3029)"
+      "ts": "2026-10-19T16:57:16Z",
+      "commit": "4e2568e",
+      "commit_full": "4e2568e2daf33405406b771af3450fa5b60dd035",
+      "subject": "RTF import: heading and code formatting compared with the file's own stylesheet (gap 19 follow-up) (#2236)"
     },
-    "last_commit_ts": "2026-10-19T07:08:47Z",
+    "last_commit_ts": "2026-10-19T16:57:16Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       17,
@@ -461,7 +461,7 @@
       0,
       2,
       239,
-      21
+      29
     ],
     "days": [
       {
@@ -673,20 +673,20 @@
       },
       {
         "d": "2026-10-19",
-        "code": 21,
+        "code": 29,
         "other": 0,
         "samples": [
           {
-            "commit": "117aea3",
-            "subject": "Navigation pane: a long heading wraps within the pane instead of ending in an ellipsis (#3015) (#3029)"
+            "commit": "4e2568e",
+            "subject": "RTF import: heading and code formatting compared with the file's own stylesheet (gap 19 follow-up) (#2236)"
           },
           {
-            "commit": "fdf791a",
-            "subject": "#3045: the empty window's ribbon tabs stay live, so File reaches the Start screen (#3064)"
+            "commit": "b8debb3",
+            "subject": "Content controls: typed text takes the control's formatting, in any language (#3116)"
           },
           {
-            "commit": "dbc5c34",
-            "subject": "Size the text cursor by the font, not the line spacing (#2920) (#3011)"
+            "commit": "f1b4be8",
+            "subject": "Restrict Editing: forms protection keeps a form's content controls (#3112)"
           }
         ]
       }
@@ -9369,7 +9369,53 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "f1b4be8",
+      "commit_full": "f1b4be8a04a56d70200171afe1470efaee067c67",
+      "commit_date": "2026-10-19T12:49:05-04:00",
+      "ts": "2026-10-19T16:49:05Z",
+      "message": "Restrict Editing: forms protection keeps a form's content controls (#3112)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-19",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "b8debb3",
+      "commit_full": "b8debb3050a398c5b19ee3080291524e3864e21c",
+      "commit_date": "2026-10-19T12:53:44-04:00",
+      "ts": "2026-10-19T16:53:44Z",
+      "message": "Content controls: typed text takes the control's formatting, in any language (#3116)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-19",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-19T07:19:20+00:00"
+  "updated_at": "2026-10-19T16:59:35+00:00"
 }
