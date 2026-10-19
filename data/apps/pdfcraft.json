@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/pdfcraft",
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
-  "latest_commit": "aebb333",
-  "latest_commit_date": "2026-10-19T13:02:58-04:00",
-  "latest_message": "docs: base the XFA page area Acrobat observations on a synthetic form (#2574) (#3431)",
+  "latest_commit": "ec0a965",
+  "latest_commit_date": "2026-10-19T12:21:37-06:00",
+  "latest_message": "M5.6: preserve nested annotation values in FDF exports (#1971)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -258,6 +258,10 @@
       },
       {
         "date": "2026-10-18",
+        "text": "(M5, PR #1971 review): Nested FDF annotation values that identify a source /Page or /Pages dictionary become null at every copy depth. A synthetic three-page PDF saved and reopened before export verifies that destination actions cannot pull source page content into the FDF, while unrelated nested metadata and shared references remain intact. FDF import semantics, copied-graph limits and estimates are unchanged."
+      },
+      {
+        "date": "2026-10-18",
         "text": "(M6, #2892): Push-button normal labels are editable per widget through Options and formsetprops, independently of field names; rendering, undo/redo and incremental/full save/reopen are covered. Estimates unchanged."
       },
       {
@@ -295,6 +299,10 @@
       {
         "date": "2026-10-16",
         "text": "(M3, #2739): Wrapped revision buttons stay above Binding in Document Properties. A synthetic regression checks control bounds and opens a saved revision at two viewport widths. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-15",
+        "text": "(M5, PR #1971 refresh): Nested FDF annotation values retain shared or cyclic copied graphs. Discovery borrows direct values and records annotation positions with lazy array owners; retained entries are budgeted before cloning. Synthetic stress fixtures include repeated aliases and saved-PDF cache eviction. Limits cover the copied graph; source parsing and page discovery retain their existing limits, with no total source-memory bound. FDF import semantics and estimates are unchanged."
       },
       {
         "date": "2026-10-15",
@@ -383,14 +391,6 @@
       {
         "date": "2026-10-14",
         "text": "(M5, PR #1457 branch refresh): Merged upstream main and reconciled roadmap entries while preserving comment submission shortcuts. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-14",
-        "text": "(M9, signature appearance labels): A visible signature's labels (\"Digitally signed by\", \"Reason: \", …) follow the interface language when Helvetica can draw all of them, and fall back to English as a set otherwise, with a note under the preview; the preview shows the same labels and the signing time. A drawn label the font can't draw is refused naming the label and character, never written as ?. signdocument takes labels and appearance. Sign, automation and kittest regressions cover German, Chinese and the refusals. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-14",
-        "text": "(M4, page transitions read, §12.4.4): /Trans and /Dur are read into DocInfo::transitions and listed by docinfo, the data a full-screen presentation needs to play transitions and auto-advance; playing and editing them stay planned."
       }
     ]
   },
@@ -410,39 +410,39 @@
     }
   },
   "roadmap": {
-    "revisions": 153,
-    "revisions_7d": 88,
+    "revisions": 154,
+    "revisions_7d": 89,
     "last_revision": {
-      "ts": "2026-10-19T17:02:58Z",
+      "ts": "2026-10-19T18:21:37Z",
       "kind": "content",
-      "commit": "aebb333",
-      "commit_full": "aebb3335826b8403f5cbefd6e2c214b4ac22ec4d",
-      "message": "docs: base the XFA page area Acrobat observations on a synthetic form (#2574) (#3431)"
+      "commit": "ec0a965",
+      "commit_full": "ec0a965074f376a5bf610435948e4e5184bf3299",
+      "message": "M5.6: preserve nested annotation values in FDF exports (#1971)"
     },
     "last_update": {
-      "ts": "2026-10-19T17:02:58Z",
+      "ts": "2026-10-19T18:21:37Z",
       "kind": "content",
-      "commit": "aebb333",
-      "commit_full": "aebb3335826b8403f5cbefd6e2c214b4ac22ec4d",
-      "message": "docs: base the XFA page area Acrobat observations on a synthetic form (#2574) (#3431)"
+      "commit": "ec0a965",
+      "commit_full": "ec0a965074f376a5bf610435948e4e5184bf3299",
+      "message": "M5.6: preserve nested annotation values in FDF exports (#1971)"
     },
     "self_reported": "2026-10-18"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 25.4,
+    "score": 25.5,
     "active_days_7d": 7,
-    "changes_7d": 360,
-    "changes_14d": 959,
+    "changes_7d": 361,
+    "changes_14d": 960,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-19T17:03:54Z",
-      "commit": "459379e",
-      "commit_full": "459379ef9b127648cc30c0b2fe2b20c2b2375f04",
-      "subject": "Edit text: refuse a rewrite of text that is a clipping path (#3447)"
+      "ts": "2026-10-19T18:21:37Z",
+      "commit": "ec0a965",
+      "commit_full": "ec0a965074f376a5bf610435948e4e5184bf3299",
+      "subject": "M5.6: preserve nested annotation values in FDF exports (#1971)"
     },
-    "last_commit_ts": "2026-10-19T17:03:54Z",
+    "last_commit_ts": "2026-10-19T18:21:37Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       14,
@@ -458,7 +458,7 @@
       3,
       5,
       56,
-      24
+      25
     ],
     "days": [
       {
@@ -824,9 +824,13 @@
       },
       {
         "d": "2026-10-19",
-        "code": 24,
+        "code": 25,
         "other": 1,
         "samples": [
+          {
+            "commit": "ec0a965",
+            "subject": "M5.6: preserve nested annotation values in FDF exports (#1971)"
+          },
           {
             "commit": "459379e",
             "subject": "Edit text: refuse a rewrite of text that is a clipping path (#3447)"
@@ -834,10 +838,6 @@
           {
             "commit": "e503324",
             "subject": "Add fills and border widths to text boxes and callouts (#3366)"
-          },
-          {
-            "commit": "e45d5dc",
-            "subject": "Tests: the parser-cancel test guards against a hang, not a 2 s limit (#1970) (#3462)"
           }
         ]
       }
@@ -4534,7 +4534,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "ec0a965",
+      "commit_full": "ec0a965074f376a5bf610435948e4e5184bf3299",
+      "commit_date": "2026-10-19T12:21:37-06:00",
+      "ts": "2026-10-19T18:21:37Z",
+      "message": "M5.6: preserve nested annotation values in FDF exports (#1971)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-19T17:23:39+00:00"
+  "updated_at": "2026-10-19T19:06:16+00:00"
 }
