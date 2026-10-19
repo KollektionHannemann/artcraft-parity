@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/deckcraft",
   "roadmap_url": "https://github.com/storytold/deckcraft/blob/main/ROADMAP.md",
-  "latest_commit": "0981e6e",
-  "latest_commit_date": "2026-10-18T11:21:26-04:00",
-  "latest_message": "Merge pull request #871 from marcoarnulfo/feat/alignto",
+  "latest_commit": "f34f412",
+  "latest_commit_date": "2026-10-19T11:44:16-06:00",
+  "latest_message": "Format: retain imported chart parts through native saves (#851)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
-    "last_updated": "2026-10-14",
+    "last_updated": "2026-10-18",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -238,6 +238,10 @@
     ],
     "progress": [
       {
+        "date": "2026-10-18",
+        "text": "Native chart sidecar bytes move from JSON arrays into referenced ZIP entries, with shared media byte/item limits and bounded reads; older inline sidecars still load. Synthetic format regressions cover large workbooks and malformed members"
+      },
+      {
         "date": "2026-10-17",
         "text": "Opening a file caps absurd effect sizes (glow, soft edges, shadows, reflections, on shapes, text and table text) at what Format Shape allows: a glow of 10^18 pt in a .pptx made rendering ask for 34 GB and abort"
       },
@@ -268,6 +272,10 @@
       {
         "date": "2026-10-16",
         "text": "A PowerPoint Show (.ppsx) opened from the command line or the file association starts its slide show, as in PowerPoint; File › Open still opens it for editing (#862)"
+      },
+      {
+        "date": "2026-10-15",
+        "text": "Native saves keep an imported chart's embedded workbook, drawings and relationships; headless PPTX → edit → native save/reopen → PPTX tests verify the payloads and stale-workbook rejection"
       },
       {
         "date": "2026-10-15",
@@ -388,14 +396,6 @@
       {
         "date": "2026-10-14",
         "text": "PNG and JPEG slide export record their resolution. The default 2 pixels per point is 144 dpi, so Preview and print show the slide's real size instead of twice that"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Design ▸ Effects: named effect schemes (DeckCraft, Soft, Crisp, Lift, Glow, Plain) replace the theme's fills, lines and effects and leave colours and fonts. design.effects"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Slide Master: Preserve on the open master or layout, and Title and Footers placeholder checkboxes. Two commands (master.preserve, master.placeholders)"
       }
     ]
   },
@@ -406,39 +406,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 77,
-    "revisions_7d": 73,
+    "revisions": 78,
+    "revisions_7d": 74,
     "last_revision": {
-      "ts": "2026-10-18T15:21:26Z",
+      "ts": "2026-10-19T17:44:16Z",
       "kind": "content",
-      "commit": "0981e6e",
-      "commit_full": "0981e6e675540dbf6f8d90f0a0b1d491ff570278",
-      "message": "Merge pull request #871 from marcoarnulfo/feat/alignto"
+      "commit": "f34f412",
+      "commit_full": "f34f4121c8ee720ca08e5d47b912155a33504e69",
+      "message": "Format: retain imported chart parts through native saves (#851)"
     },
     "last_update": {
-      "ts": "2026-10-18T15:21:26Z",
+      "ts": "2026-10-19T17:44:16Z",
       "kind": "content",
-      "commit": "0981e6e",
-      "commit_full": "0981e6e675540dbf6f8d90f0a0b1d491ff570278",
-      "message": "Merge pull request #871 from marcoarnulfo/feat/alignto"
+      "commit": "f34f412",
+      "commit_full": "f34f4121c8ee720ca08e5d47b912155a33504e69",
+      "message": "Format: retain imported chart parts through native saves (#851)"
     },
-    "self_reported": "2026-10-14"
+    "self_reported": "2026-10-18"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.9,
-    "active_days_7d": 6,
-    "changes_7d": 317,
-    "changes_14d": 392,
+    "score": 16.9,
+    "active_days_7d": 7,
+    "changes_7d": 318,
+    "changes_14d": 393,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-10-18T15:21:27Z",
-      "commit": "868016e",
-      "commit_full": "868016ee2fe907ba1c810746d9f5d2f24affec8c",
-      "subject": "Merge pull request #882 from marcoarnulfo/fix/show-anim-steps"
+      "ts": "2026-10-19T17:44:16Z",
+      "commit": "f34f412",
+      "commit_full": "f34f4121c8ee720ca08e5d47b912155a33504e69",
+      "subject": "Format: retain imported chart parts through native saves (#851)"
     },
-    "last_commit_ts": "2026-10-18T18:31:16Z",
+    "last_commit_ts": "2026-10-19T17:44:16Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
       16,
@@ -454,7 +454,7 @@
       6,
       2,
       24,
-      0
+      1
     ],
     "days": [
       {
@@ -667,6 +667,17 @@
           {
             "commit": "006bbe1",
             "subject": "Merge pull request #864 from marcoarnulfo/feat/ppsx-starts-show"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-19",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "f34f412",
+            "subject": "Format: retain imported chart parts through native saves (#851)"
           }
         ]
       }
@@ -2564,7 +2575,30 @@
       "breadth_pct": 62.0,
       "full_prev": 55.0,
       "kind": "content"
+    },
+    {
+      "commit": "f34f412",
+      "commit_full": "f34f4121c8ee720ca08e5d47b912155a33504e69",
+      "commit_date": "2026-10-19T11:44:16-06:00",
+      "ts": "2026-10-19T17:44:16Z",
+      "message": "Format: retain imported chart parts through native saves (#851)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-19T00:08:44+00:00"
+  "updated_at": "2026-10-19T17:53:27+00:00"
 }

@@ -441,18 +441,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.6,
+    "score": 19.7,
     "active_days_7d": 7,
-    "changes_7d": 89,
-    "changes_14d": 294,
+    "changes_7d": 96,
+    "changes_14d": 301,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-10-19T17:23:28Z",
-      "commit": "7ca8c80",
-      "commit_full": "7ca8c80a8fb5bb34bd26f0878d22814f362d1775",
-      "subject": "M3: removing auto layout drops its gap and padding bindings (#810) (#814)"
+      "ts": "2026-10-19T17:47:23Z",
+      "commit": "0e0c3c7",
+      "commit_full": "0e0c3c7be4b4a01c8e177effafffda8b1fa6845d",
+      "subject": "Reject server addresses whose port is not all ASCII digits (#869)"
     },
-    "last_commit_ts": "2026-10-19T17:23:28Z",
+    "last_commit_ts": "2026-10-19T17:47:23Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       0,
@@ -468,7 +468,7 @@
       4,
       18,
       13,
-      5
+      12
     ],
     "days": [
       {
@@ -663,20 +663,20 @@
       },
       {
         "d": "2026-10-19",
-        "code": 5,
+        "code": 12,
         "other": 0,
         "samples": [
           {
-            "commit": "7ca8c80",
-            "subject": "M3: removing auto layout drops its gap and padding bindings (#810) (#814)"
+            "commit": "0e0c3c7",
+            "subject": "Reject server addresses whose port is not all ASCII digits (#869)"
           },
           {
-            "commit": "409de1a",
-            "subject": "M3: explicit edits of bound scalar fields detach their variable (#809) (#871)"
+            "commit": "3ed4578",
+            "subject": "M3: effects refuse keys they don't read instead of dropping them (#851)"
           },
           {
-            "commit": "ba496ed",
-            "subject": "M3: an explicit paint edit detaches the variable bound to what it changed (#811)"
+            "commit": "f3c211e",
+            "subject": "M3: a refused slot names component.makeSlot (#850)"
           }
         ]
       }
@@ -2967,5 +2967,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-19T17:23:47+00:00"
+  "updated_at": "2026-10-19T17:53:20+00:00"
 }
