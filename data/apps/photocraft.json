@@ -289,18 +289,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 28.3,
+    "score": 28.8,
     "active_days_7d": 7,
-    "changes_7d": 440,
-    "changes_14d": 2196,
-    "housekeeping_7d": 14,
+    "changes_7d": 441,
+    "changes_14d": 2197,
+    "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-10-20T03:11:09Z",
-      "commit": "03d0c7e",
-      "commit_full": "03d0c7e3b39cfb401cdbba590431141ee4c6c8fa",
-      "subject": "Integration batch: 8 PRs on main (#7823)"
+      "ts": "2026-10-20T12:47:42Z",
+      "commit": "8ede07b",
+      "commit_full": "8ede07b096af6d3afbfcb80659338fbfbd0c7fba",
+      "subject": "Format: build on FreeBSD (rustix has no xattr calls there)"
     },
-    "last_commit_ts": "2026-10-20T03:11:09Z",
+    "last_commit_ts": "2026-10-20T12:47:46Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       193,
@@ -316,7 +316,7 @@
       38,
       102,
       59,
-      1
+      2
     ],
     "days": [
       {
@@ -701,9 +701,13 @@
       },
       {
         "d": "2026-10-20",
-        "code": 1,
-        "other": 0,
+        "code": 2,
+        "other": 2,
         "samples": [
+          {
+            "commit": "8ede07b",
+            "subject": "Format: build on FreeBSD (rustix has no xattr calls there)"
+          },
           {
             "commit": "03d0c7e",
             "subject": "Integration batch: 8 PRs on main (#7823)"
@@ -1012,5 +1016,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-20T03:18:39+00:00"
+  "updated_at": "2026-10-20T13:10:49+00:00"
 }
