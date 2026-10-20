@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/vectorcraft",
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
-  "latest_commit": "d14b67e",
-  "latest_commit_date": "2026-10-20T06:41:08+07:00",
-  "latest_message": "Effects: Artistic: Smudge Stick, Sponge and Watercolor (#2435) (#2525)",
+  "latest_commit": "02e12c6",
+  "latest_commit_date": "2026-10-20T06:53:21+07:00",
+  "latest_message": "Effects: Sketch › Bas Relief, Charcoal, Photocopy and Stamp (#2527) (#2533)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -174,7 +174,7 @@
       },
       {
         "label": "Raster effects (Effect Gallery) — effects-parity.md",
-        "pct": 49.0
+        "pct": 79.0
       },
       {
         "label": "3D and Materials",
@@ -242,7 +242,7 @@
       ".ai files from real users (G9): layer structure, guides, speed: 10–20 h.",
       "Launch and stability on real machines (G10): 20–35 h.",
       "Core-tool correctness (G11: Shape Builder regions, Asset Export borders): 8–15 h.",
-      "Raster effects (G2) alongside: 15 filters (7 Artistic, 8 Sketch) and the Effect Gallery, 14–24 h.",
+      "Raster effects (G2) alongside: the 12 remaining filters (7 Artistic, 4 Sketch, 1 more) and the Effect Gallery, 8–14 h.",
       "Then: type core and advanced type (G4), the Illustrator 2026 additions (G13), 3D (G3)."
     ],
     "progress": [
@@ -415,42 +415,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 174,
-    "revisions_7d": 38,
+    "revisions": 175,
+    "revisions_7d": 30,
     "last_revision": {
-      "ts": "2026-10-19T23:41:08Z",
-      "kind": "content",
-      "commit": "d14b67e",
-      "commit_full": "d14b67e015f8366f4539face8fb3a3f12402420c",
-      "message": "Effects: Artistic: Smudge Stick, Sponge and Watercolor (#2435) (#2525)"
+      "ts": "2026-10-19T23:53:21Z",
+      "kind": "estimates",
+      "commit": "02e12c6",
+      "commit_full": "02e12c6935a70fb202354b927566a716f9b83af2",
+      "message": "Effects: Sketch › Bas Relief, Charcoal, Photocopy and Stamp (#2527) (#2533)"
     },
     "last_update": {
-      "ts": "2026-10-19T23:41:08Z",
-      "kind": "content",
-      "commit": "d14b67e",
-      "commit_full": "d14b67e015f8366f4539face8fb3a3f12402420c",
-      "message": "Effects: Artistic: Smudge Stick, Sponge and Watercolor (#2435) (#2525)"
+      "ts": "2026-10-19T23:53:21Z",
+      "kind": "estimates",
+      "commit": "02e12c6",
+      "commit_full": "02e12c6935a70fb202354b927566a716f9b83af2",
+      "message": "Effects: Sketch › Bas Relief, Charcoal, Photocopy and Stamp (#2527) (#2533)"
     },
     "self_reported": "2026-10-19"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 34.5,
+    "score": 29.5,
     "active_days_7d": 7,
-    "changes_7d": 762,
-    "changes_14d": 1457,
-    "housekeeping_7d": 26,
+    "changes_7d": 640,
+    "changes_14d": 1417,
+    "housekeeping_7d": 22,
     "last_code_change": {
-      "ts": "2026-10-19T23:41:08Z",
-      "commit": "d14b67e",
-      "commit_full": "d14b67e015f8366f4539face8fb3a3f12402420c",
-      "subject": "Effects: Artistic: Smudge Stick, Sponge and Watercolor (#2435) (#2525)"
+      "ts": "2026-10-20T00:10:07Z",
+      "commit": "a13968e",
+      "commit_full": "a13968e821b5a3b083f733d4f968884b8df9a87e",
+      "subject": "G1: Group Selection Shift-click deselects compound path members (#3050)"
     },
-    "last_commit_ts": "2026-10-19T23:41:08Z",
+    "last_commit_ts": "2026-10-20T00:10:07Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
-      43,
       94,
       110,
       77,
@@ -463,7 +462,8 @@
       57,
       196,
       90,
-      78
+      79,
+      2
     ],
     "days": [
       {
@@ -816,9 +816,13 @@
       },
       {
         "d": "2026-10-19",
-        "code": 78,
+        "code": 79,
         "other": 3,
         "samples": [
+          {
+            "commit": "02e12c6",
+            "subject": "Effects: Sketch › Bas Relief, Charcoal, Photocopy and Stamp (#2527) (#2533)"
+          },
           {
             "commit": "d14b67e",
             "subject": "Effects: Artistic: Smudge Stick, Sponge and Watercolor (#2435) (#2525)"
@@ -826,10 +830,21 @@
           {
             "commit": "1097ab1",
             "subject": "Export Selection: the selection becomes one asset, not one per object (#3166)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-20",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "a13968e",
+            "subject": "G1: Group Selection Shift-click deselects compound path members (#3050)"
           },
           {
-            "commit": "4322c82",
-            "subject": "G1: Rectangular and Polar Grid dialogs reference point locator (#1377) (#3057)"
+            "commit": "891793b",
+            "subject": "Export for Screens: the Assets tab scrolls to the assets it opens on (#3167)"
           }
         ]
       }
@@ -5565,7 +5580,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "02e12c6",
+      "commit_full": "02e12c6935a70fb202354b927566a716f9b83af2",
+      "commit_date": "2026-10-20T06:53:21+07:00",
+      "ts": "2026-10-19T23:53:21Z",
+      "message": "Effects: Sketch › Bas Relief, Charcoal, Photocopy and Stamp (#2527) (#2533)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-19",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "estimates"
     }
   ],
-  "updated_at": "2026-10-19T23:51:57+00:00"
+  "updated_at": "2026-10-20T00:13:14+00:00"
 }
