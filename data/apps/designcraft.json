@@ -426,18 +426,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 13.3,
+    "score": 14.1,
     "active_days_7d": 5,
-    "changes_7d": 165,
-    "changes_14d": 341,
-    "housekeeping_7d": 12,
+    "changes_7d": 167,
+    "changes_14d": 343,
+    "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-21T02:26:43Z",
-      "commit": "417ef40",
-      "commit_full": "417ef40c4ce9004435750e568960937c8926b45a",
-      "subject": "Pin winit to storytold/winit (same commit) (#1113)"
+      "ts": "2026-10-21T17:57:06Z",
+      "commit": "b67232a",
+      "commit_full": "b67232a6c8255cce824598f896fdecfe6223654d",
+      "subject": "ci: add SonarCloud scan workflow and config"
     },
-    "last_commit_ts": "2026-10-21T07:40:09Z",
+    "last_commit_ts": "2026-10-21T17:57:30Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       19,
@@ -453,7 +453,7 @@
       0,
       32,
       0,
-      2
+      4
     ],
     "days": [
       {
@@ -796,16 +796,20 @@
       },
       {
         "d": "2026-10-21",
-        "code": 2,
-        "other": 2,
+        "code": 4,
+        "other": 3,
         "samples": [
+          {
+            "commit": "b67232a",
+            "subject": "ci: add SonarCloud scan workflow and config"
+          },
+          {
+            "commit": "9826154",
+            "subject": "ci: add SonarCloud scan workflow and config"
+          },
           {
             "commit": "417ef40",
             "subject": "Pin winit to storytold/winit (same commit) (#1113)"
-          },
-          {
-            "commit": "1420d8c",
-            "subject": "refactor(pdf): share placed-PDF rendering (PDFR) (#876)"
           }
         ]
       }
@@ -3302,5 +3306,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-21T08:03:31+00:00"
+  "updated_at": "2026-10-21T18:17:54+00:00"
 }
