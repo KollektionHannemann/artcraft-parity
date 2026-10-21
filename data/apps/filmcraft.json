@@ -386,18 +386,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.8,
+    "score": 15.2,
     "active_days_7d": 5,
-    "changes_7d": 53,
-    "changes_14d": 546,
+    "changes_7d": 56,
+    "changes_14d": 549,
     "housekeeping_7d": 10,
     "last_code_change": {
-      "ts": "2026-10-21T23:09:37Z",
-      "commit": "410f44e",
-      "commit_full": "410f44e341d9fa6451a491a9e6d83e952b8971bb",
-      "subject": "Hostile-input hardening for video decoders (AV1 panic + oversize allocation, MPEG-2 allocation) and fuzz tests (#1795)"
+      "ts": "2026-10-21T23:36:08Z",
+      "commit": "45901fc",
+      "commit_full": "45901fccd06f1c2aa1dcdaac67cc00262a85f1be",
+      "subject": "security: enforce HTTPS on curl downloads (SonarCloud S6506) (#2720)"
     },
-    "last_commit_ts": "2026-10-21T23:09:37Z",
+    "last_commit_ts": "2026-10-21T23:36:08Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       11,
@@ -413,7 +413,7 @@
       25,
       18,
       0,
-      8
+      11
     ],
     "days": [
       {
@@ -775,20 +775,20 @@
       },
       {
         "d": "2026-10-21",
-        "code": 8,
+        "code": 11,
         "other": 2,
         "samples": [
           {
-            "commit": "410f44e",
-            "subject": "Hostile-input hardening for video decoders (AV1 panic + oversize allocation, MPEG-2 allocation) and fuzz tests (#1795)"
+            "commit": "45901fc",
+            "subject": "security: enforce HTTPS on curl downloads (SonarCloud S6506) (#2720)"
           },
           {
-            "commit": "14eb1d6",
-            "subject": "Re-open a failed audio output while playing instead of going silent for good (#2555)"
+            "commit": "7576186",
+            "subject": "security: validate CLI paths/args in dev tools (SonarCloud S2083/S8707/S8705) (#2723)"
           },
           {
-            "commit": "ed7d11d",
-            "subject": "codecs: avoid duration-sized silence allocation for damaged MP4 audio (#1987)"
+            "commit": "3325caa",
+            "subject": "fix: use async file I/O in async MCP screenshot handler (SonarCloud rust:S7493) (#2724)"
           }
         ]
       }
@@ -1238,5 +1238,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-21T23:13:34+00:00"
+  "updated_at": "2026-10-21T23:51:03+00:00"
 }

@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/pdfcraft",
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
-  "latest_commit": "d90cee4",
-  "latest_commit_date": "2026-10-21T18:01:35-04:00",
-  "latest_message": "fix(render): read each object stream's index once (vendored hayro-syntax patch 22) (#2427)",
+  "latest_commit": "6898094",
+  "latest_commit_date": "2026-10-21T19:25:43-04:00",
+  "latest_message": "M6: renaming a field renames it in the calculations that read it (#3550)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -234,6 +234,10 @@
     "progress": [
       {
         "date": "2026-10-19",
+        "text": "(M6, renames keep formulas): Renaming a field renames it in every calculation that reads it, in the same undo step: AFSimpleCalculate field lists, simplified field notation (the comment and the JavaScript after it) and getField calls naming it in one string literal; the rest of each script is kept as written. A sum used to drop the renamed field, notation read it as 0 and a script kept a stale value. Field Properties says how many formulas changed and formsetprops lists them as formulasupdated. Names built at run time and other events' scripts are not rewritten. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-19",
         "text": "(M14, #3373): The main menu and its long submenus scroll in short windows, keeping their commands reachable. Estimates unchanged."
       },
       {
@@ -387,10 +391,6 @@
       {
         "date": "2026-10-14",
         "text": "(M14, Italian catalog): Italian gains the 201 entries the other catalogs had and the code looks up: the sentences the accessibility checker, preflight, signature validation and page-range parser word, certificate and calendar labels, digital-ID dialog messages and five plurals. It now has 2,528 entries. 64 keys other catalogs carry but no code looks up (tooltip texts with a fixed shortcut, older wordings, generic labels only Lithuanian has) were left out. AI-assisted, written from the meaning of the English; native review welcome. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-14",
-        "text": "(M1, #2166): No PDF leaves the engine unchecked and no writer truncates: new files from Combine, Extract, Split and Create, signed, timestamped and LTV-embedded files and the OCR batch output reopen with their pages before anyone writes them, as saves already did; the desktop app, the automation tools (with or without --root) and the CLI's edit, combine, extract and split all write through the one staging-file writer in pdfcraft-platform, so a failed write or --out naming the input never leaves a half-written file. Special files such as /dev/stdout are still written as given."
       }
     ]
   },
@@ -410,39 +410,39 @@
     }
   },
   "roadmap": {
-    "revisions": 156,
-    "revisions_7d": 75,
+    "revisions": 157,
+    "revisions_7d": 76,
     "last_revision": {
-      "ts": "2026-10-21T22:01:35Z",
+      "ts": "2026-10-21T23:25:43Z",
       "kind": "content",
-      "commit": "d90cee4",
-      "commit_full": "d90cee4669433df2288cabbd4ac7b0894643c3ea",
-      "message": "fix(render): read each object stream's index once (vendored hayro-syntax patch 22) (#2427)"
+      "commit": "6898094",
+      "commit_full": "6898094e773b41249cd20ac76754fb83c9f46986",
+      "message": "M6: renaming a field renames it in the calculations that read it (#3550)"
     },
     "last_update": {
-      "ts": "2026-10-21T22:01:35Z",
+      "ts": "2026-10-21T23:25:43Z",
       "kind": "content",
-      "commit": "d90cee4",
-      "commit_full": "d90cee4669433df2288cabbd4ac7b0894643c3ea",
-      "message": "fix(render): read each object stream's index once (vendored hayro-syntax patch 22) (#2427)"
+      "commit": "6898094",
+      "commit_full": "6898094e773b41249cd20ac76754fb83c9f46986",
+      "message": "M6: renaming a field renames it in the calculations that read it (#3550)"
     },
     "self_reported": "2026-10-18"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.2,
+    "score": 20.5,
     "active_days_7d": 6,
-    "changes_7d": 299,
-    "changes_14d": 951,
+    "changes_7d": 301,
+    "changes_14d": 953,
     "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-10-21T22:26:28Z",
-      "commit": "6dec57b",
-      "commit_full": "6dec57bf809a386df2d8fad89830749786e8414f",
-      "subject": "M7: lay out Format text as Acrobat's panel (#2249)"
+      "ts": "2026-10-21T23:36:46Z",
+      "commit": "606c560",
+      "commit_full": "606c560d240f82ae246b2b03f1c159a01b8b77ea",
+      "subject": "Use chrono instead of hand-rolled UTC conversion (#3824)"
     },
-    "last_commit_ts": "2026-10-21T22:26:28Z",
+    "last_commit_ts": "2026-10-21T23:36:46Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       110,
@@ -458,7 +458,7 @@
       56,
       25,
       0,
-      10
+      12
     ],
     "days": [
       {
@@ -849,20 +849,20 @@
       },
       {
         "d": "2026-10-21",
-        "code": 10,
+        "code": 12,
         "other": 2,
         "samples": [
           {
+            "commit": "606c560",
+            "subject": "Use chrono instead of hand-rolled UTC conversion (#3824)"
+          },
+          {
+            "commit": "6898094",
+            "subject": "M6: renaming a field renames it in the calculations that read it (#3550)"
+          },
+          {
             "commit": "6dec57b",
             "subject": "M7: lay out Format text as Acrobat's panel (#2249)"
-          },
-          {
-            "commit": "1937545",
-            "subject": "M3: the Tools panel has no tab strip while docked alone (#2244)"
-          },
-          {
-            "commit": "18b61e2",
-            "subject": "M4: Organize pages remembers its page size, as Acrobat does (#2282)"
           }
         ]
       }
@@ -4662,7 +4662,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "6898094",
+      "commit_full": "6898094e773b41249cd20ac76754fb83c9f46986",
+      "commit_date": "2026-10-21T19:25:43-04:00",
+      "ts": "2026-10-21T23:25:43Z",
+      "message": "M6: renaming a field renames it in the calculations that read it (#3550)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-21T22:53:57+00:00"
+  "updated_at": "2026-10-21T23:51:14+00:00"
 }
