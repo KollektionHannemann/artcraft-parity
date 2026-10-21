@@ -289,18 +289,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 25.5,
+    "score": 25.8,
     "active_days_7d": 7,
-    "changes_7d": 298,
-    "changes_14d": 2008,
+    "changes_7d": 299,
+    "changes_14d": 2009,
     "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-10-21T15:02:54Z",
-      "commit": "68348dc",
-      "commit_full": "68348dcafcf42599846afaab42a8a724b630eed5",
-      "subject": "Integration batch: 86 PRs on main (#8271)"
+      "ts": "2026-10-21T20:00:47Z",
+      "commit": "87fa191",
+      "commit_full": "87fa1918188dc7fbca95a19842f1d80b6488f27d",
+      "subject": "ci: add sonar-project.properties for CI-based analysis"
     },
-    "last_commit_ts": "2026-10-21T19:47:04Z",
+    "last_commit_ts": "2026-10-21T20:00:47Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       194,
@@ -316,7 +316,7 @@
       102,
       59,
       3,
-      3
+      4
     ],
     "days": [
       {
@@ -720,9 +720,13 @@
       },
       {
         "d": "2026-10-21",
-        "code": 3,
+        "code": 4,
         "other": 3,
         "samples": [
+          {
+            "commit": "87fa191",
+            "subject": "ci: add sonar-project.properties for CI-based analysis"
+          },
           {
             "commit": "68348dc",
             "subject": "Integration batch: 86 PRs on main (#8271)"
@@ -730,10 +734,6 @@
           {
             "commit": "b097800",
             "subject": "Integration batch: 9 PRs on main (#8095)"
-          },
-          {
-            "commit": "24ffcbc",
-            "subject": "Integration batch: 26 PRs from the known-issues list (#7973) on main (#8094)"
           }
         ]
       }
@@ -1039,5 +1039,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-21T19:54:37+00:00"
+  "updated_at": "2026-10-21T20:15:21+00:00"
 }

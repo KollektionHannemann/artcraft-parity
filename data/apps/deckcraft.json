@@ -427,18 +427,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 13.2,
+    "score": 13.5,
     "active_days_7d": 6,
-    "changes_7d": 52,
-    "changes_14d": 380,
+    "changes_7d": 53,
+    "changes_14d": 381,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-10-21T19:46:52Z",
-      "commit": "4113361",
-      "commit_full": "41133616604d1c5c6e2cc78c05336172131cd0c3",
-      "subject": "ci: add SonarCloud scan via shared reusable workflow"
+      "ts": "2026-10-21T20:00:30Z",
+      "commit": "354087e",
+      "commit_full": "354087ecd56305842582e9e410cf24d595849789",
+      "subject": "ci: add sonar-project.properties for CI-based analysis"
     },
-    "last_commit_ts": "2026-10-21T19:46:52Z",
+    "last_commit_ts": "2026-10-21T20:00:30Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
       2,
@@ -454,7 +454,7 @@
       24,
       1,
       0,
-      3
+      4
     ],
     "days": [
       {
@@ -689,9 +689,13 @@
       },
       {
         "d": "2026-10-21",
-        "code": 3,
+        "code": 4,
         "other": 1,
         "samples": [
+          {
+            "commit": "354087e",
+            "subject": "ci: add sonar-project.properties for CI-based analysis"
+          },
           {
             "commit": "4113361",
             "subject": "ci: add SonarCloud scan via shared reusable workflow"
@@ -699,10 +703,6 @@
           {
             "commit": "5a76518",
             "subject": "ci: add SonarCloud scan workflow and config"
-          },
-          {
-            "commit": "9ad2cf3",
-            "subject": "macOS: open presentations from Finder, Open With and the Dock (#138, #347) (#432)"
           }
         ]
       }
@@ -2665,5 +2665,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-21T19:54:56+00:00"
+  "updated_at": "2026-10-21T20:16:02+00:00"
 }

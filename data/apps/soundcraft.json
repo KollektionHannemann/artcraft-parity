@@ -342,18 +342,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 8.7,
-    "active_days_7d": 3,
-    "changes_7d": 56,
-    "changes_14d": 234,
+    "score": 9.7,
+    "active_days_7d": 4,
+    "changes_7d": 57,
+    "changes_14d": 235,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-10-19T07:14:49Z",
-      "commit": "25d52c6",
-      "commit_full": "25d52c646aea780c8076ff966076f994ad256221",
-      "subject": "Fix main: rustfmt the clip group overlap test (#779)"
+      "ts": "2026-10-21T20:00:49Z",
+      "commit": "30ef830",
+      "commit_full": "30ef8306f8a4b569b6ef96d6faeaf07ad714e999",
+      "subject": "ci: add sonar-project.properties for CI-based analysis"
     },
-    "last_commit_ts": "2026-10-21T19:47:06Z",
+    "last_commit_ts": "2026-10-21T20:00:49Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
       3,
@@ -369,7 +369,7 @@
       0,
       54,
       0,
-      0
+      1
     ],
     "days": [
       {
@@ -577,9 +577,14 @@
       },
       {
         "d": "2026-10-21",
-        "code": 0,
+        "code": 1,
         "other": 2,
-        "samples": []
+        "samples": [
+          {
+            "commit": "30ef830",
+            "subject": "ci: add sonar-project.properties for CI-based analysis"
+          }
+        ]
       }
     ]
   },
@@ -1114,5 +1119,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-21T19:54:54+00:00"
+  "updated_at": "2026-10-21T20:15:59+00:00"
 }

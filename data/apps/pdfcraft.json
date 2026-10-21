@@ -431,18 +431,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.4,
+    "score": 18.8,
     "active_days_7d": 6,
-    "changes_7d": 291,
-    "changes_14d": 943,
+    "changes_7d": 292,
+    "changes_14d": 944,
     "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-10-21T19:27:33Z",
-      "commit": "3e30645",
-      "commit_full": "3e3064532f04fd6ec769c6bd7b2c97464757970e",
-      "subject": "Release: PdfCraft v0.11.0 (#3893)"
+      "ts": "2026-10-21T20:00:45Z",
+      "commit": "b1bf1cf",
+      "commit_full": "b1bf1cf01ff8d513a7a9bcb87d99933f2fb643f8",
+      "subject": "ci: add sonar-project.properties for CI-based analysis"
     },
-    "last_commit_ts": "2026-10-21T19:47:03Z",
+    "last_commit_ts": "2026-10-21T20:00:45Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       110,
@@ -458,7 +458,7 @@
       56,
       25,
       0,
-      2
+      3
     ],
     "days": [
       {
@@ -849,9 +849,13 @@
       },
       {
         "d": "2026-10-21",
-        "code": 2,
+        "code": 3,
         "other": 2,
         "samples": [
+          {
+            "commit": "b1bf1cf",
+            "subject": "ci: add sonar-project.properties for CI-based analysis"
+          },
           {
             "commit": "3e30645",
             "subject": "Release: PdfCraft v0.11.0 (#3893)"
@@ -865,6 +869,23 @@
     ]
   },
   "releases": [
+    {
+      "tag": "v0.11.0",
+      "name": "PdfCraft v0.11.0",
+      "ts": "2026-10-21T19:57:25Z",
+      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.11.0",
+      "changes": 4,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.10.1",
       "name": "PdfCraft v0.10.1",
@@ -4597,5 +4618,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-21T19:54:47+00:00"
+  "updated_at": "2026-10-21T20:15:44+00:00"
 }

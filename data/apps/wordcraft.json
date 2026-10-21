@@ -434,18 +434,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.6,
-    "active_days_7d": 4,
-    "changes_7d": 346,
-    "changes_14d": 942,
+    "score": 16.6,
+    "active_days_7d": 5,
+    "changes_7d": 347,
+    "changes_14d": 943,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-10-19T17:09:22Z",
-      "commit": "e6c5a70",
-      "commit_full": "e6c5a701ddff5be16e266028168c70658aae39d9",
-      "subject": "The caret and clicks land between the letters of a ligature (#1974) (#2006)"
+      "ts": "2026-10-21T20:00:51Z",
+      "commit": "f7d7c02",
+      "commit_full": "f7d7c0288c131e3970922fee1c8af367c1f3c802",
+      "subject": "ci: add sonar-project.properties for CI-based analysis"
     },
-    "last_commit_ts": "2026-10-21T19:47:09Z",
+    "last_commit_ts": "2026-10-21T20:00:51Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       3,
@@ -461,7 +461,7 @@
       239,
       30,
       0,
-      0
+      1
     ],
     "days": [
       {
@@ -698,9 +698,14 @@
       },
       {
         "d": "2026-10-21",
-        "code": 0,
+        "code": 1,
         "other": 3,
-        "samples": []
+        "samples": [
+          {
+            "commit": "f7d7c02",
+            "subject": "ci: add sonar-project.properties for CI-based analysis"
+          }
+        ]
       }
     ]
   },
@@ -9469,5 +9474,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-21T19:54:53+00:00"
+  "updated_at": "2026-10-21T20:15:57+00:00"
 }

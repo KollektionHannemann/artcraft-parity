@@ -426,18 +426,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.3,
+    "score": 14.5,
     "active_days_7d": 5,
-    "changes_7d": 168,
-    "changes_14d": 344,
+    "changes_7d": 169,
+    "changes_14d": 345,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-21T19:46:54Z",
-      "commit": "c2dbcff",
-      "commit_full": "c2dbcff51f85851cee12ffeee8e827a28808f93d",
-      "subject": "ci: add SonarCloud scan via shared reusable workflow"
+      "ts": "2026-10-21T20:00:32Z",
+      "commit": "e2a2502",
+      "commit_full": "e2a2502fba08d2c3f59fe5f75b9fafa0098c9f04",
+      "subject": "ci: add sonar-project.properties for CI-based analysis"
     },
-    "last_commit_ts": "2026-10-21T19:46:54Z",
+    "last_commit_ts": "2026-10-21T20:00:32Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       19,
@@ -453,7 +453,7 @@
       0,
       32,
       0,
-      5
+      6
     ],
     "days": [
       {
@@ -796,19 +796,19 @@
       },
       {
         "d": "2026-10-21",
-        "code": 5,
+        "code": 6,
         "other": 3,
         "samples": [
+          {
+            "commit": "e2a2502",
+            "subject": "ci: add sonar-project.properties for CI-based analysis"
+          },
           {
             "commit": "c2dbcff",
             "subject": "ci: add SonarCloud scan via shared reusable workflow"
           },
           {
             "commit": "b67232a",
-            "subject": "ci: add SonarCloud scan workflow and config"
-          },
-          {
-            "commit": "9826154",
             "subject": "ci: add SonarCloud scan workflow and config"
           }
         ]
@@ -3323,5 +3323,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-21T19:54:50+00:00"
+  "updated_at": "2026-10-21T20:15:52+00:00"
 }
