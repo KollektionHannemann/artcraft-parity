@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/vectorcraft",
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
-  "latest_commit": "ee4564c",
-  "latest_commit_date": "2026-10-20T08:39:16+07:00",
-  "latest_message": "G2: Effect › Sketch › Note Paper (#2954)",
+  "latest_commit": "c1a823b",
+  "latest_commit_date": "2026-10-21T15:28:29+07:00",
+  "latest_message": "G2: Effect › Sketch › Water Paper raster filter (#2955)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -174,7 +174,7 @@
       },
       {
         "label": "Raster effects (Effect Gallery) — effects-parity.md",
-        "pct": 81.0
+        "pct": 82.0
       },
       {
         "label": "3D and Materials",
@@ -242,7 +242,7 @@
       ".ai files from real users (G9): layer structure, guides, speed: 10–20 h.",
       "Launch and stability on real machines (G10): 20–35 h.",
       "Core-tool correctness (G11: Shape Builder regions, Asset Export borders): 8–15 h.",
-      "Raster effects (G2) alongside: the 11 remaining filters (7 Artistic, 3 Sketch, 1 more) and the Effect Gallery, 8–14 h.",
+      "Raster effects (G2) alongside: the 10 remaining filters (7 Artistic, 2 Sketch, 1 more) and the Effect Gallery, 8–14 h.",
       "Then: type core and advanced type (G4), the Illustrator 2026 additions (G13), 3D (G3)."
     ],
     "progress": [
@@ -415,39 +415,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 176,
-    "revisions_7d": 29,
+    "revisions": 177,
+    "revisions_7d": 30,
     "last_revision": {
-      "ts": "2026-10-20T01:39:16Z",
+      "ts": "2026-10-21T08:28:29Z",
       "kind": "estimates",
-      "commit": "ee4564c",
-      "commit_full": "ee4564c586e59f714b02d1a11f933013068928c1",
-      "message": "G2: Effect › Sketch › Note Paper (#2954)"
+      "commit": "c1a823b",
+      "commit_full": "c1a823b34d134d45e79fef5abbf8255ea5e69a9b",
+      "message": "G2: Effect › Sketch › Water Paper raster filter (#2955)"
     },
     "last_update": {
-      "ts": "2026-10-20T01:39:16Z",
+      "ts": "2026-10-21T08:28:29Z",
       "kind": "estimates",
-      "commit": "ee4564c",
-      "commit_full": "ee4564c586e59f714b02d1a11f933013068928c1",
-      "message": "G2: Effect › Sketch › Note Paper (#2954)"
+      "commit": "c1a823b",
+      "commit_full": "c1a823b34d134d45e79fef5abbf8255ea5e69a9b",
+      "message": "G2: Effect › Sketch › Water Paper raster filter (#2955)"
     },
     "self_reported": "2026-10-19"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 25.7,
-    "active_days_7d": 6,
-    "changes_7d": 617,
-    "changes_14d": 1335,
+    "score": 29.5,
+    "active_days_7d": 7,
+    "changes_7d": 630,
+    "changes_14d": 1348,
     "housekeeping_7d": 24,
     "last_code_change": {
-      "ts": "2026-10-20T16:17:30Z",
-      "commit": "bc1ae08",
-      "commit_full": "bc1ae0825264c5ca4b27bd718d6e04f2121b8bb3",
-      "subject": "EMF export: pattern tiles stop at 250,000 in all (#3224)"
+      "ts": "2026-10-21T08:41:57Z",
+      "commit": "0f39505",
+      "commit_full": "0f39505d121f4ff44d2fb7481f3417fe23952f63",
+      "subject": "Warn on export when a font style is drawn in another style (#3229) (#3251)"
     },
-    "last_commit_ts": "2026-10-20T16:17:30Z",
+    "last_commit_ts": "2026-10-21T08:41:57Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       110,
@@ -463,7 +463,7 @@
       90,
       79,
       14,
-      0
+      13
     ],
     "days": [
       {
@@ -849,6 +849,25 @@
           {
             "commit": "0c42504",
             "subject": "Gradient meshes: deleting mesh lines leaves a malformed mesh as it is (#3194)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-21",
+        "code": 13,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "0f39505",
+            "subject": "Warn on export when a font style is drawn in another style (#3229) (#3251)"
+          },
+          {
+            "commit": "31734a0",
+            "subject": "Legacy .ai export: a radial gradient's color stops are written from ramp point 0 to 100 (#3285)"
+          },
+          {
+            "commit": "c5f6443",
+            "subject": "Offset Path's Preview checkbox keeps its last state across opens (#3195) (#3203)"
           }
         ]
       }
@@ -5636,7 +5655,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "estimates"
+    },
+    {
+      "commit": "c1a823b",
+      "commit_full": "c1a823b34d134d45e79fef5abbf8255ea5e69a9b",
+      "commit_date": "2026-10-21T15:28:29+07:00",
+      "ts": "2026-10-21T08:28:29Z",
+      "message": "G2: Effect › Sketch › Water Paper raster filter (#2955)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-19",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "estimates"
     }
   ],
-  "updated_at": "2026-10-21T08:03:11+00:00"
+  "updated_at": "2026-10-21T09:01:23+00:00"
 }
