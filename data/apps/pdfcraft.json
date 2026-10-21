@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/pdfcraft",
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
-  "latest_commit": "8f3456f",
-  "latest_commit_date": "2026-10-21T17:34:11-04:00",
-  "latest_message": "fix(engine): PNG export writes opaque pages as RGB at deflate level 3 (3–5× faster, same size) (#2425)",
+  "latest_commit": "d90cee4",
+  "latest_commit_date": "2026-10-21T18:01:35-04:00",
+  "latest_message": "fix(render): read each object stream's index once (vendored hayro-syntax patch 22) (#2427)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -358,6 +358,10 @@
       },
       {
         "date": "2026-10-15",
+        "text": "(M2, large object streams): An object stream's index of objnum offset pairs is read once per stream instead of once per object fetched from it (vendored hayro-syntax patch 22), so reading every object of a stream of N objects no longer takes N² steps. A Firefox page whose 65,542 objects share one stream (pdf.js corpus bug1978317.pdf) drew in 37 s and extracted its text in 40 s; it now takes 0.5 s and 1.9 s, and leaves the robustness baseline's known timeouts. 40,000 pages in one stream open in 0.2 s instead of 54 s. The regression fails before the fix. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-15",
         "text": "(M14, gap 24): misc.localization and misc.installers move from planned to partial. Localization: 22 catalogs ship, but Chinese shows tofu in releases, Telugu has no release font and Arabic is not mirrored. Installers: macOS and Windows releases are signed, Linux packages are not. The Acrobat menu diff itself remains open. Estimates unchanged."
       },
       {
@@ -387,10 +391,6 @@
       {
         "date": "2026-10-14",
         "text": "(M1, #2166): No PDF leaves the engine unchecked and no writer truncates: new files from Combine, Extract, Split and Create, signed, timestamped and LTV-embedded files and the OCR batch output reopen with their pages before anyone writes them, as saves already did; the desktop app, the automation tools (with or without --root) and the CLI's edit, combine, extract and split all write through the one staging-file writer in pdfcraft-platform, so a failed write or --out naming the input never leaves a half-written file. Special files such as /dev/stdout are still written as given."
-      },
-      {
-        "date": "2026-10-14",
-        "text": "(M3 #2080 candidate): Existing per-tab page history gains explicit search jumps, rail buttons and control-channel commands. Continuous scrolling and automatic search refresh stay outside history; page-level restoration and estimates unchanged."
       }
     ]
   },
@@ -410,39 +410,39 @@
     }
   },
   "roadmap": {
-    "revisions": 155,
-    "revisions_7d": 74,
+    "revisions": 156,
+    "revisions_7d": 75,
     "last_revision": {
-      "ts": "2026-10-21T21:34:11Z",
+      "ts": "2026-10-21T22:01:35Z",
       "kind": "content",
-      "commit": "8f3456f",
-      "commit_full": "8f3456f29c9fbcb94a46e91fd9cdf58588a323a0",
-      "message": "fix(engine): PNG export writes opaque pages as RGB at deflate level 3 (3–5× faster, same size) (#2425)"
+      "commit": "d90cee4",
+      "commit_full": "d90cee4669433df2288cabbd4ac7b0894643c3ea",
+      "message": "fix(render): read each object stream's index once (vendored hayro-syntax patch 22) (#2427)"
     },
     "last_update": {
-      "ts": "2026-10-21T21:34:11Z",
+      "ts": "2026-10-21T22:01:35Z",
       "kind": "content",
-      "commit": "8f3456f",
-      "commit_full": "8f3456f29c9fbcb94a46e91fd9cdf58588a323a0",
-      "message": "fix(engine): PNG export writes opaque pages as RGB at deflate level 3 (3–5× faster, same size) (#2425)"
+      "commit": "d90cee4",
+      "commit_full": "d90cee4669433df2288cabbd4ac7b0894643c3ea",
+      "message": "fix(render): read each object stream's index once (vendored hayro-syntax patch 22) (#2427)"
     },
     "self_reported": "2026-10-18"
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 19.6,
+    "level": "buzzing",
+    "score": 20.1,
     "active_days_7d": 6,
-    "changes_7d": 295,
-    "changes_14d": 947,
+    "changes_7d": 298,
+    "changes_14d": 950,
     "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-10-21T21:34:16Z",
-      "commit": "583c1ec",
-      "commit_full": "583c1ec68c75024d77066983a79c05f27141f820",
-      "subject": "M3: the mode bar has no Read tab, as in Acrobat (#2240)"
+      "ts": "2026-10-21T22:11:05Z",
+      "commit": "1937545",
+      "commit_full": "193754502f03d05d8f03c36f8df0dfa99e861189",
+      "subject": "M3: the Tools panel has no tab strip while docked alone (#2244)"
     },
-    "last_commit_ts": "2026-10-21T21:34:16Z",
+    "last_commit_ts": "2026-10-21T22:11:05Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       110,
@@ -458,7 +458,7 @@
       56,
       25,
       0,
-      6
+      9
     ],
     "days": [
       {
@@ -849,20 +849,20 @@
       },
       {
         "d": "2026-10-21",
-        "code": 6,
+        "code": 9,
         "other": 2,
         "samples": [
           {
-            "commit": "583c1ec",
-            "subject": "M3: the mode bar has no Read tab, as in Acrobat (#2240)"
+            "commit": "1937545",
+            "subject": "M3: the Tools panel has no tab strip while docked alone (#2244)"
           },
           {
-            "commit": "8f3456f",
-            "subject": "fix(engine): PNG export writes opaque pages as RGB at deflate level 3 (3–5× faster, same size) (#2425)"
+            "commit": "18b61e2",
+            "subject": "M4: Organize pages remembers its page size, as Acrobat does (#2282)"
           },
           {
-            "commit": "322a1b2",
-            "subject": "M7: lay out the Edit panel as Acrobat's (#2245)"
+            "commit": "d90cee4",
+            "subject": "fix(render): read each object stream's index once (vendored hayro-syntax patch 22) (#2427)"
           }
         ]
       }
@@ -4639,7 +4639,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "d90cee4",
+      "commit_full": "d90cee4669433df2288cabbd4ac7b0894643c3ea",
+      "commit_date": "2026-10-21T18:01:35-04:00",
+      "ts": "2026-10-21T22:01:35Z",
+      "message": "fix(render): read each object stream's index once (vendored hayro-syntax patch 22) (#2427)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-21T21:57:12+00:00"
+  "updated_at": "2026-10-21T22:18:50+00:00"
 }
