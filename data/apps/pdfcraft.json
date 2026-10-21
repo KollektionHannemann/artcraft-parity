@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/pdfcraft",
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
-  "latest_commit": "ec0a965",
-  "latest_commit_date": "2026-10-19T12:21:37-06:00",
-  "latest_message": "M5.6: preserve nested annotation values in FDF exports (#1971)",
+  "latest_commit": "8f3456f",
+  "latest_commit_date": "2026-10-21T17:34:11-04:00",
+  "latest_message": "fix(engine): PNG export writes opaque pages as RGB at deflate level 3 (3–5× faster, same size) (#2425)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -362,6 +362,10 @@
       },
       {
         "date": "2026-10-15",
+        "text": "(M14, PNG export): Export ▸ Image as PNG, pdfcraft-cli render and the pagerender automation/MCP tool write an opaque page as RGB at deflate level 3 instead of RGBA at the default level 6: the files stay the same size and are written 3–5× faster (a 300-dpi scan drawn at 220 dpi: 805 → 167 ms; a text page at 220 dpi: 70 → 40 ms; an annual-report page at 150 dpi: 179 → 64 ms). A page with translucent pixels is still written as RGBA. The automation tools use the engine's encoder instead of a copy of it. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-15",
         "text": "(M2, renderer speed): Three vendored hayro-interpret patches (31–33), pixel for pixel the same over the first three pages of every pdf.js corpus file. A sampled (Type 0) function keeps its samples in one flat array instead of a hash map rebuilt every time a shading using it is painted: bug1721218 (InDesign) draws in 0.49 s (was 1.34 s), and a 2,097,152-sample ramp painted 30 times in under a second (was 38 s). One decode of a JPEG or Flate image serves every size it is drawn at (only JPX decodes for a size), so zooming a 300-dpi scan in and out costs 35–40% less render work. Coons and tensor patch meshes copy their vertices' colours less: mesh-gradient pages draw 10–16% faster (page 8 of #1584's annual report 773 → 696 ms). Estimates unchanged."
       },
       {
@@ -387,10 +391,6 @@
       {
         "date": "2026-10-14",
         "text": "(M3 #2080 candidate): Existing per-tab page history gains explicit search jumps, rail buttons and control-channel commands. Continuous scrolling and automatic search refresh stay outside history; page-level restoration and estimates unchanged."
-      },
-      {
-        "date": "2026-10-14",
-        "text": "(M5, PR #1457 branch refresh): Merged upstream main and reconciled roadmap entries while preserving comment submission shortcuts. Estimates unchanged."
       }
     ]
   },
@@ -410,39 +410,39 @@
     }
   },
   "roadmap": {
-    "revisions": 154,
-    "revisions_7d": 73,
+    "revisions": 155,
+    "revisions_7d": 74,
     "last_revision": {
-      "ts": "2026-10-19T18:21:37Z",
+      "ts": "2026-10-21T21:34:11Z",
       "kind": "content",
-      "commit": "ec0a965",
-      "commit_full": "ec0a965074f376a5bf610435948e4e5184bf3299",
-      "message": "M5.6: preserve nested annotation values in FDF exports (#1971)"
+      "commit": "8f3456f",
+      "commit_full": "8f3456f29c9fbcb94a46e91fd9cdf58588a323a0",
+      "message": "fix(engine): PNG export writes opaque pages as RGB at deflate level 3 (3–5× faster, same size) (#2425)"
     },
     "last_update": {
-      "ts": "2026-10-19T18:21:37Z",
+      "ts": "2026-10-21T21:34:11Z",
       "kind": "content",
-      "commit": "ec0a965",
-      "commit_full": "ec0a965074f376a5bf610435948e4e5184bf3299",
-      "message": "M5.6: preserve nested annotation values in FDF exports (#1971)"
+      "commit": "8f3456f",
+      "commit_full": "8f3456f29c9fbcb94a46e91fd9cdf58588a323a0",
+      "message": "fix(engine): PNG export writes opaque pages as RGB at deflate level 3 (3–5× faster, same size) (#2425)"
     },
     "self_reported": "2026-10-18"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.8,
+    "score": 19.6,
     "active_days_7d": 6,
-    "changes_7d": 292,
-    "changes_14d": 944,
+    "changes_7d": 295,
+    "changes_14d": 947,
     "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-10-21T20:00:45Z",
-      "commit": "b1bf1cf",
-      "commit_full": "b1bf1cf01ff8d513a7a9bcb87d99933f2fb643f8",
-      "subject": "ci: add sonar-project.properties for CI-based analysis"
+      "ts": "2026-10-21T21:34:16Z",
+      "commit": "583c1ec",
+      "commit_full": "583c1ec68c75024d77066983a79c05f27141f820",
+      "subject": "M3: the mode bar has no Read tab, as in Acrobat (#2240)"
     },
-    "last_commit_ts": "2026-10-21T20:00:45Z",
+    "last_commit_ts": "2026-10-21T21:34:16Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       110,
@@ -458,7 +458,7 @@
       56,
       25,
       0,
-      3
+      6
     ],
     "days": [
       {
@@ -849,20 +849,20 @@
       },
       {
         "d": "2026-10-21",
-        "code": 3,
+        "code": 6,
         "other": 2,
         "samples": [
           {
-            "commit": "b1bf1cf",
-            "subject": "ci: add sonar-project.properties for CI-based analysis"
+            "commit": "583c1ec",
+            "subject": "M3: the mode bar has no Read tab, as in Acrobat (#2240)"
           },
           {
-            "commit": "3e30645",
-            "subject": "Release: PdfCraft v0.11.0 (#3893)"
+            "commit": "8f3456f",
+            "subject": "fix(engine): PNG export writes opaque pages as RGB at deflate level 3 (3–5× faster, same size) (#2425)"
           },
           {
-            "commit": "d695bc5",
-            "subject": "fix(redact): evaluate OCMD visibility during sanitization (#3522)"
+            "commit": "322a1b2",
+            "subject": "M7: lay out the Edit panel as Acrobat's (#2245)"
           }
         ]
       }
@@ -4616,7 +4616,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "8f3456f",
+      "commit_full": "8f3456f29c9fbcb94a46e91fd9cdf58588a323a0",
+      "commit_date": "2026-10-21T17:34:11-04:00",
+      "ts": "2026-10-21T21:34:11Z",
+      "message": "fix(engine): PNG export writes opaque pages as RGB at deflate level 3 (3–5× faster, same size) (#2425)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-21T20:15:44+00:00"
+  "updated_at": "2026-10-21T21:57:12+00:00"
 }
