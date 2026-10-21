@@ -431,18 +431,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.8,
-    "active_days_7d": 5,
-    "changes_7d": 289,
-    "changes_14d": 941,
+    "score": 17.8,
+    "active_days_7d": 6,
+    "changes_7d": 290,
+    "changes_14d": 942,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-19T18:21:37Z",
-      "commit": "ec0a965",
-      "commit_full": "ec0a965074f376a5bf610435948e4e5184bf3299",
-      "subject": "M5.6: preserve nested annotation values in FDF exports (#1971)"
+      "ts": "2026-10-21T00:17:34Z",
+      "commit": "d695bc5",
+      "commit_full": "d695bc56545944fe9c7181901c61d0bf1c11c887",
+      "subject": "fix(redact): evaluate OCMD visibility during sanitization (#3522)"
     },
-    "last_commit_ts": "2026-10-20T15:38:59Z",
+    "last_commit_ts": "2026-10-21T00:17:34Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       110,
@@ -458,7 +458,7 @@
       56,
       25,
       0,
-      0
+      1
     ],
     "days": [
       {
@@ -846,6 +846,17 @@
         "code": 0,
         "other": 4,
         "samples": []
+      },
+      {
+        "d": "2026-10-21",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "d695bc5",
+            "subject": "fix(redact): evaluate OCMD visibility during sanitization (#3522)"
+          }
+        ]
       }
     ]
   },
@@ -4565,5 +4576,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-21T00:11:27+00:00"
+  "updated_at": "2026-10-21T01:08:03+00:00"
 }
