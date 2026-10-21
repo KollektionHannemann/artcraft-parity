@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "2451b5a",
-  "latest_commit_date": "2026-10-21T18:17:49-04:00",
-  "latest_message": "The I-beam pointer shows on white paper on Windows (#1746) (#2230)",
+  "latest_commit": "ff3c7d8",
+  "latest_commit_date": "2026-10-21T18:48:29-04:00",
+  "latest_message": "Layout: text above a float's anchor wraps around it (#2048) (#2237)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -413,39 +413,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 378,
-    "revisions_7d": 126,
+    "revisions": 380,
+    "revisions_7d": 128,
     "last_revision": {
-      "ts": "2026-10-21T22:17:49Z",
+      "ts": "2026-10-21T22:48:29Z",
       "kind": "content",
-      "commit": "2451b5a",
-      "commit_full": "2451b5a4213c20e89b14b718b9112c2acce30d14",
-      "message": "The I-beam pointer shows on white paper on Windows (#1746) (#2230)"
+      "commit": "ff3c7d8",
+      "commit_full": "ff3c7d8d25bd8271326f372cb90f2c8106ec4d92",
+      "message": "Layout: text above a float's anchor wraps around it (#2048) (#2237)"
     },
     "last_update": {
-      "ts": "2026-10-21T22:17:49Z",
+      "ts": "2026-10-21T22:48:29Z",
       "kind": "content",
-      "commit": "2451b5a",
-      "commit_full": "2451b5a4213c20e89b14b718b9112c2acce30d14",
-      "message": "The I-beam pointer shows on white paper on Windows (#1746) (#2230)"
+      "commit": "ff3c7d8",
+      "commit_full": "ff3c7d8d25bd8271326f372cb90f2c8106ec4d92",
+      "message": "Layout: text above a float's anchor wraps around it (#2048) (#2237)"
     },
     "self_reported": "2026-10-21"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.5,
+    "score": 18.8,
     "active_days_7d": 5,
-    "changes_7d": 352,
-    "changes_14d": 948,
+    "changes_7d": 354,
+    "changes_14d": 950,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-10-21T22:17:49Z",
-      "commit": "2451b5a",
-      "commit_full": "2451b5a4213c20e89b14b718b9112c2acce30d14",
-      "subject": "The I-beam pointer shows on white paper on Windows (#1746) (#2230)"
+      "ts": "2026-10-21T22:48:29Z",
+      "commit": "ff3c7d8",
+      "commit_full": "ff3c7d8d25bd8271326f372cb90f2c8106ec4d92",
+      "subject": "Layout: text above a float's anchor wraps around it (#2048) (#2237)"
     },
-    "last_commit_ts": "2026-10-21T22:17:49Z",
+    "last_commit_ts": "2026-10-21T22:48:29Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       3,
@@ -461,7 +461,7 @@
       239,
       30,
       0,
-      6
+      8
     ],
     "days": [
       {
@@ -698,20 +698,20 @@
       },
       {
         "d": "2026-10-21",
-        "code": 6,
+        "code": 8,
         "other": 3,
         "samples": [
           {
+            "commit": "ff3c7d8",
+            "subject": "Layout: text above a float's anchor wraps around it (#2048) (#2237)"
+          },
+          {
+            "commit": "c02ceef",
+            "subject": "Borders: triple borders draw as three lines on screen and in PDF (#1740) (#2210)"
+          },
+          {
             "commit": "2451b5a",
             "subject": "The I-beam pointer shows on white paper on Windows (#1746) (#2230)"
-          },
-          {
-            "commit": "71aeebc",
-            "subject": "Double-clicking a later page's footer opens it without scrolling up (#2103) (#2214)"
-          },
-          {
-            "commit": "b4a1d34",
-            "subject": "#1792: Check spelling as you type is remembered across restarts (#1837)"
           }
         ]
       }
@@ -9549,7 +9549,53 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "c02ceef",
+      "commit_full": "c02ceef673ad265d988236c84035fb6978a25101",
+      "commit_date": "2026-10-21T18:32:33-04:00",
+      "ts": "2026-10-21T22:32:33Z",
+      "message": "Borders: triple borders draw as three lines on screen and in PDF (#1740) (#2210)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-21",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "ff3c7d8",
+      "commit_full": "ff3c7d8d25bd8271326f372cb90f2c8106ec4d92",
+      "commit_date": "2026-10-21T18:48:29-04:00",
+      "ts": "2026-10-21T22:48:29Z",
+      "message": "Layout: text above a float's anchor wraps around it (#2048) (#2237)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-21",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-21T22:19:01+00:00"
+  "updated_at": "2026-10-21T22:54:13+00:00"
 }
