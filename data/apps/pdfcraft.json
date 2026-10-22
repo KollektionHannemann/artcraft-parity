@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/pdfcraft",
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
-  "latest_commit": "e451934",
-  "latest_commit_date": "2026-10-21T19:56:27-04:00",
-  "latest_message": "M6: calculation order: read, check, fix and set the order fields calculate in (#3708)",
+  "latest_commit": "ffaf312",
+  "latest_commit_date": "2026-10-21T20:30:58-04:00",
+  "latest_message": "M6: Prepare a form ▸ Calculation order: a page to reorder, check and fix the order fields calculate in (#3733)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -234,6 +234,10 @@
     "progress": [
       {
         "date": "2026-10-20",
+        "text": "(M6, calculation order page): Prepare a form ▸ Calculation order, a page of its own, lists the calculated fields in the order they calculate with their formulas and values, moved with Up/Down arrows (as Acrobat's Set Field Calculation Order), Alt+↑/↓ or by dragging. A card says what is wrong with the order and holds Fix order; a loop has a card of its own that opens one of its formulas. On the page, each calculated field shows its step, and arrows show what the field in focus reads and what reads it. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-20",
         "text": "(M6, calculation order): The order a form's fields calculate in (/CO) is read, checked, fixed and set headlessly with formcalculationorder: it says which fields read one calculated later (they show stale values), which read each other in a loop, and which the PDF's order leaves out; Fix order moves only what must move, in one undo step, and the form recalculates. Editing a formula no longer moves its field to the end of the order, and a field the order lists twice calculates once. Estimates unchanged."
       },
       {
@@ -387,10 +391,6 @@
       {
         "date": "2026-10-15",
         "text": "(M9, #1895): Preserve original signature artwork and show validation through a separate page overlay. Generic in-place appearance rewriting is deferred: neither a caption substring nor a unique drawing establishes an icon role. Signed regressions cover chamfered borders, mixed signer/caption text, image/text exports, both print modes and saves. Snapshot reuse and trust/cache refresh remain. Baked Not Verified captions are not replaced; #79 remains open. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-14",
-        "text": "(M1, Flate fallback): Raw deflate whose first bytes resemble a zlib header no longer loses a decoding-limit error during fallback. Strict and tolerant filter regressions and a COS stream regression cover refusal at the caller limit and successful decoding within it. No parity status or estimate changes."
       }
     ]
   },
@@ -410,39 +410,39 @@
     }
   },
   "roadmap": {
-    "revisions": 158,
-    "revisions_7d": 26,
+    "revisions": 159,
+    "revisions_7d": 27,
     "last_revision": {
-      "ts": "2026-10-21T23:56:27Z",
+      "ts": "2026-10-22T00:30:58Z",
       "kind": "content",
-      "commit": "e451934",
-      "commit_full": "e451934f7217f09d4ea6942a1d9d36f80d5a7ac2",
-      "message": "M6: calculation order: read, check, fix and set the order fields calculate in (#3708)"
+      "commit": "ffaf312",
+      "commit_full": "ffaf312358e4f059e9c746004308e87583407a02",
+      "message": "M6: Prepare a form ▸ Calculation order: a page to reorder, check and fix the order fields calculate in (#3733)"
     },
     "last_update": {
-      "ts": "2026-10-21T23:56:27Z",
+      "ts": "2026-10-22T00:30:58Z",
       "kind": "content",
-      "commit": "e451934",
-      "commit_full": "e451934f7217f09d4ea6942a1d9d36f80d5a7ac2",
-      "message": "M6: calculation order: read, check, fix and set the order fields calculate in (#3708)"
+      "commit": "ffaf312",
+      "commit_full": "ffaf312358e4f059e9c746004308e87583407a02",
+      "message": "M6: Prepare a form ▸ Calculation order: a page to reorder, check and fix the order fields calculate in (#3733)"
     },
     "self_reported": "2026-10-18"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.5,
-    "active_days_7d": 5,
-    "changes_7d": 102,
-    "changes_14d": 844,
-    "housekeeping_7d": 13,
+    "score": 18.0,
+    "active_days_7d": 6,
+    "changes_7d": 104,
+    "changes_14d": 846,
+    "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-21T23:56:27Z",
-      "commit": "e451934",
-      "commit_full": "e451934f7217f09d4ea6942a1d9d36f80d5a7ac2",
-      "subject": "M6: calculation order: read, check, fix and set the order fields calculate in (#3708)"
+      "ts": "2026-10-22T00:30:58Z",
+      "commit": "ffaf312",
+      "commit_full": "ffaf312358e4f059e9c746004308e87583407a02",
+      "subject": "M6: Prepare a form ▸ Calculation order: a page to reorder, check and fix the order fields calculate in (#3733)"
     },
-    "last_commit_ts": "2026-10-21T23:56:27Z",
+    "last_commit_ts": "2026-10-22T00:30:58Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       118,
@@ -458,7 +458,7 @@
       25,
       0,
       13,
-      0
+      2
     ],
     "days": [
       {
@@ -863,6 +863,21 @@
           {
             "commit": "6898094",
             "subject": "M6: renaming a field renames it in the calculations that read it (#3550)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-22",
+        "code": 2,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "ffaf312",
+            "subject": "M6: Prepare a form ▸ Calculation order: a page to reorder, check and fix the order fields calculate in (#3733)"
+          },
+          {
+            "commit": "78ef666",
+            "subject": "security: enforce HTTPS on curl downloads (SonarCloud S6506) (#3933)"
           }
         ]
       }
@@ -4708,7 +4723,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "ffaf312",
+      "commit_full": "ffaf312358e4f059e9c746004308e87583407a02",
+      "commit_date": "2026-10-21T20:30:58-04:00",
+      "ts": "2026-10-22T00:30:58Z",
+      "message": "M6: Prepare a form ▸ Calculation order: a page to reorder, check and fix the order fields calculate in (#3733)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-22T00:11:20+00:00"
+  "updated_at": "2026-10-22T01:06:23+00:00"
 }

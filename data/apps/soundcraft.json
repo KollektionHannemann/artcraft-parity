@@ -341,19 +341,19 @@
   },
   "milestone": null,
   "activity": {
-    "level": "quiet",
-    "score": 7.8,
-    "active_days_7d": 4,
-    "changes_7d": 57,
-    "changes_14d": 232,
+    "level": "active",
+    "score": 8.8,
+    "active_days_7d": 5,
+    "changes_7d": 58,
+    "changes_14d": 233,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-10-21T20:00:49Z",
-      "commit": "30ef830",
-      "commit_full": "30ef8306f8a4b569b6ef96d6faeaf07ad714e999",
-      "subject": "ci: add sonar-project.properties for CI-based analysis"
+      "ts": "2026-10-22T00:13:52Z",
+      "commit": "9b8283b",
+      "commit_full": "9b8283b90877813a929f5e28b2dc92e5774da933",
+      "subject": "security: enforce HTTPS on curl downloads (SonarCloud S6506) (#860)"
     },
-    "last_commit_ts": "2026-10-21T20:00:49Z",
+    "last_commit_ts": "2026-10-22T00:13:52Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
       17,
@@ -369,7 +369,7 @@
       54,
       0,
       1,
-      0
+      1
     ],
     "days": [
       {
@@ -583,6 +583,17 @@
           {
             "commit": "30ef830",
             "subject": "ci: add sonar-project.properties for CI-based analysis"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-22",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "9b8283b",
+            "subject": "security: enforce HTTPS on curl downloads (SonarCloud S6506) (#860)"
           }
         ]
       }
@@ -1119,5 +1130,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-22T00:11:34+00:00"
+  "updated_at": "2026-10-22T01:06:30+00:00"
 }

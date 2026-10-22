@@ -287,18 +287,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 9.5,
-    "active_days_7d": 4,
-    "changes_7d": 88,
-    "changes_14d": 528,
+    "score": 10.5,
+    "active_days_7d": 5,
+    "changes_7d": 89,
+    "changes_14d": 529,
     "housekeeping_7d": 10,
     "last_code_change": {
-      "ts": "2026-10-21T20:00:22Z",
-      "commit": "54d9683",
-      "commit_full": "54d96834d582de8889044325a941b8443ad36bab",
-      "subject": "ci: add sonar-project.properties for CI-based analysis"
+      "ts": "2026-10-22T00:13:55Z",
+      "commit": "75d9d72",
+      "commit_full": "75d9d7270378081f4ffbced674f66433c1acb7ad",
+      "subject": "security: enforce HTTPS on curl downloads (SonarCloud S6506) (#1837)"
     },
-    "last_commit_ts": "2026-10-21T20:00:22Z",
+    "last_commit_ts": "2026-10-22T00:13:55Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       1,
@@ -314,7 +314,7 @@
       82,
       0,
       4,
-      0
+      1
     ],
     "days": [
       {
@@ -519,6 +519,17 @@
           {
             "commit": "896a390",
             "subject": "ci: add SonarCloud scan workflow and config"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-22",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "75d9d72",
+            "subject": "security: enforce HTTPS on curl downloads (SonarCloud S6506) (#1837)"
           }
         ]
       }
@@ -894,5 +905,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-22T00:11:40+00:00"
+  "updated_at": "2026-10-22T01:06:32+00:00"
 }
