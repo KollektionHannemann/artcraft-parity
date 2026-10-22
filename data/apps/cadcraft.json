@@ -287,18 +287,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 13.0,
+    "score": 13.2,
     "active_days_7d": 5,
-    "changes_7d": 99,
-    "changes_14d": 539,
-    "housekeeping_7d": 11,
+    "changes_7d": 100,
+    "changes_14d": 540,
+    "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-10-22T13:51:40Z",
-      "commit": "e4214f7",
-      "commit_full": "e4214f7180d041d1a88fbb1885317648d0e8bc4b",
-      "subject": "Write the ACAD_TABLE *T block relative to its insertion point (#1644) (#1677)"
+      "ts": "2026-10-22T18:09:16Z",
+      "commit": "acd109d",
+      "commit_full": "acd109d97c62d95e48462dfe53d14f9a46920b50",
+      "subject": "Use chrono instead of hand-rolled UTC conversion (#1789)"
     },
-    "last_commit_ts": "2026-10-22T13:51:40Z",
+    "last_commit_ts": "2026-10-22T18:09:16Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       1,
@@ -314,7 +314,7 @@
       82,
       0,
       4,
-      11
+      12
     ],
     "days": [
       {
@@ -524,9 +524,13 @@
       },
       {
         "d": "2026-10-22",
-        "code": 11,
-        "other": 1,
+        "code": 12,
+        "other": 2,
         "samples": [
+          {
+            "commit": "acd109d",
+            "subject": "Use chrono instead of hand-rolled UTC conversion (#1789)"
+          },
           {
             "commit": "e4214f7",
             "subject": "Write the ACAD_TABLE *T block relative to its insertion point (#1644) (#1677)"
@@ -534,10 +538,6 @@
           {
             "commit": "3593471",
             "subject": "Keep a layout's plot window corners when saving DXF (#1667) (#1683)"
-          },
-          {
-            "commit": "916d440",
-            "subject": "Control server: wait after a failed accept instead of retrying at once (#1718)"
           }
         ]
       }
@@ -913,5 +913,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-22T16:27:55+00:00"
+  "updated_at": "2026-10-22T18:16:30+00:00"
 }
