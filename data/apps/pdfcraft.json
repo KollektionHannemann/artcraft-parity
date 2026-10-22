@@ -431,18 +431,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.3,
+    "score": 19.5,
     "active_days_7d": 6,
-    "changes_7d": 108,
-    "changes_14d": 850,
+    "changes_7d": 109,
+    "changes_14d": 851,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-10-22T11:09:59Z",
-      "commit": "80b7d21",
-      "commit_full": "80b7d21525b263621818427b0223560101d1325f",
-      "subject": "fix: add generic font-family fallbacks in demo (SonarCloud css:S4649)"
+      "ts": "2026-10-22T15:28:58Z",
+      "commit": "9526363",
+      "commit_full": "9526363152b780ff82fc45d1c1e8ac3963fec904",
+      "subject": "Build each crate's integration tests as one binary (#4087)"
     },
-    "last_commit_ts": "2026-10-22T11:09:59Z",
+    "last_commit_ts": "2026-10-22T15:28:58Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       118,
@@ -458,7 +458,7 @@
       25,
       0,
       13,
-      6
+      7
     ],
     "days": [
       {
@@ -868,9 +868,13 @@
       },
       {
         "d": "2026-10-22",
-        "code": 6,
+        "code": 7,
         "other": 2,
         "samples": [
+          {
+            "commit": "9526363",
+            "subject": "Build each crate's integration tests as one binary (#4087)"
+          },
           {
             "commit": "80b7d21",
             "subject": "fix: add generic font-family fallbacks in demo (SonarCloud css:S4649)"
@@ -878,10 +882,6 @@
           {
             "commit": "9a0ec64",
             "subject": "Integration batch: 218 PRs on main (#3983)"
-          },
-          {
-            "commit": "88dad98",
-            "subject": "M14: add Norwegian Bokmål interface and date language (#1836)"
           }
         ]
       }
@@ -4821,5 +4821,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-22T11:24:35+00:00"
+  "updated_at": "2026-10-22T15:59:10+00:00"
 }

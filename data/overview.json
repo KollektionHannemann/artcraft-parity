@@ -86,11 +86,11 @@
       "id": "soundcraft",
       "name": "SoundCraft",
       "type": "release",
-      "ts": "2026-10-21T17:57:33Z",
+      "ts": "2026-10-21T18:12:00Z",
       "tag": "v0.11.0",
       "kind": "minor",
-      "changes": null,
-      "url": null,
+      "changes": 1,
+      "url": "https://github.com/storytold/soundcraft/releases/tag/v0.11.0",
       "prerelease": false
     },
     {
@@ -171,17 +171,6 @@
       "prerelease": false
     },
     {
-      "id": "cadcraft",
-      "name": "CADCraft",
-      "type": "release",
-      "ts": "2026-10-21T07:46:12Z",
-      "tag": "v0.10.0",
-      "kind": "minor",
-      "changes": 84,
-      "url": "https://github.com/storytold/cadcraft/releases/tag/v0.10.0",
-      "prerelease": false
-    },
-    {
       "id": "photocraft",
       "name": "PhotoCraft",
       "type": "release",
@@ -229,7 +218,18 @@
       "id": "soundcraft",
       "name": "SoundCraft",
       "type": "release",
-      "ts": "2026-10-20T02:17:25Z",
+      "ts": "2026-10-20T14:34:31Z",
+      "tag": "v0.10.0",
+      "kind": "minor",
+      "changes": 58,
+      "url": "https://github.com/storytold/soundcraft/releases/tag/v0.10.0",
+      "prerelease": false
+    },
+    {
+      "id": "cadcraft",
+      "name": "CADCraft",
+      "type": "release",
+      "ts": "2026-10-20T02:18:26Z",
       "tag": "v0.10.0",
       "kind": "minor",
       "changes": null,
@@ -358,21 +358,21 @@
       "prerelease": false
     },
     {
-      "id": "cadcraft",
-      "name": "CADCraft",
-      "type": "release",
-      "ts": "2026-10-17T23:35:10Z",
-      "tag": "v0.8.0",
-      "kind": "minor",
-      "changes": 3,
-      "url": "https://github.com/storytold/cadcraft/releases/tag/v0.8.0",
-      "prerelease": false
-    },
-    {
       "id": "soundcraft",
       "name": "SoundCraft",
       "type": "release",
-      "ts": "2026-10-17T21:16:15Z",
+      "ts": "2026-10-17T23:16:47Z",
+      "tag": "v0.8.0",
+      "kind": "minor",
+      "changes": 3,
+      "url": "https://github.com/storytold/soundcraft/releases/tag/v0.8.0",
+      "prerelease": false
+    },
+    {
+      "id": "cadcraft",
+      "name": "CADCraft",
+      "type": "release",
+      "ts": "2026-10-17T21:20:02Z",
       "tag": "v0.8.0",
       "kind": "minor",
       "changes": null,
@@ -413,17 +413,6 @@
       "prerelease": false
     },
     {
-      "id": "cadcraft",
-      "name": "CADCraft",
-      "type": "release",
-      "ts": "2026-10-14T15:29:49Z",
-      "tag": "v0.7.0",
-      "kind": "minor",
-      "changes": 102,
-      "url": "https://github.com/storytold/cadcraft/releases/tag/v0.7.0",
-      "prerelease": false
-    },
-    {
       "id": "deckcraft",
       "name": "DeckCraft",
       "type": "release",
@@ -443,6 +432,17 @@
       "kind": "minor",
       "changes": 48,
       "url": "https://github.com/storytold/wordcraft/releases/tag/v0.7.0",
+      "prerelease": false
+    },
+    {
+      "id": "cadcraft",
+      "name": "CADCraft",
+      "type": "release",
+      "ts": "2026-10-14T13:34:27Z",
+      "tag": "v0.7.0",
+      "kind": "minor",
+      "changes": null,
+      "url": null,
       "prerelease": false
     }
   ],
@@ -501,16 +501,16 @@
         "level": "buzzing",
         "score": 32.4,
         "active_days_7d": 7,
-        "changes_7d": 653,
-        "changes_14d": 1442,
+        "changes_7d": 654,
+        "changes_14d": 1443,
         "housekeeping_7d": 25,
         "last_code_change": {
-          "ts": "2026-10-22T15:09:29Z",
-          "commit": "30d1948",
-          "commit_full": "30d1948f51819fe9ae8452204e76b0e168bb6202",
-          "subject": "Place: Link keeps a placed PDF or .ai linked to its file (#3496)"
+          "ts": "2026-10-22T15:56:41Z",
+          "commit": "d73946b",
+          "commit_full": "d73946ba461465852673a5e9bf7b35517b8aa823",
+          "subject": "Gradients: Dither in the Gradient panel draws a gradient fill with fine noise that hides banding (#3637)"
         },
-        "last_commit_ts": "2026-10-22T15:09:29Z",
+        "last_commit_ts": "2026-10-22T15:56:41Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           77,
@@ -526,7 +526,7 @@
           79,
           14,
           169,
-          48
+          49
         ]
       },
       "release": {
@@ -1181,18 +1181,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 19.3,
+        "score": 19.5,
         "active_days_7d": 6,
-        "changes_7d": 108,
-        "changes_14d": 850,
+        "changes_7d": 109,
+        "changes_14d": 851,
         "housekeeping_7d": 15,
         "last_code_change": {
-          "ts": "2026-10-22T11:09:59Z",
-          "commit": "80b7d21",
-          "commit_full": "80b7d21525b263621818427b0223560101d1325f",
-          "subject": "fix: add generic font-family fallbacks in demo (SonarCloud css:S4649)"
+          "ts": "2026-10-22T15:28:58Z",
+          "commit": "9526363",
+          "commit_full": "9526363152b780ff82fc45d1c1e8ac3963fec904",
+          "subject": "Build each crate's integration tests as one binary (#4087)"
         },
-        "last_commit_ts": "2026-10-22T11:09:59Z",
+        "last_commit_ts": "2026-10-22T15:28:58Z",
         "repo_since": "2026-09-30T09:17:08Z",
         "window": [
           118,
@@ -1208,7 +1208,7 @@
           25,
           0,
           13,
-          6
+          7
         ]
       },
       "release": {
@@ -1757,14 +1757,19 @@
       },
       "release": {
         "tag": "v0.11.0",
-        "name": "v0.11.0",
-        "ts": "2026-10-21T17:57:33Z",
-        "url": null,
-        "changes": null,
+        "name": "SoundCraft v0.11.0",
+        "ts": "2026-10-21T18:12:00Z",
+        "url": "https://github.com/storytold/soundcraft/releases/tag/v0.11.0",
+        "changes": 1,
         "new_contributors": null,
-        "platforms": [],
+        "platforms": [
+          "macOS",
+          "Windows",
+          "Linux",
+          "Web"
+        ],
         "prerelease": false,
-        "source": "tag",
+        "source": "release",
         "kind": "minor"
       },
       "series": [
@@ -1860,19 +1865,14 @@
       },
       "release": {
         "tag": "v0.10.0",
-        "name": "CADCraft v0.10.0",
-        "ts": "2026-10-21T07:46:12Z",
-        "url": "https://github.com/storytold/cadcraft/releases/tag/v0.10.0",
-        "changes": 84,
-        "new_contributors": 16,
-        "platforms": [
-          "macOS",
-          "Windows",
-          "Linux",
-          "Web"
-        ],
+        "name": "v0.10.0",
+        "ts": "2026-10-20T02:18:26Z",
+        "url": null,
+        "changes": null,
+        "new_contributors": null,
+        "platforms": [],
         "prerelease": false,
-        "source": "release",
+        "source": "tag",
         "kind": "minor"
       },
       "series": [
@@ -1889,5 +1889,5 @@
     }
   ],
   "errors": [],
-  "generated_at": "2026-10-22T15:27:44+00:00"
+  "generated_at": "2026-10-22T15:59:22+00:00"
 }
