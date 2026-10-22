@@ -287,18 +287,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.0,
+    "score": 14.2,
     "active_days_7d": 5,
-    "changes_7d": 110,
-    "changes_14d": 550,
+    "changes_7d": 113,
+    "changes_14d": 553,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-22T21:57:39Z",
-      "commit": "dc4bbe8",
-      "commit_full": "dc4bbe86f64a3126173b2f7af930132f287e9571",
-      "subject": "security: bound font outline geometry and MTEXT line scanning (CWE-400/407) (#1852)"
+      "ts": "2026-10-22T22:42:51Z",
+      "commit": "01bbdb2",
+      "commit_full": "01bbdb24bc27b087893afc37dff07d79862a5b97",
+      "subject": "security: confine craft-fonts manifest paths and reject newline directives (CWE-22, CWE-74) (#1841)"
     },
-    "last_commit_ts": "2026-10-22T21:57:39Z",
+    "last_commit_ts": "2026-10-22T22:42:51Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       1,
@@ -314,7 +314,7 @@
       82,
       0,
       4,
-      22
+      25
     ],
     "days": [
       {
@@ -524,20 +524,20 @@
       },
       {
         "d": "2026-10-22",
-        "code": 22,
+        "code": 25,
         "other": 3,
         "samples": [
           {
-            "commit": "dc4bbe8",
-            "subject": "security: bound font outline geometry and MTEXT line scanning (CWE-400/407) (#1852)"
+            "commit": "01bbdb2",
+            "subject": "security: confine craft-fonts manifest paths and reject newline directives (CWE-22, CWE-74) (#1841)"
           },
           {
-            "commit": "953a6b3",
-            "subject": "security: bound Lisp callbacks, native comparisons, and local file reads (CWE-400, CWE-407) (#1842)"
+            "commit": "15ba3dc",
+            "subject": "security: submit XATTACH picked path as literal text, not a command line (CWE-74) (#1843)"
           },
           {
-            "commit": "8085745",
-            "subject": "security: bound native DXF/SVG/PDF import allocation and quadratic work (CWE-400/407/789) (#1846)"
+            "commit": "07bb604",
+            "subject": "security: guard the DXF->DWG conversion input and document decoder limits (CWE-789) (#1847)"
           }
         ]
       }
@@ -930,5 +930,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-22T22:17:16+00:00"
+  "updated_at": "2026-10-22T22:54:32+00:00"
 }
