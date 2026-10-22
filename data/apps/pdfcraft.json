@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/pdfcraft",
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
-  "latest_commit": "6898094",
-  "latest_commit_date": "2026-10-21T19:25:43-04:00",
-  "latest_message": "M6: renaming a field renames it in the calculations that read it (#3550)",
+  "latest_commit": "e451934",
+  "latest_commit_date": "2026-10-21T19:56:27-04:00",
+  "latest_message": "M6: calculation order: read, check, fix and set the order fields calculate in (#3708)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -233,6 +233,10 @@
     ],
     "progress": [
       {
+        "date": "2026-10-20",
+        "text": "(M6, calculation order): The order a form's fields calculate in (/CO) is read, checked, fixed and set headlessly with formcalculationorder: it says which fields read one calculated later (they show stale values), which read each other in a loop, and which the PDF's order leaves out; Fix order moves only what must move, in one undo step, and the form recalculates. Editing a formula no longer moves its field to the end of the order, and a field the order lists twice calculates once. Estimates unchanged."
+      },
+      {
         "date": "2026-10-19",
         "text": "(M6, renames keep formulas): Renaming a field renames it in every calculation that reads it, in the same undo step: AFSimpleCalculate field lists, simplified field notation (the comment and the JavaScript after it) and getField calls naming it in one string literal; the rest of each script is kept as written. A sum used to drop the renamed field, notation read it as 0 and a script kept a stale value. Field Properties says how many formulas changed and formsetprops lists them as formulasupdated. Names built at run time and other events' scripts are not rewritten. Estimates unchanged."
       },
@@ -387,10 +391,6 @@
       {
         "date": "2026-10-14",
         "text": "(M1, Flate fallback): Raw deflate whose first bytes resemble a zlib header no longer loses a decoding-limit error during fallback. Strict and tolerant filter regressions and a COS stream regression cover refusal at the caller limit and successful decoding within it. No parity status or estimate changes."
-      },
-      {
-        "date": "2026-10-14",
-        "text": "(M14, Italian catalog): Italian gains the 201 entries the other catalogs had and the code looks up: the sentences the accessibility checker, preflight, signature validation and page-range parser word, certificate and calendar labels, digital-ID dialog messages and five plurals. It now has 2,528 entries. 64 keys other catalogs carry but no code looks up (tooltip texts with a fixed shortcut, older wordings, generic labels only Lithuanian has) were left out. AI-assisted, written from the meaning of the English; native review welcome. Estimates unchanged."
       }
     ]
   },
@@ -410,42 +410,41 @@
     }
   },
   "roadmap": {
-    "revisions": 157,
-    "revisions_7d": 76,
+    "revisions": 158,
+    "revisions_7d": 26,
     "last_revision": {
-      "ts": "2026-10-21T23:25:43Z",
+      "ts": "2026-10-21T23:56:27Z",
       "kind": "content",
-      "commit": "6898094",
-      "commit_full": "6898094e773b41249cd20ac76754fb83c9f46986",
-      "message": "M6: renaming a field renames it in the calculations that read it (#3550)"
+      "commit": "e451934",
+      "commit_full": "e451934f7217f09d4ea6942a1d9d36f80d5a7ac2",
+      "message": "M6: calculation order: read, check, fix and set the order fields calculate in (#3708)"
     },
     "last_update": {
-      "ts": "2026-10-21T23:25:43Z",
+      "ts": "2026-10-21T23:56:27Z",
       "kind": "content",
-      "commit": "6898094",
-      "commit_full": "6898094e773b41249cd20ac76754fb83c9f46986",
-      "message": "M6: renaming a field renames it in the calculations that read it (#3550)"
+      "commit": "e451934",
+      "commit_full": "e451934f7217f09d4ea6942a1d9d36f80d5a7ac2",
+      "message": "M6: calculation order: read, check, fix and set the order fields calculate in (#3708)"
     },
     "self_reported": "2026-10-18"
   },
   "milestone": null,
   "activity": {
-    "level": "buzzing",
-    "score": 20.5,
-    "active_days_7d": 6,
-    "changes_7d": 301,
-    "changes_14d": 953,
-    "housekeeping_7d": 16,
+    "level": "active",
+    "score": 16.5,
+    "active_days_7d": 5,
+    "changes_7d": 102,
+    "changes_14d": 844,
+    "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-21T23:36:46Z",
-      "commit": "606c560",
-      "commit_full": "606c560d240f82ae246b2b03f1c159a01b8b77ea",
-      "subject": "Use chrono instead of hand-rolled UTC conversion (#3824)"
+      "ts": "2026-10-21T23:56:27Z",
+      "commit": "e451934",
+      "commit_full": "e451934f7217f09d4ea6942a1d9d36f80d5a7ac2",
+      "subject": "M6: calculation order: read, check, fix and set the order fields calculate in (#3708)"
     },
-    "last_commit_ts": "2026-10-21T23:36:46Z",
+    "last_commit_ts": "2026-10-21T23:56:27Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
-      110,
       118,
       136,
       123,
@@ -458,7 +457,8 @@
       56,
       25,
       0,
-      12
+      13,
+      0
     ],
     "days": [
       {
@@ -849,9 +849,13 @@
       },
       {
         "d": "2026-10-21",
-        "code": 12,
+        "code": 13,
         "other": 2,
         "samples": [
+          {
+            "commit": "e451934",
+            "subject": "M6: calculation order: read, check, fix and set the order fields calculate in (#3708)"
+          },
           {
             "commit": "606c560",
             "subject": "Use chrono instead of hand-rolled UTC conversion (#3824)"
@@ -859,10 +863,6 @@
           {
             "commit": "6898094",
             "subject": "M6: renaming a field renames it in the calculations that read it (#3550)"
-          },
-          {
-            "commit": "6dec57b",
-            "subject": "M7: lay out Format text as Acrobat's panel (#2249)"
           }
         ]
       }
@@ -4685,7 +4685,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "e451934",
+      "commit_full": "e451934f7217f09d4ea6942a1d9d36f80d5a7ac2",
+      "commit_date": "2026-10-21T19:56:27-04:00",
+      "ts": "2026-10-21T23:56:27Z",
+      "message": "M6: calculation order: read, check, fix and set the order fields calculate in (#3708)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-21T23:51:14+00:00"
+  "updated_at": "2026-10-22T00:11:20+00:00"
 }

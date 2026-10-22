@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "67ec657",
-  "latest_commit_date": "2026-10-21T19:30:13-04:00",
-  "latest_message": "Legacy menu keys: Alt, V, U and 17 more Word 2003 sequences (#1697) (#1769)",
+  "latest_commit": "dbebb2e",
+  "latest_commit_date": "2026-10-21T20:04:57-04:00",
+  "latest_message": "#2617: centre equation-array rows without & (#2690)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -306,6 +306,10 @@
       },
       {
         "date": "2026-10-17",
+        "text": "Equation arrays centre a row that has no & among rows that do, as Word does, so case equations like Word's \"First Property of Radicals\" no longer push the aligned row right (#2617)."
+      },
+      {
+        "date": "2026-10-17",
         "text": "Restrict Editing holds for structure too (#1327): an exception inside a table cell no longer lets table, row or cell formatting change the protected rest of the table; formatting limited to styles refuses Paste Formatting, table shading, borders, cell alignment, cell margins, text direction, table-style edits and locked table styles; loading, filtering or sorting recipients no longer rewrites merge-field results in a protected document."
       },
       {
@@ -358,6 +362,10 @@
       },
       {
         "date": "2026-10-16",
+        "text": "English dialects (#1281, #1045): English (UK), (Australia), (Canada) and the other Englishes are proofed in their own spelling — colour is flagged in a US document and color in a British one, with the right form suggested first — from our own list of American/British spellings, so nothing to install. Review › Language lists them, the .docx w:lang keeps them, and an English interface on a British (or Canadian, Australian…) system starts new documents in that English"
+      },
+      {
+        "date": "2026-10-16",
         "text": "wordcraft-cli run --script FILE.json (- for stdin) runs a JSON list of commands, then saves to one or more outputs (docx and pdf in one run); errors name the command number and id and nothing is saved, #1963"
       },
       {
@@ -395,14 +403,6 @@
       {
         "date": "2026-10-16",
         "text": "Hebrew in fields and quotes (#1670): a STYLEREF (or any field) showing right-to-left text such as \"פרק א\" reads right to left in headers and the body instead of reversed; smart quotes in Hebrew pinned to Word's logical-order result (“ before, ” after, ” in acronyms like צה\"ל)"
-      },
-      {
-        "date": "2026-10-16",
-        "text": "Zero-extent drawing anchors contribute no inline font height."
-      },
-      {
-        "date": "2026-10-16",
-        "text": "Control-channel keyboard and text input reaches the focused widget while the native window is inactive, without activating it; normal widget targets, dialogs and document protection remain in force (#2420)"
       }
     ]
   },
@@ -413,42 +413,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 383,
-    "revisions_7d": 131,
+    "revisions": 385,
+    "revisions_7d": 107,
     "last_revision": {
-      "ts": "2026-10-21T23:30:13Z",
+      "ts": "2026-10-22T00:04:57Z",
       "kind": "content",
-      "commit": "67ec657",
-      "commit_full": "67ec657af6fea892b254cbbee88bc732fb2014e9",
-      "message": "Legacy menu keys: Alt, V, U and 17 more Word 2003 sequences (#1697) (#1769)"
+      "commit": "dbebb2e",
+      "commit_full": "dbebb2eca70a8a36c13f87de9d725febe08e1318",
+      "message": "#2617: centre equation-array rows without & (#2690)"
     },
     "last_update": {
-      "ts": "2026-10-21T23:30:13Z",
+      "ts": "2026-10-22T00:04:57Z",
       "kind": "content",
-      "commit": "67ec657",
-      "commit_full": "67ec657af6fea892b254cbbee88bc732fb2014e9",
-      "message": "Legacy menu keys: Alt, V, U and 17 more Word 2003 sequences (#1697) (#1769)"
+      "commit": "dbebb2e",
+      "commit_full": "dbebb2eca70a8a36c13f87de9d725febe08e1318",
+      "message": "#2617: centre equation-array rows without & (#2690)"
     },
     "self_reported": "2026-10-21"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.5,
+    "score": 16.9,
     "active_days_7d": 5,
-    "changes_7d": 359,
-    "changes_14d": 955,
-    "housekeeping_7d": 16,
+    "changes_7d": 286,
+    "changes_14d": 954,
+    "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-21T23:36:41Z",
-      "commit": "7f38f41",
-      "commit_full": "7f38f41d8cfdad4ca6fb88b638b8b18370d0af02",
-      "subject": "Use chrono instead of hand-rolled UTC conversion (#3427)"
+      "ts": "2026-10-22T00:04:57Z",
+      "commit": "dbebb2e",
+      "commit_full": "dbebb2eca70a8a36c13f87de9d725febe08e1318",
+      "subject": "#2617: centre equation-array rows without & (#2690)"
     },
-    "last_commit_ts": "2026-10-21T23:36:41Z",
+    "last_commit_ts": "2026-10-22T00:04:57Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
-      3,
       15,
       130,
       56,
@@ -461,7 +460,8 @@
       239,
       30,
       0,
-      13
+      14,
+      1
     ],
     "days": [
       {
@@ -698,9 +698,13 @@
       },
       {
         "d": "2026-10-21",
-        "code": 13,
+        "code": 14,
         "other": 4,
         "samples": [
+          {
+            "commit": "4913b20",
+            "subject": "#1281: English dialects in proofing — en-GB, en-CA, en-AU… flag each other's spellings (#1045) (#2632)"
+          },
           {
             "commit": "7f38f41",
             "subject": "Use chrono instead of hand-rolled UTC conversion (#3427)"
@@ -708,10 +712,17 @@
           {
             "commit": "67ec657",
             "subject": "Legacy menu keys: Alt, V, U and 17 more Word 2003 sequences (#1697) (#1769)"
-          },
+          }
+        ]
+      },
+      {
+        "d": "2026-10-22",
+        "code": 1,
+        "other": 0,
+        "samples": [
           {
-            "commit": "6b01aa9",
-            "subject": "Shape fills: gradients and transparency (#1500) (#1605)"
+            "commit": "dbebb2e",
+            "subject": "#2617: centre equation-array rows without & (#2690)"
           }
         ]
       }
@@ -9664,7 +9675,53 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "4913b20",
+      "commit_full": "4913b2025958530287b9ce62a4d9e3ea713d458c",
+      "commit_date": "2026-10-21T19:52:57-04:00",
+      "ts": "2026-10-21T23:52:57Z",
+      "message": "#1281: English dialects in proofing — en-GB, en-CA, en-AU… flag each other's spellings (#1045) (#2632)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-21",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "dbebb2e",
+      "commit_full": "dbebb2eca70a8a36c13f87de9d725febe08e1318",
+      "commit_date": "2026-10-21T20:04:57-04:00",
+      "ts": "2026-10-22T00:04:57Z",
+      "message": "#2617: centre equation-array rows without & (#2690)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-21",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-21T23:51:27+00:00"
+  "updated_at": "2026-10-22T00:11:33+00:00"
 }
