@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/pdfcraft",
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
-  "latest_commit": "88dad98",
-  "latest_commit_date": "2026-10-21T22:05:23-04:00",
-  "latest_message": "M14: add Norwegian Bokmål interface and date language (#1836)",
+  "latest_commit": "9a0ec64",
+  "latest_commit_date": "2026-10-22T03:01:16-04:00",
+  "latest_message": "Integration batch: 218 PRs on main (#3983)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
-    "last_updated": "2026-10-18",
+    "last_updated": "2026-10-21",
     "metrics": {
       "full": {
         "label": "Full Acrobat Pro (ready for real work)",
@@ -233,12 +233,92 @@
     ],
     "progress": [
       {
+        "date": "2026-10-22",
+        "text": "(M2, #3107 / PR #3438): Inline-image parsing falls back to the existing EI heuristic when missing declared samples, headers or terminators exceed the content-window budget, instead of waiting for an impossible allocation. Exact-length parsing for available samples and ordinary large streamed images is retained. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-22",
+        "text": "(M14, JPEG and TIFF export): Export ▸ Image as JPEG or TIFF refuses a raster that is not exactly width × height pixels, as PNG export has since #2425. A raster a pixel short panicked inside the JPEG and TIFF encoders, and a partial pixel at the end was dropped and the rest written as a valid image. Rendered pages are always the right size, so what exports is unchanged. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-21",
+        "text": "(M3, #3808): Page thumbnails in the Inspector can be resized independently from the document and Organize, with a slider, buttons and thumbnail-zoom control option. Selection, page following and reload are covered by regressions. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-21",
+        "text": "(M14, Brazilian Portuguese): Completed the pt-br catalog against the current 2,674-key union, including signature validation and accessibility messages; no build or compilation run. Localization remains partial because help and unpredictable engine/OS error details are not translated."
+      },
+      {
+        "date": "2026-10-21",
+        "text": "(M14, #3557): Preferences: the OK button stays below the scrolling settings instead of being the last thing in them, so it is in reach in a short window."
+      },
+      {
+        "date": "2026-10-20",
+        "text": "(M4, initial view): Window and interface options read indirect boolean ViewerPreferences values. Synthetic regressions cover true/false, direct/indirect preference dictionaries and save/reopen; malformed entries retain false defaults. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-20",
+        "text": "(M3, #3535): Escape with a menu open closes the menu and keeps the text selection; the next Escape clears it, as before. One keypress used to do both. A synthetic UI regression checks it. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-20",
+        "text": "(M11, #3507): Image merging keeps trailing comments, split operands and graphics state across content streams. Synthetic tool tests check saved text, rendered regions and exact image rows."
+      },
+      {
         "date": "2026-10-20",
         "text": "(M6, calculation order page): Prepare a form ▸ Calculation order, a page of its own, lists the calculated fields in the order they calculate with their formulas and values, moved with Up/Down arrows (as Acrobat's Set Field Calculation Order), Alt+↑/↓ or by dragging. A card says what is wrong with the order and holds Fix order; a loop has a card of its own that opens one of its formulas. On the page, each calculated field shows its step, and arrows show what the field in focus reads and what reads it. Estimates unchanged."
       },
       {
         "date": "2026-10-20",
         "text": "(M6, calculation order): The order a form's fields calculate in (/CO) is read, checked, fixed and set headlessly with formcalculationorder: it says which fields read one calculated later (they show stale values), which read each other in a loop, and which the PDF's order leaves out; Fix order moves only what must move, in one undo step, and the form recalculates. Editing a formula no longer moves its field to the end of the order, and a field the order lists twice calculates once. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-20",
+        "text": "(M2, #3574): Forms without Resources use page Properties for ActualText and layer visibility. Synthetic tests cover boundaries, nested/shared forms, and save/reopen. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-20",
+        "text": "(M2, PR #3348 review): Tracking samples retain short repeated punctuation (up to four glyphs), keeping tracked ellipses intact and searchable while longer TOC leaders still preserve title word spaces. Synthetic regressions cover isolated and surrounded ellipses. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-20",
+        "text": "(M2, #3601): A missing spacing glyph in an OpenType substitute uses its ordinary-space glyph. Synthetic Japanese CID renderer tests check blank spaces, /W and /DW placement, and unchanged Unicode extraction. Font selection and embedded fonts are unchanged. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-20",
+        "text": "(M12, #3673): Character encoding accepts Identity-H/V fonts with Adobe CJK collections and recognizes predefined non-Identity CMaps independently. Unknown CMaps and foreign registries remain refused; synthetic checker and read-only automation regressions passed after failing before the fix. Per-glyph mapping validation and embedded-font extraction remain separate. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-20",
+        "text": "(M6, #3502): Form detection preserves comments across content streams and does not add fields over rectangles hidden by those comments. Synthetic tests cover visible controls, graphics state, and saved field inventories. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-20",
+        "text": "(M6, #2273 / PR #2279): Rebased the field-highlight default and Appearance preference onto main, retaining secured-form parity evidence and updating secured AcroForm/XFA toggle expectations. Build and test validation delegated to GitHub CI. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-20",
+        "text": "(M5, reshape lines): A line or arrow could only be moved after it was drawn; its length and angle stayed. A selected line, connected lines, polygon or cloud now has a handle on each end or corner: dragging one reshapes it (Shift holds it to 45°), as one undo step, with the new shape drawn while dragging. pdfcraftannot::setpoints, Edit::ReshapeAnnotation, commentedit points; comment lists carry the points. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-20",
+        "text": "(M3, #3620): Overlapping comment hover uses the original annotation index independently of spatial inspection order. A synthetic UI regression covers different annotation upper edges. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-20",
+        "text": "(M3, #3541/#3620): Comment hover follows the individual marked lines instead of the enclosing multiline rectangle, and overlapping comments follow paint order. Synthetic UI regressions cover all four text-markup kinds, page/view rotations, neighboring highlights, legacy rectangle fallback and unchanged PDF bytes. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-20",
+        "text": "(M10, #3532 partial): Vector printing retains existing widget artwork when its appearance lacks Subtype. A print-owned copy adds Form dispatch metadata. The source stream and all explicit subtypes stay unchanged. Synthetic source/output raster checks cover resources, selected/shared appearances, placement, flags and content modes. Appearance regeneration and physical printer validation remain outside this fix. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-20",
+        "text": "(M14, Spanish catalog gaps): es.tsv gains the 143 (context, English) keys the other catalogs carried and it was missing, so Spanish covers the whole bundled key union like Lithuanian and Vietnamese: calendar months and weekdays, the certificate context, X.509 key usages, signature-revision and digital-ID lines, password validation, eight plural messages, the combine-from-folder strings, the rendering and stale-file notices and the shortcut-spelled tooltips. Counts in localization-parity.md re-measured against the current union (vi restated against it for the same reason). Status stays partial: no translated help, and OS details stay outside the catalog. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-19",
+        "text": "(M11, #2178): Optimize checks image and soft-mask dimensions and byte counts before decoding; hostile-dimension regressions pass. Estimates unchanged."
       },
       {
         "date": "2026-10-19",
@@ -250,11 +330,23 @@
       },
       {
         "date": "2026-10-19",
+        "text": "(M7, #3591): A background added to a page that already has one is painted over the old one instead of going under it and staying hidden. Behind the content, backgrounds come first, in the order added, and then behind-content watermarks, so a watermark added after a background no longer disappears. Synthetic regressions in crates/edit check the order. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-19",
+        "text": "(M2, radial luminosity masks): Added synthetic radial-fade coverage for the existing masked-gradient fix (#2132): centre, midpoint, antialiased clip and per-pixel shading reference, including previews, scales and tiles. Removing the existing native-gradient mask guard reproduces an opaque midpoint; restoring it passes. No new renderer behavior or estimate change."
+      },
+      {
+        "date": "2026-10-19",
         "text": "(M14, #3373): The main menu and its long submenus scroll in short windows, keeping their commands reachable. Estimates unchanged."
       },
       {
         "date": "2026-10-19",
         "text": "(M3, #3387): Save-prompt shortcuts yield to later consent and utility dialogs; a synthetic UI regression checks that an edited document stays open. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-19",
+        "text": "(M4, #3309 review): Page deletion keeps working with 60,000 named destinations, without a name-count traversal limit. Synthetic regressions verify every surviving target after deletion and restoration of the deleted page and its destinations by undo/redo, full/incremental save/reopen and unchanged rendering. Estimates unchanged."
       },
       {
         "date": "2026-10-19",
@@ -270,11 +362,23 @@
       },
       {
         "date": "2026-10-18",
+        "text": "(M3, PR #3101 review): Gap changes in Organize Pages preserve document scroll position; menu and control changes apply to both comparison panes without changing unrelated tabs. Three synthetic UI regressions were observed failing before the fixes. Readiness estimates unchanged."
+      },
+      {
+        "date": "2026-10-18",
+        "text": "(M3, PR #3101): Optional gapless continuous page display with persisted defaults and UI control support; both new labels translated in all 22 catalogs. Rebased onto current main, preserving navigation and rendering fixes. Readiness estimates unchanged."
+      },
+      {
+        "date": "2026-10-18",
         "text": "(M10, #3120): Export to Word, PowerPoint, HTML and RTF reads text from form XObjects nested as deep as the renderer draws them (50 levels), and up to 50 000 forms a page (the renderer's budget for nested ones); it stopped at 12 levels and 4 096 forms and left the rest out silently. A page past those limits is listed in docexportoffice's truncatedpages, with a warning. Estimates unchanged."
       },
       {
         "date": "2026-10-18",
         "text": "(M5, PR #1971 review): Nested FDF annotation values that identify a source /Page or /Pages dictionary become null at every copy depth. A synthetic three-page PDF saved and reopened before export verifies that destination actions cannot pull source page content into the FDF, while unrelated nested metadata and shared references remain intact. FDF import semantics, copied-graph limits and estimates are unchanged."
+      },
+      {
+        "date": "2026-10-18",
+        "text": "(M2, #3086): Text extraction estimates letter tracking without repeated punctuation gaps so dotted TOC leaders do not swallow word spaces. Synthetic PDF regressions cover leader lengths, phrase search and selection; strongly tracked text stays intact. Estimates unchanged."
       },
       {
         "date": "2026-10-18",
@@ -286,111 +390,7 @@
       },
       {
         "date": "2026-10-18",
-        "text": "(M4, PR #1919 review): repeated page indices apply each rotation to the latest page-local value, preserving indirect/inherited angles. Synthetic adjacent/interleaved duplicates retain siblings and page contents through incremental and full saves. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-18",
-        "text": "(M3, #3149): Page replacement cancels render demand collected for the previous geometry; all viewer raster upload paths reject empty or oversized textures before cache eviction. Synthetic regressions reproduce the reported 1880×2350 upload at a 2048 limit, retain cached images and unsaved edits, and resume bounded backdrops and tiles. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-18",
-        "text": "(M8, #1350): Integrated current main while preserving content-stream comment boundaries. Hidden-text cleanup retires unused named replacement descriptions on rewritten pages and forms, including inherited/shared resource holders, without removing descriptions still used by surviving content. Synthetic saved-byte and preservation regressions cover the cleanup. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-17",
-        "text": "(M4, #2997): Dragging page thumbnails in the Organize grid with Ctrl held (Option on macOS) drops copies at the gap instead of moving the pages: a \"+\" badge sits by the pointer, the copies land at the gap selected, and one undo step (\"Duplicate pages\") takes them out again. pageduplicate takes at (1-based, where the first copy goes; left out, after the last of them) so agents can drive the same thing, and the UI control channel's ui.drag modifiers now reach gestures that read the input state. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-16",
-        "text": "(M3, #2781): The Pages panel follows the current page, as Acrobat's page thumbnails do: going to a page whose thumbnail is out of sight (scrolling, Page Down, Go to page, a bookmark) scrolls the panel just enough to show it. A thumbnail already in view, or clicked, leaves the panel where it is, and a page change while the user scrolls the panel or drags thumbnails does not move it. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-16",
-        "text": "(M12, #1645): CLI info, text and render use the engine's dynamic XFA layout rather than placeholder pages. Synthetic two-page and encrypted-form regressions cover counts, text, pixels, copy permissions and unchanged input bytes. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-16",
-        "text": "(M10, #1201 partial): Lossless image export applies each component's Decode pair. Indexed values round and clip before palette lookup. Color-key masks keep raw samples. The existing 16-bit precision limit remains. JPEG and mask Decode, ICC transforms, and calibrated colors remain outside this fix. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-16",
-        "text": "(M3, #2739): Wrapped revision buttons stay above Binding in Document Properties. A synthetic regression checks control bounds and opens a saved revision at two viewport widths. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "(M5, PR #1971 refresh): Nested FDF annotation values retain shared or cyclic copied graphs. Discovery borrows direct values and records annotation positions with lazy array owners; retained entries are budgeted before cloning. Synthetic stress fixtures include repeated aliases and saved-PDF cache eviction. Limits cover the copied graph; source parsing and page discovery retain their existing limits, with no total source-memory bound. FDF import semantics and estimates are unchanged."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "(M7, Edit text caret): In a text region that mixes sizes (a 24 pt title over 12 pt lines), the inline editor's caret on a small row was as tall as the region's first size and reached into the row below: egui draws the caret at least one row of the text field's font tall, and that font had the paragraph's first size. The field's font is now half the region's smallest size, so each row's own height decides. Kittest regression; checked in the app on a real document. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "(M4, #1919 refresh): Integrated upstream 99941daa while retaining the indirect page rotation correction and all upstream progress. Only independent documentation conflicts required resolution; focused production and test files are unchanged from the previously green CI head. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "(M6, AcroForm XML text): Plain AcroForm XML imports retain all direct text around comments and processing instructions, including CDATA and character references. Synthetic regressions verify exact values and unknown catalog data after incremental and full save/reopen. Nested-element and XFA interpretation are unchanged. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "(M6, #1917 refresh): Integrated upstream 99941daa while retaining the XML/XFDF attribute whitespace correction and all upstream progress. Only independent documentation conflicts required resolution; focused production and test files are unchanged from the previously green CI head. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "(M1, #2267 refresh): Integrated upstream 99941daa while retaining the raw-deflate fallback correction and all upstream progress. Only independent documentation conflicts required resolution; focused production and test files are unchanged from the previously green CI head. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "(M2, gap 12): cargo xtask text-oracle scores reading order as well as word F1: the longest common subsequence of the two word sequences over the longer one. F1 is a bag of words and cannot see order at all -- measuring #2431, a change that moves text and nothing else, it called 26 of the 29 files whose output changed identical, where the order score separated 18 improvements from 6 regressions. Reports, does not gate; a disagreement with Poppler, not a verdict. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "(M2, #2305 follow-up): WinAnsiEncoding 0xA0 and 0xAD and MacRomanEncoding 0xCA extract as the ordinary space and hyphen Annex D.2 names them, in the vendored hayro tables (patch 30) as well as crates/fonts, so search, copy and redaction see characters that were hidden behind U+00A0 and U+00AD. Across the pdf.js corpus the soft hyphens we extract fall 117 to 13 and the non-breaking spaces 30 to 26; the rest come from /ToUnicode. An explicit /Differences name keeps its glyph list value, as pdftotext does. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "(M12, XFA, #2574): A pageArea with no <occur> repeats without limit instead of taking a subform's default of one use, so a later page area with occur max=\"1\" is no longer drawn (with a copy of its fields) over every body page. A page area's occur min is honoured too: one the body never reached gets the pages it still needs after the body (the once-only closing page of a form, with its button, comes last). Acrobat Pro also puts that page last, and when printing keeps it but leaves it blank (relevant=\"-print\" on the page area), which PdfCraft does not do yet; both re-observed on a synthetic fixture, see the 2026-10-19 line. Synthetic regression tests. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "(M8, #2447): Removing links or comments (Remove Hidden Information, Sanitize) also drops the tagged-PDF structure tree's object references to them, so the full rewrite no longer keeps a removed link's URL or a comment's text. Regression seen to fail without the fix. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "(M6, CSV tab-containing headers): CSV export and spreadsheet merging quote tabs, and import distinguishes quoted tabs from TSV delimiters without changing field identities. Synthetic export/import and incremental/full save regressions cover header tabs, quotes and line breaks, plus ordinary TSV controls. Formula-cell policy is unchanged. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "(M6, AcroForm XML text): Plain AcroForm XML imports retain all direct text around comments and processing instructions, including CDATA and character references. Synthetic regressions verify exact values and unknown catalog data after incremental and full save/reopen. Nested-element and XFA interpretation are unchanged. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "(M12, XFA, #2574): A pageArea with no <occur> repeats without limit instead of taking a subform's default of one use, so a later page area with occur max=\"1\" is no longer drawn (with a copy of its fields) over every body page. Synthetic regression test; the page area's occur min (a once-only page of its own) is still not laid out, recorded in form.xfa-dynamic. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "(M14, #2383 candidate): Device-limit requests now clamp unsupported maxima and minimum alignments before enabling the adapter's full 2D texture extent. This addresses the reported V3D request of 16 shader variables on an adapter supporting 15. Synthetic regressions fail before the clamp and pass afterward, along with the existing HiDPI case and Windows GPU-required application tests. Raspberry Pi startup remains unverified; milestone and overall estimates are unchanged."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "(M14, Norwegian Bokmål localization): Added Norwegian Bokmål (nb) as an interface and date language: a catalog covering every key the other catalogs have, Norwegian key names, month and weekday names for Fill & Sign dates, and no/nn locales resolving to it until a Nynorsk catalog exists. Written from the meaning of the English labels; terminology reviewed by a native-speaking contributor, not yet every line. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "(M2, large object streams): An object stream's index of objnum offset pairs is read once per stream instead of once per object fetched from it (vendored hayro-syntax patch 22), so reading every object of a stream of N objects no longer takes N² steps. A Firefox page whose 65,542 objects share one stream (pdf.js corpus bug1978317.pdf) drew in 37 s and extracted its text in 40 s; it now takes 0.5 s and 1.9 s, and leaves the robustness baseline's known timeouts. 40,000 pages in one stream open in 0.2 s instead of 54 s. The regression fails before the fix. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "(M14, gap 24): misc.localization and misc.installers move from planned to partial. Localization: 22 catalogs ship, but Chinese shows tofu in releases, Telugu has no release font and Arabic is not mirrored. Installers: macOS and Windows releases are signed, Linux packages are not. The Acrobat menu diff itself remains open. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "(M14, PNG export): Export ▸ Image as PNG, pdfcraft-cli render and the pagerender automation/MCP tool write an opaque page as RGB at deflate level 3 instead of RGBA at the default level 6: the files stay the same size and are written 3–5× faster (a 300-dpi scan drawn at 220 dpi: 805 → 167 ms; a text page at 220 dpi: 70 → 40 ms; an annual-report page at 150 dpi: 179 → 64 ms). A page with translucent pixels is still written as RGBA. The automation tools use the engine's encoder instead of a copy of it. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "(M2, renderer speed): Three vendored hayro-interpret patches (31–33), pixel for pixel the same over the first three pages of every pdf.js corpus file. A sampled (Type 0) function keeps its samples in one flat array instead of a hash map rebuilt every time a shading using it is painted: bug1721218 (InDesign) draws in 0.49 s (was 1.34 s), and a 2,097,152-sample ramp painted 30 times in under a second (was 38 s). One decode of a JPEG or Flate image serves every size it is drawn at (only JPX decodes for a size), so zooming a 300-dpi scan in and out costs 35–40% less render work. Coons and tensor patch meshes copy their vertices' colours less: mesh-gradient pages draw 10–16% faster (page 8 of #1584's annual report 773 → 696 ms). Estimates unchanged."
+        "text": "(M7, #3187): Added-image automation normalizes extreme signed rotation angles before combining them with the current orientation; integer bounds, history, pixels, save/reopen and MCP have regressions. Estimates unchanged."
       }
     ]
   },
@@ -410,39 +410,39 @@
     }
   },
   "roadmap": {
-    "revisions": 161,
-    "revisions_7d": 29,
+    "revisions": 162,
+    "revisions_7d": 30,
     "last_revision": {
-      "ts": "2026-10-22T02:05:23Z",
+      "ts": "2026-10-22T07:01:16Z",
       "kind": "content",
-      "commit": "88dad98",
-      "commit_full": "88dad98dd478d255399b1405b33765f4da542704",
-      "message": "M14: add Norwegian Bokmål interface and date language (#1836)"
+      "commit": "9a0ec64",
+      "commit_full": "9a0ec64568088fe7e74ef540817b66b7c1a50553",
+      "message": "Integration batch: 218 PRs on main (#3983)"
     },
     "last_update": {
-      "ts": "2026-10-22T02:05:23Z",
+      "ts": "2026-10-22T07:01:16Z",
       "kind": "content",
-      "commit": "88dad98",
-      "commit_full": "88dad98dd478d255399b1405b33765f4da542704",
-      "message": "M14: add Norwegian Bokmål interface and date language (#1836)"
+      "commit": "9a0ec64",
+      "commit_full": "9a0ec64568088fe7e74ef540817b66b7c1a50553",
+      "message": "Integration batch: 218 PRs on main (#3983)"
     },
-    "self_reported": "2026-10-18"
+    "self_reported": "2026-10-21"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.8,
+    "score": 19.0,
     "active_days_7d": 6,
-    "changes_7d": 106,
-    "changes_14d": 848,
+    "changes_7d": 107,
+    "changes_14d": 849,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-22T02:05:23Z",
-      "commit": "88dad98",
-      "commit_full": "88dad98dd478d255399b1405b33765f4da542704",
-      "subject": "M14: add Norwegian Bokmål interface and date language (#1836)"
+      "ts": "2026-10-22T07:01:16Z",
+      "commit": "9a0ec64",
+      "commit_full": "9a0ec64568088fe7e74ef540817b66b7c1a50553",
+      "subject": "Integration batch: 218 PRs on main (#3983)"
     },
-    "last_commit_ts": "2026-10-22T02:05:23Z",
+    "last_commit_ts": "2026-10-22T07:01:16Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       118,
@@ -458,7 +458,7 @@
       25,
       0,
       13,
-      4
+      5
     ],
     "days": [
       {
@@ -868,9 +868,13 @@
       },
       {
         "d": "2026-10-22",
-        "code": 4,
+        "code": 5,
         "other": 1,
         "samples": [
+          {
+            "commit": "9a0ec64",
+            "subject": "Integration batch: 218 PRs on main (#3983)"
+          },
           {
             "commit": "88dad98",
             "subject": "M14: add Norwegian Bokmål interface and date language (#1836)"
@@ -878,10 +882,6 @@
           {
             "commit": "d676fd4",
             "subject": "M6: Prepare a form ▸ Text field table: rows and columns of text fields as one edit (#3479)"
-          },
-          {
-            "commit": "ffaf312",
-            "subject": "M6: Prepare a form ▸ Calculation order: a page to reorder, check and fix the order fields calculate in (#3733)"
           }
         ]
       }
@@ -4796,7 +4796,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "9a0ec64",
+      "commit_full": "9a0ec64568088fe7e74ef540817b66b7c1a50553",
+      "commit_date": "2026-10-22T03:01:16-04:00",
+      "ts": "2026-10-22T07:01:16Z",
+      "message": "Integration batch: 218 PRs on main (#3983)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-21",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-22T02:19:54+00:00"
+  "updated_at": "2026-10-22T07:16:17+00:00"
 }
