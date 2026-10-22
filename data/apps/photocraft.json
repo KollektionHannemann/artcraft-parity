@@ -293,18 +293,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 27.2,
+    "score": 27.4,
     "active_days_7d": 7,
-    "changes_7d": 284,
-    "changes_14d": 1865,
+    "changes_7d": 289,
+    "changes_14d": 1870,
     "housekeeping_7d": 19,
     "last_code_change": {
-      "ts": "2026-10-22T21:40:47Z",
-      "commit": "98de85c",
-      "commit_full": "98de85c64ea677bc1cb0e8e489b3d1369deb92c4",
-      "subject": "fix(raster): prevent overflow in strided row sampling (#8668)"
+      "ts": "2026-10-22T23:44:59Z",
+      "commit": "ee0d23f",
+      "commit_full": "ee0d23f77a5c49314558642860bc39101934b60e",
+      "subject": "security: stop double decompression of gzip-compressed SVG (#8505)"
     },
-    "last_commit_ts": "2026-10-22T21:40:47Z",
+    "last_commit_ts": "2026-10-22T23:44:59Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       337,
@@ -320,7 +320,7 @@
       59,
       3,
       11,
-      43
+      48
     ],
     "days": [
       {
@@ -743,20 +743,20 @@
       },
       {
         "d": "2026-10-22",
-        "code": 43,
+        "code": 48,
         "other": 4,
         "samples": [
           {
-            "commit": "98de85c",
-            "subject": "fix(raster): prevent overflow in strided row sampling (#8668)"
+            "commit": "ee0d23f",
+            "subject": "security: stop double decompression of gzip-compressed SVG (#8505)"
           },
           {
-            "commit": "0ec95fa",
-            "subject": "View › Extras (Cmd+H) hides the Move tool's transform controls (#6699) (#6705)"
+            "commit": "217af69",
+            "subject": "security: admit embedded SVG raster images by header size (#8504)"
           },
           {
-            "commit": "c36e46c",
-            "subject": "Automation: tighten workspace checks for export, linked files and dialogs (#8680)"
+            "commit": "6ed61e9",
+            "subject": "security: harden native temporary and recovery files (#8406)"
           }
         ]
       }
@@ -1108,5 +1108,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-22T21:55:09+00:00"
+  "updated_at": "2026-10-22T23:49:39+00:00"
 }

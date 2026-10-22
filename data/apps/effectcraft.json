@@ -296,18 +296,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.2,
+    "score": 14.5,
     "active_days_7d": 5,
-    "changes_7d": 141,
-    "changes_14d": 462,
+    "changes_7d": 143,
+    "changes_14d": 464,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-22T13:52:56Z",
-      "commit": "b55cb5b",
-      "commit_full": "b55cb5bc15f44eff2bb3233b7ed035e375d96036",
-      "subject": "Project: comp_contains walks precomps with a visited set, not recursion (#1237) (#1363)"
+      "ts": "2026-10-22T23:27:57Z",
+      "commit": "0871135",
+      "commit_full": "0871135a6be36692499810dbe44a04cf20bfed64",
+      "subject": "fix: JS reliability bugs (SonarCloud S1764/S9383/S4275) (#2062)"
     },
-    "last_commit_ts": "2026-10-22T19:39:32Z",
+    "last_commit_ts": "2026-10-22T23:27:57Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       58,
@@ -323,7 +323,7 @@
       0,
       0,
       4,
-      8
+      10
     ],
     "days": [
       {
@@ -682,20 +682,20 @@
       },
       {
         "d": "2026-10-22",
-        "code": 8,
+        "code": 10,
         "other": 2,
         "samples": [
           {
+            "commit": "0871135",
+            "subject": "fix: JS reliability bugs (SonarCloud S1764/S9383/S4275) (#2062)"
+          },
+          {
+            "commit": "645b683",
+            "subject": "security: use crypto.randomUUID for temp file suffix (SonarCloud S2245) (#2061)"
+          },
+          {
             "commit": "b55cb5b",
             "subject": "Project: comp_contains walks precomps with a visited set, not recursion (#1237) (#1363)"
-          },
-          {
-            "commit": "571aebd",
-            "subject": "script: setValue rejects an array of the wrong dimension (#1936) (#1957)"
-          },
-          {
-            "commit": "831e719",
-            "subject": "Windows: two fixes so cargo xtask ci gets past clippy and the media tests (#1855)"
           }
         ]
       }
@@ -1070,5 +1070,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-22T20:56:41+00:00"
+  "updated_at": "2026-10-22T23:50:08+00:00"
 }
