@@ -293,18 +293,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 27.1,
+    "score": 27.2,
     "active_days_7d": 7,
-    "changes_7d": 281,
-    "changes_14d": 1862,
+    "changes_7d": 282,
+    "changes_14d": 1863,
     "housekeeping_7d": 19,
     "last_code_change": {
-      "ts": "2026-10-22T17:54:10Z",
-      "commit": "6649b78",
-      "commit_full": "6649b78526826cc543f5aced1195c06c0b7e850a",
-      "subject": "Use chrono instead of hand-rolled UTC conversion (#8234)"
+      "ts": "2026-10-22T21:18:24Z",
+      "commit": "c36e46c",
+      "commit_full": "c36e46c3873ee39f299cc50a3dcd28494c78366d",
+      "subject": "Automation: tighten workspace checks for export, linked files and dialogs (#8680)"
     },
-    "last_commit_ts": "2026-10-22T19:39:21Z",
+    "last_commit_ts": "2026-10-22T21:18:24Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       337,
@@ -320,7 +320,7 @@
       59,
       3,
       11,
-      40
+      41
     ],
     "days": [
       {
@@ -743,9 +743,13 @@
       },
       {
         "d": "2026-10-22",
-        "code": 40,
+        "code": 41,
         "other": 4,
         "samples": [
+          {
+            "commit": "c36e46c",
+            "subject": "Automation: tighten workspace checks for export, linked files and dialogs (#8680)"
+          },
           {
             "commit": "6649b78",
             "subject": "Use chrono instead of hand-rolled UTC conversion (#8234)"
@@ -753,10 +757,6 @@
           {
             "commit": "46394c5",
             "subject": "Build each crate's integration tests as one binary (#8644)"
-          },
-          {
-            "commit": "6d807ba",
-            "subject": "Backlog batch: 271 reviewed contributor PRs (#8577)"
           }
         ]
       }
@@ -1108,5 +1108,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-22T19:56:43+00:00"
+  "updated_at": "2026-10-22T21:20:23+00:00"
 }
