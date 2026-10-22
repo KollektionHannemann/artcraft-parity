@@ -287,18 +287,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 13.7,
+    "score": 13.9,
     "active_days_7d": 5,
-    "changes_7d": 106,
-    "changes_14d": 546,
+    "changes_7d": 108,
+    "changes_14d": 548,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-22T21:12:04Z",
-      "commit": "916be26",
-      "commit_full": "916be26ed30d1c3cf3d0d54dfa590949b6e7ce34",
-      "subject": "security: bound constraint-engine work and allocation (CWE-400/407) (#1851)"
+      "ts": "2026-10-22T21:35:43Z",
+      "commit": "8085745",
+      "commit_full": "8085745a224c92a3c867da6b6cc1a9f02682923b",
+      "subject": "security: bound native DXF/SVG/PDF import allocation and quadratic work (CWE-400/407/789) (#1846)"
     },
-    "last_commit_ts": "2026-10-22T21:12:04Z",
+    "last_commit_ts": "2026-10-22T21:35:43Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       1,
@@ -314,7 +314,7 @@
       82,
       0,
       4,
-      18
+      20
     ],
     "days": [
       {
@@ -524,20 +524,20 @@
       },
       {
         "d": "2026-10-22",
-        "code": 18,
+        "code": 20,
         "other": 3,
         "samples": [
           {
+            "commit": "8085745",
+            "subject": "security: bound native DXF/SVG/PDF import allocation and quadratic work (CWE-400/407/789) (#1846)"
+          },
+          {
+            "commit": "ca578a8",
+            "subject": "security: authenticate the local control server with a per-session token (CWE-306) (#1844)"
+          },
+          {
             "commit": "916be26",
             "subject": "security: bound constraint-engine work and allocation (CWE-400/407) (#1851)"
-          },
-          {
-            "commit": "2dbc769",
-            "subject": "security: budget the rendering pipeline against DoS geometry (CWE-400/407/789) (#1849)"
-          },
-          {
-            "commit": "7c72ec4",
-            "subject": "security: bound drawing document-model work and allocation (CWE-400/407) (#1850)"
           }
         ]
       }
@@ -930,5 +930,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-22T21:21:01+00:00"
+  "updated_at": "2026-10-22T21:55:59+00:00"
 }

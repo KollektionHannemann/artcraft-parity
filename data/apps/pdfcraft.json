@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/pdfcraft",
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
-  "latest_commit": "9a0ec64",
-  "latest_commit_date": "2026-10-22T03:01:16-04:00",
-  "latest_message": "Integration batch: 218 PRs on main (#3983)",
+  "latest_commit": "adea2c9",
+  "latest_commit_date": "2026-10-22T15:49:13-06:00",
+  "latest_message": "M14: recover existing macOS PDF associations after open and save (#3558)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
-    "last_updated": "2026-10-21",
+    "last_updated": "2026-10-22",
     "metrics": {
       "full": {
         "label": "Full Acrobat Pro (ready for real work)",
@@ -234,6 +234,10 @@
     "progress": [
       {
         "date": "2026-10-22",
+        "text": "(M14, macOS association recovery candidate): Successful desktop open/save/sign can queue recovery of an existing per-file binding to the running PDFCraft bundle through NSWorkspace. Metadata-only watcher changes retain undo and avoid false overwrite prompts; real same-length/same-mtime edits remain protected. Rebased on 0.12.0 and reuses #3042's shared atomic metadata preservation; the bounded recovery parser does not narrow save limits. Prior native Preview TEST-signature and Finder workflows passed on macOS 27.0.1; other versions remain unqualified. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-22",
         "text": "(M2, #3107 / PR #3438): Inline-image parsing falls back to the existing EI heuristic when missing declared samples, headers or terminators exceed the content-window budget, instead of waiting for an impossible allocation. Exact-length parsing for available samples and ordinary large streamed images is retained. Estimates unchanged."
       },
       {
@@ -387,10 +391,6 @@
       {
         "date": "2026-10-18",
         "text": "(M7, #3212): Headers, Bates numbers, watermarks and added text stay visible after unfinished marked content, with original content preserved."
-      },
-      {
-        "date": "2026-10-18",
-        "text": "(M7, #3187): Added-image automation normalizes extreme signed rotation angles before combining them with the current orientation; integer bounds, history, pixels, save/reopen and MCP have regressions. Estimates unchanged."
       }
     ]
   },
@@ -410,39 +410,39 @@
     }
   },
   "roadmap": {
-    "revisions": 162,
-    "revisions_7d": 30,
+    "revisions": 163,
+    "revisions_7d": 31,
     "last_revision": {
-      "ts": "2026-10-22T07:01:16Z",
+      "ts": "2026-10-22T21:49:13Z",
       "kind": "content",
-      "commit": "9a0ec64",
-      "commit_full": "9a0ec64568088fe7e74ef540817b66b7c1a50553",
-      "message": "Integration batch: 218 PRs on main (#3983)"
+      "commit": "adea2c9",
+      "commit_full": "adea2c908a95093876c787258edbc6c4480fb87d",
+      "message": "M14: recover existing macOS PDF associations after open and save (#3558)"
     },
     "last_update": {
-      "ts": "2026-10-22T07:01:16Z",
+      "ts": "2026-10-22T21:49:13Z",
       "kind": "content",
-      "commit": "9a0ec64",
-      "commit_full": "9a0ec64568088fe7e74ef540817b66b7c1a50553",
-      "message": "Integration batch: 218 PRs on main (#3983)"
+      "commit": "adea2c9",
+      "commit_full": "adea2c908a95093876c787258edbc6c4480fb87d",
+      "message": "M14: recover existing macOS PDF associations after open and save (#3558)"
     },
-    "self_reported": "2026-10-21"
+    "self_reported": "2026-10-22"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.3,
+    "score": 22.4,
     "active_days_7d": 6,
-    "changes_7d": 160,
-    "changes_14d": 902,
+    "changes_7d": 161,
+    "changes_14d": 903,
     "housekeeping_7d": 18,
     "last_code_change": {
-      "ts": "2026-10-22T19:17:44Z",
-      "commit": "8555d6f",
-      "commit_full": "8555d6f159a7b2d7d420185642b8901719b457a6",
-      "subject": "fix(parity): cite the renamed renderer-check test and drop fixed redaction gaps"
+      "ts": "2026-10-22T21:49:13Z",
+      "commit": "adea2c9",
+      "commit_full": "adea2c908a95093876c787258edbc6c4480fb87d",
+      "subject": "M14: recover existing macOS PDF associations after open and save (#3558)"
     },
-    "last_commit_ts": "2026-10-22T19:39:48Z",
+    "last_commit_ts": "2026-10-22T21:49:13Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       118,
@@ -458,7 +458,7 @@
       25,
       0,
       13,
-      58
+      59
     ],
     "days": [
       {
@@ -868,9 +868,13 @@
       },
       {
         "d": "2026-10-22",
-        "code": 58,
+        "code": 59,
         "other": 5,
         "samples": [
+          {
+            "commit": "adea2c9",
+            "subject": "M14: recover existing macOS PDF associations after open and save (#3558)"
+          },
           {
             "commit": "8555d6f",
             "subject": "fix(parity): cite the renamed renderer-check test and drop fixed redaction gaps"
@@ -878,10 +882,6 @@
           {
             "commit": "b720788",
             "subject": "fix(content): end inline images where the renderer ends them"
-          },
-          {
-            "commit": "7db3791",
-            "subject": "fix(redact): clear descriptions above removed content and annotations"
           }
         ]
       }
@@ -4819,7 +4819,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "adea2c9",
+      "commit_full": "adea2c908a95093876c787258edbc6c4480fb87d",
+      "commit_date": "2026-10-22T15:49:13-06:00",
+      "ts": "2026-10-22T21:49:13Z",
+      "message": "M14: recover existing macOS PDF associations after open and save (#3558)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-22",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-22T20:56:38+00:00"
+  "updated_at": "2026-10-22T21:55:35+00:00"
 }
