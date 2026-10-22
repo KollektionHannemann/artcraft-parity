@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/pdfcraft",
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
-  "latest_commit": "d676fd4",
-  "latest_commit_date": "2026-10-21T21:27:31-04:00",
-  "latest_message": "M6: Prepare a form ▸ Text field table: rows and columns of text fields as one edit (#3479)",
+  "latest_commit": "88dad98",
+  "latest_commit_date": "2026-10-21T22:05:23-04:00",
+  "latest_message": "M14: add Norwegian Bokmål interface and date language (#1836)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -374,6 +374,10 @@
       },
       {
         "date": "2026-10-15",
+        "text": "(M14, Norwegian Bokmål localization): Added Norwegian Bokmål (nb) as an interface and date language: a catalog covering every key the other catalogs have, Norwegian key names, month and weekday names for Fill & Sign dates, and no/nn locales resolving to it until a Nynorsk catalog exists. Written from the meaning of the English labels; terminology reviewed by a native-speaking contributor, not yet every line. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-15",
         "text": "(M2, large object streams): An object stream's index of objnum offset pairs is read once per stream instead of once per object fetched from it (vendored hayro-syntax patch 22), so reading every object of a stream of N objects no longer takes N² steps. A Firefox page whose 65,542 objects share one stream (pdf.js corpus bug1978317.pdf) drew in 37 s and extracted its text in 40 s; it now takes 0.5 s and 1.9 s, and leaves the robustness baseline's known timeouts. 40,000 pages in one stream open in 0.2 s instead of 54 s. The regression fails before the fix. Estimates unchanged."
       },
       {
@@ -387,10 +391,6 @@
       {
         "date": "2026-10-15",
         "text": "(M2, renderer speed): Three vendored hayro-interpret patches (31–33), pixel for pixel the same over the first three pages of every pdf.js corpus file. A sampled (Type 0) function keeps its samples in one flat array instead of a hash map rebuilt every time a shading using it is painted: bug1721218 (InDesign) draws in 0.49 s (was 1.34 s), and a 2,097,152-sample ramp painted 30 times in under a second (was 38 s). One decode of a JPEG or Flate image serves every size it is drawn at (only JPX decodes for a size), so zooming a 300-dpi scan in and out costs 35–40% less render work. Coons and tensor patch meshes copy their vertices' colours less: mesh-gradient pages draw 10–16% faster (page 8 of #1584's annual report 773 → 696 ms). Estimates unchanged."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "(M3, #2166 part 1): Save asks before writing over a version of the file the document did not come from (something else wrote it since the open or the last save), with Save as… to keep it, and the changed-on-disk notice says what Reload and Save each do; a file that is open already comes to the front instead of opening twice; a running instance's autosaves are locked, so a second instance neither offers nor discards them. Part 2 (every writer checked and atomic) is #2182."
       }
     ]
   },
@@ -410,39 +410,39 @@
     }
   },
   "roadmap": {
-    "revisions": 160,
-    "revisions_7d": 28,
+    "revisions": 161,
+    "revisions_7d": 29,
     "last_revision": {
-      "ts": "2026-10-22T01:27:31Z",
+      "ts": "2026-10-22T02:05:23Z",
       "kind": "content",
-      "commit": "d676fd4",
-      "commit_full": "d676fd44ea99b277d508455a7e107e4aa1346323",
-      "message": "M6: Prepare a form ▸ Text field table: rows and columns of text fields as one edit (#3479)"
+      "commit": "88dad98",
+      "commit_full": "88dad98dd478d255399b1405b33765f4da542704",
+      "message": "M14: add Norwegian Bokmål interface and date language (#1836)"
     },
     "last_update": {
-      "ts": "2026-10-22T01:27:31Z",
+      "ts": "2026-10-22T02:05:23Z",
       "kind": "content",
-      "commit": "d676fd4",
-      "commit_full": "d676fd44ea99b277d508455a7e107e4aa1346323",
-      "message": "M6: Prepare a form ▸ Text field table: rows and columns of text fields as one edit (#3479)"
+      "commit": "88dad98",
+      "commit_full": "88dad98dd478d255399b1405b33765f4da542704",
+      "message": "M14: add Norwegian Bokmål interface and date language (#1836)"
     },
     "self_reported": "2026-10-18"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.5,
+    "score": 18.8,
     "active_days_7d": 6,
-    "changes_7d": 105,
-    "changes_14d": 847,
+    "changes_7d": 106,
+    "changes_14d": 848,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-22T01:27:31Z",
-      "commit": "d676fd4",
-      "commit_full": "d676fd44ea99b277d508455a7e107e4aa1346323",
-      "subject": "M6: Prepare a form ▸ Text field table: rows and columns of text fields as one edit (#3479)"
+      "ts": "2026-10-22T02:05:23Z",
+      "commit": "88dad98",
+      "commit_full": "88dad98dd478d255399b1405b33765f4da542704",
+      "subject": "M14: add Norwegian Bokmål interface and date language (#1836)"
     },
-    "last_commit_ts": "2026-10-22T01:27:31Z",
+    "last_commit_ts": "2026-10-22T02:05:23Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       118,
@@ -458,7 +458,7 @@
       25,
       0,
       13,
-      3
+      4
     ],
     "days": [
       {
@@ -868,9 +868,13 @@
       },
       {
         "d": "2026-10-22",
-        "code": 3,
+        "code": 4,
         "other": 1,
         "samples": [
+          {
+            "commit": "88dad98",
+            "subject": "M14: add Norwegian Bokmål interface and date language (#1836)"
+          },
           {
             "commit": "d676fd4",
             "subject": "M6: Prepare a form ▸ Text field table: rows and columns of text fields as one edit (#3479)"
@@ -878,10 +882,6 @@
           {
             "commit": "ffaf312",
             "subject": "M6: Prepare a form ▸ Calculation order: a page to reorder, check and fix the order fields calculate in (#3733)"
-          },
-          {
-            "commit": "78ef666",
-            "subject": "security: enforce HTTPS on curl downloads (SonarCloud S6506) (#3933)"
           }
         ]
       }
@@ -4773,7 +4773,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "88dad98",
+      "commit_full": "88dad98dd478d255399b1405b33765f4da542704",
+      "commit_date": "2026-10-21T22:05:23-04:00",
+      "ts": "2026-10-22T02:05:23Z",
+      "message": "M14: add Norwegian Bokmål interface and date language (#1836)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-22T01:56:47+00:00"
+  "updated_at": "2026-10-22T02:19:54+00:00"
 }
