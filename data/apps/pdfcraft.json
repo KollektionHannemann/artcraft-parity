@@ -430,19 +430,19 @@
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 19.5,
+    "level": "buzzing",
+    "score": 20.8,
     "active_days_7d": 6,
-    "changes_7d": 109,
-    "changes_14d": 851,
+    "changes_7d": 121,
+    "changes_14d": 863,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-10-22T15:28:58Z",
-      "commit": "9526363",
-      "commit_full": "9526363152b780ff82fc45d1c1e8ac3963fec904",
-      "subject": "Build each crate's integration tests as one binary (#4087)"
+      "ts": "2026-10-22T16:13:16Z",
+      "commit": "d5047aa",
+      "commit_full": "d5047aa4acdf35158c3943839dc5c98f16a8f955",
+      "subject": "test(cos): build the private temp directory without an unused mut on Windows"
     },
-    "last_commit_ts": "2026-10-22T15:28:58Z",
+    "last_commit_ts": "2026-10-22T16:13:16Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       118,
@@ -458,7 +458,7 @@
       25,
       0,
       13,
-      7
+      19
     ],
     "days": [
       {
@@ -868,20 +868,20 @@
       },
       {
         "d": "2026-10-22",
-        "code": 7,
+        "code": 19,
         "other": 2,
         "samples": [
           {
-            "commit": "9526363",
-            "subject": "Build each crate's integration tests as one binary (#4087)"
+            "commit": "d5047aa",
+            "subject": "test(cos): build the private temp directory without an unused mut on Windows"
           },
           {
-            "commit": "80b7d21",
-            "subject": "fix: add generic font-family fallbacks in demo (SonarCloud css:S4649)"
+            "commit": "7cdde6c",
+            "subject": "chore(assets): record the changed translation catalogues in ATTRIBUTION.toml"
           },
           {
-            "commit": "9a0ec64",
-            "subject": "Integration batch: 218 PRs on main (#3983)"
+            "commit": "7c47312",
+            "subject": "style(sign): rustfmt the new tests"
           }
         ]
       }
@@ -890,206 +890,146 @@
   "releases": [
     {
       "tag": "v0.11.0",
-      "name": "PdfCraft v0.11.0",
-      "ts": "2026-10-21T19:57:25Z",
-      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.11.0",
-      "changes": 4,
+      "name": "v0.11.0",
+      "ts": "2026-10-21T19:27:33Z",
+      "url": null,
+      "changes": null,
       "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
+      "platforms": [],
       "prerelease": false,
-      "source": "release",
+      "source": "tag",
       "kind": "minor"
     },
     {
       "tag": "v0.10.1",
-      "name": "PdfCraft v0.10.1",
-      "ts": "2026-10-21T07:46:31Z",
-      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.10.1",
-      "changes": 124,
-      "new_contributors": 29,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
+      "name": "v0.10.1",
+      "ts": "2026-10-20T15:38:32Z",
+      "url": null,
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [],
       "prerelease": false,
-      "source": "release",
+      "source": "tag",
       "kind": "minor"
     },
     {
       "tag": "v0.9.0",
-      "name": "PdfCraft v0.9.0",
-      "ts": "2026-10-18T03:55:00Z",
-      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.9.0",
-      "changes": 220,
-      "new_contributors": 38,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
+      "name": "v0.9.0",
+      "ts": "2026-10-18T01:43:00Z",
+      "url": null,
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [],
       "prerelease": false,
-      "source": "release",
+      "source": "tag",
       "kind": "minor"
     },
     {
       "tag": "v0.8.0",
-      "name": "PdfCraft v0.8.0",
-      "ts": "2026-10-14T15:21:59Z",
-      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.8.0",
-      "changes": 68,
-      "new_contributors": 9,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
+      "name": "v0.8.0",
+      "ts": "2026-10-14T13:06:28Z",
+      "url": null,
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [],
       "prerelease": false,
-      "source": "release",
+      "source": "tag",
       "kind": "minor"
     },
     {
       "tag": "v0.7.1",
-      "name": "PdfCraft v0.7.1",
-      "ts": "2026-10-12T15:55:32Z",
-      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.7.1",
-      "changes": 219,
-      "new_contributors": 70,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
+      "name": "v0.7.1",
+      "ts": "2026-10-12T15:11:04Z",
+      "url": null,
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [],
       "prerelease": false,
-      "source": "release",
+      "source": "tag",
       "kind": "minor"
     },
     {
       "tag": "v0.6.0",
-      "name": "PdfCraft v0.6.0",
-      "ts": "2026-10-11T01:34:01Z",
-      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.6.0",
-      "changes": 124,
-      "new_contributors": 20,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
+      "name": "v0.6.0",
+      "ts": "2026-10-11T00:50:57Z",
+      "url": null,
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [],
       "prerelease": false,
-      "source": "release",
+      "source": "tag",
       "kind": "minor"
     },
     {
       "tag": "v0.5.0",
-      "name": "PdfCraft v0.5.0",
-      "ts": "2026-10-10T02:51:38Z",
-      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.5.0",
-      "changes": 176,
-      "new_contributors": 42,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
+      "name": "v0.5.0",
+      "ts": "2026-10-10T02:05:06Z",
+      "url": null,
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [],
       "prerelease": false,
-      "source": "release",
+      "source": "tag",
       "kind": "minor"
     },
     {
       "tag": "v0.4.0",
-      "name": "PdfCraft v0.4.0",
-      "ts": "2026-10-08T14:41:34Z",
-      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.4.0",
-      "changes": 85,
-      "new_contributors": 28,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
+      "name": "v0.4.0",
+      "ts": "2026-10-08T14:01:50Z",
+      "url": null,
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [],
       "prerelease": false,
-      "source": "release",
+      "source": "tag",
       "kind": "minor"
     },
     {
       "tag": "v0.2.1",
-      "name": "PrintCraft v0.2.1",
-      "ts": "2026-10-06T12:37:41Z",
-      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.2.1",
-      "changes": 25,
-      "new_contributors": 2,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
+      "name": "v0.2.1",
+      "ts": "2026-10-06T12:02:41Z",
+      "url": null,
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [],
       "prerelease": false,
-      "source": "release",
+      "source": "tag",
       "kind": "patch"
     },
     {
       "tag": "v0.2.0",
-      "name": "PrintCraft v0.2.0",
-      "ts": "2026-10-05T07:03:10Z",
-      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.2.0",
-      "changes": 31,
-      "new_contributors": 2,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
+      "name": "v0.2.0",
+      "ts": "2026-10-05T06:41:04Z",
+      "url": null,
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [],
       "prerelease": false,
-      "source": "release",
+      "source": "tag",
       "kind": "minor"
     },
     {
       "tag": "v0.1.1",
-      "name": "PrintCraft v0.1.1",
-      "ts": "2026-10-03T14:24:20Z",
-      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.1.1",
+      "name": "v0.1.1",
+      "ts": "2026-10-03T13:55:41Z",
+      "url": null,
       "changes": null,
       "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
+      "platforms": [],
       "prerelease": false,
-      "source": "release",
+      "source": "tag",
       "kind": "patch"
     },
     {
       "tag": "v0.1.0",
-      "name": "PrintCraft v0.1.0",
-      "ts": "2026-10-02T22:31:36Z",
-      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.1.0",
+      "name": "v0.1.0",
+      "ts": "2026-10-02T19:47:40Z",
+      "url": null,
       "changes": null,
       "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
+      "platforms": [],
       "prerelease": false,
-      "source": "release",
+      "source": "tag",
       "kind": null
     }
   ],
@@ -4821,5 +4761,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-22T15:59:10+00:00"
+  "updated_at": "2026-10-22T16:27:39+00:00"
 }
