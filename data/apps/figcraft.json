@@ -441,18 +441,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.8,
+    "score": 17.0,
     "active_days_7d": 6,
-    "changes_7d": 101,
-    "changes_14d": 289,
+    "changes_7d": 102,
+    "changes_14d": 290,
     "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-10-23T17:50:42Z",
-      "commit": "6ba0223",
-      "commit_full": "6ba02236367320fef0b373b461f6e9796bfc6de0",
-      "subject": "Tests: the paragraph indent test loads system fonts and skips only without glyphs (#1227)"
+      "ts": "2026-10-23T19:43:21Z",
+      "commit": "70f702c",
+      "commit_full": "70f702ca170f1c44e439a5965e8f57090e39dd3f",
+      "subject": "i18n: a missing translation fails no check; cargo xtask i18n-report lists them (#1228)"
     },
-    "last_commit_ts": "2026-10-23T19:02:19Z",
+    "last_commit_ts": "2026-10-23T19:43:21Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       51,
@@ -468,7 +468,7 @@
       0,
       16,
       4,
-      6
+      7
     ],
     "days": [
       {
@@ -726,9 +726,13 @@
       },
       {
         "d": "2026-10-23",
-        "code": 6,
+        "code": 7,
         "other": 2,
         "samples": [
+          {
+            "commit": "70f702c",
+            "subject": "i18n: a missing translation fails no check; cargo xtask i18n-report lists them (#1228)"
+          },
           {
             "commit": "6ba0223",
             "subject": "Tests: the paragraph indent test loads system fonts and skips only without glyphs (#1227)"
@@ -736,10 +740,6 @@
           {
             "commit": "c481023",
             "subject": "Packaging: pin the signing client and appimagetool, and check their hashes (#950)"
-          },
-          {
-            "commit": "fc7a744",
-            "subject": "CI: one test binary per crate, nextest, line tables only (#1208)"
           }
         ]
       }
@@ -3242,5 +3242,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T19:04:55+00:00"
+  "updated_at": "2026-10-23T19:53:06+00:00"
 }

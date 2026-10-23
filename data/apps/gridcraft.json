@@ -402,18 +402,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 13.3,
+    "score": 13.4,
     "active_days_7d": 6,
-    "changes_7d": 56,
-    "changes_14d": 427,
+    "changes_7d": 57,
+    "changes_14d": 428,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-10-23T18:14:15Z",
-      "commit": "aa8399b",
-      "commit_full": "aa8399be9507ebc789063117c71d02efb5fb7251",
-      "subject": "Grid: #### is sized by the width of #, so it fits its cell in every font (#2378)"
+      "ts": "2026-10-23T19:39:59Z",
+      "commit": "15a705e",
+      "commit_full": "15a705e23457d502f053e2b7b9fac1876830d403",
+      "subject": "i18n: missing translations are reported, never a failure (#2383)"
     },
-    "last_commit_ts": "2026-10-23T18:47:33Z",
+    "last_commit_ts": "2026-10-23T19:39:59Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       83,
@@ -429,7 +429,7 @@
       0,
       2,
       3,
-      21
+      22
     ],
     "days": [
       {
@@ -674,9 +674,13 @@
       },
       {
         "d": "2026-10-23",
-        "code": 21,
+        "code": 22,
         "other": 2,
         "samples": [
+          {
+            "commit": "15a705e",
+            "subject": "i18n: missing translations are reported, never a failure (#2383)"
+          },
           {
             "commit": "aa8399b",
             "subject": "Grid: #### is sized by the width of #, so it fits its cell in every font (#2378)"
@@ -684,10 +688,6 @@
           {
             "commit": "33a4513",
             "subject": "Packaging: pin the signing client and appimagetool, and check their hashes (#2073)"
-          },
-          {
-            "commit": "a7608ad",
-            "subject": "CI: one test binary per crate, nextest, line tables only (#2372)"
           }
         ]
       }
@@ -2224,5 +2224,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T19:05:14+00:00"
+  "updated_at": "2026-10-23T19:53:25+00:00"
 }
