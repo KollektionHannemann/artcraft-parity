@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/deckcraft",
   "roadmap_url": "https://github.com/storytold/deckcraft/blob/main/ROADMAP.md",
-  "latest_commit": "964d470",
-  "latest_commit_date": "2026-10-23T17:11:13-04:00",
-  "latest_message": "# Conflicts: (#1091)",
+  "latest_commit": "a58bdbc",
+  "latest_commit_date": "2026-10-23T17:28:02-04:00",
+  "latest_message": "Docs: Apply to All reaches the slide masters (#891); keep gaps.md a list of shortfalls",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -239,6 +239,10 @@
     "progress": [
       {
         "date": "2026-10-23",
+        "text": "Format Background ▸ Apply to All also sets the background of the slide masters the slides use (and clears their layouts' overrides), so new slides keep it (#891)"
+      },
+      {
+        "date": "2026-10-23",
         "text": "A shape with no fill and no line (a text box) no longer draws its shape-level glow as a halo round its box; the text's own glow is all PowerPoint shows"
       },
       {
@@ -272,6 +276,10 @@
       {
         "date": "2026-10-20",
         "text": "Chart number formats with explicit empty positive, negative or zero sections hide the corresponding labels, including all values with three semicolons; a blank whole format still uses General. Synthetic formatter regressions"
+      },
+      {
+        "date": "2026-10-19",
+        "text": "README: the Linux runtime libraries a tarball or musl install has to provide — the dlopened X11/Vulkan/GL/dialog libraries with their Alpine and Void package names, the software-Vulkan fallback, and why fontconfig and freetype are not among them (#955)"
       },
       {
         "date": "2026-10-18",
@@ -316,6 +324,10 @@
       {
         "date": "2026-10-17",
         "text": "While a placeholder's text is being edited, a click on a shape in front of it selects that shape instead of moving the caret, as in PowerPoint (#931)"
+      },
+      {
+        "date": "2026-10-16",
+        "text": "Symbol-font characters: a run's U+F0xx symbol code (from <a:sym typeface=\"Symbol\"/>) now draws from the installed Symbol face even when it has no private-use mapping — Apple's Symbol on macOS maps the glyphs to real Unicode, so the code is remapped to that character (the Adobe Symbol encoding) instead of falling to a look-alike. Bullets and metafile text take the same remap"
       },
       {
         "date": "2026-10-16",
@@ -384,18 +396,6 @@
       {
         "date": "2026-10-14",
         "text": "Insert › Icons: a gallery of Lucide stroke icons (release 1.56.0) inserted as custom shapes, no fill, round stroke scaled from the 24-unit design"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Size and Position dialog: height, width, rotation, scale and lock aspect ratio in one undo step, from Shape Format › Size and the shape menu"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Review: Previous and Next comment walk every comment in the deck; the Comments pane lists every slide and highlights the one you landed on"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "File › New starter decks: Briefing, Lesson, Pitch, Field Notes, Quarterly and Evening Talk, original text on our themes (file.new {template}, file.templates). The large template gallery is still open"
       }
     ]
   },
@@ -406,39 +406,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 95,
-    "revisions_7d": 28,
+    "revisions": 98,
+    "revisions_7d": 31,
     "last_revision": {
-      "ts": "2026-10-23T21:11:13Z",
+      "ts": "2026-10-23T21:28:02Z",
       "kind": "content",
-      "commit": "964d470",
-      "commit_full": "964d4701222001268fcd6118eccb9eb5b6d698d9",
-      "message": "# Conflicts: (#1091)"
+      "commit": "a58bdbc",
+      "commit_full": "a58bdbc756583070eadd1a16b9acbe8a71498604",
+      "message": "Docs: Apply to All reaches the slide masters (#891); keep gaps.md a list of shortfalls"
     },
     "last_update": {
-      "ts": "2026-10-23T21:11:13Z",
+      "ts": "2026-10-23T21:28:02Z",
       "kind": "content",
-      "commit": "964d470",
-      "commit_full": "964d4701222001268fcd6118eccb9eb5b6d698d9",
-      "message": "# Conflicts: (#1091)"
+      "commit": "a58bdbc",
+      "commit_full": "a58bdbc756583070eadd1a16b9acbe8a71498604",
+      "message": "Docs: Apply to All reaches the slide masters (#891); keep gaps.md a list of shortfalls"
     },
     "self_reported": "2026-10-23"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.8,
+    "score": 17.0,
     "active_days_7d": 6,
-    "changes_7d": 85,
-    "changes_14d": 422,
-    "housekeeping_7d": 11,
+    "changes_7d": 90,
+    "changes_14d": 427,
+    "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-23T21:13:40Z",
-      "commit": "137685b",
-      "commit_full": "137685b098e38d06bcd06048e886724b7139d06d",
-      "subject": "Merge pull request #986 from HyakoV3/fix/974-modern-comment-namespaces"
+      "ts": "2026-10-23T21:22:14Z",
+      "commit": "7871ff3",
+      "commit_full": "7871ff3d62ee6d0135aa1b111ed57d8838d75348",
+      "subject": "Merge pull request #1076 from fchinu/format_text"
     },
-    "last_commit_ts": "2026-10-23T21:13:40Z",
+    "last_commit_ts": "2026-10-23T21:28:02Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
       17,
@@ -454,7 +454,7 @@
       0,
       4,
       7,
-      47
+      52
     ],
     "days": [
       {
@@ -727,20 +727,20 @@
       },
       {
         "d": "2026-10-23",
-        "code": 47,
-        "other": 2,
+        "code": 52,
+        "other": 4,
         "samples": [
           {
-            "commit": "137685b",
-            "subject": "Merge pull request #986 from HyakoV3/fix/974-modern-comment-namespaces"
+            "commit": "7871ff3",
+            "subject": "Merge pull request #1076 from fchinu/format_text"
           },
           {
-            "commit": "9861de3",
-            "subject": "Media: a negative (padding) video crop keeps the letterboxed frame"
+            "commit": "8b912c1",
+            "subject": "Merge pull request #1002 from Silvertree2010/fix/h2821-find-replace-ignores-line-breaks"
           },
           {
-            "commit": "48066c4",
-            "subject": "# Conflicts: (#1008)"
+            "commit": "37ac384",
+            "subject": "Merge pull request #896 from Bryson14/feat/symbol-font-mac-remap"
           }
         ]
       }
@@ -3086,7 +3086,76 @@
       "breadth_pct": 62.0,
       "full_prev": 55.0,
       "kind": "content"
+    },
+    {
+      "commit": "37ac384",
+      "commit_full": "37ac38447d2905965a267710a3165002322e06f8",
+      "commit_date": "2026-10-23T17:22:13-04:00",
+      "ts": "2026-10-23T21:22:13Z",
+      "message": "Merge pull request #896 from Bryson14/feat/symbol-font-mac-remap",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-23",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "10d911c",
+      "commit_full": "10d911cdd6f4c86621ba2c3501d0f9e049f0e248",
+      "commit_date": "2026-10-23T17:22:14-04:00",
+      "ts": "2026-10-23T21:22:14Z",
+      "message": "Merge pull request #1037 from FabPei/agent/issue-955",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-23",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "a58bdbc",
+      "commit_full": "a58bdbc756583070eadd1a16b9acbe8a71498604",
+      "commit_date": "2026-10-23T17:28:02-04:00",
+      "ts": "2026-10-23T21:28:02Z",
+      "message": "Docs: Apply to All reaches the slide masters (#891); keep gaps.md a list of shortfalls",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-23",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T21:18:17+00:00"
+  "updated_at": "2026-10-23T21:55:00+00:00"
 }

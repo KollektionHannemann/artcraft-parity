@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "17ed21d",
-  "latest_commit_date": "2026-10-24T02:56:55+07:00",
-  "latest_message": "M6: Dev Mode tail: imports in layer trees, compare with versions, an inspect-only canvas (#538)",
+  "latest_commit": "8167f13",
+  "latest_commit_date": "2026-10-24T04:18:55+07:00",
+  "latest_message": "M12: Boards: a collaborative whiteboard file kind (#1229)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Figma Design (desktop app 126.10.7)",
-    "last_updated": "2026-10-17",
+    "last_updated": "2026-10-24",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -232,6 +232,10 @@
       {
         "label": "AI features",
         "pct": 0.0
+      },
+      {
+        "label": "Boards (whiteboarding; not in the weighted numbers)",
+        "pct": 35.0
       }
     ],
     "upcoming": [
@@ -242,6 +246,10 @@
       "Multiplayer (M9): accounts and teams on top of the live sessions and the standalone server (transport, hosting, invite links that open the app, document sync, presence with remote text carets, cursor chat and spotlight, per-user undo, reconnect with offline edits, collision-free ids for styles, variables and comments, the browser client, figcraft-server with persistence and share links to edit or view, team libraries on the server landed): 42–84 h."
     ],
     "progress": [
+      {
+        "date": "2026-10-24",
+        "text": "· Boards (M12): File ▸ New board makes a board, a file kind of its own saved in .figcraft and carried to people joining a live session. Sticky notes (8 colours, text that shrinks as the note grows, the author's name, Shift+Cmd/Ctrl+Enter for the next one), shapes with text (7 outlines), connectors that re-route when what they join moves (computed in the engine's normalize pass, so local edits, undo and others' edits agree), marker, highlighter and eraser, stamps with the placer's name on hover; a board toolbar, a contextual bar over the selection and the Design panel hidden until asked for; prototyping and Dev Mode refuse on boards. Design files and boards have their own marks (a pen nib, a note) on tabs, the home screen and the Open files list. Checked in the app, with two app instances in one live session, and through MCP; the web build compiles (boards-parity)."
+      },
       {
         "date": "2026-10-17",
         "text": "· Control channel while the window is minimised (M8, #720): a minimised or covered window answers every request that acts on the app's state (edits, ui.inspect, ui.pointer, ui.key, ui.type, ui.set, app.quit…) without drawing, and what needs a drawn frame (ui.screenshot, ui.input, window.new) is an error at once; before, those waited up to 60 s and held up every later request on the connection (an attached agent's inspectui or window screenshot stalled until the window came back). Measured on Windows 11, minimised: requests ~100 ms each (eframe wakes a minimised window at most ten times a second; ~2 ms on screen), a window screenshot fails in ~100 ms instead of 60 s, idle CPU 0. Numbers unchanged."
@@ -397,10 +405,6 @@
       {
         "date": "2026-10-12",
         "text": "· Keyboard shortcut parity (gap 4): a table test with a row for each of the 129"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "· Plugin directory on figcraft-server (gap 6): publish a plugin folder with the server key"
       }
     ]
   },
@@ -420,39 +424,39 @@
     }
   },
   "roadmap": {
-    "revisions": 102,
-    "revisions_7d": 14,
+    "revisions": 103,
+    "revisions_7d": 15,
     "last_revision": {
-      "ts": "2026-10-23T19:56:55Z",
+      "ts": "2026-10-23T21:18:55Z",
       "kind": "estimates",
-      "commit": "17ed21d",
-      "commit_full": "17ed21d1285192bc12eb9fe4c07e0fa602d7a4c6",
-      "message": "M6: Dev Mode tail: imports in layer trees, compare with versions, an inspect-only canvas (#538)"
+      "commit": "8167f13",
+      "commit_full": "8167f13a6a416ca61fcb505a7eaf6be383f6c5c0",
+      "message": "M12: Boards: a collaborative whiteboard file kind (#1229)"
     },
     "last_update": {
-      "ts": "2026-10-23T19:56:55Z",
+      "ts": "2026-10-23T21:18:55Z",
       "kind": "estimates",
-      "commit": "17ed21d",
-      "commit_full": "17ed21d1285192bc12eb9fe4c07e0fa602d7a4c6",
-      "message": "M6: Dev Mode tail: imports in layer trees, compare with versions, an inspect-only canvas (#538)"
+      "commit": "8167f13",
+      "commit_full": "8167f13a6a416ca61fcb505a7eaf6be383f6c5c0",
+      "message": "M12: Boards: a collaborative whiteboard file kind (#1229)"
     },
-    "self_reported": "2026-10-17"
+    "self_reported": "2026-10-24"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.2,
+    "score": 17.3,
     "active_days_7d": 6,
-    "changes_7d": 103,
-    "changes_14d": 291,
+    "changes_7d": 104,
+    "changes_14d": 292,
     "housekeeping_7d": 18,
     "last_code_change": {
-      "ts": "2026-10-23T19:56:55Z",
-      "commit": "17ed21d",
-      "commit_full": "17ed21d1285192bc12eb9fe4c07e0fa602d7a4c6",
-      "subject": "M6: Dev Mode tail: imports in layer trees, compare with versions, an inspect-only canvas (#538)"
+      "ts": "2026-10-23T21:18:55Z",
+      "commit": "8167f13",
+      "commit_full": "8167f13a6a416ca61fcb505a7eaf6be383f6c5c0",
+      "subject": "M12: Boards: a collaborative whiteboard file kind (#1229)"
     },
-    "last_commit_ts": "2026-10-23T21:01:52Z",
+    "last_commit_ts": "2026-10-23T21:18:55Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       51,
@@ -468,7 +472,7 @@
       0,
       16,
       4,
-      8
+      9
     ],
     "days": [
       {
@@ -726,9 +730,13 @@
       },
       {
         "d": "2026-10-23",
-        "code": 8,
+        "code": 9,
         "other": 3,
         "samples": [
+          {
+            "commit": "8167f13",
+            "subject": "M12: Boards: a collaborative whiteboard file kind (#1229)"
+          },
           {
             "commit": "17ed21d",
             "subject": "M6: Dev Mode tail: imports in layer trees, compare with versions, an inspect-only canvas (#538)"
@@ -736,10 +744,6 @@
           {
             "commit": "70f702c",
             "subject": "i18n: a missing translation fails no check; cargo xtask i18n-report lists them (#1228)"
-          },
-          {
-            "commit": "6ba0223",
-            "subject": "Tests: the paragraph indent test loads system fonts and skips only without glyphs (#1227)"
           }
         ]
       }
@@ -3263,7 +3267,30 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "estimates"
+    },
+    {
+      "commit": "8167f13",
+      "commit_full": "8167f13a6a416ca61fcb505a7eaf6be383f6c5c0",
+      "commit_date": "2026-10-24T04:18:55+07:00",
+      "ts": "2026-10-23T21:18:55Z",
+      "message": "M12: Boards: a collaborative whiteboard file kind (#1229)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-24",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "estimates"
     }
   ],
-  "updated_at": "2026-10-23T21:18:10+00:00"
+  "updated_at": "2026-10-23T21:54:54+00:00"
 }
