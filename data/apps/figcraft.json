@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "d6e8a6e",
-  "latest_commit_date": "2026-10-24T02:02:19+07:00",
-  "latest_message": "Docs: roadmap entries for the community PRs in #507, #510, #529 and #530 (#587)",
+  "latest_commit": "17ed21d",
+  "latest_commit_date": "2026-10-24T02:56:55+07:00",
+  "latest_message": "M6: Dev Mode tail: imports in layer trees, compare with versions, an inspect-only canvas (#538)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -207,7 +207,7 @@
       },
       {
         "label": "Dev Mode / inspect",
-        "pct": 96.0
+        "pct": 97.0
       },
       {
         "label": "Comments, versions, misc",
@@ -285,6 +285,10 @@
       {
         "date": "2026-10-15",
         "text": "· Alt-drag copies snap to their original and Duplicate (Cmd+D) repeats the last copy's offset (M1, #283). Numbers unchanged."
+      },
+      {
+        "date": "2026-10-15",
+        "text": "· Dev Mode tail (M6, gap 16): generated layer trees start with the import lines of the connected components they call, once each per language; Compare changes takes any saved version as the before; a behaviour suite made the Dev Mode canvas inspect-only (no moving, resizing, drawing or editing; menus and shortcuts refuse design edits with a note), added Changed to the ready list and refused statuses on layers inside frames; read-only plugins show their panels from the Inspect tab. Dev Mode 97% / 76%."
       },
       {
         "date": "2026-10-14",
@@ -397,10 +401,6 @@
       {
         "date": "2026-10-12",
         "text": "· Plugin directory on figcraft-server (gap 6): publish a plugin folder with the server key"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "· Plugin widgets and the panel tail (gap 6, plugin API 3; older plugins run unchanged): a widget"
       }
     ]
   },
@@ -420,39 +420,39 @@
     }
   },
   "roadmap": {
-    "revisions": 101,
-    "revisions_7d": 13,
+    "revisions": 102,
+    "revisions_7d": 14,
     "last_revision": {
-      "ts": "2026-10-23T19:02:19Z",
-      "kind": "content",
-      "commit": "d6e8a6e",
-      "commit_full": "d6e8a6e8745434b0f4e495b5216ad19b4a820722",
-      "message": "Docs: roadmap entries for the community PRs in #507, #510, #529 and #530 (#587)"
+      "ts": "2026-10-23T19:56:55Z",
+      "kind": "estimates",
+      "commit": "17ed21d",
+      "commit_full": "17ed21d1285192bc12eb9fe4c07e0fa602d7a4c6",
+      "message": "M6: Dev Mode tail: imports in layer trees, compare with versions, an inspect-only canvas (#538)"
     },
     "last_update": {
-      "ts": "2026-10-23T19:02:19Z",
-      "kind": "content",
-      "commit": "d6e8a6e",
-      "commit_full": "d6e8a6e8745434b0f4e495b5216ad19b4a820722",
-      "message": "Docs: roadmap entries for the community PRs in #507, #510, #529 and #530 (#587)"
+      "ts": "2026-10-23T19:56:55Z",
+      "kind": "estimates",
+      "commit": "17ed21d",
+      "commit_full": "17ed21d1285192bc12eb9fe4c07e0fa602d7a4c6",
+      "message": "M6: Dev Mode tail: imports in layer trees, compare with versions, an inspect-only canvas (#538)"
     },
     "self_reported": "2026-10-17"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.0,
+    "score": 17.2,
     "active_days_7d": 6,
-    "changes_7d": 102,
-    "changes_14d": 290,
+    "changes_7d": 103,
+    "changes_14d": 291,
     "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-10-23T19:43:21Z",
-      "commit": "70f702c",
-      "commit_full": "70f702ca170f1c44e439a5965e8f57090e39dd3f",
-      "subject": "i18n: a missing translation fails no check; cargo xtask i18n-report lists them (#1228)"
+      "ts": "2026-10-23T19:56:55Z",
+      "commit": "17ed21d",
+      "commit_full": "17ed21d1285192bc12eb9fe4c07e0fa602d7a4c6",
+      "subject": "M6: Dev Mode tail: imports in layer trees, compare with versions, an inspect-only canvas (#538)"
     },
-    "last_commit_ts": "2026-10-23T19:43:21Z",
+    "last_commit_ts": "2026-10-23T19:56:55Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       51,
@@ -468,7 +468,7 @@
       0,
       16,
       4,
-      7
+      8
     ],
     "days": [
       {
@@ -726,9 +726,13 @@
       },
       {
         "d": "2026-10-23",
-        "code": 7,
+        "code": 8,
         "other": 2,
         "samples": [
+          {
+            "commit": "17ed21d",
+            "subject": "M6: Dev Mode tail: imports in layer trees, compare with versions, an inspect-only canvas (#538)"
+          },
           {
             "commit": "70f702c",
             "subject": "i18n: a missing translation fails no check; cargo xtask i18n-report lists them (#1228)"
@@ -736,10 +740,6 @@
           {
             "commit": "6ba0223",
             "subject": "Tests: the paragraph indent test loads system fonts and skips only without glyphs (#1227)"
-          },
-          {
-            "commit": "c481023",
-            "subject": "Packaging: pin the signing client and appimagetool, and check their hashes (#950)"
           }
         ]
       }
@@ -3240,7 +3240,30 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "17ed21d",
+      "commit_full": "17ed21d1285192bc12eb9fe4c07e0fa602d7a4c6",
+      "commit_date": "2026-10-24T02:56:55+07:00",
+      "ts": "2026-10-23T19:56:55Z",
+      "message": "M6: Dev Mode tail: imports in layer trees, compare with versions, an inspect-only canvas (#538)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-17",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "estimates"
     }
   ],
-  "updated_at": "2026-10-23T19:53:06+00:00"
+  "updated_at": "2026-10-23T20:14:04+00:00"
 }

@@ -436,16 +436,16 @@
     "level": "buzzing",
     "score": 20.7,
     "active_days_7d": 6,
-    "changes_7d": 342,
-    "changes_14d": 995,
+    "changes_7d": 343,
+    "changes_14d": 996,
     "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-10-23T18:24:37Z",
-      "commit": "c795e3c",
-      "commit_full": "c795e3cd417711bfff7b38dd8deaddc3c6854396",
-      "subject": "CI: one test binary per crate, nextest, line tables only (#4025)"
+      "ts": "2026-10-23T20:00:19Z",
+      "commit": "806a945",
+      "commit_full": "806a945d8507f78c50ca5f4c7cd52fd009eee478",
+      "subject": "i18n tests: missing translations never fail; one report lists them (#4043)"
     },
-    "last_commit_ts": "2026-10-23T18:50:49Z",
+    "last_commit_ts": "2026-10-23T20:00:19Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       130,
@@ -461,7 +461,7 @@
       0,
       14,
       5,
-      52
+      53
     ],
     "days": [
       {
@@ -736,9 +736,13 @@
       },
       {
         "d": "2026-10-23",
-        "code": 52,
+        "code": 53,
         "other": 1,
         "samples": [
+          {
+            "commit": "806a945",
+            "subject": "i18n tests: missing translations never fail; one report lists them (#4043)"
+          },
           {
             "commit": "c795e3c",
             "subject": "CI: one test binary per crate, nextest, line tables only (#4025)"
@@ -746,10 +750,6 @@
           {
             "commit": "c539994",
             "subject": "Translate ribbon disabled-reason tooltips (#2678) (#2680)"
-          },
-          {
-            "commit": "8919642",
-            "subject": "Mail merge: go to any record, and merge or print a range of records (#3028) (#3894)"
           }
         ]
       }
@@ -10114,5 +10114,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T19:05:00+00:00"
+  "updated_at": "2026-10-23T20:14:07+00:00"
 }
