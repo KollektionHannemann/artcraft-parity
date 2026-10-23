@@ -388,16 +388,16 @@
     "level": "active",
     "score": 17.7,
     "active_days_7d": 6,
-    "changes_7d": 119,
-    "changes_14d": 541,
+    "changes_7d": 120,
+    "changes_14d": 542,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-23T17:38:11Z",
-      "commit": "fbeccbe",
-      "commit_full": "fbeccbe9bc5464dbc0fecbf0512b3e04c51f55dd",
-      "subject": "Fonts: pin craft-fonts bfcbf71; CRAFT_FONTS_REQUIRED fails without CRAFT_FONTS_DIR (#2646)"
+      "ts": "2026-10-23T18:00:44Z",
+      "commit": "c3b4c4d",
+      "commit_full": "c3b4c4deb0db176de32fbac0ea0ce94cbc78d75a",
+      "subject": "Packaging: pin the signing client and appimagetool, and check their hashes (#2610)"
     },
-    "last_commit_ts": "2026-10-23T17:38:11Z",
+    "last_commit_ts": "2026-10-23T18:00:44Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       198,
@@ -413,7 +413,7 @@
       0,
       11,
       5,
-      59
+      60
     ],
     "days": [
       {
@@ -813,9 +813,13 @@
       },
       {
         "d": "2026-10-23",
-        "code": 59,
+        "code": 60,
         "other": 3,
         "samples": [
+          {
+            "commit": "c3b4c4d",
+            "subject": "Packaging: pin the signing client and appimagetool, and check their hashes (#2610)"
+          },
           {
             "commit": "fbeccbe",
             "subject": "Fonts: pin craft-fonts bfcbf71; CRAFT_FONTS_REQUIRED fails without CRAFT_FONTS_DIR (#2646)"
@@ -823,10 +827,6 @@
           {
             "commit": "4743cfb",
             "subject": "fix(engine): resolve stored media paths with craft-docpath's resolve_absolute (#2609)"
-          },
-          {
-            "commit": "0a88126",
-            "subject": "CI: xtask ci in the dev profile, one test binary per crate, nextest (#2860)"
           }
         ]
       }
@@ -1293,5 +1293,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T17:53:55+00:00"
+  "updated_at": "2026-10-23T18:15:00+00:00"
 }

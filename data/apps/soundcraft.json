@@ -342,18 +342,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 12.5,
+    "score": 12.7,
     "active_days_7d": 5,
-    "changes_7d": 77,
-    "changes_14d": 236,
+    "changes_7d": 78,
+    "changes_14d": 237,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-23T17:37:39Z",
-      "commit": "ab1849c",
-      "commit_full": "ab1849cbf8f3f046ad626124edce25436367b45e",
-      "subject": "Audio: check the WAVE behind a skipped RIFF form; hold egui at 0.36 in Dependabot (#978)"
+      "ts": "2026-10-23T18:00:38Z",
+      "commit": "e8abd44",
+      "commit_full": "e8abd447128f604fc49251bc6b790644c1e14507",
+      "subject": "CI: one test binary per crate, nextest, line tables only (#985)"
     },
-    "last_commit_ts": "2026-10-23T17:37:39Z",
+    "last_commit_ts": "2026-10-23T18:00:38Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
       23,
@@ -369,7 +369,7 @@
       0,
       1,
       12,
-      9
+      10
     ],
     "days": [
       {
@@ -607,9 +607,13 @@
       },
       {
         "d": "2026-10-23",
-        "code": 9,
+        "code": 10,
         "other": 0,
         "samples": [
+          {
+            "commit": "e8abd44",
+            "subject": "CI: one test binary per crate, nextest, line tables only (#985)"
+          },
           {
             "commit": "ab1849c",
             "subject": "Audio: check the WAVE behind a skipped RIFF form; hold egui at 0.36 in Dependabot (#978)"
@@ -617,10 +621,6 @@
           {
             "commit": "265645a",
             "subject": "Sessions: resolve stored source paths with craft-docpath's resolve_absolute (#826)"
-          },
-          {
-            "commit": "9b68982",
-            "subject": "autosave: give every session its own folder; keep the tests apart from coarse mtimes (#579) (#594)"
           }
         ]
       }
@@ -1174,5 +1174,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T17:54:32+00:00"
+  "updated_at": "2026-10-23T18:15:17+00:00"
 }
