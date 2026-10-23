@@ -426,18 +426,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.9,
+    "score": 15.6,
     "active_days_7d": 5,
-    "changes_7d": 64,
-    "changes_14d": 348,
+    "changes_7d": 66,
+    "changes_14d": 350,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-10-23T14:02:32Z",
-      "commit": "08718d7",
-      "commit_full": "08718d712cac82256bd7fec64983bfc0260be692",
-      "subject": "fix: keep package temp files owner-writable (SonarCloud rust:S2612) (#1658)"
+      "ts": "2026-10-23T15:16:54Z",
+      "commit": "2e36dcf",
+      "commit_full": "2e36dcf909627c8f0e5662fe6b4825b1c1c24420",
+      "subject": "packaging: harden shell scripts (SonarCloud S7688/S7679/S7682/S131) (#1640)"
     },
-    "last_commit_ts": "2026-10-23T14:02:32Z",
+    "last_commit_ts": "2026-10-23T15:16:54Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       70,
@@ -453,7 +453,7 @@
       0,
       8,
       19,
-      2
+      4
     ],
     "days": [
       {
@@ -834,16 +834,20 @@
       },
       {
         "d": "2026-10-23",
-        "code": 2,
+        "code": 4,
         "other": 0,
         "samples": [
           {
-            "commit": "08718d7",
-            "subject": "fix: keep package temp files owner-writable (SonarCloud rust:S2612) (#1658)"
+            "commit": "2e36dcf",
+            "subject": "packaging: harden shell scripts (SonarCloud S7688/S7679/S7682/S131) (#1640)"
           },
           {
-            "commit": "e74208d",
-            "subject": "CI: one test binary per crate, nextest, line tables only (#1642)"
+            "commit": "df1db16",
+            "subject": "web: let the browser zoom the page (SonarCloud Web:S7926) (#1641)"
+          },
+          {
+            "commit": "08718d7",
+            "subject": "fix: keep package temp files owner-writable (SonarCloud rust:S2612) (#1658)"
           }
         ]
       }
@@ -3495,5 +3499,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T14:02:38+00:00"
+  "updated_at": "2026-10-23T16:01:37+00:00"
 }

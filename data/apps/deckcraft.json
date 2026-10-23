@@ -427,18 +427,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 11.2,
-    "active_days_7d": 5,
-    "changes_7d": 38,
-    "changes_14d": 375,
+    "score": 12.8,
+    "active_days_7d": 6,
+    "changes_7d": 40,
+    "changes_14d": 377,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-10-22T13:50:16Z",
-      "commit": "a243538",
-      "commit_full": "a2435383b156b02278a63d09b0ffaa6bd7af3d4d",
-      "subject": "Clear animation triggers that point at deleted shapes (#996)"
+      "ts": "2026-10-23T15:20:42Z",
+      "commit": "0f4fffc",
+      "commit_full": "0f4fffcf6c71ffa16029d07ac23752fedd783547",
+      "subject": "Use chrono instead of hand-rolled UTC conversion (#1116)"
     },
-    "last_commit_ts": "2026-10-22T19:37:20Z",
+    "last_commit_ts": "2026-10-23T15:20:42Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
       17,
@@ -454,7 +454,7 @@
       0,
       4,
       7,
-      0
+      2
     ],
     "days": [
       {
@@ -722,6 +722,21 @@
           {
             "commit": "3f399dd",
             "subject": "Reject invalid slide index params instead of using the selection (#1063)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-23",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "0f4fffc",
+            "subject": "Use chrono instead of hand-rolled UTC conversion (#1116)"
+          },
+          {
+            "commit": "bdcb532",
+            "subject": "packaging: [[ ]] tests, named positional parameters, explicit returns and a default case (SonarCloud S7688, S7679, S7682, S131) (#1212)"
           }
         ]
       }
@@ -2724,5 +2739,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T00:13:02+00:00"
+  "updated_at": "2026-10-23T16:01:50+00:00"
 }

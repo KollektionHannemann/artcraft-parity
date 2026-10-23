@@ -296,18 +296,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.1,
+    "score": 15.4,
     "active_days_7d": 5,
-    "changes_7d": 84,
-    "changes_14d": 417,
+    "changes_7d": 87,
+    "changes_14d": 420,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-10-23T14:44:42Z",
-      "commit": "dd325c7",
-      "commit_full": "dd325c7ab8556e7ff33d64391c78e2316561da55",
-      "subject": "segment: bound checkpoint tensors and pickle work (#2192)"
+      "ts": "2026-10-23T15:29:09Z",
+      "commit": "f6ef1a7",
+      "commit_full": "f6ef1a790625657259f449f3f4f0773d7df449bb",
+      "subject": "Use chrono instead of hand-rolled UTC conversion (#2023)"
     },
-    "last_commit_ts": "2026-10-23T14:44:42Z",
+    "last_commit_ts": "2026-10-23T15:29:09Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       12,
@@ -323,7 +323,7 @@
       0,
       4,
       10,
-      11
+      14
     ],
     "days": [
       {
@@ -701,20 +701,20 @@
       },
       {
         "d": "2026-10-23",
-        "code": 11,
+        "code": 14,
         "other": 1,
         "samples": [
           {
-            "commit": "dd325c7",
-            "subject": "segment: bound checkpoint tensors and pickle work (#2192)"
+            "commit": "f6ef1a7",
+            "subject": "Use chrono instead of hand-rolled UTC conversion (#2023)"
           },
           {
-            "commit": "250b341",
-            "subject": "fix: suppress the stat check's taint finding (SonarCloud) (#2218)"
+            "commit": "49d1797",
+            "subject": "packaging: use [[ tests, named locals and explicit returns (SonarCloud S7688/S7679/S7682) (#2187)"
           },
           {
-            "commit": "9b735dc",
-            "subject": "fix: document the AE checker's operator-supplied CLI path (SonarCloud) (#2217)"
+            "commit": "bd3ae8a",
+            "subject": "xtask: use unique temporary directories for bench tests (#2196)"
           }
         ]
       }
@@ -1089,5 +1089,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T15:01:05+00:00"
+  "updated_at": "2026-10-23T16:01:29+00:00"
 }

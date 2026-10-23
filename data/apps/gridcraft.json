@@ -402,18 +402,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 12.9,
+    "score": 13.1,
     "active_days_7d": 6,
-    "changes_7d": 51,
-    "changes_14d": 422,
+    "changes_7d": 53,
+    "changes_14d": 424,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-23T14:15:31Z",
-      "commit": "f1e29fa",
-      "commit_full": "f1e29fa82868fe1a099fc90740a3849f6c8b8ff3",
-      "subject": "Review fixes for #2267 and #2292"
+      "ts": "2026-10-23T15:48:02Z",
+      "commit": "bdf8b8c",
+      "commit_full": "bdf8b8cc755ae6dfc2266d23b3ede43329114339",
+      "subject": "Use chrono instead of hand-rolled UTC conversion (#2121)"
     },
-    "last_commit_ts": "2026-10-23T14:15:31Z",
+    "last_commit_ts": "2026-10-23T15:48:02Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       83,
@@ -429,7 +429,7 @@
       0,
       2,
       3,
-      16
+      18
     ],
     "days": [
       {
@@ -674,20 +674,20 @@
       },
       {
         "d": "2026-10-23",
-        "code": 16,
+        "code": 18,
         "other": 0,
         "samples": [
           {
+            "commit": "bdf8b8c",
+            "subject": "Use chrono instead of hand-rolled UTC conversion (#2121)"
+          },
+          {
+            "commit": "168acc5",
+            "subject": "packaging: shell, PowerShell and web page fixes (SonarCloud S7688, S7679, S7682, S8677, S7926) (#2323)"
+          },
+          {
             "commit": "f1e29fa",
             "subject": "Review fixes for #2267 and #2292"
-          },
-          {
-            "commit": "fe2f9a7",
-            "subject": "Merge PR #2357"
-          },
-          {
-            "commit": "a09454e",
-            "subject": "Merge PR #2315"
           }
         ]
       }
@@ -2224,5 +2224,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T15:01:24+00:00"
+  "updated_at": "2026-10-23T16:01:58+00:00"
 }
