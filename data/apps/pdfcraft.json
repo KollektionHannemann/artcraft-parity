@@ -433,16 +433,16 @@
     "level": "buzzing",
     "score": 23.4,
     "active_days_7d": 6,
-    "changes_7d": 201,
-    "changes_14d": 828,
+    "changes_7d": 202,
+    "changes_14d": 829,
     "housekeeping_7d": 24,
     "last_code_change": {
-      "ts": "2026-10-23T19:42:18Z",
-      "commit": "8d99a5c",
-      "commit_full": "8d99a5ce1f909c1ffad9e2a866d62644be0d00cf",
-      "subject": "Translations: a missing string never fails a test; xtask ci prints the gaps (#4302)"
+      "ts": "2026-10-23T20:41:52Z",
+      "commit": "c4a6dd6",
+      "commit_full": "c4a6dd6be373df4a68af51ba6af15a4b4261245f",
+      "subject": "Assets: don't hash translation catalogs in ATTRIBUTION.toml (#4284)"
     },
-    "last_commit_ts": "2026-10-23T19:42:18Z",
+    "last_commit_ts": "2026-10-23T20:41:52Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       136,
@@ -458,7 +458,7 @@
       0,
       13,
       59,
-      43
+      44
     ],
     "days": [
       {
@@ -887,9 +887,13 @@
       },
       {
         "d": "2026-10-23",
-        "code": 43,
+        "code": 44,
         "other": 7,
         "samples": [
+          {
+            "commit": "c4a6dd6",
+            "subject": "Assets: don't hash translation catalogs in ATTRIBUTION.toml (#4284)"
+          },
           {
             "commit": "8d99a5c",
             "subject": "Translations: a missing string never fails a test; xtask ci prints the gaps (#4302)"
@@ -897,10 +901,6 @@
           {
             "commit": "c9ac28a",
             "subject": "test(automation): give sign_document a real digital ID and document in the hostile-arguments sweep (#4277)"
-          },
-          {
-            "commit": "045c8b3",
-            "subject": "CI: nextest, line tables only, one wasm check (#4269)"
           }
         ]
       }
@@ -4909,5 +4909,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T19:52:50+00:00"
+  "updated_at": "2026-10-23T20:55:46+00:00"
 }

@@ -287,18 +287,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.6,
+    "score": 14.7,
     "active_days_7d": 5,
-    "changes_7d": 119,
-    "changes_14d": 559,
+    "changes_7d": 120,
+    "changes_14d": 560,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-23T19:40:12Z",
-      "commit": "dd1f053",
-      "commit_full": "dd1f0531ac553b2c614dd1bc7d80406c3d29d767",
-      "subject": "i18n: missing translations never fail; cargo xtask i18n reports them (#2013)"
+      "ts": "2026-10-23T20:42:01Z",
+      "commit": "d3e6111",
+      "commit_full": "d3e6111cf115677053d278b298fe90e815b09e49",
+      "subject": "Xrefs and data links: resolve stored paths with craft-docpath's resolve_absolute (#1750)"
     },
-    "last_commit_ts": "2026-10-23T19:40:12Z",
+    "last_commit_ts": "2026-10-23T20:42:01Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       191,
@@ -314,7 +314,7 @@
       0,
       4,
       25,
-      7
+      8
     ],
     "days": [
       {
@@ -543,9 +543,13 @@
       },
       {
         "d": "2026-10-23",
-        "code": 7,
+        "code": 8,
         "other": 2,
         "samples": [
+          {
+            "commit": "d3e6111",
+            "subject": "Xrefs and data links: resolve stored paths with craft-docpath's resolve_absolute (#1750)"
+          },
           {
             "commit": "dd1f053",
             "subject": "i18n: missing translations never fail; cargo xtask i18n reports them (#2013)"
@@ -553,10 +557,6 @@
           {
             "commit": "9cf115e",
             "subject": "CI: one test binary per crate, nextest, line tables only (#1989)"
-          },
-          {
-            "commit": "9d8f16c",
-            "subject": "Build main again after the #1957 dependency bump (#1991)"
           }
         ]
       }
@@ -966,5 +966,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T19:53:21+00:00"
+  "updated_at": "2026-10-23T20:56:15+00:00"
 }
