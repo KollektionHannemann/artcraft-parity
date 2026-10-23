@@ -293,18 +293,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.9,
-    "active_days_7d": 6,
-    "changes_7d": 261,
-    "changes_14d": 1533,
+    "score": 22.9,
+    "active_days_7d": 7,
+    "changes_7d": 262,
+    "changes_14d": 1534,
     "housekeeping_7d": 20,
     "last_code_change": {
-      "ts": "2026-10-22T23:44:59Z",
-      "commit": "ee0d23f",
-      "commit_full": "ee0d23f77a5c49314558642860bc39101934b60e",
-      "subject": "security: stop double decompression of gzip-compressed SVG (#8505)"
+      "ts": "2026-10-23T12:38:15Z",
+      "commit": "1695f32",
+      "commit_full": "1695f323e6cfd3e94d6678c1848810b49ec78ea1",
+      "subject": "fix(psd): retain pattern budget charges after parse failures (#8767)"
     },
-    "last_commit_ts": "2026-10-23T00:06:08Z",
+    "last_commit_ts": "2026-10-23T12:38:15Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       255,
@@ -320,7 +320,7 @@
       3,
       11,
       48,
-      0
+      1
     ],
     "days": [
       {
@@ -762,9 +762,14 @@
       },
       {
         "d": "2026-10-23",
-        "code": 0,
+        "code": 1,
         "other": 1,
-        "samples": []
+        "samples": [
+          {
+            "commit": "1695f32",
+            "subject": "fix(psd): retain pattern budget charges after parse failures (#8767)"
+          }
+        ]
       }
     ]
   },
@@ -1114,5 +1119,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T01:11:24+00:00"
+  "updated_at": "2026-10-23T13:07:36+00:00"
 }
