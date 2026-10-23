@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/lightcraft",
   "roadmap_url": "https://github.com/storytold/lightcraft/blob/main/ROADMAP.md",
-  "latest_commit": "31ee264",
-  "latest_commit_date": "2026-10-22T00:25:29-04:00",
-  "latest_message": "Merge PR #2515: integration of 85 reviewed PRs (round 2)",
+  "latest_commit": "f3bb7a9",
+  "latest_commit_date": "2026-10-23T13:34:30-04:00",
+  "latest_message": "CI: one test binary per crate, line tables only, one WASM check (#2710)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -325,39 +325,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 9,
-    "revisions_7d": 1,
+    "revisions": 10,
+    "revisions_7d": 2,
     "last_revision": {
-      "ts": "2026-10-22T04:25:29Z",
-      "kind": "estimates",
-      "commit": "31ee264",
-      "commit_full": "31ee2643cf208a18cf780b8a63c677e87ab256f7",
-      "message": "Merge PR #2515: integration of 85 reviewed PRs (round 2)"
+      "ts": "2026-10-23T17:34:30Z",
+      "kind": "content",
+      "commit": "f3bb7a9",
+      "commit_full": "f3bb7a9f3068e6b3e6136a1e864f7a3ae5dfc796",
+      "message": "CI: one test binary per crate, line tables only, one WASM check (#2710)"
     },
     "last_update": {
-      "ts": "2026-10-22T04:25:29Z",
-      "kind": "estimates",
-      "commit": "31ee264",
-      "commit_full": "31ee2643cf208a18cf780b8a63c677e87ab256f7",
-      "message": "Merge PR #2515: integration of 85 reviewed PRs (round 2)"
+      "ts": "2026-10-23T17:34:30Z",
+      "kind": "content",
+      "commit": "f3bb7a9",
+      "commit_full": "f3bb7a9f3068e6b3e6136a1e864f7a3ae5dfc796",
+      "message": "CI: one test binary per crate, line tables only, one WASM check (#2710)"
     },
     "self_reported": "2026-10-16"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 8.7,
+    "score": 9.0,
     "active_days_7d": 5,
-    "changes_7d": 20,
-    "changes_14d": 44,
-    "housekeeping_7d": 11,
+    "changes_7d": 21,
+    "changes_14d": 45,
+    "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-10-23T17:00:02Z",
-      "commit": "0e6b0b1",
-      "commit_full": "0e6b0b150fe9755c03f3210d5789b80f9db9ace2",
-      "subject": "Packaging: pin the signing client and appimagetool, and check their hashes (#2413)"
+      "ts": "2026-10-23T17:34:30Z",
+      "commit": "f3bb7a9",
+      "commit_full": "f3bb7a9f3068e6b3e6136a1e864f7a3ae5dfc796",
+      "subject": "CI: one test binary per crate, line tables only, one WASM check (#2710)"
     },
-    "last_commit_ts": "2026-10-23T17:00:02Z",
+    "last_commit_ts": "2026-10-23T17:35:38Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
       6,
@@ -373,7 +373,7 @@
       0,
       5,
       2,
-      3
+      4
     ],
     "days": [
       {
@@ -759,9 +759,13 @@
       },
       {
         "d": "2026-10-23",
-        "code": 3,
-        "other": 1,
+        "code": 4,
+        "other": 2,
         "samples": [
+          {
+            "commit": "f3bb7a9",
+            "subject": "CI: one test binary per crate, line tables only, one WASM check (#2710)"
+          },
           {
             "commit": "0e6b0b1",
             "subject": "Packaging: pin the signing client and appimagetool, and check their hashes (#2413)"
@@ -769,10 +773,6 @@
           {
             "commit": "d5e639b",
             "subject": "packaging: bash tests, named positional parameters and stderr errors (SonarCloud S7688/S7679/S7682/S7677) (#2655)"
-          },
-          {
-            "commit": "1c03b7b",
-            "subject": "fix: document the deliberate buffer leak during thread teardown (SonarCloud) (#2700)"
           }
         ]
       }
@@ -1191,7 +1191,30 @@
       "breadth_pct": 81.6,
       "full_prev": 61.0,
       "kind": "estimates"
+    },
+    {
+      "commit": "f3bb7a9",
+      "commit_full": "f3bb7a9f3068e6b3e6136a1e864f7a3ae5dfc796",
+      "commit_date": "2026-10-23T13:34:30-04:00",
+      "ts": "2026-10-23T17:34:30Z",
+      "message": "CI: one test binary per crate, line tables only, one WASM check (#2710)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-16",
+      "full_pct": 61.0,
+      "full_range": null,
+      "full_hours": [
+        1000,
+        1800
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe Lightroom Classic 15.5 / Lightroom 9.6",
+      "mainstream_pct": 51.0,
+      "essentials_pct": 65.0,
+      "breadth_pct": 81.6,
+      "full_prev": 61.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T17:22:28+00:00"
+  "updated_at": "2026-10-23T17:54:01+00:00"
 }

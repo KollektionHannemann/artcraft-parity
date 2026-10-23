@@ -586,39 +586,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 9,
-        "revisions_7d": 1,
+        "revisions": 10,
+        "revisions_7d": 2,
         "last_revision": {
-          "ts": "2026-10-22T04:25:29Z",
-          "kind": "estimates",
-          "commit": "31ee264",
-          "commit_full": "31ee2643cf208a18cf780b8a63c677e87ab256f7",
-          "message": "Merge PR #2515: integration of 85 reviewed PRs (round 2)"
+          "ts": "2026-10-23T17:34:30Z",
+          "kind": "content",
+          "commit": "f3bb7a9",
+          "commit_full": "f3bb7a9f3068e6b3e6136a1e864f7a3ae5dfc796",
+          "message": "CI: one test binary per crate, line tables only, one WASM check (#2710)"
         },
         "last_update": {
-          "ts": "2026-10-22T04:25:29Z",
-          "kind": "estimates",
-          "commit": "31ee264",
-          "commit_full": "31ee2643cf208a18cf780b8a63c677e87ab256f7",
-          "message": "Merge PR #2515: integration of 85 reviewed PRs (round 2)"
+          "ts": "2026-10-23T17:34:30Z",
+          "kind": "content",
+          "commit": "f3bb7a9",
+          "commit_full": "f3bb7a9f3068e6b3e6136a1e864f7a3ae5dfc796",
+          "message": "CI: one test binary per crate, line tables only, one WASM check (#2710)"
         },
         "self_reported": "2026-10-16"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 8.7,
+        "score": 9.0,
         "active_days_7d": 5,
-        "changes_7d": 20,
-        "changes_14d": 44,
-        "housekeeping_7d": 11,
+        "changes_7d": 21,
+        "changes_14d": 45,
+        "housekeeping_7d": 12,
         "last_code_change": {
-          "ts": "2026-10-23T17:00:02Z",
-          "commit": "0e6b0b1",
-          "commit_full": "0e6b0b150fe9755c03f3210d5789b80f9db9ace2",
-          "subject": "Packaging: pin the signing client and appimagetool, and check their hashes (#2413)"
+          "ts": "2026-10-23T17:34:30Z",
+          "commit": "f3bb7a9",
+          "commit_full": "f3bb7a9f3068e6b3e6136a1e864f7a3ae5dfc796",
+          "subject": "CI: one test binary per crate, line tables only, one WASM check (#2710)"
         },
-        "last_commit_ts": "2026-10-23T17:00:02Z",
+        "last_commit_ts": "2026-10-23T17:35:38Z",
         "repo_since": "2026-09-30T14:04:12Z",
         "window": [
           6,
@@ -634,7 +634,7 @@
           0,
           5,
           2,
-          3
+          4
         ]
       },
       "release": {
@@ -660,11 +660,11 @@
           "v": 61.0
         },
         {
-          "t": "2026-10-22T04:25:29Z",
+          "t": "2026-10-23T17:34:30Z",
           "v": 61.0
         }
       ],
-      "history_len": 9
+      "history_len": 10
     },
     {
       "id": "wordcraft",
@@ -674,7 +674,7 @@
       "color": "#3f63e8",
       "added": null,
       "is_new": false,
-      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4; previously trivial: progress log: a word with no break opportunity in it no longer makes the layout quadratic, #3412; previously trivial: progress log: a relationship the markup names without the prefix is read as it wrote, and an ordinary id names no part; previously trivial: progress log: a document with many relationships opens in the time its part takes, and an id the text only mentions is not a reference, #3411; previously trivial: progress log: read only and comments-only protection grey out edits; previously trivial: progress log: an empty paragraph with a hidden mark shows nothing, not even its list number, #3982; previously trivial: progress log: \"NaN\" in the Font dialog's Size box no longer closes the app, #3663; previously trivial: progress log: a table cell span from a .json file no longer overflows, #3637; previously trivial: progress log: a click in the footer while editing the header moves there; previously trivial: explicit documents keep the editor when recovery discovery finishes; readable recovery controls; previously trivial: Slovenian interface catalog, 2,614 entries; previously trivial: Insert Table of Figures dialog for any caption label, #3013; previously trivial: progress log: Home › Underline drop-down, #2738; previously trivial: personal templates in File › New and Save as Word Template, #2852; previously trivial: progress log: the scrollbar page tip stays on one line, #3341; previously trivial: progress log: forms protection greys out the control buttons; previously trivial: progress log: a document with many content controls saves in the time the controls take, #13; previously trivial: progress log: Word signature lines kept on save; previously trivial: a Thai run with Latin finds one installed font covering it all on Linux too, #1549; previously trivial: progress log: closing the header returns to the body selection, #3331; previously trivial: progress log: saving to a NAS share mounted by GVFS, #3003; previously trivial: progress log: a picture dragged near the bottom of a page lands there, #3169; previously trivial: centred list labels after leading page breaks, #2964; previously trivial: progress log: inline pictures drag to an insertion cursor and stay inline, #2233, #2234; previously trivial: progress log: a text file saved over itself closes without asking, #2376; previously trivial: progress log: a text frame in the paragraph defaults frames nothing, #2360; previously trivial: fixed font inputs in four layout controls; previously trivial: typing no longer starts render threads on every repaint, #3027; previously trivial: a right, centre or decimal tab whose text doesn't fit, or a left tab past the right indent, goes to the next line with its text, #1840; previously trivial: progress log: banded rows shade as in Word, #3415; previously trivial: progress log: the table handles show while the caret is in the table, #2428; previously trivial: progress log: a click below a floating table reaches the text after it, #2038; previously trivial: progress log: Delete on selected table cells leaves one empty paragraph in each, #2802; previously trivial: progress log: lam-alef in exported PDFs extracts whole with fonts that draw it as two glyphs, #2310; previously trivial: Bullets and Numbering toggle off style-inherited lists at their effective level, including basedOn chains and numbered ListParagraph styles; other paragraphs and list definitions stay unchanged (related to #3459); previously trivial: Russian sorting keeps ё with е and recognises decomposed ё/й; previously trivial: progress log: a text box that keeps the keyboard no longer resets the input method every frame, #2986; previously trivial: progress log: recovery copies and .json files store pictures as base64, #586 follow-up; previously trivial: progress log: legacy menu keys, #1697; previously trivial: progress log: shape gradients and transparency, #1500; previously trivial: progress log: Focus fills the screen, and Full Screen View shows the pages alone, #1678; previously trivial: progress log: text above a float's anchor wraps around it, #2048; previously trivial: progress log: File › Recover follows the app theme, #3243; previously trivial: progress log: formatting toolbar with the text context menu, #2959; previously trivial: progress log: caret inside ligatures, #1974; previously trivial: text typed into a content control takes the control's formatting; localized placeholder styles recognised; previously trivial: forms protection keeps its content controls: no inserting, Properties or Remove Content Control; previously trivial: long navigation headings wrap onto further lines within the pane, #3015; previously trivial: clearing a no-match font query keeps the recent heading visible, #2068; previously trivial: a word after a slash wraps whole, like Word, #2963; previously trivial: progress log: a header-cell picture watermark sits behind the text, #1775; previously trivial: symbols keep their font when the text font changes, #2036; previously trivial: opening a DOCX no longer copies its pictures; previously trivial: Add Font imports every selected font file, #1789); previously trivial (RTF export writes sections (gap 19); previously trivial: ODT export writes sections (gap 19); previously trivial: Read Aloud speaks each sentence in its own language, #1843; previously trivial: hint-reliant CJK outlines; previously trivial: Ctrl+wheel zoom no longer scrolls the document, #1743; previously trivial: progress log: Turkish case mapping in AutoCorrect, #1923; previously trivial: a mouse drag on a table leaves the view where it is, #1738; previously trivial: progress log: Hebrew field results and smart quotes, #1670; previously trivial: Backspace removes a selected table, rows or columns, #1844; previously trivial: progress log: mixed Hebrew/Latin text keeps its order in Word, #1543; previously trivial: progress log: web typing in non-Latin text no longer repeats, #1480; previously trivial: progress log: font family caches bounded and math font lookups follow font changes, #1354; previously trivial: --> AutoCorrect replacement, #2223; previously trivial: numbered headings, #1793; previously trivial: Navigation Find exposes Results, #2096; previously trivial: progress log: Columns on selected text, #2024; previously trivial: progress log: legacy outline, shadow, emboss and imprint text effects drawn, #2534; previously trivial: progress log: Indonesian proofing, #498; previously trivial: progress log: DOCX glossary documents (building blocks); previously trivial: progress log: Read Mode keeps the keyboard and shows whole, unobscured columns, #1772); previously trivial: progress log: font list entries of tall-ascent fonts no longer cut off, #2570); previously trivial: progress log: Split Cells and Convert Text to Table dialogs follow the Word check, #2592; previously trivial: a new source's Tag is made like Word's, three letters of the author and two digits of the year with a number added when taken, and an edit keeps the Tag, #2094; previously trivial: Web Layout fills the window width, #1876; previously trivial: progress log: Different First Page headers reachable from page 1, #2826; previously trivial: Language dialog keeps inherited proofing language and no-proof choices (#2717); previously trivial: progress log: web preferences kept between visits, #2132; previously trivial: progress log: undrawable private-use list bullets show the level's default bullet, #1683; previously trivial: progress log: w:eastAsianLayout kept on save; previously trivial: table style editor formats every part, #714); previously trivial: VML freeforms read and kept on save; previously trivial: progress log: consistent preferred cell widths; previously trivial: multi-paragraph field instructions no longer add blank lines; previously trivial: page-break-only list paragraphs hide their labels; previously trivial: progress log: grouped flowChartOr shapes draw their circle and crossing spokes; previously trivial: progress log: copies keep their formatting in other programs, #1523; previously trivial: progress log: privacy options on save, #1062; previously trivial: progress log: equation pictures in theme colours on Windows, #1002; previously trivial: symbol fonts, #776; previously trivial: the save prompt answers from the keyboard, #861; previously trivial: table column and row markers on the rulers, #700; previously trivial: table borders and the resize handle drag on the page, #217; previously trivial: formatting revisions landed, #41; previously trivial: Draw tab ink, #307, and Draw Table and Eraser, #303, landed: catalog 402/434; previously minor: readiness table with hours per audience; full number back to the additive weighted sum, 60%; mainstream and essentials numbers added; alpha gate checked; previously major: full re-measure against Word for Mac 16.113.4; restructured to the craftrules progress-docs standard)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
       "order": 9,
       "stage": "alpha",
       "next_stage": "beta",
@@ -694,39 +694,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 397,
-        "revisions_7d": 119,
+        "revisions": 400,
+        "revisions_7d": 122,
         "last_revision": {
-          "ts": "2026-10-23T17:14:15Z",
+          "ts": "2026-10-23T17:36:57Z",
           "kind": "content",
-          "commit": "fa59922",
-          "commit_full": "fa5992223f9442df4044707cfeecaacf181df7ec",
-          "message": "doc: preserve rotated free endpoints when rerouting connectors (#3882)"
+          "commit": "c539994",
+          "commit_full": "c5399949975b0b06a35def3d8a42838ff95fede6",
+          "message": "Translate ribbon disabled-reason tooltips (#2678) (#2680)"
         },
         "last_update": {
-          "ts": "2026-10-23T17:14:15Z",
+          "ts": "2026-10-23T17:36:57Z",
           "kind": "content",
-          "commit": "fa59922",
-          "commit_full": "fa5992223f9442df4044707cfeecaacf181df7ec",
-          "message": "doc: preserve rotated free endpoints when rerouting connectors (#3882)"
+          "commit": "c539994",
+          "commit_full": "c5399949975b0b06a35def3d8a42838ff95fede6",
+          "message": "Translate ribbon disabled-reason tooltips (#2678) (#2680)"
         },
         "self_reported": "2026-10-23"
       },
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 20.5,
+        "score": 20.6,
         "active_days_7d": 6,
-        "changes_7d": 338,
-        "changes_14d": 991,
+        "changes_7d": 341,
+        "changes_14d": 994,
         "housekeeping_7d": 15,
         "last_code_change": {
-          "ts": "2026-10-23T17:14:15Z",
-          "commit": "fa59922",
-          "commit_full": "fa5992223f9442df4044707cfeecaacf181df7ec",
-          "subject": "doc: preserve rotated free endpoints when rerouting connectors (#3882)"
+          "ts": "2026-10-23T17:36:57Z",
+          "commit": "c539994",
+          "commit_full": "c5399949975b0b06a35def3d8a42838ff95fede6",
+          "subject": "Translate ribbon disabled-reason tooltips (#2678) (#2680)"
         },
-        "last_commit_ts": "2026-10-23T17:14:15Z",
+        "last_commit_ts": "2026-10-23T17:36:57Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
           130,
@@ -742,7 +742,7 @@
           0,
           14,
           5,
-          48
+          51
         ]
       },
       "release": {
@@ -768,11 +768,11 @@
           "v": 60.0
         },
         {
-          "t": "2026-10-23T17:14:15Z",
+          "t": "2026-10-23T17:36:57Z",
           "v": 60.0
         }
       ],
-      "history_len": 397
+      "history_len": 400
     },
     {
       "id": "filmcraft",
@@ -823,18 +823,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 17.6,
+        "score": 17.7,
         "active_days_7d": 6,
-        "changes_7d": 116,
-        "changes_14d": 538,
+        "changes_7d": 119,
+        "changes_14d": 541,
         "housekeeping_7d": 13,
         "last_code_change": {
-          "ts": "2026-10-23T17:08:41Z",
-          "commit": "20e159d",
-          "commit_full": "20e159dd68c2c4dd5d0665e79aa32ed039b0a171",
-          "subject": "tools: quit the super-linear regex scans in the spec table extractors (SonarCloud S8786) (#3007)"
+          "ts": "2026-10-23T17:38:11Z",
+          "commit": "fbeccbe",
+          "commit_full": "fbeccbe9bc5464dbc0fecbf0512b3e04c51f55dd",
+          "subject": "Fonts: pin craft-fonts bfcbf71; CRAFT_FONTS_REQUIRED fails without CRAFT_FONTS_DIR (#2646)"
         },
-        "last_commit_ts": "2026-10-23T17:08:41Z",
+        "last_commit_ts": "2026-10-23T17:38:11Z",
         "repo_since": "2026-09-30T09:22:00Z",
         "window": [
           198,
@@ -850,7 +850,7 @@
           0,
           11,
           5,
-          56
+          59
         ]
       },
       "release": {
@@ -931,18 +931,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.2,
+        "score": 13.6,
         "active_days_7d": 6,
-        "changes_7d": 41,
-        "changes_14d": 378,
+        "changes_7d": 42,
+        "changes_14d": 379,
         "housekeeping_7d": 10,
         "last_code_change": {
-          "ts": "2026-10-23T16:43:34Z",
-          "commit": "f001f37",
-          "commit_full": "f001f37906bfe5e91d5a684e4a57018e4066b1fc",
-          "subject": "CI: one test binary per crate, nextest, line tables only (#1213)"
+          "ts": "2026-10-23T17:40:57Z",
+          "commit": "c787f4f",
+          "commit_full": "c787f4f08061e4779e11de75ae151c316d236c0d",
+          "subject": "Packaging: pin the signing client and appimagetool, and check their hashes (#1082)"
         },
-        "last_commit_ts": "2026-10-23T16:59:34Z",
+        "last_commit_ts": "2026-10-23T17:40:57Z",
         "repo_since": "2026-10-06T02:13:02Z",
         "window": [
           17,
@@ -958,7 +958,7 @@
           0,
           4,
           7,
-          3
+          4
         ]
       },
       "release": {
@@ -1048,18 +1048,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 16.6,
+        "score": 16.8,
         "active_days_7d": 6,
-        "changes_7d": 100,
-        "changes_14d": 288,
+        "changes_7d": 101,
+        "changes_14d": 289,
         "housekeeping_7d": 15,
         "last_code_change": {
-          "ts": "2026-10-23T17:02:11Z",
-          "commit": "c481023",
-          "commit_full": "c48102350b1ef00614b105ac07451ff0ca8a5141",
-          "subject": "Packaging: pin the signing client and appimagetool, and check their hashes (#950)"
+          "ts": "2026-10-23T17:50:42Z",
+          "commit": "6ba0223",
+          "commit_full": "6ba02236367320fef0b373b461f6e9796bfc6de0",
+          "subject": "Tests: the paragraph indent test loads system fonts and skips only without glyphs (#1227)"
         },
-        "last_commit_ts": "2026-10-23T17:02:11Z",
+        "last_commit_ts": "2026-10-23T17:50:42Z",
         "repo_since": "2026-10-09T15:38:50Z",
         "window": [
           51,
@@ -1075,7 +1075,7 @@
           0,
           16,
           4,
-          5
+          6
         ]
       },
       "release": {
@@ -1183,16 +1183,16 @@
         "level": "buzzing",
         "score": 23.3,
         "active_days_7d": 6,
-        "changes_7d": 198,
-        "changes_14d": 825,
+        "changes_7d": 199,
+        "changes_14d": 826,
         "housekeeping_7d": 22,
         "last_code_change": {
-          "ts": "2026-10-23T17:02:56Z",
-          "commit": "cf0f806",
-          "commit_full": "cf0f80604ff1c27356c68ebe9b6c0aa1cfaca152",
-          "subject": "Allow OFL typefaces, Noto CJK and Source Han included (AGENTS.md §1.1) (#3908)"
+          "ts": "2026-10-23T17:34:21Z",
+          "commit": "045c8b3",
+          "commit_full": "045c8b39a712f30a72209aa479651949e555f7a0",
+          "subject": "CI: nextest, line tables only, one wasm check (#4269)"
         },
-        "last_commit_ts": "2026-10-23T17:02:56Z",
+        "last_commit_ts": "2026-10-23T17:34:21Z",
         "repo_since": "2026-09-30T09:17:08Z",
         "window": [
           136,
@@ -1208,7 +1208,7 @@
           0,
           13,
           59,
-          40
+          41
         ]
       },
       "release": {
@@ -1509,18 +1509,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 25.1,
+        "score": 25.4,
         "active_days_7d": 7,
-        "changes_7d": 269,
-        "changes_14d": 1541,
+        "changes_7d": 271,
+        "changes_14d": 1543,
         "housekeeping_7d": 22,
         "last_code_change": {
-          "ts": "2026-10-23T13:57:10Z",
-          "commit": "f27656b",
-          "commit_full": "f27656b9109af338c64d6a9a031b14f3db1ecbbf",
-          "subject": "fix: restrict droplet shim permissions and annotate test range (SonarCloud) (#8870)"
+          "ts": "2026-10-23T17:48:36Z",
+          "commit": "cf0960b",
+          "commit_full": "cf0960b5207e9bb2209e27b604f075f88d9f6bfd",
+          "subject": "CI: no debug info for dependencies, nextest in xtask ci, long sweeps spread over days (#8915)"
         },
-        "last_commit_ts": "2026-10-23T13:59:59Z",
+        "last_commit_ts": "2026-10-23T17:48:36Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           255,
@@ -1536,7 +1536,7 @@
           3,
           11,
           48,
-          8
+          10
         ]
       },
       "release": {
@@ -1725,18 +1725,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 11.8,
+        "score": 12.5,
         "active_days_7d": 5,
-        "changes_7d": 73,
-        "changes_14d": 232,
+        "changes_7d": 77,
+        "changes_14d": 236,
         "housekeeping_7d": 13,
         "last_code_change": {
-          "ts": "2026-10-23T16:15:56Z",
-          "commit": "f0d5acb",
-          "commit_full": "f0d5acb800c65bcd2a9d637cd1726cf6597cb629",
-          "subject": "Deps: fix the workspace build after the dependency bump (#954)"
+          "ts": "2026-10-23T17:37:39Z",
+          "commit": "ab1849c",
+          "commit_full": "ab1849cbf8f3f046ad626124edce25436367b45e",
+          "subject": "Audio: check the WAVE behind a skipped RIFF form; hold egui at 0.36 in Dependabot (#978)"
         },
-        "last_commit_ts": "2026-10-23T16:15:56Z",
+        "last_commit_ts": "2026-10-23T17:37:39Z",
         "repo_since": "2026-10-06T00:08:04Z",
         "window": [
           23,
@@ -1752,7 +1752,7 @@
           0,
           1,
           12,
-          5
+          9
         ]
       },
       "release": {
@@ -1833,18 +1833,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.1,
+        "score": 14.4,
         "active_days_7d": 5,
-        "changes_7d": 117,
-        "changes_14d": 557,
+        "changes_7d": 118,
+        "changes_14d": 558,
         "housekeeping_7d": 13,
         "last_code_change": {
-          "ts": "2026-10-23T17:00:16Z",
-          "commit": "9d8f16c",
-          "commit_full": "9d8f16c8257062de2085c61c54e343bf6fb52450",
-          "subject": "Build main again after the #1957 dependency bump (#1991)"
+          "ts": "2026-10-23T17:34:26Z",
+          "commit": "9cf115e",
+          "commit_full": "9cf115e808b9a76a0bdf742c72e51ead251c3eb1",
+          "subject": "CI: one test binary per crate, nextest, line tables only (#1989)"
         },
-        "last_commit_ts": "2026-10-23T17:00:16Z",
+        "last_commit_ts": "2026-10-23T17:34:26Z",
         "repo_since": "2026-10-06T00:15:47Z",
         "window": [
           191,
@@ -1860,7 +1860,7 @@
           0,
           4,
           25,
-          5
+          6
         ]
       },
       "release": {
@@ -1894,5 +1894,5 @@
     }
   ],
   "errors": [],
-  "generated_at": "2026-10-23T17:22:49+00:00"
+  "generated_at": "2026-10-23T17:54:45+00:00"
 }

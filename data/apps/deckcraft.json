@@ -427,18 +427,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 13.2,
+    "score": 13.6,
     "active_days_7d": 6,
-    "changes_7d": 41,
-    "changes_14d": 378,
+    "changes_7d": 42,
+    "changes_14d": 379,
     "housekeeping_7d": 10,
     "last_code_change": {
-      "ts": "2026-10-23T16:43:34Z",
-      "commit": "f001f37",
-      "commit_full": "f001f37906bfe5e91d5a684e4a57018e4066b1fc",
-      "subject": "CI: one test binary per crate, nextest, line tables only (#1213)"
+      "ts": "2026-10-23T17:40:57Z",
+      "commit": "c787f4f",
+      "commit_full": "c787f4f08061e4779e11de75ae151c316d236c0d",
+      "subject": "Packaging: pin the signing client and appimagetool, and check their hashes (#1082)"
     },
-    "last_commit_ts": "2026-10-23T16:59:34Z",
+    "last_commit_ts": "2026-10-23T17:40:57Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
       17,
@@ -454,7 +454,7 @@
       0,
       4,
       7,
-      3
+      4
     ],
     "days": [
       {
@@ -727,9 +727,13 @@
       },
       {
         "d": "2026-10-23",
-        "code": 3,
+        "code": 4,
         "other": 1,
         "samples": [
+          {
+            "commit": "c787f4f",
+            "subject": "Packaging: pin the signing client and appimagetool, and check their hashes (#1082)"
+          },
           {
             "commit": "f001f37",
             "subject": "CI: one test binary per crate, nextest, line tables only (#1213)"
@@ -737,10 +741,6 @@
           {
             "commit": "0f4fffc",
             "subject": "Use chrono instead of hand-rolled UTC conversion (#1116)"
-          },
-          {
-            "commit": "bdcb532",
-            "subject": "packaging: [[ ]] tests, named positional parameters, explicit returns and a default case (SonarCloud S7688, S7679, S7682, S131) (#1212)"
           }
         ]
       }
@@ -2743,5 +2743,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T17:22:45+00:00"
+  "updated_at": "2026-10-23T17:54:36+00:00"
 }

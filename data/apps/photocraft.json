@@ -293,18 +293,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 25.1,
+    "score": 25.4,
     "active_days_7d": 7,
-    "changes_7d": 269,
-    "changes_14d": 1541,
+    "changes_7d": 271,
+    "changes_14d": 1543,
     "housekeeping_7d": 22,
     "last_code_change": {
-      "ts": "2026-10-23T13:57:10Z",
-      "commit": "f27656b",
-      "commit_full": "f27656b9109af338c64d6a9a031b14f3db1ecbbf",
-      "subject": "fix: restrict droplet shim permissions and annotate test range (SonarCloud) (#8870)"
+      "ts": "2026-10-23T17:48:36Z",
+      "commit": "cf0960b",
+      "commit_full": "cf0960b5207e9bb2209e27b604f075f88d9f6bfd",
+      "subject": "CI: no debug info for dependencies, nextest in xtask ci, long sweeps spread over days (#8915)"
     },
-    "last_commit_ts": "2026-10-23T13:59:59Z",
+    "last_commit_ts": "2026-10-23T17:48:36Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       255,
@@ -320,7 +320,7 @@
       3,
       11,
       48,
-      8
+      10
     ],
     "days": [
       {
@@ -762,20 +762,20 @@
       },
       {
         "d": "2026-10-23",
-        "code": 8,
+        "code": 10,
         "other": 3,
         "samples": [
           {
+            "commit": "cf0960b",
+            "subject": "CI: no debug info for dependencies, nextest in xtask ci, long sweeps spread over days (#8915)"
+          },
+          {
+            "commit": "9f0f7bc",
+            "subject": "Linked files: resolve stored paths with craft-docpath's resolve_absolute (#8032)"
+          },
+          {
             "commit": "f27656b",
             "subject": "fix: restrict droplet shim permissions and annotate test range (SonarCloud) (#8870)"
-          },
-          {
-            "commit": "f346b5c",
-            "subject": "fix(vector): bound hostile geometry and raster work (#8769)"
-          },
-          {
-            "commit": "92262d5",
-            "subject": "fix(cms): confirm ICC profile identity by bytes, not the 64-bit hash alone (#8863)"
           }
         ]
       }
@@ -1127,5 +1127,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T14:02:21+00:00"
+  "updated_at": "2026-10-23T17:53:40+00:00"
 }
