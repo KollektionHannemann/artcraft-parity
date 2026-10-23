@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "8e98636",
-  "latest_commit_date": "2026-10-22T01:03:11-04:00",
-  "latest_message": "Header and footer: a click in the other band edits it there (#3557)",
+  "latest_commit": "c799fdb",
+  "latest_commit_date": "2026-10-22T21:19:40-06:00",
+  "latest_message": "Restrict Editing: the file commands, the user name and the post-check (#3285)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -249,6 +249,10 @@
         "text": "Headers and footers: while editing the header, a single click in the footer edits the footer with the caret where clicked (and the reverse, and another page's own header or footer). The click went to the header being edited and the view scrolled back up to it, so a double-click on the footer rarely landed unless both were on screen."
       },
       {
+        "date": "2026-10-22",
+        "text": "Restrict Editing: the CLI's --author uses the same protection check as file.setAuthor, and File › Options disables the User name field while the document is protected."
+      },
+      {
         "date": "2026-10-21",
         "text": "Bullets and Numbering toggle off style-inherited lists at their effective level, including basedOn chains and numbered ListParagraph styles; other paragraphs and list definitions stay unchanged (related to #3459)."
       },
@@ -287,6 +291,14 @@
       {
         "date": "2026-10-20",
         "text": "The page tip shown while dragging the vertical scrollbar stays on one line; it broke into two or three lines (\"Page 10 of\" / \"40\") as the page number grew during the drag (#3341)."
+      },
+      {
+        "date": "2026-10-20",
+        "text": "Restrict Editing, three more gaps closed: the protection of a protected document only changes through the explicit stop (review.restrict {\"stop\": true}; the \"none\" mode is the shorthand and doesn't stop it), the session author used for new tracked changes and comments can't change through file.setAuthor while the document is protected (the CLI's --author uses the same protection check), and the post-check compares the document's settings, metadata, custom properties, list definitions, bibliography sources and the comments' resolved flags as well as its text and formatting"
+      },
+      {
+        "date": "2026-10-20",
+        "text": "Restrict Editing holds for the file commands too: the privacy options, the properties and the inspector's removals are refused on a protected document, and restoring a stored version keeps the protection and its password instead of the snapshot's stale ones"
       },
       {
         "date": "2026-10-20",
@@ -391,18 +403,6 @@
       {
         "date": "2026-10-18",
         "text": "Dragging a single selected cell's border (Select Cell, left-edge arrow, triple-click on its last paragraph) moves it in its row only; the neighbour takes up the difference. Checked against Word for Mac 16.113.4."
-      },
-      {
-        "date": "2026-10-18",
-        "text": "Manage Sources › Import… (#2640) reads a Word bibliography file (b:Sources: Word's own Sources.xml master list) into the document: the tags, names, kinds and fields Word saves are read by the same code that reads the bibliography custom XML part of a .docx, a tag already in the document is left alone (an import never overwrites an edited source), an untagged source gets a tag the way a new one does, the whole import is one undo step, and a file that isn't b:Sources is refused."
-      },
-      {
-        "date": "2026-10-18",
-        "text": "Explicit New/Open keeps the requested document visible when startup recovery discovery finishes; older copies stay available. Recover uses the regular theme. See docs/recovery.md."
-      },
-      {
-        "date": "2026-10-18",
-        "text": "Picture Format › Size (#2573): width and height in the interface unit, and a size typed in any unit works, pixels too (300 px keeps the picture's proportions, #1901), applied once typed (Enter, Tab or a click elsewhere; Esc cancels) in one undo step. The group's launcher opens a Size dialog: height and width, scale of the original size (or of the size it opened with), Lock aspect ratio, the original size with its pixels, and Reset. picture.size {\"original\": true, \"scale\"?} sizes from the original; sizes past 4000 pt that keep the proportions shrink as a whole."
       }
     ]
   },
@@ -413,39 +413,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 388,
-    "revisions_7d": 110,
+    "revisions": 389,
+    "revisions_7d": 111,
     "last_revision": {
-      "ts": "2026-10-22T05:03:11Z",
+      "ts": "2026-10-23T03:19:40Z",
       "kind": "content",
-      "commit": "8e98636",
-      "commit_full": "8e986366c7a5a261e058644a9446d4c73aa8a063",
-      "message": "Header and footer: a click in the other band edits it there (#3557)"
+      "commit": "c799fdb",
+      "commit_full": "c799fdbcfbe455fd2157d605ce10fe1a853ef4e6",
+      "message": "Restrict Editing: the file commands, the user name and the post-check (#3285)"
     },
     "last_update": {
-      "ts": "2026-10-22T05:03:11Z",
+      "ts": "2026-10-23T03:19:40Z",
       "kind": "content",
-      "commit": "8e98636",
-      "commit_full": "8e986366c7a5a261e058644a9446d4c73aa8a063",
-      "message": "Header and footer: a click in the other band edits it there (#3557)"
+      "commit": "c799fdb",
+      "commit_full": "c799fdbcfbe455fd2157d605ce10fe1a853ef4e6",
+      "message": "Restrict Editing: the file commands, the user name and the post-check (#3285)"
     },
     "self_reported": "2026-10-22"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.9,
-    "active_days_7d": 5,
-    "changes_7d": 290,
-    "changes_14d": 943,
+    "score": 15.9,
+    "active_days_7d": 6,
+    "changes_7d": 291,
+    "changes_14d": 944,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-10-22T05:03:11Z",
-      "commit": "8e98636",
-      "commit_full": "8e986366c7a5a261e058644a9446d4c73aa8a063",
-      "subject": "Header and footer: a click in the other band edits it there (#3557)"
+      "ts": "2026-10-23T03:19:40Z",
+      "commit": "c799fdb",
+      "commit_full": "c799fdbcfbe455fd2157d605ce10fe1a853ef4e6",
+      "subject": "Restrict Editing: the file commands, the user name and the post-check (#3285)"
     },
-    "last_commit_ts": "2026-10-22T19:37:16Z",
+    "last_commit_ts": "2026-10-23T03:19:40Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       130,
@@ -461,7 +461,7 @@
       0,
       14,
       5,
-      0
+      1
     ],
     "days": [
       {
@@ -731,6 +731,17 @@
           {
             "commit": "169581d",
             "subject": "Merge 178 open PRs (backlog round 1) (#3555)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-23",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "c799fdb",
+            "subject": "Restrict Editing: the file commands, the user name and the post-check (#3285)"
           }
         ]
       }
@@ -9815,7 +9826,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "c799fdb",
+      "commit_full": "c799fdbcfbe455fd2157d605ce10fe1a853ef4e6",
+      "commit_date": "2026-10-22T21:19:40-06:00",
+      "ts": "2026-10-23T03:19:40Z",
+      "message": "Restrict Editing: the file commands, the user name and the post-check (#3285)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-22",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T00:12:58+00:00"
+  "updated_at": "2026-10-23T03:22:44+00:00"
 }
