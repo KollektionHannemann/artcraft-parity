@@ -426,18 +426,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.3,
+    "score": 14.9,
     "active_days_7d": 5,
-    "changes_7d": 63,
-    "changes_14d": 347,
+    "changes_7d": 64,
+    "changes_14d": 348,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-10-23T03:59:30Z",
-      "commit": "e74208d",
-      "commit_full": "e74208dd7e0c801d15dfdf926d64cfe5e3b346d3",
-      "subject": "CI: one test binary per crate, nextest, line tables only (#1642)"
+      "ts": "2026-10-23T14:02:32Z",
+      "commit": "08718d7",
+      "commit_full": "08718d712cac82256bd7fec64983bfc0260be692",
+      "subject": "fix: keep package temp files owner-writable (SonarCloud rust:S2612) (#1658)"
     },
-    "last_commit_ts": "2026-10-23T03:59:30Z",
+    "last_commit_ts": "2026-10-23T14:02:32Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       70,
@@ -453,7 +453,7 @@
       0,
       8,
       19,
-      1
+      2
     ],
     "days": [
       {
@@ -834,9 +834,13 @@
       },
       {
         "d": "2026-10-23",
-        "code": 1,
+        "code": 2,
         "other": 0,
         "samples": [
+          {
+            "commit": "08718d7",
+            "subject": "fix: keep package temp files owner-writable (SonarCloud rust:S2612) (#1658)"
+          },
           {
             "commit": "e74208d",
             "subject": "CI: one test binary per crate, nextest, line tables only (#1642)"
@@ -3491,5 +3495,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T04:24:16+00:00"
+  "updated_at": "2026-10-23T14:02:38+00:00"
 }

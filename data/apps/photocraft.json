@@ -293,18 +293,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.9,
+    "score": 25.1,
     "active_days_7d": 7,
-    "changes_7d": 262,
-    "changes_14d": 1534,
-    "housekeeping_7d": 20,
+    "changes_7d": 269,
+    "changes_14d": 1541,
+    "housekeeping_7d": 22,
     "last_code_change": {
-      "ts": "2026-10-23T12:38:15Z",
-      "commit": "1695f32",
-      "commit_full": "1695f323e6cfd3e94d6678c1848810b49ec78ea1",
-      "subject": "fix(psd): retain pattern budget charges after parse failures (#8767)"
+      "ts": "2026-10-23T13:57:10Z",
+      "commit": "f27656b",
+      "commit_full": "f27656b9109af338c64d6a9a031b14f3db1ecbbf",
+      "subject": "fix: restrict droplet shim permissions and annotate test range (SonarCloud) (#8870)"
     },
-    "last_commit_ts": "2026-10-23T12:38:15Z",
+    "last_commit_ts": "2026-10-23T13:59:59Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       255,
@@ -320,7 +320,7 @@
       3,
       11,
       48,
-      1
+      8
     ],
     "days": [
       {
@@ -762,12 +762,20 @@
       },
       {
         "d": "2026-10-23",
-        "code": 1,
-        "other": 1,
+        "code": 8,
+        "other": 3,
         "samples": [
           {
-            "commit": "1695f32",
-            "subject": "fix(psd): retain pattern budget charges after parse failures (#8767)"
+            "commit": "f27656b",
+            "subject": "fix: restrict droplet shim permissions and annotate test range (SonarCloud) (#8870)"
+          },
+          {
+            "commit": "f346b5c",
+            "subject": "fix(vector): bound hostile geometry and raster work (#8769)"
+          },
+          {
+            "commit": "92262d5",
+            "subject": "fix(cms): confirm ICC profile identity by bytes, not the 64-bit hash alone (#8863)"
           }
         ]
       }
@@ -1119,5 +1127,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T13:07:36+00:00"
+  "updated_at": "2026-10-23T14:02:21+00:00"
 }
