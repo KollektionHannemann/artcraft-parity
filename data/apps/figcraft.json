@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "f6f44dc",
-  "latest_commit_date": "2026-10-21T15:50:24+07:00",
-  "latest_message": "M7: a document dropped on the canvas opens as a new file (#916) (#928)",
+  "latest_commit": "d6e8a6e",
+  "latest_commit_date": "2026-10-24T02:02:19+07:00",
+  "latest_message": "Docs: roadmap entries for the community PRs in #507, #510, #529 and #530 (#587)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -238,7 +238,7 @@
       ".fig import's tail: fixes from real files, connector labels, table cells, filled areas with their own fills (the best-effort import, editable vector networks, the other layer kinds and variable prototype actions landed 2026-10-11): 5–10 h; then checking the rest of the experimental .fig export (landed 2026-10-12; written files open and draw in other software) on effects, images, prototypes and real files: 5–15 h.",
       "Real-file corpus and measured fidelity: 15–30 h.",
       "Tool-by-tool interaction pass against Figma: 40–60 h.",
-      "Languages: native reviews of the es, fr, de, pt-BR, ja and ko drafts (people), Latin American Spanish (1–2 h), then Simplified Chinese (3–5 h).",
+      "Languages: native reviews of the es (with es-419), fr, de, pt-BR, ja, ko, zh-Hans, id and cs drafts (people), the entries added since each catalog was written, then Hindi, Vietnamese and Arabic (localization-parity).",
       "Multiplayer (M9): accounts and teams on top of the live sessions and the standalone server (transport, hosting, invite links that open the app, document sync, presence with remote text carets, cursor chat and spotlight, per-user undo, reconnect with offline edits, collision-free ids for styles, variables and comments, the browser client, figcraft-server with persistence and share links to edit or view, team libraries on the server landed): 42–84 h."
     ],
     "progress": [
@@ -253,6 +253,38 @@
       {
         "date": "2026-10-17",
         "text": "· Frames and sections convert into each other (M1, #719): object.convertToSection turns a frame on the page or in a section into a section in place (same box, name, fill and layers, which stay where they are; what only a frame has goes: auto layout, clipping, layout grids, guides, scrolling), and object.convertToFrame now also turns a section into a frame that keeps its fill and doesn't clip, so the look stays. Nested frames, instances, main components and sections holding sections are refused with the reason; one undo step each. Both are in the canvas context menu (Convert to section / Convert to frame) and in Spanish. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-15",
+        "text": "· Auto-save (M1, #305): Preferences ▸ Save files automatically (pref.autoSave, off by default, desktop only) saves each open file that has a path 3 s after its last change, never during a gesture, a live text preview or while a version is shown; the file is encoded off the UI thread, a failed save says why and is tried again a minute later. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-15",
+        "text": "· A text box by dragging (M1, #363): a drag with the Text tool makes a fixed-size text box the size of the drag; a click still makes auto-width text. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-15",
+        "text": "· Batch step references (M0.9, #400): a command.batch step can use the id an earlier step made ({\"$step\": n}, a reserved key), so a nested tree takes one call and one undo step. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-15",
+        "text": "· Removing someone from a live session (M9, #338): the host or the file's owner removes a person from the avatar's menu or with collab.removePerson; they keep their copy and can't rejoin while the session runs. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-15",
+        "text": "· Languages (M10, #257, #263, #469, #477, #288): Russian (one/few/many plurals) and Turkish catalogs reviewed by native speakers, Czech and Indonesian drafts, the Japanese draft completed; Preferences ▸ Language lists 12 languages and Latin American Spanish. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-15",
+        "text": "· Zoom previews (M8, #312): when renders from scratch are slow, a new zoom shows the whole view coarsely first, then refines it. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-15",
+        "text": "· Web clipboard (M1, #375): copy and paste in the browser go through the system clipboard. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-15",
+        "text": "· Alt-drag copies snap to their original and Duplicate (Cmd+D) repeats the last copy's offset (M1, #283). Numbers unchanged."
       },
       {
         "date": "2026-10-14",
@@ -369,38 +401,6 @@
       {
         "date": "2026-10-12",
         "text": "· Plugin widgets and the panel tail (gap 6, plugin API 3; older plugins run unchanged): a widget"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "· Layers and Assets panels behaviour suite (gap 4): several layers dropped together land"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "· Vector multi-edit and the vector edit tail (gap 9): several vector layers in edit"
-      },
-      {
-        "date": "2026-10-11",
-        "text": "· Canvas navigation, guides and grids behaviour suite (gap 4): zoom, panning, the pixel"
-      },
-      {
-        "date": "2026-10-11",
-        "text": "· Export and inspect behaviour suite (gap 4): exports cover what a layer paints (shadows"
-      },
-      {
-        "date": "2026-10-11",
-        "text": "· .fig import's tail (gap 1): vectors open as editable vector networks with their"
-      },
-      {
-        "date": "2026-10-11",
-        "text": "· Paint and effects behaviour suite: every documented rule for fills, blend modes,"
-      },
-      {
-        "date": "2026-10-11",
-        "text": "· .fig import, best effort (gap 1): file.open, file.import, drag and drop, the CLI and"
-      },
-      {
-        "date": "2026-10-11",
-        "text": "· Gamut warnings (gap 18): the colour picker of a Display P3 file flags colours"
       }
     ]
   },
@@ -420,21 +420,21 @@
     }
   },
   "roadmap": {
-    "revisions": 100,
-    "revisions_7d": 12,
+    "revisions": 101,
+    "revisions_7d": 13,
     "last_revision": {
-      "ts": "2026-10-21T08:50:24Z",
+      "ts": "2026-10-23T19:02:19Z",
       "kind": "content",
-      "commit": "f6f44dc",
-      "commit_full": "f6f44dcc53706c12c4e6eba11efeaee5b3092987",
-      "message": "M7: a document dropped on the canvas opens as a new file (#916) (#928)"
+      "commit": "d6e8a6e",
+      "commit_full": "d6e8a6e8745434b0f4e495b5216ad19b4a820722",
+      "message": "Docs: roadmap entries for the community PRs in #507, #510, #529 and #530 (#587)"
     },
     "last_update": {
-      "ts": "2026-10-21T08:50:24Z",
+      "ts": "2026-10-23T19:02:19Z",
       "kind": "content",
-      "commit": "f6f44dc",
-      "commit_full": "f6f44dcc53706c12c4e6eba11efeaee5b3092987",
-      "message": "M7: a document dropped on the canvas opens as a new file (#916) (#928)"
+      "commit": "d6e8a6e",
+      "commit_full": "d6e8a6e8745434b0f4e495b5216ad19b4a820722",
+      "message": "Docs: roadmap entries for the community PRs in #507, #510, #529 and #530 (#587)"
     },
     "self_reported": "2026-10-17"
   },
@@ -445,14 +445,14 @@
     "active_days_7d": 6,
     "changes_7d": 101,
     "changes_14d": 289,
-    "housekeeping_7d": 15,
+    "housekeeping_7d": 17,
     "last_code_change": {
       "ts": "2026-10-23T17:50:42Z",
       "commit": "6ba0223",
       "commit_full": "6ba02236367320fef0b373b461f6e9796bfc6de0",
       "subject": "Tests: the paragraph indent test loads system fonts and skips only without glyphs (#1227)"
     },
-    "last_commit_ts": "2026-10-23T17:50:42Z",
+    "last_commit_ts": "2026-10-23T19:02:19Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       51,
@@ -727,7 +727,7 @@
       {
         "d": "2026-10-23",
         "code": 6,
-        "other": 0,
+        "other": 2,
         "samples": [
           {
             "commit": "6ba0223",
@@ -3217,7 +3217,30 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "d6e8a6e",
+      "commit_full": "d6e8a6e8745434b0f4e495b5216ad19b4a820722",
+      "commit_date": "2026-10-24T02:02:19+07:00",
+      "ts": "2026-10-23T19:02:19Z",
+      "message": "Docs: roadmap entries for the community PRs in #507, #510, #529 and #530 (#587)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-17",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T17:54:27+00:00"
+  "updated_at": "2026-10-23T19:04:55+00:00"
 }

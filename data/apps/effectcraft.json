@@ -296,18 +296,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.7,
+    "score": 15.8,
     "active_days_7d": 5,
-    "changes_7d": 90,
-    "changes_14d": 423,
-    "housekeeping_7d": 11,
+    "changes_7d": 91,
+    "changes_14d": 424,
+    "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-10-23T17:02:36Z",
-      "commit": "89b8db7",
-      "commit_full": "89b8db77185fddf8aee562b874f06731f4b57c9e",
-      "subject": "Footage, Lottie and models: resolve stored paths with craft-docpath's resolve_absolute (#1975)"
+      "ts": "2026-10-23T18:16:37Z",
+      "commit": "7e49932",
+      "commit_full": "7e49932cafe7241b0fcf7dec1b4efdb377913bf5",
+      "subject": "GPU tests: pass on Mesa lavapipe (boundary flips, skip the Reshape case that crashes it); cargo fmt (#2239)"
     },
-    "last_commit_ts": "2026-10-23T17:02:36Z",
+    "last_commit_ts": "2026-10-23T18:54:10Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       12,
@@ -323,7 +323,7 @@
       0,
       4,
       10,
-      17
+      18
     ],
     "days": [
       {
@@ -701,9 +701,13 @@
       },
       {
         "d": "2026-10-23",
-        "code": 17,
-        "other": 1,
+        "code": 18,
+        "other": 2,
         "samples": [
+          {
+            "commit": "7e49932",
+            "subject": "GPU tests: pass on Mesa lavapipe (boundary flips, skip the Reshape case that crashes it); cargo fmt (#2239)"
+          },
           {
             "commit": "89b8db7",
             "subject": "Footage, Lottie and models: resolve stored paths with craft-docpath's resolve_absolute (#1975)"
@@ -711,10 +715,6 @@
           {
             "commit": "5a027fa",
             "subject": "Packaging: pin the signing client and appimagetool, and check their hashes (#1976)"
-          },
-          {
-            "commit": "0173abd",
-            "subject": "CI: dev-profile gate, one test binary per crate, nextest, line tables only (#2235)"
           }
         ]
       }
@@ -1089,5 +1089,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T17:22:34+00:00"
+  "updated_at": "2026-10-23T19:04:46+00:00"
 }
