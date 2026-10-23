@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/deckcraft",
   "roadmap_url": "https://github.com/storytold/deckcraft/blob/main/ROADMAP.md",
-  "latest_commit": "f011313",
-  "latest_commit_date": "2026-10-22T07:49:48-06:00",
-  "latest_message": "Thumbnails: only render the slides in view (#969) (#1011)",
+  "latest_commit": "964d470",
+  "latest_commit_date": "2026-10-23T17:11:13-04:00",
+  "latest_message": "# Conflicts: (#1091)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
-    "last_updated": "2026-10-18",
+    "last_updated": "2026-10-23",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -238,12 +238,68 @@
     ],
     "progress": [
       {
+        "date": "2026-10-23",
+        "text": "A shape with no fill and no line (a text box) no longer draws its shape-level glow as a halo round its box; the text's own glow is all PowerPoint shows"
+      },
+      {
+        "date": "2026-10-23",
+        "text": "Normal view: a slide zoomed past the window gets a horizontal and a vertical scroll bar on the axes that overflow; drag the thumb or click the track to reach every edge (#1157)"
+      },
+      {
+        "date": "2026-10-22",
+        "text": "Table text takes the master's other-text style (otherStyle), shapes and text boxes the presentation's default text style, as PowerPoint for Mac draws them (synthetic probe: 14 pt cells under a 14 pt otherStyle and a 26 pt defaultTextStyle); a private deck's table had been drawn 20 pt instead of 18"
+      },
+      {
+        "date": "2026-10-22",
+        "text": "Slide Show: while animations play, each frame draws only the slide's shapes over the slide's backdrop (background, master and layout graphics), rendered once and ahead of time. A full-slide picture with a glow in the layout re-rendered at every frame held animations to 2–3 frames a second (~390 ms a frame at 1080p); now ~28 ms"
+      },
+      {
+        "date": "2026-10-22",
+        "text": "Animation Pane ▸ Play From: with an effect selected, the pane's play button starts the canvas preview at that effect, with the effects before it already played. With nothing selected it is still Play All"
+      },
+      {
+        "date": "2026-10-22",
+        "text": "Shape Fill and Shape Outline format the members of a selected group, including nested groups, in one undo step. Fill transparency retains each member's effective colour (#1079)"
+      },
+      {
+        "date": "2026-10-21",
+        "text": "Opening a .pptx puts the text of shapes without an anchor at the top even when the theme's shape defaults (spDef) centre new shapes, as PowerPoint for Mac draws them; checked with a synthetic probe and on a private 166-deck corpus (51 slides closer to PowerPoint's PDF, none further)"
+      },
+      {
+        "date": "2026-10-21",
+        "text": "3-D contours, extrusion depths and bevels keep their size in points inside a group whose child coordinates scale its shapes: a 1 pt contour on a small extruded cube in a legacy group drew hundreds of points wide, a band across the slide"
+      },
+      {
+        "date": "2026-10-20",
+        "text": "Chart number formats with explicit empty positive, negative or zero sections hide the corresponding labels, including all values with three semicolons; a blank whole format still uses General. Synthetic formatter regressions"
+      },
+      {
+        "date": "2026-10-18",
+        "text": "Find (Ctrl+F): \"Find what:\" has the keyboard as soon as the dialog opens, and keeps it after Enter finds a match, so the search can be typed and changed without clicking the field (#951)"
+      },
+      {
+        "date": "2026-10-18",
+        "text": "Duplicate (Ctrl+D) repeats a move: duplicate a shape, move the copy, and the next Duplicate places its copy the same distance further on, as in PowerPoint (#966)"
+      },
+      {
         "date": "2026-10-18",
         "text": "Native chart sidecar bytes move from JSON arrays into referenced ZIP entries, with shared media byte/item limits and bounded reads; older inline sidecars still load. Synthetic format regressions cover large workbooks and malformed members"
       },
       {
         "date": "2026-10-18",
         "text": "Slide thumbnails and the Slide Sorter render only the slides in view: on a deck of more than 600 slides they used to evict their own thumbnails, so the pane flashed white and never finished (#969)"
+      },
+      {
+        "date": "2026-10-18",
+        "text": "Resizing with the mouse snaps the edge being dragged to the slide, guides and other shapes: a fixed edge that already lined up used to take the snap and leave the dragged edge free, and a fixed edge near a line shifted the dragged one (#961)"
+      },
+      {
+        "date": "2026-10-18",
+        "text": "Slide show: a video or audio clip is looked up on the slide it belongs to, so slides whose shape ids repeat (the PPTX import numbers each slide afresh) no longer play each other's clips (#994)"
+      },
+      {
+        "date": "2026-10-18",
+        "text": "About: Contributors and Models get their own fixed-size block below the tab row, so the tab row is no longer squeezed into the credits and the tabs keep answering (#843)"
       },
       {
         "date": "2026-10-17",
@@ -268,6 +324,10 @@
       {
         "date": "2026-10-16",
         "text": "Arrange ▸ Align: Align to Slide and Align Selected Objects, as in PowerPoint. One object aligns to the slide and several to each other until the other choice is ticked; the choice holds for that selection and also drives Distribute"
+      },
+      {
+        "date": "2026-10-16",
+        "text": "Fitted canvas: discrete mouse-wheel steps navigate immediately, including rapid and batched input, while trackpad gestures retain their cooldown and zoomed slides still pan."
       },
       {
         "date": "2026-10-16",
@@ -336,66 +396,6 @@
       {
         "date": "2026-10-14",
         "text": "File › New starter decks: Briefing, Lesson, Pitch, Field Notes, Quarterly and Evening Talk, original text on our themes (file.new {template}, file.templates). The large template gallery is still open"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Slide Sorter sections: Add Section, rename in place, collapse a section, and drag the bar to move that section and its slides"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Text: an input method's composition in a table cell is underlined in place, with the caret and candidate window in that cell"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Edit Photo Album (insert.photoAlbumEdit): reopen the album's slides and re-flow them in one undo step, with black and white, rotation, brightness, contrast and an album theme"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Photo Album dialog (insert.photoAlbum): pictures and text boxes become slides in the open presentation, one undo step"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Design › Colors › Customize Colors… opens Create New Theme Colors: the open master's scheme name and twelve theme colours, applied in one undo"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Design › Fonts › Customize Fonts… opens Create New Theme Fonts: the open master's scheme name and its heading and body latin faces, applied in one undo"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Alt Text: Mark as decorative opens checked when the selection already is, so OK no longer clears it"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Insert Hyperlink: address, email, slide and ScreenTip open from the selection, so OK no longer replaces them with https:// and an empty tip"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Insert › Date and Time: the ribbon and Insert menu open a format list (datetime1–datetime13) with a language and Update automatically. OK inserts one field, or the shown text when Update is off. English has every format; en-GB, French, Japanese and Swedish list the numeric date and 24-hour time"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "View: the Zoom dialog takes a percent or Fit and applies it on OK. View ▸ Zoom opens it; the arrow still lists the presets"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Slide Show: Show Media Controls writes the show setting and hides the playback bar and GIF button during the show"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "During a show, a typed slide number is shown and Enter goes to that slide"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "A custom show plays only its slides: Show in the Custom Shows dialog, Set Up Slide Show, or a click action"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Presenter view pauses and resets its timer (T, R) and changes notes size (A-/A+, brackets). The clock shows local time. Second-display placement stays with #433"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "See All Slides and zoom during a show: a thumbnail grid (G, or All), click to jump, and click-to-zoom at 2× (Z). Presenter view has Black, White, All slides and Zoom"
       }
     ]
   },
@@ -406,39 +406,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 80,
-    "revisions_7d": 13,
+    "revisions": 95,
+    "revisions_7d": 28,
     "last_revision": {
-      "ts": "2026-10-22T13:49:48Z",
+      "ts": "2026-10-23T21:11:13Z",
       "kind": "content",
-      "commit": "f011313",
-      "commit_full": "f011313a3a8906371d895c58936b8929c6e517eb",
-      "message": "Thumbnails: only render the slides in view (#969) (#1011)"
+      "commit": "964d470",
+      "commit_full": "964d4701222001268fcd6118eccb9eb5b6d698d9",
+      "message": "# Conflicts: (#1091)"
     },
     "last_update": {
-      "ts": "2026-10-22T13:49:48Z",
+      "ts": "2026-10-23T21:11:13Z",
       "kind": "content",
-      "commit": "f011313",
-      "commit_full": "f011313a3a8906371d895c58936b8929c6e517eb",
-      "message": "Thumbnails: only render the slides in view (#969) (#1011)"
+      "commit": "964d470",
+      "commit_full": "964d4701222001268fcd6118eccb9eb5b6d698d9",
+      "message": "# Conflicts: (#1091)"
     },
-    "self_reported": "2026-10-18"
+    "self_reported": "2026-10-23"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 13.6,
+    "score": 16.8,
     "active_days_7d": 6,
-    "changes_7d": 42,
-    "changes_14d": 379,
-    "housekeeping_7d": 10,
+    "changes_7d": 85,
+    "changes_14d": 422,
+    "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-10-23T17:40:57Z",
-      "commit": "c787f4f",
-      "commit_full": "c787f4f08061e4779e11de75ae151c316d236c0d",
-      "subject": "Packaging: pin the signing client and appimagetool, and check their hashes (#1082)"
+      "ts": "2026-10-23T21:13:40Z",
+      "commit": "137685b",
+      "commit_full": "137685b098e38d06bcd06048e886724b7139d06d",
+      "subject": "Merge pull request #986 from HyakoV3/fix/974-modern-comment-namespaces"
     },
-    "last_commit_ts": "2026-10-23T17:40:57Z",
+    "last_commit_ts": "2026-10-23T21:13:40Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
       17,
@@ -454,7 +454,7 @@
       0,
       4,
       7,
-      4
+      47
     ],
     "days": [
       {
@@ -727,20 +727,20 @@
       },
       {
         "d": "2026-10-23",
-        "code": 4,
-        "other": 1,
+        "code": 47,
+        "other": 2,
         "samples": [
           {
-            "commit": "c787f4f",
-            "subject": "Packaging: pin the signing client and appimagetool, and check their hashes (#1082)"
+            "commit": "137685b",
+            "subject": "Merge pull request #986 from HyakoV3/fix/974-modern-comment-namespaces"
           },
           {
-            "commit": "f001f37",
-            "subject": "CI: one test binary per crate, nextest, line tables only (#1213)"
+            "commit": "9861de3",
+            "subject": "Media: a negative (padding) video crop keeps the letterboxed frame"
           },
           {
-            "commit": "0f4fffc",
-            "subject": "Use chrono instead of hand-rolled UTC conversion (#1116)"
+            "commit": "48066c4",
+            "subject": "# Conflicts: (#1008)"
           }
         ]
       }
@@ -2741,7 +2741,352 @@
       "breadth_pct": 62.0,
       "full_prev": 55.0,
       "kind": "content"
+    },
+    {
+      "commit": "86f6b36",
+      "commit_full": "86f6b365f31cca1dea30121d990398467e0d2753",
+      "commit_date": "2026-10-23T17:09:24-04:00",
+      "ts": "2026-10-23T21:09:24Z",
+      "message": "Merge pull request #1145 from pick2510/fix/table-text-other-style",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "532d88c",
+      "commit_full": "532d88cda107d24100187799eb3d3319c2a4d054",
+      "commit_date": "2026-10-23T17:09:37-04:00",
+      "ts": "2026-10-23T21:09:37Z",
+      "message": "Merge pull request #1003 from Faabyy/fix/resize-snaps-dragged-edge-961",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "3084f5b",
+      "commit_full": "3084f5b5f4d48ad628edd381d47bec2f6bababb8",
+      "commit_date": "2026-10-23T17:09:37-04:00",
+      "ts": "2026-10-23T21:09:37Z",
+      "message": "Merge pull request #989 from Zetenypapp/fix/find-focus-951",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "e128a09",
+      "commit_full": "e128a09caaa242672a317a87a725a8b699a1c1de",
+      "commit_date": "2026-10-23T17:09:38-04:00",
+      "ts": "2026-10-23T21:09:38Z",
+      "message": "# Conflicts: (#988)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "6498809",
+      "commit_full": "6498809e29fcaf2164c9a5060da467f6b5a5aed6",
+      "commit_date": "2026-10-23T17:09:40-04:00",
+      "ts": "2026-10-23T21:09:40Z",
+      "message": "Merge pull request #1161 from kbarni/faster-transition",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "f5e9cf5",
+      "commit_full": "f5e9cf5b0aea720e1ada5655bd1de6d337aa55b1",
+      "commit_date": "2026-10-23T17:09:41-04:00",
+      "ts": "2026-10-23T21:09:41Z",
+      "message": "Merge pull request #999 from Faabyy/fix/media-clip-per-slide-994",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "5bebcd9",
+      "commit_full": "5bebcd90757167e86e00ca14ce5c9f181bf1566c",
+      "commit_date": "2026-10-23T17:09:49-04:00",
+      "ts": "2026-10-23T21:09:49Z",
+      "message": "Merge pull request #872 from kinower/fix/responsive-mouse-wheel-navigation",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "0f00a94",
+      "commit_full": "0f00a94c236948cb945b2f33b84efe97897c2d05",
+      "commit_date": "2026-10-23T17:09:50-04:00",
+      "ts": "2026-10-23T21:09:50Z",
+      "message": "Merge pull request #906 from MarekSpodBiedry/issue-843",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "2d7b69d",
+      "commit_full": "2d7b69d7b60bf77806f86e67f1f5b9e3bd120f30",
+      "commit_date": "2026-10-23T17:10:12-04:00",
+      "ts": "2026-10-23T21:10:12Z",
+      "message": "Merge pull request #1199 from marcoarnulfo/feat/anim-play-from",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "7e5b21b",
+      "commit_full": "7e5b21b79420fd7b2d322b281e0f21c0878ed96d",
+      "commit_date": "2026-10-23T17:10:31-04:00",
+      "ts": "2026-10-23T21:10:31Z",
+      "message": "Merge pull request #1136 from pick2510/fix/spdef-anchor-new-shapes-only",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "1d6205d",
+      "commit_full": "1d6205d576d7ed57777c829ebd0dc7a6dc48f494",
+      "commit_date": "2026-10-23T17:10:39-04:00",
+      "ts": "2026-10-23T21:10:39Z",
+      "message": "Merge pull request #1240 from leobasilio/fix/textbox-glow-halo",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-18",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "a7c4894",
+      "commit_full": "a7c489447187fa920b6e30f7337f5fd33ea132e7",
+      "commit_date": "2026-10-23T17:10:40-04:00",
+      "ts": "2026-10-23T21:10:40Z",
+      "message": "Merge pull request #1239 from marcoarnulfo/feat/canvas-scrollbars",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-23",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "a0aca7f",
+      "commit_full": "a0aca7f36b9c4dd5d975d170f48d8024ac65a0da",
+      "commit_date": "2026-10-23T17:10:42-04:00",
+      "ts": "2026-10-23T21:10:42Z",
+      "message": "Merge pull request #1187 from samirhvbr/fix/group-shape-appearance",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-23",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "e27d549",
+      "commit_full": "e27d549be73d73ff58c8780cb68da9da645f31f2",
+      "commit_date": "2026-10-23T17:10:42-04:00",
+      "ts": "2026-10-23T21:10:42Z",
+      "message": "Merge pull request #1134 from pick2510/fix/3d-in-scaled-groups",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-23",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "964d470",
+      "commit_full": "964d4701222001268fcd6118eccb9eb5b6d698d9",
+      "commit_date": "2026-10-23T17:11:13-04:00",
+      "ts": "2026-10-23T21:11:13Z",
+      "message": "# Conflicts: (#1091)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-23",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T17:54:36+00:00"
+  "updated_at": "2026-10-23T21:18:17+00:00"
 }

@@ -293,18 +293,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 26.6,
+    "score": 26.7,
     "active_days_7d": 7,
-    "changes_7d": 285,
-    "changes_14d": 1557,
-    "housekeeping_7d": 23,
+    "changes_7d": 287,
+    "changes_14d": 1559,
+    "housekeeping_7d": 25,
     "last_code_change": {
-      "ts": "2026-10-23T20:36:09Z",
-      "commit": "84a2aa9",
-      "commit_full": "84a2aa9b036daddeceae4b75b45fdfde79b43c03",
-      "subject": "xtask: the panic hunt without nextest builds with the HEIF decoder (#8980)"
+      "ts": "2026-10-23T21:11:00Z",
+      "commit": "4991f63",
+      "commit_full": "4991f6377e871f54bdefb324cda0debb25606c54",
+      "subject": "packaging(macos): retry stapling when Apple's ticket lookup drops (#8995)"
     },
-    "last_commit_ts": "2026-10-23T20:36:09Z",
+    "last_commit_ts": "2026-10-23T21:11:30Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       255,
@@ -320,7 +320,7 @@
       3,
       11,
       48,
-      24
+      26
     ],
     "days": [
       {
@@ -762,20 +762,20 @@
       },
       {
         "d": "2026-10-23",
-        "code": 24,
-        "other": 4,
+        "code": 26,
+        "other": 6,
         "samples": [
+          {
+            "commit": "4991f63",
+            "subject": "packaging(macos): retry stapling when Apple's ticket lookup drops (#8995)"
+          },
+          {
+            "commit": "6d4b969",
+            "subject": "deps: roxmltree 0.21 in photocraft-io and photocraft-engine (#8973)"
+          },
           {
             "commit": "84a2aa9",
             "subject": "xtask: the panic hunt without nextest builds with the HEIF decoder (#8980)"
-          },
-          {
-            "commit": "bde1368",
-            "subject": "CI: cargo xtask ci is the gate, and the workflow runs it (#8970)"
-          },
-          {
-            "commit": "f3f2acc",
-            "subject": "security(gpu,ui-egui): bound clipped group planning; pattern swatch sampling (#8960)"
           }
         ]
       }
@@ -1127,5 +1127,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T20:55:17+00:00"
+  "updated_at": "2026-10-23T21:17:40+00:00"
 }
