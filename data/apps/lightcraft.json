@@ -346,18 +346,18 @@
   "milestone": null,
   "activity": {
     "level": "quiet",
-    "score": 6.7,
-    "active_days_7d": 4,
-    "changes_7d": 17,
-    "changes_14d": 41,
+    "score": 7.7,
+    "active_days_7d": 5,
+    "changes_7d": 18,
+    "changes_14d": 42,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-10-22T23:27:49Z",
-      "commit": "beb044b",
-      "commit_full": "beb044bf35378716e4bc5c40dff03b7f2991cc36",
-      "subject": "security: validate CLI paths/args in dev tools (SonarCloud S2083/S8707/S8705) (#2494)"
+      "ts": "2026-10-23T14:31:35Z",
+      "commit": "1c03b7b",
+      "commit_full": "1c03b7b18f3a8219b034ad384477bf2f8d767585",
+      "subject": "fix: document the deliberate buffer leak during thread teardown (SonarCloud) (#2700)"
     },
-    "last_commit_ts": "2026-10-23T00:06:09Z",
+    "last_commit_ts": "2026-10-23T14:31:35Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
       6,
@@ -373,7 +373,7 @@
       0,
       5,
       2,
-      0
+      1
     ],
     "days": [
       {
@@ -759,9 +759,14 @@
       },
       {
         "d": "2026-10-23",
-        "code": 0,
+        "code": 1,
         "other": 1,
-        "samples": []
+        "samples": [
+          {
+            "commit": "1c03b7b",
+            "subject": "fix: document the deliberate buffer leak during thread teardown (SonarCloud) (#2700)"
+          }
+        ]
       }
     ]
   },
@@ -1180,5 +1185,5 @@
       "kind": "estimates"
     }
   ],
-  "updated_at": "2026-10-23T01:11:30+00:00"
+  "updated_at": "2026-10-23T15:00:56+00:00"
 }

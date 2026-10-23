@@ -296,18 +296,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.7,
+    "score": 15.1,
     "active_days_7d": 5,
-    "changes_7d": 81,
-    "changes_14d": 414,
+    "changes_7d": 84,
+    "changes_14d": 417,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-10-23T13:53:46Z",
-      "commit": "16c3083",
-      "commit_full": "16c30830ef010a665d3ab658b34e174a037d1395",
-      "subject": "fix: put the NOSONAR marker on the spawnSync line (SonarCloud follow-up) (#2215)"
+      "ts": "2026-10-23T14:44:42Z",
+      "commit": "dd325c7",
+      "commit_full": "dd325c7ab8556e7ff33d64391c78e2316561da55",
+      "subject": "segment: bound checkpoint tensors and pickle work (#2192)"
     },
-    "last_commit_ts": "2026-10-23T13:53:46Z",
+    "last_commit_ts": "2026-10-23T14:44:42Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       12,
@@ -323,7 +323,7 @@
       0,
       4,
       10,
-      8
+      11
     ],
     "days": [
       {
@@ -701,20 +701,20 @@
       },
       {
         "d": "2026-10-23",
-        "code": 8,
+        "code": 11,
         "other": 1,
         "samples": [
           {
-            "commit": "16c3083",
-            "subject": "fix: put the NOSONAR marker on the spawnSync line (SonarCloud follow-up) (#2215)"
+            "commit": "dd325c7",
+            "subject": "segment: bound checkpoint tensors and pickle work (#2192)"
           },
           {
-            "commit": "9066b64",
-            "subject": "fix: validate the CLI path in the AE ease checker (SonarCloud jssecurity:S8705) (#2214)"
+            "commit": "250b341",
+            "subject": "fix: suppress the stat check's taint finding (SonarCloud) (#2218)"
           },
           {
-            "commit": "23f11ab",
-            "subject": "expr: bound rewrite expansion and preserve assignment targets (#2195)"
+            "commit": "9b735dc",
+            "subject": "fix: document the AE checker's operator-supplied CLI path (SonarCloud) (#2217)"
           }
         ]
       }
@@ -1089,5 +1089,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T14:02:36+00:00"
+  "updated_at": "2026-10-23T15:01:05+00:00"
 }
