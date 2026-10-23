@@ -441,18 +441,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.6,
+    "score": 16.0,
     "active_days_7d": 6,
-    "changes_7d": 97,
-    "changes_14d": 285,
+    "changes_7d": 98,
+    "changes_14d": 286,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-10-23T15:17:32Z",
-      "commit": "8d79060",
-      "commit_full": "8d790607ff1ad40e32343ca2116d8fdcf3244c8d",
-      "subject": "packaging: bash test and function hygiene (SonarCloud S7688, S7679, S7682, S131, S7677) (#1201)"
+      "ts": "2026-10-23T16:56:34Z",
+      "commit": "e66780a",
+      "commit_full": "e66780a39beeb75c0e5721fa9cc3576b0949909f",
+      "subject": "packaging: use [[ for bash conditional tests (SonarCloud S7688) (#1225)"
     },
-    "last_commit_ts": "2026-10-23T15:17:32Z",
+    "last_commit_ts": "2026-10-23T16:56:34Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       51,
@@ -468,7 +468,7 @@
       0,
       16,
       4,
-      2
+      3
     ],
     "days": [
       {
@@ -726,9 +726,13 @@
       },
       {
         "d": "2026-10-23",
-        "code": 2,
+        "code": 3,
         "other": 0,
         "samples": [
+          {
+            "commit": "e66780a",
+            "subject": "packaging: use [[ for bash conditional tests (SonarCloud S7688) (#1225)"
+          },
           {
             "commit": "8d79060",
             "subject": "packaging: bash test and function hygiene (SonarCloud S7688, S7679, S7682, S131, S7677) (#1201)"
@@ -3215,5 +3219,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T16:01:40+00:00"
+  "updated_at": "2026-10-23T16:59:07+00:00"
 }

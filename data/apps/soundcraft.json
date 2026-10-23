@@ -342,18 +342,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 11.5,
+    "score": 11.8,
     "active_days_7d": 5,
-    "changes_7d": 72,
-    "changes_14d": 231,
+    "changes_7d": 73,
+    "changes_14d": 232,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-23T15:35:06Z",
-      "commit": "d47abe4",
-      "commit_full": "d47abe484d4f9ef0cc9f8e872e0b3880a61a4588",
-      "subject": "Use chrono instead of hand-rolled UTC conversion (#844)"
+      "ts": "2026-10-23T16:15:56Z",
+      "commit": "f0d5acb",
+      "commit_full": "f0d5acb800c65bcd2a9d637cd1726cf6597cb629",
+      "subject": "Deps: fix the workspace build after the dependency bump (#954)"
     },
-    "last_commit_ts": "2026-10-23T15:35:06Z",
+    "last_commit_ts": "2026-10-23T16:15:56Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
       23,
@@ -369,7 +369,7 @@
       0,
       1,
       12,
-      4
+      5
     ],
     "days": [
       {
@@ -607,9 +607,13 @@
       },
       {
         "d": "2026-10-23",
-        "code": 4,
+        "code": 5,
         "other": 0,
         "samples": [
+          {
+            "commit": "f0d5acb",
+            "subject": "Deps: fix the workspace build after the dependency bump (#954)"
+          },
           {
             "commit": "d47abe4",
             "subject": "Use chrono instead of hand-rolled UTC conversion (#844)"
@@ -617,10 +621,6 @@
           {
             "commit": "f431791",
             "subject": "style: use [[ ]], named locals and explicit returns in packaging scripts (SonarCloud S7688/S7679/S7682) (#950)"
-          },
-          {
-            "commit": "53a18ec",
-            "subject": "style: normalize the prores DCT basis literals (SonarCloud rust:S7454) (#962)"
           }
         ]
       }
@@ -1174,5 +1174,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T16:01:46+00:00"
+  "updated_at": "2026-10-23T16:59:12+00:00"
 }
