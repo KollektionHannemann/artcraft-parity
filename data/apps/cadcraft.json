@@ -287,18 +287,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 13.9,
+    "score": 14.1,
     "active_days_7d": 5,
-    "changes_7d": 116,
-    "changes_14d": 556,
+    "changes_7d": 117,
+    "changes_14d": 557,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-23T15:16:40Z",
-      "commit": "f043540",
-      "commit_full": "f043540d13dac03ce895a96c78a8349f3e40bd5b",
-      "subject": "packaging: use [[ ]] tests, named locals and explicit returns in shell scripts (SonarCloud S7688/S7679/S7682) (#1972)"
+      "ts": "2026-10-23T17:00:16Z",
+      "commit": "9d8f16c",
+      "commit_full": "9d8f16c8257062de2085c61c54e343bf6fb52450",
+      "subject": "Build main again after the #1957 dependency bump (#1991)"
     },
-    "last_commit_ts": "2026-10-23T15:16:40Z",
+    "last_commit_ts": "2026-10-23T17:00:16Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       191,
@@ -314,7 +314,7 @@
       0,
       4,
       25,
-      4
+      5
     ],
     "days": [
       {
@@ -543,9 +543,13 @@
       },
       {
         "d": "2026-10-23",
-        "code": 4,
+        "code": 5,
         "other": 1,
         "samples": [
+          {
+            "commit": "9d8f16c",
+            "subject": "Build main again after the #1957 dependency bump (#1991)"
+          },
           {
             "commit": "f043540",
             "subject": "packaging: use [[ ]] tests, named locals and explicit returns in shell scripts (SonarCloud S7688/S7679/S7682) (#1972)"
@@ -553,10 +557,6 @@
           {
             "commit": "78decf8",
             "subject": "web: allow browser zoom in the viewport meta (SonarCloud Web:S7926) (#1974)"
-          },
-          {
-            "commit": "1977a49",
-            "subject": "chore(deps): bump the cargo-dependencies group across 1 directory with 17 updates (#1957)"
           }
         ]
       }
@@ -966,5 +966,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T16:01:54+00:00"
+  "updated_at": "2026-10-23T17:22:47+00:00"
 }

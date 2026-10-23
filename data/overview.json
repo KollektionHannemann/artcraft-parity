@@ -501,16 +501,16 @@
         "level": "buzzing",
         "score": 31.7,
         "active_days_7d": 7,
-        "changes_7d": 669,
-        "changes_14d": 1438,
+        "changes_7d": 670,
+        "changes_14d": 1439,
         "housekeeping_7d": 28,
         "last_code_change": {
-          "ts": "2026-10-23T14:15:23Z",
-          "commit": "125df6d",
-          "commit_full": "125df6d8ecfae01d01ce369ac02e4aa03e0deed5",
-          "subject": "G9: Preserve supplied passwords when confirming the Save PDF dialog (#3836)"
+          "ts": "2026-10-23T17:21:42Z",
+          "commit": "c6e6c23",
+          "commit_full": "c6e6c23b99e30242b73f73958c8b3d77ea2a7e5c",
+          "subject": "packaging: use [[ for bash conditional tests (SonarCloud S7688) (#3853)"
         },
-        "last_commit_ts": "2026-10-23T14:15:23Z",
+        "last_commit_ts": "2026-10-23T17:21:42Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           114,
@@ -526,7 +526,7 @@
           14,
           169,
           96,
-          25
+          26
         ]
       },
       "release": {
@@ -607,18 +607,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 8.3,
+        "score": 8.7,
         "active_days_7d": 5,
-        "changes_7d": 19,
-        "changes_14d": 43,
+        "changes_7d": 20,
+        "changes_14d": 44,
         "housekeeping_7d": 11,
         "last_code_change": {
-          "ts": "2026-10-23T15:45:18Z",
-          "commit": "d5e639b",
-          "commit_full": "d5e639b3d1ad079c39a924c1b65d0a96ee2134ac",
-          "subject": "packaging: bash tests, named positional parameters and stderr errors (SonarCloud S7688/S7679/S7682/S7677) (#2655)"
+          "ts": "2026-10-23T17:00:02Z",
+          "commit": "0e6b0b1",
+          "commit_full": "0e6b0b150fe9755c03f3210d5789b80f9db9ace2",
+          "subject": "Packaging: pin the signing client and appimagetool, and check their hashes (#2413)"
         },
-        "last_commit_ts": "2026-10-23T15:45:18Z",
+        "last_commit_ts": "2026-10-23T17:00:02Z",
         "repo_since": "2026-09-30T14:04:12Z",
         "window": [
           6,
@@ -634,7 +634,7 @@
           0,
           5,
           2,
-          2
+          3
         ]
       },
       "release": {
@@ -674,7 +674,7 @@
       "color": "#3f63e8",
       "added": null,
       "is_new": false,
-      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4; previously trivial: progress log: a word with no break opportunity in it no longer makes the layout quadratic, #3412; previously trivial: progress log: a relationship the markup names without the prefix is read as it wrote, and an ordinary id names no part; previously trivial: progress log: a document with many relationships opens in the time its part takes, and an id the text only mentions is not a reference, #3411; previously trivial: progress log: read only and comments-only protection grey out edits; previously trivial: progress log: an empty paragraph with a hidden mark shows nothing, not even its list number, #3982; previously trivial: progress log: \"NaN\" in the Font dialog's Size box no longer closes the app, #3663; previously trivial: progress log: a table cell span from a .json file no longer overflows, #3637; previously trivial: progress log: a click in the footer while editing the header moves there; previously trivial: explicit documents keep the editor when recovery discovery finishes; readable recovery controls; previously trivial: Slovenian interface catalog, 2,614 entries; previously trivial: Insert Table of Figures dialog for any caption label, #3013; previously trivial: progress log: Home › Underline drop-down, #2738; previously trivial: personal templates in File › New and Save as Word Template, #2852; previously trivial: progress log: the scrollbar page tip stays on one line, #3341; previously trivial: progress log: forms protection greys out the control buttons; previously trivial: progress log: a document with many content controls saves in the time the controls take, #13; previously trivial: progress log: Word signature lines kept on save; previously trivial: a Thai run with Latin finds one installed font covering it all on Linux too, #1549; previously trivial: progress log: closing the header returns to the body selection, #3331; previously trivial: progress log: saving to a NAS share mounted by GVFS, #3003; previously trivial: progress log: a picture dragged near the bottom of a page lands there, #3169; previously trivial: centred list labels after leading page breaks, #2964; previously trivial: progress log: inline pictures drag to an insertion cursor and stay inline, #2233, #2234; previously trivial: progress log: a text file saved over itself closes without asking, #2376; previously trivial: progress log: a text frame in the paragraph defaults frames nothing, #2360; previously trivial: fixed font inputs in four layout controls; previously trivial: typing no longer starts render threads on every repaint, #3027; previously trivial: a right, centre or decimal tab whose text doesn't fit, or a left tab past the right indent, goes to the next line with its text, #1840; previously trivial: progress log: banded rows shade as in Word, #3415; previously trivial: progress log: the table handles show while the caret is in the table, #2428; previously trivial: progress log: a click below a floating table reaches the text after it, #2038; previously trivial: progress log: Delete on selected table cells leaves one empty paragraph in each, #2802; previously trivial: progress log: lam-alef in exported PDFs extracts whole with fonts that draw it as two glyphs, #2310; previously trivial: Bullets and Numbering toggle off style-inherited lists at their effective level, including basedOn chains and numbered ListParagraph styles; other paragraphs and list definitions stay unchanged (related to #3459); previously trivial: Russian sorting keeps ё with е and recognises decomposed ё/й; previously trivial: progress log: a text box that keeps the keyboard no longer resets the input method every frame, #2986; previously trivial: progress log: recovery copies and .json files store pictures as base64, #586 follow-up; previously trivial: progress log: legacy menu keys, #1697; previously trivial: progress log: shape gradients and transparency, #1500; previously trivial: progress log: Focus fills the screen, and Full Screen View shows the pages alone, #1678; previously trivial: progress log: text above a float's anchor wraps around it, #2048; previously trivial: progress log: File › Recover follows the app theme, #3243; previously trivial: progress log: formatting toolbar with the text context menu, #2959; previously trivial: progress log: caret inside ligatures, #1974; previously trivial: text typed into a content control takes the control's formatting; localized placeholder styles recognised; previously trivial: forms protection keeps its content controls: no inserting, Properties or Remove Content Control; previously trivial: long navigation headings wrap onto further lines within the pane, #3015; previously trivial: clearing a no-match font query keeps the recent heading visible, #2068; previously trivial: a word after a slash wraps whole, like Word, #2963; previously trivial: progress log: a header-cell picture watermark sits behind the text, #1775; previously trivial: symbols keep their font when the text font changes, #2036; previously trivial: opening a DOCX no longer copies its pictures; previously trivial: Add Font imports every selected font file, #1789); previously trivial (RTF export writes sections (gap 19); previously trivial: ODT export writes sections (gap 19); previously trivial: Read Aloud speaks each sentence in its own language, #1843; previously trivial: hint-reliant CJK outlines; previously trivial: Ctrl+wheel zoom no longer scrolls the document, #1743; previously trivial: progress log: Turkish case mapping in AutoCorrect, #1923; previously trivial: a mouse drag on a table leaves the view where it is, #1738; previously trivial: progress log: Hebrew field results and smart quotes, #1670; previously trivial: Backspace removes a selected table, rows or columns, #1844; previously trivial: progress log: mixed Hebrew/Latin text keeps its order in Word, #1543; previously trivial: progress log: web typing in non-Latin text no longer repeats, #1480; previously trivial: progress log: font family caches bounded and math font lookups follow font changes, #1354; previously trivial: --> AutoCorrect replacement, #2223; previously trivial: numbered headings, #1793; previously trivial: Navigation Find exposes Results, #2096; previously trivial: progress log: Columns on selected text, #2024; previously trivial: progress log: legacy outline, shadow, emboss and imprint text effects drawn, #2534; previously trivial: progress log: Indonesian proofing, #498; previously trivial: progress log: DOCX glossary documents (building blocks); previously trivial: progress log: Read Mode keeps the keyboard and shows whole, unobscured columns, #1772); previously trivial: progress log: font list entries of tall-ascent fonts no longer cut off, #2570); previously trivial: progress log: Split Cells and Convert Text to Table dialogs follow the Word check, #2592; previously trivial: a new source's Tag is made like Word's, three letters of the author and two digits of the year with a number added when taken, and an edit keeps the Tag, #2094; previously trivial: Web Layout fills the window width, #1876; previously trivial: progress log: Different First Page headers reachable from page 1, #2826; previously trivial: Language dialog keeps inherited proofing language and no-proof choices (#2717); previously trivial: progress log: web preferences kept between visits, #2132; previously trivial: progress log: undrawable private-use list bullets show the level's default bullet, #1683; previously trivial: progress log: w:eastAsianLayout kept on save; previously trivial: table style editor formats every part, #714); previously trivial: VML freeforms read and kept on save; previously trivial: progress log: consistent preferred cell widths; previously trivial: multi-paragraph field instructions no longer add blank lines; previously trivial: page-break-only list paragraphs hide their labels; previously trivial: progress log: grouped flowChartOr shapes draw their circle and crossing spokes; previously trivial: progress log: copies keep their formatting in other programs, #1523; previously trivial: progress log: privacy options on save, #1062; previously trivial: progress log: equation pictures in theme colours on Windows, #1002; previously trivial: symbol fonts, #776; previously trivial: the save prompt answers from the keyboard, #861; previously trivial: table column and row markers on the rulers, #700; previously trivial: table borders and the resize handle drag on the page, #217; previously trivial: formatting revisions landed, #41; previously trivial: Draw tab ink, #307, and Draw Table and Eraser, #303, landed: catalog 402/434; previously minor: readiness table with hours per audience; full number back to the additive weighted sum, 60%; mainstream and essentials numbers added; alpha gate checked; previously major: full re-measure against Word for Mac 16.113.4; restructured to the craftrules progress-docs standard)",
       "order": 9,
       "stage": "alpha",
       "next_stage": "beta",
@@ -694,21 +694,21 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 395,
-        "revisions_7d": 117,
+        "revisions": 397,
+        "revisions_7d": 119,
         "last_revision": {
-          "ts": "2026-10-23T16:55:46Z",
+          "ts": "2026-10-23T17:14:15Z",
           "kind": "content",
-          "commit": "3a49688",
-          "commit_full": "3a49688cfee92bdd6f9d7333d7ea6f9ec98d9193",
-          "message": "A document with many relationships takes minutes to open (#3809)"
+          "commit": "fa59922",
+          "commit_full": "fa5992223f9442df4044707cfeecaacf181df7ec",
+          "message": "doc: preserve rotated free endpoints when rerouting connectors (#3882)"
         },
         "last_update": {
-          "ts": "2026-10-23T16:55:46Z",
+          "ts": "2026-10-23T17:14:15Z",
           "kind": "content",
-          "commit": "3a49688",
-          "commit_full": "3a49688cfee92bdd6f9d7333d7ea6f9ec98d9193",
-          "message": "A document with many relationships takes minutes to open (#3809)"
+          "commit": "fa59922",
+          "commit_full": "fa5992223f9442df4044707cfeecaacf181df7ec",
+          "message": "doc: preserve rotated free endpoints when rerouting connectors (#3882)"
         },
         "self_reported": "2026-10-23"
       },
@@ -717,16 +717,16 @@
         "level": "buzzing",
         "score": 20.5,
         "active_days_7d": 6,
-        "changes_7d": 336,
-        "changes_14d": 989,
+        "changes_7d": 338,
+        "changes_14d": 991,
         "housekeeping_7d": 15,
         "last_code_change": {
-          "ts": "2026-10-23T16:55:46Z",
-          "commit": "3a49688",
-          "commit_full": "3a49688cfee92bdd6f9d7333d7ea6f9ec98d9193",
-          "subject": "A document with many relationships takes minutes to open (#3809)"
+          "ts": "2026-10-23T17:14:15Z",
+          "commit": "fa59922",
+          "commit_full": "fa5992223f9442df4044707cfeecaacf181df7ec",
+          "subject": "doc: preserve rotated free endpoints when rerouting connectors (#3882)"
         },
-        "last_commit_ts": "2026-10-23T16:55:46Z",
+        "last_commit_ts": "2026-10-23T17:14:15Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
           130,
@@ -742,7 +742,7 @@
           0,
           14,
           5,
-          46
+          48
         ]
       },
       "release": {
@@ -768,11 +768,11 @@
           "v": 60.0
         },
         {
-          "t": "2026-10-23T16:55:46Z",
+          "t": "2026-10-23T17:14:15Z",
           "v": 60.0
         }
       ],
-      "history_len": 395
+      "history_len": 397
     },
     {
       "id": "filmcraft",
@@ -825,16 +825,16 @@
         "level": "active",
         "score": 17.6,
         "active_days_7d": 6,
-        "changes_7d": 115,
-        "changes_14d": 537,
+        "changes_7d": 116,
+        "changes_14d": 538,
         "housekeeping_7d": 13,
         "last_code_change": {
-          "ts": "2026-10-23T16:53:57Z",
-          "commit": "4d08966",
-          "commit_full": "4d089668a84a770b6857afe70b40d361871d0e4c",
-          "subject": "packaging: use [[ for bash conditional tests (SonarCloud S7688) (#3003)"
+          "ts": "2026-10-23T17:08:41Z",
+          "commit": "20e159d",
+          "commit_full": "20e159dd68c2c4dd5d0665e79aa32ed039b0a171",
+          "subject": "tools: quit the super-linear regex scans in the spec table extractors (SonarCloud S8786) (#3007)"
         },
-        "last_commit_ts": "2026-10-23T16:53:57Z",
+        "last_commit_ts": "2026-10-23T17:08:41Z",
         "repo_since": "2026-09-30T09:22:00Z",
         "window": [
           198,
@@ -850,7 +850,7 @@
           0,
           11,
           5,
-          55
+          56
         ]
       },
       "release": {
@@ -935,14 +935,14 @@
         "active_days_7d": 6,
         "changes_7d": 41,
         "changes_14d": 378,
-        "housekeeping_7d": 9,
+        "housekeeping_7d": 10,
         "last_code_change": {
           "ts": "2026-10-23T16:43:34Z",
           "commit": "f001f37",
           "commit_full": "f001f37906bfe5e91d5a684e4a57018e4066b1fc",
           "subject": "CI: one test binary per crate, nextest, line tables only (#1213)"
         },
-        "last_commit_ts": "2026-10-23T16:43:34Z",
+        "last_commit_ts": "2026-10-23T16:59:34Z",
         "repo_since": "2026-10-06T02:13:02Z",
         "window": [
           17,
@@ -1048,18 +1048,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 16.0,
+        "score": 16.6,
         "active_days_7d": 6,
-        "changes_7d": 98,
-        "changes_14d": 286,
+        "changes_7d": 100,
+        "changes_14d": 288,
         "housekeeping_7d": 15,
         "last_code_change": {
-          "ts": "2026-10-23T16:56:34Z",
-          "commit": "e66780a",
-          "commit_full": "e66780a39beeb75c0e5721fa9cc3576b0949909f",
-          "subject": "packaging: use [[ for bash conditional tests (SonarCloud S7688) (#1225)"
+          "ts": "2026-10-23T17:02:11Z",
+          "commit": "c481023",
+          "commit_full": "c48102350b1ef00614b105ac07451ff0ca8a5141",
+          "subject": "Packaging: pin the signing client and appimagetool, and check their hashes (#950)"
         },
-        "last_commit_ts": "2026-10-23T16:56:34Z",
+        "last_commit_ts": "2026-10-23T17:02:11Z",
         "repo_since": "2026-10-09T15:38:50Z",
         "window": [
           51,
@@ -1075,7 +1075,7 @@
           0,
           16,
           4,
-          3
+          5
         ]
       },
       "release": {
@@ -1181,18 +1181,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 23.2,
+        "score": 23.3,
         "active_days_7d": 6,
-        "changes_7d": 195,
-        "changes_14d": 822,
+        "changes_7d": 198,
+        "changes_14d": 825,
         "housekeeping_7d": 22,
         "last_code_change": {
-          "ts": "2026-10-23T14:43:59Z",
-          "commit": "57e531c",
-          "commit_full": "57e531ccca0047597809748b5cb4276336d6051a",
-          "subject": "G14: Romanian: translate the 64 catalog rows still in English (#4016)"
+          "ts": "2026-10-23T17:02:56Z",
+          "commit": "cf0f806",
+          "commit_full": "cf0f80604ff1c27356c68ebe9b6c0aa1cfaca152",
+          "subject": "Allow OFL typefaces, Noto CJK and Source Han included (AGENTS.md §1.1) (#3908)"
         },
-        "last_commit_ts": "2026-10-23T14:43:59Z",
+        "last_commit_ts": "2026-10-23T17:02:56Z",
         "repo_since": "2026-09-30T09:17:08Z",
         "window": [
           136,
@@ -1208,7 +1208,7 @@
           0,
           13,
           59,
-          37
+          40
         ]
       },
       "release": {
@@ -1293,18 +1293,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.1,
+        "score": 13.2,
         "active_days_7d": 6,
-        "changes_7d": 53,
-        "changes_14d": 424,
+        "changes_7d": 55,
+        "changes_14d": 426,
         "housekeeping_7d": 13,
         "last_code_change": {
-          "ts": "2026-10-23T15:48:02Z",
-          "commit": "bdf8b8c",
-          "commit_full": "bdf8b8cc755ae6dfc2266d23b3ede43329114339",
-          "subject": "Use chrono instead of hand-rolled UTC conversion (#2121)"
+          "ts": "2026-10-23T17:02:16Z",
+          "commit": "33a4513",
+          "commit_full": "33a45130a1786bd9dce1aa2f8b431339a56ed8ee",
+          "subject": "Packaging: pin the signing client and appimagetool, and check their hashes (#2073)"
         },
-        "last_commit_ts": "2026-10-23T15:48:02Z",
+        "last_commit_ts": "2026-10-23T17:02:16Z",
         "repo_since": "2026-10-06T02:09:42Z",
         "window": [
           83,
@@ -1320,7 +1320,7 @@
           0,
           2,
           3,
-          18
+          20
         ]
       },
       "release": {
@@ -1617,18 +1617,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.4,
+        "score": 15.7,
         "active_days_7d": 5,
-        "changes_7d": 87,
-        "changes_14d": 420,
+        "changes_7d": 90,
+        "changes_14d": 423,
         "housekeeping_7d": 11,
         "last_code_change": {
-          "ts": "2026-10-23T15:29:09Z",
-          "commit": "f6ef1a7",
-          "commit_full": "f6ef1a790625657259f449f3f4f0773d7df449bb",
-          "subject": "Use chrono instead of hand-rolled UTC conversion (#2023)"
+          "ts": "2026-10-23T17:02:36Z",
+          "commit": "89b8db7",
+          "commit_full": "89b8db77185fddf8aee562b874f06731f4b57c9e",
+          "subject": "Footage, Lottie and models: resolve stored paths with craft-docpath's resolve_absolute (#1975)"
         },
-        "last_commit_ts": "2026-10-23T15:29:09Z",
+        "last_commit_ts": "2026-10-23T17:02:36Z",
         "repo_since": "2026-10-01T16:48:39Z",
         "window": [
           12,
@@ -1644,7 +1644,7 @@
           0,
           4,
           10,
-          14
+          17
         ]
       },
       "release": {
@@ -1833,18 +1833,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.9,
+        "score": 14.1,
         "active_days_7d": 5,
-        "changes_7d": 116,
-        "changes_14d": 556,
+        "changes_7d": 117,
+        "changes_14d": 557,
         "housekeeping_7d": 13,
         "last_code_change": {
-          "ts": "2026-10-23T15:16:40Z",
-          "commit": "f043540",
-          "commit_full": "f043540d13dac03ce895a96c78a8349f3e40bd5b",
-          "subject": "packaging: use [[ ]] tests, named locals and explicit returns in shell scripts (SonarCloud S7688/S7679/S7682) (#1972)"
+          "ts": "2026-10-23T17:00:16Z",
+          "commit": "9d8f16c",
+          "commit_full": "9d8f16c8257062de2085c61c54e343bf6fb52450",
+          "subject": "Build main again after the #1957 dependency bump (#1991)"
         },
-        "last_commit_ts": "2026-10-23T15:16:40Z",
+        "last_commit_ts": "2026-10-23T17:00:16Z",
         "repo_since": "2026-10-06T00:15:47Z",
         "window": [
           191,
@@ -1860,7 +1860,7 @@
           0,
           4,
           25,
-          4
+          5
         ]
       },
       "release": {
@@ -1894,5 +1894,5 @@
     }
   ],
   "errors": [],
-  "generated_at": "2026-10-23T16:59:22+00:00"
+  "generated_at": "2026-10-23T17:22:49+00:00"
 }
