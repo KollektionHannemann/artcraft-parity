@@ -293,18 +293,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 28.1,
+    "score": 28.4,
     "active_days_7d": 7,
-    "changes_7d": 332,
-    "changes_14d": 1604,
+    "changes_7d": 349,
+    "changes_14d": 1621,
     "housekeeping_7d": 25,
     "last_code_change": {
-      "ts": "2026-10-23T21:55:54Z",
-      "commit": "fc0b40d",
-      "commit_full": "fc0b40dae50301c08a6f302f32ecc10a39d20158",
-      "subject": "fix(atn): keep Photoshop's other transform interpolation modes on import (#8698)"
+      "ts": "2026-10-23T22:37:21Z",
+      "commit": "28f3c18",
+      "commit_full": "28f3c18c0d11d69005d224a0a5d5edc56f1fe858",
+      "subject": "Make magnetic lasso edge direction polarity-independent (#3415)"
     },
-    "last_commit_ts": "2026-10-23T21:55:54Z",
+    "last_commit_ts": "2026-10-23T22:37:21Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       255,
@@ -320,7 +320,7 @@
       3,
       11,
       48,
-      71
+      88
     ],
     "days": [
       {
@@ -762,26 +762,43 @@
       },
       {
         "d": "2026-10-23",
-        "code": 71,
+        "code": 88,
         "other": 6,
         "samples": [
           {
-            "commit": "fc0b40d",
-            "subject": "fix(atn): keep Photoshop's other transform interpolation modes on import (#8698)"
+            "commit": "28f3c18",
+            "subject": "Make magnetic lasso edge direction polarity-independent (#3415)"
           },
           {
-            "commit": "2b83be6",
-            "subject": "Levels, Curves and the other adjustments: ⌥ plus the shortcut opens the dialog at its last settings (#8900) (#8969)"
+            "commit": "ed0286d",
+            "subject": "New Document: category tabs and preset cards show a pointer, not a text cursor (#3647)"
           },
           {
-            "commit": "3a870ca",
-            "subject": "fix(ipp): preserve printer group metadata (#8828)"
+            "commit": "afd5127",
+            "subject": "perf: skip redundant smart object resamples and per-pixel reads (#6406)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.15.1",
+      "name": "PhotoCraft v0.15.1",
+      "ts": "2026-10-23T22:44:33Z",
+      "url": "https://github.com/storytold/photocraft/releases/tag/v0.15.1",
+      "changes": 28,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.14.0",
       "name": "PhotoCraft v0.14.0",
@@ -967,23 +984,6 @@
       ],
       "prerelease": false,
       "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.2.0",
-      "name": "PhotoCraft v0.2.0",
-      "ts": "2026-10-05T04:42:21Z",
-      "url": "https://github.com/storytold/photocraft/releases/tag/v0.2.0",
-      "changes": 52,
-      "new_contributors": 6,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
       "kind": null
     }
   ],
@@ -1127,5 +1127,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T22:16:42+00:00"
+  "updated_at": "2026-10-23T22:52:35+00:00"
 }
