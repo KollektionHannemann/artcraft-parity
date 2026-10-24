@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/designcraft",
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
-  "latest_commit": "348a8a4",
-  "latest_commit_date": "2026-10-23T17:30:30-04:00",
-  "latest_message": "PDF: report visible unembedded fonts in PDF/X-4 (#1235)",
+  "latest_commit": "d8d7885",
+  "latest_commit_date": "2026-10-24T01:34:05-04:00",
+  "latest_message": "Anchored objects: Relative to Spine mirrors custom positions on right-hand pages (#1702)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -237,6 +237,10 @@
     ],
     "progress": [
       {
+        "date": "2026-10-24",
+        "text": "· Custom-positioned anchored objects honour Relative to Spine (anchored.options {spineRelative}, IDML SpineRelative): the settings describe a left-hand page and mirror on a right-hand page, so marginal notes stay in the outside margin on both pages of a spread. On right-hand pages they took the left-hand placement and landed in the inside margin, across the spine or over the body text. No readiness percentage change."
+      },
+      {
         "date": "2026-10-23",
         "text": "· Save and export dialogs (Save As, Save a Copy, Export PDF and the other exports, Package, libraries and books) start in the active document's folder once it has been saved, and for a document never saved in the folder of the last file saved or exported, remembered across sessions (#1653). A folder deleted since falls back to the system's choice. No readiness percentage change."
       },
@@ -391,10 +395,6 @@
       {
         "date": "2026-10-15",
         "text": "· Paragraph Style Options summarizes captured and pending color, size and"
-      },
-      {
-        "date": "2026-10-15",
-        "text": "· Typography uses named panel groups with the Control panel and restores that"
       }
     ]
   },
@@ -405,39 +405,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 110,
-    "revisions_7d": 18,
+    "revisions": 111,
+    "revisions_7d": 19,
     "last_revision": {
-      "ts": "2026-10-23T21:30:30Z",
+      "ts": "2026-10-24T05:34:05Z",
       "kind": "content",
-      "commit": "348a8a4",
-      "commit_full": "348a8a4dc93fe4d44f8a4bcf60cfe25e5324af6c",
-      "message": "PDF: report visible unembedded fonts in PDF/X-4 (#1235)"
+      "commit": "d8d7885",
+      "commit_full": "d8d78851729a2c1a10e5bfad7c591f3de78651a0",
+      "message": "Anchored objects: Relative to Spine mirrors custom positions on right-hand pages (#1702)"
     },
     "last_update": {
-      "ts": "2026-10-23T21:30:30Z",
+      "ts": "2026-10-24T05:34:05Z",
       "kind": "content",
-      "commit": "348a8a4",
-      "commit_full": "348a8a4dc93fe4d44f8a4bcf60cfe25e5324af6c",
-      "message": "PDF: report visible unembedded fonts in PDF/X-4 (#1235)"
+      "commit": "d8d7885",
+      "commit_full": "d8d78851729a2c1a10e5bfad7c591f3de78651a0",
+      "message": "Anchored objects: Relative to Spine mirrors custom positions on right-hand pages (#1702)"
     },
     "self_reported": "2026-10-13"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.7,
+    "score": 17.1,
     "active_days_7d": 5,
-    "changes_7d": 108,
-    "changes_14d": 325,
+    "changes_7d": 109,
+    "changes_14d": 326,
     "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-10-24T03:03:36Z",
-      "commit": "4823b59",
-      "commit_full": "4823b5949285f43d60e2edb11f1aab57963ecae9",
-      "subject": "PDF: shared reader from craft-libs 9f75d3dc (input bounds and crash fixes) (#1701)"
+      "ts": "2026-10-24T05:34:05Z",
+      "commit": "d8d7885",
+      "commit_full": "d8d78851729a2c1a10e5bfad7c591f3de78651a0",
+      "subject": "Anchored objects: Relative to Spine mirrors custom positions on right-hand pages (#1702)"
     },
-    "last_commit_ts": "2026-10-24T03:03:36Z",
+    "last_commit_ts": "2026-10-24T05:34:05Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       4,
@@ -453,7 +453,7 @@
       8,
       19,
       47,
-      2
+      3
     ],
     "days": [
       {
@@ -853,9 +853,13 @@
       },
       {
         "d": "2026-10-24",
-        "code": 2,
+        "code": 3,
         "other": 1,
         "samples": [
+          {
+            "commit": "d8d7885",
+            "subject": "Anchored objects: Relative to Spine mirrors custom positions on right-hand pages (#1702)"
+          },
           {
             "commit": "4823b59",
             "subject": "PDF: shared reader from craft-libs 9f75d3dc (input bounds and crash fixes) (#1701)"
@@ -3604,7 +3608,30 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "d8d7885",
+      "commit_full": "d8d78851729a2c1a10e5bfad7c591f3de78651a0",
+      "commit_date": "2026-10-24T01:34:05-04:00",
+      "ts": "2026-10-24T05:34:05Z",
+      "message": "Anchored objects: Relative to Spine mirrors custom positions on right-hand pages (#1702)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-24T03:17:20+00:00"
+  "updated_at": "2026-10-24T05:53:44+00:00"
 }

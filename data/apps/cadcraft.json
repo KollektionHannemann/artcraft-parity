@@ -287,18 +287,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 11.6,
-    "active_days_7d": 4,
-    "changes_7d": 119,
-    "changes_14d": 369,
-    "housekeeping_7d": 15,
+    "score": 17.2,
+    "active_days_7d": 5,
+    "changes_7d": 166,
+    "changes_14d": 416,
+    "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-10-23T20:42:01Z",
-      "commit": "d3e6111",
-      "commit_full": "d3e6111cf115677053d278b298fe90e815b09e49",
-      "subject": "Xrefs and data links: resolve stored paths with craft-docpath's resolve_absolute (#1750)"
+      "ts": "2026-10-24T05:53:49Z",
+      "commit": "1c35d7f",
+      "commit_full": "1c35d7f8c19f3d2ac6da46e5846f4450bbbbf847",
+      "subject": "Keep the active layout when saving DWG/DXF (#1735)"
     },
-    "last_commit_ts": "2026-10-23T21:28:41Z",
+    "last_commit_ts": "2026-10-24T05:53:49Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       115,
@@ -314,7 +314,7 @@
       4,
       25,
       8,
-      0
+      47
     ],
     "days": [
       {
@@ -557,6 +557,25 @@
           {
             "commit": "9cf115e",
             "subject": "CI: one test binary per crate, nextest, line tables only (#1989)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-24",
+        "code": 47,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "1c35d7f",
+            "subject": "Keep the active layout when saving DWG/DXF (#1735)"
+          },
+          {
+            "commit": "a94fc08",
+            "subject": "Diameter dimensions: the *D block's text keeps the sign as %%c (fixes #1645) (#1696)"
+          },
+          {
+            "commit": "a0dced6",
+            "subject": "fix(render): honor DIMDSEP in angular dimensions (#1670)"
           }
         ]
       }
@@ -966,5 +985,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-24T00:12:15+00:00"
+  "updated_at": "2026-10-24T05:53:51+00:00"
 }
