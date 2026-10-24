@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "9d1067f",
-  "latest_commit_date": "2026-10-24T14:43:59-04:00",
-  "latest_message": "#3360, #3553: Spanish proofing (es-ES, es-MX, es-419, es-UY) (#3562)",
+  "latest_commit": "ab390cc",
+  "latest_commit_date": "2026-10-24T18:33:13-04:00",
+  "latest_message": "Merge 27 open PRs (tested batch) (#4194)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
-    "last_updated": "2026-10-23",
+    "last_updated": "2026-10-25",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -245,6 +245,58 @@
     ],
     "progress": [
       {
+        "date": "2026-10-25",
+        "text": "Text Highlight Color shows the last colour as the button's bar in the ribbon and mini toolbar; after No Color it shows the pen without a misleading yellow bar, and the button removes highlighting (#4087)."
+      },
+      {
+        "date": "2026-10-25",
+        "text": "#4085 review: highlight toggling checks the full target with constant resolved-run storage; a different colour after 10,000 runs prevents clearing."
+      },
+      {
+        "date": "2026-10-24",
+        "text": "Exact line spacing fixes the floating-table contact boundary independently of paragraph-mark metrics (#3977). Both row selection and word skipping use it; original regressions cover oversized and undersized marks, contact and one-twip offsets in modes 11/12/14/15. Shape behavior is unchanged."
+      },
+      {
+        "date": "2026-10-24",
+        "text": "A line touching a floating table at its bottom edge keeps clear of the table (#3977), in both row-span selection and word skipping. Shapes keep their strict overlap rule. Original Source Sans 3 boundary and narrow-strip controls cover modes 11/12/14/15; the expected Word distinction is cyril265's Word for Mac 16.114.1 observation."
+      },
+      {
+        "date": "2026-10-24",
+        "text": "AutoFormat As You Type has \"Built-in Heading styles\" (off by default): pressing Enter twice after a line of five or fewer words that ends in a letter or digit makes it Heading 1, or Heading 2 or 3 when the line starts with one or two tabs."
+      },
+      {
+        "date": "2026-10-24",
+        "text": "Spelling: with Ignore web and file addresses on, a web or e-mail address after a no-break space or an ideographic space is skipped, as it is after a plain space. Its words were marked as misspelled."
+      },
+      {
+        "date": "2026-10-24",
+        "text": "AutoFormat As You Type has \"Set left- and first-indent with tabs and backspaces\" (off by default): Tab at the start of a paragraph with text indents its first line, Tab at the start of a later line indents the whole paragraph, and Backspace at the start takes the indents back."
+      },
+      {
+        "date": "2026-10-24",
+        "text": "AutoCorrect: a word typed after a no-break space or an ideographic space is corrected as after a plain space (replacements, sentence capitals, ordinals and links). AutoCorrect left such a word as typed."
+      },
+      {
+        "date": "2026-10-24",
+        "text": "MCP typetext with paragraphs: true is one command (#3973): it was a text.newParagraph and a text.insert per line, each snapshotting the whole document for Undo, so 10,000 lines took 2.8 s (doubling the lines cost 2.4–3.2×) and left an Undo step per line; now they take ~10 ms (linear) and one Undo takes them all back. A CRLF is one break, not two, and the breaks no longer run AutoCorrect (the per-line way capitalised every line but the last). Typed line breaks are the Enter key, so in a one-line content control, where Enter does nothing, they no longer split it into paragraphs."
+      },
+      {
+        "date": "2026-10-24",
+        "text": "Track Changes: the border-line (--- and the others) and +---+ table AutoFormats mark the typed characters deleted instead of removing them, so Reject All brings them back. Characters the same author typed with tracking on are removed, as a tracked Backspace removes them. A border at the top of a story is a tracked formatting change too, as the border on the paragraph above already was. The table is inserted untracked, as Insert › Table inserts one. A line that holds a tracked deletion no longer triggers either AutoFormat."
+      },
+      {
+        "date": "2026-10-24",
+        "text": "#4085: Ctrl+Alt+H toggles the last chosen highlight colour; explicit colour setters remain idempotent. Mixed, inherited and pending formatting and Undo/Redo covered by command/key regressions."
+      },
+      {
+        "date": "2026-10-23",
+        "text": "cu20we: DrawingML flat, square and round line caps are imported, saved, displayed and exported to PDF; absent or unknown caps default to flat. VML end caps (including shapetype inheritance) are preserved through DOCX save. Ink and metafile stroke handling remain separate. Synthetic DOCX, raster and PDF regressions cover the change; no new native Word comparison."
+      },
+      {
+        "date": "2026-10-23",
+        "text": "cu20we: paragraph-relative box floats start above effective space before; header, footer, cell and text-box layout regressions pass. Framed paragraph positioning is unchanged; no new native Word comparison."
+      },
+      {
         "date": "2026-10-23",
         "text": "DOCX: a document whose default font size is unset keeps its size when saved and reopened. The size was left out of the file, and the reader read the missing size as 10 pt while the document resolved it as 11 pt; the file now says 11 pt (DEFAULTFONTSIZE). Files from other programs without a size are read as before."
       },
@@ -266,11 +318,23 @@
       },
       {
         "date": "2026-10-23",
+        "text": "Table of contents: Update Table on a TOC set in columns (here Word's own two-column TOC, written by Word in Portuguese) keeps it in its columns (#3889). The page numbers stand at the column's right edge rather than the page's, so entries no longer run over the next column and push its page numbers off the page; the TOC styles Word stores under translated ids (Sumrio1 for toc 1) are read as the TOC styles, so the entries keep their font, indents and spacing; and no blank line tops the first column. Update, save and reopen keep it so. The same keeps a Portuguese Word's TOC formatted as its TOC styles say through Update Table (#3891)."
+      },
+      {
+        "date": "2026-10-23",
         "text": "A relationship the markup names without the prefix is read as it wrote (#3411 follow-up): a producer that left the prefix out writes the relationship id as a plain id, and the reader resolves it the way it resolves the namespaced one, so the part it names is kept with the object that names it and the writer rewrites the attribute with the id the new package gives the part. An ordinary id — a VML shape's, a drawing's wp:docPr, a picture's pic:cNvPr — is the element's own and names no part."
       },
       {
         "date": "2026-10-23",
+        "text": "A command that changes nothing is not an edit: it adds no undo step, marks no unsaved changes and forces no relayout, so the redo stack survives it and five hundred of them can no longer push the user's own edits out of the undo history."
+      },
+      {
+        "date": "2026-10-23",
         "text": "Interface translations come from storytold/craft-i18n, shared with the other Crafting Apps: the catalogs are embedded at build time from the commit in craft-i18n.rev and looked up through craft-libs' craft-i18n crate; crates/ui-egui/src/i18n/.tsv are gone (translations now go to craft-i18n). Strings other apps already translate show translated; a build without CRAFTI18NDIR is English only"
+      },
+      {
+        "date": "2026-10-23",
+        "text": "Comment times show in the user's own time zone, as in Word: the Comments pane converts them (it showed the file's UTC time) and the balloons show them under each author (they showed none). The file's UTC time (Word's w16cex:dateUtc) wins over w:date, a time naming its zone is converted, and one without a zone shows as written (#2322, #2337)"
       },
       {
         "date": "2026-10-22",
@@ -339,70 +403,6 @@
       {
         "date": "2026-10-20",
         "text": "Restrict Editing: read only and comments-only protection grey out every edit in the ribbon when no exception lets the author edit, and tracked-changes protection greys out Accept and Reject, instead of buttons that look live and refuse when clicked."
-      },
-      {
-        "date": "2026-10-20",
-        "text": "Restrict Editing: with Filling in forms enforced, the Developer tab's content-control buttons and Properties grey out in the ribbon, their tooltips saying why, as in Word; before, they looked live and only refused when clicked."
-      },
-      {
-        "date": "2026-10-20",
-        "text": "The page tip shown while dragging the vertical scrollbar stays on one line; it broke into two or three lines (\"Page 10 of\" / \"40\") as the page number grew during the drag (#3341)."
-      },
-      {
-        "date": "2026-10-20",
-        "text": "The Document Inspector's removals are refused while the document tracks changes: they delete straight from the document, so the text would go with no revision to show for it and the revision trail would be broken behind the user's back"
-      },
-      {
-        "date": "2026-10-20",
-        "text": "A version snapshot belongs to the document it was taken from: the snapshots went with the document, so a restore can only ever bring back a version of the document that is open"
-      },
-      {
-        "date": "2026-10-20",
-        "text": "Restrict Editing, three more gaps closed: the protection of a protected document only changes through the explicit stop (review.restrict {\"stop\": true}; the \"none\" mode is the shorthand and doesn't stop it), the session author used for new tracked changes and comments can't change through file.setAuthor while the document is protected (the CLI's --author uses the same protection check), and the post-check compares the document's settings, metadata, custom properties, list definitions, bibliography sources and the comments' resolved flags as well as its text and formatting"
-      },
-      {
-        "date": "2026-10-20",
-        "text": "Restrict Editing holds for the file commands too: the privacy options, the properties and the inspector's removals are refused on a protected document, and restoring a stored version keeps the protection and its password instead of the snapshot's stale ones"
-      },
-      {
-        "date": "2026-10-20",
-        "text": "The move and resize handles of a table show while the caret is in it, not only under the pointer, as in Word (#2428)"
-      },
-      {
-        "date": "2026-10-20",
-        "text": "Table sorting and formulas read and write decimal points for Cuban and Peruvian Spanish (es-CU, es-PE), so 1.234 is a decimal instead of 1234; grouped-number and result-formatting regressions retain Spain's decimal comma."
-      },
-      {
-        "date": "2026-10-20",
-        "text": "Set Proofing Language › Set As Default persists for future blank documents and plain-text files, independently of the interface language; existing DOCX and templates keep their languages, and rejected commands retain the previous saved default (#2882)."
-      },
-      {
-        "date": "2026-10-20",
-        "text": "Russian sorting keeps ё with е and recognises decomposed ё/й: case-insensitive words and index headings share the corrected collation, with regressions and no new dependencies."
-      },
-      {
-        "date": "2026-10-20",
-        "text": "Saving to a NAS share mounted by GVFS (smb:// in the Linux file manager, #3003) works: the share refuses every Unix mode change with \"Operation not supported\", which used to fail the whole save, so the close prompt's Save never closed. The save now goes on without copying a mode the folder doesn't keep; any other failure still keeps the original. Unit tests; not yet confirmed on a real share"
-      },
-      {
-        "date": "2026-10-19",
-        "text": "Restrict Editing: with Filling in forms enforced, inserting content controls, their Properties and Remove Content Control are refused, as in Word (it greys them out), so a form's fields stay as they are and only their content is filled in."
-      },
-      {
-        "date": "2026-10-19",
-        "text": "Content controls: text typed over a placeholder takes the control's own run properties (w:sdtPr/w:rPr, ECMA-376 §17.5.2.27), as in Word, and the placeholder style is recognised by its built-in name \"Placeholder Text\" whatever its localized id (German Word: Platzhaltertext), so entries in forms from localized Word no longer stay grey."
-      },
-      {
-        "date": "2026-10-19",
-        "text": "Insert Table of Figures opens its dialog (#3013): pick the caption label (Figure, Table, Equation or your own), with or without label and number, page numbers and leader, so a document can have a list of figures and a list of tables. The list is a TOC \\c/\\a field (ECMA-376 §17.16.5.68); a Word table of figures with its switches in any order updates too, and Update Table keeps each list's label and leader."
-      },
-      {
-        "date": "2026-10-19",
-        "text": "Right-clicking text or pressing Shift+F10 offers the existing two-row formatting mini toolbar above the context-menu commands. Formatting keeps the selection and popup; menu commands, Escape and outside clicks dismiss it. This is the mini-toolbar portion of #2959; paste choices are in PR #2599."
-      },
-      {
-        "date": "2026-10-19",
-        "text": "Personal templates (#2852): File › New lists the .dotx and .dotm files in your templates folder under Personal (a subfolder per category; the search box covers them), and one opens as a new untitled document attached to it, as in Word. Save As › Save as Word Template starts in that folder, made on first use in the settings folder; File › Options › Advanced › File locations › User templates points it elsewhere. Agents list them with file.listTemplates."
       }
     ]
   },
@@ -413,39 +413,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 404,
-    "revisions_7d": 125,
+    "revisions": 405,
+    "revisions_7d": 126,
     "last_revision": {
-      "ts": "2026-10-24T18:43:59Z",
+      "ts": "2026-10-24T22:33:13Z",
       "kind": "content",
-      "commit": "9d1067f",
-      "commit_full": "9d1067fc0e7f754978879bfd61351d359c9b39cb",
-      "message": "#3360, #3553: Spanish proofing (es-ES, es-MX, es-419, es-UY) (#3562)"
+      "commit": "ab390cc",
+      "commit_full": "ab390cc27e979d1100e9dcab10b8f1385eb5f03b",
+      "message": "Merge 27 open PRs (tested batch) (#4194)"
     },
     "last_update": {
-      "ts": "2026-10-24T18:43:59Z",
+      "ts": "2026-10-24T22:33:13Z",
       "kind": "content",
-      "commit": "9d1067f",
-      "commit_full": "9d1067fc0e7f754978879bfd61351d359c9b39cb",
-      "message": "#3360, #3553: Spanish proofing (es-ES, es-MX, es-419, es-UY) (#3562)"
+      "commit": "ab390cc",
+      "commit_full": "ab390cc27e979d1100e9dcab10b8f1385eb5f03b",
+      "message": "Merge 27 open PRs (tested batch) (#4194)"
     },
-    "self_reported": "2026-10-23"
+    "self_reported": "2026-10-25"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.0,
+    "score": 21.1,
     "active_days_7d": 6,
-    "changes_7d": 365,
-    "changes_14d": 890,
+    "changes_7d": 366,
+    "changes_14d": 891,
     "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-10-24T21:52:43Z",
-      "commit": "ffa5144",
-      "commit_full": "ffa51443f269797ba85386428ff3ddc52d7aad58",
-      "subject": "Bump craft-print, craft-pdf, krilla and craft-i18n to craft-libs 1774443 (#4184)"
+      "ts": "2026-10-24T22:33:13Z",
+      "commit": "ab390cc",
+      "commit_full": "ab390cc27e979d1100e9dcab10b8f1385eb5f03b",
+      "subject": "Merge 27 open PRs (tested batch) (#4194)"
     },
-    "last_commit_ts": "2026-10-24T21:52:43Z",
+    "last_commit_ts": "2026-10-24T22:33:13Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       56,
@@ -461,7 +461,7 @@
       14,
       5,
       57,
-      20
+      21
     ],
     "days": [
       {
@@ -755,9 +755,13 @@
       },
       {
         "d": "2026-10-24",
-        "code": 20,
+        "code": 21,
         "other": 0,
         "samples": [
+          {
+            "commit": "ab390cc",
+            "subject": "Merge 27 open PRs (tested batch) (#4194)"
+          },
           {
             "commit": "ffa5144",
             "subject": "Bump craft-print, craft-pdf, krilla and craft-i18n to craft-libs 1774443 (#4184)"
@@ -765,10 +769,6 @@
           {
             "commit": "9d1067f",
             "subject": "#3360, #3553: Spanish proofing (es-ES, es-MX, es-419, es-UY) (#3562)"
-          },
-          {
-            "commit": "254351c",
-            "subject": "Insert › Table: the grid previews the hovered table on the page (#3931) (#4052)"
           }
         ]
       }
@@ -10223,7 +10223,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "ab390cc",
+      "commit_full": "ab390cc27e979d1100e9dcab10b8f1385eb5f03b",
+      "commit_date": "2026-10-24T18:33:13-04:00",
+      "ts": "2026-10-24T22:33:13Z",
+      "message": "Merge 27 open PRs (tested batch) (#4194)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-25",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-24T22:12:06+00:00"
+  "updated_at": "2026-10-24T22:48:57+00:00"
 }
