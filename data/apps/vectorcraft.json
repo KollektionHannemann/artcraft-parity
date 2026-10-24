@@ -436,18 +436,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 28.2,
+    "score": 29.8,
     "active_days_7d": 7,
-    "changes_7d": 557,
-    "changes_14d": 1408,
-    "housekeeping_7d": 27,
+    "changes_7d": 561,
+    "changes_14d": 1412,
+    "housekeeping_7d": 28,
     "last_code_change": {
-      "ts": "2026-10-24T00:02:17Z",
-      "commit": "768f6ba",
-      "commit_full": "768f6ba523d65f57ed01be9b684dc2c71ac645f7",
-      "subject": "Type: SVG glyphs leave out images of SVG documents (#3916)"
+      "ts": "2026-10-24T00:56:41Z",
+      "commit": "f2d793f",
+      "commit_full": "f2d793f74602d9d75871f33bda7067eb541022de",
+      "subject": "Fix #3920: a family another thread is loading is found whole, so fallback text never takes the style of its first file (#3921)"
     },
-    "last_commit_ts": "2026-10-24T00:02:17Z",
+    "last_commit_ts": "2026-10-24T00:59:43Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       105,
@@ -463,7 +463,7 @@
       169,
       96,
       108,
-      1
+      5
     ],
     "days": [
       {
@@ -911,12 +911,20 @@
       },
       {
         "d": "2026-10-24",
-        "code": 1,
-        "other": 0,
+        "code": 5,
+        "other": 1,
         "samples": [
           {
-            "commit": "768f6ba",
-            "subject": "Type: SVG glyphs leave out images of SVG documents (#3916)"
+            "commit": "f2d793f",
+            "subject": "Fix #3920: a family another thread is loading is found whole, so fallback text never takes the style of its first file (#3921)"
+          },
+          {
+            "commit": "533cbc6",
+            "subject": "Fix #3586: the PDF pre-open scan reads a file dense with stream keywords in linear time (#3919)"
+          },
+          {
+            "commit": "cdd3b94",
+            "subject": "Type: an SVG glyph's image is an SVG image by its plain href first (#3918)"
           }
         ]
       }
@@ -6096,5 +6104,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-24T00:11:58+00:00"
+  "updated_at": "2026-10-24T01:14:41+00:00"
 }
