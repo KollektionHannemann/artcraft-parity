@@ -402,18 +402,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.0,
+    "score": 15.1,
     "active_days_7d": 6,
-    "changes_7d": 80,
-    "changes_14d": 369,
+    "changes_7d": 81,
+    "changes_14d": 370,
     "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-10-24T10:33:19Z",
-      "commit": "10bec74",
-      "commit_full": "10bec74810c55c73fda2f08393ad45238eb783b5",
-      "subject": "M6: misc hardening — unbounded picture cache, stats walk, signing tmpdir, web clipboard, dash budget, fs cycle, rezip loop (#2422)"
+      "ts": "2026-10-24T11:58:13Z",
+      "commit": "3099df9",
+      "commit_full": "3099df934eda27cd457a9b8d1525d3fc973a1b7b",
+      "subject": "M7: verify Agile encryption's dataIntegrity before returning plaintext (#2425)"
     },
-    "last_commit_ts": "2026-10-24T10:33:19Z",
+    "last_commit_ts": "2026-10-24T11:58:13Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       124,
@@ -429,7 +429,7 @@
       2,
       3,
       29,
-      17
+      18
     ],
     "days": [
       {
@@ -693,9 +693,13 @@
       },
       {
         "d": "2026-10-24",
-        "code": 17,
+        "code": 18,
         "other": 0,
         "samples": [
+          {
+            "commit": "3099df9",
+            "subject": "M7: verify Agile encryption's dataIntegrity before returning plaintext (#2425)"
+          },
           {
             "commit": "10bec74",
             "subject": "M6: misc hardening — unbounded picture cache, stats walk, signing tmpdir, web clipboard, dash budget, fs cycle, rezip loop (#2422)"
@@ -703,10 +707,6 @@
           {
             "commit": "a005d82",
             "subject": "M2.9: close protection gaps a trusted script or other sheet would slip through (sec scan findings 17,20,24) (#2420)"
-          },
-          {
-            "commit": "48d9ba2",
-            "subject": "M2.9: harden native file open/save (sec scan findings 15,22,25) (#2418)"
           }
         ]
       }
@@ -2358,5 +2358,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-24T10:52:57+00:00"
+  "updated_at": "2026-10-24T12:13:56+00:00"
 }
