@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "478fd44",
-  "latest_commit_date": "2026-10-23T17:00:38-06:00",
-  "latest_message": "i18n: interface translations from craft-i18n (pilot) (#4072)",
+  "latest_commit": "a2312a3",
+  "latest_commit_date": "2026-10-24T10:53:34-04:00",
+  "latest_message": "DOCX: write the default font size when the document leaves it unset (#4092)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -246,6 +246,10 @@
     "progress": [
       {
         "date": "2026-10-23",
+        "text": "DOCX: a document whose default font size is unset keeps its size when saved and reopened. The size was left out of the file, and the reader read the missing size as 10 pt while the document resolved it as 11 pt; the file now says 11 pt (DEFAULTFONTSIZE). Files from other programs without a size are read as before."
+      },
+      {
+        "date": "2026-10-23",
         "text": "Lists: an empty paragraph whose mark is hidden takes no room and draws no list number, in the body and in table cells, as in Word; the number is still counted, so the next item keeps its place (#3982)."
       },
       {
@@ -399,10 +403,6 @@
       {
         "date": "2026-10-19",
         "text": "A table-of-contents entry whose text just fits no longer leaves its page number alone at the start of the next line: the tab goes there with it, leader and all (#1840)."
-      },
-      {
-        "date": "2026-10-19",
-        "text": "A Thai run with Latin letters and digits in a missing Thai font is drawn in one face on Linux too (#1549): the fallback no longer stops at Noto Sans Thai, which has no Latin letters, but finds an installed font covering the whole run (IBM Plex Sans Thai, say) and loads its whole family, so regular text gets the Regular face. Concurrent lookups no longer cache a miss."
       }
     ]
   },
@@ -413,39 +413,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 401,
-    "revisions_7d": 122,
+    "revisions": 402,
+    "revisions_7d": 123,
     "last_revision": {
-      "ts": "2026-10-23T23:00:38Z",
+      "ts": "2026-10-24T14:53:34Z",
       "kind": "content",
-      "commit": "478fd44",
-      "commit_full": "478fd44530cce7736665b880d8f3b493783d137d",
-      "message": "i18n: interface translations from craft-i18n (pilot) (#4072)"
+      "commit": "a2312a3",
+      "commit_full": "a2312a310f016efacde2548eae811807bd3d1e86",
+      "message": "DOCX: write the default font size when the document leaves it unset (#4092)"
     },
     "last_update": {
-      "ts": "2026-10-23T23:00:38Z",
+      "ts": "2026-10-24T14:53:34Z",
       "kind": "content",
-      "commit": "478fd44",
-      "commit_full": "478fd44530cce7736665b880d8f3b493783d137d",
-      "message": "i18n: interface translations from craft-i18n (pilot) (#4072)"
+      "commit": "a2312a3",
+      "commit_full": "a2312a310f016efacde2548eae811807bd3d1e86",
+      "message": "DOCX: write the default font size when the document leaves it unset (#4092)"
     },
     "self_reported": "2026-10-23"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.5,
+    "score": 20.8,
     "active_days_7d": 6,
-    "changes_7d": 359,
-    "changes_14d": 884,
+    "changes_7d": 362,
+    "changes_14d": 887,
     "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-10-24T14:46:13Z",
-      "commit": "831b86d",
-      "commit_full": "831b86dab3c8d8403433d763a89f02d0b7258ef3",
-      "subject": "Outline: re-match collapsed headings only after edits, via a hash index (#4014)"
+      "ts": "2026-10-24T15:07:50Z",
+      "commit": "12fc444",
+      "commit_full": "12fc444bd7e93e3126f99b867a67f2d43e1610ca",
+      "subject": "Keep the direction of left, up and down block arrows (#3919) (#4022)"
     },
-    "last_commit_ts": "2026-10-24T14:46:13Z",
+    "last_commit_ts": "2026-10-24T15:07:50Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       56,
@@ -461,7 +461,7 @@
       14,
       5,
       57,
-      14
+      17
     ],
     "days": [
       {
@@ -755,20 +755,20 @@
       },
       {
         "d": "2026-10-24",
-        "code": 14,
+        "code": 17,
         "other": 0,
         "samples": [
           {
-            "commit": "831b86d",
-            "subject": "Outline: re-match collapsed headings only after edits, via a hash index (#4014)"
+            "commit": "12fc444",
+            "subject": "Keep the direction of left, up and down block arrows (#3919) (#4022)"
           },
           {
-            "commit": "c20f06d",
-            "subject": "Dialogs: draw real tabs (Paragraph, Find, About) (#4029)"
+            "commit": "0e662ca",
+            "subject": "#3994: watermark font names round-trip through the textpath's CSS style (#4071)"
           },
           {
-            "commit": "e6c4fb2",
-            "subject": "Route ui.screenshot path writes through the guarded engine writer (#4048)"
+            "commit": "a2312a3",
+            "subject": "DOCX: write the default font size when the document leaves it unset (#4092)"
           }
         ]
       }
@@ -10154,7 +10154,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "a2312a3",
+      "commit_full": "a2312a310f016efacde2548eae811807bd3d1e86",
+      "commit_date": "2026-10-24T10:53:34-04:00",
+      "ts": "2026-10-24T14:53:34Z",
+      "message": "DOCX: write the default font size when the document leaves it unset (#4092)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-23",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-24T14:51:32+00:00"
+  "updated_at": "2026-10-24T15:13:09+00:00"
 }
