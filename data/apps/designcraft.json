@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/designcraft",
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
-  "latest_commit": "5def4a8",
-  "latest_commit_date": "2026-10-24T10:08:40-04:00",
-  "latest_message": "Story Optical Margin Alignment with a size, and Ignore Optical Margin (Story panel, engine and IDML) (#1705)",
+  "latest_commit": "45ed6cf",
+  "latest_commit_date": "2026-10-24T10:24:24-04:00",
+  "latest_message": "MCP: --automation-read-root and --automation-write-root may each be given more than once (#1552) (#1678)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -238,6 +238,14 @@
     "progress": [
       {
         "date": "2026-10-24",
+        "text": "· Type › Notes › Previous Note and Next Note (note.previous, note.next): as in InDesign, they move the insertion point from note to note in the story, putting the caret after the note's anchor. Each item is unavailable when no note lies in its direction in the story, or when the insertion point is in a table cell or a footnote. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-24",
+        "text": "· Type › Notes › Convert to Note (note.convertFromText {author?}): as in InDesign, the selected text leaves the story and becomes the text of a new note, whose anchor takes its place; Convert Note to Text puts it back. DesignCraft refuses a selection in a table cell, or one that holds a note, footnote, endnote, anchored object, index marker, text anchor, cross-reference or table. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-24",
         "text": "· Story panel (Window › Type & Tables › Story): Optical Margin Alignment and its size for the stories of the text selection or the selected text frames, disabled without either; type.selectionAttrs reports them as storyOptions, null where the stories differ. The Paragraph panel menu has Ignore Optical Margin in place of the per-paragraph Optical Margin Alignment switch, which stays in type.para, and Paragraph Style Options › Indents and Spacing has Ignore Optical Margin (#947). No readiness percentage change."
       },
       {
@@ -274,11 +282,27 @@
       },
       {
         "date": "2026-10-23",
+        "text": "· designcraft-cli mcp takes --automation-read-root and --automation-write-root more than once, as the suite's other apps do (#1552): a path inside any root of its kind passes, and the roots' common parent, .. or a link out of them and the other kind's roots stay refused. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-23",
+        "text": "· Layout › Go Back and Go Forward (Cmd+Page Up / Cmd+Page Down, Ctrl on Windows and Linux) retrace the jumps between pages (Go to Page, the page and spread commands, the Pages panel) as InDesign's do, returning to where the view was on each page at the current zoom; a new jump after going back drops the pages ahead, scrolling adds no entry, and pages deleted since are skipped. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-23",
+        "text": "· Effects dialog: with Use Global Light on, the Angle field (and the Bevel and Emboss one) stays editable and shows the document's global light angle; a change there sets the global light for every effect that uses it, applied with the effects in one undo step (object.effects takes globalLight). Before, the field was greyed out and the angle couldn't be changed in the dialog. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-23",
         "text": "· Save and export dialogs (Save As, Save a Copy, Export PDF and the other exports, Package, libraries and books) start in the active document's folder once it has been saved, and for a document never saved in the folder of the last file saved or exported, remembered across sessions (#1653). A folder deleted since falls back to the system's choice. No readiness percentage change."
       },
       {
         "date": "2026-10-23",
         "text": "· Translations: a missing string shows in English and fails no test; cargo xtask i18n-report, run by cargo xtask ci, prints the missing strings per language. Tests keep duplicate-key and placeholder checks and the language mechanics (lookup, context captions, plural captions, right-to-left). No readiness percentage change."
+      },
+      {
+        "date": "2026-10-23",
+        "text": "· Type › Text Variables › Convert Variable to Text (variables.convertToText): the variable instances in the selected text, in a story, a table cell or a footnote, become plain text of the value each shows on its own page (a running header on page 3 becomes page 3's heading). variables.convertAllToText {name} does the same for every instance of one variable in the document, as the Text Variables dialog's Convert to Text button. The variable stays defined; one undo step. No readiness percentage change."
       },
       {
         "date": "2026-10-22",
@@ -371,30 +395,6 @@
       {
         "date": "2026-10-16",
         "text": "· Layout: Margins and Columns keeps dragged column guides unless the column count or gutter changes (#1096). The dialog sends every field on OK, so a margin-only change re-divided the columns evenly. Margin changes keep the positions; the columns follow them only while they fit the margin box. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-16",
-        "text": "· Lock Guides and Lock Column Guides are commands in View ▸ Grids & Guides (view.lockGuides, ⌥⌘;, and view.lockColumnGuides), so the control channel and MCP reach them. Lock Column Guides is an undo step, is saved with the document, on in new ones, and read from and written to IDML's ColumnGuideLocked, which export always wrote as locked (#1096). No readiness percentage change."
-      },
-      {
-        "date": "2026-10-16",
-        "text": "· IDML: a page keeps column guides that were dragged off centre (InDesign's Custom columns). They were divided evenly on import, so the gutter sprang back to the middle; the imported positions now place the columns, with the canvas guides, snapping and text placement following them, and they are written back on export. Layout › Margins and Columns re-divides them evenly when the count or gutter changes, as InDesign's does. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-16",
-        "text": "· IDML: custom column positions are checked before they are used (#1096). A set must give two edges per column, ascending from the left margin to the right one; any other (a wrong count, unsorted or non-numeric values, a list longer than 216 columns allow, or positions left behind by a margin or page-size change) is the even split, in the canvas, on import and on export, instead of columns drawn outside the margins. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-16",
-        "text": "· Type › Reload Fonts (font.reload): fonts installed, edited or removed while DesignCraft runs are read again without a restart, and the open documents recompose with them (#328, #547). An edited font file is noticed by its length and modification time; bundled, added and document fonts stay as they are. InDesign does this by itself, so noticing changes automatically is still open (gap 6). No readiness percentage change."
-      },
-      {
-        "date": "2026-10-16",
-        "text": "· Parents can be deleted from their Pages-panel context menu or layout.parents.delete {id}. Applied-page and based-on references are cleared, local override copies survive, and Undo restores the parent. Addresses the deletion portion of #956; no readiness percentage change."
-      },
-      {
-        "date": "2026-10-16",
-        "text": "· Layout: autoflow, inserted pages and new parents follow dragged column guides (#1096). Autoflow sets one frame per dragged column and counts the pages it adds from them; Insert Pages and New Parent keep the custom positions with the column count and gutter; document.inspect reports each page's gutter, column rects and whether its columns are custom. No readiness percentage change."
       }
     ]
   },
@@ -405,39 +405,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 117,
-    "revisions_7d": 25,
+    "revisions": 123,
+    "revisions_7d": 31,
     "last_revision": {
-      "ts": "2026-10-24T14:08:40Z",
+      "ts": "2026-10-24T14:24:24Z",
       "kind": "content",
-      "commit": "5def4a8",
-      "commit_full": "5def4a8c01a15b8d7b20317b181e8b7d3d9d932e",
-      "message": "Story Optical Margin Alignment with a size, and Ignore Optical Margin (Story panel, engine and IDML) (#1705)"
+      "commit": "45ed6cf",
+      "commit_full": "45ed6cfce0f86e59ff66ab18a05c3ec03ccef531",
+      "message": "MCP: --automation-read-root and --automation-write-root may each be given more than once (#1552) (#1678)"
     },
     "last_update": {
-      "ts": "2026-10-24T14:08:40Z",
+      "ts": "2026-10-24T14:24:24Z",
       "kind": "content",
-      "commit": "5def4a8",
-      "commit_full": "5def4a8c01a15b8d7b20317b181e8b7d3d9d932e",
-      "message": "Story Optical Margin Alignment with a size, and Ignore Optical Margin (Story panel, engine and IDML) (#1705)"
+      "commit": "45ed6cf",
+      "commit_full": "45ed6cfce0f86e59ff66ab18a05c3ec03ccef531",
+      "message": "MCP: --automation-read-root and --automation-write-root may each be given more than once (#1552) (#1678)"
     },
     "self_reported": "2026-10-13"
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 19.5,
+    "level": "buzzing",
+    "score": 20.3,
     "active_days_7d": 5,
-    "changes_7d": 126,
-    "changes_14d": 343,
+    "changes_7d": 141,
+    "changes_14d": 358,
     "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-10-24T14:08:40Z",
-      "commit": "5def4a8",
-      "commit_full": "5def4a8c01a15b8d7b20317b181e8b7d3d9d932e",
-      "subject": "Story Optical Margin Alignment with a size, and Ignore Optical Margin (Story panel, engine and IDML) (#1705)"
+      "ts": "2026-10-24T14:24:24Z",
+      "commit": "45ed6cf",
+      "commit_full": "45ed6cfce0f86e59ff66ab18a05c3ec03ccef531",
+      "subject": "MCP: --automation-read-root and --automation-write-root may each be given more than once (#1552) (#1678)"
     },
-    "last_commit_ts": "2026-10-24T14:08:40Z",
+    "last_commit_ts": "2026-10-24T14:24:24Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       4,
@@ -453,7 +453,7 @@
       8,
       19,
       47,
-      20
+      35
     ],
     "days": [
       {
@@ -853,20 +853,20 @@
       },
       {
         "d": "2026-10-24",
-        "code": 20,
+        "code": 35,
         "other": 1,
         "samples": [
           {
-            "commit": "5def4a8",
-            "subject": "Story Optical Margin Alignment with a size, and Ignore Optical Margin (Story panel, engine and IDML) (#1705)"
+            "commit": "45ed6cf",
+            "subject": "MCP: --automation-read-root and --automation-write-root may each be given more than once (#1552) (#1678)"
           },
           {
-            "commit": "d767fcf",
-            "subject": "Text frames: a custom baseline grid's Relative To (page, margin, frame or inset) (#1758)"
+            "commit": "ee8a339",
+            "subject": "Type › Text Variables › Convert Variable to Text: the selected instances, or every instance of one variable, become the text they show on their page (#1639)"
           },
           {
-            "commit": "7848c21",
-            "subject": "Paragraph Style Options: Align to Grid (None, All Lines, First Line Only) in Indents and Spacing (#1759)"
+            "commit": "057d76b",
+            "subject": "Layout: Go Back and Go Forward through the pages viewed, with InDesign's shortcuts (#1638)"
           }
         ]
       }
@@ -3769,7 +3769,145 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "6649125",
+      "commit_full": "6649125539345238883e0be112de65a7ef76a24a",
+      "commit_date": "2026-10-24T10:23:02-04:00",
+      "ts": "2026-10-24T14:23:02Z",
+      "message": "Effects dialog: the Angle with Use Global Light stays editable and sets the global light (#1744)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "2b93db2",
+      "commit_full": "2b93db2cff945997c8b5b2e1eda630d972ea4b70",
+      "commit_date": "2026-10-24T10:23:26-04:00",
+      "ts": "2026-10-24T14:23:26Z",
+      "message": "Type › Notes › Convert to Note: the selected text becomes a note, as in InDesign (#1756)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "3f637ae",
+      "commit_full": "3f637ae093236486d70875b4801ed52b64c10605",
+      "commit_date": "2026-10-24T10:23:40-04:00",
+      "ts": "2026-10-24T14:23:40Z",
+      "message": "Type › Notes › Previous Note and Next Note: the insertion point moves from note to note, as in InDesign (#1762)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "057d76b",
+      "commit_full": "057d76be3c6197fd78d57eeac97d7db77f702cdd",
+      "commit_date": "2026-10-24T10:23:55-04:00",
+      "ts": "2026-10-24T14:23:55Z",
+      "message": "Layout: Go Back and Go Forward through the pages viewed, with InDesign's shortcuts (#1638)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "ee8a339",
+      "commit_full": "ee8a3397a370bb7b388d436788d5ba1435d6c9b0",
+      "commit_date": "2026-10-24T10:24:10-04:00",
+      "ts": "2026-10-24T14:24:10Z",
+      "message": "Type › Text Variables › Convert Variable to Text: the selected instances, or every instance of one variable, become the text they show on their page (#1639)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "45ed6cf",
+      "commit_full": "45ed6cfce0f86e59ff66ab18a05c3ec03ccef531",
+      "commit_date": "2026-10-24T10:24:24-04:00",
+      "ts": "2026-10-24T14:24:24Z",
+      "message": "MCP: --automation-read-root and --automation-write-root may each be given more than once (#1552) (#1678)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-24T14:12:04+00:00"
+  "updated_at": "2026-10-24T14:51:28+00:00"
 }
