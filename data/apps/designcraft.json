@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/designcraft",
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
-  "latest_commit": "45ed6cf",
-  "latest_commit_date": "2026-10-24T10:24:24-04:00",
-  "latest_message": "MCP: --automation-read-root and --automation-write-root may each be given more than once (#1552) (#1678)",
+  "latest_commit": "a16f29a",
+  "latest_commit_date": "2026-10-24T14:45:04-04:00",
+  "latest_message": "Optical margin alignment: lines with a tab hang their edge glyphs, as both line breakers measure them (#1760)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -238,6 +238,10 @@
     "progress": [
       {
         "date": "2026-10-24",
+        "text": "· Optical Margin Alignment and hanging punctuation apply to lines with a tab or a right indent tab, as both composers already measured them: the edge glyphs hang, and tab stops stay where they are. Such a line was set without the hang: a justified line that fit only because its period or closing quote hangs had its word spaces squeezed to make up for it, and text after a right indent tab stopped at the measure instead of hanging. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-24",
         "text": "· Type › Notes › Previous Note and Next Note (note.previous, note.next): as in InDesign, they move the insertion point from note to note in the story, putting the caret after the note's anchor. Each item is unavailable when no note lies in its direction in the story, or when the insertion point is in a table cell or a footnote. No readiness percentage change."
       },
       {
@@ -391,10 +395,6 @@
       {
         "date": "2026-10-16",
         "text": "· Layout: autoflow, inserted pages and new parents follow dragged column guides (#1096). Autoflow sets one frame per dragged column and counts the pages it adds from them; Insert Pages and New Parent keep the custom positions with the column count and gutter; a page that moves to the other side of the spine (inserted, deleted or moved pages, Duplicate Spread, a new parent's other page) has them mirrored across its margin box, as InDesign does; document.inspect reports each page's gutter, column rects and whether its columns are custom. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-16",
-        "text": "· Layout: Margins and Columns keeps dragged column guides unless the column count or gutter changes (#1096). The dialog sends every field on OK, so a margin-only change re-divided the columns evenly. Margin changes keep the positions; the columns follow them only while they fit the margin box. No readiness percentage change."
       }
     ]
   },
@@ -405,21 +405,21 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 123,
-    "revisions_7d": 31,
+    "revisions": 124,
+    "revisions_7d": 32,
     "last_revision": {
-      "ts": "2026-10-24T14:24:24Z",
+      "ts": "2026-10-24T18:45:04Z",
       "kind": "content",
-      "commit": "45ed6cf",
-      "commit_full": "45ed6cfce0f86e59ff66ab18a05c3ec03ccef531",
-      "message": "MCP: --automation-read-root and --automation-write-root may each be given more than once (#1552) (#1678)"
+      "commit": "a16f29a",
+      "commit_full": "a16f29a6697fe0e2cfa82e9b47216b234cf28cbf",
+      "message": "Optical margin alignment: lines with a tab hang their edge glyphs, as both line breakers measure them (#1760)"
     },
     "last_update": {
-      "ts": "2026-10-24T14:24:24Z",
+      "ts": "2026-10-24T18:45:04Z",
       "kind": "content",
-      "commit": "45ed6cf",
-      "commit_full": "45ed6cfce0f86e59ff66ab18a05c3ec03ccef531",
-      "message": "MCP: --automation-read-root and --automation-write-root may each be given more than once (#1552) (#1678)"
+      "commit": "a16f29a",
+      "commit_full": "a16f29a6697fe0e2cfa82e9b47216b234cf28cbf",
+      "message": "Optical margin alignment: lines with a tab hang their edge glyphs, as both line breakers measure them (#1760)"
     },
     "self_reported": "2026-10-13"
   },
@@ -428,16 +428,16 @@
     "level": "buzzing",
     "score": 20.3,
     "active_days_7d": 5,
-    "changes_7d": 141,
-    "changes_14d": 358,
+    "changes_7d": 142,
+    "changes_14d": 359,
     "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-10-24T14:24:24Z",
-      "commit": "45ed6cf",
-      "commit_full": "45ed6cfce0f86e59ff66ab18a05c3ec03ccef531",
-      "subject": "MCP: --automation-read-root and --automation-write-root may each be given more than once (#1552) (#1678)"
+      "ts": "2026-10-24T18:45:04Z",
+      "commit": "a16f29a",
+      "commit_full": "a16f29a6697fe0e2cfa82e9b47216b234cf28cbf",
+      "subject": "Optical margin alignment: lines with a tab hang their edge glyphs, as both line breakers measure them (#1760)"
     },
-    "last_commit_ts": "2026-10-24T14:24:24Z",
+    "last_commit_ts": "2026-10-24T18:45:04Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       4,
@@ -453,7 +453,7 @@
       8,
       19,
       47,
-      35
+      36
     ],
     "days": [
       {
@@ -853,9 +853,13 @@
       },
       {
         "d": "2026-10-24",
-        "code": 35,
+        "code": 36,
         "other": 1,
         "samples": [
+          {
+            "commit": "a16f29a",
+            "subject": "Optical margin alignment: lines with a tab hang their edge glyphs, as both line breakers measure them (#1760)"
+          },
           {
             "commit": "45ed6cf",
             "subject": "MCP: --automation-read-root and --automation-write-root may each be given more than once (#1552) (#1678)"
@@ -863,10 +867,6 @@
           {
             "commit": "ee8a339",
             "subject": "Type › Text Variables › Convert Variable to Text: the selected instances, or every instance of one variable, become the text they show on their page (#1639)"
-          },
-          {
-            "commit": "057d76b",
-            "subject": "Layout: Go Back and Go Forward through the pages viewed, with InDesign's shortcuts (#1638)"
           }
         ]
       }
@@ -3907,7 +3907,30 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "a16f29a",
+      "commit_full": "a16f29a6697fe0e2cfa82e9b47216b234cf28cbf",
+      "commit_date": "2026-10-24T14:45:04-04:00",
+      "ts": "2026-10-24T18:45:04Z",
+      "message": "Optical margin alignment: lines with a tab hang their edge glyphs, as both line breakers measure them (#1760)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-24T14:51:28+00:00"
+  "updated_at": "2026-10-24T18:56:35+00:00"
 }
