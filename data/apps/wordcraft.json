@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "ab390cc",
-  "latest_commit_date": "2026-10-24T18:33:13-04:00",
-  "latest_message": "Merge 27 open PRs (tested batch) (#4194)",
+  "latest_commit": "fc7bdcb",
+  "latest_commit_date": "2026-10-24T19:36:17-04:00",
+  "latest_message": "Merge the latest commits of #4100, #4133 and #4171 (#4215)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -250,6 +250,10 @@
       },
       {
         "date": "2026-10-25",
+        "text": "#4085 mark review: whole-cell and ordinary highlight targets include their selected paragraph marks; empty, inherited and partial-column controls added."
+      },
+      {
+        "date": "2026-10-25",
         "text": "#4085 review: highlight toggling checks the full target with constant resolved-run storage; a different colour after 10,000 runs prevents clearing."
       },
       {
@@ -399,10 +403,6 @@
       {
         "date": "2026-10-20",
         "text": "Headers and footers: closing them with Esc or Close Header and Footer puts the caret back where it was in the body, as Word does, instead of on page 1 (the view no longer jumps to the top of the document, #3331)."
-      },
-      {
-        "date": "2026-10-20",
-        "text": "Restrict Editing: read only and comments-only protection grey out every edit in the ribbon when no exception lets the author edit, and tracked-changes protection greys out Accept and Reject, instead of buttons that look live and refuse when clicked."
       }
     ]
   },
@@ -413,21 +413,21 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 405,
-    "revisions_7d": 126,
+    "revisions": 406,
+    "revisions_7d": 127,
     "last_revision": {
-      "ts": "2026-10-24T22:33:13Z",
+      "ts": "2026-10-24T23:36:17Z",
       "kind": "content",
-      "commit": "ab390cc",
-      "commit_full": "ab390cc27e979d1100e9dcab10b8f1385eb5f03b",
-      "message": "Merge 27 open PRs (tested batch) (#4194)"
+      "commit": "fc7bdcb",
+      "commit_full": "fc7bdcb9ec0a23b686049d8a2ff3936e7b7d6be8",
+      "message": "Merge the latest commits of #4100, #4133 and #4171 (#4215)"
     },
     "last_update": {
-      "ts": "2026-10-24T22:33:13Z",
+      "ts": "2026-10-24T23:36:17Z",
       "kind": "content",
-      "commit": "ab390cc",
-      "commit_full": "ab390cc27e979d1100e9dcab10b8f1385eb5f03b",
-      "message": "Merge 27 open PRs (tested batch) (#4194)"
+      "commit": "fc7bdcb",
+      "commit_full": "fc7bdcb9ec0a23b686049d8a2ff3936e7b7d6be8",
+      "message": "Merge the latest commits of #4100, #4133 and #4171 (#4215)"
     },
     "self_reported": "2026-10-25"
   },
@@ -436,16 +436,16 @@
     "level": "buzzing",
     "score": 21.1,
     "active_days_7d": 6,
-    "changes_7d": 366,
-    "changes_14d": 891,
+    "changes_7d": 367,
+    "changes_14d": 892,
     "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-10-24T22:33:13Z",
-      "commit": "ab390cc",
-      "commit_full": "ab390cc27e979d1100e9dcab10b8f1385eb5f03b",
-      "subject": "Merge 27 open PRs (tested batch) (#4194)"
+      "ts": "2026-10-24T23:36:17Z",
+      "commit": "fc7bdcb",
+      "commit_full": "fc7bdcb9ec0a23b686049d8a2ff3936e7b7d6be8",
+      "subject": "Merge the latest commits of #4100, #4133 and #4171 (#4215)"
     },
-    "last_commit_ts": "2026-10-24T22:33:13Z",
+    "last_commit_ts": "2026-10-24T23:36:17Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       56,
@@ -461,7 +461,7 @@
       14,
       5,
       57,
-      21
+      22
     ],
     "days": [
       {
@@ -755,9 +755,13 @@
       },
       {
         "d": "2026-10-24",
-        "code": 21,
+        "code": 22,
         "other": 0,
         "samples": [
+          {
+            "commit": "fc7bdcb",
+            "subject": "Merge the latest commits of #4100, #4133 and #4171 (#4215)"
+          },
           {
             "commit": "ab390cc",
             "subject": "Merge 27 open PRs (tested batch) (#4194)"
@@ -765,10 +769,6 @@
           {
             "commit": "ffa5144",
             "subject": "Bump craft-print, craft-pdf, krilla and craft-i18n to craft-libs 1774443 (#4184)"
-          },
-          {
-            "commit": "9d1067f",
-            "subject": "#3360, #3553: Spanish proofing (es-ES, es-MX, es-419, es-UY) (#3562)"
           }
         ]
       }
@@ -10246,7 +10246,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "fc7bdcb",
+      "commit_full": "fc7bdcb9ec0a23b686049d8a2ff3936e7b7d6be8",
+      "commit_date": "2026-10-24T19:36:17-04:00",
+      "ts": "2026-10-24T23:36:17Z",
+      "message": "Merge the latest commits of #4100, #4133 and #4171 (#4215)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-25",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-24T22:48:57+00:00"
+  "updated_at": "2026-10-24T23:44:20+00:00"
 }
