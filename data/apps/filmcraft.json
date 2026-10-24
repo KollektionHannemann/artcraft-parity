@@ -386,18 +386,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.1,
-    "active_days_7d": 5,
-    "changes_7d": 121,
-    "changes_14d": 346,
+    "score": 19.0,
+    "active_days_7d": 6,
+    "changes_7d": 151,
+    "changes_14d": 376,
     "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-10-23T21:51:38Z",
-      "commit": "fa550ce",
-      "commit_full": "fa550ce2d07bdfee6b1d7b6835e8abc8c6913d00",
-      "subject": "Build: use craft-media for bitstream, isobmff and matroska (#2435)"
+      "ts": "2026-10-24T08:51:22Z",
+      "commit": "da691ce",
+      "commit_full": "da691ce78ab120149e14e89d9be75a0a8a2db9b2",
+      "subject": "fix(speech): bound Whisper model metadata allocations (#2866)"
     },
-    "last_commit_ts": "2026-10-23T21:51:38Z",
+    "last_commit_ts": "2026-10-24T08:51:22Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       62,
@@ -413,7 +413,7 @@
       11,
       5,
       62,
-      0
+      30
     ],
     "days": [
       {
@@ -827,6 +827,25 @@
           {
             "commit": "c3b4c4d",
             "subject": "Packaging: pin the signing client and appimagetool, and check their hashes (#2610)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-24",
+        "code": 30,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "da691ce",
+            "subject": "fix(speech): bound Whisper model metadata allocations (#2866)"
+          },
+          {
+            "commit": "e69122c",
+            "subject": "fix(speech): contain and verify downloaded model artifacts (#2867)"
+          },
+          {
+            "commit": "ee08cd3",
+            "subject": "security(frame): bound decimation sampling work (#2878)"
           }
         ]
       }
@@ -1293,5 +1312,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-24T00:12:00+00:00"
+  "updated_at": "2026-10-24T08:55:01+00:00"
 }

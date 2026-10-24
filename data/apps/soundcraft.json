@@ -342,18 +342,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.1,
+    "score": 15.2,
     "active_days_7d": 5,
-    "changes_7d": 106,
-    "changes_14d": 243,
+    "changes_7d": 107,
+    "changes_14d": 244,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-24T05:03:54Z",
-      "commit": "ef646cf",
-      "commit_full": "ef646cf6263e0a381b84170ef1d655455ef669e9",
-      "subject": "audiosuite: saturating render budget, and a sharper budget test (follow-up to #996) (#1009)"
+      "ts": "2026-10-24T08:30:47Z",
+      "commit": "93800e0",
+      "commit_full": "93800e0764ca62435ee66a4770f355df954b7fcd",
+      "subject": "refactor(video): use method paths instead of closures for first_chunk (S1612) (#1012)"
     },
-    "last_commit_ts": "2026-10-24T05:03:54Z",
+    "last_commit_ts": "2026-10-24T08:30:47Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
       14,
@@ -369,7 +369,7 @@
       1,
       12,
       12,
-      27
+      28
     ],
     "days": [
       {
@@ -626,9 +626,13 @@
       },
       {
         "d": "2026-10-24",
-        "code": 27,
+        "code": 28,
         "other": 0,
         "samples": [
+          {
+            "commit": "93800e0",
+            "subject": "refactor(video): use method paths instead of closures for first_chunk (S1612) (#1012)"
+          },
           {
             "commit": "ef646cf",
             "subject": "audiosuite: saturating render budget, and a sharper budget test (follow-up to #996) (#1009)"
@@ -636,10 +640,6 @@
           {
             "commit": "aa06d87",
             "subject": "Guard all playback output paths against NaN from interpolation overflow (#982)"
-          },
-          {
-            "commit": "c422084",
-            "subject": "Video: clamp H.264 IDCT inputs and temporal-direct mvs to the spec ranges (#928) (#994)"
           }
         ]
       }
@@ -1193,5 +1193,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-24T05:15:45+00:00"
+  "updated_at": "2026-10-24T08:55:25+00:00"
 }

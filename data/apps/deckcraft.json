@@ -427,18 +427,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.3,
+    "score": 17.0,
     "active_days_7d": 6,
-    "changes_7d": 92,
-    "changes_14d": 414,
+    "changes_7d": 99,
+    "changes_14d": 421,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-24T03:28:09Z",
-      "commit": "5fadda5",
-      "commit_full": "5fadda5ecfda00e11e364f095a31974f54857e21",
-      "subject": "chore: resolve SonarCloud maintainability issues (#1255)"
+      "ts": "2026-10-24T08:45:48Z",
+      "commit": "c955407",
+      "commit_full": "c955407373605c012ed77c86fe9f1316e4715350",
+      "subject": "security(engine): check regular file and size bound on read, preserve permissions and symlinks on save (#1265)"
     },
-    "last_commit_ts": "2026-10-24T03:28:09Z",
+    "last_commit_ts": "2026-10-24T08:45:48Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
       0,
@@ -454,7 +454,7 @@
       4,
       7,
       54,
-      2
+      9
     ],
     "days": [
       {
@@ -746,16 +746,20 @@
       },
       {
         "d": "2026-10-24",
-        "code": 2,
+        "code": 9,
         "other": 0,
         "samples": [
           {
-            "commit": "5fadda5",
-            "subject": "chore: resolve SonarCloud maintainability issues (#1255)"
+            "commit": "c955407",
+            "subject": "security(engine): check regular file and size bound on read, preserve permissions and symlinks on save (#1265)"
           },
           {
-            "commit": "b913c4f",
-            "subject": "PDF: pin craft-pdf and krilla to craft-libs main (#1253)"
+            "commit": "54962c6",
+            "subject": "refactor: explicit imports for table modules (SonarCloud S2208) (#1262)"
+          },
+          {
+            "commit": "6189fa8",
+            "subject": "perf(engine): bound HTML entity semicolon scan window and formatting stack search (#1267)"
           }
         ]
       }
@@ -3172,5 +3176,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-24T03:57:46+00:00"
+  "updated_at": "2026-10-24T08:55:28+00:00"
 }

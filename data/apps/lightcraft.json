@@ -346,18 +346,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 8.8,
+    "score": 9.8,
     "active_days_7d": 5,
-    "changes_7d": 23,
-    "changes_14d": 43,
+    "changes_7d": 25,
+    "changes_14d": 45,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-24T02:45:21Z",
-      "commit": "4ae3089",
-      "commit_full": "4ae3089420cb57d4c839e51a735d4f48271cbf17",
-      "subject": "security: bounded keyword, repair and journal-recovery work (CodeRabbit) (#2763)"
+      "ts": "2026-10-24T08:43:15Z",
+      "commit": "23f5480",
+      "commit_full": "23f54803e617ef4aa45b6fec23fc467ef4c2449d",
+      "subject": "fix(tools): keep install-sam3.sh POSIX sh (no arrays for curl auth options) (#2760)"
     },
-    "last_commit_ts": "2026-10-24T02:45:21Z",
+    "last_commit_ts": "2026-10-24T08:43:15Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
       4,
@@ -373,7 +373,7 @@
       5,
       2,
       7,
-      1
+      3
     ],
     "days": [
       {
@@ -778,9 +778,17 @@
       },
       {
         "d": "2026-10-24",
-        "code": 1,
+        "code": 3,
         "other": 0,
         "samples": [
+          {
+            "commit": "23f5480",
+            "subject": "fix(tools): keep install-sam3.sh POSIX sh (no arrays for curl auth options) (#2760)"
+          },
+          {
+            "commit": "e83bf77",
+            "subject": "security: bound codec allocation to what a hostile file declares (#2769)"
+          },
           {
             "commit": "4ae3089",
             "subject": "security: bounded keyword, repair and journal-recovery work (CodeRabbit) (#2763)"
@@ -1227,5 +1235,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-24T02:55:39+00:00"
+  "updated_at": "2026-10-24T08:55:05+00:00"
 }
