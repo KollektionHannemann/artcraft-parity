@@ -407,7 +407,7 @@
   },
   "roadmap": {
     "revisions": 98,
-    "revisions_7d": 31,
+    "revisions_7d": 30,
     "last_revision": {
       "ts": "2026-10-23T21:28:02Z",
       "kind": "content",
@@ -427,21 +427,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.0,
-    "active_days_7d": 6,
-    "changes_7d": 91,
-    "changes_14d": 428,
+    "score": 13.7,
+    "active_days_7d": 5,
+    "changes_7d": 90,
+    "changes_14d": 412,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-23T23:29:43Z",
-      "commit": "7626f74",
-      "commit_full": "7626f74b99aa50171c0fabfaa55ad82a7e1b1635",
-      "subject": "Media: use craft-media for bitstream, isobmff and matroska (#1034)"
+      "ts": "2026-10-23T23:56:24Z",
+      "commit": "9aef21e",
+      "commit_full": "9aef21e627cb447dd2180cd804db85343e73e5cf",
+      "subject": "Media: a clip opened from a .pptx gets its length and size from its headers (#1241) (#1250)"
     },
-    "last_commit_ts": "2026-10-23T23:29:43Z",
+    "last_commit_ts": "2026-10-23T23:56:24Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
-      17,
       0,
       29,
       77,
@@ -454,7 +453,8 @@
       0,
       4,
       7,
-      53
+      54,
+      0
     ],
     "days": [
       {
@@ -727,9 +727,13 @@
       },
       {
         "d": "2026-10-23",
-        "code": 53,
+        "code": 54,
         "other": 4,
         "samples": [
+          {
+            "commit": "9aef21e",
+            "subject": "Media: a clip opened from a .pptx gets its length and size from its headers (#1241) (#1250)"
+          },
           {
             "commit": "7626f74",
             "subject": "Media: use craft-media for bitstream, isobmff and matroska (#1034)"
@@ -737,10 +741,6 @@
           {
             "commit": "7871ff3",
             "subject": "Merge pull request #1076 from fchinu/format_text"
-          },
-          {
-            "commit": "8b912c1",
-            "subject": "Merge pull request #1002 from Silvertree2010/fix/h2821-find-replace-ignores-line-breaks"
           }
         ]
       }
@@ -3157,5 +3157,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-23T23:49:31+00:00"
+  "updated_at": "2026-10-24T00:12:14+00:00"
 }
