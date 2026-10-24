@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/lightcraft",
   "roadmap_url": "https://github.com/storytold/lightcraft/blob/main/ROADMAP.md",
-  "latest_commit": "f3bb7a9",
-  "latest_commit_date": "2026-10-23T13:34:30-04:00",
-  "latest_message": "CI: one test binary per crate, line tables only, one WASM check (#2710)",
+  "latest_commit": "c414ef0",
+  "latest_commit_date": "2026-10-24T09:39:25-04:00",
+  "latest_message": "Round 3a integration: 42 PRs of #2580, built and tested locally (#2689)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Adobe Lightroom Classic 15.5 / Lightroom 9.6",
-    "last_updated": "2026-10-16",
+    "last_updated": "2026-10-22",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -225,6 +225,10 @@
     ],
     "progress": [
       {
+        "date": "2026-10-22",
+        "text": "Print page setup and PDF output gain the Japanese photo and postcard papers — L判"
+      },
+      {
         "date": "2026-10-18",
         "text": "Minolta / Konica Minolta MRW decodes from sensor data (12-bit packed and 16-bit words,"
       },
@@ -325,39 +329,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 10,
-    "revisions_7d": 2,
+    "revisions": 11,
+    "revisions_7d": 3,
     "last_revision": {
-      "ts": "2026-10-23T17:34:30Z",
+      "ts": "2026-10-24T13:39:25Z",
       "kind": "content",
-      "commit": "f3bb7a9",
-      "commit_full": "f3bb7a9f3068e6b3e6136a1e864f7a3ae5dfc796",
-      "message": "CI: one test binary per crate, line tables only, one WASM check (#2710)"
+      "commit": "c414ef0",
+      "commit_full": "c414ef06ecfc4fbf383dc4ff644a4fb93ad96876",
+      "message": "Round 3a integration: 42 PRs of #2580, built and tested locally (#2689)"
     },
     "last_update": {
-      "ts": "2026-10-23T17:34:30Z",
+      "ts": "2026-10-24T13:39:25Z",
       "kind": "content",
-      "commit": "f3bb7a9",
-      "commit_full": "f3bb7a9f3068e6b3e6136a1e864f7a3ae5dfc796",
-      "message": "CI: one test binary per crate, line tables only, one WASM check (#2710)"
+      "commit": "c414ef0",
+      "commit_full": "c414ef06ecfc4fbf383dc4ff644a4fb93ad96876",
+      "message": "Round 3a integration: 42 PRs of #2580, built and tested locally (#2689)"
     },
-    "self_reported": "2026-10-16"
+    "self_reported": "2026-10-22"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 9.8,
+    "score": 10.1,
     "active_days_7d": 5,
-    "changes_7d": 25,
-    "changes_14d": 45,
+    "changes_7d": 26,
+    "changes_14d": 46,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-24T08:43:15Z",
-      "commit": "23f5480",
-      "commit_full": "23f54803e617ef4aa45b6fec23fc467ef4c2449d",
-      "subject": "fix(tools): keep install-sam3.sh POSIX sh (no arrays for curl auth options) (#2760)"
+      "ts": "2026-10-24T13:39:25Z",
+      "commit": "c414ef0",
+      "commit_full": "c414ef06ecfc4fbf383dc4ff644a4fb93ad96876",
+      "subject": "Round 3a integration: 42 PRs of #2580, built and tested locally (#2689)"
     },
-    "last_commit_ts": "2026-10-24T08:43:15Z",
+    "last_commit_ts": "2026-10-24T13:39:25Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
       4,
@@ -373,7 +377,7 @@
       5,
       2,
       7,
-      3
+      4
     ],
     "days": [
       {
@@ -778,9 +782,13 @@
       },
       {
         "d": "2026-10-24",
-        "code": 3,
+        "code": 4,
         "other": 0,
         "samples": [
+          {
+            "commit": "c414ef0",
+            "subject": "Round 3a integration: 42 PRs of #2580, built and tested locally (#2689)"
+          },
           {
             "commit": "23f5480",
             "subject": "fix(tools): keep install-sam3.sh POSIX sh (no arrays for curl auth options) (#2760)"
@@ -788,10 +796,6 @@
           {
             "commit": "e83bf77",
             "subject": "security: bound codec allocation to what a hostile file declares (#2769)"
-          },
-          {
-            "commit": "4ae3089",
-            "subject": "security: bounded keyword, repair and journal-recovery work (CodeRabbit) (#2763)"
           }
         ]
       }
@@ -1233,7 +1237,30 @@
       "breadth_pct": 81.6,
       "full_prev": 61.0,
       "kind": "content"
+    },
+    {
+      "commit": "c414ef0",
+      "commit_full": "c414ef06ecfc4fbf383dc4ff644a4fb93ad96876",
+      "commit_date": "2026-10-24T09:39:25-04:00",
+      "ts": "2026-10-24T13:39:25Z",
+      "message": "Round 3a integration: 42 PRs of #2580, built and tested locally (#2689)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-22",
+      "full_pct": 61.0,
+      "full_range": null,
+      "full_hours": [
+        1000,
+        1800
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe Lightroom Classic 15.5 / Lightroom 9.6",
+      "mainstream_pct": 51.0,
+      "essentials_pct": 65.0,
+      "breadth_pct": 81.6,
+      "full_prev": 61.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-24T08:55:05+00:00"
+  "updated_at": "2026-10-24T13:50:54+00:00"
 }

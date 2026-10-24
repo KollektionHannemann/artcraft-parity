@@ -431,18 +431,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.8,
+    "score": 22.1,
     "active_days_7d": 6,
-    "changes_7d": 204,
-    "changes_14d": 700,
+    "changes_7d": 206,
+    "changes_14d": 702,
     "housekeeping_7d": 26,
     "last_code_change": {
-      "ts": "2026-10-24T12:40:40Z",
-      "commit": "b75cbd9",
-      "commit_full": "b75cbd92c5b21972b814d451fb89ddf94e6a12d9",
-      "subject": "Integration batch 5: 9 contributor PRs (OCR, attachments, documents, selection), after #4391 (#4394)"
+      "ts": "2026-10-24T13:38:10Z",
+      "commit": "fc1372a",
+      "commit_full": "fc1372a64cda667093519fcdc166e070d0f0cd3d",
+      "subject": "fix(render): vendor hayro-postscript so a run of << in a CMap can't overflow the stack (#4363)"
     },
-    "last_commit_ts": "2026-10-24T12:40:40Z",
+    "last_commit_ts": "2026-10-24T13:38:10Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       123,
@@ -458,7 +458,7 @@
       13,
       59,
       44,
-      7
+      9
     ],
     "days": [
       {
@@ -906,20 +906,20 @@
       },
       {
         "d": "2026-10-24",
-        "code": 7,
+        "code": 9,
         "other": 1,
         "samples": [
           {
+            "commit": "fc1372a",
+            "subject": "fix(render): vendor hayro-postscript so a run of << in a CMap can't overflow the stack (#4363)"
+          },
+          {
+            "commit": "b6b0bba",
+            "subject": "fix(forms): a multiline field rejects a glyph wider than the field (#4447)"
+          },
+          {
             "commit": "b75cbd9",
             "subject": "Integration batch 5: 9 contributor PRs (OCR, attachments, documents, selection), after #4391 (#4394)"
-          },
-          {
-            "commit": "885ae3f",
-            "subject": "Integration batch 4: 26 contributor PRs (comments, viewer, pages, printing), after #4390 (#4391)"
-          },
-          {
-            "commit": "0b51b20",
-            "subject": "Integration batch 3: 47 contributor PRs (editing, forms, XFA, rendering) (#4390)"
           }
         ]
       }
@@ -4997,5 +4997,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-24T13:03:09+00:00"
+  "updated_at": "2026-10-24T13:50:57+00:00"
 }
