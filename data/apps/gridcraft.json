@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/gridcraft",
   "roadmap_url": "https://github.com/storytold/gridcraft/blob/main/ROADMAP.md",
-  "latest_commit": "d1399ff",
-  "latest_commit_date": "2026-10-23T10:11:12-04:00",
-  "latest_message": "Merge PR #2279",
+  "latest_commit": "beda2a4",
+  "latest_commit_date": "2026-10-24T02:10:42-04:00",
+  "latest_message": "Merge PR #2394",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Microsoft Excel (Microsoft 365)",
-    "last_updated": "2026-10-22",
+    "last_updated": "2026-10-23",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -213,6 +213,14 @@
     ],
     "progress": [
       {
+        "date": "2026-10-23",
+        "text": "Accounting negatives in text: $(1,234), $ (5) and (5)% read as negative numbers when typed, coerced by arithmetic or passed to VALUE, like Excel 365; (-5), ((5)), $5% and dates or times in parentheses stay text"
+      },
+      {
+        "date": "2026-10-23",
+        "text": "Calc: INDEX(A1:C3,2) (one index on a reference of several rows and columns) is #REF! as in Excel, instead of the whole row; INDEX(A1:C3,2,) still gives the row"
+      },
+      {
         "date": "2026-10-22",
         "text": "Formula hardening: digits too many for a finite number are text, so \"1 <400 digits>/<400 digits>\" no longer coerces to NaN; a NaN column index in VLOOKUP, HLOOKUP and the D-functions is #VALUE! instead of an index underflow; REGEXREPLACE stops building a result as soon as it can only be too long (a worst case went from 1 GB to 7 MB) (#2163, #2162)"
       },
@@ -262,6 +270,14 @@
       },
       {
         "date": "2026-10-14",
+        "text": "Lookups (MATCH, XMATCH, VLOOKUP, HLOOKUP, XLOOKUP, LOOKUP) compare numbers exactly like Excel, so a computed key such as =0.1+0.2 no longer finds 0.3; = and COUNTIF/SUMIF keep their 15-digit comparison"
+      },
+      {
+        "date": "2026-10-14",
+        "text": "Functions: EOMONTH, EDATE, WORKDAY, NETWORKDAYS, YEARFRAC, WEEKNUM, the bond and coupon functions, DISC, BIN2DEC, IM and the other Analysis ToolPak functions give #VALUE! for a reference to more than one cell in a value argument, as Excel 365 does, instead of spilling; array constants and computed arrays still lift"
+      },
+      {
+        "date": "2026-10-14",
         "text": "Protect Sheet on a protected sheet: Home › Format, its keytips (HOP, RPS) and the tab menu now read Unprotect Sheet… and unprotect (straight away without a password); a protected sheet that forbids selecting locked (or unlocked) cells is enforced for clicks, arrows and Go To, and the Protect Sheet dialog has the select options (#1346)"
       },
       {
@@ -275,6 +291,10 @@
       {
         "date": "2026-10-14",
         "text": "Recalculation: when two arrays of one recalculation want the same empty cells, the formulas that read the one laid out second (at its anchor or over the cells it would have spilled into) read #SPILL! and empty cells instead of its values"
+      },
+      {
+        "date": "2026-10-14",
+        "text": "Border keytips: each Alt, H, B letter applies the preset Excel's Borders menu gives it (H,B,O bottom, H,B,B bottom double, H,B,N no border, H,B,A all borders and the rest); they all drew a bottom border before. H,B,M opens Format Cells on the Border tab"
       },
       {
         "date": "2026-10-13",
@@ -351,26 +371,6 @@
       {
         "date": "2026-10-12",
         "text": "TEXT() over a range and chart labels parse each number format code once instead of once per value (#806)"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "SUBTOTAL(109) over hidden rows recalculates after Row Height, AutoFit Row Height and Ungroup reveal rows (found by the command-sequence fuzz)"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "Page Layout view: drag the margin edges on the rulers to set the page margins (resize cursor, live preview, value tooltip, one undo step, Esc cancels) (#792)"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "Forecast Sheet gets Forecast Start: begin the forecast inside the history to compare it with the actuals (#785)"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "Ink strokes save as unfilled DrawingML paths and reopen as editable ink with their points, colour and width; icons in #551 remain a follow-up"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "The selection outline stays visible when extended to the last row (Ctrl+Shift+Down): its sides are cut to the viewport instead of stroking a 20-million-point rectangle (#687)"
       }
     ]
   },
@@ -381,39 +381,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 59,
-    "revisions_7d": 2,
+    "revisions": 64,
+    "revisions_7d": 7,
     "last_revision": {
-      "ts": "2026-10-23T14:11:12Z",
+      "ts": "2026-10-24T06:10:42Z",
       "kind": "content",
-      "commit": "d1399ff",
-      "commit_full": "d1399ff2ca58479fee2bd627946a18b1c63f2a3a",
-      "message": "Merge PR #2279"
+      "commit": "beda2a4",
+      "commit_full": "beda2a44dcda12d5b6767f6e0f9b4e033da2825b",
+      "message": "Merge PR #2394"
     },
     "last_update": {
-      "ts": "2026-10-23T14:11:12Z",
+      "ts": "2026-10-24T06:10:42Z",
       "kind": "content",
-      "commit": "d1399ff",
-      "commit_full": "d1399ff2ca58479fee2bd627946a18b1c63f2a3a",
-      "message": "Merge PR #2279"
+      "commit": "beda2a4",
+      "commit_full": "beda2a44dcda12d5b6767f6e0f9b4e033da2825b",
+      "message": "Merge PR #2394"
     },
-    "self_reported": "2026-10-22"
+    "self_reported": "2026-10-23"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 11.9,
+    "score": 14.5,
     "active_days_7d": 6,
-    "changes_7d": 64,
-    "changes_14d": 353,
+    "changes_7d": 74,
+    "changes_14d": 363,
     "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-10-24T06:06:44Z",
-      "commit": "6ead1fb",
-      "commit_full": "6ead1fb51936f7d368c09e8ce68806f51589b6c3",
-      "subject": "Engine: building blocks for multi-command actions (undo groups, recording buffer, document trust, chunked hidden names) (#462)"
+      "ts": "2026-10-24T06:12:07Z",
+      "commit": "72c1d57",
+      "commit_full": "72c1d57d1e7ec4b86b784a60ac5bad943ffe5bdb",
+      "subject": "Review fixes for #2393, #2394, #2397 and #2399"
     },
-    "last_commit_ts": "2026-10-24T06:06:44Z",
+    "last_commit_ts": "2026-10-24T06:12:07Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       124,
@@ -429,7 +429,7 @@
       2,
       3,
       29,
-      1
+      11
     ],
     "days": [
       {
@@ -693,12 +693,20 @@
       },
       {
         "d": "2026-10-24",
-        "code": 1,
+        "code": 11,
         "other": 0,
         "samples": [
           {
-            "commit": "6ead1fb",
-            "subject": "Engine: building blocks for multi-command actions (undo groups, recording buffer, document trust, chunked hidden names) (#462)"
+            "commit": "72c1d57",
+            "subject": "Review fixes for #2393, #2394, #2397 and #2399"
+          },
+          {
+            "commit": "beda2a4",
+            "subject": "Merge PR #2394"
+          },
+          {
+            "commit": "ec841a0",
+            "subject": "Merge PR #2388"
           }
         ]
       }
@@ -2233,7 +2241,122 @@
       "breadth_pct": 75.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "deb1679",
+      "commit_full": "deb167956c4a467dd66a612bb3b77f29627d1ebb",
+      "commit_date": "2026-10-24T02:10:36-04:00",
+      "ts": "2026-10-24T06:10:36Z",
+      "message": "Merge PR #2392",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-23",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "14d6dab",
+      "commit_full": "14d6dabcafaef2f8c733154ab73d0dd7dfe7fce5",
+      "commit_date": "2026-10-24T02:10:36-04:00",
+      "ts": "2026-10-24T06:10:36Z",
+      "message": "Merge PR #2396",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-23",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "f9af0d8",
+      "commit_full": "f9af0d88a5e0d6ea0afa2c55583fec78591324a6",
+      "commit_date": "2026-10-24T02:10:42-04:00",
+      "ts": "2026-10-24T06:10:42Z",
+      "message": "Merge PR #2397",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-23",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "d743f21",
+      "commit_full": "d743f2199238d64c85df896a3bb2a4a7148ea121",
+      "commit_date": "2026-10-24T02:10:42-04:00",
+      "ts": "2026-10-24T06:10:42Z",
+      "message": "Merge PR #2399",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-23",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "beda2a4",
+      "commit_full": "beda2a44dcda12d5b6767f6e0f9b4e033da2825b",
+      "commit_date": "2026-10-24T02:10:42-04:00",
+      "ts": "2026-10-24T06:10:42Z",
+      "message": "Merge PR #2394",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-23",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-24T06:15:39+00:00"
+  "updated_at": "2026-10-24T07:08:06+00:00"
 }

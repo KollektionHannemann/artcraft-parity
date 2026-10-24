@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/designcraft",
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
-  "latest_commit": "d8d7885",
-  "latest_commit_date": "2026-10-24T01:34:05-04:00",
-  "latest_message": "Anchored objects: Relative to Spine mirrors custom positions on right-hand pages (#1702)",
+  "latest_commit": "5449bc4",
+  "latest_commit_date": "2026-10-24T00:51:57-06:00",
+  "latest_message": "M6: preserve PDF catalogs and safely apply layer choices (#1670)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -405,39 +405,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 111,
-    "revisions_7d": 19,
+    "revisions": 112,
+    "revisions_7d": 20,
     "last_revision": {
-      "ts": "2026-10-24T05:34:05Z",
+      "ts": "2026-10-24T06:51:57Z",
       "kind": "content",
-      "commit": "d8d7885",
-      "commit_full": "d8d78851729a2c1a10e5bfad7c591f3de78651a0",
-      "message": "Anchored objects: Relative to Spine mirrors custom positions on right-hand pages (#1702)"
+      "commit": "5449bc4",
+      "commit_full": "5449bc47579cdc65b11f6a208e549ddb2b7092f1",
+      "message": "M6: preserve PDF catalogs and safely apply layer choices (#1670)"
     },
     "last_update": {
-      "ts": "2026-10-24T05:34:05Z",
+      "ts": "2026-10-24T06:51:57Z",
       "kind": "content",
-      "commit": "d8d7885",
-      "commit_full": "d8d78851729a2c1a10e5bfad7c591f3de78651a0",
-      "message": "Anchored objects: Relative to Spine mirrors custom positions on right-hand pages (#1702)"
+      "commit": "5449bc4",
+      "commit_full": "5449bc47579cdc65b11f6a208e549ddb2b7092f1",
+      "message": "M6: preserve PDF catalogs and safely apply layer choices (#1670)"
     },
     "self_reported": "2026-10-13"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.1,
+    "score": 17.4,
     "active_days_7d": 5,
-    "changes_7d": 109,
-    "changes_14d": 326,
+    "changes_7d": 110,
+    "changes_14d": 327,
     "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-10-24T05:34:05Z",
-      "commit": "d8d7885",
-      "commit_full": "d8d78851729a2c1a10e5bfad7c591f3de78651a0",
-      "subject": "Anchored objects: Relative to Spine mirrors custom positions on right-hand pages (#1702)"
+      "ts": "2026-10-24T06:51:57Z",
+      "commit": "5449bc4",
+      "commit_full": "5449bc47579cdc65b11f6a208e549ddb2b7092f1",
+      "subject": "M6: preserve PDF catalogs and safely apply layer choices (#1670)"
     },
-    "last_commit_ts": "2026-10-24T05:34:05Z",
+    "last_commit_ts": "2026-10-24T06:51:57Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       4,
@@ -453,7 +453,7 @@
       8,
       19,
       47,
-      3
+      4
     ],
     "days": [
       {
@@ -853,9 +853,13 @@
       },
       {
         "d": "2026-10-24",
-        "code": 3,
+        "code": 4,
         "other": 1,
         "samples": [
+          {
+            "commit": "5449bc4",
+            "subject": "M6: preserve PDF catalogs and safely apply layer choices (#1670)"
+          },
           {
             "commit": "d8d7885",
             "subject": "Anchored objects: Relative to Spine mirrors custom positions on right-hand pages (#1702)"
@@ -863,10 +867,6 @@
           {
             "commit": "4823b59",
             "subject": "PDF: shared reader from craft-libs 9f75d3dc (input bounds and crash fixes) (#1701)"
-          },
-          {
-            "commit": "3b71900",
-            "subject": "Links: resolve stored paths with craft-docpath's resolve_absolute (#1399)"
           }
         ]
       }
@@ -3631,7 +3631,30 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "5449bc4",
+      "commit_full": "5449bc47579cdc65b11f6a208e549ddb2b7092f1",
+      "commit_date": "2026-10-24T00:51:57-06:00",
+      "ts": "2026-10-24T06:51:57Z",
+      "message": "M6: preserve PDF catalogs and safely apply layer choices (#1670)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-13",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-24T05:53:44+00:00"
+  "updated_at": "2026-10-24T07:07:54+00:00"
 }

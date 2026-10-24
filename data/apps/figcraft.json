@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "3476f4b",
-  "latest_commit_date": "2026-10-24T11:15:53+07:00",
-  "latest_message": "Community batch r2-1: 63 reviewed PRs (#1244)",
+  "latest_commit": "e3e39bb",
+  "latest_commit_date": "2026-10-24T13:33:26+07:00",
+  "latest_message": "M6: Dev Mode measurements kept on the canvas, a read-only layers panel (#1248)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -207,7 +207,7 @@
       },
       {
         "label": "Dev Mode / inspect",
-        "pct": 97.0
+        "pct": 98.0
       },
       {
         "label": "Comments, versions, misc",
@@ -246,6 +246,10 @@
       "Multiplayer (M9): accounts and teams on top of the live sessions and the standalone server (transport, hosting, invite links that open the app, document sync, presence with remote text carets, cursor chat and spotlight, per-user undo, reconnect with offline edits, collision-free ids for styles, variables and comments, the browser client, figcraft-server with persistence and share links to edit or view, team libraries on the server landed): 42–84 h."
     ],
     "progress": [
+      {
+        "date": "2026-10-24",
+        "text": "· Dev Mode tail (M6, gap 16): Measurements kept on the canvas (gap 16): devMode.addMeasurement {from?, to?, side?} places one between two layers, along one side of a layer or (neither) to the layer around it, stored on the layer it starts from (saved in .figcraft, synced, undoable; old files open without them); Dev Mode draws them as labelled redlines that follow the layers, the Inspect tab lists them (those of the selected layer, or every one on the page), places and removes them; devMode.removeMeasurement and devMode.measurements remove and list them; a copy keeps those to layers copied with it. The layers panel is read-only in Dev Mode: rows select and expand, but don't rename, reorder, hide or lock. Dev Mode 98% / 78%."
+      },
       {
         "date": "2026-10-24",
         "text": "· Boards (M12): File ▸ New board makes a board, a file kind of its own saved in .figcraft and carried to people joining a live session. Sticky notes (8 colours, text that shrinks as the note grows, the author's name, Shift+Cmd/Ctrl+Enter for the next one), shapes with text (7 outlines), connectors that re-route when what they join moves (computed in the engine's normalize pass, so local edits, undo and others' edits agree), marker, highlighter and eraser, stamps with the placer's name on hover; a board toolbar, a contextual bar over the selection and the Design panel hidden until asked for; prototyping and Dev Mode refuse on boards. Design files and boards have their own marks (a pen nib, a note) on tabs, the home screen and the Open files list. Checked in the app, with two app instances in one live session, and through MCP; the web build compiles (boards-parity)."
@@ -401,10 +405,6 @@
       {
         "date": "2026-10-12",
         "text": "· .fig export opens elsewhere (gap 1): written files were checked by opening them in other"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "· Experimental .fig export (gap 1): file.export {format: \"fig\"}, File ▸ Export… ▸ .fig"
       }
     ]
   },
@@ -424,39 +424,39 @@
     }
   },
   "roadmap": {
-    "revisions": 104,
-    "revisions_7d": 10,
+    "revisions": 105,
+    "revisions_7d": 11,
     "last_revision": {
-      "ts": "2026-10-24T04:15:53Z",
-      "kind": "content",
-      "commit": "3476f4b",
-      "commit_full": "3476f4b1e72e31514670ceff9c1a5a3d78a8b302",
-      "message": "Community batch r2-1: 63 reviewed PRs (#1244)"
+      "ts": "2026-10-24T06:33:26Z",
+      "kind": "estimates",
+      "commit": "e3e39bb",
+      "commit_full": "e3e39bbc4dc94d58a70775fae17ee0d7a486a95f",
+      "message": "M6: Dev Mode measurements kept on the canvas, a read-only layers panel (#1248)"
     },
     "last_update": {
-      "ts": "2026-10-24T04:15:53Z",
-      "kind": "content",
-      "commit": "3476f4b",
-      "commit_full": "3476f4b1e72e31514670ceff9c1a5a3d78a8b302",
-      "message": "Community batch r2-1: 63 reviewed PRs (#1244)"
+      "ts": "2026-10-24T06:33:26Z",
+      "kind": "estimates",
+      "commit": "e3e39bb",
+      "commit_full": "e3e39bbc4dc94d58a70775fae17ee0d7a486a95f",
+      "message": "M6: Dev Mode measurements kept on the canvas, a read-only layers panel (#1248)"
     },
     "self_reported": "2026-10-24"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.9,
+    "score": 16.2,
     "active_days_7d": 6,
-    "changes_7d": 89,
-    "changes_14d": 244,
+    "changes_7d": 90,
+    "changes_14d": 245,
     "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-10-24T04:15:53Z",
-      "commit": "3476f4b",
-      "commit_full": "3476f4b1e72e31514670ceff9c1a5a3d78a8b302",
-      "subject": "Community batch r2-1: 63 reviewed PRs (#1244)"
+      "ts": "2026-10-24T06:33:26Z",
+      "commit": "e3e39bb",
+      "commit_full": "e3e39bbc4dc94d58a70775fae17ee0d7a486a95f",
+      "subject": "M6: Dev Mode measurements kept on the canvas, a read-only layers panel (#1248)"
     },
-    "last_commit_ts": "2026-10-24T04:15:53Z",
+    "last_commit_ts": "2026-10-24T06:33:26Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       53,
@@ -472,7 +472,7 @@
       16,
       4,
       9,
-      3
+      4
     ],
     "days": [
       {
@@ -749,9 +749,13 @@
       },
       {
         "d": "2026-10-24",
-        "code": 3,
+        "code": 4,
         "other": 0,
         "samples": [
+          {
+            "commit": "e3e39bb",
+            "subject": "M6: Dev Mode measurements kept on the canvas, a read-only layers panel (#1248)"
+          },
           {
             "commit": "3476f4b",
             "subject": "Community batch r2-1: 63 reviewed PRs (#1244)"
@@ -759,10 +763,6 @@
           {
             "commit": "a1a842a",
             "subject": "chore: resolve SonarCloud maintainability issues (#1241)"
-          },
-          {
-            "commit": "c668e21",
-            "subject": "PDF: write with craft-libs' krilla, which bounds decoded PNGs (#1240)"
           }
         ]
       }
@@ -3332,7 +3332,30 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "e3e39bb",
+      "commit_full": "e3e39bbc4dc94d58a70775fae17ee0d7a486a95f",
+      "commit_date": "2026-10-24T13:33:26+07:00",
+      "ts": "2026-10-24T06:33:26Z",
+      "message": "M6: Dev Mode measurements kept on the canvas, a read-only layers panel (#1248)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-24",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "estimates"
     }
   ],
-  "updated_at": "2026-10-24T04:19:10+00:00"
+  "updated_at": "2026-10-24T07:07:56+00:00"
 }
