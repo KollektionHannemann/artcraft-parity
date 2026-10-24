@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/deckcraft",
   "roadmap_url": "https://github.com/storytold/deckcraft/blob/main/ROADMAP.md",
-  "latest_commit": "a58bdbc",
-  "latest_commit_date": "2026-10-23T17:28:02-04:00",
-  "latest_message": "Docs: Apply to All reaches the slide masters (#891); keep gaps.md a list of shortfalls",
+  "latest_commit": "38d2ade",
+  "latest_commit_date": "2026-10-24T08:38:28-04:00",
+  "latest_message": "Integration batch 1: 35 contributor PRs (charts, shapes, slides, text editing, dialogs, outline files) (#1260)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -239,6 +239,10 @@
     "progress": [
       {
         "date": "2026-10-23",
+        "text": "Chart text colour: chart.options {textColor} and Font Color on a selected chart colour its title, axes, legend and data labels; the colour is written to the chart part (c:txPr on the axes, legend, labels and chart, the title's run defaults) so an imported chart keeps its txPr colours through an edit and a save; text without a colour of its own takes PowerPoint's default, the theme's text colour at 65 % plus 35 % (595959 on a light theme, light grey on a dark one)"
+      },
+      {
+        "date": "2026-10-23",
         "text": "Format Background ▸ Apply to All also sets the background of the slide masters the slides use (and clears their layouts' overrides), so new slides keep it (#891)"
       },
       {
@@ -266,6 +270,10 @@
         "text": "Shape Fill and Shape Outline format the members of a selected group, including nested groups, in one undo step. Fill transparency retains each member's effective colour (#1079)"
       },
       {
+        "date": "2026-10-22",
+        "text": "Chart bars and their legend keys draw the series' own pattern fill (a:pattFill, now read and written) and draw nothing for a:noFill, with the series outline where it has one, as PowerPoint for Mac does (synthetic probe); they took the palette's colour before. Lines, areas and markers use a pattern's foreground colour"
+      },
+      {
         "date": "2026-10-21",
         "text": "Opening a .pptx puts the text of shapes without an anchor at the top even when the theme's shape defaults (spDef) centre new shapes, as PowerPoint for Mac draws them; checked with a synthetic probe and on a private 166-deck corpus (51 slides closer to PowerPoint's PDF, none further)"
       },
@@ -274,8 +282,24 @@
         "text": "3-D contours, extrusion depths and bevels keep their size in points inside a group whose child coordinates scale its shapes: a 1 pt contour on a small extruded cube in a legacy group drew hundreds of points wide, a band across the slide"
       },
       {
+        "date": "2026-10-21",
+        "text": "Groups nest at most 32 deep (arrange.group refuses more), as deep as PPTX import reads and slides draw: a deck grouped 39 or more levels deep saved without complaint and then could not be opened again"
+      },
+      {
+        "date": "2026-10-21",
+        "text": "Reuse Slides: pick which slides of the other presentation to insert from a list (slide.reuseList, #1103)"
+      },
+      {
         "date": "2026-10-20",
         "text": "Chart number formats with explicit empty positive, negative or zero sections hide the corresponding labels, including all values with three semicolons; a blank whole format still uses General. Synthetic formatter regressions"
+      },
+      {
+        "date": "2026-10-20",
+        "text": "Tests: the Options dialog's Cancel, Esc and close button put the settings back the way they were (#878)"
+      },
+      {
+        "date": "2026-10-20",
+        "text": "Tests: Ctrl+A in the slide sorter selects every slide, as in PowerPoint (#936)"
       },
       {
         "date": "2026-10-19",
@@ -308,6 +332,14 @@
       {
         "date": "2026-10-18",
         "text": "About: Contributors and Models get their own fixed-size block below the tab row, so the tab row is no longer squeezed into the credits and the tabs keep answering (#843)"
+      },
+      {
+        "date": "2026-10-18",
+        "text": "Charts: a series' own data-label setting is honoured — numbers PowerPoint shows on a graph no longer disappear, and a bare c:showVal means on (#868)"
+      },
+      {
+        "date": "2026-10-18",
+        "text": "Thumbnails: navigating slides with the arrow keys scrolls the thumbnail pane to keep the current slide visible (#917)"
       },
       {
         "date": "2026-10-17",
@@ -343,6 +375,10 @@
       },
       {
         "date": "2026-10-16",
+        "text": "PPTX import: a paragraph build edited in PowerPoint (paragraphs with their own start, other shapes' effects in between, builds by 2nd-level paragraphs) takes PowerPoint's clicks in the show; it used to be rebuilt as one build, 34 clicks instead of 10 on the reporter's slide. Paragraph builds with sub-points save as PowerPoint writes them (#844)"
+      },
+      {
+        "date": "2026-10-16",
         "text": "AutoFormat as you type: ordinals (1st, 22nd, 103rd) get superscript suffixes after a space or punctuation; Tools ▸ AutoCorrect and text.autocorrect {ordinals} turn it off"
       },
       {
@@ -355,47 +391,11 @@
       },
       {
         "date": "2026-10-15",
-        "text": "PPTX trigger sequences keep separate On Click steps, including paragraph builds; synthetic import/edit/save/reopen and headless show regressions"
+        "text": "Render: quick styles render on empty placeholders — the fill gate now checks for style and line overrides too (#832)"
       },
       {
         "date": "2026-10-15",
-        "text": "CLI: .txt and .md export includes table cell text, which it used to skip silently (#814)"
-      },
-      {
-        "date": "2026-10-15",
-        "text": "A .pptx slide that can't be read is reported, not dropped in silence: lostSlides from file.open, a message and a repaired copy in the app, a warning from deckcraft-cli (#203)"
-      },
-      {
-        "date": "2026-10-15",
-        "text": "PDF export and rendering: anchorCtr centres the drawn text block — right-aligned text no longer ran past the box edge (#736)"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "connected MCP rejects unrelated, malformed, incomplete and oversized replies without replay; buffered unsolicited bytes force a fresh connection before sending (#718)"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Empty bulleted and numbered paragraphs show gray markers while editing, including on first click and after Enter. Markers use the list style and stay out of slide shows and exports."
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Presenter View handles the same keyboard navigation as the audience window, consumes handled keys before focused buttons, and remains available at the end screen. Regression tests cover presenter-only input, single-step navigation and Escape"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "PPTX: an owned corpus round-trips SmartArt and OLE kept as XML, audio and video bookmarks and trims, a section with a hidden slide, slide-number and date fields, ink (as freeform lines), 3-D models (.glb, including the fallback picture) and animation repeat, bounce end and triggers. Relationship-bearing SmartArt and OLE (#203), playback options (#74) and rewind (#77) stay open"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Chart trendlines are drawn: linear, exponential, logarithmic, polynomial, power and moving average, with forecast and the equation and R² label. The value axis grows to include the fit"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Chart trendlines round-trip (type, polynomial order, moving-average period, forecast, intercept, equation and R²). An owned corpus slice also checks combo charts with data labels, merged tables with diagonal borders, and text columns, autofit, vertical text and a WordArt warp"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Insert › Icons: a gallery of Lucide stroke icons (release 1.56.0) inserted as custom shapes, no fill, round stroke scaled from the 24-unit design"
+        "text": "Canvas: the resize cursor follows the handle's rotated diagonal — rotated shapes showed the wrong diagonal cursor (#745)"
       }
     ]
   },
@@ -406,39 +406,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 98,
-    "revisions_7d": 30,
+    "revisions": 99,
+    "revisions_7d": 31,
     "last_revision": {
-      "ts": "2026-10-23T21:28:02Z",
+      "ts": "2026-10-24T12:38:28Z",
       "kind": "content",
-      "commit": "a58bdbc",
-      "commit_full": "a58bdbc756583070eadd1a16b9acbe8a71498604",
-      "message": "Docs: Apply to All reaches the slide masters (#891); keep gaps.md a list of shortfalls"
+      "commit": "38d2ade",
+      "commit_full": "38d2ade2b77de39c0e06278ddfd44d1082ff80a8",
+      "message": "Integration batch 1: 35 contributor PRs (charts, shapes, slides, text editing, dialogs, outline files) (#1260)"
     },
     "last_update": {
-      "ts": "2026-10-23T21:28:02Z",
+      "ts": "2026-10-24T12:38:28Z",
       "kind": "content",
-      "commit": "a58bdbc",
-      "commit_full": "a58bdbc756583070eadd1a16b9acbe8a71498604",
-      "message": "Docs: Apply to All reaches the slide masters (#891); keep gaps.md a list of shortfalls"
+      "commit": "38d2ade",
+      "commit_full": "38d2ade2b77de39c0e06278ddfd44d1082ff80a8",
+      "message": "Integration batch 1: 35 contributor PRs (charts, shapes, slides, text editing, dialogs, outline files) (#1260)"
     },
     "self_reported": "2026-10-23"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.4,
+    "score": 17.5,
     "active_days_7d": 6,
-    "changes_7d": 102,
-    "changes_14d": 424,
+    "changes_7d": 103,
+    "changes_14d": 425,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-24T10:01:30Z",
-      "commit": "7be391a",
-      "commit_full": "7be391a1be0fdc09f9601e41bb55ac5fbac3df34",
-      "subject": "fix(pptx): harden import resource budgets, deduplication, and lookup caching (#1283)"
+      "ts": "2026-10-24T12:38:28Z",
+      "commit": "38d2ade",
+      "commit_full": "38d2ade2b77de39c0e06278ddfd44d1082ff80a8",
+      "subject": "Integration batch 1: 35 contributor PRs (charts, shapes, slides, text editing, dialogs, outline files) (#1260)"
     },
-    "last_commit_ts": "2026-10-24T10:01:30Z",
+    "last_commit_ts": "2026-10-24T12:38:28Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
       0,
@@ -454,7 +454,7 @@
       4,
       7,
       54,
-      12
+      13
     ],
     "days": [
       {
@@ -746,9 +746,13 @@
       },
       {
         "d": "2026-10-24",
-        "code": 12,
+        "code": 13,
         "other": 0,
         "samples": [
+          {
+            "commit": "38d2ade",
+            "subject": "Integration batch 1: 35 contributor PRs (charts, shapes, slides, text editing, dialogs, outline files) (#1260)"
+          },
           {
             "commit": "7be391a",
             "subject": "fix(pptx): harden import resource budgets, deduplication, and lookup caching (#1283)"
@@ -756,10 +760,6 @@
           {
             "commit": "f86928d",
             "subject": "perf(pptx): index export lookups and deduplicate relationship parts (#1281)"
-          },
-          {
-            "commit": "c55a9f7",
-            "subject": "security(metafile): harden EMF+ parsing, clipping complexity, and memory accounting (#1280)"
           }
         ]
       }
@@ -3174,7 +3174,30 @@
       "breadth_pct": 62.0,
       "full_prev": 55.0,
       "kind": "content"
+    },
+    {
+      "commit": "38d2ade",
+      "commit_full": "38d2ade2b77de39c0e06278ddfd44d1082ff80a8",
+      "commit_date": "2026-10-24T08:38:28-04:00",
+      "ts": "2026-10-24T12:38:28Z",
+      "message": "Integration batch 1: 35 contributor PRs (charts, shapes, slides, text editing, dialogs, outline files) (#1260)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-23",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-24T10:14:44+00:00"
+  "updated_at": "2026-10-24T13:03:27+00:00"
 }

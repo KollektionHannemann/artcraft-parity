@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/soundcraft",
   "roadmap_url": "https://github.com/storytold/soundcraft/blob/main/ROADMAP.md",
-  "latest_commit": "3776e33",
-  "latest_commit_date": "2026-10-19T03:10:04-04:00",
-  "latest_message": "Fix mono device playback dropping right-channel audio (#719)",
+  "latest_commit": "aa74bff",
+  "latest_commit_date": "2026-10-24T08:38:37-04:00",
+  "latest_message": "Integration batch 1: 36 contributor PRs (files, editing, sessions, CLI, mixer, MIDI, plug-ins, interface) (#1011)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
     "target": "Avid Pro Tools Ultimate 2026.4.1",
-    "last_updated": "2026-10-18",
+    "last_updated": "2026-10-23",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -213,6 +213,14 @@
     ],
     "progress": [
       {
+        "date": "2026-10-23",
+        "text": "A built-in Ring Modulator (ringmod) applies ring modulation, frequency modulation or a positive or negative resonator, and an LFO, an envelope follower or sample and hold moves its frequency. AudioSuite › Modulation › Sci-Fi now runs it instead of the Flanger. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-19",
+        "text": "Float32 WAV and AIFF-C encoding preserve finite samples above full scale. Integer PCM still clips at full scale. Tests cover whole-file and streaming encoders, non-finite samples, and bounce output with normalization on and off. No readiness percentage change."
+      },
+      {
         "date": "2026-10-18",
         "text": "Mono audio devices receive the average of the stereo channels before output clipping, retaining right-only audio. Surround mixes use the same average after their ITU stereo fold-down. Regression tests cover channel balance, polarity cancellation, clipping, centered mono tracks, each 5.1 channel and several callback sizes. No readiness percentage change."
       },
@@ -225,8 +233,16 @@
         "text": "Aux, folder and master latency calculations exclude inserts already taken out for producing NaN or infinity, matching audio tracks. Subsequent blocks no longer compensate for an insert that is bypassed after failure. Regression tests check impulse timing, healthy insert latency and reset/retry at 64- and 512-sample blocks. No readiness percentage change."
       },
       {
+        "date": "2026-10-16",
+        "text": "Split into Mono extracts the correct source channel for each mono track instead of playing channel zero on every track. Clip offsets, gain, fades and stretch, source timestamps, Undo/Redo and saved audio are preserved; repeated clips share each extracted mono source. Unavailable media returns an error without partial edits. No readiness percentage change."
+      },
+      {
         "date": "2026-10-14",
         "text": "MCP batch rejects more than 1000 calls before executing any command, instead of silently running only the first 1000 (#460). No readiness percentage change."
+      },
+      {
+        "date": "2026-10-14",
+        "text": "soundcraft-cli convert dithers only when the output loses resolution (fewer bits than the source, a float or lossy source, or resampled/normalized samples); a same-depth, wider or 32-bit float conversion copies the samples exactly and digital silence stays silent. --dither and --no-dither override the choice (#548)"
       },
       {
         "date": "2026-10-13",
@@ -235,6 +251,10 @@
       {
         "date": "2026-10-13",
         "text": "Sampler: a ping-pong loop keeps its phase and direction when a step is wider than the loop (a narrow loop with high transposition), instead of reflecting once and dropping the rest of the travel (#463)"
+      },
+      {
+        "date": "2026-10-13",
+        "text": "(VST3 host messages): The VST3 host creates IMessage and IAttributeList objects for plugins (IHostApplication::createInstance), so plugins whose controller and processor talk through IConnectionPoint::notify work: Line 6 Helix Stadium Native now loads its content database (it reported \"Failed to get content database recovery info (Out of memory condition)\") and exposes its parameters. No readiness percentage change."
       },
       {
         "date": "2026-10-13",
@@ -321,39 +341,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 17,
-    "revisions_7d": 6,
+    "revisions": 18,
+    "revisions_7d": 7,
     "last_revision": {
-      "ts": "2026-10-19T07:10:04Z",
+      "ts": "2026-10-24T12:38:37Z",
       "kind": "content",
-      "commit": "3776e33",
-      "commit_full": "3776e3338f947a141d82504670981e3dce856807",
-      "message": "Fix mono device playback dropping right-channel audio (#719)"
+      "commit": "aa74bff",
+      "commit_full": "aa74bffac1aebfeedee0a3b60729ad8ceefc2195",
+      "message": "Integration batch 1: 36 contributor PRs (files, editing, sessions, CLI, mixer, MIDI, plug-ins, interface) (#1011)"
     },
     "last_update": {
-      "ts": "2026-10-19T07:10:04Z",
+      "ts": "2026-10-24T12:38:37Z",
       "kind": "content",
-      "commit": "3776e33",
-      "commit_full": "3776e3338f947a141d82504670981e3dce856807",
-      "message": "Fix mono device playback dropping right-channel audio (#719)"
+      "commit": "aa74bff",
+      "commit_full": "aa74bffac1aebfeedee0a3b60729ad8ceefc2195",
+      "message": "Integration batch 1: 36 contributor PRs (files, editing, sessions, CLI, mixer, MIDI, plug-ins, interface) (#1011)"
     },
-    "self_reported": "2026-10-18"
+    "self_reported": "2026-10-23"
   },
   "milestone": null,
   "activity": {
     "level": "active",
     "score": 15.2,
     "active_days_7d": 5,
-    "changes_7d": 107,
-    "changes_14d": 244,
+    "changes_7d": 108,
+    "changes_14d": 245,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-24T08:30:47Z",
-      "commit": "93800e0",
-      "commit_full": "93800e0764ca62435ee66a4770f355df954b7fcd",
-      "subject": "refactor(video): use method paths instead of closures for first_chunk (S1612) (#1012)"
+      "ts": "2026-10-24T12:38:37Z",
+      "commit": "aa74bff",
+      "commit_full": "aa74bffac1aebfeedee0a3b60729ad8ceefc2195",
+      "subject": "Integration batch 1: 36 contributor PRs (files, editing, sessions, CLI, mixer, MIDI, plug-ins, interface) (#1011)"
     },
-    "last_commit_ts": "2026-10-24T08:30:47Z",
+    "last_commit_ts": "2026-10-24T12:38:37Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
       14,
@@ -369,7 +389,7 @@
       1,
       12,
       12,
-      28
+      29
     ],
     "days": [
       {
@@ -626,9 +646,13 @@
       },
       {
         "d": "2026-10-24",
-        "code": 28,
+        "code": 29,
         "other": 0,
         "samples": [
+          {
+            "commit": "aa74bff",
+            "subject": "Integration batch 1: 36 contributor PRs (files, editing, sessions, CLI, mixer, MIDI, plug-ins, interface) (#1011)"
+          },
           {
             "commit": "93800e0",
             "subject": "refactor(video): use method paths instead of closures for first_chunk (S1612) (#1012)"
@@ -636,10 +660,6 @@
           {
             "commit": "ef646cf",
             "subject": "audiosuite: saturating render budget, and a sharper budget test (follow-up to #996) (#1009)"
-          },
-          {
-            "commit": "aa06d87",
-            "subject": "Guard all playback output paths against NaN from interpolation overflow (#982)"
           }
         ]
       }
@@ -1191,7 +1211,30 @@
       "breadth_pct": 70.0,
       "full_prev": 40.0,
       "kind": "content"
+    },
+    {
+      "commit": "aa74bff",
+      "commit_full": "aa74bffac1aebfeedee0a3b60729ad8ceefc2195",
+      "commit_date": "2026-10-24T08:38:37-04:00",
+      "ts": "2026-10-24T12:38:37Z",
+      "message": "Integration batch 1: 36 contributor PRs (files, editing, sessions, CLI, mixer, MIDI, plug-ins, interface) (#1011)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-23",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-24T08:55:25+00:00"
+  "updated_at": "2026-10-24T13:03:25+00:00"
 }
