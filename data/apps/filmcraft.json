@@ -386,18 +386,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.0,
+    "score": 19.3,
     "active_days_7d": 6,
-    "changes_7d": 151,
-    "changes_14d": 376,
+    "changes_7d": 156,
+    "changes_14d": 381,
     "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-10-24T08:51:22Z",
-      "commit": "da691ce",
-      "commit_full": "da691ce78ab120149e14e89d9be75a0a8a2db9b2",
-      "subject": "fix(speech): bound Whisper model metadata allocations (#2866)"
+      "ts": "2026-10-24T09:28:22Z",
+      "commit": "552f008",
+      "commit_full": "552f008d2757e307194256b3e672c9c1de4fa9b2",
+      "subject": "security(audio): bound sequence sample rates and AAF/OMF export channel buffers (#3082)"
     },
-    "last_commit_ts": "2026-10-24T08:51:22Z",
+    "last_commit_ts": "2026-10-24T09:28:22Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       62,
@@ -413,7 +413,7 @@
       11,
       5,
       62,
-      30
+      35
     ],
     "days": [
       {
@@ -832,20 +832,20 @@
       },
       {
         "d": "2026-10-24",
-        "code": 30,
+        "code": 35,
         "other": 0,
         "samples": [
           {
-            "commit": "da691ce",
-            "subject": "fix(speech): bound Whisper model metadata allocations (#2866)"
+            "commit": "552f008",
+            "subject": "security(audio): bound sequence sample rates and AAF/OMF export channel buffers (#3082)"
           },
           {
-            "commit": "e69122c",
-            "subject": "fix(speech): contain and verify downloaded model artifacts (#2867)"
+            "commit": "48c7a27",
+            "subject": "security(engine): require local trust for ingest destinations (#3083)"
           },
           {
-            "commit": "ee08cd3",
-            "subject": "security(frame): bound decimation sampling work (#2878)"
+            "commit": "b4901c5",
+            "subject": "security(codecs): validate VP9 empty tiles and AV1 film grain scaling points (#3081)"
           }
         ]
       }
@@ -1312,5 +1312,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-24T08:55:01+00:00"
+  "updated_at": "2026-10-24T09:53:06+00:00"
 }

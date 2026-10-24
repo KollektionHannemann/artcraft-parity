@@ -402,18 +402,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.6,
+    "score": 14.9,
     "active_days_7d": 6,
-    "changes_7d": 75,
-    "changes_14d": 364,
+    "changes_7d": 78,
+    "changes_14d": 367,
     "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-10-24T09:07:08Z",
-      "commit": "f284f6a",
-      "commit_full": "f284f6a8256aced973d41c9e171f0a80e4002067",
-      "subject": "M2.9: budget lambda work and bound wildcard substring search (#2415)"
+      "ts": "2026-10-24T09:46:35Z",
+      "commit": "48d9ba2",
+      "commit_full": "48d9ba264cf71685b05b9223783144a338c25c52",
+      "subject": "M2.9: harden native file open/save (sec scan findings 15,22,25) (#2418)"
     },
-    "last_commit_ts": "2026-10-24T09:07:08Z",
+    "last_commit_ts": "2026-10-24T09:46:35Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       124,
@@ -429,7 +429,7 @@
       2,
       3,
       29,
-      12
+      15
     ],
     "days": [
       {
@@ -693,20 +693,20 @@
       },
       {
         "d": "2026-10-24",
-        "code": 12,
+        "code": 15,
         "other": 0,
         "samples": [
           {
-            "commit": "f284f6a",
-            "subject": "M2.9: budget lambda work and bound wildcard substring search (#2415)"
+            "commit": "48d9ba2",
+            "subject": "M2.9: harden native file open/save (sec scan findings 15,22,25) (#2418)"
           },
           {
-            "commit": "72c1d57",
-            "subject": "Review fixes for #2393, #2394, #2397 and #2399"
+            "commit": "89d8e81",
+            "subject": "M2.9: bound print/export/autofit work in the engine (sec scan findings 18,21,27,28,30) (#2416)"
           },
           {
-            "commit": "beda2a4",
-            "subject": "Merge PR #2394"
+            "commit": "6fac430",
+            "subject": "M2.9: cap xlsx import work and gate hostile datetime field lengths (#2413)"
           }
         ]
       }
@@ -2358,5 +2358,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-24T09:14:49+00:00"
+  "updated_at": "2026-10-24T09:53:24+00:00"
 }
