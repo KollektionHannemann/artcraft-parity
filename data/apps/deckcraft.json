@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/deckcraft",
   "roadmap_url": "https://github.com/storytold/deckcraft/blob/main/ROADMAP.md",
-  "latest_commit": "80f1301",
-  "latest_commit_date": "2026-10-24T23:48:59-04:00",
-  "latest_message": "Merge 14 open PRs (tested batch) (#1344)",
+  "latest_commit": "5e9043a",
+  "latest_commit_date": "2026-10-25T13:43:07-04:00",
+  "latest_message": "Merge pull request #1336",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -247,7 +247,19 @@
       },
       {
         "date": "2026-10-24",
+        "text": "Preferences ▸ Measurement units: inches or centimetres. The Format pane's Size and Position fields, Shape Format ▸ Size on the ribbon, the Slide Size dialog and the ruler show and take the chosen unit; the deck still stores points (#1326)"
+      },
+      {
+        "date": "2026-10-24",
+        "text": "A picture's own fill shows behind its transparent pixels, and an embedded object (an old equation, p:oleObj) takes the fill and outline of its fallback picture, as PowerPoint for Mac draws them (synthetic probe: a half-transparent PNG on orange and on yellow with an outline); on a private 166-deck corpus 51 slides of equations on coloured boxes move closer to PowerPoint's PDF, none further"
+      },
+      {
+        "date": "2026-10-24",
         "text": "Columns dialog: Home › Columns › More Columns… and Format Shape › Text Box › Columns… set the number of text columns (1 to 16) and the spacing between them in inches, in one undo step; format.columns with no fields opens it, and a key left out keeps the text box's own value"
+      },
+      {
+        "date": "2026-10-24",
+        "text": "Slide Show: Ctrl+wheel (Cmd+wheel on a Mac) over the slide zooms in and out around the pointer, four notches per doubling, up to 4×, as in PowerPoint; zooming back to the whole slide leaves the zoom, and the plain wheel still turns the page (#1286)"
       },
       {
         "date": "2026-10-24",
@@ -315,7 +327,15 @@
       },
       {
         "date": "2026-10-21",
+        "text": "Review › Language has Whole presentation: one proofing language for every text box, table cell, note, master and layout, and the default for new text (format.languageAll, one undo step); the per-selection language still works"
+      },
+      {
+        "date": "2026-10-21",
         "text": "Reuse Slides: pick which slides of the other presentation to insert from a list (slide.reuseList, #1103)"
+      },
+      {
+        "date": "2026-10-21",
+        "text": "Slide list and slide sorter: Shift+click selects a range of slides and Ctrl+Shift+click adds it to the selection (slide.selectRange, #1105)"
       },
       {
         "date": "2026-10-20",
@@ -376,26 +396,6 @@
       {
         "date": "2026-10-17",
         "text": "Opening a .deckcraft file whose shapes repeat an id gives the repeats fresh ids (groups, layouts and masters too), so the deck validates and edits by id find one shape"
-      },
-      {
-        "date": "2026-10-17",
-        "text": "Edit Points: turning a shape into a freeform is one undo step, so Undo brings the original shape back (it used to stay a freeform)"
-      },
-      {
-        "date": "2026-10-17",
-        "text": "While a placeholder's text is being edited, a click on a shape in front of it selects that shape instead of moving the caret, as in PowerPoint (#931)"
-      },
-      {
-        "date": "2026-10-16",
-        "text": "Symbol-font characters: a run's U+F0xx symbol code (from <a:sym typeface=\"Symbol\"/>) now draws from the installed Symbol face even when it has no private-use mapping — Apple's Symbol on macOS maps the glyphs to real Unicode, so the code is remapped to that character (the Adobe Symbol encoding) instead of falling to a look-alike. Bullets and metafile text take the same remap"
-      },
-      {
-        "date": "2026-10-16",
-        "text": "Export: PNG with a transparent background — the slide background is left out, only the slide's content is drawn (Export… dialog, File › Export, web download, file.export/file.render transparentBackground, deckcraft-cli render --transparent) (#784)"
-      },
-      {
-        "date": "2026-10-16",
-        "text": "Arrange ▸ Align: Align to Slide and Align Selected Objects, as in PowerPoint. One object aligns to the slide and several to each other until the other choice is ticked; the choice holds for that selection and also drives Distribute"
       }
     ]
   },
@@ -406,39 +406,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 100,
-    "revisions_7d": 23,
+    "revisions": 105,
+    "revisions_7d": 28,
     "last_revision": {
-      "ts": "2026-10-25T03:48:59Z",
+      "ts": "2026-10-25T17:43:07Z",
       "kind": "content",
-      "commit": "80f1301",
-      "commit_full": "80f13011d5a3c353369c6e38250df6e5a260f3e0",
-      "message": "Merge 14 open PRs (tested batch) (#1344)"
+      "commit": "5e9043a",
+      "commit_full": "5e9043afa68b695fad1c7c1566f727121cc7f383",
+      "message": "Merge pull request #1336"
     },
     "last_update": {
-      "ts": "2026-10-25T03:48:59Z",
+      "ts": "2026-10-25T17:43:07Z",
       "kind": "content",
-      "commit": "80f1301",
-      "commit_full": "80f13011d5a3c353369c6e38250df6e5a260f3e0",
-      "message": "Merge 14 open PRs (tested batch) (#1344)"
+      "commit": "5e9043a",
+      "commit_full": "5e9043afa68b695fad1c7c1566f727121cc7f383",
+      "message": "Merge pull request #1336"
     },
     "self_reported": "2026-10-24"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.2,
+    "score": 19.7,
     "active_days_7d": 6,
-    "changes_7d": 85,
-    "changes_14d": 431,
+    "changes_7d": 119,
+    "changes_14d": 465,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-10-25T17:18:05Z",
-      "commit": "7d4c490",
-      "commit_full": "7d4c49051cc87c82566bbe4b0e3645e7238d884a",
-      "subject": "refactor: explicit imports in engine/anim/geom/model/render/text/pdf/ogg modules (SonarCloud S2208) (#1270)"
+      "ts": "2026-10-25T17:49:12Z",
+      "commit": "5d9c381",
+      "commit_full": "5d9c3818a5e145e5e302de90ed9fb48387d50fcd",
+      "subject": "Tests: the Slide Size preset test opens the dialog's own combo box (egui 0.37 exposes the ribbon's too)"
     },
-    "last_commit_ts": "2026-10-25T17:18:05Z",
+    "last_commit_ts": "2026-10-25T17:49:12Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
       29,
@@ -454,7 +454,7 @@
       7,
       54,
       13,
-      6
+      40
     ],
     "days": [
       {
@@ -765,20 +765,20 @@
       },
       {
         "d": "2026-10-25",
-        "code": 6,
+        "code": 40,
         "other": 2,
         "samples": [
           {
-            "commit": "7d4c490",
-            "subject": "refactor: explicit imports in engine/anim/geom/model/render/text/pdf/ogg modules (SonarCloud S2208) (#1270)"
+            "commit": "5d9c381",
+            "subject": "Tests: the Slide Size preset test opens the dialog's own combo box (egui 0.37 exposes the ribbon's too)"
           },
           {
-            "commit": "14f40c4",
-            "subject": "Migrate DeckCraft to egui 0.37 (#1350)"
+            "commit": "31cf44c",
+            "subject": "Integration: the merged PRs import what they use (#1270) and use egui 0.37's wheel source and media clock (#1350)"
           },
           {
-            "commit": "79bf9a6",
-            "subject": "macOS signing: keep the temporary keychain until the build has signed with it"
+            "commit": "d20b08e",
+            "subject": "Tests: drop the units test's PNG debug hook; the PDF link test's doc says only web and mail links export"
           }
         ]
       }
@@ -3256,7 +3256,122 @@
       "breadth_pct": 62.0,
       "full_prev": 55.0,
       "kind": "content"
+    },
+    {
+      "commit": "c8a1356",
+      "commit_full": "c8a13561b3eb6eec5fe3b264d3598454b3c9386d",
+      "commit_date": "2026-10-25T13:42:05-04:00",
+      "ts": "2026-10-25T17:42:05Z",
+      "message": "Merge pull request #1331",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-24",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "8b2c0f4",
+      "commit_full": "8b2c0f456a805840a79dcfc3d88124b9bb355ce7",
+      "commit_date": "2026-10-25T13:42:05-04:00",
+      "ts": "2026-10-25T17:42:05Z",
+      "message": "Merge pull request #1294",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-24",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "ad664b2",
+      "commit_full": "ad664b2cddb8b27ea5986aa95ab771b61921328a",
+      "commit_date": "2026-10-25T13:42:06-04:00",
+      "ts": "2026-10-25T17:42:06Z",
+      "message": "Merge pull request #1107",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-24",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "637bbcd",
+      "commit_full": "637bbcdf510c44def7632cc536a403ea461dae69",
+      "commit_date": "2026-10-25T13:42:06-04:00",
+      "ts": "2026-10-25T17:42:06Z",
+      "message": "Merge pull request #1118",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-24",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "5e9043a",
+      "commit_full": "5e9043afa68b695fad1c7c1566f727121cc7f383",
+      "commit_date": "2026-10-25T13:43:07-04:00",
+      "ts": "2026-10-25T17:43:07Z",
+      "message": "Merge pull request #1336",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-24",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-25T17:49:50+00:00"
+  "updated_at": "2026-10-25T18:11:58+00:00"
 }
