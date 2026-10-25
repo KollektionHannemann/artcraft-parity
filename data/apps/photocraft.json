@@ -293,21 +293,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 26.6,
-    "active_days_7d": 7,
-    "changes_7d": 325,
-    "changes_14d": 1380,
-    "housekeeping_7d": 23,
+    "score": 21.4,
+    "active_days_7d": 6,
+    "changes_7d": 224,
+    "changes_14d": 1159,
+    "housekeeping_7d": 20,
     "last_code_change": {
-      "ts": "2026-10-24T21:56:16Z",
-      "commit": "486afd8",
-      "commit_full": "486afd82cce99255e999224bcfe28de00fd766aa",
-      "subject": "fix(ui): centre size-changing filter previews on the CPU canvas (#8994)"
+      "ts": "2026-10-24T23:49:00Z",
+      "commit": "703bc4c",
+      "commit_full": "703bc4c821f03c135147de10f50c4478f328dd92",
+      "subject": "raster: a translated surface shares one rebuilt tile however many threads build it (#9230)"
     },
-    "last_commit_ts": "2026-10-24T21:56:16Z",
+    "last_commit_ts": "2026-10-24T23:49:00Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
-      222,
       243,
       312,
       147,
@@ -320,7 +319,8 @@
       11,
       48,
       89,
-      13
+      14,
+      0
     ],
     "days": [
       {
@@ -781,9 +781,13 @@
       },
       {
         "d": "2026-10-24",
-        "code": 13,
+        "code": 14,
         "other": 0,
         "samples": [
+          {
+            "commit": "703bc4c",
+            "subject": "raster: a translated surface shares one rebuilt tile however many threads build it (#9230)"
+          },
           {
             "commit": "486afd8",
             "subject": "fix(ui): centre size-changing filter previews on the CPU canvas (#8994)"
@@ -791,10 +795,6 @@
           {
             "commit": "155d1ea",
             "subject": "ui: highlight menu rows while dragging with the button held (#9112)"
-          },
-          {
-            "commit": "fa253cb",
-            "subject": "fix(ui): keep repeated Tab presses in text editing (#8889) (#9030)"
           }
         ]
       }
@@ -1146,5 +1146,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-24T22:11:18+00:00"
+  "updated_at": "2026-10-25T00:08:10+00:00"
 }
