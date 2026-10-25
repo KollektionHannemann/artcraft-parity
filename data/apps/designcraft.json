@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/designcraft",
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
-  "latest_commit": "0f1ff65",
-  "latest_commit_date": "2026-10-24T18:55:32-06:00",
-  "latest_message": "M6: preserve placed-graphic layer settings across IDML and native saves (#1647)",
+  "latest_commit": "5971d46",
+  "latest_commit_date": "2026-10-24T19:40:42-06:00",
+  "latest_message": "Fix nested placed-PDF layer choices in PDF/A-2b export (#1799)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -405,39 +405,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 129,
-    "revisions_7d": 37,
+    "revisions": 131,
+    "revisions_7d": 39,
     "last_revision": {
-      "ts": "2026-10-25T00:55:32Z",
+      "ts": "2026-10-25T01:40:42Z",
       "kind": "content",
-      "commit": "0f1ff65",
-      "commit_full": "0f1ff65e7ad4f47a330731c3f39f88b84e2adb25",
-      "message": "M6: preserve placed-graphic layer settings across IDML and native saves (#1647)"
+      "commit": "5971d46",
+      "commit_full": "5971d4639192bdecee5f818892a9c469bea8f9b2",
+      "message": "Fix nested placed-PDF layer choices in PDF/A-2b export (#1799)"
     },
     "last_update": {
-      "ts": "2026-10-25T00:55:32Z",
+      "ts": "2026-10-25T01:40:42Z",
       "kind": "content",
-      "commit": "0f1ff65",
-      "commit_full": "0f1ff65e7ad4f47a330731c3f39f88b84e2adb25",
-      "message": "M6: preserve placed-graphic layer settings across IDML and native saves (#1647)"
+      "commit": "5971d46",
+      "commit_full": "5971d4639192bdecee5f818892a9c469bea8f9b2",
+      "message": "Fix nested placed-PDF layer choices in PDF/A-2b export (#1799)"
     },
     "self_reported": "2026-10-23"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.6,
+    "score": 19.2,
     "active_days_7d": 6,
-    "changes_7d": 147,
-    "changes_14d": 360,
+    "changes_7d": 149,
+    "changes_14d": 362,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-25T00:55:32Z",
-      "commit": "0f1ff65",
-      "commit_full": "0f1ff65e7ad4f47a330731c3f39f88b84e2adb25",
-      "subject": "M6: preserve placed-graphic layer settings across IDML and native saves (#1647)"
+      "ts": "2026-10-25T01:40:42Z",
+      "commit": "5971d46",
+      "commit_full": "5971d4639192bdecee5f818892a9c469bea8f9b2",
+      "subject": "Fix nested placed-PDF layer choices in PDF/A-2b export (#1799)"
     },
-    "last_commit_ts": "2026-10-25T00:55:32Z",
+    "last_commit_ts": "2026-10-25T01:40:42Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       23,
@@ -453,7 +453,7 @@
       19,
       47,
       38,
-      3
+      5
     ],
     "days": [
       {
@@ -872,20 +872,20 @@
       },
       {
         "d": "2026-10-25",
-        "code": 3,
+        "code": 5,
         "other": 0,
         "samples": [
           {
+            "commit": "5971d46",
+            "subject": "Fix nested placed-PDF layer choices in PDF/A-2b export (#1799)"
+          },
+          {
+            "commit": "755e4d1",
+            "subject": "Keep explicit all-on PDF layer choices through saves and exports (#1671)"
+          },
+          {
             "commit": "0f1ff65",
             "subject": "M6: preserve placed-graphic layer settings across IDML and native saves (#1647)"
-          },
-          {
-            "commit": "befc2e0",
-            "subject": "Styles: renaming a style keeps its Export Tagging (#1790)"
-          },
-          {
-            "commit": "a598803",
-            "subject": "Search: Delete Workspace is left out of Quick Apply and command search (#1791)"
           }
         ]
       }
@@ -4064,7 +4064,53 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "755e4d1",
+      "commit_full": "755e4d194c9ff41838e213605404ca7a3906fa67",
+      "commit_date": "2026-10-24T19:16:40-06:00",
+      "ts": "2026-10-25T01:16:40Z",
+      "message": "Keep explicit all-on PDF layer choices through saves and exports (#1671)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-23",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "5971d46",
+      "commit_full": "5971d4639192bdecee5f818892a9c469bea8f9b2",
+      "commit_date": "2026-10-24T19:40:42-06:00",
+      "ts": "2026-10-25T01:40:42Z",
+      "message": "Fix nested placed-PDF layer choices in PDF/A-2b export (#1799)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-23",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-25T01:04:06+00:00"
+  "updated_at": "2026-10-25T01:53:05+00:00"
 }

@@ -431,18 +431,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.7,
+    "score": 21.7,
     "active_days_7d": 6,
-    "changes_7d": 176,
-    "changes_14d": 605,
+    "changes_7d": 179,
+    "changes_14d": 608,
     "housekeeping_7d": 21,
     "last_code_change": {
-      "ts": "2026-10-25T01:03:25Z",
-      "commit": "f4f91d0",
-      "commit_full": "f4f91d0d5cfc1e54b1b755da0869974e8c52d65d",
-      "subject": "fix(xfa): require full save when stripping XFA packets (#4568)"
+      "ts": "2026-10-25T01:08:21Z",
+      "commit": "24edde6",
+      "commit_full": "24edde656349c9145a501d450fab3cca62490745",
+      "subject": "forms: clear typed XFA password field values from datasets on save (#3944) (#4506)"
     },
-    "last_commit_ts": "2026-10-25T01:03:25Z",
+    "last_commit_ts": "2026-10-25T01:08:21Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       93,
@@ -458,7 +458,7 @@
       59,
       44,
       33,
-      2
+      5
     ],
     "days": [
       {
@@ -925,16 +925,20 @@
       },
       {
         "d": "2026-10-25",
-        "code": 2,
+        "code": 5,
         "other": 0,
         "samples": [
           {
-            "commit": "f4f91d0",
-            "subject": "fix(xfa): require full save when stripping XFA packets (#4568)"
+            "commit": "24edde6",
+            "subject": "forms: clear typed XFA password field values from datasets on save (#3944) (#4506)"
           },
           {
-            "commit": "c28d1c8",
-            "subject": "Integration batch 6: 6 contributor PRs (All tools view, page pointer, comments, redaction, Properties, Home) (#4566)"
+            "commit": "aa9a910",
+            "subject": "fix(redact): remove AcroForm on Hidden::FormFields even when field count is zero (#4571)"
+          },
+          {
+            "commit": "4c69b8c",
+            "subject": "fix(forms): align has_password_flag traversal depth with field enumeration (#4570)"
           }
         ]
       }
@@ -5058,5 +5062,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-25T01:04:00+00:00"
+  "updated_at": "2026-10-25T01:53:01+00:00"
 }
