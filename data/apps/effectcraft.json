@@ -300,18 +300,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.6,
+    "score": 14.9,
     "active_days_7d": 5,
-    "changes_7d": 43,
-    "changes_14d": 420,
+    "changes_7d": 44,
+    "changes_14d": 421,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-10-25T19:34:53Z",
-      "commit": "dbe46d3",
-      "commit_full": "dbe46d3ff82c02e795bc03392bea56696ed5320d",
-      "subject": "build: pin craft-update to craft-libs main (db19c37) (#2435)"
+      "ts": "2026-10-25T20:36:06Z",
+      "commit": "e821fee",
+      "commit_full": "e821feeec4f7e3148a31ea24e6a11a36fac08337",
+      "subject": "sonar: method paths instead of closures (rust:S1612) (#2274)"
     },
-    "last_commit_ts": "2026-10-25T19:34:53Z",
+    "last_commit_ts": "2026-10-25T20:36:06Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       132,
@@ -327,7 +327,7 @@
       10,
       21,
       5,
-      3
+      4
     ],
     "days": [
       {
@@ -743,9 +743,13 @@
       },
       {
         "d": "2026-10-25",
-        "code": 3,
+        "code": 4,
         "other": 1,
         "samples": [
+          {
+            "commit": "e821fee",
+            "subject": "sonar: method paths instead of closures (rust:S1612) (#2274)"
+          },
           {
             "commit": "dbe46d3",
             "subject": "build: pin craft-update to craft-libs main (db19c37) (#2435)"
@@ -753,10 +757,6 @@
           {
             "commit": "a0ea5f5",
             "subject": "feat: startup update prompt modal and direct self-updating (#2420)"
-          },
-          {
-            "commit": "76402b1",
-            "subject": "Migrate EffectCraft to egui 0.37 (#2367)"
           }
         ]
       }
@@ -1154,5 +1154,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-25T19:47:25+00:00"
+  "updated_at": "2026-10-25T20:49:52+00:00"
 }
