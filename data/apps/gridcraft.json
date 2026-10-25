@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/gridcraft",
   "roadmap_url": "https://github.com/storytold/gridcraft/blob/main/ROADMAP.md",
-  "latest_commit": "e1a12fa",
-  "latest_commit_date": "2026-10-24T20:54:34-06:00",
-  "latest_message": "UI: theme tokens with a contrast test, ribbon overflow arrows and split button, multi-line formula bar, code editor widget (#456)",
+  "latest_commit": "52fa440",
+  "latest_commit_date": "2026-10-25T00:53:54-04:00",
+  "latest_message": "Merge 18 open PRs (tested batch) (#2538)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -213,6 +213,38 @@
     ],
     "progress": [
       {
+        "date": "2026-10-24",
+        "text": "Go To lists the named ranges of every sheet (Sheet2!Name for a name scoped to another sheet; hidden names, constants and formulas left out) and the references entered before, a double-click goes to an entry, and the Reference box takes several names or references separated by commas (Price, Type, B14:C22,F19:G30)"
+      },
+      {
+        "date": "2026-10-24",
+        "text": "Status bar: a right-click opens a menu that sets which selection statistics show (Average, Count and Sum by default; Numerical Count, Minimum and Maximum are new), kept with the preferences (view.statusBar)"
+      },
+      {
+        "date": "2026-10-24",
+        "text": "Ctrl+Shift+U (Control+Shift+U on a Mac) expands and collapses the formula bar, on the grid and while editing (view.expandFormulaBar); on Windows and Linux it used to underline"
+      },
+      {
+        "date": "2026-10-24",
+        "text": "Fill handle: from a date, the right-drag menu and the Auto Fill Options button offer Fill Days, Fill Weekdays (Saturday and Sunday skipped), Fill Months and Fill Years"
+      },
+      {
+        "date": "2026-10-24",
+        "text": "PivotTables: Enable show details (pivot.options enableShowDetails); turned off, Show Details and double-clicking a value cell list no records, and XLSX files keep the setting (enableDrill)"
+      },
+      {
+        "date": "2026-10-24",
+        "text": "PivotTables: right-clicking a value, subtotal or grand total cell offers Show Details in the cell menu, which lists the cell's source records on a new sheet as double-clicking does"
+      },
+      {
+        "date": "2026-10-24",
+        "text": "Sheet tabs: dragging the handle between the tabs and the horizontal scrollbar gives the tabs more or less of the bar, as in Excel; each open workbook keeps its own share"
+      },
+      {
+        "date": "2026-10-24",
+        "text": "Charts: 100% Stacked Area (insert.chart {type: \"area\", subtype: \"stacked100\"}), drawn as each value's share of its category's total; XLSX percentStacked area charts open as 100% stacked instead of stacked"
+      },
+      {
         "date": "2026-10-23",
         "text": "Accounting negatives in text: $(1,234), $ (5) and (5)% read as negative numbers when typed, coerced by arithmetic or passed to VALUE, like Excel 365; (-5), ((5)), $5% and dates or times in parentheses stay text"
       },
@@ -339,38 +371,6 @@
       {
         "date": "2026-10-12",
         "text": "Number formats: parsing a format code is linear in its length (long runs of [, , or / no longer take quadratic time), and an unclosed [ is a literal when splitting sections as well as when tokenizing (#810)"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "Number formats: a fraction denominator with 65,536 zeros no longer crashes; format codes are capped at 255 characters like Excel (longer codes display as General, TEXT gives #VALUE!) (#807)"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "Security: cell hyperlinks open only http, https and mailto, after a confirmation; other schemes (file:, smb:, UNC, custom handlers) are refused (#777, part 1)"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "Deleting several Ctrl-selected rows or columns removes them all in one undo step (#758)"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "XLSX chart sheets are kept on open and save: the sheet, its drawing and chart (with style and colours) are written back unchanged in their place among the worksheets, and left out when the sheet they plot is deleted or renamed or a worksheet took their name (#727)"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "CSV and tab-separated export is capped at 512 MiB: a sheet whose used range would expand to more (two cells far apart, such as A1 and XFD1048576, are 16 GiB of commas) is refused with the rows, columns and limit, before anything is allocated or written (#528)"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "PDF writer hardening: text width cannot overflow, all-zero dash arrays and negative or NaN stroke widths are sanitised, non-finite sizes and positions draw nothing (#812)"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "PDF export writes the document title and author as UTF-16BE when they are not ASCII, so viewers show accents, currency signs and non-Latin text correctly (#813)"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "TEXT() over a range and chart labels parse each number format code once instead of once per value (#806)"
       }
     ]
   },
@@ -381,39 +381,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 65,
-    "revisions_7d": 8,
+    "revisions": 66,
+    "revisions_7d": 9,
     "last_revision": {
-      "ts": "2026-10-25T02:54:34Z",
+      "ts": "2026-10-25T04:53:54Z",
       "kind": "content",
-      "commit": "e1a12fa",
-      "commit_full": "e1a12fa337bba80b589176c491c2fb5646fc35d5",
-      "message": "UI: theme tokens with a contrast test, ribbon overflow arrows and split button, multi-line formula bar, code editor widget (#456)"
+      "commit": "52fa440",
+      "commit_full": "52fa4406c1ebff8b260a2922472f03aba198b9cf",
+      "message": "Merge 18 open PRs (tested batch) (#2538)"
     },
     "last_update": {
-      "ts": "2026-10-25T02:54:34Z",
+      "ts": "2026-10-25T04:53:54Z",
       "kind": "content",
-      "commit": "e1a12fa",
-      "commit_full": "e1a12fa337bba80b589176c491c2fb5646fc35d5",
-      "message": "UI: theme tokens with a contrast test, ribbon overflow arrows and split button, multi-line formula bar, code editor widget (#456)"
+      "commit": "52fa440",
+      "commit_full": "52fa4406c1ebff8b260a2922472f03aba198b9cf",
+      "message": "Merge 18 open PRs (tested batch) (#2538)"
     },
     "self_reported": "2026-10-23"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 13.0,
+    "score": 13.6,
     "active_days_7d": 6,
-    "changes_7d": 78,
-    "changes_14d": 247,
+    "changes_7d": 79,
+    "changes_14d": 248,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-25T02:54:34Z",
-      "commit": "e1a12fa",
-      "commit_full": "e1a12fa337bba80b589176c491c2fb5646fc35d5",
-      "subject": "UI: theme tokens with a contrast test, ribbon overflow arrows and split button, multi-line formula bar, code editor widget (#456)"
+      "ts": "2026-10-25T04:53:54Z",
+      "commit": "52fa440",
+      "commit_full": "52fa4406c1ebff8b260a2922472f03aba198b9cf",
+      "subject": "Merge 18 open PRs (tested batch) (#2538)"
     },
-    "last_commit_ts": "2026-10-25T02:54:34Z",
+    "last_commit_ts": "2026-10-25T04:53:54Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       1,
@@ -429,7 +429,7 @@
       3,
       29,
       18,
-      1
+      2
     ],
     "days": [
       {
@@ -712,9 +712,13 @@
       },
       {
         "d": "2026-10-25",
-        "code": 1,
+        "code": 2,
         "other": 0,
         "samples": [
+          {
+            "commit": "52fa440",
+            "subject": "Merge 18 open PRs (tested batch) (#2538)"
+          },
           {
             "commit": "e1a12fa",
             "subject": "UI: theme tokens with a contrast test, ribbon overflow arrows and split button, multi-line formula bar, code editor widget (#456)"
@@ -2390,7 +2394,30 @@
       "breadth_pct": 75.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "52fa440",
+      "commit_full": "52fa4406c1ebff8b260a2922472f03aba198b9cf",
+      "commit_date": "2026-10-25T00:53:54-04:00",
+      "ts": "2026-10-25T04:53:54Z",
+      "message": "Merge 18 open PRs (tested batch) (#2538)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-23",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-25T02:56:52+00:00"
+  "updated_at": "2026-10-25T04:57:41+00:00"
 }

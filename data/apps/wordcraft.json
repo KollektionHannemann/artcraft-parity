@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "fc7bdcb",
-  "latest_commit_date": "2026-10-24T19:36:17-04:00",
-  "latest_message": "Merge the latest commits of #4100, #4133 and #4171 (#4215)",
+  "latest_commit": "c72e1ca",
+  "latest_commit_date": "2026-10-25T00:47:34-04:00",
+  "latest_message": "Merge 10 open PRs (fields, tables, AutoFormat, Track Changes; tested batch) (#4232)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -258,6 +258,10 @@
       },
       {
         "date": "2026-10-24",
+        "text": "Parity catalog: Read Mode's View menu has its own rows. Column Width (view.readColumnWidth) and Page Color (view.readPageColor) count as live; Layout (view.readLayout) is listed as missing. Catalog 504/520 (96.9%)."
+      },
+      {
+        "date": "2026-10-24",
         "text": "Exact line spacing fixes the floating-table contact boundary independently of paragraph-mark metrics (#3977). Both row selection and word skipping use it; original regressions cover oversized and undersized marks, contact and one-twip offsets in modes 11/12/14/15. Shape behavior is unchanged."
       },
       {
@@ -267,6 +271,10 @@
       {
         "date": "2026-10-24",
         "text": "AutoFormat As You Type has \"Built-in Heading styles\" (off by default): pressing Enter twice after a line of five or fewer words that ends in a letter or digit makes it Heading 1, or Heading 2 or 3 when the line starts with one or two tabs."
+      },
+      {
+        "date": "2026-10-24",
+        "text": "AutoFormat: a paragraph numbered through its style (a heading in a heading-linked Multilevel List) keeps --- and +---+ as text on Enter, as a paragraph numbered directly does. At the top of the document the border-line AutoFormat removed the characters and switched off the heading's number, and left no border."
       },
       {
         "date": "2026-10-24",
@@ -293,12 +301,32 @@
         "text": "#4085: Ctrl+Alt+H toggles the last chosen highlight colour; explicit colour setters remain idempotent. Mixed, inherited and pending formatting and Undo/Redo covered by command/key regressions."
       },
       {
+        "date": "2026-10-24",
+        "text": "Table Layout › Convert to Text opens its dialog: Separate text with Paragraph marks, Tabs (the default), Commas or Other. With rows selected only those rows become text, and the rows above and below stay tables; the caret alone converts the whole table. The text keeps its formatting and objects, and a table nested in a cell stays a table; table.toText gains other + char."
+      },
+      {
+        "date": "2026-10-24",
+        "text": "Document information fields: SUBJECT, KEYWORDS, COMMENTS, LASTSAVEDBY, REVNUM and NUMCHARS update with the other fields and are listed in the Field dialog; a quoted text after TITLE, SUBJECT, AUTHOR, KEYWORDS or COMMENTS replaces that document property (at most 255 characters), and NUMWORDS, NUMCHARS and REVNUM take a \\ number format"
+      },
+      {
+        "date": "2026-10-24",
+        "text": "Field capitalization switches: \\ Upper, \\ Lower, \\ Caps and \\ FirstCap apply to the document information, DOCPROPERTY, FILENAME, date, REF, PAGEREF, SEQ, STYLEREF and table formula results that Update Field computes and to the page-number fields, and \\ CardText and \\ OrdText results are lowercase unless one of them follows (\\ CardText \\ Caps shows \"Seven Hundred Ninety\"); a table formula takes a \\ number format (=SUM(A1:B2) \\ CardText), and other \\ switches such as \\ MERGEFORMAT no longer make it a syntax error"
+      },
+      {
+        "date": "2026-10-24",
+        "text": "Field \\ DollarText and \\ Hex switches: { = 9.20 + 5.35 \\ DollarText \\ Upper } shows \"FOURTEEN AND 55/100\" and \\ Hex writes uppercase hexadecimal digits (458 shows \"1CA\"), in table formulas and in the page-number, SEQ, PAGEREF and count fields; { PAGE \\ ArabicDash } shows \"- 31 -\"; cardinal, ordinal and dollar text past 999,999 keep their digits"
+      },
+      {
         "date": "2026-10-23",
         "text": "cu20we: DrawingML flat, square and round line caps are imported, saved, displayed and exported to PDF; absent or unknown caps default to flat. VML end caps (including shapetype inheritance) are preserved through DOCX save. Ink and metafile stroke handling remain separate. Synthetic DOCX, raster and PDF regressions cover the change; no new native Word comparison."
       },
       {
         "date": "2026-10-23",
         "text": "cu20we: paragraph-relative box floats start above effective space before; header, footer, cell and text-box layout regressions pass. Framed paragraph positioning is unchanged; no new native Word comparison."
+      },
+      {
+        "date": "2026-10-23",
+        "text": "AutoFormat As You Type: Bold and italic as real formatting. With the option on, word typed and finished becomes bold and word italic, without the marks. It is off by default (tools.autocorrect {\"boldItalic\"})."
       },
       {
         "date": "2026-10-23",
@@ -375,34 +403,6 @@
       {
         "date": "2026-10-21",
         "text": "A document with many relationships opens in the time its part takes (#3411): the reader looked for each relationship's id in the main document's part, once per relationship, so a 70 KB file with 1024 relationships and a 64 MiB part took 224 s to open. The ids are now the ones the markup names in a relationship attribute, taken from the main document the reader has already parsed, so an id the text only mentions is no longer a reference and the part it belongs to is no longer dropped on save. The open is linear now."
-      },
-      {
-        "date": "2026-10-21",
-        "text": "File › Recover follows the app theme (#3243, part of #2348): no black page or forced white text on the light theme"
-      },
-      {
-        "date": "2026-10-21",
-        "text": "Table styles shade the same banded rows in Word and WordCraft: our banded styles (Grid Table 4…) and new table styles write their band sizes (w:tblStyleRowBandSize, w:tblStyleColBandSize), which Word otherwise reads as zero and leaves unbanded, and a file's style without them is unbanded here too (#3415)."
-      },
-      {
-        "date": "2026-10-21",
-        "text": "Screen readers: the ribbon's font name and size boxes, and the dropdown arrows beside them, say what they are (#3172). The"
-      },
-      {
-        "date": "2026-10-21",
-        "text": "A document with many content controls saves in the time the controls take (#13): the writer looked for each paragraph's markers in the whole set of markers, once per paragraph, and compared every control with every other one to find the ones that clash, so a document with 32,000 controls took four seconds to save. Both are a lookup and a sweep now, and what is written does not change."
-      },
-      {
-        "date": "2026-10-20",
-        "text": "A click below a floating table (one dragged by its move handle, or from a .docx) goes to the paragraph beside or after it, as in Word, instead of a cell of its last row, so the text after a moved table can be reached with the mouse again (#2038)."
-      },
-      {
-        "date": "2026-10-20",
-        "text": "A picture cropped to a sliver of its source (under 5% of an axis) is drawn at the size the file gives, on screen and in PDF: a header bar cropped to 2.7% of a page-sized WMF is no longer half as tall, so the name in the text box over it shows (#1899)."
-      },
-      {
-        "date": "2026-10-20",
-        "text": "Headers and footers: closing them with Esc or Close Header and Footer puts the caret back where it was in the body, as Word does, instead of on page 1 (the view no longer jumps to the top of the document, #3331)."
       }
     ]
   },
@@ -413,39 +413,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 406,
-    "revisions_7d": 36,
+    "revisions": 407,
+    "revisions_7d": 37,
     "last_revision": {
-      "ts": "2026-10-24T23:36:17Z",
+      "ts": "2026-10-25T04:47:34Z",
       "kind": "content",
-      "commit": "fc7bdcb",
-      "commit_full": "fc7bdcb9ec0a23b686049d8a2ff3936e7b7d6be8",
-      "message": "Merge the latest commits of #4100, #4133 and #4171 (#4215)"
+      "commit": "c72e1ca",
+      "commit_full": "c72e1cad9b08bf06ee3545ce5002b83fd2f77739",
+      "message": "Merge 10 open PRs (fields, tables, AutoFormat, Track Changes; tested batch) (#4232)"
     },
     "last_update": {
-      "ts": "2026-10-24T23:36:17Z",
+      "ts": "2026-10-25T04:47:34Z",
       "kind": "content",
-      "commit": "fc7bdcb",
-      "commit_full": "fc7bdcb9ec0a23b686049d8a2ff3936e7b7d6be8",
-      "message": "Merge the latest commits of #4100, #4133 and #4171 (#4215)"
+      "commit": "c72e1ca",
+      "commit_full": "c72e1cad9b08bf06ee3545ce5002b83fd2f77739",
+      "message": "Merge 10 open PRs (fields, tables, AutoFormat, Track Changes; tested batch) (#4232)"
     },
     "self_reported": "2026-10-25"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.0,
+    "score": 18.6,
     "active_days_7d": 6,
-    "changes_7d": 129,
-    "changes_14d": 837,
+    "changes_7d": 130,
+    "changes_14d": 838,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-10-25T01:10:15Z",
-      "commit": "b4da59f",
-      "commit_full": "b4da59f0c38b506c36629b1d812ad7c0519fc238",
-      "subject": "security: require the data integrity check on encrypted DOCX packages (#4223)"
+      "ts": "2026-10-25T04:47:34Z",
+      "commit": "c72e1ca",
+      "commit_full": "c72e1cad9b08bf06ee3545ce5002b83fd2f77739",
+      "subject": "Merge 10 open PRs (fields, tables, AutoFormat, Track Changes; tested batch) (#4232)"
     },
-    "last_commit_ts": "2026-10-25T01:10:15Z",
+    "last_commit_ts": "2026-10-25T04:47:34Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       171,
@@ -461,7 +461,7 @@
       5,
       57,
       22,
-      1
+      2
     ],
     "days": [
       {
@@ -774,9 +774,13 @@
       },
       {
         "d": "2026-10-25",
-        "code": 1,
+        "code": 2,
         "other": 0,
         "samples": [
+          {
+            "commit": "c72e1ca",
+            "subject": "Merge 10 open PRs (fields, tables, AutoFormat, Track Changes; tested batch) (#4232)"
+          },
           {
             "commit": "b4da59f",
             "subject": "security: require the data integrity check on encrypted DOCX packages (#4223)"
@@ -10280,7 +10284,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "c72e1ca",
+      "commit_full": "c72e1cad9b08bf06ee3545ce5002b83fd2f77739",
+      "commit_date": "2026-10-25T00:47:34-04:00",
+      "ts": "2026-10-25T04:47:34Z",
+      "message": "Merge 10 open PRs (fields, tables, AutoFormat, Track Changes; tested batch) (#4232)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-25",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-25T01:53:08+00:00"
+  "updated_at": "2026-10-25T04:57:36+00:00"
 }
