@@ -436,16 +436,16 @@
     "level": "buzzing",
     "score": 22.0,
     "active_days_7d": 6,
-    "changes_7d": 159,
-    "changes_14d": 867,
-    "housekeeping_7d": 13,
+    "changes_7d": 160,
+    "changes_14d": 868,
+    "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-25T15:48:13Z",
-      "commit": "ea5780d",
-      "commit_full": "ea5780d2ab02d284436a952d16a07788f90f03b3",
-      "subject": "Gap 9: open AES-encrypted Word files (Standard encryption) (#2628)"
+      "ts": "2026-10-25T16:32:19Z",
+      "commit": "4095cc3",
+      "commit_full": "4095cc341372f47e07b120a29260aac62fa38829",
+      "subject": "Security: bounded file reads, Read Aloud and macOS signing temp file (#3680, #3666) (#3877)"
     },
-    "last_commit_ts": "2026-10-25T15:48:13Z",
+    "last_commit_ts": "2026-10-25T16:32:19Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       171,
@@ -461,7 +461,7 @@
       5,
       57,
       22,
-      31
+      32
     ],
     "days": [
       {
@@ -774,9 +774,13 @@
       },
       {
         "d": "2026-10-25",
-        "code": 31,
-        "other": 1,
+        "code": 32,
+        "other": 2,
         "samples": [
+          {
+            "commit": "4095cc3",
+            "subject": "Security: bounded file reads, Read Aloud and macOS signing temp file (#3680, #3666) (#3877)"
+          },
           {
             "commit": "ea5780d",
             "subject": "Gap 9: open AES-encrypted Word files (Standard encryption) (#2628)"
@@ -784,10 +788,6 @@
           {
             "commit": "49731f3",
             "subject": "#2982: File ▸ Info Custom Document Properties dialog (#2997)"
-          },
-          {
-            "commit": "1b2f7a8",
-            "subject": "#1845: filter-as-you-type command search in Customize Ribbon, QAT and Keyboard pickers (#1848)"
           }
         ]
       }
@@ -10491,5 +10491,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-25T15:53:12+00:00"
+  "updated_at": "2026-10-25T16:53:36+00:00"
 }

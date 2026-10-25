@@ -436,18 +436,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 32.0,
+    "score": 32.1,
     "active_days_7d": 7,
-    "changes_7d": 584,
-    "changes_14d": 1420,
+    "changes_7d": 586,
+    "changes_14d": 1422,
     "housekeeping_7d": 32,
     "last_code_change": {
-      "ts": "2026-10-25T14:56:13Z",
-      "commit": "f792c63",
-      "commit_full": "f792c63597f289d0bfb914fd06255cd1e4c8852d",
-      "subject": "Recolor Artwork: double-click a new color to pick it in the Color Picker, in the model it was picked in (#4090)"
+      "ts": "2026-10-25T16:32:45Z",
+      "commit": "f05c33c",
+      "commit_full": "f05c33cdfc0de6bd3f7d71e2a1628622af9a50f8",
+      "subject": "Security: document model bounds (id hashing, page ranges, overprint migration, auto slices, nested Repeat bounds) (#3888)"
     },
-    "last_commit_ts": "2026-10-25T14:56:13Z",
+    "last_commit_ts": "2026-10-25T16:32:45Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       152,
@@ -463,7 +463,7 @@
       96,
       108,
       94,
-      24
+      26
     ],
     "days": [
       {
@@ -930,20 +930,20 @@
       },
       {
         "d": "2026-10-25",
-        "code": 24,
+        "code": 26,
         "other": 3,
         "samples": [
           {
+            "commit": "f05c33c",
+            "subject": "Security: document model bounds (id hashing, page ranges, overprint migration, auto slices, nested Repeat bounds) (#3888)"
+          },
+          {
+            "commit": "6b0df68",
+            "subject": "Security: EPS and legacy Illustrator bounds (operator recursion, bind, copy, cvn, previews, writer output, ink name) (#3883)"
+          },
+          {
             "commit": "f792c63",
             "subject": "Recolor Artwork: double-click a new color to pick it in the Color Picker, in the model it was picked in (#4090)"
-          },
-          {
-            "commit": "e14b2b2",
-            "subject": "Direct Selection: an anchor of type on a path's path drags and the type reflows along it (#4070)"
-          },
-          {
-            "commit": "378d7d4",
-            "subject": "Protect Windows device names followed by a space in safe_file_name (#4125)"
           }
         ]
       }
@@ -6123,5 +6123,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-25T15:13:08+00:00"
+  "updated_at": "2026-10-25T16:53:22+00:00"
 }
