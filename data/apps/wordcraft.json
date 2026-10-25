@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "c72e1ca",
-  "latest_commit_date": "2026-10-25T00:47:34-04:00",
-  "latest_message": "Merge 10 open PRs (fields, tables, AutoFormat, Track Changes; tested batch) (#4232)",
+  "latest_commit": "b0b7e6b",
+  "latest_commit_date": "2026-10-25T10:32:31-04:00",
+  "latest_message": "Fix Markdown code span line endings (#3804)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -342,6 +342,10 @@
       },
       {
         "date": "2026-10-23",
+        "text": "Justified paragraphs: a line ending in a manual line break (Shift+Enter) is stretched to the right margin like a wrapped line, as Word does; it stayed short like the paragraph's last line. A document with Word's w:doNotExpandShiftReturn compatibility option keeps such lines short, and the option is read and written back (#3924)."
+      },
+      {
+        "date": "2026-10-23",
         "text": "Font dialog: \"NaN\" or \"inf\" typed in the Size box previews the text at 12 pt. \"NaN\" reads as a number, and a font size that is not a number stopped the app while drawing the preview (#3663)."
       },
       {
@@ -382,6 +386,10 @@
       },
       {
         "date": "2026-10-22",
+        "text": "Markdown inline code replaces each line ending with a space before export, including code in lists and table cells. A following heading, list marker or HTML tag stays literal code (#3738)."
+      },
+      {
+        "date": "2026-10-22",
         "text": "Headers and footers: while editing the header, a single click in the footer edits the footer with the caret where clicked (and the reverse, and another page's own header or footer). The click went to the header being edited and the view scrolled back up to it, so a double-click on the footer rarely landed unless both were on screen."
       },
       {
@@ -395,14 +403,6 @@
       {
         "date": "2026-10-21",
         "text": "Bullets and Numbering toggle off style-inherited lists at their effective level, including basedOn chains and numbered ListParagraph styles; other paragraphs and list definitions stay unchanged (related to #3459)."
-      },
-      {
-        "date": "2026-10-21",
-        "text": "A word with no break opportunity in it no longer makes the layout quadratic (#3412): measuring it beside a floating object walked the whole paragraph for every line it takes, so a 1 MiB word took 30 s to lay out. The layout is linear now."
-      },
-      {
-        "date": "2026-10-21",
-        "text": "A document with many relationships opens in the time its part takes (#3411): the reader looked for each relationship's id in the main document's part, once per relationship, so a 70 KB file with 1024 relationships and a 64 MiB part took 224 s to open. The ids are now the ones the markup names in a relationship attribute, taken from the main document the reader has already parsed, so an id the text only mentions is no longer a reference and the part it belongs to is no longer dropped on save. The open is linear now."
       }
     ]
   },
@@ -413,39 +413,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 407,
-    "revisions_7d": 37,
+    "revisions": 409,
+    "revisions_7d": 39,
     "last_revision": {
-      "ts": "2026-10-25T04:47:34Z",
+      "ts": "2026-10-25T14:32:31Z",
       "kind": "content",
-      "commit": "c72e1ca",
-      "commit_full": "c72e1cad9b08bf06ee3545ce5002b83fd2f77739",
-      "message": "Merge 10 open PRs (fields, tables, AutoFormat, Track Changes; tested batch) (#4232)"
+      "commit": "b0b7e6b",
+      "commit_full": "b0b7e6b5ea7589450b01d74cb2a8645312bac370",
+      "message": "Fix Markdown code span line endings (#3804)"
     },
     "last_update": {
-      "ts": "2026-10-25T04:47:34Z",
+      "ts": "2026-10-25T14:32:31Z",
       "kind": "content",
-      "commit": "c72e1ca",
-      "commit_full": "c72e1cad9b08bf06ee3545ce5002b83fd2f77739",
-      "message": "Merge 10 open PRs (fields, tables, AutoFormat, Track Changes; tested batch) (#4232)"
+      "commit": "b0b7e6b",
+      "commit_full": "b0b7e6b5ea7589450b01d74cb2a8645312bac370",
+      "message": "Fix Markdown code span line endings (#3804)"
     },
     "self_reported": "2026-10-25"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.3,
+    "score": 21.4,
     "active_days_7d": 6,
-    "changes_7d": 137,
-    "changes_14d": 845,
+    "changes_7d": 148,
+    "changes_14d": 856,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-25T14:04:21Z",
-      "commit": "77200f9",
-      "commit_full": "77200f9c130c46441e453cabe8789b586bfe42de",
-      "subject": "Indent a whole selected paragraph on Tab instead of replacing it (#4291)"
+      "ts": "2026-10-25T14:48:42Z",
+      "commit": "d1db090",
+      "commit_full": "d1db090a7cb9e2dd0404859a448e05e93d55dc20",
+      "subject": "Mini toolbar: the alignment buttons mark the alignment seen on the page, as the ribbon does (#3886)"
     },
-    "last_commit_ts": "2026-10-25T14:04:21Z",
+    "last_commit_ts": "2026-10-25T14:48:42Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       171,
@@ -461,7 +461,7 @@
       5,
       57,
       22,
-      9
+      20
     ],
     "days": [
       {
@@ -774,20 +774,20 @@
       },
       {
         "d": "2026-10-25",
-        "code": 9,
+        "code": 20,
         "other": 1,
         "samples": [
           {
-            "commit": "77200f9",
-            "subject": "Indent a whole selected paragraph on Tab instead of replacing it (#4291)"
+            "commit": "d1db090",
+            "subject": "Mini toolbar: the alignment buttons mark the alignment seen on the page, as the ribbon does (#3886)"
           },
           {
-            "commit": "9003e2b",
-            "subject": "Limit DOCX XML attributes (#3857)"
+            "commit": "4bf785c",
+            "subject": "Keep Arabic-Indic digits as typed in Arabic numeral mode (#3329)"
           },
           {
-            "commit": "84c2d37",
-            "subject": "Cap list label length when expanding level template text (#4003)"
+            "commit": "a552672",
+            "subject": "Cover repeated DOCX style replacement across saves (#2469)"
           }
         ]
       }
@@ -10328,7 +10328,53 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "14f0eec",
+      "commit_full": "14f0eec255ff555255b785dfab8866f9b8bc9512",
+      "commit_date": "2026-10-25T10:27:35-04:00",
+      "ts": "2026-10-25T14:27:35Z",
+      "message": "Stretch justified lines that end in a manual line break (#3924) (#4023)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-25",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "b0b7e6b",
+      "commit_full": "b0b7e6b5ea7589450b01d74cb2a8645312bac370",
+      "commit_date": "2026-10-25T10:32:31-04:00",
+      "ts": "2026-10-25T14:32:31Z",
+      "message": "Fix Markdown code span line endings (#3804)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-25",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-25T14:13:14+00:00"
+  "updated_at": "2026-10-25T14:52:06+00:00"
 }
