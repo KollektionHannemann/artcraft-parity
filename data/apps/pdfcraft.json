@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/pdfcraft",
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
-  "latest_commit": "58d368f",
-  "latest_commit_date": "2026-10-25T10:11:00-04:00",
-  "latest_message": "M10: Word export keeps an italic run inside its sentence's paragraph (#4158) (#4411)",
+  "latest_commit": "e90f788",
+  "latest_commit_date": "2026-10-25T14:30:31-04:00",
+  "latest_message": "Migrate PdfCraft to egui 0.37 (#4591)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
-    "last_updated": "2026-10-23",
+    "last_updated": "2026-10-25",
     "metrics": {
       "full": {
         "label": "Full Acrobat Pro (ready for real work)",
@@ -223,7 +223,7 @@
     ],
     "upcoming": [
       "0 · Convert and share: Create PDF from Office, Word export that keeps layout (#773) · 32–55",
-      "1 · Backlog and platform: crash and wrong-result reports, Chinese UI face (#826) · 50–90",
+      "1 · Backlog and platform: crash and wrong-result reports, Chinese web UI face (#826) · 50–90",
       "2 · Fidelity harness against Acrobat and the renderer decision (M2; owner decision on #841) · 110–190",
       "3 · Editing existing content (M7) · 100–180",
       "4 · OCR languages and Office export/import (M10) · 95–175",
@@ -410,39 +410,39 @@
     }
   },
   "roadmap": {
-    "revisions": 172,
-    "revisions_7d": 25,
+    "revisions": 173,
+    "revisions_7d": 26,
     "last_revision": {
-      "ts": "2026-10-25T14:11:00Z",
+      "ts": "2026-10-25T18:30:31Z",
       "kind": "content",
-      "commit": "58d368f",
-      "commit_full": "58d368f1f07877ba99fa7296b4ab381f8a5599b5",
-      "message": "M10: Word export keeps an italic run inside its sentence's paragraph (#4158) (#4411)"
+      "commit": "e90f788",
+      "commit_full": "e90f7882f19c4c2d8ac8037bc4fcb43c70478386",
+      "message": "Migrate PdfCraft to egui 0.37 (#4591)"
     },
     "last_update": {
-      "ts": "2026-10-25T14:11:00Z",
+      "ts": "2026-10-25T18:30:31Z",
       "kind": "content",
-      "commit": "58d368f",
-      "commit_full": "58d368f1f07877ba99fa7296b4ab381f8a5599b5",
-      "message": "M10: Word export keeps an italic run inside its sentence's paragraph (#4158) (#4411)"
+      "commit": "e90f788",
+      "commit_full": "e90f7882f19c4c2d8ac8037bc4fcb43c70478386",
+      "message": "Migrate PdfCraft to egui 0.37 (#4591)"
     },
-    "self_reported": "2026-10-23"
+    "self_reported": "2026-10-25"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 24.1,
+    "score": 24.2,
     "active_days_7d": 6,
-    "changes_7d": 205,
-    "changes_14d": 634,
+    "changes_7d": 206,
+    "changes_14d": 635,
     "housekeeping_7d": 22,
     "last_code_change": {
-      "ts": "2026-10-25T16:06:35Z",
-      "commit": "d764a8e",
-      "commit_full": "d764a8ebca2dc289841b34ea3048f613a9869bbb",
-      "subject": "refactor(ui): side panels on craft-ui task panes and the shared rail (#4606)"
+      "ts": "2026-10-25T18:30:31Z",
+      "commit": "e90f788",
+      "commit_full": "e90f7882f19c4c2d8ac8037bc4fcb43c70478386",
+      "subject": "Migrate PdfCraft to egui 0.37 (#4591)"
     },
-    "last_commit_ts": "2026-10-25T16:06:35Z",
+    "last_commit_ts": "2026-10-25T18:30:31Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       93,
@@ -458,7 +458,7 @@
       59,
       44,
       33,
-      31
+      32
     ],
     "days": [
       {
@@ -925,9 +925,13 @@
       },
       {
         "d": "2026-10-25",
-        "code": 31,
+        "code": 32,
         "other": 1,
         "samples": [
+          {
+            "commit": "e90f788",
+            "subject": "Migrate PdfCraft to egui 0.37 (#4591)"
+          },
           {
             "commit": "d764a8e",
             "subject": "refactor(ui): side panels on craft-ui task panes and the shared rail (#4606)"
@@ -935,10 +939,6 @@
           {
             "commit": "71b47b5",
             "subject": "M3: a Page tools menu in the Pages panel (#4415) (#4583)"
-          },
-          {
-            "commit": "8708f35",
-            "subject": "M6: with NeedAppearances, check boxes and radio buttons draw their /MK caption (ISO 32000-2 Table 224) (#4454)"
           }
         ]
       }
@@ -5106,7 +5106,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "e90f788",
+      "commit_full": "e90f7882f19c4c2d8ac8037bc4fcb43c70478386",
+      "commit_date": "2026-10-25T14:30:31-04:00",
+      "ts": "2026-10-25T18:30:31Z",
+      "message": "Migrate PdfCraft to egui 0.37 (#4591)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-25",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-25T16:14:04+00:00"
+  "updated_at": "2026-10-25T18:57:01+00:00"
 }
