@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "e3e39bb",
-  "latest_commit_date": "2026-10-24T13:33:26+07:00",
-  "latest_message": "M6: Dev Mode measurements kept on the canvas, a read-only layers panel (#1248)",
+  "latest_commit": "f215fc4",
+  "latest_commit_date": "2026-10-25T12:11:08-04:00",
+  "latest_message": "M0.9: allow literal dash-prefixed CLI filenames (#954)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -248,6 +248,10 @@
     "progress": [
       {
         "date": "2026-10-24",
+        "text": "· Open, Save and the folder dialogs start in the folder of the last file or folder picked in the run (#1290): the Linux portal does not remember it between dialogs as the macOS and Windows panels do. A folder deleted since falls back to the system's choice. No numbers change."
+      },
+      {
+        "date": "2026-10-24",
         "text": "· Dev Mode tail (M6, gap 16): Measurements kept on the canvas (gap 16): devMode.addMeasurement {from?, to?, side?} places one between two layers, along one side of a layer or (neither) to the layer around it, stored on the layer it starts from (saved in .figcraft, synced, undoable; old files open without them); Dev Mode draws them as labelled redlines that follow the layers, the Inspect tab lists them (those of the selected layer, or every one on the page), places and removes them; devMode.removeMeasurement and devMode.measurements remove and list them; a copy keeps those to layers copied with it. The layers panel is read-only in Dev Mode: rows select and expand, but don't rename, reorder, hide or lock. Dev Mode 98% / 78%."
       },
       {
@@ -257,6 +261,10 @@
       {
         "date": "2026-10-22",
         "text": "· fill and stroke props accept \"none\" and null (M1, #1036): node.create, node.set and the other prop appliers map them to an empty fills/strokes list, as fills: [] already did, so an outline-only shape is one call (agents write \"none\" for no paint; the empty-list form was undocumented). The parameter docs (KEYS, shown by listcommands and the CLI) and docs/mcp.md say so, and the error message names the accepted forms. fillnonetests covers create, set, undo, text and the error. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-20",
+        "text": "· CLI option terminator (M0.9): -- ends option parsing, so dash-prefixed"
       },
       {
         "date": "2026-10-17",
@@ -397,14 +405,6 @@
       {
         "date": "2026-10-12",
         "text": "· Live sessions are per document: every open file has its own session or none, several run at"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "· A public figcraft-server: openpublish = true lets anyone publish without the server key"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "· .fig export opens elsewhere (gap 1): written files were checked by opening them in other"
       }
     ]
   },
@@ -424,39 +424,39 @@
     }
   },
   "roadmap": {
-    "revisions": 105,
-    "revisions_7d": 11,
+    "revisions": 107,
+    "revisions_7d": 13,
     "last_revision": {
-      "ts": "2026-10-24T06:33:26Z",
-      "kind": "estimates",
-      "commit": "e3e39bb",
-      "commit_full": "e3e39bbc4dc94d58a70775fae17ee0d7a486a95f",
-      "message": "M6: Dev Mode measurements kept on the canvas, a read-only layers panel (#1248)"
+      "ts": "2026-10-25T16:11:08Z",
+      "kind": "content",
+      "commit": "f215fc4",
+      "commit_full": "f215fc4f9598cd5b2ac70382e8f96771a87bc27a",
+      "message": "M0.9: allow literal dash-prefixed CLI filenames (#954)"
     },
     "last_update": {
-      "ts": "2026-10-24T06:33:26Z",
-      "kind": "estimates",
-      "commit": "e3e39bb",
-      "commit_full": "e3e39bbc4dc94d58a70775fae17ee0d7a486a95f",
-      "message": "M6: Dev Mode measurements kept on the canvas, a read-only layers panel (#1248)"
+      "ts": "2026-10-25T16:11:08Z",
+      "kind": "content",
+      "commit": "f215fc4",
+      "commit_full": "f215fc4f9598cd5b2ac70382e8f96771a87bc27a",
+      "message": "M0.9: allow literal dash-prefixed CLI filenames (#954)"
     },
     "self_reported": "2026-10-24"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.5,
+    "score": 19.5,
     "active_days_7d": 6,
-    "changes_7d": 105,
-    "changes_14d": 220,
+    "changes_7d": 123,
+    "changes_14d": 238,
     "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-10-25T13:44:13Z",
-      "commit": "149f59c",
-      "commit_full": "149f59cd14914f8c40392c80b7b688bc25aea7af",
-      "subject": "Web: build the browser wasm with opt-level z to stay under the 24 MiB gate"
+      "ts": "2026-10-25T16:11:24Z",
+      "commit": "3fc005c",
+      "commit_full": "3fc005c7fe5a69252c850cb2e571c6dae35079ab",
+      "subject": "Keep style runs disjoint when inserting text at a run boundary (#1295)"
     },
-    "last_commit_ts": "2026-10-25T13:44:44Z",
+    "last_commit_ts": "2026-10-25T16:11:24Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       31,
@@ -472,7 +472,7 @@
       4,
       9,
       27,
-      5
+      23
     ],
     "days": [
       {
@@ -768,20 +768,20 @@
       },
       {
         "d": "2026-10-25",
-        "code": 5,
+        "code": 23,
         "other": 3,
         "samples": [
           {
-            "commit": "149f59c",
-            "subject": "Web: build the browser wasm with opt-level z to stay under the 24 MiB gate"
+            "commit": "3fc005c",
+            "subject": "Keep style runs disjoint when inserting text at a run boundary (#1295)"
           },
           {
-            "commit": "4b76c40",
-            "subject": "macOS signing: keep the temporary keychain until the build has signed with it"
+            "commit": "e1d23d8",
+            "subject": "Reject multiple leading '#' in Color::from_hex (#944)"
           },
           {
-            "commit": "9268272",
-            "subject": "Follow-ups from the #1311 review: link notice clicks, variable scopes, corner tooltip (#1316)"
+            "commit": "f53001c",
+            "subject": "i18n(pl): native review, catch-up and terminology fixes (#931)"
           }
         ]
       }
@@ -3391,7 +3391,53 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "estimates"
+    },
+    {
+      "commit": "0761a0e",
+      "commit_full": "0761a0e07af3c43d446c5548f059aec9e0001f03",
+      "commit_date": "2026-10-25T12:10:58-04:00",
+      "ts": "2026-10-25T16:10:58Z",
+      "message": "Dialogs start in the folder of the last file picked (#1303)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-24",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "f215fc4",
+      "commit_full": "f215fc4f9598cd5b2ac70382e8f96771a87bc27a",
+      "commit_date": "2026-10-25T12:11:08-04:00",
+      "ts": "2026-10-25T16:11:08Z",
+      "message": "M0.9: allow literal dash-prefixed CLI filenames (#954)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-24",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-25T14:13:10+00:00"
+  "updated_at": "2026-10-25T16:14:09+00:00"
 }
