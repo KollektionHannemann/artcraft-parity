@@ -389,19 +389,19 @@
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 17.5,
+    "level": "buzzing",
+    "score": 20.0,
     "active_days_7d": 6,
-    "changes_7d": 152,
-    "changes_14d": 340,
-    "housekeeping_7d": 14,
+    "changes_7d": 166,
+    "changes_14d": 354,
+    "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-10-25T05:18:05Z",
-      "commit": "a504f3c",
-      "commit_full": "a504f3c5adc4cd60d9c1120916cddb50c9b24b86",
-      "subject": "Follow-ups to #3240: alpha upload table, duplicate markers off the UI thread, cut drag over the clips (#3243)"
+      "ts": "2026-10-25T13:43:00Z",
+      "commit": "693c41b",
+      "commit_full": "693c41be5a93241e7c502e24d09a946c8a06944e",
+      "subject": "Stop reading on-the-hour times with a spurious \"zero\" (#3190)"
     },
-    "last_commit_ts": "2026-10-25T05:18:05Z",
+    "last_commit_ts": "2026-10-25T13:43:00Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       85,
@@ -417,7 +417,7 @@
       5,
       62,
       54,
-      2
+      16
     ],
     "days": [
       {
@@ -855,22 +855,43 @@
       },
       {
         "d": "2026-10-25",
-        "code": 2,
-        "other": 0,
+        "code": 16,
+        "other": 1,
         "samples": [
           {
-            "commit": "a504f3c",
-            "subject": "Follow-ups to #3240: alpha upload table, duplicate markers off the UI thread, cut drag over the clips (#3243)"
+            "commit": "693c41b",
+            "subject": "Stop reading on-the-hour times with a spurious \"zero\" (#3190)"
           },
           {
-            "commit": "0f99661",
-            "subject": "Merge 6 open PRs (tested batch) (#3240)"
+            "commit": "c41a8fa",
+            "subject": "Program: drag a marquee or Shift-click to select several mask vertices, and move them together (#3209)"
+          },
+          {
+            "commit": "d81c897",
+            "subject": "Lift and Extract put the removed range on the clipboard (#3211)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.13.0",
+      "name": "FilmCraft v0.13.0",
+      "ts": "2026-10-25T13:48:40Z",
+      "url": "https://github.com/storytold/filmcraft/releases/tag/v0.13.0",
+      "changes": 129,
+      "new_contributors": 9,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.12.0",
       "name": "FilmCraft v0.12.0",
@@ -1048,23 +1069,6 @@
       "url": "https://github.com/storytold/filmcraft/releases/tag/v0.2.0",
       "changes": 26,
       "new_contributors": 2,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.1.1",
-      "name": "FilmCraft v0.1.1",
-      "ts": "2026-10-03T14:24:18Z",
-      "url": "https://github.com/storytold/filmcraft/releases/tag/v0.1.1",
-      "changes": null,
-      "new_contributors": null,
       "platforms": [
         "macOS",
         "Windows",
@@ -1354,5 +1358,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-25T05:19:59+00:00"
+  "updated_at": "2026-10-25T13:51:38+00:00"
 }

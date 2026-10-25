@@ -445,18 +445,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.0,
+    "score": 17.5,
     "active_days_7d": 6,
-    "changes_7d": 103,
-    "changes_14d": 218,
-    "housekeeping_7d": 13,
+    "changes_7d": 105,
+    "changes_14d": 220,
+    "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-10-25T05:09:29Z",
-      "commit": "9268272",
-      "commit_full": "92682728e9d6a3a97ea25a99395be7a34a8db993",
-      "subject": "Follow-ups from the #1311 review: link notice clicks, variable scopes, corner tooltip (#1316)"
+      "ts": "2026-10-25T13:44:13Z",
+      "commit": "149f59c",
+      "commit_full": "149f59cd14914f8c40392c80b7b688bc25aea7af",
+      "subject": "Web: build the browser wasm with opt-level z to stay under the 24 MiB gate"
     },
-    "last_commit_ts": "2026-10-25T05:09:29Z",
+    "last_commit_ts": "2026-10-25T13:44:44Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       31,
@@ -472,7 +472,7 @@
       4,
       9,
       27,
-      3
+      5
     ],
     "days": [
       {
@@ -768,20 +768,20 @@
       },
       {
         "d": "2026-10-25",
-        "code": 3,
-        "other": 0,
+        "code": 5,
+        "other": 3,
         "samples": [
+          {
+            "commit": "149f59c",
+            "subject": "Web: build the browser wasm with opt-level z to stay under the 24 MiB gate"
+          },
+          {
+            "commit": "4b76c40",
+            "subject": "macOS signing: keep the temporary keychain until the build has signed with it"
+          },
           {
             "commit": "9268272",
             "subject": "Follow-ups from the #1311 review: link notice clicks, variable scopes, corner tooltip (#1316)"
-          },
-          {
-            "commit": "2a3b7d4",
-            "subject": "Merge 13 open PRs (tested batch) (#1311)"
-          },
-          {
-            "commit": "9f78875",
-            "subject": "security: linear vector import, stroking and rounding, validation, and cyclic dev snapshots (#1306)"
           }
         ]
       }
@@ -3376,5 +3376,5 @@
       "kind": "estimates"
     }
   ],
-  "updated_at": "2026-10-25T05:20:26+00:00"
+  "updated_at": "2026-10-25T13:51:57+00:00"
 }

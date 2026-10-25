@@ -434,18 +434,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.0,
+    "score": 19.3,
     "active_days_7d": 6,
-    "changes_7d": 131,
-    "changes_14d": 839,
-    "housekeeping_7d": 12,
+    "changes_7d": 132,
+    "changes_14d": 840,
+    "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-25T05:13:58Z",
-      "commit": "b70c746",
-      "commit_full": "b70c746f9bb70f830c5377f7710fc31dd3e8f195",
-      "subject": "Merge the late commits of #4098 and #4224 (#4238)"
+      "ts": "2026-10-25T13:47:48Z",
+      "commit": "52d81d0",
+      "commit_full": "52d81d02d3fcf5de69e4ec77335bbe2fa574cc9d",
+      "subject": "Parse \\genfrac in LaTeX import so binomials survive export (#4242)"
     },
-    "last_commit_ts": "2026-10-25T05:13:58Z",
+    "last_commit_ts": "2026-10-25T13:47:48Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       171,
@@ -461,7 +461,7 @@
       5,
       57,
       22,
-      3
+      4
     ],
     "days": [
       {
@@ -774,9 +774,13 @@
       },
       {
         "d": "2026-10-25",
-        "code": 3,
-        "other": 0,
+        "code": 4,
+        "other": 1,
         "samples": [
+          {
+            "commit": "52d81d0",
+            "subject": "Parse \\genfrac in LaTeX import so binomials survive export (#4242)"
+          },
           {
             "commit": "b70c746",
             "subject": "Merge the late commits of #4098 and #4224 (#4238)"
@@ -784,16 +788,29 @@
           {
             "commit": "c72e1ca",
             "subject": "Merge 10 open PRs (fields, tables, AutoFormat, Track Changes; tested batch) (#4232)"
-          },
-          {
-            "commit": "b4da59f",
-            "subject": "security: require the data integrity check on encrypted DOCX packages (#4223)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.11.0",
+      "name": "WordCraft v0.11.0",
+      "ts": "2026-10-25T13:30:52Z",
+      "url": "https://github.com/storytold/wordcraft/releases/tag/v0.11.0",
+      "changes": 121,
+      "new_contributors": 18,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.10.0",
       "name": "WordCraft v0.10.0",
@@ -10313,5 +10330,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-25T05:20:31+00:00"
+  "updated_at": "2026-10-25T13:52:00+00:00"
 }
