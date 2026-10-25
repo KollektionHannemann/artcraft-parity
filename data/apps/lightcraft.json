@@ -350,18 +350,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 11.2,
+    "score": 11.3,
     "active_days_7d": 5,
-    "changes_7d": 25,
-    "changes_14d": 49,
+    "changes_7d": 26,
+    "changes_14d": 50,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-10-25T20:45:57Z",
-      "commit": "2833d8f",
-      "commit_full": "2833d8fc9ae34ea5a0ead435169231dc867a44b0",
-      "subject": "security/raw: bound hostile-memory paths in the raw decoders (#2780)"
+      "ts": "2026-10-25T21:55:29Z",
+      "commit": "522beb0",
+      "commit_full": "522beb0c3e6a8521c8298c16209f7db3d84d2608",
+      "subject": "build: pin craft-update to craft-libs main (495e597) (#2990)"
     },
-    "last_commit_ts": "2026-10-25T20:45:57Z",
+    "last_commit_ts": "2026-10-25T21:55:29Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
       1,
@@ -377,7 +377,7 @@
       2,
       7,
       5,
-      6
+      7
     ],
     "days": [
       {
@@ -801,9 +801,13 @@
       },
       {
         "d": "2026-10-25",
-        "code": 6,
+        "code": 7,
         "other": 1,
         "samples": [
+          {
+            "commit": "522beb0",
+            "subject": "build: pin craft-update to craft-libs main (495e597) (#2990)"
+          },
           {
             "commit": "2833d8f",
             "subject": "security/raw: bound hostile-memory paths in the raw decoders (#2780)"
@@ -811,10 +815,6 @@
           {
             "commit": "c6c4f96",
             "subject": "security: bound heic-rs 0.1.4 work around hostile HEIF containers (#2770)"
-          },
-          {
-            "commit": "63cb047",
-            "subject": "feat(update): add startup update prompt modal and self-update (#2933)"
           }
         ]
       }
@@ -1281,5 +1281,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-25T20:49:45+00:00"
+  "updated_at": "2026-10-25T22:10:19+00:00"
 }
