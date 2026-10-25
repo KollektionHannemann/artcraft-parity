@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "50a1c34",
-  "latest_commit_date": "2026-10-25T11:06:42-04:00",
-  "latest_message": "#1475: Scale all style font sizes at once (#2620)",
+  "latest_commit": "ea5780d",
+  "latest_commit_date": "2026-10-25T11:48:13-04:00",
+  "latest_message": "Gap 9: open AES-encrypted Word files (Standard encryption) (#2628)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -257,6 +257,10 @@
         "text": "#4085 review: highlight toggling checks the full target with constant resolved-run storage; a different colour after 10,000 runs prevents clearing."
       },
       {
+        "date": "2026-10-25",
+        "text": "Custom document properties (#2982, split from #1798): File › Info › Properties › Advanced Properties… opens a Custom Document Properties dialog that lists the document's custom properties and adds, modifies and deletes them through the name/value form (text properties only; Word's number/date/yes-no types not offered). OK is one undoable file.properties step and marks the document changed; Cancel discards everything; names and values are validated against the engine's limits with the error shown in the dialog. Saved properties survive a DOCX round trip."
+      },
+      {
         "date": "2026-10-24",
         "text": "Parity catalog: Read Mode's View menu has its own rows. Column Width (view.readColumnWidth) and Page Color (view.readPageColor) count as live; Layout (view.readLayout) is listed as missing. Catalog 504/520 (96.9%)."
       },
@@ -399,10 +403,6 @@
       {
         "date": "2026-10-22",
         "text": "Compare results opened as new or revised untitled documents start without the previous document's version snapshots. A comparison or mailing result rejected by protection keeps the snapshots and save target with the original document."
-      },
-      {
-        "date": "2026-10-22",
-        "text": "Restrict Editing: the CLI's --author uses the same protection check as file.setAuthor, and File › Options disables the User name field while the document is protected."
       }
     ]
   },
@@ -413,39 +413,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 411,
-    "revisions_7d": 41,
+    "revisions": 414,
+    "revisions_7d": 44,
     "last_revision": {
-      "ts": "2026-10-25T15:06:42Z",
+      "ts": "2026-10-25T15:48:13Z",
       "kind": "content",
-      "commit": "50a1c34",
-      "commit_full": "50a1c34647e1fcae52fcc02daf92c3fce64c5651",
-      "message": "#1475: Scale all style font sizes at once (#2620)"
+      "commit": "ea5780d",
+      "commit_full": "ea5780d2ab02d284436a952d16a07788f90f03b3",
+      "message": "Gap 9: open AES-encrypted Word files (Standard encryption) (#2628)"
     },
     "last_update": {
-      "ts": "2026-10-25T15:06:42Z",
+      "ts": "2026-10-25T15:48:13Z",
       "kind": "content",
-      "commit": "50a1c34",
-      "commit_full": "50a1c34647e1fcae52fcc02daf92c3fce64c5651",
-      "message": "#1475: Scale all style font sizes at once (#2620)"
+      "commit": "ea5780d",
+      "commit_full": "ea5780d2ab02d284436a952d16a07788f90f03b3",
+      "message": "Gap 9: open AES-encrypted Word files (Standard encryption) (#2628)"
     },
     "self_reported": "2026-10-25"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.6,
+    "score": 22.0,
     "active_days_7d": 6,
-    "changes_7d": 152,
-    "changes_14d": 860,
+    "changes_7d": 159,
+    "changes_14d": 867,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-25T15:11:20Z",
-      "commit": "0cb2af4",
-      "commit_full": "0cb2af4f4b60b12be738fcd8b9aff102da3b35df",
-      "subject": "AutoFormat As You Type: optional \"Add a period with double-space\", and an AutoCorrect Options button in Options › Proofing (#2848) (#3318)"
+      "ts": "2026-10-25T15:48:13Z",
+      "commit": "ea5780d",
+      "commit_full": "ea5780d2ab02d284436a952d16a07788f90f03b3",
+      "subject": "Gap 9: open AES-encrypted Word files (Standard encryption) (#2628)"
     },
-    "last_commit_ts": "2026-10-25T15:11:20Z",
+    "last_commit_ts": "2026-10-25T15:48:13Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       171,
@@ -461,7 +461,7 @@
       5,
       57,
       22,
-      24
+      31
     ],
     "days": [
       {
@@ -774,20 +774,20 @@
       },
       {
         "d": "2026-10-25",
-        "code": 24,
+        "code": 31,
         "other": 1,
         "samples": [
           {
-            "commit": "0cb2af4",
-            "subject": "AutoFormat As You Type: optional \"Add a period with double-space\", and an AutoCorrect Options button in Options › Proofing (#2848) (#3318)"
+            "commit": "ea5780d",
+            "subject": "Gap 9: open AES-encrypted Word files (Standard encryption) (#2628)"
           },
           {
-            "commit": "50a1c34",
-            "subject": "#1475: Scale all style font sizes at once (#2620)"
+            "commit": "49731f3",
+            "subject": "#2982: File ▸ Info Custom Document Properties dialog (#2997)"
           },
           {
-            "commit": "b638caa",
-            "subject": "Keep a document's own styles and defaults when applying a style set (#4013)"
+            "commit": "1b2f7a8",
+            "subject": "#1845: filter-as-you-type command search in Customize Ribbon, QAT and Keyboard pickers (#1848)"
           }
         ]
       }
@@ -10420,7 +10420,76 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "40a7fe6",
+      "commit_full": "40a7fe6be26045b1f6edf0f501bc33157320989a",
+      "commit_date": "2026-10-25T11:34:23-04:00",
+      "ts": "2026-10-25T15:34:23Z",
+      "message": "Make three-column header/footer presets editable tables (#2197) (#2266)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-25",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "49731f3",
+      "commit_full": "49731f3faad534ceed38746f1af1a9d25dc6f6f2",
+      "commit_date": "2026-10-25T11:44:31-04:00",
+      "ts": "2026-10-25T15:44:31Z",
+      "message": "#2982: File ▸ Info Custom Document Properties dialog (#2997)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-25",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "ea5780d",
+      "commit_full": "ea5780d2ab02d284436a952d16a07788f90f03b3",
+      "commit_date": "2026-10-25T11:48:13-04:00",
+      "ts": "2026-10-25T15:48:13Z",
+      "message": "Gap 9: open AES-encrypted Word files (Standard encryption) (#2628)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-25",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-25T15:13:46+00:00"
+  "updated_at": "2026-10-25T15:53:12+00:00"
 }
