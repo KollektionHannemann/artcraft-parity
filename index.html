@@ -1157,6 +1157,8 @@
   function layoutGrid(grid) {
     const cards = [...grid.querySelectorAll(".card")];
     if (!cards.length) return;
+    // Measuring collapses the grid for a moment; keep the page where it was, or it jumps on every toggle
+    const y = window.scrollY;
     // Clear the old placement first: columns it created beyond the template would count as tracks
     cards.forEach((el) => { el.style.gridColumn = ""; el.style.gridRow = ""; });
     const n = Math.max(1, getComputedStyle(grid).gridTemplateColumns.split(" ").length);
@@ -1180,6 +1182,7 @@
       });
     }
     grid.dataset.cols = n;
+    if (window.scrollY !== y) window.scrollTo(0, y);
   }
   // A new column count or card width changes every height
   let gridWidth = 0;
@@ -1215,6 +1218,9 @@
         holdOnInteract(m);
       });
       const sync = () => { lines.forEach(fade); lines.forEach((m) => ticker(m, d.open)); };
+      // Open and lay out in one step: the toggle event only fires after the next paint, which would show one frame
+      // of the panel spilling over the card below
+      d.querySelector("summary").addEventListener("click", (e) => { e.preventDefault(); d.open = !d.open; layoutGrid(grid); });
       d.addEventListener("toggle", () => { layoutGrid(grid); sync(); });
       if (d.open) requestAnimationFrame(sync);
     });
