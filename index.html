@@ -159,21 +159,21 @@
   /* "Latest" strip */
   .latest { display: grid; grid-template-columns: 1.25fr 1fr 1fr; border: 1px solid var(--line); border-top: 0; margin-bottom: 22px; }
   @media (max-width: 900px) { .latest { grid-template-columns: 1fr; } }
-  .latest > a, .latest > div { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; padding: 16px 20px; min-width: 0; }
+  .latest > div { display: flex; align-items: center; gap: 16px; padding: 12px 18px; min-width: 0; }
   .latest > * + * { border-left: 1px solid var(--line); }
   @media (max-width: 900px) { .latest > * + * { border-left: 0; border-top: 1px solid var(--line); } }
-  @media (max-width: 560px) { .latest > a, .latest > div { padding: 14px 16px; grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .latest > div { padding: 11px 16px; } }
+  .latest .lt { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
+  .latest .lk { color: var(--faint); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+  .latest .what { font-size: 14px; font-weight: 600; letter-spacing: -.01em; }
+  .latest .why { color: var(--muted); font-size: 12.5px; }
   .latest .why a { color: var(--text); }
   .latest .why a:hover { text-decoration: underline; }
-  .waves, .waves-lab { max-width: 280px; }
-  .waves { grid-column: 2; display: flex; align-items: flex-end; gap: 3px; height: 30px; margin-top: 8px; }
+  .wv { flex: none; width: 112px; }
+  .waves { display: flex; align-items: flex-end; gap: 2px; height: 26px; }
   .waves i { flex: 1; background: var(--line-2); min-height: 2px; }
   .waves i.now { background: var(--text); }
-  .waves-lab { grid-column: 2; display: flex; justify-content: space-between; gap: 8px; color: var(--faint); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
-  @media (max-width: 560px) { .waves, .waves-lab { grid-column: 1; } }
-  .latest .what { font-size: 16px; font-weight: 600; letter-spacing: -.01em; }
-  .latest .why { color: var(--muted); font-size: 13px; grid-column: 2; }
-  @media (max-width: 560px) { .latest .why { grid-column: 1; } }
+  .waves-lab { display: flex; justify-content: space-between; color: var(--faint); font-size: 9.5px; letter-spacing: .06em; text-transform: uppercase; margin-top: 3px; }
   .etype { display: inline-flex; align-items: center; justify-content: center; height: 22px; padding: 0 8px; border: 1px solid var(--line-2); color: var(--muted); white-space: nowrap; align-self: start; justify-self: start; }
   .etype.parity { background: var(--c, var(--text)); border-color: var(--c, var(--text)); color: #000; }
   .etype.milestone { border-color: var(--gold); color: var(--gold); }
@@ -698,28 +698,28 @@
     const byId = Object.fromEntries(ov.apps.map((a) => [a.id, a]));
     const waves = ov.release_waves || [];
     const n = ov.apps.length;
-    const col = (type, cls, what, why, extra = "") =>
-      `<div><span class="etype mono ${cls}">${type}</span><span class="what">${what}</span><span class="why">${why}</span>${extra}</div>`;
+    const col = (type, what, why, extra = "") =>
+      `<div><div class="lt"><span class="lk mono">${type}</span><span class="what">${what}</span><span class="why">${why}</span></div>${extra}</div>`;
 
-    let rel = col("Release", "release", "No releases yet", "");
+    let rel = col("Release", "No releases yet", "");
     const w = waves[0];
     if (w) {
       const max = Math.max(...waves.map((x) => x.changes), 1);
       const bars = waves.slice().reverse().map((x, i, arr) =>
         `<i class="${i === arr.length - 1 ? "now" : ""}" style="height:${Math.max(6, Math.round(x.changes / max * 100))}%" title="${esc(dayUTC(x.day, false))}: ${esc(plural(x.apps, "app"))}, ${esc(plural(x.changes, "change"))}"></i>`).join("");
       const lg = w.largest;
-      rel = col("Release wave", "release",
+      rel = col("Release wave",
         `${dayUTC(w.day, false)} · ${w.apps === n ? `all ${n} apps` : `${w.apps} of ${n} apps`}, ${plural(w.changes, "change")}`,
         lg ? `Largest: <a href="#/app/${esc(lg.id)}">${esc(lg.name)} ${esc(lg.tag)}</a>, ${plural(lg.changes, "change")}` : "",
-        waves.length > 1 ? `<div class="waves" role="img" aria-label="Changes per release day, last ${waves.length} days with releases">${bars}</div>
-          <div class="waves-lab mono"><span>${dayUTC(waves[waves.length - 1].day, false)}</span><span>Changes per release day</span><span>${dayUTC(w.day, false)}</span></div>` : "");
+        waves.length > 1 ? `<div class="wv" title="Changes per release day"><div class="waves" role="img" aria-label="Changes per release day, last ${waves.length} days with releases">${bars}</div>
+          <div class="waves-lab mono"><span>${dayUTC(waves[waves.length - 1].day, false)}</span><span>${dayUTC(w.day, false)}</span></div></div>` : "");
     }
 
     const p = ev.find((e) => e.type === "parity" || e.type === "milestone");
     const since = ov.apps.map((a) => a.parity?.tracked_since).filter(Boolean).sort()[0];
     let ready;
     if (p?.type === "milestone") {
-      ready = col("Milestone", "milestone", `${esc(p.name)} is ${pct(p.value)} % ready for real work`,
+      ready = col("Milestone", `${esc(p.name)} is ${pct(p.value)} % ready for real work`,
         `${when(p.ts)} · first revision at or above ${pct(p.threshold)} %`);
     } else {
       const last = p?.ts || since;
@@ -734,8 +734,8 @@
       const lastTxt = p ? `Last: <a href="#/app/${esc(p.id)}" style="color:${c}">${esc(p.name)}</a> <span class="${p.delta > 0 ? "up" : "down"}">${pp(p.delta)}</span> to ${pct(p.to)} % on ${dateEN(p.ts, false)}`
         : `No app has changed its value since ${dateEN(since, false)}`;
       ready = days != null && days >= 2
-        ? col("Ready", "parity", `No value changed for ${days} days`, lastTxt + wavesTxt)
-        : col("Ready", "parity", p ? `${esc(p.name)} is ${pct(p.to)} % ready for real work <span class="${p.delta > 0 ? "up" : "down"}">(${pp(p.delta)})</span>` : "No changes yet",
+        ? col("Ready", `No value changed for ${days} days`, lastTxt + wavesTxt)
+        : col("Ready", p ? `${esc(p.name)} is ${pct(p.to)} % ready for real work <span class="${p.delta > 0 ? "up" : "down"}">(${pp(p.delta)})</span>` : "No changes yet",
           p ? `${when(p.ts)}${wavesTxt}` : "");
     }
 
@@ -743,7 +743,7 @@
     const code7 = acts.reduce((s, a) => s + (a.activity.changes_7d || 0), 0);
     const top = acts.slice().sort((a, b) => (b.activity.changes_7d || 0) - (a.activity.changes_7d || 0))[0];
     const revs = ov.apps.reduce((s, a) => s + (a.roadmap?.revisions_7d || 0), 0);
-    const code = col("Code", "", `${plural(code7, "change")} merged in 7 days`,
+    const code = col("Code", `${plural(code7, "change")} merged in 7 days`,
       `${top ? `Busiest: <a href="#/app/${esc(top.id)}">${esc(top.name)}</a>, ${nf(top.activity.changes_7d)}` : ""}${revs ? ` · roadmaps revised ${plural(revs, "time")}` : ""}`);
 
     return `<section class="latest" aria-label="Latest updates">${rel}${ready}${code}</section>`;
