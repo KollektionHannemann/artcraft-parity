@@ -434,18 +434,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.3,
+    "score": 21.6,
     "active_days_7d": 6,
-    "changes_7d": 146,
-    "changes_14d": 713,
+    "changes_7d": 148,
+    "changes_14d": 715,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-26T01:17:01Z",
-      "commit": "ba27ef1",
-      "commit_full": "ba27ef13fbacc9c887e0dd96ca515ded4ad4cfa3",
-      "subject": "Security: bound layout memory (linked text boxes, repeated headers, crops, gridAfter) (#3867)"
+      "ts": "2026-10-26T01:52:01Z",
+      "commit": "6660103",
+      "commit_full": "66601038df94ce538741fb31a025c6ce0fc6bdec",
+      "subject": "tests(layout): build the nbsp test document without struct-update syntax (#4380)"
     },
-    "last_commit_ts": "2026-10-26T01:17:01Z",
+    "last_commit_ts": "2026-10-26T01:52:01Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       0,
@@ -461,7 +461,7 @@
       57,
       22,
       37,
-      11
+      13
     ],
     "days": [
       {
@@ -793,20 +793,20 @@
       },
       {
         "d": "2026-10-26",
-        "code": 11,
+        "code": 13,
         "other": 0,
         "samples": [
           {
+            "commit": "6660103",
+            "subject": "tests(layout): build the nbsp test document without struct-update syntax (#4380)"
+          },
+          {
+            "commit": "ee7e98e",
+            "subject": "hotfix: same_content must mention media_index (E0027 after #3872)"
+          },
+          {
             "commit": "ba27ef1",
             "subject": "Security: bound layout memory (linked text boxes, repeated headers, crops, gridAfter) (#3867)"
-          },
-          {
-            "commit": "ebf2721",
-            "subject": "Security: DOCX package/writer hardening — glossary privacy scrub, case-insensitive part names, chart and font limits, Flat OPC inlining (#3692, #3704, #3742, #3"
-          },
-          {
-            "commit": "7740ea6",
-            "subject": "Security: font ingestion checks sizes and counts before allocating (#3703, #3716) (#3869)"
           }
         ]
       }
@@ -10556,5 +10556,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-26T01:19:01+00:00"
+  "updated_at": "2026-10-26T02:02:53+00:00"
 }
