@@ -494,7 +494,8 @@
   };
   const state = {
     overview: null, status: null, run: null, fromCache: false, loadedAt: 0, renderSeq: 0,
-    sort: store.get("tracker.sort", "release"), filter: "all", query: "",
+    // v2: the default changed to "release"; a choice saved under the old key would hide it
+    sort: store.get("tracker.sort.v2", "release"), filter: "all", query: "",
     rank: store.get("tracker.rank", "ready"), animated: false, chartScale: store.get("tracker.scale", "fit"),
     metric: store.get("tracker.metric", "ready"),
   };
@@ -859,7 +860,7 @@
     }));
     document.getElementById("sort").addEventListener("change", (e) => {
       state.sort = e.target.value;
-      store.set("tracker.sort", state.sort);
+      store.set("tracker.sort.v2", state.sort);
       drawGrid(true);
     });
     document.getElementById("q").addEventListener("input", (e) => { state.query = e.target.value; drawGrid(false); });
@@ -925,7 +926,7 @@
         </div>
         <div class="tags mono">
           ${a.stage ? `<span class="tag">${esc(stageLabel(a.stage))}</span>` : ""}
-          ${r ? `<span class="tag plain" title="Latest release, ${esc(stamp(r.ts))}">${esc(r.tag)}</span>` : ""}
+          ${r ? `<span class="tag plain" title="Latest release, ${esc(stamp(r.ts))}">${esc(r.tag)} · ${esc(dateEN(r.ts, false))}</span>` : ""}
           ${a.is_new ? `<span class="tag new">New app</span>` : ""}
           ${milestoneTag(a.milestone, true)}
         </div>
