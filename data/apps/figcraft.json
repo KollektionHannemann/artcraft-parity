@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "26291af",
-  "latest_commit_date": "2026-10-26T11:52:16+07:00",
-  "latest_message": "M12: boards dot grid, re-attaching connector ends, curved connectors (#1249)",
+  "latest_commit": "d3782fd",
+  "latest_commit_date": "2026-10-26T12:52:39+07:00",
+  "latest_message": "M12: board templates and tables (#1363)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -235,7 +235,7 @@
       },
       {
         "label": "Boards (whiteboarding; not in the weighted numbers)",
-        "pct": 37.0
+        "pct": 47.0
       }
     ],
     "upcoming": [
@@ -265,6 +265,14 @@
       {
         "date": "2026-10-24",
         "text": "· Dev Mode tail (M6, gap 16): Measurements kept on the canvas (gap 16): devMode.addMeasurement {from?, to?, side?} places one between two layers, along one side of a layer or (neither) to the layer around it, stored on the layer it starts from (saved in .figcraft, synced, undoable; old files open without them); Dev Mode draws them as labelled redlines that follow the layers, the Inspect tab lists them (those of the selected layer, or every one on the page), places and removes them; devMode.removeMeasurement and devMode.measurements remove and list them; a copy keeps those to layers copied with it. The layers panel is read-only in Dev Mode: rows select and expand, but don't rename, reorder, hide or lock. Dev Mode 98% / 78%."
+      },
+      {
+        "date": "2026-10-24",
+        "text": "· Board facilitation (M12): a timer everyone on a board sees (presets or any minutes, pause, resume, a minute more, stop; synced as its end time, so nothing ticks over the network) and voting sessions (votes per person, on everything, on sticky notes or on the selection; a click votes, your badge takes it back; your votes show while it runs, everyone's with a ranked list once it ends; clear results), in a pill at the top right of the board. board.timer, board.timerState, board.vote, board.voteResults; ballots sync per voter. Checked in the app, with two app instances in one live session through a local figcraft-server, and through MCP; the web build compiles (boards-parity)."
+      },
+      {
+        "date": "2026-10-24",
+        "text": "· Board templates and tables (M12): a templates picker in the board toolbar places a retrospective, a brainstorm, a weekly planner, a flow chart or a kanban board (board.template, all FigCraft's own) as ordinary board objects in one undo step; board.table makes a table of auto layout frames (up to 50 × 20) whose rows grow with their text, edited by row and column from the bar over the selection or board.tableEdit, typed into with a double-click. Boards ~35% → ~40% breadth, 30–60 h → 26–54 h; the weighted numbers are unchanged."
       },
       {
         "date": "2026-10-24",
@@ -397,14 +405,6 @@
       {
         "date": "2026-10-13",
         "text": "· Auto layout, wrapped-line alignment (M2): a wrapping layout's lines (rows of a horizontal one, columns of a vertical one) are packed where the cross alignment says (start, centre, end; before, they always sat at the start), stretch when every child fills across the flow, or take the free space between them (contentAlign: spaceBetween, the Design panel's Row/Column gap mode, the alignment pad lighting the whole cross axis). Read from REST JSON and .fig, written to .fig, align-content in CSS, an instance override with the other alignment settings. 13 hand-computed layout cases and command tests. Numbers unchanged."
-      },
-      {
-        "date": "2026-10-13",
-        "text": "· .fig export: instance sizes, variables, styles (gap 1): instances write what they change from"
-      },
-      {
-        "date": "2026-10-13",
-        "text": "· Starter templates and first-run help: eight templates built in code (mobile app, landing page,"
       }
     ]
   },
@@ -424,39 +424,39 @@
     }
   },
   "roadmap": {
-    "revisions": 116,
-    "revisions_7d": 17,
+    "revisions": 118,
+    "revisions_7d": 19,
     "last_revision": {
-      "ts": "2026-10-26T04:52:16Z",
+      "ts": "2026-10-26T05:52:39Z",
       "kind": "estimates",
-      "commit": "26291af",
-      "commit_full": "26291aff2ccbad585991fea196c8d56b63dd177f",
-      "message": "M12: boards dot grid, re-attaching connector ends, curved connectors (#1249)"
+      "commit": "d3782fd",
+      "commit_full": "d3782fdc430a502c41b464b2a1deca68315e75cc",
+      "message": "M12: board templates and tables (#1363)"
     },
     "last_update": {
-      "ts": "2026-10-26T04:52:16Z",
+      "ts": "2026-10-26T05:52:39Z",
       "kind": "estimates",
-      "commit": "26291af",
-      "commit_full": "26291aff2ccbad585991fea196c8d56b63dd177f",
-      "message": "M12: boards dot grid, re-attaching connector ends, curved connectors (#1249)"
+      "commit": "d3782fd",
+      "commit_full": "d3782fdc430a502c41b464b2a1deca68315e75cc",
+      "message": "M12: board templates and tables (#1363)"
     },
     "self_reported": "2026-10-25"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.5,
+    "score": 21.6,
     "active_days_7d": 6,
-    "changes_7d": 131,
-    "changes_14d": 259,
+    "changes_7d": 135,
+    "changes_14d": 263,
     "housekeeping_7d": 18,
     "last_code_change": {
-      "ts": "2026-10-26T04:52:16Z",
-      "commit": "26291af",
-      "commit_full": "26291aff2ccbad585991fea196c8d56b63dd177f",
-      "subject": "M12: boards dot grid, re-attaching connector ends, curved connectors (#1249)"
+      "ts": "2026-10-26T05:52:39Z",
+      "commit": "d3782fd",
+      "commit_full": "d3782fdc430a502c41b464b2a1deca68315e75cc",
+      "subject": "M12: board templates and tables (#1363)"
     },
-    "last_commit_ts": "2026-10-26T04:52:16Z",
+    "last_commit_ts": "2026-10-26T05:52:39Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       20,
@@ -472,7 +472,7 @@
       9,
       27,
       26,
-      49
+      53
     ],
     "days": [
       {
@@ -787,20 +787,20 @@
       },
       {
         "d": "2026-10-26",
-        "code": 49,
+        "code": 53,
         "other": 2,
         "samples": [
           {
-            "commit": "26291af",
-            "subject": "M12: boards dot grid, re-attaching connector ends, curved connectors (#1249)"
+            "commit": "d3782fd",
+            "subject": "M12: board templates and tables (#1363)"
           },
           {
-            "commit": "33061d9",
-            "subject": "M10: Thai UI fonts and a Thai draft catalog (#1287)"
+            "commit": "bfd6e5f",
+            "subject": "Keep 8-bit alpha when printing colours with Color::to_css (#1359)"
           },
           {
-            "commit": "edef2e2",
-            "subject": "M7: offer the installed styles of an embedded font family (#1246) (#1294)"
+            "commit": "ad2fc0c",
+            "subject": "fix: fsync the files directory after creating a new files folder (#1362)"
           }
         ]
       }
@@ -3663,7 +3663,53 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "estimates"
+    },
+    {
+      "commit": "4fad29a",
+      "commit_full": "4fad29a66e2521789244344cee1332b7a2409bb2",
+      "commit_date": "2026-10-26T12:28:59+07:00",
+      "ts": "2026-10-26T05:28:59Z",
+      "message": "M12: board timer and voting sessions (#1361)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-25",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "estimates"
+    },
+    {
+      "commit": "d3782fd",
+      "commit_full": "d3782fdc430a502c41b464b2a1deca68315e75cc",
+      "commit_date": "2026-10-26T12:52:39+07:00",
+      "ts": "2026-10-26T05:52:39Z",
+      "message": "M12: board templates and tables (#1363)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-25",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "estimates"
     }
   ],
-  "updated_at": "2026-10-26T05:01:27+00:00"
+  "updated_at": "2026-10-26T05:58:51+00:00"
 }
