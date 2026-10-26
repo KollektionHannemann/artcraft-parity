@@ -24,8 +24,11 @@ its releases. It reads the repositories every 30 minutes and can be installed as
   ranking and the detail chart switch between both; sorting works by either.
 - **Latest update** on the start page: the newest change of "ready for real work" or milestone, and the newest release.
 - **Activity level** per app (Buzzing, Active, Quiet, Cold), from the code changes merged in the last 14 days.
-- **Cards** sorted by the latest change of "ready for real work" by default; other sorts are ready for real work,
-  product parity, activity, latest release, suite order and name. "What changed" on each card opens the latest value
+- **Cards** sorted by the latest release by default. The apps ship in suite-wide waves within minutes of each other,
+  so the sort groups releases by UTC day, puts the newest wave first, and within a wave sorts by the number of changes
+  in the release, then by ready for real work. Other sorts are the latest change of ready for real work, ready for
+  real work, product parity, activity, suite order and name. When releases shipped after the current ready value was
+  set, the card says so ("Value from 10 Oct · 9 releases since"). "What changed" on each card opens the latest value
   change, roadmap update, code change and release.
 - **Detail view** per app: the four kinds of update side by side, a chart of ready for real work or product parity
   (zoomed or 0–100), daily code

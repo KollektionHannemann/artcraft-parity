@@ -346,6 +346,22 @@ class PipelineTest(unittest.TestCase):
         self.assertEqual(self.api_calls[-1][1], 'W/"e1"')
         self.assertEqual((self.root / "data/overview.json").read_bytes(), before)
 
+    def test_releases_since_the_current_value(self):
+        self.base_history()
+        z = lambda d: (NOW - d).strftime("%Y-%m-%dT%H:%M:%SZ")
+        rel = lambda tag, ts, **kw: {"tag_name": tag, "name": tag, "published_at": ts, "html_url": None, "body": "",
+                                     "draft": False, "prerelease": False, "assets": [], **kw}
+        self.releases_api = ([rel("v0.3.0", z(timedelta(days=2))), rel("v0.3.0-rc1", z(timedelta(days=3)), prerelease=True),
+                              rel("v0.2.0", z(timedelta(days=6))), rel("v0.1.0", z(timedelta(days=9)))], 'W/"s1"')
+        self.run_update()
+        par = self.overview_app()["parity"]
+        self.assertEqual((par["value_since"], par["releases_since"], par["releases_since_capped"]),
+                         (z(timedelta(days=8)), 2, False))  # the prerelease and the older release do not count
+        self.repos["testcraft"].commit(NOW - timedelta(days=1), "Raise the full target", {"ROADMAP.md": roadmap(52)})
+        self.run_update()
+        par = self.overview_app()["parity"]
+        self.assertEqual((par["value_since"], par["releases_since"]), (z(timedelta(days=1)), 0))
+
     def test_rotating_etag_does_not_change_committed_files(self):
         self.base_history()
         rel = {"tag_name": "v0.1.0", "name": "v0.1.0", "published_at": "2026-10-17T04:00:00Z", "html_url": "https://github.com/x",

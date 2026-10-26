@@ -64,7 +64,9 @@ python3 scripts/make_icons.py              # redraw icons after changing the mar
   (commits without a full-target value, not parsed again), `truncated.<app>`, `releases.<app>` (last known release list; the ETag is kept in `.cache/release-etags.json`, never
   in `state.json`, because GitHub changes it with every download).
 - `overview.json`:
-  - `apps`: one entry per app, sorted by full target. Per app: `parity` (`tracked_since`, `changes`, `last_change`),
+  - `apps`: one entry per app, sorted by full target. Per app: `parity` (`tracked_since`, `changes`, `last_change`,
+    `value_since` = first revision with the current full-target value, `releases_since` = non-prerelease releases after
+    it, `releases_since_capped` when the count reaches the oldest of the 12 kept releases),
     `roadmap` (`last_update`, `revisions_7d`), `activity` (`level`, `score`, `window` = 14 daily code counts ending today),
     `release`, `milestone` (`reached_at` is the commit time of the first revision at or above 95 %, `null` if the first
     known revision was already there), compact `series`.
@@ -117,7 +119,9 @@ python3 scripts/make_icons.py              # redraw icons after changing the mar
   white primary buttons, numbered chips, two-tone app names ("Photo" in white, "Craft" in the app color).
   Do not use ArtCraft logos or the engraved app icons.
 - **Full target is the headline metric** ("Ready for real work" in the UI). Product parity (feature breadth) is an
-  option, never the default. Events, the default sort, notifications and the 95 % milestone use the full target only.
+  option, never the default. Events, notifications and the 95 % milestone use the full target only. The default card
+  sort is the latest release (release wave by UTC day, then changes in the release, then full target), because the
+  roadmap values rarely move while releases ship several times a week.
   Other numbers support it. Do not reorder the UI
   to put them first. Activity is effort, not progress: keep it visually separate (neutral cells on cards, never the
   parity bar style). Parity ranges stay in the data but are not shown; hour estimates stay ranges.

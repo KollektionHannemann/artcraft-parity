@@ -506,11 +506,28 @@ def update_history(app: dict, limit: int, errors: list, state: dict, rebuild: bo
     }
 
 
-def parity_summary(history: list, truncated: bool) -> dict:
+def value_since(history: list):
+    """Commit time of the first revision that shows the current full-target value."""
+    if not history:
+        return None
+    i = len(history) - 1
+    while i > 0 and history[i - 1]["full_pct"] == history[-1]["full_pct"]:
+        i -= 1
+    return history[i]["ts"]
+
+
+def parity_summary(history: list, truncated: bool, releases: list = ()) -> dict:
     changes = [h for h in history if h.get("kind") == "parity"]
     last = changes[-1] if changes else None
+    since = value_since(history)
+    # Releases shipped while the value stood still. Only RELEASES_KEPT are listed, so a count that reaches
+    # the oldest listed release is a lower bound ("capped").
+    shipped = [r for r in releases if since and not r.get("prerelease") and parse_ts(r["ts"]) > parse_ts(since)]
     return {
         "tracked_since": history[0]["ts"] if history else None,
+        "value_since": since,
+        "releases_since": len(shipped),
+        "releases_since_capped": bool(shipped) and len(releases) >= RELEASES_KEPT and shipped[-1] is releases[-1],
         "changes": len(changes),
         "truncated": truncated,
         "last_change": None if not last else {
@@ -903,7 +920,7 @@ def main():
             releases = releases or previous.get("releases") or []
             res["latest"] = {"sha": previous.get("latest_commit") or "", "date": previous.get("latest_commit_date"),
                              "message": previous.get("latest_message")}
-        parity = parity_summary(history, res["truncated"])
+        parity = parity_summary(history, res["truncated"], releases)
         roadmap = roadmap_summary(history, now)
         milestone = milestone_summary(history) if history else None
         latest = res.get("latest") or {}

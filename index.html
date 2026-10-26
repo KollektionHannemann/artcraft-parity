@@ -220,6 +220,7 @@
   .full-lab { text-align: right; color: var(--muted); }
   .pline { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 13px; margin-top: -4px; }
   .pline b { font-weight: 600; }
+  .stale { color: var(--faint); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; margin-top: -8px; }
   .aline { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding-top: 12px; border-top: 1px solid var(--line); }
 
   details.what { border-top: 1px solid var(--line); margin: 0 -20px; }
@@ -478,11 +479,11 @@
     breadth: { key: "breadth_pct", label: "Product parity", short: "Parity", lab: "Product parity<br>feature breadth" },
   };
   const SORTS = [
-    ["parity_change", "Latest change"],
+    ["release", "Latest release"],
+    ["parity_change", "Latest Ready change"],
     ["full", "Ready for real work"],
     ["breadth", "Product parity"],
     ["activity", "Activity"],
-    ["release", "Latest release"],
     ["order", "Suite order"],
     ["name", "Name"],
   ];
@@ -493,13 +494,13 @@
   };
   const state = {
     overview: null, status: null, run: null, fromCache: false, loadedAt: 0, renderSeq: 0,
-    sort: store.get("tracker.sort", "parity_change"), filter: "all", query: "",
+    sort: store.get("tracker.sort", "release"), filter: "all", query: "",
     rank: store.get("tracker.rank", "ready"), animated: false, chartScale: store.get("tracker.scale", "fit"),
     metric: store.get("tracker.metric", "ready"),
   };
   if (!METRICS[state.metric]) state.metric = "ready";
   if (!["ready", "breadth", "activity"].includes(state.rank)) state.rank = "ready";
-  if (!SORTS.some(([k]) => k === state.sort)) state.sort = "parity_change";
+  if (!SORTS.some(([k]) => k === state.sort)) state.sort = "release";
   const app = document.getElementById("app");
   const status = document.getElementById("statusbar");
   const offline = document.getElementById("offline");
@@ -579,6 +580,13 @@
     if (s.kind === "unknown") return `<span class="tag gold" title="Already ${thr} % ready for real work or more in the first revision with a value, so the date it was reached is unknown">${thr} % before tracking</span>`;
     const label = short ? `★ ${thr} %` : `★ ${thr} % on ${dateEN(m.reached_at, false)}`;
     return `<span class="tag gold" title="First reported ${thr} % ready for real work or more on ${esc(stamp(m.reached_at))} (commit ${esc(m.commit)})${m.above_now ? "" : ". It's below that now."}">${label}${m.above_now ? "" : " · now below"}</span>`;
+  }
+
+  // The roadmap value lags behind the code when releases ship while it stands still. Empty if none did.
+  function staleHint(p) {
+    if (!p?.releases_since) return "";
+    const n = p.releases_since_capped ? `${nf(p.releases_since)}+ releases` : plural(p.releases_since, "release");
+    return `Value from ${dateEN(p.value_since, false)} · ${n} since`;
   }
 
   function parityLine(a) {
@@ -875,7 +883,11 @@
     full: (a, b) => (b.full_pct ?? -1) - (a.full_pct ?? -1) || byName(a, b),
     activity: (a, b) => (b.activity?.score ?? -1) - (a.activity?.score ?? -1) ||
       (b.activity?.changes_14d ?? 0) - (a.activity?.changes_14d ?? 0) || byName(a, b),
-    release: (a, b) => (ms(b.release?.ts) || 0) - (ms(a.release?.ts) || 0) || byName(a, b),
+    // The suite ships in waves (all apps within minutes), so the exact time says nothing. Newest wave (UTC day)
+    // first, then the size of the release, then the full target.
+    release: (a, b) => (b.release?.ts || "").slice(0, 10).localeCompare((a.release?.ts || "").slice(0, 10)) ||
+      (b.release?.changes ?? -1) - (a.release?.changes ?? -1) ||
+      (b.full_pct ?? -1) - (a.full_pct ?? -1) || byName(a, b),
     breadth: (a, b) => (b.breadth_pct ?? -1) - (a.breadth_pct ?? -1) || byName(a, b),
     order: (a, b) => (a.order ?? 99) - (b.order ?? 99),
     name: byName,
@@ -893,7 +905,7 @@
     const shown = a[M.key];
     const what = [
       ["Ready", lc ? `<b class="${lc.delta > 0 ? "up" : "down"}">${pp(lc.delta)}</b> to ${pct(lc.to)} % · ${when(lc.ts)}<span class="m" tabindex="0">${esc(lc.message)}</span>`
-        : `Unchanged since ${dateEN(a.parity?.tracked_since, false)}<span class="m" tabindex="0">First value read ${dateEN(a.parity?.tracked_since)}</span>`],
+        : `Unchanged since ${dateEN(a.parity?.value_since || a.parity?.tracked_since, false)}${a.parity?.releases_since ? ` · ${plural(a.parity.releases_since, "release")} since` : ""}<span class="m" tabindex="0">First value read ${dateEN(a.parity?.tracked_since)}</span>`],
       ["Roadmap", ru ? `${ruLabel(ru.kind)} · ${when(ru.ts)}<span class="m" tabindex="0">${esc(ru.message)}</span>` : "No revisions yet"],
       ["Code", act?.last_code_change ? `${plural(act.changes_7d, "change")} in 7 days · latest ${when(act.last_code_change.ts)}<span class="m" tabindex="0">${esc(act.last_code_change.subject)}</span>` : "No code changes found"],
       ["Release", r ? `${esc(r.tag)} · ${when(r.ts)}<span class="m" tabindex="0">${releaseKind(r.kind)}${r.changes ? ", " + plural(r.changes, "change") : ""}</span>` : "No releases yet"],
@@ -924,6 +936,7 @@
         ${bar(shown, state.metric === "ready")}
         <div class="pline">${state.metric === "ready" ? parityLine(a)
           : `<span>Ready for real work <b>${pct(a.full_pct)} %</b></span>${a.parity?.last_change ? `<span class="${a.parity.last_change.delta > 0 ? "up" : "down"}">${pp(a.parity.last_change.delta)} ${when(a.parity.last_change.ts)}</span>` : "<span></span>"}`}</div>
+        ${staleHint(a.parity) ? `<div class="stale mono" title="The roadmap value has not changed since ${esc(stamp(a.parity.value_since))}">${staleHint(a.parity)}</div>` : ""}
         <div class="aline">
           ${level(act)}
           <span title="Code changes per day, last 14 days">${act ? cells(act.window) : ""}</span>
@@ -1002,7 +1015,7 @@
     let apps = ov.apps.filter((a) =>
       (state.filter === "all" || stageKey(a.stage) === state.filter) &&
       (!q || [a.name, a.adobe, a.category].join(" ").toLowerCase().includes(q)));
-    apps = apps.slice().sort(sorters[state.sort] || sorters.parity_change);
+    apps = apps.slice().sort(sorters[state.sort] || sorters.release);
 
     const grid = document.getElementById("grid");
     const before = new Map();
