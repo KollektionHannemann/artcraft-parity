@@ -71,6 +71,8 @@ python3 scripts/make_icons.py              # redraw icons after changing the mar
     `release`, `milestone` (`reached_at` is the commit time of the first revision at or above 95 %, `null` if the first
     known revision was already there), compact `series`.
   - `latest_events`: full-target changes (`type: "parity"`), milestones, releases and new apps, newest first.
+  - `release_waves`: the last 8 UTC days with releases (`day`, `apps` = distinct apps, `changes`, `largest`), newest
+    first. Pre-releases don't count. Days older than the oldest kept release of a capped app are left out.
   - `recent_additions`: apps discovered within `RECENT_DAYS` (14). Drives the banner on the overview.
   - `errors`: notices shown at the top of the overview. Discovery, git and parser problems all end up here.
 - `apps/<app>.json`: detail data, including `activity.days` (daily code/other counts for 180 days with sample subjects)

@@ -362,6 +362,21 @@ class PipelineTest(unittest.TestCase):
         par = self.overview_app()["parity"]
         self.assertEqual((par["value_since"], par["releases_since"]), (z(timedelta(days=1)), 0))
 
+    def test_release_waves_group_by_day_and_drop_incomplete_days(self):
+        r = lambda tag, ts, n, pre=False: {"tag": tag, "ts": ts, "changes": n, "prerelease": pre}
+        a = {"id": "a", "name": "ACraft", "_releases": [r("v2", "2026-10-25T13:30:00Z", 10),
+                                                         r("v2-rc", "2026-10-24T09:00:00Z", 99, pre=True),
+                                                         r("v1", "2026-10-22T20:00:00Z", 5)]}
+        b = {"id": "b", "name": "BCraft", "_releases": [r("v9", "2026-10-25T14:10:00Z", 30), r("v8", "2026-10-25T09:00:00Z", 0)] +
+             [r(f"v{i}", f"2026-10-{10 + i:02d}T12:00:00Z", 1) for i in range(update.RELEASES_KEPT - 2, 0, -1)]}
+        with mock.patch.object(update, "WAVES_KEPT", 50):
+            waves = update.release_waves([a, b])
+        self.assertEqual(waves[0], {"day": "2026-10-25", "apps": 2, "changes": 40,
+                                    "largest": {"id": "b", "name": "BCraft", "tag": "v9", "changes": 30}})
+        self.assertNotIn("2026-10-24", [w["day"] for w in waves])  # pre-releases are not part of a wave
+        self.assertEqual(waves[-1]["day"], "2026-10-11")  # BCraft is capped: nothing before its oldest release
+        self.assertEqual(len(update.release_waves([a, b])), update.WAVES_KEPT)
+
     def test_rotating_etag_does_not_change_committed_files(self):
         self.base_history()
         rel = {"tag_name": "v0.1.0", "name": "v0.1.0", "published_at": "2026-10-17T04:00:00Z", "html_url": "https://github.com/x",

@@ -22,7 +22,10 @@ its releases. It reads the repositories every 30 minutes and can be installed as
 - **Product parity** as a second view: the roadmaps' feature breadth, how many of the reference product's features
   exist at all, ready or not (VectorCraft: 88 % product parity, 62 % ready for real work). "Show" above the cards, the
   ranking and the detail chart switch between both; sorting works by either.
-- **Latest update** on the start page: the newest change of "ready for real work" or milestone, and the newest release.
+- **Latest update** on the start page, in three columns: the latest release wave (all apps release within minutes)
+  with a small chart of the changes per release day, the state of "ready for real work" (days without a value change
+  and the changes shipped since), and the code changes merged in the last 7 days. The hero shows the average ready
+  value, the changes in the last release wave and the apps buzzing now.
 - **Activity level** per app (Buzzing, Active, Quiet, Cold), from the code changes merged in the last 14 days.
 - **Cards** sorted by the latest release by default. The apps ship in suite-wide waves within minutes of each other,
   so the sort groups releases by UTC day, puts the newest wave first, and within a wave sorts by the number of changes

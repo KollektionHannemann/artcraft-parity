@@ -73,6 +73,7 @@ ACTIVITY_LEVELS = (            # (level, minimum score, minimum active days in t
 )
 SAMPLES_PER_DAY = 3
 RECENT_EVENTS = 40
+WAVES_KEPT = 8        # release waves (UTC days with releases) in overview.json, for the chart on the start page
 
 PALETTE = ["#3d6cf0", "#ff6a4d", "#8f5cf5", "#f5a524", "#1ab394", "#e8448a", "#8bc53f",
            "#2bc48a", "#3f63e8", "#1cb8c9", "#ff7a1a", "#20b2c8", "#22a85a"]
@@ -828,6 +829,27 @@ def compact_series(history: list) -> list:
     return out
 
 
+def release_waves(apps: list) -> list:
+    """The suite releases in waves: all apps within minutes. One entry per UTC day with releases, newest first.
+
+    Each app keeps only RELEASES_KEPT releases, so days older than the oldest release of a capped app would be
+    incomplete and are left out."""
+    days, cutoff = {}, ""
+    for a in apps:
+        rels = [r for r in a["_releases"] if not r.get("prerelease")]
+        if len(a["_releases"]) >= RELEASES_KEPT and rels:
+            cutoff = max(cutoff, rels[-1]["ts"][:10])
+        for r in rels:
+            w = days.setdefault(r["ts"][:10], {"day": r["ts"][:10], "apps": set(), "changes": 0, "largest": None})
+            w["apps"].add(a["id"])  # an app can release twice on one day
+            w["changes"] += r.get("changes") or 0
+            if r.get("changes") and (not w["largest"] or r["changes"] > w["largest"]["changes"]):
+                w["largest"] = {"id": a["id"], "name": a["name"], "tag": r["tag"], "changes": r["changes"]}
+    waves = sorted(({**w, "apps": len(w["apps"])} for d, w in days.items() if d >= cutoff),
+                   key=lambda w: w["day"], reverse=True)
+    return waves[:WAVES_KEPT]
+
+
 def suite_events(apps: list) -> list:
     """Newest relevant events across all apps: parity changes, milestones, releases, new apps."""
     events = []
@@ -983,6 +1005,7 @@ def main():
         state["schema"] = SCHEMA
     save_json(STATE, state)
     overview_apps.sort(key=lambda a: (a["full_pct"] is None, -(a["full_pct"] or 0)))
+    waves = release_waves(overview_apps)  # before suite_events(), which consumes _releases
     latest_events = suite_events(overview_apps)
     recent = [{"id": a["id"], "name": a["name"], "adobe": a["adobe"], "added": a["added"]}
               for a in overview_apps if a["is_new"]]
@@ -993,6 +1016,7 @@ def main():
         "activity_window_days": ACTIVITY_WINDOW_DAYS,
         "recent_additions": recent,
         "latest_events": latest_events,
+        "release_waves": waves,
         "apps": overview_apps,
         "errors": errors,
     }, "generated_at")

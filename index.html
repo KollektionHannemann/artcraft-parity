@@ -77,6 +77,7 @@
   .checked.stale .dot { background: var(--warn); }
   .checked.off .dot { background: var(--low); }
   @media (max-width: 860px) { .hide-md { display: none; } }
+  @media (max-width: 720px) { .checked .lbl { display: none; } }
   @media (max-width: 560px) {
     .topbar { flex-wrap: wrap; }
     .wordmark { flex: 1; border-right: 0; padding: 12px 16px; }
@@ -97,6 +98,8 @@
   .hero { display: grid; grid-template-columns: 1.1fr 1fr; border: 1px solid var(--line); }
   @media (max-width: 900px) { .hero { grid-template-columns: 1fr; } }
   .hero > section { padding: 26px 26px 24px; min-width: 0; }
+  .hero > section:first-child { display: flex; flex-direction: column; }  /* stats sit on the bottom line */
+  #hero-checked { margin-bottom: 22px; }
   .hero > section + section { border-left: 1px solid var(--line); }
   @media (max-width: 900px) { .hero > section + section { border-left: 0; border-top: 1px solid var(--line); } }
   @media (max-width: 560px) { .hero > section { padding: 20px 16px; } }
@@ -105,7 +108,7 @@
   .hero h1 em { font-style: normal; color: var(--muted); }
   @media (max-width: 560px) { .hero h1 { font-size: 34px; } }
   .hero p { margin: 0; color: var(--muted); max-width: 52ch; }
-  .stats { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 22px; border-top: 1px solid var(--line); }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: auto; border-top: 1px solid var(--line); }
   .stats > div { padding: 14px 0 0; min-width: 0; }
   .stats > div + div { padding-left: 16px; border-left: 1px solid var(--line); }
   .stats .v { font-size: 30px; font-weight: 700; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
@@ -154,13 +157,20 @@
   .sig.l1 i:nth-child(-n+1), .sig.l2 i:nth-child(-n+2), .sig.l3 i:nth-child(-n+3), .sig.l4 i { background: var(--text); }
 
   /* "Latest" strip */
-  .latest { display: grid; grid-template-columns: 1.4fr 1fr; border: 1px solid var(--line); border-top: 0; margin-bottom: 22px; }
+  .latest { display: grid; grid-template-columns: 1.25fr 1fr 1fr; border: 1px solid var(--line); border-top: 0; margin-bottom: 22px; }
   @media (max-width: 900px) { .latest { grid-template-columns: 1fr; } }
   .latest > a, .latest > div { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; padding: 16px 20px; min-width: 0; }
   .latest > * + * { border-left: 1px solid var(--line); }
   @media (max-width: 900px) { .latest > * + * { border-left: 0; border-top: 1px solid var(--line); } }
   @media (max-width: 560px) { .latest > a, .latest > div { padding: 14px 16px; grid-template-columns: 1fr; } }
-  .latest a:hover { background: var(--panel-2); }
+  .latest .why a { color: var(--text); }
+  .latest .why a:hover { text-decoration: underline; }
+  .waves, .waves-lab { max-width: 280px; }
+  .waves { grid-column: 2; display: flex; align-items: flex-end; gap: 3px; height: 30px; margin-top: 8px; }
+  .waves i { flex: 1; background: var(--line-2); min-height: 2px; }
+  .waves i.now { background: var(--text); }
+  .waves-lab { grid-column: 2; display: flex; justify-content: space-between; gap: 8px; color: var(--faint); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
+  @media (max-width: 560px) { .waves, .waves-lab { grid-column: 1; } }
   .latest .what { font-size: 16px; font-weight: 600; letter-spacing: -.01em; }
   .latest .why { color: var(--muted); font-size: 13px; grid-column: 2; }
   @media (max-width: 560px) { .latest .why { grid-column: 1; } }
@@ -181,10 +191,11 @@
   .sortlab { display: flex; align-items: center; padding: 0 14px; border-left: 1px solid var(--line); color: var(--faint); }
   #showlab { border-left: 0; }
   .sel, .search { background: #000; color: var(--text); border: 0; padding: 12px 14px; outline: none; }
-  .sel { cursor: pointer; }
+  .sel { cursor: pointer; appearance: none; -webkit-appearance: none; padding-right: 40px;
+    background: #000 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23a3a3a3' stroke-width='1.2'/%3E%3C/svg%3E") no-repeat right 16px center; }
   .search { min-width: 220px; border-left: 1px solid var(--line); }
   .search::placeholder { color: var(--faint); }
-  .sel:focus-visible, .search:focus-visible { background: #0b0b0b; outline: 1px solid var(--line-2); outline-offset: -1px; }
+  .sel:focus-visible, .search:focus-visible { background-color: #0b0b0b; outline: 1px solid var(--line-2); outline-offset: -1px; }
   @media (max-width: 720px) {
     .seg { flex: 1 1 auto; border-bottom: 1px solid var(--line); }
     .seg:first-child { flex-basis: 100%; }
@@ -220,7 +231,7 @@
   .full-lab { text-align: right; color: var(--muted); }
   .pline { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: 13px; margin-top: -4px; }
   .pline b { font-weight: 600; }
-  .stale { color: var(--faint); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; margin-top: -8px; }
+  .stale-hint { color: var(--faint); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; margin-top: -8px; }
   .aline { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding-top: 12px; border-top: 1px solid var(--line); }
 
   details.what { border-top: 1px solid var(--line); margin: 0 -20px; }
@@ -680,38 +691,62 @@
   }
 
   /* ---------- Overview ---------- */
+  /* Three columns under the hero: the latest release wave with the size of the last waves, the state of
+     "ready for real work", and this week's code. Activity stays neutral (no app colors, no parity bars). */
   function latestStrip(ov) {
     const ev = ov.latest_events || [];
     const byId = Object.fromEntries(ov.apps.map((a) => [a.id, a]));
-    const parity = ev.find((e) => e.type === "parity" || e.type === "milestone");
-    const other = ev.find((e) => e.type === "release" || e.type === "new_app");
-    const nChanges = ov.apps.reduce((s, a) => s + (a.parity?.changes || 0), 0);
-    const since = ov.apps.map((a) => a.parity?.tracked_since).filter(Boolean).sort()[0];
-    const item = (e, why) => {
-      const c = byId[e.id]?.color || "#fff";
-      let type = "Ready", what = "";
-      if (e.type === "parity") what = `${esc(e.name)} is ${pct(e.to)} % ready for real work <span class="${e.delta > 0 ? "up" : "down"}">(${pp(e.delta)})</span>`;
-      if (e.type === "milestone") { type = "Milestone"; what = `${esc(e.name)} is ${pct(e.value)} % ready for real work`; }
-      if (e.type === "release") { type = "Release"; what = `${esc(e.name)} ${esc(e.tag)}${e.prerelease ? " (pre-release)" : ""}`; }
-      if (e.type === "new_app") { type = "New app"; what = `${esc(e.name)} is now tracked`; }
-      return `<a href="#/app/${esc(e.id)}" style="--c:${c}">
-        <span class="etype mono ${e.type}">${type}</span>
-        <span class="what">${what}</span>
-        <span class="why">${when(e.ts)} · ${why}</span>
-      </a>`;
-    };
-    const left = parity
-      ? item(parity, parity.type === "milestone"
-        ? `First revision at or above ${pct(parity.threshold)} %`
-        : `The headline value changed ${plural(nChanges, "time")} across all apps since ${dateEN(since, false)}`)
-      : `<div><span class="etype mono">Ready</span><span class="what">No changes to "ready for real work" yet</span><span class="why">Every app has kept its value since ${dateEN(since, false)}</span></div>`;
-    let right = `<div><span class="etype mono">Release</span><span class="what">No releases yet</span><span class="why"></span></div>`;
-    if (other) {
-      right = item(other, other.type === "release"
-        ? `${releaseKind(other.kind)}${other.changes ? `, ${plural(other.changes, "change")} in the notes` : ""}`
-        : `Reference ${esc(other.adobe || "")}`);
+    const waves = ov.release_waves || [];
+    const n = ov.apps.length;
+    const col = (type, cls, what, why, extra = "") =>
+      `<div><span class="etype mono ${cls}">${type}</span><span class="what">${what}</span><span class="why">${why}</span>${extra}</div>`;
+
+    let rel = col("Release", "release", "No releases yet", "");
+    const w = waves[0];
+    if (w) {
+      const max = Math.max(...waves.map((x) => x.changes), 1);
+      const bars = waves.slice().reverse().map((x, i, arr) =>
+        `<i class="${i === arr.length - 1 ? "now" : ""}" style="height:${Math.max(6, Math.round(x.changes / max * 100))}%" title="${esc(dayUTC(x.day, false))}: ${esc(plural(x.apps, "app"))}, ${esc(plural(x.changes, "change"))}"></i>`).join("");
+      const lg = w.largest;
+      rel = col("Release wave", "release",
+        `${dayUTC(w.day, false)} · ${w.apps === n ? `all ${n} apps` : `${w.apps} of ${n} apps`}, ${plural(w.changes, "change")}`,
+        lg ? `Largest: <a href="#/app/${esc(lg.id)}">${esc(lg.name)} ${esc(lg.tag)}</a>, ${plural(lg.changes, "change")}` : "",
+        waves.length > 1 ? `<div class="waves" role="img" aria-label="Changes per release day, last ${waves.length} days with releases">${bars}</div>
+          <div class="waves-lab mono"><span>${dayUTC(waves[waves.length - 1].day, false)}</span><span>Changes per release day</span><span>${dayUTC(w.day, false)}</span></div>` : "");
     }
-    return `<section class="latest" aria-label="Latest updates">${left}${right}</section>`;
+
+    const p = ev.find((e) => e.type === "parity" || e.type === "milestone");
+    const since = ov.apps.map((a) => a.parity?.tracked_since).filter(Boolean).sort()[0];
+    let ready;
+    if (p?.type === "milestone") {
+      ready = col("Milestone", "milestone", `${esc(p.name)} is ${pct(p.value)} % ready for real work`,
+        `${when(p.ts)} · first revision at or above ${pct(p.threshold)} %`);
+    } else {
+      const last = p?.ts || since;
+      const days = last ? Math.floor((Date.now() - ms(last)) / 86400000) : null;
+      // Changes shipped in releases after the last value change. The waves only reach back so far: a "+" says
+      // the count starts at the oldest listed wave.
+      const after = waves.filter((x) => last && x.day > last.slice(0, 10));
+      const shipped = after.reduce((s, x) => s + x.changes, 0);
+      const more = after.length === waves.length && last.slice(0, 10) < (waves[waves.length - 1]?.day || "");
+      const wavesTxt = shipped ? ` · ${nf(shipped)}${more ? "+" : ""} changes shipped since` : "";
+      const c = p ? byId[p.id]?.color || "#fff" : null;
+      const lastTxt = p ? `Last: <a href="#/app/${esc(p.id)}" style="color:${c}">${esc(p.name)}</a> <span class="${p.delta > 0 ? "up" : "down"}">${pp(p.delta)}</span> to ${pct(p.to)} % on ${dateEN(p.ts, false)}`
+        : `No app has changed its value since ${dateEN(since, false)}`;
+      ready = days != null && days >= 2
+        ? col("Ready", "parity", `No value changed for ${days} days`, lastTxt + wavesTxt)
+        : col("Ready", "parity", p ? `${esc(p.name)} is ${pct(p.to)} % ready for real work <span class="${p.delta > 0 ? "up" : "down"}">(${pp(p.delta)})</span>` : "No changes yet",
+          p ? `${when(p.ts)}${wavesTxt}` : "");
+    }
+
+    const acts = ov.apps.filter((a) => a.activity);
+    const code7 = acts.reduce((s, a) => s + (a.activity.changes_7d || 0), 0);
+    const top = acts.slice().sort((a, b) => (b.activity.changes_7d || 0) - (a.activity.changes_7d || 0))[0];
+    const revs = ov.apps.reduce((s, a) => s + (a.roadmap?.revisions_7d || 0), 0);
+    const code = col("Code", "", `${plural(code7, "change")} merged in 7 days`,
+      `${top ? `Busiest: <a href="#/app/${esc(top.id)}">${esc(top.name)}</a>, ${nf(top.activity.changes_7d)}` : ""}${revs ? ` · roadmaps revised ${plural(revs, "time")}` : ""}`);
+
+    return `<section class="latest" aria-label="Latest updates">${rel}${ready}${code}</section>`;
   }
 
   function ranking(withFull) {
@@ -749,8 +784,7 @@
     const avg = withFull.length ? withFull.reduce((s, a) => s + a.full_pct, 0) / withFull.length : null;
     const alpha = all.filter((a) => stageKey(a.stage) === "alpha").length;
     const pre = all.filter((a) => stageKey(a.stage) === "prealpha").length;
-    const nChanges = all.reduce((s, a) => s + (a.parity?.changes || 0), 0);
-    const since = all.map((a) => a.parity?.tracked_since).filter(Boolean).sort()[0];
+    const wave = (ov.release_waves || [])[0];
     const buzzing = all.filter((a) => a.activity?.level === "buzzing").length;
     const thr = ov.milestone_pct ?? 95;
 
@@ -787,7 +821,7 @@
           <p class="mono" id="hero-checked" style="margin-top:14px;font-size:10.5px;max-width:none">${heroChecked()}</p>
           <div class="stats">
             <div><div class="v">${pct(avg)} %</div><div class="l">Average ready for real work</div></div>
-            <div><div class="v">${nChanges}</div><div class="l">Value changes since ${dateEN(since, false)}</div></div>
+            <div><div class="v">${wave ? nf(wave.changes) : "–"}</div><div class="l">${wave ? `Changes in the last release wave, ${dayUTC(wave.day, false)}` : "No release wave yet"}</div></div>
             <div><div class="v">${buzzing}<span class="muted" style="font-size:18px"> / ${all.length}</span></div><div class="l">Apps buzzing now</div></div>
           </div>
         </section>
@@ -937,7 +971,7 @@
         ${bar(shown, state.metric === "ready")}
         <div class="pline">${state.metric === "ready" ? parityLine(a)
           : `<span>Ready for real work <b>${pct(a.full_pct)} %</b></span>${a.parity?.last_change ? `<span class="${a.parity.last_change.delta > 0 ? "up" : "down"}">${pp(a.parity.last_change.delta)} ${when(a.parity.last_change.ts)}</span>` : "<span></span>"}`}</div>
-        ${staleHint(a.parity) ? `<div class="stale mono" title="The roadmap value has not changed since ${esc(stamp(a.parity.value_since))}">${staleHint(a.parity)}</div>` : ""}
+        ${staleHint(a.parity) ? `<div class="stale-hint mono" title="The roadmap value has not changed since ${esc(stamp(a.parity.value_since))}">${staleHint(a.parity)}</div>` : ""}
         <div class="aline">
           ${level(act)}
           <span title="Code changes per day, last 14 days">${act ? cells(act.window) : ""}</span>
