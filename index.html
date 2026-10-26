@@ -337,6 +337,11 @@
   .kv > div:nth-child(n+3) { border-top: 1px solid var(--line); }
   .kv .v { font-size: 18px; font-weight: 600; font-variant-numeric: tabular-nums; }
   .kv .l { color: var(--muted); font-size: 12px; margin-top: 2px; }
+  .tip { position: fixed; z-index: 60; max-width: 300px; padding: 8px 10px; background: #111; border: 1px solid var(--line-2); color: var(--text); font-size: 12px; line-height: 1.45; white-space: pre-line; text-transform: none; letter-spacing: 0; font-family: inherit; pointer-events: none; opacity: 0; transition: opacity .12s; }
+  .tip.on { opacity: 1; }
+  @media (prefers-reduced-motion: reduce) { .tip { transition: none; } }
+  [data-tip], [title] { cursor: help; }
+  a[data-tip], a[title], button[data-tip], button[title], .card [data-tip], .card[title] { cursor: inherit; }
   .since { border-top: 1px solid var(--line); padding: 12px 0 0; font-size: 13.5px; }
   .since .k { color: var(--faint); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; }
   .since .v { margin-top: 6px; font-weight: 600; }
@@ -509,6 +514,35 @@
     ["name", "Name"],
   ];
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  /* Hover infos: one tooltip for every element with a title. The title moves to data-tip on first hover, so the
+     browser's own tooltip doesn't show as well. Mouse, keyboard focus and touch all open it. */
+  const tip = Object.assign(document.createElement("div"), { className: "tip", id: "tip" });
+  tip.setAttribute("role", "tooltip");
+  document.body.append(tip);
+  let tipFor = null;
+  function hideTip() {
+    tipFor?.removeAttribute("aria-describedby");
+    tipFor = null;
+    tip.classList.remove("on");
+  }
+  function showTip(el) {
+    if (el.hasAttribute("title")) { el.dataset.tip = el.getAttribute("title"); el.removeAttribute("title"); }
+    if (!el.dataset.tip) return;
+    tipFor = el;
+    el.setAttribute("aria-describedby", "tip");
+    tip.textContent = el.dataset.tip;
+    tip.classList.add("on");
+    const r = el.getBoundingClientRect(), w = tip.offsetWidth, h = tip.offsetHeight;
+    tip.style.left = `${Math.max(8, Math.min(innerWidth - w - 8, r.left + r.width / 2 - w / 2))}px`;
+    tip.style.top = `${r.top - h - 8 >= 8 ? r.top - h - 8 : r.bottom + 8}px`;
+  }
+  const tipTarget = (e) => e.target.closest?.("[title], [data-tip]") || null;
+  document.addEventListener("pointerover", (e) => { const el = tipTarget(e); if (el !== tipFor) { hideTip(); if (el) showTip(el); } });
+  document.addEventListener("pointerout", (e) => { if (tipFor && !tipFor.contains(e.relatedTarget)) hideTip(); });
+  document.addEventListener("focusin", (e) => { const el = tipTarget(e); if (el) showTip(el); });
+  document.addEventListener("focusout", hideTip);
+  addEventListener("scroll", hideTip, { passive: true });
+
   const store = {
     get(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : v; } catch (e) { return d; } },
     set(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* storage blocked */ } },
@@ -637,15 +671,19 @@
     const top = staleHint(p);
     if (!top) return "";
     const below = "revisions_since" in p ? belowHint(p) : "";  // data written before areas and hours were read
-    const hr = p.hours_since ? ` Hours to ~95 %: ${hours(p.hours_since.from)} then, ${hours(p.hours_since.to)} now.` : "";
-    const title = `The roadmap value has not changed since ${stamp(p.value_since)}. Updates are roadmap revisions with new text or other estimates.${p.areas_since ? ` Areas: ${moveList(p.areas_since)}.` : ""}${hr}`;
-    return `<div class="stale-hint mono" title="${esc(title)}"><span>${top}</span>${below ? `<span>${below}</span>` : ""}</div>`;
+    const topTip = `The "ready for real work" value has stood since ${stamp(p.value_since)}.${p.revisions_since ? `\nUpdates: ${plural(p.revisions_since, "roadmap revision")} with new text or other estimates since then.` : ""}${p.releases_since ? `\nReleases: ${p.releases_since_capped ? `${nf(p.releases_since)} or more` : nf(p.releases_since)} published since then (pre-releases don't count).` : ""}`;
+    const moves = (p.areas_since?.moves || []).map((m) => `${m.label}: ${pct(m.from)} → ${pct(m.to)} % (${dateEN(m.ts, false)})`);
+    const belowTip = [
+      moves.length ? `Areas of the roadmap's Features table whose ready value changed since ${dateEN(p.value_since, false)}:\n${moves.join("\n")}` : "No area of the roadmap's Features table changed its ready value since then.",
+      p.hours_since ? `Agent hours to ~95 %, the roadmap's own estimate: ${hours(p.hours_since.from)} then, ${hours(p.hours_since.to)} now.` : "The roadmap's hour estimate to ~95 % is unchanged.",
+    ].join("\n\n");
+    return `<div class="stale-hint mono"><span title="${esc(topTip)}">${top}</span>${below ? `<span title="${esc(belowTip)}">${below}</span>` : ""}</div>`;
   }
   const moveList = (s) => (s?.moves || []).map((m) => `${esc(m.label)} ${pct(m.from)} → ${pct(m.to)} %`).join(" · ");
 
   function parityLine(a) {
     const lc = a.parity?.last_change;
-    return `<span>Product parity <b>${pct(a.breadth_pct)} %</b></span>${lc ? `<span class="${lc.delta > 0 ? "up" : "down"}">${pp(lc.delta)} ${when(lc.ts)}</span>` : "<span></span>"}`;
+    return `<span title="${esc(`Feature breadth: how many of ${a.adobe}'s features exist at all, ready or not.`)}">Product parity <b>${pct(a.breadth_pct)} %</b></span>${lc ? `<span class="${lc.delta > 0 ? "up" : "down"}" title="${esc(`Last value change: ${pct(lc.from)} → ${pct(lc.to)} % on ${stamp(lc.ts)}\n${lc.message}`)}">${pp(lc.delta)} ${esc(ago(lc.ts))}</span>` : "<span></span>"}`;
   }
 
   /* ---------- Data ---------- */
@@ -740,8 +778,8 @@
     const byId = Object.fromEntries(ov.apps.map((a) => [a.id, a]));
     const waves = ov.release_waves || [];
     const n = ov.apps.length;
-    const col = (type, what, why, extra = "") =>
-      `<div><div class="lt"><span class="lk mono">${type}</span><span class="what">${what}</span><span class="why">${why}</span></div>${extra}</div>`;
+    const col = (type, what, why, extra = "", tipText = "") =>
+      `<div><div class="lt"><span class="lk mono">${type}</span><span class="what"${tipText ? ` title="${esc(tipText)}"` : ""}>${what}</span><span class="why">${why}</span></div>${extra}</div>`;
 
     let rel = col("Release", "No releases yet", "");
     const w = waves[0];
@@ -754,7 +792,8 @@
         `${dayUTC(w.day, false)} · ${w.apps === n ? `all ${n} apps` : `${w.apps} of ${n} apps`}, ${plural(w.changes, "change")}`,
         lg ? `Largest: <a href="#/app/${esc(lg.id)}">${esc(lg.name)} ${esc(lg.tag)}</a>, ${plural(lg.changes, "change")}` : "",
         waves.length > 1 ? `<div class="wv" title="Changes per release day"><div class="waves" role="img" aria-label="Changes per release day, last ${waves.length} days with releases">${bars}</div>
-          <div class="waves-lab mono"><span>${dayUTC(waves[waves.length - 1].day, false)}</span><span>${dayUTC(w.day, false)}</span></div></div>` : "");
+          <div class="waves-lab mono"><span>${dayUTC(waves[waves.length - 1].day, false)}</span><span>${dayUTC(w.day, false)}</span></div></div>` : "",
+        "The apps release in waves, all within minutes. A wave is one UTC day with releases; changes are the pull requests listed in the release notes. Pre-releases don't count.");
     }
 
     const p = ev.find((e) => e.type === "parity" || e.type === "milestone");
@@ -775,8 +814,9 @@
       const c = p ? byId[p.id]?.color || "#fff" : null;
       const lastTxt = p ? `Last: <a href="#/app/${esc(p.id)}" style="color:${c}">${esc(p.name)}</a> <span class="${p.delta > 0 ? "up" : "down"}">${pp(p.delta)}</span> to ${pct(p.to)} % on ${dateEN(p.ts, false)}`
         : `No app has changed its value since ${dateEN(since, false)}`;
+      const readyTip = `Days since any app's "ready for real work" value last changed.${shipped ? ` The changes shipped since are the pull requests in the release waves after that day${more ? "; \"+\" means the count starts at the oldest kept wave" : ""}.` : ""}`;
       ready = days != null && days >= 2
-        ? col("Ready", `No value changed for ${days} days`, lastTxt + wavesTxt)
+        ? col("Ready", `No value changed for ${days} days`, lastTxt + wavesTxt, "", readyTip)
         : col("Ready", p ? `${esc(p.name)} is ${pct(p.to)} % ready for real work <span class="${p.delta > 0 ? "up" : "down"}">(${pp(p.delta)})</span>` : "No changes yet",
           p ? `${when(p.ts)}${wavesTxt}` : "");
     }
@@ -786,7 +826,8 @@
     const top = acts.slice().sort((a, b) => (b.activity.changes_7d || 0) - (a.activity.changes_7d || 0))[0];
     const revs = ov.apps.reduce((s, a) => s + (a.roadmap?.revisions_7d || 0), 0);
     const code = col("Code", `${plural(code7, "change")} merged in 7 days`,
-      `${top ? `Busiest: <a href="#/app/${esc(top.id)}">${esc(top.name)}</a>, ${nf(top.activity.changes_7d)}` : ""}${revs ? ` · roadmaps revised ${plural(revs, "time")}` : ""}`);
+      `${top ? `Busiest: <a href="#/app/${esc(top.id)}">${esc(top.name)}</a>, ${nf(top.activity.changes_7d)}` : ""}${revs ? ` · roadmaps revised ${plural(revs, "time")}` : ""}`,
+      "", "Code changesets merged into main across all apps in the last 7 UTC days (pull requests and direct commits, each once). Docs, CI, roadmap edits and version bumps don't count.");
 
     return `<section class="latest" aria-label="Latest updates">${rel}${ready}${code}</section>`;
   }
@@ -811,7 +852,7 @@
         </a>`).join("");
     }
     return withFull.slice().sort((a, b) => b.full_pct - a.full_pct || a.order - b.order).map((a, i) => `
-      <a class="rank-row" href="#/app/${esc(a.id)}" style="--c:${a.color}">
+      <a class="rank-row" href="#/app/${esc(a.id)}" style="--c:${a.color}" title="${esc(`${pct(a.full_pct)} % ready for real work, ${pct(a.breadth_pct)} % product parity. Value from ${dateEN(a.parity?.value_since, false)}.`)}">
         <span class="ri">${chipNo(i + 1)}</span>
         <span class="rn">${twoTone(a.name)}</span>
         ${bar(a.full_pct)}
@@ -829,6 +870,10 @@
     const wave = (ov.release_waves || [])[0];
     const buzzing = all.filter((a) => a.activity?.level === "buzzing").length;
     const thr = ov.milestone_pct ?? 95;
+    const byFull = withFull.slice().sort((a, b) => a.full_pct - b.full_pct);
+    const avgTip = byFull.length ? `Plain mean of the ${byFull.length} apps' "ready for real work" values, each the project's own estimate in its ROADMAP.md.\nLowest: ${byFull[0].name} ${pct(byFull[0].full_pct)} %. Highest: ${byFull.at(-1).name} ${pct(byFull.at(-1).full_pct)} %.` : "";
+    const waveTip = wave ? `All releases on ${dayUTC(wave.day)} (UTC): ${plural(wave.apps, "app")}, ${plural(wave.changes, "pull request")} listed in their release notes. Pre-releases don't count.${wave.largest ? `\nLargest: ${wave.largest.name} ${wave.largest.tag}, ${plural(wave.largest.changes, "change")}.` : ""}` : "";
+    const buzzTip = `Buzzing: code changes on at least 5 of the last 7 days and a high activity score. Activity is effort, not progress.\n${all.filter((a) => a.activity?.level === "buzzing").map((a) => a.name).join(", ") || "None right now."}`;
 
     const errors = (ov.errors || []).length ? `<div class="errors">${ov.errors.map(esc).join("<br>")}</div>` : "";
     const banner = (ov.recent_additions || []).map((r) => `
@@ -862,9 +907,9 @@
           <p>How close each app is to replacing the product it rebuilds, how actively it's being built, and what changed last.</p>
           <p class="mono" id="hero-checked" style="margin-top:14px;font-size:10.5px;max-width:none">${heroChecked()}</p>
           <div class="stats">
-            <div><div class="v">${pct(avg)} %</div><div class="l">Average ready for real work</div></div>
-            <div><div class="v">${wave ? nf(wave.changes) : "–"}</div><div class="l">${wave ? `Changes in the last release wave, ${dayUTC(wave.day, false)}` : "No release wave yet"}</div></div>
-            <div><div class="v">${buzzing}<span class="muted" style="font-size:18px"> / ${all.length}</span></div><div class="l">Apps buzzing now</div></div>
+            <div title="${esc(avgTip)}"><div class="v">${pct(avg)} %</div><div class="l">Average ready for real work</div></div>
+            <div title="${esc(waveTip)}"><div class="v">${wave ? nf(wave.changes) : "–"}</div><div class="l">${wave ? `Changes in the last release wave, ${dayUTC(wave.day, false)}` : "No release wave yet"}</div></div>
+            <div title="${esc(buzzTip)}"><div class="v">${buzzing}<span class="muted" style="font-size:18px"> / ${all.length}</span></div><div class="l">Apps buzzing now</div></div>
           </div>
         </section>
         <section>
@@ -1003,13 +1048,15 @@
           <div class="sub">${esc(a.category)} · Reference ${esc(a.adobe)}</div>
         </div>
         <div class="tags mono">
-          ${a.stage ? `<span class="tag">${esc(stageLabel(a.stage))}</span>` : ""}
+          ${a.stage ? `<span class="tag" title="${esc(`Stage from the roadmap: ${stageLabel(a.stage)}${a.next_stage ? `, next ${stageLabel(a.next_stage)}` : ""}.`)}">${esc(stageLabel(a.stage))}</span>` : ""}
           ${r ? `<span class="tag plain" title="Latest release, ${esc(stamp(r.ts))}">${esc(r.tag)} · ${esc(dateEN(r.ts, false))}</span>` : ""}
           ${a.is_new ? `<span class="tag new">New app</span>` : ""}
           ${milestoneTag(a.milestone, true)}
         </div>
         <div class="full">
-          <div class="full-num" data-v="${shown ?? ""}">${pct(shown)}<span>%</span></div>
+          <div class="full-num" data-v="${shown ?? ""}" title="${esc(state.metric === "ready"
+            ? `Ready for real work: how much of ${a.adobe} a professional could replace with ${a.name} in daily work, the project's own estimate.${a.full_hours ? `\nAbout ${hours(a.full_hours)} of agent work to ~95 %.` : ""}`
+            : `Product parity: how many of ${a.adobe}'s features exist in ${a.name}, ready or not (the roadmap's feature breadth).`)}">${pct(shown)}<span>%</span></div>
           ${M.lab ? `<div class="full-lab mono">${M.lab}</div>` : ""}
         </div>
         ${bar(shown, state.metric === "ready")}
@@ -1432,7 +1479,7 @@
     const moved = new Map((par.areas_since?.moves || []).map((mv) => [mv.label, mv]));
     const areaRows = (list) => (list || []).map((x) => {
       const mv = moved.get(x.label);
-      const sub = [x.hours ? `${hours(x.hours)} to go` : "", mv ? `<span class="${mv.to > mv.from ? "up" : "down"}">${pp(mv.to - mv.from)}</span> since ${dateEN(par.value_since, false)}` : ""].filter(Boolean).join(" · ");
+      const sub = [x.hours ? `${hours(x.hours)} to go` : "", mv ? `<span class="${mv.to > mv.from ? "up" : "down"}" title="${esc(`${pct(mv.from)} → ${pct(mv.to)} %, last changed ${stamp(mv.ts)}`)}">${pp(mv.to - mv.from)}</span> since ${dateEN(par.value_since, false)}` : ""].filter(Boolean).join(" · ");
       return `<div class="row"><span>${esc(x.label)}</span>${bar(x.pct)}<span class="p">${pct(x.pct)} %</span>${sub ? `<span class="sub2 mono">${sub}</span>` : ""}</div>`;
     }).join("");
     // Everything that moved while the headline value stood still. All of it is read from the roadmap.
@@ -1443,7 +1490,7 @@
     ].filter(Boolean);  // the hours trend sits under the hours value above
     const sinceHTML = par.value_since && sinceParts.length ? `<div class="since">
       <div class="k mono">Since the value was set · ${esc(dateEN(par.value_since))}</div>
-      <div class="v">${sinceParts.join(" · ")}</div>
+      <div class="v" title="What moved while the ready value stood still, all read from the roadmap and GitHub. Updates are roadmap revisions with new text or other estimates; areas are rows of its Features table whose ready value changed (net per area).">${sinceParts.join(" · ")}</div>
       ${par.areas_since ? `<div class="m">${moveList(par.areas_since)}</div>` : ""}</div>` : "";
     const feed = (p.progress || []).slice(0, 30).map((x) => `<li><time class="mono">${esc(dateEN(x.date))}</time><span>${esc(x.text)}</span></li>`).join("");
     const upcoming = (p.upcoming || []).map((u) => `<li>${esc(u)}</li>`).join("");
@@ -1500,10 +1547,10 @@
           <div class="big-detail" style="margin-top:14px">${pct(fullNow)}<span>%</span></div>
           <div style="margin-top:14px">${bar(fullNow, true)}</div>
           <div class="kv">
-            <div><div class="v">${hours(m.full?.hours || s.full_hours)}</div><div class="l">Agent hours to ~95 % (estimate)${par.hours_since ? `<br><span class="${hoursDelta(par.hours_since).endsWith("less") ? "up" : ""}">${hoursDelta(par.hours_since)}</span> than ${hours(par.hours_since.from)} on ${dateEN(par.value_since, false)}` : ""}</div></div>
-            <div><div class="v">${pct(m.breadth?.pct)} %</div><div class="l">Product parity (feature breadth)</div></div>
-            <div><div class="v">${sinceStart == null ? "–" : sinceStart === 0 ? "±0 pp" : pp(sinceStart)}</div><div class="l">Since the first value (${dateEN(par.tracked_since, false)})</div></div>
-            <div><div class="v">${nf(par.changes ?? 0)}</div><div class="l">Value changes in ${plural(hist.length, "revision")}</div></div>
+            <div title="The roadmap's own estimate of agent work left until ~95 % ready for real work, one agent working sequentially. Always a range."><div class="v">${hours(m.full?.hours || s.full_hours)}</div><div class="l">Agent hours to ~95 % (estimate)${par.hours_since ? `<br><span class="${hoursDelta(par.hours_since).endsWith("less") ? "up" : ""}">${hoursDelta(par.hours_since)}</span> than ${hours(par.hours_since.from)} on ${dateEN(par.value_since, false)}` : ""}</div></div>
+            <div title="${esc(`How many of ${d.adobe}'s features exist at all, ready or not. Usually much higher than ready for real work.`)}"><div class="v">${pct(m.breadth?.pct)} %</div><div class="l">Product parity (feature breadth)</div></div>
+            <div title="${esc(`Ready for real work now against the first value the roadmap reported (${firstVal == null ? "–" : pct(firstVal)} % on ${dateEN(par.tracked_since)}).`)}"><div class="v">${sinceStart == null ? "–" : sinceStart === 0 ? "±0 pp" : pp(sinceStart)}</div><div class="l">Since the first value (${dateEN(par.tracked_since, false)})</div></div>
+            <div title="Roadmap revisions on the main branch that changed the ready value, up or down, out of all revisions read. Formatting-only revisions are included in the total."><div class="v">${nf(par.changes ?? 0)}</div><div class="l">Value changes in ${plural(hist.length, "revision")}</div></div>
           </div>
           ${sinceHTML}
           ${par.truncated ? `<p class="note">History is incomplete: older revisions weren't read.</p>` : ""}
@@ -1528,10 +1575,10 @@
         <div class="body">
           ${activityChart(act, c)}
           <div class="afig">
-            <div><div class="v">${act ? nf(act.changes_7d) : "–"}</div><div class="l">Code changes, 7 days</div></div>
-            <div><div class="v">${act ? `${act.active_days_7d} / 7` : "–"}</div><div class="l">Days with code changes</div></div>
-            <div><div class="v">${act ? nf(act.housekeeping_7d) : "–"}</div><div class="l">Docs, CI, release, 7 days</div></div>
-            <div><div class="v">${pause == null ? "–" : plural(pause, "day")}</div><div class="l">Longest pause</div></div>
+            <div title="Code changesets merged into main in the last 7 UTC days: pull-request merges and direct commits, each once."><div class="v">${act ? nf(act.changes_7d) : "–"}</div><div class="l">Code changes, 7 days</div></div>
+            <div title="UTC days in the last 7 with at least one code change. Buzzing needs 5, Active 2."><div class="v">${act ? `${act.active_days_7d} / 7` : "–"}</div><div class="l">Days with code changes</div></div>
+            <div title="Changesets in the last 7 days that only touch docs, the roadmap, CI files, dotfiles or lockfiles, plus version bumps. They don't count as activity."><div class="v">${act ? nf(act.housekeeping_7d) : "–"}</div><div class="l">Docs, CI, release, 7 days</div></div>
+            <div title="Longest run of days without a code change in the activity chart above."><div class="v">${pause == null ? "–" : plural(pause, "day")}</div><div class="l">Longest pause</div></div>
           </div>
           <p class="note">Changes merged into main (pull requests and direct commits) per UTC day.${act?.repo_since ? ` The repository started on ${dateEN(act.repo_since)}.` : ""} Activity measures effort, not progress.</p>
         </div>
