@@ -405,18 +405,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.7,
+    "score": 16.9,
     "active_days_7d": 6,
-    "changes_7d": 89,
-    "changes_14d": 282,
+    "changes_7d": 90,
+    "changes_14d": 283,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-10-26T04:00:24Z",
-      "commit": "f6b0cec",
-      "commit_full": "f6b0cec67e328f2f6352768b5cb2feb7e562c5db",
-      "subject": "Window per workbook (4/4): two windows on one workbook without copying it; Arrange All (#2619)"
+      "ts": "2026-10-26T13:48:03Z",
+      "commit": "d8c5f58",
+      "commit_full": "d8c5f5885fc5320f8f1023d5fdc9f484a185ba86",
+      "subject": "refactor: reduce cognitive complexity in options, python highlighter, i18n scanner, loop search (#2611)"
     },
-    "last_commit_ts": "2026-10-26T04:00:24Z",
+    "last_commit_ts": "2026-10-26T13:48:03Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       160,
@@ -432,7 +432,7 @@
       29,
       18,
       31,
-      6
+      7
     ],
     "days": [
       {
@@ -734,9 +734,13 @@
       },
       {
         "d": "2026-10-26",
-        "code": 6,
+        "code": 7,
         "other": 0,
         "samples": [
+          {
+            "commit": "d8c5f58",
+            "subject": "refactor: reduce cognitive complexity in options, python highlighter, i18n scanner, loop search (#2611)"
+          },
           {
             "commit": "f6b0cec",
             "subject": "Window per workbook (4/4): two windows on one workbook without copying it; Arrange All (#2619)"
@@ -744,10 +748,6 @@
           {
             "commit": "862dfc1",
             "subject": "Window per workbook (3/4): a native window per workbook window (#2618)"
-          },
-          {
-            "commit": "1b63c3f",
-            "subject": "Window per workbook (2/4): windows in the engine; New Window shares the workbook (#2617)"
           }
         ]
       }
@@ -2623,5 +2623,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-26T11:13:47+00:00"
+  "updated_at": "2026-10-26T15:26:51+00:00"
 }
