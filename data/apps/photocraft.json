@@ -363,18 +363,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 24.2,
+    "score": 24.4,
     "active_days_7d": 7,
-    "changes_7d": 215,
-    "changes_14d": 966,
+    "changes_7d": 216,
+    "changes_14d": 967,
     "housekeeping_7d": 20,
     "last_code_change": {
-      "ts": "2026-10-26T03:13:32Z",
-      "commit": "59cb4c4",
-      "commit_full": "59cb4c49bd236df04d8e37d4764253f29ca6600a",
-      "subject": "Panels: remove the native dock's drawing, strip and drag code (#9583)"
+      "ts": "2026-10-26T19:16:03Z",
+      "commit": "d641b96",
+      "commit_full": "d641b96a5211c05619c37679903836c184618647",
+      "subject": "Preserve locale-aware CJK fonts and migration regressions after #9363 (#9518)"
     },
-    "last_commit_ts": "2026-10-26T03:13:32Z",
+    "last_commit_ts": "2026-10-26T19:16:03Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       312,
@@ -390,7 +390,7 @@
       89,
       14,
       45,
-      5
+      6
     ],
     "days": [
       {
@@ -889,9 +889,13 @@
       },
       {
         "d": "2026-10-26",
-        "code": 5,
+        "code": 6,
         "other": 0,
         "samples": [
+          {
+            "commit": "d641b96",
+            "subject": "Preserve locale-aware CJK fonts and migration regressions after #9363 (#9518)"
+          },
           {
             "commit": "59cb4c4",
             "subject": "Panels: remove the native dock's drawing, strip and drag code (#9583)"
@@ -899,10 +903,6 @@
           {
             "commit": "d3b0a76",
             "subject": "lint: drop blank lines after doc comments and attributes; tidy IME else, closure, shell tests (#9576)"
-          },
-          {
-            "commit": "b078e0e",
-            "subject": "Panels: review follow-ups to the shared docking and egui 0.37 merges (#9575)"
           }
         ]
       }
@@ -1254,5 +1254,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-26T17:58:51+00:00"
+  "updated_at": "2026-10-26T19:30:41+00:00"
 }
