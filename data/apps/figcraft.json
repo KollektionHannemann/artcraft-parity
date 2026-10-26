@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "42d7c3c",
-  "latest_commit_date": "2026-10-26T08:59:44+07:00",
-  "latest_message": "Review fixes for #1184, #919 and #1134 (#1355)",
+  "latest_commit": "f93deb9",
+  "latest_commit_date": "2026-10-26T10:23:17+07:00",
+  "latest_message": "M7: find fonts activated through Adobe Fonts on macOS (#298) (#661)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -283,6 +283,10 @@
         "text": "· Frames and sections convert into each other (M1, #719): object.convertToSection turns a frame on the page or in a section into a section in place (same box, name, fill and layers, which stay where they are; what only a frame has goes: auto layout, clipping, layout grids, guides, scrolling), and object.convertToFrame now also turns a section into a frame that keeps its fill and doesn't clip, so the look stays. Nested frames, instances, main components and sections holding sections are refused with the reason; one undo step each. Both are in the canvas context menu (Convert to section / Convert to frame) and in Spanish. Numbers unchanged."
       },
       {
+        "date": "2026-10-16",
+        "text": "· Adobe Fonts found on macOS (M7, #298): fonts activated through Adobe Fonts rendered in the fallback font without a warning, because Creative Cloud keeps them in its own folder as hidden files named by number, which the font scan never read. The macOS scan now includes ~/Library/Application Support/Adobe/CoreSync/plugins/livetype, and files without an extension are indexed when they start with a font signature. Fonts are read in place. Regression test in the font database tests; docs/cli.md lists the folder. Numbers unchanged."
+      },
+      {
         "date": "2026-10-15",
         "text": "· Auto-save (M1, #305): Preferences ▸ Save files automatically (pref.autoSave, off by default, desktop only) saves each open file that has a path 3 s after its last change, never during a gesture, a live text preview or while a version is shown; the file is encoded off the UI thread, a failed save says why and is tried again a minute later. Numbers unchanged."
       },
@@ -401,10 +405,6 @@
       {
         "date": "2026-10-12",
         "text": "· Sharing with a join code: Share ▸ Online (through the server in Preferences, built in) or"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "· Text metrics measured: our example documents, re-saved by other software, were read back and"
       }
     ]
   },
@@ -424,39 +424,39 @@
     }
   },
   "roadmap": {
-    "revisions": 110,
-    "revisions_7d": 11,
+    "revisions": 111,
+    "revisions_7d": 12,
     "last_revision": {
-      "ts": "2026-10-26T01:59:44Z",
+      "ts": "2026-10-26T03:23:17Z",
       "kind": "content",
-      "commit": "42d7c3c",
-      "commit_full": "42d7c3c45f00bee195f7451fa03ed44bfdfbd98b",
-      "message": "Review fixes for #1184, #919 and #1134 (#1355)"
+      "commit": "f93deb9",
+      "commit_full": "f93deb965ba455302e6cd3e35b5808d7daadb0f1",
+      "message": "M7: find fonts activated through Adobe Fonts on macOS (#298) (#661)"
     },
     "last_update": {
-      "ts": "2026-10-26T01:59:44Z",
+      "ts": "2026-10-26T03:23:17Z",
       "kind": "content",
-      "commit": "42d7c3c",
-      "commit_full": "42d7c3c45f00bee195f7451fa03ed44bfdfbd98b",
-      "message": "Review fixes for #1184, #919 and #1134 (#1355)"
+      "commit": "f93deb9",
+      "commit_full": "f93deb965ba455302e6cd3e35b5808d7daadb0f1",
+      "message": "M7: find fonts activated through Adobe Fonts on macOS (#298) (#661)"
     },
     "self_reported": "2026-10-25"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.4,
+    "score": 21.2,
     "active_days_7d": 6,
-    "changes_7d": 104,
-    "changes_14d": 232,
+    "changes_7d": 121,
+    "changes_14d": 249,
     "housekeeping_7d": 18,
     "last_code_change": {
-      "ts": "2026-10-26T02:05:13Z",
-      "commit": "abc5105",
-      "commit_full": "abc5105111bd0ed56c290634b84daa9265c4f406",
-      "subject": "Skip zero-length segments when finding arrowhead direction (#1297)"
+      "ts": "2026-10-26T03:25:56Z",
+      "commit": "660140d",
+      "commit_full": "660140ddc13c16bbfb6ded5b45992b616bb516df",
+      "subject": "i18n(sv): translate 38 new strings, use the agreed terms in 93 (#984)"
     },
-    "last_commit_ts": "2026-10-26T02:05:13Z",
+    "last_commit_ts": "2026-10-26T03:25:56Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       20,
@@ -472,7 +472,7 @@
       9,
       27,
       26,
-      22
+      39
     ],
     "days": [
       {
@@ -787,20 +787,20 @@
       },
       {
         "d": "2026-10-26",
-        "code": 22,
+        "code": 39,
         "other": 2,
         "samples": [
           {
-            "commit": "abc5105",
-            "subject": "Skip zero-length segments when finding arrowhead direction (#1297)"
+            "commit": "660140d",
+            "subject": "i18n(sv): translate 38 new strings, use the agreed terms in 93 (#984)"
           },
           {
-            "commit": "1172cfa",
-            "subject": "Fix missing end arrowhead when a closed subpath follows an open one (#1324)"
+            "commit": "f93cdc7",
+            "subject": "Name the failing step in batch command errors (#1340)"
           },
           {
-            "commit": "a2d4886",
-            "subject": "Scale per-point corner radius of vector layers in transform.scale (#1329)"
+            "commit": "8b470ec",
+            "subject": "fix: Issue (#1062) render bounds stop at the depth the renderer draws. (#1275)"
           }
         ]
       }
@@ -3525,7 +3525,30 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "f93deb9",
+      "commit_full": "f93deb965ba455302e6cd3e35b5808d7daadb0f1",
+      "commit_date": "2026-10-26T10:23:17+07:00",
+      "ts": "2026-10-26T03:23:17Z",
+      "message": "M7: find fonts activated through Adobe Fonts on macOS (#298) (#661)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-25",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-26T03:00:43+00:00"
+  "updated_at": "2026-10-26T03:27:34+00:00"
 }
