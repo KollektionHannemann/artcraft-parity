@@ -78,7 +78,7 @@
   .checked.off .dot { background: var(--low); }
   @media (max-width: 860px) { .hide-md { display: none; } }
   @media (max-width: 720px) { .checked .lbl { display: none; } }
-  @media (max-width: 560px) {
+  @media (max-width: 640px) {  /* wordmark, badge and check time stop fitting in one row below about 620 px */
     .topbar { flex-wrap: wrap; }
     .wordmark { flex: 1; border-right: 0; padding: 12px 16px; }
     .wordmark { flex: 1 1 auto; }
@@ -181,7 +181,7 @@
   .up { color: var(--good); } .down { color: var(--low); }
 
   /* Toolbar */
-  .toolbar { display: flex; align-items: stretch; border: 1px solid var(--line); border-bottom: 0; flex-wrap: wrap; }
+  .toolbar { display: flex; align-items: stretch; border: 1px solid var(--line); flex-wrap: wrap; }
   .seg { display: flex; }
   .seg button { background: none; border: 0; border-right: 1px solid var(--line); color: var(--muted); padding: 12px 16px; cursor: pointer; }
   .seg button:hover { color: var(--text); }
@@ -193,29 +193,45 @@
   .sel, .search { background: #000; color: var(--text); border: 0; padding: 12px 14px; outline: none; }
   .sel { cursor: pointer; appearance: none; -webkit-appearance: none; padding-right: 40px;
     background: #000 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23a3a3a3' stroke-width='1.2'/%3E%3C/svg%3E") no-repeat right 16px center; }
-  .search { min-width: 220px; border-left: 1px solid var(--line); }
+  .search { flex: 1 1 220px; min-width: 0; border-left: 1px solid var(--line); }
+  /* The bar wraps in steps, never between "Sort" and its menu: one row from 1210 px; below, the search takes a
+     row of its own while sorting fills the rest of the first; below 1010 px sorting moves down next to the search */
+  .sortgrp { display: flex; flex: 0 0 auto; }
+  .toolbar .brk { display: none; }
+  .seg.view button:last-child { border-right: 0; }  /* "Sort" draws the line after it */
+  @media (max-width: 1210px) {
+    .sortgrp { flex: 1 1 auto; }
+    .sortgrp .sel { flex: 1; }
+    .search { flex-basis: 100%; border-left: 0; border-top: 1px solid var(--line); }
+  }
+  @media (max-width: 1010px) {
+    .toolbar .brk { display: block; flex-basis: 100%; height: 0; }  /* sorting always starts the second row */
+    .sortgrp { flex: 0 0 auto; border-top: 1px solid var(--line); }
+    .sortgrp .sortlab { border-left: 0; }
+    .search { flex: 1 1 220px; border-left: 1px solid var(--line); }
+  }
   .search::placeholder { color: var(--faint); }
   .sel:focus-visible, .search:focus-visible { background-color: #0b0b0b; outline: 1px solid var(--line-2); outline-offset: -1px; }
-  @media (max-width: 720px) {
+  @media (max-width: 760px) {  /* filters and view stop fitting in one row below about 735 px */
     .seg { flex: 1 1 auto; border-bottom: 1px solid var(--line); }
     .seg:first-child { flex-basis: 100%; }
     #showlab { border-bottom: 1px solid var(--line); }
     .seg button { flex: 1; padding: 11px 8px; }
     .seg button:last-child { border-right: 0; }
-    .toolbar .spacer { display: none; }
     .sortlab { border-left: 0; }
     .sel { flex: 1; }
-    .search { flex: 1 1 100%; min-width: 0; border-left: 0; border-top: 1px solid var(--line); }
+    .sortgrp { flex: 1 1 100%; border-top: 0; }
+    .search { flex: 1 1 100%; border-left: 0; border-top: 1px solid var(--line); }
   }
 
   /* Cards */
   /* Cards are placed by layoutGrid(): one column per track, rows of 1px. A row of closed cards shares one height; an
-     open card grows on its own and pushes only the cards below it in its column. The hairlines are the cards'
-     outer shadows, so the space under a shorter column stays page background. */
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); grid-auto-rows: 1px; gap: 0 1px; padding: 1px 1px 0; }
-  .grid + * { border-top: 1px solid var(--line) !important; }  /* the line the grid's border drew under short columns */
+     open card grows on its own and pushes only the cards below it in its column. Cards are separate tiles: a gap
+     of page background between them and an outline (outer shadow) a step lighter than the lines inside a card. */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); grid-auto-rows: 1px; gap: 0 12px; padding: 13px 1px 1px; }
+  .grid + * { border-top: 1px solid var(--line) !important; margin-top: 12px; }  /* cards are tiles; what follows has its own top line */
   @media (max-width: 380px) { .grid { grid-template-columns: 1fr; } }
-  .card { background: var(--panel); padding: 20px 20px 18px; display: flex; flex-direction: column; gap: 14px; position: relative; cursor: pointer; transition: background .15s; min-width: 0; align-self: start; box-sizing: border-box; box-shadow: 0 0 0 1px var(--line); }
+  .card { background: var(--panel); padding: 20px 20px 18px; display: flex; flex-direction: column; gap: 14px; position: relative; cursor: pointer; transition: background .15s; min-width: 0; align-self: start; box-sizing: border-box; box-shadow: 0 0 0 1px var(--line-2); }
   .card:hover { background: var(--panel-2); }
   .card-top { display: flex; align-items: center; justify-content: space-between; color: var(--muted); }
   .clinks { display: flex; gap: 14px; }
@@ -263,7 +279,7 @@
 
   /* Milestone */
   .card.ms-fresh, .dhead.ms-fresh { box-shadow: inset 0 0 0 1px rgba(232,196,106,.6); }
-  .card.ms-fresh { box-shadow: 0 0 0 1px var(--line), inset 0 0 0 1px rgba(232,196,106,.6); }
+  .card.ms-fresh { box-shadow: 0 0 0 1px var(--line-2), inset 0 0 0 1px rgba(232,196,106,.6); }
   .ms-banner { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; border: 1px solid rgba(232,196,106,.55); background: rgba(232,196,106,.06); padding: 14px 18px; margin-bottom: 18px; }
   .ms-banner:hover { background: rgba(232,196,106,.1); }
   .ms-banner strong { font-size: 16px; }
@@ -271,8 +287,7 @@
   .burst { position: absolute; pointer-events: none; width: 6px; height: 6px; background: var(--gold); border-radius: 1px; z-index: 4; }
   .sheen { position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,.55), transparent); transform: translateX(-100%); z-index: 2; pointer-events: none; }
 
-  .statusbar { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin: 22px -24px 0; padding: 12px 24px; color: var(--muted); }
-  @media (max-width: 560px) { .statusbar { margin: 22px -16px 0; padding: 12px 16px; } }
+  .statusbar { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px; border: 1px solid var(--line); margin: 22px 0 0; padding: 12px 16px; color: var(--muted); }
   .errors { border: 1px solid rgba(255,107,107,.4); color: #ffb3b3; padding: 12px 14px; margin: 0 0 18px; font-size: 13px; }
   .empty { color: var(--muted); padding: 48px 0; text-align: center; grid-column: 1 / -1; grid-row: 1 / span 120; background: var(--panel); box-shadow: 0 0 0 1px var(--line); }
   .banner { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; border: 1px solid var(--blue); background: rgba(91,140,255,.08); padding: 14px 18px; margin-bottom: 18px; color: var(--text); }
@@ -934,11 +949,13 @@
         <div class="seg view" role="group" aria-labelledby="showlab">
           ${Object.entries(METRICS).map(([k, m]) => `<button class="mono ${state.metric === k ? "on" : ""}" data-metric="${k}" aria-pressed="${state.metric === k}">${m.label}</button>`).join("")}
         </div>
-        <div class="spacer"></div>
-        <label class="sortlab mono" for="sort">Sort</label>
-        <select class="sel mono" id="sort">
-          ${SORTS.map(([k, l]) => `<option value="${k}" ${state.sort === k ? "selected" : ""}>${l}</option>`).join("")}
-        </select>
+        <i class="brk" aria-hidden="true"></i>
+        <div class="sortgrp">
+          <label class="sortlab mono" for="sort">Sort</label>
+          <select class="sel mono" id="sort">
+            ${SORTS.map(([k, l]) => `<option value="${k}" ${state.sort === k ? "selected" : ""}>${l}</option>`).join("")}
+          </select>
+        </div>
         <input class="search" id="q" type="search" placeholder="Search apps" value="${esc(state.query)}" aria-label="Search apps">
       </div>
       <div class="grid" id="grid"></div>
@@ -1140,6 +1157,8 @@
   function layoutGrid(grid) {
     const cards = [...grid.querySelectorAll(".card")];
     if (!cards.length) return;
+    // Clear the old placement first: columns it created beyond the template would count as tracks
+    cards.forEach((el) => { el.style.gridColumn = ""; el.style.gridRow = ""; });
     const n = Math.max(1, getComputedStyle(grid).gridTemplateColumns.split(" ").length);
     const sizes = cards.map((el) => {
       el.style.height = "";
@@ -1147,6 +1166,7 @@
       const extra = list ? list.offsetHeight : 0;
       return { el, extra, closed: el.offsetHeight - extra };
     });
+    const gap = Math.round(parseFloat(getComputedStyle(grid).columnGap)) || 1;
     const top = Array(n).fill(1);  // next free row line per column
     for (let i = 0; i < sizes.length; i += n) {
       const row = sizes.slice(i, i + n);
@@ -1156,7 +1176,7 @@
         s.el.style.gridColumn = String(c + 1);
         s.el.style.gridRow = `${top[c]} / span ${H}`;
         s.el.style.height = `${H}px`;
-        top[c] += H + 1;  // one row of hairline between cards
+        top[c] += H + gap;  // the same gap as between the columns
       });
     }
     grid.dataset.cols = n;
