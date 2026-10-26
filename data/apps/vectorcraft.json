@@ -146,95 +146,187 @@
     "features": [
       {
         "label": "Selection, transform & align",
-        "pct": 85.0
+        "pct": 85.0,
+        "hours": [
+          4,
+          6
+        ]
       },
       {
         "label": "Drawing tools",
-        "pct": 85.0
+        "pct": 85.0,
+        "hours": [
+          8,
+          13
+        ]
       },
       {
         "label": "Path operations, Pathfinder, Shape Builder, Live Paint",
-        "pct": 80.0
+        "pct": 80.0,
+        "hours": [
+          4,
+          8
+        ]
       },
       {
         "label": "Colour, swatches, gradients, patterns, mesh, recolor",
-        "pct": 92.0
+        "pct": 92.0,
+        "hours": [
+          4,
+          7
+        ]
       },
       {
         "label": "Strokes, brushes, width profiles",
-        "pct": 88.0
+        "pct": 88.0,
+        "hours": [
+          8,
+          15
+        ]
       },
       {
         "label": "Appearance, transparency, graphic styles, masks",
-        "pct": 97.0
+        "pct": 97.0,
+        "hours": [
+          1,
+          2
+        ]
       },
       {
         "label": "Live vector effects",
-        "pct": 85.0
+        "pct": 85.0,
+        "hours": [
+          4,
+          8
+        ]
       },
       {
         "label": "Raster effects (Effect Gallery) — effects-parity.md",
-        "pct": 85.0
+        "pct": 85.0,
+        "hours": [
+          1,
+          2
+        ]
       },
       {
         "label": "3D and Materials",
-        "pct": 25.0
+        "pct": 25.0,
+        "hours": [
+          30,
+          55
+        ]
       },
       {
         "label": "Type core — type-parity.md",
-        "pct": 80.0
+        "pct": 80.0,
+        "hours": [
+          14,
+          19
+        ]
       },
       {
         "label": "Type advanced (CJK, spelling, Touch Type)",
-        "pct": 50.0
+        "pct": 50.0,
+        "hours": [
+          20,
+          28
+        ]
       },
       {
         "label": "Symbols, blends, envelopes, Repeat, perspective",
-        "pct": 87.0
+        "pct": 87.0,
+        "hours": [
+          5,
+          9
+        ]
       },
       {
         "label": "Image Trace, graphs, image tools",
-        "pct": 75.0
+        "pct": 75.0,
+        "hours": [
+          5,
+          8
+        ]
       },
       {
         "label": "Layers, artboards, document setup",
-        "pct": 78.0
+        "pct": 78.0,
+        "hours": [
+          5,
+          8
+        ]
       },
       {
         "label": "View & navigation",
-        "pct": 70.0
+        "pct": 70.0,
+        "hours": [
+          9,
+          14
+        ]
       },
       {
         "label": "Guides, grids, smart guides, snapping",
-        "pct": 80.0
+        "pct": 80.0,
+        "hours": [
+          4,
+          7
+        ]
       },
       {
         "label": "File formats — file-format-parity.md",
-        "pct": 75.0
+        "pct": 75.0,
+        "hours": [
+          10,
+          20
+        ]
       },
       {
         "label": "Export for Screens, Asset Export, slices",
-        "pct": 85.0
+        "pct": 85.0,
+        "hours": [
+          2,
+          4
+        ]
       },
       {
         "label": "Print, colour management, separations",
-        "pct": 80.0
+        "pct": 80.0,
+        "hours": [
+          2,
+          4
+        ]
       },
       {
         "label": "Automation (Actions, Variables, scripting)",
-        "pct": 60.0
+        "pct": 60.0,
+        "hours": [
+          8,
+          14
+        ]
       },
       {
         "label": "UI chrome (panels, Properties, preferences)",
-        "pct": 80.0
+        "pct": 80.0,
+        "hours": [
+          13,
+          20
+        ]
       },
       {
         "label": "Libraries, Links, Package",
-        "pct": 82.0
+        "pct": 82.0,
+        "hours": [
+          2,
+          3
+        ]
       },
       {
         "label": "Generative AI",
-        "pct": 0.0
+        "pct": 0.0,
+        "hours": [
+          30,
+          60
+        ]
       }
     ],
     "upcoming": [
@@ -413,6 +505,32 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 9,
     "releases_since_capped": false,
+    "revisions_since": 190,
+    "hours_since": null,
+    "areas_since": {
+      "up": 3,
+      "down": 0,
+      "moves": [
+        {
+          "label": "Raster effects (Effect Gallery) — effects-parity.md",
+          "from": 40.0,
+          "to": 85.0,
+          "ts": "2026-10-22T20:48:43Z"
+        },
+        {
+          "label": "Symbols, blends, envelopes, Repeat, perspective",
+          "from": 85.0,
+          "to": 87.0,
+          "ts": "2026-10-16T08:42:21Z"
+        },
+        {
+          "label": "3D and Materials",
+          "from": 8.0,
+          "to": 25.0,
+          "ts": "2026-10-12T18:38:27Z"
+        }
+      ]
+    },
     "changes": 0,
     "truncated": false,
     "last_change": null
@@ -422,14 +540,14 @@
     "revisions_7d": 16,
     "last_revision": {
       "ts": "2026-10-23T20:12:10Z",
-      "kind": "content",
+      "kind": "estimates",
       "commit": "b5df562",
       "commit_full": "b5df562df7dd871472d7e340d3820639b61a9f84",
       "message": "Pathfinder: Trap spreads the lighter colour into the darker as an overprinting strip where solid colours meet (#3785)"
     },
     "last_update": {
       "ts": "2026-10-23T20:12:10Z",
-      "kind": "content",
+      "kind": "estimates",
       "commit": "b5df562",
       "commit_full": "b5df562df7dd871472d7e340d3820639b61a9f84",
       "message": "Pathfinder: Trap spreads the lighter colour into the darker as an overprinting strip where solid colours meet (#3785)"
@@ -1227,6 +1345,13 @@
       "mainstream_pct": 65.0,
       "essentials_pct": 75.0,
       "breadth_pct": 88.0,
+      "area_moves": [
+        {
+          "label": "Raster effects (Effect Gallery) — effects-parity.md",
+          "from": 40.0,
+          "to": 48.0
+        }
+      ],
       "full_prev": 62.0,
       "kind": "estimates"
     },
@@ -4165,6 +4290,13 @@
       "mainstream_pct": 65.0,
       "essentials_pct": 75.0,
       "breadth_pct": 88.0,
+      "area_moves": [
+        {
+          "label": "Raster effects (Effect Gallery) — effects-parity.md",
+          "from": 48.0,
+          "to": 49.0
+        }
+      ],
       "full_prev": 62.0,
       "kind": "estimates"
     },
@@ -4581,6 +4713,13 @@
       "mainstream_pct": 65.0,
       "essentials_pct": 75.0,
       "breadth_pct": 88.0,
+      "area_moves": [
+        {
+          "label": "3D and Materials",
+          "from": 8.0,
+          "to": 25.0
+        }
+      ],
       "full_prev": 62.0,
       "kind": "estimates"
     },
@@ -5205,6 +5344,13 @@
       "mainstream_pct": 65.0,
       "essentials_pct": 75.0,
       "breadth_pct": 88.0,
+      "area_moves": [
+        {
+          "label": "Symbols, blends, envelopes, Repeat, perspective",
+          "from": 85.0,
+          "to": 87.0
+        }
+      ],
       "full_prev": 62.0,
       "kind": "estimates"
     },
@@ -5362,7 +5508,7 @@
       "essentials_pct": 75.0,
       "breadth_pct": 88.0,
       "full_prev": 62.0,
-      "kind": "content"
+      "kind": "estimates"
     },
     {
       "commit": "fdac986",
@@ -5700,7 +5846,7 @@
       "essentials_pct": 75.0,
       "breadth_pct": 88.0,
       "full_prev": 62.0,
-      "kind": "content"
+      "kind": "estimates"
     },
     {
       "commit": "02e12c6",
@@ -5725,6 +5871,13 @@
       "mainstream_pct": 65.0,
       "essentials_pct": 75.0,
       "breadth_pct": 88.0,
+      "area_moves": [
+        {
+          "label": "Raster effects (Effect Gallery) — effects-parity.md",
+          "from": 49.0,
+          "to": 79.0
+        }
+      ],
       "full_prev": 62.0,
       "kind": "estimates"
     },
@@ -5751,6 +5904,13 @@
       "mainstream_pct": 65.0,
       "essentials_pct": 75.0,
       "breadth_pct": 88.0,
+      "area_moves": [
+        {
+          "label": "Raster effects (Effect Gallery) — effects-parity.md",
+          "from": 79.0,
+          "to": 81.0
+        }
+      ],
       "full_prev": 62.0,
       "kind": "estimates"
     },
@@ -5777,6 +5937,13 @@
       "mainstream_pct": 65.0,
       "essentials_pct": 75.0,
       "breadth_pct": 88.0,
+      "area_moves": [
+        {
+          "label": "Raster effects (Effect Gallery) — effects-parity.md",
+          "from": 81.0,
+          "to": 82.0
+        }
+      ],
       "full_prev": 62.0,
       "kind": "estimates"
     },
@@ -5986,7 +6153,7 @@
       "essentials_pct": 75.0,
       "breadth_pct": 88.0,
       "full_prev": 62.0,
-      "kind": "content"
+      "kind": "estimates"
     },
     {
       "commit": "524ecee",
@@ -6063,6 +6230,13 @@
       "mainstream_pct": 65.0,
       "essentials_pct": 75.0,
       "breadth_pct": 88.0,
+      "area_moves": [
+        {
+          "label": "Raster effects (Effect Gallery) — effects-parity.md",
+          "from": 82.0,
+          "to": 85.0
+        }
+      ],
       "full_prev": 62.0,
       "kind": "estimates"
     },
@@ -6142,8 +6316,8 @@
       "essentials_pct": 75.0,
       "breadth_pct": 88.0,
       "full_prev": 62.0,
-      "kind": "content"
+      "kind": "estimates"
     }
   ],
-  "updated_at": "2026-10-26T15:26:13+00:00"
+  "updated_at": "2026-10-26T17:59:02+00:00"
 }

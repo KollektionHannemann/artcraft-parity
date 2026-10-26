@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "63d9268",
-  "latest_commit_date": "2026-10-26T13:57:24+07:00",
-  "latest_message": "M10: branches in live sessions (#1367)",
+  "latest_commit": "7cb369d",
+  "latest_commit_date": "2026-10-27T00:23:36+07:00",
+  "latest_message": "Transliterate non-ASCII layer names into code-export class names (#1372)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Figma Design (desktop app 126.10.7)",
-    "last_updated": "2026-10-25",
+    "last_updated": "2026-10-26",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -151,91 +151,179 @@
     "features": [
       {
         "label": "Canvas & navigation",
-        "pct": 98.0
+        "pct": 74.0,
+        "hours": [
+          1,
+          4
+        ]
       },
       {
         "label": "Selection & transform",
-        "pct": 97.0
+        "pct": 72.0,
+        "hours": [
+          3,
+          5
+        ]
       },
       {
         "label": "Layers panel",
-        "pct": 99.0
+        "pct": 85.0,
+        "hours": [
+          1,
+          2
+        ]
       },
       {
         "label": "Shapes & vector",
-        "pct": 99.0
+        "pct": 73.0,
+        "hours": [
+          1,
+          3
+        ]
       },
       {
         "label": "Paint",
-        "pct": 90.0
+        "pct": 71.0,
+        "hours": [
+          2,
+          5
+        ]
       },
       {
         "label": "Strokes",
-        "pct": 95.0
+        "pct": 75.0,
+        "hours": [
+          1,
+          2
+        ]
       },
       {
         "label": "Effects",
-        "pct": 100.0
+        "pct": 75.0,
+        "hours": [
+          2,
+          5
+        ]
       },
       {
         "label": "Frames, groups, sections, masks",
-        "pct": 97.0
+        "pct": 80.0,
+        "hours": [
+          1,
+          3
+        ]
       },
       {
         "label": "Auto layout & constraints",
-        "pct": 98.0
+        "pct": 74.0,
+        "hours": [
+          3,
+          6
+        ]
       },
       {
         "label": "Text",
-        "pct": 90.0
+        "pct": 70.0,
+        "hours": [
+          3,
+          7
+        ]
       },
       {
         "label": "Components & variants",
-        "pct": 96.0
+        "pct": 72.0,
+        "hours": [
+          4,
+          9
+        ]
       },
       {
         "label": "Styles & variables",
-        "pct": 95.0
+        "pct": 76.0,
+        "hours": [
+          2,
+          4
+        ]
       },
       {
         "label": "Prototyping",
-        "pct": 92.0
+        "pct": 74.0,
+        "hours": [
+          2,
+          5
+        ]
       },
       {
         "label": "Import/export",
-        "pct": 86.0
+        "pct": 58.0,
+        "hours": [
+          5,
+          10
+        ]
       },
       {
         "label": "Dev Mode / inspect",
-        "pct": 98.0
+        "pct": 78.0,
+        "hours": [
+          1,
+          2
+        ]
       },
       {
         "label": "Comments, versions, misc",
-        "pct": 87.0
+        "pct": 63.0,
+        "hours": [
+          1,
+          3
+        ]
       },
       {
         "label": "Multiplayer & sharing",
-        "pct": 17.0
+        "pct": 5.0,
+        "hours": [
+          42,
+          84
+        ]
       },
       {
         "label": "Plugins & widgets",
-        "pct": 65.0
+        "pct": 38.0,
+        "hours": [
+          6,
+          22
+        ]
       },
       {
         "label": "Team libraries",
-        "pct": 70.0
+        "pct": 40.0,
+        "hours": [
+          4,
+          8
+        ]
       },
       {
         "label": "Figma Draw extras",
-        "pct": 88.0
+        "pct": 60.0,
+        "hours": [
+          1,
+          3
+        ]
       },
       {
         "label": "AI features",
-        "pct": 0.0
+        "pct": 0.0,
+        "hours": [
+          30,
+          60
+        ]
       },
       {
         "label": "Boards (whiteboarding; not in the weighted numbers)",
-        "pct": 47.0
+        "pct": 29.0,
+        "hours": [
+          20,
+          44
+        ]
       }
     ],
     "upcoming": [
@@ -246,6 +334,10 @@
       "Multiplayer (M9): accounts and teams on top of the live sessions and the standalone server (transport, hosting, invite links that open the app, document sync, presence with remote text carets, cursor chat and spotlight, per-user undo, reconnect with offline edits, collision-free ids for styles, variables and comments, the browser client, figcraft-server with persistence and share links to edit or view, team libraries on the server landed): 42–84 h."
     ],
     "progress": [
+      {
+        "date": "2026-10-26",
+        "text": "· Non-ASCII layer names transliterate in code export (M6, #1235): classname runs the name through deunicode before its ASCII filter, so 로그인 화면 → rogeuin-hwamyeon, кнопка → knopka, über → uber in the HTML/CSS/React/Leptos class names, component roots and data- variant attributes (SwiftUI/Compose type names unchanged); a name left with nothing (symbols only) takes the node's kind (.text, .frame) instead of layer-, and the 40-character cut lands on a word boundary. New dependency: deunicode (pure Rust tables, zero deps, BSD-3-Clause, the slug crate's base). htmlcodegentests. Numbers unchanged."
+      },
       {
         "date": "2026-10-25",
         "text": "· egui 0.37 capture lifecycle: screenshots with hidden or unknown visibility queue, request a hidden paint, and expire after 60 seconds if no capture arrives (headless-tested contract). Logic-only edits, saves and inspection continue while hidden. Native visible GUI and forced hidden-window paint, browser and Wayland behavior remain unqualified; parity percentages are unchanged."
@@ -401,10 +493,6 @@
       {
         "date": "2026-10-13",
         "text": "· Frames and groups, a one-step convert (M1): object.convertToGroup and object.convertToFrame (the Design panel's type menu on a frame or a group) change the layer in place, its layers staying where they are on the page. A frame turned into a group loses what only a frame has (auto layout, with the positions it gave kept and fill children fixed; fills, strokes, corner radius, clipping, layout grids, guides, scrolling) and takes its layers' box; a group turned into a frame keeps its box, with no fill and no clipping. Instances, main components, layers inside instances and empty frames are refused with the reason, all or nothing; one undo step. Numbers unchanged."
-      },
-      {
-        "date": "2026-10-13",
-        "text": "· Prototyping, delays on mouse triggers and manual overlay offsets (M5): mouse enter, leave, down and up wait delayMs before their actions run (once while waiting; dropped when the screen or overlay they were on goes away; a pointer that leaves early doesn't cancel, the documentation is silent), and a manual overlay sits at offset: [x, y] from the top-left of the layer that opens it (without one, right below it, as before). Delay and X/Y fields in the interaction editor, the player on its own clock, REST import (delay, overlayRelativePosition), .fig import and export (the export's field for mouse delays is unchecked against other software). Numbers unchanged."
       }
     ]
   },
@@ -413,6 +501,47 @@
     "value_since": "2026-10-11T21:41:28Z",
     "releases_since": 9,
     "releases_since_capped": false,
+    "revisions_since": 72,
+    "hours_since": {
+      "from": [
+        273,
+        530
+      ],
+      "to": [
+        266,
+        518
+      ]
+    },
+    "areas_since": {
+      "up": 4,
+      "down": 0,
+      "moves": [
+        {
+          "label": "Plugins & widgets",
+          "from": 32.0,
+          "to": 38.0,
+          "ts": "2026-10-26T06:31:53Z"
+        },
+        {
+          "label": "Boards (whiteboarding; not in the weighted numbers)",
+          "from": 20.0,
+          "to": 29.0,
+          "ts": "2026-10-26T05:52:39Z"
+        },
+        {
+          "label": "Dev Mode / inspect",
+          "from": 72.0,
+          "to": 78.0,
+          "ts": "2026-10-24T06:33:26Z"
+        },
+        {
+          "label": "Import/export",
+          "from": 57.0,
+          "to": 58.0,
+          "ts": "2026-10-12T00:19:57Z"
+        }
+      ]
+    },
     "changes": 4,
     "truncated": false,
     "last_change": {
@@ -427,39 +556,39 @@
     }
   },
   "roadmap": {
-    "revisions": 120,
-    "revisions_7d": 21,
+    "revisions": 121,
+    "revisions_7d": 22,
     "last_revision": {
-      "ts": "2026-10-26T06:57:24Z",
+      "ts": "2026-10-26T17:23:36Z",
       "kind": "content",
-      "commit": "63d9268",
-      "commit_full": "63d926876ffdb22f0c934a65c8130ba23f73cc7c",
-      "message": "M10: branches in live sessions (#1367)"
+      "commit": "7cb369d",
+      "commit_full": "7cb369db8ca6e30298c74b9d39b26f4961e051cf",
+      "message": "Transliterate non-ASCII layer names into code-export class names (#1372)"
     },
     "last_update": {
-      "ts": "2026-10-26T06:57:24Z",
+      "ts": "2026-10-26T17:23:36Z",
       "kind": "content",
-      "commit": "63d9268",
-      "commit_full": "63d926876ffdb22f0c934a65c8130ba23f73cc7c",
-      "message": "M10: branches in live sessions (#1367)"
+      "commit": "7cb369d",
+      "commit_full": "7cb369db8ca6e30298c74b9d39b26f4961e051cf",
+      "message": "Transliterate non-ASCII layer names into code-export class names (#1372)"
     },
-    "self_reported": "2026-10-25"
+    "self_reported": "2026-10-26"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.7,
+    "score": 22.1,
     "active_days_7d": 6,
-    "changes_7d": 139,
-    "changes_14d": 267,
+    "changes_7d": 157,
+    "changes_14d": 285,
     "housekeeping_7d": 19,
     "last_code_change": {
-      "ts": "2026-10-26T15:38:50Z",
-      "commit": "6ea44e9",
-      "commit_full": "6ea44e936ff3da686ca69b9c14bdb6ff3804d2fc",
-      "subject": "Add Korean support (#966)"
+      "ts": "2026-10-26T17:53:10Z",
+      "commit": "740cc2a",
+      "commit_full": "740cc2a2c67e34d04837d7be50efe4aca915dd9c",
+      "subject": "M6: export variables as Dart constants for Flutter (#726)"
     },
-    "last_commit_ts": "2026-10-26T15:38:50Z",
+    "last_commit_ts": "2026-10-26T17:53:10Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       20,
@@ -475,7 +604,7 @@
       9,
       27,
       26,
-      57
+      75
     ],
     "days": [
       {
@@ -790,20 +919,20 @@
       },
       {
         "d": "2026-10-26",
-        "code": 57,
+        "code": 75,
         "other": 3,
         "samples": [
           {
-            "commit": "6ea44e9",
-            "subject": "Add Korean support (#966)"
+            "commit": "740cc2a",
+            "subject": "M6: export variables as Dart constants for Flutter (#726)"
           },
           {
-            "commit": "90f9697",
-            "subject": "M7: find fonts that macOS font managers activate outside the font folders (#1309)"
+            "commit": "a93dd5a",
+            "subject": "perf(render): keep glass shapes between renders, fix a glass seam (#256) (#287)"
           },
           {
-            "commit": "63d9268",
-            "subject": "M10: branches in live sessions (#1367)"
+            "commit": "cac9913",
+            "subject": "perf(canvas): preview cold zoom and page transitions once they run long (M8) (#320)"
           }
         ]
       }
@@ -1134,6 +1263,13 @@
       "mainstream_pct": 43.0,
       "essentials_pct": 53.0,
       "breadth_pct": 79.0,
+      "area_moves": [
+        {
+          "label": "Shapes & vector",
+          "from": 66.0,
+          "to": 68.0
+        }
+      ],
       "full_prev": 47.0,
       "kind": "estimates"
     },
@@ -1180,6 +1316,13 @@
       "mainstream_pct": 43.0,
       "essentials_pct": 53.0,
       "breadth_pct": 79.0,
+      "area_moves": [
+        {
+          "label": "Styles & variables",
+          "from": 70.0,
+          "to": 72.0
+        }
+      ],
       "full_prev": 47.0,
       "kind": "estimates"
     },
@@ -1272,6 +1415,13 @@
       "mainstream_pct": 43.0,
       "essentials_pct": 53.0,
       "breadth_pct": 79.0,
+      "area_moves": [
+        {
+          "label": "Team libraries",
+          "from": 25.0,
+          "to": 40.0
+        }
+      ],
       "full_prev": 47.0,
       "kind": "estimates"
     },
@@ -1295,6 +1445,13 @@
       "mainstream_pct": 43.0,
       "essentials_pct": 53.0,
       "breadth_pct": 79.0,
+      "area_moves": [
+        {
+          "label": "Figma Draw extras",
+          "from": 30.0,
+          "to": 45.0
+        }
+      ],
       "full_prev": 47.0,
       "kind": "estimates"
     },
@@ -1318,6 +1475,13 @@
       "mainstream_pct": 43.0,
       "essentials_pct": 53.0,
       "breadth_pct": 79.0,
+      "area_moves": [
+        {
+          "label": "Figma Draw extras",
+          "from": 45.0,
+          "to": 55.0
+        }
+      ],
       "full_prev": 47.0,
       "kind": "estimates"
     },
@@ -1341,6 +1505,13 @@
       "mainstream_pct": 43.0,
       "essentials_pct": 53.0,
       "breadth_pct": 79.0,
+      "area_moves": [
+        {
+          "label": "Dev Mode / inspect",
+          "from": 62.0,
+          "to": 64.0
+        }
+      ],
       "full_prev": 47.0,
       "kind": "estimates"
     },
@@ -1387,6 +1558,13 @@
       "mainstream_pct": 43.0,
       "essentials_pct": 53.0,
       "breadth_pct": 79.0,
+      "area_moves": [
+        {
+          "label": "Plugins & widgets",
+          "from": 20.0,
+          "to": 28.0
+        }
+      ],
       "full_prev": 47.0,
       "kind": "estimates"
     },
@@ -1502,6 +1680,13 @@
       "mainstream_pct": 43.0,
       "essentials_pct": 53.0,
       "breadth_pct": 79.0,
+      "area_moves": [
+        {
+          "label": "Auto layout & constraints",
+          "from": 68.0,
+          "to": 74.0
+        }
+      ],
       "full_prev": 47.0,
       "kind": "estimates"
     },
@@ -1571,6 +1756,13 @@
       "mainstream_pct": 46.0,
       "essentials_pct": 57.0,
       "breadth_pct": 80.0,
+      "area_moves": [
+        {
+          "label": "Selection & transform",
+          "from": 68.0,
+          "to": 72.0
+        }
+      ],
       "full_prev": 49.0,
       "kind": "estimates"
     },
@@ -1594,6 +1786,13 @@
       "mainstream_pct": 46.0,
       "essentials_pct": 57.0,
       "breadth_pct": 80.0,
+      "area_moves": [
+        {
+          "label": "Text",
+          "from": 64.0,
+          "to": 68.0
+        }
+      ],
       "full_prev": 49.0,
       "kind": "estimates"
     },
@@ -1617,6 +1816,18 @@
       "mainstream_pct": 46.0,
       "essentials_pct": 57.0,
       "breadth_pct": 80.0,
+      "area_moves": [
+        {
+          "label": "Layers panel",
+          "from": 78.0,
+          "to": 82.0
+        },
+        {
+          "label": "Strokes",
+          "from": 72.0,
+          "to": 75.0
+        }
+      ],
       "full_prev": 49.0,
       "kind": "estimates"
     },
@@ -1640,6 +1851,13 @@
       "mainstream_pct": 46.0,
       "essentials_pct": 57.0,
       "breadth_pct": 80.0,
+      "area_moves": [
+        {
+          "label": "Paint",
+          "from": 66.0,
+          "to": 67.0
+        }
+      ],
       "full_prev": 49.0,
       "kind": "estimates"
     },
@@ -1663,6 +1881,13 @@
       "mainstream_pct": 47.0,
       "essentials_pct": 57.0,
       "breadth_pct": 80.0,
+      "area_moves": [
+        {
+          "label": "Components & variants",
+          "from": 68.0,
+          "to": 72.0
+        }
+      ],
       "full_prev": 49.0,
       "kind": "estimates"
     },
@@ -1686,6 +1911,13 @@
       "mainstream_pct": 48.0,
       "essentials_pct": 57.0,
       "breadth_pct": 80.0,
+      "area_moves": [
+        {
+          "label": "Prototyping",
+          "from": 70.0,
+          "to": 74.0
+        }
+      ],
       "full_prev": 49.0,
       "kind": "estimates"
     },
@@ -1709,6 +1941,13 @@
       "mainstream_pct": 48.0,
       "essentials_pct": 57.0,
       "breadth_pct": 80.0,
+      "area_moves": [
+        {
+          "label": "Styles & variables",
+          "from": 72.0,
+          "to": 76.0
+        }
+      ],
       "full_prev": 49.0,
       "kind": "estimates"
     },
@@ -1732,6 +1971,13 @@
       "mainstream_pct": 48.0,
       "essentials_pct": 57.0,
       "breadth_pct": 80.0,
+      "area_moves": [
+        {
+          "label": "Frames, groups, sections, masks",
+          "from": 75.0,
+          "to": 80.0
+        }
+      ],
       "full_prev": 49.0,
       "kind": "estimates"
     },
@@ -1755,8 +2001,20 @@
       "mainstream_pct": 48.0,
       "essentials_pct": 57.0,
       "breadth_pct": 80.0,
+      "area_moves": [
+        {
+          "label": "Paint",
+          "from": 67.0,
+          "to": 71.0
+        },
+        {
+          "label": "Effects",
+          "from": 72.0,
+          "to": 75.0
+        }
+      ],
       "full_prev": 49.0,
-      "kind": "content"
+      "kind": "estimates"
     },
     {
       "commit": "2a54adb",
@@ -1778,6 +2036,13 @@
       "mainstream_pct": 49.0,
       "essentials_pct": 57.0,
       "breadth_pct": 82.0,
+      "area_moves": [
+        {
+          "label": "Shapes & vector",
+          "from": 68.0,
+          "to": 72.0
+        }
+      ],
       "full_prev": 49.0,
       "kind": "parity"
     },
@@ -1801,6 +2066,13 @@
       "mainstream_pct": 49.0,
       "essentials_pct": 57.0,
       "breadth_pct": 82.0,
+      "area_moves": [
+        {
+          "label": "Import/export",
+          "from": 35.0,
+          "to": 54.0
+        }
+      ],
       "full_prev": 51.0,
       "kind": "estimates"
     },
@@ -1824,6 +2096,18 @@
       "mainstream_pct": 49.0,
       "essentials_pct": 57.0,
       "breadth_pct": 82.0,
+      "area_moves": [
+        {
+          "label": "Import/export",
+          "from": 54.0,
+          "to": 57.0
+        },
+        {
+          "label": "Dev Mode / inspect",
+          "from": 64.0,
+          "to": 70.0
+        }
+      ],
       "full_prev": 51.0,
       "kind": "estimates"
     },
@@ -1847,6 +2131,13 @@
       "mainstream_pct": 49.0,
       "essentials_pct": 57.0,
       "breadth_pct": 82.0,
+      "area_moves": [
+        {
+          "label": "Canvas & navigation",
+          "from": 72.0,
+          "to": 74.0
+        }
+      ],
       "full_prev": 51.0,
       "kind": "estimates"
     },
@@ -1870,6 +2161,13 @@
       "mainstream_pct": 49.0,
       "essentials_pct": 57.0,
       "breadth_pct": 82.0,
+      "area_moves": [
+        {
+          "label": "Comments, versions, misc",
+          "from": 58.0,
+          "to": 62.0
+        }
+      ],
       "full_prev": 51.0,
       "kind": "estimates"
     },
@@ -1893,6 +2191,13 @@
       "mainstream_pct": 49.0,
       "essentials_pct": 57.0,
       "breadth_pct": 82.0,
+      "area_moves": [
+        {
+          "label": "Text",
+          "from": 68.0,
+          "to": 70.0
+        }
+      ],
       "full_prev": 51.0,
       "kind": "estimates"
     },
@@ -1939,6 +2244,13 @@
       "mainstream_pct": 50.0,
       "essentials_pct": 57.0,
       "breadth_pct": 84.0,
+      "area_moves": [
+        {
+          "label": "Comments, versions, misc",
+          "from": 62.0,
+          "to": 63.0
+        }
+      ],
       "full_prev": 51.0,
       "kind": "estimates"
     },
@@ -1985,6 +2297,13 @@
       "mainstream_pct": 50.0,
       "essentials_pct": 57.0,
       "breadth_pct": 84.0,
+      "area_moves": [
+        {
+          "label": "Dev Mode / inspect",
+          "from": 70.0,
+          "to": 72.0
+        }
+      ],
       "full_prev": 51.0,
       "kind": "estimates"
     },
@@ -2008,6 +2327,18 @@
       "mainstream_pct": 49.0,
       "essentials_pct": 57.0,
       "breadth_pct": 84.0,
+      "area_moves": [
+        {
+          "label": "Shapes & vector",
+          "from": 72.0,
+          "to": 73.0
+        },
+        {
+          "label": "Figma Draw extras",
+          "from": 55.0,
+          "to": 60.0
+        }
+      ],
       "full_prev": 51.0,
       "kind": "parity"
     },
@@ -2031,6 +2362,13 @@
       "mainstream_pct": 49.0,
       "essentials_pct": 57.0,
       "breadth_pct": 84.0,
+      "area_moves": [
+        {
+          "label": "Layers panel",
+          "from": 82.0,
+          "to": 85.0
+        }
+      ],
       "full_prev": 52.0,
       "kind": "estimates"
     },
@@ -2100,6 +2438,13 @@
       "mainstream_pct": 49.0,
       "essentials_pct": 57.0,
       "breadth_pct": 84.0,
+      "area_moves": [
+        {
+          "label": "Plugins & widgets",
+          "from": 28.0,
+          "to": 32.0
+        }
+      ],
       "full_prev": 52.0,
       "kind": "estimates"
     },
@@ -2146,6 +2491,13 @@
       "mainstream_pct": 49.0,
       "essentials_pct": 57.0,
       "breadth_pct": 84.0,
+      "area_moves": [
+        {
+          "label": "Plugins & widgets",
+          "from": 32.0,
+          "to": 35.0
+        }
+      ],
       "full_prev": 53.0,
       "kind": "estimates"
     },
@@ -2261,6 +2613,13 @@
       "mainstream_pct": 50.0,
       "essentials_pct": 57.0,
       "breadth_pct": 85.0,
+      "area_moves": [
+        {
+          "label": "Import/export",
+          "from": 57.0,
+          "to": 58.0
+        }
+      ],
       "full_prev": 53.0,
       "kind": "estimates"
     },
@@ -3342,6 +3701,13 @@
       "mainstream_pct": 50.0,
       "essentials_pct": 59.0,
       "breadth_pct": 85.0,
+      "area_moves": [
+        {
+          "label": "Dev Mode / inspect",
+          "from": 72.0,
+          "to": 76.0
+        }
+      ],
       "full_prev": 53.0,
       "kind": "estimates"
     },
@@ -3411,6 +3777,13 @@
       "mainstream_pct": 50.0,
       "essentials_pct": 59.0,
       "breadth_pct": 85.0,
+      "area_moves": [
+        {
+          "label": "Dev Mode / inspect",
+          "from": 76.0,
+          "to": 78.0
+        }
+      ],
       "full_prev": 53.0,
       "kind": "estimates"
     },
@@ -3664,6 +4037,13 @@
       "mainstream_pct": 50.0,
       "essentials_pct": 59.0,
       "breadth_pct": 85.0,
+      "area_moves": [
+        {
+          "label": "Boards (whiteboarding; not in the weighted numbers)",
+          "from": 20.0,
+          "to": 21.0
+        }
+      ],
       "full_prev": 53.0,
       "kind": "estimates"
     },
@@ -3687,6 +4067,13 @@
       "mainstream_pct": 50.0,
       "essentials_pct": 59.0,
       "breadth_pct": 85.0,
+      "area_moves": [
+        {
+          "label": "Boards (whiteboarding; not in the weighted numbers)",
+          "from": 21.0,
+          "to": 25.0
+        }
+      ],
       "full_prev": 53.0,
       "kind": "estimates"
     },
@@ -3710,6 +4097,13 @@
       "mainstream_pct": 50.0,
       "essentials_pct": 59.0,
       "breadth_pct": 85.0,
+      "area_moves": [
+        {
+          "label": "Boards (whiteboarding; not in the weighted numbers)",
+          "from": 25.0,
+          "to": 29.0
+        }
+      ],
       "full_prev": 53.0,
       "kind": "estimates"
     },
@@ -3733,6 +4127,13 @@
       "mainstream_pct": 50.0,
       "essentials_pct": 59.0,
       "breadth_pct": 85.0,
+      "area_moves": [
+        {
+          "label": "Plugins & widgets",
+          "from": 35.0,
+          "to": 38.0
+        }
+      ],
       "full_prev": 53.0,
       "kind": "estimates"
     },
@@ -3758,7 +4159,30 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "7cb369d",
+      "commit_full": "7cb369db8ca6e30298c74b9d39b26f4961e051cf",
+      "commit_date": "2026-10-27T00:23:36+07:00",
+      "ts": "2026-10-26T17:23:36Z",
+      "message": "Transliterate non-ASCII layer names into code-export class names (#1372)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-26",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-26T16:19:17+00:00"
+  "updated_at": "2026-10-26T17:59:37+00:00"
 }
