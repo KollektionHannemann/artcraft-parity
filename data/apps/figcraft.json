@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "f93deb9",
-  "latest_commit_date": "2026-10-26T10:23:17+07:00",
-  "latest_message": "M7: find fonts activated through Adobe Fonts on macOS (#298) (#661)",
+  "latest_commit": "b107ddf",
+  "latest_commit_date": "2026-10-26T10:41:08+07:00",
+  "latest_message": "M4: CJK kinsoku completed to JIS X 4051 (#990)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -264,6 +264,10 @@
       },
       {
         "date": "2026-10-22",
+        "text": "· CJK line breaking completes JIS X 4051's kinsoku (M4): the line-start set now also has the halfwidth small kana ｧ–ｯ and small tsu, the halfwidth (semi-)voiced sound marks ﾞﾟ, the spacing (semi-)voiced sound marks ゛゜, the kana iteration marks 〱–〵 and the halfwidth closing parenthesis ｠; the line-end set has the halfwidth opening parenthesis ｟. Text layers, auto layout and the canvas otherwise wrap Japanese as before: ideographs break anywhere and the behaviour suite pins every category plus that a manual newline may still start a line with a prohibited character. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-22",
         "text": "· fill and stroke props accept \"none\" and null (M1, #1036): node.create, node.set and the other prop appliers map them to an empty fills/strokes list, as fills: [] already did, so an outline-only shape is one call (agents write \"none\" for no paint; the empty-list form was undocumented). The parameter docs (KEYS, shown by listcommands and the CLI) and docs/mcp.md say so, and the error message names the accepted forms. fillnonetests covers create, set, undo, text and the error. Numbers unchanged."
       },
       {
@@ -401,10 +405,6 @@
       {
         "date": "2026-10-12",
         "text": "· Everyday editing partials: number fields (scrub rates with Shift and Alt, arrow keys by the nudge"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "· Sharing with a join code: Share ▸ Online (through the server in Preferences, built in) or"
       }
     ]
   },
@@ -424,39 +424,39 @@
     }
   },
   "roadmap": {
-    "revisions": 111,
-    "revisions_7d": 12,
+    "revisions": 113,
+    "revisions_7d": 14,
     "last_revision": {
-      "ts": "2026-10-26T03:23:17Z",
+      "ts": "2026-10-26T03:41:08Z",
       "kind": "content",
-      "commit": "f93deb9",
-      "commit_full": "f93deb965ba455302e6cd3e35b5808d7daadb0f1",
-      "message": "M7: find fonts activated through Adobe Fonts on macOS (#298) (#661)"
+      "commit": "b107ddf",
+      "commit_full": "b107ddf8821d44ede55d9e405380ae225fc41231",
+      "message": "M4: CJK kinsoku completed to JIS X 4051 (#990)"
     },
     "last_update": {
-      "ts": "2026-10-26T03:23:17Z",
+      "ts": "2026-10-26T03:41:08Z",
       "kind": "content",
-      "commit": "f93deb9",
-      "commit_full": "f93deb965ba455302e6cd3e35b5808d7daadb0f1",
-      "message": "M7: find fonts activated through Adobe Fonts on macOS (#298) (#661)"
+      "commit": "b107ddf",
+      "commit_full": "b107ddf8821d44ede55d9e405380ae225fc41231",
+      "message": "M4: CJK kinsoku completed to JIS X 4051 (#990)"
     },
     "self_reported": "2026-10-25"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.2,
+    "score": 21.4,
     "active_days_7d": 6,
-    "changes_7d": 121,
-    "changes_14d": 249,
+    "changes_7d": 127,
+    "changes_14d": 255,
     "housekeeping_7d": 18,
     "last_code_change": {
-      "ts": "2026-10-26T03:25:56Z",
-      "commit": "660140d",
-      "commit_full": "660140ddc13c16bbfb6ded5b45992b616bb516df",
-      "subject": "i18n(sv): translate 38 new strings, use the agreed terms in 93 (#984)"
+      "ts": "2026-10-26T03:55:11Z",
+      "commit": "d203f8f",
+      "commit_full": "d203f8fdcfdfdf705549971234d0586177ba1885",
+      "subject": "feat(plugin): add saveFile permission with host-owned save dialog (#698)"
     },
-    "last_commit_ts": "2026-10-26T03:25:56Z",
+    "last_commit_ts": "2026-10-26T03:55:11Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       20,
@@ -472,7 +472,7 @@
       9,
       27,
       26,
-      39
+      45
     ],
     "days": [
       {
@@ -787,20 +787,20 @@
       },
       {
         "d": "2026-10-26",
-        "code": 39,
+        "code": 45,
         "other": 2,
         "samples": [
           {
-            "commit": "660140d",
-            "subject": "i18n(sv): translate 38 new strings, use the agreed terms in 93 (#984)"
+            "commit": "d203f8f",
+            "subject": "feat(plugin): add saveFile permission with host-owned save dialog (#698)"
           },
           {
-            "commit": "f93cdc7",
-            "subject": "Name the failing step in batch command errors (#1340)"
+            "commit": "3a64102",
+            "subject": "Vector editing, property copy/paste, dev-mode assets, ArkUI codegen and shape-builder fixes (#1202)"
           },
           {
-            "commit": "8b470ec",
-            "subject": "fix: Issue (#1062) render bounds stop at the depth the renderer draws. (#1275)"
+            "commit": "b107ddf",
+            "subject": "M4: CJK kinsoku completed to JIS X 4051 (#990)"
           }
         ]
       }
@@ -3548,7 +3548,53 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "9e993c6",
+      "commit_full": "9e993c6a77e9c6eb6c0560f3e1e44e54149a2090",
+      "commit_date": "2026-10-26T10:31:47+07:00",
+      "ts": "2026-10-26T03:31:47Z",
+      "message": "i18n: add Vietnamese (vi) interface localization (#1026)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-25",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "b107ddf",
+      "commit_full": "b107ddf8821d44ede55d9e405380ae225fc41231",
+      "commit_date": "2026-10-26T10:41:08+07:00",
+      "ts": "2026-10-26T03:41:08Z",
+      "message": "M4: CJK kinsoku completed to JIS X 4051 (#990)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-25",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        268,
+        522
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-26T03:27:34+00:00"
+  "updated_at": "2026-10-26T04:03:52+00:00"
 }

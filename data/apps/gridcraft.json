@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/gridcraft",
   "roadmap_url": "https://github.com/storytold/gridcraft/blob/main/ROADMAP.md",
-  "latest_commit": "2fbbed3",
-  "latest_commit_date": "2026-10-25T16:45:46-04:00",
-  "latest_message": "Security: the --control server requires an auth token and closes bad connections (#777) (#783)",
+  "latest_commit": "f6b0cec",
+  "latest_commit_date": "2026-10-26T00:00:24-04:00",
+  "latest_message": "Window per workbook (4/4): two windows on one workbook without copying it; Arrange All (#2619)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -261,6 +261,22 @@
         "text": "Formula hardening: digits too many for a finite number are text, so \"1 <400 digits>/<400 digits>\" no longer coerces to NaN; a NaN column index in VLOOKUP, HLOOKUP and the D-functions is #VALUE! instead of an index underflow; REGEXREPLACE stops building a result as soon as it can only be too long (a worst case went from 1 GB to 7 MB) (#2163, #2162)"
       },
       {
+        "date": "2026-10-22",
+        "text": "View › New Window and Arrange All on the ribbon. Arrange All tiles, stacks side by side or top to bottom, or cascades the native windows over the main window's monitor, the active one first. Two windows on one workbook show different sheets without copying the workbook or marking it changed; Save records the sheet of the window used last. A dialog stays in the window it was opened in"
+      },
+      {
+        "date": "2026-10-22",
+        "text": "On the desktop every workbook window is a native window of its own: New, Open and New Window open one, each keeps its own cell draft, dialog and ribbon, and the macOS menu bar acts on the window focused last. Closing one of several windows on a workbook doesn't ask; closing a workbook's last window, or quitting, asks about unsaved changes in that window. The last window closed quits on Windows and Linux; macOS keeps running with the menu bar. First craft-libs craft-window use (window list and viewport driver)"
+      },
+      {
+        "date": "2026-10-22",
+        "text": "View › New Window opens a second window on the same workbook (it used to open a copy whose Save overwrote the original): each window has its own selection, active sheet and scroll, titles read \"Book1:1\" / \"Book1:2\", and Switch Windows, Hide, Unhide and Close act per window. The control channel, CLI send and MCP tools take an optional window or doc id and default to the active window; window.list (MCP listwindows) lists the windows"
+      },
+      {
+        "date": "2026-10-22",
+        "text": "Typing in a cell and then choosing File › New no longer strands the first workbook: the entry is committed into its own workbook before any File or window command (a refused entry stays open and stops the command), View › Switch Windows and the macOS Window menu list the open workbooks with unsaved markers, view.switchWindows {doc} switches by a stable workbook id, and the macOS Quit item asks about unsaved workbooks"
+      },
+      {
         "date": "2026-10-21",
         "text": "Page Setup paper sizes match Japanese Excel: B4/B5/B6 are the JIS sizes (ISO B4/B5/B6 stay reachable by name), so a Japanese B5 worksheet prints at 182×257 mm; Japanese Postcard (100×148 mm), Double Postcard (148×200 mm), Envelope #3/#4 (120×235/90×205 mm), Kaku #2/#3 (240×332/216×277 mm) and A6 are added, both sizes reach the PDF page (file.exportPdf/file.print MediaBox) and the size survives an XLSX round-trip; the Page Layout Size menu lists them. B4/B5 used to be the ISO sizes, which is changed here"
       },
@@ -355,22 +371,6 @@
       {
         "date": "2026-10-13",
         "text": "Charts: a huge trendline forecast no longer collapses the chart: on a category axis it adds at most four times the data in empty slots (at least 32), the line is sampled over the plot only, and forecasts read from XLSX or set by command are clamped, NaN and infinity becoming 0 (#1148)"
-      },
-      {
-        "date": "2026-10-13",
-        "text": "XLSX export writes a picture used on several sheets once, as one xl/media part every drawing points to (it wrote a copy per drawing: a 16-sheet workbook with one 112 KB logo grew from 0.4 to 1.9 MB) (#985)"
-      },
-      {
-        "date": "2026-10-13",
-        "text": "XLSX: [ContentTypes].xml, rels/.rels, the workbook rels and xl/workbook.xml are the first zip entries (document properties last), so libmagic and PHP finfo detect the file type even with large properties (#1090)"
-      },
-      {
-        "date": "2026-10-13",
-        "text": "Conditional formatting: a rule gathers range statistics only when it reads them (top/bottom, above average, duplicates, scales, bars, icons) and borrows them instead of copying them per cell, so the per-frame lookup of an expression or cell-value rule no longer visits its whole range (#1098, part 1)"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "Next/previous sheet navigation stops at the first/last visible worksheet instead of activating a hidden boundary sheet; the current selection is retained"
       }
     ]
   },
@@ -381,39 +381,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 69,
-    "revisions_7d": 12,
+    "revisions": 73,
+    "revisions_7d": 16,
     "last_revision": {
-      "ts": "2026-10-25T20:45:46Z",
+      "ts": "2026-10-26T04:00:24Z",
       "kind": "content",
-      "commit": "2fbbed3",
-      "commit_full": "2fbbed33bcce0a6b45894038c0dbf875583174a8",
-      "message": "Security: the --control server requires an auth token and closes bad connections (#777) (#783)"
+      "commit": "f6b0cec",
+      "commit_full": "f6b0cec67e328f2f6352768b5cb2feb7e562c5db",
+      "message": "Window per workbook (4/4): two windows on one workbook without copying it; Arrange All (#2619)"
     },
     "last_update": {
-      "ts": "2026-10-25T20:45:46Z",
+      "ts": "2026-10-26T04:00:24Z",
       "kind": "content",
-      "commit": "2fbbed3",
-      "commit_full": "2fbbed33bcce0a6b45894038c0dbf875583174a8",
-      "message": "Security: the --control server requires an auth token and closes bad connections (#777) (#783)"
+      "commit": "f6b0cec",
+      "commit_full": "f6b0cec67e328f2f6352768b5cb2feb7e562c5db",
+      "message": "Window per workbook (4/4): two windows on one workbook without copying it; Arrange All (#2619)"
     },
     "self_reported": "2026-10-25"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.4,
+    "score": 16.7,
     "active_days_7d": 6,
-    "changes_7d": 85,
-    "changes_14d": 278,
+    "changes_7d": 89,
+    "changes_14d": 282,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-10-26T01:39:17Z",
-      "commit": "42bbf6b",
-      "commit_full": "42bbf6baa26a57f094411f17d1ab039cc91905a0",
-      "subject": "refactor: split complex functions for Sonar S3776 (#2612)"
+      "ts": "2026-10-26T04:00:24Z",
+      "commit": "f6b0cec",
+      "commit_full": "f6b0cec67e328f2f6352768b5cb2feb7e562c5db",
+      "subject": "Window per workbook (4/4): two windows on one workbook without copying it; Arrange All (#2619)"
     },
-    "last_commit_ts": "2026-10-26T01:39:17Z",
+    "last_commit_ts": "2026-10-26T04:00:24Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       160,
@@ -429,7 +429,7 @@
       29,
       18,
       31,
-      2
+      6
     ],
     "days": [
       {
@@ -731,16 +731,20 @@
       },
       {
         "d": "2026-10-26",
-        "code": 2,
+        "code": 6,
         "other": 0,
         "samples": [
           {
-            "commit": "42bbf6b",
-            "subject": "refactor: split complex functions for Sonar S3776 (#2612)"
+            "commit": "f6b0cec",
+            "subject": "Window per workbook (4/4): two windows on one workbook without copying it; Arrange All (#2619)"
           },
           {
-            "commit": "52cf825",
-            "subject": "refactor: split complex functions for Sonar S3776 (#2609)"
+            "commit": "862dfc1",
+            "subject": "Window per workbook (3/4): a native window per workbook window (#2618)"
+          },
+          {
+            "commit": "1b63c3f",
+            "subject": "Window per workbook (2/4): windows in the engine; New Window shares the workbook (#2617)"
           }
         ]
       }
@@ -2522,7 +2526,99 @@
       "breadth_pct": 75.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "ecb0e54",
+      "commit_full": "ecb0e546d8d6d726c6836b6ed92b6b2f74031be6",
+      "commit_date": "2026-10-25T23:57:56-04:00",
+      "ts": "2026-10-26T03:57:56Z",
+      "message": "Window per workbook (1/4): a cell draft stays in its workbook; Switch Windows (#2616)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-25",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "1b63c3f",
+      "commit_full": "1b63c3f3356f53b121ecc0017dbc9a261a8f46ac",
+      "commit_date": "2026-10-25T23:58:35-04:00",
+      "ts": "2026-10-26T03:58:35Z",
+      "message": "Window per workbook (2/4): windows in the engine; New Window shares the workbook (#2617)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-25",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "862dfc1",
+      "commit_full": "862dfc19201d35721e605fb30cd281dd4bf27042",
+      "commit_date": "2026-10-25T23:59:45-04:00",
+      "ts": "2026-10-26T03:59:45Z",
+      "message": "Window per workbook (3/4): a native window per workbook window (#2618)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-25",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "f6b0cec",
+      "commit_full": "f6b0cec67e328f2f6352768b5cb2feb7e562c5db",
+      "commit_date": "2026-10-26T00:00:24-04:00",
+      "ts": "2026-10-26T04:00:24Z",
+      "message": "Window per workbook (4/4): two windows on one workbook without copying it; Arrange All (#2619)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-25",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-26T02:02:59+00:00"
+  "updated_at": "2026-10-26T04:04:02+00:00"
 }
