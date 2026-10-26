@@ -363,18 +363,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 24.4,
+    "score": 24.6,
     "active_days_7d": 7,
-    "changes_7d": 216,
-    "changes_14d": 967,
+    "changes_7d": 217,
+    "changes_14d": 968,
     "housekeeping_7d": 20,
     "last_code_change": {
-      "ts": "2026-10-26T19:16:03Z",
-      "commit": "d641b96",
-      "commit_full": "d641b96a5211c05619c37679903836c184618647",
-      "subject": "Preserve locale-aware CJK fonts and migration regressions after #9363 (#9518)"
+      "ts": "2026-10-26T20:01:43Z",
+      "commit": "a0ce166",
+      "commit_full": "a0ce166acd2a64ff1200f793d4006db61c09f4d6",
+      "subject": "refactor: lower cognitive complexity in styles apply, affinity text read and warp identity"
     },
-    "last_commit_ts": "2026-10-26T19:16:03Z",
+    "last_commit_ts": "2026-10-26T20:01:43Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       312,
@@ -390,7 +390,7 @@
       89,
       14,
       45,
-      6
+      7
     ],
     "days": [
       {
@@ -889,9 +889,13 @@
       },
       {
         "d": "2026-10-26",
-        "code": 6,
+        "code": 7,
         "other": 0,
         "samples": [
+          {
+            "commit": "a0ce166",
+            "subject": "refactor: lower cognitive complexity in styles apply, affinity text read and warp identity"
+          },
           {
             "commit": "d641b96",
             "subject": "Preserve locale-aware CJK fonts and migration regressions after #9363 (#9518)"
@@ -899,10 +903,6 @@
           {
             "commit": "59cb4c4",
             "subject": "Panels: remove the native dock's drawing, strip and drag code (#9583)"
-          },
-          {
-            "commit": "d3b0a76",
-            "subject": "lint: drop blank lines after doc comments and attributes; tidy IME else, closure, shell tests (#9576)"
           }
         ]
       }
@@ -1254,5 +1254,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-26T19:30:41+00:00"
+  "updated_at": "2026-10-26T20:17:45+00:00"
 }

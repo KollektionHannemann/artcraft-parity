@@ -354,18 +354,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.3,
+    "score": 15.5,
     "active_days_7d": 6,
-    "changes_7d": 54,
-    "changes_14d": 299,
+    "changes_7d": 55,
+    "changes_14d": 300,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-10-26T19:15:59Z",
-      "commit": "6867f33",
-      "commit_full": "6867f331f2daa46245b0e0503ddaccdbaaba37ff",
-      "subject": "Preserve migration regressions and fix software GPU median timeouts (#2437)"
+      "ts": "2026-10-26T20:01:49Z",
+      "commit": "c618429",
+      "commit_full": "c618429252587525a2a6d4b5bccbe4ec5261e1b9",
+      "subject": "Sonar: reduce cognitive complexity in footage reload, edit delete and text layout"
     },
-    "last_commit_ts": "2026-10-26T19:15:59Z",
+    "last_commit_ts": "2026-10-26T20:01:49Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       111,
@@ -381,7 +381,7 @@
       21,
       5,
       8,
-      6
+      7
     ],
     "days": [
       {
@@ -816,9 +816,13 @@
       },
       {
         "d": "2026-10-26",
-        "code": 6,
+        "code": 7,
         "other": 0,
         "samples": [
+          {
+            "commit": "c618429",
+            "subject": "Sonar: reduce cognitive complexity in footage reload, edit delete and text layout"
+          },
           {
             "commit": "6867f33",
             "subject": "Preserve migration regressions and fix software GPU median timeouts (#2437)"
@@ -826,10 +830,6 @@
           {
             "commit": "4c87a58",
             "subject": "Use checked access in the WGSL grammar test scanner"
-          },
-          {
-            "commit": "2961258",
-            "subject": "Timeline: each open comp is a tab in the group's tab row, with an overflow menu (#2458)"
           }
         ]
       }
@@ -1227,5 +1227,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-26T19:31:07+00:00"
+  "updated_at": "2026-10-26T20:18:10+00:00"
 }
