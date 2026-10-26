@@ -340,8 +340,8 @@
   .tip { position: fixed; z-index: 60; max-width: 300px; padding: 8px 10px; background: #111; border: 1px solid var(--line-2); color: var(--text); font-size: 12px; line-height: 1.45; white-space: pre-line; text-transform: none; letter-spacing: 0; font-family: inherit; pointer-events: none; opacity: 0; transition: opacity .12s; }
   .tip.on { opacity: 1; }
   @media (prefers-reduced-motion: reduce) { .tip { transition: none; } }
-  [data-tip], [title] { cursor: help; }
-  a[data-tip], a[title], button[data-tip], button[title], .card [data-tip], .card[title] { cursor: inherit; }
+  /* Hover areas hug their text: a block with a tip is only as wide as its content */
+  .stats .v, .kv .v, .afig .v, .since .v, .lt .what, .stale-hint > span { width: fit-content; max-width: 100%; }
   .since { border-top: 1px solid var(--line); padding: 12px 0 0; font-size: 13.5px; }
   .since .k { color: var(--faint); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; }
   .since .v { margin-top: 6px; font-weight: 600; }
@@ -835,24 +835,24 @@
   function ranking(withFull) {
     if (state.rank === "breadth") {
       return state.overview.apps.filter((a) => a.breadth_pct != null).slice().sort(sorters.breadth).map((a, i) => `
-        <a class="rank-row" href="#/app/${esc(a.id)}" style="--c:${a.color}" title="Product parity (feature breadth); ${pct(a.full_pct)} % ready for real work">
+        <a class="rank-row" href="#/app/${esc(a.id)}" style="--c:${a.color}">
           <span class="ri">${chipNo(i + 1)}</span>
           <span class="rn">${twoTone(a.name)}</span>
           ${bar(a.breadth_pct)}
-          <span class="rv">${pct(a.breadth_pct)} %</span>
+          <span class="rv" title="Product parity (feature breadth); ${pct(a.full_pct)} % ready for real work">${pct(a.breadth_pct)} %</span>
         </a>`).join("");
     }
     if (state.rank === "activity") {
       return state.overview.apps.filter((a) => a.activity).slice().sort(sorters.activity).map((a, i) => `
-        <a class="rank-row" href="#/app/${esc(a.id)}" style="--c:${a.color}" title="${esc(plural(a.activity.changes_7d, "code change"))} in 7 days, on ${a.activity.active_days_7d} of 7 days">
+        <a class="rank-row" href="#/app/${esc(a.id)}" style="--c:${a.color}">
           <span class="ri">${chipNo(i + 1)}</span>
           <span class="rn">${twoTone(a.name)}</span>
           ${cells(a.activity.window)}
-          <span class="rv lv mono">${esc(LEVELS[a.activity.level]?.label || "")}</span>
+          <span class="rv lv mono" title="${esc(plural(a.activity.changes_7d, "code change"))} in 7 days, on ${a.activity.active_days_7d} of 7 days">${esc(LEVELS[a.activity.level]?.label || "")}</span>
         </a>`).join("");
     }
     return withFull.slice().sort((a, b) => b.full_pct - a.full_pct || a.order - b.order).map((a, i) => `
-      <a class="rank-row" href="#/app/${esc(a.id)}" style="--c:${a.color}" title="${esc(`${pct(a.full_pct)} % ready for real work, ${pct(a.breadth_pct)} % product parity. Value from ${dateEN(a.parity?.value_since, false)}.`)}">
+      <a class="rank-row" href="#/app/${esc(a.id)}" style="--c:${a.color}">
         <span class="ri">${chipNo(i + 1)}</span>
         <span class="rn">${twoTone(a.name)}</span>
         ${bar(a.full_pct)}
@@ -907,9 +907,9 @@
           <p>How close each app is to replacing the product it rebuilds, how actively it's being built, and what changed last.</p>
           <p class="mono" id="hero-checked" style="margin-top:14px;font-size:10.5px;max-width:none">${heroChecked()}</p>
           <div class="stats">
-            <div title="${esc(avgTip)}"><div class="v">${pct(avg)} %</div><div class="l">Average ready for real work</div></div>
-            <div title="${esc(waveTip)}"><div class="v">${wave ? nf(wave.changes) : "–"}</div><div class="l">${wave ? `Changes in the last release wave, ${dayUTC(wave.day, false)}` : "No release wave yet"}</div></div>
-            <div title="${esc(buzzTip)}"><div class="v">${buzzing}<span class="muted" style="font-size:18px"> / ${all.length}</span></div><div class="l">Apps buzzing now</div></div>
+            <div><div class="v" title="${esc(avgTip)}">${pct(avg)} %</div><div class="l">Average ready for real work</div></div>
+            <div><div class="v" title="${esc(waveTip)}">${wave ? nf(wave.changes) : "–"}</div><div class="l">${wave ? `Changes in the last release wave, ${dayUTC(wave.day, false)}` : "No release wave yet"}</div></div>
+            <div><div class="v" title="${esc(buzzTip)}">${buzzing}<span class="muted" style="font-size:18px"> / ${all.length}</span></div><div class="l">Apps buzzing now</div></div>
           </div>
         </section>
         <section>
@@ -1547,10 +1547,10 @@
           <div class="big-detail" style="margin-top:14px">${pct(fullNow)}<span>%</span></div>
           <div style="margin-top:14px">${bar(fullNow, true)}</div>
           <div class="kv">
-            <div title="The roadmap's own estimate of agent work left until ~95 % ready for real work, one agent working sequentially. Always a range."><div class="v">${hours(m.full?.hours || s.full_hours)}</div><div class="l">Agent hours to ~95 % (estimate)${par.hours_since ? `<br><span class="${hoursDelta(par.hours_since).endsWith("less") ? "up" : ""}">${hoursDelta(par.hours_since)}</span> than ${hours(par.hours_since.from)} on ${dateEN(par.value_since, false)}` : ""}</div></div>
-            <div title="${esc(`How many of ${d.adobe}'s features exist at all, ready or not. Usually much higher than ready for real work.`)}"><div class="v">${pct(m.breadth?.pct)} %</div><div class="l">Product parity (feature breadth)</div></div>
-            <div title="${esc(`Ready for real work now against the first value the roadmap reported (${firstVal == null ? "–" : pct(firstVal)} % on ${dateEN(par.tracked_since)}).`)}"><div class="v">${sinceStart == null ? "–" : sinceStart === 0 ? "±0 pp" : pp(sinceStart)}</div><div class="l">Since the first value (${dateEN(par.tracked_since, false)})</div></div>
-            <div title="Roadmap revisions on the main branch that changed the ready value, up or down, out of all revisions read. Formatting-only revisions are included in the total."><div class="v">${nf(par.changes ?? 0)}</div><div class="l">Value changes in ${plural(hist.length, "revision")}</div></div>
+            <div><div class="v" title="The roadmap's own estimate of agent work left until ~95 % ready for real work, one agent working sequentially. Always a range.">${hours(m.full?.hours || s.full_hours)}</div><div class="l">Agent hours to ~95 % (estimate)${par.hours_since ? `<br><span class="${hoursDelta(par.hours_since).endsWith("less") ? "up" : ""}">${hoursDelta(par.hours_since)}</span> than ${hours(par.hours_since.from)} on ${dateEN(par.value_since, false)}` : ""}</div></div>
+            <div><div class="v" title="${esc(`How many of ${d.adobe}'s features exist at all, ready or not. Usually much higher than ready for real work.`)}">${pct(m.breadth?.pct)} %</div><div class="l">Product parity (feature breadth)</div></div>
+            <div><div class="v" title="${esc(`Ready for real work now against the first value the roadmap reported (${firstVal == null ? "–" : pct(firstVal)} % on ${dateEN(par.tracked_since)}).`)}">${sinceStart == null ? "–" : sinceStart === 0 ? "±0 pp" : pp(sinceStart)}</div><div class="l">Since the first value (${dateEN(par.tracked_since, false)})</div></div>
+            <div><div class="v" title="Roadmap revisions on the main branch that changed the ready value, up or down, out of all revisions read. Formatting-only revisions are included in the total.">${nf(par.changes ?? 0)}</div><div class="l">Value changes in ${plural(hist.length, "revision")}</div></div>
           </div>
           ${sinceHTML}
           ${par.truncated ? `<p class="note">History is incomplete: older revisions weren't read.</p>` : ""}
@@ -1575,10 +1575,10 @@
         <div class="body">
           ${activityChart(act, c)}
           <div class="afig">
-            <div title="Code changesets merged into main in the last 7 UTC days: pull-request merges and direct commits, each once."><div class="v">${act ? nf(act.changes_7d) : "–"}</div><div class="l">Code changes, 7 days</div></div>
-            <div title="UTC days in the last 7 with at least one code change. Buzzing needs 5, Active 2."><div class="v">${act ? `${act.active_days_7d} / 7` : "–"}</div><div class="l">Days with code changes</div></div>
-            <div title="Changesets in the last 7 days that only touch docs, the roadmap, CI files, dotfiles or lockfiles, plus version bumps. They don't count as activity."><div class="v">${act ? nf(act.housekeeping_7d) : "–"}</div><div class="l">Docs, CI, release, 7 days</div></div>
-            <div title="Longest run of days without a code change in the activity chart above."><div class="v">${pause == null ? "–" : plural(pause, "day")}</div><div class="l">Longest pause</div></div>
+            <div><div class="v" title="Code changesets merged into main in the last 7 UTC days: pull-request merges and direct commits, each once.">${act ? nf(act.changes_7d) : "–"}</div><div class="l">Code changes, 7 days</div></div>
+            <div><div class="v" title="UTC days in the last 7 with at least one code change. Buzzing needs 5, Active 2.">${act ? `${act.active_days_7d} / 7` : "–"}</div><div class="l">Days with code changes</div></div>
+            <div><div class="v" title="Changesets in the last 7 days that only touch docs, the roadmap, CI files, dotfiles or lockfiles, plus version bumps. They don't count as activity.">${act ? nf(act.housekeeping_7d) : "–"}</div><div class="l">Docs, CI, release, 7 days</div></div>
+            <div><div class="v" title="Longest run of days without a code change in the activity chart above.">${pause == null ? "–" : plural(pause, "day")}</div><div class="l">Longest pause</div></div>
           </div>
           <p class="note">Changes merged into main (pull requests and direct commits) per UTC day.${act?.repo_since ? ` The repository started on ${dateEN(act.repo_since)}.` : ""} Activity measures effort, not progress.</p>
         </div>
