@@ -439,18 +439,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 32.4,
+    "score": 32.5,
     "active_days_7d": 7,
-    "changes_7d": 593,
-    "changes_14d": 1356,
+    "changes_7d": 594,
+    "changes_14d": 1357,
     "housekeeping_7d": 29,
     "last_code_change": {
-      "ts": "2026-10-26T10:55:44Z",
-      "commit": "8fa61c4",
-      "commit_full": "8fa61c4aa266fa31c581dd6128d515efb36a207d",
-      "subject": "Windows fonts: list the fonts only GDI has loaded, such as Creative Cloud's Adobe Fonts (#1258) (#4130)"
+      "ts": "2026-10-26T11:16:53Z",
+      "commit": "1a84e18",
+      "commit_full": "1a84e180979eada1c7bedbc0728b566298bf2f6a",
+      "subject": "Fix #4128: text.create and text.setStyle store a font style the family has (#4250)"
     },
-    "last_commit_ts": "2026-10-26T10:55:44Z",
+    "last_commit_ts": "2026-10-26T11:16:53Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       125,
@@ -466,7 +466,7 @@
       108,
       94,
       32,
-      80
+      81
     ],
     "days": [
       {
@@ -952,9 +952,13 @@
       },
       {
         "d": "2026-10-26",
-        "code": 80,
+        "code": 81,
         "other": 0,
         "samples": [
+          {
+            "commit": "1a84e18",
+            "subject": "Fix #4128: text.create and text.setStyle store a font style the family has (#4250)"
+          },
           {
             "commit": "8fa61c4",
             "subject": "Windows fonts: list the fonts only GDI has loaded, such as Creative Cloud's Adobe Fonts (#1258) (#4130)"
@@ -962,10 +966,6 @@
           {
             "commit": "9badc56",
             "subject": "View: all 25 saved views in the View menu; Edit Views… lists them (#4247)"
-          },
-          {
-            "commit": "751c4ee",
-            "subject": "Undo: a canceled undo scope drops the journal entries it cut from open undo groups (#4243)"
           }
         ]
       }
@@ -6145,5 +6145,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-26T11:13:06+00:00"
+  "updated_at": "2026-10-26T11:33:54+00:00"
 }

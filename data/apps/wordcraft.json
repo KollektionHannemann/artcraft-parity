@@ -439,16 +439,16 @@
     "level": "buzzing",
     "score": 22.5,
     "active_days_7d": 6,
-    "changes_7d": 160,
-    "changes_14d": 727,
+    "changes_7d": 161,
+    "changes_14d": 728,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-26T05:31:58Z",
-      "commit": "2c99a42",
-      "commit_full": "2c99a427803364354181d0bc20865f05880605f7",
-      "subject": "#3866 follow-up: PDF export draws items with authors and cell clips built once per page; endnote selection linear (#4392)"
+      "ts": "2026-10-26T11:27:16Z",
+      "commit": "6a2b520",
+      "commit_full": "6a2b520fa49aa0d0595cea36589aaf16ca371cd3",
+      "subject": "#3866: fix main's layout test build (tests_linear imports Page and Rgb) (#4401)"
     },
-    "last_commit_ts": "2026-10-26T05:31:58Z",
+    "last_commit_ts": "2026-10-26T11:27:16Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       0,
@@ -464,7 +464,7 @@
       57,
       22,
       37,
-      25
+      26
     ],
     "days": [
       {
@@ -796,9 +796,13 @@
       },
       {
         "d": "2026-10-26",
-        "code": 25,
+        "code": 26,
         "other": 0,
         "samples": [
+          {
+            "commit": "6a2b520",
+            "subject": "#3866: fix main's layout test build (tests_linear imports Page and Rgb) (#4401)"
+          },
           {
             "commit": "2c99a42",
             "subject": "#3866 follow-up: PDF export draws items with authors and cell clips built once per page; endnote selection linear (#4392)"
@@ -806,10 +810,6 @@
           {
             "commit": "ab0eccd",
             "subject": "Sonar: reduce cognitive complexity in four engine commands (#4377)"
-          },
-          {
-            "commit": "0377eda",
-            "subject": "Sonar: clear S1612, S2208 and S7688 new-code issues (#4376)"
           }
         ]
       }
@@ -10582,5 +10582,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-26T11:13:36+00:00"
+  "updated_at": "2026-10-26T11:34:22+00:00"
 }
