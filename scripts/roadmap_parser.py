@@ -81,6 +81,40 @@ def first_pct(cells):
     return None, None
 
 
+def area_columns(header):
+    """Indexes of the ready and the hours column of an area table, picked by header.
+
+    Tables differ per app ("Breadth | Ready | Hours", "Ready | Breadth | Remaining", "% ready", "Parity",
+    "%"). A column named "ready" wins; breadth columns are never the ready value. Without a header match the
+    first percentage that is not in a breadth column is used.
+    """
+    h = [clean(c).lower() for c in header]
+    ready = next((i for i, c in enumerate(h) if i and "ready" in c and "breadth" not in c), None)
+    hours = next((i for i, c in enumerate(h) if i and ("hour" in c or "remaining" in c or "(h)" in c)), None)
+    breadth = {i for i, c in enumerate(h) if "breadth" in c}
+    return ready, hours, breadth
+
+
+def area_row(cells, ready, hours, breadth):
+    pct = None
+    if ready is not None and ready < len(cells):
+        m = PCT.search(clean(cells[ready]))
+        pct = float(m.group(1)) if m else None
+    if pct is None:
+        for i, c in enumerate(cells[1:], 1):
+            m = PCT.search(clean(c))
+            if m and i not in breadth:
+                pct = float(m.group(1))
+                break
+    if pct is None:
+        return None
+    rng = None
+    if hours is not None and hours < len(cells):
+        hm = NUM_RANGE.search(clean(cells[hours]))
+        rng = [to_int(hm.group(1)), to_int(hm.group(2))] if hm else None
+    return {"label": clean(cells[0]), "pct": pct, "hours": rng}
+
+
 def parse_roadmap(text: str) -> dict:
     lines = text.splitlines()
     head = "\n".join(lines[:40])
@@ -150,10 +184,12 @@ def parse_roadmap(text: str) -> dict:
                 if pct is not None:
                     dimensions.append({"label": clean(cells[0]), "pct": pct})
         elif title.startswith("features"):
-            for cells in table_rows(body)[1:]:
-                pct, _ = first_pct(cells[1:])
-                if pct is not None:
-                    features.append({"label": clean(cells[0]), "pct": pct})
+            rows = table_rows(body)
+            cols = area_columns(rows[0]) if rows else (None, None, set())
+            for cells in rows[1:]:
+                row = area_row(cells, *cols)
+                if row:
+                    features.append(row)
         elif title.startswith("upcoming"):
             for cells in table_rows(body)[1:]:
                 upcoming.append(" · ".join(clean(c) for c in cells if c))

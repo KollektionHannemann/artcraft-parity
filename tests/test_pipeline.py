@@ -24,9 +24,11 @@ import update  # noqa: E402
 NOW = datetime(2026, 10, 18, 12, 0, tzinfo=timezone.utc)
 
 
-def roadmap(full, mainstream=60, progress=(), note="", bold=True):
+def roadmap(full, mainstream=60, progress=(), note="", bold=True, hours="100–200", areas=None):
     b = "**" if bold else ""
     rows = "\n".join(f"| {d} | {t} |" for d, t in progress)
+    features = "" if not areas else "## Features\n\n| Area | Breadth | Ready | Hours |\n|---|---|---|---|\n" + "\n".join(
+        f"| {label} | 90% | {ready}% | 2–4 |" for label, ready in areas.items()) + "\n"
     return f"""# TestCraft Roadmap
 
 **Stage: alpha** · next: beta
@@ -39,9 +41,10 @@ def roadmap(full, mainstream=60, progress=(), note="", bold=True):
 
 | Audience | Ready % | Hours to ~95% |
 |---|---:|---:|
-| {b}Full Testshop{b} (ready for real work) | {b}~{full}%{b} (50–70%) | ~100–200 h |
+| {b}Full Testshop{b} (ready for real work) | {b}~{full}%{b} (50–70%) | ~{hours} h |
 | {b}Mainstream user{b} | ~{mainstream}% | ~50–90 h |
 
+{features}
 ## Progress log
 
 | Date | Change |
@@ -220,6 +223,55 @@ class PipelineTest(unittest.TestCase):
         self.assertEqual(app["roadmap"]["last_update"]["kind"], "estimates")
         self.assertEqual(app["roadmap"]["revisions_7d"], 2)  # the editorial revision does not count
         self.assertEqual(len(self.read("data/changelog.json")), 3)  # the change log keeps every revision
+
+    def test_movement_below_a_steady_value(self):
+        r = self.repos["testcraft"]
+        r.commit(NOW - timedelta(days=8), "Add roadmap",
+                 {"ROADMAP.md": roadmap(50, areas={"Layers": 70, "Text": 60}), "src/main.rs": "fn main() {}\n"})
+        self.run_update()
+        r.commit(NOW - timedelta(hours=6), "Progress log", {"ROADMAP.md": roadmap(
+            50, areas={"Layers": 70, "Text": 60}, progress=[("2026-10-18", "Layer masks")])})
+        r.commit(NOW - timedelta(hours=5), "Layers depth", {"ROADMAP.md": roadmap(
+            50, hours="95–190", areas={"Layers": 74, "Text": 60}, progress=[("2026-10-18", "Layer masks")])})
+        r.commit(NOW - timedelta(hours=4), "Text re-scored", {"ROADMAP.md": roadmap(
+            50, hours="95–190", areas={"Layers": 76, "Text": 58, "Brushes": 10},
+            progress=[("2026-10-18", "Layer masks")])})
+        events = self.run_update()
+        self.assertEqual([e["kind"] for e in events], ["content", "estimates", "estimates"])
+        self.assertEqual(notify.notifiable(events), [])  # areas and hours never notify
+        par = self.overview_app()["parity"]
+        self.assertEqual(par["revisions_since"], 3)
+        self.assertEqual(par["hours_since"], {"from": [100, 200], "to": [95, 190]})
+        ar = par["areas_since"]
+        self.assertEqual((ar["up"], ar["down"]), (1, 1))  # a new area ("Brushes") is not a move
+        self.assertEqual([(m["label"], m["from"], m["to"]) for m in ar["moves"]],
+                         [("Layers", 70.0, 76.0), ("Text", 60.0, 58.0)])  # net change since the value was set
+        hist = self.history()
+        self.assertEqual([("areas" in h) for h in hist], [True, False, True, True])  # stored only on change
+        self.assertEqual(hist[2]["area_moves"], [{"label": "Layers", "from": 70.0, "to": 74.0}])
+        detail = self.read("data/apps/testcraft.json")
+        self.assertFalse(any("areas" in h for h in detail["history"]))
+        self.assertEqual(detail["parsed"]["features"][0], {"label": "Layers", "pct": 76.0, "hours": [2, 4]})
+        # A new full-target value starts the count again
+        r.commit(NOW - timedelta(hours=1), "Raise the full target", {"ROADMAP.md": roadmap(
+            52, hours="95–190", areas={"Layers": 76, "Text": 58, "Brushes": 10})})
+        self.run_update()
+        par = self.overview_app()["parity"]
+        self.assertEqual((par["revisions_since"], par["hours_since"], par["areas_since"]), (0, None, None))
+
+    def test_area_columns_by_header(self):
+        from roadmap_parser import parse_roadmap
+        def areas(header, row):
+            text = f"## Features\n\n| {header} |\n|---|---|---|---|\n| Paint | {row} |\n"
+            return parse_roadmap(text)["features"]
+        self.assertEqual(areas("Area | Breadth | Ready | Hours", "90% | 71% | 2–5"),
+                         [{"label": "Paint", "pct": 71.0, "hours": [2, 5]}])
+        self.assertEqual(areas("Area | Ready | Breadth | Remaining", "80% | 90% | 25–45 h"),
+                         [{"label": "Paint", "pct": 80.0, "hours": [25, 45]}])
+        self.assertEqual(areas("Area | Breadth (measured) | % | One agent (h)", "95% | 85% | 4–6"),
+                         [{"label": "Paint", "pct": 85.0, "hours": [4, 6]}])  # breadth is never the ready value
+        self.assertEqual(areas("Area | Parity | Hours | Doc", "60% | 15–25 | [doc](x.md)"),
+                         [{"label": "Paint", "pct": 60.0, "hours": [15, 25]}])
 
     def test_side_branch_states_are_not_revisions(self):
         self.base_history()

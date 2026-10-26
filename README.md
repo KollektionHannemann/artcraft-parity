@@ -30,13 +30,14 @@ its releases. It reads the repositories every 30 minutes and can be installed as
 - **Cards** sorted by the latest release by default. The apps ship in suite-wide waves within minutes of each other,
   so the sort groups releases by UTC day, puts the newest wave first, and within a wave sorts by the number of changes
   in the release, then by ready for real work. Other sorts are the latest change of ready for real work, ready for
-  real work, product parity, activity, suite order and name. When releases shipped after the current ready value was
-  set, the card says so ("Value from 10 Oct · 9 releases since"). "What changed" on each card opens the latest value
-  change, roadmap update, code change and release.
+  real work, product parity, activity, suite order and name. Under the bar each card says what happened since the
+  current ready value was set ("Since 11 Oct: 72 updates · 9 releases") and what moved below it in the roadmap
+  ("4 areas up · 7–12 h less", see [Movement below the headline](#movement-below-the-headline)). "What changed" on
+  each card opens the latest value change, area and hour movement, roadmap update, code change and release.
 - **Detail view** per app: the four kinds of update side by side, a chart of ready for real work or product parity
-  (zoomed or 0–100), daily code
-  activity, one timeline for all update types with filters, releases, audiences, dimensions, features and the
-  roadmap's own progress log.
+  (zoomed or 0–100), what moved since the value was set, daily code
+  activity, one timeline for all update types with filters (including area moves), releases, audiences, dimensions,
+  features with their hours and change, and the roadmap's own progress log.
 - **95 % milestone:** the first time an app reports at least 95 % ready for real work, it gets a short celebration and a gold outline for
   seven days, then a permanent marker.
 - **Installable web app** with offline support; offline copies are always labelled as saved data.
@@ -89,6 +90,20 @@ Findings from the real repositories that shaped this model (October 2026):
 - About 93 % of the changesets on main touch code; there are no bot accounts. Releases are tagged across the suite
   within minutes of each other and come with notes that list every merged pull request.
 
+## Movement below the headline
+
+The roadmaps re-score "ready for real work" rarely. In October 2026 every app kept its value for two weeks and more
+while its roadmap was revised up to 400 times, mostly with progress-log lines that end in "numbers unchanged". So the
+tracker shows what does move, all of it read from the roadmaps. It computes no percentage of its own.
+
+| Shown | What it is |
+|---|---|
+| Updates since | Roadmap revisions with new text or other estimates since the current value was first reported. |
+| Areas up / down | Rows of the roadmap's Features table whose ready value changed since then, net per area. The ready column is picked by its header ("Ready", "% ready"; never "Breadth"); tables without one use the first percentage. Areas that appear, disappear or are renamed don't count. |
+| Hours less / more | The full target's own hour estimate then and now, compared at both ends of the range (273–530 h → 266–518 h is "7–12 h less"). Most roadmaps don't update it. |
+
+Area moves are listed in the detail timeline ("Areas" filter). They never notify and never count as a value change.
+
 ## Activity
 
 Activity measures effort, not progress. It counts **code changesets** on the main branch: pull-request merges and
@@ -133,7 +148,8 @@ when it changes, the timeline shows it.
    API calls; file contents are fetched only for new roadmap revisions, in one batch.
 2. New first-parent revisions of `ROADMAP.md` are parsed and appended to `data/history/<app>.json`, then every
    revision gets its kind from the one before it. Revisions without a full-target value are remembered in
-   `data/state.json` and not parsed again.
+   `data/state.json` and not parsed again. The ready value per area of the Features table is stored with a revision
+   only when it changed, and the changed areas are listed with it.
 3. The changesets of the last 180 days are classified by the files they touch and condensed into the activity level.
    Merge commits are shown with their pull-request title.
 4. Releases come from the GitHub Releases API (see above); the last known list stays in `data/state.json` in case

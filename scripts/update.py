@@ -57,7 +57,7 @@ ETAGS_FILE = CACHE / "release-etags.json"  # not committed: GitHub's ETag change
 GIT_BASE = os.environ.get("TRACKER_GIT_BASE", "https://github.com")
 TRACKER_REPO = os.environ.get("GITHUB_REPOSITORY", "KollektionHannemann/artcraft-parity")
 
-SCHEMA = 2            # bump to rebuild all histories once (without notifications)
+SCHEMA = 3            # bump to rebuild all histories once (without notifications)
 DEFAULT_LIMIT = 1000  # roadmap revisions listed per app and run
 RECENT_DAYS = 14      # how long a newly discovered app is highlighted on the dashboard
 RECHECK_DAYS = 1      # how often a repository without a Craft roadmap is checked again
@@ -374,6 +374,7 @@ def metric_point(parsed: dict, commit: dict, text: str) -> dict:
         "breadth_pct": (m["breadth"] or {}).get("pct"),
         "scores_hash": scores_fingerprint(parsed),
         "text_hash": text_fingerprint(text),
+        "areas": {f["label"]: f["pct"] for f in parsed["features"]},  # kept only where it changed, see annotate()
     }
 
 
@@ -387,9 +388,28 @@ def annotate(history: list):
       content    the text changed (new progress-log lines, plans, descriptions)
       editorial  only formatting or the header metadata changed
     Recomputed on every run, so the classification is reproducible from the stored hashes.
+
+    areas (ready % per row of the roadmap's Features table) is stored only on points where it differs from the
+    point before; the other points inherit it. area_moves lists the areas whose value changed against the point
+    before. Areas that appear, disappear or are renamed are not moves.
     """
     prev = None
+    carried = None
     for h in history:
+        areas = h.get("areas")
+        if areas is None:
+            areas = carried
+        elif prev is not None and areas == carried:
+            h.pop("areas")
+        moves = []
+        if prev is not None and carried and areas and areas is not carried:
+            moves = [{"label": k, "from": carried[k], "to": v} for k, v in areas.items()
+                     if k in carried and carried[k] != v]
+        if moves:
+            h["area_moves"] = moves
+        else:
+            h.pop("area_moves", None)
+        carried = areas
         h["full_prev"] = prev["full_pct"] if prev else None
         if prev is None:
             kind = "first"
@@ -507,20 +527,40 @@ def update_history(app: dict, limit: int, errors: list, state: dict, rebuild: bo
     }
 
 
-def value_since(history: list):
-    """Commit time of the first revision that shows the current full-target value."""
+def value_start(history: list):
+    """Index of the first revision that shows the current full-target value."""
     if not history:
         return None
     i = len(history) - 1
     while i > 0 and history[i - 1]["full_pct"] == history[-1]["full_pct"]:
         i -= 1
-    return history[i]["ts"]
+    return i
+
+
+def areas_since(after: list):
+    """Net change per area over the given points: first 'from', last 'to'. Areas back at their start drop out."""
+    net = {}
+    for h in after:
+        for mv in h.get("area_moves") or []:
+            e = net.setdefault(mv["label"], {"label": mv["label"], "from": mv["from"]})
+            e["to"], e["ts"] = mv["to"], h["ts"]
+    moves = sorted((e for e in net.values() if e["to"] != e["from"]), key=lambda e: e["ts"], reverse=True)
+    if not moves:
+        return None
+    return {"up": sum(1 for e in moves if e["to"] > e["from"]),
+            "down": sum(1 for e in moves if e["to"] < e["from"]), "moves": moves}
 
 
 def parity_summary(history: list, truncated: bool, releases: list = ()) -> dict:
     changes = [h for h in history if h.get("kind") == "parity"]
     last = changes[-1] if changes else None
-    since = value_since(history)
+    start = value_start(history)
+    since = history[start]["ts"] if history else None
+    # What moved below the headline while it stood still: roadmap revisions, the full target's hour estimate
+    # and the areas of the Features table. All of it comes from the roadmap; nothing here is our own estimate.
+    after = history[start + 1:] if history else []
+    base_hours = history[start].get("full_hours") if history else None
+    now_hours = history[-1].get("full_hours") if history else None
     # Releases shipped while the value stood still. Only RELEASES_KEPT are listed, so a count that reaches
     # the oldest listed release is a lower bound ("capped").
     shipped = [r for r in releases if since and not r.get("prerelease") and parse_ts(r["ts"]) > parse_ts(since)]
@@ -529,6 +569,10 @@ def parity_summary(history: list, truncated: bool, releases: list = ()) -> dict:
         "value_since": since,
         "releases_since": len(shipped),
         "releases_since_capped": bool(shipped) and len(releases) >= RELEASES_KEPT and shipped[-1] is releases[-1],
+        "revisions_since": sum(1 for h in after if h.get("kind") in ("estimates", "content")),
+        "hours_since": {"from": base_hours, "to": now_hours} if base_hours and now_hours and base_hours != now_hours
+        else None,
+        "areas_since": areas_since(after),
         "changes": len(changes),
         "truncated": truncated,
         "last_change": None if not last else {
@@ -964,7 +1008,7 @@ def main():
             "milestone": milestone,
             "activity": activity,
             "releases": releases,
-            "history": [{k: v for k, v in h.items() if k not in ("scores_hash", "text_hash")} for h in history],
+            "history": [{k: v for k, v in h.items() if k not in ("scores_hash", "text_hash", "areas")} for h in history],
         }
         save_if_changed(APPS_DIR / f"{repo}.json", detail, "updated_at")
 

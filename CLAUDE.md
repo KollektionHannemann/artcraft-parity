@@ -59,14 +59,18 @@ python3 scripts/make_icons.py              # redraw icons after changing the mar
   order (never sort by the `commit_date` string: offsets differ). Keys include `commit_full`, `commit_date` (original
   offset), `ts` (UTC, `Z`), `full_pct`, `full_prev`, `kind`, `full_range`, `full_hours`, `full_label`, `target`, `stage`,
   `mainstream_pct`, `essentials_pct`, `breadth_pct`, `scores_hash`, `text_hash`. `kind` is recomputed every run by
-  `annotate()` from the point before: `first`, `parity`, `estimates`, `content` or `editorial`.
+  `annotate()` from the point before: `first`, `parity`, `estimates`, `content` or `editorial`. `areas` (ready % per
+  row of the Features table) is stored only on points where it changed; `annotate()` drops repeats and sets
+  `area_moves` (`label`, `from`, `to`). The detail file's history leaves `areas` out.
 - `state.json`: `schema` (bump `SCHEMA` in `update.py` to rebuild every history once, without events), `skipped.<app>`
   (commits without a full-target value, not parsed again), `truncated.<app>`, `releases.<app>` (last known release list; the ETag is kept in `.cache/release-etags.json`, never
   in `state.json`, because GitHub changes it with every download).
 - `overview.json`:
   - `apps`: one entry per app, sorted by full target. Per app: `parity` (`tracked_since`, `changes`, `last_change`,
     `value_since` = first revision with the current full-target value, `releases_since` = non-prerelease releases after
-    it, `releases_since_capped` when the count reaches the oldest of the 12 kept releases),
+    it, `releases_since_capped` when the count reaches the oldest of the 12 kept releases, `revisions_since` =
+    estimates/content revisions after it, `hours_since` = full-target hours then and now if they differ,
+    `areas_since` = net area moves after it with `up`/`down` counts, `null` if none),
     `roadmap` (`last_update`, `revisions_7d`), `activity` (`level`, `score`, `window` = 14 daily code counts ending today),
     `release`, `milestone` (`reached_at` is the commit time of the first revision at or above 95 %, `null` if the first
     known revision was already there), compact `series`.
@@ -103,6 +107,10 @@ python3 scripts/make_icons.py              # redraw icons after changing the mar
   DeckCraft 55, FigCraft 53, PdfCraft 50, GridCraft 50, DesignCraft 47, PhotoCraft 45, EffectCraft 45, SoundCraft 40,
   CADCraft 38.
 - Markdown links are reduced to their text (`clean()`). Keep it that way, or labels show raw `[text](file.md)` syntax.
+- Features table: the ready column is picked by header in `area_columns()` ("ready" wins, "breadth" never counts,
+  else the first percentage). The headers differ per app; all 13 parse.
+- Movement below the headline (areas, hours, updates since) is read from the roadmaps. Never compute a percentage of
+  our own, and never notify on it.
 
 ## Discovery of new apps
 
