@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "5dd5e8b",
-  "latest_commit_date": "2026-10-25T13:30:14-04:00",
-  "latest_message": "Port WordCraft to egui 0.37 with current-main editing changes (#4241)",
+  "latest_commit": "d753023",
+  "latest_commit_date": "2026-10-25T20:37:35-04:00",
+  "latest_message": "#39: per-user Windows installer that needs no administrator rights (#2560)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -413,39 +413,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 415,
-    "revisions_7d": 40,
+    "revisions": 416,
+    "revisions_7d": 41,
     "last_revision": {
-      "ts": "2026-10-25T17:30:14Z",
+      "ts": "2026-10-26T00:37:35Z",
       "kind": "content",
-      "commit": "5dd5e8b",
-      "commit_full": "5dd5e8b31b080beaae7383e573a909fd2c2dc4c6",
-      "message": "Port WordCraft to egui 0.37 with current-main editing changes (#4241)"
+      "commit": "d753023",
+      "commit_full": "d7530233cc48e24dc3095f4e20218d5be39f2428",
+      "message": "#39: per-user Windows installer that needs no administrator rights (#2560)"
     },
     "last_update": {
-      "ts": "2026-10-25T17:30:14Z",
+      "ts": "2026-10-26T00:37:35Z",
       "kind": "content",
-      "commit": "5dd5e8b",
-      "commit_full": "5dd5e8b31b080beaae7383e573a909fd2c2dc4c6",
-      "message": "Port WordCraft to egui 0.37 with current-main editing changes (#4241)"
+      "commit": "d753023",
+      "commit_full": "d7530233cc48e24dc3095f4e20218d5be39f2428",
+      "message": "#39: per-user Windows installer that needs no administrator rights (#2560)"
     },
     "self_reported": "2026-10-25"
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 17.8,
-    "active_days_7d": 5,
-    "changes_7d": 135,
-    "changes_14d": 702,
+    "level": "buzzing",
+    "score": 21.3,
+    "active_days_7d": 6,
+    "changes_7d": 146,
+    "changes_14d": 713,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-25T23:27:38Z",
-      "commit": "6d33706",
-      "commit_full": "6d3370635d3d21e15952330e9f722a4ada2ce40d",
-      "subject": "chore(deps): safe dependency refresh (#4356)"
+      "ts": "2026-10-26T01:17:01Z",
+      "commit": "ba27ef1",
+      "commit_full": "ba27ef13fbacc9c887e0dd96ca515ded4ad4cfa3",
+      "subject": "Security: bound layout memory (linked text boxes, repeated headers, crops, gridAfter) (#3867)"
     },
-    "last_commit_ts": "2026-10-25T23:27:38Z",
+    "last_commit_ts": "2026-10-26T01:17:01Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       0,
@@ -461,7 +461,7 @@
       57,
       22,
       37,
-      0
+      11
     ],
     "days": [
       {
@@ -788,6 +788,25 @@
           {
             "commit": "e5cffe7",
             "subject": "Small fixes: MERGEFIELD in any case, 18 SonarCloud closures, one unused constructor (#4233)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-26",
+        "code": 11,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "ba27ef1",
+            "subject": "Security: bound layout memory (linked text boxes, repeated headers, crops, gridAfter) (#3867)"
+          },
+          {
+            "commit": "ebf2721",
+            "subject": "Security: DOCX package/writer hardening — glossary privacy scrub, case-insensitive part names, chart and font limits, Flat OPC inlining (#3692, #3704, #3742, #3"
+          },
+          {
+            "commit": "7740ea6",
+            "subject": "Security: font ingestion checks sizes and counts before allocating (#3703, #3716) (#3869)"
           }
         ]
       }
@@ -10512,7 +10531,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "d753023",
+      "commit_full": "d7530233cc48e24dc3095f4e20218d5be39f2428",
+      "commit_date": "2026-10-25T20:37:35-04:00",
+      "ts": "2026-10-26T00:37:35Z",
+      "message": "#39: per-user Windows installer that needs no administrator rights (#2560)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-25",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-26T00:10:18+00:00"
+  "updated_at": "2026-10-26T01:19:01+00:00"
 }
