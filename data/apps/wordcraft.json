@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "438775c",
-  "latest_commit_date": "2026-10-26T00:12:33-04:00",
-  "latest_message": "View › New Window opens another window on the same document (#4391)",
+  "latest_commit": "f8e327b",
+  "latest_commit_date": "2026-10-27T12:37:46-04:00",
+  "latest_message": "#3907: continuous sections running off a page go onto the next; empty section marks in a row stack to the page bottom (#3936)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -454,6 +454,10 @@
       },
       {
         "date": "2026-10-23",
+        "text": "Layout: paragraphs that each start a continuous section now go onto new pages. A run of them ran off the bottom of the first page, because each new section counted as the top of a page. Empty section-break paragraphs after the first in a row take a line each until the page is full and then stay at its bottom, so the text after them starts the next page, as measured in Word (#3907)."
+      },
+      {
+        "date": "2026-10-23",
         "text": "A relationship the markup names without the prefix is read as it wrote (#3411 follow-up): a producer that left the prefix out writes the relationship id as a plain id, and the reader resolves it the way it resolves the namespaced one, so the part it names is kept with the object that names it and the writer rewrites the attribute with the id the new package gives the part. An ordinary id — a VML shape's, a drawing's wp:docPr, a picture's pic:cNvPr — is the element's own and names no part."
       },
       {
@@ -479,10 +483,6 @@
       {
         "date": "2026-10-22",
         "text": "Recovery covers every open document. Each dirty document keeps its own copy, written on the same ten-second cadence whether it is shown or not; closing a document without saving deletes its copy, as saving does, and a clean exit deletes the copies of every document saved or closed since its last copy. File › Recover lists only copies no open document keeps, and Restore opens a copy as another document (or in place of an untouched blank one), so it never replaces work. After a crash with several unsaved documents, the next start lists all of them."
-      },
-      {
-        "date": "2026-10-22",
-        "text": "The desktop window works with several open documents (one window per document comes next). View › Window › Switch Windows lists them and shows the one chosen, back where it was left; New, Open and the mailings open beside unsaved work instead of asking about it; File › Close shows the next document; quitting asks about every document with unsaved changes, one at a time, and Cancel keeps the app open."
       }
     ]
   },
@@ -491,7 +491,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 7,
     "releases_since_capped": false,
-    "revisions_since": 413,
+    "revisions_since": 414,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -516,39 +516,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 417,
-    "revisions_7d": 42,
+    "revisions": 418,
+    "revisions_7d": 43,
     "last_revision": {
-      "ts": "2026-10-26T04:12:33Z",
+      "ts": "2026-10-27T16:37:46Z",
       "kind": "content",
-      "commit": "438775c",
-      "commit_full": "438775cea155337f6cb0773444a1f36aae2d9fec",
-      "message": "View › New Window opens another window on the same document (#4391)"
+      "commit": "f8e327b",
+      "commit_full": "f8e327b068a2115d7f3e7f18fc7b9cb99a1fa5f7",
+      "message": "#3907: continuous sections running off a page go onto the next; empty section marks in a row stack to the page bottom (#3936)"
     },
     "last_update": {
-      "ts": "2026-10-26T04:12:33Z",
+      "ts": "2026-10-27T16:37:46Z",
       "kind": "content",
-      "commit": "438775c",
-      "commit_full": "438775cea155337f6cb0773444a1f36aae2d9fec",
-      "message": "View › New Window opens another window on the same document (#4391)"
+      "commit": "f8e327b",
+      "commit_full": "f8e327b068a2115d7f3e7f18fc7b9cb99a1fa5f7",
+      "message": "#3907: continuous sections running off a page go onto the next; empty section marks in a row stack to the page bottom (#3936)"
     },
     "self_reported": "2026-10-25"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.1,
+    "score": 21.1,
     "active_days_7d": 7,
-    "changes_7d": 165,
-    "changes_14d": 732,
+    "changes_7d": 168,
+    "changes_14d": 735,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-10-27T14:27:21Z",
-      "commit": "436d444",
-      "commit_full": "436d444ef0ee35c2e2b9fb44f87aa7d08d72641f",
-      "subject": "fix(ui): dropdown menus grow back after a search with no matches (#4577)"
+      "ts": "2026-10-27T16:37:46Z",
+      "commit": "f8e327b",
+      "commit_full": "f8e327b068a2115d7f3e7f18fc7b9cb99a1fa5f7",
+      "subject": "#3907: continuous sections running off a page go onto the next; empty section marks in a row stack to the page bottom (#3936)"
     },
-    "last_commit_ts": "2026-10-27T14:27:21Z",
+    "last_commit_ts": "2026-10-27T16:37:46Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       221,
@@ -564,7 +564,7 @@
       22,
       37,
       28,
-      2
+      5
     ],
     "days": [
       {
@@ -915,16 +915,20 @@
       },
       {
         "d": "2026-10-27",
-        "code": 2,
+        "code": 5,
         "other": 0,
         "samples": [
           {
-            "commit": "436d444",
-            "subject": "fix(ui): dropdown menus grow back after a search with no matches (#4577)"
+            "commit": "f8e327b",
+            "subject": "#3907: continuous sections running off a page go onto the next; empty section marks in a row stack to the page bottom (#3936)"
           },
           {
-            "commit": "2cf1d6c",
-            "subject": "refactor: shared module layout (craft-contrib#20) (#4489)"
+            "commit": "50a8ebe",
+            "subject": "#3872 follow-up: font table found by its stored spelling; privacy scrub keeps attribute values well-formed (#4387)"
+          },
+          {
+            "commit": "f270dbd",
+            "subject": "#3995: Thai one-face fallback tests skip unless a Thai font with Latin is installed (#4060)"
           }
         ]
       }
@@ -10709,7 +10713,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "f8e327b",
+      "commit_full": "f8e327b068a2115d7f3e7f18fc7b9cb99a1fa5f7",
+      "commit_date": "2026-10-27T12:37:46-04:00",
+      "ts": "2026-10-27T16:37:46Z",
+      "message": "#3907: continuous sections running off a page go onto the next; empty section marks in a row stack to the page bottom (#3936)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-25",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-27T15:11:03+00:00"
+  "updated_at": "2026-10-27T17:09:38+00:00"
 }
