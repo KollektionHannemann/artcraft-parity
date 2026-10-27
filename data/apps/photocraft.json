@@ -363,18 +363,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.3,
+    "score": 22.5,
     "active_days_7d": 7,
-    "changes_7d": 219,
-    "changes_14d": 661,
+    "changes_7d": 220,
+    "changes_14d": 662,
     "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-10-27T14:32:56Z",
-      "commit": "07bd794",
-      "commit_full": "07bd794686ea4db0b557c978d58173a62760e4ca",
-      "subject": "fix(ui): dropdown menus grow back after a search with no matches (#9849)"
+      "ts": "2026-10-27T17:42:11Z",
+      "commit": "a85d791",
+      "commit_full": "a85d79167ef95b7348872ff6542e011f15b9ec3b",
+      "subject": "perf(save): faster .pcraft and PSD saves, byte-identical output (#9877)"
     },
-    "last_commit_ts": "2026-10-27T14:32:56Z",
+    "last_commit_ts": "2026-10-27T17:42:11Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       147,
@@ -390,7 +390,7 @@
       14,
       45,
       7,
-      5
+      6
     ],
     "days": [
       {
@@ -908,9 +908,13 @@
       },
       {
         "d": "2026-10-27",
-        "code": 5,
+        "code": 6,
         "other": 1,
         "samples": [
+          {
+            "commit": "a85d791",
+            "subject": "perf(save): faster .pcraft and PSD saves, byte-identical output (#9877)"
+          },
           {
             "commit": "07bd794",
             "subject": "fix(ui): dropdown menus grow back after a search with no matches (#9849)"
@@ -918,10 +922,6 @@
           {
             "commit": "7ac7b8b",
             "subject": "refactor(selection): take the feather reach from the blur (#9802)"
-          },
-          {
-            "commit": "805ed13",
-            "subject": "Expand, Contract and Border: crop to the selection, up to 40× faster on small selections (#9697)"
           }
         ]
       }
@@ -1273,5 +1273,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-27T15:10:35+00:00"
+  "updated_at": "2026-10-27T18:02:29+00:00"
 }

@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/designcraft",
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
-  "latest_commit": "50650f7",
-  "latest_commit_date": "2026-10-27T01:54:50-04:00",
-  "latest_message": "Iconic panel flyouts stay open while the canvas is in use (#1902)",
+  "latest_commit": "1abeda4",
+  "latest_commit_date": "2026-10-27T13:45:19-04:00",
+  "latest_message": "Text frames: column rules run from the top line's ascent to the bottom line's descent (#1802)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -312,6 +312,10 @@
       },
       {
         "date": "2026-10-24",
+        "text": "· Column rules run from the top line's ascent to the bottom line's descent, as InDesign draws them, instead of from the top to the bottom of the columns, on screen, in PDF and in PowerPoint export. The top and bottom insets shorten the rule from those lines. Existing documents draw their column rules at the new length. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-24",
         "text": "· Panels dock through the suite's shared docking (craft-libs), and on desktop a floating panel opens in its own window that can leave the main window: keys pressed there run the main window's shortcuts, clipboard and tool keys, and the canvas paints no tool cursor while another of the app's windows has the pointer. The web build keeps floating panels in the page. No readiness percentage change."
       },
       {
@@ -337,6 +341,10 @@
       {
         "date": "2026-10-24",
         "text": "· Optical Margin Alignment and hanging punctuation apply to lines with a tab or a right indent tab, as both composers already measured them: the edge glyphs hang, and tab stops stay where they are. Such a line was set without the hang: a justified line that fit only because its period or closing quote hangs had its word spaces squeezed to make up for it, and text after a right indent tab stopped at the measure instead of hanging. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-24",
+        "text": "· The Story Editor has InDesign's vertical depth ruler between the style column and the text, and View › Story Editor › Show/Hide Depth Ruler (view.storyEditorDepthRuler) shows or hides it in the Story Editor, remembered with the preferences. The ruler is marked in the document's vertical ruler units with how deep the story's text fills its frames, counted through its columns and threaded frames (lines set side by side, in the sub-columns of a split paragraph or on both sides of a wrap object, count once), and is shaded down to the overset point, where a red line now crosses the editor. No readiness percentage change."
       },
       {
         "date": "2026-10-24",
@@ -457,14 +465,6 @@
       {
         "date": "2026-10-21",
         "text": "· Properties › Character and Paragraph: ••• (More Options) expands the section in place, as InDesign's: Character adds vertical and horizontal scale, baseline shift, skew, language and OpenType, and All Caps, Small Caps, Superscript, Subscript, Underline and Strikethrough; Paragraph adds the left, right, first line and last line indents, space before and after, the drop cap's lines and characters, Align to Baseline Grid and Hyphenate. It used to open the Character or Paragraph panel; the language field moved under ••• as in InDesign. Found in the Learn Skills Daily course, chapter 16. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-21",
-        "text": "· The text Control panel has InDesign's two modes: A (Character Formatting Controls: font and style, size and leading, All Caps/Superscript/Underline and Small Caps/Subscript/Strikethrough, kerning and tracking, vertical and horizontal scale, baseline shift and skew, character style and language) and ¶ (Paragraph Formatting Controls: the nine alignments, left/first line and right/last line indents, space before and after, the drop cap's lines and characters, paragraph style, Hyphenate and Align to Baseline Grid). It used to show a fixed mix of both. Found in the Learn Skills Daily course, chapter 16. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-21",
-        "text": "· The ¶ (Paragraph Formatting Controls) mode of the text Control panel has InDesign's Bulleted List and Numbered List buttons (with the default hanging indent) and Shading and Border: a checkbox, a button opening Paragraph Borders and Shading on that tab, and the colour. Found in the Learn Skills Daily course, chapter 21. No readiness percentage change."
       }
     ]
   },
@@ -473,7 +473,7 @@
     "value_since": "2026-10-10T18:09:17Z",
     "releases_since": 8,
     "releases_since_capped": false,
-    "revisions_since": 143,
+    "revisions_since": 145,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -481,39 +481,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 144,
-    "revisions_7d": 45,
+    "revisions": 146,
+    "revisions_7d": 47,
     "last_revision": {
-      "ts": "2026-10-27T05:54:50Z",
+      "ts": "2026-10-27T17:45:19Z",
       "kind": "content",
-      "commit": "50650f7",
-      "commit_full": "50650f74d7328745cfcdd16098313a9fc31b23d5",
-      "message": "Iconic panel flyouts stay open while the canvas is in use (#1902)"
+      "commit": "1abeda4",
+      "commit_full": "1abeda4459032ad6e935e2ebfb66b65c2d75c8a4",
+      "message": "Text frames: column rules run from the top line's ascent to the bottom line's descent (#1802)"
     },
     "last_update": {
-      "ts": "2026-10-27T05:54:50Z",
+      "ts": "2026-10-27T17:45:19Z",
       "kind": "content",
-      "commit": "50650f7",
-      "commit_full": "50650f74d7328745cfcdd16098313a9fc31b23d5",
-      "message": "Iconic panel flyouts stay open while the canvas is in use (#1902)"
+      "commit": "1abeda4",
+      "commit_full": "1abeda4459032ad6e935e2ebfb66b65c2d75c8a4",
+      "message": "Text frames: column rules run from the top line's ascent to the bottom line's descent (#1802)"
     },
     "self_reported": "2026-10-23"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.1,
+    "score": 19.9,
     "active_days_7d": 7,
-    "changes_7d": 165,
-    "changes_14d": 354,
+    "changes_7d": 168,
+    "changes_14d": 357,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-10-27T14:27:32Z",
-      "commit": "d77fdf2",
-      "commit_full": "d77fdf2d4c55f6013cf16b2db6c49f64ae22e820",
-      "subject": "fix(ui): dropdown menus grow back after a search with no matches (#1917)"
+      "ts": "2026-10-27T17:45:19Z",
+      "commit": "1abeda4",
+      "commit_full": "1abeda4459032ad6e935e2ebfb66b65c2d75c8a4",
+      "subject": "Text frames: column rules run from the top line's ascent to the bottom line's descent (#1802)"
     },
-    "last_commit_ts": "2026-10-27T14:27:32Z",
+    "last_commit_ts": "2026-10-27T17:45:19Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       26,
@@ -529,7 +529,7 @@
       38,
       39,
       11,
-      3
+      6
     ],
     "days": [
       {
@@ -986,20 +986,20 @@
       },
       {
         "d": "2026-10-27",
-        "code": 3,
+        "code": 6,
         "other": 0,
         "samples": [
           {
-            "commit": "d77fdf2",
-            "subject": "fix(ui): dropdown menus grow back after a search with no matches (#1917)"
+            "commit": "1abeda4",
+            "subject": "Text frames: column rules run from the top line's ascent to the bottom line's descent (#1802)"
           },
           {
-            "commit": "50650f7",
-            "subject": "Iconic panel flyouts stay open while the canvas is in use (#1902)"
+            "commit": "5d8739b",
+            "subject": "Story Editor: a depth ruler beside the text, and View › Story Editor › Show/Hide Depth Ruler, as in InDesign (#1795)"
           },
           {
-            "commit": "935b817",
-            "subject": "refactor: shared module layout (craft-contrib#20) (#1892)"
+            "commit": "d36e5fb",
+            "subject": "PDF export: ask the composition cache once per story and page (#1927)"
           }
         ]
       }
@@ -4523,7 +4523,53 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "5d8739b",
+      "commit_full": "5d8739b3d81c2e94e42c564f2d4141beddd20176",
+      "commit_date": "2026-10-27T13:44:46-04:00",
+      "ts": "2026-10-27T17:44:46Z",
+      "message": "Story Editor: a depth ruler beside the text, and View › Story Editor › Show/Hide Depth Ruler, as in InDesign (#1795)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-23",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "1abeda4",
+      "commit_full": "1abeda4459032ad6e935e2ebfb66b65c2d75c8a4",
+      "commit_date": "2026-10-27T13:45:19-04:00",
+      "ts": "2026-10-27T17:45:19Z",
+      "message": "Text frames: column rules run from the top line's ascent to the bottom line's descent (#1802)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-23",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-27T15:10:56+00:00"
+  "updated_at": "2026-10-27T18:03:17+00:00"
 }

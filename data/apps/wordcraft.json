@@ -537,18 +537,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.1,
+    "score": 21.4,
     "active_days_7d": 7,
-    "changes_7d": 168,
-    "changes_14d": 735,
+    "changes_7d": 169,
+    "changes_14d": 736,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-10-27T16:37:46Z",
-      "commit": "f8e327b",
-      "commit_full": "f8e327b068a2115d7f3e7f18fc7b9cb99a1fa5f7",
-      "subject": "#3907: continuous sections running off a page go onto the next; empty section marks in a row stack to the page bottom (#3936)"
+      "ts": "2026-10-27T17:41:24Z",
+      "commit": "4b8b06f",
+      "commit_full": "4b8b06fe03f93c9fc81783ee3e5b01977be89efc",
+      "subject": "Speed up PDF export by about 24 % (#4602)"
     },
-    "last_commit_ts": "2026-10-27T16:37:46Z",
+    "last_commit_ts": "2026-10-27T17:41:24Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       221,
@@ -564,7 +564,7 @@
       22,
       37,
       28,
-      5
+      6
     ],
     "days": [
       {
@@ -915,9 +915,13 @@
       },
       {
         "d": "2026-10-27",
-        "code": 5,
+        "code": 6,
         "other": 0,
         "samples": [
+          {
+            "commit": "4b8b06f",
+            "subject": "Speed up PDF export by about 24 % (#4602)"
+          },
           {
             "commit": "f8e327b",
             "subject": "#3907: continuous sections running off a page go onto the next; empty section marks in a row stack to the page bottom (#3936)"
@@ -925,10 +929,6 @@
           {
             "commit": "50a8ebe",
             "subject": "#3872 follow-up: font table found by its stored spelling; privacy scrub keeps attribute values well-formed (#4387)"
-          },
-          {
-            "commit": "f270dbd",
-            "subject": "#3995: Thai one-face fallback tests skip unless a Thai font with Latin is installed (#4060)"
           }
         ]
       }
@@ -10738,5 +10738,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-27T17:09:38+00:00"
+  "updated_at": "2026-10-27T18:03:24+00:00"
 }
