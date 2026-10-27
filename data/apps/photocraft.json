@@ -363,18 +363,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.7,
+    "score": 22.0,
     "active_days_7d": 7,
-    "changes_7d": 217,
-    "changes_14d": 659,
+    "changes_7d": 218,
+    "changes_14d": 660,
     "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-10-27T04:56:40Z",
-      "commit": "805ed13",
-      "commit_full": "805ed134e4e94432088c800efc12022f0271523d",
-      "subject": "Expand, Contract and Border: crop to the selection, up to 40× faster on small selections (#9697)"
+      "ts": "2026-10-27T05:07:05Z",
+      "commit": "7ac7b8b",
+      "commit_full": "7ac7b8b106acccf6826d45ed5c9e481dfe341035",
+      "subject": "refactor(selection): take the feather reach from the blur (#9802)"
     },
-    "last_commit_ts": "2026-10-27T04:56:40Z",
+    "last_commit_ts": "2026-10-27T05:07:05Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       147,
@@ -390,7 +390,7 @@
       14,
       45,
       7,
-      3
+      4
     ],
     "days": [
       {
@@ -908,9 +908,13 @@
       },
       {
         "d": "2026-10-27",
-        "code": 3,
+        "code": 4,
         "other": 1,
         "samples": [
+          {
+            "commit": "7ac7b8b",
+            "subject": "refactor(selection): take the feather reach from the blur (#9802)"
+          },
           {
             "commit": "805ed13",
             "subject": "Expand, Contract and Border: crop to the selection, up to 40× faster on small selections (#9697)"
@@ -918,10 +922,6 @@
           {
             "commit": "55b8df8",
             "subject": "perf(selection): window marquee and lasso feather masks (#9794)"
-          },
-          {
-            "commit": "d42f9da",
-            "subject": "refactor: shared module layout (craft-contrib#20) (#9758)"
           }
         ]
       }
@@ -1273,5 +1273,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-27T04:59:05+00:00"
+  "updated_at": "2026-10-27T05:25:33+00:00"
 }
