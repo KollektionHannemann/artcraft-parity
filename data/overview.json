@@ -1375,7 +1375,7 @@
         "value_since": "2026-10-15T06:21:11Z",
         "releases_since": 6,
         "releases_since_capped": false,
-        "revisions_since": 85,
+        "revisions_since": 86,
         "hours_since": null,
         "areas_since": null,
         "changes": 1,
@@ -1392,39 +1392,39 @@
         }
       },
       "roadmap": {
-        "revisions": 173,
-        "revisions_7d": 19,
+        "revisions": 174,
+        "revisions_7d": 20,
         "last_revision": {
-          "ts": "2026-10-25T18:30:31Z",
+          "ts": "2026-10-27T19:57:22Z",
           "kind": "content",
-          "commit": "e90f788",
-          "commit_full": "e90f7882f19c4c2d8ac8037bc4fcb43c70478386",
-          "message": "Migrate PdfCraft to egui 0.37 (#4591)"
+          "commit": "1889690",
+          "commit_full": "1889690bfa65c908654cf3fe9a1e5f2f37dcbe02",
+          "message": "Packaging: fetch OCR models from the ONNX URLs (legacy RTEN URLs return 403) (#5039)"
         },
         "last_update": {
-          "ts": "2026-10-25T18:30:31Z",
+          "ts": "2026-10-27T19:57:22Z",
           "kind": "content",
-          "commit": "e90f788",
-          "commit_full": "e90f7882f19c4c2d8ac8037bc4fcb43c70478386",
-          "message": "Migrate PdfCraft to egui 0.37 (#4591)"
+          "commit": "1889690",
+          "commit_full": "1889690bfa65c908654cf3fe9a1e5f2f37dcbe02",
+          "message": "Packaging: fetch OCR models from the ONNX URLs (legacy RTEN URLs return 403) (#5039)"
         },
-        "self_reported": "2026-10-25"
+        "self_reported": "2026-10-27"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 19.4,
+        "score": 19.8,
         "active_days_7d": 7,
-        "changes_7d": 192,
-        "changes_14d": 492,
+        "changes_7d": 193,
+        "changes_14d": 493,
         "housekeeping_7d": 19,
         "last_code_change": {
-          "ts": "2026-10-27T17:42:21Z",
-          "commit": "e9fc890",
-          "commit_full": "e9fc890a862ea2d8c895ea32ddecda98580483cd",
-          "subject": "perf(engine): export page images on worker threads (about 80% less wall time) (#5026)"
+          "ts": "2026-10-27T19:57:22Z",
+          "commit": "1889690",
+          "commit_full": "1889690bfa65c908654cf3fe9a1e5f2f37dcbe02",
+          "subject": "Packaging: fetch OCR models from the ONNX URLs (legacy RTEN URLs return 403) (#5039)"
         },
-        "last_commit_ts": "2026-10-27T17:42:21Z",
+        "last_commit_ts": "2026-10-27T19:57:22Z",
         "repo_since": "2026-09-30T09:17:08Z",
         "window": [
           11,
@@ -1440,7 +1440,7 @@
           33,
           36,
           5,
-          2
+          3
         ]
       },
       "release": {
@@ -1470,11 +1470,11 @@
           "v": 50.0
         },
         {
-          "t": "2026-10-25T18:30:31Z",
+          "t": "2026-10-27T19:57:22Z",
           "v": 50.0
         }
       ],
-      "history_len": 173
+      "history_len": 174
     },
     {
       "id": "gridcraft",
@@ -1987,18 +1987,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.2,
+        "score": 13.7,
         "active_days_7d": 7,
-        "changes_7d": 71,
-        "changes_14d": 128,
+        "changes_7d": 72,
+        "changes_14d": 129,
         "housekeeping_7d": 13,
         "last_code_change": {
-          "ts": "2026-10-27T14:27:11Z",
-          "commit": "1e6310f",
-          "commit_full": "1e6310f85ba4e289d9078b52202948c9d398ff44",
-          "subject": "fix(ui): dropdown menus grow back after a search with no matches (#1140)"
+          "ts": "2026-10-27T19:41:22Z",
+          "commit": "a8c19f0",
+          "commit_full": "a8c19f0ffe44b992aad227bc409e5de01ceb59c4",
+          "subject": "Speed up mix bounce by about 20 % with byte-identical output (#1144)"
         },
-        "last_commit_ts": "2026-10-27T14:27:11Z",
+        "last_commit_ts": "2026-10-27T19:41:22Z",
         "repo_since": "2026-10-06T00:08:04Z",
         "window": [
           1,
@@ -2014,7 +2014,7 @@
           30,
           11,
           3,
-          2
+          3
         ]
       },
       "release": {
@@ -2101,18 +2101,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 18.2,
+        "score": 18.4,
         "active_days_7d": 7,
-        "changes_7d": 168,
-        "changes_14d": 252,
+        "changes_7d": 169,
+        "changes_14d": 253,
         "housekeeping_7d": 14,
         "last_code_change": {
-          "ts": "2026-10-27T18:55:46Z",
-          "commit": "26da98e",
-          "commit_full": "26da98e320d06ae22a171601871c6dd7dd74c542",
-          "subject": "fix(ui-egui): Ui::scope_id for the block description field (#2336)"
+          "ts": "2026-10-27T19:55:09Z",
+          "commit": "2721aa8",
+          "commit_full": "2721aa8982478bc459b203f5a1d2c7d7d154f5ce",
+          "subject": "Enforce Rust coding standards via Clippy (#2239)"
         },
-        "last_commit_ts": "2026-10-27T18:55:46Z",
+        "last_commit_ts": "2026-10-27T19:55:09Z",
         "repo_since": "2026-10-06T00:15:47Z",
         "window": [
           0,
@@ -2128,7 +2128,7 @@
           67,
           49,
           6,
-          9
+          10
         ]
       },
       "release": {
@@ -2162,5 +2162,5 @@
     }
   ],
   "errors": [],
-  "generated_at": "2026-10-27T19:11:29+00:00"
+  "generated_at": "2026-10-27T19:59:02+00:00"
 }
