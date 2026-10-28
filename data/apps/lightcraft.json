@@ -419,18 +419,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 11.9,
+    "score": 12.2,
     "active_days_7d": 7,
-    "changes_7d": 35,
-    "changes_14d": 57,
+    "changes_7d": 36,
+    "changes_14d": 58,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-10-28T16:09:18Z",
-      "commit": "aaf532c",
-      "commit_full": "aaf532c5252ebb235847107002998b462fce0de6",
-      "subject": "macOS packaging: retry stapler when Apple's CloudKit drops the connection"
+      "ts": "2026-10-28T17:05:19Z",
+      "commit": "e2d18b5",
+      "commit_full": "e2d18b5fb9e6177167177c194461a0b427b0a196",
+      "subject": "Grant network access so update checks can reach GitHub (#3269)"
     },
-    "last_commit_ts": "2026-10-28T16:09:24Z",
+    "last_commit_ts": "2026-10-28T17:05:19Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
       6,
@@ -446,7 +446,7 @@
       8,
       3,
       7,
-      3
+      4
     ],
     "days": [
       {
@@ -927,9 +927,13 @@
       },
       {
         "d": "2026-10-28",
-        "code": 3,
+        "code": 4,
         "other": 1,
         "samples": [
+          {
+            "commit": "e2d18b5",
+            "subject": "Grant network access so update checks can reach GitHub (#3269)"
+          },
           {
             "commit": "aaf532c",
             "subject": "macOS packaging: retry stapler when Apple's CloudKit drops the connection"
@@ -937,10 +941,6 @@
           {
             "commit": "59a5d00",
             "subject": "Enforce Rust coding standards via Clippy (#3111)"
-          },
-          {
-            "commit": "56b5c8b",
-            "subject": "Scan the whole repository again in SonarCloud (#3224)"
           }
         ]
       }
@@ -1414,5 +1414,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-28T16:14:13+00:00"
+  "updated_at": "2026-10-28T17:13:58+00:00"
 }

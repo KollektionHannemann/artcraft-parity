@@ -471,7 +471,7 @@
   "parity": {
     "tracked_since": "2026-10-10T18:09:17Z",
     "value_since": "2026-10-10T18:09:17Z",
-    "releases_since": 8,
+    "releases_since": 9,
     "releases_since_capped": false,
     "revisions_since": 145,
     "hours_since": null,
@@ -502,18 +502,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.8,
+    "score": 18.2,
     "active_days_7d": 7,
-    "changes_7d": 163,
-    "changes_14d": 334,
+    "changes_7d": 164,
+    "changes_14d": 335,
     "housekeeping_7d": 10,
     "last_code_change": {
-      "ts": "2026-10-28T15:52:02Z",
-      "commit": "2ea0dfc",
-      "commit_full": "2ea0dfc11f4d363a0b0abb4f02cf2f46357548f6",
-      "subject": "macOS packaging: retry stapler when Apple's CloudKit drops the connection"
+      "ts": "2026-10-28T17:07:31Z",
+      "commit": "32119f3",
+      "commit_full": "32119f34ee95d5c4e17360d56ee4bdfe5b15d0fb",
+      "subject": "Grant network access so update checks can reach GitHub (#1954)"
     },
-    "last_commit_ts": "2026-10-28T15:52:07Z",
+    "last_commit_ts": "2026-10-28T17:07:31Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       124,
@@ -529,7 +529,7 @@
       39,
       11,
       7,
-      2
+      3
     ],
     "days": [
       {
@@ -1005,9 +1005,13 @@
       },
       {
         "d": "2026-10-28",
-        "code": 2,
+        "code": 3,
         "other": 1,
         "samples": [
+          {
+            "commit": "32119f3",
+            "subject": "Grant network access so update checks can reach GitHub (#1954)"
+          },
           {
             "commit": "2ea0dfc",
             "subject": "macOS packaging: retry stapler when Apple's CloudKit drops the connection"
@@ -1021,6 +1025,23 @@
     ]
   },
   "releases": [
+    {
+      "tag": "v0.14.0",
+      "name": "DesignCraft v0.14.0",
+      "ts": "2026-10-28T16:25:36Z",
+      "url": "https://github.com/storytold/designcraft/releases/tag/v0.14.0",
+      "changes": 50,
+      "new_contributors": 2,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.13.0",
       "name": "DesignCraft v0.13.0",
@@ -1198,23 +1219,6 @@
       "url": "https://github.com/storytold/designcraft/releases/tag/v0.2.1",
       "changes": 7,
       "new_contributors": 1,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "patch"
-    },
-    {
-      "tag": "v0.2.0",
-      "name": "DesignCraft v0.2.0",
-      "ts": "2026-10-05T06:55:53Z",
-      "url": "https://github.com/storytold/designcraft/releases/tag/v0.2.0",
-      "changes": 17,
-      "new_contributors": 2,
       "platforms": [
         "macOS",
         "Windows",
@@ -4586,5 +4590,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-28T16:14:42+00:00"
+  "updated_at": "2026-10-28T17:14:24+00:00"
 }
