@@ -453,7 +453,7 @@
   "parity": {
     "tracked_since": "2026-10-10T18:23:28Z",
     "value_since": "2026-10-15T06:21:11Z",
-    "releases_since": 6,
+    "releases_since": 7,
     "releases_since_capped": false,
     "revisions_since": 86,
     "hours_since": null,
@@ -493,18 +493,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.5,
+    "score": 18.8,
     "active_days_7d": 7,
-    "changes_7d": 185,
-    "changes_14d": 487,
+    "changes_7d": 186,
+    "changes_14d": 488,
     "housekeeping_7d": 18,
     "last_code_change": {
-      "ts": "2026-10-28T16:09:18Z",
-      "commit": "45d95f1",
-      "commit_full": "45d95f1107014c81a3a49c3bc760bda3d90050f7",
-      "subject": "macOS packaging: retry stapler when Apple's CloudKit drops the connection"
+      "ts": "2026-10-28T17:17:18Z",
+      "commit": "67d4f18",
+      "commit_full": "67d4f181795c46d149cbc50b50799ddf125c3ddf",
+      "subject": "Grant network access so update checks can reach GitHub (#5189)"
     },
-    "last_commit_ts": "2026-10-28T16:09:26Z",
+    "last_commit_ts": "2026-10-28T17:17:18Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       200,
@@ -520,7 +520,7 @@
       36,
       5,
       5,
-      3
+      4
     ],
     "days": [
       {
@@ -1044,9 +1044,13 @@
       },
       {
         "d": "2026-10-28",
-        "code": 3,
+        "code": 4,
         "other": 1,
         "samples": [
+          {
+            "commit": "67d4f18",
+            "subject": "Grant network access so update checks can reach GitHub (#5189)"
+          },
           {
             "commit": "45d95f1",
             "subject": "macOS packaging: retry stapler when Apple's CloudKit drops the connection"
@@ -1054,16 +1058,29 @@
           {
             "commit": "20eebc1",
             "subject": "deps: pin craft-libs at e11f9d9a so Cargo before 1.99 loads craft-menu (#5094)"
-          },
-          {
-            "commit": "3932ee0",
-            "subject": "Enforce Rust coding standards via Clippy (#4897)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.15.0",
+      "name": "PdfCraft v0.15.0",
+      "ts": "2026-10-28T17:38:25Z",
+      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.15.0",
+      "changes": 44,
+      "new_contributors": 4,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.14.0",
       "name": "PdfCraft v0.14.0",
@@ -1241,23 +1258,6 @@
       "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.4.0",
       "changes": 85,
       "new_contributors": 28,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.2.1",
-      "name": "PrintCraft v0.2.1",
-      "ts": "2026-10-06T12:37:41Z",
-      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.2.1",
-      "changes": 25,
-      "new_contributors": 2,
       "platforms": [
         "macOS",
         "Windows",
@@ -5273,5 +5273,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-28T16:14:24+00:00"
+  "updated_at": "2026-10-28T18:05:53+00:00"
 }
