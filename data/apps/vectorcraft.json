@@ -557,18 +557,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 26.2,
+    "score": 26.9,
     "active_days_7d": 7,
-    "changes_7d": 445,
-    "changes_14d": 1231,
+    "changes_7d": 447,
+    "changes_14d": 1233,
     "housekeeping_7d": 24,
     "last_code_change": {
-      "ts": "2026-10-28T19:48:05Z",
-      "commit": "56804f6",
-      "commit_full": "56804f6d7e961a7d6bfb8e3d46c168b15e1feee2",
-      "subject": "packaging: honor CARGO_BUILD_TARGET in FreeBSD package.sh (#4487)"
+      "ts": "2026-10-28T22:46:56Z",
+      "commit": "5fd2282",
+      "commit_full": "5fd2282b79b519078995bccb7356a00a5553c863",
+      "subject": "Remove the experimental Windows 7 build (#4497)"
     },
-    "last_commit_ts": "2026-10-28T19:48:05Z",
+    "last_commit_ts": "2026-10-28T22:46:56Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       181,
@@ -584,7 +584,7 @@
       32,
       98,
       15,
-      2
+      4
     ],
     "days": [
       {
@@ -1108,16 +1108,20 @@
       },
       {
         "d": "2026-10-28",
-        "code": 2,
+        "code": 4,
         "other": 2,
         "samples": [
           {
-            "commit": "56804f6",
-            "subject": "packaging: honor CARGO_BUILD_TARGET in FreeBSD package.sh (#4487)"
+            "commit": "5fd2282",
+            "subject": "Remove the experimental Windows 7 build (#4497)"
           },
           {
-            "commit": "ed960ef",
-            "subject": "Grant network access so update checks can reach GitHub (#4482)"
+            "commit": "49a60d9",
+            "subject": "Enforce Rust coding standards via Clippy (#4299)"
+          },
+          {
+            "commit": "56804f6",
+            "subject": "packaging: honor CARGO_BUILD_TARGET in FreeBSD package.sh (#4487)"
           }
         ]
       }
@@ -6353,5 +6357,5 @@
       "kind": "estimates"
     }
   ],
-  "updated_at": "2026-10-28T20:06:12+00:00"
+  "updated_at": "2026-10-28T22:59:15+00:00"
 }
