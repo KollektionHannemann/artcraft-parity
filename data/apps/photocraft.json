@@ -363,18 +363,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.7,
+    "score": 21.0,
     "active_days_7d": 7,
-    "changes_7d": 216,
-    "changes_14d": 522,
+    "changes_7d": 217,
+    "changes_14d": 523,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-28T03:56:45Z",
-      "commit": "d453c7d",
-      "commit_full": "d453c7d12b2869862bc61dace14ccb7778845dbf",
-      "subject": "xtask perf: a baseline knows how trustworthy it is (#7494) (#9564)"
+      "ts": "2026-10-28T05:01:25Z",
+      "commit": "1f7fc0f",
+      "commit_full": "1f7fc0f53696e54da79b95015abb37d7c22cdd1a",
+      "subject": "refactor: split oversized filter, adjustment, crop and effect builders (#6463)"
     },
-    "last_commit_ts": "2026-10-28T03:56:45Z",
+    "last_commit_ts": "2026-10-28T05:01:25Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       65,
@@ -390,7 +390,7 @@
       45,
       7,
       9,
-      4
+      5
     ],
     "days": [
       {
@@ -927,9 +927,13 @@
       },
       {
         "d": "2026-10-28",
-        "code": 4,
+        "code": 5,
         "other": 0,
         "samples": [
+          {
+            "commit": "1f7fc0f",
+            "subject": "refactor: split oversized filter, adjustment, crop and effect builders (#6463)"
+          },
           {
             "commit": "d453c7d",
             "subject": "xtask perf: a baseline knows how trustworthy it is (#7494) (#9564)"
@@ -937,10 +941,6 @@
           {
             "commit": "54f7f2c",
             "subject": "Render path: one place records why a view left the GPU (#9328) (#9566)"
-          },
-          {
-            "commit": "d5be9b8",
-            "subject": "Enforce Rust coding standards via Clippy (#9770)"
           }
         ]
       }
@@ -1292,5 +1292,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-28T04:08:11+00:00"
+  "updated_at": "2026-10-28T05:07:42+00:00"
 }
