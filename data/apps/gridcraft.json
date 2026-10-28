@@ -460,18 +460,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.7,
+    "score": 15.1,
     "active_days_7d": 7,
-    "changes_7d": 95,
-    "changes_14d": 130,
+    "changes_7d": 96,
+    "changes_14d": 131,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-10-28T17:07:26Z",
-      "commit": "70327cd",
-      "commit_full": "70327cd3d9b7de9af1bcaa33488c0736a0d346d8",
-      "subject": "Grant network access so update checks can reach GitHub (#2841)"
+      "ts": "2026-10-28T19:35:58Z",
+      "commit": "146161b",
+      "commit_full": "146161b4b450a56e5e59a083ba0478582d1e602b",
+      "subject": "Honor CARGO_BUILD_TARGET in FreeBSD packaging for aarch64 release builds (#2847)"
     },
-    "last_commit_ts": "2026-10-28T17:07:26Z",
+    "last_commit_ts": "2026-10-28T19:35:58Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       2,
@@ -487,7 +487,7 @@
       31,
       7,
       5,
-      2
+      3
     ],
     "days": [
       {
@@ -827,9 +827,13 @@
       },
       {
         "d": "2026-10-28",
-        "code": 2,
+        "code": 3,
         "other": 1,
         "samples": [
+          {
+            "commit": "146161b",
+            "subject": "Honor CARGO_BUILD_TARGET in FreeBSD packaging for aarch64 release builds (#2847)"
+          },
           {
             "commit": "70327cd",
             "subject": "Grant network access so update checks can reach GitHub (#2841)"
@@ -2729,5 +2733,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-28T17:14:53+00:00"
+  "updated_at": "2026-10-28T20:07:28+00:00"
 }

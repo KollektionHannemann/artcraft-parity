@@ -419,18 +419,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 12.2,
+    "score": 12.5,
     "active_days_7d": 7,
-    "changes_7d": 36,
-    "changes_14d": 58,
+    "changes_7d": 37,
+    "changes_14d": 59,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-10-28T17:05:19Z",
-      "commit": "e2d18b5",
-      "commit_full": "e2d18b5fb9e6177167177c194461a0b427b0a196",
-      "subject": "Grant network access so update checks can reach GitHub (#3269)"
+      "ts": "2026-10-28T19:48:43Z",
+      "commit": "77c0a6a",
+      "commit_full": "77c0a6adfa7db6e4f79b80843c0c578e5f16dee1",
+      "subject": "Honor CARGO_BUILD_TARGET in FreeBSD packaging for aarch64 release builds (#3275)"
     },
-    "last_commit_ts": "2026-10-28T17:05:19Z",
+    "last_commit_ts": "2026-10-28T19:48:43Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
       6,
@@ -446,7 +446,7 @@
       8,
       3,
       7,
-      4
+      5
     ],
     "days": [
       {
@@ -927,9 +927,13 @@
       },
       {
         "d": "2026-10-28",
-        "code": 4,
+        "code": 5,
         "other": 1,
         "samples": [
+          {
+            "commit": "77c0a6a",
+            "subject": "Honor CARGO_BUILD_TARGET in FreeBSD packaging for aarch64 release builds (#3275)"
+          },
           {
             "commit": "e2d18b5",
             "subject": "Grant network access so update checks can reach GitHub (#3269)"
@@ -937,10 +941,6 @@
           {
             "commit": "aaf532c",
             "subject": "macOS packaging: retry stapler when Apple's CloudKit drops the connection"
-          },
-          {
-            "commit": "59a5d00",
-            "subject": "Enforce Rust coding standards via Clippy (#3111)"
           }
         ]
       }
@@ -1414,5 +1414,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-28T18:05:44+00:00"
+  "updated_at": "2026-10-28T20:06:29+00:00"
 }

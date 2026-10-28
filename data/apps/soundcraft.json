@@ -458,18 +458,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 13.4,
+    "score": 13.7,
     "active_days_7d": 7,
-    "changes_7d": 75,
-    "changes_14d": 132,
+    "changes_7d": 76,
+    "changes_14d": 133,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-10-28T17:16:03Z",
-      "commit": "60b2c07",
-      "commit_full": "60b2c07a7036cb6a16294c3c7f10a6583cee4d16",
-      "subject": "Grant network access so update checks can reach GitHub (#1163)"
+      "ts": "2026-10-28T19:36:07Z",
+      "commit": "8ca6939",
+      "commit_full": "8ca6939981a1cf5d4b0f39cbcd2b0c6a3dedadb0",
+      "subject": "Honor CARGO_BUILD_TARGET in FreeBSD packaging for aarch64 release builds (#1167)"
     },
-    "last_commit_ts": "2026-10-28T17:16:03Z",
+    "last_commit_ts": "2026-10-28T19:36:07Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
       0,
@@ -485,7 +485,7 @@
       11,
       3,
       4,
-      3
+      4
     ],
     "days": [
       {
@@ -818,9 +818,13 @@
       },
       {
         "d": "2026-10-28",
-        "code": 3,
+        "code": 4,
         "other": 1,
         "samples": [
+          {
+            "commit": "8ca6939",
+            "subject": "Honor CARGO_BUILD_TARGET in FreeBSD packaging for aarch64 release builds (#1167)"
+          },
           {
             "commit": "60b2c07",
             "subject": "Grant network access so update checks can reach GitHub (#1163)"
@@ -828,10 +832,6 @@
           {
             "commit": "9f2be37",
             "subject": "Enforce Rust coding standards via Clippy (#1129)"
-          },
-          {
-            "commit": "e82c168",
-            "subject": "refactor(cli): parse `soundcraft-cli` arguments with clap, following RFC-0012 (#1136)"
           }
         ]
       }
@@ -1511,5 +1511,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-28T18:06:24+00:00"
+  "updated_at": "2026-10-28T20:07:09+00:00"
 }

@@ -353,18 +353,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.2,
+    "score": 17.5,
     "active_days_7d": 7,
-    "changes_7d": 169,
-    "changes_14d": 257,
+    "changes_7d": 170,
+    "changes_14d": 258,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-28T17:23:09Z",
-      "commit": "9de2b8b",
-      "commit_full": "9de2b8bbdc6691830e7c15abe2cbcae45b22bedb",
-      "subject": "Grant network access so update checks can reach GitHub (#2413)"
+      "ts": "2026-10-28T19:53:50Z",
+      "commit": "336243e",
+      "commit_full": "336243e0afb3019feee58d0d4fc0d218f25530e7",
+      "subject": "Honor CARGO_BUILD_TARGET in FreeBSD packaging for aarch64 release builds (#2425)"
     },
-    "last_commit_ts": "2026-10-28T17:23:09Z",
+    "last_commit_ts": "2026-10-28T19:53:50Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       0,
@@ -380,7 +380,7 @@
       49,
       6,
       11,
-      3
+      4
     ],
     "days": [
       {
@@ -704,9 +704,13 @@
       },
       {
         "d": "2026-10-28",
-        "code": 3,
+        "code": 4,
         "other": 1,
         "samples": [
+          {
+            "commit": "336243e",
+            "subject": "Honor CARGO_BUILD_TARGET in FreeBSD packaging for aarch64 release builds (#2425)"
+          },
           {
             "commit": "9de2b8b",
             "subject": "Grant network access so update checks can reach GitHub (#2413)"
@@ -714,10 +718,6 @@
           {
             "commit": "d9265c9",
             "subject": "macOS packaging: retry stapler when Apple's CloudKit drops the connection"
-          },
-          {
-            "commit": "5654240",
-            "subject": "refactor(cli): parse `cadcraft-cli` arguments with clap, following RFC-0012 (#2268)"
           }
         ]
       }
@@ -1184,5 +1184,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-28T18:06:35+00:00"
+  "updated_at": "2026-10-28T20:07:20+00:00"
 }

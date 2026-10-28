@@ -363,18 +363,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.4,
+    "score": 21.6,
     "active_days_7d": 7,
-    "changes_7d": 219,
-    "changes_14d": 525,
+    "changes_7d": 220,
+    "changes_14d": 526,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-28T17:21:15Z",
-      "commit": "2fccdcb",
-      "commit_full": "2fccdcba8ea273dae3d997569bc888ed1df93470",
-      "subject": "Correct update_transport comment: Flatpak sandbox now has network (#9983)"
+      "ts": "2026-10-28T19:48:48Z",
+      "commit": "8988161",
+      "commit_full": "8988161e90b97608cfe8b8970d0692491fb2ed04",
+      "subject": "Honor CARGO_BUILD_TARGET in FreeBSD packaging for aarch64 release builds (#9989)"
     },
-    "last_commit_ts": "2026-10-28T17:21:15Z",
+    "last_commit_ts": "2026-10-28T19:48:48Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       65,
@@ -390,7 +390,7 @@
       45,
       7,
       9,
-      7
+      8
     ],
     "days": [
       {
@@ -927,9 +927,13 @@
       },
       {
         "d": "2026-10-28",
-        "code": 7,
+        "code": 8,
         "other": 1,
         "samples": [
+          {
+            "commit": "8988161",
+            "subject": "Honor CARGO_BUILD_TARGET in FreeBSD packaging for aarch64 release builds (#9989)"
+          },
           {
             "commit": "2fccdcb",
             "subject": "Correct update_transport comment: Flatpak sandbox now has network (#9983)"
@@ -937,10 +941,6 @@
           {
             "commit": "f1866ae",
             "subject": "Grant network access so update checks can reach GitHub (#9982)"
-          },
-          {
-            "commit": "1f7fc0f",
-            "subject": "refactor: split oversized filter, adjustment, crop and effect builders (#6463)"
           }
         ]
       }
@@ -1292,5 +1292,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-28T18:05:25+00:00"
+  "updated_at": "2026-10-28T20:05:58+00:00"
 }
