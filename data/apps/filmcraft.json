@@ -436,18 +436,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.0,
+    "score": 16.5,
     "active_days_7d": 7,
-    "changes_7d": 162,
-    "changes_14d": 218,
-    "housekeeping_7d": 11,
+    "changes_7d": 163,
+    "changes_14d": 219,
+    "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-10-28T10:18:38Z",
-      "commit": "c49efe0",
-      "commit_full": "c49efe070fab862df6c21d61a503605eb6f07105",
-      "subject": "Enforce Rust coding standards via Clippy (#3426)"
+      "ts": "2026-10-28T16:09:17Z",
+      "commit": "e65d94a",
+      "commit_full": "e65d94a3087c52314efcb2901ae9c184daddd5d2",
+      "subject": "macOS packaging: retry stapler when Apple's CloudKit drops the connection"
     },
-    "last_commit_ts": "2026-10-28T10:18:38Z",
+    "last_commit_ts": "2026-10-28T16:09:21Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       1,
@@ -463,7 +463,7 @@
       28,
       5,
       7,
-      1
+      2
     ],
     "days": [
       {
@@ -958,9 +958,13 @@
       },
       {
         "d": "2026-10-28",
-        "code": 1,
-        "other": 0,
+        "code": 2,
+        "other": 1,
         "samples": [
+          {
+            "commit": "e65d94a",
+            "subject": "macOS packaging: retry stapler when Apple's CloudKit drops the connection"
+          },
           {
             "commit": "c49efe0",
             "subject": "Enforce Rust coding standards via Clippy (#3426)"
@@ -1453,5 +1457,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-28T11:06:42+00:00"
+  "updated_at": "2026-10-28T16:14:04+00:00"
 }
