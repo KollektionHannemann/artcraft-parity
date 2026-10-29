@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "7ba22fb",
-  "latest_commit_date": "2026-10-29T15:07:21+07:00",
-  "latest_message": "M1: Crop image from the Object menu, the right-click menu and the image fill row (#1464) (#1501)",
+  "latest_commit": "3d5185c",
+  "latest_commit_date": "2026-10-29T16:14:40+07:00",
+  "latest_message": "M0.9: web wasm back under the 24 MiB gate (#1472) (#1511)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -501,7 +501,7 @@
     "value_since": "2026-10-11T21:41:28Z",
     "releases_since": 10,
     "releases_since_capped": false,
-    "revisions_since": 83,
+    "revisions_since": 85,
     "hours_since": {
       "from": [
         273,
@@ -556,39 +556,39 @@
     }
   },
   "roadmap": {
-    "revisions": 132,
-    "revisions_7d": 32,
+    "revisions": 134,
+    "revisions_7d": 34,
     "last_revision": {
-      "ts": "2026-10-29T08:07:21Z",
+      "ts": "2026-10-29T09:14:40Z",
       "kind": "content",
-      "commit": "7ba22fb",
-      "commit_full": "7ba22fb2b6dcc4401e7749a3bbb4cb1cd2a0e2a4",
-      "message": "M1: Crop image from the Object menu, the right-click menu and the image fill row (#1464) (#1501)"
+      "commit": "3d5185c",
+      "commit_full": "3d5185c2ab972d3d4a6665cdd4c1fa0398300f3f",
+      "message": "M0.9: web wasm back under the 24 MiB gate (#1472) (#1511)"
     },
     "last_update": {
-      "ts": "2026-10-29T08:07:21Z",
+      "ts": "2026-10-29T09:14:40Z",
       "kind": "content",
-      "commit": "7ba22fb",
-      "commit_full": "7ba22fb2b6dcc4401e7749a3bbb4cb1cd2a0e2a4",
-      "message": "M1: Crop image from the Object menu, the right-click menu and the image fill row (#1464) (#1501)"
+      "commit": "3d5185c",
+      "commit_full": "3d5185c2ab972d3d4a6665cdd4c1fa0398300f3f",
+      "message": "M0.9: web wasm back under the 24 MiB gate (#1472) (#1511)"
     },
     "self_reported": "2026-10-29"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.8,
+    "score": 20.9,
     "active_days_7d": 7,
-    "changes_7d": 201,
-    "changes_14d": 300,
+    "changes_7d": 203,
+    "changes_14d": 302,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-29T08:07:21Z",
-      "commit": "7ba22fb",
-      "commit_full": "7ba22fb2b6dcc4401e7749a3bbb4cb1cd2a0e2a4",
-      "subject": "M1: Crop image from the Object menu, the right-click menu and the image fill row (#1464) (#1501)"
+      "ts": "2026-10-29T09:14:40Z",
+      "commit": "3d5185c",
+      "commit_full": "3d5185c2ab972d3d4a6665cdd4c1fa0398300f3f",
+      "subject": "M0.9: web wasm back under the 24 MiB gate (#1472) (#1511)"
     },
-    "last_commit_ts": "2026-10-29T08:07:21Z",
+    "last_commit_ts": "2026-10-29T09:14:40Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       4,
@@ -604,7 +604,7 @@
       77,
       4,
       4,
-      54
+      56
     ],
     "days": [
       {
@@ -976,20 +976,20 @@
       },
       {
         "d": "2026-10-29",
-        "code": 54,
+        "code": 56,
         "other": 1,
         "samples": [
           {
+            "commit": "3d5185c",
+            "subject": "M0.9: web wasm back under the 24 MiB gate (#1472) (#1511)"
+          },
+          {
+            "commit": "1df9190",
+            "subject": "M3: shadows of images with transparent pixels follow their alpha (#1289) (#1509)"
+          },
+          {
             "commit": "7ba22fb",
             "subject": "M1: Crop image from the Object menu, the right-click menu and the image fill row (#1464) (#1501)"
-          },
-          {
-            "commit": "fe7b4ba",
-            "subject": "M6: import and export Penpot 2.x files offline (#1143)"
-          },
-          {
-            "commit": "cabf864",
-            "subject": "M0.9: let batches continue after failed steps (#1386) (#1409)"
           }
         ]
       }
@@ -4509,7 +4509,53 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "1df9190",
+      "commit_full": "1df9190d0c244a108da5412b93ae279e82024d62",
+      "commit_date": "2026-10-29T15:43:08+07:00",
+      "ts": "2026-10-29T08:43:08Z",
+      "message": "M3: shadows of images with transparent pixels follow their alpha (#1289) (#1509)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "3d5185c",
+      "commit_full": "3d5185c2ab972d3d4a6665cdd4c1fa0398300f3f",
+      "commit_date": "2026-10-29T16:14:40+07:00",
+      "ts": "2026-10-29T09:14:40Z",
+      "message": "M0.9: web wasm back under the 24 MiB gate (#1472) (#1511)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-29T08:20:47+00:00"
+  "updated_at": "2026-10-29T09:14:54+00:00"
 }

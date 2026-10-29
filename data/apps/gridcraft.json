@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/gridcraft",
   "roadmap_url": "https://github.com/storytold/gridcraft/blob/main/ROADMAP.md",
-  "latest_commit": "f6b0cec",
-  "latest_commit_date": "2026-10-26T00:00:24-04:00",
-  "latest_message": "Window per workbook (4/4): two windows on one workbook without copying it; Arrange All (#2619)",
+  "latest_commit": "2ff7517",
+  "latest_commit_date": "2026-10-29T05:10:50-04:00",
+  "latest_message": "Macro interface: Automate › Macros, Macros and Record Macro dialogs, step editor with a debugger (#478)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -246,7 +246,7 @@
         ]
       },
       {
-        "label": "Automation (recorded scripts; no VBA)",
+        "label": "Automation (recorded scripts; typed macros with a recorder, a Macros dialog and a step editor; no VBA)",
         "pct": 20.0,
         "hours": [
           12,
@@ -267,6 +267,10 @@
       {
         "date": "2026-10-25",
         "text": "AutoSum over a selection does what Excel does: a selected row gets one total to its right (in its last cell if that is empty), not a one-cell total under each cell; a block whose last column is empty gets each row's total there, one whose last row is empty each column's, and with both the corner gets the total of the block; otherwise totals go under each column as before"
+      },
+      {
+        "date": "2026-10-24",
+        "text": "Macro interface (macros.md): an Automate › Macros group (Record Macro, which turns into Stop Recording, Use Relative References, Run Macro with recent macros); \"Recording · N steps\" with Stop in the status bar; a Record Macro dialog (checked name, free Ctrl+Shift shortcut, description); the Macros dialog lists macros beside Automate scripts and a VBA project, with Run, Step Into, Edit, Create, Delete and Options; Ctrl+Shift+letter macro shortcuts; questions that offer Run, Overwrite, Shift Down or Shift Right; a step editor with a breakpoint gutter, drag to reorder, a command picker, reference boxes that switch between relative tokens and absolute references, Inputs and Output tabs, a debug bar (Check, Run, Step, Continue, Run to Here, Stop with keep or undo) and grid overlays for inputs, writes, conflicts and the current step"
       },
       {
         "date": "2026-10-24",
@@ -331,6 +335,10 @@
       {
         "date": "2026-10-21",
         "text": "Page Setup paper sizes match Japanese Excel: B4/B5/B6 are the JIS sizes (ISO B4/B5/B6 stay reachable by name), so a Japanese B5 worksheet prints at 182×257 mm; Japanese Postcard (100×148 mm), Double Postcard (148×200 mm), Envelope #3/#4 (120×235/90×205 mm), Kaku #2/#3 (240×332/216×277 mm) and A6 are added, both sizes reach the PDF page (file.exportPdf/file.print MediaBox) and the size survives an XLSX round-trip; the Page Layout Size menu lists them. B4/B5 used to be the ISO sizes, which is changed here"
+      },
+      {
+        "date": "2026-10-21",
+        "text": "Macro engine (macros.md): typed, declarative macros saved in the workbook (a JSON field; hidden names in xlsx); declared inputs checked with messages that name the cells; tokens (Input.col(2), Row, Output, Name:Total, {{…}} in formulas); one undo step with full rollback; a footprint dry run with ask, fail, overwrite, shift down or shift right; a policy that keeps macros away from files and the app, with approval for macros in opened files; Repeat, If and Stop steps; a debugger; a relative recorder; macro. commands beside the unchanged Automate scripts"
       },
       {
         "date": "2026-10-20",
@@ -415,14 +423,6 @@
       {
         "date": "2026-10-13",
         "text": "Colour menus: Fill Color, Font Color and the Format Cells pickers end with Recent Colors (the last ten custom colours) and More Colors… (hue/saturation area, RGB, hex box, preview, OK/Cancel) (#928)"
-      },
-      {
-        "date": "2026-10-13",
-        "text": "Multi-level category axes: a category range two or more columns wide beside a column of values (year beside month, Excel's multiLvlStrRef) draws its innermost labels across the plot and the outer levels in rows under them with group separators (columns beside the labels in bar charts), instead of flattening the two columns into twice as many categories; saving writes the reference back as multiLvlStrRef with Excel's level caches, so the axis survives a round trip"
-      },
-      {
-        "date": "2026-10-13",
-        "text": "Charts: a huge trendline forecast no longer collapses the chart: on a category axis it adds at most four times the data in empty slots (at least 32), the line is sampled over the plot only, and forecasts read from XLSX or set by command are clamped, NaN and infinity becoming 0 (#1148)"
       }
     ]
   },
@@ -431,7 +431,7 @@
     "value_since": "2026-10-10T18:09:06Z",
     "releases_since": 9,
     "releases_since_capped": false,
-    "revisions_since": 71,
+    "revisions_since": 72,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -439,39 +439,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 73,
-    "revisions_7d": 15,
+    "revisions": 74,
+    "revisions_7d": 16,
     "last_revision": {
-      "ts": "2026-10-26T04:00:24Z",
-      "kind": "content",
-      "commit": "f6b0cec",
-      "commit_full": "f6b0cec67e328f2f6352768b5cb2feb7e562c5db",
-      "message": "Window per workbook (4/4): two windows on one workbook without copying it; Arrange All (#2619)"
+      "ts": "2026-10-29T09:10:50Z",
+      "kind": "estimates",
+      "commit": "2ff7517",
+      "commit_full": "2ff751791b7e5f3454f1cbd8bf87f04fac9d8649",
+      "message": "Macro interface: Automate › Macros, Macros and Record Macro dialogs, step editor with a debugger (#478)"
     },
     "last_update": {
-      "ts": "2026-10-26T04:00:24Z",
-      "kind": "content",
-      "commit": "f6b0cec",
-      "commit_full": "f6b0cec67e328f2f6352768b5cb2feb7e562c5db",
-      "message": "Window per workbook (4/4): two windows on one workbook without copying it; Arrange All (#2619)"
+      "ts": "2026-10-29T09:10:50Z",
+      "kind": "estimates",
+      "commit": "2ff7517",
+      "commit_full": "2ff751791b7e5f3454f1cbd8bf87f04fac9d8649",
+      "message": "Macro interface: Automate › Macros, Macros and Record Macro dialogs, step editor with a debugger (#478)"
     },
     "self_reported": "2026-10-25"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 12.3,
-    "active_days_7d": 6,
-    "changes_7d": 93,
-    "changes_14d": 129,
+    "score": 13.3,
+    "active_days_7d": 7,
+    "changes_7d": 94,
+    "changes_14d": 130,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-10-28T19:35:58Z",
-      "commit": "146161b",
-      "commit_full": "146161b4b450a56e5e59a083ba0478582d1e602b",
-      "subject": "Honor CARGO_BUILD_TARGET in FreeBSD packaging for aarch64 release builds (#2847)"
+      "ts": "2026-10-29T09:10:50Z",
+      "commit": "2ff7517",
+      "commit_full": "2ff751791b7e5f3454f1cbd8bf87f04fac9d8649",
+      "subject": "Macro interface: Automate › Macros, Macros and Record Macro dialogs, step editor with a debugger (#478)"
     },
-    "last_commit_ts": "2026-10-28T19:35:58Z",
+    "last_commit_ts": "2026-10-29T09:10:50Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       1,
@@ -487,7 +487,7 @@
       7,
       5,
       3,
-      0
+      1
     ],
     "days": [
       {
@@ -841,6 +841,17 @@
           {
             "commit": "55b5a45",
             "subject": "Enforce Rust coding standards via Clippy (#2711)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-29",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "2ff7517",
+            "subject": "Macro interface: Automate › Macros, Macros and Record Macro dialogs, step editor with a debugger (#478)"
           }
         ]
       }
@@ -2731,7 +2742,30 @@
       "breadth_pct": 75.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "2ff7517",
+      "commit_full": "2ff751791b7e5f3454f1cbd8bf87f04fac9d8649",
+      "commit_date": "2026-10-29T05:10:50-04:00",
+      "ts": "2026-10-29T09:10:50Z",
+      "message": "Macro interface: Automate › Macros, Macros and Record Macro dialogs, step editor with a debugger (#478)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-25",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "estimates"
     }
   ],
-  "updated_at": "2026-10-29T00:29:55+00:00"
+  "updated_at": "2026-10-29T09:15:04+00:00"
 }
