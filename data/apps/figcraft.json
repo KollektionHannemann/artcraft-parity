@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "be7a2ec",
-  "latest_commit_date": "2026-10-30T05:41:26+07:00",
-  "latest_message": "M0.9: parse figcraft-cli arguments with clap, following RFC-0012 (#1396) (#1570)",
+  "latest_commit": "bc6dad0",
+  "latest_commit_date": "2026-10-30T06:56:33+07:00",
+  "latest_message": "M9: comment.list lists only the threads that mention a name (#1415) (#1585)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -501,7 +501,7 @@
     "value_since": "2026-10-11T21:41:28Z",
     "releases_since": 10,
     "releases_since_capped": false,
-    "revisions_since": 118,
+    "revisions_since": 121,
     "hours_since": {
       "from": [
         273,
@@ -556,21 +556,21 @@
     }
   },
   "roadmap": {
-    "revisions": 167,
-    "revisions_7d": 67,
+    "revisions": 170,
+    "revisions_7d": 70,
     "last_revision": {
-      "ts": "2026-10-29T22:41:26Z",
+      "ts": "2026-10-29T23:56:33Z",
       "kind": "content",
-      "commit": "be7a2ec",
-      "commit_full": "be7a2ecd3cb2c94e8bd4db52268e87ec4a516314",
-      "message": "M0.9: parse figcraft-cli arguments with clap, following RFC-0012 (#1396) (#1570)"
+      "commit": "bc6dad0",
+      "commit_full": "bc6dad0c2fd3947a3f1a1505711649b44ae9e7c1",
+      "message": "M9: comment.list lists only the threads that mention a name (#1415) (#1585)"
     },
     "last_update": {
-      "ts": "2026-10-29T22:41:26Z",
+      "ts": "2026-10-29T23:56:33Z",
       "kind": "content",
-      "commit": "be7a2ec",
-      "commit_full": "be7a2ecd3cb2c94e8bd4db52268e87ec4a516314",
-      "message": "M0.9: parse figcraft-cli arguments with clap, following RFC-0012 (#1396) (#1570)"
+      "commit": "bc6dad0",
+      "commit_full": "bc6dad0c2fd3947a3f1a1505711649b44ae9e7c1",
+      "message": "M9: comment.list lists only the threads that mention a name (#1415) (#1585)"
     },
     "self_reported": "2026-10-29"
   },
@@ -579,16 +579,16 @@
     "level": "buzzing",
     "score": 21.8,
     "active_days_7d": 7,
-    "changes_7d": 251,
-    "changes_14d": 350,
+    "changes_7d": 254,
+    "changes_14d": 353,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-10-29T22:41:26Z",
-      "commit": "be7a2ec",
-      "commit_full": "be7a2ecd3cb2c94e8bd4db52268e87ec4a516314",
-      "subject": "M0.9: parse figcraft-cli arguments with clap, following RFC-0012 (#1396) (#1570)"
+      "ts": "2026-10-29T23:56:33Z",
+      "commit": "bc6dad0",
+      "commit_full": "bc6dad0c2fd3947a3f1a1505711649b44ae9e7c1",
+      "subject": "M9: comment.list lists only the threads that mention a name (#1415) (#1585)"
     },
-    "last_commit_ts": "2026-10-29T22:41:26Z",
+    "last_commit_ts": "2026-10-29T23:56:33Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       4,
@@ -604,7 +604,7 @@
       77,
       4,
       4,
-      104
+      107
     ],
     "days": [
       {
@@ -976,20 +976,20 @@
       },
       {
         "d": "2026-10-29",
-        "code": 104,
+        "code": 107,
         "other": 2,
         "samples": [
           {
-            "commit": "be7a2ec",
-            "subject": "M0.9: parse figcraft-cli arguments with clap, following RFC-0012 (#1396) (#1570)"
+            "commit": "bc6dad0",
+            "subject": "M9: comment.list lists only the threads that mention a name (#1415) (#1585)"
           },
           {
-            "commit": "6f50d83",
-            "subject": "M8: the browser worker's preview and wait tests run on a clock and a threshold they set (#1575)"
+            "commit": "974ab39",
+            "subject": "M8: keep unsaved files when a panic stops the browser build (#1123) (#1580)"
           },
           {
-            "commit": "47552c0",
-            "subject": "Reject non-finite hsl()/hsla() components in parse_css (#1559)"
+            "commit": "cc3052d",
+            "subject": "M8: cap the input of boolean operations (#1104) (#1581)"
           }
         ]
       }
@@ -5314,7 +5314,76 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "cc3052d",
+      "commit_full": "cc3052de5e23b8e578311c529dec13f47f623ef4",
+      "commit_date": "2026-10-30T06:03:35+07:00",
+      "ts": "2026-10-29T23:03:35Z",
+      "message": "M8: cap the input of boolean operations (#1104) (#1581)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "974ab39",
+      "commit_full": "974ab39503520774173ef9292bc4a192bed91265",
+      "commit_date": "2026-10-30T06:36:33+07:00",
+      "ts": "2026-10-29T23:36:33Z",
+      "message": "M8: keep unsaved files when a panic stops the browser build (#1123) (#1580)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "bc6dad0",
+      "commit_full": "bc6dad0c2fd3947a3f1a1505711649b44ae9e7c1",
+      "commit_date": "2026-10-30T06:56:33+07:00",
+      "ts": "2026-10-29T23:56:33Z",
+      "message": "M9: comment.list lists only the threads that mention a name (#1415) (#1585)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-29T23:01:22+00:00"
+  "updated_at": "2026-10-29T23:57:25+00:00"
 }
