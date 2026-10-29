@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "05f8111",
-  "latest_commit_date": "2026-10-30T03:04:11+07:00",
-  "latest_message": "M1: start on other graphics when the window's first ones fail (#965, #1438) (#1557)",
+  "latest_commit": "d890de9",
+  "latest_commit_date": "2026-10-30T04:01:07+07:00",
+  "latest_message": "M8: SVG import reads color() and color-mix() colours (#1550) (#1566)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -501,7 +501,7 @@
     "value_since": "2026-10-11T21:41:28Z",
     "releases_since": 10,
     "releases_since_capped": false,
-    "revisions_since": 111,
+    "revisions_since": 113,
     "hours_since": {
       "from": [
         273,
@@ -556,39 +556,39 @@
     }
   },
   "roadmap": {
-    "revisions": 160,
-    "revisions_7d": 60,
+    "revisions": 162,
+    "revisions_7d": 62,
     "last_revision": {
-      "ts": "2026-10-29T20:04:11Z",
+      "ts": "2026-10-29T21:01:07Z",
       "kind": "content",
-      "commit": "05f8111",
-      "commit_full": "05f811105c3a7afb78cfcd55c3191c3be688d2fd",
-      "message": "M1: start on other graphics when the window's first ones fail (#965, #1438) (#1557)"
+      "commit": "d890de9",
+      "commit_full": "d890de92c484b544a4df9f3217b119c505b9b4e1",
+      "message": "M8: SVG import reads color() and color-mix() colours (#1550) (#1566)"
     },
     "last_update": {
-      "ts": "2026-10-29T20:04:11Z",
+      "ts": "2026-10-29T21:01:07Z",
       "kind": "content",
-      "commit": "05f8111",
-      "commit_full": "05f811105c3a7afb78cfcd55c3191c3be688d2fd",
-      "message": "M1: start on other graphics when the window's first ones fail (#965, #1438) (#1557)"
+      "commit": "d890de9",
+      "commit_full": "d890de92c484b544a4df9f3217b119c505b9b4e1",
+      "message": "M8: SVG import reads color() and color-mix() colours (#1550) (#1566)"
     },
     "self_reported": "2026-10-29"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.6,
+    "score": 21.7,
     "active_days_7d": 7,
-    "changes_7d": 241,
-    "changes_14d": 340,
+    "changes_7d": 244,
+    "changes_14d": 343,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-10-29T20:04:11Z",
-      "commit": "05f8111",
-      "commit_full": "05f811105c3a7afb78cfcd55c3191c3be688d2fd",
-      "subject": "M1: start on other graphics when the window's first ones fail (#965, #1438) (#1557)"
+      "ts": "2026-10-29T21:01:07Z",
+      "commit": "d890de9",
+      "commit_full": "d890de92c484b544a4df9f3217b119c505b9b4e1",
+      "subject": "M8: SVG import reads color() and color-mix() colours (#1550) (#1566)"
     },
-    "last_commit_ts": "2026-10-29T20:04:11Z",
+    "last_commit_ts": "2026-10-29T21:01:07Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       4,
@@ -604,7 +604,7 @@
       77,
       4,
       4,
-      94
+      97
     ],
     "days": [
       {
@@ -976,20 +976,20 @@
       },
       {
         "d": "2026-10-29",
-        "code": 94,
+        "code": 97,
         "other": 2,
         "samples": [
           {
-            "commit": "05f8111",
-            "subject": "M1: start on other graphics when the window's first ones fail (#965, #1438) (#1557)"
+            "commit": "d890de9",
+            "subject": "M8: SVG import reads color() and color-mix() colours (#1550) (#1566)"
           },
           {
-            "commit": "d774924",
-            "subject": "M4: Thai, Lao, Khmer and Burmese lines break between words (#1219) (#1548)"
+            "commit": "aa72750",
+            "subject": "M1: keep settings next to the executable in portable mode (#1320) (#1558)"
           },
           {
-            "commit": "132abcc",
-            "subject": "M8: show in the app where an attached AI agent is working (#1416) (#1556)"
+            "commit": "28a0fe6",
+            "subject": "M9: the admin budget test allows for the bucket refilling during a slow run (#1564)"
           }
         ]
       }
@@ -5153,7 +5153,53 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "aa72750",
+      "commit_full": "aa727500a4d9793966cc58d4bc8a46edd9abb097",
+      "commit_date": "2026-10-30T03:35:12+07:00",
+      "ts": "2026-10-29T20:35:12Z",
+      "message": "M1: keep settings next to the executable in portable mode (#1320) (#1558)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "d890de9",
+      "commit_full": "d890de92c484b544a4df9f3217b119c505b9b4e1",
+      "commit_date": "2026-10-30T04:01:07+07:00",
+      "ts": "2026-10-29T21:01:07Z",
+      "message": "M8: SVG import reads color() and color-mix() colours (#1550) (#1566)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-29T20:08:21+00:00"
+  "updated_at": "2026-10-29T21:08:21+00:00"
 }
