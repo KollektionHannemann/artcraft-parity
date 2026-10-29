@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "e41f484",
-  "latest_commit_date": "2026-10-29T11:20:12+07:00",
-  "latest_message": "M4: draw dots for zero-length round dashes (#1439)",
+  "latest_commit": "e1c7879",
+  "latest_commit_date": "2026-10-29T13:52:42+07:00",
+  "latest_message": "M7: place images at their own size, in points for 2x screenshots (#1360)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Figma Design (desktop app 126.10.7)",
-    "last_updated": "2026-10-28",
+    "last_updated": "2026-10-29",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -501,7 +501,7 @@
     "value_since": "2026-10-11T21:41:28Z",
     "releases_since": 10,
     "releases_since_capped": false,
-    "revisions_since": 78,
+    "revisions_since": 81,
     "hours_since": {
       "from": [
         273,
@@ -556,39 +556,39 @@
     }
   },
   "roadmap": {
-    "revisions": 127,
-    "revisions_7d": 27,
+    "revisions": 130,
+    "revisions_7d": 30,
     "last_revision": {
-      "ts": "2026-10-29T04:20:12Z",
+      "ts": "2026-10-29T06:52:42Z",
       "kind": "content",
-      "commit": "e41f484",
-      "commit_full": "e41f4847334d88aa516ba5efcc2dbdc9621c0483",
-      "message": "M4: draw dots for zero-length round dashes (#1439)"
+      "commit": "e1c7879",
+      "commit_full": "e1c787995701265d04317c4656eb5a17465a77f5",
+      "message": "M7: place images at their own size, in points for 2x screenshots (#1360)"
     },
     "last_update": {
-      "ts": "2026-10-29T04:20:12Z",
+      "ts": "2026-10-29T06:52:42Z",
       "kind": "content",
-      "commit": "e41f484",
-      "commit_full": "e41f4847334d88aa516ba5efcc2dbdc9621c0483",
-      "message": "M4: draw dots for zero-length round dashes (#1439)"
+      "commit": "e1c7879",
+      "commit_full": "e1c787995701265d04317c4656eb5a17465a77f5",
+      "message": "M7: place images at their own size, in points for 2x screenshots (#1360)"
     },
-    "self_reported": "2026-10-28"
+    "self_reported": "2026-10-29"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.3,
+    "score": 20.8,
     "active_days_7d": 7,
-    "changes_7d": 183,
-    "changes_14d": 282,
+    "changes_7d": 200,
+    "changes_14d": 299,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-29T04:50:03Z",
-      "commit": "cabfc9f",
-      "commit_full": "cabfc9f8faf232332de0184ebff0e7eb1205f6fb",
-      "subject": "M8: bound attached MCP replies to 512 MiB (#1113) (#1407)"
+      "ts": "2026-10-29T07:20:14Z",
+      "commit": "fe7b4ba",
+      "commit_full": "fe7b4bac63cbb7d8412334d7b78c1e5165bc19ec",
+      "subject": "M6: import and export Penpot 2.x files offline (#1143)"
     },
-    "last_commit_ts": "2026-10-29T04:50:03Z",
+    "last_commit_ts": "2026-10-29T07:20:14Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       4,
@@ -604,7 +604,7 @@
       77,
       4,
       4,
-      36
+      53
     ],
     "days": [
       {
@@ -976,20 +976,20 @@
       },
       {
         "d": "2026-10-29",
-        "code": 36,
+        "code": 53,
         "other": 0,
         "samples": [
           {
-            "commit": "cabfc9f",
-            "subject": "M8: bound attached MCP replies to 512 MiB (#1113) (#1407)"
+            "commit": "fe7b4ba",
+            "subject": "M6: import and export Penpot 2.x files offline (#1143)"
           },
           {
-            "commit": "1a755cc",
-            "subject": "Treat a % suffix on node.set opacity as a percentage (#1425)"
+            "commit": "cabf864",
+            "subject": "M0.9: let batches continue after failed steps (#1386) (#1409)"
           },
           {
-            "commit": "27c3232",
-            "subject": "Reject colour arrays containing non-numeric entries in color_of (#1426)"
+            "commit": "99575f2",
+            "subject": "M1: Alt pressed during a drag turns the move into a copy (#1385) (#1427)"
           }
         ]
       }
@@ -4394,7 +4394,76 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "1497d8d",
+      "commit_full": "1497d8ddc4fe62f0e28e1bc960cae734839323e4",
+      "commit_date": "2026-10-29T13:34:02+07:00",
+      "ts": "2026-10-29T06:34:02Z",
+      "message": "ui: rebuild the toolbar pill on a 32 pt grid, without the Resources button (#1210)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "8dc3ab5",
+      "commit_full": "8dc3ab57036070bc80b3debdc9d7bedbe3aad099",
+      "commit_date": "2026-10-29T13:37:49+07:00",
+      "ts": "2026-10-29T06:37:49Z",
+      "message": "M7: Flutter code generation (#669)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "e1c7879",
+      "commit_full": "e1c787995701265d04317c4656eb5a17465a77f5",
+      "commit_date": "2026-10-29T13:52:42+07:00",
+      "ts": "2026-10-29T06:52:42Z",
+      "message": "M7: place images at their own size, in points for 2x screenshots (#1360)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-29T05:09:32+00:00"
+  "updated_at": "2026-10-29T07:29:52+00:00"
 }
