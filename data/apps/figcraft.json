@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "3efb269",
-  "latest_commit_date": "2026-10-29T19:00:15+07:00",
-  "latest_message": "M3: the instance-swap menus have a search field that filters as you type (#1338) (#1527)",
+  "latest_commit": "436cfa1",
+  "latest_commit_date": "2026-10-29T20:02:46+07:00",
+  "latest_message": "M9: the replay log is bounded in bytes by default (#1069) (#1524)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -501,7 +501,7 @@
     "value_since": "2026-10-11T21:41:28Z",
     "releases_since": 10,
     "releases_since_capped": false,
-    "revisions_since": 93,
+    "revisions_since": 97,
     "hours_since": {
       "from": [
         273,
@@ -556,39 +556,39 @@
     }
   },
   "roadmap": {
-    "revisions": 142,
-    "revisions_7d": 42,
+    "revisions": 146,
+    "revisions_7d": 46,
     "last_revision": {
-      "ts": "2026-10-29T12:00:15Z",
+      "ts": "2026-10-29T13:02:46Z",
       "kind": "content",
-      "commit": "3efb269",
-      "commit_full": "3efb2699b675e6b81d2b56625028ba20ab7b9a9d",
-      "message": "M3: the instance-swap menus have a search field that filters as you type (#1338) (#1527)"
+      "commit": "436cfa1",
+      "commit_full": "436cfa1b9627c49ff7f9482bdd81807fd06d055d",
+      "message": "M9: the replay log is bounded in bytes by default (#1069) (#1524)"
     },
     "last_update": {
-      "ts": "2026-10-29T12:00:15Z",
+      "ts": "2026-10-29T13:02:46Z",
       "kind": "content",
-      "commit": "3efb269",
-      "commit_full": "3efb2699b675e6b81d2b56625028ba20ab7b9a9d",
-      "message": "M3: the instance-swap menus have a search field that filters as you type (#1338) (#1527)"
+      "commit": "436cfa1",
+      "commit_full": "436cfa1b9627c49ff7f9482bdd81807fd06d055d",
+      "message": "M9: the replay log is bounded in bytes by default (#1069) (#1524)"
     },
     "self_reported": "2026-10-29"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.1,
+    "score": 21.2,
     "active_days_7d": 7,
-    "changes_7d": 211,
-    "changes_14d": 310,
+    "changes_7d": 215,
+    "changes_14d": 314,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-29T12:00:15Z",
-      "commit": "3efb269",
-      "commit_full": "3efb2699b675e6b81d2b56625028ba20ab7b9a9d",
-      "subject": "M3: the instance-swap menus have a search field that filters as you type (#1338) (#1527)"
+      "ts": "2026-10-29T13:02:46Z",
+      "commit": "436cfa1",
+      "commit_full": "436cfa1b9627c49ff7f9482bdd81807fd06d055d",
+      "subject": "M9: the replay log is bounded in bytes by default (#1069) (#1524)"
     },
-    "last_commit_ts": "2026-10-29T12:00:15Z",
+    "last_commit_ts": "2026-10-29T13:02:46Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       4,
@@ -604,7 +604,7 @@
       77,
       4,
       4,
-      64
+      68
     ],
     "days": [
       {
@@ -976,20 +976,20 @@
       },
       {
         "d": "2026-10-29",
-        "code": 64,
+        "code": 68,
         "other": 1,
         "samples": [
           {
-            "commit": "3efb269",
-            "subject": "M3: the instance-swap menus have a search field that filters as you type (#1338) (#1527)"
+            "commit": "436cfa1",
+            "subject": "M9: the replay log is bounded in bytes by default (#1069) (#1524)"
           },
           {
-            "commit": "08173cc",
-            "subject": "M9: a refused batch's fixes in linear time (#1063) (#1522)"
+            "commit": "714bbfc",
+            "subject": "M8: MCP and control calls name the document they act on (#998) (#1533)"
           },
           {
-            "commit": "d4e6ad5",
-            "subject": "M12: the connector tool previews the connector it will make, ends snapping to attach points (#1387) (#1526)"
+            "commit": "b242188",
+            "subject": "M9: sibling placement in live sessions by binary search (#1065) (#1523)"
           }
         ]
       }
@@ -4739,7 +4739,99 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "72b4269",
+      "commit_full": "72b4269383b8fbb1220bc976b7c8313edbbcdaab",
+      "commit_date": "2026-10-29T19:15:19+07:00",
+      "ts": "2026-10-29T12:15:19Z",
+      "message": "M8: an AI agent attached over MCP comments under its own name (#1414) (#1529)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "b242188",
+      "commit_full": "b2421885d06552214489a5d75c7a97d5768fd513",
+      "commit_date": "2026-10-29T19:32:30+07:00",
+      "ts": "2026-10-29T12:32:30Z",
+      "message": "M9: sibling placement in live sessions by binary search (#1065) (#1523)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "714bbfc",
+      "commit_full": "714bbfcdaa186b393c71b41676ddcf7d060d281a",
+      "commit_date": "2026-10-29T19:47:41+07:00",
+      "ts": "2026-10-29T12:47:41Z",
+      "message": "M8: MCP and control calls name the document they act on (#998) (#1533)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "436cfa1",
+      "commit_full": "436cfa1b9627c49ff7f9482bdd81807fd06d055d",
+      "commit_date": "2026-10-29T20:02:46+07:00",
+      "ts": "2026-10-29T13:02:46Z",
+      "message": "M9: the replay log is bounded in bytes by default (#1069) (#1524)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-29T12:06:10+00:00"
+  "updated_at": "2026-10-29T13:28:46+00:00"
 }
