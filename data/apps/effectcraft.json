@@ -358,18 +358,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.1,
+    "score": 17.2,
     "active_days_7d": 7,
-    "changes_7d": 104,
-    "changes_14d": 247,
+    "changes_7d": 105,
+    "changes_14d": 248,
     "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-10-29T17:16:23Z",
-      "commit": "866a697",
-      "commit_full": "866a697d461a269a1ca7593f2c9e2080043ac8e3",
-      "subject": "Shape Size gets the Constrain Proportions chain, off by default (#2489) (#2550)"
+      "ts": "2026-10-29T17:16:36Z",
+      "commit": "03f1a1b",
+      "commit_full": "03f1a1b221b1d8cae1c56e228c9789d9a92a745b",
+      "subject": "Draw a line to the end point of degenerate SVG arcs (#2181)"
     },
-    "last_commit_ts": "2026-10-29T17:16:23Z",
+    "last_commit_ts": "2026-10-29T17:16:36Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       70,
@@ -385,7 +385,7 @@
       7,
       4,
       3,
-      56
+      57
     ],
     "days": [
       {
@@ -877,9 +877,13 @@
       },
       {
         "d": "2026-10-29",
-        "code": 56,
+        "code": 57,
         "other": 0,
         "samples": [
+          {
+            "commit": "03f1a1b",
+            "subject": "Draw a line to the end point of degenerate SVG arcs (#2181)"
+          },
           {
             "commit": "866a697",
             "subject": "Shape Size gets the Constrain Proportions chain, off by default (#2489) (#2550)"
@@ -887,10 +891,6 @@
           {
             "commit": "d52e3a4",
             "subject": "Fix \"-0.000\" in seconds time display for tiny negative times (#2467)"
-          },
-          {
-            "commit": "9a623d5",
-            "subject": "Return identity from Mat3::square_to_quad for a degenerate quad (#1947)"
           }
         ]
       }
@@ -1311,5 +1311,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-29T17:16:35+00:00"
+  "updated_at": "2026-10-29T18:07:33+00:00"
 }

@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "2e3d9b6",
-  "latest_commit_date": "2026-10-29T23:57:49+07:00",
-  "latest_message": "M8: SVG pattern tiles drawn once per scale, within the layer budget (#1080) (#1551)",
+  "latest_commit": "af2df34",
+  "latest_commit_date": "2026-10-30T00:51:46+07:00",
+  "latest_message": "M9: the Join dialog shows a join until its file is ready, with Cancel and Try again (#1381) (#1553)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -501,7 +501,7 @@
     "value_since": "2026-10-11T21:41:28Z",
     "releases_since": 10,
     "releases_since_capped": false,
-    "revisions_since": 103,
+    "revisions_since": 105,
     "hours_since": {
       "from": [
         273,
@@ -556,39 +556,39 @@
     }
   },
   "roadmap": {
-    "revisions": 152,
-    "revisions_7d": 52,
+    "revisions": 154,
+    "revisions_7d": 54,
     "last_revision": {
-      "ts": "2026-10-29T16:57:49Z",
+      "ts": "2026-10-29T17:51:46Z",
       "kind": "content",
-      "commit": "2e3d9b6",
-      "commit_full": "2e3d9b6f0752c6b923e7f778cee8b70610abd0bd",
-      "message": "M8: SVG pattern tiles drawn once per scale, within the layer budget (#1080) (#1551)"
+      "commit": "af2df34",
+      "commit_full": "af2df345bc5db3a8e07f8dcc23711f9eb4ed5936",
+      "message": "M9: the Join dialog shows a join until its file is ready, with Cancel and Try again (#1381) (#1553)"
     },
     "last_update": {
-      "ts": "2026-10-29T16:57:49Z",
+      "ts": "2026-10-29T17:51:46Z",
       "kind": "content",
-      "commit": "2e3d9b6",
-      "commit_full": "2e3d9b6f0752c6b923e7f778cee8b70610abd0bd",
-      "message": "M8: SVG pattern tiles drawn once per scale, within the layer budget (#1080) (#1551)"
+      "commit": "af2df34",
+      "commit_full": "af2df345bc5db3a8e07f8dcc23711f9eb4ed5936",
+      "message": "M9: the Join dialog shows a join until its file is ready, with Cancel and Try again (#1381) (#1553)"
     },
     "self_reported": "2026-10-29"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.4,
+    "score": 21.5,
     "active_days_7d": 7,
-    "changes_7d": 227,
-    "changes_14d": 326,
-    "housekeeping_7d": 14,
+    "changes_7d": 235,
+    "changes_14d": 334,
+    "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-10-29T17:15:01Z",
-      "commit": "ae0deb4",
-      "commit_full": "ae0deb44b2f5911a9b5471e0800c3ab127363f39",
-      "subject": "Reject non-boolean values for node.set flag properties (#1545)"
+      "ts": "2026-10-29T18:01:35Z",
+      "commit": "3ac8467",
+      "commit_full": "3ac8467c54a74ed1b2c1c4f560518d7d5a414105",
+      "subject": "board grid settings: dots, lines, graph paper or none (#1547)"
     },
-    "last_commit_ts": "2026-10-29T17:15:01Z",
+    "last_commit_ts": "2026-10-29T18:01:35Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       4,
@@ -604,7 +604,7 @@
       77,
       4,
       4,
-      80
+      88
     ],
     "days": [
       {
@@ -976,20 +976,20 @@
       },
       {
         "d": "2026-10-29",
-        "code": 80,
-        "other": 1,
+        "code": 88,
+        "other": 2,
         "samples": [
           {
-            "commit": "ae0deb4",
-            "subject": "Reject non-boolean values for node.set flag properties (#1545)"
+            "commit": "3ac8467",
+            "subject": "board grid settings: dots, lines, graph paper or none (#1547)"
           },
           {
-            "commit": "2f7d22e",
-            "subject": "M2: add auto layout from groups in the sidebar and convert them in place (#1546)"
+            "commit": "af2df34",
+            "subject": "M9: the Join dialog shows a join until its file is ready, with Cancel and Try again (#1381) (#1553)"
           },
           {
-            "commit": "40c9e56",
-            "subject": "Fix double alpha when binding a translucent variable to an empty fill (#1530)"
+            "commit": "501b9f7",
+            "subject": "M1: dismiss colour pickers outside and anchor them beside the sidebar (#1544)"
           }
         ]
       }
@@ -4969,7 +4969,53 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "f6ccef0",
+      "commit_full": "f6ccef0c5d07ffefaa2164a945e517e9e982e9a7",
+      "commit_date": "2026-10-30T00:20:57+07:00",
+      "ts": "2026-10-29T17:20:57Z",
+      "message": "M9: a per-address budget for server admin requests, and join codes found by hash (#1075) (#1552)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "af2df34",
+      "commit_full": "af2df345bc5db3a8e07f8dcc23711f9eb4ed5936",
+      "commit_date": "2026-10-30T00:51:46+07:00",
+      "ts": "2026-10-29T17:51:46Z",
+      "message": "M9: the Join dialog shows a join until its file is ready, with Cancel and Try again (#1381) (#1553)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-29T17:16:46+00:00"
+  "updated_at": "2026-10-29T18:07:38+00:00"
 }
