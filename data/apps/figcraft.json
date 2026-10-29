@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "0971d09",
-  "latest_commit_date": "2026-10-29T17:42:53+07:00",
-  "latest_message": "M8: the progressive JPEG check guards file thumbnails too (#1517)",
+  "latest_commit": "3efb269",
+  "latest_commit_date": "2026-10-29T19:00:15+07:00",
+  "latest_message": "M3: the instance-swap menus have a search field that filters as you type (#1338) (#1527)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -501,7 +501,7 @@
     "value_since": "2026-10-11T21:41:28Z",
     "releases_since": 10,
     "releases_since_capped": false,
-    "revisions_since": 89,
+    "revisions_since": 93,
     "hours_since": {
       "from": [
         273,
@@ -556,39 +556,39 @@
     }
   },
   "roadmap": {
-    "revisions": 138,
-    "revisions_7d": 38,
+    "revisions": 142,
+    "revisions_7d": 42,
     "last_revision": {
-      "ts": "2026-10-29T10:42:53Z",
+      "ts": "2026-10-29T12:00:15Z",
       "kind": "content",
-      "commit": "0971d09",
-      "commit_full": "0971d096db18aa107c5f3d1f83af4ac7f89ea2c3",
-      "message": "M8: the progressive JPEG check guards file thumbnails too (#1517)"
+      "commit": "3efb269",
+      "commit_full": "3efb2699b675e6b81d2b56625028ba20ab7b9a9d",
+      "message": "M3: the instance-swap menus have a search field that filters as you type (#1338) (#1527)"
     },
     "last_update": {
-      "ts": "2026-10-29T10:42:53Z",
+      "ts": "2026-10-29T12:00:15Z",
       "kind": "content",
-      "commit": "0971d09",
-      "commit_full": "0971d096db18aa107c5f3d1f83af4ac7f89ea2c3",
-      "message": "M8: the progressive JPEG check guards file thumbnails too (#1517)"
+      "commit": "3efb269",
+      "commit_full": "3efb2699b675e6b81d2b56625028ba20ab7b9a9d",
+      "message": "M3: the instance-swap menus have a search field that filters as you type (#1338) (#1527)"
     },
     "self_reported": "2026-10-29"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.0,
+    "score": 21.1,
     "active_days_7d": 7,
-    "changes_7d": 207,
-    "changes_14d": 306,
+    "changes_7d": 211,
+    "changes_14d": 310,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-29T10:42:53Z",
-      "commit": "0971d09",
-      "commit_full": "0971d096db18aa107c5f3d1f83af4ac7f89ea2c3",
-      "subject": "M8: the progressive JPEG check guards file thumbnails too (#1517)"
+      "ts": "2026-10-29T12:00:15Z",
+      "commit": "3efb269",
+      "commit_full": "3efb2699b675e6b81d2b56625028ba20ab7b9a9d",
+      "subject": "M3: the instance-swap menus have a search field that filters as you type (#1338) (#1527)"
     },
-    "last_commit_ts": "2026-10-29T10:42:53Z",
+    "last_commit_ts": "2026-10-29T12:00:15Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       4,
@@ -604,7 +604,7 @@
       77,
       4,
       4,
-      60
+      64
     ],
     "days": [
       {
@@ -976,20 +976,20 @@
       },
       {
         "d": "2026-10-29",
-        "code": 60,
+        "code": 64,
         "other": 1,
         "samples": [
           {
-            "commit": "0971d09",
-            "subject": "M8: the progressive JPEG check guards file thumbnails too (#1517)"
+            "commit": "3efb269",
+            "subject": "M3: the instance-swap menus have a search field that filters as you type (#1338) (#1527)"
           },
           {
-            "commit": "a492cca",
-            "subject": "M6: .fig import resolves library text styles linked by asset key and orders restated override rows by level (#1234) (#1515)"
+            "commit": "08173cc",
+            "subject": "M9: a refused batch's fixes in linear time (#1063) (#1522)"
           },
           {
-            "commit": "07681af",
-            "subject": "M6: .fig import keeps the file's saved line breaks while the text is unedited (#1236) (#1519)"
+            "commit": "d4e6ad5",
+            "subject": "M12: the connector tool previews the connector it will make, ends snapping to attach points (#1387) (#1526)"
           }
         ]
       }
@@ -4647,7 +4647,99 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "e32f8f2",
+      "commit_full": "e32f8f2e075e1e433bdef770a34030b750edceb3",
+      "commit_date": "2026-10-29T18:14:18+07:00",
+      "ts": "2026-10-29T11:14:18Z",
+      "message": "M8: large images on the canvas draw from a smaller copy (#1483) (#1518)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "d4e6ad5",
+      "commit_full": "d4e6ad5d81cccf9957f609248666229b3bcf9f9e",
+      "commit_date": "2026-10-29T18:29:48+07:00",
+      "ts": "2026-10-29T11:29:48Z",
+      "message": "M12: the connector tool previews the connector it will make, ends snapping to attach points (#1387) (#1526)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "08173cc",
+      "commit_full": "08173cc51e5422bca5900a82a8d91e92e210def2",
+      "commit_date": "2026-10-29T18:44:03+07:00",
+      "ts": "2026-10-29T11:44:03Z",
+      "message": "M9: a refused batch's fixes in linear time (#1063) (#1522)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "3efb269",
+      "commit_full": "3efb2699b675e6b81d2b56625028ba20ab7b9a9d",
+      "commit_date": "2026-10-29T19:00:15+07:00",
+      "ts": "2026-10-29T12:00:15Z",
+      "message": "M3: the instance-swap menus have a search field that filters as you type (#1338) (#1527)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-29T11:08:36+00:00"
+  "updated_at": "2026-10-29T12:06:10+00:00"
 }
