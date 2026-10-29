@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "740d117",
-  "latest_commit_date": "2026-10-27T01:27:07+07:00",
-  "latest_message": "M1: LCH and OKLCH models in the colour picker (#827)",
+  "latest_commit": "a8753e4",
+  "latest_commit_date": "2026-10-29T10:07:47+07:00",
+  "latest_message": "M3: scaled instances keep their scale when their main is rebuilt (#922) (#1484)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Figma Design (desktop app 126.10.7)",
-    "last_updated": "2026-10-26",
+    "last_updated": "2026-10-28",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -335,6 +335,18 @@
     ],
     "progress": [
       {
+        "date": "2026-10-28",
+        "text": "· M3, #922: an instance scaled with the Scale tool (or transform.scale) keeps its layers' scaled size and points when its main is rebuilt. The scaled layers' new size and place were read as what constraints give (an ancestor resized in the same edit), so no override was kept, and adding a layer to the main put a 14 px icon's 24 px triangle back. The Scale tool now records them as size and position overrides on layers inside instances; strokes already kept theirs. The report's own sequence (clearing effects on the component holding the icon) no longer reproduces on main. Regressions for a scaled instance, one scaled with the tool (with undo) and a scaled icon nested in a component and its instances. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-28",
+        "text": "· M6, #1059: .fig import copies each image carried inside the message once per blob, shared by every hash that names it, instead of once per hash: a file pointing many hashes at one large blob no longer multiplies it in memory (100 hashes on a 250 MB blob were 25 GB). Regression test. Numbers unchanged."
+      },
+      {
+        "date": "2026-10-28",
+        "text": "· M1, #1476: page ruler guides survive save and reopen. A page kept its guides in the page kind while the layer's own guides field (frame guides, #70) took that key when a file was read, so a reopened page's guides vanished, and saving it wrote guides twice, which then refused to open. Every layer now keeps its guides in the one field, and a page with two guides lists opens with both. Regressions in the doc and format crates. Numbers unchanged."
+      },
+      {
         "date": "2026-10-26",
         "text": "· Non-ASCII layer names transliterate in code export (M6, #1235): classname runs the name through deunicode before its ASCII filter, so 로그인 화면 → rogeuin-hwamyeon, кнопка → knopka, über → uber in the HTML/CSS/React/Leptos class names, component roots and data- variant attributes (SwiftUI/Compose type names unchanged); a name left with nothing (symbols only) takes the node's kind (.text, .frame) instead of layer-, and the 40-character cut lands on a word boundary. New dependency: deunicode (pure Rust tables, zero deps, BSD-3-Clause, the slug crate's base). htmlcodegentests. Numbers unchanged."
       },
@@ -481,18 +493,6 @@
       {
         "date": "2026-10-13",
         "text": "· Variables inside styles (M3): a shared style can bind variables to fields of its value (style.bind {style, field, variable?}: a paint style's colours and gradient stops, an effect style's colour, radius, spread and offsets, a grid style's size, count, gutter and offset, a text style's font size, line height, letter spacing, family and style). Every layer using the style shows those fields resolved in its own modes and stays linked when a variable or a mode changes; the style keeps them resolved in the default modes. A style made from a layer keeps that layer's bindings; a new value drops bindings to what is gone. The style editor binds from its property rows (paint colour, shadow colour, blur radius, grid size) and detaches from the variable's chip; the style picker marks styles that use variables. .fig export and import carry the bindings on the style, REST layers hand theirs to the style they use. Left: binding text style fields and the other effect and grid fields from the editor (commands only), library variables in the picker, a style's library copy. Numbers unchanged."
-      },
-      {
-        "date": "2026-10-13",
-        "text": "· Effects on groups, inner shadows and background blur (M3): a group is no outline of its own, so its inner shadows are cast inwards from around what its layers draw together (their pixels, over them: no shade at a seam between two layers) and its background blur and glass show the backdrop through the outlines of its layers (under them). Canvas and PNG; SVG embeds a group with an inner shadow as a render and its background blur as an image under the layers; PDF places both as images, the blur matching the PNG. Where the group holds one shape the pixels match that shape, or a frame filled like it, carrying the effect (groupeffectstests in render, svg and pdf). Offsets and spreads of a group's inner shadow go by whole pixels. Numbers unchanged."
-      },
-      {
-        "date": "2026-10-13",
-        "text": "· Text made by commands on a dark page (M1): in the app, text.create and node.create {type: text} that name no fill give white text on a dark page, by the same rule as the Text tool (the page's colour decides, also inside a frame); a named fill, fills or fillStyle is kept. Sessions without an interface (CLI, MCP, exports) still make black text everywhere. Numbers unchanged."
-      },
-      {
-        "date": "2026-10-13",
-        "text": "· Frames and groups, a one-step convert (M1): object.convertToGroup and object.convertToFrame (the Design panel's type menu on a frame or a group) change the layer in place, its layers staying where they are on the page. A frame turned into a group loses what only a frame has (auto layout, with the positions it gave kept and fill children fixed; fills, strokes, corner radius, clipping, layout grids, guides, scrolling) and takes its layers' box; a group turned into a frame keeps its box, with no fill and no clipping. Instances, main components, layers inside instances and empty frames are refused with the reason, all or nothing; one undo step. Numbers unchanged."
       }
     ]
   },
@@ -501,7 +501,7 @@
     "value_since": "2026-10-11T21:41:28Z",
     "releases_since": 10,
     "releases_since_capped": false,
-    "revisions_since": 73,
+    "revisions_since": 76,
     "hours_since": {
       "from": [
         273,
@@ -556,39 +556,39 @@
     }
   },
   "roadmap": {
-    "revisions": 122,
-    "revisions_7d": 22,
+    "revisions": 125,
+    "revisions_7d": 25,
     "last_revision": {
-      "ts": "2026-10-26T18:27:07Z",
+      "ts": "2026-10-29T03:07:47Z",
       "kind": "content",
-      "commit": "740d117",
-      "commit_full": "740d117313d7476e29b84f8697af45c40404a270",
-      "message": "M1: LCH and OKLCH models in the colour picker (#827)"
+      "commit": "a8753e4",
+      "commit_full": "a8753e4acadf2b560c12779ceefe07468baac72e",
+      "message": "M3: scaled instances keep their scale when their main is rebuilt (#922) (#1484)"
     },
     "last_update": {
-      "ts": "2026-10-26T18:27:07Z",
+      "ts": "2026-10-29T03:07:47Z",
       "kind": "content",
-      "commit": "740d117",
-      "commit_full": "740d117313d7476e29b84f8697af45c40404a270",
-      "message": "M1: LCH and OKLCH models in the colour picker (#827)"
+      "commit": "a8753e4",
+      "commit_full": "a8753e4acadf2b560c12779ceefe07468baac72e",
+      "message": "M3: scaled instances keep their scale when their main is rebuilt (#922) (#1484)"
     },
-    "self_reported": "2026-10-26"
+    "self_reported": "2026-10-28"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.1,
-    "active_days_7d": 6,
-    "changes_7d": 147,
-    "changes_14d": 246,
+    "score": 19.0,
+    "active_days_7d": 7,
+    "changes_7d": 161,
+    "changes_14d": 260,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-28T19:48:52Z",
-      "commit": "2af5e23",
-      "commit_full": "2af5e232d5dd86321e4671655de60f9ae031c53a",
-      "subject": "Honor CARGO_BUILD_TARGET in FreeBSD packaging for aarch64 release builds (#1475)"
+      "ts": "2026-10-29T03:07:47Z",
+      "commit": "a8753e4",
+      "commit_full": "a8753e4acadf2b560c12779ceefe07468baac72e",
+      "subject": "M3: scaled instances keep their scale when their main is rebuilt (#922) (#1484)"
     },
-    "last_commit_ts": "2026-10-28T19:48:52Z",
+    "last_commit_ts": "2026-10-29T03:07:47Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       4,
@@ -604,7 +604,7 @@
       77,
       4,
       4,
-      0
+      14
     ],
     "days": [
       {
@@ -971,6 +971,25 @@
           {
             "commit": "32e8fd0",
             "subject": "Grant network access so update checks can reach GitHub (#1471)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-29",
+        "code": 14,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "a8753e4",
+            "subject": "M3: scaled instances keep their scale when their main is rebuilt (#922) (#1484)"
+          },
+          {
+            "commit": "7f646aa",
+            "subject": "M8: the browser refines a zoom only once it has paused (#1468)"
+          },
+          {
+            "commit": "4a0bd79",
+            "subject": "fix(collab): image entries must match their hash and sane bounds (#1086) (#1488)"
           }
         ]
       }
@@ -4260,7 +4279,76 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "baaafc3",
+      "commit_full": "baaafc381bcf6a15bf662a2525cac7b928c1885f",
+      "commit_date": "2026-10-29T09:29:31+07:00",
+      "ts": "2026-10-29T02:29:31Z",
+      "message": "M1: page ruler guides survive save and reopen (#1476) (#1485)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-28",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "d2811b9",
+      "commit_full": "d2811b9d862e57f4d57d6243335fe784fd4932f1",
+      "commit_date": "2026-10-29T09:44:38+07:00",
+      "ts": "2026-10-29T02:44:38Z",
+      "message": "M6: .fig embedded images are copied once per blob, not once per hash (#1059) (#1486)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-28",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "a8753e4",
+      "commit_full": "a8753e4acadf2b560c12779ceefe07468baac72e",
+      "commit_date": "2026-10-29T10:07:47+07:00",
+      "ts": "2026-10-29T03:07:47Z",
+      "message": "M3: scaled instances keep their scale when their main is rebuilt (#922) (#1484)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-28",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-29T00:29:40+00:00"
+  "updated_at": "2026-10-29T03:08:22+00:00"
 }
