@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/vectorcraft",
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
-  "latest_commit": "0a9d791",
-  "latest_commit_date": "2026-10-29T13:48:33+07:00",
-  "latest_message": "i18n: add Catalan (ca) localization (#4453)",
+  "latest_commit": "fffc2b7",
+  "latest_commit_date": "2026-10-30T02:19:58+07:00",
+  "latest_message": "Linux clipboard: stop the retry storm (#4629)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -339,6 +339,10 @@
     ],
     "progress": [
       {
+        "date": "2026-10-29",
+        "text": "Linux: a clipboard that can't be opened (the Flatpak on GNOME, where arboard has neither data-control nor X11) is retried after 1 s, doubling to a minute, and logged once, where the background Paste check used to reconnect and log a warning every 250 ms (267k warnings in 18 h). Scores and estimates unchanged."
+      },
+      {
         "date": "2026-10-23",
         "text": "Pathfinder › Trap: the Pathfinder panel's Trap… and Effect › Pathfinder › Trap… add a thin overprinting strip of the lighter colour inside the darker one where two solid colours meet, so misregistered plates leave no gap (trapping), with Thickness, Height/Width, Tint Reduction, Traps with Process Color and Reverse Traps. Illustrator effects 49/50 (SVG Filters remains); Live vector effects hours 6–10 → 4–8; headline numbers unchanged."
       },
@@ -493,10 +497,6 @@
       {
         "date": "2026-10-12",
         "text": "Effect › 3D and Materials: Extrude & Bevel (depth, twist, taper, solid or hollow caps, five bevel shapes with repeat, spacing, inside and both sides), Inflate (volume, both sides) and Rotate, with Position presets and the rotation and light gizmos; live, exported as vector faces, expandable (#1407)."
-      },
-      {
-        "date": "2026-10-12",
-        "text": "convert --editing-data (editingData: \"always\") opens a .ai from its editing data even where its page, which can be older, draws differently, with a note."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 10,
     "releases_since_capped": false,
-    "revisions_since": 191,
+    "revisions_since": 192,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,39 +536,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 192,
-    "revisions_7d": 3,
+    "revisions": 193,
+    "revisions_7d": 4,
     "last_revision": {
-      "ts": "2026-10-29T06:48:33Z",
+      "ts": "2026-10-29T19:19:58Z",
       "kind": "content",
-      "commit": "0a9d791",
-      "commit_full": "0a9d791e33311e75546fa00bf5a7bbfe06b494dc",
-      "message": "i18n: add Catalan (ca) localization (#4453)"
+      "commit": "fffc2b7",
+      "commit_full": "fffc2b747fa7967204c6d153345fe4bd11f366b5",
+      "message": "Linux clipboard: stop the retry storm (#4629)"
     },
     "last_update": {
-      "ts": "2026-10-29T06:48:33Z",
+      "ts": "2026-10-29T19:19:58Z",
       "kind": "content",
-      "commit": "0a9d791",
-      "commit_full": "0a9d791e33311e75546fa00bf5a7bbfe06b494dc",
-      "message": "i18n: add Catalan (ca) localization (#4453)"
+      "commit": "fffc2b7",
+      "commit_full": "fffc2b747fa7967204c6d153345fe4bd11f366b5",
+      "message": "Linux clipboard: stop the retry storm (#4629)"
     },
     "self_reported": "2026-10-23"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 29.0,
+    "score": 29.1,
     "active_days_7d": 7,
-    "changes_7d": 517,
-    "changes_14d": 1218,
-    "housekeeping_7d": 21,
+    "changes_7d": 521,
+    "changes_14d": 1222,
+    "housekeeping_7d": 22,
     "last_code_change": {
-      "ts": "2026-10-29T17:46:03Z",
-      "commit": "31124c8",
-      "commit_full": "31124c8709488664dd012acdbe96f938da1cb72d",
-      "subject": "Image Trace: background traces see library colour changes, and keep frames coming (#3098) (#4617)"
+      "ts": "2026-10-29T19:19:58Z",
+      "commit": "fffc2b7",
+      "commit_full": "fffc2b747fa7967204c6d153345fe4bd11f366b5",
+      "subject": "Linux clipboard: stop the retry storm (#4629)"
     },
-    "last_commit_ts": "2026-10-29T17:46:03Z",
+    "last_commit_ts": "2026-10-29T19:19:58Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       57,
@@ -584,7 +584,7 @@
       98,
       15,
       4,
-      166
+      170
     ],
     "days": [
       {
@@ -1127,20 +1127,20 @@
       },
       {
         "d": "2026-10-29",
-        "code": 166,
-        "other": 0,
+        "code": 170,
+        "other": 1,
         "samples": [
           {
-            "commit": "31124c8",
-            "subject": "Image Trace: background traces see library colour changes, and keep frames coming (#3098) (#4617)"
+            "commit": "fffc2b7",
+            "subject": "Linux clipboard: stop the retry storm (#4629)"
           },
           {
-            "commit": "a885569",
-            "subject": "Fix #4420: import attached Affinity recolor adjustment layers as color overlays (#4620)"
+            "commit": "f4d9956",
+            "subject": "Align: Align to Glyph Bounds for point and area type (#4231) (#4631)"
           },
           {
-            "commit": "e454ea2",
-            "subject": "Fix #3232: a CMYK gradient mesh keeps its K when lightened (#4619)"
+            "commit": "98830e5",
+            "subject": "Contributors: add Ashok Ram (#4627)"
           }
         ]
       }
@@ -6400,7 +6400,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "fffc2b7",
+      "commit_full": "fffc2b747fa7967204c6d153345fe4bd11f366b5",
+      "commit_date": "2026-10-30T02:19:58+07:00",
+      "ts": "2026-10-29T19:19:58Z",
+      "message": "Linux clipboard: stop the retry storm (#4629)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-23",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-29T18:07:19+00:00"
+  "updated_at": "2026-10-29T19:20:15+00:00"
 }
