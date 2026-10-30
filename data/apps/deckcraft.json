@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/deckcraft",
   "roadmap_url": "https://github.com/storytold/deckcraft/blob/main/ROADMAP.md",
-  "latest_commit": "230b648",
-  "latest_commit_date": "2026-10-25T20:23:43-04:00",
-  "latest_message": "fix(windows): keep the shortcut icon after an update (#1114) (#1391)",
+  "latest_commit": "ae08bbe",
+  "latest_commit_date": "2026-10-30T16:08:20-04:00",
+  "latest_message": "Merge pull request #1546",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
-    "last_updated": "2026-10-24",
+    "last_updated": "2026-10-29",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -315,8 +315,52 @@
     ],
     "progress": [
       {
+        "date": "2026-10-29",
+        "text": "Slide Show: going back to the previous slide plays the transition of the slide being left, reversed, as PowerPoint does, instead of the previous slide's own entrance transition (#1531); a jump (Go to Slide, links) still plays the target slide's transition"
+      },
+      {
+        "date": "2026-10-29",
+        "text": "Review ▸ Accessibility checks text runs in every paragraph and nested group descendants for low contrast, reporting each affected shape once; the all-black control stays clear"
+      },
+      {
+        "date": "2026-10-29",
+        "text": "Picture Format: the Picture Styles row shows as many styles as leave room for the groups after it, and its arrow opens all 24. With every style in the row, Crop and Size sat past the ribbon's edge in any window narrower than about 2500 px, so Crop could not be seen without scrolling the ribbon (#1232). In the default 1440 px window Crop, Height and Width are now in view, and from 1600 px the whole tab fits"
+      },
+      {
+        "date": "2026-10-28",
+        "text": "CLI run --cmd-file FILE reads UTF-8 commands in order alongside --cmd, skips blank/comment lines, and reports file/line errors before final save/export (#1098)"
+      },
+      {
+        "date": "2026-10-28",
+        "text": "MCP accepts repeated --automation-read-root and --automation-write-root flags for access to multiple folders (#1154)"
+      },
+      {
+        "date": "2026-10-27",
+        "text": "Set Up Slide Show ▸ Keep mouse cursor visible: a full-screen show no longer hides a still pointer, so the choices of a branching deck stay visible and clickable; the setting is kept with the user's preferences (ui.json, showKeepCursor), off by default (#1445)"
+      },
+      {
+        "date": "2026-10-26",
+        "text": "Slide reorder: dragging one of several selected slides in the thumbnail pane or the Slide Sorter moves the whole selection, as one run in deck order and one undo step; the slides stay selected and join the section they land in. slide.move {ids, to} does the same from the control channel and MCP; dragging an unselected slide still moves only that slide"
+      },
+      {
+        "date": "2026-10-26",
+        "text": "A space, digit or punctuation after a symbol-font character (a:sym, e.g. a Wingdings arrow typed in a run) draws in the run's own font, as PowerPoint does; it stayed in the symbol font, whose space is about four times as wide (synthetic probe)"
+      },
+      {
+        "date": "2026-10-26",
+        "text": "Duplicate (Ctrl+D) names the copy as PowerPoint does: a shape with an automatic name (\"Rectangle 1\") gets the next one (\"Rectangle 5\", also for the shapes inside a duplicated group), and a name you chose (\"Hero\") stays as it is instead of becoming \"Hero copy\""
+      },
+      {
+        "date": "2026-10-25",
+        "text": "A photo in a picture placeholder is cut into the shape its layout gives the placeholder, as PowerPoint draws it: a layout's round picture placeholder keeps a slide's photo in a circle with the layout's white border, where it came out as a rectangle (the reader only passed p:sp placeholders to inheritplaceholdergeometry, not p:pic)"
+      },
+      {
         "date": "2026-10-25",
         "text": "Windows installer: the Start menu shortcut takes the icon embedded in deckcraft.exe instead of an MSI <Icon>, so a taskbar pin keeps its icon after an update (#1114); a pin that already lost it has to be unpinned and pinned again once"
+      },
+      {
+        "date": "2026-10-25",
+        "text": "Format Shape ▸ Fill: Slide background fill shows the slide background through the shape (shape.fill {background: true}, saved as useBgFill). A shape opened from a file with this fill showed it as Automatic, and the pane offered no way to set it"
       },
       {
         "date": "2026-10-24",
@@ -429,50 +473,6 @@
       {
         "date": "2026-10-20",
         "text": "Tests: Ctrl+A in the slide sorter selects every slide, as in PowerPoint (#936)"
-      },
-      {
-        "date": "2026-10-19",
-        "text": "README: the Linux runtime libraries a tarball or musl install has to provide — the dlopened X11/Vulkan/GL/dialog libraries with their Alpine and Void package names, the software-Vulkan fallback, and why fontconfig and freetype are not among them (#955)"
-      },
-      {
-        "date": "2026-10-18",
-        "text": "Find (Ctrl+F): \"Find what:\" has the keyboard as soon as the dialog opens, and keeps it after Enter finds a match, so the search can be typed and changed without clicking the field (#951)"
-      },
-      {
-        "date": "2026-10-18",
-        "text": "Duplicate (Ctrl+D) repeats a move: duplicate a shape, move the copy, and the next Duplicate places its copy the same distance further on, as in PowerPoint (#966)"
-      },
-      {
-        "date": "2026-10-18",
-        "text": "Native chart sidecar bytes move from JSON arrays into referenced ZIP entries, with shared media byte/item limits and bounded reads; older inline sidecars still load. Synthetic format regressions cover large workbooks and malformed members"
-      },
-      {
-        "date": "2026-10-18",
-        "text": "Slide thumbnails and the Slide Sorter render only the slides in view: on a deck of more than 600 slides they used to evict their own thumbnails, so the pane flashed white and never finished (#969)"
-      },
-      {
-        "date": "2026-10-18",
-        "text": "Resizing with the mouse snaps the edge being dragged to the slide, guides and other shapes: a fixed edge that already lined up used to take the snap and leave the dragged edge free, and a fixed edge near a line shifted the dragged one (#961)"
-      },
-      {
-        "date": "2026-10-18",
-        "text": "Slide show: a video or audio clip is looked up on the slide it belongs to, so slides whose shape ids repeat (the PPTX import numbers each slide afresh) no longer play each other's clips (#994)"
-      },
-      {
-        "date": "2026-10-18",
-        "text": "About: Contributors and Models get their own fixed-size block below the tab row, so the tab row is no longer squeezed into the credits and the tabs keep answering (#843)"
-      },
-      {
-        "date": "2026-10-18",
-        "text": "Charts: a series' own data-label setting is honoured — numbers PowerPoint shows on a graph no longer disappear, and a bare c:showVal means on (#868)"
-      },
-      {
-        "date": "2026-10-18",
-        "text": "Thumbnails: navigating slides with the arrow keys scrolls the thumbnail pane to keep the current slide visible (#917)"
-      },
-      {
-        "date": "2026-10-17",
-        "text": "Opening a file caps absurd effect sizes (glow, soft edges, shadows, reflections, on shapes, text and table text) at what Format Shape allows: a glow of 10^18 pt in a .pptx made rendering ask for 34 GB and abort"
       }
     ]
   },
@@ -481,7 +481,7 @@
     "value_since": "2026-10-10T18:09:21Z",
     "releases_since": 8,
     "releases_since_capped": false,
-    "revisions_since": 103,
+    "revisions_since": 116,
     "hours_since": null,
     "areas_since": {
       "up": 1,
@@ -500,39 +500,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 106,
-    "revisions_7d": 8,
+    "revisions": 119,
+    "revisions_7d": 21,
     "last_revision": {
-      "ts": "2026-10-26T00:23:43Z",
+      "ts": "2026-10-30T20:08:20Z",
       "kind": "content",
-      "commit": "230b648",
-      "commit_full": "230b6485d91a8fc5e171082ed4dd9e7d8ea39ac1",
-      "message": "fix(windows): keep the shortcut icon after an update (#1114) (#1391)"
+      "commit": "ae08bbe",
+      "commit_full": "ae08bbe62d29844324170087224c124ea143839b",
+      "message": "Merge pull request #1546"
     },
     "last_update": {
-      "ts": "2026-10-26T00:23:43Z",
+      "ts": "2026-10-30T20:08:20Z",
       "kind": "content",
-      "commit": "230b648",
-      "commit_full": "230b6485d91a8fc5e171082ed4dd9e7d8ea39ac1",
-      "message": "fix(windows): keep the shortcut icon after an update (#1114) (#1391)"
+      "commit": "ae08bbe",
+      "commit_full": "ae08bbe62d29844324170087224c124ea143839b",
+      "message": "Merge pull request #1546"
     },
-    "self_reported": "2026-10-24"
+    "self_reported": "2026-10-29"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 12.4,
+    "score": 16.7,
     "active_days_7d": 6,
-    "changes_7d": 85,
-    "changes_14d": 177,
-    "housekeeping_7d": 7,
+    "changes_7d": 143,
+    "changes_14d": 235,
+    "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-10-30T06:33:11Z",
-      "commit": "3a4e30e",
-      "commit_full": "3a4e30e10e83c5f988a074dba1a519984828b4fd",
-      "subject": "UPD.1: honor pretend versions and restore dev-testkit checks (#1562)"
+      "ts": "2026-10-30T20:08:21Z",
+      "commit": "c4221b1",
+      "commit_full": "c4221b1a7cd39b6cb2ae43104cb4bf1c041cd6b9",
+      "subject": "Merge pull request #1371"
     },
-    "last_commit_ts": "2026-10-30T06:33:11Z",
+    "last_commit_ts": "2026-10-30T20:08:21Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
       2,
@@ -548,7 +548,7 @@
       4,
       4,
       0,
-      2
+      60
     ],
     "days": [
       {
@@ -935,16 +935,20 @@
       },
       {
         "d": "2026-10-30",
-        "code": 2,
-        "other": 1,
+        "code": 60,
+        "other": 3,
         "samples": [
           {
-            "commit": "3a4e30e",
-            "subject": "UPD.1: honor pretend versions and restore dev-testkit checks (#1562)"
+            "commit": "c4221b1",
+            "subject": "Merge pull request #1371"
           },
           {
-            "commit": "505a6f2",
-            "subject": "Update prompt shows the app icon and accent color instead of a letter (#1561)"
+            "commit": "46f2322",
+            "subject": "Merge pull request #1510"
+          },
+          {
+            "commit": "ae08bbe",
+            "subject": "Merge pull request #1546"
           }
         ]
       }
@@ -3584,7 +3588,306 @@
       "breadth_pct": 62.0,
       "full_prev": 55.0,
       "kind": "content"
+    },
+    {
+      "commit": "9cb5139",
+      "commit_full": "9cb51393b366049e93961b08fd7a47dfb1a56356",
+      "commit_date": "2026-10-30T15:42:30-04:00",
+      "ts": "2026-10-30T19:42:30Z",
+      "message": "Merge pull request #1533",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-24",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "8d278d7",
+      "commit_full": "8d278d71cb16c07544eee86ed3c397473839d714",
+      "commit_date": "2026-10-30T15:42:42-04:00",
+      "ts": "2026-10-30T19:42:42Z",
+      "message": "Merge pull request #1456",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-27",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "5e85f73",
+      "commit_full": "5e85f73c5e32ae8fa1ff4a301665bf8dd9988608",
+      "commit_date": "2026-10-30T15:48:04-04:00",
+      "ts": "2026-10-30T19:48:04Z",
+      "message": "Merge pull request #1397",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-27",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "b3c36e8",
+      "commit_full": "b3c36e816aba35f175d4c67c0c45ec849a220f2a",
+      "commit_date": "2026-10-30T15:48:31-04:00",
+      "ts": "2026-10-30T19:48:31Z",
+      "message": "Merge pull request #1560",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "f08e5f8",
+      "commit_full": "f08e5f86914dd2eb1c9b0e6e50cbf703a33d33de",
+      "commit_date": "2026-10-30T15:48:35-04:00",
+      "ts": "2026-10-30T19:48:35Z",
+      "message": "Merge pull request #1384",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "f61b7a3",
+      "commit_full": "f61b7a34dd918e83f50c22b43519546786698ae6",
+      "commit_date": "2026-10-30T15:58:52-04:00",
+      "ts": "2026-10-30T19:58:52Z",
+      "message": "Merge pull request #1560",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "e279461",
+      "commit_full": "e279461ca7647c6e14c26fde40a9293da11ddf0e",
+      "commit_date": "2026-10-30T15:58:53-04:00",
+      "ts": "2026-10-30T19:58:53Z",
+      "message": "Merge pull request #1493",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "34cfc5b",
+      "commit_full": "34cfc5b20bf556a42b2b219f47ab29ee01f97f3a",
+      "commit_date": "2026-10-30T15:58:54-04:00",
+      "ts": "2026-10-30T19:58:54Z",
+      "message": "Merge pull request #1500",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "28756fc",
+      "commit_full": "28756fc75528a95476721487b10fc4f096dfe73c",
+      "commit_date": "2026-10-30T15:59:10-04:00",
+      "ts": "2026-10-30T19:59:10Z",
+      "message": "Merge pull request #1462",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "dc1fc8d",
+      "commit_full": "dc1fc8d83b48ae1c7d7c75ee2fcc73984bbb7a3b",
+      "commit_date": "2026-10-30T16:05:27-04:00",
+      "ts": "2026-10-30T20:05:27Z",
+      "message": "Merge pull request #1418",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "3dc66ac",
+      "commit_full": "3dc66ac1a5cebf8ee65d0bba7c613540f232257a",
+      "commit_date": "2026-10-30T16:05:36-04:00",
+      "ts": "2026-10-30T20:05:36Z",
+      "message": "Merge pull request #1417",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "81eff03",
+      "commit_full": "81eff036d2f75dc324b09fcfd5837d777cd603e9",
+      "commit_date": "2026-10-30T16:08:18-04:00",
+      "ts": "2026-10-30T20:08:18Z",
+      "message": "Merge pull request #1439",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "ae08bbe",
+      "commit_full": "ae08bbe62d29844324170087224c124ea143839b",
+      "commit_date": "2026-10-30T16:08:20-04:00",
+      "ts": "2026-10-30T20:08:20Z",
+      "message": "Merge pull request #1546",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-30T07:29:51+00:00"
+  "updated_at": "2026-10-30T20:24:59+00:00"
 }

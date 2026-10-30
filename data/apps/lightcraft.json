@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/lightcraft",
   "roadmap_url": "https://github.com/storytold/lightcraft/blob/main/ROADMAP.md",
-  "latest_commit": "c414ef0",
-  "latest_commit_date": "2026-10-24T09:39:25-04:00",
-  "latest_message": "Round 3a integration: 42 PRs of #2580, built and tested locally (#2689)",
+  "latest_commit": "8aabf61",
+  "latest_commit_date": "2026-10-30T15:57:58-04:00",
+  "latest_message": "Merge PR: integration batch 45 (17 community PRs)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Adobe Lightroom Classic 15.5 / Lightroom 9.6",
-    "last_updated": "2026-10-22",
+    "last_updated": "2026-10-24",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -272,7 +272,7 @@
       "~~Full-resolution zoom~~ (done 2026-10-12)",
       "AI masks: Subject / Sky / People (40–70 h + model decision)",
       "Compressed ORF and HE NEF (28–55 h)",
-      "Lens profile database of our own (40–80 h)",
+      "Lens profile database of our own (40–80 h, #329)",
       "Tests in CI on macOS, Windows and Linux (6–12 h)"
     ],
     "progress": [
@@ -379,7 +379,7 @@
     "value_since": "2026-10-10T18:25:15Z",
     "releases_since": 10,
     "releases_since_capped": false,
-    "revisions_since": 10,
+    "revisions_since": 11,
     "hours_since": null,
     "areas_since": {
       "up": 1,
@@ -398,39 +398,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 11,
-    "revisions_7d": 1,
+    "revisions": 12,
+    "revisions_7d": 2,
     "last_revision": {
-      "ts": "2026-10-24T13:39:25Z",
+      "ts": "2026-10-30T19:57:58Z",
       "kind": "content",
-      "commit": "c414ef0",
-      "commit_full": "c414ef06ecfc4fbf383dc4ff644a4fb93ad96876",
-      "message": "Round 3a integration: 42 PRs of #2580, built and tested locally (#2689)"
+      "commit": "8aabf61",
+      "commit_full": "8aabf61449bc736d10f1d753b5497b54a55e9365",
+      "message": "Merge PR: integration batch 45 (17 community PRs)"
     },
     "last_update": {
-      "ts": "2026-10-24T13:39:25Z",
+      "ts": "2026-10-30T19:57:58Z",
       "kind": "content",
-      "commit": "c414ef0",
-      "commit_full": "c414ef06ecfc4fbf383dc4ff644a4fb93ad96876",
-      "message": "Round 3a integration: 42 PRs of #2580, built and tested locally (#2689)"
+      "commit": "8aabf61",
+      "commit_full": "8aabf61449bc736d10f1d753b5497b54a55e9365",
+      "message": "Merge PR: integration batch 45 (17 community PRs)"
     },
-    "self_reported": "2026-10-22"
+    "self_reported": "2026-10-24"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 9.8,
+    "score": 10.2,
     "active_days_7d": 6,
-    "changes_7d": 30,
-    "changes_14d": 54,
+    "changes_7d": 31,
+    "changes_14d": 55,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-10-30T13:02:24Z",
-      "commit": "5194cc2",
-      "commit_full": "5194cc20dea06d725079ac162c6912fc1f0d3a78",
-      "subject": "UPD.1: honor pretend versions and track the updater icon in CI (#3365)"
+      "ts": "2026-10-30T19:57:58Z",
+      "commit": "8aabf61",
+      "commit_full": "8aabf61449bc736d10f1d753b5497b54a55e9365",
+      "subject": "Merge PR: integration batch 45 (17 community PRs)"
     },
-    "last_commit_ts": "2026-10-30T13:02:24Z",
+    "last_commit_ts": "2026-10-30T19:57:58Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
       2,
@@ -446,7 +446,7 @@
       7,
       5,
       0,
-      2
+      3
     ],
     "days": [
       {
@@ -946,9 +946,13 @@
       },
       {
         "d": "2026-10-30",
-        "code": 2,
+        "code": 3,
         "other": 2,
         "samples": [
+          {
+            "commit": "8aabf61",
+            "subject": "Merge PR: integration batch 45 (17 community PRs)"
+          },
           {
             "commit": "5194cc2",
             "subject": "UPD.1: honor pretend versions and track the updater icon in CI (#3365)"
@@ -1427,7 +1431,30 @@
       "breadth_pct": 81.6,
       "full_prev": 61.0,
       "kind": "content"
+    },
+    {
+      "commit": "8aabf61",
+      "commit_full": "8aabf61449bc736d10f1d753b5497b54a55e9365",
+      "commit_date": "2026-10-30T15:57:58-04:00",
+      "ts": "2026-10-30T19:57:58Z",
+      "message": "Merge PR: integration batch 45 (17 community PRs)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-24",
+      "full_pct": 61.0,
+      "full_range": null,
+      "full_hours": [
+        1000,
+        1800
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe Lightroom Classic 15.5 / Lightroom 9.6",
+      "mainstream_pct": 51.0,
+      "essentials_pct": 65.0,
+      "breadth_pct": 81.6,
+      "full_prev": 61.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-30T13:24:59+00:00"
+  "updated_at": "2026-10-30T20:24:30+00:00"
 }

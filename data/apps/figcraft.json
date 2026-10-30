@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "bbd1188",
-  "latest_commit_date": "2026-10-31T02:21:53+07:00",
-  "latest_message": "M3: a collection of this file can be extended (#1679)",
+  "latest_commit": "fd8d49f",
+  "latest_commit_date": "2026-10-31T03:24:32+07:00",
+  "latest_message": "M11: a widget opens its plugin's panel (plugin API 5) (#1684)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -501,7 +501,7 @@
     "value_since": "2026-10-11T21:41:28Z",
     "releases_since": 10,
     "releases_since_capped": false,
-    "revisions_since": 179,
+    "revisions_since": 182,
     "hours_since": {
       "from": [
         273,
@@ -556,39 +556,39 @@
     }
   },
   "roadmap": {
-    "revisions": 228,
-    "revisions_7d": 125,
+    "revisions": 231,
+    "revisions_7d": 128,
     "last_revision": {
-      "ts": "2026-10-30T19:21:53Z",
+      "ts": "2026-10-30T20:24:32Z",
       "kind": "content",
-      "commit": "bbd1188",
-      "commit_full": "bbd1188c815e12a08de8757d6e15a6942b78fae2",
-      "message": "M3: a collection of this file can be extended (#1679)"
+      "commit": "fd8d49f",
+      "commit_full": "fd8d49fc9579ab29422f48b6b77981df5830849a",
+      "message": "M11: a widget opens its plugin's panel (plugin API 5) (#1684)"
     },
     "last_update": {
-      "ts": "2026-10-30T19:21:53Z",
+      "ts": "2026-10-30T20:24:32Z",
       "kind": "content",
-      "commit": "bbd1188",
-      "commit_full": "bbd1188c815e12a08de8757d6e15a6942b78fae2",
-      "message": "M3: a collection of this file can be extended (#1679)"
+      "commit": "fd8d49f",
+      "commit_full": "fd8d49fc9579ab29422f48b6b77981df5830849a",
+      "message": "M11: a widget opens its plugin's panel (plugin API 5) (#1684)"
     },
     "self_reported": "2026-10-30"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 24.1,
+    "score": 24.2,
     "active_days_7d": 7,
-    "changes_7d": 328,
-    "changes_14d": 432,
+    "changes_7d": 331,
+    "changes_14d": 435,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-30T19:34:39Z",
-      "commit": "77778ca",
-      "commit_full": "77778cad9d0999b0b0f44167c196041b9d180b3e",
-      "subject": "i18n(fi): translate the 99 UI strings and 23 command labels Finnish lacked (#1700)"
+      "ts": "2026-10-30T20:24:32Z",
+      "commit": "fd8d49f",
+      "commit_full": "fd8d49fc9579ab29422f48b6b77981df5830849a",
+      "subject": "M11: a widget opens its plugin's panel (plugin API 5) (#1684)"
     },
-    "last_commit_ts": "2026-10-30T19:34:39Z",
+    "last_commit_ts": "2026-10-30T20:24:32Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       18,
@@ -604,7 +604,7 @@
       4,
       4,
       107,
-      83
+      86
     ],
     "days": [
       {
@@ -995,20 +995,20 @@
       },
       {
         "d": "2026-10-30",
-        "code": 83,
+        "code": 86,
         "other": 2,
         "samples": [
           {
-            "commit": "77778ca",
-            "subject": "i18n(fi): translate the 99 UI strings and 23 command labels Finnish lacked (#1700)"
+            "commit": "fd8d49f",
+            "subject": "M11: a widget opens its plugin's panel (plugin API 5) (#1684)"
           },
           {
-            "commit": "bbd1188",
-            "subject": "M3: a collection of this file can be extended (#1679)"
+            "commit": "9dafa22",
+            "subject": "M8: the Menu key opens the context menu; stale parity rows on reorder rings and shortcut counts corrected (#1677)"
           },
           {
-            "commit": "6bc8d39",
-            "subject": "M4: editing a stroke's Dash or Gap keeps the rest of its dash pattern (#1681) (#1698)"
+            "commit": "760aece",
+            "subject": "M5: an Open link action can open in place of the prototype, with Open in new tab off (#1685)"
           }
         ]
       }
@@ -6736,7 +6736,76 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "760aece",
+      "commit_full": "760aece2384bfbb2186cbadf09434df4cb198584",
+      "commit_date": "2026-10-31T02:37:54+07:00",
+      "ts": "2026-10-30T19:37:54Z",
+      "message": "M5: an Open link action can open in place of the prototype, with Open in new tab off (#1685)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-30",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "9dafa22",
+      "commit_full": "9dafa22a20903303b4e888a1605c09725e562344",
+      "commit_date": "2026-10-31T03:07:14+07:00",
+      "ts": "2026-10-30T20:07:14Z",
+      "message": "M8: the Menu key opens the context menu; stale parity rows on reorder rings and shortcut counts corrected (#1677)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-30",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "fd8d49f",
+      "commit_full": "fd8d49fc9579ab29422f48b6b77981df5830849a",
+      "commit_date": "2026-10-31T03:24:32+07:00",
+      "ts": "2026-10-30T20:24:32Z",
+      "message": "M11: a widget opens its plugin's panel (plugin API 5) (#1684)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-30",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-30T19:34:59+00:00"
+  "updated_at": "2026-10-30T20:24:49+00:00"
 }
