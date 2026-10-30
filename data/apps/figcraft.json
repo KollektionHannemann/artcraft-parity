@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "838d368",
-  "latest_commit_date": "2026-10-30T21:10:04+07:00",
-  "latest_message": "M6: .fig connector labels without a saved snapshot are kept, centred on their line (#1659)",
+  "latest_commit": "ddda495",
+  "latest_commit_date": "2026-10-30T22:12:49+07:00",
+  "latest_message": "M6: a long frame name stays on one line in the Export button and Dev Mode's header (#1650) (#1661)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -501,7 +501,7 @@
     "value_since": "2026-10-11T21:41:28Z",
     "releases_since": 10,
     "releases_since_capped": false,
-    "revisions_since": 164,
+    "revisions_since": 167,
     "hours_since": {
       "from": [
         273,
@@ -556,39 +556,39 @@
     }
   },
   "roadmap": {
-    "revisions": 213,
-    "revisions_7d": 110,
+    "revisions": 216,
+    "revisions_7d": 113,
     "last_revision": {
-      "ts": "2026-10-30T14:10:04Z",
+      "ts": "2026-10-30T15:12:49Z",
       "kind": "content",
-      "commit": "838d368",
-      "commit_full": "838d3687125b57e009479530fe32cf6bb41f6ddd",
-      "message": "M6: .fig connector labels without a saved snapshot are kept, centred on their line (#1659)"
+      "commit": "ddda495",
+      "commit_full": "ddda495a6ff40c326a117fbc393a8cfaa319f529",
+      "message": "M6: a long frame name stays on one line in the Export button and Dev Mode's header (#1650) (#1661)"
     },
     "last_update": {
-      "ts": "2026-10-30T14:10:04Z",
+      "ts": "2026-10-30T15:12:49Z",
       "kind": "content",
-      "commit": "838d368",
-      "commit_full": "838d3687125b57e009479530fe32cf6bb41f6ddd",
-      "message": "M6: .fig connector labels without a saved snapshot are kept, centred on their line (#1659)"
+      "commit": "ddda495",
+      "commit_full": "ddda495a6ff40c326a117fbc393a8cfaa319f529",
+      "message": "M6: a long frame name stays on one line in the Export button and Dev Mode's header (#1650) (#1661)"
     },
     "self_reported": "2026-10-30"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 23.7,
+    "score": 23.8,
     "active_days_7d": 7,
-    "changes_7d": 307,
-    "changes_14d": 411,
+    "changes_7d": 311,
+    "changes_14d": 415,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-30T14:10:04Z",
-      "commit": "838d368",
-      "commit_full": "838d3687125b57e009479530fe32cf6bb41f6ddd",
-      "subject": "M6: .fig connector labels without a saved snapshot are kept, centred on their line (#1659)"
+      "ts": "2026-10-30T15:12:49Z",
+      "commit": "ddda495",
+      "commit_full": "ddda495a6ff40c326a117fbc393a8cfaa319f529",
+      "subject": "M6: a long frame name stays on one line in the Export button and Dev Mode's header (#1650) (#1661)"
     },
-    "last_commit_ts": "2026-10-30T14:10:04Z",
+    "last_commit_ts": "2026-10-30T15:12:49Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       18,
@@ -604,7 +604,7 @@
       4,
       4,
       107,
-      62
+      66
     ],
     "days": [
       {
@@ -995,20 +995,20 @@
       },
       {
         "d": "2026-10-30",
-        "code": 62,
+        "code": 66,
         "other": 2,
         "samples": [
           {
-            "commit": "838d368",
-            "subject": "M6: .fig connector labels without a saved snapshot are kept, centred on their line (#1659)"
+            "commit": "ddda495",
+            "subject": "M6: a long frame name stays on one line in the Export button and Dev Mode's header (#1650) (#1661)"
           },
           {
-            "commit": "27920c5",
-            "subject": "M8: a drag moving many layers normalises only what sits around them, not each layer's bindings, sizing, text and instance checks (#1571) (#1656)"
+            "commit": "db725dc",
+            "subject": "M8: the Design panel and the selection overlays stop going over a large selection every frame (#1571) (#1660)"
           },
           {
-            "commit": "64fc996",
-            "subject": "M8: a font's damaged table offsets are skipped instead of wrapping on 32-bit targets (#1125) (#1657)"
+            "commit": "139d5e9",
+            "subject": "Server tests: rate limits measured at a clock the tests hold still (#1662)"
           }
         ]
       }
@@ -6391,7 +6391,76 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "9b18124",
+      "commit_full": "9b1812432f2825afde85b38b09dd630d97795330",
+      "commit_date": "2026-10-30T21:26:15+07:00",
+      "ts": "2026-10-30T14:26:15Z",
+      "message": "M6: plugin panels show images (#1639)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-30",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "db725dc",
+      "commit_full": "db725dc73f3d99b598c12b3d2a8014059df9dd02",
+      "commit_date": "2026-10-30T21:58:41+07:00",
+      "ts": "2026-10-30T14:58:41Z",
+      "message": "M8: the Design panel and the selection overlays stop going over a large selection every frame (#1571) (#1660)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-30",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "ddda495",
+      "commit_full": "ddda495a6ff40c326a117fbc393a8cfaa319f529",
+      "commit_date": "2026-10-30T22:12:49+07:00",
+      "ts": "2026-10-30T15:12:49Z",
+      "message": "M6: a long frame name stays on one line in the Export button and Dev Mode's header (#1650) (#1661)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-30",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-30T14:19:50+00:00"
+  "updated_at": "2026-10-30T15:16:00+00:00"
 }
