@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "1be606d",
-  "latest_commit_date": "2026-10-29T22:41:10-04:00",
-  "latest_message": "Insert › Shapes shows the basic shapes as an icon grid (#4349) (#4739)",
+  "latest_commit": "a57dd81",
+  "latest_commit_date": "2026-10-30T00:14:26-04:00",
+  "latest_message": "Copy selected objects along an axis with Ctrl+Shift (#4764) (#4775)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -326,7 +326,19 @@
     "progress": [
       {
         "date": "2026-10-29",
+        "text": "Increase/Decrease Font Size and the one-point shortcuts change each selected run from its own resolved size, retaining mixed-size formatting, inherited styles and one-step Undo (#4903). Existing size steps and limits stay unchanged."
+      },
+      {
+        "date": "2026-10-29",
+        "text": "Saving a DOCX with many comments no longer searches all comment paragraph IDs and all reserved durable IDs for each comment. Paragraph IDs use their existing sorted order; durable-ID reservations are indexed once. Parent links, resolved flags, authored text and existing ID rules are unchanged."
+      },
+      {
+        "date": "2026-10-29",
         "text": "Recipient labels continue across product-sized sheets instead of stopping after the first sheet (#4880). Labels → New Document with one label per recipient includes every selected address, with unused labels blank on the final sheet. Fixed-text and single-label output remain one sheet. Finish & Merge template expansion is separate."
+      },
+      {
+        "date": "2026-10-29",
+        "text": "HTML import keeps preformatted lines with CR, CRLF or LF input newlines (#4810); numeric character references retain their separate meaning; readiness estimates unchanged."
       },
       {
         "date": "2026-10-29",
@@ -341,12 +353,56 @@
         "text": "A NUL in a document title no longer reaches the native window title, which panicked on X11 (#3634): displayed titles and suggested file names drop NUL characters and fall back to the untitled name when empty; the stored title is unchanged"
       },
       {
+        "date": "2026-10-29",
+        "text": "Corporate authors in bibliographies (#4848): a source whose author is an organisation (Word's Corporate Author, b:Corporate) keeps it when a Word document opens, instead of losing the author. Citations and bibliography entries write the name as it is in every style (\"(World Health Organization, 2021)\", never \"Organization, W. H.\"); it gives the source's tag and its place in an author-sorted list, and it saves back as b:Corporate. Create Source has a Corporate Author box under Author."
+      },
+      {
+        "date": "2026-10-29",
+        "text": "Table Properties follows the selection (#4857): with the whole table (or several rows, columns or cells) selected, the Row, Column and Cell settings apply to every selected row, column and cell, as in Word. Before, they changed the caret's row alone, so unticking Allow row to break across pages with the table selected left the other rows breaking. Allow row to break and Repeat as header row show as mixed when the selected rows differ and change nothing unless clicked."
+      },
+      {
+        "date": "2026-10-28",
+        "text": "Aligned-copy review fixes keep the document axis locked through middle-button scrolling and let Ctrl/Command+Shift start on a secondary selected object. Plain Ctrl and Shift clicks keep their existing behavior (#4764)."
+      },
+      {
+        "date": "2026-10-28",
+        "text": "Ctrl/Command+Shift copies a selected floating picture, shape or text box along its dominant axis (#4764); inline copies keep the text cursor. Guides on the free axis, original/clipboard/selection, cancel, protection and history are covered by synthetic Linux tests. Native desktop and Word untested; readiness unchanged."
+      },
+      {
+        "date": "2026-10-28",
+        "text": "Charts and SmartArt draw text their font lacks in a fallback face, as body text does: Chinese titles, axis labels and legends no longer show boxes (#4720). A run of such characters takes one face that covers it all, so a label doesn't mix serif and sans glyphs; bold labels stay bold."
+      },
+      {
+        "date": "2026-10-28",
+        "text": "Custom document properties retain their bookmark link targets through DOCX saves, native JSON reopens, value edits and dialog renames (#4767). Linked values are not evaluated; the existing dialog and field-update behavior are unchanged. Original fixtures cover ordinary and raw property values; broader corpus qualification and readiness estimates remain unchanged."
+      },
+      {
+        "date": "2026-10-28",
+        "text": "Convert Notes walks reference offsets and formatting runs together instead of rescanning all references for every run (#4750). Note text, IDs, custom marks, styles, history and saved content retain their behavior. Synthetic scaling, CLI/MCP and native/DOCX reopen coverage; readiness estimates unchanged."
+      },
+      {
+        "date": "2026-10-28",
+        "text": "RTF import keeps pictures stored as Windows Metafiles (\\wmetafile8, as Word writes a pasted or floating picture) and Enhanced Metafiles (\\emfblip); they were dropped, so such a document opened without its pictures. They are drawn by the metafile renderer, saved to .docx as .wmf/.emf media, and saved to .rtf as metafiles again (RTF export dropped them too). (#4259)"
+      },
+      {
+        "date": "2026-10-28",
+        "text": "Arabic diacritic editing (#4757): Backspace removes the last stored Arabic combining mark, so its base letter can stay while the mark is replaced. Caret movement and forward Delete keep their cluster rules. Synthetic command, history, protection and native/DOCX fresh-reopen checks; no native Word comparison or readiness change."
+      },
+      {
         "date": "2026-10-28",
         "text": "The Traditional Chinese interface draws hanzi to the Taiwan standard: on the desktop an installed Traditional Chinese font (PingFang TC on macOS, Microsoft JhengHei on Windows, Noto Sans CJK TC on Linux) comes before the embedded Noto Sans CJK SC, which drew 說, 這, 為, 戶 in mainland shapes; without one, and on the web, nothing changes."
       },
       {
+        "date": "2026-10-28",
+        "text": "Markdown import bounds nested undefined reference-label work within the existing link allowance; literal source and normal reference matching are preserved (#4658)."
+      },
+      {
         "date": "2026-10-27",
         "text": "File › Options › Proofing › AutoCorrect Options opens with no document open (#4585). On the Start screen, or after closing the last document, the button did nothing: AutoCorrect wasn't among the commands allowed without a document. Its options are user preferences, so changes made there are kept for the next document."
+      },
+      {
+        "date": "2026-10-27",
+        "text": "Connector rerouting indexes laid-out object positions once per batch, preserving page hints, first-match order and same-page glue; synthetic equivalence, geometry and scaling regressions (#3631); routing policy and readiness estimates unchanged"
       },
       {
         "date": "2026-10-25",
@@ -427,62 +483,6 @@
       {
         "date": "2026-10-24",
         "text": "Document information fields: SUBJECT, KEYWORDS, COMMENTS, LASTSAVEDBY, REVNUM and NUMCHARS update with the other fields and are listed in the Field dialog; a quoted text after TITLE, SUBJECT, AUTHOR, KEYWORDS or COMMENTS replaces that document property (at most 255 characters), and NUMWORDS, NUMCHARS and REVNUM take a \\ number format"
-      },
-      {
-        "date": "2026-10-24",
-        "text": "Field capitalization switches: \\ Upper, \\ Lower, \\ Caps and \\ FirstCap apply to the document information, DOCPROPERTY, FILENAME, date, REF, PAGEREF, SEQ, STYLEREF and table formula results that Update Field computes and to the page-number fields, and \\ CardText and \\ OrdText results are lowercase unless one of them follows (\\ CardText \\ Caps shows \"Seven Hundred Ninety\"); a table formula takes a \\ number format (=SUM(A1:B2) \\ CardText), and other \\ switches such as \\ MERGEFORMAT no longer make it a syntax error"
-      },
-      {
-        "date": "2026-10-24",
-        "text": "Field \\ DollarText and \\ Hex switches: { = 9.20 + 5.35 \\ DollarText \\ Upper } shows \"FOURTEEN AND 55/100\" and \\ Hex writes uppercase hexadecimal digits (458 shows \"1CA\"), in table formulas and in the page-number, SEQ, PAGEREF and count fields; { PAGE \\ ArabicDash } shows \"- 31 -\"; cardinal, ordinal and dollar text past 999,999 keep their digits"
-      },
-      {
-        "date": "2026-10-23",
-        "text": "cu20we: DrawingML flat, square and round line caps are imported, saved, displayed and exported to PDF; absent or unknown caps default to flat. VML end caps (including shapetype inheritance) are preserved through DOCX save. Ink and metafile stroke handling remain separate. Synthetic DOCX, raster and PDF regressions cover the change; no new native Word comparison."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "cu20we: paragraph-relative box floats start above effective space before; header, footer, cell and text-box layout regressions pass. Framed paragraph positioning is unchanged; no new native Word comparison."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "AutoFormat As You Type: Bold and italic as real formatting. With the option on, word typed and finished becomes bold and word italic, without the marks. It is off by default (tools.autocorrect {\"boldItalic\"})."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "DOCX: a document whose default font size is unset keeps its size when saved and reopened. The size was left out of the file, and the reader read the missing size as 10 pt while the document resolved it as 11 pt; the file now says 11 pt (DEFAULTFONTSIZE). Files from other programs without a size are read as before."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "Insert › Table: hovering the grid shows the table on the page where it would go, as Word's Live Preview does, and the preview follows the pointer from square to square. It is laid out on a copy of the document, so nothing changes, and Undo has nothing new, until a square is clicked (#3931)."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "Lists: an empty paragraph whose mark is hidden takes no room and draws no list number, in the body and in table cells, as in Word; the number is still counted, so the next item keeps its place (#3982)."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "Justified paragraphs: a line ending in a manual line break (Shift+Enter) is stretched to the right margin like a wrapped line, as Word does; it stayed short like the paragraph's last line. A document with Word's w:doNotExpandShiftReturn compatibility option keeps such lines short, and the option is read and written back (#3924)."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "Font dialog: \"NaN\" or \"inf\" typed in the Size box previews the text at 12 pt. \"NaN\" reads as a number, and a font size that is not a number stopped the app while drawing the preview (#3663)."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "Tables: a cell span read from a .json document (any 32-bit number) no longer overflows when a column is inserted through the cell or the cell is merged: the span is counted from its clamped value and stays within 63 columns. It panicked in debug builds and wrapped to a small span in release (#3637)."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "Table of contents: Update Table on a TOC set in columns (here Word's own two-column TOC, written by Word in Portuguese) keeps it in its columns (#3889). The page numbers stand at the column's right edge rather than the page's, so entries no longer run over the next column and push its page numbers off the page; the TOC styles Word stores under translated ids (Sumrio1 for toc 1) are read as the TOC styles, so the entries keep their font, indents and spacing; and no blank line tops the first column. Update, save and reopen keep it so. The same keeps a Portuguese Word's TOC formatted as its TOC styles say through Update Table (#3891)."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "Layout: paragraphs that each start a continuous section now go onto new pages. A run of them ran off the bottom of the first page, because each new section counted as the top of a page. Empty section-break paragraphs after the first in a row take a line each until the page is full and then stay at its bottom, so the text after them starts the next page, as measured in Word (#3907)."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "A relationship the markup names without the prefix is read as it wrote (#3411 follow-up): a producer that left the prefix out writes the relationship id as a plain id, and the reader resolves it the way it resolves the namespaced one, so the part it names is kept with the object that names it and the writer rewrites the attribute with the id the new package gives the part. An ordinary id — a VML shape's, a drawing's wp:docPr, a picture's pic:cNvPr — is the element's own and names no part."
       }
     ]
   },
@@ -491,7 +491,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 8,
     "releases_since_capped": false,
-    "revisions_since": 422,
+    "revisions_since": 435,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -516,39 +516,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 426,
-    "revisions_7d": 25,
+    "revisions": 439,
+    "revisions_7d": 38,
     "last_revision": {
-      "ts": "2026-10-30T02:41:10Z",
+      "ts": "2026-10-30T04:14:26Z",
       "kind": "content",
-      "commit": "1be606d",
-      "commit_full": "1be606de0341e1482b9b5a1be4a1793b217b0573",
-      "message": "Insert › Shapes shows the basic shapes as an icon grid (#4349) (#4739)"
+      "commit": "a57dd81",
+      "commit_full": "a57dd81dba2eb0c7bbf423db044b30f8c0b16b61",
+      "message": "Copy selected objects along an axis with Ctrl+Shift (#4764) (#4775)"
     },
     "last_update": {
-      "ts": "2026-10-30T02:41:10Z",
+      "ts": "2026-10-30T04:14:26Z",
       "kind": "content",
-      "commit": "1be606d",
-      "commit_full": "1be606de0341e1482b9b5a1be4a1793b217b0573",
-      "message": "Insert › Shapes shows the basic shapes as an icon grid (#4349) (#4739)"
+      "commit": "a57dd81",
+      "commit_full": "a57dd81dba2eb0c7bbf423db044b30f8c0b16b61",
+      "message": "Copy selected objects along an axis with Ctrl+Shift (#4764) (#4775)"
     },
     "self_reported": "2026-10-29"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.3,
+    "score": 19.6,
     "active_days_7d": 7,
-    "changes_7d": 117,
-    "changes_14d": 464,
-    "housekeeping_7d": 7,
+    "changes_7d": 144,
+    "changes_14d": 491,
+    "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-10-30T02:41:10Z",
-      "commit": "1be606d",
-      "commit_full": "1be606de0341e1482b9b5a1be4a1793b217b0573",
-      "subject": "Insert › Shapes shows the basic shapes as an icon grid (#4349) (#4739)"
+      "ts": "2026-10-30T04:14:26Z",
+      "commit": "a57dd81",
+      "commit_full": "a57dd81dba2eb0c7bbf423db044b30f8c0b16b61",
+      "subject": "Copy selected objects along an axis with Ctrl+Shift (#4764) (#4775)"
     },
-    "last_commit_ts": "2026-10-30T02:41:10Z",
+    "last_commit_ts": "2026-10-30T04:14:53Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       2,
@@ -564,7 +564,7 @@
       7,
       4,
       2,
-      17
+      44
     ],
     "days": [
       {
@@ -968,20 +968,20 @@
       },
       {
         "d": "2026-10-30",
-        "code": 17,
-        "other": 2,
+        "code": 44,
+        "other": 3,
         "samples": [
           {
-            "commit": "1be606d",
-            "subject": "Insert › Shapes shows the basic shapes as an icon grid (#4349) (#4739)"
+            "commit": "a57dd81",
+            "subject": "Copy selected objects along an axis with Ctrl+Shift (#4764) (#4775)"
           },
           {
-            "commit": "685b420",
-            "subject": "Ctrl+V pastes a clipboard picture again with egui 0.37 (#4787)"
+            "commit": "a4b1682",
+            "subject": "Index laid-out objects during connector rerouting (#3631) (#4622)"
           },
           {
-            "commit": "4fcc409",
-            "subject": "AutoCorrect Options opens with no document open (#4585) (#4626)"
+            "commit": "2f78615",
+            "subject": "#4720: Chart and SmartArt text the font lacks is drawn in a fallback face, so Chinese labels no longer show boxes (#4726)"
           }
         ]
       }
@@ -10990,7 +10990,306 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "990b57a",
+      "commit_full": "990b57a1e8d9bbce61e4f2515a85d65ba2e1d108",
+      "commit_date": "2026-10-29T23:42:07-04:00",
+      "ts": "2026-10-30T03:42:07Z",
+      "message": "HTML: preserve preformatted lines with CR input newlines (#4810) (#4815)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "4854547",
+      "commit_full": "48545479b0a0938b90bdc0c7734ecc9789c485e5",
+      "commit_date": "2026-10-29T23:42:49-04:00",
+      "ts": "2026-10-30T03:42:49Z",
+      "message": "Markdown import: bound nested reference-label work (#4659)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "5b952b2",
+      "commit_full": "5b952b246378eddbd25824174a230e340a56d438",
+      "commit_date": "2026-10-29T23:43:55-04:00",
+      "ts": "2026-10-30T03:43:55Z",
+      "message": "RTF: keep Windows and Enhanced Metafile pictures (#4259) (#4648)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "4abb77a",
+      "commit_full": "4abb77aa70357619c06f9fc57ae08e7f3ec32835",
+      "commit_date": "2026-10-29T23:50:49-04:00",
+      "ts": "2026-10-30T03:50:49Z",
+      "message": "DOCX: avoid repeated searches when writing comment IDs (#4841)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "d39be3b",
+      "commit_full": "d39be3bab8cf4f90e977c8b28fd3c65d1fcf25c2",
+      "commit_date": "2026-10-29T23:52:43-04:00",
+      "ts": "2026-10-30T03:52:43Z",
+      "message": "Avoid repeated reference scans when converting notes (#4750) (#4752)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "74b2cbb",
+      "commit_full": "74b2cbb5c9cafff40b5ae3dc02800b1769209608",
+      "commit_date": "2026-10-29T23:53:06-04:00",
+      "ts": "2026-10-30T03:53:06Z",
+      "message": "Backspace: keep Arabic base letters when removing marks (#4757) (#4761)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "db2b3ca",
+      "commit_full": "db2b3cab9920e60ce4a749b853b06d58125f4642",
+      "commit_date": "2026-10-30T00:09:39-04:00",
+      "ts": "2026-10-30T04:09:39Z",
+      "message": "Home › Font: step each selected run from its own size (#4903) (#4910)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "9a172e2",
+      "commit_full": "9a172e2241130585dba9a3f4fc5bb3f860d5abd7",
+      "commit_date": "2026-10-30T00:10:33-04:00",
+      "ts": "2026-10-30T04:10:33Z",
+      "message": "Table Properties: row, column and cell settings follow the selection (#4857) (#4896)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "18ae8b2",
+      "commit_full": "18ae8b21500849043f6a3e6b604f348982fd6bc2",
+      "commit_date": "2026-10-30T00:11:27-04:00",
+      "ts": "2026-10-30T04:11:27Z",
+      "message": "DOCX: preserve custom-property bookmark links (#4767) (#4771)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "9632646",
+      "commit_full": "9632646c5e6e24237173bab32cfb37447d585211",
+      "commit_date": "2026-10-30T00:12:17-04:00",
+      "ts": "2026-10-30T04:12:17Z",
+      "message": "Bibliography: keep a source's corporate author (#4848) (#4898)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "2f78615",
+      "commit_full": "2f7861529193999ce79e9bcc7ee5333d1c82bcab",
+      "commit_date": "2026-10-30T00:12:55-04:00",
+      "ts": "2026-10-30T04:12:55Z",
+      "message": "#4720: Chart and SmartArt text the font lacks is drawn in a fallback face, so Chinese labels no longer show boxes (#4726)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "a4b1682",
+      "commit_full": "a4b1682b4182f86ad7d84c1b267674df9a0b599c",
+      "commit_date": "2026-10-30T00:13:32-04:00",
+      "ts": "2026-10-30T04:13:32Z",
+      "message": "Index laid-out objects during connector rerouting (#3631) (#4622)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "a57dd81",
+      "commit_full": "a57dd81dba2eb0c7bbf423db044b30f8c0b16b61",
+      "commit_date": "2026-10-30T00:14:26-04:00",
+      "ts": "2026-10-30T04:14:26Z",
+      "message": "Copy selected objects along an axis with Ctrl+Shift (#4764) (#4775)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-30T03:29:59+00:00"
+  "updated_at": "2026-10-30T04:16:10+00:00"
 }

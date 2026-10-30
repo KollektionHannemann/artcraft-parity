@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "8261915",
-  "latest_commit_date": "2026-10-30T10:25:14+07:00",
-  "latest_message": "M8: an explicit variables file is refused past 256 MiB or when it isn't a regular file (part of #1114) (#1608)",
+  "latest_commit": "4224f4b",
+  "latest_commit_date": "2026-10-30T11:04:57+07:00",
+  "latest_message": "M8: deep files import on the browser's 1 MB stack (#1101) (#1600)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -501,7 +501,7 @@
     "value_since": "2026-10-11T21:41:28Z",
     "releases_since": 10,
     "releases_since_capped": false,
-    "revisions_since": 134,
+    "revisions_since": 136,
     "hours_since": {
       "from": [
         273,
@@ -556,39 +556,39 @@
     }
   },
   "roadmap": {
-    "revisions": 183,
-    "revisions_7d": 80,
+    "revisions": 185,
+    "revisions_7d": 82,
     "last_revision": {
-      "ts": "2026-10-30T03:25:14Z",
+      "ts": "2026-10-30T04:04:57Z",
       "kind": "content",
-      "commit": "8261915",
-      "commit_full": "826191559ab8fded54c8d3c3a40ab110591c9429",
-      "message": "M8: an explicit variables file is refused past 256 MiB or when it isn't a regular file (part of #1114) (#1608)"
+      "commit": "4224f4b",
+      "commit_full": "4224f4b660d8a3493cf32e2726f03d3e225fc3c1",
+      "message": "M8: deep files import on the browser's 1 MB stack (#1101) (#1600)"
     },
     "last_update": {
-      "ts": "2026-10-30T03:25:14Z",
+      "ts": "2026-10-30T04:04:57Z",
       "kind": "content",
-      "commit": "8261915",
-      "commit_full": "826191559ab8fded54c8d3c3a40ab110591c9429",
-      "message": "M8: an explicit variables file is refused past 256 MiB or when it isn't a regular file (part of #1114) (#1608)"
+      "commit": "4224f4b",
+      "commit_full": "4224f4b660d8a3493cf32e2726f03d3e225fc3c1",
+      "message": "M8: deep files import on the browser's 1 MB stack (#1101) (#1600)"
     },
     "self_reported": "2026-10-30"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.1,
+    "score": 22.2,
     "active_days_7d": 7,
-    "changes_7d": 264,
-    "changes_14d": 368,
+    "changes_7d": 266,
+    "changes_14d": 370,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-10-30T03:25:14Z",
-      "commit": "8261915",
-      "commit_full": "826191559ab8fded54c8d3c3a40ab110591c9429",
-      "subject": "M8: an explicit variables file is refused past 256 MiB or when it isn't a regular file (part of #1114) (#1608)"
+      "ts": "2026-10-30T04:04:57Z",
+      "commit": "4224f4b",
+      "commit_full": "4224f4b660d8a3493cf32e2726f03d3e225fc3c1",
+      "subject": "M8: deep files import on the browser's 1 MB stack (#1101) (#1600)"
     },
-    "last_commit_ts": "2026-10-30T03:25:14Z",
+    "last_commit_ts": "2026-10-30T04:04:57Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       18,
@@ -604,7 +604,7 @@
       4,
       4,
       107,
-      19
+      21
     ],
     "days": [
       {
@@ -995,20 +995,20 @@
       },
       {
         "d": "2026-10-30",
-        "code": 19,
+        "code": 21,
         "other": 1,
         "samples": [
           {
+            "commit": "4224f4b",
+            "subject": "M8: deep files import on the browser's 1 MB stack (#1101) (#1600)"
+          },
+          {
+            "commit": "7fdbda9",
+            "subject": "M8: One depth cap for a whole render, and render threads with room for it (#1605)"
+          },
+          {
             "commit": "8261915",
             "subject": "M8: an explicit variables file is refused past 256 MiB or when it isn't a regular file (part of #1114) (#1608)"
-          },
-          {
-            "commit": "fb0465f",
-            "subject": "M8: a server file everyone left stays loaded a minute and its open time is written hourly, so idle join/leave does no disk I/O (#1074) (#1606)"
-          },
-          {
-            "commit": "e274279",
-            "subject": "M8: one unpack budget per .figcraft open (#1079) (#1599)"
           }
         ]
       }
@@ -5701,7 +5701,53 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "7fdbda9",
+      "commit_full": "7fdbda9f098ac6d52b4714b75d2555618af83683",
+      "commit_date": "2026-10-30T10:43:49+07:00",
+      "ts": "2026-10-30T03:43:49Z",
+      "message": "M8: One depth cap for a whole render, and render threads with room for it (#1605)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-30",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "4224f4b",
+      "commit_full": "4224f4b660d8a3493cf32e2726f03d3e225fc3c1",
+      "commit_date": "2026-10-30T11:04:57+07:00",
+      "ts": "2026-10-30T04:04:57Z",
+      "message": "M8: deep files import on the browser's 1 MB stack (#1101) (#1600)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-30",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-30T03:29:56+00:00"
+  "updated_at": "2026-10-30T04:16:06+00:00"
 }
