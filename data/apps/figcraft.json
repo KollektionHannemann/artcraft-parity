@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "e110f23",
-  "latest_commit_date": "2026-10-30T15:09:34+07:00",
-  "latest_message": "M0.9: generate shell completions and man pages for figcraft-cli (part of #1396) (#1615)",
+  "latest_commit": "99440fa",
+  "latest_commit_date": "2026-10-30T16:13:55+07:00",
+  "latest_message": "M8: a drag that only moves the selection shifts what was worked out at its start (#1571) (#1640)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -501,7 +501,7 @@
     "value_since": "2026-10-11T21:41:28Z",
     "releases_since": 10,
     "releases_since_capped": false,
-    "revisions_since": 148,
+    "revisions_since": 151,
     "hours_since": {
       "from": [
         273,
@@ -556,39 +556,39 @@
     }
   },
   "roadmap": {
-    "revisions": 197,
-    "revisions_7d": 94,
+    "revisions": 200,
+    "revisions_7d": 97,
     "last_revision": {
-      "ts": "2026-10-30T08:09:34Z",
+      "ts": "2026-10-30T09:13:55Z",
       "kind": "content",
-      "commit": "e110f23",
-      "commit_full": "e110f23d8cf9873ac21c218ae656982d5ee7ca96",
-      "message": "M0.9: generate shell completions and man pages for figcraft-cli (part of #1396) (#1615)"
+      "commit": "99440fa",
+      "commit_full": "99440fa9ff58b693107d0d558be2971e61a0c5f7",
+      "message": "M8: a drag that only moves the selection shifts what was worked out at its start (#1571) (#1640)"
     },
     "last_update": {
-      "ts": "2026-10-30T08:09:34Z",
+      "ts": "2026-10-30T09:13:55Z",
       "kind": "content",
-      "commit": "e110f23",
-      "commit_full": "e110f23d8cf9873ac21c218ae656982d5ee7ca96",
-      "message": "M0.9: generate shell completions and man pages for figcraft-cli (part of #1396) (#1615)"
+      "commit": "99440fa",
+      "commit_full": "99440fa9ff58b693107d0d558be2971e61a0c5f7",
+      "message": "M8: a drag that only moves the selection shifts what was worked out at its start (#1571) (#1640)"
     },
     "self_reported": "2026-10-30"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 23.1,
+    "score": 23.3,
     "active_days_7d": 7,
-    "changes_7d": 285,
-    "changes_14d": 389,
+    "changes_7d": 292,
+    "changes_14d": 396,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-30T08:09:34Z",
-      "commit": "e110f23",
-      "commit_full": "e110f23d8cf9873ac21c218ae656982d5ee7ca96",
-      "subject": "M0.9: generate shell completions and man pages for figcraft-cli (part of #1396) (#1615)"
+      "ts": "2026-10-30T09:13:55Z",
+      "commit": "99440fa",
+      "commit_full": "99440fa9ff58b693107d0d558be2971e61a0c5f7",
+      "subject": "M8: a drag that only moves the selection shifts what was worked out at its start (#1571) (#1640)"
     },
-    "last_commit_ts": "2026-10-30T08:09:34Z",
+    "last_commit_ts": "2026-10-30T09:13:55Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       18,
@@ -604,7 +604,7 @@
       4,
       4,
       107,
-      40
+      47
     ],
     "days": [
       {
@@ -995,20 +995,20 @@
       },
       {
         "d": "2026-10-30",
-        "code": 40,
+        "code": 47,
         "other": 2,
         "samples": [
           {
-            "commit": "e110f23",
-            "subject": "M0.9: generate shell completions and man pages for figcraft-cli (part of #1396) (#1615)"
+            "commit": "99440fa",
+            "subject": "M8: a drag that only moves the selection shifts what was worked out at its start (#1571) (#1640)"
           },
           {
-            "commit": "e94350a",
-            "subject": "M8: an edit renders where the changed layer paints, its effects' margin once (#1630)"
+            "commit": "34fce9b",
+            "subject": "M12: create the next board shape already connected (#1631)"
           },
           {
-            "commit": "c44f382",
-            "subject": "M8: a patch reads no backdrop past the view's edge (#1633)"
+            "commit": "d17de28",
+            "subject": "Tests: read the docs' examples whatever the checkout's line endings (#1645)"
           }
         ]
       }
@@ -6023,7 +6023,76 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "c1451fe",
+      "commit_full": "c1451fecd53f0d640a1af14c1505e798854d4c71",
+      "commit_date": "2026-10-30T15:44:09+07:00",
+      "ts": "2026-10-30T08:44:09Z",
+      "message": "M4: an imported file finds an installed family under the other names its fonts give it (#1292) (#1628)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-30",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "34fce9b",
+      "commit_full": "34fce9bfcfdc6cf381d23d3b4aa8495d96f0fe0a",
+      "commit_date": "2026-10-30T15:59:13+07:00",
+      "ts": "2026-10-30T08:59:13Z",
+      "message": "M12: create the next board shape already connected (#1631)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-30",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "99440fa",
+      "commit_full": "99440fa9ff58b693107d0d558be2971e61a0c5f7",
+      "commit_date": "2026-10-30T16:13:55+07:00",
+      "ts": "2026-10-30T09:13:55Z",
+      "message": "M8: a drag that only moves the selection shifts what was worked out at its start (#1571) (#1640)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-30",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-30T08:20:13+00:00"
+  "updated_at": "2026-10-30T09:15:16+00:00"
 }
