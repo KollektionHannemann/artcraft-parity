@@ -370,18 +370,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.1,
+    "score": 21.2,
     "active_days_7d": 7,
-    "changes_7d": 259,
-    "changes_14d": 353,
+    "changes_7d": 261,
+    "changes_14d": 355,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-30T09:06:42Z",
-      "commit": "44f95f7",
-      "commit_full": "44f95f766cdd8dd4ea7026729f4c6683bad135b3",
-      "subject": "Fix #2091 copy/paste masks between layers (#2216)"
+      "ts": "2026-10-30T10:02:45Z",
+      "commit": "3d28511",
+      "commit_full": "3d285116d8ae290308c367469b515828ec4f997a",
+      "subject": "Roto Brush: follow the object with SAM 2.1 (Tiny, Small, Base+, Large; optional models) (#1539)"
     },
-    "last_commit_ts": "2026-10-30T09:06:42Z",
+    "last_commit_ts": "2026-10-30T10:02:45Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       4,
@@ -397,7 +397,7 @@
       4,
       3,
       156,
-      76
+      78
     ],
     "days": [
       {
@@ -908,20 +908,20 @@
       },
       {
         "d": "2026-10-30",
-        "code": 76,
+        "code": 78,
         "other": 7,
         "samples": [
           {
+            "commit": "3d28511",
+            "subject": "Roto Brush: follow the object with SAM 2.1 (Tiny, Small, Base+, Large; optional models) (#1539)"
+          },
+          {
+            "commit": "7174c81",
+            "subject": "#1743, part 3: two Render Queue outputs never write the same file, and default names avoid the queue's other outputs (#1830)"
+          },
+          {
             "commit": "44f95f7",
             "subject": "Fix #2091 copy/paste masks between layers (#2216)"
-          },
-          {
-            "commit": "0555b52",
-            "subject": "Shape toolbar: keep gradient stroke widths (#2668)"
-          },
-          {
-            "commit": "d242bab",
-            "subject": "Cache/GPU: adjustment footprint ignores the effect stack; upload starvation is reported (#687) (#701)"
           }
         ]
       }
@@ -1411,5 +1411,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-30T09:15:06+00:00"
+  "updated_at": "2026-10-30T10:14:11+00:00"
 }
