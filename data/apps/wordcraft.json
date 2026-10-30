@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "5714408",
-  "latest_commit_date": "2026-10-29T22:20:19-04:00",
-  "latest_message": "M14: validate window fallback geometry and avoid duplicate symbol names (#4343)",
+  "latest_commit": "1be606d",
+  "latest_commit_date": "2026-10-29T22:41:10-04:00",
+  "latest_message": "Insert › Shapes shows the basic shapes as an icon grid (#4349) (#4739)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -330,6 +330,10 @@
       },
       {
         "date": "2026-10-29",
+        "text": "Insert › Shapes shows the basic shapes as a grid of code-drawn icon tiles, each with an accessible name and tooltip, instead of a text list (#4349)"
+      },
+      {
+        "date": "2026-10-29",
         "text": "Window sizing falls back to the screen rectangle when the reported inner size is invalid, and an Equation symbol tooltip no longer repeats a missing glyph's name or code point"
       },
       {
@@ -339,6 +343,10 @@
       {
         "date": "2026-10-28",
         "text": "The Traditional Chinese interface draws hanzi to the Taiwan standard: on the desktop an installed Traditional Chinese font (PingFang TC on macOS, Microsoft JhengHei on Windows, Noto Sans CJK TC on Linux) comes before the embedded Noto Sans CJK SC, which drew 說, 這, 為, 戶 in mainland shapes; without one, and on the web, nothing changes."
+      },
+      {
+        "date": "2026-10-27",
+        "text": "File › Options › Proofing › AutoCorrect Options opens with no document open (#4585). On the Start screen, or after closing the last document, the button did nothing: AutoCorrect wasn't among the commands allowed without a document. Its options are user preferences, so changes made there are kept for the next document."
       },
       {
         "date": "2026-10-25",
@@ -475,14 +483,6 @@
       {
         "date": "2026-10-23",
         "text": "A relationship the markup names without the prefix is read as it wrote (#3411 follow-up): a producer that left the prefix out writes the relationship id as a plain id, and the reader resolves it the way it resolves the namespaced one, so the part it names is kept with the object that names it and the writer rewrites the attribute with the id the new package gives the part. An ordinary id — a VML shape's, a drawing's wp:docPr, a picture's pic:cNvPr — is the element's own and names no part."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "A command that changes nothing is not an edit: it adds no undo step, marks no unsaved changes and forces no relayout, so the redo stack survives it and five hundred of them can no longer push the user's own edits out of the undo history."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "Interface translations come from storytold/craft-i18n, shared with the other Crafting Apps: the catalogs are embedded at build time from the commit in craft-i18n.rev and looked up through craft-libs' craft-i18n crate; crates/ui-egui/src/i18n/.tsv are gone (translations now go to craft-i18n). Strings other apps already translate show translated; a build without CRAFTI18NDIR is English only"
       }
     ]
   },
@@ -491,7 +491,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 8,
     "releases_since_capped": false,
-    "revisions_since": 420,
+    "revisions_since": 422,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -516,39 +516,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 424,
-    "revisions_7d": 23,
+    "revisions": 426,
+    "revisions_7d": 25,
     "last_revision": {
-      "ts": "2026-10-30T02:20:19Z",
+      "ts": "2026-10-30T02:41:10Z",
       "kind": "content",
-      "commit": "5714408",
-      "commit_full": "5714408dd8f1712e8d5d6f78532529cf74105529",
-      "message": "M14: validate window fallback geometry and avoid duplicate symbol names (#4343)"
+      "commit": "1be606d",
+      "commit_full": "1be606de0341e1482b9b5a1be4a1793b217b0573",
+      "message": "Insert › Shapes shows the basic shapes as an icon grid (#4349) (#4739)"
     },
     "last_update": {
-      "ts": "2026-10-30T02:20:19Z",
+      "ts": "2026-10-30T02:41:10Z",
       "kind": "content",
-      "commit": "5714408",
-      "commit_full": "5714408dd8f1712e8d5d6f78532529cf74105529",
-      "message": "M14: validate window fallback geometry and avoid duplicate symbol names (#4343)"
+      "commit": "1be606d",
+      "commit_full": "1be606de0341e1482b9b5a1be4a1793b217b0573",
+      "message": "Insert › Shapes shows the basic shapes as an icon grid (#4349) (#4739)"
     },
     "self_reported": "2026-10-29"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.4,
+    "score": 18.3,
     "active_days_7d": 7,
-    "changes_7d": 109,
-    "changes_14d": 456,
+    "changes_7d": 117,
+    "changes_14d": 464,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-10-30T02:24:23Z",
-      "commit": "983f1e0",
-      "commit_full": "983f1e0267a684164014750f6f81e381e1768b02",
-      "subject": "docx: pin Standard-encryption key derivation to a real-world package (#4472)"
+      "ts": "2026-10-30T02:41:10Z",
+      "commit": "1be606d",
+      "commit_full": "1be606de0341e1482b9b5a1be4a1793b217b0573",
+      "subject": "Insert › Shapes shows the basic shapes as an icon grid (#4349) (#4739)"
     },
-    "last_commit_ts": "2026-10-30T02:24:23Z",
+    "last_commit_ts": "2026-10-30T02:41:10Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       2,
@@ -564,7 +564,7 @@
       7,
       4,
       2,
-      9
+      17
     ],
     "days": [
       {
@@ -968,20 +968,20 @@
       },
       {
         "d": "2026-10-30",
-        "code": 9,
+        "code": 17,
         "other": 2,
         "samples": [
           {
-            "commit": "983f1e0",
-            "subject": "docx: pin Standard-encryption key derivation to a real-world package (#4472)"
+            "commit": "1be606d",
+            "subject": "Insert › Shapes shows the basic shapes as an icon grid (#4349) (#4739)"
           },
           {
-            "commit": "5714408",
-            "subject": "M14: validate window fallback geometry and avoid duplicate symbol names (#4343)"
+            "commit": "685b420",
+            "subject": "Ctrl+V pastes a clipboard picture again with egui 0.37 (#4787)"
           },
           {
-            "commit": "3508cac",
-            "subject": "Prevent X11 crashes from NUL in document titles (#3634) (#4301)"
+            "commit": "4fcc409",
+            "subject": "AutoCorrect Options opens with no document open (#4585) (#4626)"
           }
         ]
       }
@@ -10944,7 +10944,53 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "4fcc409",
+      "commit_full": "4fcc409c8b4fe5117e67d9c7ef087e896ad3dd0d",
+      "commit_date": "2026-10-29T22:37:44-04:00",
+      "ts": "2026-10-30T02:37:44Z",
+      "message": "AutoCorrect Options opens with no document open (#4585) (#4626)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "1be606d",
+      "commit_full": "1be606de0341e1482b9b5a1be4a1793b217b0573",
+      "commit_date": "2026-10-29T22:41:10-04:00",
+      "ts": "2026-10-30T02:41:10Z",
+      "message": "Insert › Shapes shows the basic shapes as an icon grid (#4349) (#4739)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-29",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-30T02:32:37+00:00"
+  "updated_at": "2026-10-30T03:29:59+00:00"
 }
