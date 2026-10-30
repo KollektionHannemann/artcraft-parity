@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "7b88640",
-  "latest_commit_date": "2026-10-30T13:03:31+07:00",
-  "latest_message": "M8: Opening a file contacts no team library server it names until you check it (#1621)",
+  "latest_commit": "c8b0726",
+  "latest_commit_date": "2026-10-30T14:18:18+07:00",
+  "latest_message": "M10: clarify German gradient, OpenType and startup labels (#1505)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -335,6 +335,10 @@
     ],
     "progress": [
       {
+        "date": "2026-10-29",
+        "text": "· M10: correct nine German labels in de.toml: gradient stops use Verlaufsstopp, OpenType ss01–ss05 use Stilsatz, and the Home-screen preference names the Startbildschirm consistently in the UI and Actions palette. This is a partial terminology pass; German remains a draft awaiting a full native-speaker review and maintainer approval. Numbers unchanged."
+      },
+      {
         "date": "2026-10-28",
         "text": "· M3, #922: an instance scaled with the Scale tool (or transform.scale) keeps its layers' scaled size and points when its main is rebuilt. The scaled layers' new size and place were read as what constraints give (an ancestor resized in the same edit), so no override was kept, and adding a layer to the main put a 14 px icon's 24 px triangle back. The Scale tool now records them as size and position overrides on layers inside instances; strokes already kept theirs. The report's own sequence (clearing effects on the component holding the icon) no longer reproduces on main. Regressions for a scaled instance, one scaled with the tool (with undo) and a scaled icon nested in a component and its instances. Numbers unchanged."
       },
@@ -489,10 +493,6 @@
       {
         "date": "2026-10-13",
         "text": "· Attached MCP (M0.9, #194): a transport failure no longer replays a request that may already have edited the document. The caller gets an outcome-unknown error and must inspect before retrying; the next explicit call reconnects. Loopback tests cover a lost mutation reply, a single applied edit, reconnect and a connection failure before sending. Numbers unchanged."
-      },
-      {
-        "date": "2026-10-13",
-        "text": "· Constrain proportions in the Layout panel (M1, #220): with the W/H link on, typing a width or height scales the other side by the layer's own ratio; the property edit dropped the ratio, so the link only worked while dragging resize handles. Both sides in one edit stay as typed, the w/h aliases work the same, each layer of a multi-selection keeps its own ratio, and a zero side has no ratio to keep. Regression test in the transform behaviour suite. Numbers unchanged."
       }
     ]
   },
@@ -501,7 +501,7 @@
     "value_since": "2026-10-11T21:41:28Z",
     "releases_since": 10,
     "releases_since_capped": false,
-    "revisions_since": 142,
+    "revisions_since": 146,
     "hours_since": {
       "from": [
         273,
@@ -556,39 +556,39 @@
     }
   },
   "roadmap": {
-    "revisions": 191,
-    "revisions_7d": 88,
+    "revisions": 195,
+    "revisions_7d": 92,
     "last_revision": {
-      "ts": "2026-10-30T06:03:31Z",
+      "ts": "2026-10-30T07:18:18Z",
       "kind": "content",
-      "commit": "7b88640",
-      "commit_full": "7b886404c38eaa1c24f6cb4570ff85e16ebd9ef0",
-      "message": "M8: Opening a file contacts no team library server it names until you check it (#1621)"
+      "commit": "c8b0726",
+      "commit_full": "c8b0726d2d5359f9dda2e8311a20991c5ec34bd1",
+      "message": "M10: clarify German gradient, OpenType and startup labels (#1505)"
     },
     "last_update": {
-      "ts": "2026-10-30T06:03:31Z",
+      "ts": "2026-10-30T07:18:18Z",
       "kind": "content",
-      "commit": "7b88640",
-      "commit_full": "7b886404c38eaa1c24f6cb4570ff85e16ebd9ef0",
-      "message": "M8: Opening a file contacts no team library server it names until you check it (#1621)"
+      "commit": "c8b0726",
+      "commit_full": "c8b0726d2d5359f9dda2e8311a20991c5ec34bd1",
+      "message": "M10: clarify German gradient, OpenType and startup labels (#1505)"
     },
     "self_reported": "2026-10-30"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.7,
+    "score": 22.9,
     "active_days_7d": 7,
-    "changes_7d": 274,
-    "changes_14d": 378,
+    "changes_7d": 280,
+    "changes_14d": 384,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-30T06:03:31Z",
-      "commit": "7b88640",
-      "commit_full": "7b886404c38eaa1c24f6cb4570ff85e16ebd9ef0",
-      "subject": "M8: Opening a file contacts no team library server it names until you check it (#1621)"
+      "ts": "2026-10-30T07:18:18Z",
+      "commit": "c8b0726",
+      "commit_full": "c8b0726d2d5359f9dda2e8311a20991c5ec34bd1",
+      "subject": "M10: clarify German gradient, OpenType and startup labels (#1505)"
     },
-    "last_commit_ts": "2026-10-30T06:03:31Z",
+    "last_commit_ts": "2026-10-30T07:18:18Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       18,
@@ -604,7 +604,7 @@
       4,
       4,
       107,
-      29
+      35
     ],
     "days": [
       {
@@ -995,20 +995,20 @@
       },
       {
         "d": "2026-10-30",
-        "code": 29,
+        "code": 35,
         "other": 2,
         "samples": [
           {
-            "commit": "7b88640",
-            "subject": "M8: Opening a file contacts no team library server it names until you check it (#1621)"
+            "commit": "c8b0726",
+            "subject": "M10: clarify German gradient, OpenType and startup labels (#1505)"
           },
           {
-            "commit": "15479ea",
-            "subject": "M8: effects reach as far under a scaled layer (#1626)"
+            "commit": "ca703a0",
+            "subject": "M3: stored variable and collection references keep their identity (#1613) (#1618)"
           },
           {
-            "commit": "f1eaf3f",
-            "subject": "M8: cap the people a client keeps track of and the deleted ids a session remembers (#1622)"
+            "commit": "c471774",
+            "subject": "M8: every file a command reads by path is a regular file within a cap (#1114) (#1625)"
           }
         ]
       }
@@ -5885,7 +5885,99 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "3bdbe5b",
+      "commit_full": "3bdbe5b2a04720a69e16c26161f2723cbd18e733",
+      "commit_date": "2026-10-30T13:18:06+07:00",
+      "ts": "2026-10-30T06:18:06Z",
+      "message": "M9: the server compares the operator key by its hash (#1130) (#1614)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-30",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "47e9e0a",
+      "commit_full": "47e9e0a50d6203c7de43f14a02410755593382fc",
+      "commit_date": "2026-10-30T13:32:36+07:00",
+      "ts": "2026-10-30T06:32:36Z",
+      "message": "M8: a component set's property rows fit the 240 px right panel (#1629)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-30",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "c471774",
+      "commit_full": "c47177498dd148ad832eaf43436b8ad2657c19d8",
+      "commit_date": "2026-10-30T13:48:26+07:00",
+      "ts": "2026-10-30T06:48:26Z",
+      "message": "M8: every file a command reads by path is a regular file within a cap (#1114) (#1625)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-30",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "c8b0726",
+      "commit_full": "c8b0726d2d5359f9dda2e8311a20991c5ec34bd1",
+      "commit_date": "2026-10-30T14:18:18+07:00",
+      "ts": "2026-10-30T07:18:18Z",
+      "message": "M10: clarify German gradient, OpenType and startup labels (#1505)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-30",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-30T06:06:12+00:00"
+  "updated_at": "2026-10-30T07:29:39+00:00"
 }
