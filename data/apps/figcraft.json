@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "12d36a9",
-  "latest_commit_date": "2026-10-31T03:56:43+07:00",
-  "latest_message": "M4: a stroke's Custom style takes a dash pattern as a comma-separated list (#1681) (#1712)",
+  "latest_commit": "b462a48",
+  "latest_commit_date": "2026-10-31T04:53:36+07:00",
+  "latest_message": "M12: a connector's path can be reshaped by dragging its path handles (#1710) (#1717)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -501,7 +501,7 @@
     "value_since": "2026-10-11T21:41:28Z",
     "releases_since": 10,
     "releases_since_capped": false,
-    "revisions_since": 184,
+    "revisions_since": 187,
     "hours_since": {
       "from": [
         273,
@@ -556,39 +556,39 @@
     }
   },
   "roadmap": {
-    "revisions": 233,
-    "revisions_7d": 130,
+    "revisions": 236,
+    "revisions_7d": 133,
     "last_revision": {
-      "ts": "2026-10-30T20:56:43Z",
+      "ts": "2026-10-30T21:53:36Z",
       "kind": "content",
-      "commit": "12d36a9",
-      "commit_full": "12d36a9913593b25edd89f250a12fe7f7690ab6a",
-      "message": "M4: a stroke's Custom style takes a dash pattern as a comma-separated list (#1681) (#1712)"
+      "commit": "b462a48",
+      "commit_full": "b462a483469aea71f89f6d9e2a69324e828943c4",
+      "message": "M12: a connector's path can be reshaped by dragging its path handles (#1710) (#1717)"
     },
     "last_update": {
-      "ts": "2026-10-30T20:56:43Z",
+      "ts": "2026-10-30T21:53:36Z",
       "kind": "content",
-      "commit": "12d36a9",
-      "commit_full": "12d36a9913593b25edd89f250a12fe7f7690ab6a",
-      "message": "M4: a stroke's Custom style takes a dash pattern as a comma-separated list (#1681) (#1712)"
+      "commit": "b462a48",
+      "commit_full": "b462a483469aea71f89f6d9e2a69324e828943c4",
+      "message": "M12: a connector's path can be reshaped by dragging its path handles (#1710) (#1717)"
     },
     "self_reported": "2026-10-30"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 24.2,
+    "score": 24.3,
     "active_days_7d": 7,
-    "changes_7d": 334,
-    "changes_14d": 438,
+    "changes_7d": 337,
+    "changes_14d": 441,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-30T20:58:29Z",
-      "commit": "0fb8d37",
-      "commit_full": "0fb8d37084d7e479115e798ab1f0f046a07b716d",
-      "subject": "i18n(sv): translate 22 new strings (#1715)"
+      "ts": "2026-10-30T21:53:36Z",
+      "commit": "b462a48",
+      "commit_full": "b462a483469aea71f89f6d9e2a69324e828943c4",
+      "subject": "M12: a connector's path can be reshaped by dragging its path handles (#1710) (#1717)"
     },
-    "last_commit_ts": "2026-10-30T20:58:29Z",
+    "last_commit_ts": "2026-10-30T21:53:36Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       18,
@@ -604,7 +604,7 @@
       4,
       4,
       107,
-      89
+      92
     ],
     "days": [
       {
@@ -995,20 +995,20 @@
       },
       {
         "d": "2026-10-30",
-        "code": 89,
+        "code": 92,
         "other": 2,
         "samples": [
           {
-            "commit": "0fb8d37",
-            "subject": "i18n(sv): translate 22 new strings (#1715)"
+            "commit": "b462a48",
+            "subject": "M12: a connector's path can be reshaped by dragging its path handles (#1710) (#1717)"
           },
           {
-            "commit": "12d36a9",
-            "subject": "M4: a stroke's Custom style takes a dash pattern as a comma-separated list (#1681) (#1712)"
+            "commit": "4bcfd52",
+            "subject": "M12: boards have 16 more shapes, in grid pickers (#1705)"
           },
           {
-            "commit": "437d052",
-            "subject": "M8: a control request can set its own timeout, up to 10 minutes (#1696) (#1706)"
+            "commit": "2d784c3",
+            "subject": "M3: library analytics count insertions and show them over time (#1704)"
           }
         ]
       }
@@ -6851,7 +6851,76 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "2d784c3",
+      "commit_full": "2d784c363d4c66b697761c6e0024c2f81cd0fcf0",
+      "commit_date": "2026-10-31T04:13:14+07:00",
+      "ts": "2026-10-30T21:13:14Z",
+      "message": "M3: library analytics count insertions and show them over time (#1704)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-30",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "4bcfd52",
+      "commit_full": "4bcfd5247f79a3212f8033254b158c088b3766b8",
+      "commit_date": "2026-10-31T04:27:12+07:00",
+      "ts": "2026-10-30T21:27:12Z",
+      "message": "M12: boards have 16 more shapes, in grid pickers (#1705)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-30",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "b462a48",
+      "commit_full": "b462a483469aea71f89f6d9e2a69324e828943c4",
+      "commit_date": "2026-10-31T04:53:36+07:00",
+      "ts": "2026-10-30T21:53:36Z",
+      "message": "M12: a connector's path can be reshaped by dragging its path handles (#1710) (#1717)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-30",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-30T21:02:39+00:00"
+  "updated_at": "2026-10-30T21:58:28+00:00"
 }
