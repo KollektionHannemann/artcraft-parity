@@ -416,7 +416,7 @@
   },
   "roadmap": {
     "revisions": 12,
-    "revisions_7d": 1,
+    "revisions_7d": 0,
     "last_revision": {
       "ts": "2026-10-24T14:16:09Z",
       "kind": "content",
@@ -436,21 +436,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.9,
+    "score": 14.8,
     "active_days_7d": 6,
-    "changes_7d": 137,
+    "changes_7d": 84,
     "changes_14d": 259,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-10-30T06:58:39Z",
-      "commit": "fed0f42",
-      "commit_full": "fed0f42fd52012a337d744743a93409c0b1e8f9d",
-      "subject": "UPD.1: honor app pretend versions in update checks (#3668)"
+      "ts": "2026-10-31T00:12:00Z",
+      "commit": "6a8715d",
+      "commit_full": "6a8715df2773bda57dfbc791158e9c4d039b2b4b",
+      "subject": "fix(flatpak): allow reading launcher version pins (#3726)"
     },
-    "last_commit_ts": "2026-10-30T06:58:39Z",
+    "last_commit_ts": "2026-10-31T00:12:00Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
-      1,
       25,
       18,
       0,
@@ -463,7 +462,8 @@
       7,
       4,
       0,
-      39
+      39,
+      1
     ],
     "days": [
       {
@@ -993,6 +993,17 @@
             "subject": "control: say why the control server is not serving (#3436) (#3535)"
           }
         ]
+      },
+      {
+        "d": "2026-10-31",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "6a8715d",
+            "subject": "fix(flatpak): allow reading launcher version pins (#3726)"
+          }
+        ]
       }
     ]
   },
@@ -1480,5 +1491,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-30T07:29:08+00:00"
+  "updated_at": "2026-10-31T00:28:32+00:00"
 }

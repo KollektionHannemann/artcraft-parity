@@ -438,7 +438,7 @@
   },
   "roadmap": {
     "revisions": 21,
-    "revisions_7d": 4,
+    "revisions_7d": 3,
     "last_revision": {
       "ts": "2026-10-26T01:33:15Z",
       "kind": "content",
@@ -458,21 +458,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.5,
+    "score": 12.8,
     "active_days_7d": 6,
-    "changes_7d": 90,
+    "changes_7d": 61,
     "changes_14d": 170,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-10-30T06:31:43Z",
-      "commit": "7902d59",
-      "commit_full": "7902d59b475c1df203b212ef3436cc80bee2ccf2",
-      "subject": "UPD.1: honor app pretend versions in update checks (#1199)"
+      "ts": "2026-10-31T00:12:19Z",
+      "commit": "e8bc475",
+      "commit_full": "e8bc4758ccb4881e6c427fbccd0f0df750d31dd8",
+      "subject": "fix(flatpak): allow reading launcher version pins (#1210)"
     },
-    "last_commit_ts": "2026-10-30T06:31:43Z",
+    "last_commit_ts": "2026-10-31T00:12:19Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
-      1,
       0,
       54,
       0,
@@ -485,7 +484,8 @@
       4,
       4,
       0,
-      38
+      38,
+      1
     ],
     "days": [
       {
@@ -851,6 +851,17 @@
           {
             "commit": "d2079bf",
             "subject": "Bound the command journal (#995, rebased) (#1194)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-31",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "e8bc475",
+            "subject": "fix(flatpak): allow reading launcher version pins (#1210)"
           }
         ]
       }
@@ -1530,5 +1541,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-30T07:29:47+00:00"
+  "updated_at": "2026-10-31T00:29:10+00:00"
 }

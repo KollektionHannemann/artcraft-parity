@@ -369,22 +369,21 @@
   },
   "milestone": null,
   "activity": {
-    "level": "buzzing",
-    "score": 21.2,
+    "level": "active",
+    "score": 18.2,
     "active_days_7d": 7,
-    "changes_7d": 262,
-    "changes_14d": 356,
+    "changes_7d": 258,
+    "changes_14d": 353,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-30T11:06:31Z",
-      "commit": "ec7ced1",
-      "commit_full": "ec7ced1f0515f0b6f376dbcc297f1c441f452d6e",
-      "subject": "#1743, part 2: commands that write to a path never replace footage, a proxy or the project file (#1829)"
+      "ts": "2026-10-31T00:12:07Z",
+      "commit": "7a9572d",
+      "commit_full": "7a9572d8b9c81f91647ab5e9514a6dd07f0eb3b5",
+      "subject": "fix(flatpak): allow reading launcher version pins (#2704)"
     },
-    "last_commit_ts": "2026-10-30T11:06:31Z",
+    "last_commit_ts": "2026-10-31T00:12:07Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
-      4,
       55,
       0,
       0,
@@ -397,7 +396,8 @@
       4,
       3,
       156,
-      79
+      79,
+      1
     ],
     "days": [
       {
@@ -924,6 +924,17 @@
             "subject": "#1743, part 3: two Render Queue outputs never write the same file, and default names avoid the queue's other outputs (#1830)"
           }
         ]
+      },
+      {
+        "d": "2026-10-31",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "7a9572d",
+            "subject": "fix(flatpak): allow reading launcher version pins (#2704)"
+          }
+        ]
       }
     ]
   },
@@ -1411,5 +1422,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-30T12:04:23+00:00"
+  "updated_at": "2026-10-31T00:28:51+00:00"
 }
