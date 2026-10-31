@@ -429,7 +429,7 @@
   "parity": {
     "tracked_since": "2026-10-10T18:09:06Z",
     "value_since": "2026-10-10T18:09:06Z",
-    "releases_since": 9,
+    "releases_since": 10,
     "releases_since_capped": false,
     "revisions_since": 72,
     "hours_since": null,
@@ -460,18 +460,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.4,
+    "score": 17.9,
     "active_days_7d": 7,
-    "changes_7d": 75,
-    "changes_14d": 156,
-    "housekeeping_7d": 8,
+    "changes_7d": 96,
+    "changes_14d": 177,
+    "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-10-31T00:12:32Z",
-      "commit": "1f4c67e",
-      "commit_full": "1f4c67ef0a0200e48d832c7cbbb5570b743b7837",
-      "subject": "fix(flatpak): allow reading launcher version pins (#2985)"
+      "ts": "2026-10-31T03:25:28Z",
+      "commit": "1f73f62",
+      "commit_full": "1f73f62c4f86ad7ab34f584fde0a9afb0b29c706",
+      "subject": "Flatpak bundle: skip the debuginfo pass manifest-wide (runner has no eu-strip)"
     },
-    "last_commit_ts": "2026-10-31T02:59:24Z",
+    "last_commit_ts": "2026-10-31T03:25:30Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       4,
@@ -487,7 +487,7 @@
       3,
       3,
       25,
-      1
+      22
     ],
     "days": [
       {
@@ -884,18 +884,43 @@
       },
       {
         "d": "2026-10-31",
-        "code": 1,
-        "other": 1,
+        "code": 22,
+        "other": 4,
         "samples": [
           {
-            "commit": "1f4c67e",
-            "subject": "fix(flatpak): allow reading launcher version pins (#2985)"
+            "commit": "1f73f62",
+            "subject": "Flatpak bundle: skip the debuginfo pass manifest-wide (runner has no eu-strip)"
+          },
+          {
+            "commit": "fb1e59f",
+            "subject": "Merge remote-tracking branch 'origin/main' into land-1030b"
+          },
+          {
+            "commit": "0db7d97",
+            "subject": "Merge PR #3008"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.14.2",
+      "name": "GridCraft v0.14.2",
+      "ts": "2026-10-31T03:48:32Z",
+      "url": "https://github.com/storytold/gridcraft/releases/tag/v0.14.2",
+      "changes": 57,
+      "new_contributors": 9,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.13.0",
       "name": "GridCraft v0.13.0",
@@ -1072,23 +1097,6 @@
       "ts": "2026-10-08T14:41:54Z",
       "url": "https://github.com/storytold/gridcraft/releases/tag/v0.3.0",
       "changes": 3,
-      "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.1.0",
-      "name": "GridCraft v0.1.0",
-      "ts": "2026-10-08T00:47:18Z",
-      "url": "https://github.com/storytold/gridcraft/releases/tag/v0.1.0",
-      "changes": null,
       "new_contributors": null,
       "platforms": [
         "macOS",
@@ -2805,5 +2813,5 @@
       "kind": "estimates"
     }
   ],
-  "updated_at": "2026-10-31T03:09:04+00:00"
+  "updated_at": "2026-10-31T04:07:23+00:00"
 }

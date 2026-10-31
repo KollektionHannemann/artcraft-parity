@@ -453,7 +453,7 @@
   "parity": {
     "tracked_since": "2026-10-10T18:23:28Z",
     "value_since": "2026-10-15T06:21:11Z",
-    "releases_since": 7,
+    "releases_since": 8,
     "releases_since_capped": false,
     "revisions_since": 88,
     "hours_since": null,
@@ -493,18 +493,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.6,
+    "score": 16.3,
     "active_days_7d": 7,
-    "changes_7d": 71,
-    "changes_14d": 301,
-    "housekeeping_7d": 5,
+    "changes_7d": 73,
+    "changes_14d": 303,
+    "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-10-31T00:45:08Z",
-      "commit": "65ff3a0",
-      "commit_full": "65ff3a00c04ad5189f4a0abedcdf7104f14e2aed",
-      "subject": "M2: continue CJK viewer fallback for Windows GBK PDFs (#4172)"
+      "ts": "2026-10-31T03:25:35Z",
+      "commit": "35c187f",
+      "commit_full": "35c187ff1927b720da4d025bb746b3b445b839cc",
+      "subject": "Flatpak bundle: skip the debuginfo pass manifest-wide (runner has no eu-strip)"
     },
-    "last_commit_ts": "2026-10-31T00:45:08Z",
+    "last_commit_ts": "2026-10-31T03:25:37Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       56,
@@ -520,7 +520,7 @@
       16,
       3,
       4,
-      2
+      4
     ],
     "days": [
       {
@@ -1101,22 +1101,43 @@
       },
       {
         "d": "2026-10-31",
-        "code": 2,
-        "other": 0,
+        "code": 4,
+        "other": 2,
         "samples": [
+          {
+            "commit": "35c187f",
+            "subject": "Flatpak bundle: skip the debuginfo pass manifest-wide (runner has no eu-strip)"
+          },
+          {
+            "commit": "4b70916",
+            "subject": "Flatpak bundle: skip the debuginfo pass for cups-client (runner has no eu-strip)"
+          },
           {
             "commit": "65ff3a0",
             "subject": "M2: continue CJK viewer fallback for Windows GBK PDFs (#4172)"
-          },
-          {
-            "commit": "ec33924",
-            "subject": "fix(flatpak): allow reading launcher version pins (#5490)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.16.1",
+      "name": "PdfCraft v0.16.1",
+      "ts": "2026-10-31T03:59:54Z",
+      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.16.1",
+      "changes": 62,
+      "new_contributors": 3,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.15.0",
       "name": "PdfCraft v0.15.0",
@@ -1294,23 +1315,6 @@
       "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.5.0",
       "changes": 176,
       "new_contributors": 42,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.4.0",
-      "name": "PdfCraft v0.4.0",
-      "ts": "2026-10-08T14:41:34Z",
-      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.4.0",
-      "changes": 85,
-      "new_contributors": 28,
       "platforms": [
         "macOS",
         "Windows",
@@ -5372,5 +5376,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-31T01:29:39+00:00"
+  "updated_at": "2026-10-31T04:06:57+00:00"
 }

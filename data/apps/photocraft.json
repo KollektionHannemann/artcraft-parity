@@ -332,8 +332,8 @@
   "parity": {
     "tracked_since": "2026-10-10T19:09:04Z",
     "value_since": "2026-10-10T19:09:04Z",
-    "releases_since": 11,
-    "releases_since_capped": false,
+    "releases_since": 12,
+    "releases_since_capped": true,
     "revisions_since": 5,
     "hours_since": null,
     "areas_since": null,
@@ -363,18 +363,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.1,
+    "score": 18.6,
     "active_days_7d": 7,
-    "changes_7d": 98,
-    "changes_14d": 424,
-    "housekeeping_7d": 5,
+    "changes_7d": 99,
+    "changes_14d": 425,
+    "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-10-31T00:54:57Z",
-      "commit": "e7b7cf1",
-      "commit_full": "e7b7cf11e34d820c72226a05edabd0b261ed7a7f",
-      "subject": "Follow-up to #10204: match the reference application in ten places (#10327) (#10328)"
+      "ts": "2026-10-31T03:26:31Z",
+      "commit": "d5b564d",
+      "commit_full": "d5b564db930d742796dbefe2cad20d14cc7385d5",
+      "subject": "Flatpak bundle: skip the debuginfo pass manifest-wide (runner has no eu-strip)"
     },
-    "last_commit_ts": "2026-10-31T00:54:57Z",
+    "last_commit_ts": "2026-10-31T03:26:40Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       102,
@@ -390,7 +390,7 @@
       10,
       18,
       7,
-      2
+      3
     ],
     "days": [
       {
@@ -984,9 +984,13 @@
       },
       {
         "d": "2026-10-31",
-        "code": 2,
-        "other": 0,
+        "code": 3,
+        "other": 1,
         "samples": [
+          {
+            "commit": "d5b564d",
+            "subject": "Flatpak bundle: skip the debuginfo pass manifest-wide (runner has no eu-strip)"
+          },
           {
             "commit": "e7b7cf1",
             "subject": "Follow-up to #10204: match the reference application in ten places (#10327) (#10328)"
@@ -1000,6 +1004,23 @@
     ]
   },
   "releases": [
+    {
+      "tag": "v0.18.0",
+      "name": "PhotoCraft v0.18.0",
+      "ts": "2026-10-31T04:02:59Z",
+      "url": "https://github.com/storytold/photocraft/releases/tag/v0.18.0",
+      "changes": 176,
+      "new_contributors": 16,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.17.0",
       "name": "PhotoCraft v0.17.0",
@@ -1185,23 +1206,6 @@
       ],
       "prerelease": false,
       "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.6.0",
-      "name": "PhotoCraft v0.6.0",
-      "ts": "2026-10-10T02:51:42Z",
-      "url": "https://github.com/storytold/photocraft/releases/tag/v0.6.0",
-      "changes": 501,
-      "new_contributors": 86,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
       "kind": null
     }
   ],
@@ -1345,5 +1349,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-31T01:29:08+00:00"
+  "updated_at": "2026-10-31T04:06:36+00:00"
 }

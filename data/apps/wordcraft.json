@@ -489,7 +489,7 @@
   "parity": {
     "tracked_since": "2026-10-10T18:11:53Z",
     "value_since": "2026-10-10T18:11:53Z",
-    "releases_since": 8,
+    "releases_since": 9,
     "releases_since_capped": false,
     "revisions_since": 435,
     "hours_since": null,
@@ -537,18 +537,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.0,
+    "score": 18.0,
     "active_days_7d": 7,
-    "changes_7d": 125,
-    "changes_14d": 492,
-    "housekeeping_7d": 10,
+    "changes_7d": 127,
+    "changes_14d": 494,
+    "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-10-31T00:12:15Z",
-      "commit": "aeae018",
-      "commit_full": "aeae018cfd1c1f0f5bfa09ab45eefc1b4e9ac584",
-      "subject": "fix(flatpak): allow reading launcher version pins (#5010)"
+      "ts": "2026-10-31T03:25:28Z",
+      "commit": "5f55134",
+      "commit_full": "5f551346a587b23fd06e612ca053d9cb369ca802",
+      "subject": "Flatpak bundle: skip the debuginfo pass manifest-wide (runner has no eu-strip)"
     },
-    "last_commit_ts": "2026-10-31T02:59:22Z",
+    "last_commit_ts": "2026-10-31T03:25:32Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       239,
@@ -564,7 +564,7 @@
       4,
       2,
       46,
-      1
+      3
     ],
     "days": [
       {
@@ -987,9 +987,17 @@
       },
       {
         "d": "2026-10-31",
-        "code": 1,
-        "other": 1,
+        "code": 3,
+        "other": 3,
         "samples": [
+          {
+            "commit": "5f55134",
+            "subject": "Flatpak bundle: skip the debuginfo pass manifest-wide (runner has no eu-strip)"
+          },
+          {
+            "commit": "fc41416",
+            "subject": "Flatpak bundle: skip the debuginfo pass for cups-client (runner has no eu-strip)"
+          },
           {
             "commit": "aeae018",
             "subject": "fix(flatpak): allow reading launcher version pins (#5010)"
@@ -999,6 +1007,23 @@
     ]
   },
   "releases": [
+    {
+      "tag": "v0.13.2",
+      "name": "WordCraft v0.13.2",
+      "ts": "2026-10-31T03:56:34Z",
+      "url": "https://github.com/storytold/wordcraft/releases/tag/v0.13.2",
+      "changes": 54,
+      "new_contributors": 11,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.12.0",
       "name": "WordCraft v0.12.0",
@@ -11302,5 +11327,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-31T03:08:54+00:00"
+  "updated_at": "2026-10-31T04:07:12+00:00"
 }

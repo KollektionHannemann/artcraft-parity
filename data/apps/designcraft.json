@@ -471,7 +471,7 @@
   "parity": {
     "tracked_since": "2026-10-10T18:09:17Z",
     "value_since": "2026-10-10T18:09:17Z",
-    "releases_since": 9,
+    "releases_since": 10,
     "releases_since_capped": false,
     "revisions_since": 159,
     "hours_since": null,
@@ -502,18 +502,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.4,
+    "score": 17.1,
     "active_days_7d": 7,
-    "changes_7d": 102,
-    "changes_14d": 246,
-    "housekeeping_7d": 7,
+    "changes_7d": 104,
+    "changes_14d": 248,
+    "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-10-31T03:03:12Z",
-      "commit": "4663076",
-      "commit_full": "4663076a10f1191c9445debff7eda03c16011b53",
-      "subject": "Integrate 21 held PRs (rebase and fixes) (#2067)"
+      "ts": "2026-10-31T03:25:32Z",
+      "commit": "8ce8fb1",
+      "commit_full": "8ce8fb132c196c6230b626b917f006c21bba2ec7",
+      "subject": "Flatpak bundle: skip the debuginfo pass manifest-wide (runner has no eu-strip)"
     },
-    "last_commit_ts": "2026-10-31T03:03:12Z",
+    "last_commit_ts": "2026-10-31T03:25:34Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       0,
@@ -529,7 +529,7 @@
       5,
       1,
       37,
-      2
+      4
     ],
     "days": [
       {
@@ -1054,22 +1054,43 @@
       },
       {
         "d": "2026-10-31",
-        "code": 2,
-        "other": 1,
+        "code": 4,
+        "other": 3,
         "samples": [
+          {
+            "commit": "8ce8fb1",
+            "subject": "Flatpak bundle: skip the debuginfo pass manifest-wide (runner has no eu-strip)"
+          },
+          {
+            "commit": "1ecb13b",
+            "subject": "Flatpak bundle: skip the debuginfo pass for cups-client (runner has no eu-strip)"
+          },
           {
             "commit": "4663076",
             "subject": "Integrate 21 held PRs (rebase and fixes) (#2067)"
-          },
-          {
-            "commit": "7579761",
-            "subject": "fix(flatpak): allow reading launcher version pins (#2059)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.15.2",
+      "name": "DesignCraft v0.15.2",
+      "ts": "2026-10-31T03:59:39Z",
+      "url": "https://github.com/storytold/designcraft/releases/tag/v0.15.2",
+      "changes": 109,
+      "new_contributors": 4,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.14.0",
       "name": "DesignCraft v0.14.0",
@@ -1247,23 +1268,6 @@
       "url": "https://github.com/storytold/designcraft/releases/tag/v0.4.0",
       "changes": 34,
       "new_contributors": 10,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.2.1",
-      "name": "DesignCraft v0.2.1",
-      "ts": "2026-10-06T12:15:04Z",
-      "url": "https://github.com/storytold/designcraft/releases/tag/v0.2.1",
-      "changes": 7,
-      "new_contributors": 1,
       "platforms": [
         "macOS",
         "Windows",
@@ -4957,5 +4961,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-31T03:08:49+00:00"
+  "updated_at": "2026-10-31T04:07:05+00:00"
 }

@@ -353,18 +353,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.2,
+    "score": 18.3,
     "active_days_7d": 6,
-    "changes_7d": 130,
-    "changes_14d": 316,
-    "housekeeping_7d": 9,
+    "changes_7d": 131,
+    "changes_14d": 317,
+    "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-10-31T02:25:50Z",
-      "commit": "dc1442a",
-      "commit_full": "dc1442ac89428dd09462d3cd132b9fafb458bd03",
-      "subject": "fix(io): MTEXT keeps its R2018 embedded column object (#2248) (#2525)"
+      "ts": "2026-10-31T03:46:09Z",
+      "commit": "d4eab70",
+      "commit_full": "d4eab70e63f45db03159d1ae0dd781772ba0416f",
+      "subject": "DWG bridge: build without acadrust on FreeBSD aarch64, where 0.6.6 doesn't compile"
     },
-    "last_commit_ts": "2026-10-31T02:25:50Z",
+    "last_commit_ts": "2026-10-31T03:46:11Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       0,
@@ -380,7 +380,7 @@
       4,
       0,
       42,
-      18
+      19
     ],
     "days": [
       {
@@ -742,9 +742,13 @@
       },
       {
         "d": "2026-10-31",
-        "code": 18,
-        "other": 1,
+        "code": 19,
+        "other": 3,
         "samples": [
+          {
+            "commit": "d4eab70",
+            "subject": "DWG bridge: build without acadrust on FreeBSD aarch64, where 0.6.6 doesn't compile"
+          },
           {
             "commit": "dc1442a",
             "subject": "fix(io): MTEXT keeps its R2018 embedded column object (#2248) (#2525)"
@@ -752,10 +756,6 @@
           {
             "commit": "b22a068",
             "subject": "Update symlink target in write_atomic instead of replacing the link (#2524)"
-          },
-          {
-            "commit": "60f1bd6",
-            "subject": "DXF: save pre-2007 text in the file's code page instead of all \\U+ escapes (#2523)"
           }
         ]
       }
@@ -1222,5 +1222,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-31T03:09:02+00:00"
+  "updated_at": "2026-10-31T04:07:20+00:00"
 }

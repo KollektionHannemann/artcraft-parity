@@ -557,18 +557,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 26.9,
+    "score": 27.1,
     "active_days_7d": 7,
-    "changes_7d": 433,
-    "changes_14d": 1083,
-    "housekeeping_7d": 14,
+    "changes_7d": 434,
+    "changes_14d": 1084,
+    "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-10-31T00:57:58Z",
-      "commit": "1660cd1",
-      "commit_full": "1660cd1b41be81a7d00cdf0d7ce889305ed63b44",
-      "subject": "Path Precision Tools: the Shared Edges fields read like the others in the panel (#4781)"
+      "ts": "2026-10-31T03:26:30Z",
+      "commit": "e27f3b9",
+      "commit_full": "e27f3b9968fadbb6a58cb28a7821da1abd4fa1bd",
+      "subject": "Flatpak bundle: skip the debuginfo pass manifest-wide (runner has no eu-strip)"
     },
-    "last_commit_ts": "2026-10-31T00:57:58Z",
+    "last_commit_ts": "2026-10-31T03:26:38Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       90,
@@ -584,7 +584,7 @@
       4,
       180,
       99,
-      5
+      6
     ],
     "days": [
       {
@@ -1165,9 +1165,13 @@
       },
       {
         "d": "2026-10-31",
-        "code": 5,
-        "other": 0,
+        "code": 6,
+        "other": 1,
         "samples": [
+          {
+            "commit": "e27f3b9",
+            "subject": "Flatpak bundle: skip the debuginfo pass manifest-wide (runner has no eu-strip)"
+          },
           {
             "commit": "1660cd1",
             "subject": "Path Precision Tools: the Shared Edges fields read like the others in the panel (#4781)"
@@ -1175,10 +1179,6 @@
           {
             "commit": "9b26bcc",
             "subject": "Render: leave out an object whose opacity mask lost an image (#4780)"
-          },
-          {
-            "commit": "b0ab477",
-            "subject": "Image Trace: Document Library fills are not linked to swatches (#4777)"
           }
         ]
       }
@@ -6544,5 +6544,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-31T01:29:18+00:00"
+  "updated_at": "2026-10-31T04:06:43+00:00"
 }
