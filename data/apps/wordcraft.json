@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "eecbb8f",
-  "latest_commit_date": "2026-10-31T01:06:36-04:00",
-  "latest_message": "docs: tidy agent, contributor and asset docs (#5035)",
+  "latest_commit": "c934977",
+  "latest_commit_date": "2026-10-31T10:32:05-04:00",
+  "latest_message": "Keytips: Alt, F shows the Backstage pages' letters; Alt, F, P and Alt, F, V print (#4960) (#4981)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
-    "last_updated": "2026-10-29",
+    "last_updated": "2026-10-31",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -325,6 +325,14 @@
     ],
     "progress": [
       {
+        "date": "2026-10-31",
+        "text": "Keytips reach the Backstage: Alt, F badges its pages with Word's letters, and Alt, F, P (or V) opens Print (#4960)."
+      },
+      {
+        "date": "2026-10-29",
+        "text": "Documents with hyperlinks or a table of contents print again on the desktop (#4734). The print job scales each page to the paper, and the spooler refused a page with link annotations (\"flatten page annotations before using shrink-to-fit\"); the PDF sent to the printer now omits link annotations, which print nothing; the link and table-of-contents text stays on the page. Exported PDFs and Save these pages as PDF (file.printPdf) keep the annotations."
+      },
+      {
         "date": "2026-10-29",
         "text": "Increase/Decrease Font Size and the one-point shortcuts change each selected run from its own resolved size, retaining mixed-size formatting, inherited styles and one-step Undo (#4903). Existing size steps and limits stay unchanged."
       },
@@ -359,6 +367,10 @@
       {
         "date": "2026-10-29",
         "text": "Table Properties follows the selection (#4857): with the whole table (or several rows, columns or cells) selected, the Row, Column and Cell settings apply to every selected row, column and cell, as in Word. Before, they changed the caret's row alone, so unticking Allow row to break across pages with the table selected left the other rows breaking. Allow row to break and Repeat as header row show as mixed when the selected rows differ and change nothing unless clicked."
+      },
+      {
+        "date": "2026-10-28",
+        "text": "Word count counts each Chinese and Japanese character as a word, as Word does, in the status bar, the Word Count dialog and NUMWORDS fields. Unspaced Chinese text used to count as one word per run of text; Korean, which is written with spaces, still counts by words. (#4547)"
       },
       {
         "date": "2026-10-28",
@@ -471,18 +483,6 @@
       {
         "date": "2026-10-24",
         "text": "Track Changes: the border-line (--- and the others) and +---+ table AutoFormats mark the typed characters deleted instead of removing them, so Reject All brings them back. Characters the same author typed with tracking on are removed, as a tracked Backspace removes them. A border at the top of a story is a tracked formatting change too, as the border on the paragraph above already was. The table is inserted untracked, as Insert › Table inserts one. A line that holds a tracked deletion no longer triggers either AutoFormat."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "#4085: Ctrl+Alt+H toggles the last chosen highlight colour; explicit colour setters remain idempotent. Mixed, inherited and pending formatting and Undo/Redo covered by command/key regressions."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "Table Layout › Convert to Text opens its dialog: Separate text with Paragraph marks, Tabs (the default), Commas or Other. With rows selected only those rows become text, and the rows above and below stay tables; the caret alone converts the whole table. The text keeps its formatting and objects, and a table nested in a cell stays a table; table.toText gains other + char."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "Document information fields: SUBJECT, KEYWORDS, COMMENTS, LASTSAVEDBY, REVNUM and NUMCHARS update with the other fields and are listed in the Field dialog; a quoted text after TITLE, SUBJECT, AUTHOR, KEYWORDS or COMMENTS replaces that document property (at most 255 characters), and NUMWORDS, NUMCHARS and REVNUM take a \\ number format"
       }
     ]
   },
@@ -491,7 +491,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 9,
     "releases_since_capped": false,
-    "revisions_since": 436,
+    "revisions_since": 439,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -516,39 +516,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 440,
-    "revisions_7d": 34,
+    "revisions": 443,
+    "revisions_7d": 37,
     "last_revision": {
-      "ts": "2026-10-31T05:06:36Z",
+      "ts": "2026-10-31T14:32:05Z",
       "kind": "content",
-      "commit": "eecbb8f",
-      "commit_full": "eecbb8fe57a56340e7fa109e8da7f1376a03e154",
-      "message": "docs: tidy agent, contributor and asset docs (#5035)"
+      "commit": "c934977",
+      "commit_full": "c934977157cd89f6a2d4ecd2e59c6cf23c1c7a11",
+      "message": "Keytips: Alt, F shows the Backstage pages' letters; Alt, F, P and Alt, F, V print (#4960) (#4981)"
     },
     "last_update": {
-      "ts": "2026-10-31T05:06:36Z",
+      "ts": "2026-10-31T14:32:05Z",
       "kind": "content",
-      "commit": "eecbb8f",
-      "commit_full": "eecbb8fe57a56340e7fa109e8da7f1376a03e154",
-      "message": "docs: tidy agent, contributor and asset docs (#5035)"
+      "commit": "c934977",
+      "commit_full": "c934977157cd89f6a2d4ecd2e59c6cf23c1c7a11",
+      "message": "Keytips: Alt, F shows the Backstage pages' letters; Alt, F, P and Alt, F, V print (#4960) (#4981)"
     },
-    "self_reported": "2026-10-29"
+    "self_reported": "2026-10-31"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.6,
+    "score": 19.9,
     "active_days_7d": 7,
-    "changes_7d": 129,
-    "changes_14d": 496,
+    "changes_7d": 138,
+    "changes_14d": 505,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-10-31T05:06:36Z",
-      "commit": "eecbb8f",
-      "commit_full": "eecbb8fe57a56340e7fa109e8da7f1376a03e154",
-      "subject": "docs: tidy agent, contributor and asset docs (#5035)"
+      "ts": "2026-10-31T14:50:22Z",
+      "commit": "8afe6be",
+      "commit_full": "8afe6bef6d6d1195e06f50776a318d19058214da",
+      "subject": "fix: translate highlighting color tooltips (#5008)"
     },
-    "last_commit_ts": "2026-10-31T05:06:36Z",
+    "last_commit_ts": "2026-10-31T14:50:22Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       239,
@@ -564,7 +564,7 @@
       4,
       2,
       46,
-      5
+      14
     ],
     "days": [
       {
@@ -987,20 +987,20 @@
       },
       {
         "d": "2026-10-31",
-        "code": 5,
+        "code": 14,
         "other": 3,
         "samples": [
           {
-            "commit": "eecbb8f",
-            "subject": "docs: tidy agent, contributor and asset docs (#5035)"
+            "commit": "8afe6be",
+            "subject": "fix: translate highlighting color tooltips (#5008)"
           },
           {
-            "commit": "a20fd62",
-            "subject": "Updates: shared check-result dialog from craft-update (#5037)"
+            "commit": "6dae5a1",
+            "subject": "Detect CSV separator from the first non-blank line (#5042)"
           },
           {
-            "commit": "5f55134",
-            "subject": "Flatpak bundle: skip the debuginfo pass manifest-wide (runner has no eu-strip)"
+            "commit": "3d966e2",
+            "subject": "Treat <!--> and <!---> as empty comments in HTML import (#5040)"
           }
         ]
       }
@@ -11348,7 +11348,76 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "54517ac",
+      "commit_full": "54517ace14b1c8945b6ba870f995c6c2ec53349f",
+      "commit_date": "2026-10-31T10:19:24-04:00",
+      "ts": "2026-10-31T14:19:24Z",
+      "message": "Word count: each Chinese and Japanese character is a word (#4547) (#4629)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-31",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "a2f3875",
+      "commit_full": "a2f387567d668a243ac758f51b2205358e287ca4",
+      "commit_date": "2026-10-31T10:26:28-04:00",
+      "ts": "2026-10-31T14:26:28Z",
+      "message": "Printing: the print job's PDF leaves out link annotations, so documents with links print (#4734) (#4817)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-31",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "c934977",
+      "commit_full": "c934977157cd89f6a2d4ecd2e59c6cf23c1c7a11",
+      "commit_date": "2026-10-31T10:32:05-04:00",
+      "ts": "2026-10-31T14:32:05Z",
+      "message": "Keytips: Alt, F shows the Backstage pages' letters; Alt, F, P and Alt, F, V print (#4960) (#4981)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-31",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-31T06:00:49+00:00"
+  "updated_at": "2026-10-31T14:57:13+00:00"
 }
