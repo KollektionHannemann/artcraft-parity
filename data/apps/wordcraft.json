@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "401c6c0",
-  "latest_commit_date": "2026-10-31T11:53:56-04:00",
-  "latest_message": "References: a table of contents writes its page numbers as PAGEREF fields, as Word does (#5097)",
+  "latest_commit": "e6a5cd0",
+  "latest_commit_date": "2026-10-31T12:03:07-04:00",
+  "latest_message": "DOCX: a paragraph naming an undefined style is formatted as Normal, as in Word (#5077) (#5104)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -326,6 +326,10 @@
     "progress": [
       {
         "date": "2026-10-31",
+        "text": "DOCX: a paragraph naming a style the file doesn't define is formatted as Normal, as in Word, not with the document defaults alone, so a Pandoc footer naming an undefined Footer style is as tall as Word's and no longer pushes the last paragraph to the next page (#5077). Readiness unchanged."
+      },
+      {
+        "date": "2026-10-31",
         "text": "A table of contents writes its page numbers as PAGEREF fields to the headings' bookmarks, as Word does, so updating the fields in Word moves the numbers with the headings; they were plain text (#5097)."
       },
       {
@@ -479,10 +483,6 @@
       {
         "date": "2026-10-24",
         "text": "AutoCorrect: a word typed after a no-break space or an ideographic space is corrected as after a plain space (replacements, sentence capitals, ordinals and links). AutoCorrect left such a word as typed."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "MCP typetext with paragraphs: true is one command (#3973): it was a text.newParagraph and a text.insert per line, each snapshotting the whole document for Undo, so 10,000 lines took 2.8 s (doubling the lines cost 2.4–3.2×) and left an Undo step per line; now they take ~10 ms (linear) and one Undo takes them all back. A CRLF is one break, not two, and the breaks no longer run AutoCorrect (the per-line way capitalised every line but the last). Typed line breaks are the Enter key, so in a one-line content control, where Enter does nothing, they no longer split it into paragraphs."
       }
     ]
   },
@@ -491,7 +491,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 9,
     "releases_since_capped": false,
-    "revisions_since": 440,
+    "revisions_since": 441,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -516,39 +516,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 444,
-    "revisions_7d": 38,
+    "revisions": 445,
+    "revisions_7d": 39,
     "last_revision": {
-      "ts": "2026-10-31T15:53:56Z",
+      "ts": "2026-10-31T16:03:07Z",
       "kind": "content",
-      "commit": "401c6c0",
-      "commit_full": "401c6c0dc2319bb2774ca3536c6c27b5dbda02d0",
-      "message": "References: a table of contents writes its page numbers as PAGEREF fields, as Word does (#5097)"
+      "commit": "e6a5cd0",
+      "commit_full": "e6a5cd05f045e4caf25a28660bfeb622f25b5129",
+      "message": "DOCX: a paragraph naming an undefined style is formatted as Normal, as in Word (#5077) (#5104)"
     },
     "last_update": {
-      "ts": "2026-10-31T15:53:56Z",
+      "ts": "2026-10-31T16:03:07Z",
       "kind": "content",
-      "commit": "401c6c0",
-      "commit_full": "401c6c0dc2319bb2774ca3536c6c27b5dbda02d0",
-      "message": "References: a table of contents writes its page numbers as PAGEREF fields, as Word does (#5097)"
+      "commit": "e6a5cd0",
+      "commit_full": "e6a5cd05f045e4caf25a28660bfeb622f25b5129",
+      "message": "DOCX: a paragraph naming an undefined style is formatted as Normal, as in Word (#5077) (#5104)"
     },
     "self_reported": "2026-10-31"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.0,
+    "score": 20.1,
     "active_days_7d": 7,
-    "changes_7d": 139,
-    "changes_14d": 506,
+    "changes_7d": 140,
+    "changes_14d": 507,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-10-31T15:53:56Z",
-      "commit": "401c6c0",
-      "commit_full": "401c6c0dc2319bb2774ca3536c6c27b5dbda02d0",
-      "subject": "References: a table of contents writes its page numbers as PAGEREF fields, as Word does (#5097)"
+      "ts": "2026-10-31T16:03:07Z",
+      "commit": "e6a5cd0",
+      "commit_full": "e6a5cd05f045e4caf25a28660bfeb622f25b5129",
+      "subject": "DOCX: a paragraph naming an undefined style is formatted as Normal, as in Word (#5077) (#5104)"
     },
-    "last_commit_ts": "2026-10-31T15:53:56Z",
+    "last_commit_ts": "2026-10-31T16:03:07Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       239,
@@ -564,7 +564,7 @@
       4,
       2,
       46,
-      15
+      16
     ],
     "days": [
       {
@@ -987,9 +987,13 @@
       },
       {
         "d": "2026-10-31",
-        "code": 15,
+        "code": 16,
         "other": 3,
         "samples": [
+          {
+            "commit": "e6a5cd0",
+            "subject": "DOCX: a paragraph naming an undefined style is formatted as Normal, as in Word (#5077) (#5104)"
+          },
           {
             "commit": "401c6c0",
             "subject": "References: a table of contents writes its page numbers as PAGEREF fields, as Word does (#5097)"
@@ -997,10 +1001,6 @@
           {
             "commit": "8afe6be",
             "subject": "fix: translate highlighting color tooltips (#5008)"
-          },
-          {
-            "commit": "6dae5a1",
-            "subject": "Detect CSV separator from the first non-blank line (#5042)"
           }
         ]
       }
@@ -11440,7 +11440,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "e6a5cd0",
+      "commit_full": "e6a5cd05f045e4caf25a28660bfeb622f25b5129",
+      "commit_date": "2026-10-31T12:03:07-04:00",
+      "ts": "2026-10-31T16:03:07Z",
+      "message": "DOCX: a paragraph naming an undefined style is formatted as Normal, as in Word (#5077) (#5104)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-31",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-31T15:57:02+00:00"
+  "updated_at": "2026-10-31T16:23:44+00:00"
 }
