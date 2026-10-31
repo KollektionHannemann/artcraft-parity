@@ -6,6 +6,28 @@
   "recent_additions": [],
   "latest_events": [
     {
+      "id": "cadcraft",
+      "name": "CADCraft",
+      "type": "release",
+      "ts": "2026-10-31T04:13:30Z",
+      "tag": "v0.15.1",
+      "kind": "minor",
+      "changes": 68,
+      "url": "https://github.com/storytold/cadcraft/releases/tag/v0.15.1",
+      "prerelease": false
+    },
+    {
+      "id": "vectorcraft",
+      "name": "VectorCraft",
+      "type": "release",
+      "ts": "2026-10-31T04:08:53Z",
+      "tag": "v0.19.0",
+      "kind": "minor",
+      "changes": 294,
+      "url": "https://github.com/storytold/vectorcraft/releases/tag/v0.19.0",
+      "prerelease": false
+    },
+    {
       "id": "effectcraft",
       "name": "EffectCraft",
       "type": "release",
@@ -413,28 +435,6 @@
       "prerelease": false
     },
     {
-      "id": "vectorcraft",
-      "name": "VectorCraft",
-      "type": "release",
-      "ts": "2026-10-23T01:01:59Z",
-      "tag": "v0.16.0",
-      "kind": "minor",
-      "changes": 23,
-      "url": "https://github.com/storytold/vectorcraft/releases/tag/v0.16.0",
-      "prerelease": false
-    },
-    {
-      "id": "cadcraft",
-      "name": "CADCraft",
-      "type": "release",
-      "ts": "2026-10-23T00:34:58Z",
-      "tag": "v0.12.0",
-      "kind": "minor",
-      "changes": 13,
-      "url": "https://github.com/storytold/cadcraft/releases/tag/v0.12.0",
-      "prerelease": false
-    },
-    {
       "id": "pdfcraft",
       "name": "PdfCraft",
       "type": "parity",
@@ -449,13 +449,13 @@
   "release_waves": [
     {
       "day": "2026-10-31",
-      "apps": 11,
-      "changes": 1117,
+      "apps": 13,
+      "changes": 1479,
       "largest": {
-        "id": "effectcraft",
-        "name": "EffectCraft",
+        "id": "vectorcraft",
+        "name": "VectorCraft",
         "tag": "v0.19.0",
-        "changes": 257
+        "changes": 294
       }
     },
     {
@@ -564,7 +564,7 @@
       "parity": {
         "tracked_since": "2026-10-10T18:11:14Z",
         "value_since": "2026-10-10T18:11:14Z",
-        "releases_since": 10,
+        "releases_since": 11,
         "releases_since_capped": false,
         "revisions_since": 195,
         "hours_since": null,
@@ -649,12 +649,12 @@
         ]
       },
       "release": {
-        "tag": "v0.18.0",
-        "name": "VectorCraft v0.18.0",
-        "ts": "2026-10-28T17:38:39Z",
-        "url": "https://github.com/storytold/vectorcraft/releases/tag/v0.18.0",
-        "changes": 151,
-        "new_contributors": 8,
+        "tag": "v0.19.0",
+        "name": "VectorCraft v0.19.0",
+        "ts": "2026-10-31T04:08:53Z",
+        "url": "https://github.com/storytold/vectorcraft/releases/tag/v0.19.0",
+        "changes": 294,
+        "new_contributors": 13,
         "platforms": [
           "macOS",
           "Windows",
@@ -1073,7 +1073,7 @@
         "value_since": "2026-10-10T18:09:21Z",
         "releases_since": 9,
         "releases_since_capped": false,
-        "revisions_since": 116,
+        "revisions_since": 118,
         "hours_since": null,
         "areas_since": {
           "up": 1,
@@ -1092,39 +1092,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 119,
-        "revisions_7d": 20,
+        "revisions": 121,
+        "revisions_7d": 22,
         "last_revision": {
-          "ts": "2026-10-30T20:08:20Z",
+          "ts": "2026-10-31T04:56:17Z",
           "kind": "content",
-          "commit": "ae08bbe",
-          "commit_full": "ae08bbe62d29844324170087224c124ea143839b",
-          "message": "Merge pull request #1546"
+          "commit": "d92874f",
+          "commit_full": "d92874f5414a262df545c6c6b3a2ec6cddd71740",
+          "message": "Merge pull request #1574"
         },
         "last_update": {
-          "ts": "2026-10-30T20:08:20Z",
+          "ts": "2026-10-31T04:56:17Z",
           "kind": "content",
-          "commit": "ae08bbe",
-          "commit_full": "ae08bbe62d29844324170087224c124ea143839b",
-          "message": "Merge pull request #1546"
+          "commit": "d92874f",
+          "commit_full": "d92874f5414a262df545c6c6b3a2ec6cddd71740",
+          "message": "Merge pull request #1574"
         },
-        "self_reported": "2026-10-29"
+        "self_reported": "2026-10-30"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.2,
+        "score": 18.1,
         "active_days_7d": 6,
-        "changes_7d": 132,
-        "changes_14d": 235,
+        "changes_7d": 151,
+        "changes_14d": 254,
         "housekeeping_7d": 11,
         "last_code_change": {
-          "ts": "2026-10-31T03:21:55Z",
-          "commit": "255df31",
-          "commit_full": "255df314da653d7a9547b16348cd833a49893ead",
-          "subject": "FreeBSD packaging: compare ELF header bytes without od's column padding"
+          "ts": "2026-10-31T05:05:27Z",
+          "commit": "92bf7fc",
+          "commit_full": "92bf7fc67dbe8f934c45b33b94879221118dc089",
+          "subject": "fix(xtask): update SHARED_REV for craft-libs update"
         },
-        "last_commit_ts": "2026-10-31T03:21:58Z",
+        "last_commit_ts": "2026-10-31T05:05:27Z",
         "repo_since": "2026-10-06T02:13:02Z",
         "window": [
           24,
@@ -1140,7 +1140,7 @@
           4,
           0,
           60,
-          2
+          21
         ]
       },
       "release": {
@@ -1166,11 +1166,11 @@
           "v": 55.0
         },
         {
-          "t": "2026-10-30T20:08:20Z",
+          "t": "2026-10-31T04:56:17Z",
           "v": 55.0
         }
       ],
-      "history_len": 119
+      "history_len": 121
     },
     {
       "id": "figcraft",
@@ -1274,18 +1274,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 23.7,
+        "score": 23.9,
         "active_days_7d": 7,
-        "changes_7d": 332,
-        "changes_14d": 445,
+        "changes_7d": 334,
+        "changes_14d": 447,
         "housekeeping_7d": 16,
         "last_code_change": {
-          "ts": "2026-10-31T03:34:10Z",
-          "commit": "96552d6",
-          "commit_full": "96552d6d094802f99699b500aa083f1012f865ed",
-          "subject": "craft-libs: move to e11f9d9 so craft-menu parses on FreeBSD's Cargo 1.98 (craft-libs#366)"
+          "ts": "2026-10-31T05:05:13Z",
+          "commit": "29e333b",
+          "commit_full": "29e333b5b14649345ca214a304980850f37ebd62",
+          "subject": "fix: remove unused tr import in updates_ui"
         },
-        "last_commit_ts": "2026-10-31T03:34:12Z",
+        "last_commit_ts": "2026-10-31T05:05:13Z",
         "repo_since": "2026-10-09T15:38:50Z",
         "window": [
           13,
@@ -1301,7 +1301,7 @@
           4,
           107,
           100,
-          14
+          16
         ]
       },
       "release": {
@@ -1616,7 +1616,7 @@
         "value_since": "2026-10-10T18:09:17Z",
         "releases_since": 10,
         "releases_since_capped": false,
-        "revisions_since": 159,
+        "revisions_since": 165,
         "hours_since": null,
         "areas_since": null,
         "changes": 0,
@@ -1624,39 +1624,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 160,
-        "revisions_7d": 34,
+        "revisions": 166,
+        "revisions_7d": 40,
         "last_revision": {
-          "ts": "2026-10-31T03:03:12Z",
+          "ts": "2026-10-31T05:02:09Z",
           "kind": "content",
-          "commit": "4663076",
-          "commit_full": "4663076a10f1191c9445debff7eda03c16011b53",
-          "message": "Integrate 21 held PRs (rebase and fixes) (#2067)"
+          "commit": "153d232",
+          "commit_full": "153d232a26904f0c833b6ae98d4930c54e7e296c",
+          "message": "Import warnings: Show selects the frame a story warning is about (#2052)"
         },
         "last_update": {
-          "ts": "2026-10-31T03:03:12Z",
+          "ts": "2026-10-31T05:02:09Z",
           "kind": "content",
-          "commit": "4663076",
-          "commit_full": "4663076a10f1191c9445debff7eda03c16011b53",
-          "message": "Integrate 21 held PRs (rebase and fixes) (#2067)"
+          "commit": "153d232",
+          "commit_full": "153d232a26904f0c833b6ae98d4930c54e7e296c",
+          "message": "Import warnings: Show selects the frame a story warning is about (#2052)"
         },
         "self_reported": "2026-10-23"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 17.1,
+        "score": 19.1,
         "active_days_7d": 7,
-        "changes_7d": 104,
-        "changes_14d": 248,
+        "changes_7d": 119,
+        "changes_14d": 263,
         "housekeeping_7d": 9,
         "last_code_change": {
-          "ts": "2026-10-31T03:25:32Z",
-          "commit": "8ce8fb1",
-          "commit_full": "8ce8fb132c196c6230b626b917f006c21bba2ec7",
-          "subject": "Flatpak bundle: skip the debuginfo pass manifest-wide (runner has no eu-strip)"
+          "ts": "2026-10-31T05:02:09Z",
+          "commit": "153d232",
+          "commit_full": "153d232a26904f0c833b6ae98d4930c54e7e296c",
+          "subject": "Import warnings: Show selects the frame a story warning is about (#2052)"
         },
-        "last_commit_ts": "2026-10-31T03:25:34Z",
+        "last_commit_ts": "2026-10-31T05:02:09Z",
         "repo_since": "2026-10-01T13:00:02Z",
         "window": [
           0,
@@ -1672,7 +1672,7 @@
           5,
           1,
           37,
-          4
+          19
         ]
       },
       "release": {
@@ -1698,11 +1698,11 @@
           "v": 47.0
         },
         {
-          "t": "2026-10-31T03:03:12Z",
+          "t": "2026-10-31T05:02:09Z",
           "v": 47.0
         }
       ],
-      "history_len": 160
+      "history_len": 166
     },
     {
       "id": "photocraft",
@@ -2070,7 +2070,7 @@
       "parity": {
         "tracked_since": "2026-10-10T18:13:04Z",
         "value_since": "2026-10-10T18:13:04Z",
-        "releases_since": 9,
+        "releases_since": 10,
         "releases_since_capped": false,
         "revisions_since": 10,
         "hours_since": null,
@@ -2101,18 +2101,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 18.3,
+        "score": 18.5,
         "active_days_7d": 6,
-        "changes_7d": 131,
-        "changes_14d": 317,
+        "changes_7d": 133,
+        "changes_14d": 319,
         "housekeeping_7d": 11,
         "last_code_change": {
-          "ts": "2026-10-31T03:46:09Z",
-          "commit": "d4eab70",
-          "commit_full": "d4eab70e63f45db03159d1ae0dd781772ba0416f",
-          "subject": "DWG bridge: build without acadrust on FreeBSD aarch64, where 0.6.6 doesn't compile"
+          "ts": "2026-10-31T04:45:52Z",
+          "commit": "b35f008",
+          "commit_full": "b35f00847a76485b271956dc17685fbc88c58760",
+          "subject": "Validate new linetype names in the rename command (#2519)"
         },
-        "last_commit_ts": "2026-10-31T03:46:11Z",
+        "last_commit_ts": "2026-10-31T04:45:52Z",
         "repo_since": "2026-10-06T00:15:47Z",
         "window": [
           0,
@@ -2128,16 +2128,16 @@
           4,
           0,
           42,
-          19
+          21
         ]
       },
       "release": {
-        "tag": "v0.14.0",
-        "name": "CADCraft v0.14.0",
-        "ts": "2026-10-28T16:34:10Z",
-        "url": "https://github.com/storytold/cadcraft/releases/tag/v0.14.0",
+        "tag": "v0.15.1",
+        "name": "CADCraft v0.15.1",
+        "ts": "2026-10-31T04:13:30Z",
+        "url": "https://github.com/storytold/cadcraft/releases/tag/v0.15.1",
         "changes": 68,
-        "new_contributors": 1,
+        "new_contributors": 14,
         "platforms": [
           "macOS",
           "Windows",
@@ -2162,5 +2162,5 @@
     }
   ],
   "errors": [],
-  "generated_at": "2026-10-31T04:07:23+00:00"
+  "generated_at": "2026-10-31T05:05:51+00:00"
 }

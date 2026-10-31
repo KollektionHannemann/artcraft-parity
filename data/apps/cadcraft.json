@@ -322,7 +322,7 @@
   "parity": {
     "tracked_since": "2026-10-10T18:13:04Z",
     "value_since": "2026-10-10T18:13:04Z",
-    "releases_since": 9,
+    "releases_since": 10,
     "releases_since_capped": false,
     "revisions_since": 10,
     "hours_since": null,
@@ -353,18 +353,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.3,
+    "score": 18.5,
     "active_days_7d": 6,
-    "changes_7d": 131,
-    "changes_14d": 317,
+    "changes_7d": 133,
+    "changes_14d": 319,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-10-31T03:46:09Z",
-      "commit": "d4eab70",
-      "commit_full": "d4eab70e63f45db03159d1ae0dd781772ba0416f",
-      "subject": "DWG bridge: build without acadrust on FreeBSD aarch64, where 0.6.6 doesn't compile"
+      "ts": "2026-10-31T04:45:52Z",
+      "commit": "b35f008",
+      "commit_full": "b35f00847a76485b271956dc17685fbc88c58760",
+      "subject": "Validate new linetype names in the rename command (#2519)"
     },
-    "last_commit_ts": "2026-10-31T03:46:11Z",
+    "last_commit_ts": "2026-10-31T04:45:52Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       0,
@@ -380,7 +380,7 @@
       4,
       0,
       42,
-      19
+      21
     ],
     "days": [
       {
@@ -742,26 +742,43 @@
       },
       {
         "d": "2026-10-31",
-        "code": 19,
+        "code": 21,
         "other": 3,
         "samples": [
           {
+            "commit": "b35f008",
+            "subject": "Validate new linetype names in the rename command (#2519)"
+          },
+          {
+            "commit": "c6e49b1",
+            "subject": "test(autosave): fix a flake: wait for the background write to finish, not just for its file"
+          },
+          {
             "commit": "d4eab70",
             "subject": "DWG bridge: build without acadrust on FreeBSD aarch64, where 0.6.6 doesn't compile"
-          },
-          {
-            "commit": "dc1442a",
-            "subject": "fix(io): MTEXT keeps its R2018 embedded column object (#2248) (#2525)"
-          },
-          {
-            "commit": "b22a068",
-            "subject": "Update symlink target in write_atomic instead of replacing the link (#2524)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.15.1",
+      "name": "CADCraft v0.15.1",
+      "ts": "2026-10-31T04:13:30Z",
+      "url": "https://github.com/storytold/cadcraft/releases/tag/v0.15.1",
+      "changes": 68,
+      "new_contributors": 14,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.14.0",
       "name": "CADCraft v0.14.0",
@@ -938,23 +955,6 @@
       "ts": "2026-10-08T14:41:49Z",
       "url": "https://github.com/storytold/cadcraft/releases/tag/v0.3.0",
       "changes": 2,
-      "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.1.0",
-      "name": "CADCraft v0.1.0",
-      "ts": "2026-10-08T03:07:48Z",
-      "url": "https://github.com/storytold/cadcraft/releases/tag/v0.1.0",
-      "changes": null,
       "new_contributors": null,
       "platforms": [
         "macOS",
@@ -1222,5 +1222,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-31T04:07:20+00:00"
+  "updated_at": "2026-10-31T05:05:48+00:00"
 }
