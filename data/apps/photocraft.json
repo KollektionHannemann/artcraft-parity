@@ -363,18 +363,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.1,
+    "score": 19.4,
     "active_days_7d": 7,
-    "changes_7d": 101,
-    "changes_14d": 427,
+    "changes_7d": 102,
+    "changes_14d": 428,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-10-31T05:06:22Z",
-      "commit": "422ca7b",
-      "commit_full": "422ca7beda90d927643bcd074646ebbd37706d75",
-      "subject": "docs: tidy agent, contributor and release docs (#10420)"
+      "ts": "2026-10-31T17:07:18Z",
+      "commit": "f3caa31",
+      "commit_full": "f3caa319a2aa10791a8579795979e0d6ba1ce630",
+      "subject": "Keep brush state intact when preset tip loading fails (#10288)"
     },
-    "last_commit_ts": "2026-10-31T05:06:22Z",
+    "last_commit_ts": "2026-10-31T17:07:18Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       102,
@@ -390,7 +390,7 @@
       10,
       18,
       7,
-      5
+      6
     ],
     "days": [
       {
@@ -984,9 +984,13 @@
       },
       {
         "d": "2026-10-31",
-        "code": 5,
+        "code": 6,
         "other": 1,
         "samples": [
+          {
+            "commit": "f3caa31",
+            "subject": "Keep brush state intact when preset tip loading fails (#10288)"
+          },
           {
             "commit": "422ca7b",
             "subject": "docs: tidy agent, contributor and release docs (#10420)"
@@ -994,10 +998,6 @@
           {
             "commit": "e65dca0",
             "subject": "Updates: shared check-result dialog from craft-update (#10421)"
-          },
-          {
-            "commit": "d5b564d",
-            "subject": "Flatpak bundle: skip the debuginfo pass manifest-wide (runner has no eu-strip)"
           }
         ]
       }
@@ -1372,5 +1372,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-31T06:00:29+00:00"
+  "updated_at": "2026-10-31T17:22:56+00:00"
 }
