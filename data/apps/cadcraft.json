@@ -353,18 +353,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.0,
+    "score": 17.3,
     "active_days_7d": 6,
-    "changes_7d": 113,
-    "changes_14d": 299,
-    "housekeeping_7d": 8,
+    "changes_7d": 121,
+    "changes_14d": 307,
+    "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-10-31T00:12:28Z",
-      "commit": "ba3196e",
-      "commit_full": "ba3196e3f737f2fed0d4d8ae9c065b20773dec16",
-      "subject": "fix(flatpak): allow reading launcher version pins (#2515)"
+      "ts": "2026-10-31T02:16:47Z",
+      "commit": "85fc399",
+      "commit_full": "85fc3991b1d313f50f73ac204ac07fb7861ffa21",
+      "subject": "fix(io): an attached ATTRIB keeps its Constant mode through DXF and DWG (#2246) (#2418)"
     },
-    "last_commit_ts": "2026-10-31T00:12:28Z",
+    "last_commit_ts": "2026-10-31T02:16:47Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       0,
@@ -380,7 +380,7 @@
       4,
       0,
       42,
-      1
+      9
     ],
     "days": [
       {
@@ -742,12 +742,20 @@
       },
       {
         "d": "2026-10-31",
-        "code": 1,
-        "other": 0,
+        "code": 9,
+        "other": 1,
         "samples": [
           {
-            "commit": "ba3196e",
-            "subject": "fix(flatpak): allow reading launcher version pins (#2515)"
+            "commit": "85fc399",
+            "subject": "fix(io): an attached ATTRIB keeps its Constant mode through DXF and DWG (#2246) (#2418)"
+          },
+          {
+            "commit": "9b71496",
+            "subject": "fix(io): MTEXT legacy column groups no longer leak into the entity (#2247) (#2416)"
+          },
+          {
+            "commit": "dc6a0e9",
+            "subject": "engine: renaming a layer repoints every viewport's frozen list and colour overrides (#1264)"
           }
         ]
       }
@@ -1214,5 +1222,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-31T00:29:19+00:00"
+  "updated_at": "2026-10-31T02:16:52+00:00"
 }
