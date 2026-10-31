@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/vectorcraft",
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
-  "latest_commit": "61551b5",
-  "latest_commit_date": "2026-10-31T22:41:19+07:00",
-  "latest_message": "Docs: ROADMAP progress log for 2026-10-31 (#4902)",
+  "latest_commit": "e9c2aa2",
+  "latest_commit_date": "2026-11-01T02:58:55+07:00",
+  "latest_message": "Add-ons: Group Overlapping Objects, Divide into Dashes, Save a Timestamped Copy, New Symbols from Layers (#4974)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Adobe Illustrator 2026 (30.x)",
-    "last_updated": "2026-10-31",
+    "last_updated": "2026-11-01",
     "metrics": {
       "full": {
         "label": "Full Illustrator (ready for real work; decides the stage)",
@@ -339,6 +339,22 @@
     ],
     "progress": [
       {
+        "date": "2026-11-01",
+        "text": "New Symbols from Layers joins the Document Tools add-on (Object › Plug-ins › Document Tools): one symbol of each top-level layer's art (the layers highlighted in the Layers panel when two or more are, else every layer), named after the layer, made as New Symbol makes one; Convert Layers to Symbols also puts an instance of each in place of its layer's art. Empty layers are skipped and reported; one undo step. A VectorCraft addition: headline numbers unchanged."
+      },
+      {
+        "date": "2026-11-01",
+        "text": "Document Tools, a built-in add-on (Object › Plug-ins › Document Tools), starts with Save a Timestamped Copy: a copy of the document named <name>YYYY-MM-DDHH-MM (UTC; -2, -3… when that name is taken) goes next to it, or into a folder picked for a document never saved, written as File › Save a Copy writes it, so the document keeps its path, title and modified state. Off on the web, which has no clock. A VectorCraft addition: headline numbers unchanged."
+      },
+      {
+        "date": "2026-11-01",
+        "text": "Divide into Dashes joins the Path Precision Tools add-on (Object › Plug-ins › Path Precision Tools): the selected paths, or only their direct-selected segments, are cut into separate open paths of a dash length measured along the curve, with an optional gap (left empty, or kept as pieces), each keeping the path's appearance; Fit to Corners and Ends stretches or squeezes the lengths so every run starts and ends on a dash. A dialog with Preview, one undo step, at most 100000 pieces. A VectorCraft addition: headline numbers unchanged."
+      },
+      {
+        "date": "2026-11-01",
+        "text": "Group Overlapping Objects joins the Arrange Tools add-on (Object › Plug-ins › Arrange Tools): the selected objects whose visual bounds overlap or touch, chains included, go into one group each, within their own layer or group, at the stacking place of their frontmost member; objects that overlap nothing stay as they are. One undo step, a sweep along x so thousands of loose pieces group quickly (at most 20000 objects). A VectorCraft addition: headline numbers unchanged."
+      },
+      {
         "date": "2026-10-31",
         "text": "Export for Screens works as the reference app's dialog: Artboards and Assets tabs with a grid or list of thumbnails, Clear Selection and Prefix, Create Sub-folders by Scale or Format (on by default), Export PDFs As Single File (the chosen artboards as one PDF's pages, pdfs: \"single\") or Multiple Files, iOS and Android rows, format presets in a ☰ menu, and a count of the files the export writes (#4895). About 55 community PRs and fixes landed the same day: Find Font, Replace Font, Outline Stroke and Expand leave hidden and locked art alone (with a warning); DXF export writes LINE and ELLIPSE entities and outlines only the strokes a CAD line can't draw; Blob Brush Angle and Roundness; Shift-constrained Perspective Selection; Grid Repeat Options Preview; a gradient mesh from a file budgeted at about a million quads; width-profile strokes keep their shape zoomed out; .ai/EPS import fidelity (area type, envelopes, transparency in dictionaries, character styles); PDF import finds hyphenated and CMap-suffixed font names; Windows renders follow the process's core affinity; Enter or Escape in a floating panel's field no longer reaches the canvas (#4803); Properties shows Blend Options for any selected blend (#4817); Artwork Cleanup finds doubled type (#4835) and joins stacked lines into one object (Join Point Text, #4826). Headline numbers unchanged."
       },
@@ -481,22 +497,6 @@
       {
         "date": "2026-10-13",
         "text": "Control sockets close after bounded idle, partial-line and reply-write waits, returning their connection slot (#1726); existing command processing timeout remains separate."
-      },
-      {
-        "date": "2026-10-13",
-        "text": "Image Trace: neighbouring colours share one fitted edge (gaps between them 22 to 50 px of area down to under 2), a 16 megapixel photo traces in 0.9 GB (was 3.9), stroked centre lines lie in the middle of their ink at its width (0.30 to 0.05 px off, 18 to 3 anchors a stroke), nearly level lines are levelled, more sharp corners are kept; new: Ignore Color, the Auto Color and Outline presets, and the Shapes, Auto Grouping and Gradients options (off by default) (docs/image-trace-quality.md)."
-      },
-      {
-        "date": "2026-10-13",
-        "text": "The interface is available in Polish (pl): menus, panels, dialogs and messages, with one/few/many plurals; AI-drafted, native review pending (#1498). Native documents with a lot of path data (traced or generated art, in layers, symbols or patterns) are saved as compact JSON, about a fifth of the size; small documents stay pretty-printed (#1492). Paste takes a PDF or EPS another app copied as editable vector art: from the macOS pasteboard (with SVG), EPS on Windows beside PDF, and .eps files copied in a file manager, with the new command clipboard.importEps (#1538, fixes #1499). Opening or placing a file with an image too large to decode says so, and the Links panel shows it on the row (#1540, part of #1479). Import: a multi-artboard .ai with notes beside its artboards opens from its editing data, a page's art past its artboard no longer lying over the page before it (#1528); a .ai gradient whose stops are listed upwards keeps each midpoint on the stop that starts its part of the ramp (#1530); SVG text on a path follows basic shapes (circle, ellipse, rect, line, polyline, polygon) as their SVG 2 equivalent paths (#1531, fixes #1527); PDFs whose alpha soft masks are drawn as images import with the mask instead of empty art (#1551); EPS and PostScript type set in Type 42 (TrueType) fonts imports at its size instead of 1000 times too large (#1553); PDF and EPS import keep a clipping path whose bounding box covers the page but whose shape doesn't (#1544, fixes #1542). Make Compound Path on a group (such as outlined type) keeps the paint of its backmost path instead of drawing nothing, and compound paths joined into one keep their holes (#1537). Live Corners: a round corner next to a curved side curves smoothly instead of sticking out of the shape, and the Smooth tool smooths only the stretch of path under the drag (#1547, fixes #1512). Join merges the selected anchor points that lie on one another, as after Average, into one anchor (#1582, fixes #1533). Guides: Lock Guides also locks the objects made into guides: they can't be selected, moved or deleted (#1543); they are drawn in the guide colour and style of Preferences, and a dragged selection snaps to ruler guides with Smart Guides on (#1583, fixes #1534). Edit › Keyboard Shortcuts lists Edit › Duplicate and the other commands that are in no menu but run without parameters (panel-menu commands such as Break Link to Symbol), so they can be given shortcuts (#1549, #1580, fixes #1539). Raster effects (blur, shadow, glow, grain) drawn after a pattern, radial or freeform gradient fill export at their place and size (#1541, fixes #1536). Fonts: the font scan on Linux also reads the folders fontconfig's configuration lists, such as TeX fonts under /usr/share/texmf/fonts (#1548, fixes #1529; not verified on Linux)."
-      },
-      {
-        "date": "2026-10-13",
-        "text": "Image Trace's colour presets trace flat art with its own colours however many are asked for (noise no longer shatters it: 16 Colors 70 → 4 paths on the harness's flat art; no slivers of in-between colour along anti-aliased edges), and the photo presets trace a photo into smooth tones without specks or hairlines (High Fidelity Photo 3,653 → 121 paths, colour error 2.30 → 1.75; 16 megapixels traced where 4 were refused) (docs/image-trace-quality.md)."
-      },
-      {
-        "date": "2026-10-13",
-        "text": "Image Trace traces anti-aliased and blurred images to a fraction of a pixel in Black and White, Grayscale and Color, with corners put back, straight edges as lines and round outlines as circles; a harness measures every preset before and after (docs/image-trace-quality.md): outlines 0.31 → 0.09 px off on average (Default), 0.27 → 0.06 (Black and White Logo)."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 11,
     "releases_since_capped": false,
-    "revisions_since": 198,
+    "revisions_since": 199,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,39 +536,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 199,
-    "revisions_7d": 8,
+    "revisions": 200,
+    "revisions_7d": 9,
     "last_revision": {
-      "ts": "2026-10-31T15:41:19Z",
+      "ts": "2026-10-31T19:58:55Z",
       "kind": "content",
-      "commit": "61551b5",
-      "commit_full": "61551b5dea81c559f16b64cbccd3d1fd2e05a9e9",
-      "message": "Docs: ROADMAP progress log for 2026-10-31 (#4902)"
+      "commit": "e9c2aa2",
+      "commit_full": "e9c2aa24914f0a88933bfa731f29dcf2c6f86e9d",
+      "message": "Add-ons: Group Overlapping Objects, Divide into Dashes, Save a Timestamped Copy, New Symbols from Layers (#4974)"
     },
     "last_update": {
-      "ts": "2026-10-31T15:41:19Z",
+      "ts": "2026-10-31T19:58:55Z",
       "kind": "content",
-      "commit": "61551b5",
-      "commit_full": "61551b5dea81c559f16b64cbccd3d1fd2e05a9e9",
-      "message": "Docs: ROADMAP progress log for 2026-10-31 (#4902)"
+      "commit": "e9c2aa2",
+      "commit_full": "e9c2aa24914f0a88933bfa731f29dcf2c6f86e9d",
+      "message": "Add-ons: Group Overlapping Objects, Divide into Dashes, Save a Timestamped Copy, New Symbols from Layers (#4974)"
     },
-    "self_reported": "2026-10-31"
+    "self_reported": "2026-11-01"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
     "score": 31.0,
     "active_days_7d": 7,
-    "changes_7d": 529,
-    "changes_14d": 1179,
+    "changes_7d": 530,
+    "changes_14d": 1180,
     "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-10-31T19:23:58Z",
-      "commit": "a261bce",
-      "commit_full": "a261bce00229ea3c06b462a6354fe74ced9a8790",
-      "subject": "Part of #3187: a gradient mesh made from an ellipse keeps its shape (#4958)"
+      "ts": "2026-10-31T19:58:55Z",
+      "commit": "e9c2aa2",
+      "commit_full": "e9c2aa24914f0a88933bfa731f29dcf2c6f86e9d",
+      "subject": "Add-ons: Group Overlapping Objects, Divide into Dashes, Save a Timestamped Copy, New Symbols from Layers (#4974)"
     },
-    "last_commit_ts": "2026-10-31T19:23:58Z",
+    "last_commit_ts": "2026-10-31T19:58:55Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       90,
@@ -584,7 +584,7 @@
       4,
       180,
       99,
-      101
+      102
     ],
     "days": [
       {
@@ -1165,9 +1165,13 @@
       },
       {
         "d": "2026-10-31",
-        "code": 101,
+        "code": 102,
         "other": 3,
         "samples": [
+          {
+            "commit": "e9c2aa2",
+            "subject": "Add-ons: Group Overlapping Objects, Divide into Dashes, Save a Timestamped Copy, New Symbols from Layers (#4974)"
+          },
           {
             "commit": "a261bce",
             "subject": "Part of #3187: a gradient mesh made from an ellipse keeps its shape (#4958)"
@@ -1175,10 +1179,6 @@
           {
             "commit": "1beb821",
             "subject": "Cursors: Caps Lock gives the drawing tools the crosshair (#4960)"
-          },
-          {
-            "commit": "1bb52c5",
-            "subject": "Fix #4940, #4946: text is shaped in its language, with a Language setting per text and Indian languages (#4943) (#4959)"
           }
         ]
       }
@@ -6620,7 +6620,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "e9c2aa2",
+      "commit_full": "e9c2aa24914f0a88933bfa731f29dcf2c6f86e9d",
+      "commit_date": "2026-11-01T02:58:55+07:00",
+      "ts": "2026-10-31T19:58:55Z",
+      "message": "Add-ons: Group Overlapping Objects, Divide into Dashes, Save a Timestamped Copy, New Symbols from Layers (#4974)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-01",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-31T19:55:36+00:00"
+  "updated_at": "2026-10-31T20:17:49+00:00"
 }
