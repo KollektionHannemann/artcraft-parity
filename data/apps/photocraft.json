@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/photocraft",
   "roadmap_url": "https://github.com/storytold/photocraft/blob/main/ROADMAP.md",
-  "latest_commit": "46394c5",
-  "latest_commit_date": "2026-10-22T13:53:15-04:00",
-  "latest_message": "Build each crate's integration tests as one binary (#8644)",
+  "latest_commit": "422ca7b",
+  "latest_commit_date": "2026-10-31T01:06:22-04:00",
+  "latest_message": "docs: tidy agent, contributor and release docs (#10420)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -297,7 +297,7 @@
       },
       {
         "date": "2026-10-10",
-        "text": "Full re-measure against Photoshop 2026 27.11.0 (installed bundle inspected): breadth ~76%, ready ~45%, alpha. Progress docs reorganized to the craftrules standard (parity.md → parity-checklist.md, parity-estimate.md merged into target-app-parity.md). 0.6.0 released."
+        "text": "Full re-measure against Photoshop 2026 27.11.0 (installed bundle inspected): breadth ~76%, ready ~45%, alpha. Progress docs reorganized (parity.md → parity-checklist.md, parity-estimate.md merged into target-app-parity.md). 0.6.0 released."
       },
       {
         "date": "2026-10-09",
@@ -334,7 +334,7 @@
     "value_since": "2026-10-10T19:09:04Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 5,
+    "revisions_since": 6,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -342,39 +342,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 6,
-    "revisions_7d": 0,
+    "revisions": 7,
+    "revisions_7d": 1,
     "last_revision": {
-      "ts": "2026-10-22T17:53:15Z",
+      "ts": "2026-10-31T05:06:22Z",
       "kind": "content",
-      "commit": "46394c5",
-      "commit_full": "46394c59765122c32c190e4493100c9a517f1c90",
-      "message": "Build each crate's integration tests as one binary (#8644)"
+      "commit": "422ca7b",
+      "commit_full": "422ca7beda90d927643bcd074646ebbd37706d75",
+      "message": "docs: tidy agent, contributor and release docs (#10420)"
     },
     "last_update": {
-      "ts": "2026-10-22T17:53:15Z",
+      "ts": "2026-10-31T05:06:22Z",
       "kind": "content",
-      "commit": "46394c5",
-      "commit_full": "46394c59765122c32c190e4493100c9a517f1c90",
-      "message": "Build each crate's integration tests as one binary (#8644)"
+      "commit": "422ca7b",
+      "commit_full": "422ca7beda90d927643bcd074646ebbd37706d75",
+      "message": "docs: tidy agent, contributor and release docs (#10420)"
     },
     "self_reported": "2026-10-17"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.6,
+    "score": 19.1,
     "active_days_7d": 7,
-    "changes_7d": 99,
-    "changes_14d": 425,
+    "changes_7d": 101,
+    "changes_14d": 427,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-10-31T03:26:31Z",
-      "commit": "d5b564d",
-      "commit_full": "d5b564db930d742796dbefe2cad20d14cc7385d5",
-      "subject": "Flatpak bundle: skip the debuginfo pass manifest-wide (runner has no eu-strip)"
+      "ts": "2026-10-31T05:06:22Z",
+      "commit": "422ca7b",
+      "commit_full": "422ca7beda90d927643bcd074646ebbd37706d75",
+      "subject": "docs: tidy agent, contributor and release docs (#10420)"
     },
-    "last_commit_ts": "2026-10-31T03:26:40Z",
+    "last_commit_ts": "2026-10-31T05:06:22Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       102,
@@ -390,7 +390,7 @@
       10,
       18,
       7,
-      3
+      5
     ],
     "days": [
       {
@@ -984,20 +984,20 @@
       },
       {
         "d": "2026-10-31",
-        "code": 3,
+        "code": 5,
         "other": 1,
         "samples": [
           {
+            "commit": "422ca7b",
+            "subject": "docs: tidy agent, contributor and release docs (#10420)"
+          },
+          {
+            "commit": "e65dca0",
+            "subject": "Updates: shared check-result dialog from craft-update (#10421)"
+          },
+          {
             "commit": "d5b564d",
             "subject": "Flatpak bundle: skip the debuginfo pass manifest-wide (runner has no eu-strip)"
-          },
-          {
-            "commit": "e7b7cf1",
-            "subject": "Follow-up to #10204: match the reference application in ten places (#10327) (#10328)"
-          },
-          {
-            "commit": "3ff283a",
-            "subject": "fix(flatpak): allow reading launcher version pins (#10393)"
           }
         ]
       }
@@ -1347,7 +1347,30 @@
       "breadth_pct": 76.0,
       "full_prev": 45.0,
       "kind": "content"
+    },
+    {
+      "commit": "422ca7b",
+      "commit_full": "422ca7beda90d927643bcd074646ebbd37706d75",
+      "commit_date": "2026-10-31T01:06:22-04:00",
+      "ts": "2026-10-31T05:06:22Z",
+      "message": "docs: tidy agent, contributor and release docs (#10420)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-17",
+      "full_pct": 45.0,
+      "full_range": null,
+      "full_hours": [
+        2300,
+        4100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe Photoshop 2026",
+      "mainstream_pct": 43.0,
+      "essentials_pct": 61.0,
+      "breadth_pct": 76.0,
+      "full_prev": 45.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-31T04:06:36+00:00"
+  "updated_at": "2026-10-31T06:00:29+00:00"
 }

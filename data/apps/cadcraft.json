@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/cadcraft",
   "roadmap_url": "https://github.com/storytold/cadcraft/blob/main/ROADMAP.md",
-  "latest_commit": "73e7486",
-  "latest_commit_date": "2026-10-24T01:55:07-04:00",
-  "latest_message": "DXF: proxy objects and entities keep their class through a save (#1812) (#1858)",
+  "latest_commit": "a133589",
+  "latest_commit_date": "2026-10-31T01:06:48-04:00",
+  "latest_message": "docs: tidy agent, contributor and asset docs (#2527)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -295,11 +295,11 @@
       },
       {
         "date": "2026-10-10",
-        "text": "Stage re-normalized from alpha to pre-alpha under the craftrules core-workflow gate: drafting with tracking, blocks, plotting and lossless DWG save fail; dimensioning passes. Alpha is ≈ 125–190 h away."
+        "text": "Stage re-normalized from alpha to pre-alpha under the core-workflow gate: drafting with tracking, blocks, plotting and lossless DWG save fail; dimensioning passes. Alpha is ≈ 125–190 h away."
       },
       {
         "date": "2026-10-10",
-        "text": "Full re-measure against AutoCAD 2027 for Mac in the craftrules progress-docs format: menu breadth 245/491 (50%), ready for real work ≈ 37%, stage alpha. Remaining estimates rose (≈ 570 h → 1,300–2,100 h) on new evidence: behaviour audits found tracking/extension/parallel snaps and dynamic input are not real, saves drop unmodelled content, DWG saves as R2000, and the old estimate had no localization, ecosystem, stability, platform or AI rows. New docs: target-app-parity, gaps, roadmap, architecture, localization, file-format, hardware, UI and geometry parity; docs/parity.md became docs/parity-checklist.md."
+        "text": "Full re-measure against AutoCAD 2027 for Mac: menu breadth 245/491 (50%), ready for real work ≈ 37%, stage alpha. Remaining estimates rose (≈ 570 h → 1,300–2,100 h) on new evidence: behaviour audits found tracking/extension/parallel snaps and dynamic input are not real, saves drop unmodelled content, DWG saves as R2000, and the old estimate had no localization, ecosystem, stability, platform or AI rows. New docs: target-app-parity, gaps, roadmap, architecture, localization, file-format, hardware, UI and geometry parity; docs/parity.md became docs/parity-checklist.md."
       },
       {
         "date": "2026-10-10",
@@ -324,7 +324,7 @@
     "value_since": "2026-10-10T18:13:04Z",
     "releases_since": 10,
     "releases_since_capped": false,
-    "revisions_since": 10,
+    "revisions_since": 11,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -332,39 +332,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 11,
-    "revisions_7d": 0,
+    "revisions": 12,
+    "revisions_7d": 1,
     "last_revision": {
-      "ts": "2026-10-24T05:55:07Z",
+      "ts": "2026-10-31T05:06:48Z",
       "kind": "content",
-      "commit": "73e7486",
-      "commit_full": "73e7486dc9af7fb202b3bdd1e107cacc89a247ee",
-      "message": "DXF: proxy objects and entities keep their class through a save (#1812) (#1858)"
+      "commit": "a133589",
+      "commit_full": "a1335895fc3b9c301191a408e9a92d673ca59bce",
+      "message": "docs: tidy agent, contributor and asset docs (#2527)"
     },
     "last_update": {
-      "ts": "2026-10-24T05:55:07Z",
+      "ts": "2026-10-31T05:06:48Z",
       "kind": "content",
-      "commit": "73e7486",
-      "commit_full": "73e7486dc9af7fb202b3bdd1e107cacc89a247ee",
-      "message": "DXF: proxy objects and entities keep their class through a save (#1812) (#1858)"
+      "commit": "a133589",
+      "commit_full": "a1335895fc3b9c301191a408e9a92d673ca59bce",
+      "message": "docs: tidy agent, contributor and asset docs (#2527)"
     },
     "self_reported": "2026-10-21"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.5,
+    "score": 18.6,
     "active_days_7d": 6,
-    "changes_7d": 133,
-    "changes_14d": 319,
+    "changes_7d": 135,
+    "changes_14d": 321,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-10-31T04:45:52Z",
-      "commit": "b35f008",
-      "commit_full": "b35f00847a76485b271956dc17685fbc88c58760",
-      "subject": "Validate new linetype names in the rename command (#2519)"
+      "ts": "2026-10-31T05:06:48Z",
+      "commit": "a133589",
+      "commit_full": "a1335895fc3b9c301191a408e9a92d673ca59bce",
+      "subject": "docs: tidy agent, contributor and asset docs (#2527)"
     },
-    "last_commit_ts": "2026-10-31T04:45:52Z",
+    "last_commit_ts": "2026-10-31T05:06:48Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       0,
@@ -380,7 +380,7 @@
       4,
       0,
       42,
-      21
+      23
     ],
     "days": [
       {
@@ -742,20 +742,20 @@
       },
       {
         "d": "2026-10-31",
-        "code": 21,
+        "code": 23,
         "other": 3,
         "samples": [
           {
+            "commit": "a133589",
+            "subject": "docs: tidy agent, contributor and asset docs (#2527)"
+          },
+          {
+            "commit": "b6c7a73",
+            "subject": "Updates: shared check-result dialog from craft-update (#2530)"
+          },
+          {
             "commit": "b35f008",
             "subject": "Validate new linetype names in the rename command (#2519)"
-          },
-          {
-            "commit": "c6e49b1",
-            "subject": "test(autosave): fix a flake: wait for the background write to finish, not just for its file"
-          },
-          {
-            "commit": "d4eab70",
-            "subject": "DWG bridge: build without acadrust on FreeBSD aarch64, where 0.6.6 doesn't compile"
           }
         ]
       }
@@ -1220,7 +1220,30 @@
       "breadth_pct": 50.0,
       "full_prev": 38.0,
       "kind": "content"
+    },
+    {
+      "commit": "a133589",
+      "commit_full": "a1335895fc3b9c301191a408e9a92d673ca59bce",
+      "commit_date": "2026-10-31T01:06:48-04:00",
+      "ts": "2026-10-31T05:06:48Z",
+      "message": "docs: tidy agent, contributor and asset docs (#2527)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-21",
+      "full_pct": 38.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1850
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Autodesk AutoCAD 2027",
+      "mainstream_pct": 28.0,
+      "essentials_pct": 46.0,
+      "breadth_pct": 50.0,
+      "full_prev": 38.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-31T05:05:48+00:00"
+  "updated_at": "2026-10-31T06:00:54+00:00"
 }

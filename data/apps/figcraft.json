@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/figcraft",
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
-  "latest_commit": "12e9b40",
-  "latest_commit_date": "2026-10-31T10:27:56+07:00",
-  "latest_message": "M12: a connector end on any part of an object with Cmd/Ctrl (#1733)",
+  "latest_commit": "7253909",
+  "latest_commit_date": "2026-10-31T01:06:42-04:00",
+  "latest_message": "docs: tidy agent, contributor and asset docs (#1739)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -501,7 +501,7 @@
     "value_since": "2026-10-11T21:41:28Z",
     "releases_since": 11,
     "releases_since_capped": false,
-    "revisions_since": 203,
+    "revisions_since": 204,
     "hours_since": {
       "from": [
         273,
@@ -556,39 +556,39 @@
     }
   },
   "roadmap": {
-    "revisions": 252,
-    "revisions_7d": 147,
+    "revisions": 253,
+    "revisions_7d": 148,
     "last_revision": {
-      "ts": "2026-10-31T03:27:56Z",
+      "ts": "2026-10-31T05:06:42Z",
       "kind": "content",
-      "commit": "12e9b40",
-      "commit_full": "12e9b409eda63b300ee881bf428be039ab4e1e70",
-      "message": "M12: a connector end on any part of an object with Cmd/Ctrl (#1733)"
+      "commit": "7253909",
+      "commit_full": "7253909c09a50617898393e61897f3b4f405f2f6",
+      "message": "docs: tidy agent, contributor and asset docs (#1739)"
     },
     "last_update": {
-      "ts": "2026-10-31T03:27:56Z",
+      "ts": "2026-10-31T05:06:42Z",
       "kind": "content",
-      "commit": "12e9b40",
-      "commit_full": "12e9b409eda63b300ee881bf428be039ab4e1e70",
-      "message": "M12: a connector end on any part of an object with Cmd/Ctrl (#1733)"
+      "commit": "7253909",
+      "commit_full": "7253909c09a50617898393e61897f3b4f405f2f6",
+      "message": "docs: tidy agent, contributor and asset docs (#1739)"
     },
     "self_reported": "2026-10-30"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 23.9,
+    "score": 24.0,
     "active_days_7d": 7,
-    "changes_7d": 334,
-    "changes_14d": 447,
+    "changes_7d": 336,
+    "changes_14d": 449,
     "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-10-31T05:05:13Z",
-      "commit": "29e333b",
-      "commit_full": "29e333b5b14649345ca214a304980850f37ebd62",
-      "subject": "fix: remove unused tr import in updates_ui"
+      "ts": "2026-10-31T05:43:37Z",
+      "commit": "0abbe44",
+      "commit_full": "0abbe44cd4a2450cb6d25c9368bc96a6ab88af19",
+      "subject": "updates: gate the wasm-only import (#1746)"
     },
-    "last_commit_ts": "2026-10-31T05:05:13Z",
+    "last_commit_ts": "2026-10-31T05:43:37Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       13,
@@ -604,7 +604,7 @@
       4,
       107,
       100,
-      16
+      18
     ],
     "days": [
       {
@@ -1014,20 +1014,20 @@
       },
       {
         "d": "2026-10-31",
-        "code": 16,
+        "code": 18,
         "other": 2,
         "samples": [
           {
+            "commit": "0abbe44",
+            "subject": "updates: gate the wasm-only import (#1746)"
+          },
+          {
+            "commit": "7253909",
+            "subject": "docs: tidy agent, contributor and asset docs (#1739)"
+          },
+          {
             "commit": "29e333b",
             "subject": "fix: remove unused tr import in updates_ui"
-          },
-          {
-            "commit": "2983ea5",
-            "subject": "Updates: shared check-result dialog from craft-update (#1743)"
-          },
-          {
-            "commit": "96552d6",
-            "subject": "craft-libs: move to e11f9d9 so craft-menu parses on FreeBSD's Cargo 1.98 (craft-libs#366)"
           }
         ]
       }
@@ -7307,7 +7307,30 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "7253909",
+      "commit_full": "7253909c09a50617898393e61897f3b4f405f2f6",
+      "commit_date": "2026-10-31T01:06:42-04:00",
+      "ts": "2026-10-31T05:06:42Z",
+      "message": "docs: tidy agent, contributor and asset docs (#1739)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-30",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-31T05:05:38+00:00"
+  "updated_at": "2026-10-31T06:00:47+00:00"
 }

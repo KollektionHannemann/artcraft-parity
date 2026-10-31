@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/soundcraft",
   "roadmap_url": "https://github.com/storytold/soundcraft/blob/main/ROADMAP.md",
-  "latest_commit": "7dc56a4",
-  "latest_commit_date": "2026-10-25T21:33:15-04:00",
-  "latest_message": "ui: Tracks and Groups and Clips in full-height dock columns (#1088)",
+  "latest_commit": "4179cf8",
+  "latest_commit_date": "2026-10-31T01:06:45-04:00",
+  "latest_message": "docs: tidy agent, contributor and release docs (#1218)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -400,7 +400,7 @@
       },
       {
         "date": "2026-10-10",
-        "text": "— Stage re-normalized to pre-alpha by the core-workflow gate (interface recording, MIDI recording and session interchange fail). Full re-measure against Pro Tools Ultimate 2026.4.1 and the standard"
+        "text": "— Stage re-normalized to pre-alpha by the core-workflow gate (interface recording, MIDI recording and session interchange fail). Full re-measure against Pro Tools Ultimate 2026.4.1 and the progress docs"
       },
       {
         "date": "2026-10-09",
@@ -429,7 +429,7 @@
     "value_since": "2026-10-10T18:08:49Z",
     "releases_since": 10,
     "releases_since_capped": false,
-    "revisions_since": 20,
+    "revisions_since": 21,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -437,39 +437,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 21,
-    "revisions_7d": 3,
+    "revisions": 22,
+    "revisions_7d": 4,
     "last_revision": {
-      "ts": "2026-10-26T01:33:15Z",
+      "ts": "2026-10-31T05:06:45Z",
       "kind": "content",
-      "commit": "7dc56a4",
-      "commit_full": "7dc56a4dbeebf57eacece09536726c57844fc59d",
-      "message": "ui: Tracks and Groups and Clips in full-height dock columns (#1088)"
+      "commit": "4179cf8",
+      "commit_full": "4179cf88e6d0ec9db09b7292b678bbbf978c2894",
+      "message": "docs: tidy agent, contributor and release docs (#1218)"
     },
     "last_update": {
-      "ts": "2026-10-26T01:33:15Z",
+      "ts": "2026-10-31T05:06:45Z",
       "kind": "content",
-      "commit": "7dc56a4",
-      "commit_full": "7dc56a4dbeebf57eacece09536726c57844fc59d",
-      "message": "ui: Tracks and Groups and Clips in full-height dock columns (#1088)"
+      "commit": "4179cf8",
+      "commit_full": "4179cf88e6d0ec9db09b7292b678bbbf978c2894",
+      "message": "docs: tidy agent, contributor and release docs (#1218)"
     },
     "self_reported": "2026-10-25"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 12.8,
+    "score": 13.8,
     "active_days_7d": 6,
-    "changes_7d": 61,
-    "changes_14d": 170,
+    "changes_7d": 63,
+    "changes_14d": 172,
     "housekeeping_7d": 10,
     "last_code_change": {
-      "ts": "2026-10-31T00:12:19Z",
-      "commit": "e8bc475",
-      "commit_full": "e8bc4758ccb4881e6c427fbccd0f0df750d31dd8",
-      "subject": "fix(flatpak): allow reading launcher version pins (#1210)"
+      "ts": "2026-10-31T05:06:45Z",
+      "commit": "4179cf8",
+      "commit_full": "4179cf88e6d0ec9db09b7292b678bbbf978c2894",
+      "subject": "docs: tidy agent, contributor and release docs (#1218)"
     },
-    "last_commit_ts": "2026-10-31T02:59:18Z",
+    "last_commit_ts": "2026-10-31T05:06:45Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
       0,
@@ -485,7 +485,7 @@
       4,
       0,
       38,
-      1
+      3
     ],
     "days": [
       {
@@ -856,9 +856,17 @@
       },
       {
         "d": "2026-10-31",
-        "code": 1,
+        "code": 3,
         "other": 1,
         "samples": [
+          {
+            "commit": "4179cf8",
+            "subject": "docs: tidy agent, contributor and release docs (#1218)"
+          },
+          {
+            "commit": "ca6271b",
+            "subject": "Updates: shared check-result dialog from craft-update (#1219)"
+          },
           {
             "commit": "e8bc475",
             "subject": "fix(flatpak): allow reading launcher version pins (#1210)"
@@ -1556,7 +1564,30 @@
       "breadth_pct": 70.0,
       "full_prev": 40.0,
       "kind": "content"
+    },
+    {
+      "commit": "4179cf8",
+      "commit_full": "4179cf88e6d0ec9db09b7292b678bbbf978c2894",
+      "commit_date": "2026-10-31T01:06:45-04:00",
+      "ts": "2026-10-31T05:06:45Z",
+      "message": "docs: tidy agent, contributor and release docs (#1218)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-25",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-10-31T04:07:14+00:00"
+  "updated_at": "2026-10-31T06:00:50+00:00"
 }
