@@ -353,18 +353,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.3,
+    "score": 18.2,
     "active_days_7d": 6,
-    "changes_7d": 121,
-    "changes_14d": 307,
+    "changes_7d": 130,
+    "changes_14d": 316,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-10-31T02:16:47Z",
-      "commit": "85fc399",
-      "commit_full": "85fc3991b1d313f50f73ac204ac07fb7861ffa21",
-      "subject": "fix(io): an attached ATTRIB keeps its Constant mode through DXF and DWG (#2246) (#2418)"
+      "ts": "2026-10-31T02:25:50Z",
+      "commit": "dc1442a",
+      "commit_full": "dc1442ac89428dd09462d3cd132b9fafb458bd03",
+      "subject": "fix(io): MTEXT keeps its R2018 embedded column object (#2248) (#2525)"
     },
-    "last_commit_ts": "2026-10-31T02:16:47Z",
+    "last_commit_ts": "2026-10-31T02:25:50Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       0,
@@ -380,7 +380,7 @@
       4,
       0,
       42,
-      9
+      18
     ],
     "days": [
       {
@@ -742,20 +742,20 @@
       },
       {
         "d": "2026-10-31",
-        "code": 9,
+        "code": 18,
         "other": 1,
         "samples": [
           {
-            "commit": "85fc399",
-            "subject": "fix(io): an attached ATTRIB keeps its Constant mode through DXF and DWG (#2246) (#2418)"
+            "commit": "dc1442a",
+            "subject": "fix(io): MTEXT keeps its R2018 embedded column object (#2248) (#2525)"
           },
           {
-            "commit": "9b71496",
-            "subject": "fix(io): MTEXT legacy column groups no longer leak into the entity (#2247) (#2416)"
+            "commit": "b22a068",
+            "subject": "Update symlink target in write_atomic instead of replacing the link (#2524)"
           },
           {
-            "commit": "dc6a0e9",
-            "subject": "engine: renaming a layer repoints every viewport's frozen list and colour overrides (#1264)"
+            "commit": "60f1bd6",
+            "subject": "DXF: save pre-2007 text in the file's code page instead of all \\U+ escapes (#2523)"
           }
         ]
       }
@@ -1222,5 +1222,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-10-31T02:16:52+00:00"
+  "updated_at": "2026-10-31T03:09:02+00:00"
 }
