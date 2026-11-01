@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/pdfcraft",
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
-  "latest_commit": "eea00a6",
-  "latest_commit_date": "2026-10-31T23:42:20+01:00",
-  "latest_message": "M3: Add optional page-edge shadows setting (fixes #1577) (#2088)",
+  "latest_commit": "61140ed",
+  "latest_commit_date": "2026-11-01T18:50:01+01:00",
+  "latest_message": "feat: Acrobat UI parity for image editing, text formatting, and UI stabilization and Bug Fixes (#2155)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
-    "last_updated": "2026-10-31",
+    "last_updated": "2026-11-01",
     "metrics": {
       "full": {
         "label": "Full Acrobat Pro (ready for real work)",
@@ -289,6 +289,22 @@
     ],
     "progress": [
       {
+        "date": "2026-11-01",
+        "text": "PR #2155 further review preserves inherited Form text state and soft-mask chronology during Arrange, composes crop-group moves in the proper scope, and uses affine/press-relative image resize plus a shared rotation pivot. No-op script buttons preserve hidden source text; paste coordinates, visible selection ownership, and Snapshot/Export permissions have dedicated regressions. Candidate only; estimates unchanged."
+      },
+      {
+        "date": "2026-11-01",
+        "text": "PR #2155 latest follow-up handles explicit image-paste events without release-time guesses, refreshes the font-size field when a selection becomes mixed, and specifies mixed-script normalization with exact Undo restoration. Candidate only; estimates unchanged."
+      },
+      {
+        "date": "2026-11-01",
+        "text": "PR #2155 review follow-up preserves editor crops through group moves and keeps arranged artwork outside added-item streams; unsafe nested-tag extraction is refused. Image handles and flips follow page orientation, added images accept general transforms, and clipboard/text/Home/font-discovery edge cases have focused regressions. Candidate only; estimates unchanged."
+      },
+      {
+        "date": "2026-11-01",
+        "text": "PR #2155 maintainer edits remove redundant image/text helpers and add regressions for crop ownership, arrange scope/state fidelity, clipboard precedence, crop-drag bounds, and font scanning. Transform and Unicode-script tools complete the headless paths."
+      },
+      {
         "date": "2026-10-31",
         "text": "(M2, PR #4172 review): Added same-machine pixel oracles for GBK Song, Hei, Kai and FangSong, including all four subset-prefixed Founder aliases. Reference PDFs use explicit Unicode mappings and independently selected installed faces; font data and rasters remain in memory. All eight cases ran; wrong-glyph and wrong-family production mutations each failed the new assertion and were restored. Validation: 422 renderer unit tests, renderer all-target Clippy with -D warnings, formatting, layers/assets/parity and renderer WASM checks passed; existing optional-patch/WASM warnings and parity notes remain. Estimates unchanged."
       },
@@ -431,22 +447,6 @@
       {
         "date": "2026-10-22",
         "text": "(M6, calculation scripts): The Calculate tab and a rename read simplified field notation only from a comment, where Acrobat writes it: a string that spells BVCALC … EVCALC is no longer taken for the notation, or rewritten by a rename. A / after the condition of if, while, for or with starts a regular expression, so a rename no longer rewrites a name inside one, and a quote inside one no longer hides the getField calls after it. Both found in review of #3550. A // comment ends at \\r, U+2028 or U+2029 as well as \\n, so in a script with \\r line endings the code after one is no longer hidden from a rename, or taken for the notation. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-22",
-        "text": "(M14, JPEG and TIFF export): Export ▸ Image as JPEG or TIFF refuses a raster that is not exactly width × height pixels, as PNG export has since #2425. A raster a pixel short panicked inside the JPEG and TIFF encoders, and a partial pixel at the end was dropped and the rest written as a valid image. Rendered pages are always the right size, so what exports is unchanged. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-21",
-        "text": "(M3, window resize and move on Wayland): With PdfCraft's own title bar on GNOME/Wayland, a second resize by a window edge, or a second move by the empty tab strip, works straight after the first; it waited for a click inside the window, because the compositor keeps the button's release from egui. A unit test covers the release given back; checked by hand in a test build. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-21",
-        "text": "(M3, #3808): Page thumbnails in the Inspector can be resized independently from the document and Organize, with a slider, buttons and thumbnail-zoom control option. Selection, page following and reload are covered by regressions. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-21",
-        "text": "(M14, Brazilian Portuguese): Completed the pt-br catalog against the current 2,674-key union, including signature validation and accessibility messages; no build or compilation run. Localization remains partial because help and unpredictable engine/OS error details are not translated."
       }
     ]
   },
@@ -455,7 +455,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 8,
     "releases_since_capped": false,
-    "revisions_since": 91,
+    "revisions_since": 92,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -472,39 +472,39 @@
     }
   },
   "roadmap": {
-    "revisions": 179,
-    "revisions_7d": 6,
+    "revisions": 180,
+    "revisions_7d": 7,
     "last_revision": {
-      "ts": "2026-10-31T22:42:20Z",
+      "ts": "2026-11-01T17:50:01Z",
       "kind": "content",
-      "commit": "eea00a6",
-      "commit_full": "eea00a6186546762d11d857666249672bff3fcad",
-      "message": "M3: Add optional page-edge shadows setting (fixes #1577) (#2088)"
+      "commit": "61140ed",
+      "commit_full": "61140ed807809af05db3a2f18bdacf40791b6eb7",
+      "message": "feat: Acrobat UI parity for image editing, text formatting, and UI stabilization and Bug Fixes (#2155)"
     },
     "last_update": {
-      "ts": "2026-10-31T22:42:20Z",
+      "ts": "2026-11-01T17:50:01Z",
       "kind": "content",
-      "commit": "eea00a6",
-      "commit_full": "eea00a6186546762d11d857666249672bff3fcad",
-      "message": "M3: Add optional page-edge shadows setting (fixes #1577) (#2088)"
+      "commit": "61140ed",
+      "commit_full": "61140ed807809af05db3a2f18bdacf40791b6eb7",
+      "message": "feat: Acrobat UI parity for image editing, text formatting, and UI stabilization and Bug Fixes (#2155)"
     },
-    "self_reported": "2026-10-31"
+    "self_reported": "2026-11-01"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.1,
-    "active_days_7d": 6,
-    "changes_7d": 44,
-    "changes_14d": 254,
-    "housekeeping_7d": 6,
+    "score": 15.1,
+    "active_days_7d": 7,
+    "changes_7d": 45,
+    "changes_14d": 255,
+    "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-10-31T22:42:20Z",
-      "commit": "eea00a6",
-      "commit_full": "eea00a6186546762d11d857666249672bff3fcad",
-      "subject": "M3: Add optional page-edge shadows setting (fixes #1577) (#2088)"
+      "ts": "2026-11-01T17:50:01Z",
+      "commit": "61140ed",
+      "commit_full": "61140ed807809af05db3a2f18bdacf40791b6eb7",
+      "subject": "feat: Acrobat UI parity for image editing, text formatting, and UI stabilization and Bug Fixes (#2155)"
     },
-    "last_commit_ts": "2026-11-01T03:43:03Z",
+    "last_commit_ts": "2026-11-01T17:50:01Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       25,
@@ -520,7 +520,7 @@
       3,
       4,
       11,
-      0
+      1
     ],
     "days": [
       {
@@ -1120,9 +1120,14 @@
       },
       {
         "d": "2026-11-01",
-        "code": 0,
-        "other": 1,
-        "samples": []
+        "code": 1,
+        "other": 2,
+        "samples": [
+          {
+            "commit": "61140ed",
+            "subject": "feat: Acrobat UI parity for image editing, text formatting, and UI stabilization and Bug Fixes (#2155)"
+          }
+        ]
       }
     ]
   },
@@ -5449,7 +5454,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "61140ed",
+      "commit_full": "61140ed807809af05db3a2f18bdacf40791b6eb7",
+      "commit_date": "2026-11-01T18:50:01+01:00",
+      "ts": "2026-11-01T17:50:01Z",
+      "message": "feat: Acrobat UI parity for image editing, text formatting, and UI stabilization and Bug Fixes (#2155)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-01",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-01T04:36:50+00:00"
+  "updated_at": "2026-11-01T17:54:50+00:00"
 }
