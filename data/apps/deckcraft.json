@@ -479,7 +479,7 @@
   "parity": {
     "tracked_since": "2026-10-10T18:09:21Z",
     "value_since": "2026-10-10T18:09:21Z",
-    "releases_since": 9,
+    "releases_since": 10,
     "releases_since_capped": false,
     "revisions_since": 119,
     "hours_since": null,
@@ -521,18 +521,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.7,
+    "score": 16.2,
     "active_days_7d": 6,
-    "changes_7d": 102,
-    "changes_14d": 233,
-    "housekeeping_7d": 10,
+    "changes_7d": 103,
+    "changes_14d": 234,
+    "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-11-01T09:54:32Z",
-      "commit": "5fb694d",
-      "commit_full": "5fb694d9917d232fbf5b2e0f42ac15d73febde7c",
-      "subject": "Text: a word doesn't break after ?, !, } or + (URLs wrap as in PowerPoint) (#924)"
+      "ts": "2026-11-01T19:14:20Z",
+      "commit": "bbd5798",
+      "commit_full": "bbd579813fdf4d64e002ce9efd2c8de24becea06",
+      "subject": "packaging(flatpak): flatpak-oci.sh sources common.sh, not the absent env.sh"
     },
-    "last_commit_ts": "2026-11-01T18:57:23Z",
+    "last_commit_ts": "2026-11-01T19:14:22Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
       1,
@@ -548,7 +548,7 @@
       0,
       60,
       23,
-      1
+      2
     ],
     "days": [
       {
@@ -973,9 +973,13 @@
       },
       {
         "d": "2026-11-01",
-        "code": 1,
-        "other": 3,
+        "code": 2,
+        "other": 4,
         "samples": [
+          {
+            "commit": "bbd5798",
+            "subject": "packaging(flatpak): flatpak-oci.sh sources common.sh, not the absent env.sh"
+          },
           {
             "commit": "5fb694d",
             "subject": "Text: a word doesn't break after ?, !, } or + (URLs wrap as in PowerPoint) (#924)"
@@ -985,6 +989,23 @@
     ]
   },
   "releases": [
+    {
+      "tag": "v0.14.1",
+      "name": "DeckCraft v0.14.1",
+      "ts": "2026-11-01T19:38:54Z",
+      "url": "https://github.com/storytold/deckcraft/releases/tag/v0.14.1",
+      "changes": 20,
+      "new_contributors": 1,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.13.1",
       "name": "DeckCraft v0.13.1",
@@ -1162,23 +1183,6 @@
       "url": "https://github.com/storytold/deckcraft/releases/tag/v0.3.0",
       "changes": 4,
       "new_contributors": 1,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.1.0",
-      "name": "DeckCraft v0.1.0",
-      "ts": "2026-10-08T00:23:17Z",
-      "url": "https://github.com/storytold/deckcraft/releases/tag/v0.1.0",
-      "changes": null,
-      "new_contributors": null,
       "platforms": [
         "macOS",
         "Windows",
@@ -4005,5 +4009,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-01T19:11:45+00:00"
+  "updated_at": "2026-11-01T19:57:13+00:00"
 }

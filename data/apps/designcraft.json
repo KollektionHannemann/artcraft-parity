@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/designcraft",
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
-  "latest_commit": "ea214dd",
-  "latest_commit_date": "2026-10-31T01:06:18-04:00",
-  "latest_message": "docs: tidy agent, contributor and asset docs (#2070)",
+  "latest_commit": "a288a87",
+  "latest_commit_date": "2026-11-01T14:54:59-05:00",
+  "latest_message": "i18n: Swedish (sv) interface translation (#1018)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -307,6 +307,14 @@
     ],
     "progress": [
       {
+        "date": "2026-10-31",
+        "text": "· font.list reports the embedding licence of the face that sets each font's text: its OS/2 fsType and what the bits mean (restrictedLicence, bitmapOnly, noSubsetting, editable, previewPrint; null when the font is missing or has no OS/2 table). A script or host that makes PDFs can check every face, bundled and installed ones included, without reading font files. Export behaviour is unchanged. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-31",
+        "text": "· A .designcraft file opened from bytes (file.openBytes with its file name, as a browser or host passes it) is titled without the extension, as an IDML file opened that way is. Saving it in the browser downloaded Brochure.designcraft.designcraft, and the File Name variable showed the doubled name. Browser Open and Drop pass the full file name, so only the engine removes the extension and a repeated suffix is kept in the title. No readiness percentage change."
+      },
+      {
         "date": "2026-10-30",
         "text": "· The Color Picker takes an eyedropper: dragged from the picker onto the page, it takes the colour the canvas shows (proofed under Proof Colors). No readiness percentage change."
       },
@@ -457,23 +465,15 @@
       {
         "date": "2026-10-23",
         "text": "· designcraft-cli mcp takes --automation-read-root and --automation-write-root more than once, as the suite's other apps do (#1552): a path inside any root of its kind passes, and the roots' common parent, .. or a link out of them and the other kind's roots stay refused. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "· Layout › Go Back and Go Forward (Cmd+Page Up / Cmd+Page Down, Ctrl on Windows and Linux) retrace the jumps between pages (Go to Page, the page and spread commands, the Pages panel) as InDesign's do, returning to where the view was on each page at the current zoom; a new jump after going back drops the pages ahead, scrolling adds no entry, and pages deleted since are skipped. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "· Effects dialog: with Use Global Light on, the Angle field (and the Bevel and Emboss one) stays editable and shows the document's global light angle; a change there sets the global light for every effect that uses it, applied with the effects in one undo step (object.effects takes globalLight). Before, the field was greyed out and the angle couldn't be changed in the dialog. No readiness percentage change."
       }
     ]
   },
   "parity": {
     "tracked_since": "2026-10-10T18:09:17Z",
     "value_since": "2026-10-10T18:09:17Z",
-    "releases_since": 10,
+    "releases_since": 11,
     "releases_since_capped": false,
-    "revisions_since": 166,
+    "revisions_since": 170,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -481,39 +481,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 167,
-    "revisions_7d": 29,
+    "revisions": 171,
+    "revisions_7d": 33,
     "last_revision": {
-      "ts": "2026-10-31T05:06:18Z",
+      "ts": "2026-11-01T19:54:59Z",
       "kind": "content",
-      "commit": "ea214dd",
-      "commit_full": "ea214dd44dbfbfed23ffd79e5efaba375510afb4",
-      "message": "docs: tidy agent, contributor and asset docs (#2070)"
+      "commit": "a288a87",
+      "commit_full": "a288a87bf60ba274b6b5cc76a8d3728de804a4bb",
+      "message": "i18n: Swedish (sv) interface translation (#1018)"
     },
     "last_update": {
-      "ts": "2026-10-31T05:06:18Z",
+      "ts": "2026-11-01T19:54:59Z",
       "kind": "content",
-      "commit": "ea214dd",
-      "commit_full": "ea214dd44dbfbfed23ffd79e5efaba375510afb4",
-      "message": "docs: tidy agent, contributor and asset docs (#2070)"
+      "commit": "a288a87",
+      "commit_full": "a288a87bf60ba274b6b5cc76a8d3728de804a4bb",
+      "message": "i18n: Swedish (sv) interface translation (#1018)"
     },
     "self_reported": "2026-10-23"
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 15.9,
-    "active_days_7d": 6,
-    "changes_7d": 83,
-    "changes_14d": 266,
+    "level": "buzzing",
+    "score": 20.0,
+    "active_days_7d": 7,
+    "changes_7d": 100,
+    "changes_14d": 283,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-10-31T22:53:17Z",
-      "commit": "98d8016",
-      "commit_full": "98d80160014a11f3455d7bb7e7e429c894f0ebe6",
-      "subject": "packaging(flatpak): add OCI image build and GHCR publishing helper (#2099)"
+      "ts": "2026-11-01T19:54:59Z",
+      "commit": "a288a87",
+      "commit_full": "a288a87bf60ba274b6b5cc76a8d3728de804a4bb",
+      "subject": "i18n: Swedish (sv) interface translation (#1018)"
     },
-    "last_commit_ts": "2026-11-01T18:58:16Z",
+    "last_commit_ts": "2026-11-01T19:54:59Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       32,
@@ -529,7 +529,7 @@
       1,
       37,
       22,
-      0
+      17
     ],
     "days": [
       {
@@ -1073,13 +1073,43 @@
       },
       {
         "d": "2026-11-01",
-        "code": 0,
+        "code": 17,
         "other": 3,
-        "samples": []
+        "samples": [
+          {
+            "commit": "a288a87",
+            "subject": "i18n: Swedish (sv) interface translation (#1018)"
+          },
+          {
+            "commit": "8d75ded",
+            "subject": "font.list: report each face's fsType embedding bits (#2109)"
+          },
+          {
+            "commit": "78a1087",
+            "subject": "Add initial Hungarian (hu) interface localization (#1223)"
+          }
+        ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.16.0",
+      "name": "DesignCraft v0.16.0",
+      "ts": "2026-11-01T19:32:27Z",
+      "url": "https://github.com/storytold/designcraft/releases/tag/v0.16.0",
+      "changes": 18,
+      "new_contributors": 3,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.15.2",
       "name": "DesignCraft v0.15.2",
@@ -1257,23 +1287,6 @@
       "url": "https://github.com/storytold/designcraft/releases/tag/v0.5.0",
       "changes": 1,
       "new_contributors": 1,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.4.0",
-      "name": "DesignCraft v0.4.0",
-      "ts": "2026-10-08T14:41:43Z",
-      "url": "https://github.com/storytold/designcraft/releases/tag/v0.4.0",
-      "changes": 34,
-      "new_contributors": 10,
       "platforms": [
         "macOS",
         "Windows",
@@ -5126,7 +5139,99 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "3bd5adf",
+      "commit_full": "3bd5adfb1906612b8e69dd2f90918d1d0a848b88",
+      "commit_date": "2026-11-01T14:49:27-05:00",
+      "ts": "2026-11-01T19:49:27Z",
+      "message": "file.openBytes: title a .designcraft file without its extension (#2108)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-23",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "78a1087",
+      "commit_full": "78a108707ca64a8dbcd9fdaed5b2934a0198dcdd",
+      "commit_date": "2026-11-01T14:49:43-05:00",
+      "ts": "2026-11-01T19:49:43Z",
+      "message": "Add initial Hungarian (hu) interface localization (#1223)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-23",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "8d75ded",
+      "commit_full": "8d75ded7ffd342f246fa96990653bd90d2f15a49",
+      "commit_date": "2026-11-01T14:54:44-05:00",
+      "ts": "2026-11-01T19:54:44Z",
+      "message": "font.list: report each face's fsType embedding bits (#2109)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-23",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "a288a87",
+      "commit_full": "a288a87bf60ba274b6b5cc76a8d3728de804a4bb",
+      "commit_date": "2026-11-01T14:54:59-05:00",
+      "ts": "2026-11-01T19:54:59Z",
+      "message": "i18n: Swedish (sv) interface translation (#1018)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-23",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-01T19:11:35+00:00"
+  "updated_at": "2026-11-01T19:57:05+00:00"
 }
