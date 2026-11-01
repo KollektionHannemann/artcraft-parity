@@ -495,16 +495,16 @@
     "level": "active",
     "score": 18.5,
     "active_days_7d": 7,
-    "changes_7d": 64,
-    "changes_14d": 274,
+    "changes_7d": 65,
+    "changes_14d": 275,
     "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-01T21:44:16Z",
-      "commit": "4d8eede",
-      "commit_full": "4d8eede62ae2718e2363db2c1646c482e751af58",
-      "subject": "M11: Monochrome Images reads JBIG2 scans: averaged like any, and stored again as JBIG2 (optimize.mono-compression) (#5472)"
+      "ts": "2026-11-01T22:09:46Z",
+      "commit": "85c8a2a",
+      "commit_full": "85c8a2a0bf108984173fa892f91894de34909a23",
+      "subject": "M8: a redacted black-and-white scan is stored as Group 4, or JBIG2 again, when smaller (protect.redact-image-pixels) (#5474)"
     },
-    "last_commit_ts": "2026-11-01T21:44:16Z",
+    "last_commit_ts": "2026-11-01T22:09:46Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       25,
@@ -520,7 +520,7 @@
       3,
       4,
       11,
-      20
+      21
     ],
     "days": [
       {
@@ -1120,9 +1120,13 @@
       },
       {
         "d": "2026-11-01",
-        "code": 20,
+        "code": 21,
         "other": 3,
         "samples": [
+          {
+            "commit": "85c8a2a",
+            "subject": "M8: a redacted black-and-white scan is stored as Group 4, or JBIG2 again, when smaller (protect.redact-image-pixels) (#5474)"
+          },
           {
             "commit": "4d8eede",
             "subject": "M11: Monochrome Images reads JBIG2 scans: averaged like any, and stored again as JBIG2 (optimize.mono-compression) (#5472)"
@@ -1130,10 +1134,6 @@
           {
             "commit": "2850d52",
             "subject": "M11: Monochrome Images averages indexed black-and-white images, the palette saying which sample is dark (optimize.downsample-images) (#5471)"
-          },
-          {
-            "commit": "99e63d4",
-            "subject": "M8: redaction clears the covered pixels of JBIG2 scans instead of removing them (protect.redact-image-pixels) (#5461)"
           }
         ]
       }
@@ -5510,5 +5510,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-01T21:57:18+00:00"
+  "updated_at": "2026-11-01T22:23:37+00:00"
 }
