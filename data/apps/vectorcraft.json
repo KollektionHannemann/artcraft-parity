@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/vectorcraft",
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
-  "latest_commit": "e9c2aa2",
-  "latest_commit_date": "2026-11-01T02:58:55+07:00",
-  "latest_message": "Add-ons: Group Overlapping Objects, Divide into Dashes, Save a Timestamped Copy, New Symbols from Layers (#4974)",
+  "latest_commit": "6d3d5ad",
+  "latest_commit_date": "2026-11-01T08:25:50+07:00",
+  "latest_message": "Fix #4917: Sort Objects sorts the selection by one attribute and applies that order to another (#5017)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -340,6 +340,14 @@
     "progress": [
       {
         "date": "2026-11-01",
+        "text": "Randomize Opacity joins the Arrange Tools add-on (Object › Plug-ins › Arrange Tools): each selected object gets its own opacity at random between a minimum and a maximum percent, with a seed that repeats the result, as one undo step (addon.arrange.randomizeOpacity, #4925)."
+      },
+      {
+        "date": "2026-11-01",
+        "text": "Sort Objects joins the Arrange Tools add-on (Object › Plug-ins › Arrange Tools): the selected objects are sorted by width, height, area, position, opacity or stacking order (small to large, large to small or at random) and take another of those in that order, trading their values or stepping them evenly, as one undo step (addon.arrange.sort, #4917)."
+      },
+      {
+        "date": "2026-11-01",
         "text": "New Symbols from Layers joins the Document Tools add-on (Object › Plug-ins › Document Tools): one symbol of each top-level layer's art (the layers highlighted in the Layers panel when two or more are, else every layer), named after the layer, made as New Symbol makes one; Convert Layers to Symbols also puts an instance of each in place of its layer's art. Empty layers are skipped and reported; one undo step. A VectorCraft addition: headline numbers unchanged."
       },
       {
@@ -489,14 +497,6 @@
       {
         "date": "2026-10-13",
         "text": "Synthetic control input has finite click/drag counts and pending-event limits, checked before queue mutation; control-channel bursts yield after 64 requests per frame (#1709)."
-      },
-      {
-        "date": "2026-10-13",
-        "text": "SVGs that move objects with a CSS transform (translate(100px, 0), rotate(45deg)) or style type with the font shorthand import as drawn (#1565). SVG symbols whose shapes use percentage lengths import at the size and place they are drawn, the percentages being of the symbol's viewBox (#1596). Inkscape's flowed text (flowRoot) opens as area type in its rectangle, a paragraph per flowPara, instead of being dropped, and a region that can't be read is left out with a warning (#1569, fixes #1568). The warning for an unsupported SVG filter names the filter, its primitives and the object, and says the object is drawn without it (#1599, fixes #1598). The pages of an Inkscape multi-page SVG become artboards, named by their labels (#1603, fixes #1601). SVG export with CSS classes or style entities stays fast in documents with many distinct styles (#1567). PDF and .ai import: evenly letter-spaced or tightened type on a path keeps its length along the path instead of closing up to the font's advances (#1586), and type on a path whose stroke is written glyph by glyph comes in as one text object with its stroke, not one object per glyph (#1585). The ICC profiles embedded in JPEG, TIFF and PSD exports have every tag on a 4-byte boundary (ICC.1 §7.1.2), so strict readers accept them (#1589, fixes #1584). GIF, PNG-8 and other indexed exports find each pixel's palette colour through an index instead of a scan, with identical output (#1576). Saving to a network drive on macOS falls back to a plain fsync when the share refuses a full flush (#1625, part of #1620; not confirmed on a real share), and a save still succeeds when a folder refuses the temporary file, the rename over the document or copying permissions: the content is written elsewhere first and copied in, and a failed copy keeps the temporary file and names it (#1649, part of #1620). A document opened by a relative path finds its relatively linked images, and vectorcraft-cli convert lists what reading the input left out as importWarnings (#1606, fixes #1604). A zero-length subpath draws its round cap as a dot and its projecting cap as a square, so dots in imported .ai and SVG files show (#1619, fixes #1613). Pathfinder's Trim, Merge and Crop remove the objects' strokes, and Merge joins same-fill objects whatever their strokes were, as the public Pathfinder page describes (#1572, fixes #1570). Offset Path with an inset larger than the shapes says the offset leaves nothing, instead of asking to select paths (#1591, fixes #1590). The Symbols panel's New Symbol opens Symbol Options to name the symbol first, and Alt-click skips it (#1566, fixes #1560). Tool flyouts are as wide as their longest translated name and shortcut need, so names no longer run into shortcuts in Spanish and other languages (#1650, fixes #1616). Smart Guides: a point drawn with the Pen or a shape tool, and an anchor dragged with Direct Selection, snaps to where paths and ruler guides cross, labelled \"intersect\" (#1658, part of #1602; a moved selection's own anchors don't). The Transform panel shows a selected ruler guide's X or Y, and typing a value moves it (#1659, part of #1597). This is not established by the documentation we could find: the public help pages on guides, rulers and the Transform, Control and Properties panels (read again on 2026-10-14) describe selecting and dragging unlocked guides and the panels' X and Y for a selection, not a guide's position in a panel, and the one public statement of it is a user's community answer, which is not documentation. It is kept as a convenience pending the owner's decision, with no parity claim and nothing counted towards a score. Select Behind (Ctrl/Cmd-click) tests each object once, so a deep stack of overlapping objects no longer slows it; same objects in the same order (#1571). Commands that take ids run on the objects given with nothing selected, over MCP, the control channel and the CLI too (#1577, fixes #1575). Zig Zag spaces its ridges evenly along each segment, so lines and curves get a regular wave in Corner and Smooth (#1558). Warp › Arc (the effect and Envelope › Make with Warp) bends in the object's real proportions: a circular arc with concentric edges and no fold-over at 100%, so Arc on art that isn't square draws differently from before (#1581, fixes #1578). effect.apply and effect.setParams give an error for a misspelt or wrongly typed effect parameter instead of running the effect with its default (#1623, #1592). Area type in a non-rectangular shape moves a word too wide for the top lines down to the first line that holds it instead of breaking it (#1617, fixes #1615). Stylistic sets (ss01–ss20), stylistic and titling alternates, proportional and lining figures, and superscript and subscript glyphs can be turned on as OpenType features of a character style (text.setStyle {features}), and the OpenType panel keeps them (#1611, fixes #1607). The Polish translator confirmed the Polish rows the maintainers had added after the catalog was written (#1614). No headline number moves."
-      },
-      {
-        "date": "2026-10-13",
-        "text": "Control sockets close after bounded idle, partial-line and reply-write waits, returning their connection slot (#1726); existing command processing timeout remains separate."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 11,
     "releases_since_capped": false,
-    "revisions_since": 199,
+    "revisions_since": 201,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,39 +536,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 200,
-    "revisions_7d": 9,
+    "revisions": 202,
+    "revisions_7d": 11,
     "last_revision": {
-      "ts": "2026-10-31T19:58:55Z",
+      "ts": "2026-11-01T01:25:50Z",
       "kind": "content",
-      "commit": "e9c2aa2",
-      "commit_full": "e9c2aa24914f0a88933bfa731f29dcf2c6f86e9d",
-      "message": "Add-ons: Group Overlapping Objects, Divide into Dashes, Save a Timestamped Copy, New Symbols from Layers (#4974)"
+      "commit": "6d3d5ad",
+      "commit_full": "6d3d5ad1a21def340b56d0f3f57adbbc3b181b2d",
+      "message": "Fix #4917: Sort Objects sorts the selection by one attribute and applies that order to another (#5017)"
     },
     "last_update": {
-      "ts": "2026-10-31T19:58:55Z",
+      "ts": "2026-11-01T01:25:50Z",
       "kind": "content",
-      "commit": "e9c2aa2",
-      "commit_full": "e9c2aa24914f0a88933bfa731f29dcf2c6f86e9d",
-      "message": "Add-ons: Group Overlapping Objects, Divide into Dashes, Save a Timestamped Copy, New Symbols from Layers (#4974)"
+      "commit": "6d3d5ad",
+      "commit_full": "6d3d5ad1a21def340b56d0f3f57adbbc3b181b2d",
+      "message": "Fix #4917: Sort Objects sorts the selection by one attribute and applies that order to another (#5017)"
     },
     "self_reported": "2026-11-01"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 25.2,
-    "active_days_7d": 6,
-    "changes_7d": 522,
-    "changes_14d": 1114,
+    "score": 28.4,
+    "active_days_7d": 7,
+    "changes_7d": 530,
+    "changes_14d": 1122,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-10-31T23:48:58Z",
-      "commit": "433ddb5",
-      "commit_full": "433ddb593d7c75165fb4b8ae61022a671ed7bcdb",
-      "subject": "Tabs: Ctrl-dragging a tab stop moves all the stops together (#4997)"
+      "ts": "2026-11-01T01:25:50Z",
+      "commit": "6d3d5ad",
+      "commit_full": "6d3d5ad1a21def340b56d0f3f57adbbc3b181b2d",
+      "subject": "Fix #4917: Sort Objects sorts the selection by one attribute and applies that order to another (#5017)"
     },
-    "last_commit_ts": "2026-10-31T23:48:58Z",
+    "last_commit_ts": "2026-11-01T01:25:50Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       79,
@@ -584,7 +584,7 @@
       180,
       99,
       126,
-      0
+      8
     ],
     "days": [
       {
@@ -1179,6 +1179,25 @@
           {
             "commit": "6e5b8b1",
             "subject": "Fix #4820: the Layers panel lists a blend's spine (#5000)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-01",
+        "code": 8,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "6d3d5ad",
+            "subject": "Fix #4917: Sort Objects sorts the selection by one attribute and applies that order to another (#5017)"
+          },
+          {
+            "commit": "9a8a885",
+            "subject": "Fix #4925: Randomize Opacity gives each selected object a random opacity in a range (#5016)"
+          },
+          {
+            "commit": "5a9a14f",
+            "subject": "Languages: Serbian (Cyrillic, Latin) and Croatian, with their quote marks (#4975)"
           }
         ]
       }
@@ -6646,7 +6665,59 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "9a8a885",
+      "commit_full": "9a8a88549817e15c680a5f229d7a57955565e563",
+      "commit_date": "2026-11-01T08:25:34+07:00",
+      "ts": "2026-11-01T01:25:34Z",
+      "message": "Fix #4925: Randomize Opacity gives each selected object a random opacity in a range (#5016)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-01",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
+    },
+    {
+      "commit": "6d3d5ad",
+      "commit_full": "6d3d5ad1a21def340b56d0f3f57adbbc3b181b2d",
+      "commit_date": "2026-11-01T08:25:50+07:00",
+      "ts": "2026-11-01T01:25:50Z",
+      "message": "Fix #4917: Sort Objects sorts the selection by one attribute and applies that order to another (#5017)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-01",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-01T00:23:32+00:00"
+  "updated_at": "2026-11-01T01:36:27+00:00"
 }
