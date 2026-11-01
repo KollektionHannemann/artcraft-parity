@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/vectorcraft",
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
-  "latest_commit": "6d3d5ad",
-  "latest_commit_date": "2026-11-01T08:25:50+07:00",
-  "latest_message": "Fix #4917: Sort Objects sorts the selection by one attribute and applies that order to another (#5017)",
+  "latest_commit": "58e9851",
+  "latest_commit_date": "2026-11-01T09:23:32+07:00",
+  "latest_message": "Fix #4922: Expand Dashes into Paths (#5048)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -340,6 +340,10 @@
     "progress": [
       {
         "date": "2026-11-01",
+        "text": "Expand Dashes into Paths joins the Path Precision Tools add-on (Object › Plug-ins › Path Precision Tools): each selected path's dashed stroke becomes separate open paths, one per dash, laid out exactly as the stroke draws them (pattern, offset, Align Dashes to Corners and Path Ends), each keeping the stroke with the dashes off, so the gaps are real gaps for cutters and plotters, as one undo step (addon.pathtools.expandDashes, #4922)."
+      },
+      {
+        "date": "2026-11-01",
         "text": "Randomize Opacity joins the Arrange Tools add-on (Object › Plug-ins › Arrange Tools): each selected object gets its own opacity at random between a minimum and a maximum percent, with a seed that repeats the result, as one undo step (addon.arrange.randomizeOpacity, #4925)."
       },
       {
@@ -493,10 +497,6 @@
       {
         "date": "2026-10-13",
         "text": "PngSuite downloads use pinned HTTPS files and a SHA-256 manifest; no archive extraction (#1729)."
-      },
-      {
-        "date": "2026-10-13",
-        "text": "Synthetic control input has finite click/drag counts and pending-event limits, checked before queue mutation; control-channel bursts yield after 64 requests per frame (#1709)."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 11,
     "releases_since_capped": false,
-    "revisions_since": 201,
+    "revisions_since": 202,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,39 +536,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 202,
-    "revisions_7d": 11,
+    "revisions": 203,
+    "revisions_7d": 12,
     "last_revision": {
-      "ts": "2026-11-01T01:25:50Z",
+      "ts": "2026-11-01T02:23:32Z",
       "kind": "content",
-      "commit": "6d3d5ad",
-      "commit_full": "6d3d5ad1a21def340b56d0f3f57adbbc3b181b2d",
-      "message": "Fix #4917: Sort Objects sorts the selection by one attribute and applies that order to another (#5017)"
+      "commit": "58e9851",
+      "commit_full": "58e98510d154dccffabdd17625cb2896d74204e7",
+      "message": "Fix #4922: Expand Dashes into Paths (#5048)"
     },
     "last_update": {
-      "ts": "2026-11-01T01:25:50Z",
+      "ts": "2026-11-01T02:23:32Z",
       "kind": "content",
-      "commit": "6d3d5ad",
-      "commit_full": "6d3d5ad1a21def340b56d0f3f57adbbc3b181b2d",
-      "message": "Fix #4917: Sort Objects sorts the selection by one attribute and applies that order to another (#5017)"
+      "commit": "58e9851",
+      "commit_full": "58e98510d154dccffabdd17625cb2896d74204e7",
+      "message": "Fix #4922: Expand Dashes into Paths (#5048)"
     },
     "self_reported": "2026-11-01"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 28.4,
+    "score": 29.4,
     "active_days_7d": 7,
-    "changes_7d": 530,
-    "changes_14d": 1122,
+    "changes_7d": 539,
+    "changes_14d": 1131,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-11-01T01:25:50Z",
-      "commit": "6d3d5ad",
-      "commit_full": "6d3d5ad1a21def340b56d0f3f57adbbc3b181b2d",
-      "subject": "Fix #4917: Sort Objects sorts the selection by one attribute and applies that order to another (#5017)"
+      "ts": "2026-11-01T02:23:32Z",
+      "commit": "58e9851",
+      "commit_full": "58e98510d154dccffabdd17625cb2896d74204e7",
+      "subject": "Fix #4922: Expand Dashes into Paths (#5048)"
     },
-    "last_commit_ts": "2026-11-01T01:25:50Z",
+    "last_commit_ts": "2026-11-01T02:23:32Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       79,
@@ -584,7 +584,7 @@
       180,
       99,
       126,
-      8
+      17
     ],
     "days": [
       {
@@ -1184,20 +1184,20 @@
       },
       {
         "d": "2026-11-01",
-        "code": 8,
+        "code": 17,
         "other": 0,
         "samples": [
           {
-            "commit": "6d3d5ad",
-            "subject": "Fix #4917: Sort Objects sorts the selection by one attribute and applies that order to another (#5017)"
+            "commit": "58e9851",
+            "subject": "Fix #4922: Expand Dashes into Paths (#5048)"
           },
           {
-            "commit": "9a8a885",
-            "subject": "Fix #4925: Randomize Opacity gives each selected object a random opacity in a range (#5016)"
+            "commit": "50228cd",
+            "subject": "Fix #4908: Glyphs panel highlights the selected character (#5047)"
           },
           {
-            "commit": "5a9a14f",
-            "subject": "Languages: Serbian (Cyrillic, Latin) and Croatian, with their quote marks (#4975)"
+            "commit": "209e66d",
+            "subject": "Grid tools: F, V, X and C change the divider skews by 10 while a grid is dragged out (#5019)"
           }
         ]
       }
@@ -6717,7 +6717,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "58e9851",
+      "commit_full": "58e98510d154dccffabdd17625cb2896d74204e7",
+      "commit_date": "2026-11-01T09:23:32+07:00",
+      "ts": "2026-11-01T02:23:32Z",
+      "message": "Fix #4922: Expand Dashes into Paths (#5048)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-01",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-01T01:36:27+00:00"
+  "updated_at": "2026-11-01T02:33:44+00:00"
 }
