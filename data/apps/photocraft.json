@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/photocraft",
   "roadmap_url": "https://github.com/storytold/photocraft/blob/main/ROADMAP.md",
-  "latest_commit": "422ca7b",
-  "latest_commit_date": "2026-10-31T01:06:22-04:00",
-  "latest_message": "docs: tidy agent, contributor and release docs (#10420)",
+  "latest_commit": "f8e393f",
+  "latest_commit_date": "2026-11-02T19:59:41+01:00",
+  "latest_message": "Enable font-free GNOME/Wayland controls for system title bars (#6266)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -292,6 +292,10 @@
     ],
     "progress": [
       {
+        "date": "2026-10-21",
+        "text": "Linux can use font-free Adwaita controls when System Title Bar is selected, while the integrated CSD title bar remains the default (as in #4439). Saved preferences are respected; startup and preference-dialog regressions cover both choices (#6266)."
+      },
+      {
         "date": "2026-10-17",
         "text": "Object Finder classifies background by boundary coverage, retaining large enclosed foregrounds and rejecting surrounding backdrop (#6548); learned segmentation remains open (#2788)"
       },
@@ -334,7 +338,7 @@
     "value_since": "2026-10-10T19:09:04Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 6,
+    "revisions_since": 7,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -342,39 +346,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 7,
-    "revisions_7d": 1,
+    "revisions": 8,
+    "revisions_7d": 2,
     "last_revision": {
-      "ts": "2026-10-31T05:06:22Z",
+      "ts": "2026-11-02T18:59:41Z",
       "kind": "content",
-      "commit": "422ca7b",
-      "commit_full": "422ca7beda90d927643bcd074646ebbd37706d75",
-      "message": "docs: tidy agent, contributor and release docs (#10420)"
+      "commit": "f8e393f",
+      "commit_full": "f8e393fdb6f8d0e5da193b03e86e90d278fcc707",
+      "message": "Enable font-free GNOME/Wayland controls for system title bars (#6266)"
     },
     "last_update": {
-      "ts": "2026-10-31T05:06:22Z",
+      "ts": "2026-11-02T18:59:41Z",
       "kind": "content",
-      "commit": "422ca7b",
-      "commit_full": "422ca7beda90d927643bcd074646ebbd37706d75",
-      "message": "docs: tidy agent, contributor and release docs (#10420)"
+      "commit": "f8e393f",
+      "commit_full": "f8e393fdb6f8d0e5da193b03e86e90d278fcc707",
+      "message": "Enable font-free GNOME/Wayland controls for system title bars (#6266)"
     },
     "self_reported": "2026-10-17"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.1,
+    "score": 18.3,
     "active_days_7d": 7,
-    "changes_7d": 68,
-    "changes_14d": 285,
+    "changes_7d": 69,
+    "changes_14d": 286,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-02T18:31:22Z",
-      "commit": "9034223",
-      "commit_full": "9034223c4b6d80fe15a12b9e0d173786ac5f7a4c",
-      "subject": "TIFF: open YCbCr images as RGB (#10316) (#10319)"
+      "ts": "2026-11-02T18:59:41Z",
+      "commit": "f8e393f",
+      "commit_full": "f8e393fdb6f8d0e5da193b03e86e90d278fcc707",
+      "subject": "Enable font-free GNOME/Wayland controls for system title bars (#6266)"
     },
-    "last_commit_ts": "2026-11-02T18:31:22Z",
+    "last_commit_ts": "2026-11-02T18:59:41Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       3,
@@ -390,7 +394,7 @@
       7,
       8,
       11,
-      5
+      6
     ],
     "days": [
       {
@@ -1022,9 +1026,13 @@
       },
       {
         "d": "2026-11-02",
-        "code": 5,
+        "code": 6,
         "other": 0,
         "samples": [
+          {
+            "commit": "f8e393f",
+            "subject": "Enable font-free GNOME/Wayland controls for system title bars (#6266)"
+          },
           {
             "commit": "9034223",
             "subject": "TIFF: open YCbCr images as RGB (#10316) (#10319)"
@@ -1032,10 +1040,6 @@
           {
             "commit": "289dd0a",
             "subject": "Format: take the .pcraft envelope from craft-pcraft-format (#10724)"
-          },
-          {
-            "commit": "5d9c57e",
-            "subject": "Linux: return memory of closed documents to the system (#8743) (#10515)"
           }
         ]
       }
@@ -1408,7 +1412,30 @@
       "breadth_pct": 76.0,
       "full_prev": 45.0,
       "kind": "content"
+    },
+    {
+      "commit": "f8e393f",
+      "commit_full": "f8e393fdb6f8d0e5da193b03e86e90d278fcc707",
+      "commit_date": "2026-11-02T19:59:41+01:00",
+      "ts": "2026-11-02T18:59:41Z",
+      "message": "Enable font-free GNOME/Wayland controls for system title bars (#6266)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-17",
+      "full_pct": 45.0,
+      "full_range": null,
+      "full_hours": [
+        2300,
+        4100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe Photoshop 2026",
+      "mainstream_pct": 43.0,
+      "essentials_pct": 61.0,
+      "breadth_pct": 76.0,
+      "full_prev": 45.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-02T18:39:35+00:00"
+  "updated_at": "2026-11-02T19:41:44+00:00"
 }
