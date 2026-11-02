@@ -458,18 +458,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 10.7,
-    "active_days_7d": 4,
-    "changes_7d": 69,
-    "changes_14d": 138,
+    "score": 12.7,
+    "active_days_7d": 5,
+    "changes_7d": 72,
+    "changes_14d": 141,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-10-31T22:52:51Z",
-      "commit": "85ffa1f",
-      "commit_full": "85ffa1f53ee6d04c4e99b66afd142bd4345d2009",
-      "subject": "packaging(flatpak): add OCI image build and GHCR publishing helper (#1233)"
+      "ts": "2026-11-02T04:06:45Z",
+      "commit": "d557d18",
+      "commit_full": "d557d18118109cd5f73a521c2abaa698c3836d9d",
+      "subject": "AIFF: test that a negative channel count is rejected (#1223)"
     },
-    "last_commit_ts": "2026-11-01T18:57:15Z",
+    "last_commit_ts": "2026-11-02T04:06:45Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
       0,
@@ -485,7 +485,7 @@
       38,
       23,
       0,
-      0
+      3
     ],
     "days": [
       {
@@ -878,6 +878,25 @@
         "code": 0,
         "other": 3,
         "samples": []
+      },
+      {
+        "d": "2026-11-02",
+        "code": 3,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "d557d18",
+            "subject": "AIFF: test that a negative channel count is rejected (#1223)"
+          },
+          {
+            "commit": "98cda6e",
+            "subject": "Export only the MIDI notes a trimmed clip still plays (#1032)"
+          },
+          {
+            "commit": "920ec2c",
+            "subject": "Keep score export notes when bars are shorter than a sixteenth (#1234)"
+          }
+        ]
       }
     ]
   },
@@ -1618,5 +1637,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-02T00:25:29+00:00"
+  "updated_at": "2026-11-02T04:45:04+00:00"
 }

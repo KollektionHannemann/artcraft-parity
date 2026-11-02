@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "fd7f662",
-  "latest_commit_date": "2026-11-01T14:48:32-05:00",
-  "latest_message": "Markdown export: a list inside a block quote stays in the quote (#5156)",
+  "latest_commit": "bf9e9fb",
+  "latest_commit_date": "2026-11-01T23:17:19-05:00",
+  "latest_message": "DOCX: keep alternate-content table rows and cells (#5221)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -326,6 +326,10 @@
     "progress": [
       {
         "date": "2026-11-01",
+        "text": "DOCX tables keep rows and cells wrapped in mc:AlternateContent, selecting one supported Choice or Fallback with the existing reader policy (#5219). Original synthetic checks cover namespace aliases, unsupported requirements, nested row/cell content controls and two save/reopen cycles; broader corpus and native Word qualification remain open."
+      },
+      {
+        "date": "2026-11-01",
         "text": "Shapes: a line's arrowheads are as long and as wide as Word draws them: 2, 3 or 5 times the line's width for small, medium and large (a line under 2 points as a 2-point one). Their kind, width and length are read from DOCX (DrawingML and VML) and saved back; before, every arrowhead was one size and saved as a medium triangle."
       },
       {
@@ -479,10 +483,6 @@
       {
         "date": "2026-10-25",
         "text": "#4085 review: highlight toggling checks the full target with constant resolved-run storage; a different colour after 10,000 runs prevents clearing."
-      },
-      {
-        "date": "2026-10-25",
-        "text": "Custom document properties (#2982, split from #1798): File › Info › Properties › Advanced Properties… opens a Custom Document Properties dialog that lists the document's custom properties and adds, modifies and deletes them through the name/value form (text properties only; Word's number/date/yes-no types not offered). OK is one undoable file.properties step and marks the document changed; Cancel discards everything; names and values are validated against the engine's limits with the error shown in the dialog. Saved properties survive a DOCX round trip."
       }
     ]
   },
@@ -491,7 +491,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 10,
     "releases_since_capped": false,
-    "revisions_since": 450,
+    "revisions_since": 451,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -516,39 +516,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 454,
-    "revisions_7d": 37,
+    "revisions": 455,
+    "revisions_7d": 38,
     "last_revision": {
-      "ts": "2026-11-01T19:48:32Z",
+      "ts": "2026-11-02T04:17:19Z",
       "kind": "content",
-      "commit": "fd7f662",
-      "commit_full": "fd7f6621a1419c7c99f2293c9e99b1b7c4b87282",
-      "message": "Markdown export: a list inside a block quote stays in the quote (#5156)"
+      "commit": "bf9e9fb",
+      "commit_full": "bf9e9fb8ae26e93b1780af82cda10216321dc422",
+      "message": "DOCX: keep alternate-content table rows and cells (#5221)"
     },
     "last_update": {
-      "ts": "2026-11-01T19:48:32Z",
+      "ts": "2026-11-02T04:17:19Z",
       "kind": "content",
-      "commit": "fd7f662",
-      "commit_full": "fd7f6621a1419c7c99f2293c9e99b1b7c4b87282",
-      "message": "Markdown export: a list inside a block quote stays in the quote (#5156)"
+      "commit": "bf9e9fb",
+      "commit_full": "bf9e9fb8ae26e93b1780af82cda10216321dc422",
+      "message": "DOCX: keep alternate-content table rows and cells (#5221)"
     },
     "self_reported": "2026-11-01"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.1,
-    "active_days_7d": 6,
-    "changes_7d": 90,
-    "changes_14d": 253,
+    "score": 17.1,
+    "active_days_7d": 7,
+    "changes_7d": 91,
+    "changes_14d": 254,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-01T19:48:32Z",
-      "commit": "fd7f662",
-      "commit_full": "fd7f6621a1419c7c99f2293c9e99b1b7c4b87282",
-      "subject": "Markdown export: a list inside a block quote stays in the quote (#5156)"
+      "ts": "2026-11-02T04:17:19Z",
+      "commit": "bf9e9fb",
+      "commit_full": "bf9e9fb8ae26e93b1780af82cda10216321dc422",
+      "subject": "DOCX: keep alternate-content table rows and cells (#5221)"
     },
-    "last_commit_ts": "2026-11-01T19:48:32Z",
+    "last_commit_ts": "2026-11-02T04:17:19Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       0,
@@ -564,7 +564,7 @@
       46,
       17,
       14,
-      0
+      1
     ],
     "days": [
       {
@@ -1020,6 +1020,17 @@
           {
             "commit": "499fc62",
             "subject": "Columns: the line between them is drawn for selected text, as tall as the section's text (#5178) (#5183)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-02",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "bf9e9fb",
+            "subject": "DOCX: keep alternate-content table rows and cells (#5221)"
           }
         ]
       }
@@ -11689,7 +11700,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "bf9e9fb",
+      "commit_full": "bf9e9fb8ae26e93b1780af82cda10216321dc422",
+      "commit_date": "2026-11-01T23:17:19-05:00",
+      "ts": "2026-11-02T04:17:19Z",
+      "message": "DOCX: keep alternate-content table rows and cells (#5221)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-01",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-02T00:25:27+00:00"
+  "updated_at": "2026-11-02T04:45:01+00:00"
 }
