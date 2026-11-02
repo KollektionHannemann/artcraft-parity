@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/gridcraft",
   "roadmap_url": "https://github.com/storytold/gridcraft/blob/main/ROADMAP.md",
-  "latest_commit": "6f52cc5",
-  "latest_commit_date": "2026-11-02T15:45:36+01:00",
-  "latest_message": "Equations: Insert › Equation with a LaTeX editor, Office Math in xlsx and equations in PDF (#471)",
+  "latest_commit": "9172516",
+  "latest_commit_date": "2026-11-02T17:31:18+01:00",
+  "latest_message": "Python cells in the interface: formula bar Python mode and the output switch (no code runs) (#2639)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -266,6 +266,14 @@
     "progress": [
       {
         "date": "2026-11-02",
+        "text": "Python mode in the formula bar: Ctrl+Alt+Shift+P, =PY then Tab, or editing a Python cell edits its code in the formula bar, with Enter for a new line, Tab to indent and Ctrl+Enter to commit through python.set. The code still doesn't run"
+      },
+      {
+        "date": "2026-11-02",
+        "text": "Python cells as data: python.set stores code in a cell, Python cells copy, move, fill and undo like formulas, and .xlsx reads and writes Python cells as [MS-XLSX] specifies (xlfn.xlws.PY(index,0 or 1), the code in the workbook's Python part) with cached values and spills, so such workbooks open with their results; nothing runs Python (new code shows #BLOCKED!), and opening a file limits code size, result size and spill ranges"
+      },
+      {
+        "date": "2026-11-02",
         "text": "Equations: Insert › Equation (a split button with a gallery of examples) and an editor with quick-insert buttons, the error underlined at its position and a live preview; insert.equation and equation.edit; LaTeX laid out by RaTeX inside the new gridcraft-math crate, capped and panic-guarded, and cached on the shape so that painting never runs the layout engine; xlsx writes Office Math with a plain-text fallback and the source in descr, and reads Office Math back into LaTeX; PDF prints equations with the standard Symbol font and [?] for anything else"
       },
       {
@@ -415,14 +423,6 @@
       {
         "date": "2026-10-15",
         "text": "Function help follows the interface language: argument hints, autocomplete, Insert Function (search and readable categories) and the Formulas-tab menus read per-language tables of descriptions and argument names; Spanish keeps its 10 functions in the new format"
-      },
-      {
-        "date": "2026-10-15",
-        "text": "Row auto-fit counts a cell's line breaks only when the cell wraps, as Excel does: a file whose unwrapped cells hold multi-line text no longer opens with tall rows (typing a break still turns wrap on and grows the row)"
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Lookups (MATCH, XMATCH, VLOOKUP, HLOOKUP, XLOOKUP, LOOKUP) compare numbers exactly like Excel, so a computed key such as =0.1+0.2 no longer finds 0.3; = and COUNTIF/SUMIF keep their 15-digit comparison"
       }
     ]
   },
@@ -431,7 +431,7 @@
     "value_since": "2026-10-10T18:09:06Z",
     "releases_since": 11,
     "releases_since_capped": false,
-    "revisions_since": 82,
+    "revisions_since": 84,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -439,39 +439,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 84,
-    "revisions_7d": 11,
+    "revisions": 86,
+    "revisions_7d": 13,
     "last_revision": {
-      "ts": "2026-11-02T14:45:36Z",
+      "ts": "2026-11-02T16:31:18Z",
       "kind": "content",
-      "commit": "6f52cc5",
-      "commit_full": "6f52cc50906f39719a05ba7d3f36bee8a62c50fb",
-      "message": "Equations: Insert › Equation with a LaTeX editor, Office Math in xlsx and equations in PDF (#471)"
+      "commit": "9172516",
+      "commit_full": "9172516aa85e81f8c6f89889e1ebfd5fe892c742",
+      "message": "Python cells in the interface: formula bar Python mode and the output switch (no code runs) (#2639)"
     },
     "last_update": {
-      "ts": "2026-11-02T14:45:36Z",
+      "ts": "2026-11-02T16:31:18Z",
       "kind": "content",
-      "commit": "6f52cc5",
-      "commit_full": "6f52cc50906f39719a05ba7d3f36bee8a62c50fb",
-      "message": "Equations: Insert › Equation with a LaTeX editor, Office Math in xlsx and equations in PDF (#471)"
+      "commit": "9172516",
+      "commit_full": "9172516aa85e81f8c6f89889e1ebfd5fe892c742",
+      "message": "Python cells in the interface: formula bar Python mode and the output switch (no code runs) (#2639)"
     },
     "self_reported": "2026-11-02"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.0,
+    "score": 19.2,
     "active_days_7d": 7,
-    "changes_7d": 95,
-    "changes_14d": 185,
+    "changes_7d": 97,
+    "changes_14d": 187,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-11-02T14:45:36Z",
-      "commit": "6f52cc5",
-      "commit_full": "6f52cc50906f39719a05ba7d3f36bee8a62c50fb",
-      "subject": "Equations: Insert › Equation with a LaTeX editor, Office Math in xlsx and equations in PDF (#471)"
+      "ts": "2026-11-02T16:31:18Z",
+      "commit": "9172516",
+      "commit_full": "9172516aa85e81f8c6f89889e1ebfd5fe892c742",
+      "subject": "Python cells in the interface: formula bar Python mode and the output switch (no code runs) (#2639)"
     },
-    "last_commit_ts": "2026-11-02T14:45:36Z",
+    "last_commit_ts": "2026-11-02T16:31:18Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       0,
@@ -487,7 +487,7 @@
       25,
       30,
       17,
-      12
+      14
     ],
     "days": [
       {
@@ -922,20 +922,20 @@
       },
       {
         "d": "2026-11-02",
-        "code": 12,
+        "code": 14,
         "other": 1,
         "samples": [
           {
+            "commit": "9172516",
+            "subject": "Python cells in the interface: formula bar Python mode and the output switch (no code runs) (#2639)"
+          },
+          {
+            "commit": "824a6ff",
+            "subject": "Python cells as data: stored, edited and saved as Excel's PY formula (no code runs) (#2637)"
+          },
+          {
             "commit": "6f52cc5",
             "subject": "Equations: Insert › Equation with a LaTeX editor, Office Math in xlsx and equations in PDF (#471)"
-          },
-          {
-            "commit": "488f998",
-            "subject": "Review fix for #2729: document the portable shortcut notation and the Mac-only override"
-          },
-          {
-            "commit": "c1bc098",
-            "subject": "Merge PR #2729"
           }
         ]
       }
@@ -3079,7 +3079,53 @@
       "breadth_pct": 75.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "824a6ff",
+      "commit_full": "824a6fffd29cc0fd46a2ef40244991867d7cff75",
+      "commit_date": "2026-11-02T17:30:47+01:00",
+      "ts": "2026-11-02T16:30:47Z",
+      "message": "Python cells as data: stored, edited and saved as Excel's PY formula (no code runs) (#2637)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-02",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "9172516",
+      "commit_full": "9172516aa85e81f8c6f89889e1ebfd5fe892c742",
+      "commit_date": "2026-11-02T17:31:18+01:00",
+      "ts": "2026-11-02T16:31:18Z",
+      "message": "Python cells in the interface: formula bar Python mode and the output switch (no code runs) (#2639)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-02",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-02T14:46:11+00:00"
+  "updated_at": "2026-11-02T16:47:57+00:00"
 }
