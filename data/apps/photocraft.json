@@ -363,18 +363,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.8,
+    "score": 18.1,
     "active_days_7d": 7,
-    "changes_7d": 67,
-    "changes_14d": 284,
+    "changes_7d": 68,
+    "changes_14d": 285,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-02T16:43:46Z",
-      "commit": "289dd0a",
-      "commit_full": "289dd0a874763d6528bab2184a87a1b53771c02a",
-      "subject": "Format: take the .pcraft envelope from craft-pcraft-format (#10724)"
+      "ts": "2026-11-02T18:31:22Z",
+      "commit": "9034223",
+      "commit_full": "9034223c4b6d80fe15a12b9e0d173786ac5f7a4c",
+      "subject": "TIFF: open YCbCr images as RGB (#10316) (#10319)"
     },
-    "last_commit_ts": "2026-11-02T16:43:46Z",
+    "last_commit_ts": "2026-11-02T18:31:22Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       3,
@@ -390,7 +390,7 @@
       7,
       8,
       11,
-      4
+      5
     ],
     "days": [
       {
@@ -1022,9 +1022,13 @@
       },
       {
         "d": "2026-11-02",
-        "code": 4,
+        "code": 5,
         "other": 0,
         "samples": [
+          {
+            "commit": "9034223",
+            "subject": "TIFF: open YCbCr images as RGB (#10316) (#10319)"
+          },
           {
             "commit": "289dd0a",
             "subject": "Format: take the .pcraft envelope from craft-pcraft-format (#10724)"
@@ -1032,10 +1036,6 @@
           {
             "commit": "5d9c57e",
             "subject": "Linux: return memory of closed documents to the system (#8743) (#10515)"
-          },
-          {
-            "commit": "86ddfb7",
-            "subject": "Reuse large buffers so returning freed memory to the OS doesn't slow filters (#10479) (#10514)"
           }
         ]
       }
@@ -1410,5 +1410,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-02T16:46:46+00:00"
+  "updated_at": "2026-11-02T18:39:35+00:00"
 }
