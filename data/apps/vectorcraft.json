@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/vectorcraft",
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
-  "latest_commit": "1c4a783",
-  "latest_commit_date": "2026-11-01T11:28:39+07:00",
-  "latest_message": "Fix #4923: Find Nearest Swatch in the document or a swatch library (#5067)",
+  "latest_commit": "b724438",
+  "latest_commit_date": "2026-11-02T12:27:08+07:00",
+  "latest_message": "Swatch libraries: Patterns › Geometric Patterns adds a pattern with its swatch (#5049)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -372,6 +372,10 @@
       },
       {
         "date": "2026-10-31",
+        "text": "Pattern libraries: Window › Swatch Libraries › Patterns and the Swatches panel's library menu open Geometric Patterns, a built-in library of eleven pattern swatches (dots, stripes, checks, a grid and shapes); clicking one adds its pattern and swatch to the document, once, and applies it to the active fill or stroke (swatch.library.add)."
+      },
+      {
+        "date": "2026-10-31",
         "text": "Export for Screens works as the reference app's dialog: Artboards and Assets tabs with a grid or list of thumbnails, Clear Selection and Prefix, Create Sub-folders by Scale or Format (on by default), Export PDFs As Single File (the chosen artboards as one PDF's pages, pdfs: \"single\") or Multiple Files, iOS and Android rows, format presets in a ☰ menu, and a count of the files the export writes (#4895). About 55 community PRs and fixes landed the same day: Find Font, Replace Font, Outline Stroke and Expand leave hidden and locked art alone (with a warning); DXF export writes LINE and ELLIPSE entities and outlines only the strokes a CAD line can't draw; Blob Brush Angle and Roundness; Shift-constrained Perspective Selection; Grid Repeat Options Preview; a gradient mesh from a file budgeted at about a million quads; width-profile strokes keep their shape zoomed out; .ai/EPS import fidelity (area type, envelopes, transparency in dictionaries, character styles); PDF import finds hyphenated and CMap-suffixed font names; Windows renders follow the process's core affinity; Enter or Escape in a floating panel's field no longer reaches the canvas (#4803); Properties shows Blend Options for any selected blend (#4817); Artwork Cleanup finds doubled type (#4835) and joins stacked lines into one object (Join Point Text, #4826). Headline numbers unchanged."
       },
       {
@@ -493,10 +497,6 @@
       {
         "date": "2026-10-14",
         "text": "Image Trace: Shapes finds rounded rectangles and shapes in blurred and scanned art (98 to 100% of the plain-shape inputs, from 57 to 62%; #1845), square-ended lines get square caps (Outline's largest distance 2.94 px to 0.88; #1846), each documented preset has an enhanced version with Auto Grouping and Shapes that measures no worse than the preset (#1847), and blurred or noisy linear gradients trace as one gradient-filled path instead of 3 to 56 (#1848) (docs/image-trace-quality.md). No headline number moves."
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Align and Distribute act on the anchor points selected with Direct Selection: the points of one path align to each other, not to the artboard, and Distribute spaces them (#1641, fixes #1636; aligning to a key anchor is still missing). Delete removes every selected anchor of a closed path (it used to remove the wrong ones), removes objects selected whole along with the selected anchors of others, and keeps the remainder selected so a second Delete removes it (#1674). In isolation mode Direct Selection and Group Selection pick only inside the isolated object (#1666). Escape cancels a Direct Selection drag (#1803, #1743). Escape while typing ends the edit, keeps the type selected and switches to the Selection tool (#1802, #1686, #1656). A filled Pencil path keeps a stroke of None (#1804, part of #1679). With the Pen, a press that moves under 3 screen pixels is a click (a corner without handles), and a Precise Cursors command toggles the existing preference and can take a shortcut (#1663). The [ and ] keys reach the Blob Brush, the Eraser and the Symbolism tools in the app (#1734, part of #1661). In the Pathfinder panel a group selected alone counts its nested shapes, so an expanded stroked object keeps the Shape Modes enabled (#1642, #1635). Object › Expand turns radial, grid and mirror repeats into groups of their instances (#1765, #1756). Select › Same matches type on its characters' fill and stroke (#1746, #1737). Fields commit what was typed when you click away or move to another field, as Enter does; Escape still discards it (#1787). Up and Down move through the command search results and Enter runs the highlighted one (#1798, #1757). Slider rails show on Medium Dark (#1808, #1662). On Windows the custom title bar's window stays truly borderless, so the pointer lines up with what is drawn on systems where the hidden caption offset it (#1791, #1758; awaiting the reporter's confirmation). Tool cursors are painted into the window on Wayland (#1652; not run on Linux, #1645 stays open until confirmed). Roughen with Smooth keeps turn-backs smooth instead of making cusps that draw as spikes (#1646, #1643). Scribble draws one zig-zag per region, with no lines across holes and notches; convex shapes are unchanged (#1651, #1648). EPS import: a stitched shading keeps its hard colour changes (#1654, #1653). WMF/EMF import refuses an oversized embedded PNG or JPEG from its header, before any pixels are decoded (#1776). PDF open no longer takes exponential time on a crafted name tree with shared nodes when it looks for the editing data (#1781). The size limits on a native file's embedded data also apply to files read from memory, not only streamed ones (#1783). Saving over a private file on Unix no longer leaves a readable temporary copy beside it while the file is written (#1778). An Export for Screens suffix can no longer place files outside the export folder (#1777). Package refuses a folder where it would overwrite the open document or one of its linked files (#1786). ruzstd 0.9.1 fixes a decompression bomb (RUSTSEC-2026-0344) reachable from EPS/.ai and Affinity import (#1807). File Info dates are stamped only after a save succeeds, so a failed save no longer changes them (#1774). Linked files that change during a drag are updated after the drag instead of being missed (#1773). Scatter graph data near the largest number is refused with a message instead of hanging the app (#1780). One very long Liquify stroke segment can no longer create an unbounded number of dabs (#1779). A drag whose last preview failed is no longer recorded as a committed command in the journal that actions and scripts read (#1775). Tests: text import fuzzing no longer searches installed fonts (#1785). Tests: render tests that add fonts no longer race the frame cache tests (#1795). text.create, text.createInPath and the MCP addtext tool take justify, so point type can be centred on or end at its point (#1752, #1748). Control replies are written through a 64 KiB buffer: a 10 MB document.inspect reply over loopback on Windows takes 0.25 s instead of 36 s (#1684). MCP limits: 16 MiB lines, 64-message batches, 256-step commandbatch with 8 MiB of kept results and 256 MiB control replies (#1764, fixes #1727). MCP requires the JSON-RPC 2.0 envelope and matches control replies by id, and an app refusal without an id reports the app's reason (#1768, fixes #1728). The MCP server reconnects to the app before a call when the connection was closed or holds stray bytes, after an app restart or an idle expiry (#1739). Image Trace, measured in image-trace-quality.md: snap Curves To Lines moves no end of a line by more than 1.6 px, so long lines a degree or two off stay as the image has them (#1647: Technical Drawing's largest distance 4.21 px to 1.46); flat Logo takes the tones a scan's uneven paper makes of one colour for one colour (#1657: on scans 470 paths and 21 px off to 8.5 paths and 0.09 px). No headline number moves."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 203,
+    "revisions_since": 204,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,39 +536,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 204,
-    "revisions_7d": 13,
+    "revisions": 205,
+    "revisions_7d": 14,
     "last_revision": {
-      "ts": "2026-11-01T04:28:39Z",
+      "ts": "2026-11-02T05:27:08Z",
       "kind": "content",
-      "commit": "1c4a783",
-      "commit_full": "1c4a7831ebdd9746b0f253413fe4f1fefc543bfc",
-      "message": "Fix #4923: Find Nearest Swatch in the document or a swatch library (#5067)"
+      "commit": "b724438",
+      "commit_full": "b72443875706dc2fd127667f97d9feece7100f3b",
+      "message": "Swatch libraries: Patterns › Geometric Patterns adds a pattern with its swatch (#5049)"
     },
     "last_update": {
-      "ts": "2026-11-01T04:28:39Z",
+      "ts": "2026-11-02T05:27:08Z",
       "kind": "content",
-      "commit": "1c4a783",
-      "commit_full": "1c4a7831ebdd9746b0f253413fe4f1fefc543bfc",
-      "message": "Fix #4923: Find Nearest Swatch in the document or a swatch library (#5067)"
+      "commit": "b724438",
+      "commit_full": "b72443875706dc2fd127667f97d9feece7100f3b",
+      "message": "Swatch libraries: Patterns › Geometric Patterns adds a pattern with its swatch (#5049)"
     },
     "self_reported": "2026-11-01"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 25.7,
+    "score": 30.6,
     "active_days_7d": 7,
-    "changes_7d": 466,
-    "changes_14d": 1077,
-    "housekeeping_7d": 18,
+    "changes_7d": 524,
+    "changes_14d": 1135,
+    "housekeeping_7d": 20,
     "last_code_change": {
-      "ts": "2026-11-02T04:30:54Z",
-      "commit": "890c27c",
-      "commit_full": "890c27ccb212fc020f7f94da8533d4aadb773571",
-      "subject": "Native format: take the .vectorcraft envelope from craft-vectorcraft-format (#5146)"
+      "ts": "2026-11-02T05:34:59Z",
+      "commit": "cfb30d8",
+      "commit_full": "cfb30d8139161cf1722dfabf3046741a0b21b3da",
+      "subject": "Recolor: the Global Adjust sliders change every color at once (#5214)"
     },
-    "last_commit_ts": "2026-11-02T04:30:54Z",
+    "last_commit_ts": "2026-11-02T05:34:59Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       14,
@@ -584,7 +584,7 @@
       99,
       126,
       41,
-      1
+      59
     ],
     "days": [
       {
@@ -1203,12 +1203,20 @@
       },
       {
         "d": "2026-11-02",
-        "code": 1,
-        "other": 0,
+        "code": 59,
+        "other": 2,
         "samples": [
           {
-            "commit": "890c27c",
-            "subject": "Native format: take the .vectorcraft envelope from craft-vectorcraft-format (#5146)"
+            "commit": "cfb30d8",
+            "subject": "Recolor: the Global Adjust sliders change every color at once (#5214)"
+          },
+          {
+            "commit": "6daefef",
+            "subject": "Document Info: Save writes the category the panel shows (#5212)"
+          },
+          {
+            "commit": "c4a394c",
+            "subject": "Artwork Cleanup: Empty Text and Off-Artboard Art leave type that clips art (#5203)"
           }
         ]
       }
@@ -6780,7 +6788,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "b724438",
+      "commit_full": "b72443875706dc2fd127667f97d9feece7100f3b",
+      "commit_date": "2026-11-02T12:27:08+07:00",
+      "ts": "2026-11-02T05:27:08Z",
+      "message": "Swatch libraries: Patterns › Geometric Patterns adds a pattern with its swatch (#5049)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-01",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-02T04:44:17+00:00"
+  "updated_at": "2026-11-02T05:46:28+00:00"
 }

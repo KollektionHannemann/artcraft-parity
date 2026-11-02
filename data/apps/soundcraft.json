@@ -458,18 +458,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 12.7,
+    "score": 13.0,
     "active_days_7d": 5,
-    "changes_7d": 72,
-    "changes_14d": 141,
+    "changes_7d": 73,
+    "changes_14d": 142,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-02T04:06:45Z",
-      "commit": "d557d18",
-      "commit_full": "d557d18118109cd5f73a521c2abaa698c3836d9d",
-      "subject": "AIFF: test that a negative channel count is rejected (#1223)"
+      "ts": "2026-11-02T05:30:05Z",
+      "commit": "8444edf",
+      "commit_full": "8444edf075eae24ad37b128675c939fd5d370a60",
+      "subject": "Accept VST3 multi-out instruments with up to 64 audio buses (#1248)"
     },
-    "last_commit_ts": "2026-11-02T04:06:45Z",
+    "last_commit_ts": "2026-11-02T05:30:05Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
       0,
@@ -485,7 +485,7 @@
       38,
       23,
       0,
-      3
+      4
     ],
     "days": [
       {
@@ -881,9 +881,13 @@
       },
       {
         "d": "2026-11-02",
-        "code": 3,
+        "code": 4,
         "other": 0,
         "samples": [
+          {
+            "commit": "8444edf",
+            "subject": "Accept VST3 multi-out instruments with up to 64 audio buses (#1248)"
+          },
           {
             "commit": "d557d18",
             "subject": "AIFF: test that a negative channel count is rejected (#1223)"
@@ -891,10 +895,6 @@
           {
             "commit": "98cda6e",
             "subject": "Export only the MIDI notes a trimmed clip still plays (#1032)"
-          },
-          {
-            "commit": "920ec2c",
-            "subject": "Keep score export notes when bars are shorter than a sixteenth (#1234)"
           }
         ]
       }
@@ -1637,5 +1637,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-02T04:45:04+00:00"
+  "updated_at": "2026-11-02T05:47:15+00:00"
 }
