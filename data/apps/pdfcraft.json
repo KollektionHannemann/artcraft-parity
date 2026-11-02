@@ -493,18 +493,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.0,
+    "score": 17.6,
     "active_days_7d": 7,
-    "changes_7d": 64,
-    "changes_14d": 254,
+    "changes_7d": 66,
+    "changes_14d": 256,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-02T04:49:18Z",
-      "commit": "d338434",
-      "commit_full": "d3384340a628bd728389eba71371fa6f7c9b0b4e",
-      "subject": "M7: make page-mark replacement transactional (#5657) (#5704)"
+      "ts": "2026-11-02T10:07:42Z",
+      "commit": "d7dd1de",
+      "commit_full": "d7dd1de647ee186d2161b2c464bdb8bb68f085fb",
+      "subject": "Reject '+' sign in page selection numbers (#5715)"
     },
-    "last_commit_ts": "2026-11-02T04:49:18Z",
+    "last_commit_ts": "2026-11-02T10:07:42Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       0,
@@ -520,7 +520,7 @@
       4,
       11,
       22,
-      3
+      5
     ],
     "days": [
       {
@@ -1139,20 +1139,20 @@
       },
       {
         "d": "2026-11-02",
-        "code": 3,
+        "code": 5,
         "other": 0,
         "samples": [
           {
+            "commit": "d7dd1de",
+            "subject": "Reject '+' sign in page selection numbers (#5715)"
+          },
+          {
+            "commit": "4a0b1dd",
+            "subject": "Repair scan: an object whose header names another generation is still found (#5580) (#5584)"
+          },
+          {
             "commit": "d338434",
             "subject": "M7: make page-mark replacement transactional (#5657) (#5704)"
-          },
-          {
-            "commit": "8faebd0",
-            "subject": "Fix Matrix::invert rejecting valid matrices with a small scale (#5703)"
-          },
-          {
-            "commit": "f035218",
-            "subject": "fix(ui): don't check recent files on the UI thread at startup (#5682) (#5692)"
           }
         ]
       }
@@ -5575,5 +5575,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-02T05:46:50+00:00"
+  "updated_at": "2026-11-02T10:27:43+00:00"
 }

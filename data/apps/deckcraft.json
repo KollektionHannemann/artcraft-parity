@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/deckcraft",
   "roadmap_url": "https://github.com/storytold/deckcraft/blob/main/ROADMAP.md",
-  "latest_commit": "a3fbf02",
-  "latest_commit_date": "2026-10-31T01:06:52-04:00",
-  "latest_message": "docs: tidy agent, contributor and roadmap docs (#1592)",
+  "latest_commit": "f4fcac9",
+  "latest_commit_date": "2026-11-02T04:51:18-05:00",
+  "latest_message": "Merge pull request #1623",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
-    "last_updated": "2026-10-30",
+    "last_updated": "2026-11-01",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -315,6 +315,10 @@
     ],
     "progress": [
       {
+        "date": "2026-10-31",
+        "text": "No Fill shape interiors allow selection and editing of underlying objects, even when a quick style remains; hit-testing uses the renderer’s fill resolution. Outlines, rotation, text targets and actual fills keep their hit behaviour (#1621)"
+      },
+      {
         "date": "2026-10-30",
         "text": "Print-preview tests use the URL emitted by egui and its exact file path; previews are explicitly removed before the macOS process exits"
       },
@@ -469,10 +473,6 @@
       {
         "date": "2026-10-21",
         "text": "Slide list and slide sorter: Shift+click selects a range of slides and Ctrl+Shift+click adds it to the selection (slide.selectRange, #1105)"
-      },
-      {
-        "date": "2026-10-20",
-        "text": "Chart number formats with explicit empty positive, negative or zero sections hide the corresponding labels, including all values with three semicolons; a blank whole format still uses General. Synthetic formatter regressions"
       }
     ]
   },
@@ -481,7 +481,7 @@
     "value_since": "2026-10-10T18:09:21Z",
     "releases_since": 10,
     "releases_since_capped": false,
-    "revisions_since": 119,
+    "revisions_since": 120,
     "hours_since": null,
     "areas_since": {
       "up": 1,
@@ -500,39 +500,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 122,
-    "revisions_7d": 16,
+    "revisions": 123,
+    "revisions_7d": 17,
     "last_revision": {
-      "ts": "2026-10-31T05:06:52Z",
+      "ts": "2026-11-02T09:51:18Z",
       "kind": "content",
-      "commit": "a3fbf02",
-      "commit_full": "a3fbf02952839c223df600dc33106a2dbc65be1b",
-      "message": "docs: tidy agent, contributor and roadmap docs (#1592)"
+      "commit": "f4fcac9",
+      "commit_full": "f4fcac9f2d49f7fb642c62abf271d585381a3668",
+      "message": "Merge pull request #1623"
     },
     "last_update": {
-      "ts": "2026-10-31T05:06:52Z",
+      "ts": "2026-11-02T09:51:18Z",
       "kind": "content",
-      "commit": "a3fbf02",
-      "commit_full": "a3fbf02952839c223df600dc33106a2dbc65be1b",
-      "message": "docs: tidy agent, contributor and roadmap docs (#1592)"
+      "commit": "f4fcac9",
+      "commit_full": "f4fcac9f2d49f7fb642c62abf271d585381a3668",
+      "message": "Merge pull request #1623"
     },
-    "self_reported": "2026-10-30"
+    "self_reported": "2026-11-01"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 13.6,
-    "active_days_7d": 5,
-    "changes_7d": 94,
-    "changes_14d": 234,
+    "score": 17.6,
+    "active_days_7d": 6,
+    "changes_7d": 109,
+    "changes_14d": 249,
     "housekeeping_7d": 10,
     "last_code_change": {
-      "ts": "2026-11-01T20:36:45Z",
-      "commit": "9005839",
-      "commit_full": "90058395b78be26bb7ea7b4914a9f113c28d979d",
-      "subject": "WASM: open presenter view in a separate browser window (#729) (#730)"
+      "ts": "2026-11-02T09:53:51Z",
+      "commit": "0d45a64",
+      "commit_full": "0d45a64db23baa0a4c8f9f7ac14c59c91b40fec9",
+      "subject": "Merge pull request #1645"
     },
-    "last_commit_ts": "2026-11-01T20:36:45Z",
+    "last_commit_ts": "2026-11-02T09:53:51Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
       0,
@@ -548,7 +548,7 @@
       60,
       23,
       3,
-      0
+      15
     ],
     "days": [
       {
@@ -987,6 +987,25 @@
           {
             "commit": "5fb694d",
             "subject": "Text: a word doesn't break after ?, !, } or + (URLs wrap as in PowerPoint) (#924)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-02",
+        "code": 15,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "0d45a64",
+            "subject": "Merge pull request #1645"
+          },
+          {
+            "commit": "e832a37",
+            "subject": "Merge pull request #1639"
+          },
+          {
+            "commit": "6c63345",
+            "subject": "Merge pull request #1667"
           }
         ]
       }
@@ -4011,7 +4030,30 @@
       "breadth_pct": 62.0,
       "full_prev": 55.0,
       "kind": "content"
+    },
+    {
+      "commit": "f4fcac9",
+      "commit_full": "f4fcac9f2d49f7fb642c62abf271d585381a3668",
+      "commit_date": "2026-11-02T04:51:18-05:00",
+      "ts": "2026-11-02T09:51:18Z",
+      "message": "Merge pull request #1623",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-01",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-02T00:25:33+00:00"
+  "updated_at": "2026-11-02T10:27:55+00:00"
 }
