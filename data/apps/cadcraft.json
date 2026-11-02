@@ -355,16 +355,16 @@
     "level": "buzzing",
     "score": 21.4,
     "active_days_7d": 6,
-    "changes_7d": 155,
-    "changes_14d": 314,
+    "changes_7d": 156,
+    "changes_14d": 315,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-02T22:01:57Z",
-      "commit": "2ac5009",
-      "commit_full": "2ac500925b6b53b6a3f00dc30e4428caf565ebbe",
-      "subject": "DWG: a table cell's text height is an override only when the file flags it (part of #2501) (#2588)"
+      "ts": "2026-11-02T23:51:54Z",
+      "commit": "096b3f9",
+      "commit_full": "096b3f9be427830db5568a3a8ed2e8ba3e41ee66",
+      "subject": "Saves to a missing folder write the file and say which folder was created (#2260) (#2668)"
     },
-    "last_commit_ts": "2026-11-02T22:01:57Z",
+    "last_commit_ts": "2026-11-02T23:51:54Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       0,
@@ -380,7 +380,7 @@
       42,
       43,
       17,
-      38
+      39
     ],
     "days": [
       {
@@ -780,9 +780,13 @@
       },
       {
         "d": "2026-11-02",
-        "code": 38,
+        "code": 39,
         "other": 0,
         "samples": [
+          {
+            "commit": "096b3f9",
+            "subject": "Saves to a missing folder write the file and say which folder was created (#2260) (#2668)"
+          },
           {
             "commit": "2ac5009",
             "subject": "DWG: a table cell's text height is an override only when the file flags it (part of #2501) (#2588)"
@@ -790,10 +794,6 @@
           {
             "commit": "5ec0d21",
             "subject": "CLI: info and convert report what a damaged DWG left out (read notes, #859) (#2337)"
-          },
-          {
-            "commit": "3f57f8d",
-            "subject": "render: a display list past the block-expansion budget says what it left out (#1278)"
           }
         ]
       }
@@ -1283,5 +1283,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-02T22:09:41+00:00"
+  "updated_at": "2026-11-02T23:56:12+00:00"
 }
