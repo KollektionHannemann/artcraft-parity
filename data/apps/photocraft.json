@@ -363,18 +363,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.5,
+    "score": 17.5,
     "active_days_7d": 7,
-    "changes_7d": 64,
-    "changes_14d": 281,
+    "changes_7d": 66,
+    "changes_14d": 283,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-02T00:11:02Z",
-      "commit": "fab871d",
-      "commit_full": "fab871dadb85e7422d0b7c872497ff485ae92da9",
-      "subject": "Integration batch 11: 9 ATN PRs on main (#10535)"
+      "ts": "2026-11-02T08:30:46Z",
+      "commit": "5d9c57e",
+      "commit_full": "5d9c57e60db966382abda2638d0ccbb7489d8ee7",
+      "subject": "Linux: return memory of closed documents to the system (#8743) (#10515)"
     },
-    "last_commit_ts": "2026-11-02T00:11:02Z",
+    "last_commit_ts": "2026-11-02T08:30:46Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       3,
@@ -390,7 +390,7 @@
       7,
       8,
       11,
-      1
+      3
     ],
     "days": [
       {
@@ -1022,9 +1022,17 @@
       },
       {
         "d": "2026-11-02",
-        "code": 1,
+        "code": 3,
         "other": 0,
         "samples": [
+          {
+            "commit": "5d9c57e",
+            "subject": "Linux: return memory of closed documents to the system (#8743) (#10515)"
+          },
+          {
+            "commit": "86ddfb7",
+            "subject": "Reuse large buffers so returning freed memory to the OS doesn't slow filters (#10479) (#10514)"
+          },
           {
             "commit": "fab871d",
             "subject": "Integration batch 11: 9 ATN PRs on main (#10535)"
@@ -1402,5 +1410,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-02T00:24:46+00:00"
+  "updated_at": "2026-11-02T09:29:26+00:00"
 }
