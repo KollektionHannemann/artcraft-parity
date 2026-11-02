@@ -353,18 +353,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.1,
+    "score": 18.4,
     "active_days_7d": 6,
-    "changes_7d": 120,
-    "changes_14d": 279,
+    "changes_7d": 121,
+    "changes_14d": 280,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-02T10:31:22Z",
-      "commit": "ebc67fa",
-      "commit_full": "ebc67fa81dccb0d89c157babb27e7d5c3a5c1177",
-      "subject": "Dynamic blocks: stretch the points inside the frame, as AutoCAD does (#2627)"
+      "ts": "2026-11-02T17:23:14Z",
+      "commit": "dae4b7b",
+      "commit_full": "dae4b7b2f564b9870a97213a5f9ec31f65d56883",
+      "subject": "fix(it): correct Chamfer terminology (#2335)"
     },
-    "last_commit_ts": "2026-11-02T10:31:22Z",
+    "last_commit_ts": "2026-11-02T17:23:14Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       0,
@@ -380,7 +380,7 @@
       42,
       43,
       17,
-      3
+      4
     ],
     "days": [
       {
@@ -780,9 +780,13 @@
       },
       {
         "d": "2026-11-02",
-        "code": 3,
+        "code": 4,
         "other": 0,
         "samples": [
+          {
+            "commit": "dae4b7b",
+            "subject": "fix(it): correct Chamfer terminology (#2335)"
+          },
           {
             "commit": "ebc67fa",
             "subject": "Dynamic blocks: stretch the points inside the frame, as AutoCAD does (#2627)"
@@ -790,10 +794,6 @@
           {
             "commit": "fa03bf2",
             "subject": "feat(engine): INSERT of a drawing file keeps an attribute definition's field (#2619)"
-          },
-          {
-            "commit": "b006110",
-            "subject": "OOPS: bring back what -WBLOCK erased; keep the last erase through REFEDIT; the Block Editor (#2625)"
           }
         ]
       }
@@ -1283,5 +1283,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-02T11:19:10+00:00"
+  "updated_at": "2026-11-02T17:44:26+00:00"
 }
