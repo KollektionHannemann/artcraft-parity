@@ -353,18 +353,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.1,
-    "active_days_7d": 5,
-    "changes_7d": 117,
-    "changes_14d": 276,
+    "score": 18.1,
+    "active_days_7d": 6,
+    "changes_7d": 120,
+    "changes_14d": 279,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-01T19:40:30Z",
-      "commit": "2034d68",
-      "commit_full": "2034d6899eba72363028723ec75d4c36eacfceac",
-      "subject": "Polyface meshes stay one object through DXF and DWG (#2600)"
+      "ts": "2026-11-02T10:31:22Z",
+      "commit": "ebc67fa",
+      "commit_full": "ebc67fa81dccb0d89c157babb27e7d5c3a5c1177",
+      "subject": "Dynamic blocks: stretch the points inside the frame, as AutoCAD does (#2627)"
     },
-    "last_commit_ts": "2026-11-01T19:40:30Z",
+    "last_commit_ts": "2026-11-02T10:31:22Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       0,
@@ -380,7 +380,7 @@
       42,
       43,
       17,
-      0
+      3
     ],
     "days": [
       {
@@ -775,6 +775,25 @@
           {
             "commit": "152617f",
             "subject": "Plot: a layout's saved page setup is used by default (part of #2493) (#2586)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-02",
+        "code": 3,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "ebc67fa",
+            "subject": "Dynamic blocks: stretch the points inside the frame, as AutoCAD does (#2627)"
+          },
+          {
+            "commit": "fa03bf2",
+            "subject": "feat(engine): INSERT of a drawing file keeps an attribute definition's field (#2619)"
+          },
+          {
+            "commit": "b006110",
+            "subject": "OOPS: bring back what -WBLOCK erased; keep the last erase through REFEDIT; the Block Editor (#2625)"
           }
         ]
       }
@@ -1264,5 +1283,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-02T00:25:36+00:00"
+  "updated_at": "2026-11-02T11:19:10+00:00"
 }
