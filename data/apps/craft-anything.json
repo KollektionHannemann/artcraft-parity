@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "48759fb",
-  "latest_commit_date": "2026-11-03T19:31:22+07:00",
-  "latest_message": "Stop unchanged rebuilds after two turns across runs (#557)",
+  "latest_commit": "ad5cd81",
+  "latest_commit_date": "2026-11-03T20:50:05+07:00",
+  "latest_message": "Paste pictures into the prompt box with Ctrl+V and show attachments as picture tiles (#631)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 67,
-    "revisions_7d": 67,
+    "revisions": 78,
+    "revisions_7d": 78,
     "last_revision": {
-      "ts": "2026-11-03T12:31:22Z",
+      "ts": "2026-11-03T13:50:05Z",
       "kind": "content",
-      "commit": "48759fb",
-      "commit_full": "48759fb5fccde45405c2db29d162ac55edbc6562",
-      "message": "Stop unchanged rebuilds after two turns across runs (#557)"
+      "commit": "ad5cd81",
+      "commit_full": "ad5cd81b6a2ce5238024dadc9397ea0fc20170e5",
+      "message": "Paste pictures into the prompt box with Ctrl+V and show attachments as picture tiles (#631)"
     },
     "last_update": {
-      "ts": "2026-11-03T12:31:22Z",
+      "ts": "2026-11-03T13:50:05Z",
       "kind": "content",
-      "commit": "48759fb",
-      "commit_full": "48759fb5fccde45405c2db29d162ac55edbc6562",
-      "message": "Stop unchanged rebuilds after two turns across runs (#557)"
+      "commit": "ad5cd81",
+      "commit_full": "ad5cd81b6a2ce5238024dadc9397ea0fc20170e5",
+      "message": "Paste pictures into the prompt box with Ctrl+V and show attachments as picture tiles (#631)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.3,
+    "score": 16.9,
     "active_days_7d": 4,
-    "changes_7d": 234,
-    "changes_14d": 234,
+    "changes_7d": 254,
+    "changes_14d": 254,
     "housekeeping_7d": 20,
     "last_code_change": {
-      "ts": "2026-11-03T12:31:22Z",
-      "commit": "48759fb",
-      "commit_full": "48759fb5fccde45405c2db29d162ac55edbc6562",
-      "subject": "Stop unchanged rebuilds after two turns across runs (#557)"
+      "ts": "2026-11-03T13:50:05Z",
+      "commit": "ad5cd81",
+      "commit_full": "ad5cd81b6a2ce5238024dadc9397ea0fc20170e5",
+      "subject": "Paste pictures into the prompt box with Ctrl+V and show attachments as picture tiles (#631)"
     },
-    "last_commit_ts": "2026-11-03T12:31:22Z",
+    "last_commit_ts": "2026-11-03T13:50:05Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       3,
       73,
       117,
-      41
+      61
     ],
     "days": [
       {
@@ -155,20 +155,20 @@
       },
       {
         "d": "2026-11-03",
-        "code": 41,
+        "code": 61,
         "other": 3,
         "samples": [
           {
-            "commit": "48759fb",
-            "subject": "Stop unchanged rebuilds after two turns across runs (#557)"
+            "commit": "ad5cd81",
+            "subject": "Paste pictures into the prompt box with Ctrl+V and show attachments as picture tiles (#631)"
           },
           {
-            "commit": "f307d39",
-            "subject": "Retry builder turns from typed failures, including stateless backends (#552)"
+            "commit": "ebed13d",
+            "subject": "Keep ARM32 conditional call values, esbuild dependencies and window labels right (#656)"
           },
           {
-            "commit": "888f75b",
-            "subject": "Help models correct rejected tool argument types (#546)"
+            "commit": "aeb86a6",
+            "subject": "Agent setup and streaming fixes: Aider, Antigravity on Windows, chat-only models, SSE limits and retries (#653)"
           }
         ]
       }
@@ -696,8 +696,85 @@
       "commit": "48759fb",
       "commit_full": "48759fb5fccde45405c2db29d162ac55edbc6562",
       "message": "Stop unchanged rebuilds after two turns across runs (#557)"
+    },
+    {
+      "ts": "2026-11-03T12:53:16Z",
+      "kind": "content",
+      "commit": "1d66a6b",
+      "commit_full": "1d66a6ba4b0e1de161b18ced8fc4c4504b2153d1",
+      "message": "Choose OpenCode models and thinking depth locally or over SSH (#413)"
+    },
+    {
+      "ts": "2026-11-03T12:58:08Z",
+      "kind": "content",
+      "commit": "0eea78d",
+      "commit_full": "0eea78d7aa50a4943c8cf60c1a3dcadf0d85e658",
+      "message": "Read HTML pages' scripts and preloads correctly in more cases (#645)"
+    },
+    {
+      "ts": "2026-11-03T13:07:33Z",
+      "kind": "content",
+      "commit": "3ee1642",
+      "commit_full": "3ee164277023a3d76a3859f5796782eba6260f3f",
+      "message": "Serve previews only to this computer, stream their files and bound their connections (#649)"
+    },
+    {
+      "ts": "2026-11-03T13:14:49Z",
+      "kind": "content",
+      "commit": "b9c4c53",
+      "commit_full": "b9c4c53099fecc493c87617bf92908fab77a8bda",
+      "message": "Find Hermes Agent's native Windows install when the app's PATH is older than it (#585)"
+    },
+    {
+      "ts": "2026-11-03T13:15:01Z",
+      "kind": "content",
+      "commit": "78e1f7d",
+      "commit_full": "78e1f7dce0e440b514c4673ba0b91c42b7903d27",
+      "message": "Say where a program is when it is there but can't start, instead of \"isn't installed\" (#583)"
+    },
+    {
+      "ts": "2026-11-03T13:25:48Z",
+      "kind": "content",
+      "commit": "82856a3",
+      "commit_full": "82856a30b2e464018616bcbb5822927ce241f0bc",
+      "message": "Redact HAR reports more thoroughly and count their bodies correctly (#648)"
+    },
+    {
+      "ts": "2026-11-03T13:29:18Z",
+      "kind": "content",
+      "commit": "15de366",
+      "commit_full": "15de36614b2d1039ed68bffcc36e0e92053b3f12",
+      "message": "Format parsers refuse or flag input they used to half-read (#652)"
+    },
+    {
+      "ts": "2026-11-03T13:34:57Z",
+      "kind": "content",
+      "commit": "3be1d0b",
+      "commit_full": "3be1d0b8713d500ed524dd7f0967355b70200527",
+      "message": "Refuse an agent's own file tools outright in Clean room chats and questions (#574)"
+    },
+    {
+      "ts": "2026-11-03T13:35:03Z",
+      "kind": "content",
+      "commit": "e9852f8",
+      "commit_full": "e9852f8c580a8fa023d89210e439948d7eef5e3e",
+      "message": "Name every place the website check accepts a site, and where the app really is (#627)"
+    },
+    {
+      "ts": "2026-11-03T13:41:06Z",
+      "kind": "content",
+      "commit": "aeb86a6",
+      "commit_full": "aeb86a69a35db8afca288a616e8622e866e03c52",
+      "message": "Agent setup and streaming fixes: Aider, Antigravity on Windows, chat-only models, SSE limits and retries (#653)"
+    },
+    {
+      "ts": "2026-11-03T13:50:05Z",
+      "kind": "content",
+      "commit": "ad5cd81",
+      "commit_full": "ad5cd81b6a2ce5238024dadc9397ea0fc20170e5",
+      "message": "Paste pictures into the prompt box with Ctrl+V and show attachments as picture tiles (#631)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-03T12:42:59+00:00"
+  "updated_at": "2026-11-03T13:58:03+00:00"
 }

@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "bf0f3c9",
-  "latest_commit_date": "2026-11-03T00:33:11-05:00",
-  "latest_message": "M10: macOS print jobs name their title and owner (#5743) (#5757)",
+  "latest_commit": "ea353f7",
+  "latest_commit_date": "2026-11-03T14:00:16+01:00",
+  "latest_message": "fix(ui): do not open right-click context menu on image in crop mode (#5835) (#5900)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -293,6 +293,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-03",
+        "text": "(M7, #5835): In image crop mode, a right-click on the image, its crop box or its handles keeps the crop and opens no menu, so the menu no longer switches as the pointer moves. A right-click elsewhere clears the selection and opens the page menu. UI tests cover all four page rotations, overlapping images, a 45° image, and a check that the Done/Cancel/Remove Crop pills at a page edge still keep the crop."
+      },
+      {
         "date": "2026-11-02",
         "text": "(M10, #5743): macOS print jobs name their title and owner (com.apple.print.JobInfo.PMJobName, PMJobOwner), as the system print dialog does, because a Kyocera filter crashes on a job without them. Checked by a test and through docprint against a stand-in lp; not yet on a physical printer."
       },
@@ -447,10 +451,6 @@
       {
         "date": "2026-10-22",
         "text": "(M4, #3916 partial): Document edits and Undo/Redo cancel an Organize page drag. Pointer-release regressions check exact page order and save/reopen."
-      },
-      {
-        "date": "2026-10-22",
-        "text": "(M10, #3752 paper): CUPS jobs ask for the chosen paper in every size. The 13 sizes the Print dialog sent no paper for (A6, A0–A2, ARCH, ANSI C–E) use PWG 5101.1 names, checked against a synthetic PPD with cupsfilter, and docprint to a printer sends the paper too. The macOS tray half (Auto Select instead of the PPD's default tray) is a craft-print change that needs a pin bump here. Estimates unchanged."
       }
     ]
   },
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 10,
     "releases_since_capped": false,
-    "revisions_since": 96,
+    "revisions_since": 97,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 184,
-    "revisions_7d": 10,
+    "revisions": 185,
+    "revisions_7d": 11,
     "last_revision": {
-      "ts": "2026-11-03T05:33:11Z",
+      "ts": "2026-11-03T13:00:16Z",
       "kind": "content",
-      "commit": "bf0f3c9",
-      "commit_full": "bf0f3c9f775d747e3cc38d1de56a8e0f82e1e7e0",
-      "message": "M10: macOS print jobs name their title and owner (#5743) (#5757)"
+      "commit": "ea353f7",
+      "commit_full": "ea353f7a598ff032e412f27352a3373357ccef50",
+      "message": "fix(ui): do not open right-click context menu on image in crop mode (#5835) (#5900)"
     },
     "last_update": {
-      "ts": "2026-11-03T05:33:11Z",
+      "ts": "2026-11-03T13:00:16Z",
       "kind": "content",
-      "commit": "bf0f3c9",
-      "commit_full": "bf0f3c9f775d747e3cc38d1de56a8e0f82e1e7e0",
-      "message": "M10: macOS print jobs name their title and owner (#5743) (#5757)"
+      "commit": "ea353f7",
+      "commit_full": "ea353f7a598ff032e412f27352a3373357ccef50",
+      "message": "fix(ui): do not open right-click context menu on image in crop mode (#5835) (#5900)"
     },
     "self_reported": "2026-11-01"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.2,
+    "score": 19.3,
     "active_days_7d": 7,
-    "changes_7d": 82,
-    "changes_14d": 277,
+    "changes_7d": 83,
+    "changes_14d": 278,
     "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-03T12:06:31Z",
-      "commit": "01ba3ac",
-      "commit_full": "01ba3ac9d126dd4345c8795e74b46e311f18cc7d",
-      "subject": "Feat/unify hotbar quick tools (Fixes #5890) (#5909)"
+      "ts": "2026-11-03T13:00:16Z",
+      "commit": "ea353f7",
+      "commit_full": "ea353f7a598ff032e412f27352a3373357ccef50",
+      "subject": "fix(ui): do not open right-click context menu on image in crop mode (#5835) (#5900)"
     },
-    "last_commit_ts": "2026-11-03T12:06:31Z",
+    "last_commit_ts": "2026-11-03T13:00:16Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       13,
@@ -524,7 +524,7 @@
       11,
       22,
       11,
-      15
+      16
     ],
     "days": [
       {
@@ -1162,9 +1162,13 @@
       },
       {
         "d": "2026-11-03",
-        "code": 15,
+        "code": 16,
         "other": 1,
         "samples": [
+          {
+            "commit": "ea353f7",
+            "subject": "fix(ui): do not open right-click context menu on image in crop mode (#5835) (#5900)"
+          },
           {
             "commit": "01ba3ac",
             "subject": "Feat/unify hotbar quick tools (Fixes #5890) (#5909)"
@@ -1172,10 +1176,6 @@
           {
             "commit": "14ae839",
             "subject": "i18n(tr): translate the 288 strings the gaps report lists (#5795)"
-          },
-          {
-            "commit": "d9b7359",
-            "subject": "i18n(fr): translate the 16 strings the report listed as missing (#5736)"
           }
         ]
       }
@@ -5620,7 +5620,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "ea353f7",
+      "commit_full": "ea353f7a598ff032e412f27352a3373357ccef50",
+      "commit_date": "2026-11-03T14:00:16+01:00",
+      "ts": "2026-11-03T13:00:16Z",
+      "message": "fix(ui): do not open right-click context menu on image in crop mode (#5835) (#5900)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-01",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T12:42:29+00:00"
+  "updated_at": "2026-11-03T13:57:28+00:00"
 }

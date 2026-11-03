@@ -462,18 +462,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 13.9,
+    "score": 14.1,
     "active_days_7d": 5,
-    "changes_7d": 77,
-    "changes_14d": 150,
+    "changes_7d": 78,
+    "changes_14d": 151,
     "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-03T11:18:44Z",
-      "commit": "351b9d3",
-      "commit_full": "351b9d3a55c08a2f7ca03a7fec317678bb72c2cd",
-      "subject": "Tempo map: binary-search tempo segments in tick/sample conversions (#1297)"
+      "ts": "2026-11-03T12:44:31Z",
+      "commit": "aa250cc",
+      "commit_full": "aa250cc1d740013cf26cc449e53a20653ed67e2e",
+      "subject": "Clip gain to volume: index envelope lookups (#1309)"
     },
-    "last_commit_ts": "2026-11-03T11:18:44Z",
+    "last_commit_ts": "2026-11-03T12:44:31Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
       1,
@@ -489,7 +489,7 @@
       23,
       0,
       6,
-      6
+      7
     ],
     "days": [
       {
@@ -904,9 +904,13 @@
       },
       {
         "d": "2026-11-03",
-        "code": 6,
+        "code": 7,
         "other": 1,
         "samples": [
+          {
+            "commit": "aa250cc",
+            "subject": "Clip gain to volume: index envelope lookups (#1309)"
+          },
           {
             "commit": "351b9d3",
             "subject": "Tempo map: binary-search tempo segments in tick/sample conversions (#1297)"
@@ -914,10 +918,6 @@
           {
             "commit": "da02c19",
             "subject": "Bundles: refuse entries that share their data (#1303)"
-          },
-          {
-            "commit": "64540f1",
-            "subject": "Mixer: compute cyclic aux depths in one pass per hop (#1306)"
           }
         ]
       }
@@ -1661,5 +1661,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T11:32:32+00:00"
+  "updated_at": "2026-11-03T13:57:47+00:00"
 }

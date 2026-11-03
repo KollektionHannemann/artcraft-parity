@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 32.8,
+    "score": 33.4,
     "active_days_7d": 7,
-    "changes_7d": 1116,
-    "changes_14d": 1939,
+    "changes_7d": 1118,
+    "changes_14d": 1941,
     "housekeeping_7d": 25,
     "last_code_change": {
-      "ts": "2026-11-03T12:23:17Z",
-      "commit": "e438a9b",
-      "commit_full": "e438a9bbea566ca6b4f1987bb4ce7969bd03b26c",
-      "subject": "Web app: choose the release, the release candidate or the edge build (#11419)"
+      "ts": "2026-11-03T13:51:11Z",
+      "commit": "bd2dc3f",
+      "commit_full": "bd2dc3fade1d89de40c82dd230f79a399b647e28",
+      "subject": "Reference tests: the variable round on a box edge (case 77) is a known failure at solidcore 8ddce9016 (#11611)"
     },
-    "last_commit_ts": "2026-11-03T12:23:17Z",
+    "last_commit_ts": "2026-11-03T13:51:11Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       85,
@@ -93,7 +93,7 @@
       201,
       128,
       160,
-      3
+      5
     ],
     "days": [
       {
@@ -611,20 +611,20 @@
       },
       {
         "d": "2026-11-03",
-        "code": 3,
+        "code": 5,
         "other": 3,
         "samples": [
           {
+            "commit": "bd2dc3f",
+            "subject": "Reference tests: the variable round on a box edge (case 77) is a known failure at solidcore 8ddce9016 (#11611)"
+          },
+          {
+            "commit": "1b51a06",
+            "subject": "Kernel rig: export each case's kernel operations as a corpus for solidcore's rig (#11568)"
+          },
+          {
             "commit": "e438a9b",
             "subject": "Web app: choose the release, the release candidate or the edge build (#11419)"
-          },
-          {
-            "commit": "2aa7e3e",
-            "subject": "Release 0.40.0-rc.1 (#11457)"
-          },
-          {
-            "commit": "2b921df",
-            "subject": "Kernel: solidcore is SolidCraft's only kernel; C++ SMLib removed (#8526 on #11351) (#11360)"
           }
         ]
       }
@@ -2190,5 +2190,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-03T12:43:10+00:00"
+  "updated_at": "2026-11-03T13:58:18+00:00"
 }

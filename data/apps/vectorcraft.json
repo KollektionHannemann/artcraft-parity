@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "c859ebd",
-  "latest_commit_date": "2026-11-03T16:35:38+07:00",
-  "latest_message": "Type: step font families with the mouse wheel (#5331)",
+  "latest_commit": "bf2258b",
+  "latest_commit_date": "2026-11-03T20:16:27+07:00",
+  "latest_message": "Fix #4924: Text Tweaker ramps or randomises one character attribute letter by letter (#5344)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Adobe Illustrator 2026 (30.x)",
-    "last_updated": "2026-11-02",
+    "last_updated": "2026-11-03",
     "metrics": {
       "full": {
         "label": "Full Illustrator (ready for real work; decides the stage)",
@@ -343,6 +343,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-03",
+        "text": "Text Tweaker, the first tool of the Type Tools add-on (Object › Plug-ins › Type Tools): one character attribute (size, baseline shift, rotation, horizontal or vertical scale, tracking, leading or stroke weight) goes letter by letter from a start value to an end value along a straight ramp, an ease, a bow, a spike or at random with a seed, set as the Character panel sets it, while the text stays live; a dialog with Preview, one undo step (addon.type.textTweaker, #4924). A VectorCraft addition: headline numbers unchanged."
+      },
+      {
         "date": "2026-11-02",
         "text": "Mouse wheel over a closed font-family field in Character, Properties or Control changes selected text through the family list using saved font filters (excluding search text), one undo step per notch, stopping at the ends (#5253). Scores and estimates unchanged."
       },
@@ -497,10 +501,6 @@
       {
         "date": "2026-10-14",
         "text": "Direct Selection: deleting an interior anchor of an open path leaves separate surviving runs. Delete/Backspace and history regressions cover the gap; explicit Remove Anchors remains connected. Headline numbers unchanged."
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Corner Radius has a link button in Properties and Transform: unlinked, a live rectangle shows a radius field for each corner (#1682). With the Width tool, double-clicking a stroke opens Width Point Edit to create a width point there, and Shift-double-click on a width point opens it with Adjust Adjoining Width Points ticked (#1814, #1630). Holding Alt while dragging a guide out of a ruler switches it between horizontal and vertical (#1782), and a marquee with the Selection or Direct Selection tool also selects the unlocked ruler guides it crosses (#1836). The Transform panel's, Properties panel's and Control bar's X/Y/W/H show and edit only the anchor points selected with Direct Selection (#1839, fixes #1824). With the Direct Selection tool, double-clicking type (including type nested inside a group) switches to the Type tool and puts the caret at the clicked character; pressing Escape finishes editing and returns to the selection tool used before double-clicking, and in isolation mode the first Escape exits editing while preserving isolation until a second Escape. With Snap to Grid on, anchors and objects snap to the grid even when Snap to Pixel is also ticked (#1840; #1816 waits for the reporter). Artboards are deleted the same way from the Artboards panel, its menu, Properties and Delete/Backspace (#1631). The toolbar shows no group labels by default (a preference brings them back) and runs on in one or two columns; the All Tools drawer lists the tools by flyout group with their shortcuts, has a menu (Reset, Basic, Advanced) and a Show section for the Fill/Stroke, Coloring, Draw Mode and Screen Mode controls (#1751). An action clicked in the Actions panel stays selected, so Play Current Selection and Delete Selection act on it (#1853, part of #1629). Redo during a drag keeps the drag as a step (#1856, #1719). Preferences are written as soon as OK is pressed (#1857; #1747 waits for the reporter). Preferences › Appearance of Black › Printing / Exporting and Units › Identify Objects By act (#1750, #1809). The paragraph alignment buttons show none selected for paragraphs with different alignments (#1784); redefining a character style to Auto leading updates the text that uses it and keeps local overrides (#1633); New and Redefine Character Style take the format of the selected text range, also while typing (#1634). Type inside symbols, pattern tiles, graph designs and opacity masks gets its layout bounds back when a native file opens, so warped type in a symbol looks the same after save and reopen (#1833, #1738). Editing, renaming, deleting or merging a global swatch reaches the art of opacity masks (#1830, #1735). macOS: Save As, Save a Copy and the first Save show their sheet again; the sheet's Format menu (#866, reopened) is withdrawn until it can be set before the sheet opens (#1855)."
       }
     ]
   },
@@ -509,7 +509,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 206,
+    "revisions_since": 207,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -540,39 +540,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 207,
-    "revisions_7d": 16,
+    "revisions": 208,
+    "revisions_7d": 17,
     "last_revision": {
-      "ts": "2026-11-03T09:35:38Z",
+      "ts": "2026-11-03T13:16:27Z",
       "kind": "content",
-      "commit": "c859ebd",
-      "commit_full": "c859ebd2cc0ae4d74fcbf11bcb2bd287567bed9c",
-      "message": "Type: step font families with the mouse wheel (#5331)"
+      "commit": "bf2258b",
+      "commit_full": "bf2258b48f07d3620db78a6f56acc74c3070cd9d",
+      "message": "Fix #4924: Text Tweaker ramps or randomises one character attribute letter by letter (#5344)"
     },
     "last_update": {
-      "ts": "2026-11-03T09:35:38Z",
+      "ts": "2026-11-03T13:16:27Z",
       "kind": "content",
-      "commit": "c859ebd",
-      "commit_full": "c859ebd2cc0ae4d74fcbf11bcb2bd287567bed9c",
-      "message": "Type: step font families with the mouse wheel (#5331)"
+      "commit": "bf2258b",
+      "commit_full": "bf2258b48f07d3620db78a6f56acc74c3070cd9d",
+      "message": "Fix #4924: Text Tweaker ramps or randomises one character attribute letter by letter (#5344)"
     },
-    "self_reported": "2026-11-02"
+    "self_reported": "2026-11-03"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 31.6,
+    "score": 31.7,
     "active_days_7d": 7,
-    "changes_7d": 625,
-    "changes_14d": 1237,
-    "housekeeping_7d": 20,
+    "changes_7d": 628,
+    "changes_14d": 1240,
+    "housekeeping_7d": 22,
     "last_code_change": {
-      "ts": "2026-11-03T10:36:30Z",
-      "commit": "94abb6a",
-      "commit_full": "94abb6ae9cd4db37392cbc7f95490a27b25e424e",
-      "subject": "Fix #5342: `eexec` skips in the file it is given (#5343)"
+      "ts": "2026-11-03T13:16:27Z",
+      "commit": "bf2258b",
+      "commit_full": "bf2258b48f07d3620db78a6f56acc74c3070cd9d",
+      "subject": "Fix #4924: Text Tweaker ramps or randomises one character attribute letter by letter (#5344)"
     },
-    "last_commit_ts": "2026-11-03T10:36:30Z",
+    "last_commit_ts": "2026-11-03T13:17:00Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       169,
@@ -588,7 +588,7 @@
       126,
       41,
       113,
-      62
+      65
     ],
     "days": [
       {
@@ -1226,20 +1226,20 @@
       },
       {
         "d": "2026-11-03",
-        "code": 62,
-        "other": 3,
+        "code": 65,
+        "other": 5,
         "samples": [
           {
-            "commit": "94abb6a",
-            "subject": "Fix #5342: `eexec` skips in the file it is given (#5343)"
+            "commit": "bf2258b",
+            "subject": "Fix #4924: Text Tweaker ramps or randomises one character attribute letter by letter (#5344)"
           },
           {
-            "commit": "60e397c",
-            "subject": "Group flattened multi-line transparent type by line (#5338)"
+            "commit": "78a5b8b",
+            "subject": "Tests: isolate font wheel picking from missing-glyph protection (#5353)"
           },
           {
-            "commit": "329d923",
-            "subject": ".ai import: Effect › Pathfinder on a group opens as a live effect (#5150)"
+            "commit": "b541041",
+            "subject": "Fix #5236: Use System Defaults for Edit Original (Preferences › File Handling) (#5327)"
           }
         ]
       }
@@ -6890,7 +6890,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "bf2258b",
+      "commit_full": "bf2258b48f07d3620db78a6f56acc74c3070cd9d",
+      "commit_date": "2026-11-03T20:16:27+07:00",
+      "ts": "2026-11-03T13:16:27Z",
+      "message": "Fix #4924: Text Tweaker ramps or randomises one character attribute letter by letter (#5344)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T10:49:23+00:00"
+  "updated_at": "2026-11-03T13:57:12+00:00"
 }
