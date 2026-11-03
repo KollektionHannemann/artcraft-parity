@@ -357,18 +357,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.4,
+    "score": 22.5,
     "active_days_7d": 6,
-    "changes_7d": 172,
-    "changes_14d": 342,
+    "changes_7d": 174,
+    "changes_14d": 344,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-11-03T14:08:07Z",
-      "commit": "b639b18",
-      "commit_full": "b639b18f69bfefd58f866fd0dc04940d0c6aa6e6",
-      "subject": "fix(io): sort each space once when a DXF has several SORTENTSTABLEs for it (#2709)"
+      "ts": "2026-11-03T23:11:23Z",
+      "commit": "dad7d1c",
+      "commit_full": "dad7d1c138f585f9b4b21db7ea4f3d545a66fc54",
+      "subject": "fix(render): charge every block entry, index attribute definitions, and walk dashes and outlines in linear time (#2724)"
     },
-    "last_commit_ts": "2026-11-03T14:08:07Z",
+    "last_commit_ts": "2026-11-03T23:11:23Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       4,
@@ -384,7 +384,7 @@
       43,
       17,
       39,
-      27
+      29
     ],
     "days": [
       {
@@ -803,20 +803,20 @@
       },
       {
         "d": "2026-11-03",
-        "code": 27,
+        "code": 29,
         "other": 2,
         "samples": [
           {
+            "commit": "dad7d1c",
+            "subject": "fix(render): charge every block entry, index attribute definitions, and walk dashes and outlines in linear time (#2724)"
+          },
+          {
+            "commit": "b1b3754",
+            "subject": "fix(engine): autosave files are owner-only and lock files are never written through a link (#2717)"
+          },
+          {
             "commit": "b639b18",
             "subject": "fix(io): sort each space once when a DXF has several SORTENTSTABLEs for it (#2709)"
-          },
-          {
-            "commit": "578da3b",
-            "subject": "fix(io): an ACAD_TABLE with no rows or no columns reads as an empty table (#2708)"
-          },
-          {
-            "commit": "f2afcd4",
-            "subject": "fix(engine): look names up in an index in AUDIT, layer-state restore and CAL (#2712)"
           }
         ]
       }
@@ -1307,5 +1307,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T14:44:30+00:00"
+  "updated_at": "2026-11-03T23:58:30+00:00"
 }

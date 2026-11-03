@@ -376,16 +376,16 @@
     "level": "buzzing",
     "score": 21.9,
     "active_days_7d": 7,
-    "changes_7d": 340,
-    "changes_14d": 399,
+    "changes_7d": 341,
+    "changes_14d": 400,
     "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-11-03T22:56:37Z",
-      "commit": "ff68626",
-      "commit_full": "ff686265977b5c228786fc59dab8447c9e0a6909",
-      "subject": "#1605: Posterize and CC Grid Wipe match the CPU on AMD and Intel (#1836)"
+      "ts": "2026-11-03T23:28:51Z",
+      "commit": "025c038",
+      "commit_full": "025c038af558362a64f650dcba7a994d7d5cfb23",
+      "subject": "GPU: build effect kernels on first use, each family from a module of its own (fixes #1590) (#1705)"
     },
-    "last_commit_ts": "2026-11-03T22:56:37Z",
+    "last_commit_ts": "2026-11-03T23:28:51Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       4,
@@ -401,7 +401,7 @@
       37,
       1,
       19,
-      45
+      46
     ],
     "days": [
       {
@@ -980,9 +980,13 @@
       },
       {
         "d": "2026-11-03",
-        "code": 45,
+        "code": 46,
         "other": 1,
         "samples": [
+          {
+            "commit": "025c038",
+            "subject": "GPU: build effect kernels on first use, each family from a module of its own (fixes #1590) (#1705)"
+          },
           {
             "commit": "ff68626",
             "subject": "#1605: Posterize and CC Grid Wipe match the CPU on AMD and Intel (#1836)"
@@ -990,10 +994,6 @@
           {
             "commit": "8d20cf0",
             "subject": "GPU.1: Preserve CPU parity in numerical effect kernels (#1490)"
-          },
-          {
-            "commit": "c4f386a",
-            "subject": "Preview: debounce GPU memory pressure and recover the frame budget (#3025)"
           }
         ]
       }
@@ -1530,5 +1530,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T23:07:11+00:00"
+  "updated_at": "2026-11-03T23:58:17+00:00"
 }
