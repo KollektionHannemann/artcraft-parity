@@ -367,18 +367,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.1,
-    "active_days_7d": 6,
-    "changes_7d": 61,
-    "changes_14d": 284,
-    "housekeeping_7d": 6,
+    "score": 16.1,
+    "active_days_7d": 7,
+    "changes_7d": 62,
+    "changes_14d": 285,
+    "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-02T20:13:40Z",
-      "commit": "b957878",
-      "commit_full": "b957878f3f4d80426cc4bf8d1db8774b57cc8af0",
-      "subject": "Integration batch 12: 14 Actions PRs on main (#10776)"
+      "ts": "2026-11-03T00:47:01Z",
+      "commit": "eed8bd2",
+      "commit_full": "eed8bd27d297b87ab33bde76f7196bfa6ecfc76e",
+      "subject": "Packaging: run the cross-built CLI's --version check without the malloc re-exec"
     },
-    "last_commit_ts": "2026-11-02T20:13:40Z",
+    "last_commit_ts": "2026-11-03T00:47:05Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       11,
@@ -394,7 +394,7 @@
       8,
       11,
       7,
-      0
+      1
     ],
     "days": [
       {
@@ -1042,10 +1042,38 @@
             "subject": "TIFF: open YCbCr images as RGB (#10316) (#10319)"
           }
         ]
+      },
+      {
+        "d": "2026-11-03",
+        "code": 1,
+        "other": 2,
+        "samples": [
+          {
+            "commit": "eed8bd2",
+            "subject": "Packaging: run the cross-built CLI's --version check without the malloc re-exec"
+          }
+        ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.20.1",
+      "name": "PhotoCraft v0.20.1",
+      "ts": "2026-11-03T01:24:40Z",
+      "url": "https://github.com/storytold/photocraft/releases/tag/v0.20.1",
+      "changes": 31,
+      "new_contributors": 6,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.19.0",
       "name": "PhotoCraft v0.19.0",
@@ -1223,23 +1251,6 @@
       "url": "https://github.com/storytold/photocraft/releases/tag/v0.9.0",
       "changes": 393,
       "new_contributors": 42,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.8.2",
-      "name": "PhotoCraft v0.8.2",
-      "ts": "2026-10-12T21:22:47Z",
-      "url": "https://github.com/storytold/photocraft/releases/tag/v0.8.2",
-      "changes": 414,
-      "new_contributors": 53,
       "platforms": [
         "macOS",
         "Windows",
@@ -1437,5 +1448,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T00:26:35+00:00"
+  "updated_at": "2026-11-03T01:32:19+00:00"
 }

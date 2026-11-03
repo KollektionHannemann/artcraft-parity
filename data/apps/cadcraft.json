@@ -322,8 +322,8 @@
   "parity": {
     "tracked_since": "2026-10-10T18:13:04Z",
     "value_since": "2026-10-10T18:13:04Z",
-    "releases_since": 11,
-    "releases_since_capped": false,
+    "releases_since": 12,
+    "releases_since_capped": true,
     "revisions_since": 11,
     "hours_since": null,
     "areas_since": null,
@@ -353,18 +353,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.6,
+    "score": 19.6,
     "active_days_7d": 6,
-    "changes_7d": 146,
-    "changes_14d": 316,
-    "housekeeping_7d": 10,
+    "changes_7d": 148,
+    "changes_14d": 318,
+    "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-11-03T00:10:53Z",
-      "commit": "eacdbe4",
-      "commit_full": "eacdbe43eef1b58b7436317830751c8b6e93bf6e",
-      "subject": "Save: a folder that can't be made says so, not that the backup failed (#2669)"
+      "ts": "2026-11-03T01:14:29Z",
+      "commit": "6c4984f",
+      "commit_full": "6c4984f5ad05ef0cbd9b42028ce06521c7f29341",
+      "subject": "A panic in the interface saves the work and reports it (E4) (#2671)"
     },
-    "last_commit_ts": "2026-11-03T00:26:12Z",
+    "last_commit_ts": "2026-11-03T01:24:51Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       4,
@@ -380,7 +380,7 @@
       43,
       17,
       39,
-      1
+      3
     ],
     "days": [
       {
@@ -799,9 +799,17 @@
       },
       {
         "d": "2026-11-03",
-        "code": 1,
-        "other": 1,
+        "code": 3,
+        "other": 2,
         "samples": [
+          {
+            "commit": "6c4984f",
+            "subject": "A panic in the interface saves the work and reports it (E4) (#2671)"
+          },
+          {
+            "commit": "fdfe4d9",
+            "subject": "Autosave: failures are shown, and a crash is recovered at the first relaunch (#2670)"
+          },
           {
             "commit": "eacdbe4",
             "subject": "Save: a folder that can't be made says so, not that the backup failed (#2669)"
@@ -811,6 +819,23 @@
     ]
   },
   "releases": [
+    {
+      "tag": "v0.17.0",
+      "name": "CADCraft v0.17.0",
+      "ts": "2026-11-03T00:54:01Z",
+      "url": "https://github.com/storytold/cadcraft/releases/tag/v0.17.0",
+      "changes": 59,
+      "new_contributors": 13,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.16.0",
       "name": "CADCraft v0.16.0",
@@ -988,23 +1013,6 @@
       "url": "https://github.com/storytold/cadcraft/releases/tag/v0.5.0",
       "changes": 180,
       "new_contributors": 11,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.4.0",
-      "name": "CADCraft v0.4.0",
-      "ts": "2026-10-10T02:51:15Z",
-      "url": "https://github.com/storytold/cadcraft/releases/tag/v0.4.0",
-      "changes": 1,
-      "new_contributors": 1,
       "platforms": [
         "macOS",
         "Windows",
@@ -1294,5 +1302,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T00:27:26+00:00"
+  "updated_at": "2026-11-03T01:33:08+00:00"
 }
