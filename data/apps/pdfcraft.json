@@ -499,16 +499,16 @@
     "level": "active",
     "score": 19.9,
     "active_days_7d": 7,
-    "changes_7d": 91,
-    "changes_14d": 286,
+    "changes_7d": 92,
+    "changes_14d": 287,
     "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-03T19:33:41Z",
-      "commit": "76260bb",
-      "commit_full": "76260bb6a5032fd9ab3cfd364add751c3f80b828",
-      "subject": "fix(xfa): scripts come only from the XDP's own packets and quote the date pattern (#5987)"
+      "ts": "2026-11-03T20:10:02Z",
+      "commit": "801fd3a",
+      "commit_full": "801fd3aa676be57fa3e686704d305b08a61fe106",
+      "subject": "fix(engine): decode signature preview images within a small work allowance (#5981)"
     },
-    "last_commit_ts": "2026-11-03T19:33:41Z",
+    "last_commit_ts": "2026-11-03T20:10:02Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       13,
@@ -524,7 +524,7 @@
       11,
       22,
       11,
-      24
+      25
     ],
     "days": [
       {
@@ -1162,9 +1162,13 @@
       },
       {
         "d": "2026-11-03",
-        "code": 24,
+        "code": 25,
         "other": 1,
         "samples": [
+          {
+            "commit": "801fd3a",
+            "subject": "fix(engine): decode signature preview images within a small work allowance (#5981)"
+          },
           {
             "commit": "76260bb",
             "subject": "fix(xfa): scripts come only from the XDP's own packets and quote the date pattern (#5987)"
@@ -1172,10 +1176,6 @@
           {
             "commit": "ecdd1e6",
             "subject": "fix(audit): read content one operator at a time and charge hidden text and findings (#5875)"
-          },
-          {
-            "commit": "0d3f57e",
-            "subject": "M5: keep Fill & Sign editing on Enter and preserve line breaks (#5850) (#5954)"
           }
         ]
       }
@@ -5668,5 +5668,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T19:38:09+00:00"
+  "updated_at": "2026-11-03T20:40:28+00:00"
 }
