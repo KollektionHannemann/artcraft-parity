@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/vectorcraft",
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
-  "latest_commit": "36c35b3",
-  "latest_commit_date": "2026-11-02T14:54:50+07:00",
-  "latest_message": "Brushes: Calligraphic and Scatter values follow pen tilt, bearing and rotation (#5031)",
+  "latest_commit": "c859ebd",
+  "latest_commit_date": "2026-11-03T16:35:38+07:00",
+  "latest_message": "Type: step font families with the mouse wheel (#5331)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Adobe Illustrator 2026 (30.x)",
-    "last_updated": "2026-11-01",
+    "last_updated": "2026-11-02",
     "metrics": {
       "full": {
         "label": "Full Illustrator (ready for real work; decides the stage)",
@@ -339,6 +339,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-02",
+        "text": "Mouse wheel over a closed font-family field in Character, Properties or Control changes selected text through the family list using saved font filters (excluding search text), one undo step per notch, stopping at the ends (#5253). Scores and estimates unchanged."
+      },
+      {
         "date": "2026-11-01",
         "text": "Find Nearest Swatch joins the Color Effects add-on (Object › Plug-ins › Color Effects): for each colour of the selection, the closest swatches of the document, a built-in library or a library or colour book the user loaded, with their CIEDE2000 difference; Apply gives each colour its nearest swatch as one undo step, linking global and spot swatches and adding a library's to the document first, so a process colour becomes the closest spot colour (addon.color.nearestSwatch, addon.color.applyNearestSwatch, #4923)."
       },
@@ -493,10 +497,6 @@
       {
         "date": "2026-10-14",
         "text": "Corner Radius has a link button in Properties and Transform: unlinked, a live rectangle shows a radius field for each corner (#1682). With the Width tool, double-clicking a stroke opens Width Point Edit to create a width point there, and Shift-double-click on a width point opens it with Adjust Adjoining Width Points ticked (#1814, #1630). Holding Alt while dragging a guide out of a ruler switches it between horizontal and vertical (#1782), and a marquee with the Selection or Direct Selection tool also selects the unlocked ruler guides it crosses (#1836). The Transform panel's, Properties panel's and Control bar's X/Y/W/H show and edit only the anchor points selected with Direct Selection (#1839, fixes #1824). With the Direct Selection tool, double-clicking type (including type nested inside a group) switches to the Type tool and puts the caret at the clicked character; pressing Escape finishes editing and returns to the selection tool used before double-clicking, and in isolation mode the first Escape exits editing while preserving isolation until a second Escape. With Snap to Grid on, anchors and objects snap to the grid even when Snap to Pixel is also ticked (#1840; #1816 waits for the reporter). Artboards are deleted the same way from the Artboards panel, its menu, Properties and Delete/Backspace (#1631). The toolbar shows no group labels by default (a preference brings them back) and runs on in one or two columns; the All Tools drawer lists the tools by flyout group with their shortcuts, has a menu (Reset, Basic, Advanced) and a Show section for the Fill/Stroke, Coloring, Draw Mode and Screen Mode controls (#1751). An action clicked in the Actions panel stays selected, so Play Current Selection and Delete Selection act on it (#1853, part of #1629). Redo during a drag keeps the drag as a step (#1856, #1719). Preferences are written as soon as OK is pressed (#1857; #1747 waits for the reporter). Preferences › Appearance of Black › Printing / Exporting and Units › Identify Objects By act (#1750, #1809). The paragraph alignment buttons show none selected for paragraphs with different alignments (#1784); redefining a character style to Auto leading updates the text that uses it and keeps local overrides (#1633); New and Redefine Character Style take the format of the selected text range, also while typing (#1634). Type inside symbols, pattern tiles, graph designs and opacity masks gets its layout bounds back when a native file opens, so warped type in a symbol looks the same after save and reopen (#1833, #1738). Editing, renaming, deleting or merging a global swatch reaches the art of opacity masks (#1830, #1735). macOS: Save As, Save a Copy and the first Save show their sheet again; the sheet's Format menu (#866, reopened) is withdrawn until it can be set before the sheet opens (#1855)."
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Rendering: copies, symbol instances and repeats that share an appearance keep their stroke outlines between frames (#1667); the canvas no longer reads its whole picture back for each non-isolated group that blends (#1687); envelopes, blends, repeats and meshes redraw when a pattern, symbol, font or colour setting they show changes (#1688); Outline view draws from geometry kept between frames (#1689); CMYK documents with transparency compose their ink planes on several threads (#1755); an edit re-flows a threaded story only when it changes one of the story's frames (#1792); opening a file reads its linked files and lays out its type on the opening thread (#1767). Instances of imported symbols are measured, selected, aligned, culled and exported by their art instead of a 20 pt square (#1744). Export for Screens and the Asset Export panel offer TIFF (#1632). SVG import looks style rules up by id, class and type (#1690), applies :not() selectors (#1799, #1557), no longer stalls on stacked descendant selectors over deep nesting (#1834, #1703) and reads linked files within the automation roots again (#1870). DXF export writes the VPORT view direction once (#1789). Untrusted files: nesting is capped at 32 objects in SVG, PDF, EPS and native files and symbols or patterns that use themselves open without the offending instance or paint (#1852); deeply nested PDF and .ai data, page trees holding themselves and functions or colour spaces built on themselves (#1871), decompression bombs and impossible predictor parameters (#1873, #1700, #1701), brushes that draw themselves (#1872) and hostile EPS, Affinity and native data (#1863: #1715, #1714, #1704, #1699) no longer crash or exhaust the app; the save fallback keeps the old file until the new one is in (#1695). Files whose ids sit at their largest value, a failed command.batch, control requests that timed out and images too large as RGBA for the Eyedropper are handled (#1862: #1718, #1697, #1725, #1717). Effects: wide shadows and glows at high zoom stay within the raster budget, stacked Transform effects are bounded, 3D keeps the area a nonzero compound path fills, pattern tiles redraw when the art they show changes, and a template layer dims its images by Dim Images (#1864: #1706, #1705, #1724, #1723, #1683). A failed save or export is reported in a dialog that names the file and stays until closed (#1865, #1685); a browser download that can't start fails the save (#1693); a file that finishes opening waits while a dialog is open (#1694). krilla's text shaping is no longer built in (#1874, #1730); the CI gate compiles the web app for wasm (#1875)."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 205,
+    "revisions_since": 206,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,39 +536,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 206,
-    "revisions_7d": 15,
+    "revisions": 207,
+    "revisions_7d": 16,
     "last_revision": {
-      "ts": "2026-11-02T07:54:50Z",
+      "ts": "2026-11-03T09:35:38Z",
       "kind": "content",
-      "commit": "36c35b3",
-      "commit_full": "36c35b3961506976db83f0e27e6ce1e9f08a4732",
-      "message": "Brushes: Calligraphic and Scatter values follow pen tilt, bearing and rotation (#5031)"
+      "commit": "c859ebd",
+      "commit_full": "c859ebd2cc0ae4d74fcbf11bcb2bd287567bed9c",
+      "message": "Type: step font families with the mouse wheel (#5331)"
     },
     "last_update": {
-      "ts": "2026-11-02T07:54:50Z",
+      "ts": "2026-11-03T09:35:38Z",
       "kind": "content",
-      "commit": "36c35b3",
-      "commit_full": "36c35b3961506976db83f0e27e6ce1e9f08a4732",
-      "message": "Brushes: Calligraphic and Scatter values follow pen tilt, bearing and rotation (#5031)"
+      "commit": "c859ebd",
+      "commit_full": "c859ebd2cc0ae4d74fcbf11bcb2bd287567bed9c",
+      "message": "Type: step font families with the mouse wheel (#5331)"
     },
-    "self_reported": "2026-11-01"
+    "self_reported": "2026-11-02"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 30.4,
+    "score": 31.4,
     "active_days_7d": 7,
-    "changes_7d": 588,
-    "changes_14d": 1200,
-    "housekeeping_7d": 19,
+    "changes_7d": 617,
+    "changes_14d": 1229,
+    "housekeeping_7d": 20,
     "last_code_change": {
-      "ts": "2026-11-03T05:19:44Z",
-      "commit": "065a646",
-      "commit_full": "065a646799f1f20f5454845d6648e09a5252c452",
-      "subject": "Symbols: 9-slice guides are shown and dragged on the canvas while editing a symbol (#5280)"
+      "ts": "2026-11-03T09:36:11Z",
+      "commit": "93a0dd1",
+      "commit_full": "93a0dd11cfe5686dc4c87a2ef5fda2ce27296438",
+      "subject": "Render: a compound path's members are assembled once and kept with the node (#5262)"
     },
-    "last_commit_ts": "2026-11-03T05:19:44Z",
+    "last_commit_ts": "2026-11-03T09:36:11Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       169,
@@ -584,7 +584,7 @@
       126,
       41,
       113,
-      25
+      54
     ],
     "days": [
       {
@@ -1222,20 +1222,20 @@
       },
       {
         "d": "2026-11-03",
-        "code": 25,
-        "other": 2,
+        "code": 54,
+        "other": 3,
         "samples": [
           {
-            "commit": "065a646",
-            "subject": "Symbols: 9-slice guides are shown and dragged on the canvas while editing a symbol (#5280)"
+            "commit": "93a0dd1",
+            "subject": "Render: a compound path's members are assembled once and kept with the node (#5262)"
           },
           {
-            "commit": "2ef386c",
-            "subject": "Recolor Artwork: the Edit tab shows the colors on a smooth wheel, a segmented wheel or as color bars (#5249)"
+            "commit": "eb57f92",
+            "subject": "Selection: a click on a large compound path is culled by its control points (#5261)"
           },
           {
-            "commit": "d232a29",
-            "subject": "Global Edit: a Shift-click on a highlighted match leaves it out of the edit (#5237)"
+            "commit": "c859ebd",
+            "subject": "Type: step font families with the mouse wheel (#5331)"
           }
         ]
       }
@@ -6859,7 +6859,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "c859ebd",
+      "commit_full": "c859ebd2cc0ae4d74fcbf11bcb2bd287567bed9c",
+      "commit_date": "2026-11-03T16:35:38+07:00",
+      "ts": "2026-11-03T09:35:38Z",
+      "message": "Type: step font families with the mouse wheel (#5331)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-02",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T05:39:11+00:00"
+  "updated_at": "2026-11-03T09:42:03+00:00"
 }
