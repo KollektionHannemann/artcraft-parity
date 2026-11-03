@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "ae5c65b",
-  "latest_commit_date": "2026-11-03T09:05:14-05:00",
-  "latest_message": "Paste: charge copied text box stories for the formatting they clone (#5379)",
+  "latest_commit": "a591879",
+  "latest_commit_date": "2026-11-03T20:45:39Z",
+  "latest_message": "Comments: a long comment's card and balloon stop at ten lines (#3382) (#3899)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -330,6 +330,10 @@
     "progress": [
       {
         "date": "2026-11-03",
+        "text": "A long comment no longer grows its card or balloon without limit (#3382). Its field in the Comments pane and in a selected balloon stops at ten lines and scrolls, keeping the caret in view; a balloon that isn't selected shows the first ten lines of the comment and of each reply, and clicking it opens the scrolling field. The buttons and the next comment stay in view."
+      },
+      {
+        "date": "2026-11-03",
         "text": "Security: pasting text boxes charges each copied story for its formatting too (run, mark, paragraph and section properties), not only its text and objects, so a story with huge style or font names can't copy past the paste's 32 MiB text box budget. Readiness unchanged."
       },
       {
@@ -483,10 +487,6 @@
       {
         "date": "2026-10-28",
         "text": "Convert Notes walks reference offsets and formatting runs together instead of rescanning all references for every run (#4750). Note text, IDs, custom marks, styles, history and saved content retain their behavior. Synthetic scaling, CLI/MCP and native/DOCX reopen coverage; readiness estimates unchanged."
-      },
-      {
-        "date": "2026-10-28",
-        "text": "RTF import keeps pictures stored as Windows Metafiles (\\wmetafile8, as Word writes a pasted or floating picture) and Enhanced Metafiles (\\emfblip); they were dropped, so such a document opened without its pictures. They are drawn by the metafile renderer, saved to .docx as .wmf/.emf media, and saved to .rtf as metafiles again (RTF export dropped them too). (#4259)"
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 11,
     "releases_since_capped": false,
-    "revisions_since": 463,
+    "revisions_since": 464,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 467,
-    "revisions_7d": 49,
+    "revisions": 468,
+    "revisions_7d": 50,
     "last_revision": {
-      "ts": "2026-11-03T14:05:14Z",
+      "ts": "2026-11-03T20:45:39Z",
       "kind": "content",
-      "commit": "ae5c65b",
-      "commit_full": "ae5c65b9dd11faf359ce039a2a487e57e3d824a2",
-      "message": "Paste: charge copied text box stories for the formatting they clone (#5379)"
+      "commit": "a591879",
+      "commit_full": "a5918792948cc77fef58a9491dd14057fd56527c",
+      "message": "Comments: a long comment's card and balloon stop at ten lines (#3382) (#3899)"
     },
     "last_update": {
-      "ts": "2026-11-03T14:05:14Z",
+      "ts": "2026-11-03T20:45:39Z",
       "kind": "content",
-      "commit": "ae5c65b",
-      "commit_full": "ae5c65b9dd11faf359ce039a2a487e57e3d824a2",
-      "message": "Paste: charge copied text box stories for the formatting they clone (#5379)"
+      "commit": "a591879",
+      "commit_full": "a5918792948cc77fef58a9491dd14057fd56527c",
+      "message": "Comments: a long comment's card and balloon stop at ten lines (#3382) (#3899)"
     },
     "self_reported": "2026-11-03"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.1,
+    "score": 20.2,
     "active_days_7d": 7,
-    "changes_7d": 109,
-    "changes_14d": 279,
+    "changes_7d": 110,
+    "changes_14d": 280,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-11-03T14:05:14Z",
-      "commit": "ae5c65b",
-      "commit_full": "ae5c65b9dd11faf359ce039a2a487e57e3d824a2",
-      "subject": "Paste: charge copied text box stories for the formatting they clone (#5379)"
+      "ts": "2026-11-03T20:45:39Z",
+      "commit": "a591879",
+      "commit_full": "a5918792948cc77fef58a9491dd14057fd56527c",
+      "subject": "Comments: a long comment's card and balloon stop at ten lines (#3382) (#3899)"
     },
-    "last_commit_ts": "2026-11-03T14:05:14Z",
+    "last_commit_ts": "2026-11-03T20:45:39Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       14,
@@ -568,7 +568,7 @@
       17,
       14,
       11,
-      15
+      16
     ],
     "days": [
       {
@@ -1048,9 +1048,13 @@
       },
       {
         "d": "2026-11-03",
-        "code": 15,
+        "code": 16,
         "other": 1,
         "samples": [
+          {
+            "commit": "a591879",
+            "subject": "Comments: a long comment's card and balloon stop at ten lines (#3382) (#3899)"
+          },
           {
             "commit": "ae5c65b",
             "subject": "Paste: charge copied text box stories for the formatting they clone (#5379)"
@@ -1058,10 +1062,6 @@
           {
             "commit": "1f8f9e8",
             "subject": "DOC import: keep one override per table cell instead of a copy per repeated sprm (#5374)"
-          },
-          {
-            "commit": "cf23ca7",
-            "subject": "DOC import: attach sections to their paragraphs through an index of paragraph ends (#5373)"
           }
         ]
       }
@@ -12032,7 +12032,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "a591879",
+      "commit_full": "a5918792948cc77fef58a9491dd14057fd56527c",
+      "commit_date": "2026-11-03T20:45:39Z",
+      "ts": "2026-11-03T20:45:39Z",
+      "message": "Comments: a long comment's card and balloon stop at ten lines (#3382) (#3899)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4> Last reviewed: 2026-10-10",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T14:44:15+00:00"
+  "updated_at": "2026-11-03T21:28:49+00:00"
 }

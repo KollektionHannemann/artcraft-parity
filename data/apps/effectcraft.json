@@ -374,18 +374,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.7,
+    "score": 21.8,
     "active_days_7d": 7,
-    "changes_7d": 335,
-    "changes_14d": 394,
+    "changes_7d": 337,
+    "changes_14d": 396,
     "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-11-03T20:12:19Z",
-      "commit": "08362b9",
-      "commit_full": "08362b9c044247472a490eae396527a1c6b0dbcf",
-      "subject": "GPU: free effect working textures after each call instead of at frame end (#1523)"
+      "ts": "2026-11-03T21:24:42Z",
+      "commit": "389894e",
+      "commit_full": "389894e69b665c63c8f240f12f064d3bc7e0fb39",
+      "subject": "gpu: run Content-Aware Fill's PatchMatch and flow on the GPU (#1856)"
     },
-    "last_commit_ts": "2026-11-03T20:12:19Z",
+    "last_commit_ts": "2026-11-03T21:24:42Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       4,
@@ -401,7 +401,7 @@
       37,
       1,
       19,
-      40
+      42
     ],
     "days": [
       {
@@ -980,20 +980,20 @@
       },
       {
         "d": "2026-11-03",
-        "code": 40,
+        "code": 42,
         "other": 1,
         "samples": [
           {
+            "commit": "389894e",
+            "subject": "gpu: run Content-Aware Fill's PatchMatch and flow on the GPU (#1856)"
+          },
+          {
+            "commit": "6df7eab",
+            "subject": "gpu: memory back-pressure for frames in flight (fixes OOM at 3–4 frames in flight) (#1550)"
+          },
+          {
             "commit": "08362b9",
             "subject": "GPU: free effect working textures after each call instead of at frame end (#1523)"
-          },
-          {
-            "commit": "2f31c22",
-            "subject": "fix(prefs): when recovering from a bad value, try only the settings' own pages one by one (#3010)"
-          },
-          {
-            "commit": "5464a23",
-            "subject": "Mask feather: bound the variable feather's distance pass (#2947)"
           }
         ]
       }
@@ -1530,5 +1530,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T20:41:22+00:00"
+  "updated_at": "2026-11-03T21:28:37+00:00"
 }
