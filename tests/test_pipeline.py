@@ -107,6 +107,7 @@ class PipelineTest(unittest.TestCase):
                       "color": "#3d6cf0"}]
         self.repos = {"testcraft": Repo(self.tmp, "testcraft")}
         self.remote_listing = []
+        self.catalog = []
         self.api_calls = []
         self.patches = []
 
@@ -142,6 +143,8 @@ class PipelineTest(unittest.TestCase):
         self.patches = [mock.patch.object(update, k, v) for k, v in values.items()]
         self.patches.append(mock.patch.object(update, "now_utc", lambda: now))
         self.patches.append(mock.patch.object(update, "list_repos", lambda: self.remote_listing))
+        self.patches.append(mock.patch.object(update, "fetch_catalog", lambda state, errors: self.catalog))
+        self.patches.append(mock.patch.object(update, "http_json", lambda url: {"default_branch": "main"}))
         self.patches.append(mock.patch.object(update, "fetch_raw", self.fake_raw))
         self.patches.append(mock.patch.object(update, "http_json_etag", self.fake_api))
         for p in self.patches:
@@ -158,9 +161,9 @@ class PipelineTest(unittest.TestCase):
             return data, f'W/"{len(self.api_calls)}"'
         return (None, etag) if etag == new_etag else (data, new_etag)
 
-    def fake_raw(self, repo, ref):
-        r = self.repos.get(repo)
-        path = r.work / "ROADMAP.md" if r else None
+    def fake_raw(self, repo, ref, path="ROADMAP.md"):
+        r = self.repos.get(repo) or self.repos.get(repo.rsplit("/", 1)[-1])
+        path = r.work / path if r else None
         return path.read_text(encoding="utf-8") if path and path.exists() else None
 
     def run_update(self, *args, now=NOW):
@@ -507,6 +510,93 @@ class PipelineTest(unittest.TestCase):
         self.assertEqual(self.overview_app("newcraft")["full_pct"], 25.0)
         self.assertEqual(len(notify.notifiable(events)), 1)  # new apps always notify
         self.assertEqual(self.run_update(), [])  # and only once
+
+    def test_all_seventeen_catalog_apps_reach_overview_and_details(self):
+        from app_catalog import parse_launcher_catalog
+        self.catalog = parse_launcher_catalog((ROOT / "tests/fixtures/launcher-catalog.rs").read_text())
+        self.apps = []
+        for app in self.catalog:
+            name = app["id"]
+            repo = Repo(self.tmp, name)
+            self.repos[name] = repo
+            if app["kind"] == "community":
+                external = self.tmp / "origin" / app["repo"].split("/")[0] / f"{name}.git"
+                external.parent.mkdir(parents=True, exist_ok=True)
+                repo.origin.rename(external)
+                repo.origin = external
+                repo.git("remote", "set-url", "origin", str(external))
+            path = "docs/ROADMAP.md" if name == "craft-anything" else "ROADMAP.md"
+            text = "# Roadmap\n\n## Next\n- More tools\n" if name in ("texturecraft", "materialcraft", "craft-anything", "solidcraft") else roadmap(50)
+            repo.commit(NOW - timedelta(days=1), "Initial app", {path: text, "src/main.rs": "code"})
+        self.releases_api = ([], '"empty"')
+        self.run_update()
+        ov = self.read("data/overview.json")
+        self.assertEqual(len(ov["apps"]), 17)
+        self.assertEqual(ov["discovery"]["missing"], [])
+        self.assertEqual(ov["discovery"]["tracked_from_catalog"], 17)
+        for a in ov["apps"]:
+            self.assertEqual(self.read(f"data/apps/{a['id']}.json")["id"], a["id"])
+            self.assertIsNotNone(a["activity"])
+        self.assertEqual(sum(a["full_pct"] is not None for a in ov["apps"]), 13)
+        self.assertEqual(self.run_update(), [])
+
+    def test_catalog_apps_without_percentages_and_external_repository(self):
+        self.base_history()
+        self.run_update()
+        new = Repo(self.tmp, "craft-anything")
+        self.repos["craft-anything"] = new
+        new.commit(NOW - timedelta(days=1), "Start app", {"docs/ROADMAP.md": "# Plans\n\n## Next\n- Build more tools\n", "src/main.rs": "code"})
+        solid = Repo(self.tmp, "solidcraft")
+        self.repos["solidcraft"] = solid
+        external = self.tmp / "origin" / "tangency-labs" / "solidcraft.git"
+        external.parent.mkdir(parents=True)
+        solid.origin.rename(external)
+        solid.origin = external
+        solid.git("remote", "set-url", "origin", str(external))
+        solid.git("branch", "-m", "develop")
+        solid.git("symbolic-ref", "HEAD", "refs/heads/develop")
+        solid._git(None, "--git-dir", str(external), "symbolic-ref", "HEAD", "refs/heads/develop")
+        # Repo.commit pushes main; create and publish the non-main branch explicitly.
+        (solid.work / "src").mkdir()
+        (solid.work / "src/main.rs").write_text("code")
+        solid.git("add", ".")
+        solid.git("commit", "-qm", "Start CAD")
+        solid.git("push", "-q", "origin", "develop")
+        self.catalog = [{"id": "craft-anything", "name": "Craft Anything", "repo": "storytold/craft-anything", "kind": "official"},
+                        {"id": "solidcraft", "name": "SolidCraft", "repo": "tangency-labs/solidcraft", "branch": "develop", "kind": "community"}]
+        self.releases_api = ([{"tag_name": "v0.1.0", "published_at": "2026-10-18T01:00:00Z", "body": "", "assets": []}], '"catalog"')
+        events = self.run_update()
+        self.assertEqual({e["id"] for e in events if e["type"] == "new_app"}, {"craft-anything", "solidcraft"})
+        for app_id in ("craft-anything", "solidcraft"):
+            a = self.overview_app(app_id)
+            self.assertIsNone(a["full_pct"])
+            self.assertIsNone(a["milestone"])
+            self.assertIsNotNone(a["activity"])
+            self.assertEqual(a["release"]["tag"], "v0.1.0")
+        ca = self.read("data/apps/craft-anything.json")
+        sc = self.read("data/apps/solidcraft.json")
+        self.assertTrue(ca["roadmap_url"].endswith("/main/docs/ROADMAP.md"))
+        self.assertIsNotNone(ca["roadmap"]["last_update"])
+        self.assertEqual(sc["repo_url"], "https://github.com/tangency-labs/solidcraft")
+        self.assertEqual(sc["branch"], "develop")
+        self.assertTrue(any("repos/tangency-labs/solidcraft/releases" in url for url, _ in self.api_calls))
+        before = (self.root / "data/overview.json").read_bytes()
+        self.assertEqual(self.run_update(), [])
+        self.assertEqual((self.root / "data/overview.json").read_bytes(), before)
+
+    def test_app_repository_without_roadmap_is_discovered_but_empty_repo_is_candidate(self):
+        self.base_history()
+        new = Repo(self.tmp, "futurecraft")
+        self.repos["futurecraft"] = new
+        new.commit(NOW - timedelta(days=1), "App starts", {"README.md": "# FutureCraft", "src/main.rs": "code"})
+        self.remote_listing = [{"name": "futurecraft", "size": 12}, {"name": "AniCraft", "size": 0},
+                               {"name": "craft-libs", "size": 10}]
+        self.run_update()
+        self.assertIsNone(self.overview_app("futurecraft")["full_pct"])
+        self.assertEqual(self.overview_app("futurecraft")["metric_status"], "roadmap_missing")
+        candidates = self.read("data/overview.json")["discovery"]["candidates"]
+        self.assertIn("AniCraft", [c["id"] for c in candidates])
+        self.assertNotIn("craft-libs", [a["id"] for a in self.read("data/overview.json")["apps"]])
 
     # ---------- 8, 9, 10: milestone ----------
 

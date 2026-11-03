@@ -65,6 +65,14 @@ reference product.
 | [DeckCraft](https://github.com/storytold/deckcraft) | PowerPoint | Presentation |
 | [CADCraft](https://github.com/storytold/cadcraft) | AutoCAD | CAD |
 | [GridCraft](https://github.com/storytold/gridcraft) | Excel | Spreadsheet |
+| [TextureCraft](https://github.com/storytold/texturecraft) | 3D texture painting workflow | 3D texturing |
+| [MaterialCraft](https://github.com/storytold/materialcraft) | Procedural material workflow | Materials |
+| [Craft Anything](https://github.com/storytold/craft-anything) | No single reference product | Software |
+| [SolidCraft](https://github.com/tangency-labs/solidcraft) | Parametric 3D CAD workflow | 3D CAD (community) |
+
+The current launcher catalog contains 16 official apps and SolidCraft, a community app by Tangency Labs.
+An app does not need to publish a readiness percentage to appear. Missing comparable estimates stay unknown;
+they are not treated as zero, included in readiness averages or inferred from unrelated parity scores.
 
 ## Update types
 
@@ -133,7 +141,7 @@ at the top of `scripts/update.py`.
 
 ## Releases
 
-Each run asks the GitHub Releases API once per repository (13 calls per run, well within the 1,000 per hour of the
+Each run asks the GitHub Releases API once per repository (17 calls per run for the current catalog, well within the 1,000 per hour of the
 workflow token). For each release the tracker keeps the version, publish time, link, platforms (from the asset names), the number of
 pull requests listed in the notes and the version step from the previous stable release (major, minor, patch).
 Pre-releases are shown but never used as the base of a version step. If the API is unreachable, git tags are used.
@@ -144,9 +152,10 @@ when it changes, the timeline shows it.
 
 ## How it works
 
-1. `scripts/update.py` keeps partial clones of each repository (commits and trees only). Reading the history needs no
+1. `scripts/update.py` reconciles the official directory, launcher catalog and repository candidates, then keeps partial clones of each repository (commits and trees only). Reading the history needs no
    API calls; file contents are fetched only for new roadmap revisions, in one batch.
-2. New first-parent revisions of `ROADMAP.md` are parsed and appended to `data/history/<app>.json`, then every
+2. Each app stores its full GitHub repository, default branch and roadmap path (`ROADMAP.md` or `docs/ROADMAP.md`).
+   New first-parent revisions of its roadmap are parsed and appended to `data/history/<app>.json`, then every
    revision gets its kind from the one before it. Revisions without a full-target value are remembered in
    `data/state.json` and not parsed again. The ready value per area of the Features table is stored with a revision
    only when it changed, and the changed areas are listed with it.
@@ -154,7 +163,9 @@ when it changes, the timeline shows it.
    Merge commits are shown with their pull-request title.
 4. Releases come from the GitHub Releases API (see above); the last known list stays in `data/state.json` in case
    the API is unreachable.
-5. `data/overview.json` and `data/apps/<app>.json` are written only when their content changed, so a run without
+5. Apps without comparable metrics still get releases, activity and a roadmap revision timeline. The current roadmap
+   is read independently of numeric history; if a formerly reported value disappears, it is not shown as current.
+6. `data/overview.json` and `data/apps/<app>.json` are written only when their content changed, so a run without
    changes makes no commit. `index.html` reads them directly.
 
 "Last checked" in the dashboard is the newest successful run of the workflow, read from the GitHub API in the
@@ -164,7 +175,7 @@ falls back to the last recorded check in `data/status.json`.
 ## Notifications
 
 Every run collects events: new apps and roadmap revisions that are newer than the data already stored. All of them are
-logged in `data/changelog.json`. Only new apps and revisions that change the full-target value notify. If there are
+logged in `data/changelog.json`. New apps notify once even when they have no percentage or roadmap. Only new apps and revisions that change the full-target value notify. If there are
 notifying events, the workflow:
 
 1. opens an issue in this repository titled, for example, `ArtCraft Parity: 1 new app, 2 full-target changes`. The
@@ -180,17 +191,29 @@ To add the ntfy push, pick a random topic name, subscribe to it in the ntfy app,
 
 ## Automatic discovery of new apps
 
-Every run checks the public repositories of the GitHub account for new Craft apps:
+Every scheduled run reconciles two authoritative sources:
 
-- A repository is **added automatically** if it is not yet tracked, is not a fork or archived, has a `ROADMAP.md`,
-  and that roadmap contains a full-target row. Repositories with a roadmap of a different kind (for example product
-  goals) are skipped.
-- The new app is appended to `apps.json` and tracked from then on. Its `added` date is recorded.
-- For 14 days after discovery, the dashboard shows a banner on the overview page and a *New app* tag on the card.
-- Repositories listed under `ignored_repos` in `apps.json` are never added. The account's `artcraft` and `craft-launcher`
-  repositories are ignored by default.
+- The [official Crafting Apps directory](https://getartcraft.com/apps).
+- The complete [ArtCraft Launcher SUITE catalog](https://github.com/storytold/craft-launcher/blob/main/crates/core/src/catalog.rs), including community apps and their own GitHub accounts.
 
-Discovery and releases need the GitHub API. In GitHub Actions, the built-in token is passed automatically.
+A catalog app is added regardless of whether it has a roadmap or a recognizable readiness percentage.
+The launcher's declared app count is checked against the parsed inventory: a format change cannot silently return
+only some apps. Each source's last good inventory is saved in `data/state.json`; a failed source produces a visible
+notice and keeps its saved members, while the other source continues to discover apps. Existing apps are never
+removed automatically when an upstream catalog changes.
+
+The public repositories of `storytold` are also checked. Nonempty, non-fork, non-archived repositories whose names end
+in `craft` are admitted without needing a metric; repositories with a recognizable full-target roadmap remain eligible
+too. Empty app repositories such as AniCraft are listed as candidates with a reason and reconsidered every run.
+Libraries, assets and developer tooling are not assumed to be consumer apps merely because their name starts with
+`craft-`. `ignored_repos` continues to exclude ArtCraft Studio and the launcher itself.
+
+Every app records its repository, branch, optional roadmap path and official/community classification in `apps.json`.
+Root and `docs/` roadmap locations are checked daily, and external repositories use their actual default branch.
+For 14 days after admission, a new-app banner and card tag appear. The overview includes catalog coverage and pending
+candidates; source failures and coverage gaps are shown as notices. Releases and code activity continue without metrics.
+
+Discovery and releases use the GitHub API where needed. GitHub Actions passes its built-in token automatically.
 
 ## Web app
 
@@ -208,10 +231,12 @@ touched. The icons are drawn by `scripts/make_icons.py`.
 | `manifest.webmanifest`, `sw.js`, `icons/` | Web app manifest, service worker and icons |
 | `apps.json` | Tracked apps (reference product, category, color, suite order) and `ignored_repos` |
 | `scripts/update.py` | Discovery, roadmap history, activity, releases, data files and events |
+| `scripts/app_catalog.py` | Validates and parses the official directory and complete launcher inventory |
 | `scripts/roadmap_parser.py` | Parses a `ROADMAP.md` into metrics, dimensions, features and the change log |
 | `scripts/notify.py` | Opens the notification issue and sends the optional ntfy message |
 | `scripts/make_icons.py` | Draws the tracker mark and writes the icons |
-| `tests/test_pipeline.py` | End-to-end tests against local git repositories |
+| `tests/test_pipeline.py` | End-to-end tests, including all 17 apps, external repositories and missing metrics |
+| `tests/test_app_catalog.py`, `tests/fixtures/launcher-catalog.rs` | Catalog completeness and outage regression tests |
 | `data/overview.json` | Data for the overview page, including the latest events across all apps |
 | `data/apps/<app>.json` | Current state, history, activity and releases per app |
 | `data/history/<app>.json` | One entry per roadmap revision on the main line |

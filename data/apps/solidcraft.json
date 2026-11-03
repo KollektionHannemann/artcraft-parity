@@ -1,0 +1,2190 @@
+{
+  "id": "solidcraft",
+  "name": "SolidCraft",
+  "adobe": "Unknown",
+  "category": "Parametric 3D CAD",
+  "color": "#46a1fb",
+  "added": "2026-11-03",
+  "repo_url": "https://github.com/tangency-labs/solidcraft",
+  "branch": "main",
+  "kind": "community",
+  "roadmap_url": "https://github.com/tangency-labs/solidcraft/blob/main/ROADMAP.md",
+  "roadmap_history_url": "https://github.com/tangency-labs/solidcraft/commits/main/ROADMAP.md",
+  "metric_status": "not_reported",
+  "latest_commit": "9e5e143",
+  "latest_commit_date": "2026-11-02T05:24:50Z",
+  "latest_message": "Sheet metal: a fold crosses slanted or curved edges of any panel (#10621) (#10922)",
+  "parsed": {
+    "stage": null,
+    "next_stage": null,
+    "target": null,
+    "last_updated": null,
+    "metrics": {
+      "full": null,
+      "mainstream": null,
+      "essentials": null,
+      "ready": null,
+      "breadth": null
+    },
+    "audiences": [],
+    "dimensions": [],
+    "features": [],
+    "upcoming": [],
+    "progress": []
+  },
+  "parity": {
+    "tracked_since": null,
+    "value_since": null,
+    "releases_since": 0,
+    "releases_since_capped": false,
+    "revisions_since": 0,
+    "hours_since": null,
+    "areas_since": null,
+    "changes": 0,
+    "truncated": false,
+    "last_change": null
+  },
+  "roadmap": {
+    "revisions": 193,
+    "revisions_7d": 2,
+    "last_revision": {
+      "ts": "2026-11-02T05:24:50Z",
+      "kind": "content",
+      "commit": "9e5e143",
+      "commit_full": "9e5e143ac3b02ae9f7b650004b919b90afd8bc51",
+      "message": "Sheet metal: a fold crosses slanted or curved edges of any panel (#10621) (#10922)"
+    },
+    "last_update": {
+      "ts": "2026-11-02T05:24:50Z",
+      "kind": "content",
+      "commit": "9e5e143",
+      "commit_full": "9e5e143ac3b02ae9f7b650004b919b90afd8bc51",
+      "message": "Sheet metal: a fold crosses slanted or curved edges of any panel (#10621) (#10922)"
+    },
+    "self_reported": null
+  },
+  "milestone": null,
+  "activity": {
+    "level": "buzzing",
+    "score": 32.4,
+    "active_days_7d": 7,
+    "changes_7d": 1115,
+    "changes_14d": 1938,
+    "housekeeping_7d": 25,
+    "last_code_change": {
+      "ts": "2026-11-03T05:59:58Z",
+      "commit": "2aa7e3e",
+      "commit_full": "2aa7e3e51c94c7f47fef3fc0b25523a18a5fd6bf",
+      "subject": "Release 0.40.0-rc.1 (#11457)"
+    },
+    "last_commit_ts": "2026-11-03T07:17:58Z",
+    "repo_since": "2026-10-07T17:01:29Z",
+    "window": [
+      85,
+      25,
+      132,
+      85,
+      214,
+      139,
+      143,
+      225,
+      191,
+      208,
+      201,
+      128,
+      160,
+      2
+    ],
+    "days": [
+      {
+        "d": "2026-10-07",
+        "code": 69,
+        "other": 2,
+        "samples": [
+          {
+            "commit": "cb01314",
+            "subject": "3D sketch curves (wires): Include 3D Geometry keeps out-of-plane edges and curves 3D; Project To Surface (curves onto a face along the sketch normal), Intersect"
+          },
+          {
+            "commit": "beab69c",
+            "subject": "Measure tool (I): pick one or two vertices, edges or faces for length/area/position, minimum distance with ΔX/ΔY/ΔZ and a line in the view, and the angle betwee"
+          },
+          {
+            "commit": "7518c4f",
+            "subject": "Edit Feature dialogs for rectangular/circular patterns, loft, sweep and move (directions along other vectors are kept)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-08",
+        "code": 215,
+        "other": 7,
+        "samples": [
+          {
+            "commit": "740360d",
+            "subject": "Fillet corners: a radius per edge (kernel::fillet_radii), rounds next to earlier rounds of another radius, and smooth corner patches where three rounds meet"
+          },
+          {
+            "commit": "7820ee4",
+            "subject": "Chamfer dialog: Chamfer Type (Equal Distance, Two Distances, Distance and Angle) with the second distance or the angle and Flip, sent as the engine's distance2 "
+          },
+          {
+            "commit": "dffa1c7",
+            "subject": "Provenance of sweeps and lofts: swept_origins (start cap in the profile's plane, walls by the profile segment under their start edge, end caps) and sweep_origin"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-09",
+        "code": 43,
+        "other": 7,
+        "samples": [
+          {
+            "commit": "5d69452",
+            "subject": "View cube: the axis triad is drawn behind the cube, so only its parts outside the cube show"
+          },
+          {
+            "commit": "322a357",
+            "subject": "Y-up worlds in the camera: an up axis on the camera (Z by default, or Y), with yaw and pitch measured about it; standard views, the home view, Look At, orbit, p"
+          },
+          {
+            "commit": "abb9d74",
+            "subject": "Acceptance project (#27): examples/acceptance/sensor_enclosure.json, a sensor enclosure sized from user parameters (case with USB cut-out, patterned PCB standof"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-10",
+        "code": 77,
+        "other": 10,
+        "samples": [
+          {
+            "commit": "95ae096",
+            "subject": "Restore minimal view-cube turns and drag-to-orbit"
+          },
+          {
+            "commit": "13dd456",
+            "subject": "Fix chamfers on sloped end faces and enforce rim clearance (#102)"
+          },
+          {
+            "commit": "e575bde",
+            "subject": "Fix construction-plane references in mirror, section, and sketches (#99)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-11",
+        "code": 52,
+        "other": 9,
+        "samples": [
+          {
+            "commit": "6dd202d",
+            "subject": "Fix desktop launch, app icons and keyboard parameter editing"
+          },
+          {
+            "commit": "8fa52c8",
+            "subject": "fix(ui): restore free Shift-middle orbit (#197)"
+          },
+          {
+            "commit": "d8beaed",
+            "subject": "Open Parameters directly and prepare SolidCraft 0.3.0"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-12",
+        "code": 129,
+        "other": 8,
+        "samples": [
+          {
+            "commit": "809ecf7",
+            "subject": "Version 0.6.0 (#444)"
+          },
+          {
+            "commit": "01bf0e4",
+            "subject": "perf: pattern joins skip pushing apart faces that don't meet (#437)"
+          },
+          {
+            "commit": "0d995c6",
+            "subject": "fix: lines and arcs that touch meet at one point in planar booleans (#432)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-13",
+        "code": 200,
+        "other": 11,
+        "samples": [
+          {
+            "commit": "7eac1de",
+            "subject": "Open large designs faster: list each face's mesh vertices once when flagging seams (#914)"
+          },
+          {
+            "commit": "fe07f79",
+            "subject": "fix: a hole at sketch points drills into the part its sketch touches (#910)"
+          },
+          {
+            "commit": "b52d439",
+            "subject": "face.delete heal: false leaves an open surface body (#861)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-14",
+        "code": 149,
+        "other": 7,
+        "samples": [
+          {
+            "commit": "9935133",
+            "subject": "Live preview: the tool alone, the boolean only on OK, computed off the window thread (#1201)"
+          },
+          {
+            "commit": "a261aaa",
+            "subject": "Render: integrated workspace, preview image jobs and opaque PBR (#1046)"
+          },
+          {
+            "commit": "e4ef6cf",
+            "subject": "French (fr) UI localization (#1224)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-15",
+        "code": 125,
+        "other": 2,
+        "samples": [
+          {
+            "commit": "845f491",
+            "subject": "render: add opaque CPU sampling and bounded mip chains (#1459)"
+          },
+          {
+            "commit": "78242d6",
+            "subject": "Import FreeCAD and Rhino files through cadmpeg (#1435)"
+          },
+          {
+            "commit": "2b45635",
+            "subject": "Version 0.13.1"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-16",
+        "code": 114,
+        "other": 22,
+        "samples": [
+          {
+            "commit": "3749619",
+            "subject": "Motion analysis: chart a study's joints and points, and find the parts that collide along it (#1712)"
+          },
+          {
+            "commit": "9de0b9d",
+            "subject": "Merge pull request #1839 from jyviko/fix/goldens-seed-55"
+          },
+          {
+            "commit": "649ad39",
+            "subject": "3D mouse: read spacenavd on Linux so the spnavcfg settings apply (#1000) (#1825)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-17",
+        "code": 76,
+        "other": 22,
+        "samples": [
+          {
+            "commit": "2acc344",
+            "subject": "Sketch: show open and untied profile ends (#2000) (#2001)"
+          },
+          {
+            "commit": "487aa64",
+            "subject": "Multi profile extrusion performance (#2064)"
+          },
+          {
+            "commit": "180e62c",
+            "subject": "Macos space mouse support (#1815)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-18",
+        "code": 54,
+        "other": 18,
+        "samples": [
+          {
+            "commit": "e887792",
+            "subject": "Fix orbit about the picked point (regression in 0.16.0) (#2753)"
+          },
+          {
+            "commit": "dd23be1",
+            "subject": "UI: the Interference dialog and the continuity legend's Gap are translatable (#2443)"
+          },
+          {
+            "commit": "ab22da1",
+            "subject": "Browser sidebar: drag its width, and float it over the workspace (#2741)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-19",
+        "code": 117,
+        "other": 21,
+        "samples": [
+          {
+            "commit": "3ffd8ef",
+            "subject": "Loft: preserve holes through matching sketch sections (#2435) (#2447)"
+          },
+          {
+            "commit": "26dd254",
+            "subject": "Preview modeled threads using the desktop background worker (#2264)"
+          },
+          {
+            "commit": "07be3f8",
+            "subject": "Paste saved linked designs at the viewport pointer (#2430) (#2433)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-20",
+        "code": 104,
+        "other": 13,
+        "samples": [
+          {
+            "commit": "079a600",
+            "subject": "Recovery: autosave every open design tab (#2884) (#2952)"
+          },
+          {
+            "commit": "94bd871",
+            "subject": "STEP import: a void reads as a cavity whichever way its shell flag points (#3730) (#3872)"
+          },
+          {
+            "commit": "fc3dedf",
+            "subject": "STEP import: regression sweep over the step-conformance parts of known shape (#3880)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-21",
+        "code": 85,
+        "other": 8,
+        "samples": [
+          {
+            "commit": "dfd5829",
+            "subject": "Navigation: opt-in free orbit and shared Normal to Selection (#1912)"
+          },
+          {
+            "commit": "ba4f786",
+            "subject": "Export Current View as DXF includes shown sketches (#3708) (#3780)"
+          },
+          {
+            "commit": "b289dc2",
+            "subject": "Sketch Dimension: `name = value` defines a user parameter (#2916) (#3638)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-22",
+        "code": 25,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "0301874",
+            "subject": "Release 0.20.0 (#5118)"
+          },
+          {
+            "commit": "198fbeb",
+            "subject": "i18n: every UI label reaches the catalog, on the UI kit (#2483)"
+          },
+          {
+            "commit": "186096c",
+            "subject": "agent chat: agent detection finishes on the start page (#3265)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-23",
+        "code": 132,
+        "other": 6,
+        "samples": [
+          {
+            "commit": "fb374b5",
+            "subject": "UI: integrate theme radii, borders, palettes and viewport refresh (#5045) (#5046)"
+          },
+          {
+            "commit": "0dffb20",
+            "subject": "Assembly: ground the first part; drag free joint chains (#2804) (#2805)"
+          },
+          {
+            "commit": "30b01e8",
+            "subject": "A spherical shell revolves into a solid with a void, and cuts and joins with hollow tools work (#451) (#4182)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-24",
+        "code": 85,
+        "other": 9,
+        "samples": [
+          {
+            "commit": "4b119dd",
+            "subject": "Performance overlay: frame-time graph and histogram, triangles, draw calls (#2548) (#2549)"
+          },
+          {
+            "commit": "6224cbf",
+            "subject": "Thread: the refusal for a fine-only size says what to type (#4971) (#4977)"
+          },
+          {
+            "commit": "e89a8f5",
+            "subject": "MidPoint: the point goes to the line's middle, whichever is picked first (#5011)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-25",
+        "code": 214,
+        "other": 2,
+        "samples": [
+          {
+            "commit": "d396be7",
+            "subject": "Regenerate generated files and fold pending files [skip ci]"
+          },
+          {
+            "commit": "cbac207",
+            "subject": "Regenerate generated files and fold pending files [skip ci]"
+          },
+          {
+            "commit": "ff2ca2d",
+            "subject": "Keep focus when correcting an invalid parameter name (#3965) (#4000)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-26",
+        "code": 139,
+        "other": 24,
+        "samples": [
+          {
+            "commit": "56bcd87",
+            "subject": "Cone primitive: solid.cone with base and top radius (#5641) (#6250)"
+          },
+          {
+            "commit": "6c0fca3",
+            "subject": "Press Pull on a fillet's round face edits the fillet (#1932) (#6815)"
+          },
+          {
+            "commit": "ef1d02f",
+            "subject": "Claim bot: let an unassigned claimant /unclaim (#6718) (#6719)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-27",
+        "code": 143,
+        "other": 10,
+        "samples": [
+          {
+            "commit": "03606ec",
+            "subject": "Regenerate generated files and fold pending files [skip ci]"
+          },
+          {
+            "commit": "c4fb42f",
+            "subject": "Preferences: search settings (#2218) (#6002)"
+          },
+          {
+            "commit": "00e31c2",
+            "subject": "Sketch: Delete on a picked profile deletes the curves around it (#7107) (#7120)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-28",
+        "code": 225,
+        "other": 5,
+        "samples": [
+          {
+            "commit": "1937dea",
+            "subject": "Sketch constraints: refuse one curve picked twice for a two-curve constraint (#8577)"
+          },
+          {
+            "commit": "a545f32",
+            "subject": "Render stage panels: Surfaces and references, Studios and environments, and the review dialogs (#6281) (#7999)"
+          },
+          {
+            "commit": "05a7a4f",
+            "subject": "Traditional Chinese: translate the 56 messages main gained since batch 1 (batch 3) (#8365)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-29",
+        "code": 191,
+        "other": 5,
+        "samples": [
+          {
+            "commit": "87206f2",
+            "subject": "Theme: the System theme leaves the window to follow the system appearance (#8983) (#9103)"
+          },
+          {
+            "commit": "5a24d40",
+            "subject": "Sketch: an old edge-on projection keeps its line when it is re-resolved (#9025) (#9097)"
+          },
+          {
+            "commit": "3e62553",
+            "subject": "Release 0.27.0 (#9106)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-30",
+        "code": 208,
+        "other": 4,
+        "samples": [
+          {
+            "commit": "045cfed",
+            "subject": "Release 0.28.0 (#9766)"
+          },
+          {
+            "commit": "5f60d78",
+            "subject": "Regenerate generated files and fold pending files [skip ci]"
+          },
+          {
+            "commit": "646eb97",
+            "subject": "motion.list gives study keys in motion.study units (#9741) (#9760)"
+          }
+        ]
+      },
+      {
+        "d": "2026-10-31",
+        "code": 201,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "df04e77",
+            "subject": "Assembly: let components extruded from reference faces move independently (#10289) (#10332)"
+          },
+          {
+            "commit": "e4a67d1",
+            "subject": "Assembly: move sketches to the part they're drawn on (#10218) (#10219)"
+          },
+          {
+            "commit": "ed9599d",
+            "subject": "View angles card: per-axis zero buttons and locks (#4581) (#10344)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-01",
+        "code": 128,
+        "other": 4,
+        "samples": [
+          {
+            "commit": "afa4f72",
+            "subject": "Insert SVG: say why a sketch is too large (#10874) (#10880)"
+          },
+          {
+            "commit": "cfc4644",
+            "subject": "Joints: an edge origin shares the joint faces' measurement (#10866)"
+          },
+          {
+            "commit": "58c64ca",
+            "subject": "Regenerate generated files and fold pending files [skip ci]"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-02",
+        "code": 160,
+        "other": 3,
+        "samples": [
+          {
+            "commit": "185c480",
+            "subject": "Regenerate generated files and fold pending files [skip ci]"
+          },
+          {
+            "commit": "ea772a0",
+            "subject": "Merge develop into main: SolidCraft on the SMLib kernel (v1.1.0-alpha) (#11351)"
+          },
+          {
+            "commit": "841b355",
+            "subject": "Regenerate generated files and fold pending files [skip ci]"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-03",
+        "code": 2,
+        "other": 3,
+        "samples": [
+          {
+            "commit": "2aa7e3e",
+            "subject": "Release 0.40.0-rc.1 (#11457)"
+          },
+          {
+            "commit": "2b921df",
+            "subject": "Kernel: solidcore is SolidCraft's only kernel; C++ SMLib removed (#8526 on #11351) (#11360)"
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [
+    {
+      "tag": "v0.40.0-rc.1",
+      "name": "SolidCraft v0.40.0-rc.1",
+      "ts": "2026-11-03T08:26:40Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.40.0-rc.1",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.30.1",
+      "name": "v0.30.1",
+      "ts": "2026-11-02T17:21:52Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.30.1",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "patch"
+    },
+    {
+      "tag": "v0.30.0",
+      "name": "v0.30.0",
+      "ts": "2026-11-02T03:54:13Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.30.0",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.29.0",
+      "name": "v0.29.0",
+      "ts": "2026-11-01T00:21:27Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.29.0",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.28.0",
+      "name": "v0.28.0",
+      "ts": "2026-10-31T01:20:03Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.28.0",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.27.1",
+      "name": "v0.27.1",
+      "ts": "2026-10-30T04:24:22Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.27.1",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "patch"
+    },
+    {
+      "tag": "v0.27.0",
+      "name": "v0.27.0",
+      "ts": "2026-10-30T00:54:39Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.27.0",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.26.1",
+      "name": "v0.26.1",
+      "ts": "2026-10-29T11:46:12Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.26.1",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "patch"
+    },
+    {
+      "tag": "v0.26.0",
+      "name": "v0.26.0",
+      "ts": "2026-10-29T00:47:35Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.26.0",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.25.1-nightly.20261028.90.1",
+      "name": "SolidCraft v0.25.1-nightly.20261028.90.1 (nightly)",
+      "ts": "2026-10-28T10:51:28Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.25.1-nightly.20261028.90.1",
+      "changes": 108,
+      "new_contributors": 7,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "patch"
+    },
+    {
+      "tag": "v0.25.1",
+      "name": "v0.25.1",
+      "ts": "2026-10-28T01:45:03Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.25.1",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "patch"
+    },
+    {
+      "tag": "v0.25.0",
+      "name": "v0.25.0",
+      "ts": "2026-10-27T22:53:11Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.25.0",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": null
+    }
+  ],
+  "roadmap_history": [
+    {
+      "ts": "2026-10-07T17:58:32Z",
+      "kind": "content",
+      "commit": "0f3e770",
+      "commit_full": "0f3e7701a7ef601418b510456b53c09d933bcd6c",
+      "message": "M0: docs (README, CLAUDE/AGENTS, ROADMAP, control protocol, NOTICE, attribution), example, parity and oracle reports"
+    },
+    {
+      "ts": "2026-10-07T20:00:17Z",
+      "kind": "content",
+      "commit": "97e73b0",
+      "commit_full": "97e73b0935e81cacd6432e18f12fb060228ac6cd",
+      "message": "Selection feedback and origin: hover and selected highlights (theme tokens), origin planes/axes/point at a fixed screen size with browser eye toggles, click-to-"
+    },
+    {
+      "ts": "2026-10-07T20:19:56Z",
+      "kind": "content",
+      "commit": "9dfd7ca",
+      "commit_full": "9dfd7cad6007654a124153c45e623c415125b671",
+      "message": "Timeline editing: double-click or Edit Feature reopens the feature's dialog filled in (model rolled back to it, references highlighted) and rebuilds it in place"
+    },
+    {
+      "ts": "2026-10-07T20:35:55Z",
+      "kind": "content",
+      "commit": "a737dda",
+      "commit_full": "a737ddad3bdc1c354c139581e6baaffd398e4b95",
+      "message": "Web: apps/solvecraft-web (Trunk, eframe web runner, WebGPU or WebGL2), cargo xtask wasm in ci, web-time clocks"
+    },
+    {
+      "ts": "2026-10-07T21:01:04Z",
+      "kind": "content",
+      "commit": "f3dbb12",
+      "commit_full": "f3dbb12b23adc08bed678d2a84adb6db1225a7b9",
+      "message": "STEP: open/insert/drag-drop"
+    },
+    {
+      "ts": "2026-10-07T21:30:18Z",
+      "kind": "content",
+      "commit": "043a542",
+      "commit_full": "043a542e29ab36f52fec359b73f3eac75edef9c1",
+      "message": "Kernel: pole-free six-patch spheres; vendored truck-shapeops with robust meshing and nearest-parameter loop projection (sphere and box booleans work); least-squ"
+    },
+    {
+      "ts": "2026-10-07T21:30:38Z",
+      "kind": "content",
+      "commit": "ea3dd0e",
+      "commit_full": "ea3dd0ed6ed85e9680c03397897c646aa3c14dd2",
+      "message": "3MF: export, and 3MF/STL import as mesh bodies"
+    },
+    {
+      "ts": "2026-10-07T22:08:27Z",
+      "kind": "content",
+      "commit": "a4a1733",
+      "commit_full": "a4a17331dc8b7e27c94d1c494f1235d5990dcac6",
+      "message": "Kernel: concave edge fillets; whole smooth-loop blends of planar faces (cylinders and tori: pocket floors, plate outlines); rounding every edge of a convex plan"
+    },
+    {
+      "ts": "2026-10-07T22:41:29Z",
+      "kind": "content",
+      "commit": "3229fd9",
+      "commit_full": "3229fd97409ae32e3daace47054f3a8a4ea740a4",
+      "message": "Kernel: booleans with coincident planar faces push the faces apart exactly (perpendicular neighbours stretched or shrunk), union cuts the slab beyond the plane"
+    },
+    {
+      "ts": "2026-10-07T23:00:57Z",
+      "kind": "content",
+      "commit": "b3ca891",
+      "commit_full": "b3ca8911eb2c17f7212a93ea57b380d21e6b566a",
+      "message": "Holes at sketch points (one feature, many holes, following the points) and threaded holes; cosmetic threads (FusionThreadCommand, ISO metric, model.threads); co"
+    },
+    {
+      "ts": "2026-10-07T23:15:09Z",
+      "kind": "content",
+      "commit": "eb2a5d2",
+      "commit_full": "eb2a5d27b99077e085bd597535884c78d84ad48b",
+      "message": "Scope decisions (in-scope parity headline, deferred tabs), STEP import and kernel notes in ROADMAP/plan"
+    },
+    {
+      "ts": "2026-10-07T23:39:25Z",
+      "kind": "content",
+      "commit": "32e6b2a",
+      "commit_full": "32e6b2a578642aa2979b7f1a032ec63b1b93040b",
+      "message": "ROADMAP: sketch milestone status and limitations"
+    },
+    {
+      "ts": "2026-10-08T00:30:38Z",
+      "kind": "content",
+      "commit": "935e646",
+      "commit_full": "935e6465fa43f0902b719c7c8b5a001235415e03",
+      "message": "Blends: whole smooth loops picked by one edge (tangent chain), full circles, walls at any angle, several loops per feature; flat non-plane faces healed into pla"
+    },
+    {
+      "ts": "2026-10-08T00:59:20Z",
+      "kind": "content",
+      "commit": "708aad8",
+      "commit_full": "708aad8e65363a6ac52e109738afa9eabe1e9614",
+      "message": "ROADMAP: M6 UI depth status"
+    },
+    {
+      "ts": "2026-10-08T01:38:03Z",
+      "kind": "content",
+      "commit": "1df3e3f",
+      "commit_full": "1df3e3fe0fdc71219d7703f5b76739b4d851c029",
+      "message": "ROADMAP: parameters done, M7 progress, oracle 52/66"
+    },
+    {
+      "ts": "2026-10-08T01:56:36Z",
+      "kind": "content",
+      "commit": "83438ee",
+      "commit_full": "83438eeaab00f55e173208fb54ee2b37a9a3e1e0",
+      "message": "Coil walls as smooth B-spline surfaces (one per profile segment; ruled walls only as a fallback): a 3-turn coil has 4 faces instead of 724"
+    },
+    {
+      "ts": "2026-10-08T02:16:37Z",
+      "kind": "content",
+      "commit": "606d991",
+      "commit_full": "606d9913aa3954dfc8b855b921b98d0f8c12e3e3",
+      "message": "ROADMAP: sketch milestone update"
+    },
+    {
+      "ts": "2026-10-08T02:48:17Z",
+      "kind": "content",
+      "commit": "8c88fb8",
+      "commit_full": "8c88fb8d2d94de9a023f47c2f3ad9b749e09683e",
+      "message": "Measure: split triangles that cut through curved faces onto the surface (trimmed faces after booleans were measured up to 15% off; 61's keyway volume now matche"
+    },
+    {
+      "ts": "2026-10-08T03:25:21Z",
+      "kind": "content",
+      "commit": "59685a9",
+      "commit_full": "59685a918043fecbee176131d9e1921d7ea0996c",
+      "message": "Shell and offset faces on bodies of planes and cylinders (filleted boxes, bosses: each face moves along its normal, cylinders change radius, corners and arcs fo"
+    },
+    {
+      "ts": "2026-10-08T03:35:18Z",
+      "kind": "content",
+      "commit": "7e373ff",
+      "commit_full": "7e373ff1f7fb248762f74c93ea3be500bc76cd05",
+      "message": "Draft of walls between caps on non-convex bodies: planes tilt about their neutral-plane line, cylinders become cones (47: drafted round-ended pocket)"
+    },
+    {
+      "ts": "2026-10-08T03:59:23Z",
+      "kind": "content",
+      "commit": "7ca6e92",
+      "commit_full": "7ca6e9278bc12e2531f0ef5ec51b973f8c796942",
+      "message": "Loop blends: sharp corners between straight edges meet in mitres (ellipse arcs), arcs of exactly the blend's radius become sphere octants (pole-free), and loops"
+    },
+    {
+      "ts": "2026-10-08T04:53:49Z",
+      "kind": "content",
+      "commit": "fc7cb5d",
+      "commit_full": "fc7cb5d60db830f4f60bf4da87051c1a84436572",
+      "message": "Booleans: prisms along one direction combined exactly in 2D (overlapping holes in plates; equal sections stacked end to end), bodies touching along one whole fa"
+    },
+    {
+      "ts": "2026-10-08T05:50:50Z",
+      "kind": "content",
+      "commit": "66df249",
+      "commit_full": "66df249c0f5a1376090ad8470b5010d6f5840eab",
+      "message": "Plastic: Rest (round or rectangular pad, solid or hollow wall, draft) and Plastic Rules (the six-rule library, design rules from expressions using Thickness, ac"
+    },
+    {
+      "ts": "2026-10-08T05:59:28Z",
+      "kind": "content",
+      "commit": "5539de8",
+      "commit_full": "5539de8fd4d283b4e20f32e15209530d5be03ddd",
+      "message": "Booleans: a face crossed by nested intersection loops (both walls of a tube) gives each hole to the innermost piece holding it (vendored shapeops; tubes and tor"
+    },
+    {
+      "ts": "2026-10-08T06:37:13Z",
+      "kind": "content",
+      "commit": "3e7826f",
+      "commit_full": "3e7826fe563f3b1bf07b256a208a926ab8f494b9",
+      "message": "Fillets and chamfers along closed chains of curved edges between any two smooth sides (a branch pipe meeting a main pipe): a ball rolled along the edge gives th"
+    },
+    {
+      "ts": "2026-10-08T07:29:26Z",
+      "kind": "content",
+      "commit": "66fa6fe",
+      "commit_full": "66fa6fe584dda5da9c370179e721ac9a76d0e25d",
+      "message": "Dialogs for joints, sheet metal and plastic"
+    },
+    {
+      "ts": "2026-10-08T08:32:45Z",
+      "kind": "content",
+      "commit": "f7703ca",
+      "commit_full": "f7703ca720ac95aae2015e875623b5838ce5fe6c",
+      "message": "Fillets and chamfers along open chains of curved edges that end at planar faces square to them (the round edge of a D-shaped block): the end faces take the blen"
+    },
+    {
+      "ts": "2026-10-08T09:42:34Z",
+      "kind": "content",
+      "commit": "b9bc756",
+      "commit_full": "b9bc75670c71fb13dae245288d51f1552595cf79",
+      "message": "Exact profiles for splines of any degree (a degree-4…7 Bézier segment kind, Seg2::Bezier, extruded as B-spline edges) and for free-form curves cut by crossings "
+    },
+    {
+      "ts": "2026-10-08T11:31:27Z",
+      "kind": "content",
+      "commit": "01b3498",
+      "commit_full": "01b349842cf78b39fe12a40702ddb6943f81533d",
+      "message": "Fillets and chamfers on runs of neighbouring edges along a planar face's loop (two or three top edges of a box): the blends meet in mitres at the sharp corners "
+    },
+    {
+      "ts": "2026-10-08T11:37:33Z",
+      "kind": "content",
+      "commit": "f40356a",
+      "commit_full": "f40356a74f5abbb1303ce6a8e93f08f0fbcc44fe",
+      "message": "Never lose work: atomic saves (temporary file, flush, rename) keeping the replaced version as <file>.bak; autosave of unsaved changes into a recovery folder (ev"
+    },
+    {
+      "ts": "2026-10-08T11:37:33Z",
+      "kind": "content",
+      "commit": "f413a86",
+      "commit_full": "f413a86d3dab756356a554db761bcbbb89d32b30",
+      "message": "Design file format 2 with a migration chain (doc::format: older formats upgraded step by step, newer refused with a message, out-of-range numbers and broken occ"
+    },
+    {
+      "ts": "2026-10-08T11:37:33Z",
+      "kind": "content",
+      "commit": "10a67ef",
+      "commit_full": "10a67ef25969061babe3f022d97ab3679b1ad343",
+      "message": "Contact Sets (EnableContactSetsCmd, EnableAllContactCmd, DisableAllContactCmd, ContactSetCmd, contact.edit/list/check): driving a joint stops where bodies of on"
+    },
+    {
+      "ts": "2026-10-08T11:37:33Z",
+      "kind": "content",
+      "commit": "b78cb88",
+      "commit_full": "b78cb886b8e09c1eec9b5f4592d208ef52c6fb00",
+      "message": "Configurations: a configuration table of rows (parameter expressions and feature suppressions per row) that switch the design (config.activate: undoable, all or"
+    },
+    {
+      "ts": "2026-10-08T11:37:33Z",
+      "kind": "content",
+      "commit": "d12c955",
+      "commit_full": "d12c955220637a3462d0055248b5192dd35f9b50",
+      "message": "ROADMAP: M5 status"
+    },
+    {
+      "ts": "2026-10-08T11:54:09Z",
+      "kind": "content",
+      "commit": "46f3ff7",
+      "commit_full": "46f3ff713d2d686954bad41c65df5bae606905f7",
+      "message": "Fillets of edges meeting at corners in any selection order: blends go one at a time in an order that works (a run along a planar loop waits for a selected edge "
+    },
+    {
+      "ts": "2026-10-08T12:59:50Z",
+      "kind": "content",
+      "commit": "0ee343b",
+      "commit_full": "0ee343b9e612515d85b705bc5f5e0659a2c67e24",
+      "message": "Shell and offset faces on cones and spheres too (a dome moves to a smaller sphere about its centre, a cone's apex slides along its axis); surface fitting robust"
+    },
+    {
+      "ts": "2026-10-08T13:48:12Z",
+      "kind": "content",
+      "commit": "8045904",
+      "commit_full": "8045904c54c048cee510979dfa59e2739a42747a",
+      "message": "Lofts through three or more sections are smooth: each side is one B-spline surface through every section (the middle sections leave no edges); two sections stay"
+    },
+    {
+      "ts": "2026-10-08T14:25:27Z",
+      "kind": "content",
+      "commit": "2ef7f90",
+      "commit_full": "2ef7f908b0117e6f6519d96e0cbd6b242746f999",
+      "message": "ROADMAP: M5"
+    },
+    {
+      "ts": "2026-10-09T12:17:23Z",
+      "kind": "content",
+      "commit": "d10312b",
+      "commit_full": "d10312b7fd009e9c88edb0990db6263722b3e876",
+      "message": "Command ids are SolveCraft's own: 173 ids that were another product's internal command ids become dotted, lower-case ids (<area>.<thing>[.<variant>]: solid.extr"
+    },
+    {
+      "ts": "2026-10-09T12:47:56Z",
+      "kind": "content",
+      "commit": "141a5fe",
+      "commit_full": "141a5fea8a0638cb9379daa40ed17457100b3bf2",
+      "message": "Modelled threads (Thread with modeled: true): the ISO 68-1 profile cut along a helix, M3 to M20, on shafts and in bores; running out past a free end of the face"
+    },
+    {
+      "ts": "2026-10-09T13:39:10Z",
+      "kind": "content",
+      "commit": "78dd776",
+      "commit_full": "78dd7761523640aa4cc3e23efc665540b520e95d",
+      "message": "ROADMAP refreshed: parity 328/541 in scope, oracle 76/76, 596 tests; persistent naming, fillet corners, Split Face, Fold and modelled threads no longer listed a"
+    },
+    {
+      "ts": "2026-10-10T19:37:00Z",
+      "kind": "content",
+      "commit": "d6cdec4",
+      "commit_full": "d6cdec40dacfa02b4cdac965e60de5d5c341b84e",
+      "message": "Fix modelling regressions and reconcile WIP UI work"
+    },
+    {
+      "ts": "2026-10-10T23:28:48Z",
+      "kind": "content",
+      "commit": "13dd456",
+      "commit_full": "13dd4566ce9a66518963dc92440068b9e827a8d5",
+      "message": "Fix chamfers on sloped end faces and enforce rim clearance (#102)"
+    },
+    {
+      "ts": "2026-10-11T00:05:45Z",
+      "kind": "content",
+      "commit": "b375c2a",
+      "commit_full": "b375c2a92af21e10ff36f291be7839657d8901b4",
+      "message": "Fix fillets and chamfers around sloped pocket rims (#108)"
+    },
+    {
+      "ts": "2026-10-11T00:56:59Z",
+      "kind": "content",
+      "commit": "17e8e3e",
+      "commit_full": "17e8e3eff29ab3065b9f339929aefca2ff2a2d4f",
+      "message": "Highlight fillets and other modifier faces from the timeline (#109)"
+    },
+    {
+      "ts": "2026-10-11T04:37:26Z",
+      "kind": "content",
+      "commit": "d71bdb7",
+      "commit_full": "d71bdb78ece41ac6ca618143aa786386656f00e2",
+      "message": "feat: strengthen modeling, configuration, and assembly workflows"
+    },
+    {
+      "ts": "2026-10-11T05:28:01Z",
+      "kind": "content",
+      "commit": "07932d0",
+      "commit_full": "07932d0f42d65097f583aa69df496b59a54fd908",
+      "message": "feat: preserve modeling intent across sketches, assemblies, and fabrication"
+    },
+    {
+      "ts": "2026-10-11T06:44:31Z",
+      "kind": "content",
+      "commit": "0398a81",
+      "commit_full": "0398a813c8c1524fa144dfe13cf5902feda5b43b",
+      "message": "feat: strengthen sketches, feature editing, and independent assemblies"
+    },
+    {
+      "ts": "2026-10-11T07:59:12Z",
+      "kind": "content",
+      "commit": "c1d819f",
+      "commit_full": "c1d819f235a3c5ae002e2882ae7fdb1954c561e7",
+      "message": "feat: preserve body history and placed modelling workflows"
+    },
+    {
+      "ts": "2026-10-11T09:32:46Z",
+      "kind": "content",
+      "commit": "a6bb8fc",
+      "commit_full": "a6bb8fc9243446844ca168e04ed0850e2b2426d4",
+      "message": "feat: stabilize face attachments and closed spline workflows"
+    },
+    {
+      "ts": "2026-10-11T11:13:42Z",
+      "kind": "content",
+      "commit": "420ee72",
+      "commit_full": "420ee723eec6578af136ed2b51b119cbc0867ff9",
+      "message": "Shell works where four or more flat faces meet at a corner (#124)"
+    },
+    {
+      "ts": "2026-10-11T12:51:58Z",
+      "kind": "content",
+      "commit": "4c4a044",
+      "commit_full": "4c4a0449a4500f7a91244fd58f5da564627422df",
+      "message": "feat: add smooth interactive axis view and diagonal snapping (#134)"
+    },
+    {
+      "ts": "2026-10-11T14:00:43Z",
+      "kind": "content",
+      "commit": "a094fa4",
+      "commit_full": "a094fa46b52f9c5554c5b7c1f9707e0ec0993e31",
+      "message": "Preserve curved sketch profiles through edits and complete adaptive modeling workflows (#138)"
+    },
+    {
+      "ts": "2026-10-11T15:16:24Z",
+      "kind": "content",
+      "commit": "5affff3",
+      "commit_full": "5affff307ec72dd1e10031383167000ad0395fda",
+      "message": "Ship 0.2.0 usability, geometry safeguards and updated desktop demo (#150)"
+    },
+    {
+      "ts": "2026-10-11T16:27:22Z",
+      "kind": "content",
+      "commit": "7abfe69",
+      "commit_full": "7abfe69603c8f9bed2e7e64ce0a1fcfe5f3bad4e",
+      "message": "docs: restore the enclosure demo with the 0.2.0 UI (#157)"
+    },
+    {
+      "ts": "2026-10-11T19:17:05Z",
+      "kind": "content",
+      "commit": "ef8f6ca",
+      "commit_full": "ef8f6ca6f9a997faffa80abe31e3a5c812fa9ece",
+      "message": "fix: restore shell and cut wall topology in 0.2.1"
+    },
+    {
+      "ts": "2026-10-11T20:16:48Z",
+      "kind": "content",
+      "commit": "af536a7",
+      "commit_full": "af536a7907dd4961bb8e01a3208863c013392c58",
+      "message": "Rename displayed product to SolidCraft and add header bug reporting"
+    },
+    {
+      "ts": "2026-10-11T21:12:16Z",
+      "kind": "content",
+      "commit": "7f98dd1",
+      "commit_full": "7f98dd1c4731fc701030a2e9d6509a3019427e16",
+      "message": "Describe SolidCraft as independent parametric CAD"
+    },
+    {
+      "ts": "2026-10-11T21:49:47Z",
+      "kind": "content",
+      "commit": "d8beaed",
+      "commit_full": "d8beaedfa4c0f0961e4e9b917f294f0ac25d70bd",
+      "message": "Open Parameters directly and prepare SolidCraft 0.3.0"
+    },
+    {
+      "ts": "2026-10-11T23:09:47Z",
+      "kind": "content",
+      "commit": "6dd202d",
+      "commit_full": "6dd202d27709596cb5c6318d0d2a0acb653ac6b0",
+      "message": "Fix desktop launch, app icons and keyboard parameter editing"
+    },
+    {
+      "ts": "2026-10-12T00:22:19Z",
+      "kind": "content",
+      "commit": "400f200",
+      "commit_full": "400f200efafc2367bf10029bdbc7cf13e360eb99",
+      "message": "Speed up cold document geometry rebuilds"
+    },
+    {
+      "ts": "2026-10-12T01:59:33Z",
+      "kind": "content",
+      "commit": "13aac42",
+      "commit_full": "13aac4296d163b7a103aefe84c58ceed7888707b",
+      "message": "Keep prepared assembly geometry through selection changes"
+    },
+    {
+      "ts": "2026-10-12T02:32:53Z",
+      "kind": "content",
+      "commit": "c53aff7",
+      "commit_full": "c53aff75929262d82763d7d52664ddfd752621d6",
+      "message": "Fix artificial Shell wall splits on stepped bodies"
+    },
+    {
+      "ts": "2026-10-12T12:36:40Z",
+      "kind": "content",
+      "commit": "ed102b5",
+      "commit_full": "ed102b5393877f84be619171ff27112ea4ce7060",
+      "message": "fix: reject degenerate boolean intersection polylines"
+    },
+    {
+      "ts": "2026-10-12T12:48:05Z",
+      "kind": "content",
+      "commit": "db0a2a0",
+      "commit_full": "db0a2a007a33fef790f26f6423e65862fce89b31",
+      "message": "Apply remaining sketch constraints to complete preselection"
+    },
+    {
+      "ts": "2026-10-12T13:08:31Z",
+      "kind": "content",
+      "commit": "732447d",
+      "commit_full": "732447d2dc5c54edacc0b7ac328a7c9a352bc7ab",
+      "message": "Fix dialog header chevrons to collapse and restore forms"
+    },
+    {
+      "ts": "2026-10-12T13:30:18Z",
+      "kind": "content",
+      "commit": "8c13914",
+      "commit_full": "8c13914d6c218460e5505e6c25775fbaa8399244",
+      "message": "Ignore repeated initial sketch points while drawing"
+    },
+    {
+      "ts": "2026-10-12T13:51:58Z",
+      "kind": "content",
+      "commit": "56b499e",
+      "commit_full": "56b499e951c1c3137b26763bb1606eedcd1dd38d",
+      "message": "Reject invalid explicit axis origins instead of using zero"
+    },
+    {
+      "ts": "2026-10-12T14:05:52Z",
+      "kind": "content",
+      "commit": "874315d",
+      "commit_full": "874315db8e65b4d83af28e4765ed95fa5a139ec6",
+      "message": "fix(sketch): apply Project to complete preselection"
+    },
+    {
+      "ts": "2026-10-12T14:06:42Z",
+      "kind": "content",
+      "commit": "df4c8a2",
+      "commit_full": "df4c8a2994e913082a136f8eddd5bc8c5e13bcc0",
+      "message": "Reconstruct constant-section meshes as parametric solids"
+    },
+    {
+      "ts": "2026-10-12T14:08:11Z",
+      "kind": "content",
+      "commit": "6284717",
+      "commit_full": "62847173f42218ec91962416e6d9150c0ba9c1b8",
+      "message": "Honor design units in sketch dimensions and measurements (#241)"
+    },
+    {
+      "ts": "2026-10-12T14:08:15Z",
+      "kind": "content",
+      "commit": "f77da83",
+      "commit_full": "f77da83c9375c70498933e7936ff78ec6eeb7d9e",
+      "message": "Edit sketch text content and placement from its outlines (#253)"
+    },
+    {
+      "ts": "2026-10-12T14:25:52Z",
+      "kind": "content",
+      "commit": "e3938de",
+      "commit_full": "e3938defd8fecaf8391bd5343ee23c0c33d7418c",
+      "message": "Fillets along a straight edge between two cylinders: trim curved cap edges to the contacts (#238)"
+    },
+    {
+      "ts": "2026-10-12T14:38:04Z",
+      "kind": "content",
+      "commit": "f0dda66",
+      "commit_full": "f0dda667bb3e505c75ea438eed41a25d62140c43",
+      "message": "Report accepted Boolean retries on features and fuzz runs (#249)"
+    },
+    {
+      "ts": "2026-10-12T14:43:43Z",
+      "kind": "content",
+      "commit": "e12758f",
+      "commit_full": "e12758ff9173b1d9c9b7231fb2244ec93c451a12",
+      "message": "Public reference tests: analytic and FreeCAD expected values (#310)"
+    },
+    {
+      "ts": "2026-10-12T15:05:57Z",
+      "kind": "content",
+      "commit": "59fabc1",
+      "commit_full": "59fabc16ac324d655faa70c5b79155e7bfe772b5",
+      "message": "Reject ambiguous origin and construction plane names (#247)"
+    },
+    {
+      "ts": "2026-10-12T15:19:15Z",
+      "kind": "content",
+      "commit": "3b8028a",
+      "commit_full": "3b8028a040f89a41584303ae4f691304306ee538",
+      "message": "Retire legacy reference data and the external command catalog (#302)"
+    },
+    {
+      "ts": "2026-10-12T15:25:39Z",
+      "kind": "content",
+      "commit": "e6e0a7e",
+      "commit_full": "e6e0a7ebb51d533b38248af3cf7a2fb6b9bfea3d",
+      "message": "Snap 3D bridge lines to points on other sketch planes (#229)"
+    },
+    {
+      "ts": "2026-10-12T15:44:19Z",
+      "kind": "content",
+      "commit": "4d4b3a7",
+      "commit_full": "4d4b3a715f72490d4a0ee084289ff004040a445b",
+      "message": "Create construction planes along drawn 3D sketch paths (#240)"
+    },
+    {
+      "ts": "2026-10-12T15:46:32Z",
+      "kind": "content",
+      "commit": "65a9960",
+      "commit_full": "65a99608d9724df8284bb81ec7faec96d92afab9",
+      "message": "Prepare independent STEP bodies concurrently on desktop (#312)"
+    },
+    {
+      "ts": "2026-10-12T15:52:53Z",
+      "kind": "content",
+      "commit": "08cf526",
+      "commit_full": "08cf526fe28beb3b705def152e3389f836117df7",
+      "message": "feat(doc): persistent names follow the kernel's exact face history (#136)"
+    },
+    {
+      "ts": "2026-10-12T17:45:48Z",
+      "kind": "content",
+      "commit": "fe4d171",
+      "commit_full": "fe4d171e22beaa3a787033b11a18fccd6c463742",
+      "message": "feat(sketch): live drag that keeps its solution, ended by sketch.drag_end (#341)"
+    },
+    {
+      "ts": "2026-10-12T17:46:40Z",
+      "kind": "content",
+      "commit": "6dab0fb",
+      "commit_full": "6dab0fb2c10ad9822c92bed718fab7954833afbe",
+      "message": "openscad navigation (#211)"
+    },
+    {
+      "ts": "2026-10-12T18:27:40Z",
+      "kind": "content",
+      "commit": "2ebceb6",
+      "commit_full": "2ebceb6918b9919ac2c4c92c8b0789a1dbb89756",
+      "message": "Sheet metal: sew the folded-material guard per piece so adjacent flanges cut (#296) (#355)"
+    },
+    {
+      "ts": "2026-10-12T20:50:49Z",
+      "kind": "content",
+      "commit": "27415e4",
+      "commit_full": "27415e4dd7a849954e9f157f39110f7b39c66205",
+      "message": "Crash reports: replayable, bounded, local, reachable by agents (#384)"
+    },
+    {
+      "ts": "2026-10-12T21:17:01Z",
+      "kind": "content",
+      "commit": "2966832",
+      "commit_full": "296683229d11dc88bf0288c3be5ecafdc3340725",
+      "message": "Rename SolveCraft to SolidCraft everywhere, with compatibility shims (#389)"
+    },
+    {
+      "ts": "2026-10-12T22:48:19Z",
+      "kind": "content",
+      "commit": "0154572",
+      "commit_full": "0154572580d3d5a22f7d86cb4f74eef7546d9002",
+      "message": "feat: close sheet flange corners at any angle (#406)"
+    },
+    {
+      "ts": "2026-10-12T23:03:22Z",
+      "kind": "content",
+      "commit": "8e0c3d2",
+      "commit_full": "8e0c3d2794c1cbc8977fffd52a1ed0cfccb3f55d",
+      "message": "feat: fold sheet metal cut-outs across bends at any angle or curved (#425)"
+    },
+    {
+      "ts": "2026-10-12T23:15:41Z",
+      "kind": "content",
+      "commit": "006a23a",
+      "commit_full": "006a23a7672114ca8be7d9d92567b314c1ef16fa",
+      "message": "Add design containers with deduplicated blobs and JSON compatibility (#327)"
+    },
+    {
+      "ts": "2026-10-13T00:13:31Z",
+      "kind": "content",
+      "commit": "5c7149e",
+      "commit_full": "5c7149e57d383c47c8b748497d02f559ff3e967b",
+      "message": "fix(ui): put Point on the default sketch toolbar (#445)"
+    },
+    {
+      "ts": "2026-10-13T00:25:38Z",
+      "kind": "content",
+      "commit": "ddd528a",
+      "commit_full": "ddd528abaffc7658639ad9122011419b35372037",
+      "message": "fix(ui): accept toolbar drops across panel labels and gaps (#454)"
+    },
+    {
+      "ts": "2026-10-13T00:33:49Z",
+      "kind": "content",
+      "commit": "fb4c1d7",
+      "commit_full": "fb4c1d74b9668df3dcd154e6a1a00b0fb28bda1d",
+      "message": "feat: edge flanges with their own angle and height per edge (#447)"
+    },
+    {
+      "ts": "2026-10-13T01:36:58Z",
+      "kind": "content",
+      "commit": "af0440a",
+      "commit_full": "af0440aaab706bf2dabed26e1799f69b95a61f13",
+      "message": "feat: sketches on a sheet metal face attach to its panel (#474)"
+    },
+    {
+      "ts": "2026-10-13T04:25:50Z",
+      "kind": "content",
+      "commit": "d6af554",
+      "commit_full": "d6af554c6d64240d995b135a67ce850374d031fb",
+      "message": "feat: corner reliefs at sheet flange corners, chosen by the rule (#488)"
+    },
+    {
+      "ts": "2026-10-13T06:33:45Z",
+      "kind": "content",
+      "commit": "c1cd4cf",
+      "commit_full": "c1cd4cf19424a068de38c391d7b107b52d94446d",
+      "message": "fix(ui): persist keyboard zoom and stabilize scale drags (#574)"
+    },
+    {
+      "ts": "2026-10-13T06:54:01Z",
+      "kind": "content",
+      "commit": "913583b",
+      "commit_full": "913583bfeebb67eea406b40c9bc282bbf27726c7",
+      "message": "Show a bounded native-cache preview before authoritative reconstruction (#463)"
+    },
+    {
+      "ts": "2026-10-13T08:07:48Z",
+      "kind": "content",
+      "commit": "083ddf7",
+      "commit_full": "083ddf77221aa5f962b8dbd8649cb5478762fe86",
+      "message": "fix(ui): preserve construction tools and dashed feedback (#600)"
+    },
+    {
+      "ts": "2026-10-13T08:17:42Z",
+      "kind": "content",
+      "commit": "2aff1c5",
+      "commit_full": "2aff1c530394d93144e2227f641395631668d194",
+      "message": "ci: scan dependency advisories nightly and update XML parser (#605)"
+    },
+    {
+      "ts": "2026-10-13T08:26:00Z",
+      "kind": "content",
+      "commit": "5ad8b39",
+      "commit_full": "5ad8b3966fce13b906f8ac58c61f85d4aeccafcf",
+      "message": "fix(ui): preview actual polygon outlines while drawing (#583)"
+    },
+    {
+      "ts": "2026-10-13T08:45:19Z",
+      "kind": "content",
+      "commit": "a2f31f6",
+      "commit_full": "a2f31f683de8582ef85e0f124a15a22ec61f60a7",
+      "message": "feat: flanges on flanges follow their flange's end and close at corners (#601)"
+    },
+    {
+      "ts": "2026-10-13T08:49:28Z",
+      "kind": "content",
+      "commit": "04cfb74",
+      "commit_full": "04cfb74c5e9b9c6ca453632f38d55c24dcb57c7e",
+      "message": "feat: Group sketch creation tools and remember variants per part (#589)"
+    },
+    {
+      "ts": "2026-10-13T09:20:47Z",
+      "kind": "content",
+      "commit": "bcbfa50",
+      "commit_full": "bcbfa50eacc7923378feec2203bd5beda11eb171",
+      "message": "Add bounded portable Home thumbnails to design files (#518)"
+    },
+    {
+      "ts": "2026-10-13T09:36:49Z",
+      "kind": "content",
+      "commit": "8d58e3b",
+      "commit_full": "8d58e3b9f9c430f9e3756022c37e211e31b30370",
+      "message": "feat(mcp): support compact single execute replies (#591)"
+    },
+    {
+      "ts": "2026-10-13T13:28:05Z",
+      "kind": "content",
+      "commit": "e10b0b7",
+      "commit_full": "e10b0b7d22a95738d79f86c09e0d12d95d8897df",
+      "message": "fix(ui): edit sketch text from letter interiors (#694)"
+    },
+    {
+      "ts": "2026-10-13T14:17:41Z",
+      "kind": "content",
+      "commit": "0e500ca",
+      "commit_full": "0e500cacd334809b703e32daaf285ad0f162052d",
+      "message": "Render: add backend capability discovery and strict request resolution (#650)"
+    },
+    {
+      "ts": "2026-10-13T14:29:02Z",
+      "kind": "content",
+      "commit": "11084a5",
+      "commit_full": "11084a5963c3d666a134879fdb36433affc5cb1f",
+      "message": "fix(sketch): move and copy editable text as a whole source (#715)"
+    },
+    {
+      "ts": "2026-10-13T14:52:28Z",
+      "kind": "content",
+      "commit": "a1cb8d4",
+      "commit_full": "a1cb8d4d360fc80cc77773812f44fece8b141d22",
+      "message": "feat: Convert to Sheet Metal takes a solid or a shelled body by its bend edges (#725)"
+    },
+    {
+      "ts": "2026-10-13T16:35:02Z",
+      "kind": "content",
+      "commit": "25a3dc5",
+      "commit_full": "25a3dc501b1d1dba422042e4dd5921df625f32b1",
+      "message": "docs(roadmap): list the proposed surface toolset under M8 (#773)"
+    },
+    {
+      "ts": "2026-10-13T17:01:31Z",
+      "kind": "content",
+      "commit": "a8b3b21",
+      "commit_full": "a8b3b21fd0ec09f5c5353df16cfbd441158720d6",
+      "message": "Feature history on the left side, with contiguous folders (#449)"
+    },
+    {
+      "ts": "2026-10-13T18:28:28Z",
+      "kind": "content",
+      "commit": "dd084ec",
+      "commit_full": "dd084ec9e1df5fc92f72f08f357d7eb868006791",
+      "message": "Sheet metal: tear as a fourth corner relief shape (#809)"
+    },
+    {
+      "ts": "2026-10-13T20:29:09Z",
+      "kind": "content",
+      "commit": "5d661fa",
+      "commit_full": "5d661fa2af7a3f23ea225c09a1790604f70e38f9",
+      "message": "Export 3MF with B-rep face tags (#834)"
+    },
+    {
+      "ts": "2026-10-13T20:33:51Z",
+      "kind": "content",
+      "commit": "e99b3bd",
+      "commit_full": "e99b3bd4e839c179213c2be3dabeb180f6f7dc5f",
+      "message": "render: bounded cooperative HDR input foundation (#837)"
+    },
+    {
+      "ts": "2026-10-14T01:52:30Z",
+      "kind": "content",
+      "commit": "17db109",
+      "commit_full": "17db109c5d07cad90f4203194882c42ded5e0e9a",
+      "message": "URDF export for robot simulators (#719) (#942)"
+    },
+    {
+      "ts": "2026-10-14T03:21:47Z",
+      "kind": "content",
+      "commit": "a2c7396",
+      "commit_full": "a2c739616043c4a2ff79a22fbc31853312fdb63a",
+      "message": "Fillets and chamfers where edges meet at corners on a curved wall or a knife-edge tip (#851) (#935)"
+    },
+    {
+      "ts": "2026-10-14T03:22:58Z",
+      "kind": "content",
+      "commit": "09b5da3",
+      "commit_full": "09b5da3e9f3bbd7d0bcab149266f00815f4161db",
+      "message": "docs: propose extensible material, appearance and component libraries (#792)"
+    },
+    {
+      "ts": "2026-10-14T08:26:53Z",
+      "kind": "content",
+      "commit": "6e84c03",
+      "commit_full": "6e84c03946cc69766656cb35bf62c9650bd02c73",
+      "message": "Curvature-continuous (G2) fillets for straight planar edges (#862)"
+    },
+    {
+      "ts": "2026-10-14T09:27:39Z",
+      "kind": "content",
+      "commit": "9ca7d30",
+      "commit_full": "9ca7d307a46e3152a1867efe2011d52170f73d21",
+      "message": "Offset of an irregular closed spline no longer fails its error certificate; offset fit nodes stay private (#1009)"
+    },
+    {
+      "ts": "2026-10-14T09:28:18Z",
+      "kind": "content",
+      "commit": "01f2c78",
+      "commit_full": "01f2c78cd14e31ba08002834351add6a70610a8d",
+      "message": "Validate sourced physical material property cards and elastic stability (#934)"
+    },
+    {
+      "ts": "2026-10-14T12:17:00Z",
+      "kind": "content",
+      "commit": "52fb5ac",
+      "commit_full": "52fb5ac0e65ead2a36dd9426e2926b170d35ce72",
+      "message": "feat: query directional elastic modulus from validated material cards (#998)"
+    },
+    {
+      "ts": "2026-10-14T13:06:24Z",
+      "kind": "content",
+      "commit": "ec8e739",
+      "commit_full": "ec8e739aadd8770e0108b54444652563e12bfaf7",
+      "message": "Export a design's timeline as a replayable command script (#1045)"
+    },
+    {
+      "ts": "2026-10-14T14:00:03Z",
+      "kind": "content",
+      "commit": "88432d2",
+      "commit_full": "88432d226af517bf4df6498900b00df68b89c876",
+      "message": "Render: bounded opaque surface contract and numerical BRDF reference (#1019)"
+    },
+    {
+      "ts": "2026-10-14T15:46:16Z",
+      "kind": "content",
+      "commit": "6df69e9",
+      "commit_full": "6df69e9defe5db05087ba3e797e5c70bcbd2ea0a",
+      "message": "Thin Extrude: walls of a set thickness along sketch curves (#721) (#991)"
+    },
+    {
+      "ts": "2026-10-14T16:21:35Z",
+      "kind": "content",
+      "commit": "d399eff",
+      "commit_full": "d399effbf72e11b3383086e88c5228b594d82b39",
+      "message": "Local appearance and material libraries (#863)"
+    },
+    {
+      "ts": "2026-10-14T17:40:16Z",
+      "kind": "content",
+      "commit": "94faf9c",
+      "commit_full": "94faf9ce1bcc8934129ed8082e780335c08dd0f7",
+      "message": "Close kinematic loops: driven joints move four-bars and sliders (#1141)"
+    },
+    {
+      "ts": "2026-10-14T20:35:52Z",
+      "kind": "content",
+      "commit": "241dac1",
+      "commit_full": "241dac15427eecdcb7066e78ed8247f2678fcc8e",
+      "message": "Render: bounded PNG/JPEG texture input admission (#909)"
+    },
+    {
+      "ts": "2026-10-14T21:11:39Z",
+      "kind": "content",
+      "commit": "289b521",
+      "commit_full": "289b521a65ae4a5c520add32824ffbc71ba061c8",
+      "message": "Render R2: persist named render setups without re-evaluating geometry (#667)"
+    },
+    {
+      "ts": "2026-10-14T21:56:02Z",
+      "kind": "content",
+      "commit": "8f08167",
+      "commit_full": "8f081679bc0b1692b102507d4076e345111d6642",
+      "message": "Equal cylinders crossing each other no longer refuse a cut (#788) (#1179)"
+    },
+    {
+      "ts": "2026-10-14T22:25:35Z",
+      "kind": "content",
+      "commit": "a4a8b48",
+      "commit_full": "a4a8b485670f28610ec649570f5aae22172bf3b6",
+      "message": "Design properties: project, author and licence in the design, its exports and inspect_design (#1015) (#1189)"
+    },
+    {
+      "ts": "2026-10-14T23:24:36Z",
+      "kind": "content",
+      "commit": "a261aaa",
+      "commit_full": "a261aaa841d8c059fc246e5ea6ff5583b7f81a19",
+      "message": "Render: integrated workspace, preview image jobs and opaque PBR (#1046)"
+    },
+    {
+      "ts": "2026-10-15T02:46:33Z",
+      "kind": "content",
+      "commit": "bd8db8e",
+      "commit_full": "bd8db8ea1c461107c32d3984815266909e569648",
+      "message": "Add Touchpad navigation: Shift to pan, Alt/Option to orbit (#1220)"
+    },
+    {
+      "ts": "2026-10-15T05:19:48Z",
+      "kind": "content",
+      "commit": "ee9b4b9",
+      "commit_full": "ee9b4b9fb1c1723f3a3e58580bf398d4f32735d3",
+      "message": "Kernel: refuse arc blends that collapse a side face (#1281)"
+    },
+    {
+      "ts": "2026-10-15T10:24:31Z",
+      "kind": "content",
+      "commit": "5fa8e7d",
+      "commit_full": "5fa8e7d60a343f6e9b754a148bd38a2c9602e374",
+      "message": "Sweep: orientation, twist and end scale (#1269)"
+    },
+    {
+      "ts": "2026-10-15T12:33:48Z",
+      "kind": "content",
+      "commit": "8a6332b",
+      "commit_full": "8a6332be8397e01e76219cf5c70a529522187c37",
+      "message": "Fix face Extrude Join targets in assemblies (#1375)"
+    },
+    {
+      "ts": "2026-10-15T15:34:48Z",
+      "kind": "content",
+      "commit": "20a7dd8",
+      "commit_full": "20a7dd8764abc8ce7b92f5aaf03bb53c301de33a",
+      "message": "Chamfer chains ending at existing bevels (#1303) (#1372)"
+    },
+    {
+      "ts": "2026-10-15T16:47:37Z",
+      "kind": "content",
+      "commit": "a18bedd",
+      "commit_full": "a18bedddf694c4d0a60d99df66ecd4687e5ff5f5",
+      "message": "Keep New Body and Offset Face previews moving during distance drags (#1238)"
+    },
+    {
+      "ts": "2026-10-15T17:55:35Z",
+      "kind": "content",
+      "commit": "1e984c8",
+      "commit_full": "1e984c8e46f0938639fb2c33e00ebaafb7614c24",
+      "message": "render: normalize high precision texture inputs (#1267)"
+    },
+    {
+      "ts": "2026-10-15T18:22:38Z",
+      "kind": "content",
+      "commit": "2d069ca",
+      "commit_full": "2d069ca1860b893ef6463b0b1d47704ed3956675",
+      "message": "In-app agent chat: your own coding agents over ACP, plus OpenAI-compatible endpoints (#1102)"
+    },
+    {
+      "ts": "2026-10-15T22:47:38Z",
+      "kind": "content",
+      "commit": "f7967b1",
+      "commit_full": "f7967b1ff64d72c1161979623db365074be397ca",
+      "message": "Joints: gears, rack and pinion, and screws (#1524)"
+    },
+    {
+      "ts": "2026-10-15T23:30:03Z",
+      "kind": "content",
+      "commit": "78242d6",
+      "commit_full": "78242d67d1d35924ccba36142e2baf5625cafb80",
+      "message": "Import FreeCAD and Rhino files through cadmpeg (#1435)"
+    },
+    {
+      "ts": "2026-10-16T00:04:25Z",
+      "kind": "content",
+      "commit": "c361630",
+      "commit_full": "c36163095490cb8683275f23ce03fa6cdc603897",
+      "message": "Export the current 3D view as 2D DXF with optional hidden lines (#1449)"
+    },
+    {
+      "ts": "2026-10-16T01:27:50Z",
+      "kind": "content",
+      "commit": "3423057",
+      "commit_full": "342305705d2e01b367b1fdd0642f5fbc52dd381c",
+      "message": "Add XAI Grok to the AI panel (#1558)"
+    },
+    {
+      "ts": "2026-10-16T02:40:09Z",
+      "kind": "content",
+      "commit": "7ef78f9",
+      "commit_full": "7ef78f960a33ee160c12912108c904f149e903ca",
+      "message": "Fix perpendicular fillets after connected rounds (#1581)"
+    },
+    {
+      "ts": "2026-10-16T03:07:24Z",
+      "kind": "content",
+      "commit": "fac3f96",
+      "commit_full": "fac3f96bdd82a146c952d8a35d7e50bb85aa995c",
+      "message": "Patch: G1/G2 to the faces beside the loop, general and N-sided loops, points (#759) (#1521)"
+    },
+    {
+      "ts": "2026-10-16T03:58:34Z",
+      "kind": "content",
+      "commit": "4d862cd",
+      "commit_full": "4d862cd76ccfa3a171c66c48d9a184209a33a945",
+      "message": "Joints: joint.reach (inverse kinematics), and a jointed part follows a drag (#1540)"
+    },
+    {
+      "ts": "2026-10-16T05:54:34Z",
+      "kind": "content",
+      "commit": "571122c",
+      "commit_full": "571122c4ba6668b8d91ea7f03bb7ba4985279b67",
+      "message": "Motion Trace: a point's path as a joint is driven or a study plays, kept as a 3D spline (#1529)"
+    },
+    {
+      "ts": "2026-10-16T10:26:27Z",
+      "kind": "content",
+      "commit": "bbd4f29",
+      "commit_full": "bbd4f29ebb58fe4445ccc9aab347d2fbdf8954ce",
+      "message": "Class-A surfacing 3/3: blend curves, curved-edge fillets, the G2 corner and continuity analysis (#1642)"
+    },
+    {
+      "ts": "2026-10-16T12:26:28Z",
+      "kind": "content",
+      "commit": "737c935",
+      "commit_full": "737c9358d070c233c15cbe8eff69c7d04bfa4d2b",
+      "message": "Add three-axis milling with independent CAM and Fusion validation (#1682)"
+    },
+    {
+      "ts": "2026-10-16T13:02:19Z",
+      "kind": "content",
+      "commit": "2c020db",
+      "commit_full": "2c020dbcbc62ca279ce97db369480c67fa269a1f",
+      "message": "Revert #1682 (three-axis milling) (#1715)"
+    },
+    {
+      "ts": "2026-10-16T14:26:27Z",
+      "kind": "content",
+      "commit": "bba0380",
+      "commit_full": "bba03803b7a1eae942518417dd7fd758caa28d83",
+      "message": "Accelerate current-view DXF export and keep desktop exports responsive (#1738)"
+    },
+    {
+      "ts": "2026-10-16T14:26:35Z",
+      "kind": "content",
+      "commit": "6232fa3",
+      "commit_full": "6232fa33c2cd75abd555244b128f10eb178a7f68",
+      "message": "Joints: cam and follower coupling (joint.cam) (#1734)"
+    },
+    {
+      "ts": "2026-10-16T16:26:23Z",
+      "kind": "content",
+      "commit": "da65b4f",
+      "commit_full": "da65b4fc8c36ac1ac9b13dcade4cd859984b3a46",
+      "message": "Thread: suggest cylinder size and expose metric diameter and pitch (#1759)"
+    },
+    {
+      "ts": "2026-10-16T22:09:37Z",
+      "kind": "content",
+      "commit": "3749619",
+      "commit_full": "37496198bf2c99285de703899a67a5f87ac60b7a",
+      "message": "Motion analysis: chart a study's joints and points, and find the parts that collide along it (#1712)"
+    },
+    {
+      "ts": "2026-10-17T08:07:46Z",
+      "kind": "content",
+      "commit": "98ce6a4",
+      "commit_full": "98ce6a4ee88ae7642c6ba271820c150e624ff62e",
+      "message": "Sweep guide rails and two-rail sweep (#771) (#1806)"
+    },
+    {
+      "ts": "2026-10-17T11:06:26Z",
+      "kind": "content",
+      "commit": "87d4eb5",
+      "commit_full": "87d4eb55e5b3411f5e0949087400e2d63535c426",
+      "message": "fix(kernel): fillet mixed arc and line loop corners (#604)"
+    },
+    {
+      "ts": "2026-10-17T12:38:55Z",
+      "kind": "content",
+      "commit": "0a66697",
+      "commit_full": "0a66697da81e55b9c45ba68e160420bd9f627a41",
+      "message": "Continuity Analysis tool, legend and theme colours on #1642's inspect.continuity; curvature combs on faces (#770) (#1247)"
+    },
+    {
+      "ts": "2026-10-17T22:30:52Z",
+      "kind": "content",
+      "commit": "487aa64",
+      "commit_full": "487aa64e109c206e5a5692df881e5c11ff2ae96c",
+      "message": "Multi profile extrusion performance (#2064)"
+    },
+    {
+      "ts": "2026-10-18T01:47:38Z",
+      "kind": "content",
+      "commit": "83c31d7",
+      "commit_full": "83c31d77c4c223aec7e7900c6528db94262c6e54",
+      "message": "surface.boundary: surfaces through boundary curves and curve networks (#763) (#2129)"
+    },
+    {
+      "ts": "2026-10-18T04:29:12Z",
+      "kind": "content",
+      "commit": "7c9f8a5",
+      "commit_full": "7c9f8a58955a6a89ef0b102d63fd2d045bed4437",
+      "message": "Drawing: validate section geometry contracts (#2053) (#2085)"
+    },
+    {
+      "ts": "2026-10-18T16:41:33Z",
+      "kind": "content",
+      "commit": "c25e101",
+      "commit_full": "c25e101b77b75ad94e3986fcf05da14e53ac42e5",
+      "message": "docs: align contribution guidance with current capabilities and CI (#2594)"
+    },
+    {
+      "ts": "2026-10-19T01:16:11Z",
+      "kind": "content",
+      "commit": "9eb1540",
+      "commit_full": "9eb1540a3449a16773438eb60561e833213e9895",
+      "message": "Docs: describe SolidCraft as independent CAD (#2768)"
+    },
+    {
+      "ts": "2026-10-19T01:29:03Z",
+      "kind": "content",
+      "commit": "8e762fe",
+      "commit_full": "8e762fee578596fe37bc4348abaeca67b5f760c2",
+      "message": "Add optional ambient occlusion and graphics quality presets (#1135)"
+    },
+    {
+      "ts": "2026-10-19T14:14:07Z",
+      "kind": "content",
+      "commit": "b4e049f",
+      "commit_full": "b4e049f9a63cb2283f016fec325cf713c8ba0455",
+      "message": "Preserve equal-radius fillet mitre tangency (#2485)"
+    },
+    {
+      "ts": "2026-10-19T20:04:02Z",
+      "kind": "content",
+      "commit": "1cd9983",
+      "commit_full": "1cd9983c8fc5da46a4079d2819b62969cd13f3bb",
+      "message": "Surface trim: projected curves, several kept regions, mutual trim (#767) (#1466)"
+    },
+    {
+      "ts": "2026-10-19T20:08:06Z",
+      "kind": "content",
+      "commit": "e1268c6",
+      "commit_full": "e1268c6ad965344ac3785e5665e466987e2c4ed0",
+      "message": "Fix fillets around tiny rounded-rectangle end edges (#2506)"
+    },
+    {
+      "ts": "2026-10-19T20:09:11Z",
+      "kind": "content",
+      "commit": "42e9910",
+      "commit_full": "42e991069f2d216be57e522c64ae3c5d39c690f0",
+      "message": "Fix shelling revolved barrels (#2421) (#2486)"
+    },
+    {
+      "ts": "2026-10-19T23:57:03Z",
+      "kind": "content",
+      "commit": "26dd254",
+      "commit_full": "26dd2548b718b310ea29bef996588ef93dc0f971",
+      "message": "Preview modeled threads using the desktop background worker (#2264)"
+    },
+    {
+      "ts": "2026-10-19T23:57:07Z",
+      "kind": "content",
+      "commit": "3ffd8ef",
+      "commit_full": "3ffd8efffc877397290f9032ae121f704bb70110",
+      "message": "Loft: preserve holes through matching sketch sections (#2435) (#2447)"
+    },
+    {
+      "ts": "2026-10-20T00:06:44Z",
+      "kind": "content",
+      "commit": "b622a46",
+      "commit_full": "b622a46624f0947c9b47bac9e426c6ad7c17dd64",
+      "message": "Fix large modeled threads and thin crest reconstruction (#2209)"
+    },
+    {
+      "ts": "2026-10-20T03:22:30Z",
+      "kind": "content",
+      "commit": "14b7529",
+      "commit_full": "14b75294652e06ee7b9e18748005a00d60ec9f15",
+      "message": "Loft guide rails (#201) (#3371)"
+    },
+    {
+      "ts": "2026-10-20T03:25:05Z",
+      "kind": "content",
+      "commit": "fa3ada1",
+      "commit_full": "fa3ada19838cf666fb7bcf3a626834b0e7ca4570",
+      "message": "claim: #2708 (#2739)"
+    },
+    {
+      "ts": "2026-10-20T03:44:16Z",
+      "kind": "content",
+      "commit": "e27d435",
+      "commit_full": "e27d43553c53b00ef16a0d20338d3266576539fb",
+      "message": "Sketch Dimension: line to circle/arc edge (#1803) (#1863)"
+    },
+    {
+      "ts": "2026-10-20T04:26:12Z",
+      "kind": "content",
+      "commit": "37a8402",
+      "commit_full": "37a8402cae2380af08035bf00f4839a1c3154a1f",
+      "message": "surface.blend: seam alignment, chain-topology refusal and a dialog (#764) (#2488)"
+    },
+    {
+      "ts": "2026-10-20T16:26:19Z",
+      "kind": "content",
+      "commit": "fb87cde",
+      "commit_full": "fb87cde6a1b96ce66990796d0ac94148f9f46d4e",
+      "message": "Sketch: persist Shift-picked midpoints with ordinary constraints (#2087) (#2378)"
+    },
+    {
+      "ts": "2026-10-21T18:56:55Z",
+      "kind": "content",
+      "commit": "63f210b",
+      "commit_full": "63f210b49fa1d3eba4c2fb540d02c7465969b838",
+      "message": "Restyle the vertical history sidebar (#2028) (#3953)"
+    },
+    {
+      "ts": "2026-10-21T23:09:57Z",
+      "kind": "content",
+      "commit": "ba4f786",
+      "commit_full": "ba4f7864fffce89f37d0bd7bf66aabaa9de907be",
+      "message": "Export Current View as DXF includes shown sketches (#3708) (#3780)"
+    },
+    {
+      "ts": "2026-10-21T23:29:29Z",
+      "kind": "content",
+      "commit": "dfd5829",
+      "commit_full": "dfd58293a6df22cace289df94428bcb8d56f992c",
+      "message": "Navigation: opt-in free orbit and shared Normal to Selection (#1912)"
+    },
+    {
+      "ts": "2026-10-22T00:52:36Z",
+      "kind": "content",
+      "commit": "4b23bb3",
+      "commit_full": "4b23bb3a0367d872fded5ddb2740b24a129eff58",
+      "message": "Implement compact workspace layout (#2029) (#4533)"
+    },
+    {
+      "ts": "2026-10-22T12:19:09Z",
+      "kind": "content",
+      "commit": "f79cbc2",
+      "commit_full": "f79cbc216cf93c9af2dcadda1482eb4adceba42a",
+      "message": "Redesign the home page as the File view (#2027) (#3822)"
+    },
+    {
+      "ts": "2026-10-23T14:22:41Z",
+      "kind": "content",
+      "commit": "27d2fe6",
+      "commit_full": "27d2fe6ec02a6ce522b9e7c206b23d73f6faa26c",
+      "message": "Frames: profile library, members along frame sketch lines, and the Frame Member dialog (#4003) (#4004)"
+    },
+    {
+      "ts": "2026-10-23T14:22:57Z",
+      "kind": "content",
+      "commit": "04dc68d",
+      "commit_full": "04dc68d98808299920a637adcb95c133dd937105",
+      "message": "macOS: Fusion navigation preset does not support Shift + two-finger orbit (#3446)"
+    },
+    {
+      "ts": "2026-10-23T23:15:34Z",
+      "kind": "content",
+      "commit": "0dffb20",
+      "commit_full": "0dffb206b1a9bd2ebab4e5260a1e305573866ecd",
+      "message": "Assembly: ground the first part; drag free joint chains (#2804) (#2805)"
+    },
+    {
+      "ts": "2026-10-24T03:47:00Z",
+      "kind": "content",
+      "commit": "612d9d0",
+      "commit_full": "612d9d08ddabb3d060f4393a48d61c2e06658218",
+      "message": "cadmpeg 0.6.3: FreeCAD and Rhino import in the browser too (#4482)"
+    },
+    {
+      "ts": "2026-10-24T05:32:30Z",
+      "kind": "content",
+      "commit": "807e367",
+      "commit_full": "807e367bdb03210dba188118fe000acd0a4b3725",
+      "message": "Hole: place a Single hole by distances from reference edges (#37) (#2931)"
+    },
+    {
+      "ts": "2026-10-24T14:21:58Z",
+      "kind": "content",
+      "commit": "b7b25f9",
+      "commit_full": "b7b25f9e2be4abe9975fe0d1799b4a06d694f589",
+      "message": "Render workspace: first basic delivery to main (#6050)"
+    },
+    {
+      "ts": "2026-10-24T19:25:49Z",
+      "kind": "content",
+      "commit": "d61dff6",
+      "commit_full": "d61dff69a63f86e932bb1283166c4e9b54f474f1",
+      "message": "Exploded views export as an animation (#3713) (#3744)"
+    },
+    {
+      "ts": "2026-10-24T20:46:04Z",
+      "kind": "content",
+      "commit": "9919825",
+      "commit_full": "9919825ea3fe2ad1f8facb487f83fa8d4f45c6a7",
+      "message": "Expand All and Collapse All in the Browser (#5190) (#5335)"
+    },
+    {
+      "ts": "2026-10-25T04:29:28Z",
+      "kind": "content",
+      "commit": "157c0d6",
+      "commit_full": "157c0d68d08569f8936736fd3c80e6de70d088cd",
+      "message": "Sketch Dimension: point/circle to circle or arc edge (#4064) (#4065)"
+    },
+    {
+      "ts": "2026-10-25T04:50:20Z",
+      "kind": "content",
+      "commit": "43565cd",
+      "commit_full": "43565cd33b703d86918c0d6e776e08dc3f6dc373",
+      "message": "Snap drawing to where two sketch curves cross (#4967) (#5342)"
+    },
+    {
+      "ts": "2026-10-25T10:24:30Z",
+      "kind": "content",
+      "commit": "9d45fa6",
+      "commit_full": "9d45fa6b34d1bfaaf94789fd8f9bdc23260f74b3",
+      "message": "Respect design units across length fields (#3271) (#3315)"
+    },
+    {
+      "ts": "2026-10-25T11:15:35Z",
+      "kind": "content",
+      "commit": "4e22705",
+      "commit_full": "4e2270517aa67e1fa7924235d93f3578792bf95b",
+      "message": "Release: sign and notarize the macOS app (#5749) (#6016)"
+    },
+    {
+      "ts": "2026-10-26T06:49:35Z",
+      "kind": "content",
+      "commit": "e53390e",
+      "commit_full": "e53390ea1b2ee48dfe2732e1541bd6681704f1f7",
+      "message": "Roadmap: a short user-facing ROADMAP.md, with the developer detail moved to docs/roadmap-detail.md (#6797)"
+    },
+    {
+      "ts": "2026-10-28T21:17:02Z",
+      "kind": "content",
+      "commit": "e6dc105",
+      "commit_full": "e6dc105134842aeac51488e7d90391e3821cf625",
+      "message": "Point clouds: insert PLY, XYZ and PTS scans as a modelling reference (#5151) (#5381)"
+    },
+    {
+      "ts": "2026-11-02T05:24:50Z",
+      "kind": "content",
+      "commit": "9e5e143",
+      "commit_full": "9e5e143ac3b02ae9f7b650004b919b90afd8bc51",
+      "message": "Sheet metal: a fold crosses slanted or curved edges of any panel (#10621) (#10922)"
+    }
+  ],
+  "history": [],
+  "updated_at": "2026-11-03T10:44:46+00:00"
+}

@@ -3,7 +3,7 @@
 
 Each run:
   1. Discovery: lists the public repositories of the GitHub account. Repositories that are not yet tracked,
-     have a ROADMAP.md and whose roadmap contains a full-target row are added to apps.json.
+     appear in the official directory/launcher or are identifiable app repositories are added, even without metrics.
   2. Roadmap history: partial clones (commits and trees only) are cached under .cache/repos/. Every unknown
      revision of ROADMAP.md on the main line (first parent) is parsed and appended to data/history/<app>.json.
      Each revision gets a kind: parity, estimates, content, editorial or first.
@@ -39,6 +39,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
 sys.path.insert(0, str(HERE))
 from roadmap_parser import clean, parse_roadmap  # noqa: E402
+from app_catalog import LAUNCHER_URL, DIRECTORY_URL, parse_launcher_catalog, parse_app_directory  # noqa: E402
 
 APPS_FILE = ROOT / "apps.json"
 CONFIG = json.loads(APPS_FILE.read_text(encoding="utf-8"))
@@ -142,9 +143,23 @@ def http_json_etag(url: str, etag=None):
         raise
 
 
-def fetch_raw(repo: str, ref: str):
-    """Text of ROADMAP.md at a ref, or None if the file does not exist there."""
-    url = f"https://raw.githubusercontent.com/{ORG}/{repo}/{ref}/{PATH}"
+def app_config(repo: str) -> dict:
+    return next((a for a in CONFIG["apps"] if a["id"] == repo), {})
+
+
+def repository(repo: str) -> str:
+    return app_config(repo).get("repo", repo if "/" in repo else f"{ORG}/{repo}")
+
+
+def app_branch(repo: str) -> str:
+    return app_config(repo).get("branch") or BRANCH
+
+
+def roadmap_path(repo: str):
+    return app_config(repo).get("roadmap_path", PATH)
+
+
+def fetch_text(url: str):
     req = urllib.request.Request(url, headers={"User-Agent": "artcraft-parity-tracker"})
     try:
         with urllib.request.urlopen(req, timeout=30) as resp:
@@ -153,6 +168,27 @@ def fetch_raw(repo: str, ref: str):
         if exc.code == 404:
             return None
         raise
+
+
+def fetch_raw(repo: str, ref: str, path="ROADMAP.md"):
+    return fetch_text(f"https://raw.githubusercontent.com/{repository(repo)}/{ref}/{path}")
+
+
+def fetch_catalog(state: dict, errors: list) -> list:
+    """Union two authoritative inventories; keep cached membership when a source fails."""
+    cache = state.setdefault("catalog_sources", {})
+    entries = {}
+    for url, parse in ((DIRECTORY_URL, parse_app_directory), (LAUNCHER_URL, parse_launcher_catalog)):
+        try:
+            source = fetch_text(url)
+            if source is None:
+                raise ValueError("source not found")
+            cache[url] = parse(source)
+        except (urllib.error.URLError, OSError, ValueError) as exc:
+            errors.append(f"discovery: {url} unavailable ({exc}); using saved catalog if available")
+        for entry in cache.get(url, []):
+            entries[entry["id"]] = {**entries.get(entry["id"], {}), **entry}
+    return list(entries.values())
 
 
 def list_repos() -> list:
@@ -199,47 +235,92 @@ def reference_name(target) -> str:
 
 
 def discover_new_apps(state: dict, errors: list) -> list:
+    catalog = fetch_catalog(state, errors)
     try:
         repos = list_repos()
     except (urllib.error.URLError, RuntimeError, json.JSONDecodeError) as exc:
         errors.append(f"discovery: repository list not available ({exc})")
-        return []
-
+        repos = []  # catalog discovery still works when repository listing fails
+    listing = {r["name"]: r for r in repos}
+    before = json.dumps(CONFIG, sort_keys=True)
+    known = {a["id"]: a for a in CONFIG["apps"]}
     checked = state.setdefault("discovery_checked", {})
-    known = {a["id"] for a in CONFIG["apps"]} | IGNORED
+    candidates = state.setdefault("discovery_candidates", {})
     added = []
-    for r in repos:
-        name = r["name"]
-        if name in known or r.get("fork") or r.get("archived"):
+    catalog_ids = {a["id"] for a in catalog}
+
+    for source in catalog + [{"id": r["name"], "repo": r.get("full_name", f"{ORG}/{r['name']}")} for r in repos
+                             if r["name"] not in catalog_ids]:
+        name = source["id"]
+        full_repo = source["repo"]
+        r = listing.get(name, {}) if full_repo.startswith(f"{ORG}/") else {}
+        if name in IGNORED or full_repo in IGNORED or r.get("fork") or r.get("archived"):
+            continue
+        is_catalog = name in catalog_ids
+        existing = known.get(name)
+        app_like = bool(re.fullmatch(r"[a-z0-9_-]+craft", name, re.I))
+        if not is_catalog and not existing and app_like and r.get("size") == 0:
+            candidates[name] = {"id": name, "repo": full_repo, "reason": "Empty repository; no published app yet"}
             continue
         last = checked.get(name)
-        if last and (today_utc() - date.fromisoformat(last)).days < RECHECK_DAYS:
-            continue  # checked recently without result
-        try:
-            text = fetch_raw(name, r.get("default_branch") or BRANCH)
-        except (urllib.error.URLError, OSError) as exc:
-            errors.append(f"discovery: {name} could not be checked ({exc})")
-            continue
-        checked[name] = today_utc().isoformat()
-        if text is None:
-            continue  # no roadmap, not an app we track
-        parsed = parse_roadmap(text)
-        if parsed["metrics"]["full"] is None:
-            continue  # has a ROADMAP.md, but not a Craft app roadmap (e.g. product goals)
-        entry = {
-            "id": name,
-            "name": pretty_name(name),
-            "adobe": reference_name(parsed.get("target")),
-            "category": "Other",
-            "color": PALETTE[len(CONFIG["apps"]) % len(PALETTE)],
+        recheck = not last or (today_utc() - date.fromisoformat(last)).days >= RECHECK_DAYS
+        # Refresh external default branches daily; keep stored metadata through API failures.
+        branch = r.get("default_branch") or source.get("branch") or (existing or {}).get("branch")
+        if is_catalog and not source.get("branch") and (not branch or (not r and recheck)):
+            try:
+                branch = http_json(f"https://api.github.com/repos/{full_repo}").get("default_branch")
+            except (urllib.error.URLError, OSError, ValueError) as exc:
+                errors.append(f"discovery: default branch of {full_repo} unavailable ({exc})")
+        branch = branch or BRANCH
+        text, path, checked_ok = None, (existing or {}).get("roadmap_path", PATH), False
+        if recheck or (is_catalog and not existing):
+            try:
+                paths = list(dict.fromkeys(p for p in (path, PATH, "docs/ROADMAP.md") if p))
+                path = None
+                for candidate in paths:
+                    text = fetch_raw(full_repo, branch, candidate)
+                    if text is not None:
+                        path = candidate
+                        break
+                checked[name] = today_utc().isoformat()
+                checked_ok = True
+            except (urllib.error.URLError, OSError) as exc:
+                errors.append(f"discovery: {full_repo} could not be checked ({exc})")
+                path = (existing or {}).get("roadmap_path", PATH)
+        parsed = None
+        if text is not None:
+            try:
+                parsed = parse_roadmap(text)
+            except Exception as exc:
+                errors.append(f"discovery: {full_repo} roadmap could not be parsed ({type(exc).__name__}: {exc})")
+        if not existing and not is_catalog:
+            if not recheck:
+                continue
+            if not (app_like and r.get("size", 1) > 0) and not (parsed and parsed["metrics"]["full"] is not None):
+                continue
+        entry = existing or {
+            "id": name, "name": source.get("name") or pretty_name(name),
+            "adobe": reference_name((parsed or {}).get("target")), "category": source.get("category", "Other"),
+            "color": source.get("color", PALETTE[len(CONFIG["apps"]) % len(PALETTE)]),
             "added": today_utc().isoformat(),
         }
-        CONFIG["apps"].append(entry)
-        known.add(name)
-        added.append(entry)
-
-    if added:
-        APPS_FILE.write_text(json.dumps(CONFIG, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        entry.update({"repo": full_repo, "branch": branch, "kind": source.get("kind", entry.get("kind", "official"))})
+        if is_catalog:
+            entry["name"] = source.get("name", entry["name"])
+        if checked_ok or not existing:
+            entry["roadmap_path"] = path
+        if not existing:
+            CONFIG["apps"].append(entry)
+            known[name] = entry
+            candidates.pop(name, None)
+            added.append(entry)
+    missing = sorted(catalog_ids - set(known) - IGNORED)
+    if missing:
+        errors.append("discovery: catalog apps missing from tracking: " + ", ".join(missing))
+    state["discovery"] = {"catalog_count": len(catalog), "tracked_from_catalog": len(catalog_ids & set(known)),
+                          "missing": missing, "candidates": sorted(candidates.values(), key=lambda a: a["id"])}
+    if json.dumps(CONFIG, sort_keys=True) != before:
+        save_json(APPS_FILE, CONFIG)
     return added
 
 
@@ -256,12 +337,15 @@ def ensure_clone(repo: str) -> Path:
     """Create a partial bare clone (no file contents) or bring an existing one up to date."""
     REPOS_CACHE.mkdir(parents=True, exist_ok=True)
     gdir = REPOS_CACHE / f"{repo}.git"
-    url = f"{GIT_BASE}/{ORG}/{repo}.git"
+    url = f"{GIT_BASE}/{repository(repo)}.git"
+    branch = app_branch(repo)
     if not gdir.exists():
         git("clone", "--bare", "--filter=blob:none", "--quiet", url, str(gdir))
     else:
+        if git("-C", str(gdir), "remote", "get-url", "origin").strip() != url:
+            git("-C", str(gdir), "remote", "set-url", "origin", url)
         git("-C", str(gdir), "fetch", "--quiet", "--filter=blob:none", "origin",
-            f"+refs/heads/{BRANCH}:refs/heads/{BRANCH}", "+refs/tags/*:refs/tags/*")
+            f"+refs/heads/{branch}:refs/heads/{branch}", "+refs/tags/*:refs/tags/*")
     return gdir
 
 
@@ -297,14 +381,14 @@ def parse_log(out: str):
         yield sha, date_s, pretty_subject(subject, body)[:160], [ln for ln in rest.split("\n") if ln.strip()]
 
 
-def list_commits(gdir: Path, limit: int):
+def list_commits(gdir: Path, limit: int, branch=None, path=PATH):
     """Revisions of ROADMAP.md on the main line, newest first.
 
     --first-parent keeps the states the branch actually had. Commits inside merged branches are not
     revisions of main; their date is when they were written, not when they were published.
     """
     out = git("-C", str(gdir), "log", f"--max-count={limit}", "--first-parent", "--diff-merges=first-parent",
-              "--raw", "--no-abbrev", "--format=%x1e%H%x1f%cI%x1f%s%x1f%b%x1d", BRANCH, "--", PATH)
+              "--raw", "--no-abbrev", "--format=%x1e%H%x1f%cI%x1f%s%x1f%b%x1d", branch or BRANCH, "--", path)
     commits = []
     for sha, date_s, msg, lines in parse_log(out):
         raw = [ln for ln in lines if ln.startswith(":")]
@@ -314,8 +398,8 @@ def list_commits(gdir: Path, limit: int):
     return commits
 
 
-def read_roadmap_at(gdir: Path, sha: str) -> str:
-    return git("-C", str(gdir), "show", f"{sha}:{PATH}")
+def read_roadmap_at(gdir: Path, sha: str, path=PATH) -> str:
+    return git("-C", str(gdir), "show", f"{sha}:{path}")
 
 
 def read_blob(gdir: Path, oid: str) -> str:
@@ -435,6 +519,12 @@ def annotate(history: list):
 
 def update_history(app: dict, limit: int, errors: list, state: dict, rebuild: bool) -> dict:
     repo = app["id"]
+    path, branch = roadmap_path(repo), app_branch(repo)
+    identity = [repository(repo), branch, path]
+    sources = state.setdefault("history_sources", {})
+    if repo in sources and sources[repo] != identity:
+        rebuild = True
+    sources[repo] = identity
     history_path = HISTORY / f"{repo}.json"
     history = [] if rebuild else load_json(history_path, [])
     for h in history:
@@ -448,21 +538,23 @@ def update_history(app: dict, limit: int, errors: list, state: dict, rebuild: bo
              "event_points": [], "initial": initial, "truncated": bool(truncated_map.get(repo)), "failed": True}
     try:
         gdir = ensure_clone(repo)
-        commits = list_commits(gdir, limit)
+        commits = list_commits(gdir, limit, branch, path) if path else []
     except RuntimeError as exc:
         errors.append(f"{repo}: git access failed ({exc})")
         return empty
 
     if not commits:
-        errors.append(f"{repo}: no commits found for {PATH}")
-        return {**empty, "gdir": gdir}
+        if history:
+            errors.append(f"{repo}: no commits found for {path}")
+        save_json(history_path, history)
+        return {**empty, "gdir": gdir, "failed": bool(history), "roadmap_commits": []}
 
     position = {c["sha"]: i for i, c in enumerate(commits)}  # 0 = newest
     rewritten = False
     if history and len(commits) < limit:  # the listing is complete, so a missing point really left main
         kept = [h for h in history if h["commit_full"] in position]
         if len(kept) != len(history):
-            errors.append(f"{repo}: {len(history) - len(kept)} stored revisions are no longer on {BRANCH} "
+            errors.append(f"{repo}: {len(history) - len(kept)} stored revisions are no longer on {branch} "
                           f"(history rewritten); they were dropped and this run sends no roadmap events")
             history[:] = kept
             rewritten = True
@@ -497,8 +589,8 @@ def update_history(app: dict, limit: int, errors: list, state: dict, rebuild: bo
             skipped.add(c["sha"])
             continue
         if point["full_pct"] is None:
-            if c["sha"] == commits[0]["sha"]:
-                errors.append(f"{repo}: newest roadmap has no recognizable full-target row, please check the parser")
+            if history and c["sha"] == commits[0]["sha"]:
+                errors.append(f"{repo}: newest roadmap has no recognizable full-target row; keeping history only")
             skipped.add(c["sha"])  # remember, so it is not parsed again
             continue
         history.append(point)
@@ -518,6 +610,7 @@ def update_history(app: dict, limit: int, errors: list, state: dict, rebuild: bo
         "changed": bool(known_before) and commits[0]["sha"] not in known_before,
         "new_revisions": len(new_commits),
         "latest": commits[0],
+        "roadmap_commits": commits,
         "history": history,
         "gdir": gdir,
         "event_points": event_points,
@@ -659,8 +752,8 @@ def classify_changeset(files: list, subject: str) -> str:
     return "code"
 
 
-def read_changesets(gdir: Path, since, max_count=None) -> list:
-    args = ["-C", str(gdir), "log", BRANCH, "--first-parent", "--diff-merges=first-parent", "--name-only",
+def read_changesets(gdir: Path, since, max_count=None, branch=None) -> list:
+    args = ["-C", str(gdir), "log", branch or BRANCH, "--first-parent", "--diff-merges=first-parent", "--name-only",
             "--format=%x1e%H%x1f%cI%x1f%s%x1f%b%x1d"]
     if since is not None:
         args.append(f"--since={since.isoformat()}")
@@ -701,13 +794,13 @@ def repo_activity(gdir, now: datetime, errors: list, repo: str):
     if gdir is None:
         return None
     try:
-        sets = read_changesets(gdir, now - timedelta(days=ACTIVITY_HISTORY_DAYS))
+        sets = read_changesets(gdir, now - timedelta(days=ACTIVITY_HISTORY_DAYS), branch=app_branch(repo))
         code = [c for c in sets if c["kind"] == "code"]
         last_code = code[0] if code else None
         if last_code is None:  # nothing in the window: look further back for the last code change
-            older = [c for c in read_changesets(gdir, None, 500) if c["kind"] == "code"]
+            older = [c for c in read_changesets(gdir, None, 500, branch=app_branch(repo)) if c["kind"] == "code"]
             last_code = older[0] if older else None
-        first_commit = git("-C", str(gdir), "log", BRANCH, "--first-parent", "--reverse", "--format=%cI")
+        first_commit = git("-C", str(gdir), "log", app_branch(repo), "--first-parent", "--reverse", "--format=%cI")
         first_ts = first_commit.split("\n", 1)[0].strip()
     except RuntimeError as exc:
         errors.append(f"{repo}: repository activity could not be read ({exc})")
@@ -798,7 +891,7 @@ def fetch_releases(repo: str, state: dict, errors: list):
     """
     cache = state.setdefault("releases", {})
     etags = load_json(ETAGS_FILE, {})
-    url = f"https://api.github.com/repos/{ORG}/{repo}/releases?per_page=30"
+    url = f"https://api.github.com/repos/{repository(repo)}/releases?per_page=30"
     try:
         data, etag = http_json_etag(url, etags.get(repo) if repo in cache else None)
     except (urllib.error.URLError, OSError, json.JSONDecodeError) as exc:
@@ -960,7 +1053,7 @@ def main():
                     "id": repo,
                     "name": app["name"],
                     "commit": p["commit"],
-                    "commit_url": f"https://github.com/{ORG}/{repo}/commit/{p['commit_full']}",
+                    "commit_url": f"https://github.com/{repository(repo)}/commit/{p['commit_full']}",
                     "date": p["ts"][:10],
                     "message": p["message"],
                     "kind": p["kind"],
@@ -971,11 +1064,24 @@ def main():
 
         latest_point = history[-1] if history else None
         parsed_latest = None
-        if latest_point and res["gdir"] is not None:
+        path, branch = roadmap_path(repo), app_branch(repo)
+        metric_status = "roadmap_missing" if not path else "unavailable"
+        if path and res["gdir"] is not None:
             try:
-                parsed_latest = parse_roadmap(read_roadmap_at(res["gdir"], latest_point["commit_full"]))
-            except RuntimeError as exc:
+                # Read today's roadmap, even when it has never reported a comparable percentage.
+                exists = git("-C", str(res["gdir"]), "ls-tree", "--name-only", branch, "--", path).strip()
+                if exists:
+                    parsed_latest = parse_roadmap(read_roadmap_at(res["gdir"], branch, path))
+                    metric_status = "available" if parsed_latest["metrics"]["full"] is not None else "not_reported"
+                else:
+                    metric_status = "roadmap_missing"
+            except (RuntimeError, ValueError) as exc:
                 errors.append(f"{repo}: detail parse failed ({exc})")
+        repo_url = f"https://github.com/{repository(repo)}"
+        links = {"repo_url": repo_url, "branch": branch, "kind": app.get("kind", "official"),
+                 "roadmap_url": f"{repo_url}/blob/{branch}/{path}" if path else None,
+                 "roadmap_history_url": f"{repo_url}/commits/{branch}/{path}" if path else None,
+                 "metric_status": metric_status}
 
         activity = repo_activity(res["gdir"], now, errors, repo)
         releases = read_releases(res["gdir"], errors, repo, state)
@@ -987,7 +1093,12 @@ def main():
             res["latest"] = {"sha": previous.get("latest_commit") or "", "date": previous.get("latest_commit_date"),
                              "message": previous.get("latest_message")}
         parity = parity_summary(history, res["truncated"], releases)
-        roadmap = roadmap_summary(history, now)
+        roadmap_points = history
+        if not history:
+            roadmap_points = [{"ts": utc_z(c["date"]), "kind": "content", "commit": c["sha"][:7],
+                               "commit_full": c["sha"], "message": c["message"]}
+                              for c in reversed(res.get("roadmap_commits", []))]
+        roadmap = roadmap_summary(roadmap_points, now)
         milestone = milestone_summary(history) if history else None
         latest = res.get("latest") or {}
         detail = {
@@ -997,8 +1108,7 @@ def main():
             "category": app["category"],
             "color": app.get("color"),
             "added": app.get("added"),
-            "repo_url": f"https://github.com/{ORG}/{repo}",
-            "roadmap_url": f"https://github.com/{ORG}/{repo}/blob/{BRANCH}/{PATH}",
+            **links,
             "latest_commit": latest.get("sha", "")[:7] or None,
             "latest_commit_date": latest.get("date"),
             "latest_message": latest.get("message"),
@@ -1008,12 +1118,22 @@ def main():
             "milestone": milestone,
             "activity": activity,
             "releases": releases,
+            "roadmap_history": roadmap_points if not history else [],
             "history": [{k: v for k, v in h.items() if k not in ("scores_hash", "text_hash", "areas")} for h in history],
         }
         save_if_changed(APPS_DIR / f"{repo}.json", detail, "updated_at")
 
-        lp = latest_point or {}
+        lp = dict(latest_point or {})
+        # Historical metrics remain in history; absent current metrics must not look current.
+        current_metrics = (parsed_latest or {}).get("metrics", {})
+        for metric, field in (("full", "full_pct"), ("mainstream", "mainstream_pct"),
+                              ("essentials", "essentials_pct"), ("breadth", "breadth_pct")):
+            lp[field] = (current_metrics.get(metric) or {}).get("pct")
+        full = current_metrics.get("full") or {}
+        lp.update({"full_range": full.get("range"), "full_hours": full.get("hours"),
+                   "stage": (parsed_latest or {}).get("stage"), "next_stage": (parsed_latest or {}).get("next_stage")})
         overview_apps.append({
+            **links,
             "id": repo,
             "name": app["name"],
             "adobe": app["adobe"],
@@ -1063,6 +1183,7 @@ def main():
         "release_waves": waves,
         "apps": overview_apps,
         "errors": errors,
+        "discovery": state.get("discovery", {}),
     }, "generated_at")
 
     # Heartbeat: one status commit per day keeps the repository active (GitHub pauses schedules

@@ -63,7 +63,7 @@ def build(events: list):
     title = "ArtCraft Parity: " + ", ".join(parts)
 
     account = CONFIG.get("notify", OWNER)
-    lines = [f"@{account}, changes were detected in the storytold repositories.", ""]
+    lines = [f"@{account}, changes were detected in the tracked app repositories.", ""]
     if new:
         lines.append("### New apps")
         for e in new:
