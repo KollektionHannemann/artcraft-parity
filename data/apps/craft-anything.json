@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "f307d39",
-  "latest_commit_date": "2026-11-03T15:51:05+07:00",
-  "latest_message": "Retry builder turns from typed failures, including stateless backends (#552)",
+  "latest_commit": "48759fb",
+  "latest_commit_date": "2026-11-03T19:31:22+07:00",
+  "latest_message": "Stop unchanged rebuilds after two turns across runs (#557)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,21 +45,21 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 66,
-    "revisions_7d": 66,
+    "revisions": 67,
+    "revisions_7d": 67,
     "last_revision": {
-      "ts": "2026-11-03T08:51:05Z",
+      "ts": "2026-11-03T12:31:22Z",
       "kind": "content",
-      "commit": "f307d39",
-      "commit_full": "f307d39480ec0aa5ce23ebcc50c0de8e9bbc8223",
-      "message": "Retry builder turns from typed failures, including stateless backends (#552)"
+      "commit": "48759fb",
+      "commit_full": "48759fb5fccde45405c2db29d162ac55edbc6562",
+      "message": "Stop unchanged rebuilds after two turns across runs (#557)"
     },
     "last_update": {
-      "ts": "2026-11-03T08:51:05Z",
+      "ts": "2026-11-03T12:31:22Z",
       "kind": "content",
-      "commit": "f307d39",
-      "commit_full": "f307d39480ec0aa5ce23ebcc50c0de8e9bbc8223",
-      "message": "Retry builder turns from typed failures, including stateless backends (#552)"
+      "commit": "48759fb",
+      "commit_full": "48759fb5fccde45405c2db29d162ac55edbc6562",
+      "message": "Stop unchanged rebuilds after two turns across runs (#557)"
     },
     "self_reported": null
   },
@@ -68,16 +68,16 @@
     "level": "active",
     "score": 16.3,
     "active_days_7d": 4,
-    "changes_7d": 233,
-    "changes_14d": 233,
+    "changes_7d": 234,
+    "changes_14d": 234,
     "housekeeping_7d": 20,
     "last_code_change": {
-      "ts": "2026-11-03T08:51:05Z",
-      "commit": "f307d39",
-      "commit_full": "f307d39480ec0aa5ce23ebcc50c0de8e9bbc8223",
-      "subject": "Retry builder turns from typed failures, including stateless backends (#552)"
+      "ts": "2026-11-03T12:31:22Z",
+      "commit": "48759fb",
+      "commit_full": "48759fb5fccde45405c2db29d162ac55edbc6562",
+      "subject": "Stop unchanged rebuilds after two turns across runs (#557)"
     },
-    "last_commit_ts": "2026-11-03T08:51:05Z",
+    "last_commit_ts": "2026-11-03T12:31:22Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       3,
       73,
       117,
-      40
+      41
     ],
     "days": [
       {
@@ -155,9 +155,13 @@
       },
       {
         "d": "2026-11-03",
-        "code": 40,
+        "code": 41,
         "other": 3,
         "samples": [
+          {
+            "commit": "48759fb",
+            "subject": "Stop unchanged rebuilds after two turns across runs (#557)"
+          },
           {
             "commit": "f307d39",
             "subject": "Retry builder turns from typed failures, including stateless backends (#552)"
@@ -165,10 +169,6 @@
           {
             "commit": "888f75b",
             "subject": "Help models correct rejected tool argument types (#546)"
-          },
-          {
-            "commit": "6bbcb0d",
-            "subject": "Skip ZIP symlink and special members when extracting (#568)"
           }
         ]
       }
@@ -689,8 +689,15 @@
       "commit": "f307d39",
       "commit_full": "f307d39480ec0aa5ce23ebcc50c0de8e9bbc8223",
       "message": "Retry builder turns from typed failures, including stateless backends (#552)"
+    },
+    {
+      "ts": "2026-11-03T12:31:22Z",
+      "kind": "content",
+      "commit": "48759fb",
+      "commit_full": "48759fb5fccde45405c2db29d162ac55edbc6562",
+      "message": "Stop unchanged rebuilds after two turns across runs (#557)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-03T11:32:42+00:00"
+  "updated_at": "2026-11-03T12:42:59+00:00"
 }

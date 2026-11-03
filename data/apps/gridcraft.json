@@ -464,18 +464,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.7,
+    "score": 18.9,
     "active_days_7d": 7,
-    "changes_7d": 100,
-    "changes_14d": 195,
+    "changes_7d": 101,
+    "changes_14d": 196,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-03T04:45:20Z",
-      "commit": "178f3eb",
-      "commit_full": "178f3eb745a589c63b61ef97dd7b6b2d6fd48515",
-      "subject": "Protection: authorize the sheet a column move changes, and refuse edits that unlock locked cells (#3196)"
+      "ts": "2026-11-03T11:45:15Z",
+      "commit": "92cdc2a",
+      "commit_full": "92cdc2a975b6e014da6ff25477232b500e3c1cf6",
+      "subject": "xlsx: rename repeated table headers without retrying handed-out suffixes (#3213)"
     },
-    "last_commit_ts": "2026-11-03T04:45:20Z",
+    "last_commit_ts": "2026-11-03T11:45:15Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       2,
@@ -491,7 +491,7 @@
       30,
       17,
       16,
-      6
+      7
     ],
     "days": [
       {
@@ -945,9 +945,13 @@
       },
       {
         "d": "2026-11-03",
-        "code": 6,
+        "code": 7,
         "other": 1,
         "samples": [
+          {
+            "commit": "92cdc2a",
+            "subject": "xlsx: rename repeated table headers without retrying handed-out suffixes (#3213)"
+          },
           {
             "commit": "178f3eb",
             "subject": "Protection: authorize the sheet a column move changes, and refuse edits that unlock locked cells (#3196)"
@@ -955,10 +959,6 @@
           {
             "commit": "e8ccb5e",
             "subject": "check: find volatile defined names with a worklist instead of repeated passes (#3187)"
-          },
-          {
-            "commit": "e1604d1",
-            "subject": "Merge PR #3132"
           }
         ]
       }
@@ -3174,5 +3174,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T10:43:52+00:00"
+  "updated_at": "2026-11-03T12:42:54+00:00"
 }
