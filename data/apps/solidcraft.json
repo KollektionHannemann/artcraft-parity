@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 34.0,
+    "score": 34.9,
     "active_days_7d": 7,
-    "changes_7d": 1121,
-    "changes_14d": 1944,
+    "changes_7d": 1129,
+    "changes_14d": 1952,
     "housekeeping_7d": 27,
     "last_code_change": {
-      "ts": "2026-11-03T14:52:19Z",
-      "commit": "603c974",
-      "commit_full": "603c974f371bc62c9d54d9bdc611a468647d7346",
-      "subject": "Fix main's build: the CLI imports the B-rep type from its new home (#11634)"
+      "ts": "2026-11-03T15:50:59Z",
+      "commit": "38ca98f",
+      "commit_full": "38ca98f88b40756dc7a15b4b7e2ae2ca35bc3672",
+      "subject": "Meshing curved faces: evaluate spline basis tables in place (#11648) (#11649)"
     },
-    "last_commit_ts": "2026-11-03T15:08:12Z",
+    "last_commit_ts": "2026-11-03T15:50:59Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       85,
@@ -93,7 +93,7 @@
       201,
       128,
       160,
-      8
+      16
     ],
     "days": [
       {
@@ -611,20 +611,20 @@
       },
       {
         "d": "2026-11-03",
-        "code": 8,
+        "code": 16,
         "other": 5,
         "samples": [
           {
-            "commit": "603c974",
-            "subject": "Fix main's build: the CLI imports the B-rep type from its new home (#11634)"
+            "commit": "38ca98f",
+            "subject": "Meshing curved faces: evaluate spline basis tables in place (#11648) (#11649)"
           },
           {
-            "commit": "c553365",
-            "subject": "Build fix: the kernel trace takes the record type from solidcore-record (main red since #11496 + #11568) (#11626)"
+            "commit": "bfb32cd",
+            "subject": "Align: move bodies by frames that follow sketch and model geometry (#6257) (#7123)"
           },
           {
-            "commit": "dc38349",
-            "subject": "Layer split stage 1: the B-rep record, native body file and Vec/Plane come from solidcore-record (#11496)"
+            "commit": "a8bc6b2",
+            "subject": "Construct: allow axes in Point At Edge And Plane (#11141) (#11152)"
           }
         ]
       }
@@ -2190,5 +2190,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-03T15:32:45+00:00"
+  "updated_at": "2026-11-03T16:41:18+00:00"
 }

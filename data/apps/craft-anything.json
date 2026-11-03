@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "f05f019",
-  "latest_commit_date": "2026-11-03T21:57:08+07:00",
-  "latest_message": "Draw on the GPU that drives the screen on Linux, so laptops with two GPUs open fast and don't lag (#659)",
+  "latest_commit": "b79fc50",
+  "latest_commit_date": "2026-11-03T23:24:57+07:00",
+  "latest_message": "Auto mode deletes inside projects whose path has capitals, and reads quoted paths with spaces whole (#682)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 82,
-    "revisions_7d": 82,
+    "revisions": 87,
+    "revisions_7d": 87,
     "last_revision": {
-      "ts": "2026-11-03T14:57:08Z",
+      "ts": "2026-11-03T16:24:57Z",
       "kind": "content",
-      "commit": "f05f019",
-      "commit_full": "f05f0196911a312f350b23cafc134d38689c29bd",
-      "message": "Draw on the GPU that drives the screen on Linux, so laptops with two GPUs open fast and don't lag (#659)"
+      "commit": "b79fc50",
+      "commit_full": "b79fc506e2f119f9188edb791b900df5170e155b",
+      "message": "Auto mode deletes inside projects whose path has capitals, and reads quoted paths with spaces whole (#682)"
     },
     "last_update": {
-      "ts": "2026-11-03T14:57:08Z",
+      "ts": "2026-11-03T16:24:57Z",
       "kind": "content",
-      "commit": "f05f019",
-      "commit_full": "f05f0196911a312f350b23cafc134d38689c29bd",
-      "message": "Draw on the GPU that drives the screen on Linux, so laptops with two GPUs open fast and don't lag (#659)"
+      "commit": "b79fc50",
+      "commit_full": "b79fc506e2f119f9188edb791b900df5170e155b",
+      "message": "Auto mode deletes inside projects whose path has capitals, and reads quoted paths with spaces whole (#682)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.0,
+    "score": 17.2,
     "active_days_7d": 4,
-    "changes_7d": 261,
-    "changes_14d": 261,
+    "changes_7d": 269,
+    "changes_14d": 269,
     "housekeeping_7d": 20,
     "last_code_change": {
-      "ts": "2026-11-03T15:14:41Z",
-      "commit": "e1d9621",
-      "commit_full": "e1d962163b29748e8c0051dcd0e3beed1e71a7bd",
-      "subject": "Ignore EOCD signatures inside ZIP comments (#660)"
+      "ts": "2026-11-03T16:24:57Z",
+      "commit": "b79fc50",
+      "commit_full": "b79fc506e2f119f9188edb791b900df5170e155b",
+      "subject": "Auto mode deletes inside projects whose path has capitals, and reads quoted paths with spaces whole (#682)"
     },
-    "last_commit_ts": "2026-11-03T15:14:41Z",
+    "last_commit_ts": "2026-11-03T16:24:57Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       3,
       73,
       117,
-      68
+      76
     ],
     "days": [
       {
@@ -155,20 +155,20 @@
       },
       {
         "d": "2026-11-03",
-        "code": 68,
+        "code": 76,
         "other": 3,
         "samples": [
           {
-            "commit": "e1d9621",
-            "subject": "Ignore EOCD signatures inside ZIP comments (#660)"
+            "commit": "b79fc50",
+            "subject": "Auto mode deletes inside projects whose path has capitals, and reads quoted paths with spaces whole (#682)"
           },
           {
-            "commit": "2920a7c",
-            "subject": "Restrict Claude Code tools and require approval for unknown tools (#637)"
+            "commit": "5ac0e2b",
+            "subject": "Preserve empty query pairs in older stand-in recordings (#673)"
           },
           {
-            "commit": "f05f019",
-            "subject": "Draw on the GPU that drives the screen on Linux, so laptops with two GPUs open fast and don't lag (#659)"
+            "commit": "75bf5a3",
+            "subject": "Handle generic GGUF paths and numeric task versions in chat discovery (#675)"
           }
         ]
       }
@@ -801,8 +801,43 @@
       "commit": "f05f019",
       "commit_full": "f05f0196911a312f350b23cafc134d38689c29bd",
       "message": "Draw on the GPU that drives the screen on Linux, so laptops with two GPUs open fast and don't lag (#659)"
+    },
+    {
+      "ts": "2026-11-03T15:38:43Z",
+      "kind": "content",
+      "commit": "4759d37",
+      "commit_full": "4759d37ad230be4f69558e3dded8944aad770361",
+      "message": "Offer a Google AI Studio (Gemini) key in Settings and first run (#670)"
+    },
+    {
+      "ts": "2026-11-03T16:14:18Z",
+      "kind": "content",
+      "commit": "2122a61",
+      "commit_full": "2122a619e946acd445c156561996a51a1258d877",
+      "message": "Verify stand-in session cleanup by answerer lifetime (#677)"
+    },
+    {
+      "ts": "2026-11-03T16:14:26Z",
+      "kind": "content",
+      "commit": "75bf5a3",
+      "commit_full": "75bf5a3f0df284296cba16500352b2eb9a805932",
+      "message": "Handle generic GGUF paths and numeric task versions in chat discovery (#675)"
+    },
+    {
+      "ts": "2026-11-03T16:16:53Z",
+      "kind": "content",
+      "commit": "5ac0e2b",
+      "commit_full": "5ac0e2b68db49860f45899ed0f2161b0b88eb261",
+      "message": "Preserve empty query pairs in older stand-in recordings (#673)"
+    },
+    {
+      "ts": "2026-11-03T16:24:57Z",
+      "kind": "content",
+      "commit": "b79fc50",
+      "commit_full": "b79fc506e2f119f9188edb791b900df5170e155b",
+      "message": "Auto mode deletes inside projects whose path has capitals, and reads quoted paths with spaces whole (#682)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-03T15:32:26+00:00"
+  "updated_at": "2026-11-03T16:40:36+00:00"
 }
