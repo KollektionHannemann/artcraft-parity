@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 36.0,
+    "score": 36.1,
     "active_days_7d": 7,
-    "changes_7d": 1149,
-    "changes_14d": 1972,
+    "changes_7d": 1150,
+    "changes_14d": 1973,
     "housekeeping_7d": 27,
     "last_code_change": {
-      "ts": "2026-11-03T20:35:34Z",
-      "commit": "1e0bfca",
-      "commit_full": "1e0bfca819649a6d1872e5b5b60b0fcdff6fe4da",
-      "subject": "Release 0.40.0-rc.2 (#11751)"
+      "ts": "2026-11-03T21:27:14Z",
+      "commit": "e12afd1",
+      "commit_full": "e12afd11ccf25e79ab57a97267a1c55e6ac9d051",
+      "subject": "Ellipse and spline extrudes make one wall; coplanar faces never lose their names to a budget (#11687)"
     },
-    "last_commit_ts": "2026-11-03T20:35:34Z",
+    "last_commit_ts": "2026-11-03T21:27:14Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       85,
@@ -93,7 +93,7 @@
       201,
       128,
       160,
-      36
+      37
     ],
     "days": [
       {
@@ -611,9 +611,13 @@
       },
       {
         "d": "2026-11-03",
-        "code": 36,
+        "code": 37,
         "other": 5,
         "samples": [
+          {
+            "commit": "e12afd1",
+            "subject": "Ellipse and spline extrudes make one wall; coplanar faces never lose their names to a budget (#11687)"
+          },
           {
             "commit": "1e0bfca",
             "subject": "Release 0.40.0-rc.2 (#11751)"
@@ -621,16 +625,29 @@
           {
             "commit": "a5b71ca",
             "subject": "Web app: bring designs saved at the old address over to app.solidcraft.io (#11630)"
-          },
-          {
-            "commit": "381ff99",
-            "subject": "Desktop: one design's long kernel call no longer stops other designs (#11684)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.40.0-rc.2",
+      "name": "SolidCraft v0.40.0-rc.2",
+      "ts": "2026-11-03T22:11:37Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.40.0-rc.2",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.40.0-rc.1",
       "name": "SolidCraft v0.40.0-rc.1",
@@ -806,23 +823,6 @@
       "name": "v0.25.1",
       "ts": "2026-10-28T01:45:03Z",
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.25.1",
-      "changes": null,
-      "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "patch"
-    },
-    {
-      "tag": "v0.25.0",
-      "name": "v0.25.0",
-      "ts": "2026-10-27T22:53:11Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.25.0",
       "changes": null,
       "new_contributors": null,
       "platforms": [
@@ -2190,5 +2190,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-03T20:53:01+00:00"
+  "updated_at": "2026-11-03T22:13:52+00:00"
 }

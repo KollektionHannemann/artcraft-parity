@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/designcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "dd37219",
-  "latest_commit_date": "2026-11-03T16:14:57-05:00",
-  "latest_message": "Integration batch integration-designcraft-20261103-7 (#2255)",
+  "latest_commit": "c1bf2c7",
+  "latest_commit_date": "2026-11-03T16:48:53-05:00",
+  "latest_message": "Give anchored objects fresh ids when copying text frames (fixes #1522) (#1968)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -477,7 +477,7 @@
     "value_since": "2026-10-10T18:09:17Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 180,
+    "revisions_since": 184,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -485,39 +485,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 181,
-    "revisions_7d": 35,
+    "revisions": 185,
+    "revisions_7d": 39,
     "last_revision": {
-      "ts": "2026-11-03T21:14:57Z",
+      "ts": "2026-11-03T21:48:53Z",
       "kind": "content",
-      "commit": "dd37219",
-      "commit_full": "dd372192e8857a77d39181387172dc1ad50c326a",
-      "message": "Integration batch integration-designcraft-20261103-7 (#2255)"
+      "commit": "c1bf2c7",
+      "commit_full": "c1bf2c769bf03f220996f59aa5491d66e8175998",
+      "message": "Give anchored objects fresh ids when copying text frames (fixes #1522) (#1968)"
     },
     "last_update": {
-      "ts": "2026-11-03T21:14:57Z",
+      "ts": "2026-11-03T21:48:53Z",
       "kind": "content",
-      "commit": "dd37219",
-      "commit_full": "dd372192e8857a77d39181387172dc1ad50c326a",
-      "message": "Integration batch integration-designcraft-20261103-7 (#2255)"
+      "commit": "c1bf2c7",
+      "commit_full": "c1bf2c769bf03f220996f59aa5491d66e8175998",
+      "message": "Give anchored objects fresh ids when copying text frames (fixes #1522) (#1968)"
     },
     "self_reported": "2026-11-01"
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 19.8,
+    "level": "buzzing",
+    "score": 20.0,
     "active_days_7d": 7,
-    "changes_7d": 114,
-    "changes_14d": 283,
+    "changes_7d": 120,
+    "changes_14d": 289,
     "housekeeping_7d": 10,
     "last_code_change": {
-      "ts": "2026-11-03T21:26:49Z",
-      "commit": "94337c8",
-      "commit_full": "94337c8bd93be26eae9e2883a1ed66377756c828",
-      "subject": "Integration batch integration-designcraft-20261103-8 (#2259)"
+      "ts": "2026-11-03T22:01:34Z",
+      "commit": "b749251",
+      "commit_full": "b749251694cd96cdc23055c48e2c41e569d304cf",
+      "subject": "cli: the three argument bugs photocraft#7071 lists are live here too (#1478)"
     },
-    "last_commit_ts": "2026-11-03T21:26:49Z",
+    "last_commit_ts": "2026-11-03T22:01:34Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       8,
@@ -533,7 +533,7 @@
       22,
       17,
       3,
-      29
+      35
     ],
     "days": [
       {
@@ -1115,20 +1115,20 @@
       },
       {
         "d": "2026-11-03",
-        "code": 29,
+        "code": 35,
         "other": 1,
         "samples": [
           {
-            "commit": "94337c8",
-            "subject": "Integration batch integration-designcraft-20261103-8 (#2259)"
+            "commit": "b749251",
+            "subject": "cli: the three argument bugs photocraft#7071 lists are live here too (#1478)"
           },
           {
-            "commit": "dd37219",
-            "subject": "Integration batch integration-designcraft-20261103-7 (#2255)"
+            "commit": "0867f82",
+            "subject": "Fill the empty or graphic frame under the pointer when a file is dropped on it (#1646) (#1666)"
           },
           {
-            "commit": "d1255e2",
-            "subject": "Integration batch integration-designcraft-20261103-6 (#2246)"
+            "commit": "c1bf2c7",
+            "subject": "Give anchored objects fresh ids when copying text frames (fixes #1522) (#1968)"
           }
         ]
       }
@@ -5504,7 +5504,99 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "6c4723e",
+      "commit_full": "6c4723e1e8ffe448cea221dc26cae4abff049e59",
+      "commit_date": "2026-11-03T16:35:55-05:00",
+      "ts": "2026-11-03T21:35:55Z",
+      "message": "MCP: complete tool hints and check nested argument keys (#184)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-01",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "de4042b",
+      "commit_full": "de4042be41051e2a0c2e1fd46112689e1324c345",
+      "commit_date": "2026-11-03T16:37:29-05:00",
+      "ts": "2026-11-03T21:37:29Z",
+      "message": "Snapping: a drawn or resized edge snaps to the page's centre line, as InDesign's smart guides do (#1404)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-01",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "4a1ff58",
+      "commit_full": "4a1ff582e945acff00fae66431af2ec2450cb712",
+      "commit_date": "2026-11-03T16:44:59-05:00",
+      "ts": "2026-11-03T21:44:59Z",
+      "message": "fix: macOSアプリにCLIを同梱 (#690)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-01",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "c1bf2c7",
+      "commit_full": "c1bf2c769bf03f220996f59aa5491d66e8175998",
+      "commit_date": "2026-11-03T16:48:53-05:00",
+      "ts": "2026-11-03T21:48:53Z",
+      "message": "Give anchored objects fresh ids when copying text frames (fixes #1522) (#1968)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-01",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T21:28:42+00:00"
+  "updated_at": "2026-11-03T22:13:07+00:00"
 }
