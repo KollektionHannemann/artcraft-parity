@@ -460,18 +460,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.5,
+    "score": 18.7,
     "active_days_7d": 7,
-    "changes_7d": 99,
-    "changes_14d": 194,
+    "changes_7d": 100,
+    "changes_14d": 195,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-03T04:33:31Z",
-      "commit": "e8ccb5e",
-      "commit_full": "e8ccb5eb15726eec25ac2710dd32f98ec1df07a1",
-      "subject": "check: find volatile defined names with a worklist instead of repeated passes (#3187)"
+      "ts": "2026-11-03T04:45:20Z",
+      "commit": "178f3eb",
+      "commit_full": "178f3eb745a589c63b61ef97dd7b6b2d6fd48515",
+      "subject": "Protection: authorize the sheet a column move changes, and refuse edits that unlock locked cells (#3196)"
     },
-    "last_commit_ts": "2026-11-03T04:33:31Z",
+    "last_commit_ts": "2026-11-03T04:45:20Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       2,
@@ -487,7 +487,7 @@
       30,
       17,
       16,
-      5
+      6
     ],
     "days": [
       {
@@ -941,9 +941,13 @@
       },
       {
         "d": "2026-11-03",
-        "code": 5,
+        "code": 6,
         "other": 1,
         "samples": [
+          {
+            "commit": "178f3eb",
+            "subject": "Protection: authorize the sheet a column move changes, and refuse edits that unlock locked cells (#3196)"
+          },
           {
             "commit": "e8ccb5e",
             "subject": "check: find volatile defined names with a worklist instead of repeated passes (#3187)"
@@ -951,10 +955,6 @@
           {
             "commit": "e1604d1",
             "subject": "Merge PR #3132"
-          },
-          {
-            "commit": "74d9641",
-            "subject": "Merge PR #3173"
           }
         ]
       }
@@ -3169,5 +3169,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T04:38:13+00:00"
+  "updated_at": "2026-11-03T05:39:37+00:00"
 }
