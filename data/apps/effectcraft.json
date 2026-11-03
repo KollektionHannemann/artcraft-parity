@@ -376,16 +376,16 @@
     "level": "buzzing",
     "score": 21.7,
     "active_days_7d": 7,
-    "changes_7d": 333,
-    "changes_14d": 392,
+    "changes_7d": 334,
+    "changes_14d": 393,
     "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-11-03T17:32:20Z",
-      "commit": "5464a23",
-      "commit_full": "5464a2380e26464c428938e89b6c9eb9ea720546",
-      "subject": "Mask feather: bound the variable feather's distance pass (#2947)"
+      "ts": "2026-11-03T19:10:24Z",
+      "commit": "2f31c22",
+      "commit_full": "2f31c22a09fb8cb512006973a57b64bcc330c9f7",
+      "subject": "fix(prefs): when recovering from a bad value, try only the settings' own pages one by one (#3010)"
     },
-    "last_commit_ts": "2026-11-03T17:32:20Z",
+    "last_commit_ts": "2026-11-03T19:10:24Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       4,
@@ -401,7 +401,7 @@
       37,
       1,
       19,
-      38
+      39
     ],
     "days": [
       {
@@ -980,9 +980,13 @@
       },
       {
         "d": "2026-11-03",
-        "code": 38,
+        "code": 39,
         "other": 1,
         "samples": [
+          {
+            "commit": "2f31c22",
+            "subject": "fix(prefs): when recovering from a bad value, try only the settings' own pages one by one (#3010)"
+          },
           {
             "commit": "5464a23",
             "subject": "Mask feather: bound the variable feather's distance pass (#2947)"
@@ -990,10 +994,6 @@
           {
             "commit": "b7dee07",
             "subject": "Path booleans: sparse winding numbers and bounded merge runs (#2946)"
-          },
-          {
-            "commit": "d16c720",
-            "subject": "Follow-up to #2981: a missing Chinese effect row draws English instead of failing the build, the font probe sees effect and category characters, coverage totals"
           }
         ]
       }
@@ -1530,5 +1530,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T17:42:09+00:00"
+  "updated_at": "2026-11-03T19:38:15+00:00"
 }
