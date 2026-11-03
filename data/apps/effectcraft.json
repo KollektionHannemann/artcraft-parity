@@ -374,18 +374,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.8,
+    "score": 21.9,
     "active_days_7d": 7,
-    "changes_7d": 338,
-    "changes_14d": 397,
+    "changes_7d": 340,
+    "changes_14d": 399,
     "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-11-03T22:00:01Z",
-      "commit": "c4f386a",
-      "commit_full": "c4f386a22fce7a5d4eb0ca9eafdd1781f70962e8",
-      "subject": "Preview: debounce GPU memory pressure and recover the frame budget (#3025)"
+      "ts": "2026-11-03T22:56:37Z",
+      "commit": "ff68626",
+      "commit_full": "ff686265977b5c228786fc59dab8447c9e0a6909",
+      "subject": "#1605: Posterize and CC Grid Wipe match the CPU on AMD and Intel (#1836)"
     },
-    "last_commit_ts": "2026-11-03T22:00:01Z",
+    "last_commit_ts": "2026-11-03T22:56:37Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       4,
@@ -401,7 +401,7 @@
       37,
       1,
       19,
-      43
+      45
     ],
     "days": [
       {
@@ -980,20 +980,20 @@
       },
       {
         "d": "2026-11-03",
-        "code": 43,
+        "code": 45,
         "other": 1,
         "samples": [
           {
+            "commit": "ff68626",
+            "subject": "#1605: Posterize and CC Grid Wipe match the CPU on AMD and Intel (#1836)"
+          },
+          {
+            "commit": "8d20cf0",
+            "subject": "GPU.1: Preserve CPU parity in numerical effect kernels (#1490)"
+          },
+          {
             "commit": "c4f386a",
             "subject": "Preview: debounce GPU memory pressure and recover the frame budget (#3025)"
-          },
-          {
-            "commit": "389894e",
-            "subject": "gpu: run Content-Aware Fill's PatchMatch and flow on the GPU (#1856)"
-          },
-          {
-            "commit": "6df7eab",
-            "subject": "gpu: memory back-pressure for frames in flight (fixes OOM at 3–4 frames in flight) (#1550)"
           }
         ]
       }
@@ -1530,5 +1530,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T22:13:01+00:00"
+  "updated_at": "2026-11-03T23:07:11+00:00"
 }

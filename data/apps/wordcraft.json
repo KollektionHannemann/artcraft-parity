@@ -11,13 +11,13 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "a591879",
-  "latest_commit_date": "2026-11-03T20:45:39Z",
-  "latest_message": "Comments: a long comment's card and balloon stop at ten lines (#3382) (#3899)",
+  "latest_commit": "682ce43",
+  "latest_commit_date": "2026-11-03T23:06:35Z",
+  "latest_message": "CP4.3: craft-proof pin at craft-libs 01315d9: French elision suggestions first; Valencian reads its pack (#5509)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
-    "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4> Last reviewed: 2026-10-10",
+    "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
     "last_updated": "2026-11-03",
     "metrics": {
       "full": {
@@ -330,6 +330,10 @@
     "progress": [
       {
         "date": "2026-11-03",
+        "text": "Proofing (CP4.3): craft-proof moves to craft-libs main with #589 and #590. French spelling suggestions offer the elided form first (Jadore → J'adore, before J adore), and Valencian text (ca-ES-valencia) is proofed with the ca-valencia pack instead of plain Catalan. Readiness unchanged."
+      },
+      {
+        "date": "2026-11-03",
         "text": "A long comment no longer grows its card or balloon without limit (#3382). Its field in the Comments pane and in a selected balloon stops at ten lines and scrolls, keeping the caret in view; a balloon that isn't selected shows the first ten lines of the comment and of each reply, and clicking it opens the scrolling field. The buttons and the next comment stay in view."
       },
       {
@@ -483,10 +487,6 @@
       {
         "date": "2026-10-28",
         "text": "Custom document properties retain their bookmark link targets through DOCX saves, native JSON reopens, value edits and dialog renames (#4767). Linked values are not evaluated; the existing dialog and field-update behavior are unchanged. Original fixtures cover ordinary and raw property values; broader corpus qualification and readiness estimates remain unchanged."
-      },
-      {
-        "date": "2026-10-28",
-        "text": "Convert Notes walks reference offsets and formatting runs together instead of rescanning all references for every run (#4750). Note text, IDs, custom marks, styles, history and saved content retain their behavior. Synthetic scaling, CLI/MCP and native/DOCX reopen coverage; readiness estimates unchanged."
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 11,
     "releases_since_capped": false,
-    "revisions_since": 464,
+    "revisions_since": 465,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 468,
-    "revisions_7d": 50,
+    "revisions": 469,
+    "revisions_7d": 51,
     "last_revision": {
-      "ts": "2026-11-03T20:45:39Z",
+      "ts": "2026-11-03T23:06:35Z",
       "kind": "content",
-      "commit": "a591879",
-      "commit_full": "a5918792948cc77fef58a9491dd14057fd56527c",
-      "message": "Comments: a long comment's card and balloon stop at ten lines (#3382) (#3899)"
+      "commit": "682ce43",
+      "commit_full": "682ce4318aac0875feab3960cc17bc910a859a1b",
+      "message": "CP4.3: craft-proof pin at craft-libs 01315d9: French elision suggestions first; Valencian reads its pack (#5509)"
     },
     "last_update": {
-      "ts": "2026-11-03T20:45:39Z",
+      "ts": "2026-11-03T23:06:35Z",
       "kind": "content",
-      "commit": "a591879",
-      "commit_full": "a5918792948cc77fef58a9491dd14057fd56527c",
-      "message": "Comments: a long comment's card and balloon stop at ten lines (#3382) (#3899)"
+      "commit": "682ce43",
+      "commit_full": "682ce4318aac0875feab3960cc17bc910a859a1b",
+      "message": "CP4.3: craft-proof pin at craft-libs 01315d9: French elision suggestions first; Valencian reads its pack (#5509)"
     },
     "self_reported": "2026-11-03"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.3,
+    "score": 20.4,
     "active_days_7d": 7,
-    "changes_7d": 111,
-    "changes_14d": 281,
+    "changes_7d": 112,
+    "changes_14d": 282,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-11-03T22:10:18Z",
-      "commit": "ddf88c3",
-      "commit_full": "ddf88c39df089ab0bbd7d2614bfd60585b809eec",
-      "subject": "CP4.3: craft-i18n.rev at 20467b6 (#116 merged): builds embed the Language data language-packs-2 was built from (#5385)"
+      "ts": "2026-11-03T23:06:35Z",
+      "commit": "682ce43",
+      "commit_full": "682ce4318aac0875feab3960cc17bc910a859a1b",
+      "subject": "CP4.3: craft-proof pin at craft-libs 01315d9: French elision suggestions first; Valencian reads its pack (#5509)"
     },
-    "last_commit_ts": "2026-11-03T22:10:18Z",
+    "last_commit_ts": "2026-11-03T23:06:35Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       14,
@@ -568,7 +568,7 @@
       17,
       14,
       11,
-      17
+      18
     ],
     "days": [
       {
@@ -1048,9 +1048,13 @@
       },
       {
         "d": "2026-11-03",
-        "code": 17,
+        "code": 18,
         "other": 1,
         "samples": [
+          {
+            "commit": "682ce43",
+            "subject": "CP4.3: craft-proof pin at craft-libs 01315d9: French elision suggestions first; Valencian reads its pack (#5509)"
+          },
           {
             "commit": "ddf88c3",
             "subject": "CP4.3: craft-i18n.rev at 20467b6 (#116 merged): builds embed the Language data language-packs-2 was built from (#5385)"
@@ -1058,10 +1062,6 @@
           {
             "commit": "a591879",
             "subject": "Comments: a long comment's card and balloon stop at ten lines (#3382) (#3899)"
-          },
-          {
-            "commit": "ae5c65b",
-            "subject": "Paste: charge copied text box stories for the formatting they clone (#5379)"
           }
         ]
       }
@@ -12055,7 +12055,31 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "682ce43",
+      "commit_full": "682ce4318aac0875feab3960cc17bc910a859a1b",
+      "commit_date": "2026-11-03T23:06:35Z",
+      "ts": "2026-11-03T23:06:35Z",
+      "message": "CP4.3: craft-proof pin at craft-libs 01315d9: French elision suggestions first; Valencian reads its pack (#5509)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content",
+      "target_changed": "Microsoft Word (Microsoft 365) for Mac 16.113.4> Last reviewed: 2026-10-10"
     }
   ],
-  "updated_at": "2026-11-03T22:13:14+00:00"
+  "updated_at": "2026-11-03T23:07:23+00:00"
 }

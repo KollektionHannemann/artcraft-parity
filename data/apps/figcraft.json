@@ -581,18 +581,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.2,
+    "score": 22.6,
     "active_days_7d": 7,
-    "changes_7d": 278,
-    "changes_14d": 441,
+    "changes_7d": 282,
+    "changes_14d": 445,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-03T19:40:54Z",
-      "commit": "53ebf1f",
-      "commit_full": "53ebf1f39c51361282ca55e18c83fbffed2f9a34",
-      "subject": "fix(pathops): sanitize a brush's width profile once before sampling (#1948)"
+      "ts": "2026-11-03T22:58:51Z",
+      "commit": "4bb35d5",
+      "commit_full": "4bb35d5266aae4dfb156cd85561c4d81198cddd9",
+      "subject": "perf(collab): check a replaced list's entries against sets, not a scan per entry (#1962)"
     },
-    "last_commit_ts": "2026-11-03T19:40:54Z",
+    "last_commit_ts": "2026-11-03T22:58:51Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       16,
@@ -608,7 +608,7 @@
       27,
       4,
       24,
-      12
+      16
     ],
     "days": [
       {
@@ -1075,20 +1075,20 @@
       },
       {
         "d": "2026-11-03",
-        "code": 12,
+        "code": 16,
         "other": 1,
         "samples": [
           {
-            "commit": "53ebf1f",
-            "subject": "fix(pathops): sanitize a brush's width profile once before sampling (#1948)"
+            "commit": "4bb35d5",
+            "subject": "perf(collab): check a replaced list's entries against sets, not a scan per entry (#1962)"
           },
           {
-            "commit": "35684ea",
-            "subject": "fix(format): index kiwi field lookups and bound schema and empty-array growth (#1896)"
+            "commit": "3265cbc",
+            "subject": "perf(engine): look up a component's asset root once per usage report, and skip mode migration without instances (#1966)"
           },
           {
-            "commit": "0e86f35",
-            "subject": "M4: wrap style on a text layer: Auto, Balance and Pretty decide where its lines break (#1827) (#1871)"
+            "commit": "fb4d0b5",
+            "subject": "perf(doc,engine): rebuild a widget by removing its children in one pass (#1967)"
           }
         ]
       }
@@ -7394,5 +7394,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T20:43:22+00:00"
+  "updated_at": "2026-11-03T23:07:19+00:00"
 }
