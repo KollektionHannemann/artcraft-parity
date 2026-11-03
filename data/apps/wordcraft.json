@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "dd2a651",
-  "latest_commit_date": "2026-11-02T22:47:03-05:00",
-  "latest_message": "References: Remove and Replace Table of Contents treat a title above a section break as Word does (#5152)",
+  "latest_commit": "ae5c65b",
+  "latest_commit_date": "2026-11-03T09:05:14-05:00",
+  "latest_message": "Paste: charge copied text box stories for the formatting they clone (#5379)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -330,7 +330,23 @@
     "progress": [
       {
         "date": "2026-11-03",
+        "text": "Security: pasting text boxes charges each copied story for its formatting too (run, mark, paragraph and section properties), not only its text and objects, so a story with huge style or font names can't copy past the paste's 32 MiB text box budget. Readiness unchanged."
+      },
+      {
+        "date": "2026-11-03",
+        "text": "Security: .doc import keeps one width, shading, alignment and merge override per table cell, the last one winning as before, instead of a copy every time a paragraph's properties repeat the sprm, so a shared PAPX can't pile up copies on every paragraph mark. Readiness unchanged."
+      },
+      {
+        "date": "2026-11-03",
+        "text": "Security: .doc import attaches each section to the paragraph that ends it through an index of paragraph ends, instead of scanning every paragraph for every section, so a file with a thousand sections that end nowhere can't multiply the work over its paragraphs. Readiness unchanged."
+      },
+      {
+        "date": "2026-11-03",
         "text": "Language packs: language-packs-2 is published and WordCraft pins its index: 75 languages, adding Danish, German (Germany, Austria, Switzerland), Esperanto, Estonian, Persian, Croatian, Hungarian, Norwegian (Bokmål, Nynorsk), Dutch (#4145, #2505) and Swedish (Sweden, Finland), which need craft-proof's flag-based compounding (storytold/craft-libs#497, pinned). English (Australia) is checked against SCOWL's en-AU list as well as en-GB's (storytold/craft-libs#496). Mongolian and Thai stay hidden. Readiness unchanged."
+      },
+      {
+        "date": "2026-11-03",
+        "text": "Arabic interface (#1195): ar selectable (and every ar- system locale); craft-i18n catalog; mirrored ribbon, panes, File page, dialogs and menus; Arabic UI font fallback; document direction stays independent. No kashida or Arabic proofing yet; Hebrew UI still open."
       },
       {
         "date": "2026-11-03",
@@ -471,22 +487,6 @@
       {
         "date": "2026-10-28",
         "text": "RTF import keeps pictures stored as Windows Metafiles (\\wmetafile8, as Word writes a pasted or floating picture) and Enhanced Metafiles (\\emfblip); they were dropped, so such a document opened without its pictures. They are drawn by the metafile renderer, saved to .docx as .wmf/.emf media, and saved to .rtf as metafiles again (RTF export dropped them too). (#4259)"
-      },
-      {
-        "date": "2026-10-28",
-        "text": "Arabic diacritic editing (#4757): Backspace removes the last stored Arabic combining mark, so its base letter can stay while the mark is replaced. Caret movement and forward Delete keep their cluster rules. Synthetic command, history, protection and native/DOCX fresh-reopen checks; no native Word comparison or readiness change."
-      },
-      {
-        "date": "2026-10-28",
-        "text": "The Traditional Chinese interface draws hanzi to the Taiwan standard: on the desktop an installed Traditional Chinese font (PingFang TC on macOS, Microsoft JhengHei on Windows, Noto Sans CJK TC on Linux) comes before the embedded Noto Sans CJK SC, which drew 說, 這, 為, 戶 in mainland shapes; without one, and on the web, nothing changes."
-      },
-      {
-        "date": "2026-10-28",
-        "text": "Markdown import bounds nested undefined reference-label work within the existing link allowance; literal source and normal reference matching are preserved (#4658)."
-      },
-      {
-        "date": "2026-10-27",
-        "text": "File › Options › Proofing › AutoCorrect Options opens with no document open (#4585). On the Start screen, or after closing the last document, the button did nothing: AutoCorrect wasn't among the commands allowed without a document. Its options are user preferences, so changes made there are kept for the next document."
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 11,
     "releases_since_capped": false,
-    "revisions_since": 459,
+    "revisions_since": 463,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 463,
-    "revisions_7d": 45,
+    "revisions": 467,
+    "revisions_7d": 49,
     "last_revision": {
-      "ts": "2026-11-03T03:47:03Z",
+      "ts": "2026-11-03T14:05:14Z",
       "kind": "content",
-      "commit": "dd2a651",
-      "commit_full": "dd2a6510932b92c40f79cef0ada920dffda8851b",
-      "message": "References: Remove and Replace Table of Contents treat a title above a section break as Word does (#5152)"
+      "commit": "ae5c65b",
+      "commit_full": "ae5c65b9dd11faf359ce039a2a487e57e3d824a2",
+      "message": "Paste: charge copied text box stories for the formatting they clone (#5379)"
     },
     "last_update": {
-      "ts": "2026-11-03T03:47:03Z",
+      "ts": "2026-11-03T14:05:14Z",
       "kind": "content",
-      "commit": "dd2a651",
-      "commit_full": "dd2a6510932b92c40f79cef0ada920dffda8851b",
-      "message": "References: Remove and Replace Table of Contents treat a title above a section break as Word does (#5152)"
+      "commit": "ae5c65b",
+      "commit_full": "ae5c65b9dd11faf359ce039a2a487e57e3d824a2",
+      "message": "Paste: charge copied text box stories for the formatting they clone (#5379)"
     },
     "self_reported": "2026-11-03"
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 19.6,
+    "level": "buzzing",
+    "score": 20.1,
     "active_days_7d": 7,
-    "changes_7d": 104,
-    "changes_14d": 274,
+    "changes_7d": 109,
+    "changes_14d": 279,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-11-03T13:55:09Z",
-      "commit": "051fd87",
-      "commit_full": "051fd875efddc6794f11044ba9109aa7051999e8",
-      "subject": "Proofing: look up unchecked runs by binary search, not a scan per issue (#5344)"
+      "ts": "2026-11-03T14:05:14Z",
+      "commit": "ae5c65b",
+      "commit_full": "ae5c65b9dd11faf359ce039a2a487e57e3d824a2",
+      "subject": "Paste: charge copied text box stories for the formatting they clone (#5379)"
     },
-    "last_commit_ts": "2026-11-03T13:55:09Z",
+    "last_commit_ts": "2026-11-03T14:05:14Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       14,
@@ -568,7 +568,7 @@
       17,
       14,
       11,
-      10
+      15
     ],
     "days": [
       {
@@ -1048,20 +1048,20 @@
       },
       {
         "d": "2026-11-03",
-        "code": 10,
+        "code": 15,
         "other": 1,
         "samples": [
           {
-            "commit": "051fd87",
-            "subject": "Proofing: look up unchecked runs by binary search, not a scan per issue (#5344)"
+            "commit": "ae5c65b",
+            "subject": "Paste: charge copied text box stories for the formatting they clone (#5379)"
           },
           {
-            "commit": "ffb155a",
-            "subject": "ci: the font-store sanitising test waits out an install another test's window moved onto the engine's thread"
+            "commit": "1f8f9e8",
+            "subject": "DOC import: keep one override per table cell instead of a copy per repeated sprm (#5374)"
           },
           {
-            "commit": "dd2a651",
-            "subject": "References: Remove and Replace Table of Contents treat a title above a section break as Word does (#5152)"
+            "commit": "cf23ca7",
+            "subject": "DOC import: attach sections to their paragraphs through an index of paragraph ends (#5373)"
           }
         ]
       }
@@ -11940,7 +11940,99 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "1ff68d6",
+      "commit_full": "1ff68d64e315cbf93d901c7d39dca634a307961e",
+      "commit_date": "2026-11-03T15:00:45+01:00",
+      "ts": "2026-11-03T14:00:45Z",
+      "message": "i18n: Arabic interface with mirrored RTL shell (+ parity docs) (#5370)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4> Last reviewed: 2026-10-10",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "cf23ca7",
+      "commit_full": "cf23ca73c9c5978e0eddc69e9105f73fe7977316",
+      "commit_date": "2026-11-03T09:03:10-05:00",
+      "ts": "2026-11-03T14:03:10Z",
+      "message": "DOC import: attach sections to their paragraphs through an index of paragraph ends (#5373)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4> Last reviewed: 2026-10-10",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "1f8f9e8",
+      "commit_full": "1f8f9e8e2c0ec0da250f3aa0a5646c6669e7a8a9",
+      "commit_date": "2026-11-03T09:04:13-05:00",
+      "ts": "2026-11-03T14:04:13Z",
+      "message": "DOC import: keep one override per table cell instead of a copy per repeated sprm (#5374)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4> Last reviewed: 2026-10-10",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "ae5c65b",
+      "commit_full": "ae5c65b9dd11faf359ce039a2a487e57e3d824a2",
+      "commit_date": "2026-11-03T09:05:14-05:00",
+      "ts": "2026-11-03T14:05:14Z",
+      "message": "Paste: charge copied text box stories for the formatting they clone (#5379)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4> Last reviewed: 2026-10-10",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T13:57:45+00:00"
+  "updated_at": "2026-11-03T14:44:15+00:00"
 }

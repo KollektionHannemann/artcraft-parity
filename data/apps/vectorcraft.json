@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "bf2258b",
-  "latest_commit_date": "2026-11-03T20:16:27+07:00",
-  "latest_message": "Fix #4924: Text Tweaker ramps or randomises one character attribute letter by letter (#5344)",
+  "latest_commit": "42bd328",
+  "latest_commit_date": "2026-11-03T21:01:38+07:00",
+  "latest_message": "Paint: use CMYK defaults when creating gradients in CMYK documents (#5354)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -509,7 +509,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 207,
+    "revisions_since": 208,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -540,39 +540,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 208,
-    "revisions_7d": 17,
+    "revisions": 209,
+    "revisions_7d": 18,
     "last_revision": {
-      "ts": "2026-11-03T13:16:27Z",
+      "ts": "2026-11-03T14:01:38Z",
       "kind": "content",
-      "commit": "bf2258b",
-      "commit_full": "bf2258b48f07d3620db78a6f56acc74c3070cd9d",
-      "message": "Fix #4924: Text Tweaker ramps or randomises one character attribute letter by letter (#5344)"
+      "commit": "42bd328",
+      "commit_full": "42bd3282d86613be6548c5be7d9a432a5da2e534",
+      "message": "Paint: use CMYK defaults when creating gradients in CMYK documents (#5354)"
     },
     "last_update": {
-      "ts": "2026-11-03T13:16:27Z",
+      "ts": "2026-11-03T14:01:38Z",
       "kind": "content",
-      "commit": "bf2258b",
-      "commit_full": "bf2258b48f07d3620db78a6f56acc74c3070cd9d",
-      "message": "Fix #4924: Text Tweaker ramps or randomises one character attribute letter by letter (#5344)"
+      "commit": "42bd328",
+      "commit_full": "42bd3282d86613be6548c5be7d9a432a5da2e534",
+      "message": "Paint: use CMYK defaults when creating gradients in CMYK documents (#5354)"
     },
     "self_reported": "2026-11-03"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 31.7,
+    "score": 31.8,
     "active_days_7d": 7,
-    "changes_7d": 628,
-    "changes_14d": 1240,
-    "housekeeping_7d": 22,
+    "changes_7d": 632,
+    "changes_14d": 1244,
+    "housekeeping_7d": 24,
     "last_code_change": {
-      "ts": "2026-11-03T13:16:27Z",
-      "commit": "bf2258b",
-      "commit_full": "bf2258b48f07d3620db78a6f56acc74c3070cd9d",
-      "subject": "Fix #4924: Text Tweaker ramps or randomises one character attribute letter by letter (#5344)"
+      "ts": "2026-11-03T14:33:29Z",
+      "commit": "52703ec",
+      "commit_full": "52703ec4edb6aa2a08398ccf1cdc46312206b9f1",
+      "subject": "SVG import preserves selector matches while retaining metadata (#5361)"
     },
-    "last_commit_ts": "2026-11-03T13:17:00Z",
+    "last_commit_ts": "2026-11-03T14:33:29Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       169,
@@ -588,7 +588,7 @@
       126,
       41,
       113,
-      65
+      69
     ],
     "days": [
       {
@@ -1226,20 +1226,20 @@
       },
       {
         "d": "2026-11-03",
-        "code": 65,
-        "other": 5,
+        "code": 69,
+        "other": 7,
         "samples": [
           {
-            "commit": "bf2258b",
-            "subject": "Fix #4924: Text Tweaker ramps or randomises one character attribute letter by letter (#5344)"
+            "commit": "52703ec",
+            "subject": "SVG import preserves selector matches while retaining metadata (#5361)"
           },
           {
-            "commit": "78a5b8b",
-            "subject": "Tests: isolate font wheel picking from missing-glyph protection (#5353)"
+            "commit": "8a2fd20",
+            "subject": "Transform previews typed values in its effect dialog (#5357)"
           },
           {
-            "commit": "b541041",
-            "subject": "Fix #5236: Use System Defaults for Edit Original (Preferences › File Handling) (#5327)"
+            "commit": "a68e7b0",
+            "subject": "Actions: New Action asks for the action's name, set, function key and color (#5270)"
           }
         ]
       }
@@ -6916,7 +6916,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "42bd328",
+      "commit_full": "42bd3282d86613be6548c5be7d9a432a5da2e534",
+      "commit_date": "2026-11-03T21:01:38+07:00",
+      "ts": "2026-11-03T14:01:38Z",
+      "message": "Paint: use CMYK defaults when creating gradients in CMYK documents (#5354)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T13:57:12+00:00"
+  "updated_at": "2026-11-03T14:43:25+00:00"
 }

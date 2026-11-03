@@ -357,18 +357,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.9,
+    "score": 22.4,
     "active_days_7d": 6,
-    "changes_7d": 164,
-    "changes_14d": 334,
+    "changes_7d": 172,
+    "changes_14d": 342,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-11-03T04:00:25Z",
-      "commit": "b04273e",
-      "commit_full": "b04273e8974245e1c59ec57eb5ad86cec7a200eb",
-      "subject": "Round-trip harness and corpus report: open, save, reopen and compare (#1937, E12) (#2685)"
+      "ts": "2026-11-03T14:08:07Z",
+      "commit": "b639b18",
+      "commit_full": "b639b18f69bfefd58f866fd0dc04940d0c6aa6e6",
+      "subject": "fix(io): sort each space once when a DXF has several SORTENTSTABLEs for it (#2709)"
     },
-    "last_commit_ts": "2026-11-03T04:00:25Z",
+    "last_commit_ts": "2026-11-03T14:08:07Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       4,
@@ -384,7 +384,7 @@
       43,
       17,
       39,
-      19
+      27
     ],
     "days": [
       {
@@ -803,20 +803,20 @@
       },
       {
         "d": "2026-11-03",
-        "code": 19,
+        "code": 27,
         "other": 2,
         "samples": [
           {
-            "commit": "b04273e",
-            "subject": "Round-trip harness and corpus report: open, save, reopen and compare (#1937, E12) (#2685)"
+            "commit": "b639b18",
+            "subject": "fix(io): sort each space once when a DXF has several SORTENTSTABLEs for it (#2709)"
           },
           {
-            "commit": "5ed1925",
-            "subject": "EXPLODE: a block reference with different X and Y scales gives ellipses, not circles (#2649)"
+            "commit": "578da3b",
+            "subject": "fix(io): an ACAD_TABLE with no rows or no columns reads as an empty table (#2708)"
           },
           {
-            "commit": "4c00f8b",
-            "subject": "FIND: a Find and Replace window, not only the command line (#2607)"
+            "commit": "f2afcd4",
+            "subject": "fix(engine): look names up in an index in AUDIT, layer-state restore and CAL (#2712)"
           }
         ]
       }
@@ -1307,5 +1307,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T10:43:48+00:00"
+  "updated_at": "2026-11-03T14:44:30+00:00"
 }

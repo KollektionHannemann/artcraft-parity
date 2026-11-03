@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/deckcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/deckcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "3c8dc6b",
-  "latest_commit_date": "2026-11-02T23:07:49-05:00",
-  "latest_message": "Merge pull request #1693",
+  "latest_commit": "aa13eeb",
+  "latest_commit_date": "2026-11-03T08:54:48-05:00",
+  "latest_message": "Integration: community PR wave 10 (one bodyPr attribute chain, reuse imports, doc headers folded)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
-    "last_updated": "2026-11-02",
+    "last_updated": "2026-11-03",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -319,8 +319,36 @@
     ],
     "progress": [
       {
+        "date": "2026-11-03",
+        "text": "Reuse Slides brings along referenced custom table styles, including grouped tables, and remaps conflicting style ids without changing destination tables"
+      },
+      {
+        "date": "2026-11-02",
+        "text": "Native and PPTX saves retain optional table right-to-left direction, including explicit false and omission; two-save round-trip tests keep labeled columns in order"
+      },
+      {
+        "date": "2026-11-02",
+        "text": "Text runs preserve alternate-language metadata independently from the main language through native and PPTX saves"
+      },
+      {
+        "date": "2026-11-02",
+        "text": "Picture compression measures displayed dimensions through nested group transforms; checklist score unchanged"
+      },
+      {
+        "date": "2026-11-02",
+        "text": "Deleting slides removes their IDs from every custom show; the cleanup is undoable and survives native save/reopen"
+      },
+      {
+        "date": "2026-11-02",
+        "text": "Reused slides scale their geometry and content dimensions to the destination slide, including kept source masters and layouts; the reuse picker still lacks thumbnails"
+      },
+      {
         "date": "2026-11-02",
         "text": "File › About replaces the unused Account page, with version, project links, contributor/model credits and appearance preferences"
+      },
+      {
+        "date": "2026-11-02",
+        "text": "PPTX reflection effects keep their authored start position, affine scale/skew, direction and fade, alignment, and rotation flag through native and PPTX saves"
       },
       {
         "date": "2026-11-02",
@@ -449,34 +477,6 @@
       {
         "date": "2026-10-22",
         "text": "Slide Show: while animations play, each frame draws only the slide's shapes over the slide's backdrop (background, master and layout graphics), rendered once and ahead of time. A full-slide picture with a glow in the layout re-rendered at every frame held animations to 2–3 frames a second (~390 ms a frame at 1080p); now ~28 ms"
-      },
-      {
-        "date": "2026-10-22",
-        "text": "Animation Pane ▸ Play From: with an effect selected, the pane's play button starts the canvas preview at that effect, with the effects before it already played. With nothing selected it is still Play All"
-      },
-      {
-        "date": "2026-10-22",
-        "text": "Shape Fill and Shape Outline format the members of a selected group, including nested groups, in one undo step. Fill transparency retains each member's effective colour (#1079)"
-      },
-      {
-        "date": "2026-10-22",
-        "text": "Chart bars and their legend keys draw the series' own pattern fill (a:pattFill, now read and written) and draw nothing for a:noFill, with the series outline where it has one, as PowerPoint for Mac does (synthetic probe); they took the palette's colour before. Lines, areas and markers use a pattern's foreground colour"
-      },
-      {
-        "date": "2026-10-21",
-        "text": "Opening a .pptx puts the text of shapes without an anchor at the top even when the theme's shape defaults (spDef) centre new shapes, as PowerPoint for Mac draws them; checked with a synthetic probe and on a private 166-deck corpus (51 slides closer to PowerPoint's PDF, none further)"
-      },
-      {
-        "date": "2026-10-21",
-        "text": "3-D contours, extrusion depths and bevels keep their size in points inside a group whose child coordinates scale its shapes: a 1 pt contour on a small extruded cube in a legacy group drew hundreds of points wide, a band across the slide"
-      },
-      {
-        "date": "2026-10-21",
-        "text": "Groups nest at most 32 deep (arrange.group refuses more), as deep as PPTX import reads and slides draw: a deck grouped 39 or more levels deep saved without complaint and then could not be opened again"
-      },
-      {
-        "date": "2026-10-21",
-        "text": "Review › Language has Whole presentation: one proofing language for every text box, table cell, note, master and layout, and the default for new text (format.languageAll, one undo step); the per-selection language still works"
       }
     ]
   },
@@ -485,7 +485,7 @@
     "value_since": "2026-10-10T18:09:21Z",
     "releases_since": 11,
     "releases_since_capped": false,
-    "revisions_since": 122,
+    "revisions_since": 129,
     "hours_since": null,
     "areas_since": {
       "up": 1,
@@ -504,39 +504,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 125,
-    "revisions_7d": 19,
+    "revisions": 133,
+    "revisions_7d": 26,
     "last_revision": {
-      "ts": "2026-11-03T04:07:49Z",
-      "kind": "content",
-      "commit": "3c8dc6b",
-      "commit_full": "3c8dc6bc982996e310a0dd452f02c2da1d09c394",
-      "message": "Merge pull request #1693"
+      "ts": "2026-11-03T13:54:48Z",
+      "kind": "editorial",
+      "commit": "aa13eeb",
+      "commit_full": "aa13eeb45e0f84afc8ee7dc803fe2c4471def478",
+      "message": "Integration: community PR wave 10 (one bodyPr attribute chain, reuse imports, doc headers folded)"
     },
     "last_update": {
-      "ts": "2026-11-03T04:07:49Z",
+      "ts": "2026-11-03T13:53:01Z",
       "kind": "content",
-      "commit": "3c8dc6b",
-      "commit_full": "3c8dc6bc982996e310a0dd452f02c2da1d09c394",
-      "message": "Merge pull request #1693"
+      "commit": "50e0249",
+      "commit_full": "50e02490b36f167d907c2672b1072b77c37a0b91",
+      "message": "Merge pull request #1720"
     },
-    "self_reported": "2026-11-02"
+    "self_reported": "2026-11-03"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.2,
+    "score": 19.3,
     "active_days_7d": 6,
-    "changes_7d": 118,
-    "changes_14d": 262,
+    "changes_7d": 133,
+    "changes_14d": 277,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-11-03T12:39:27Z",
-      "commit": "82ec813",
-      "commit_full": "82ec8137dc39f29b0f51b18630b409d655066fce",
-      "subject": "Format: bound native load work for the manifest, failed media reads and layout checks (#1704)"
+      "ts": "2026-11-03T13:54:48Z",
+      "commit": "aa13eeb",
+      "commit_full": "aa13eeb45e0f84afc8ee7dc803fe2c4471def478",
+      "subject": "Integration: community PR wave 10 (one bodyPr attribute chain, reuse imports, doc headers folded)"
     },
-    "last_commit_ts": "2026-11-03T12:39:27Z",
+    "last_commit_ts": "2026-11-03T13:54:48Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
       4,
@@ -552,7 +552,7 @@
       23,
       3,
       15,
-      13
+      28
     ],
     "days": [
       {
@@ -1015,20 +1015,20 @@
       },
       {
         "d": "2026-11-03",
-        "code": 13,
+        "code": 28,
         "other": 1,
         "samples": [
           {
-            "commit": "82ec813",
-            "subject": "Format: bound native load work for the manifest, failed media reads and layout checks (#1704)"
+            "commit": "aa13eeb",
+            "subject": "Integration: community PR wave 10 (one bodyPr attribute chain, reuse imports, doc headers folded)"
           },
           {
-            "commit": "0c00f22",
-            "subject": "Merge pull request #1694"
+            "commit": "50e0249",
+            "subject": "Merge pull request #1720"
           },
           {
-            "commit": "3c8dc6b",
-            "subject": "Merge pull request #1693"
+            "commit": "907ebd2",
+            "subject": "Merge pull request #1710"
           }
         ]
       }
@@ -4123,7 +4123,191 @@
       "breadth_pct": 62.0,
       "full_prev": 55.0,
       "kind": "content"
+    },
+    {
+      "commit": "6c1170a",
+      "commit_full": "6c1170af628ffdfa224e6b686d8e72e60fc6d8ef",
+      "commit_date": "2026-11-03T08:52:49-05:00",
+      "ts": "2026-11-03T13:52:49Z",
+      "message": "Merge pull request #1721",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-02",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "996ca4d",
+      "commit_full": "996ca4dd65f0e77d0fda90fa783d7716ec1b31ec",
+      "commit_date": "2026-11-03T08:52:49-05:00",
+      "ts": "2026-11-03T13:52:49Z",
+      "message": "Merge pull request #1722",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-02",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "1d18101",
+      "commit_full": "1d181017f6e2eb544d30d0a252f31837bfd2d322",
+      "commit_date": "2026-11-03T08:52:49-05:00",
+      "ts": "2026-11-03T13:52:49Z",
+      "message": "Merge pull request #1723",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-02",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "9f01f2e",
+      "commit_full": "9f01f2ebdb3d5181da50af114f951890c6f73ff5",
+      "commit_date": "2026-11-03T08:52:49-05:00",
+      "ts": "2026-11-03T13:52:49Z",
+      "message": "Merge pull request #1707",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-02",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "3f29dcc",
+      "commit_full": "3f29dccc0a27198971c83c454d7689a5708d571d",
+      "commit_date": "2026-11-03T08:52:49-05:00",
+      "ts": "2026-11-03T13:52:49Z",
+      "message": "Merge pull request #1717",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-02",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "ef55104",
+      "commit_full": "ef55104799c0768841cec4a7cc06e5fd0bfa0b1e",
+      "commit_date": "2026-11-03T08:52:49-05:00",
+      "ts": "2026-11-03T13:52:49Z",
+      "message": "Merge pull request #1719",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "50e0249",
+      "commit_full": "50e02490b36f167d907c2672b1072b77c37a0b91",
+      "commit_date": "2026-11-03T08:53:01-05:00",
+      "ts": "2026-11-03T13:53:01Z",
+      "message": "Merge pull request #1720",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "aa13eeb",
+      "commit_full": "aa13eeb45e0f84afc8ee7dc803fe2c4471def478",
+      "commit_date": "2026-11-03T08:54:48-05:00",
+      "ts": "2026-11-03T13:54:48Z",
+      "message": "Integration: community PR wave 10 (one bodyPr attribute chain, reuse imports, doc headers folded)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "editorial"
     }
   ],
-  "updated_at": "2026-11-03T12:42:48+00:00"
+  "updated_at": "2026-11-03T14:44:25+00:00"
 }

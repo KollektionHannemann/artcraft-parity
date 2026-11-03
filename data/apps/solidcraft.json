@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 33.4,
+    "score": 33.8,
     "active_days_7d": 7,
-    "changes_7d": 1118,
-    "changes_14d": 1941,
+    "changes_7d": 1120,
+    "changes_14d": 1943,
     "housekeeping_7d": 25,
     "last_code_change": {
-      "ts": "2026-11-03T13:51:11Z",
-      "commit": "bd2dc3f",
-      "commit_full": "bd2dc3fade1d89de40c82dd230f79a399b647e28",
-      "subject": "Reference tests: the variable round on a box edge (case 77) is a known failure at solidcore 8ddce9016 (#11611)"
+      "ts": "2026-11-03T14:27:31Z",
+      "commit": "c553365",
+      "commit_full": "c553365a2197a689e749389a6fbf707a38df9b61",
+      "subject": "Build fix: the kernel trace takes the record type from solidcore-record (main red since #11496 + #11568) (#11626)"
     },
-    "last_commit_ts": "2026-11-03T13:51:11Z",
+    "last_commit_ts": "2026-11-03T14:27:31Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       85,
@@ -93,7 +93,7 @@
       201,
       128,
       160,
-      5
+      7
     ],
     "days": [
       {
@@ -611,20 +611,20 @@
       },
       {
         "d": "2026-11-03",
-        "code": 5,
+        "code": 7,
         "other": 3,
         "samples": [
           {
+            "commit": "c553365",
+            "subject": "Build fix: the kernel trace takes the record type from solidcore-record (main red since #11496 + #11568) (#11626)"
+          },
+          {
+            "commit": "dc38349",
+            "subject": "Layer split stage 1: the B-rep record, native body file and Vec/Plane come from solidcore-record (#11496)"
+          },
+          {
             "commit": "bd2dc3f",
             "subject": "Reference tests: the variable round on a box edge (case 77) is a known failure at solidcore 8ddce9016 (#11611)"
-          },
-          {
-            "commit": "1b51a06",
-            "subject": "Kernel rig: export each case's kernel operations as a corpus for solidcore's rig (#11568)"
-          },
-          {
-            "commit": "e438a9b",
-            "subject": "Web app: choose the release, the release candidate or the edge build (#11419)"
           }
         ]
       }
@@ -2190,5 +2190,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-03T13:58:18+00:00"
+  "updated_at": "2026-11-03T14:45:03+00:00"
 }
