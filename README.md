@@ -74,6 +74,9 @@ The current launcher catalog contains 16 official apps and SolidCraft, a communi
 An app does not need to publish a readiness percentage to appear. Missing comparable estimates stay unknown;
 they are not treated as zero, included in readiness averages or inferred from unrelated parity scores.
 
+Apps without comparable metrics use a compact "Not reported" state in the same card grid. Their detail pages
+show activity, releases and roadmap revisions without empty score charts or assessment tables.
+
 ## Update types
 
 The tracker keeps three kinds of update apart. One commit can belong to more than one; each is counted once per kind.
@@ -210,8 +213,9 @@ Libraries, assets and developer tooling are not assumed to be consumer apps mere
 
 Every app records its repository, branch, optional roadmap path and official/community classification in `apps.json`.
 Root and `docs/` roadmap locations are checked daily, and external repositories use their actual default branch.
-For 14 days after admission, a new-app banner and card tag appear. The overview includes catalog coverage and pending
-candidates; source failures and coverage gaps are shown as notices. Releases and code activity continue without metrics.
+For 14 days after admission, a compact row of new-app links and a card tag appear. The overview keeps catalog coverage
+and pending candidates under Tracking details; source failures and coverage gaps are shown as notices. Releases and
+code activity continue without metrics.
 
 Discovery and releases use the GitHub API where needed. GitHub Actions passes its built-in token automatically.
 

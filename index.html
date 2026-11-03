@@ -290,11 +290,23 @@
   .statusbar { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px; border: 1px solid var(--line); margin: 22px 0 0; padding: 12px 16px; color: var(--muted); }
   .errors { border: 1px solid rgba(255,107,107,.4); color: #ffb3b3; padding: 12px 14px; margin: 0 0 18px; font-size: 13px; }
   .empty { color: var(--muted); padding: 48px 0; text-align: center; grid-column: 1 / -1; grid-row: 1 / span 120; background: var(--panel); box-shadow: 0 0 0 1px var(--line); }
-  .banner { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; border: 1px solid var(--blue); background: rgba(91,140,255,.08); padding: 14px 18px; margin-bottom: 18px; color: var(--text); }
-  .banner:hover { background: rgba(91,140,255,.14); }
-  .banner strong { font-size: 16px; }
-  .banner .muted { font-size: 13.5px; }
-  .banner .mono:last-child { margin-left: auto; color: var(--blue); }
+  .additions { display: flex; gap: 12px 22px; align-items: baseline; flex-wrap: wrap; border: 1px solid var(--line); padding: 11px 16px; margin: 0 0 18px; }
+  .additions > span { color: var(--faint); flex: none; }
+  .additions nav { display: flex; gap: 8px 20px; flex-wrap: wrap; }
+  .additions a { color: var(--muted); font-size: 13px; }
+  .additions a:hover { color: var(--text); }
+  .additions a::before { content: ""; display: inline-block; width: 5px; height: 5px; background: var(--c); margin: 0 7px 2px 0; }
+  .unscored { min-height: 110px; display: flex; flex-direction: column; justify-content: center; gap: 8px; }
+  .unscored .mono { color: var(--faint); font-size: 10px; }
+  .unscored strong { color: var(--muted); font-size: 28px; font-weight: 600; letter-spacing: -.025em; line-height: 1; }
+  .unscored .reason { color: var(--faint); font-size: 12.5px; }
+  .statusbar .tracking { flex-basis: 100%; border-top: 1px solid var(--line); padding-top: 10px; }
+  .tracking summary { width: fit-content; cursor: pointer; color: var(--faint); }
+  .tracking summary:hover, .tracking[open] summary { color: var(--text); }
+  .tracking .tracking-body { padding-top: 10px; font-family: "Inter", system-ui, sans-serif; font-size: 12.5px; letter-spacing: 0; text-transform: none; }
+  .tracking p { margin: 0 0 6px; }
+  .tracking ul { margin: 6px 0 0; padding-left: 18px; }
+  .two.single { grid-template-columns: 1fr; }
 
   /* "About the numbers" */
   .about { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-top: 0; }
@@ -618,7 +630,9 @@
   const stageKey = (s) => (s || "").includes("pre") ? "prealpha" : (s || "").startsWith("alpha") ? "alpha" : (s || "").replace(/[^a-z]/g, "");
   const twoTone = (name) => {
     const m = String(name).match(/^(.*?)(Craft)$/i);
-    return m ? `<span class="w">${esc(m[1])}</span><span class="c">${esc(m[2])}</span>` : esc(name);
+    if (m) return `<span class="w">${esc(m[1])}</span><span class="c">${esc(m[2])}</span>`;
+    const prefix = String(name).match(/^(Craft)( .+)$/i);
+    return prefix ? `<span class="c">${esc(prefix[1])}</span><span class="w">${esc(prefix[2])}</span>` : esc(name);
   };
   const chipNo = (n) => String(n ?? "").padStart(2, "0");
   const plural = (n, w, pl) => `${nf(n)} ${n === 1 ? w : (pl || w + "s")}`;
@@ -629,9 +643,9 @@
   const ghUrl = (u) => /^https:\/\/github\.com\//.test(String(u || "")) ? u : null;  // links from data: GitHub only
   const repoUrl = (a) => ghUrl(a.repo_url) || `https://github.com/storytold/${encodeURIComponent(a.id)}`;
   const commitUrl = (a, sha) => `${repoUrl(a)}/commit/${encodeURIComponent(sha)}`;
-  const readinessNote = (a) => a.metric_status === "roadmap_missing" ? "No roadmap published yet. Releases and activity are tracked."
-    : a.metric_status === "unavailable" ? "The current readiness estimate could not be checked."
-    : "No comparable readiness estimate reported. Releases and activity are tracked.";
+  const readinessNote = (a) => a.metric_status === "roadmap_missing" ? "No published roadmap yet."
+    : a.metric_status === "unavailable" ? "Latest estimate unavailable."
+    : "No comparable estimate in the roadmap.";
   const metricText = (v) => v == null ? "Not reported" : `${pct(v)} %`;
 
   function cells(win) {
@@ -908,13 +922,11 @@
     const buzzTip = `Buzzing: code changes on at least 5 of the last 7 days and a high activity score. Activity is effort, not progress.\n${all.filter((a) => a.activity?.level === "buzzing").map((a) => a.name).join(", ") || "None right now."}`;
 
     const errors = (ov.errors || []).length ? `<div class="errors">${ov.errors.map(esc).join("<br>")}</div>` : "";
-    const banner = (ov.recent_additions || []).map((r) => `
-      <a class="banner" href="#/app/${esc(r.id)}">
-        <span class="mono">New app</span>
-        <strong>${esc(r.name)}</strong>
-        <span class="muted">${r.adobe && r.adobe !== "Unknown" ? `Reference ${esc(r.adobe)} · ` : ""}found ${dateEN(r.added)} · releases and activity tracked</span>
-        <span class="mono">Open →</span>
-      </a>`).join("");
+    const additions = (ov.recent_additions || []).map((r) => {
+      const a = all.find((a) => a.id === r.id);
+      return `<a href="#/app/${esc(r.id)}" style="--c:${a?.color || "#aaa"}" title="Added ${esc(dateEN(r.added))}">${esc(r.name)}</a>`;
+    }).join("");
+    const additionsHTML = additions ? `<section class="additions" aria-label="New apps"><span class="mono">New apps</span><nav aria-label="Recently added apps">${additions}</nav></section>` : "";
     const fresh = all.filter((a) => milestoneState(a.milestone)?.kind === "fresh").map((a) => `
       <a class="ms-banner" href="#/app/${esc(a.id)}" style="--c:${a.color}">
         <span class="mono" style="color:var(--gold)">★ Milestone</span>
@@ -924,8 +936,7 @@
       </a>`).join("");
 
     app.innerHTML = `
-      ${errors}${fresh}${banner}
-      ${(ov.discovery?.candidates || []).length ? `<details class="note"><summary>App candidates awaiting publication (${ov.discovery.candidates.length})</summary><ul>${ov.discovery.candidates.map((a) => `<li><a href="https://github.com/${esc(a.repo)}" target="_blank" rel="noopener">${esc(a.id)}</a>: ${esc(a.reason)}</li>`).join("")}</ul></details>` : ""}
+      ${errors}${fresh}
       <section class="hero">
         <section>
           <div class="eyebrow mono muted">
@@ -940,7 +951,7 @@
           <p>How close each app is to replacing the product it rebuilds, how actively it's being built, and what changed last.</p>
           <p class="mono" id="hero-checked" style="margin-top:14px;font-size:10.5px;max-width:none">${heroChecked()}</p>
           <div class="stats">
-            <div><div class="v" title="${esc(avgTip)}">${pct(avg)} %</div><div class="l">Average ready for real work · ${withFull.length} of ${all.length} apps report it</div></div>
+            <div><div class="v" title="${esc(avgTip)}">${pct(avg)} %</div><div class="l">Average ready for real work</div></div>
             <div><div class="v" title="${esc(waveTip)}">${wave ? nf(wave.changes) : "–"}</div><div class="l">${wave ? `Changes in the last release wave, ${dayUTC(wave.day, false)}` : "No release wave yet"}</div></div>
             <div><div class="v" title="${esc(buzzTip)}">${buzzing}<span class="muted" style="font-size:18px"> / ${all.length}</span></div><div class="l">Apps buzzing now</div></div>
           </div>
@@ -957,6 +968,7 @@
         </section>
       </section>
       ${latestStrip(ov)}
+      ${additionsHTML}
 
       <div class="toolbar">
         <div class="seg" role="group" aria-label="Filter by stage">
@@ -1025,7 +1037,12 @@
     introAnimation();
 
     status.innerHTML = `<span>Checked every 30 min · data changed ${esc(stamp(ov.generated_at))}</span>
-      <span>${all.length} apps · ${ov.discovery?.tracked_from_catalog ?? "–"} / ${ov.discovery?.catalog_count ?? "–"} catalog apps tracked · official and community repositories</span>`;
+      <span>${all.length} apps tracked</span>
+      <details class="tracking"><summary>Tracking details</summary><div class="tracking-body">
+        <p>${ov.discovery?.tracked_from_catalog ?? "–"} of ${ov.discovery?.catalog_count ?? "–"} apps in the official and launcher directories are tracked.</p>
+        <p>${withFull.length} apps report a comparable readiness estimate. Only those values count toward the average.</p>
+        ${(ov.discovery?.candidates || []).length ? `<p>Awaiting publication:</p><ul>${ov.discovery.candidates.map((a) => `<li><a href="https://github.com/${esc(a.repo)}" target="_blank" rel="noopener">${esc(a.id)}</a> — ${esc(a.reason)}</li>`).join("")}</ul>` : ""}
+      </div></details>`;
   }
 
   const byName = (a, b) => a.name.localeCompare(b.name, "en");
@@ -1089,7 +1106,10 @@
           ${a.is_new ? `<span class="tag new">New app</span>` : ""}
           ${milestoneTag(a.milestone, true)}
         </div>
-        <div class="full">
+        ${shown == null ? `<div class="unscored" title="${esc(readinessNote(a))}">
+          <span class="mono">${M.label}</span><strong>Not reported</strong>
+          <span class="reason">${esc(readinessNote(a))}</span>
+        </div>` : `<div class="full">
           <div class="full-num" data-v="${shown ?? ""}" title="${esc(shown == null ? readinessNote(a) : state.metric === "ready"
             ? `Ready for real work: how much of ${a.adobe} a professional could replace with ${a.name} in daily work, the project's own estimate.${a.full_hours ? `\nAbout ${hours(a.full_hours)} of agent work to ~95 %.` : ""}`
             : `Product parity: how many of ${a.adobe}'s features exist in ${a.name}, ready or not (the roadmap's feature breadth).`)}">${pct(shown)}${shown == null ? "" : "<span>%</span>"}</div>
@@ -1099,6 +1119,7 @@
         <div class="pline">${state.metric === "ready" ? parityLine(a)
           : `<span>Ready for real work <b>${metricText(a.full_pct)}</b></span>${a.parity?.last_change ? `<span class="${a.parity.last_change.delta > 0 ? "up" : "down"}">${pp(a.parity.last_change.delta)} ${when(a.parity.last_change.ts)}</span>` : "<span></span>"}`}</div>
         ${hintBlock(a.parity || {})}
+        `}
         <div class="aline">
           ${level(act)}
           <span title="Code changes per day, last 14 days">${act ? cells(act.window) : ""}</span>
@@ -1503,6 +1524,9 @@
     const hist = d.history || [];
     const latest = hist[hist.length - 1] || {};
     const fullNow = s.full_pct;
+    const hasMetrics = Object.values(m).some((v) => v?.pct != null) || hist.some((h) => h.full_pct != null || h.breadth_pct != null);
+    let sectionNumber = 0;
+    const section = (label) => `${chipNo(++sectionNumber)} / ${label}`;
     const par = d.parity || s.parity || {};
     const act = d.activity;
     const rels = d.releases || [];
@@ -1573,7 +1597,7 @@
         <span class="chip">${chipNo(s.order)}</span>
         <div>
           <h1 class="name">${twoTone(d.name)}</h1>
-          <div class="target">${p.target || (d.adobe && d.adobe !== "Unknown") ? `Reference: ${esc(p.target || d.adobe)}` : esc(d.category)}</div>
+          <div class="target">${d.adobe && d.adobe !== "Unknown" ? `Reference: ${esc(p.target || d.adobe)}` : esc(d.category)}</div>
         </div>
         <div class="tags mono">
           ${d.kind === "community" ? `<span class="tag plain">Community app</span>` : ""}
@@ -1587,7 +1611,7 @@
 
       <section class="now" aria-label="Latest updates">${nowHTML}</section>
 
-      <section class="hero-detail">
+      ${hasMetrics ? `<section class="hero-detail">
         <div>
           <div class="mono muted">Ready for real work</div>
           <div class="big-detail" style="margin-top:14px">${pct(fullNow)}${fullNow == null ? "" : "<span>%</span>"}</div>
@@ -1615,10 +1639,10 @@
           <div id="pchart">${lineChart(hist, c, state.chartScale, thr, state.metric)}</div>
           <p class="note">Dots mark new values, and the line holds between them. "Fit" zooms the axis to the data and says so. "0–100" shows the whole scale. ${par.tracked_since ? `The roadmap first reported a value on ${dateEN(par.tracked_since)}.` : "A chart appears when the project reports a comparable estimate."}</p>
         </div>
-      </section>
+      </section>` : ""}
 
       <section class="panel" style="border-bottom:0">
-        <div class="section-title mono"><b>01 / Activity</b>${level(act)}</div>
+        <div class="section-title mono"><b>${section("Activity")}</b>${level(act)}</div>
         <div class="body">
           ${activityChart(act, c)}
           <div class="afig">
@@ -1633,7 +1657,7 @@
 
       <div class="two">
         <section class="panel">
-          <div class="section-title mono"><b>02 / Updates</b>
+          <div class="section-title mono"><b>${section("Updates")}</b>
             <span class="filters" role="group" aria-label="Show updates">
               ${[["all", "All"], ["parity", "Ready"], ["areas", "Areas"], ["roadmap", "Roadmap"], ["release", "Releases"], ["code", "Code"]]
                 .map(([k, l]) => `<button class="mono ${k === "all" ? "on" : ""}" data-tl="${k}" aria-pressed="${k === "all"}">${l}</button>`).join("")}
@@ -1643,14 +1667,14 @@
         </section>
         <div class="stack">
           <section class="panel">
-            <div class="section-title mono"><b>03 / Releases</b><span>${medianGap != null ? `about every ${plural(Math.max(1, Math.round(medianGap)), "day")}` : ""}</span></div>
+            <div class="section-title mono"><b>${section("Releases")}</b><span>${medianGap != null ? `about every ${plural(Math.max(1, Math.round(medianGap)), "day")}` : ""}</span></div>
             <div class="body">
               ${relRows ? `<table class="rel"><thead><tr><th>Version</th><th>Date</th><th>Type</th><th class="r">Changes</th><th class="hide-sm">Platforms</th></tr></thead><tbody>${relRows}</tbody></table>
                 <p class="note">Type is the version step from the previous stable release. Changes are the pull requests listed in the release notes.</p>` : `<p class="muted">No releases yet.</p>`}
             </div>
           </section>
-          <section class="panel">
-            <div class="section-title mono"><b>04 / Audiences</b><span></span></div>
+          ${hasMetrics ? `<section class="panel">
+            <div class="section-title mono"><b>${section("Audiences")}</b><span></span></div>
             <div class="body">
               ${aud("full", "Full target")}
               ${aud("mainstream", "Mainstream professional")}
@@ -1658,34 +1682,34 @@
               ${m.breadth ? aud("breadth", "Feature breadth") : ""}
               ${!m.full ? `<p class="muted">No audience values found.</p>` : ""}
             </div>
-          </section>
+          </section>` : ""}
         </div>
       </div>
 
-      <div class="two">
+      ${hasMetrics || (p.dimensions || []).length || (p.features || []).length ? `<div class="two">
         <section class="panel">
-          <div class="section-title mono"><b>05 / Dimensions</b><span>${(p.dimensions || []).length} areas</span></div>
+          <div class="section-title mono"><b>${section("Dimensions")}</b><span>${(p.dimensions || []).length} areas</span></div>
           <div class="body">${rows(p.dimensions) || '<p class="muted">No dimensions found.</p>'}</div>
         </section>
         <section class="panel">
-          <div class="section-title mono"><b>06 / Features</b><span>${(p.features || []).length} areas · ready</span></div>
+          <div class="section-title mono"><b>${section("Features")}</b><span>${(p.features || []).length} areas · ready</span></div>
           <div class="body">${areaRows(p.features) || '<p class="muted">No feature table found.</p>'}</div>
         </section>
-      </div>
+      </div>` : ""}
 
-      <div class="two">
-        <section class="panel">
-          <div class="section-title mono"><b>07 / Up next</b><span>from the roadmap</span></div>
+      ${hasMetrics || upcoming || feed ? `<div class="two${!hasMetrics && (!upcoming || !feed) ? " single" : ""}">
+        ${hasMetrics || upcoming ? `<section class="panel">
+          <div class="section-title mono"><b>${section("Up next")}</b><span>from the roadmap</span></div>
           <div class="body">${upcoming ? `<ul class="plain up-list">${upcoming}</ul>` : `<p class="muted">No entries.</p>`}</div>
-        </section>
-        <section class="panel">
-          <div class="section-title mono"><b>08 / Progress log</b><span>from the roadmap</span></div>
+        </section>` : ""}
+        ${hasMetrics || feed ? `<section class="panel">
+          <div class="section-title mono"><b>${section("Progress log")}</b><span>from the roadmap</span></div>
           <div class="body">${feed ? `<ul class="plain feed">${feed}</ul>` : `<p class="muted">No progress log found.</p>`}</div>
-        </section>
-      </div>
+        </section>` : ""}
+      </div>` : ""}
 
       <section class="panel" style="border-top:0">
-        <div class="section-title mono"><b>09 / Sources</b><span>data changed ${esc(stamp(d.updated_at))}</span></div>
+        <div class="section-title mono"><b>${section("Sources")}</b><span>data changed ${esc(stamp(d.updated_at))}</span></div>
         <div class="links mono">
           ${d.roadmap_url ? `<a href="${esc(d.roadmap_url)}" target="_blank" rel="noopener">Roadmap ↗</a>` : ""}
           <a href="${esc(d.repo_url)}" target="_blank" rel="noopener">Repository ↗</a>
@@ -1723,7 +1747,7 @@
     celebrate(app);
 
     status.innerHTML = `<span>${esc(d.name)} · roadmap dated ${dateEN(p.last_updated || s.roadmap?.self_reported)}</span>
-      <span>${plural(hist.length, "roadmap revision")} · ${plural(par.changes ?? 0, "value change")}</span>`;
+      <span>${plural(d.roadmap?.revisions ?? hist.length, "roadmap revision")} · ${plural(par.changes ?? 0, "value change")}</span>`;
   }
 
   /* ---------- Routing ---------- */
