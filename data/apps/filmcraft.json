@@ -440,18 +440,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 13.6,
-    "active_days_7d": 5,
-    "changes_7d": 81,
-    "changes_14d": 253,
+    "score": 15.9,
+    "active_days_7d": 6,
+    "changes_7d": 85,
+    "changes_14d": 257,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-02T05:38:18Z",
-      "commit": "68919ed",
-      "commit_full": "68919ed87aa6a097a4d21414ec7c438883f5fe22",
-      "subject": "Read decades like 1990s as plural years in TTS normalizer (#3930)"
+      "ts": "2026-11-03T02:17:11Z",
+      "commit": "5163f25",
+      "commit_full": "5163f259b5aba0526603c81e8be53e60ec44f1ac",
+      "subject": "apv: size the auxiliary alpha frame only after its tiles decode (#4109)"
     },
-    "last_commit_ts": "2026-11-03T00:25:46Z",
+    "last_commit_ts": "2026-11-03T02:17:11Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       11,
@@ -467,7 +467,7 @@
       5,
       30,
       3,
-      0
+      4
     ],
     "days": [
       {
@@ -1057,9 +1057,22 @@
       },
       {
         "d": "2026-11-03",
-        "code": 0,
+        "code": 4,
         "other": 1,
-        "samples": []
+        "samples": [
+          {
+            "commit": "5163f25",
+            "subject": "apv: size the auxiliary alpha frame only after its tiles decode (#4109)"
+          },
+          {
+            "commit": "e90bb50",
+            "subject": "dnx: cap decoded frame memory and reject repeated scan line indices (#4101)"
+          },
+          {
+            "commit": "3ef97d8",
+            "subject": "avi: hold child chunks to their container so lists cannot overlap (#4106)"
+          }
+        ]
       }
     ]
   },
@@ -1616,5 +1629,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T01:32:32+00:00"
+  "updated_at": "2026-11-03T02:35:58+00:00"
 }
