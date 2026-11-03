@@ -353,18 +353,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.0,
+    "score": 21.2,
     "active_days_7d": 6,
-    "changes_7d": 155,
-    "changes_14d": 325,
+    "changes_7d": 156,
+    "changes_14d": 326,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-11-03T02:33:55Z",
-      "commit": "d180b28",
-      "commit_full": "d180b28ef61ca3a5a7dd796611b0b218249ea77a",
-      "subject": "Multilines: find each segment's usable neighbour direction in linear time (#2679)"
+      "ts": "2026-11-03T03:05:13Z",
+      "commit": "f691d0b",
+      "commit_full": "f691d0b349e6f08f1daaae69a5cc883b5e75bc1f",
+      "subject": "DXF: read up to 100 million group codes, or a set limit, without running out of memory silently (#1976) (#2683)"
     },
-    "last_commit_ts": "2026-11-03T02:33:55Z",
+    "last_commit_ts": "2026-11-03T03:05:13Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       4,
@@ -380,7 +380,7 @@
       43,
       17,
       39,
-      10
+      11
     ],
     "days": [
       {
@@ -799,9 +799,13 @@
       },
       {
         "d": "2026-11-03",
-        "code": 10,
+        "code": 11,
         "other": 2,
         "samples": [
+          {
+            "commit": "f691d0b",
+            "subject": "DXF: read up to 100 million group codes, or a set limit, without running out of memory silently (#1976) (#2683)"
+          },
           {
             "commit": "d180b28",
             "subject": "Multilines: find each segment's usable neighbour direction in linear time (#2679)"
@@ -809,10 +813,6 @@
           {
             "commit": "2e97612",
             "subject": "Autosave: keep every folder's lock, and don't let a failure hide or wait (#2676)"
-          },
-          {
-            "commit": "c956baa",
-            "subject": "constraints: share geometry preparation across an operation and budget spline rebuilds (#2677)"
           }
         ]
       }
@@ -1302,5 +1302,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T02:36:19+00:00"
+  "updated_at": "2026-11-03T03:37:32+00:00"
 }
