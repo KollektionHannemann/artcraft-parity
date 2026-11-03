@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/wordcraft",
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
-  "latest_commit": "5702fa0",
-  "latest_commit_date": "2026-11-02T21:23:33-05:00",
-  "latest_message": "Language packs 2: 75 packs and the merged craft-proof (compounding, en-AU); #5208 review follow-ups (#5224)",
+  "latest_commit": "dd2a651",
+  "latest_commit_date": "2026-11-02T22:47:03-05:00",
+  "latest_message": "References: Remove and Replace Table of Contents treat a title above a section break as Word does (#5152)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -329,6 +329,10 @@
         "text": "Language packs: language-packs-2 is published and WordCraft pins its index: 75 languages, adding Danish, German (Germany, Austria, Switzerland), Esperanto, Estonian, Persian, Croatian, Hungarian, Norwegian (Bokmål, Nynorsk), Dutch (#4145, #2505) and Swedish (Sweden, Finland), which need craft-proof's flag-based compounding (storytold/craft-libs#497, pinned). English (Australia) is checked against SCOWL's en-AU list as well as en-GB's (storytold/craft-libs#496). Mongolian and Thai stay hidden. Readiness unchanged."
       },
       {
+        "date": "2026-11-03",
+        "text": "A password-protected file named on the command line (double-clicked in the file manager) asks for its password when the first blank document was replaced because File › Options chose a region; the window now follows that replacement at once, so the first frame no longer takes it for a document switch and drops the Password box (#5299)"
+      },
+      {
         "date": "2026-11-02",
         "text": "Language packs (CP4.4): craft-i18n's first pack release, language-packs-1, is published and WordCraft pins its index (sha256): 61 languages install from File › Options › Language, among them Lithuanian (#4707), Romanian (#3438), Catalan (#2895, #4947), French (#1325), Greek (#2561), Slovak (#3806), Serbian (#4968) and Latvian (#4438). Dutch (#4145, #2505), German and the other compounding languages wait on craft-proof engine support. Readiness unchanged."
       },
@@ -383,6 +387,10 @@
       {
         "date": "2026-10-31",
         "text": "DOCX: a paragraph naming a style the file doesn't define is formatted as Normal, as in Word, not with the document defaults alone, so a Pandoc footer naming an undefined Footer style is as tall as Word's and no longer pushes the last paragraph to the next page (#5077). Readiness unchanged."
+      },
+      {
+        "date": "2026-10-31",
+        "text": "Table of contents: with Word's table over entries in columns, where the title sits in a one-column section above a continuous break, Insert Table of Contents with new settings keeps the title above the break and the entries in their columns (the new title went under the break, into the columns), and Remove Table of Contents takes the title, the blank paragraph and its break with the entries, as Word does (observed in Word for Mac); a paragraph of another style above the break stays (#4041)."
       },
       {
         "date": "2026-10-31",
@@ -475,14 +483,6 @@
       {
         "date": "2026-10-27",
         "text": "File › Options › Proofing › AutoCorrect Options opens with no document open (#4585). On the Start screen, or after closing the last document, the button did nothing: AutoCorrect wasn't among the commands allowed without a document. Its options are user preferences, so changes made there are kept for the next document."
-      },
-      {
-        "date": "2026-10-27",
-        "text": "Connector rerouting indexes laid-out object positions once per batch, preserving page hints, first-match order and same-page glue; synthetic equivalence, geometry and scaling regressions (#3631); routing policy and readiness estimates unchanged"
-      },
-      {
-        "date": "2026-10-26",
-        "text": "Spelling & Grammar opens a right-side Proofing task pane observed in Word for Windows: sentence context, directly clickable suggestion cards and ignore/dictionary actions. Current-story traversal and stale-target checks are retained. Right-click keeps its compact menu."
       }
     ]
   },
@@ -491,7 +491,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 11,
     "releases_since_capped": false,
-    "revisions_since": 457,
+    "revisions_since": 459,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -516,39 +516,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 461,
-    "revisions_7d": 43,
+    "revisions": 463,
+    "revisions_7d": 45,
     "last_revision": {
-      "ts": "2026-11-03T02:23:33Z",
+      "ts": "2026-11-03T03:47:03Z",
       "kind": "content",
-      "commit": "5702fa0",
-      "commit_full": "5702fa08b25453fd9728c6a817848588b546dd9f",
-      "message": "Language packs 2: 75 packs and the merged craft-proof (compounding, en-AU); #5208 review follow-ups (#5224)"
+      "commit": "dd2a651",
+      "commit_full": "dd2a6510932b92c40f79cef0ada920dffda8851b",
+      "message": "References: Remove and Replace Table of Contents treat a title above a section break as Word does (#5152)"
     },
     "last_update": {
-      "ts": "2026-11-03T02:23:33Z",
+      "ts": "2026-11-03T03:47:03Z",
       "kind": "content",
-      "commit": "5702fa0",
-      "commit_full": "5702fa08b25453fd9728c6a817848588b546dd9f",
-      "message": "Language packs 2: 75 packs and the merged craft-proof (compounding, en-AU); #5208 review follow-ups (#5224)"
+      "commit": "dd2a651",
+      "commit_full": "dd2a6510932b92c40f79cef0ada920dffda8851b",
+      "message": "References: Remove and Replace Table of Contents treat a title above a section break as Word does (#5152)"
     },
     "self_reported": "2026-11-03"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.7,
+    "score": 19.5,
     "active_days_7d": 7,
-    "changes_7d": 99,
-    "changes_14d": 269,
+    "changes_7d": 103,
+    "changes_14d": 273,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-11-03T03:24:55Z",
-      "commit": "e00ff04",
-      "commit_full": "e00ff04d4a4d1de8d9c1412b4e8db98915a4f6b8",
-      "subject": "Fonts: refuse WOFF2 collections whose rebuilt directories are huge or list a table twice (#5332)"
+      "ts": "2026-11-03T04:09:38Z",
+      "commit": "ffb155a",
+      "commit_full": "ffb155a0321bba08da495efda66495104c1c8b9a",
+      "subject": "ci: the font-store sanitising test waits out an install another test's window moved onto the engine's thread"
     },
-    "last_commit_ts": "2026-11-03T03:24:55Z",
+    "last_commit_ts": "2026-11-03T04:09:38Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       14,
@@ -564,7 +564,7 @@
       17,
       14,
       11,
-      5
+      9
     ],
     "days": [
       {
@@ -1044,20 +1044,20 @@
       },
       {
         "d": "2026-11-03",
-        "code": 5,
+        "code": 9,
         "other": 1,
         "samples": [
           {
-            "commit": "e00ff04",
-            "subject": "Fonts: refuse WOFF2 collections whose rebuilt directories are huge or list a table twice (#5332)"
+            "commit": "ffb155a",
+            "subject": "ci: the font-store sanitising test waits out an install another test's window moved onto the engine's thread"
           },
           {
-            "commit": "220994d",
-            "subject": "Fonts: cut names read from a font's name table to 128 characters (#5333)"
+            "commit": "dd2a651",
+            "subject": "References: Remove and Replace Table of Contents treat a title above a section break as Word does (#5152)"
           },
           {
-            "commit": "ab0020d",
-            "subject": "Pictures: refuse a TIFF whose first image names its compression twice (#5337)"
+            "commit": "bcbc861",
+            "subject": "#5290: Page Up/Down move by a page in Outline, Draft and Web Layout (#5300)"
           }
         ]
       }
@@ -11889,7 +11889,53 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "ab5ee42",
+      "commit_full": "ab5ee4204956153371736d8c53f94295f009607c",
+      "commit_date": "2026-11-02T22:43:19-05:00",
+      "ts": "2026-11-03T03:43:19Z",
+      "message": "A command line file's Password box survives the startup document's replacement (#5334)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4> Last reviewed: 2026-10-10",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "dd2a651",
+      "commit_full": "dd2a6510932b92c40f79cef0ada920dffda8851b",
+      "commit_date": "2026-11-02T22:47:03-05:00",
+      "ts": "2026-11-03T03:47:03Z",
+      "message": "References: Remove and Replace Table of Contents treat a title above a section break as Word does (#5152)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4> Last reviewed: 2026-10-10",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T03:37:19+00:00"
+  "updated_at": "2026-11-03T04:38:03+00:00"
 }

@@ -458,18 +458,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 12.1,
+    "score": 13.6,
     "active_days_7d": 5,
-    "changes_7d": 72,
-    "changes_14d": 145,
+    "changes_7d": 76,
+    "changes_14d": 149,
     "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-03T02:30:40Z",
-      "commit": "1c35010",
-      "commit_full": "1c350101bc494117884d0d3eefd43eb91c937d28",
-      "subject": "clap-host tests: load plugins only from a freshly created private temp directory (#1295)"
+      "ts": "2026-11-03T04:33:19Z",
+      "commit": "da02c19",
+      "commit_full": "da02c19fcca8fbcc49d66c957e5efcc67a63befe",
+      "subject": "Bundles: refuse entries that share their data (#1303)"
     },
-    "last_commit_ts": "2026-11-03T02:30:40Z",
+    "last_commit_ts": "2026-11-03T04:33:19Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
       1,
@@ -485,7 +485,7 @@
       23,
       0,
       6,
-      1
+      5
     ],
     "days": [
       {
@@ -900,12 +900,20 @@
       },
       {
         "d": "2026-11-03",
-        "code": 1,
+        "code": 5,
         "other": 1,
         "samples": [
           {
-            "commit": "1c35010",
-            "subject": "clap-host tests: load plugins only from a freshly created private temp directory (#1295)"
+            "commit": "da02c19",
+            "subject": "Bundles: refuse entries that share their data (#1303)"
+          },
+          {
+            "commit": "64540f1",
+            "subject": "Mixer: compute cyclic aux depths in one pass per hop (#1306)"
+          },
+          {
+            "commit": "0af1ad9",
+            "subject": "Mixer: match automation lanes to insert parameters in one merge (#1299)"
           }
         ]
       }
@@ -1648,5 +1656,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T02:36:15+00:00"
+  "updated_at": "2026-11-03T04:38:05+00:00"
 }

@@ -440,18 +440,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.9,
+    "score": 16.4,
     "active_days_7d": 6,
-    "changes_7d": 85,
-    "changes_14d": 257,
+    "changes_7d": 87,
+    "changes_14d": 259,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-03T02:17:11Z",
-      "commit": "5163f25",
-      "commit_full": "5163f259b5aba0526603c81e8be53e60ec44f1ac",
-      "subject": "apv: size the auxiliary alpha frame only after its tiles decode (#4109)"
+      "ts": "2026-11-03T03:51:12Z",
+      "commit": "8b59e85",
+      "commit_full": "8b59e853b61b938a987c0811df930ea22a255b0f",
+      "subject": "captions: escape a TTML cue's unclosed '<' tail in one pass (#4105)"
     },
-    "last_commit_ts": "2026-11-03T02:17:11Z",
+    "last_commit_ts": "2026-11-03T03:51:12Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       11,
@@ -467,7 +467,7 @@
       5,
       30,
       3,
-      4
+      6
     ],
     "days": [
       {
@@ -1057,20 +1057,20 @@
       },
       {
         "d": "2026-11-03",
-        "code": 4,
+        "code": 6,
         "other": 1,
         "samples": [
           {
+            "commit": "8b59e85",
+            "subject": "captions: escape a TTML cue's unclosed '<' tail in one pass (#4105)"
+          },
+          {
+            "commit": "4a23548",
+            "subject": "web: load only a same-origin http(s) app in the WebCodecs read-error harness (#4103)"
+          },
+          {
             "commit": "5163f25",
             "subject": "apv: size the auxiliary alpha frame only after its tiles decode (#4109)"
-          },
-          {
-            "commit": "e90bb50",
-            "subject": "dnx: cap decoded frame memory and reject repeated scan line indices (#4101)"
-          },
-          {
-            "commit": "3ef97d8",
-            "subject": "avi: hold child chunks to their container so lists cannot overlap (#4106)"
           }
         ]
       }
@@ -1629,5 +1629,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T02:35:58+00:00"
+  "updated_at": "2026-11-03T04:37:41+00:00"
 }

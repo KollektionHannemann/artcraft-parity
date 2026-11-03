@@ -7,9 +7,9 @@
   "added": null,
   "repo_url": "https://github.com/storytold/designcraft",
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
-  "latest_commit": "71d8a68",
-  "latest_commit_date": "2026-11-02T19:03:07+01:00",
-  "latest_message": "Fix parent page resizing in panels and Page Tool (#1654)",
+  "latest_commit": "68ce4b6",
+  "latest_commit_date": "2026-11-02T23:26:01-05:00",
+  "latest_message": "M6: EPUB Export Options names a cover image file (#1934) (#2149)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -307,6 +307,22 @@
     ],
     "progress": [
       {
+        "date": "2026-11-03",
+        "text": "· type.char says when the font it applies isn't available (#2189): it returns {\"warnings\": [\"Missing font: Courier Prime (using Source Sans 3)\"]}, or Missing font style: … for a style the family doesn't have, in preflight's words. The font is still applied, as before, so Find Font and preflight list it. A script that asked for a font the machine doesn't have exported in the substitute with no word about it. No readiness percentage change."
+      },
+      {
+        "date": "2026-11-02",
+        "text": "· EPUB Export Options names a cover image file (PNG or JPEG, typed or chosen with Choose…) for the reflowable export; left empty, the first page stays the cover (#1934). No readiness percentage change."
+      },
+      {
+        "date": "2026-11-02",
+        "text": "· The Pen shows the segment a dragged smooth point shapes while it is dragged, and its rubber band curves out of a smooth point's direction line (#1438, first item). No readiness percentage change."
+      },
+      {
+        "date": "2026-11-02",
+        "text": "· A Custom text variable defined with a number (a typed 2026 reaches the command as one) shows its digits instead of nothing (#2093, first item). No readiness percentage change."
+      },
+      {
         "date": "2026-11-02",
         "text": "· Windows: the custom title bar window stays borderless, so the content is no longer drawn offset by the caption and border (black bars at the top and left, clicks landing off target). The workaround goes when winit carries the fix (storytold/winit#17). No readiness percentage change."
       },
@@ -320,7 +336,7 @@
       },
       {
         "date": "2026-10-31",
-        "text": "· A .designcraft file opened from bytes (file.openBytes with its file name, as a browser or host passes it) is titled without the extension, as an IDML file opened that way is. Saving it in the browser downloaded Brochure.designcraft.designcraft, and the File Name variable showed the doubled name. Browser Open and Drop pass the full file name, so only the engine removes the extension and a repeated suffix is kept in the title. No readiness percentage change."
+        "text": "· A .designcraft file opened from bytes (file.openBytes with its file name, as a browser or host passes it) is titled without the extension, as an IDML file opened that way is. Saving it in the browser downloaded Brochure.designcraft.designcraft, and the File Name variable showed the doubled name. Browser Open and Drop pass the full file name, so only the engine removes the extension and a repeated suffix is kept in the title. Native and IDML content takes priority over a misleading .indd or .indt extension. No readiness percentage change."
       },
       {
         "date": "2026-10-30",
@@ -408,6 +424,10 @@
       },
       {
         "date": "2026-10-24",
+        "text": "· Linux file managers show a .designcraft file's first page instead of a blank icon: the packages install a freedesktop thumbnailer (share/thumbnailers/ai.storyteller.designcraft.thumbnailer) that runs designcraft-cli thumbnail FILE OUT.png SIZE, which writes the preview.png saving already puts in the file, fitted to the size asked for and never enlarged. A file without a preview fails, so the file manager keeps the file type's icon (#1782). No readiness percentage change."
+      },
+      {
+        "date": "2026-10-24",
         "text": "· Optical Margin Alignment and hanging punctuation apply to lines with a tab or a right indent tab, as both composers already measured them: the edge glyphs hang, and tab stops stay where they are. Such a line was set without the hang: a justified line that fit only because its period or closing quote hangs had its word spaces squeezed to make up for it, and text after a right indent tab stopped at the measure instead of hanging. No readiness percentage change."
       },
       {
@@ -445,26 +465,6 @@
       {
         "date": "2026-10-24",
         "text": "· A guide pulled out of a ruler keeps the resize cursor across it until it is dropped; the tool's cursor took over as soon as the pointer left the ruler, so the drag looked as if it had stopped. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "· Anchored text frames, such as marginal notes, compose where their host story places them: they align to the baseline grid at that position, and page-number markers and spine-relative alignment inside them read the host's page. They composed against a grid measured from their stored position and on no page, so a note set to Only Align First Line to Grid could sit a fraction of a line off the body text's grid line. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "· Tables: a gradient swatch in a cell fill draws as a gradient on the canvas and in PDF, in one gradient space for the whole table, so it runs across cells without restarting. Cells showed the gradient's first stop as a solid colour. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "· New documents start with Hyphenate Capitalized Words, Hyphenate Last Word and Hyphenate Across Column off in [Basic Paragraph], as in InDesign. Opened and imported files keep the values they carry. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "· The baseline grid's Relative To setting applies: with Top Margin, the grid starts at each page's own top margin in text composition, on the canvas and for snapping. It started at the page top, so grid-aligned text sat on the wrong lines and a page could fit one line fewer. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "· Custom-positioned anchored objects honour Relative to Spine (anchored.options {spineRelative}, IDML SpineRelative): the settings describe a left-hand page and mirror on a right-hand page, so marginal notes stay in the outside margin on both pages of a spread. On right-hand pages they took the left-hand placement and landed in the inside margin, across the spine or over the body text. No readiness percentage change."
       }
     ]
   },
@@ -473,7 +473,7 @@
     "value_since": "2026-10-10T18:09:17Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 172,
+    "revisions_since": 178,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -481,39 +481,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 173,
-    "revisions_7d": 27,
+    "revisions": 179,
+    "revisions_7d": 33,
     "last_revision": {
-      "ts": "2026-11-02T18:03:07Z",
+      "ts": "2026-11-03T04:26:01Z",
       "kind": "content",
-      "commit": "71d8a68",
-      "commit_full": "71d8a68eae2fdba64dff8efe9061e217aa508f51",
-      "message": "Fix parent page resizing in panels and Page Tool (#1654)"
+      "commit": "68ce4b6",
+      "commit_full": "68ce4b63d6cb0077e96bb7d67043e5ac154ce1bb",
+      "message": "M6: EPUB Export Options names a cover image file (#1934) (#2149)"
     },
     "last_update": {
-      "ts": "2026-11-02T18:03:07Z",
+      "ts": "2026-11-03T04:26:01Z",
       "kind": "content",
-      "commit": "71d8a68",
-      "commit_full": "71d8a68eae2fdba64dff8efe9061e217aa508f51",
-      "message": "Fix parent page resizing in panels and Page Tool (#1654)"
+      "commit": "68ce4b6",
+      "commit_full": "68ce4b63d6cb0077e96bb7d67043e5ac154ce1bb",
+      "message": "M6: EPUB Export Options names a cover image file (#1934) (#2149)"
     },
     "self_reported": "2026-11-01"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.9,
-    "active_days_7d": 6,
-    "changes_7d": 85,
-    "changes_14d": 254,
+    "score": 19.2,
+    "active_days_7d": 7,
+    "changes_7d": 104,
+    "changes_14d": 273,
     "housekeeping_7d": 10,
     "last_code_change": {
-      "ts": "2026-11-02T18:33:00Z",
-      "commit": "81cca51",
-      "commit_full": "81cca513ba3120900b7f81a05df48b5672ee9a7b",
-      "subject": "Restore GNOME Wayland window controls without bundled fonts (#1072)"
+      "ts": "2026-11-03T04:26:01Z",
+      "commit": "68ce4b6",
+      "commit_full": "68ce4b63d6cb0077e96bb7d67043e5ac154ce1bb",
+      "subject": "M6: EPUB Export Options names a cover image file (#1934) (#2149)"
     },
-    "last_commit_ts": "2026-11-03T00:26:33Z",
+    "last_commit_ts": "2026-11-03T04:26:01Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       8,
@@ -529,7 +529,7 @@
       22,
       17,
       3,
-      0
+      19
     ],
     "days": [
       {
@@ -1111,9 +1111,22 @@
       },
       {
         "d": "2026-11-03",
-        "code": 0,
+        "code": 19,
         "other": 1,
-        "samples": []
+        "samples": [
+          {
+            "commit": "68ce4b6",
+            "subject": "M6: EPUB Export Options names a cover image file (#1934) (#2149)"
+          },
+          {
+            "commit": "26281e3",
+            "subject": "M4: the Pen previews the segment a dragged smooth point shapes and curves the rubber band after one (#1438) (#2143)"
+          },
+          {
+            "commit": "312eefa",
+            "subject": "An export says what text its pages had no room for (#1465) (#1493)"
+          }
+        ]
       }
     ]
   },
@@ -5302,7 +5315,145 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "462062e",
+      "commit_full": "462062e99bc12cdd24315defbd93c295ace7d59d",
+      "commit_date": "2026-11-02T23:23:20-05:00",
+      "ts": "2026-11-03T04:23:20Z",
+      "message": "type.char: warn when the font family or style isn't available (#2189) (#2190)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-01",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "3eb8091",
+      "commit_full": "3eb8091bacb4e8f1d813cb80800c931988ba7bcc",
+      "commit_date": "2026-11-02T23:23:59-05:00",
+      "ts": "2026-11-03T04:23:59Z",
+      "message": "M3: a Custom text variable defined with a number shows its digits (#2093) (#2142)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-01",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "1e2d75d",
+      "commit_full": "1e2d75d0b026b4ea6836c7f835fb042dd9eb098a",
+      "commit_date": "2026-11-02T23:24:12-05:00",
+      "ts": "2026-11-03T04:24:12Z",
+      "message": "File import: keep native and IDML bytes out of the INDD converter (#2125)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-01",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "1bca5db",
+      "commit_full": "1bca5db25bf60c5752de38d1a0a65920748399da",
+      "commit_date": "2026-11-02T23:24:25-05:00",
+      "ts": "2026-11-03T04:24:25Z",
+      "message": "Linux: file managers show a .designcraft file's first page through a freedesktop thumbnailer (#1782) (#1792)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-01",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "26281e3",
+      "commit_full": "26281e37aa1405d6eccacc2a34a58697a37749c8",
+      "commit_date": "2026-11-02T23:25:28-05:00",
+      "ts": "2026-11-03T04:25:28Z",
+      "message": "M4: the Pen previews the segment a dragged smooth point shapes and curves the rubber band after one (#1438) (#2143)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-01",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "68ce4b6",
+      "commit_full": "68ce4b63d6cb0077e96bb7d67043e5ac154ce1bb",
+      "commit_date": "2026-11-02T23:26:01-05:00",
+      "ts": "2026-11-03T04:26:01Z",
+      "message": "M6: EPUB Export Options names a cover image file (#1934) (#2149)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-01",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T01:32:51+00:00"
+  "updated_at": "2026-11-03T04:37:57+00:00"
 }
