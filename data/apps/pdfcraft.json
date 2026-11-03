@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "ea353f7",
-  "latest_commit_date": "2026-11-03T14:00:16+01:00",
-  "latest_message": "fix(ui): do not open right-click context menu on image in crop mode (#5835) (#5900)",
+  "latest_commit": "0d3f57e",
+  "latest_commit_date": "2026-11-03T10:24:45-05:00",
+  "latest_message": "M5: keep Fill & Sign editing on Enter and preserve line breaks (#5850) (#5954)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
-    "last_updated": "2026-11-01",
+    "last_updated": "2026-11-03",
     "metrics": {
       "full": {
         "label": "Full Acrobat Pro (ready for real work)",
@@ -294,6 +294,14 @@
     "progress": [
       {
         "date": "2026-11-03",
+        "text": "(M5, #5850 review): Resolve indirect IT when recognizing typewriter contents and Fill & Sign marks. Comment listing and property lookup retain their existing direct-Subtype behavior. A real double-click Edit composer preserves the typewriter’s text as written; ordinary comment edits keep trimming. Regressions cover direct Subtype with indirect intent, save/reopen, raw posted contents and same-index comments on different pages. The existing live-movement test now commits its setup with an outside click rather than Enter. Estimates unchanged."
+      },
+      {
+        "date": "2026-11-03",
+        "text": "(M5, #5850): Fill & Sign Enter inserts a line break in a growing editor; clicking outside commits and Escape cancels. Nonempty text keeps leading, internal and trailing line breaks. The headless fillsignadd path sizes its typewriter box for the same wrapped lines so saved appearances show every row. Production-order keyboard and engine save/reopen/render regressions exercise the UI and headless callers. Estimates unchanged."
+      },
+      {
+        "date": "2026-11-03",
         "text": "(M7, #5835): In image crop mode, a right-click on the image, its crop box or its handles keeps the crop and opens no menu, so the menu no longer switches as the pointer moves. A right-click elsewhere clears the selection and opens the page menu. UI tests cover all four page rotations, overlapping images, a 45° image, and a check that the Done/Cancel/Remove Crop pills at a page edge still keep the crop."
       },
       {
@@ -443,14 +451,6 @@
       {
         "date": "2026-10-23",
         "text": "(M2, #234, continuation of #1567): Reconciled installed CJK viewer fallback with current rendering changes; Windows preserves installed Song/Hei/Kai families and bounds font reads. GBK-EUC-H CIDFontType2 regression coverage includes text extraction; viewer fallback also survives reload with retained preferences. System fonts remain display-only. No overall readiness estimate changed."
-      },
-      {
-        "date": "2026-10-22",
-        "text": "(M7, #2517): A partial rewrite of the last paragraph closes its marker after that paragraph's last ET, so a row left in the source stays in the paragraph. When the next paragraph shares the text object, the marker closes before that neighbour instead of after the shared ET. The extra marker is not added across two marked-content regions. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-22",
-        "text": "(M4, #3916 partial): Document edits and Undo/Redo cancel an Organize page drag. Pointer-release regressions check exact page order and save/reopen."
       }
     ]
   },
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 10,
     "releases_since_capped": false,
-    "revisions_since": 97,
+    "revisions_since": 98,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 185,
-    "revisions_7d": 11,
+    "revisions": 186,
+    "revisions_7d": 12,
     "last_revision": {
-      "ts": "2026-11-03T13:00:16Z",
+      "ts": "2026-11-03T15:24:45Z",
       "kind": "content",
-      "commit": "ea353f7",
-      "commit_full": "ea353f7a598ff032e412f27352a3373357ccef50",
-      "message": "fix(ui): do not open right-click context menu on image in crop mode (#5835) (#5900)"
+      "commit": "0d3f57e",
+      "commit_full": "0d3f57e120a3bd0e103f870b5e32d59e43c3ba94",
+      "message": "M5: keep Fill & Sign editing on Enter and preserve line breaks (#5850) (#5954)"
     },
     "last_update": {
-      "ts": "2026-11-03T13:00:16Z",
+      "ts": "2026-11-03T15:24:45Z",
       "kind": "content",
-      "commit": "ea353f7",
-      "commit_full": "ea353f7a598ff032e412f27352a3373357ccef50",
-      "message": "fix(ui): do not open right-click context menu on image in crop mode (#5835) (#5900)"
+      "commit": "0d3f57e",
+      "commit_full": "0d3f57e120a3bd0e103f870b5e32d59e43c3ba94",
+      "message": "M5: keep Fill & Sign editing on Enter and preserve line breaks (#5850) (#5954)"
     },
-    "self_reported": "2026-11-01"
+    "self_reported": "2026-11-03"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.5,
+    "score": 19.8,
     "active_days_7d": 7,
-    "changes_7d": 86,
-    "changes_14d": 281,
+    "changes_7d": 90,
+    "changes_14d": 285,
     "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-03T14:20:23Z",
-      "commit": "eb696a3",
-      "commit_full": "eb696a3fdf632d3d2167096fcaeb23593ee08c43",
-      "subject": "Add CSS-free HTML export (#5938)"
+      "ts": "2026-11-03T15:30:12Z",
+      "commit": "ecdd1e6",
+      "commit_full": "ecdd1e658cbb9ab5ceaa924a5598f091a6135bec",
+      "subject": "fix(audit): read content one operator at a time and charge hidden text and findings (#5875)"
     },
-    "last_commit_ts": "2026-11-03T14:20:23Z",
+    "last_commit_ts": "2026-11-03T15:30:12Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       13,
@@ -524,7 +524,7 @@
       11,
       22,
       11,
-      19
+      23
     ],
     "days": [
       {
@@ -1162,20 +1162,20 @@
       },
       {
         "d": "2026-11-03",
-        "code": 19,
+        "code": 23,
         "other": 1,
         "samples": [
           {
-            "commit": "eb696a3",
-            "subject": "Add CSS-free HTML export (#5938)"
+            "commit": "ecdd1e6",
+            "subject": "fix(audit): read content one operator at a time and charge hidden text and findings (#5875)"
           },
           {
-            "commit": "1849b38",
-            "subject": "M2: a soft hyphen a substitute font lacks draws its hyphen (#5888) (#5896)"
+            "commit": "0d3f57e",
+            "subject": "M5: keep Fill & Sign editing on Enter and preserve line breaks (#5850) (#5954)"
           },
           {
-            "commit": "15e4506",
-            "subject": "Keep disabled scroll animations in Preferences (#5886)"
+            "commit": "3709926",
+            "subject": "Continue Bates numbering across ordered PDFs (#5953)"
           }
         ]
       }
@@ -5643,7 +5643,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "0d3f57e",
+      "commit_full": "0d3f57e120a3bd0e103f870b5e32d59e43c3ba94",
+      "commit_date": "2026-11-03T10:24:45-05:00",
+      "ts": "2026-11-03T15:24:45Z",
+      "message": "M5: keep Fill & Sign editing on Enter and preserve line breaks (#5850) (#5954)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T14:43:50+00:00"
+  "updated_at": "2026-11-03T15:31:50+00:00"
 }
