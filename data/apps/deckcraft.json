@@ -7,14 +7,14 @@
   "added": null,
   "repo_url": "https://github.com/storytold/deckcraft",
   "roadmap_url": "https://github.com/storytold/deckcraft/blob/main/ROADMAP.md",
-  "latest_commit": "f4fcac9",
-  "latest_commit_date": "2026-11-02T04:51:18-05:00",
-  "latest_message": "Merge pull request #1623",
+  "latest_commit": "f68150e",
+  "latest_commit_date": "2026-11-02T19:02:14-05:00",
+  "latest_message": "Replace the Account page with About (#1697)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
-    "last_updated": "2026-11-01",
+    "last_updated": "2026-11-02",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -315,6 +315,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-02",
+        "text": "File › About replaces the unused Account page, with version, project links, contributor/model credits and appearance preferences"
+      },
+      {
         "date": "2026-10-31",
         "text": "No Fill shape interiors allow selection and editing of underlying objects, even when a quick style remains; hit-testing uses the renderer’s fill resolution. Outlines, rotation, text targets and actual fills keep their hit behaviour (#1621)"
       },
@@ -469,10 +473,6 @@
       {
         "date": "2026-10-21",
         "text": "Reuse Slides: pick which slides of the other presentation to insert from a list (slide.reuseList, #1103)"
-      },
-      {
-        "date": "2026-10-21",
-        "text": "Slide list and slide sorter: Shift+click selects a range of slides and Ctrl+Shift+click adds it to the selection (slide.selectRange, #1105)"
       }
     ]
   },
@@ -481,7 +481,7 @@
     "value_since": "2026-10-10T18:09:21Z",
     "releases_since": 10,
     "releases_since_capped": false,
-    "revisions_since": 120,
+    "revisions_since": 121,
     "hours_since": null,
     "areas_since": {
       "up": 1,
@@ -500,42 +500,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 123,
-    "revisions_7d": 17,
+    "revisions": 124,
+    "revisions_7d": 18,
     "last_revision": {
-      "ts": "2026-11-02T09:51:18Z",
+      "ts": "2026-11-03T00:02:14Z",
       "kind": "content",
-      "commit": "f4fcac9",
-      "commit_full": "f4fcac9f2d49f7fb642c62abf271d585381a3668",
-      "message": "Merge pull request #1623"
+      "commit": "f68150e",
+      "commit_full": "f68150ee10966d71f187869a1c2e40f06aa2f047",
+      "message": "Replace the Account page with About (#1697)"
     },
     "last_update": {
-      "ts": "2026-11-02T09:51:18Z",
+      "ts": "2026-11-03T00:02:14Z",
       "kind": "content",
-      "commit": "f4fcac9",
-      "commit_full": "f4fcac9f2d49f7fb642c62abf271d585381a3668",
-      "message": "Merge pull request #1623"
+      "commit": "f68150e",
+      "commit_full": "f68150ee10966d71f187869a1c2e40f06aa2f047",
+      "message": "Replace the Account page with About (#1697)"
     },
-    "self_reported": "2026-11-01"
+    "self_reported": "2026-11-02"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.6,
+    "score": 15.4,
     "active_days_7d": 6,
-    "changes_7d": 109,
-    "changes_14d": 249,
+    "changes_7d": 106,
+    "changes_14d": 250,
     "housekeeping_7d": 10,
     "last_code_change": {
-      "ts": "2026-11-02T09:53:51Z",
-      "commit": "0d45a64",
-      "commit_full": "0d45a64db23baa0a4c8f9f7ac14c59c91b40fec9",
-      "subject": "Merge pull request #1645"
+      "ts": "2026-11-03T00:02:14Z",
+      "commit": "f68150e",
+      "commit_full": "f68150ee10966d71f187869a1c2e40f06aa2f047",
+      "subject": "Replace the Account page with About (#1697)"
     },
-    "last_commit_ts": "2026-11-02T09:53:51Z",
+    "last_commit_ts": "2026-11-03T00:02:14Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
-      0,
       4,
       7,
       54,
@@ -548,7 +547,8 @@
       60,
       23,
       3,
-      15
+      15,
+      1
     ],
     "days": [
       {
@@ -1006,6 +1006,17 @@
           {
             "commit": "6c63345",
             "subject": "Merge pull request #1667"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-03",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "f68150e",
+            "subject": "Replace the Account page with About (#1697)"
           }
         ]
       }
@@ -4053,7 +4064,30 @@
       "breadth_pct": 62.0,
       "full_prev": 55.0,
       "kind": "content"
+    },
+    {
+      "commit": "f68150e",
+      "commit_full": "f68150ee10966d71f187869a1c2e40f06aa2f047",
+      "commit_date": "2026-11-02T19:02:14-05:00",
+      "ts": "2026-11-03T00:02:14Z",
+      "message": "Replace the Account page with About (#1697)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-02",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-02T10:27:55+00:00"
+  "updated_at": "2026-11-03T00:27:23+00:00"
 }

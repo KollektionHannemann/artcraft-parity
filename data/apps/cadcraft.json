@@ -352,22 +352,21 @@
   },
   "milestone": null,
   "activity": {
-    "level": "buzzing",
-    "score": 21.4,
+    "level": "active",
+    "score": 18.6,
     "active_days_7d": 6,
-    "changes_7d": 156,
-    "changes_14d": 315,
-    "housekeeping_7d": 9,
+    "changes_7d": 146,
+    "changes_14d": 316,
+    "housekeeping_7d": 10,
     "last_code_change": {
-      "ts": "2026-11-02T23:51:54Z",
-      "commit": "096b3f9",
-      "commit_full": "096b3f9be427830db5568a3a8ed2e8ba3e41ee66",
-      "subject": "Saves to a missing folder write the file and say which folder was created (#2260) (#2668)"
+      "ts": "2026-11-03T00:10:53Z",
+      "commit": "eacdbe4",
+      "commit_full": "eacdbe43eef1b58b7436317830751c8b6e93bf6e",
+      "subject": "Save: a folder that can't be made says so, not that the backup failed (#2669)"
     },
-    "last_commit_ts": "2026-11-02T23:51:54Z",
+    "last_commit_ts": "2026-11-03T00:26:12Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
-      0,
       4,
       25,
       8,
@@ -380,7 +379,8 @@
       42,
       43,
       17,
-      39
+      39,
+      1
     ],
     "days": [
       {
@@ -794,6 +794,17 @@
           {
             "commit": "5ec0d21",
             "subject": "CLI: info and convert report what a damaged DWG left out (read notes, #859) (#2337)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-03",
+        "code": 1,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "eacdbe4",
+            "subject": "Save: a folder that can't be made says so, not that the backup failed (#2669)"
           }
         ]
       }
@@ -1283,5 +1294,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-02T23:56:12+00:00"
+  "updated_at": "2026-11-03T00:27:26+00:00"
 }
