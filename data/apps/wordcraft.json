@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "bf77157",
-  "latest_commit_date": "2026-11-04T21:19:03+01:00",
-  "latest_message": "Desktop: a window restored onto no monitor opens on screen (#4742)",
+  "latest_commit": "4932017",
+  "latest_commit_date": "2026-11-04T22:31:22+01:00",
+  "latest_message": "Dialogs are modal, as in Word (#4076)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -341,6 +341,10 @@
         "text": "ODT checked against 220 files from other applications (Microsoft Office, OpenOffice.org, StarOffice, Calligra, Lotus Symphony; local only): every file LibreOffice opens opens again after a WordCraft save (a manifest entry was missing), 166 round-trip pixel-identical and 194 with the same text at the time (an earlier measurement; the element-audit entry above has the current figures); hidden sections stay hidden and unedited lists are written as read (gap 19)."
       },
       {
+        "date": "2026-11-04",
+        "text": "Pictures keep the brightness, contrast and transparency their file gives them (#1711, #1766): a \"Washout\" picture watermark (VML gain/blacklevel) and a washed-out letterhead picture behind the text (a:lum) are drawn faded on screen and in PDF instead of at full colour, with the pixel curve measured on Word's own PDF export; a:alphaModFix transparency too. Saved back as DrawingML (and as VML gain/blacklevel in Word 2003 XML, without the transparency). Picture Format › Corrections, Transparency and Color › Washout replace the file's values (other Color modes leave them alone), and Reset Picture discards them all, as in Word; the PDF embeds the corrected pixels once per picture"
+      },
+      {
         "date": "2026-11-03",
         "text": "ODT paragraphs holding bookmarks, notes, formulas and objects, and the page-anchored frames before a paragraph, are written as read while unchanged (gap 19); styles of different families sharing a name are kept apart. Over the corpus 123 of 133 files round-trip pixel-identical (118), 132 with the same text, and the attributes and values a save loses fall from 539 to under 315."
       },
@@ -483,10 +487,6 @@
       {
         "date": "2026-11-01",
         "text": "ODT: saved files carry LibreOffice's layout settings (the file's own, or Word-compatible ones), so LibreOffice lays them out as WordCraft does; list items keep their contextual spacing (gap 19). Readiness unchanged."
-      },
-      {
-        "date": "2026-11-01",
-        "text": "ODT: custom character styles stay styles on open and save (gap 19). Readiness unchanged."
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 480,
+    "revisions_since": 482,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 484,
-    "revisions_7d": 66,
+    "revisions": 486,
+    "revisions_7d": 68,
     "last_revision": {
-      "ts": "2026-11-04T20:19:03Z",
+      "ts": "2026-11-04T21:31:22Z",
       "kind": "content",
-      "commit": "bf77157",
-      "commit_full": "bf7715785c7f2f1b86cb45fa1aa95a7f512fe188",
-      "message": "Desktop: a window restored onto no monitor opens on screen (#4742)"
+      "commit": "4932017",
+      "commit_full": "49320177111a3b5b20287362a8704941e1a884a4",
+      "message": "Dialogs are modal, as in Word (#4076)"
     },
     "last_update": {
-      "ts": "2026-11-04T20:19:03Z",
+      "ts": "2026-11-04T21:31:22Z",
       "kind": "content",
-      "commit": "bf77157",
-      "commit_full": "bf7715785c7f2f1b86cb45fa1aa95a7f512fe188",
-      "message": "Desktop: a window restored onto no monitor opens on screen (#4742)"
+      "commit": "4932017",
+      "commit_full": "49320177111a3b5b20287362a8704941e1a884a4",
+      "message": "Dialogs are modal, as in Word (#4076)"
     },
     "self_reported": "2026-11-04"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.3,
+    "score": 21.5,
     "active_days_7d": 7,
-    "changes_7d": 136,
-    "changes_14d": 296,
+    "changes_7d": 139,
+    "changes_14d": 299,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-11-04T20:33:52Z",
-      "commit": "1f02607",
-      "commit_full": "1f026078be016fd12431639e6c857ecf4975e3ba",
-      "subject": "Format Shape: the Angle field leaves an angle above 359.9° alone (#3959)"
+      "ts": "2026-11-04T21:31:22Z",
+      "commit": "4932017",
+      "commit_full": "49320177111a3b5b20287362a8704941e1a884a4",
+      "subject": "Dialogs are modal, as in Word (#4076)"
     },
-    "last_commit_ts": "2026-11-04T20:33:52Z",
+    "last_commit_ts": "2026-11-04T21:31:22Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       5,
@@ -568,7 +568,7 @@
       14,
       11,
       19,
-      27
+      30
     ],
     "days": [
       {
@@ -1067,20 +1067,20 @@
       },
       {
         "d": "2026-11-04",
-        "code": 27,
+        "code": 30,
         "other": 1,
         "samples": [
           {
-            "commit": "1f02607",
-            "subject": "Format Shape: the Angle field leaves an angle above 359.9° alone (#3959)"
+            "commit": "4932017",
+            "subject": "Dialogs are modal, as in Word (#4076)"
           },
           {
-            "commit": "bf77157",
-            "subject": "Desktop: a window restored onto no monitor opens on screen (#4742)"
+            "commit": "0802b4f",
+            "subject": "Layout: the caret on the empty line after a trailing line break follows the paragraph's alignment (#4293)"
           },
           {
-            "commit": "573b929",
-            "subject": "Fix #5559 follow-ups: generated list prefix, hidden-text objects, turned clipped lines, kept-markup checks (#5593)"
+            "commit": "75fc50f",
+            "subject": "DOCX: picture brightness, contrast and transparency (VML washout, a:lum, a:alphaModFix) (#1961)"
           }
         ]
       }
@@ -12443,7 +12443,53 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "75fc50f",
+      "commit_full": "75fc50fb772341e5a59943b19c9c4bb84e923584",
+      "commit_date": "2026-11-04T21:47:44+01:00",
+      "ts": "2026-11-04T20:47:44Z",
+      "message": "DOCX: picture brightness, contrast and transparency (VML washout, a:lum, a:alphaModFix) (#1961)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-04",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "4932017",
+      "commit_full": "49320177111a3b5b20287362a8704941e1a884a4",
+      "commit_date": "2026-11-04T22:31:22+01:00",
+      "ts": "2026-11-04T21:31:22Z",
+      "message": "Dialogs are modal, as in Word (#4076)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-04",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-04T20:38:54+00:00"
+  "updated_at": "2026-11-04T21:37:02+00:00"
 }
