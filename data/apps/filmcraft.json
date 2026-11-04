@@ -444,18 +444,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.0,
+    "score": 20.1,
     "active_days_7d": 6,
-    "changes_7d": 151,
-    "changes_14d": 316,
-    "housekeeping_7d": 6,
+    "changes_7d": 152,
+    "changes_14d": 317,
+    "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-04T04:50:31Z",
-      "commit": "c9be142",
-      "commit_full": "c9be14245a6c9da585ff906a6e0ca9c8200652ea",
-      "subject": "interchange: refuse repeated AAF storage ownership and bound weak paths, Bento names and FCP7 link lists (#4216)"
+      "ts": "2026-11-04T23:28:58Z",
+      "commit": "0b780f6",
+      "commit_full": "0b780f6f11dc28783b6d4dede60d3e6f1fbc5eb0",
+      "subject": "ogg: stop reading when the packet list passes 256 MiB (#4066)"
     },
-    "last_commit_ts": "2026-11-04T04:50:31Z",
+    "last_commit_ts": "2026-11-04T23:28:58Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       5,
@@ -471,7 +471,7 @@
       30,
       3,
       55,
-      19
+      20
     ],
     "days": [
       {
@@ -1080,9 +1080,13 @@
       },
       {
         "d": "2026-11-04",
-        "code": 19,
-        "other": 0,
+        "code": 20,
+        "other": 1,
         "samples": [
+          {
+            "commit": "0b780f6",
+            "subject": "ogg: stop reading when the packet list passes 256 MiB (#4066)"
+          },
           {
             "commit": "c9be142",
             "subject": "interchange: refuse repeated AAF storage ownership and bound weak paths, Bento names and FCP7 link lists (#4216)"
@@ -1090,10 +1094,6 @@
           {
             "commit": "d184681",
             "subject": "media: validate offline slate audio before allocating silence (#4199)"
-          },
-          {
-            "commit": "ece831b",
-            "subject": "render: cap Long Shadow and Glint lengths at the picture extent (#4200)"
           }
         ]
       }
@@ -1653,5 +1653,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-04T05:43:33+00:00"
+  "updated_at": "2026-11-04T23:29:50+00:00"
 }
