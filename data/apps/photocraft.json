@@ -371,18 +371,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.4,
+    "score": 19.9,
     "active_days_7d": 7,
-    "changes_7d": 85,
-    "changes_14d": 307,
+    "changes_7d": 90,
+    "changes_14d": 312,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-04T01:37:49Z",
-      "commit": "87f0bb3",
-      "commit_full": "87f0bb39421b4aa69866c2ce236997353ab19a68",
-      "subject": "raw: refuse JPEG XL tiles with compressed metadata boxes or splines (#11039)"
+      "ts": "2026-11-04T01:55:42Z",
+      "commit": "37a01ca",
+      "commit_full": "37a01ca8746c121170644a07968d11263ef64407",
+      "subject": "format: bound blob inflation by the load's remaining budget; browser budgets (#10984)"
     },
-    "last_commit_ts": "2026-11-04T01:37:49Z",
+    "last_commit_ts": "2026-11-04T01:55:42Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       48,
@@ -398,7 +398,7 @@
       11,
       7,
       24,
-      10
+      15
     ],
     "days": [
       {
@@ -1068,20 +1068,20 @@
       },
       {
         "d": "2026-11-04",
-        "code": 10,
+        "code": 15,
         "other": 0,
         "samples": [
           {
-            "commit": "87f0bb3",
-            "subject": "raw: refuse JPEG XL tiles with compressed metadata boxes or splines (#11039)"
+            "commit": "37a01ca",
+            "subject": "format: bound blob inflation by the load's remaining budget; browser budgets (#10984)"
           },
           {
-            "commit": "c004e38",
-            "subject": "raw: decode a tile range once when several tiles share it (#11041)"
+            "commit": "3225307",
+            "subject": "codecs: admit animated GIF screens, sparse RLE BMPs and icon PNG profiles (#10979)"
           },
           {
-            "commit": "06bedca",
-            "subject": "raw: refuse lossy DNG tiles that carry Extended XMP (#11042)"
+            "commit": "d82e166",
+            "subject": "codecs: charge dropped PNG text against the metadata budget (#10980)"
           }
         ]
       }
@@ -1480,5 +1480,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-04T01:46:19+00:00"
+  "updated_at": "2026-11-04T02:33:53+00:00"
 }

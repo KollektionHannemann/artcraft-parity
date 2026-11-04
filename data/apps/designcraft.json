@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/designcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "c1bf2c7",
-  "latest_commit_date": "2026-11-03T16:48:53-05:00",
-  "latest_message": "Give anchored objects fresh ids when copying text frames (fixes #1522) (#1968)",
+  "latest_commit": "b18ed2e",
+  "latest_commit_date": "2026-11-03T21:17:15-05:00",
+  "latest_message": "Place: implicit image placement preserves lines and open paths (#1294)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -331,6 +331,10 @@
         "text": "· Windows: the custom title bar window stays borderless, so the content is no longer drawn offset by the caption and border (black bars at the top and left, clicks landing off target). The workaround goes when winit carries the fix (storytold/winit#17). No readiness percentage change."
       },
       {
+        "date": "2026-11-02",
+        "text": "· Packaged PDFs report their export warnings in the package result and Instructions.txt, and soft drop shadows and feathers in them are tested. Frame and text-range hyperlinks keep their source bounds when the frame is rasterized, including inside groups. No readiness percentage change."
+      },
+      {
         "date": "2026-11-01",
         "text": "· Parent page resizing (#1620): Properties, the Page Tool Control panel and on-page handles resize the selected parent page independently of document pages. Stable parent IDs, repeated resizing, anchors and liquid rules are preserved on the current command modules. Inline parent margin editing targets only the selected parent page and preserves opposite-page margins and document overrides; document commands retain their first-page default before the canvas is initialized. No readiness percentage change."
       },
@@ -465,10 +469,6 @@
       {
         "date": "2026-10-24",
         "text": "· Paragraph Style Options › Indents and Spacing has an Align to Grid menu: None, All Lines or First Line Only. It shows the style's current setting. A First Line Only style could be set only in the CJK Grid Settings section, which shows only with CJK features on, or through commands. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "· A guide pulled out of a ruler keeps the resize cursor across it until it is dropped; the tool's cursor took over as soon as the pointer left the ruler, so the drag looked as if it had stopped. No readiness percentage change."
       }
     ]
   },
@@ -477,7 +477,7 @@
     "value_since": "2026-10-10T18:09:17Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 184,
+    "revisions_since": 186,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -485,39 +485,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 185,
-    "revisions_7d": 39,
+    "revisions": 187,
+    "revisions_7d": 41,
     "last_revision": {
-      "ts": "2026-11-03T21:48:53Z",
+      "ts": "2026-11-04T02:17:15Z",
       "kind": "content",
-      "commit": "c1bf2c7",
-      "commit_full": "c1bf2c769bf03f220996f59aa5491d66e8175998",
-      "message": "Give anchored objects fresh ids when copying text frames (fixes #1522) (#1968)"
+      "commit": "b18ed2e",
+      "commit_full": "b18ed2e7addc2d4d3d9f40e8ff45eb88219cfd78",
+      "message": "Place: implicit image placement preserves lines and open paths (#1294)"
     },
     "last_update": {
-      "ts": "2026-11-03T21:48:53Z",
+      "ts": "2026-11-04T02:17:15Z",
       "kind": "content",
-      "commit": "c1bf2c7",
-      "commit_full": "c1bf2c769bf03f220996f59aa5491d66e8175998",
-      "message": "Give anchored objects fresh ids when copying text frames (fixes #1522) (#1968)"
+      "commit": "b18ed2e",
+      "commit_full": "b18ed2e7addc2d4d3d9f40e8ff45eb88219cfd78",
+      "message": "Place: implicit image placement preserves lines and open paths (#1294)"
     },
     "self_reported": "2026-11-01"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.4,
+    "score": 19.6,
     "active_days_7d": 7,
-    "changes_7d": 121,
-    "changes_14d": 287,
+    "changes_7d": 128,
+    "changes_14d": 294,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-04T00:23:28Z",
-      "commit": "b17dd01",
-      "commit_full": "b17dd017d525bf9e725ef3b2a930381b7c46434b",
-      "subject": "Mojikumi: test consecutive punctuation under the one-em line-end set too (#2287)"
+      "ts": "2026-11-04T02:29:58Z",
+      "commit": "cf0c697",
+      "commit_full": "cf0c6971d6ef15144eac74ac74d1584b0d4013c4",
+      "subject": "doc: repair parent based_on links in one graph walk (#2244)"
     },
-    "last_commit_ts": "2026-11-04T00:23:28Z",
+    "last_commit_ts": "2026-11-04T02:29:58Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       19,
@@ -533,7 +533,7 @@
       17,
       3,
       40,
-      1
+      8
     ],
     "days": [
       {
@@ -1134,12 +1134,20 @@
       },
       {
         "d": "2026-11-04",
-        "code": 1,
+        "code": 8,
         "other": 0,
         "samples": [
           {
-            "commit": "b17dd01",
-            "subject": "Mojikumi: test consecutive punctuation under the one-em line-end set too (#2287)"
+            "commit": "cf0c697",
+            "subject": "doc: repair parent based_on links in one graph walk (#2244)"
+          },
+          {
+            "commit": "9437553",
+            "subject": "Images: one budget for the nested SVG data images of a parse (#2254)"
+          },
+          {
+            "commit": "1a05930",
+            "subject": "PPTX export: table border and paragraph lookups by index, direct charmap lookups (#2256)"
           }
         ]
       }
@@ -5607,7 +5615,53 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "2042bd9",
+      "commit_full": "2042bd96980499dd197f9cf13c7dc5f667010883",
+      "commit_date": "2026-11-03T20:55:11-05:00",
+      "ts": "2026-11-04T01:55:11Z",
+      "message": "PDF: keep hyperlinks on rasterized frames; report package PDF warnings (#1302)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-01",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "b18ed2e",
+      "commit_full": "b18ed2e7addc2d4d3d9f40e8ff45eb88219cfd78",
+      "commit_date": "2026-11-03T21:17:15-05:00",
+      "ts": "2026-11-04T02:17:15Z",
+      "message": "Place: implicit image placement preserves lines and open paths (#1294)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-01",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-04T00:36:46+00:00"
+  "updated_at": "2026-11-04T02:34:11+00:00"
 }
