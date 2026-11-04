@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "e847b2e",
-  "latest_commit_date": "2026-11-04T12:27:08+01:00",
-  "latest_message": "AutoFormat: a tracked heading or border line replaces another author's formatting change (#4231)",
+  "latest_commit": "1350f62",
+  "latest_commit_date": "2026-11-04T13:59:15+01:00",
+  "latest_message": "#2726: AccessKit focus guard — every tree update carries its focused node (#2742)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -338,6 +338,10 @@
       },
       {
         "date": "2026-11-03",
+        "text": "Arabic dialogs: the dialogs of the mirrored interface now read right to left. Rows of a label and its field, lists of columns (Compare, AutoCorrect, Special Characters, Track Changes Options, the Columns widths), the tile galleries (chart types, SmartArt layouts) and the ribbon Paragraph group start at the right edge, through an rtl::Table helper that is an egui::Grid in English; the Add >> and << Remove arrows swap, the Columns preset captions and the Macros buttons no longer overlap, and the Recipient List grid and About › Models scroll instead of running past the left edge. Readiness unchanged."
+      },
+      {
+        "date": "2026-11-03",
         "text": "Security: pasting text boxes charges each copied story for its formatting too (run, mark, paragraph and section properties), not only its text and objects, so a story with huge style or font names can't copy past the paste's 32 MiB text box budget. Readiness unchanged."
       },
       {
@@ -483,10 +487,6 @@
       {
         "date": "2026-10-29",
         "text": "Table Properties follows the selection (#4857): with the whole table (or several rows, columns or cells) selected, the Row, Column and Cell settings apply to every selected row, column and cell, as in Word. Before, they changed the caret's row alone, so unticking Allow row to break across pages with the table selected left the other rows breaking. Allow row to break and Repeat as header row show as mixed when the selected rows differ and change nothing unless clicked."
-      },
-      {
-        "date": "2026-10-28",
-        "text": "Word count counts each Chinese and Japanese character as a word, as Word does, in the status bar, the Word Count dialog and NUMWORDS fields. Unspaced Chinese text used to count as one word per run of text; Korean, which is written with spaces, still counts by words. (#4547)"
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 471,
+    "revisions_since": 473,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 475,
-    "revisions_7d": 57,
+    "revisions": 477,
+    "revisions_7d": 59,
     "last_revision": {
-      "ts": "2026-11-04T11:27:08Z",
+      "ts": "2026-11-04T12:59:15Z",
       "kind": "content",
-      "commit": "e847b2e",
-      "commit_full": "e847b2e5e32ed51256651480a7c1951a36d192a6",
-      "message": "AutoFormat: a tracked heading or border line replaces another author's formatting change (#4231)"
+      "commit": "1350f62",
+      "commit_full": "1350f62bf066b6d062f759eeba6fc118bad70d2f",
+      "message": "#2726: AccessKit focus guard — every tree update carries its focused node (#2742)"
     },
     "last_update": {
-      "ts": "2026-11-04T11:27:08Z",
+      "ts": "2026-11-04T12:59:15Z",
       "kind": "content",
-      "commit": "e847b2e",
-      "commit_full": "e847b2e5e32ed51256651480a7c1951a36d192a6",
-      "message": "AutoFormat: a tracked heading or border line replaces another author's formatting change (#4231)"
+      "commit": "1350f62",
+      "commit_full": "1350f62bf066b6d062f759eeba6fc118bad70d2f",
+      "message": "#2726: AccessKit focus guard — every tree update carries its focused node (#2742)"
     },
     "self_reported": "2026-11-03"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.1,
+    "score": 20.6,
     "active_days_7d": 7,
-    "changes_7d": 120,
-    "changes_14d": 280,
+    "changes_7d": 125,
+    "changes_14d": 285,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-11-04T11:27:08Z",
-      "commit": "e847b2e",
-      "commit_full": "e847b2e5e32ed51256651480a7c1951a36d192a6",
-      "subject": "AutoFormat: a tracked heading or border line replaces another author's formatting change (#4231)"
+      "ts": "2026-11-04T13:13:36Z",
+      "commit": "560565c",
+      "commit_full": "560565cdd75327d3fe2e1f540649b4ad0b2315f2",
+      "subject": "Audit fixes for 12 issues: import limits, escaping, link schemes, table depth (#3862)"
     },
-    "last_commit_ts": "2026-11-04T11:27:08Z",
+    "last_commit_ts": "2026-11-04T13:13:36Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       5,
@@ -568,7 +568,7 @@
       14,
       11,
       19,
-      11
+      16
     ],
     "days": [
       {
@@ -1067,20 +1067,20 @@
       },
       {
         "d": "2026-11-04",
-        "code": 11,
+        "code": 16,
         "other": 1,
         "samples": [
           {
-            "commit": "e847b2e",
-            "subject": "AutoFormat: a tracked heading or border line replaces another author's formatting change (#4231)"
+            "commit": "560565c",
+            "subject": "Audit fixes for 12 issues: import limits, escaping, link schemes, table depth (#3862)"
           },
           {
-            "commit": "fd1c5ef",
-            "subject": "Format readers: one border-type table for .doc, one HYPERLINK parser for DOCX, RTF and .doc (#4222)"
+            "commit": "1350f62",
+            "subject": "#2726: AccessKit focus guard — every tree update carries its focused node (#2742)"
           },
           {
-            "commit": "655b431",
-            "subject": "DOCX: nil shading paints no fill, border theme colours win (part of #1991) (#4705)"
+            "commit": "688cce4",
+            "subject": "Read Mode: ink and drag previews follow the Page color, which is kept between entries (#4228)"
           }
         ]
       }
@@ -12236,7 +12236,53 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "6ec8514",
+      "commit_full": "6ec85141d53c64e555d9ec20790e409288ea78a9",
+      "commit_date": "2026-11-04T13:36:55+01:00",
+      "ts": "2026-11-04T12:36:55Z",
+      "message": "Arabic interface: mirror the remaining label/field dialogs (#5449)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "1350f62",
+      "commit_full": "1350f62bf066b6d062f759eeba6fc118bad70d2f",
+      "commit_date": "2026-11-04T13:59:15+01:00",
+      "ts": "2026-11-04T12:59:15Z",
+      "message": "#2726: AccessKit focus guard — every tree update carries its focused node (#2742)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-04T11:30:24+00:00"
+  "updated_at": "2026-11-04T13:37:34+00:00"
 }

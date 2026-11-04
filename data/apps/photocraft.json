@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/photocraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/photocraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "f8e393f",
-  "latest_commit_date": "2026-11-02T19:59:41+01:00",
-  "latest_message": "Enable font-free GNOME/Wayland controls for system title bars (#6266)",
+  "latest_commit": "2c68cc6",
+  "latest_commit_date": "2026-11-04T14:18:54+01:00",
+  "latest_message": "Integration batch 15: Crop, Free Transform and Actions epic PRs (#11203)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -296,6 +296,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-02",
+        "text": "Load Actions: Mac Roman step names with é ä ö ü Ä or ° read as Mac Roman instead of windows-1252 or Cyrillic (#10774): windows-1252's rare 0x80–0x9F letters and a lone Cyrillic letter in a Latin word no longer count as common text, the degree sign does, and the file's own Unicode text settles a word-initial rare letter and breaks exact ties toward windows-1252 or Mac Roman"
+      },
+      {
         "date": "2026-10-21",
         "text": "Linux can use font-free Adwaita controls when System Title Bar is selected, while the integrated CSD title bar remains the default (as in #4439). Saved preferences are respected; startup and preference-dialog regressions cover both choices (#6266)."
       },
@@ -342,7 +346,7 @@
     "value_since": "2026-10-10T19:09:04Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 7,
+    "revisions_since": 8,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -350,39 +354,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 8,
-    "revisions_7d": 2,
+    "revisions": 9,
+    "revisions_7d": 3,
     "last_revision": {
-      "ts": "2026-11-02T18:59:41Z",
+      "ts": "2026-11-04T13:18:54Z",
       "kind": "content",
-      "commit": "f8e393f",
-      "commit_full": "f8e393fdb6f8d0e5da193b03e86e90d278fcc707",
-      "message": "Enable font-free GNOME/Wayland controls for system title bars (#6266)"
+      "commit": "2c68cc6",
+      "commit_full": "2c68cc6b9590f7100417a8f42bca9b9d67c40406",
+      "message": "Integration batch 15: Crop, Free Transform and Actions epic PRs (#11203)"
     },
     "last_update": {
-      "ts": "2026-11-02T18:59:41Z",
+      "ts": "2026-11-04T13:18:54Z",
       "kind": "content",
-      "commit": "f8e393f",
-      "commit_full": "f8e393fdb6f8d0e5da193b03e86e90d278fcc707",
-      "message": "Enable font-free GNOME/Wayland controls for system title bars (#6266)"
+      "commit": "2c68cc6",
+      "commit_full": "2c68cc6b9590f7100417a8f42bca9b9d67c40406",
+      "message": "Integration batch 15: Crop, Free Transform and Actions epic PRs (#11203)"
     },
     "self_reported": "2026-10-17"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.3,
+    "score": 20.7,
     "active_days_7d": 7,
-    "changes_7d": 94,
-    "changes_14d": 316,
+    "changes_7d": 101,
+    "changes_14d": 323,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-04T11:39:54Z",
-      "commit": "68b6dbf",
-      "commit_full": "68b6dbfa790d9d01525b494c182a0417d4b18f59",
-      "subject": "perf(bench): split command and refresh time; refresh like the app; stop rows timing setup (#10750)"
+      "ts": "2026-11-04T13:35:55Z",
+      "commit": "5617e00",
+      "commit_full": "5617e00ca05adf7658afa4ec68908cb1889edf79",
+      "subject": "fix(ui): a save that failed some Image Assets reports which outputs (#11117) (#11168)"
     },
-    "last_commit_ts": "2026-11-04T11:39:54Z",
+    "last_commit_ts": "2026-11-04T13:35:55Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       48,
@@ -398,7 +402,7 @@
       11,
       7,
       24,
-      19
+      26
     ],
     "days": [
       {
@@ -1068,20 +1072,20 @@
       },
       {
         "d": "2026-11-04",
-        "code": 19,
+        "code": 26,
         "other": 0,
         "samples": [
           {
-            "commit": "68b6dbf",
-            "subject": "perf(bench): split command and refresh time; refresh like the app; stop rows timing setup (#10750)"
+            "commit": "5617e00",
+            "subject": "fix(ui): a save that failed some Image Assets reports which outputs (#11117) (#11168)"
           },
           {
-            "commit": "e88adf2",
-            "subject": "Preferences: show Effect Cache, which the engine reads (#204) (#10921)"
+            "commit": "2c68cc6",
+            "subject": "Integration batch 15: Crop, Free Transform and Actions epic PRs (#11203)"
           },
           {
-            "commit": "db18b9d",
-            "subject": "Properties: W/H/X/Y take a typed percentage (#10784) (#10802)"
+            "commit": "01ff0e2",
+            "subject": "feat(filters): Lens Flare looks like Photoshop's (SSIM 0.97–0.995 per lens) (#8705)"
           }
         ]
       }
@@ -1478,7 +1482,30 @@
       "breadth_pct": 76.0,
       "full_prev": 45.0,
       "kind": "content"
+    },
+    {
+      "commit": "2c68cc6",
+      "commit_full": "2c68cc6b9590f7100417a8f42bca9b9d67c40406",
+      "commit_date": "2026-11-04T14:18:54+01:00",
+      "ts": "2026-11-04T13:18:54Z",
+      "message": "Integration batch 15: Crop, Free Transform and Actions epic PRs (#11203)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-17",
+      "full_pct": 45.0,
+      "full_range": null,
+      "full_hours": [
+        2300,
+        4100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe Photoshop 2026",
+      "mainstream_pct": 43.0,
+      "essentials_pct": 61.0,
+      "breadth_pct": 76.0,
+      "full_prev": 45.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-04T12:13:12+00:00"
+  "updated_at": "2026-11-04T13:36:42+00:00"
 }

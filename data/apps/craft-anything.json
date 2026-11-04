@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "b2d7e89",
-  "latest_commit_date": "2026-11-04T17:03:01+07:00",
-  "latest_message": "Give the macOS app a menu bar with its actions (#804)",
+  "latest_commit": "cf414ff",
+  "latest_commit_date": "2026-11-04T20:32:58+07:00",
+  "latest_message": "Apply replay body limits after redaction (R3.11) (#717)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 121,
-    "revisions_7d": 121,
+    "revisions": 128,
+    "revisions_7d": 128,
     "last_revision": {
-      "ts": "2026-11-04T10:03:01Z",
+      "ts": "2026-11-04T13:32:58Z",
       "kind": "content",
-      "commit": "b2d7e89",
-      "commit_full": "b2d7e89ee811a530b455dc5fe43c3a43e1cf474d",
-      "message": "Give the macOS app a menu bar with its actions (#804)"
+      "commit": "cf414ff",
+      "commit_full": "cf414ff4b93634be7ad1c877ee68f8ec84e2903b",
+      "message": "Apply replay body limits after redaction (R3.11) (#717)"
     },
     "last_update": {
-      "ts": "2026-11-04T10:03:01Z",
+      "ts": "2026-11-04T13:32:58Z",
       "kind": "content",
-      "commit": "b2d7e89",
-      "commit_full": "b2d7e89ee811a530b455dc5fe43c3a43e1cf474d",
-      "message": "Give the macOS app a menu bar with its actions (#804)"
+      "commit": "cf414ff",
+      "commit_full": "cf414ff4b93634be7ad1c877ee68f8ec84e2903b",
+      "message": "Apply replay body limits after redaction (R3.11) (#717)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.6,
+    "score": 19.9,
     "active_days_7d": 5,
-    "changes_7d": 320,
-    "changes_14d": 320,
-    "housekeeping_7d": 22,
+    "changes_7d": 328,
+    "changes_14d": 328,
+    "housekeeping_7d": 24,
     "last_code_change": {
-      "ts": "2026-11-04T10:03:01Z",
-      "commit": "b2d7e89",
-      "commit_full": "b2d7e89ee811a530b455dc5fe43c3a43e1cf474d",
-      "subject": "Give the macOS app a menu bar with its actions (#804)"
+      "ts": "2026-11-04T13:32:58Z",
+      "commit": "cf414ff",
+      "commit_full": "cf414ff4b93634be7ad1c877ee68f8ec84e2903b",
+      "subject": "Apply replay body limits after redaction (R3.11) (#717)"
     },
-    "last_commit_ts": "2026-11-04T10:03:01Z",
+    "last_commit_ts": "2026-11-04T13:32:58Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       73,
       117,
       88,
-      39
+      47
     ],
     "days": [
       {
@@ -174,20 +174,20 @@
       },
       {
         "d": "2026-11-04",
-        "code": 39,
-        "other": 2,
+        "code": 47,
+        "other": 4,
         "samples": [
           {
-            "commit": "b2d7e89",
-            "subject": "Give the macOS app a menu bar with its actions (#804)"
+            "commit": "cf414ff",
+            "subject": "Apply replay body limits after redaction (R3.11) (#717)"
           },
           {
-            "commit": "cb395ee",
-            "subject": "Let people fold the builder's plan card away, and keep the fold (#790)"
+            "commit": "f3efc1e",
+            "subject": "Delete private browser profiles when the browser closes (#822)"
           },
           {
-            "commit": "b6f61d1",
-            "subject": "Say when the Claude desktop app is installed but Claude Code isn't (#789)"
+            "commit": "e59b1ef",
+            "subject": "Register an installed agent named with --backend (R5.5) (#821)"
           }
         ]
       }
@@ -1093,8 +1093,57 @@
       "commit": "b2d7e89",
       "commit_full": "b2d7e89ee811a530b455dc5fe43c3a43e1cf474d",
       "message": "Give the macOS app a menu bar with its actions (#804)"
+    },
+    {
+      "ts": "2026-11-04T12:23:51Z",
+      "kind": "content",
+      "commit": "9d4908b",
+      "commit_full": "9d4908bd92470e5a10d3ffc62b6222a809f2c4a3",
+      "message": "Record a live Vineflower run on a real JAR (R5.7) (#802)"
+    },
+    {
+      "ts": "2026-11-04T12:29:30Z",
+      "kind": "content",
+      "commit": "98d12f2",
+      "commit_full": "98d12f23a016405694b876c4ab01fdaa5d56ab46",
+      "message": "Make all permitted tools available to Codex from startup (#805)"
+    },
+    {
+      "ts": "2026-11-04T12:29:35Z",
+      "kind": "content",
+      "commit": "03265d4",
+      "commit_full": "03265d442d56dc1dc0c433092e101d420daa76c8",
+      "message": "Name the program an agent test ran, and say when a saved agent path is gone (#809)"
+    },
+    {
+      "ts": "2026-11-04T12:29:42Z",
+      "kind": "content",
+      "commit": "f8d6e35",
+      "commit_full": "f8d6e3585a8425098698053e9a5605291611e716",
+      "message": "Build with an API backend without adding an agent (R5.5) (#819)"
+    },
+    {
+      "ts": "2026-11-04T13:03:19Z",
+      "kind": "content",
+      "commit": "e59b1ef",
+      "commit_full": "e59b1ef4d86bc5dd6febdfa641b7ac094b09e8cc",
+      "message": "Register an installed agent named with --backend (R5.5) (#821)"
+    },
+    {
+      "ts": "2026-11-04T13:32:06Z",
+      "kind": "content",
+      "commit": "f3efc1e",
+      "commit_full": "f3efc1eb6156b6ad8b635064725a963ea758c0a1",
+      "message": "Delete private browser profiles when the browser closes (#822)"
+    },
+    {
+      "ts": "2026-11-04T13:32:58Z",
+      "kind": "content",
+      "commit": "cf414ff",
+      "commit_full": "cf414ff4b93634be7ad1c877ee68f8ec84e2903b",
+      "message": "Apply replay body limits after redaction (R3.11) (#717)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-04T10:29:52+00:00"
+  "updated_at": "2026-11-04T13:37:57+00:00"
 }
