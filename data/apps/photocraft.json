@@ -371,18 +371,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.9,
+    "score": 19.4,
     "active_days_7d": 7,
-    "changes_7d": 76,
-    "changes_14d": 298,
+    "changes_7d": 85,
+    "changes_14d": 307,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-04T00:35:50Z",
-      "commit": "3fd5304",
-      "commit_full": "3fd5304dfe5bc84c317fc50021d9cf30d34f1ae9",
-      "subject": "text: find paragraphs and trailing blanks without rescanning (#11045)"
+      "ts": "2026-11-04T01:37:49Z",
+      "commit": "87f0bb3",
+      "commit_full": "87f0bb39421b4aa69866c2ce236997353ab19a68",
+      "subject": "raw: refuse JPEG XL tiles with compressed metadata boxes or splines (#11039)"
     },
-    "last_commit_ts": "2026-11-04T00:35:50Z",
+    "last_commit_ts": "2026-11-04T01:37:49Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       48,
@@ -398,7 +398,7 @@
       11,
       7,
       24,
-      1
+      10
     ],
     "days": [
       {
@@ -1068,12 +1068,20 @@
       },
       {
         "d": "2026-11-04",
-        "code": 1,
+        "code": 10,
         "other": 0,
         "samples": [
           {
-            "commit": "3fd5304",
-            "subject": "text: find paragraphs and trailing blanks without rescanning (#11045)"
+            "commit": "87f0bb3",
+            "subject": "raw: refuse JPEG XL tiles with compressed metadata boxes or splines (#11039)"
+          },
+          {
+            "commit": "c004e38",
+            "subject": "raw: decode a tile range once when several tiles share it (#11041)"
+          },
+          {
+            "commit": "06bedca",
+            "subject": "raw: refuse lossy DNG tiles that carry Extended XMP (#11042)"
           }
         ]
       }
@@ -1472,5 +1480,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-04T00:36:08+00:00"
+  "updated_at": "2026-11-04T01:46:19+00:00"
 }

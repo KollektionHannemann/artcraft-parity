@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "682ce43",
-  "latest_commit_date": "2026-11-03T23:06:35Z",
-  "latest_message": "CP4.3: craft-proof pin at craft-libs 01315d9: French elision suggestions first; Valencian reads its pack (#5509)",
+  "latest_commit": "bff0d1d",
+  "latest_commit_date": "2026-11-04T00:45:19Z",
+  "latest_message": "#3867 follow-up: header repeats count canvas members, one budget per layout; contours and chain widths don't depend on cache history (#4385)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -429,6 +429,10 @@
         "text": "Keytips reach the Backstage: Alt, F badges its pages with Word's letters, and Alt, F, P (or V) opens Print (#4960)."
       },
       {
+        "date": "2026-10-30",
+        "text": "Layout resource caps (#3867, #4385) and linear-time passes (#3866, #4392): repeated table-header rows are capped by item counts, a clipped group counting every nested member, the wrap cache by decoded pixels and the widths a linked text box chain lays out by their lines and items; PDF export, hit testing, tracked-change and clipped-table costs, and long endnote selections no longer grow quadratically. Synthetic regression tests only; no new Word comparison."
+      },
+      {
         "date": "2026-10-29",
         "text": "Documents with hyperlinks or a table of contents print again on the desktop (#4734). The print job scales each page to the paper, and the spooler refused a page with link annotations (\"flatten page annotations before using shrink-to-fit\"); the PDF sent to the printer now omits link annotations, which print nothing; the link and table-of-contents text stays on the page. Exported PDFs and Save these pages as PDF (file.printPdf) keep the annotations."
       },
@@ -483,10 +487,6 @@
       {
         "date": "2026-10-28",
         "text": "Charts and SmartArt draw text their font lacks in a fallback face, as body text does: Chinese titles, axis labels and legends no longer show boxes (#4720). A run of such characters takes one face that covers it all, so a label doesn't mix serif and sans glyphs; bold labels stay bold."
-      },
-      {
-        "date": "2026-10-28",
-        "text": "Custom document properties retain their bookmark link targets through DOCX saves, native JSON reopens, value edits and dialog renames (#4767). Linked values are not evaluated; the existing dialog and field-update behavior are unchanged. Original fixtures cover ordinary and raw property values; broader corpus qualification and readiness estimates remain unchanged."
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 11,
     "releases_since_capped": false,
-    "revisions_since": 465,
+    "revisions_since": 466,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 469,
-    "revisions_7d": 51,
+    "revisions": 470,
+    "revisions_7d": 52,
     "last_revision": {
-      "ts": "2026-11-03T23:06:35Z",
+      "ts": "2026-11-04T00:45:19Z",
       "kind": "content",
-      "commit": "682ce43",
-      "commit_full": "682ce4318aac0875feab3960cc17bc910a859a1b",
-      "message": "CP4.3: craft-proof pin at craft-libs 01315d9: French elision suggestions first; Valencian reads its pack (#5509)"
+      "commit": "bff0d1d",
+      "commit_full": "bff0d1d9250a34e74d38f53bfe17195edb2da66b",
+      "message": "#3867 follow-up: header repeats count canvas members, one budget per layout; contours and chain widths don't depend on cache history (#4385)"
     },
     "last_update": {
-      "ts": "2026-11-03T23:06:35Z",
+      "ts": "2026-11-04T00:45:19Z",
       "kind": "content",
-      "commit": "682ce43",
-      "commit_full": "682ce4318aac0875feab3960cc17bc910a859a1b",
-      "message": "CP4.3: craft-proof pin at craft-libs 01315d9: French elision suggestions first; Valencian reads its pack (#5509)"
+      "commit": "bff0d1d",
+      "commit_full": "bff0d1d9250a34e74d38f53bfe17195edb2da66b",
+      "message": "#3867 follow-up: header repeats count canvas members, one budget per layout; contours and chain widths don't depend on cache history (#4385)"
     },
     "self_reported": "2026-11-03"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.5,
-    "active_days_7d": 6,
-    "changes_7d": 109,
-    "changes_14d": 269,
+    "score": 18.1,
+    "active_days_7d": 7,
+    "changes_7d": 111,
+    "changes_14d": 271,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-03T23:12:07Z",
-      "commit": "969df57",
-      "commit_full": "969df57ea2e10342e4d17db87c83fff395482dac",
-      "subject": "About: credits tables fit without side-scrolling and their columns resize (#5506)"
+      "ts": "2026-11-04T00:57:30Z",
+      "commit": "d64ef7c",
+      "commit_full": "d64ef7c3f9160cdc30abe8e8f669bb853e40e12b",
+      "subject": "CP4.3: craft-i18n.rev at cde4900 (craft-i18n#136): Options › Language, missing-pack bar and Language pack language-name rows in 35 locales (#5518)"
     },
-    "last_commit_ts": "2026-11-03T23:12:07Z",
+    "last_commit_ts": "2026-11-04T00:57:30Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       5,
@@ -568,7 +568,7 @@
       14,
       11,
       19,
-      0
+      2
     ],
     "days": [
       {
@@ -1062,6 +1062,21 @@
           {
             "commit": "ddf88c3",
             "subject": "CP4.3: craft-i18n.rev at 20467b6 (#116 merged): builds embed the Language data language-packs-2 was built from (#5385)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-04",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "d64ef7c",
+            "subject": "CP4.3: craft-i18n.rev at cde4900 (craft-i18n#136): Options › Language, missing-pack bar and Language pack language-name rows in 35 locales (#5518)"
+          },
+          {
+            "commit": "bff0d1d",
+            "subject": "#3867 follow-up: header repeats count canvas members, one budget per layout; contours and chain widths don't depend on cache history (#4385)"
           }
         ]
       }
@@ -12079,7 +12094,30 @@
       "full_prev": 60.0,
       "kind": "content",
       "target_changed": "Microsoft Word (Microsoft 365) for Mac 16.113.4> Last reviewed: 2026-10-10"
+    },
+    {
+      "commit": "bff0d1d",
+      "commit_full": "bff0d1d9250a34e74d38f53bfe17195edb2da66b",
+      "commit_date": "2026-11-04T00:45:19Z",
+      "ts": "2026-11-04T00:45:19Z",
+      "message": "#3867 follow-up: header repeats count canvas members, one budget per layout; contours and chain widths don't depend on cache history (#4385)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-04T00:36:54+00:00"
+  "updated_at": "2026-11-04T01:46:44+00:00"
 }

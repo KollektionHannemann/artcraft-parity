@@ -374,18 +374,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.9,
-    "active_days_7d": 6,
-    "changes_7d": 338,
-    "changes_14d": 396,
+    "score": 19.4,
+    "active_days_7d": 7,
+    "changes_7d": 340,
+    "changes_14d": 398,
     "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-11-03T23:28:51Z",
-      "commit": "025c038",
-      "commit_full": "025c038af558362a64f650dcba7a994d7d5cfb23",
-      "subject": "GPU: build effect kernels on first use, each family from a module of its own (fixes #1590) (#1705)"
+      "ts": "2026-11-04T01:23:08Z",
+      "commit": "58ca9c1",
+      "commit_full": "58ca9c1c1b163fdada41291847f3d0f7559339b2",
+      "subject": "OCIO: refuse a .csp LUT whose header claims an oversized table before reserving it (#2938)"
     },
-    "last_commit_ts": "2026-11-03T23:28:51Z",
+    "last_commit_ts": "2026-11-04T01:23:08Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       10,
@@ -401,7 +401,7 @@
       1,
       19,
       46,
-      0
+      2
     ],
     "days": [
       {
@@ -996,6 +996,21 @@
             "subject": "GPU.1: Preserve CPU parity in numerical effect kernels (#1490)"
           }
         ]
+      },
+      {
+        "d": "2026-11-04",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "58ca9c1",
+            "subject": "OCIO: refuse a .csp LUT whose header claims an oversized table before reserving it (#2938)"
+          },
+          {
+            "commit": "6572514",
+            "subject": "GPU: size the memory cap from the card's video memory on Linux (fixes #1487) (#1706)"
+          }
+        ]
       }
     ]
   },
@@ -1530,5 +1545,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-04T00:36:41+00:00"
+  "updated_at": "2026-11-04T01:46:37+00:00"
 }

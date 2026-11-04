@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "ec93bc2",
-  "latest_commit_date": "2026-11-03T17:28:39-07:00",
-  "latest_message": "A builder on a local model isn't told to call memory tools it isn't offered (#746)",
+  "latest_commit": "7a0d7de",
+  "latest_commit_date": "2026-11-04T08:46:52+07:00",
+  "latest_message": "Keep what a project edited in place is built with, read from its own files (#755)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 96,
-    "revisions_7d": 96,
+    "revisions": 104,
+    "revisions_7d": 104,
     "last_revision": {
-      "ts": "2026-11-04T00:28:39Z",
+      "ts": "2026-11-04T01:46:52Z",
       "kind": "content",
-      "commit": "ec93bc2",
-      "commit_full": "ec93bc20e6d3a13de3e071e4e0e7a8a579978f20",
-      "message": "A builder on a local model isn't told to call memory tools it isn't offered (#746)"
+      "commit": "7a0d7de",
+      "commit_full": "7a0d7de0e4343dac35acb58cc64d021febcb7157",
+      "message": "Keep what a project edited in place is built with, read from its own files (#755)"
     },
     "last_update": {
-      "ts": "2026-11-04T00:28:39Z",
+      "ts": "2026-11-04T01:46:52Z",
       "kind": "content",
-      "commit": "ec93bc2",
-      "commit_full": "ec93bc20e6d3a13de3e071e4e0e7a8a579978f20",
-      "message": "A builder on a local model isn't told to call memory tools it isn't offered (#746)"
+      "commit": "7a0d7de",
+      "commit_full": "7a0d7de0e4343dac35acb58cc64d021febcb7157",
+      "message": "Keep what a project edited in place is built with, read from its own files (#755)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.3,
+    "score": 18.6,
     "active_days_7d": 5,
-    "changes_7d": 282,
-    "changes_14d": 282,
+    "changes_7d": 300,
+    "changes_14d": 300,
     "housekeeping_7d": 21,
     "last_code_change": {
-      "ts": "2026-11-04T00:28:39Z",
-      "commit": "ec93bc2",
-      "commit_full": "ec93bc20e6d3a13de3e071e4e0e7a8a579978f20",
-      "subject": "A builder on a local model isn't told to call memory tools it isn't offered (#746)"
+      "ts": "2026-11-04T01:46:52Z",
+      "commit": "7a0d7de",
+      "commit_full": "7a0d7de0e4343dac35acb58cc64d021febcb7157",
+      "subject": "Keep what a project edited in place is built with, read from its own files (#755)"
     },
-    "last_commit_ts": "2026-11-04T00:28:39Z",
+    "last_commit_ts": "2026-11-04T01:46:52Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       73,
       117,
       88,
-      1
+      19
     ],
     "days": [
       {
@@ -174,12 +174,20 @@
       },
       {
         "d": "2026-11-04",
-        "code": 1,
+        "code": 19,
         "other": 1,
         "samples": [
           {
-            "commit": "ec93bc2",
-            "subject": "A builder on a local model isn't told to call memory tools it isn't offered (#746)"
+            "commit": "7a0d7de",
+            "subject": "Keep what a project edited in place is built with, read from its own files (#755)"
+          },
+          {
+            "commit": "7eee1fd",
+            "subject": "The pasted-picture test passes when its pastes share a millisecond (#761)"
+          },
+          {
+            "commit": "bbc06cb",
+            "subject": "Start the window on Macs whose Metal compiler rejects the OS's shader version (#744)"
           }
         ]
       }
@@ -910,8 +918,64 @@
       "commit": "ec93bc2",
       "commit_full": "ec93bc20e6d3a13de3e071e4e0e7a8a579978f20",
       "message": "A builder on a local model isn't told to call memory tools it isn't offered (#746)"
+    },
+    {
+      "ts": "2026-11-04T00:58:04Z",
+      "kind": "content",
+      "commit": "1126c4a",
+      "commit_full": "1126c4a8e47e4e92e348640d8c976257ff789b92",
+      "message": "Find Visual Studio C++ tools installed outside Program Files (#726)"
+    },
+    {
+      "ts": "2026-11-04T00:59:12Z",
+      "kind": "content",
+      "commit": "447d1eb",
+      "commit_full": "447d1eb729505d6971d5691048d8dfe47d57e56b",
+      "message": "Add a model server by its address in the first run's AI step (#680)"
+    },
+    {
+      "ts": "2026-11-04T01:05:03Z",
+      "kind": "content",
+      "commit": "5eb1b2f",
+      "commit_full": "5eb1b2f4758d20435af344674e01077a052b217b",
+      "message": "The build check says where a project made one folder down is, and the Rust steps say Cargo.toml goes in app/ itself (#751)"
+    },
+    {
+      "ts": "2026-11-04T01:05:40Z",
+      "kind": "content",
+      "commit": "085b702",
+      "commit_full": "085b7029a549a7f8e516256d5a7d1f82353631ed",
+      "message": "Type in a model the list doesn't offer in Settings → AI (#730)"
+    },
+    {
+      "ts": "2026-11-04T01:05:51Z",
+      "kind": "content",
+      "commit": "66bda56",
+      "commit_full": "66bda5607def409950bc5a04030a4e58bac8e7a9",
+      "message": "Keep Make off the folder picked on Work on my project, and don't read an address in its request as an original (#750)"
+    },
+    {
+      "ts": "2026-11-04T01:08:33Z",
+      "kind": "content",
+      "commit": "c26e6ba",
+      "commit_full": "c26e6ba525e714de029402d42b216eac6f718a28",
+      "message": "Say when a saved program path has no file there, instead of blaming PATH (#739)"
+    },
+    {
+      "ts": "2026-11-04T01:22:21Z",
+      "kind": "content",
+      "commit": "87f09c4",
+      "commit_full": "87f09c4d167298a2907af463cc768d5d8bca763b",
+      "message": "Run JSON tool calls a model writes after a sentence, or several in one reply (#753)"
+    },
+    {
+      "ts": "2026-11-04T01:46:52Z",
+      "kind": "content",
+      "commit": "7a0d7de",
+      "commit_full": "7a0d7de0e4343dac35acb58cc64d021febcb7157",
+      "message": "Keep what a project edited in place is built with, read from its own files (#755)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-04T00:37:14+00:00"
+  "updated_at": "2026-11-04T01:46:54+00:00"
 }
