@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "92ecb40",
-  "latest_commit_date": "2026-11-04T16:28:18+01:00",
-  "latest_message": "ODT: full open, edit and save support, lossless on save without edits (gap 19) (#5559)",
+  "latest_commit": "bf77157",
+  "latest_commit_date": "2026-11-04T21:19:03+01:00",
+  "latest_message": "Desktop: a window restored onto no monitor opens on screen (#4742)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 479,
+    "revisions_since": 480,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 483,
-    "revisions_7d": 65,
+    "revisions": 484,
+    "revisions_7d": 66,
     "last_revision": {
-      "ts": "2026-11-04T15:28:18Z",
+      "ts": "2026-11-04T20:19:03Z",
       "kind": "content",
-      "commit": "92ecb40",
-      "commit_full": "92ecb40105f56b674c18e3e88557e1456591868b",
-      "message": "ODT: full open, edit and save support, lossless on save without edits (gap 19) (#5559)"
+      "commit": "bf77157",
+      "commit_full": "bf7715785c7f2f1b86cb45fa1aa95a7f512fe188",
+      "message": "Desktop: a window restored onto no monitor opens on screen (#4742)"
     },
     "last_update": {
-      "ts": "2026-11-04T15:28:18Z",
+      "ts": "2026-11-04T20:19:03Z",
       "kind": "content",
-      "commit": "92ecb40",
-      "commit_full": "92ecb40105f56b674c18e3e88557e1456591868b",
-      "message": "ODT: full open, edit and save support, lossless on save without edits (gap 19) (#5559)"
+      "commit": "bf77157",
+      "commit_full": "bf7715785c7f2f1b86cb45fa1aa95a7f512fe188",
+      "message": "Desktop: a window restored onto no monitor opens on screen (#4742)"
     },
     "self_reported": "2026-11-04"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.2,
+    "score": 21.3,
     "active_days_7d": 7,
-    "changes_7d": 134,
-    "changes_14d": 294,
+    "changes_7d": 136,
+    "changes_14d": 296,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-11-04T17:47:52Z",
-      "commit": "573b929",
-      "commit_full": "573b929ad683d96dd1de9d366b108f35385915fd",
-      "subject": "Fix #5559 follow-ups: generated list prefix, hidden-text objects, turned clipped lines, kept-markup checks (#5593)"
+      "ts": "2026-11-04T20:33:52Z",
+      "commit": "1f02607",
+      "commit_full": "1f026078be016fd12431639e6c857ecf4975e3ba",
+      "subject": "Format Shape: the Angle field leaves an angle above 359.9° alone (#3959)"
     },
-    "last_commit_ts": "2026-11-04T17:47:52Z",
+    "last_commit_ts": "2026-11-04T20:33:52Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       5,
@@ -568,7 +568,7 @@
       14,
       11,
       19,
-      25
+      27
     ],
     "days": [
       {
@@ -1067,20 +1067,20 @@
       },
       {
         "d": "2026-11-04",
-        "code": 25,
+        "code": 27,
         "other": 1,
         "samples": [
           {
+            "commit": "1f02607",
+            "subject": "Format Shape: the Angle field leaves an angle above 359.9° alone (#3959)"
+          },
+          {
+            "commit": "bf77157",
+            "subject": "Desktop: a window restored onto no monitor opens on screen (#4742)"
+          },
+          {
             "commit": "573b929",
             "subject": "Fix #5559 follow-ups: generated list prefix, hidden-text objects, turned clipped lines, kept-markup checks (#5593)"
-          },
-          {
-            "commit": "92ecb40",
-            "subject": "ODT: full open, edit and save support, lossless on save without edits (gap 19) (#5559)"
-          },
-          {
-            "commit": "63ceaf5",
-            "subject": "File › Print: Return prints, as Word's default Print button does (#4651)"
           }
         ]
       }
@@ -12420,7 +12420,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "bf77157",
+      "commit_full": "bf7715785c7f2f1b86cb45fa1aa95a7f512fe188",
+      "commit_date": "2026-11-04T21:19:03+01:00",
+      "ts": "2026-11-04T20:19:03Z",
+      "message": "Desktop: a window restored onto no monitor opens on screen (#4742)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-04",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-04T18:40:11+00:00"
+  "updated_at": "2026-11-04T20:38:54+00:00"
 }

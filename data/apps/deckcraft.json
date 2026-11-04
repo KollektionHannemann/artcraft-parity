@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/deckcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/deckcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "aa13eeb",
-  "latest_commit_date": "2026-11-03T08:54:48-05:00",
-  "latest_message": "Integration: community PR wave 10 (one bodyPr attribute chain, reuse imports, doc headers folded)",
+  "latest_commit": "9d36b59",
+  "latest_commit_date": "2026-11-04T15:15:59-05:00",
+  "latest_message": "Ogg: include recovered tail packets in Opus duration (#1862)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-04",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -319,6 +319,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-04",
+        "text": "Ogg Opus recovery keeps trailing packets without granules in the total duration, matching their recovered positions; valid end trimming stays covered"
+      },
+      {
         "date": "2026-11-03",
         "text": "Reuse Slides brings along referenced custom table styles, including grouped tables, and remaps conflicting style ids without changing destination tables"
       },
@@ -473,10 +477,6 @@
       {
         "date": "2026-10-22",
         "text": "Table text takes the master's other-text style (otherStyle), shapes and text boxes the presentation's default text style, as PowerPoint for Mac draws them (synthetic probe: 14 pt cells under a 14 pt otherStyle and a 26 pt defaultTextStyle); a private deck's table had been drawn 20 pt instead of 18"
-      },
-      {
-        "date": "2026-10-22",
-        "text": "Slide Show: while animations play, each frame draws only the slide's shapes over the slide's backdrop (background, master and layout graphics), rendered once and ahead of time. A full-slide picture with a glow in the layout re-rendered at every frame held animations to 2–3 frames a second (~390 ms a frame at 1080p); now ~28 ms"
       }
     ]
   },
@@ -485,7 +485,7 @@
     "value_since": "2026-10-10T18:09:21Z",
     "releases_since": 11,
     "releases_since_capped": false,
-    "revisions_since": 129,
+    "revisions_since": 130,
     "hours_since": null,
     "areas_since": {
       "up": 1,
@@ -504,39 +504,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 133,
-    "revisions_7d": 26,
+    "revisions": 134,
+    "revisions_7d": 27,
     "last_revision": {
-      "ts": "2026-11-03T13:54:48Z",
-      "kind": "editorial",
-      "commit": "aa13eeb",
-      "commit_full": "aa13eeb45e0f84afc8ee7dc803fe2c4471def478",
-      "message": "Integration: community PR wave 10 (one bodyPr attribute chain, reuse imports, doc headers folded)"
+      "ts": "2026-11-04T20:15:59Z",
+      "kind": "content",
+      "commit": "9d36b59",
+      "commit_full": "9d36b5931cf93b36605eb5c8173260a2a346ccf5",
+      "message": "Ogg: include recovered tail packets in Opus duration (#1862)"
     },
     "last_update": {
-      "ts": "2026-11-03T13:53:01Z",
+      "ts": "2026-11-04T20:15:59Z",
       "kind": "content",
-      "commit": "50e0249",
-      "commit_full": "50e02490b36f167d907c2672b1072b77c37a0b91",
-      "message": "Merge pull request #1720"
+      "commit": "9d36b59",
+      "commit_full": "9d36b5931cf93b36605eb5c8173260a2a346ccf5",
+      "message": "Ogg: include recovered tail packets in Opus duration (#1862)"
     },
-    "self_reported": "2026-11-03"
+    "self_reported": "2026-11-04"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
     "score": 20.4,
     "active_days_7d": 6,
-    "changes_7d": 155,
-    "changes_14d": 299,
+    "changes_7d": 156,
+    "changes_14d": 300,
     "housekeeping_7d": 10,
     "last_code_change": {
-      "ts": "2026-11-04T19:43:02Z",
-      "commit": "c252a68",
-      "commit_full": "c252a681a0e219b8a12ca4568822411e90b01a39",
-      "subject": "Keep whole character after a backslash in RTF outline import (#1454)"
+      "ts": "2026-11-04T20:15:59Z",
+      "commit": "9d36b59",
+      "commit_full": "9d36b5931cf93b36605eb5c8173260a2a346ccf5",
+      "subject": "Ogg: include recovered tail packets in Opus duration (#1862)"
     },
-    "last_commit_ts": "2026-11-04T19:43:02Z",
+    "last_commit_ts": "2026-11-04T20:15:59Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
       7,
@@ -552,7 +552,7 @@
       3,
       15,
       31,
-      23
+      24
     ],
     "days": [
       {
@@ -1034,9 +1034,13 @@
       },
       {
         "d": "2026-11-04",
-        "code": 23,
+        "code": 24,
         "other": 0,
         "samples": [
+          {
+            "commit": "9d36b59",
+            "subject": "Ogg: include recovered tail packets in Opus duration (#1862)"
+          },
           {
             "commit": "c252a68",
             "subject": "Keep whole character after a backslash in RTF outline import (#1454)"
@@ -1044,10 +1048,6 @@
           {
             "commit": "80f784d",
             "subject": "Fonts: ignore variation tags the font has no axis for (#1795)"
-          },
-          {
-            "commit": "07dc221",
-            "subject": "Repair: bound the notes page size like a slide (#1832)"
           }
         ]
       }
@@ -4326,7 +4326,30 @@
       "breadth_pct": 62.0,
       "full_prev": 55.0,
       "kind": "editorial"
+    },
+    {
+      "commit": "9d36b59",
+      "commit_full": "9d36b5931cf93b36605eb5c8173260a2a346ccf5",
+      "commit_date": "2026-11-04T15:15:59-05:00",
+      "ts": "2026-11-04T20:15:59Z",
+      "message": "Ogg: include recovered tail packets in Opus duration (#1862)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-04",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-04T19:45:24+00:00"
+  "updated_at": "2026-11-04T20:38:59+00:00"
 }

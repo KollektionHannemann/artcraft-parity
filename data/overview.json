@@ -31,6 +31,17 @@
   ],
   "latest_events": [
     {
+      "id": "designcraft",
+      "name": "DesignCraft",
+      "type": "release",
+      "ts": "2026-11-04T20:37:45Z",
+      "tag": "v0.17.1",
+      "kind": "patch",
+      "changes": 82,
+      "url": "https://github.com/storytold/designcraft/releases/tag/v0.17.1",
+      "prerelease": false
+    },
+    {
       "id": "texturecraft",
       "name": "TextureCraft",
       "type": "release",
@@ -442,29 +453,18 @@
       "changes": 23,
       "url": "https://github.com/storytold/gridcraft/releases/tag/v0.15.0",
       "prerelease": false
-    },
-    {
-      "id": "soundcraft",
-      "name": "SoundCraft",
-      "type": "release",
-      "ts": "2026-11-01T19:12:40Z",
-      "tag": "v0.16.0",
-      "kind": "minor",
-      "changes": 22,
-      "url": "https://github.com/storytold/soundcraft/releases/tag/v0.16.0",
-      "prerelease": false
     }
   ],
   "release_waves": [
     {
       "day": "2026-11-04",
-      "apps": 4,
-      "changes": 69,
+      "apps": 5,
+      "changes": 151,
       "largest": {
-        "id": "pdfcraft",
-        "name": "PdfCraft",
-        "tag": "v0.18.1",
-        "changes": 28
+        "id": "designcraft",
+        "name": "DesignCraft",
+        "tag": "v0.17.1",
+        "changes": 82
       }
     },
     {
@@ -623,18 +623,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 33.6,
+        "score": 33.7,
         "active_days_7d": 7,
-        "changes_7d": 845,
-        "changes_14d": 1292,
+        "changes_7d": 850,
+        "changes_14d": 1297,
         "housekeeping_7d": 33,
         "last_code_change": {
-          "ts": "2026-11-04T19:38:33Z",
-          "commit": "959662f",
-          "commit_full": "959662fde659148b8dfcd7ed26c8a11160e27ea4",
-          "subject": "Preserve styled text after copying a Type range (#5680)"
+          "ts": "2026-11-04T20:30:17Z",
+          "commit": "a2e98ac",
+          "commit_full": "a2e98ac57c72822a976c03b6b4a2ea3915003aa3",
+          "subject": "Fix #5336: Optical kerning spaces pairs by the font's own stem spacing (#5686)"
         },
-        "last_commit_ts": "2026-11-04T19:38:33Z",
+        "last_commit_ts": "2026-11-04T20:30:17Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           96,
@@ -650,7 +650,7 @@
           41,
           113,
           117,
-          169
+          174
         ]
       },
       "release": {
@@ -845,7 +845,7 @@
         "value_since": "2026-10-10T18:11:53Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 479,
+        "revisions_since": 480,
         "hours_since": null,
         "areas_since": {
           "up": 2,
@@ -870,39 +870,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 483,
-        "revisions_7d": 65,
+        "revisions": 484,
+        "revisions_7d": 66,
         "last_revision": {
-          "ts": "2026-11-04T15:28:18Z",
+          "ts": "2026-11-04T20:19:03Z",
           "kind": "content",
-          "commit": "92ecb40",
-          "commit_full": "92ecb40105f56b674c18e3e88557e1456591868b",
-          "message": "ODT: full open, edit and save support, lossless on save without edits (gap 19) (#5559)"
+          "commit": "bf77157",
+          "commit_full": "bf7715785c7f2f1b86cb45fa1aa95a7f512fe188",
+          "message": "Desktop: a window restored onto no monitor opens on screen (#4742)"
         },
         "last_update": {
-          "ts": "2026-11-04T15:28:18Z",
+          "ts": "2026-11-04T20:19:03Z",
           "kind": "content",
-          "commit": "92ecb40",
-          "commit_full": "92ecb40105f56b674c18e3e88557e1456591868b",
-          "message": "ODT: full open, edit and save support, lossless on save without edits (gap 19) (#5559)"
+          "commit": "bf77157",
+          "commit_full": "bf7715785c7f2f1b86cb45fa1aa95a7f512fe188",
+          "message": "Desktop: a window restored onto no monitor opens on screen (#4742)"
         },
         "self_reported": "2026-11-04"
       },
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 21.2,
+        "score": 21.3,
         "active_days_7d": 7,
-        "changes_7d": 134,
-        "changes_14d": 294,
+        "changes_7d": 136,
+        "changes_14d": 296,
         "housekeeping_7d": 13,
         "last_code_change": {
-          "ts": "2026-11-04T17:47:52Z",
-          "commit": "573b929",
-          "commit_full": "573b929ad683d96dd1de9d366b108f35385915fd",
-          "subject": "Fix #5559 follow-ups: generated list prefix, hidden-text objects, turned clipped lines, kept-markup checks (#5593)"
+          "ts": "2026-11-04T20:33:52Z",
+          "commit": "1f02607",
+          "commit_full": "1f026078be016fd12431639e6c857ecf4975e3ba",
+          "subject": "Format Shape: the Angle field leaves an angle above 359.9° alone (#3959)"
         },
-        "last_commit_ts": "2026-11-04T17:47:52Z",
+        "last_commit_ts": "2026-11-04T20:33:52Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
           5,
@@ -918,7 +918,7 @@
           14,
           11,
           19,
-          25
+          27
         ]
       },
       "release": {
@@ -944,11 +944,11 @@
           "v": 60.0
         },
         {
-          "t": "2026-11-04T15:28:18Z",
+          "t": "2026-11-04T20:19:03Z",
           "v": 60.0
         }
       ],
-      "history_len": 483
+      "history_len": 484
     },
     {
       "repo_url": "https://github.com/storytold/filmcraft",
@@ -1102,7 +1102,7 @@
         "value_since": "2026-10-10T18:09:21Z",
         "releases_since": 11,
         "releases_since_capped": false,
-        "revisions_since": 129,
+        "revisions_since": 130,
         "hours_since": null,
         "areas_since": {
           "up": 1,
@@ -1121,39 +1121,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 133,
-        "revisions_7d": 26,
+        "revisions": 134,
+        "revisions_7d": 27,
         "last_revision": {
-          "ts": "2026-11-03T13:54:48Z",
-          "kind": "editorial",
-          "commit": "aa13eeb",
-          "commit_full": "aa13eeb45e0f84afc8ee7dc803fe2c4471def478",
-          "message": "Integration: community PR wave 10 (one bodyPr attribute chain, reuse imports, doc headers folded)"
+          "ts": "2026-11-04T20:15:59Z",
+          "kind": "content",
+          "commit": "9d36b59",
+          "commit_full": "9d36b5931cf93b36605eb5c8173260a2a346ccf5",
+          "message": "Ogg: include recovered tail packets in Opus duration (#1862)"
         },
         "last_update": {
-          "ts": "2026-11-03T13:53:01Z",
+          "ts": "2026-11-04T20:15:59Z",
           "kind": "content",
-          "commit": "50e0249",
-          "commit_full": "50e02490b36f167d907c2672b1072b77c37a0b91",
-          "message": "Merge pull request #1720"
+          "commit": "9d36b59",
+          "commit_full": "9d36b5931cf93b36605eb5c8173260a2a346ccf5",
+          "message": "Ogg: include recovered tail packets in Opus duration (#1862)"
         },
-        "self_reported": "2026-11-03"
+        "self_reported": "2026-11-04"
       },
       "milestone": null,
       "activity": {
         "level": "buzzing",
         "score": 20.4,
         "active_days_7d": 6,
-        "changes_7d": 155,
-        "changes_14d": 299,
+        "changes_7d": 156,
+        "changes_14d": 300,
         "housekeeping_7d": 10,
         "last_code_change": {
-          "ts": "2026-11-04T19:43:02Z",
-          "commit": "c252a68",
-          "commit_full": "c252a681a0e219b8a12ca4568822411e90b01a39",
-          "subject": "Keep whole character after a backslash in RTF outline import (#1454)"
+          "ts": "2026-11-04T20:15:59Z",
+          "commit": "9d36b59",
+          "commit_full": "9d36b5931cf93b36605eb5c8173260a2a346ccf5",
+          "subject": "Ogg: include recovered tail packets in Opus duration (#1862)"
         },
-        "last_commit_ts": "2026-11-04T19:43:02Z",
+        "last_commit_ts": "2026-11-04T20:15:59Z",
         "repo_since": "2026-10-06T02:13:02Z",
         "window": [
           7,
@@ -1169,7 +1169,7 @@
           3,
           15,
           31,
-          23
+          24
         ]
       },
       "release": {
@@ -1195,11 +1195,11 @@
           "v": 55.0
         },
         {
-          "t": "2026-11-03T13:54:48Z",
+          "t": "2026-11-04T20:15:59Z",
           "v": 55.0
         }
       ],
-      "history_len": 133
+      "history_len": 134
     },
     {
       "repo_url": "https://github.com/storytold/figcraft",
@@ -1669,7 +1669,7 @@
         "value_since": "2026-10-10T18:09:17Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 187,
+        "revisions_since": 188,
         "hours_since": null,
         "areas_since": null,
         "changes": 0,
@@ -1677,39 +1677,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 188,
-        "revisions_7d": 42,
+        "revisions": 189,
+        "revisions_7d": 43,
         "last_revision": {
-          "ts": "2026-11-04T16:19:45Z",
+          "ts": "2026-11-04T20:36:05Z",
           "kind": "content",
-          "commit": "fb63090",
-          "commit_full": "fb630909c4851a0d3987f0a118b1c8fd107c9c97",
-          "message": "Place: a file dragged in from the Finder fills the frame it was dropped on (#2304)"
+          "commit": "b98687c",
+          "commit_full": "b98687c3e125c4f95df66ec5521f1df8eb871094",
+          "message": "M5: keep out-and-back cubic segments in striped strokes (#2323)"
         },
         "last_update": {
-          "ts": "2026-11-04T16:19:45Z",
+          "ts": "2026-11-04T20:36:05Z",
           "kind": "content",
-          "commit": "fb63090",
-          "commit_full": "fb630909c4851a0d3987f0a118b1c8fd107c9c97",
-          "message": "Place: a file dragged in from the Finder fills the frame it was dropped on (#2304)"
+          "commit": "b98687c",
+          "commit_full": "b98687c3e125c4f95df66ec5521f1df8eb871094",
+          "message": "M5: keep out-and-back cubic segments in striped strokes (#2323)"
         },
-        "self_reported": "2026-11-01"
+        "self_reported": "2026-11-04"
       },
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 21.0,
+        "score": 21.1,
         "active_days_7d": 7,
-        "changes_7d": 144,
-        "changes_14d": 310,
+        "changes_7d": 146,
+        "changes_14d": 312,
         "housekeeping_7d": 9,
         "last_code_change": {
-          "ts": "2026-11-04T18:57:08Z",
-          "commit": "f3bcc88",
-          "commit_full": "f3bcc886dcf3d9562bd33848602d3fdf34efd8ac",
-          "subject": "Linux packages: require libxkbcommon-x11, which winit dlopens on X11 (#2320)"
+          "ts": "2026-11-04T20:36:05Z",
+          "commit": "b98687c",
+          "commit_full": "b98687c3e125c4f95df66ec5521f1df8eb871094",
+          "subject": "M5: keep out-and-back cubic segments in striped strokes (#2323)"
         },
-        "last_commit_ts": "2026-11-04T18:57:08Z",
+        "last_commit_ts": "2026-11-04T20:36:05Z",
         "repo_since": "2026-10-01T13:00:02Z",
         "window": [
           19,
@@ -1725,16 +1725,16 @@
           17,
           3,
           40,
-          24
+          26
         ]
       },
       "release": {
-        "tag": "v0.17.0",
-        "name": "DesignCraft v0.17.0",
-        "ts": "2026-11-03T00:59:11Z",
-        "url": "https://github.com/storytold/designcraft/releases/tag/v0.17.0",
-        "changes": 20,
-        "new_contributors": 5,
+        "tag": "v0.17.1",
+        "name": "DesignCraft v0.17.1",
+        "ts": "2026-11-04T20:37:45Z",
+        "url": "https://github.com/storytold/designcraft/releases/tag/v0.17.1",
+        "changes": 82,
+        "new_contributors": 4,
         "platforms": [
           "macOS",
           "Windows",
@@ -1743,7 +1743,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
+        "kind": "patch"
       },
       "series": [
         {
@@ -1751,11 +1751,11 @@
           "v": 47.0
         },
         {
-          "t": "2026-11-04T16:19:45Z",
+          "t": "2026-11-04T20:36:05Z",
           "v": 47.0
         }
       ],
-      "history_len": 188
+      "history_len": 189
     },
     {
       "repo_url": "https://github.com/storytold/photocraft",
@@ -2619,18 +2619,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 35.9,
+        "score": 36.0,
         "active_days_7d": 7,
-        "changes_7d": 1030,
-        "changes_14d": 1993,
+        "changes_7d": 1032,
+        "changes_14d": 1995,
         "housekeeping_7d": 26,
         "last_code_change": {
-          "ts": "2026-11-04T19:12:58Z",
-          "commit": "d034633",
-          "commit_full": "d03463326557a10159e90408a480bb1378781496",
-          "subject": "Desktop: the file chooser says when it is not the desktop's own (#10618)"
+          "ts": "2026-11-04T19:59:52Z",
+          "commit": "f8a98ee",
+          "commit_full": "f8a98eed33b4ba7879e603eda5032c37ea3d161c",
+          "subject": "Regenerate generated files and fold pending files [skip ci]"
         },
-        "last_commit_ts": "2026-11-04T19:12:58Z",
+        "last_commit_ts": "2026-11-04T19:59:52Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           25,
@@ -2646,7 +2646,7 @@
           128,
           160,
           38,
-          104
+          106
         ]
       },
       "release": {
@@ -2683,5 +2683,5 @@
       }
     ]
   },
-  "generated_at": "2026-11-04T19:45:51+00:00"
+  "generated_at": "2026-11-04T20:39:24+00:00"
 }

@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/designcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "fb63090",
-  "latest_commit_date": "2026-11-04T11:19:45-05:00",
-  "latest_message": "Place: a file dragged in from the Finder fills the frame it was dropped on (#2304)",
+  "latest_commit": "b98687c",
+  "latest_commit_date": "2026-11-04T15:36:05-05:00",
+  "latest_message": "M5: keep out-and-back cubic segments in striped strokes (#2323)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
     "target": "Adobe InDesign 2026",
-    "last_updated": "2026-11-01",
+    "last_updated": "2026-11-04",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -311,6 +311,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-04",
+        "text": "· Striped strokes retain out-and-back cubic segments whose second control point is away from the coincident endpoints and first control point. A geometry regression checks the offset extent and both stripe bands. No readiness percentage change."
+      },
+      {
         "date": "2026-11-03",
         "text": "· type.char says when the font it applies isn't available (#2189): it returns {\"warnings\": [\"Missing font: Courier Prime (using Source Sans 3)\"]}, or Missing font style: … for a style the family doesn't have, in preflight's words. The font is still applied, as before, so Find Font and preflight list it. A script that asked for a font the machine doesn't have exported in the substitute with no word about it. No readiness percentage change."
       },
@@ -465,10 +469,6 @@
       {
         "date": "2026-10-24",
         "text": "· Optical Margin Alignment per story with a size (story.options {opticalMargin, opticalMarginSize}, off by default): when it is on, the story's paragraphs hang punctuation and letter edges by amounts set for that type size, except paragraphs with Ignore Optical Margin (ignoreOpticalMargin in type.para and paragraph styles). Table cells and footnotes don't take the story setting yet. When it is off, the per-paragraph switch still hangs at the text's own size. IDML imports and exports both (StoryPreference/@OpticalMarginAlignment, @OpticalMarginSize, IgnoreEdgeAlignment) (#947). No readiness percentage change."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "· Text frames: a custom baseline grid's Relative To (Text Frame Options › Baseline Options, object.textFrameOptions {baselineGrid: {relativeTo}}, IDML BaselineFrameGridRelativeOption) measures the grid's start from the top of the page, the top margin, the top of the frame or its top inset. Text Frame Options had no custom baseline grid controls, imports dropped the setting and every frame grid started from the page top, so grid-aligned text in a frame measured from its own top sat on the wrong lines. No readiness percentage change."
       }
     ]
   },
@@ -477,7 +477,7 @@
     "value_since": "2026-10-10T18:09:17Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 187,
+    "revisions_since": 188,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -485,39 +485,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 188,
-    "revisions_7d": 42,
+    "revisions": 189,
+    "revisions_7d": 43,
     "last_revision": {
-      "ts": "2026-11-04T16:19:45Z",
+      "ts": "2026-11-04T20:36:05Z",
       "kind": "content",
-      "commit": "fb63090",
-      "commit_full": "fb630909c4851a0d3987f0a118b1c8fd107c9c97",
-      "message": "Place: a file dragged in from the Finder fills the frame it was dropped on (#2304)"
+      "commit": "b98687c",
+      "commit_full": "b98687c3e125c4f95df66ec5521f1df8eb871094",
+      "message": "M5: keep out-and-back cubic segments in striped strokes (#2323)"
     },
     "last_update": {
-      "ts": "2026-11-04T16:19:45Z",
+      "ts": "2026-11-04T20:36:05Z",
       "kind": "content",
-      "commit": "fb63090",
-      "commit_full": "fb630909c4851a0d3987f0a118b1c8fd107c9c97",
-      "message": "Place: a file dragged in from the Finder fills the frame it was dropped on (#2304)"
+      "commit": "b98687c",
+      "commit_full": "b98687c3e125c4f95df66ec5521f1df8eb871094",
+      "message": "M5: keep out-and-back cubic segments in striped strokes (#2323)"
     },
-    "self_reported": "2026-11-01"
+    "self_reported": "2026-11-04"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.0,
+    "score": 21.1,
     "active_days_7d": 7,
-    "changes_7d": 144,
-    "changes_14d": 310,
+    "changes_7d": 146,
+    "changes_14d": 312,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-04T18:57:08Z",
-      "commit": "f3bcc88",
-      "commit_full": "f3bcc886dcf3d9562bd33848602d3fdf34efd8ac",
-      "subject": "Linux packages: require libxkbcommon-x11, which winit dlopens on X11 (#2320)"
+      "ts": "2026-11-04T20:36:05Z",
+      "commit": "b98687c",
+      "commit_full": "b98687c3e125c4f95df66ec5521f1df8eb871094",
+      "subject": "M5: keep out-and-back cubic segments in striped strokes (#2323)"
     },
-    "last_commit_ts": "2026-11-04T18:57:08Z",
+    "last_commit_ts": "2026-11-04T20:36:05Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       19,
@@ -533,7 +533,7 @@
       17,
       3,
       40,
-      24
+      26
     ],
     "days": [
       {
@@ -1134,26 +1134,43 @@
       },
       {
         "d": "2026-11-04",
-        "code": 24,
+        "code": 26,
         "other": 0,
         "samples": [
           {
+            "commit": "b98687c",
+            "subject": "M5: keep out-and-back cubic segments in striped strokes (#2323)"
+          },
+          {
+            "commit": "ef6c368",
+            "subject": "Linux: let the shared makepkg job build the Arch package (#2322)"
+          },
+          {
             "commit": "f3bcc88",
             "subject": "Linux packages: require libxkbcommon-x11, which winit dlopens on X11 (#2320)"
-          },
-          {
-            "commit": "fb63090",
-            "subject": "Place: a file dragged in from the Finder fills the frame it was dropped on (#2304)"
-          },
-          {
-            "commit": "632df61",
-            "subject": "Place: a graphic dropped on a frame holding a nested image replaces it (#2303)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.17.1",
+      "name": "DesignCraft v0.17.1",
+      "ts": "2026-11-04T20:37:45Z",
+      "url": "https://github.com/storytold/designcraft/releases/tag/v0.17.1",
+      "changes": 82,
+      "new_contributors": 4,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "patch"
+    },
     {
       "tag": "v0.17.0",
       "name": "DesignCraft v0.17.0",
@@ -1331,23 +1348,6 @@
       "url": "https://github.com/storytold/designcraft/releases/tag/v0.7.1",
       "changes": 17,
       "new_contributors": 2,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.6.0",
-      "name": "DesignCraft v0.6.0",
-      "ts": "2026-10-11T00:51:50Z",
-      "url": "https://github.com/storytold/designcraft/releases/tag/v0.6.0",
-      "changes": 71,
-      "new_contributors": 16,
       "platforms": [
         "macOS",
         "Windows",
@@ -5684,7 +5684,30 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "b98687c",
+      "commit_full": "b98687c3e125c4f95df66ec5521f1df8eb871094",
+      "commit_date": "2026-11-04T15:36:05-05:00",
+      "ts": "2026-11-04T20:36:05Z",
+      "message": "M5: keep out-and-back cubic segments in striped strokes (#2323)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-04",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-04T19:45:11+00:00"
+  "updated_at": "2026-11-04T20:38:47+00:00"
 }
