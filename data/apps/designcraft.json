@@ -508,16 +508,16 @@
     "level": "buzzing",
     "score": 21.0,
     "active_days_7d": 7,
-    "changes_7d": 143,
-    "changes_14d": 309,
+    "changes_7d": 144,
+    "changes_14d": 310,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-04T16:19:45Z",
-      "commit": "fb63090",
-      "commit_full": "fb630909c4851a0d3987f0a118b1c8fd107c9c97",
-      "subject": "Place: a file dragged in from the Finder fills the frame it was dropped on (#2304)"
+      "ts": "2026-11-04T18:57:08Z",
+      "commit": "f3bcc88",
+      "commit_full": "f3bcc886dcf3d9562bd33848602d3fdf34efd8ac",
+      "subject": "Linux packages: require libxkbcommon-x11, which winit dlopens on X11 (#2320)"
     },
-    "last_commit_ts": "2026-11-04T16:19:45Z",
+    "last_commit_ts": "2026-11-04T18:57:08Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       19,
@@ -533,7 +533,7 @@
       17,
       3,
       40,
-      23
+      24
     ],
     "days": [
       {
@@ -1134,9 +1134,13 @@
       },
       {
         "d": "2026-11-04",
-        "code": 23,
+        "code": 24,
         "other": 0,
         "samples": [
+          {
+            "commit": "f3bcc88",
+            "subject": "Linux packages: require libxkbcommon-x11, which winit dlopens on X11 (#2320)"
+          },
           {
             "commit": "fb63090",
             "subject": "Place: a file dragged in from the Finder fills the frame it was dropped on (#2304)"
@@ -1144,10 +1148,6 @@
           {
             "commit": "632df61",
             "subject": "Place: a graphic dropped on a frame holding a nested image replaces it (#2303)"
-          },
-          {
-            "commit": "b48a950",
-            "subject": "Swatches: renaming a swatch renames it on the images it colours (#2306) (#2311)"
           }
         ]
       }
@@ -5686,5 +5686,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-04T16:41:05+00:00"
+  "updated_at": "2026-11-04T19:45:11+00:00"
 }
