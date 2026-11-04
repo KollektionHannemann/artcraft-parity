@@ -505,22 +505,21 @@
   },
   "milestone": null,
   "activity": {
-    "level": "buzzing",
-    "score": 20.2,
+    "level": "active",
+    "score": 17.4,
     "active_days_7d": 7,
-    "changes_7d": 125,
-    "changes_14d": 294,
-    "housekeeping_7d": 10,
+    "changes_7d": 121,
+    "changes_14d": 287,
+    "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-03T23:57:15Z",
-      "commit": "823eef9",
-      "commit_full": "823eef9838301aef92982122cd0b3997048c07a7",
-      "subject": "Fix mojikumi: middle dot loses its quarter em beside a proportional (#2285)"
+      "ts": "2026-11-04T00:23:28Z",
+      "commit": "b17dd01",
+      "commit_full": "b17dd017d525bf9e725ef3b2a930381b7c46434b",
+      "subject": "Mojikumi: test consecutive punctuation under the one-em line-end set too (#2287)"
     },
-    "last_commit_ts": "2026-11-03T23:57:15Z",
+    "last_commit_ts": "2026-11-04T00:23:28Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
-      8,
       19,
       47,
       38,
@@ -533,7 +532,8 @@
       22,
       17,
       3,
-      40
+      40,
+      1
     ],
     "days": [
       {
@@ -1129,6 +1129,17 @@
           {
             "commit": "f889d7c",
             "subject": "Tables: Convert Cell to Graphic Cell… is dimmed without a table target (#2270)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-04",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "b17dd01",
+            "subject": "Mojikumi: test consecutive punctuation under the one-em line-end set too (#2287)"
           }
         ]
       }
@@ -5598,5 +5609,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-03T23:58:20+00:00"
+  "updated_at": "2026-11-04T00:36:46+00:00"
 }

@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "d8915a5",
-  "latest_commit_date": "2026-11-04T02:58:40+07:00",
-  "latest_message": "Choose Claude Code's folder per AI, so each can use another account (#664)",
+  "latest_commit": "ec93bc2",
+  "latest_commit_date": "2026-11-03T17:28:39-07:00",
+  "latest_message": "A builder on a local model isn't told to call memory tools it isn't offered (#746)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,42 +45,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 94,
-    "revisions_7d": 94,
+    "revisions": 96,
+    "revisions_7d": 96,
     "last_revision": {
-      "ts": "2026-11-03T19:58:40Z",
+      "ts": "2026-11-04T00:28:39Z",
       "kind": "content",
-      "commit": "d8915a5",
-      "commit_full": "d8915a5bbee9ca39c38e5df9af5e5bc40a172cb8",
-      "message": "Choose Claude Code's folder per AI, so each can use another account (#664)"
+      "commit": "ec93bc2",
+      "commit_full": "ec93bc20e6d3a13de3e071e4e0e7a8a579978f20",
+      "message": "A builder on a local model isn't told to call memory tools it isn't offered (#746)"
     },
     "last_update": {
-      "ts": "2026-11-03T19:58:40Z",
+      "ts": "2026-11-04T00:28:39Z",
       "kind": "content",
-      "commit": "d8915a5",
-      "commit_full": "d8915a5bbee9ca39c38e5df9af5e5bc40a172cb8",
-      "message": "Choose Claude Code's folder per AI, so each can use another account (#664)"
+      "commit": "ec93bc2",
+      "commit_full": "ec93bc20e6d3a13de3e071e4e0e7a8a579978f20",
+      "message": "A builder on a local model isn't told to call memory tools it isn't offered (#746)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.4,
-    "active_days_7d": 4,
-    "changes_7d": 280,
-    "changes_14d": 280,
-    "housekeeping_7d": 20,
+    "score": 15.3,
+    "active_days_7d": 5,
+    "changes_7d": 282,
+    "changes_14d": 282,
+    "housekeeping_7d": 21,
     "last_code_change": {
-      "ts": "2026-11-03T20:36:43Z",
-      "commit": "fb7ac86",
-      "commit_full": "fb7ac863a31fc8b22c86139da09c82107d4c548a",
-      "subject": "Pick the coding agents' tab before testing Add another (#732)"
+      "ts": "2026-11-04T00:28:39Z",
+      "commit": "ec93bc2",
+      "commit_full": "ec93bc20e6d3a13de3e071e4e0e7a8a579978f20",
+      "subject": "A builder on a local model isn't told to call memory tools it isn't offered (#746)"
     },
-    "last_commit_ts": "2026-11-03T20:36:43Z",
+    "last_commit_ts": "2026-11-04T00:28:39Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
-      0,
       0,
       0,
       0,
@@ -93,7 +92,8 @@
       3,
       73,
       117,
-      87
+      88,
+      1
     ],
     "days": [
       {
@@ -155,9 +155,13 @@
       },
       {
         "d": "2026-11-03",
-        "code": 87,
+        "code": 88,
         "other": 3,
         "samples": [
+          {
+            "commit": "bb66fa5",
+            "subject": "The pictures UI test waits for the worker that checks their sizes (#743)"
+          },
           {
             "commit": "fb7ac86",
             "subject": "Pick the coding agents' tab before testing Add another (#732)"
@@ -165,10 +169,17 @@
           {
             "commit": "d8915a5",
             "subject": "Choose Claude Code's folder per AI, so each can use another account (#664)"
-          },
+          }
+        ]
+      },
+      {
+        "d": "2026-11-04",
+        "code": 1,
+        "other": 1,
+        "samples": [
           {
-            "commit": "801f060",
-            "subject": "Refuse pictures over 20 MB when they are added (#720)"
+            "commit": "ec93bc2",
+            "subject": "A builder on a local model isn't told to call memory tools it isn't offered (#746)"
           }
         ]
       }
@@ -885,8 +896,22 @@
       "commit": "d8915a5",
       "commit_full": "d8915a5bbee9ca39c38e5df9af5e5bc40a172cb8",
       "message": "Choose Claude Code's folder per AI, so each can use another account (#664)"
+    },
+    {
+      "ts": "2026-11-04T00:02:48Z",
+      "kind": "content",
+      "commit": "f56362f",
+      "commit_full": "f56362f0152691c8c7a770ac8202f29a9ea6c2c1",
+      "message": "Bring the roadmap up to date with #490, #536 and the blocked release push (#741)"
+    },
+    {
+      "ts": "2026-11-04T00:28:39Z",
+      "kind": "content",
+      "commit": "ec93bc2",
+      "commit_full": "ec93bc20e6d3a13de3e071e4e0e7a8a579978f20",
+      "message": "A builder on a local model isn't told to call memory tools it isn't offered (#746)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-03T20:49:19+00:00"
+  "updated_at": "2026-11-04T00:37:14+00:00"
 }
