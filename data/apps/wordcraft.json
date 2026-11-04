@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "1340705",
-  "latest_commit_date": "2026-11-03T21:59:26-05:00",
-  "latest_message": "CP4.3: Options › Language: Your languages with proofing status, Add a language…, Set as default (#5515)",
+  "latest_commit": "e847b2e",
+  "latest_commit_date": "2026-11-04T12:27:08+01:00",
+  "latest_message": "AutoFormat: a tracked heading or border line replaces another author's formatting change (#4231)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 469,
+    "revisions_since": 471,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 473,
-    "revisions_7d": 55,
+    "revisions": 475,
+    "revisions_7d": 57,
     "last_revision": {
-      "ts": "2026-11-04T02:59:26Z",
+      "ts": "2026-11-04T11:27:08Z",
       "kind": "content",
-      "commit": "1340705",
-      "commit_full": "1340705fa6ef9b7128c64512f082a1b524a71178",
-      "message": "CP4.3: Options › Language: Your languages with proofing status, Add a language…, Set as default (#5515)"
+      "commit": "e847b2e",
+      "commit_full": "e847b2e5e32ed51256651480a7c1951a36d192a6",
+      "message": "AutoFormat: a tracked heading or border line replaces another author's formatting change (#4231)"
     },
     "last_update": {
-      "ts": "2026-11-04T02:59:26Z",
+      "ts": "2026-11-04T11:27:08Z",
       "kind": "content",
-      "commit": "1340705",
-      "commit_full": "1340705fa6ef9b7128c64512f082a1b524a71178",
-      "message": "CP4.3: Options › Language: Your languages with proofing status, Add a language…, Set as default (#5515)"
+      "commit": "e847b2e",
+      "commit_full": "e847b2e5e32ed51256651480a7c1951a36d192a6",
+      "message": "AutoFormat: a tracked heading or border line replaces another author's formatting change (#4231)"
     },
     "self_reported": "2026-11-03"
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 19.3,
+    "level": "buzzing",
+    "score": 20.1,
     "active_days_7d": 7,
-    "changes_7d": 115,
-    "changes_14d": 275,
+    "changes_7d": 120,
+    "changes_14d": 280,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-11-04T02:59:26Z",
-      "commit": "1340705",
-      "commit_full": "1340705fa6ef9b7128c64512f082a1b524a71178",
-      "subject": "CP4.3: Options › Language: Your languages with proofing status, Add a language…, Set as default (#5515)"
+      "ts": "2026-11-04T11:27:08Z",
+      "commit": "e847b2e",
+      "commit_full": "e847b2e5e32ed51256651480a7c1951a36d192a6",
+      "subject": "AutoFormat: a tracked heading or border line replaces another author's formatting change (#4231)"
     },
-    "last_commit_ts": "2026-11-04T03:15:22Z",
+    "last_commit_ts": "2026-11-04T11:27:08Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       5,
@@ -568,7 +568,7 @@
       14,
       11,
       19,
-      6
+      11
     ],
     "days": [
       {
@@ -1067,20 +1067,20 @@
       },
       {
         "d": "2026-11-04",
-        "code": 6,
+        "code": 11,
         "other": 1,
         "samples": [
           {
-            "commit": "1340705",
-            "subject": "CP4.3: Options › Language: Your languages with proofing status, Add a language…, Set as default (#5515)"
+            "commit": "e847b2e",
+            "subject": "AutoFormat: a tracked heading or border line replaces another author's formatting change (#4231)"
           },
           {
-            "commit": "98da959",
-            "subject": "CP4.3: the missing-pack bar works on a fresh install and counts the caret's language (#5514)"
+            "commit": "fd1c5ef",
+            "subject": "Format readers: one border-type table for .doc, one HYPERLINK parser for DOCX, RTF and .doc (#4222)"
           },
           {
-            "commit": "d97e2f3",
-            "subject": "CP4.3: one language list: Language pack languages in Set Proofing Language, Review › Language and the status bar (#5513)"
+            "commit": "655b431",
+            "subject": "DOCX: nil shading paints no fill, border theme colours win (part of #1991) (#4705)"
           }
         ]
       }
@@ -12190,7 +12190,53 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "ba58e70",
+      "commit_full": "ba58e70cc86433a91f6c0bdc1b5a1f13299dca2d",
+      "commit_date": "2026-11-04T11:48:48+01:00",
+      "ts": "2026-11-04T10:48:48Z",
+      "message": "Flag document fonts that aren't installed (#4770)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "e847b2e",
+      "commit_full": "e847b2e5e32ed51256651480a7c1951a36d192a6",
+      "commit_date": "2026-11-04T12:27:08+01:00",
+      "ts": "2026-11-04T11:27:08Z",
+      "message": "AutoFormat: a tracked heading or border line replaces another author's formatting change (#4231)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-04T04:40:51+00:00"
+  "updated_at": "2026-11-04T11:30:24+00:00"
 }
