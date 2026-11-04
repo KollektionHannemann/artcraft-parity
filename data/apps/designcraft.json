@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/designcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "b18ed2e",
-  "latest_commit_date": "2026-11-03T21:17:15-05:00",
-  "latest_message": "Place: implicit image placement preserves lines and open paths (#1294)",
+  "latest_commit": "fb63090",
+  "latest_commit_date": "2026-11-04T11:19:45-05:00",
+  "latest_message": "Place: a file dragged in from the Finder fills the frame it was dropped on (#2304)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -368,6 +368,10 @@
       },
       {
         "date": "2026-10-30",
+        "text": "· macOS: a file dragged in from the Finder fills the frame it is dropped on. winit sends no pointer events during such a drag, so the drop asks the system where the pointer is (Services::pointer, from NSEvent.mouseLocation), at any UI scale. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-30",
         "text": "· File > Package opens a dialog, as the reference app's: a Summary of fonts, links and images and inks, pages for each, a Printing Instructions step, and a PDF made with the options of a preset (#1514, #1515)."
       },
       {
@@ -465,10 +469,6 @@
       {
         "date": "2026-10-24",
         "text": "· Text frames: a custom baseline grid's Relative To (Text Frame Options › Baseline Options, object.textFrameOptions {baselineGrid: {relativeTo}}, IDML BaselineFrameGridRelativeOption) measures the grid's start from the top of the page, the top margin, the top of the frame or its top inset. Text Frame Options had no custom baseline grid controls, imports dropped the setting and every frame grid started from the page top, so grid-aligned text in a frame measured from its own top sat on the wrong lines. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "· Paragraph Style Options › Indents and Spacing has an Align to Grid menu: None, All Lines or First Line Only. It shows the style's current setting. A First Line Only style could be set only in the CJK Grid Settings section, which shows only with CJK features on, or through commands. No readiness percentage change."
       }
     ]
   },
@@ -477,7 +477,7 @@
     "value_since": "2026-10-10T18:09:17Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 186,
+    "revisions_since": 187,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -485,39 +485,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 187,
-    "revisions_7d": 41,
+    "revisions": 188,
+    "revisions_7d": 42,
     "last_revision": {
-      "ts": "2026-11-04T02:17:15Z",
+      "ts": "2026-11-04T16:19:45Z",
       "kind": "content",
-      "commit": "b18ed2e",
-      "commit_full": "b18ed2e7addc2d4d3d9f40e8ff45eb88219cfd78",
-      "message": "Place: implicit image placement preserves lines and open paths (#1294)"
+      "commit": "fb63090",
+      "commit_full": "fb630909c4851a0d3987f0a118b1c8fd107c9c97",
+      "message": "Place: a file dragged in from the Finder fills the frame it was dropped on (#2304)"
     },
     "last_update": {
-      "ts": "2026-11-04T02:17:15Z",
+      "ts": "2026-11-04T16:19:45Z",
       "kind": "content",
-      "commit": "b18ed2e",
-      "commit_full": "b18ed2e7addc2d4d3d9f40e8ff45eb88219cfd78",
-      "message": "Place: implicit image placement preserves lines and open paths (#1294)"
+      "commit": "fb63090",
+      "commit_full": "fb630909c4851a0d3987f0a118b1c8fd107c9c97",
+      "message": "Place: a file dragged in from the Finder fills the frame it was dropped on (#2304)"
     },
     "self_reported": "2026-11-01"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.9,
+    "score": 21.0,
     "active_days_7d": 7,
-    "changes_7d": 142,
-    "changes_14d": 308,
+    "changes_7d": 143,
+    "changes_14d": 309,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-04T15:40:17Z",
-      "commit": "632df61",
-      "commit_full": "632df6178a85027b34d0db706e35c0e88b9d5ec2",
-      "subject": "Place: a graphic dropped on a frame holding a nested image replaces it (#2303)"
+      "ts": "2026-11-04T16:19:45Z",
+      "commit": "fb63090",
+      "commit_full": "fb630909c4851a0d3987f0a118b1c8fd107c9c97",
+      "subject": "Place: a file dragged in from the Finder fills the frame it was dropped on (#2304)"
     },
-    "last_commit_ts": "2026-11-04T15:40:17Z",
+    "last_commit_ts": "2026-11-04T16:19:45Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       19,
@@ -533,7 +533,7 @@
       17,
       3,
       40,
-      22
+      23
     ],
     "days": [
       {
@@ -1134,9 +1134,13 @@
       },
       {
         "d": "2026-11-04",
-        "code": 22,
+        "code": 23,
         "other": 0,
         "samples": [
+          {
+            "commit": "fb63090",
+            "subject": "Place: a file dragged in from the Finder fills the frame it was dropped on (#2304)"
+          },
           {
             "commit": "632df61",
             "subject": "Place: a graphic dropped on a frame holding a nested image replaces it (#2303)"
@@ -1144,10 +1148,6 @@
           {
             "commit": "b48a950",
             "subject": "Swatches: renaming a swatch renames it on the images it colours (#2306) (#2311)"
-          },
-          {
-            "commit": "df9f065",
-            "subject": "Master pages: skip hidden and locked layers when picking items (#2221) (#2292)"
           }
         ]
       }
@@ -5661,7 +5661,30 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "fb63090",
+      "commit_full": "fb630909c4851a0d3987f0a118b1c8fd107c9c97",
+      "commit_date": "2026-11-04T11:19:45-05:00",
+      "ts": "2026-11-04T16:19:45Z",
+      "message": "Place: a file dragged in from the Finder fills the frame it was dropped on (#2304)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-01",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-04T15:42:45+00:00"
+  "updated_at": "2026-11-04T16:41:05+00:00"
 }
