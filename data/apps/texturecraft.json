@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 11.2,
+    "score": 12.0,
     "active_days_7d": 4,
-    "changes_7d": 102,
-    "changes_14d": 106,
-    "housekeeping_7d": 15,
+    "changes_7d": 104,
+    "changes_14d": 108,
+    "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-11-04T09:37:19Z",
-      "commit": "f2c3047",
-      "commit_full": "f2c3047053cf4384b0591ded3c086c867fa5ac99",
-      "subject": "Bake: curvature from short rays around each texel, on the GPU when there is one (#197)"
+      "ts": "2026-11-04T17:30:01Z",
+      "commit": "4c4f713",
+      "commit_full": "4c4f71330fad0ac657230109bebe183773094220",
+      "subject": "Honor release version in packaging"
     },
-    "last_commit_ts": "2026-11-04T14:47:51Z",
+    "last_commit_ts": "2026-11-04T17:34:09Z",
     "repo_since": "2026-10-14T18:33:13Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       40,
       52,
       8,
-      2
+      4
     ],
     "days": [
       {
@@ -231,16 +231,20 @@
       },
       {
         "d": "2026-11-04",
-        "code": 2,
-        "other": 3,
+        "code": 4,
+        "other": 4,
         "samples": [
+          {
+            "commit": "4c4f713",
+            "subject": "Honor release version in packaging"
+          },
+          {
+            "commit": "faa698a",
+            "subject": "Enable Flatpak OCI publishing"
+          },
           {
             "commit": "f2c3047",
             "subject": "Bake: curvature from short rays around each texel, on the GPU when there is one (#197)"
-          },
-          {
-            "commit": "6f35d7b",
-            "subject": "Bake: ambient occlusion defaults of 64 rays and a tenth of the diagonal, linear falloff (#221)"
           }
         ]
       }
@@ -533,5 +537,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-04T15:43:19+00:00"
+  "updated_at": "2026-11-04T17:40:13+00:00"
 }
