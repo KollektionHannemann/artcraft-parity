@@ -427,18 +427,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 9.5,
+    "score": 11.7,
     "active_days_7d": 5,
-    "changes_7d": 21,
-    "changes_14d": 58,
+    "changes_7d": 28,
+    "changes_14d": 65,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-04T03:32:53Z",
-      "commit": "b0c4aa8",
-      "commit_full": "b0c4aa8cc8acac043af6d767b3bfec30d0ab0c0a",
-      "subject": "security(raw): linear sparse planning, distinct-byte allocation bound, opcode list budget, ORF strip length (#3679)"
+      "ts": "2026-11-04T04:00:51Z",
+      "commit": "4d42507",
+      "commit_full": "4d42507bbcc180df831435c8ef2c29740b5216aa",
+      "subject": "security(raster, segment): resample tall narrow images columns first (#3678)"
     },
-    "last_commit_ts": "2026-11-04T03:32:53Z",
+    "last_commit_ts": "2026-11-04T04:00:51Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
       2,
@@ -454,7 +454,7 @@
       0,
       2,
       9,
-      1
+      8
     ],
     "days": [
       {
@@ -1032,12 +1032,20 @@
       },
       {
         "d": "2026-11-04",
-        "code": 1,
+        "code": 8,
         "other": 0,
         "samples": [
           {
-            "commit": "b0c4aa8",
-            "subject": "security(raw): linear sparse planning, distinct-byte allocation bound, opcode list budget, ORF strip length (#3679)"
+            "commit": "4d42507",
+            "subject": "security(raster, segment): resample tall narrow images columns first (#3678)"
+          },
+          {
+            "commit": "1c5cbce",
+            "subject": "security(engine): the library folder is protected from folder.move however its path is spelled (#3676)"
+          },
+          {
+            "commit": "f618fc0",
+            "subject": "security: staging and probe files are created new, never written through an existing entry (#3673)"
           }
         ]
       }
@@ -1604,5 +1612,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-04T03:35:22+00:00"
+  "updated_at": "2026-11-04T04:40:24+00:00"
 }

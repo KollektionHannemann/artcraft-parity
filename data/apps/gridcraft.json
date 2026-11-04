@@ -463,19 +463,19 @@
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 17.2,
-    "active_days_7d": 6,
-    "changes_7d": 127,
-    "changes_14d": 223,
+    "level": "buzzing",
+    "score": 21.1,
+    "active_days_7d": 7,
+    "changes_7d": 141,
+    "changes_14d": 237,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-11-03T23:10:48Z",
-      "commit": "014f030",
-      "commit_full": "014f030a15d586ddc0ff5d775fa51991cabb8907",
-      "subject": "engine: PivotTable filters test each record against a set of selected labels (#3279)"
+      "ts": "2026-11-04T03:57:52Z",
+      "commit": "632e4a1",
+      "commit_full": "632e4a1bc51ee86b3f0a55e95ee78def391aab30",
+      "subject": "formula, calc: LET/LAMBDA names looked up through a map; ragged array literals refused before reserving (#3312)"
     },
-    "last_commit_ts": "2026-11-03T23:10:48Z",
+    "last_commit_ts": "2026-11-04T03:57:52Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       3,
@@ -491,7 +491,7 @@
       17,
       16,
       36,
-      0
+      14
     ],
     "days": [
       {
@@ -959,6 +959,25 @@
           {
             "commit": "df137b8",
             "subject": "xlsx: repair repeated sheet names through a set of assigned names (#3211)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-04",
+        "code": 14,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "632e4a1",
+            "subject": "formula, calc: LET/LAMBDA names looked up through a map; ragged array literals refused before reserving (#3312)"
+          },
+          {
+            "commit": "e5f6fa8",
+            "subject": "ui-egui: reference colours through a map; cap fill-character repeats per cell (#3311)"
+          },
+          {
+            "commit": "f77ed98",
+            "subject": "chart: a series without values takes no category-span entries (#3300)"
           }
         ]
       }
@@ -3174,5 +3193,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-04T00:37:08+00:00"
+  "updated_at": "2026-11-04T04:41:04+00:00"
 }

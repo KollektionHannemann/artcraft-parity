@@ -31,6 +31,28 @@
   ],
   "latest_events": [
     {
+      "id": "wordcraft",
+      "name": "WordCraft",
+      "type": "release",
+      "ts": "2026-11-04T03:51:07Z",
+      "tag": "v0.15.1",
+      "kind": "patch",
+      "changes": 25,
+      "url": "https://github.com/storytold/wordcraft/releases/tag/v0.15.1",
+      "prerelease": false
+    },
+    {
+      "id": "pdfcraft",
+      "name": "PdfCraft",
+      "type": "release",
+      "ts": "2026-11-04T03:51:06Z",
+      "tag": "v0.18.1",
+      "kind": "patch",
+      "changes": 28,
+      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.18.1",
+      "prerelease": false
+    },
+    {
       "id": "solidcraft",
       "name": "SolidCraft",
       "type": "release",
@@ -431,31 +453,20 @@
       "changes": 25,
       "url": "https://github.com/storytold/craft-anything/releases/tag/v0.2.0",
       "prerelease": false
-    },
-    {
-      "id": "craft-anything",
-      "name": "Craft Anything",
-      "type": "release",
-      "ts": "2026-10-31T16:16:07Z",
-      "tag": "v0.1.0",
-      "kind": null,
-      "changes": 1,
-      "url": "https://github.com/storytold/craft-anything/releases/tag/v0.1.0",
-      "prerelease": false
-    },
-    {
-      "id": "cadcraft",
-      "name": "CADCraft",
-      "type": "release",
-      "ts": "2026-10-31T04:13:30Z",
-      "tag": "v0.15.1",
-      "kind": "minor",
-      "changes": 68,
-      "url": "https://github.com/storytold/cadcraft/releases/tag/v0.15.1",
-      "prerelease": false
     }
   ],
   "release_waves": [
+    {
+      "day": "2026-11-04",
+      "apps": 2,
+      "changes": 53,
+      "largest": {
+        "id": "pdfcraft",
+        "name": "PdfCraft",
+        "tag": "v0.18.1",
+        "changes": 28
+      }
+    },
     {
       "day": "2026-11-03",
       "apps": 15,
@@ -612,18 +623,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 31.2,
+        "score": 31.5,
         "active_days_7d": 7,
-        "changes_7d": 706,
-        "changes_14d": 1153,
+        "changes_7d": 714,
+        "changes_14d": 1161,
         "housekeeping_7d": 24,
         "last_code_change": {
-          "ts": "2026-11-04T03:14:05Z",
-          "commit": "d41fc3b",
-          "commit_full": "d41fc3b9b0bfc67eb21459c038a2f507c193f456",
-          "subject": "Control server: the junk-closes test leaves no unread input (#5489)"
+          "ts": "2026-11-04T04:21:52Z",
+          "commit": "5cb58c0",
+          "commit_full": "5cb58c0507cf3b7a9e70afbefff08cdda0942ba0",
+          "subject": "3D effects: every ring pair counts toward the containment budget; no zero-sized inflate cells (#5413)"
         },
-        "last_commit_ts": "2026-11-04T03:14:05Z",
+        "last_commit_ts": "2026-11-04T04:21:52Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           96,
@@ -639,7 +650,7 @@
           41,
           113,
           117,
-          30
+          38
         ]
       },
       "release": {
@@ -743,18 +754,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 9.5,
+        "score": 11.7,
         "active_days_7d": 5,
-        "changes_7d": 21,
-        "changes_14d": 58,
+        "changes_7d": 28,
+        "changes_14d": 65,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-04T03:32:53Z",
-          "commit": "b0c4aa8",
-          "commit_full": "b0c4aa8cc8acac043af6d767b3bfec30d0ab0c0a",
-          "subject": "security(raw): linear sparse planning, distinct-byte allocation bound, opcode list budget, ORF strip length (#3679)"
+          "ts": "2026-11-04T04:00:51Z",
+          "commit": "4d42507",
+          "commit_full": "4d42507bbcc180df831435c8ef2c29740b5216aa",
+          "subject": "security(raster, segment): resample tall narrow images columns first (#3678)"
         },
-        "last_commit_ts": "2026-11-04T03:32:53Z",
+        "last_commit_ts": "2026-11-04T04:00:51Z",
         "repo_since": "2026-09-30T14:04:12Z",
         "window": [
           2,
@@ -770,7 +781,7 @@
           0,
           2,
           9,
-          1
+          8
         ]
       },
       "release": {
@@ -832,8 +843,8 @@
       "parity": {
         "tracked_since": "2026-10-10T18:11:53Z",
         "value_since": "2026-10-10T18:11:53Z",
-        "releases_since": 11,
-        "releases_since_capped": false,
+        "releases_since": 12,
+        "releases_since_capped": true,
         "revisions_since": 469,
         "hours_since": null,
         "areas_since": {
@@ -911,12 +922,12 @@
         ]
       },
       "release": {
-        "tag": "v0.15.0",
-        "name": "WordCraft v0.15.0",
-        "ts": "2026-11-03T00:53:40Z",
-        "url": "https://github.com/storytold/wordcraft/releases/tag/v0.15.0",
-        "changes": 23,
-        "new_contributors": 3,
+        "tag": "v0.15.1",
+        "name": "WordCraft v0.15.1",
+        "ts": "2026-11-04T03:51:07Z",
+        "url": "https://github.com/storytold/wordcraft/releases/tag/v0.15.1",
+        "changes": 25,
+        "new_contributors": 1,
         "platforms": [
           "macOS",
           "Windows",
@@ -925,7 +936,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
+        "kind": "patch"
       },
       "series": [
         {
@@ -1000,18 +1011,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 18.7,
+        "score": 19.9,
         "active_days_7d": 6,
-        "changes_7d": 139,
-        "changes_14d": 304,
+        "changes_7d": 149,
+        "changes_14d": 314,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-04T03:32:56Z",
-          "commit": "100577c",
-          "commit_full": "100577c6250dcd3998396c97999b6b92e852bdbd",
-          "subject": "mxf: resolve a source package's repeated track references once (#4212)"
+          "ts": "2026-11-04T04:24:17Z",
+          "commit": "ece831b",
+          "commit_full": "ece831b6191777753c8b0a7412a83b28de09518e",
+          "subject": "render: cap Long Shadow and Glint lengths at the picture extent (#4200)"
         },
-        "last_commit_ts": "2026-11-04T03:32:56Z",
+        "last_commit_ts": "2026-11-04T04:24:17Z",
         "repo_since": "2026-09-30T09:22:00Z",
         "window": [
           5,
@@ -1027,7 +1038,7 @@
           30,
           3,
           55,
-          7
+          17
         ]
       },
       "release": {
@@ -1298,18 +1309,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 21.3,
+        "score": 22.6,
         "active_days_7d": 7,
-        "changes_7d": 285,
-        "changes_14d": 436,
+        "changes_7d": 297,
+        "changes_14d": 448,
         "housekeeping_7d": 10,
         "last_code_change": {
-          "ts": "2026-11-04T03:27:10Z",
-          "commit": "f54e099",
-          "commit_full": "f54e099a4804bf565e38387f05d98c200a708a72",
-          "subject": "fix(mcp): render prompt placeholders in one pass over the template (#1922)"
+          "ts": "2026-11-04T04:01:44Z",
+          "commit": "972ccc6",
+          "commit_full": "972ccc6a1741a1ab97f70f40ba2ebd7180c99d3b",
+          "subject": "fix(engine): count each id Shape Builder is given once (#1974)"
         },
-        "last_commit_ts": "2026-11-04T03:27:10Z",
+        "last_commit_ts": "2026-11-04T04:01:44Z",
         "repo_since": "2026-10-09T15:38:50Z",
         "window": [
           4,
@@ -1325,7 +1336,7 @@
           4,
           24,
           16,
-          7
+          19
         ]
       },
       "release": {
@@ -1403,7 +1414,7 @@
       "parity": {
         "tracked_since": "2026-10-10T18:23:28Z",
         "value_since": "2026-10-15T06:21:11Z",
-        "releases_since": 10,
+        "releases_since": 11,
         "releases_since_capped": false,
         "revisions_since": 98,
         "hours_since": null,
@@ -1474,12 +1485,12 @@
         ]
       },
       "release": {
-        "tag": "v0.18.0",
-        "name": "PdfCraft v0.18.0",
-        "ts": "2026-11-03T00:59:28Z",
-        "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.18.0",
+        "tag": "v0.18.1",
+        "name": "PdfCraft v0.18.1",
+        "ts": "2026-11-04T03:51:06Z",
+        "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.18.1",
         "changes": 28,
-        "new_contributors": 3,
+        "new_contributors": 6,
         "platforms": [
           "macOS",
           "Windows",
@@ -1488,7 +1499,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
+        "kind": "patch"
       },
       "series": [
         {
@@ -1566,19 +1577,19 @@
       },
       "milestone": null,
       "activity": {
-        "level": "active",
-        "score": 17.2,
-        "active_days_7d": 6,
-        "changes_7d": 127,
-        "changes_14d": 223,
+        "level": "buzzing",
+        "score": 21.1,
+        "active_days_7d": 7,
+        "changes_7d": 141,
+        "changes_14d": 237,
         "housekeeping_7d": 11,
         "last_code_change": {
-          "ts": "2026-11-03T23:10:48Z",
-          "commit": "014f030",
-          "commit_full": "014f030a15d586ddc0ff5d775fa51991cabb8907",
-          "subject": "engine: PivotTable filters test each record against a set of selected labels (#3279)"
+          "ts": "2026-11-04T03:57:52Z",
+          "commit": "632e4a1",
+          "commit_full": "632e4a1bc51ee86b3f0a55e95ee78def391aab30",
+          "subject": "formula, calc: LET/LAMBDA names looked up through a map; ragged array literals refused before reserving (#3312)"
         },
-        "last_commit_ts": "2026-11-03T23:10:48Z",
+        "last_commit_ts": "2026-11-04T03:57:52Z",
         "repo_since": "2026-10-06T02:09:42Z",
         "window": [
           3,
@@ -1594,7 +1605,7 @@
           17,
           16,
           36,
-          0
+          14
         ]
       },
       "release": {
@@ -1687,18 +1698,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 20.3,
+        "score": 20.6,
         "active_days_7d": 7,
-        "changes_7d": 134,
-        "changes_14d": 300,
+        "changes_7d": 137,
+        "changes_14d": 303,
         "housekeeping_7d": 9,
         "last_code_change": {
-          "ts": "2026-11-04T03:32:31Z",
-          "commit": "e2c2266",
-          "commit_full": "e2c22660878ebfbd6dee034b56e9c94dede9ef6f",
-          "subject": "warichu: split long runs in one pass instead of trying every length (#2184)"
+          "ts": "2026-11-04T04:26:17Z",
+          "commit": "a4017a3",
+          "commit_full": "a4017a3cda704850fcb6ed9f8513fdb2e7fb04c1",
+          "subject": "Fonts: bound named instances per file, index axis settings in style strings (#2215)"
         },
-        "last_commit_ts": "2026-11-04T03:32:31Z",
+        "last_commit_ts": "2026-11-04T04:26:17Z",
         "repo_since": "2026-10-01T13:00:02Z",
         "window": [
           19,
@@ -1714,7 +1725,7 @@
           17,
           3,
           40,
-          14
+          17
         ]
       },
       "release": {
@@ -2047,18 +2058,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 12.7,
-        "active_days_7d": 4,
-        "changes_7d": 88,
-        "changes_14d": 164,
+        "score": 14.7,
+        "active_days_7d": 5,
+        "changes_7d": 91,
+        "changes_14d": 167,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-03T22:49:25Z",
-          "commit": "b7d78c7",
-          "commit_full": "b7d78c7e9ef0fff5d528fa05ba429ec95a764de5",
-          "subject": "fix(time): edit meters in linear time (#1324)"
+          "ts": "2026-11-04T04:03:28Z",
+          "commit": "5fabf28",
+          "commit_full": "5fabf28c315ee72ad5c0234beeb35ec832c11476",
+          "subject": "test: create scratch folders exclusively (#1334)"
         },
-        "last_commit_ts": "2026-11-03T22:49:25Z",
+        "last_commit_ts": "2026-11-04T04:03:28Z",
         "repo_since": "2026-10-06T00:08:04Z",
         "window": [
           12,
@@ -2074,7 +2085,7 @@
           0,
           6,
           21,
-          0
+          3
         ]
       },
       "release": {
@@ -2479,39 +2490,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 113,
-        "revisions_7d": 113,
+        "revisions": 116,
+        "revisions_7d": 116,
         "last_revision": {
-          "ts": "2026-11-04T03:31:11Z",
+          "ts": "2026-11-04T04:33:43Z",
           "kind": "content",
-          "commit": "0356c4b",
-          "commit_full": "0356c4bc8876782b6d9c1168eeac42007643c150",
-          "message": "Find Flatpak browsers on Linux and give sandboxed browsers a profile they can reach (#759)"
+          "commit": "0e4a1cf",
+          "commit_full": "0e4a1cfb98936db1b7cd90f7e662d6a7e31631d5",
+          "message": "Offer a switched-off agent in the setup card, and turn it on (#784)"
         },
         "last_update": {
-          "ts": "2026-11-04T03:31:11Z",
+          "ts": "2026-11-04T04:33:43Z",
           "kind": "content",
-          "commit": "0356c4b",
-          "commit_full": "0356c4bc8876782b6d9c1168eeac42007643c150",
-          "message": "Find Flatpak browsers on Linux and give sandboxed browsers a profile they can reach (#759)"
+          "commit": "0e4a1cf",
+          "commit_full": "0e4a1cfb98936db1b7cd90f7e662d6a7e31631d5",
+          "message": "Offer a switched-off agent in the setup card, and turn it on (#784)"
         },
         "self_reported": null
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 19.1,
+        "score": 19.4,
         "active_days_7d": 5,
-        "changes_7d": 309,
-        "changes_14d": 309,
+        "changes_7d": 315,
+        "changes_14d": 315,
         "housekeeping_7d": 22,
         "last_code_change": {
-          "ts": "2026-11-04T03:31:11Z",
-          "commit": "0356c4b",
-          "commit_full": "0356c4bc8876782b6d9c1168eeac42007643c150",
-          "subject": "Find Flatpak browsers on Linux and give sandboxed browsers a profile they can reach (#759)"
+          "ts": "2026-11-04T04:33:43Z",
+          "commit": "0e4a1cf",
+          "commit_full": "0e4a1cfb98936db1b7cd90f7e662d6a7e31631d5",
+          "subject": "Offer a switched-off agent in the setup card, and turn it on (#784)"
         },
-        "last_commit_ts": "2026-11-04T03:31:11Z",
+        "last_commit_ts": "2026-11-04T04:33:43Z",
         "repo_since": "2026-10-31T14:52:14Z",
         "window": [
           0,
@@ -2527,7 +2538,7 @@
           73,
           117,
           88,
-          28
+          34
         ]
       },
       "release": {
@@ -2608,18 +2619,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 32.2,
+        "score": 33.0,
         "active_days_7d": 7,
-        "changes_7d": 933,
-        "changes_14d": 1896,
-        "housekeeping_7d": 22,
+        "changes_7d": 939,
+        "changes_14d": 1902,
+        "housekeeping_7d": 23,
         "last_code_change": {
-          "ts": "2026-11-04T03:08:32Z",
-          "commit": "a52ee85",
-          "commit_full": "a52ee850aade40aa3e2a82ef854788c7fab543a4",
-          "subject": "15 languages: translate the 21 messages main gained after batch 4 (batch 5) (#8573)"
+          "ts": "2026-11-04T04:14:11Z",
+          "commit": "e199f9a",
+          "commit_full": "e199f9aeff9542f6374ad79c737a7d7b18e72560",
+          "subject": "Agents and scripts: Match Surface describes its exact parameters and reply (#10981) (#10982)"
         },
-        "last_commit_ts": "2026-11-04T03:08:32Z",
+        "last_commit_ts": "2026-11-04T04:14:11Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           25,
@@ -2635,7 +2646,7 @@
           128,
           160,
           38,
-          7
+          13
         ]
       },
       "release": {
@@ -2672,5 +2683,5 @@
       }
     ]
   },
-  "generated_at": "2026-11-04T03:36:15+00:00"
+  "generated_at": "2026-11-04T04:41:25+00:00"
 }
