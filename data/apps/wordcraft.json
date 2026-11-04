@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "bff0d1d",
-  "latest_commit_date": "2026-11-04T00:45:19Z",
-  "latest_message": "#3867 follow-up: header repeats count canvas members, one budget per layout; contours and chain widths don't depend on cache history (#4385)",
+  "latest_commit": "1340705",
+  "latest_commit_date": "2026-11-03T21:59:26-05:00",
+  "latest_message": "CP4.3: Options › Language: Your languages with proofing status, Add a language…, Set as default (#5515)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -354,6 +354,18 @@
       },
       {
         "date": "2026-11-03",
+        "text": "Language lists (CP4.3): a language installed from a Language pack (Bulgarian, say) can now be chosen. Set Proofing Language lists every built-in language and every installed or available pack's, each once and sorted by name; Review › Language and the status bar's menu add the installed packs' languages to the short list, with one way of working out the check mark, by tag. A pack's language is stored as a tag that finds the pack again (sr-Latn-RS is proofed by the Latin sr-latn pack, not the Cyrillic one; Valencian is Word's ca-ES-valencia). Every pack in language-packs-2 now has an English name (Belarusian used to show its own name, Беларуская). Readiness unchanged."
+      },
+      {
+        "date": "2026-11-03",
+        "text": "Language packs (CP4.3): on a fresh install (or after an upgrade, with the list cached for an older pin) the missing-pack bar still offers a document language that has no dictionary, \"Turkish proofing isn't installed. Install\": the person's click turns on downloading, fetches the list and installs the pack if it lists one (if not, the bar goes). With downloading already on, a missing or stale list is fetched once in the background. Choosing a language with only the caret counts before anything is typed, and the spelling context menu's heading (Possible spelling mistake) is in the interface language, not the text's. Closing the bar is remembered per document, per pack and, before the list is known, per language tag. Readiness unchanged."
+      },
+      {
+        "date": "2026-11-03",
+        "text": "Options › Language (CP4.3): Your languages lists English, every installed Language pack and the languages of the open document, each with where its proofing comes from (Built in, Installed, Your own dictionary, System dictionary, Grammar built in, Not available yet) and Install, Remove and Set as default; Add a language… opens a picker with search (dutch, nederlands, nl), sorted by name, and its first click is the consent to download. The Dictionaries folder moved here from Options › Proofing, with a Dictionary files list of the file each language found (#1063). Gap 8."
+      },
+      {
+        "date": "2026-11-03",
         "text": "Arabic interface (#1195): ar selectable (and every ar- system locale); craft-i18n catalog; mirrored ribbon, panes, File page, dialogs and menus; Arabic UI font fallback; document direction stays independent. No kashida or Arabic proofing yet; Hebrew UI still open."
       },
       {
@@ -475,18 +487,6 @@
       {
         "date": "2026-10-28",
         "text": "Word count counts each Chinese and Japanese character as a word, as Word does, in the status bar, the Word Count dialog and NUMWORDS fields. Unspaced Chinese text used to count as one word per run of text; Korean, which is written with spaces, still counts by words. (#4547)"
-      },
-      {
-        "date": "2026-10-28",
-        "text": "Aligned-copy review fixes keep the document axis locked through middle-button scrolling and let Ctrl/Command+Shift start on a secondary selected object. Plain Ctrl and Shift clicks keep their existing behavior (#4764)."
-      },
-      {
-        "date": "2026-10-28",
-        "text": "Ctrl/Command+Shift copies a selected floating picture, shape or text box along its dominant axis (#4764); inline copies keep the text cursor. Guides on the free axis, original/clipboard/selection, cancel, protection and history are covered by synthetic Linux tests. Native desktop and Word untested; readiness unchanged."
-      },
-      {
-        "date": "2026-10-28",
-        "text": "Charts and SmartArt draw text their font lacks in a fallback face, as body text does: Chinese titles, axis labels and legends no longer show boxes (#4720). A run of such characters takes one face that covers it all, so a label doesn't mix serif and sans glyphs; bold labels stay bold."
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 11,
     "releases_since_capped": false,
-    "revisions_since": 466,
+    "revisions_since": 469,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 470,
-    "revisions_7d": 52,
+    "revisions": 473,
+    "revisions_7d": 55,
     "last_revision": {
-      "ts": "2026-11-04T00:45:19Z",
+      "ts": "2026-11-04T02:59:26Z",
       "kind": "content",
-      "commit": "bff0d1d",
-      "commit_full": "bff0d1d9250a34e74d38f53bfe17195edb2da66b",
-      "message": "#3867 follow-up: header repeats count canvas members, one budget per layout; contours and chain widths don't depend on cache history (#4385)"
+      "commit": "1340705",
+      "commit_full": "1340705fa6ef9b7128c64512f082a1b524a71178",
+      "message": "CP4.3: Options › Language: Your languages with proofing status, Add a language…, Set as default (#5515)"
     },
     "last_update": {
-      "ts": "2026-11-04T00:45:19Z",
+      "ts": "2026-11-04T02:59:26Z",
       "kind": "content",
-      "commit": "bff0d1d",
-      "commit_full": "bff0d1d9250a34e74d38f53bfe17195edb2da66b",
-      "message": "#3867 follow-up: header repeats count canvas members, one budget per layout; contours and chain widths don't depend on cache history (#4385)"
+      "commit": "1340705",
+      "commit_full": "1340705fa6ef9b7128c64512f082a1b524a71178",
+      "message": "CP4.3: Options › Language: Your languages with proofing status, Add a language…, Set as default (#5515)"
     },
     "self_reported": "2026-11-03"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.5,
+    "score": 19.3,
     "active_days_7d": 7,
-    "changes_7d": 112,
-    "changes_14d": 272,
-    "housekeeping_7d": 12,
+    "changes_7d": 115,
+    "changes_14d": 275,
+    "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-11-04T02:12:45Z",
-      "commit": "ea25e5d",
-      "commit_full": "ea25e5dd3ae79ff439fda3c04c47e58944a0dcb0",
-      "subject": "CP4.3: craft-i18n.rev at 9d6d54d (craft-i18n#145): region names and the Language (Region) template in 35 locales (#5522)"
+      "ts": "2026-11-04T02:59:26Z",
+      "commit": "1340705",
+      "commit_full": "1340705fa6ef9b7128c64512f082a1b524a71178",
+      "subject": "CP4.3: Options › Language: Your languages with proofing status, Add a language…, Set as default (#5515)"
     },
-    "last_commit_ts": "2026-11-04T02:12:45Z",
+    "last_commit_ts": "2026-11-04T03:15:22Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       5,
@@ -568,7 +568,7 @@
       14,
       11,
       19,
-      3
+      6
     ],
     "days": [
       {
@@ -1067,20 +1067,20 @@
       },
       {
         "d": "2026-11-04",
-        "code": 3,
-        "other": 0,
+        "code": 6,
+        "other": 1,
         "samples": [
           {
-            "commit": "ea25e5d",
-            "subject": "CP4.3: craft-i18n.rev at 9d6d54d (craft-i18n#145): region names and the Language (Region) template in 35 locales (#5522)"
+            "commit": "1340705",
+            "subject": "CP4.3: Options › Language: Your languages with proofing status, Add a language…, Set as default (#5515)"
           },
           {
-            "commit": "d64ef7c",
-            "subject": "CP4.3: craft-i18n.rev at cde4900 (craft-i18n#136): Options › Language, missing-pack bar and Language pack language-name rows in 35 locales (#5518)"
+            "commit": "98da959",
+            "subject": "CP4.3: the missing-pack bar works on a fresh install and counts the caret's language (#5514)"
           },
           {
-            "commit": "bff0d1d",
-            "subject": "#3867 follow-up: header repeats count canvas members, one budget per layout; contours and chain widths don't depend on cache history (#4385)"
+            "commit": "d97e2f3",
+            "subject": "CP4.3: one language list: Language pack languages in Set Proofing Language, Review › Language and the status bar (#5513)"
           }
         ]
       }
@@ -12121,7 +12121,76 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "d97e2f3",
+      "commit_full": "d97e2f3a299b644f34034c77cd9a07965a903336",
+      "commit_date": "2026-11-03T21:39:17-05:00",
+      "ts": "2026-11-04T02:39:17Z",
+      "message": "CP4.3: one language list: Language pack languages in Set Proofing Language, Review › Language and the status bar (#5513)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "98da959",
+      "commit_full": "98da959cebd653be8be095a66249c8b417362968",
+      "commit_date": "2026-11-03T21:54:20-05:00",
+      "ts": "2026-11-04T02:54:20Z",
+      "message": "CP4.3: the missing-pack bar works on a fresh install and counts the caret's language (#5514)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "1340705",
+      "commit_full": "1340705fa6ef9b7128c64512f082a1b524a71178",
+      "commit_date": "2026-11-03T21:59:26-05:00",
+      "ts": "2026-11-04T02:59:26Z",
+      "message": "CP4.3: Options › Language: Your languages with proofing status, Add a language…, Set as default (#5515)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-04T02:34:15+00:00"
+  "updated_at": "2026-11-04T03:35:44+00:00"
 }

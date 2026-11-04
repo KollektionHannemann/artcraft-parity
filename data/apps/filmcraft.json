@@ -444,18 +444,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.7,
-    "active_days_7d": 5,
-    "changes_7d": 132,
-    "changes_14d": 297,
+    "score": 18.7,
+    "active_days_7d": 6,
+    "changes_7d": 139,
+    "changes_14d": 304,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-03T22:59:48Z",
-      "commit": "073ef55",
-      "commit_full": "073ef5549f8a7496663b197f5e9b6e53840f4743",
-      "subject": "captions: cap the CEA-708 text an MCC import retains (#4121)"
+      "ts": "2026-11-04T03:32:56Z",
+      "commit": "100577c",
+      "commit_full": "100577c6250dcd3998396c97999b6b92e852bdbd",
+      "subject": "mxf: resolve a source package's repeated track references once (#4212)"
     },
-    "last_commit_ts": "2026-11-03T22:59:48Z",
+    "last_commit_ts": "2026-11-04T03:32:56Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       5,
@@ -471,7 +471,7 @@
       30,
       3,
       55,
-      0
+      7
     ],
     "days": [
       {
@@ -1077,6 +1077,25 @@
             "subject": "engine: do not keep opened sources in relink search results (#4198)"
           }
         ]
+      },
+      {
+        "d": "2026-11-04",
+        "code": 7,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "100577c",
+            "subject": "mxf: resolve a source package's repeated track references once (#4212)"
+          },
+          {
+            "commit": "7ae7c76",
+            "subject": "captions: bound caption outline dilation work (#4110)"
+          },
+          {
+            "commit": "9bd7250",
+            "subject": "engine: leave unselected items' source graphics out of a selection export (#4183)"
+          }
+        ]
       }
     ]
   },
@@ -1634,5 +1653,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-04T00:36:23+00:00"
+  "updated_at": "2026-11-04T03:35:18+00:00"
 }
