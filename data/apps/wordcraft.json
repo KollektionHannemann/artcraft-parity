@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "1350f62",
-  "latest_commit_date": "2026-11-04T13:59:15+01:00",
-  "latest_message": "#2726: AccessKit focus guard — every tree update carries its focused node (#2742)",
+  "latest_commit": "604ac6d",
+  "latest_commit_date": "2026-11-04T15:29:12+01:00",
+  "latest_message": "#641: print N-up sheets and folded booklets (#3916)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -417,6 +417,14 @@
         "text": "Markdown export: a list inside a block quote stays in the quote (> - item), its continuation lines included; it was read as quoted list paragraphs but written without >, so the list moved out of the quote on every save"
       },
       {
+        "date": "2026-11-01",
+        "text": "trivial · N-up and booklet print imposition (#641): integrate current print-job link handling (#4734), preserve markup preview and sheet/copy planning; readiness estimates unchanged."
+      },
+      {
+        "date": "2026-11-01",
+        "text": "trivial · Printing (#641): pin booklet page order and blank left/right slots for every count from five through nine pages and both bindings; integrate current main. Readiness estimates unchanged."
+      },
+      {
         "date": "2026-10-31",
         "text": ".doc import: text that names no font takes the stylesheet's standard font, so a Word 365 .doc in Aptos opens in Aptos (or its substitute) instead of Times New Roman, the font table's first entry (#5066). Readiness unchanged."
       },
@@ -479,14 +487,6 @@
       {
         "date": "2026-10-29",
         "text": "A NUL in a document title no longer reaches the native window title, which panicked on X11 (#3634): displayed titles and suggested file names drop NUL characters and fall back to the untitled name when empty; the stored title is unchanged"
-      },
-      {
-        "date": "2026-10-29",
-        "text": "Corporate authors in bibliographies (#4848): a source whose author is an organisation (Word's Corporate Author, b:Corporate) keeps it when a Word document opens, instead of losing the author. Citations and bibliography entries write the name as it is in every style (\"(World Health Organization, 2021)\", never \"Organization, W. H.\"); it gives the source's tag and its place in an author-sorted list, and it saves back as b:Corporate. Create Source has a Corporate Author box under Author."
-      },
-      {
-        "date": "2026-10-29",
-        "text": "Table Properties follows the selection (#4857): with the whole table (or several rows, columns or cells) selected, the Row, Column and Cell settings apply to every selected row, column and cell, as in Word. Before, they changed the caret's row alone, so unticking Allow row to break across pages with the table selected left the other rows breaking. Allow row to break and Repeat as header row show as mixed when the selected rows differ and change nothing unless clicked."
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 473,
+    "revisions_since": 475,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 477,
-    "revisions_7d": 59,
+    "revisions": 479,
+    "revisions_7d": 61,
     "last_revision": {
-      "ts": "2026-11-04T12:59:15Z",
+      "ts": "2026-11-04T14:29:12Z",
       "kind": "content",
-      "commit": "1350f62",
-      "commit_full": "1350f62bf066b6d062f759eeba6fc118bad70d2f",
-      "message": "#2726: AccessKit focus guard — every tree update carries its focused node (#2742)"
+      "commit": "604ac6d",
+      "commit_full": "604ac6ddb2cef50e1cc0fd637ac839cee1d8d4db",
+      "message": "#641: print N-up sheets and folded booklets (#3916)"
     },
     "last_update": {
-      "ts": "2026-11-04T12:59:15Z",
+      "ts": "2026-11-04T14:29:12Z",
       "kind": "content",
-      "commit": "1350f62",
-      "commit_full": "1350f62bf066b6d062f759eeba6fc118bad70d2f",
-      "message": "#2726: AccessKit focus guard — every tree update carries its focused node (#2742)"
+      "commit": "604ac6d",
+      "commit_full": "604ac6ddb2cef50e1cc0fd637ac839cee1d8d4db",
+      "message": "#641: print N-up sheets and folded booklets (#3916)"
     },
     "self_reported": "2026-11-03"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.6,
+    "score": 20.9,
     "active_days_7d": 7,
-    "changes_7d": 125,
-    "changes_14d": 285,
+    "changes_7d": 129,
+    "changes_14d": 289,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-11-04T13:13:36Z",
-      "commit": "560565c",
-      "commit_full": "560565cdd75327d3fe2e1f540649b4ad0b2315f2",
-      "subject": "Audit fixes for 12 issues: import limits, escaping, link schemes, table depth (#3862)"
+      "ts": "2026-11-04T14:41:20Z",
+      "commit": "e3b000b",
+      "commit_full": "e3b000b650802613d0ea9a92e0b90b61c67e77c9",
+      "subject": "fix(print): report noPrinters when CUPS discovery finds no destinations (#1826)"
     },
-    "last_commit_ts": "2026-11-04T13:13:36Z",
+    "last_commit_ts": "2026-11-04T14:41:20Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       5,
@@ -568,7 +568,7 @@
       14,
       11,
       19,
-      16
+      20
     ],
     "days": [
       {
@@ -1067,20 +1067,20 @@
       },
       {
         "d": "2026-11-04",
-        "code": 16,
+        "code": 20,
         "other": 1,
         "samples": [
           {
-            "commit": "560565c",
-            "subject": "Audit fixes for 12 issues: import limits, escaping, link schemes, table depth (#3862)"
+            "commit": "e3b000b",
+            "subject": "fix(print): report noPrinters when CUPS discovery finds no destinations (#1826)"
           },
           {
-            "commit": "1350f62",
-            "subject": "#2726: AccessKit focus guard — every tree update carries its focused node (#2742)"
+            "commit": "604ac6d",
+            "subject": "#641: print N-up sheets and folded booklets (#3916)"
           },
           {
-            "commit": "688cce4",
-            "subject": "Read Mode: ink and drag previews follow the Page color, which is kept between entries (#4228)"
+            "commit": "b2734c2",
+            "subject": "Undo: steps share the style sheet and list definitions (1.2 GB → 21 MB at the limit) (#2694)"
           }
         ]
       }
@@ -12282,7 +12282,53 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "ed231fd",
+      "commit_full": "ed231fd02705a67a6b251336143abc3228bc6cca",
+      "commit_date": "2026-11-04T14:49:31+01:00",
+      "ts": "2026-11-04T13:49:31Z",
+      "message": "Walk Print Markup comment objects once (#3614) (#4744)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "604ac6d",
+      "commit_full": "604ac6ddb2cef50e1cc0fd637ac839cee1d8d4db",
+      "commit_date": "2026-11-04T15:29:12+01:00",
+      "ts": "2026-11-04T14:29:12Z",
+      "message": "#641: print N-up sheets and folded booklets (#3916)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-04T13:37:34+00:00"
+  "updated_at": "2026-11-04T14:46:23+00:00"
 }

@@ -427,18 +427,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 12.5,
+    "score": 12.6,
     "active_days_7d": 5,
-    "changes_7d": 35,
-    "changes_14d": 72,
+    "changes_7d": 36,
+    "changes_14d": 73,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-04T12:58:07Z",
-      "commit": "f30dd5e",
-      "commit_full": "f30dd5e5f71a94c4ade50521a4080ea5a0ad1479",
-      "subject": "LR-EDIT-OPTICS-PROFILE: preserve unknown crop factors in lens profiles (#2676)"
+      "ts": "2026-11-04T13:40:39Z",
+      "commit": "79e900c",
+      "commit_full": "79e900c120df3f5713bca89788801d8bab7f56f4",
+      "subject": "LR-EDIT-OPTICS-PROFILE: the lens database is offered on first launch and downloads on request, the library is looked up, Optics names the profile (#3073)"
     },
-    "last_commit_ts": "2026-11-04T12:58:07Z",
+    "last_commit_ts": "2026-11-04T13:40:39Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
       2,
@@ -454,7 +454,7 @@
       0,
       2,
       9,
-      15
+      16
     ],
     "days": [
       {
@@ -1032,9 +1032,13 @@
       },
       {
         "d": "2026-11-04",
-        "code": 15,
+        "code": 16,
         "other": 0,
         "samples": [
+          {
+            "commit": "79e900c",
+            "subject": "LR-EDIT-OPTICS-PROFILE: the lens database is offered on first launch and downloads on request, the library is looked up, Optics names the profile (#3073)"
+          },
           {
             "commit": "f30dd5e",
             "subject": "LR-EDIT-OPTICS-PROFILE: preserve unknown crop factors in lens profiles (#2676)"
@@ -1042,10 +1046,6 @@
           {
             "commit": "ac55490",
             "subject": "LR-EDIT-OPTICS-PROFILE: enable Sony ILCE-7M3 embedded distortion correction (rebase of #1384) (#3144)"
-          },
-          {
-            "commit": "b28661a",
-            "subject": "LR-MASK-GEOMETRY: masks stay on the photo under lens corrections, Upright, Transform and Rotate (#3550)"
           }
         ]
       }
@@ -1612,5 +1612,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-04T13:37:04+00:00"
+  "updated_at": "2026-11-04T14:45:52+00:00"
 }
