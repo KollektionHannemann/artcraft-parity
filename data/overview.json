@@ -31,6 +31,28 @@
   ],
   "latest_events": [
     {
+      "id": "texturecraft",
+      "name": "TextureCraft",
+      "type": "release",
+      "ts": "2026-11-04T18:09:10Z",
+      "tag": "v0.3.1",
+      "kind": "patch",
+      "changes": 8,
+      "url": "https://github.com/storytold/texturecraft/releases/tag/v0.3.1",
+      "prerelease": false
+    },
+    {
+      "id": "materialcraft",
+      "name": "MaterialCraft",
+      "type": "release",
+      "ts": "2026-11-04T18:08:56Z",
+      "tag": "v0.1.1",
+      "kind": "patch",
+      "changes": 8,
+      "url": "https://github.com/storytold/materialcraft/releases/tag/v0.1.1",
+      "prerelease": false
+    },
+    {
       "id": "wordcraft",
       "name": "WordCraft",
       "type": "release",
@@ -431,35 +453,13 @@
       "changes": 22,
       "url": "https://github.com/storytold/soundcraft/releases/tag/v0.16.0",
       "prerelease": false
-    },
-    {
-      "id": "texturecraft",
-      "name": "TextureCraft",
-      "type": "release",
-      "ts": "2026-11-01T17:57:34Z",
-      "tag": "v0.2.0",
-      "kind": "minor",
-      "changes": 24,
-      "url": "https://github.com/storytold/texturecraft/releases/tag/v0.2.0",
-      "prerelease": false
-    },
-    {
-      "id": "craft-anything",
-      "name": "Craft Anything",
-      "type": "release",
-      "ts": "2026-11-01T10:11:55Z",
-      "tag": "v0.2.0",
-      "kind": "minor",
-      "changes": 25,
-      "url": "https://github.com/storytold/craft-anything/releases/tag/v0.2.0",
-      "prerelease": false
     }
   ],
   "release_waves": [
     {
       "day": "2026-11-04",
-      "apps": 2,
-      "changes": 53,
+      "apps": 4,
+      "changes": 69,
       "largest": {
         "id": "pdfcraft",
         "name": "PdfCraft",
@@ -623,18 +623,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 33.5,
+        "score": 33.6,
         "active_days_7d": 7,
-        "changes_7d": 832,
-        "changes_14d": 1279,
+        "changes_7d": 839,
+        "changes_14d": 1286,
         "housekeeping_7d": 33,
         "last_code_change": {
-          "ts": "2026-11-04T17:24:59Z",
-          "commit": "7bb95a9",
-          "commit_full": "7bb95a901a2f7432f4504040d43f392999da5352",
-          "subject": "Select by Artboards dialog: a plain click keeps artboards the search hides (#5662)"
+          "ts": "2026-11-04T18:30:38Z",
+          "commit": "6666402",
+          "commit_full": "66664020b03f4f455ccfa1990e4cb0a077f1c977",
+          "subject": "Package: name every font left out when no dialog is shown (#5671)"
         },
-        "last_commit_ts": "2026-11-04T17:24:59Z",
+        "last_commit_ts": "2026-11-04T18:30:38Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           96,
@@ -650,7 +650,7 @@
           41,
           113,
           117,
-          156
+          163
         ]
       },
       "release": {
@@ -893,16 +893,16 @@
         "level": "buzzing",
         "score": 21.2,
         "active_days_7d": 7,
-        "changes_7d": 133,
-        "changes_14d": 293,
+        "changes_7d": 134,
+        "changes_14d": 294,
         "housekeeping_7d": 13,
         "last_code_change": {
-          "ts": "2026-11-04T15:28:18Z",
-          "commit": "92ecb40",
-          "commit_full": "92ecb40105f56b674c18e3e88557e1456591868b",
-          "subject": "ODT: full open, edit and save support, lossless on save without edits (gap 19) (#5559)"
+          "ts": "2026-11-04T17:47:52Z",
+          "commit": "573b929",
+          "commit_full": "573b929ad683d96dd1de9d366b108f35385915fd",
+          "subject": "Fix #5559 follow-ups: generated list prefix, hidden-text objects, turned clipped lines, kept-markup checks (#5593)"
         },
-        "last_commit_ts": "2026-11-04T15:28:18Z",
+        "last_commit_ts": "2026-11-04T17:47:52Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
           5,
@@ -918,7 +918,7 @@
           14,
           11,
           19,
-          24
+          25
         ]
       },
       "release": {
@@ -1416,7 +1416,7 @@
         "value_since": "2026-10-15T06:21:11Z",
         "releases_since": 11,
         "releases_since_capped": false,
-        "revisions_since": 99,
+        "revisions_since": 100,
         "hours_since": null,
         "areas_since": null,
         "changes": 1,
@@ -1433,39 +1433,39 @@
         }
       },
       "roadmap": {
-        "revisions": 187,
-        "revisions_7d": 13,
+        "revisions": 188,
+        "revisions_7d": 14,
         "last_revision": {
-          "ts": "2026-11-04T12:34:08Z",
+          "ts": "2026-11-04T17:53:39Z",
           "kind": "content",
-          "commit": "d579f26",
-          "commit_full": "d579f26de342ecdf3fe6d3079ea07c7719db293d",
-          "message": "M11: JBIG2 images share a symbol dictionary, up to 16 at a time (optimize.mono-compression) (#5910)"
+          "commit": "3788af1",
+          "commit_full": "3788af11d330452d9533f837924f0287cebd90f6",
+          "message": "M12: add a 3D model (U3D or PRC) to a page with a poster (#1297) (#5808)"
         },
         "last_update": {
-          "ts": "2026-11-04T12:34:08Z",
+          "ts": "2026-11-04T17:53:39Z",
           "kind": "content",
-          "commit": "d579f26",
-          "commit_full": "d579f26de342ecdf3fe6d3079ea07c7719db293d",
-          "message": "M11: JBIG2 images share a symbol dictionary, up to 16 at a time (optimize.mono-compression) (#5910)"
+          "commit": "3788af1",
+          "commit_full": "3788af11d330452d9533f837924f0287cebd90f6",
+          "message": "M12: add a 3D model (U3D or PRC) to a page with a poster (#1297) (#5808)"
         },
         "self_reported": "2026-11-03"
       },
       "milestone": null,
       "activity": {
-        "level": "active",
-        "score": 19.8,
+        "level": "buzzing",
+        "score": 20.5,
         "active_days_7d": 7,
-        "changes_7d": 89,
-        "changes_14d": 287,
+        "changes_7d": 97,
+        "changes_14d": 295,
         "housekeeping_7d": 8,
         "last_code_change": {
-          "ts": "2026-11-04T12:51:47Z",
-          "commit": "8717a08",
-          "commit_full": "8717a085ffec6b6de3ffa86de9c0c51da1488000",
-          "subject": "M2: a JBIG2 refinement reads a reference right of it from its first column (#6048)"
+          "ts": "2026-11-04T18:33:28Z",
+          "commit": "60894af",
+          "commit_full": "60894af44d970fa7cfb386ec60554fc70d900ddd",
+          "subject": "feat(ui): cut, copy and paste bookmark subtrees (#3994) (#6125)"
         },
-        "last_commit_ts": "2026-11-04T12:51:47Z",
+        "last_commit_ts": "2026-11-04T18:33:28Z",
         "repo_since": "2026-09-30T09:17:08Z",
         "window": [
           59,
@@ -1481,7 +1481,7 @@
           22,
           11,
           26,
-          12
+          20
         ]
       },
       "release": {
@@ -1511,11 +1511,11 @@
           "v": 50.0
         },
         {
-          "t": "2026-11-04T12:34:08Z",
+          "t": "2026-11-04T17:53:39Z",
           "v": 50.0
         }
       ],
-      "history_len": 187
+      "history_len": 188
     },
     {
       "repo_url": "https://github.com/storytold/gridcraft",
@@ -1820,16 +1820,16 @@
         "level": "buzzing",
         "score": 20.7,
         "active_days_7d": 7,
-        "changes_7d": 101,
-        "changes_14d": 323,
+        "changes_7d": 102,
+        "changes_14d": 324,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-04T13:35:55Z",
-          "commit": "5617e00",
-          "commit_full": "5617e00ca05adf7658afa4ec68908cb1889edf79",
-          "subject": "fix(ui): a save that failed some Image Assets reports which outputs (#11117) (#11168)"
+          "ts": "2026-11-04T18:20:54Z",
+          "commit": "8e82c0e",
+          "commit_full": "8e82c0e728ee03eb0ce7e5d12289f98bae1595c9",
+          "subject": "Integration batch 16: 9 epic PRs on main (#11278)"
         },
-        "last_commit_ts": "2026-11-04T13:35:55Z",
+        "last_commit_ts": "2026-11-04T18:20:54Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           48,
@@ -1845,7 +1845,7 @@
           11,
           7,
           24,
-          26
+          27
         ]
       },
       "release": {
@@ -2299,14 +2299,14 @@
         "active_days_7d": 4,
         "changes_7d": 104,
         "changes_14d": 108,
-        "housekeeping_7d": 16,
+        "housekeeping_7d": 17,
         "last_code_change": {
           "ts": "2026-11-04T17:30:01Z",
           "commit": "4c4f713",
           "commit_full": "4c4f71330fad0ac657230109bebe183773094220",
           "subject": "Honor release version in packaging"
         },
-        "last_commit_ts": "2026-11-04T17:34:09Z",
+        "last_commit_ts": "2026-11-04T17:56:40Z",
         "repo_since": "2026-10-14T18:33:13Z",
         "window": [
           0,
@@ -2326,12 +2326,12 @@
         ]
       },
       "release": {
-        "tag": "v0.3.0",
-        "name": "TextureCraft v0.3.0",
-        "ts": "2026-11-03T00:45:34Z",
-        "url": "https://github.com/storytold/texturecraft/releases/tag/v0.3.0",
-        "changes": 82,
-        "new_contributors": 7,
+        "tag": "v0.3.1",
+        "name": "TextureCraft v0.3.1",
+        "ts": "2026-11-04T18:09:10Z",
+        "url": "https://github.com/storytold/texturecraft/releases/tag/v0.3.1",
+        "changes": 8,
+        "new_contributors": 1,
         "platforms": [
           "macOS",
           "Windows",
@@ -2340,7 +2340,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
+        "kind": "patch"
       },
       "series": [],
       "history_len": 0
@@ -2434,12 +2434,12 @@
         ]
       },
       "release": {
-        "tag": "v0.1.0",
-        "name": "MaterialCraft v0.1.0",
-        "ts": "2026-11-03T00:09:14Z",
-        "url": "https://github.com/storytold/materialcraft/releases/tag/v0.1.0",
-        "changes": 2,
-        "new_contributors": 2,
+        "tag": "v0.1.1",
+        "name": "MaterialCraft v0.1.1",
+        "ts": "2026-11-04T18:08:56Z",
+        "url": "https://github.com/storytold/materialcraft/releases/tag/v0.1.1",
+        "changes": 8,
+        "new_contributors": 5,
         "platforms": [
           "macOS",
           "Windows",
@@ -2448,7 +2448,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": null
+        "kind": "patch"
       },
       "series": [],
       "history_len": 0
@@ -2619,18 +2619,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 35.2,
+        "score": 35.5,
         "active_days_7d": 7,
-        "changes_7d": 988,
-        "changes_14d": 1951,
-        "housekeeping_7d": 25,
+        "changes_7d": 1005,
+        "changes_14d": 1968,
+        "housekeeping_7d": 26,
         "last_code_change": {
-          "ts": "2026-11-04T16:35:28Z",
-          "commit": "e3f99de",
-          "commit_full": "e3f99de8afcdf817ac8e04016a23231be058c020",
-          "subject": "Onyx: a tactile stone-grey theme with broad subtle blur (#10338)"
+          "ts": "2026-11-04T18:13:40Z",
+          "commit": "de9a2bc",
+          "commit_full": "de9a2bc8469a2f8bd658e9f0a90c6f5028b91b55",
+          "subject": "Shaded with hidden edges: optionally select edges through faces (#11841)"
         },
-        "last_commit_ts": "2026-11-04T17:13:13Z",
+        "last_commit_ts": "2026-11-04T18:40:09Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           25,
@@ -2646,7 +2646,7 @@
           128,
           160,
           38,
-          62
+          79
         ]
       },
       "release": {
@@ -2683,5 +2683,5 @@
       }
     ]
   },
-  "generated_at": "2026-11-04T17:40:35+00:00"
+  "generated_at": "2026-11-04T18:40:51+00:00"
 }

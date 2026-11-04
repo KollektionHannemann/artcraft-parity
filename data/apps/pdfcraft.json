@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "d579f26",
-  "latest_commit_date": "2026-11-04T13:34:08+01:00",
-  "latest_message": "M11: JBIG2 images share a symbol dictionary, up to 16 at a time (optimize.mono-compression) (#5910)",
+  "latest_commit": "3788af1",
+  "latest_commit_date": "2026-11-04T18:53:39+01:00",
+  "latest_message": "M12: add a 3D model (U3D or PRC) to a page with a poster (#1297) (#5808)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -310,6 +310,10 @@
       },
       {
         "date": "2026-11-02",
+        "text": "(M12, #1297): modeladd embeds a U3D or PRC file, recognised by its header, as a 3D annotation with a chosen activation and a poster (an image or PDF page fitted in the box, or a labelled frame); an older file's catalog /Version is raised to what the model needs. Views, a rendered poster and a UI command are later steps. Estimates unchanged."
+      },
+      {
+        "date": "2026-11-02",
         "text": "(M10, #5743): macOS print jobs name their title and owner (com.apple.print.JobInfo.PMJobName, PMJobOwner), as the system print dialog does, because a Kyocera filter crashes on a job without them. Checked by a test and through docprint against a stand-in lp; not yet on a physical printer."
       },
       {
@@ -447,10 +451,6 @@
       {
         "date": "2026-10-23",
         "text": "(M10, image export): Soft-mask Decode intervals preserve partial opacity in Export all images and Save Image As."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "(M10, print resources): Vector printing preserves original page artwork when existing XObjects use annotation resource names."
       }
     ]
   },
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 11,
     "releases_since_capped": false,
-    "revisions_since": 99,
+    "revisions_since": 100,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 187,
-    "revisions_7d": 13,
+    "revisions": 188,
+    "revisions_7d": 14,
     "last_revision": {
-      "ts": "2026-11-04T12:34:08Z",
+      "ts": "2026-11-04T17:53:39Z",
       "kind": "content",
-      "commit": "d579f26",
-      "commit_full": "d579f26de342ecdf3fe6d3079ea07c7719db293d",
-      "message": "M11: JBIG2 images share a symbol dictionary, up to 16 at a time (optimize.mono-compression) (#5910)"
+      "commit": "3788af1",
+      "commit_full": "3788af11d330452d9533f837924f0287cebd90f6",
+      "message": "M12: add a 3D model (U3D or PRC) to a page with a poster (#1297) (#5808)"
     },
     "last_update": {
-      "ts": "2026-11-04T12:34:08Z",
+      "ts": "2026-11-04T17:53:39Z",
       "kind": "content",
-      "commit": "d579f26",
-      "commit_full": "d579f26de342ecdf3fe6d3079ea07c7719db293d",
-      "message": "M11: JBIG2 images share a symbol dictionary, up to 16 at a time (optimize.mono-compression) (#5910)"
+      "commit": "3788af1",
+      "commit_full": "3788af11d330452d9533f837924f0287cebd90f6",
+      "message": "M12: add a 3D model (U3D or PRC) to a page with a poster (#1297) (#5808)"
     },
     "self_reported": "2026-11-03"
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 19.8,
+    "level": "buzzing",
+    "score": 20.5,
     "active_days_7d": 7,
-    "changes_7d": 89,
-    "changes_14d": 287,
+    "changes_7d": 97,
+    "changes_14d": 295,
     "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-04T12:51:47Z",
-      "commit": "8717a08",
-      "commit_full": "8717a085ffec6b6de3ffa86de9c0c51da1488000",
-      "subject": "M2: a JBIG2 refinement reads a reference right of it from its first column (#6048)"
+      "ts": "2026-11-04T18:33:28Z",
+      "commit": "60894af",
+      "commit_full": "60894af44d970fa7cfb386ec60554fc70d900ddd",
+      "subject": "feat(ui): cut, copy and paste bookmark subtrees (#3994) (#6125)"
     },
-    "last_commit_ts": "2026-11-04T12:51:47Z",
+    "last_commit_ts": "2026-11-04T18:33:28Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       59,
@@ -524,7 +524,7 @@
       22,
       11,
       26,
-      12
+      20
     ],
     "days": [
       {
@@ -1181,20 +1181,20 @@
       },
       {
         "d": "2026-11-04",
-        "code": 12,
+        "code": 20,
         "other": 1,
         "samples": [
           {
-            "commit": "8717a08",
-            "subject": "M2: a JBIG2 refinement reads a reference right of it from its first column (#6048)"
+            "commit": "60894af",
+            "subject": "feat(ui): cut, copy and paste bookmark subtrees (#3994) (#6125)"
           },
           {
-            "commit": "c0cd40f",
-            "subject": "M6: forms decodes field values, renamed calculations and detected pages within shared budgets (#6132)"
+            "commit": "9070431",
+            "subject": "fix(forms): clearing a field's length limit leaves it with none, not its parent field's (#5250)"
           },
           {
-            "commit": "d579f26",
-            "subject": "M11: JBIG2 images share a symbol dictionary, up to 16 at a time (optimize.mono-compression) (#5910)"
+            "commit": "3788af1",
+            "subject": "M12: add a 3D model (U3D or PRC) to a page with a poster (#1297) (#5808)"
           }
         ]
       }
@@ -5708,7 +5708,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "3788af1",
+      "commit_full": "3788af11d330452d9533f837924f0287cebd90f6",
+      "commit_date": "2026-11-04T18:53:39+01:00",
+      "ts": "2026-11-04T17:53:39Z",
+      "message": "M12: add a 3D model (U3D or PRC) to a page with a poster (#1297) (#5808)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-04T13:37:13+00:00"
+  "updated_at": "2026-11-04T18:39:50+00:00"
 }
