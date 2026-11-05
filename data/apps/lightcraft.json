@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/lightcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/lightcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "eab130e",
-  "latest_commit_date": "2026-11-05T13:54:05+01:00",
-  "latest_message": "Docs: drop the Last updated / Change header line that every PR conflicted on (#3790)",
+  "latest_commit": "ba282d3",
+  "latest_commit_date": "2026-11-05T22:23:31+01:00",
+  "latest_message": "LR-IMP-FORMATS: pure-Rust clean-room compressed Olympus ORF bitstream decoder (#3775)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -22,11 +22,11 @@
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
-        "pct": 61.0,
+        "pct": 62.0,
         "range": null,
         "hours": [
-          1000,
-          1800
+          980,
+          1750
         ]
       },
       "mainstream": {
@@ -34,8 +34,8 @@
         "pct": 51.0,
         "range": null,
         "hours": [
-          450,
-          840
+          440,
+          820
         ]
       },
       "essentials": {
@@ -59,10 +59,10 @@
       {
         "audience": "full",
         "label": "Ready for real work (full target)",
-        "pct": 61.0,
+        "pct": 62.0,
         "range": [
-          56.0,
-          66.0
+          57.0,
+          67.0
         ],
         "hours": null
       },
@@ -89,11 +89,11 @@
       {
         "audience": "full",
         "label": "Full target (ready for real work)",
-        "pct": 61.0,
+        "pct": 62.0,
         "range": null,
         "hours": [
-          1000,
-          1800
+          980,
+          1750
         ]
       },
       {
@@ -102,8 +102,8 @@
         "pct": 51.0,
         "range": null,
         "hours": [
-          450,
-          840
+          440,
+          820
         ]
       },
       {
@@ -275,11 +275,15 @@
       "Render-fidelity suite against Lightroom, then tuning (30–60 h)",
       "~~Full-resolution zoom~~ (done 2026-10-12)",
       "AI masks: Subject / Sky / People (40–70 h + model decision)",
-      "Compressed ORF and HE NEF (28–55 h)",
+      "~~Compressed ORF~~ (done 2026-11-04) and HE NEF (20–40 h)",
       "Lens profile database of our own (40–80 h, #329)",
       "Tests in CI on macOS and Windows, and the GPU tests in CI (6–12 h)"
     ],
     "progress": [
+      {
+        "date": "2026-11-04",
+        "text": "Olympus / OM System compressed ORF decodes from sensor data: clean-room pure-Rust bitstream decoder (crates/raw/src/vendor/orfc.rs) derived strictly from Olympus patents US7333035B2/US7715639B2, maker notes and CC0 samples without third-party decoder code (see docs/orf-compression.md), verified on OM-D E-M1 (r=0.995) and E-M10 Mark III (r=0.929) CC0 samples; 58 bodies newly unlocked (78 total across Olympus and OM; OM/Olympus 6% → 81% fully working, overall weighted camera coverage 94% → 97%)."
+      },
       {
         "date": "2026-10-22",
         "text": "Print page setup and PDF output gain the Japanese photo and postcard papers — L判"
@@ -384,61 +388,59 @@
   },
   "parity": {
     "tracked_since": "2026-10-10T18:25:15Z",
-    "value_since": "2026-10-10T18:25:15Z",
-    "releases_since": 12,
-    "releases_since_capped": true,
-    "revisions_since": 14,
+    "value_since": "2026-11-05T21:23:31Z",
+    "releases_since": 0,
+    "releases_since_capped": false,
+    "revisions_since": 0,
     "hours_since": null,
-    "areas_since": {
-      "up": 1,
-      "down": 0,
-      "moves": [
-        {
-          "label": "RAW decoding and camera coverage",
-          "from": 76.0,
-          "to": 77.0,
-          "ts": "2026-10-11T14:00:14Z"
-        }
-      ]
-    },
-    "changes": 0,
+    "areas_since": null,
+    "changes": 1,
     "truncated": false,
-    "last_change": null
+    "last_change": {
+      "ts": "2026-11-05T21:23:31Z",
+      "from": 61.0,
+      "to": 62.0,
+      "delta": 1.0,
+      "commit": "ba282d3",
+      "commit_full": "ba282d36379ba6c31f624c816c86de1f18521876",
+      "message": "LR-IMP-FORMATS: pure-Rust clean-room compressed Olympus ORF bitstream decoder (#3775)",
+      "label_changed": false
+    }
   },
   "roadmap": {
-    "revisions": 16,
-    "revisions_7d": 4,
+    "revisions": 17,
+    "revisions_7d": 5,
     "last_revision": {
-      "ts": "2026-11-05T12:54:05Z",
-      "kind": "editorial",
-      "commit": "eab130e",
-      "commit_full": "eab130ecee86ac6eabe75b457dc59452306a1b07",
-      "message": "Docs: drop the Last updated / Change header line that every PR conflicted on (#3790)"
+      "ts": "2026-11-05T21:23:31Z",
+      "kind": "parity",
+      "commit": "ba282d3",
+      "commit_full": "ba282d36379ba6c31f624c816c86de1f18521876",
+      "message": "LR-IMP-FORMATS: pure-Rust clean-room compressed Olympus ORF bitstream decoder (#3775)"
     },
     "last_update": {
-      "ts": "2026-11-03T01:41:34Z",
-      "kind": "content",
-      "commit": "06c1b9a",
-      "commit_full": "06c1b9ae0775464ce83ef0a9588be770337600f1",
-      "message": "Use crw craftlib (#3503)"
+      "ts": "2026-11-05T21:23:31Z",
+      "kind": "parity",
+      "commit": "ba282d3",
+      "commit_full": "ba282d36379ba6c31f624c816c86de1f18521876",
+      "message": "LR-IMP-FORMATS: pure-Rust clean-room compressed Olympus ORF bitstream decoder (#3775)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.7,
+    "score": 15.9,
     "active_days_7d": 6,
-    "changes_7d": 78,
-    "changes_14d": 113,
+    "changes_7d": 83,
+    "changes_14d": 118,
     "housekeeping_7d": 10,
     "last_code_change": {
-      "ts": "2026-11-05T20:32:41Z",
-      "commit": "e50db33",
-      "commit_full": "e50db334530c0e919fb0afbf0c637fc40a40b2e4",
-      "subject": "Cut edited thumbnails from the decoded source, not the file (#3810)"
+      "ts": "2026-11-05T21:23:31Z",
+      "commit": "ba282d3",
+      "commit_full": "ba282d36379ba6c31f624c816c86de1f18521876",
+      "subject": "LR-IMP-FORMATS: pure-Rust clean-room compressed Olympus ORF bitstream decoder (#3775)"
     },
-    "last_commit_ts": "2026-11-05T20:32:41Z",
+    "last_commit_ts": "2026-11-05T21:23:31Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
       7,
@@ -454,7 +456,7 @@
       2,
       9,
       17,
-      41
+      46
     ],
     "days": [
       {
@@ -1051,20 +1053,20 @@
       },
       {
         "d": "2026-11-05",
-        "code": 41,
+        "code": 46,
         "other": 2,
         "samples": [
           {
-            "commit": "e50db33",
-            "subject": "Cut edited thumbnails from the decoded source, not the file (#3810)"
+            "commit": "ba282d3",
+            "subject": "LR-IMP-FORMATS: pure-Rust clean-room compressed Olympus ORF bitstream decoder (#3775)"
           },
           {
-            "commit": "1b6e722",
-            "subject": "Import review: say what the folder scan left out (#2944)"
+            "commit": "aa52251",
+            "subject": "Apply Auto settings to every selected photo (#3808)"
           },
           {
-            "commit": "098c929",
-            "subject": "shortcuts: H toggles mask pins while masking (#1458)"
+            "commit": "7b99ed3",
+            "subject": "Presets change only the settings they name (fixes #2159) (#2207)"
           }
         ]
       }
@@ -1652,7 +1654,30 @@
       "breadth_pct": 81.6,
       "full_prev": 61.0,
       "kind": "editorial"
+    },
+    {
+      "commit": "ba282d3",
+      "commit_full": "ba282d36379ba6c31f624c816c86de1f18521876",
+      "commit_date": "2026-11-05T22:23:31+01:00",
+      "ts": "2026-11-05T21:23:31Z",
+      "message": "LR-IMP-FORMATS: pure-Rust clean-room compressed Olympus ORF bitstream decoder (#3775)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": null,
+      "full_pct": 62.0,
+      "full_range": null,
+      "full_hours": [
+        980,
+        1750
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe Lightroom Classic 15.5 / Lightroom 9.6",
+      "mainstream_pct": 51.0,
+      "essentials_pct": 65.0,
+      "breadth_pct": 81.6,
+      "full_prev": 61.0,
+      "kind": "parity"
     }
   ],
-  "updated_at": "2026-11-05T20:33:30+00:00"
+  "updated_at": "2026-11-05T21:30:14+00:00"
 }

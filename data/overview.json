@@ -31,6 +31,17 @@
   ],
   "latest_events": [
     {
+      "id": "lightcraft",
+      "name": "LightCraft",
+      "type": "parity",
+      "ts": "2026-11-05T21:23:31Z",
+      "from": 61.0,
+      "to": 62.0,
+      "delta": 1.0,
+      "commit": "ba282d3",
+      "message": "LR-IMP-FORMATS: pure-Rust clean-room compressed Olympus ORF bitstream decoder (#3775)"
+    },
+    {
       "id": "vectorcraft",
       "name": "VectorCraft",
       "type": "release",
@@ -450,13 +461,6 @@
       "type": "new_app",
       "ts": "2026-11-03T00:00:00Z",
       "adobe": "Unknown"
-    },
-    {
-      "id": "materialcraft",
-      "name": "MaterialCraft",
-      "type": "new_app",
-      "ts": "2026-11-03T00:00:00Z",
-      "adobe": "Unknown"
     }
   ],
   "release_waves": [
@@ -624,16 +628,16 @@
         "level": "buzzing",
         "score": 34.1,
         "active_days_7d": 7,
-        "changes_7d": 795,
-        "changes_14d": 1326,
+        "changes_7d": 797,
+        "changes_14d": 1328,
         "housekeeping_7d": 35,
         "last_code_change": {
-          "ts": "2026-11-05T19:42:52Z",
-          "commit": "5f44923",
-          "commit_full": "5f44923011c4fa92aded75c5ce8eb4239037589e",
-          "subject": "Effect dialogs: a colour swatch beside a hex colour opens the Color Picker (#5365) (#5843)"
+          "ts": "2026-11-05T21:22:47Z",
+          "commit": "36c73f7",
+          "commit_full": "36c73f7bb91dacca649360e5ac5b53875242ea89",
+          "subject": "Type: Enter, arrows, Home, End, Tab and the clipboard apply in order with the frame's text (#2636)"
         },
-        "last_commit_ts": "2026-11-05T19:42:52Z",
+        "last_commit_ts": "2026-11-05T21:22:47Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           108,
@@ -649,7 +653,7 @@
           113,
           117,
           187,
-          112
+          114
         ]
       },
       "release": {
@@ -699,72 +703,70 @@
       "order": 4,
       "stage": "alpha",
       "next_stage": "beta",
-      "full_pct": 61.0,
+      "full_pct": 62.0,
       "full_range": null,
       "full_hours": [
-        1000,
-        1800
+        980,
+        1750
       ],
       "mainstream_pct": 51.0,
       "essentials_pct": 65.0,
       "breadth_pct": 81.6,
       "parity": {
         "tracked_since": "2026-10-10T18:25:15Z",
-        "value_since": "2026-10-10T18:25:15Z",
-        "releases_since": 12,
-        "releases_since_capped": true,
-        "revisions_since": 14,
+        "value_since": "2026-11-05T21:23:31Z",
+        "releases_since": 0,
+        "releases_since_capped": false,
+        "revisions_since": 0,
         "hours_since": null,
-        "areas_since": {
-          "up": 1,
-          "down": 0,
-          "moves": [
-            {
-              "label": "RAW decoding and camera coverage",
-              "from": 76.0,
-              "to": 77.0,
-              "ts": "2026-10-11T14:00:14Z"
-            }
-          ]
-        },
-        "changes": 0,
+        "areas_since": null,
+        "changes": 1,
         "truncated": false,
-        "last_change": null
+        "last_change": {
+          "ts": "2026-11-05T21:23:31Z",
+          "from": 61.0,
+          "to": 62.0,
+          "delta": 1.0,
+          "commit": "ba282d3",
+          "commit_full": "ba282d36379ba6c31f624c816c86de1f18521876",
+          "message": "LR-IMP-FORMATS: pure-Rust clean-room compressed Olympus ORF bitstream decoder (#3775)",
+          "label_changed": false
+        }
       },
       "roadmap": {
-        "revisions": 16,
-        "revisions_7d": 4,
+        "revisions": 17,
+        "revisions_7d": 5,
         "last_revision": {
-          "ts": "2026-11-05T12:54:05Z",
-          "kind": "editorial",
-          "commit": "eab130e",
-          "commit_full": "eab130ecee86ac6eabe75b457dc59452306a1b07",
-          "message": "Docs: drop the Last updated / Change header line that every PR conflicted on (#3790)"
+          "ts": "2026-11-05T21:23:31Z",
+          "kind": "parity",
+          "commit": "ba282d3",
+          "commit_full": "ba282d36379ba6c31f624c816c86de1f18521876",
+          "message": "LR-IMP-FORMATS: pure-Rust clean-room compressed Olympus ORF bitstream decoder (#3775)"
         },
         "last_update": {
-          "ts": "2026-11-03T01:41:34Z",
-          "kind": "content",
-          "commit": "06c1b9a",
-          "commit_full": "06c1b9ae0775464ce83ef0a9588be770337600f1",
-          "message": "Use crw craftlib (#3503)"
+          "ts": "2026-11-05T21:23:31Z",
+          "kind": "parity",
+          "commit": "ba282d3",
+          "commit_full": "ba282d36379ba6c31f624c816c86de1f18521876",
+          "message": "LR-IMP-FORMATS: pure-Rust clean-room compressed Olympus ORF bitstream decoder (#3775)"
         },
         "self_reported": null
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.7,
+        "score": 15.9,
         "active_days_7d": 6,
-        "changes_7d": 78,
-        "changes_14d": 113,
+        "changes_7d": 83,
+        "changes_14d": 118,
         "housekeeping_7d": 10,
         "last_code_change": {
-          "ts": "2026-11-05T20:32:41Z",
-          "commit": "e50db33",
-          "commit_full": "e50db334530c0e919fb0afbf0c637fc40a40b2e4",
-          "subject": "Cut edited thumbnails from the decoded source, not the file (#3810)"
+          "ts": "2026-11-05T21:23:31Z",
+          "commit": "ba282d3",
+          "commit_full": "ba282d36379ba6c31f624c816c86de1f18521876",
+          "subject": "LR-IMP-FORMATS: pure-Rust clean-room compressed Olympus ORF bitstream decoder (#3775)"
         },
-        "last_commit_ts": "2026-11-05T20:32:41Z",
+        "last_commit_ts": "2026-11-05T21:23:31Z",
         "repo_since": "2026-09-30T14:04:12Z",
         "window": [
           7,
@@ -780,7 +782,7 @@
           2,
           9,
           17,
-          41
+          46
         ]
       },
       "release": {
@@ -806,11 +808,11 @@
           "v": 61.0
         },
         {
-          "t": "2026-11-05T12:54:05Z",
-          "v": 61.0
+          "t": "2026-11-05T21:23:31Z",
+          "v": 62.0
         }
       ],
-      "history_len": 16
+      "history_len": 17
     },
     {
       "repo_url": "https://github.com/storytold/wordcraft",
@@ -844,7 +846,7 @@
         "value_since": "2026-10-10T18:11:53Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 489,
+        "revisions_since": 490,
         "hours_since": null,
         "areas_since": {
           "up": 2,
@@ -869,39 +871,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 493,
-        "revisions_7d": 74,
+        "revisions": 494,
+        "revisions_7d": 75,
         "last_revision": {
-          "ts": "2026-11-05T17:50:25Z",
+          "ts": "2026-11-05T20:56:00Z",
           "kind": "content",
-          "commit": "db8d944",
-          "commit_full": "db8d944c5cd84bce220bd6d8e876f2f1cc1d798d",
-          "message": "Fonts: reuse shared MATH construction records (#4660)"
+          "commit": "2f49c8a",
+          "commit_full": "2f49c8ad2ec0ff301000a8322bd45f1228013bcf",
+          "message": "Layout: keep a cell's floats laid out in the cell inside it (layoutInCell) (#4545)"
         },
         "last_update": {
-          "ts": "2026-11-05T17:50:25Z",
+          "ts": "2026-11-05T20:56:00Z",
           "kind": "content",
-          "commit": "db8d944",
-          "commit_full": "db8d944c5cd84bce220bd6d8e876f2f1cc1d798d",
-          "message": "Fonts: reuse shared MATH construction records (#4660)"
+          "commit": "2f49c8a",
+          "commit_full": "2f49c8ad2ec0ff301000a8322bd45f1228013bcf",
+          "message": "Layout: keep a cell's floats laid out in the cell inside it (layoutInCell) (#4545)"
         },
         "self_reported": "2026-11-05"
       },
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 22.6,
+        "score": 22.7,
         "active_days_7d": 7,
-        "changes_7d": 171,
-        "changes_14d": 328,
-        "housekeeping_7d": 15,
+        "changes_7d": 173,
+        "changes_14d": 330,
+        "housekeeping_7d": 16,
         "last_code_change": {
-          "ts": "2026-11-05T17:50:25Z",
-          "commit": "db8d944",
-          "commit_full": "db8d944c5cd84bce220bd6d8e876f2f1cc1d798d",
-          "subject": "Fonts: reuse shared MATH construction records (#4660)"
+          "ts": "2026-11-05T20:56:00Z",
+          "commit": "2f49c8a",
+          "commit_full": "2f49c8ad2ec0ff301000a8322bd45f1228013bcf",
+          "subject": "Layout: keep a cell's floats laid out in the cell inside it (layoutInCell) (#4545)"
         },
-        "last_commit_ts": "2026-11-05T17:50:25Z",
+        "last_commit_ts": "2026-11-05T21:11:03Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
           57,
@@ -917,7 +919,7 @@
           11,
           19,
           32,
-          32
+          34
         ]
       },
       "release": {
@@ -943,11 +945,11 @@
           "v": 60.0
         },
         {
-          "t": "2026-11-05T17:50:25Z",
+          "t": "2026-11-05T20:56:00Z",
           "v": 60.0
         }
       ],
-      "history_len": 493
+      "history_len": 494
     },
     {
       "repo_url": "https://github.com/storytold/filmcraft",
@@ -1010,18 +1012,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 19.5,
+        "score": 19.6,
         "active_days_7d": 7,
-        "changes_7d": 160,
-        "changes_14d": 320,
+        "changes_7d": 161,
+        "changes_14d": 321,
         "housekeeping_7d": 8,
         "last_code_change": {
-          "ts": "2026-11-05T13:20:08Z",
-          "commit": "46763a8",
-          "commit_full": "46763a85d9777d3a60c2a557f359d988296d6a44",
-          "subject": "feat(web): a host bridge for embedding pages, ?host=parent and data-host=\"page\" (#3341) (#3343)"
+          "ts": "2026-11-05T21:22:47Z",
+          "commit": "221398a",
+          "commit_full": "221398a68135109279a3c315006b12ee374f99d1",
+          "subject": "interchange: AAF/OMF audio tracks keep their names (#2845)"
         },
-        "last_commit_ts": "2026-11-05T13:20:08Z",
+        "last_commit_ts": "2026-11-05T21:22:47Z",
         "repo_since": "2026-09-30T09:22:00Z",
         "window": [
           62,
@@ -1037,7 +1039,7 @@
           3,
           55,
           20,
-          8
+          9
         ]
       },
       "release": {
@@ -1232,7 +1234,7 @@
         "value_since": "2026-10-11T21:41:28Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 205,
+        "revisions_since": 207,
         "hours_since": {
           "from": [
             273,
@@ -1287,39 +1289,39 @@
         }
       },
       "roadmap": {
-        "revisions": 254,
-        "revisions_7d": 84,
+        "revisions": 256,
+        "revisions_7d": 86,
         "last_revision": {
-          "ts": "2026-11-05T13:26:53Z",
+          "ts": "2026-11-05T21:27:51Z",
           "kind": "content",
-          "commit": "01f80de",
-          "commit_full": "01f80de1cd3698f9a9eed5898152d13d0995f1a3",
-          "message": "feat(web): a host bridge for embedding pages, ?host=parent and data-host=\"page\" (#1356) (#1358)"
+          "commit": "fe3567a",
+          "commit_full": "fe3567a56ba6f22d2722c902061dc965d50225d9",
+          "message": "M3: glass bends with the reference tool's thick-lens profile and splits its colours over 8 steps (#1887)"
         },
         "last_update": {
-          "ts": "2026-11-05T13:26:53Z",
+          "ts": "2026-11-05T21:27:51Z",
           "kind": "content",
-          "commit": "01f80de",
-          "commit_full": "01f80de1cd3698f9a9eed5898152d13d0995f1a3",
-          "message": "feat(web): a host bridge for embedding pages, ?host=parent and data-host=\"page\" (#1356) (#1358)"
+          "commit": "fe3567a",
+          "commit_full": "fe3567a56ba6f22d2722c902061dc965d50225d9",
+          "message": "M3: glass bends with the reference tool's thick-lens profile and splits its colours over 8 steps (#1887)"
         },
-        "self_reported": "2026-10-30"
+        "self_reported": "2026-11-02"
       },
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 20.6,
+        "score": 21.4,
         "active_days_7d": 7,
-        "changes_7d": 197,
-        "changes_14d": 451,
+        "changes_7d": 200,
+        "changes_14d": 454,
         "housekeeping_7d": 9,
         "last_code_change": {
-          "ts": "2026-11-05T14:48:40Z",
-          "commit": "01762da",
-          "commit_full": "01762dae332960ba0b3b81a7e0bafad57d139695",
-          "subject": "fix(ui): About credits table columns can be dragged wider or narrower (#1969)"
+          "ts": "2026-11-05T21:27:51Z",
+          "commit": "fe3567a",
+          "commit_full": "fe3567a56ba6f22d2722c902061dc965d50225d9",
+          "subject": "M3: glass bends with the reference tool's thick-lens profile and splits its colours over 8 steps (#1887)"
         },
-        "last_commit_ts": "2026-11-05T14:48:40Z",
+        "last_commit_ts": "2026-11-05T21:27:51Z",
         "repo_since": "2026-10-09T15:38:50Z",
         "window": [
           9,
@@ -1335,7 +1337,7 @@
           24,
           16,
           23,
-          3
+          6
         ]
       },
       "release": {
@@ -1377,11 +1379,11 @@
           "v": 53.0
         },
         {
-          "t": "2026-11-05T13:26:53Z",
+          "t": "2026-11-05T21:27:51Z",
           "v": 53.0
         }
       ],
-      "history_len": 254
+      "history_len": 256
     },
     {
       "repo_url": "https://github.com/storytold/pdfcraft",
@@ -1548,7 +1550,7 @@
         "value_since": "2026-10-10T18:09:06Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 86,
+        "revisions_since": 87,
         "hours_since": null,
         "areas_since": null,
         "changes": 0,
@@ -1556,39 +1558,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 88,
-        "revisions_7d": 14,
+        "revisions": 89,
+        "revisions_7d": 15,
         "last_revision": {
-          "ts": "2026-11-05T03:16:46Z",
+          "ts": "2026-11-05T21:24:49Z",
           "kind": "content",
-          "commit": "642980b",
-          "commit_full": "642980b724a14afb182335e05f0d9f1be8b7bbe2",
-          "message": "Form controls: buttons, sliders and spin buttons, with Assign Action, Format Control and XLSX round trip (#481)"
+          "commit": "292b784",
+          "commit_full": "292b784f0240ae9c415889155eaf3aca686c2e52",
+          "message": "fix(calc): apply \"Set precision as displayed\" in calculation (#1366)"
         },
         "last_update": {
-          "ts": "2026-11-05T03:16:46Z",
+          "ts": "2026-11-05T21:24:49Z",
           "kind": "content",
-          "commit": "642980b",
-          "commit_full": "642980b724a14afb182335e05f0d9f1be8b7bbe2",
-          "message": "Form controls: buttons, sliders and spin buttons, with Assign Action, Format Control and XLSX round trip (#481)"
+          "commit": "292b784",
+          "commit_full": "292b784f0240ae9c415889155eaf3aca686c2e52",
+          "message": "fix(calc): apply \"Set precision as displayed\" in calculation (#1366)"
         },
         "self_reported": "2026-11-02"
       },
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 20.2,
+        "score": 20.5,
         "active_days_7d": 7,
-        "changes_7d": 146,
-        "changes_14d": 242,
+        "changes_7d": 148,
+        "changes_14d": 244,
         "housekeeping_7d": 12,
         "last_code_change": {
-          "ts": "2026-11-05T14:03:10Z",
-          "commit": "c402953",
-          "commit_full": "c40295382886f0a18d281a9911e9506fdf53b863",
-          "subject": "i18n: German context menus' Insert reads \"Zellen einfügen\", not a second \"Einfügen\" (#2874) (#3425)"
+          "ts": "2026-11-05T21:24:59Z",
+          "commit": "21b64df",
+          "commit_full": "21b64df0fe8c5cee99aa13dee578954a8c03114b",
+          "subject": "Paste of a whole-column or whole-row copy no longer aborts the app (#2018)"
         },
-        "last_commit_ts": "2026-11-05T14:03:10Z",
+        "last_commit_ts": "2026-11-05T21:24:59Z",
         "repo_since": "2026-10-06T02:09:42Z",
         "window": [
           29,
@@ -1604,7 +1606,7 @@
           16,
           36,
           16,
-          6
+          8
         ]
       },
       "release": {
@@ -1630,11 +1632,11 @@
           "v": 50.0
         },
         {
-          "t": "2026-11-05T03:16:46Z",
+          "t": "2026-11-05T21:24:49Z",
           "v": 50.0
         }
       ],
-      "history_len": 88
+      "history_len": 89
     },
     {
       "repo_url": "https://github.com/storytold/designcraft",
@@ -1696,19 +1698,19 @@
       },
       "milestone": null,
       "activity": {
-        "level": "active",
-        "score": 19.7,
+        "level": "buzzing",
+        "score": 20.1,
         "active_days_7d": 7,
-        "changes_7d": 150,
-        "changes_14d": 298,
+        "changes_7d": 152,
+        "changes_14d": 300,
         "housekeeping_7d": 10,
         "last_code_change": {
-          "ts": "2026-11-05T14:53:17Z",
-          "commit": "e16785e",
-          "commit_full": "e16785ea506d5a5a34273cd77cb285e04a396baa",
-          "subject": "Fix CLI build warnings on Windows (#2356)"
+          "ts": "2026-11-05T21:24:10Z",
+          "commit": "4b63d26",
+          "commit_full": "4b63d26ac62e564b71484b7ab617f1ec688bf2a5",
+          "subject": "A hyperlink can point at a text anchor (#1446) (#1555)"
         },
-        "last_commit_ts": "2026-11-05T14:53:17Z",
+        "last_commit_ts": "2026-11-05T21:24:10Z",
         "repo_since": "2026-10-01T13:00:02Z",
         "window": [
           47,
@@ -1724,7 +1726,7 @@
           3,
           40,
           26,
-          5
+          7
         ]
       },
       "release": {
@@ -1817,18 +1819,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 22.0,
+        "score": 22.1,
         "active_days_7d": 7,
-        "changes_7d": 122,
-        "changes_14d": 314,
+        "changes_7d": 126,
+        "changes_14d": 318,
         "housekeeping_7d": 10,
         "last_code_change": {
-          "ts": "2026-11-05T19:27:28Z",
-          "commit": "3317aed",
-          "commit_full": "3317aede3b0f7c910915f0fe30d728d0bd0ab1b5",
-          "subject": "Fix Paint Bucket target with Gradient-style crosshair (#7994)"
+          "ts": "2026-11-05T21:04:59Z",
+          "commit": "6326117",
+          "commit_full": "6326117c5394826a07afc1e897b9650699499381",
+          "subject": "Web build: big operations that won't fit fail with an error instead of trapping, and a trap says so (#10129)"
         },
-        "last_commit_ts": "2026-11-05T19:27:28Z",
+        "last_commit_ts": "2026-11-05T21:04:59Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           89,
@@ -1844,7 +1846,7 @@
           7,
           24,
           27,
-          38
+          42
         ]
       },
       "release": {
@@ -1937,18 +1939,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 19.3,
+        "score": 19.5,
         "active_days_7d": 7,
-        "changes_7d": 193,
-        "changes_14d": 397,
+        "changes_7d": 194,
+        "changes_14d": 398,
         "housekeeping_7d": 14,
         "last_code_change": {
-          "ts": "2026-11-05T14:21:59Z",
-          "commit": "1786c24",
-          "commit_full": "1786c24523a5d5a67c01ff41213b66018a69bb04",
-          "subject": "expr: an expression cannot rebind a prelude name for the next one (#2133) (#2176)"
+          "ts": "2026-11-05T20:52:10Z",
+          "commit": "7ce61c6",
+          "commit_full": "7ce61c68fcab3b10cd1c3a4f249969870a54b196",
+          "subject": "Grow the buffer to the pinned quad so Corner Pin draws outside the layer rectangle (#1938) (#1967)"
         },
-        "last_commit_ts": "2026-11-05T14:21:59Z",
+        "last_commit_ts": "2026-11-05T20:52:10Z",
         "repo_since": "2026-10-01T16:48:39Z",
         "window": [
           21,
@@ -1964,7 +1966,7 @@
           19,
           46,
           4,
-          7
+          8
         ]
       },
       "release": {
@@ -2177,18 +2179,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 19.4,
+        "score": 19.6,
         "active_days_7d": 7,
-        "changes_7d": 180,
-        "changes_14d": 325,
+        "changes_7d": 181,
+        "changes_14d": 326,
         "housekeeping_7d": 11,
         "last_code_change": {
-          "ts": "2026-11-05T14:04:04Z",
-          "commit": "df65974",
-          "commit_full": "df6597445803c3db1274412f403e2aba9d76626a",
-          "subject": "fix(mcp): render takes a background and a plot style (#803) (#2818)"
+          "ts": "2026-11-05T21:17:44Z",
+          "commit": "fc157ea",
+          "commit_full": "fc157ea91fd96bba6f7ff7611fb3465820f6530c",
+          "subject": "Land #1031: Latin accents in the CADCraft Stroke font (#2831)"
         },
-        "last_commit_ts": "2026-11-05T14:04:04Z",
+        "last_commit_ts": "2026-11-05T21:17:44Z",
         "repo_since": "2026-10-06T00:15:47Z",
         "window": [
           8,
@@ -2204,7 +2206,7 @@
           39,
           29,
           4,
-          6
+          7
         ]
       },
       "release": {
@@ -2294,18 +2296,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 11.8,
+        "score": 12.4,
         "active_days_7d": 5,
-        "changes_7d": 107,
-        "changes_14d": 111,
+        "changes_7d": 109,
+        "changes_14d": 113,
         "housekeeping_7d": 18,
         "last_code_change": {
-          "ts": "2026-11-05T16:30:59Z",
-          "commit": "169221e",
-          "commit_full": "169221ea4c0e1f1b3fd70d97c6822713eefaa77c",
-          "subject": "Mark reimported projects as modified"
+          "ts": "2026-11-05T21:28:13Z",
+          "commit": "a318e51",
+          "commit_full": "a318e51f9abca501ed056ac3dff0a090b9dd0c4b",
+          "subject": "UI: view layout and projection dropdowns in the top bar (#268)"
         },
-        "last_commit_ts": "2026-11-05T16:30:59Z",
+        "last_commit_ts": "2026-11-05T21:28:13Z",
         "repo_since": "2026-10-14T18:33:13Z",
         "window": [
           4,
@@ -2321,7 +2323,7 @@
           52,
           8,
           4,
-          3
+          5
         ]
       },
       "release": {
@@ -2402,18 +2404,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 12.5,
+        "score": 12.6,
         "active_days_7d": 5,
-        "changes_7d": 78,
-        "changes_14d": 78,
+        "changes_7d": 80,
+        "changes_14d": 80,
         "housekeeping_7d": 15,
         "last_code_change": {
-          "ts": "2026-11-05T19:02:03Z",
-          "commit": "8b4b89c",
-          "commit_full": "8b4b89cf4dd389b5601c7f897345b852531b65d4",
-          "subject": "Reject colliding filenames before exporting maps (#99)"
+          "ts": "2026-11-05T21:04:58Z",
+          "commit": "56407b9",
+          "commit_full": "56407b94706837609662a1f50188a829b907d8af",
+          "subject": "Revert the batch rollback and restore prior main"
         },
-        "last_commit_ts": "2026-11-05T19:21:09Z",
+        "last_commit_ts": "2026-11-05T21:04:58Z",
         "repo_since": "2026-11-01T19:58:46Z",
         "window": [
           0,
@@ -2429,7 +2431,7 @@
           7,
           3,
           5,
-          51
+          53
         ]
       },
       "release": {
@@ -2620,16 +2622,16 @@
         "level": "buzzing",
         "score": 36.3,
         "active_days_7d": 7,
-        "changes_7d": 989,
-        "changes_14d": 2118,
-        "housekeeping_7d": 27,
+        "changes_7d": 992,
+        "changes_14d": 2121,
+        "housekeeping_7d": 28,
         "last_code_change": {
-          "ts": "2026-11-05T19:52:26Z",
-          "commit": "bd3053f",
-          "commit_full": "bd3053f57be8b862abccc4691156e1865138f490",
-          "subject": "Insert SVG: shapes a file only defines or hides are not imported (#11039) (#11050)"
+          "ts": "2026-11-05T20:26:05Z",
+          "commit": "4699b9c",
+          "commit_full": "4699b9cc89e628a18165816be12848ff6f0b2306",
+          "subject": "Sketch library: include the built-in font in vendored sources (#12162) (#12174)"
         },
-        "last_commit_ts": "2026-11-05T19:52:26Z",
+        "last_commit_ts": "2026-11-05T21:11:13Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           132,
@@ -2645,7 +2647,7 @@
           160,
           38,
           158,
-          96
+          99
         ]
       },
       "release": {
@@ -2687,5 +2689,5 @@
       }
     ]
   },
-  "generated_at": "2026-11-05T20:34:21+00:00"
+  "generated_at": "2026-11-05T21:31:22+00:00"
 }

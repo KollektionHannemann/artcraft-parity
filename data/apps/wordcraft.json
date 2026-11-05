@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "db8d944",
-  "latest_commit_date": "2026-11-05T18:50:25+01:00",
-  "latest_message": "Fonts: reuse shared MATH construction records (#4660)",
+  "latest_commit": "2f49c8a",
+  "latest_commit_date": "2026-11-05T21:56:00+01:00",
+  "latest_message": "Layout: keep a cell's floats laid out in the cell inside it (layoutInCell) (#4545)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 489,
+    "revisions_since": 490,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 493,
-    "revisions_7d": 74,
+    "revisions": 494,
+    "revisions_7d": 75,
     "last_revision": {
-      "ts": "2026-11-05T17:50:25Z",
+      "ts": "2026-11-05T20:56:00Z",
       "kind": "content",
-      "commit": "db8d944",
-      "commit_full": "db8d944c5cd84bce220bd6d8e876f2f1cc1d798d",
-      "message": "Fonts: reuse shared MATH construction records (#4660)"
+      "commit": "2f49c8a",
+      "commit_full": "2f49c8ad2ec0ff301000a8322bd45f1228013bcf",
+      "message": "Layout: keep a cell's floats laid out in the cell inside it (layoutInCell) (#4545)"
     },
     "last_update": {
-      "ts": "2026-11-05T17:50:25Z",
+      "ts": "2026-11-05T20:56:00Z",
       "kind": "content",
-      "commit": "db8d944",
-      "commit_full": "db8d944c5cd84bce220bd6d8e876f2f1cc1d798d",
-      "message": "Fonts: reuse shared MATH construction records (#4660)"
+      "commit": "2f49c8a",
+      "commit_full": "2f49c8ad2ec0ff301000a8322bd45f1228013bcf",
+      "message": "Layout: keep a cell's floats laid out in the cell inside it (layoutInCell) (#4545)"
     },
     "self_reported": "2026-11-05"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.6,
+    "score": 22.7,
     "active_days_7d": 7,
-    "changes_7d": 171,
-    "changes_14d": 328,
-    "housekeeping_7d": 15,
+    "changes_7d": 173,
+    "changes_14d": 330,
+    "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-11-05T17:50:25Z",
-      "commit": "db8d944",
-      "commit_full": "db8d944c5cd84bce220bd6d8e876f2f1cc1d798d",
-      "subject": "Fonts: reuse shared MATH construction records (#4660)"
+      "ts": "2026-11-05T20:56:00Z",
+      "commit": "2f49c8a",
+      "commit_full": "2f49c8ad2ec0ff301000a8322bd45f1228013bcf",
+      "subject": "Layout: keep a cell's floats laid out in the cell inside it (layoutInCell) (#4545)"
     },
-    "last_commit_ts": "2026-11-05T17:50:25Z",
+    "last_commit_ts": "2026-11-05T21:11:03Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       57,
@@ -568,7 +568,7 @@
       11,
       19,
       32,
-      32
+      34
     ],
     "days": [
       {
@@ -1086,20 +1086,20 @@
       },
       {
         "d": "2026-11-05",
-        "code": 32,
-        "other": 1,
+        "code": 34,
+        "other": 2,
         "samples": [
+          {
+            "commit": "2f49c8a",
+            "subject": "Layout: keep a cell's floats laid out in the cell inside it (layoutInCell) (#4545)"
+          },
+          {
+            "commit": "334494a",
+            "subject": "Cap equation matrix size when writing OMML (#4000)"
+          },
           {
             "commit": "db8d944",
             "subject": "Fonts: reuse shared MATH construction records (#4660)"
-          },
-          {
-            "commit": "21a4e27",
-            "subject": "Tests: the ink lookup and note conversion tests count work steps instead of timing (#5643)"
-          },
-          {
-            "commit": "0c54f94",
-            "subject": "Tests: the balloon anchor test counts all of the anchor walk's work (#5622)"
           }
         ]
       }
@@ -12669,7 +12669,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "2f49c8a",
+      "commit_full": "2f49c8ad2ec0ff301000a8322bd45f1228013bcf",
+      "commit_date": "2026-11-05T21:56:00+01:00",
+      "ts": "2026-11-05T20:56:00Z",
+      "message": "Layout: keep a cell's floats laid out in the cell inside it (layoutInCell) (#4545)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-05",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T18:36:17+00:00"
+  "updated_at": "2026-11-05T21:30:42+00:00"
 }
