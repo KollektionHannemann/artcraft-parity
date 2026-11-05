@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "8d56906",
-  "latest_commit_date": "2026-11-05T13:13:56+01:00",
-  "latest_message": "M5: Escape leaves a Fill & Sign tool, as it leaves a comment tool (#4539)",
+  "latest_commit": "c3c36f7",
+  "latest_commit_date": "2026-11-05T14:39:36+01:00",
+  "latest_message": "M5: a comment's text, border or line, and fill each at an opacity of its own (#4542)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -366,6 +366,10 @@
       },
       {
         "date": "2026-10-28",
+        "text": "(M10, #4119 partial): Scan & OCR ▸ Enhance scanned file cleans scanned pages in place: background removal (level 0–100, as the camera clean-up), edge shadow removal (book gutters, copier borders) and despeckle. Each scan image is decoded, cleaned and written back into its own object at the same size and colour space (JPEG stays JPEG, others lossless, 1-bit stays 1-bit), so the OCR text layer, comments and links stay; one undo step, shared images once, unsupported images (CMYK, indexed, JPEG 2000, JBIG2, CCITT, broken data) reported. pageenhancescan drives it headlessly. Not yet an option of Recognize text. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-28",
         "text": "(M2, PR #4172): Integrated main 5af10276, preserving both roadmap histories and reviewing auto-merged export tests and accessibility UI changes. Validation: 488 scoped tests passed (18 engine, 412 renderer unit, 43 renderer integration, 15 Combine; one existing renderer integration test ignored); scoped all-target Clippy with -D warnings, formatting, layers, assets, parity and renderer/engine WASM checks passed. Viewer-only CJK fallback and print/output font policy remain unchanged; estimates unchanged."
       },
       {
@@ -391,6 +395,10 @@
       {
         "date": "2026-10-25",
         "text": "(M5, comment replies): One reply can be deleted from the Comments panel without its thread. On the selected card each reply has its own \"…\" menu (Edit, Copy text, Delete); Delete takes that reply with its pop-up and the replies to it, as commentdelete already did headlessly, and the comment and its other replies stay. The card stays selected, and the panel's editor stays open, on what they were on though the delete moved it in /Annots. Undo and Redo close the editor, since either can move what it was open on. A locked reply can't be deleted. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-25",
+        "text": "(web, same-document host mode): A page that loads the PdfCraft web module into its own document (no iframe) can opt into the host bridge with data-host=\"page\" on the app's canvas — the exact value page; any other value keeps the normal app with downloads, unless a same-origin framed ?host=parent selects the parent bridge (unframed or cross-origin, ?host=parent also keeps the normal app). It is the ?host=parent bridge with the transport swapped: the same five messages travel as non-bubbling CustomEvents on the canvas (detail holds the parent messages' fields without type; the host answers with a pdfcraft:open event), so saves reach the host instead of downloading and dirty and start-up-failure reporting are unchanged. Unit tests cover the opt-in rule; no parity or estimate changes."
       },
       {
         "date": "2026-10-24",
@@ -425,6 +433,14 @@
         "text": "(M5, Escape in Fill & Sign): Escape leaves a Fill & Sign tool as it leaves a comment tool: the first press closes the open type box, the next goes back to Select, so the Text tool no longer opens a box at every click with no way out by the keyboard. A synthetic UI regression covers the Text and Checkmark tools. Estimates unchanged."
       },
       {
+        "date": "2026-10-24",
+        "text": "(M3, arrow keys on a wide page): → / ← scroll a page wider than the window (a plan zoomed in) sideways a line at a time and turn the page at its edge, as ↓ / ↑ do in single-page view; ⌘→ / ⌘← turn it at once, and a page that fits across turns as before (#185). A synthetic viewer regression covers both. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-24",
+        "text": "(M5, part opacity): Comment Properties sets a text box's text, border and fill, and a shape's line and fill, each at an opacity of its own (a see-through fill with an opaque line on a plan); stored as /CA, /ca (PDF 2.0) and /PCTextOpacity and drawn with separate graphics states, so other viewers show it. Make Properties Default and the settings carry it; commentadd / commentedit fillopacity, textopacity. Four new labels in every catalog. Synthetic annot, UI and automation regressions. Estimates unchanged."
+      },
+      {
         "date": "2026-10-23",
         "text": "(M11, JBIG2): The PDF Optimizer can store black-and-white images as lossless JBIG2 (a generic region, written from the JBIG2 draft standard and checked against its arithmetic-coder test sequence), about a third smaller than Group 4 on 300 dpi text, and Export ▸ Images reads JBIG2 images. JBIG2 symbol coding, where its largest gains on text are, is next."
       },
@@ -435,22 +451,6 @@
       {
         "date": "2026-10-23",
         "text": "(M6, calculation checks): The calculation order now flags a formula that reads a field the form doesn't have (a field deleted from under a sum, a typo in notation, a script's getField) and a script that builds the names it reads at run time. Prepare a form ▸ Calculation order marks both on the row and in a card that names the broken formulas, in place of its all-clear. formcalculationorder gives each field's formula, and formfields shows a custom Calculate script."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "(M7, #4280): Edit text names each standard stand-in font after its face (PCEdTimesBold, ...) instead of one shared PCEdHelv. Rewriting a bold paragraph whose subset lacks an accent no longer repoints the paragraphs set earlier in a regular stand-in at Times-Bold, and the editor's frame stays on the paragraph being edited. Pages saved by older builds keep their shared name and are not repaired. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "(M8, #3205 follow-up): Phone-pattern redaction matches complete labelled Italian geographic numbers such as Tel. +39 0426/123456, with synthetic matcher and mark/apply/save/reopen coverage; unlabelled international slash numbers remain unsupported."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "(M7, #2636 partial): A new PasteContent edit pastes an added text box or image copied in the same document or another, keeping its style, picture, turns, flips and crop, as one undo step; contentcopy drives it headlessly. A paste lands beside earlier copies (18 pt steps) and stays on the page. A pasted image reuses its picture object in its own document and after the first paste into another; there a colour profile is dropped and CMYK colours stored losslessly are turned to RGB. The desktop keys and menus follow in separate PRs. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "(M11, optimizer resolution): Image downsampling includes each page's /UserUnit scale, preserving images already below the physical resolution threshold, including shared nested forms."
       }
     ]
   },
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 104,
+    "revisions_since": 109,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 192,
-    "revisions_7d": 18,
+    "revisions": 197,
+    "revisions_7d": 23,
     "last_revision": {
-      "ts": "2026-11-05T12:13:56Z",
+      "ts": "2026-11-05T13:39:36Z",
       "kind": "content",
-      "commit": "8d56906",
-      "commit_full": "8d569066b8dd5ce97d71fa50dd121b577ed818ce",
-      "message": "M5: Escape leaves a Fill & Sign tool, as it leaves a comment tool (#4539)"
+      "commit": "c3c36f7",
+      "commit_full": "c3c36f77cf1f1beb8785ad5caccf6cb654f598c5",
+      "message": "M5: a comment's text, border or line, and fill each at an opacity of its own (#4542)"
     },
     "last_update": {
-      "ts": "2026-11-05T12:13:56Z",
+      "ts": "2026-11-05T13:39:36Z",
       "kind": "content",
-      "commit": "8d56906",
-      "commit_full": "8d569066b8dd5ce97d71fa50dd121b577ed818ce",
-      "message": "M5: Escape leaves a Fill & Sign tool, as it leaves a comment tool (#4539)"
+      "commit": "c3c36f7",
+      "commit_full": "c3c36f77cf1f1beb8785ad5caccf6cb654f598c5",
+      "message": "M5: a comment's text, border or line, and fill each at an opacity of its own (#4542)"
     },
     "self_reported": "2026-11-03"
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 19.6,
+    "level": "buzzing",
+    "score": 20.4,
     "active_days_7d": 7,
-    "changes_7d": 104,
-    "changes_14d": 246,
+    "changes_7d": 110,
+    "changes_14d": 252,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-05T12:13:56Z",
-      "commit": "8d56906",
-      "commit_full": "8d569066b8dd5ce97d71fa50dd121b577ed818ce",
-      "subject": "M5: Escape leaves a Fill & Sign tool, as it leaves a comment tool (#4539)"
+      "ts": "2026-11-05T13:39:36Z",
+      "commit": "c3c36f7",
+      "commit_full": "c3c36f77cf1f1beb8785ad5caccf6cb654f598c5",
+      "subject": "M5: a comment's text, border or line, and fill each at an opacity of its own (#4542)"
     },
-    "last_commit_ts": "2026-11-05T12:13:56Z",
+    "last_commit_ts": "2026-11-05T13:39:36Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       44,
@@ -524,7 +524,7 @@
       11,
       26,
       23,
-      7
+      13
     ],
     "days": [
       {
@@ -1200,20 +1200,20 @@
       },
       {
         "d": "2026-11-05",
-        "code": 7,
+        "code": 13,
         "other": 0,
         "samples": [
           {
-            "commit": "8d56906",
-            "subject": "M5: Escape leaves a Fill & Sign tool, as it leaves a comment tool (#4539)"
+            "commit": "c3c36f7",
+            "subject": "M5: a comment's text, border or line, and fill each at an opacity of its own (#4542)"
           },
           {
-            "commit": "863af86",
-            "subject": "M1: respect generations in PDF object references and full saves (#1143)"
+            "commit": "983e2f2",
+            "subject": "M3: → / ← scroll a page wider than the window before turning it (#4540)"
           },
           {
-            "commit": "15c505d",
-            "subject": "M2: scans stay sharp at screen size and smooth when zoomed (area-average shrink, bilinear enlarge) (#3858)"
+            "commit": "c56a63b",
+            "subject": "feat(web): page host mode, so a page can host PdfCraft in its own document (#4731) (#4732)"
           }
         ]
       }
@@ -5842,7 +5842,122 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "419b267",
+      "commit_full": "419b267ee5f2e1b2bb6860cfa997faf5460f3111",
+      "commit_date": "2026-11-05T13:36:55+01:00",
+      "ts": "2026-11-05T12:36:55Z",
+      "message": "M10: Enhance scanned file cleans scanned pages in place (#5125)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "96fe832",
+      "commit_full": "96fe832e12c6de3ba88005496ba3d57cc3039fa9",
+      "commit_date": "2026-11-05T14:01:18+01:00",
+      "ts": "2026-11-05T13:01:18Z",
+      "message": "M5: Shift holds lines level or plumb while drawing (ortho) (#4285)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "c56a63b",
+      "commit_full": "c56a63bcb619e5b284befddbd7768fb9cadae370",
+      "commit_date": "2026-11-05T14:20:12+01:00",
+      "ts": "2026-11-05T13:20:12Z",
+      "message": "feat(web): page host mode, so a page can host PdfCraft in its own document (#4731) (#4732)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "983e2f2",
+      "commit_full": "983e2f2ad6bfa4b7377163050f9b3fe16af980d3",
+      "commit_date": "2026-11-05T14:25:56+01:00",
+      "ts": "2026-11-05T13:25:56Z",
+      "message": "M3: → / ← scroll a page wider than the window before turning it (#4540)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "c3c36f7",
+      "commit_full": "c3c36f77cf1f1beb8785ad5caccf6cb654f598c5",
+      "commit_date": "2026-11-05T14:39:36+01:00",
+      "ts": "2026-11-05T13:39:36Z",
+      "message": "M5: a comment's text, border or line, and fill each at an opacity of its own (#4542)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T12:16:35+00:00"
+  "updated_at": "2026-11-05T13:40:44+00:00"
 }

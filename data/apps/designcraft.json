@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/designcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "4f3bb53",
-  "latest_commit_date": "2026-11-05T06:02:27+01:00",
-  "latest_message": "Pages: parents and alternate layouts; export and print layouts and versions (#1342)",
+  "latest_commit": "0e85e9e",
+  "latest_commit_date": "2026-11-05T13:16:42+01:00",
+  "latest_message": "Esperanto as a text language (#1142) (#1204)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -315,6 +315,10 @@
         "text": "· Striped strokes retain out-and-back cubic segments whose second control point is away from the coincident endpoints and first control point. A geometry regression checks the offset extent and both stripe bands. No readiness percentage change."
       },
       {
+        "date": "2026-11-04",
+        "text": "· Esperanto is a text language (Character › Language, type.char {language: \"Esperanto\"}, IDML $ID/Esperanto): tag eo, English-style quotes; not hyphenated yet (#1201). No readiness percentage change."
+      },
+      {
         "date": "2026-11-03",
         "text": "· type.char says when the font it applies isn't available (#2189): it returns {\"warnings\": [\"Missing font: Courier Prime (using Source Sans 3)\"]}, or Missing font style: … for a style the family doesn't have, in preflight's words. The font is still applied, as before, so Find Font and preflight list it. A script that asked for a font the machine doesn't have exported in the substitute with no word about it. No readiness percentage change."
       },
@@ -465,10 +469,6 @@
       {
         "date": "2026-10-24",
         "text": "· Story panel (Window › Type & Tables › Story): Optical Margin Alignment and its size for the stories of the text selection or the selected text frames, disabled without either; type.selectionAttrs reports them as storyOptions, null where the stories differ. The Paragraph panel menu has Ignore Optical Margin in place of the per-paragraph Optical Margin Alignment switch, which stays in type.para, and Paragraph Style Options › Indents and Spacing has Ignore Optical Margin (#947). No readiness percentage change."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "· Optical Margin Alignment per story with a size (story.options {opticalMargin, opticalMarginSize}, off by default): when it is on, the story's paragraphs hang punctuation and letter edges by amounts set for that type size, except paragraphs with Ignore Optical Margin (ignoreOpticalMargin in type.para and paragraph styles). Table cells and footnotes don't take the story setting yet. When it is off, the per-paragraph switch still hangs at the text's own size. IDML imports and exports both (StoryPreference/@OpticalMarginAlignment, @OpticalMarginSize, IgnoreEdgeAlignment) (#947). No readiness percentage change."
       }
     ]
   },
@@ -477,7 +477,7 @@
     "value_since": "2026-10-10T18:09:17Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 189,
+    "revisions_since": 190,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -485,39 +485,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 190,
-    "revisions_7d": 44,
+    "revisions": 191,
+    "revisions_7d": 45,
     "last_revision": {
-      "ts": "2026-11-05T05:02:27Z",
+      "ts": "2026-11-05T12:16:42Z",
       "kind": "content",
-      "commit": "4f3bb53",
-      "commit_full": "4f3bb5340eeee5f747f7ee2a6905d3c990831d22",
-      "message": "Pages: parents and alternate layouts; export and print layouts and versions (#1342)"
+      "commit": "0e85e9e",
+      "commit_full": "0e85e9e5ec6913c5189d2d3e575ca7834473f0de",
+      "message": "Esperanto as a text language (#1142) (#1204)"
     },
     "last_update": {
-      "ts": "2026-11-05T05:02:27Z",
+      "ts": "2026-11-05T12:16:42Z",
       "kind": "content",
-      "commit": "4f3bb53",
-      "commit_full": "4f3bb5340eeee5f747f7ee2a6905d3c990831d22",
-      "message": "Pages: parents and alternate layouts; export and print layouts and versions (#1342)"
+      "commit": "0e85e9e",
+      "commit_full": "0e85e9e5ec6913c5189d2d3e575ca7834473f0de",
+      "message": "Esperanto as a text language (#1142) (#1204)"
     },
     "self_reported": "2026-11-04"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.1,
+    "score": 19.4,
     "active_days_7d": 7,
-    "changes_7d": 148,
-    "changes_14d": 296,
+    "changes_7d": 149,
+    "changes_14d": 297,
     "housekeeping_7d": 10,
     "last_code_change": {
-      "ts": "2026-11-05T11:59:03Z",
-      "commit": "8aceec1",
-      "commit_full": "8aceec1f088bbeed5b26348420a0fe7b7a71a798",
-      "subject": "Copy: a text frame anchored in a copied frame keeps its text (#2348)"
+      "ts": "2026-11-05T12:16:42Z",
+      "commit": "0e85e9e",
+      "commit_full": "0e85e9e5ec6913c5189d2d3e575ca7834473f0de",
+      "subject": "Esperanto as a text language (#1142) (#1204)"
     },
-    "last_commit_ts": "2026-11-05T11:59:03Z",
+    "last_commit_ts": "2026-11-05T12:16:42Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       47,
@@ -533,7 +533,7 @@
       3,
       40,
       26,
-      3
+      4
     ],
     "days": [
       {
@@ -1153,9 +1153,13 @@
       },
       {
         "d": "2026-11-05",
-        "code": 3,
+        "code": 4,
         "other": 0,
         "samples": [
+          {
+            "commit": "0e85e9e",
+            "subject": "Esperanto as a text language (#1142) (#1204)"
+          },
           {
             "commit": "8aceec1",
             "subject": "Copy: a text frame anchored in a copied frame keeps its text (#2348)"
@@ -1163,10 +1167,6 @@
           {
             "commit": "4f3bb53",
             "subject": "Pages: parents and alternate layouts; export and print layouts and versions (#1342)"
-          },
-          {
-            "commit": "a794037",
-            "subject": "About: credits tables fit without side-scrolling and their columns resize (#2264)"
           }
         ]
       }
@@ -5749,7 +5749,30 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "0e85e9e",
+      "commit_full": "0e85e9e5ec6913c5189d2d3e575ca7834473f0de",
+      "commit_date": "2026-11-05T13:16:42+01:00",
+      "ts": "2026-11-05T12:16:42Z",
+      "message": "Esperanto as a text language (#1142) (#1204)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-04",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T12:16:46+00:00"
+  "updated_at": "2026-11-05T13:40:49+00:00"
 }

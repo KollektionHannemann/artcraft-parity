@@ -78,19 +78,19 @@
   },
   "milestone": null,
   "activity": {
-    "level": "quiet",
-    "score": 7.8,
+    "level": "active",
+    "score": 9.8,
     "active_days_7d": 5,
-    "changes_7d": 28,
-    "changes_14d": 28,
+    "changes_7d": 34,
+    "changes_14d": 34,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-11-05T03:38:43Z",
-      "commit": "91bb53f",
-      "commit_full": "91bb53f07a67ccfe7f5cd2ae1a1e576f431ea23f",
-      "subject": "feat(i18n): add complete Arabic (ar) UI localization and font fallbacks (#38)"
+      "ts": "2026-11-05T13:37:25Z",
+      "commit": "c267773",
+      "commit_full": "c2677734a974d9a4cf0dd231e9ab2bbb4ebd1c21",
+      "subject": "Formats: bound package load memory, check image size before decoding, guard parsers (#41)"
     },
-    "last_commit_ts": "2026-11-05T03:38:43Z",
+    "last_commit_ts": "2026-11-05T13:37:25Z",
     "repo_since": "2026-11-01T19:58:46Z",
     "window": [
       0,
@@ -106,7 +106,7 @@
       7,
       3,
       5,
-      1
+      7
     ],
     "days": [
       {
@@ -187,12 +187,20 @@
       },
       {
         "d": "2026-11-05",
-        "code": 1,
+        "code": 7,
         "other": 0,
         "samples": [
           {
-            "commit": "91bb53f",
-            "subject": "feat(i18n): add complete Arabic (ar) UI localization and font fallbacks (#38)"
+            "commit": "c267773",
+            "subject": "Formats: bound package load memory, check image size before decoding, guard parsers (#41)"
+          },
+          {
+            "commit": "82373ba",
+            "subject": "Nodes: clamp parameters to hard limits before cooking (#40)"
+          },
+          {
+            "commit": "6785310",
+            "subject": "Keep typed numeric parameter values across frames (#39)"
           }
         ]
       }
@@ -275,5 +283,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-05T03:40:22+00:00"
+  "updated_at": "2026-11-05T13:41:04+00:00"
 }
