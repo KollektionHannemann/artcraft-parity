@@ -541,7 +541,7 @@
   },
   "roadmap": {
     "revisions": 210,
-    "revisions_7d": 19,
+    "revisions_7d": 17,
     "last_revision": {
       "ts": "2026-11-04T14:56:32Z",
       "kind": "content",
@@ -561,21 +561,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 33.8,
-    "active_days_7d": 7,
-    "changes_7d": 862,
-    "changes_14d": 1309,
-    "housekeeping_7d": 34,
+    "score": 27.3,
+    "active_days_7d": 6,
+    "changes_7d": 683,
+    "changes_14d": 1214,
+    "housekeeping_7d": 32,
     "last_code_change": {
-      "ts": "2026-11-04T23:17:04Z",
-      "commit": "a9c1fe0",
-      "commit_full": "a9c1fe085b1b1b919e2f4697989cba46e91b6e8a",
-      "subject": "Layers: opacity masks and edited objects count toward the thumbnail anchor limit (#5705)"
+      "ts": "2026-11-04T23:55:00Z",
+      "commit": "2596777",
+      "commit_full": "259677711db6169c61495b3b2beb4bc20873eaeb",
+      "subject": "Render: the frame after anchors of a long path move updates only the segments that touch them (#5706)"
     },
-    "last_commit_ts": "2026-11-04T23:17:04Z",
+    "last_commit_ts": "2026-11-04T23:55:00Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
-      96,
       108,
       94,
       32,
@@ -588,7 +587,8 @@
       41,
       113,
       117,
-      186
+      187,
+      0
     ],
     "days": [
       {
@@ -1245,9 +1245,13 @@
       },
       {
         "d": "2026-11-04",
-        "code": 186,
+        "code": 187,
         "other": 12,
         "samples": [
+          {
+            "commit": "2596777",
+            "subject": "Render: the frame after anchors of a long path move updates only the segments that touch them (#5706)"
+          },
           {
             "commit": "a9c1fe0",
             "subject": "Layers: opacity masks and edited objects count toward the thumbnail anchor limit (#5705)"
@@ -1255,10 +1259,6 @@
           {
             "commit": "5f35507",
             "subject": "Keep symbol colors when expanding a hidden tint (#5704)"
-          },
-          {
-            "commit": "1fb0b41",
-            "subject": "Fix tinted symbol colors in Expand Appearance (#5703)"
           }
         ]
       }
@@ -6989,5 +6989,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-04T23:29:47+00:00"
+  "updated_at": "2026-11-05T00:05:30+00:00"
 }

@@ -79,21 +79,20 @@
   "milestone": null,
   "activity": {
     "level": "quiet",
-    "score": 7.7,
+    "score": 6.8,
     "active_days_7d": 4,
-    "changes_7d": 25,
-    "changes_14d": 25,
-    "housekeeping_7d": 11,
+    "changes_7d": 27,
+    "changes_14d": 27,
+    "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-11-04T17:30:01Z",
-      "commit": "ddb7827",
-      "commit_full": "ddb78274f96a809e9f0be1df140be037b520685e",
-      "subject": "Honor release version in packaging"
+      "ts": "2026-11-04T23:51:30Z",
+      "commit": "698ea23",
+      "commit_full": "698ea233808207de8cd4d5c5374f3a4a487bb0f7",
+      "subject": "Levels: histogram editor with range handles (#37)"
     },
-    "last_commit_ts": "2026-11-04T23:29:39Z",
+    "last_commit_ts": "2026-11-04T23:51:30Z",
     "repo_since": "2026-11-01T19:58:46Z",
     "window": [
-      0,
       0,
       0,
       0,
@@ -106,7 +105,8 @@
       12,
       7,
       3,
-      3
+      5,
+      0
     ],
     "days": [
       {
@@ -168,20 +168,20 @@
       },
       {
         "d": "2026-11-04",
-        "code": 3,
-        "other": 4,
+        "code": 5,
+        "other": 6,
         "samples": [
+          {
+            "commit": "698ea23",
+            "subject": "Levels: histogram editor with range handles (#37)"
+          },
+          {
+            "commit": "e409950",
+            "subject": "Alpha in the 3D view; select, delete, swap and reroute wires (#36)"
+          },
           {
             "commit": "ddb7827",
             "subject": "Honor release version in packaging"
-          },
-          {
-            "commit": "0a29b6d",
-            "subject": "Load sbs files, and save them (#51)"
-          },
-          {
-            "commit": "c97f92a",
-            "subject": "Start desktop and browser sessions with an empty graph (#29)"
           }
         ]
       }
@@ -247,5 +247,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-04T23:30:16+00:00"
+  "updated_at": "2026-11-05T00:06:40+00:00"
 }
