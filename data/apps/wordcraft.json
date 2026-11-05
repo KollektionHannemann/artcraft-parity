@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "12a840f",
-  "latest_commit_date": "2026-11-05T09:14:03+01:00",
-  "latest_message": "Preserve section settings when saving DOCX (#5311)",
+  "latest_commit": "9c5b54a",
+  "latest_commit_date": "2026-11-05T11:39:25+01:00",
+  "latest_message": "Preserve paragraph grid indent settings in DOCX (#5384)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
-    "last_updated": "2026-11-04",
+    "last_updated": "2026-11-05",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 487,
+    "revisions_since": 488,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 491,
-    "revisions_7d": 72,
+    "revisions": 492,
+    "revisions_7d": 73,
     "last_revision": {
-      "ts": "2026-11-05T08:14:03Z",
+      "ts": "2026-11-05T10:39:25Z",
       "kind": "content",
-      "commit": "12a840f",
-      "commit_full": "12a840f6539dfd6b174b2163b9310bea3042b7aa",
-      "message": "Preserve section settings when saving DOCX (#5311)"
+      "commit": "9c5b54a",
+      "commit_full": "9c5b54a1a163fc445dd9f4681b009673705fab26",
+      "message": "Preserve paragraph grid indent settings in DOCX (#5384)"
     },
     "last_update": {
-      "ts": "2026-11-05T08:14:03Z",
+      "ts": "2026-11-05T10:39:25Z",
       "kind": "content",
-      "commit": "12a840f",
-      "commit_full": "12a840f6539dfd6b174b2163b9310bea3042b7aa",
-      "message": "Preserve section settings when saving DOCX (#5311)"
+      "commit": "9c5b54a",
+      "commit_full": "9c5b54a1a163fc445dd9f4681b009673705fab26",
+      "message": "Preserve paragraph grid indent settings in DOCX (#5384)"
     },
-    "self_reported": "2026-11-04"
+    "self_reported": "2026-11-05"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.2,
+    "score": 22.4,
     "active_days_7d": 7,
-    "changes_7d": 164,
-    "changes_14d": 321,
+    "changes_7d": 166,
+    "changes_14d": 323,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-11-05T08:14:56Z",
-      "commit": "c0ab7e2",
-      "commit_full": "c0ab7e29f9deffbf1461f1d50ecdd6953647e1f2",
-      "subject": ".doc import: a field's cached result keeps its formatting per run, not per character (#5477) (#5489)"
+      "ts": "2026-11-05T10:39:30Z",
+      "commit": "737bab4",
+      "commit_full": "737bab404f6b5e772dcff8adea3f380b8d701f61",
+      "subject": "Preserve text frame anchor locks (#5382)"
     },
-    "last_commit_ts": "2026-11-05T08:14:56Z",
+    "last_commit_ts": "2026-11-05T10:39:30Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       57,
@@ -568,7 +568,7 @@
       11,
       19,
       32,
-      25
+      27
     ],
     "days": [
       {
@@ -1086,20 +1086,20 @@
       },
       {
         "d": "2026-11-05",
-        "code": 25,
+        "code": 27,
         "other": 1,
         "samples": [
           {
+            "commit": "737bab4",
+            "subject": "Preserve text frame anchor locks (#5382)"
+          },
+          {
+            "commit": "9c5b54a",
+            "subject": "Preserve paragraph grid indent settings in DOCX (#5384)"
+          },
+          {
             "commit": "c0ab7e2",
             "subject": ".doc import: a field's cached result keeps its formatting per run, not per character (#5477) (#5489)"
-          },
-          {
-            "commit": "fede86c",
-            "subject": "Tests: comment export discovery counts work steps instead of timing (#5618)"
-          },
-          {
-            "commit": "c230e2b",
-            "subject": "Alt codes type their character in Find and other text boxes (#4403) (#5405)"
           }
         ]
       }
@@ -12623,7 +12623,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "9c5b54a",
+      "commit_full": "9c5b54a1a163fc445dd9f4681b009673705fab26",
+      "commit_date": "2026-11-05T11:39:25+01:00",
+      "ts": "2026-11-05T10:39:25Z",
+      "message": "Preserve paragraph grid indent settings in DOCX (#5384)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-05",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T09:25:24+00:00"
+  "updated_at": "2026-11-05T11:24:04+00:00"
 }
