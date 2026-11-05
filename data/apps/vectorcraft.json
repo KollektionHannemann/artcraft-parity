@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "bb0d913",
-  "latest_commit_date": "2026-11-04T21:56:32+07:00",
-  "latest_message": "New Document: units belong to the chosen preset, not the whole tab (#5614)",
+  "latest_commit": "aa518ad",
+  "latest_commit_date": "2026-11-05T11:29:04+07:00",
+  "latest_message": "Fix #5532: Release Type on a Path splits type on a path into point type and its path (#5738)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Adobe Illustrator 2026 (30.x)",
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-05",
     "metrics": {
       "full": {
         "label": "Full Illustrator (ready for real work; decides the stage)",
@@ -343,6 +343,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-05",
+        "text": "Release Type on a Path joins the Type Tools add-on (Object › Plug-ins › Type Tools): each selected type on a path splits into point type with the same text and attributes, on one straight line starting where its first character sat, and the plain path it was set on, with its exact shape and place in the stacking order and no paint; or keeps only the path or only the text, optionally leaving the original. A dialog with Preview, one undo step (addon.type.releasePath, #5532). A VectorCraft addition: headline numbers unchanged."
+      },
+      {
         "date": "2026-11-04",
         "text": "New Document: the units chosen in Preset Details now belong to the chosen document, as the pane's options are listed for the selected preset; the chosen card shows them, every other Recent and Saved card keeps the units its document or preset was made in, and the built-in tabs still follow the chosen units, so switching between inches and millimetres no longer restyles every recent template. Scores and estimates unchanged."
       },
@@ -497,10 +501,6 @@
       {
         "date": "2026-10-14",
         "text": "Document fonts register every explicitly supplied craft-fonts family after the existing Japanese, Arabic and Thai prefix; optional empty input remains supported. Headline scores and estimates are unchanged."
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Brazilian Portuguese (pt-br) covers the whole interface and status/error messages under the completeness tests (#1914); Localization 71% → 74% (measured), hours 55–90 → 50–85."
       }
     ]
   },
@@ -509,7 +509,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 209,
+    "revisions_since": 210,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -540,39 +540,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 210,
-    "revisions_7d": 17,
+    "revisions": 211,
+    "revisions_7d": 18,
     "last_revision": {
-      "ts": "2026-11-04T14:56:32Z",
+      "ts": "2026-11-05T04:29:04Z",
       "kind": "content",
-      "commit": "bb0d913",
-      "commit_full": "bb0d913d5073e742d8faabcae936633195fcbdcf",
-      "message": "New Document: units belong to the chosen preset, not the whole tab (#5614)"
+      "commit": "aa518ad",
+      "commit_full": "aa518ad796c21df5dd93dc8c37fa6eb3af8e097c",
+      "message": "Fix #5532: Release Type on a Path splits type on a path into point type and its path (#5738)"
     },
     "last_update": {
-      "ts": "2026-11-04T14:56:32Z",
+      "ts": "2026-11-05T04:29:04Z",
       "kind": "content",
-      "commit": "bb0d913",
-      "commit_full": "bb0d913d5073e742d8faabcae936633195fcbdcf",
-      "message": "New Document: units belong to the chosen preset, not the whole tab (#5614)"
+      "commit": "aa518ad",
+      "commit_full": "aa518ad796c21df5dd93dc8c37fa6eb3af8e097c",
+      "message": "Fix #5532: Release Type on a Path splits type on a path into point type and its path (#5738)"
     },
-    "self_reported": "2026-11-03"
+    "self_reported": "2026-11-05"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 31.5,
+    "score": 32.2,
     "active_days_7d": 7,
-    "changes_7d": 700,
-    "changes_14d": 1231,
+    "changes_7d": 711,
+    "changes_14d": 1242,
     "housekeeping_7d": 33,
     "last_code_change": {
-      "ts": "2026-11-05T03:39:44Z",
-      "commit": "cd01c2c",
-      "commit_full": "cd01c2ce95a077f774ff89718830d53e03e43d24",
-      "subject": "Effects: Expand Appearance makes each copy of a path's Transform effect an object of its own (#5612) (#5728)"
+      "ts": "2026-11-05T04:41:47Z",
+      "commit": "ba1757d",
+      "commit_full": "ba1757d603c6074f1250eecfc9c22d1281393ed1",
+      "subject": "Render: at very large coordinates an edited path is not taken for a moved one (#5743)"
     },
-    "last_commit_ts": "2026-11-05T03:39:44Z",
+    "last_commit_ts": "2026-11-05T04:41:47Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       108,
@@ -588,7 +588,7 @@
       113,
       117,
       187,
-      17
+      28
     ],
     "days": [
       {
@@ -1264,20 +1264,20 @@
       },
       {
         "d": "2026-11-05",
-        "code": 17,
+        "code": 28,
         "other": 1,
         "samples": [
           {
-            "commit": "cd01c2c",
-            "subject": "Effects: Expand Appearance makes each copy of a path's Transform effect an object of its own (#5612) (#5728)"
+            "commit": "ba1757d",
+            "subject": "Render: at very large coordinates an edited path is not taken for a moved one (#5743)"
           },
           {
-            "commit": "ed78763",
-            "subject": "Color Halftone: Max Radius in pixels of the raster effects resolution (#4784)"
+            "commit": "77559d5",
+            "subject": "Preferences: Additional Plug-ins Folder gets Choose…, and OK checks typed folders (#5741)"
           },
           {
-            "commit": "40bfb22",
-            "subject": "Numeric fields: a decimal comma works in arithmetic next to a number with a point (#5684) (#5727)"
+            "commit": "aa518ad",
+            "subject": "Fix #5532: Release Type on a Path splits type on a path into point type and its path (#5738)"
           }
         ]
       }
@@ -7006,7 +7006,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "aa518ad",
+      "commit_full": "aa518ad796c21df5dd93dc8c37fa6eb3af8e097c",
+      "commit_date": "2026-11-05T11:29:04+07:00",
+      "ts": "2026-11-05T04:29:04Z",
+      "message": "Fix #5532: Release Type on a Path splits type on a path into point type and its path (#5738)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-05",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T03:39:56+00:00"
+  "updated_at": "2026-11-05T04:43:39+00:00"
 }

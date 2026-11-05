@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "3788af1",
-  "latest_commit_date": "2026-11-04T18:53:39+01:00",
-  "latest_message": "M12: add a 3D model (U3D or PRC) to a page with a poster (#1297) (#5808)",
+  "latest_commit": "84e85c1",
+  "latest_commit_date": "2026-11-05T05:39:12+01:00",
+  "latest_message": "M14: Preferences can turn off the update check at start (#5737, #5460) (#5758)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -317,6 +317,10 @@
         "text": "(M10, #5743): macOS print jobs name their title and owner (com.apple.print.JobInfo.PMJobName, PMJobOwner), as the system print dialog does, because a Kyocera filter crashes on a job without them. Checked by a test and through docprint against a stand-in lp; not yet on a physical printer."
       },
       {
+        "date": "2026-11-02",
+        "text": "(M14, #5737, #5460): Preferences can turn off the update check at start. It stays on by default, and Help ▸ Check for updates still asks."
+      },
+      {
         "date": "2026-11-01",
         "text": "(M7, #5657): Header/footer, watermark and background additions and replacements stage the complete call before committing. Synthetic later-page failures preserve exact incremental bytes, object count, dirty state and allocation cursor; success controls retain other marks and shared/inherited resources. Estimates unchanged."
       },
@@ -447,10 +451,6 @@
       {
         "date": "2026-10-23",
         "text": "(M10, table continuation text): Office exporters retain text from table slots covered by another cell's span as paragraph text."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "(M10, image export): Soft-mask Decode intervals preserve partial opacity in Export all images and Save Image As."
       }
     ]
   },
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 100,
+    "revisions_since": 101,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 188,
-    "revisions_7d": 14,
+    "revisions": 189,
+    "revisions_7d": 15,
     "last_revision": {
-      "ts": "2026-11-04T17:53:39Z",
+      "ts": "2026-11-05T04:39:12Z",
       "kind": "content",
-      "commit": "3788af1",
-      "commit_full": "3788af11d330452d9533f837924f0287cebd90f6",
-      "message": "M12: add a 3D model (U3D or PRC) to a page with a poster (#1297) (#5808)"
+      "commit": "84e85c1",
+      "commit_full": "84e85c1ff36861a6dade7089abc761ed6ad55718",
+      "message": "M14: Preferences can turn off the update check at start (#5737, #5460) (#5758)"
     },
     "last_update": {
-      "ts": "2026-11-04T17:53:39Z",
+      "ts": "2026-11-05T04:39:12Z",
       "kind": "content",
-      "commit": "3788af1",
-      "commit_full": "3788af11d330452d9533f837924f0287cebd90f6",
-      "message": "M12: add a 3D model (U3D or PRC) to a page with a poster (#1297) (#5808)"
+      "commit": "84e85c1",
+      "commit_full": "84e85c1ff36861a6dade7089abc761ed6ad55718",
+      "message": "M14: Preferences can turn off the update check at start (#5737, #5460) (#5758)"
     },
     "self_reported": "2026-11-03"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.2,
+    "score": 19.0,
     "active_days_7d": 7,
-    "changes_7d": 99,
-    "changes_14d": 241,
+    "changes_7d": 101,
+    "changes_14d": 243,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-05T03:33:21Z",
-      "commit": "943718e",
-      "commit_full": "943718ea9854d217da9db7305a96087397a5ea7c",
-      "subject": "fix(ui): About credits tables fit without side-scrolling and their columns resize (#6052)"
+      "ts": "2026-11-05T04:39:12Z",
+      "commit": "84e85c1",
+      "commit_full": "84e85c1ff36861a6dade7089abc761ed6ad55718",
+      "subject": "M14: Preferences can turn off the update check at start (#5737, #5460) (#5758)"
     },
-    "last_commit_ts": "2026-11-05T03:33:21Z",
+    "last_commit_ts": "2026-11-05T04:39:12Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       44,
@@ -524,7 +524,7 @@
       11,
       26,
       23,
-      2
+      4
     ],
     "days": [
       {
@@ -1200,16 +1200,20 @@
       },
       {
         "d": "2026-11-05",
-        "code": 2,
+        "code": 4,
         "other": 0,
         "samples": [
           {
-            "commit": "943718e",
-            "subject": "fix(ui): About credits tables fit without side-scrolling and their columns resize (#6052)"
+            "commit": "84e85c1",
+            "subject": "M14: Preferences can turn off the update check at start (#5737, #5460) (#5758)"
           },
           {
-            "commit": "713c615",
-            "subject": "M5.7: the quick bar's Fill & Sign button shows the tool it picks (#5435)"
+            "commit": "2154082",
+            "subject": "M5.7: the Fill & Sign text controls use a colour dot and a size flyout (#5754)"
+          },
+          {
+            "commit": "943718e",
+            "subject": "fix(ui): About credits tables fit without side-scrolling and their columns resize (#6052)"
           }
         ]
       }
@@ -5746,7 +5750,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "84e85c1",
+      "commit_full": "84e85c1ff36861a6dade7089abc761ed6ad55718",
+      "commit_date": "2026-11-05T05:39:12+01:00",
+      "ts": "2026-11-05T04:39:12Z",
+      "message": "M14: Preferences can turn off the update check at start (#5737, #5460) (#5758)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T03:40:05+00:00"
+  "updated_at": "2026-11-05T04:43:55+00:00"
 }
