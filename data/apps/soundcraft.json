@@ -462,18 +462,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 13.4,
+    "score": 14.4,
     "active_days_7d": 6,
-    "changes_7d": 93,
-    "changes_14d": 157,
+    "changes_7d": 96,
+    "changes_14d": 160,
     "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-05T03:33:36Z",
-      "commit": "1db9563",
-      "commit_full": "1db9563379428e58a4eb0032d3942c823c0b49e9",
-      "subject": "fix(ui): About credits tables fit without side-scrolling and their columns resize (#1342)"
+      "ts": "2026-11-05T14:01:35Z",
+      "commit": "73eeb69",
+      "commit_full": "73eeb692fe0804c1750ae6f53640c0533a008805",
+      "subject": "fix(engine): cap sessions at 256 MiB and parse them without a Value tree (#892) (#1370)"
     },
-    "last_commit_ts": "2026-11-05T03:33:36Z",
+    "last_commit_ts": "2026-11-05T14:01:35Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
       12,
@@ -489,7 +489,7 @@
       6,
       21,
       3,
-      2
+      5
     ],
     "days": [
       {
@@ -942,16 +942,20 @@
       },
       {
         "d": "2026-11-05",
-        "code": 2,
+        "code": 5,
         "other": 0,
         "samples": [
           {
-            "commit": "1db9563",
-            "subject": "fix(ui): About credits tables fit without side-scrolling and their columns resize (#1342)"
+            "commit": "73eeb69",
+            "subject": "fix(engine): cap sessions at 256 MiB and parse them without a Value tree (#892) (#1370)"
           },
           {
-            "commit": "341a112",
-            "subject": "Complete Grid and Nudge time scales (#589)"
+            "commit": "bd75fe6",
+            "subject": "fix(clap-host): check for the main thread off macOS too (#901) (#1371)"
+          },
+          {
+            "commit": "6c8a9dd",
+            "subject": "feat(cli): commands --json lists every command's details (#744) (#1372)"
           }
         ]
       }
@@ -1695,5 +1699,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T03:40:15+00:00"
+  "updated_at": "2026-11-05T14:45:36+00:00"
 }
