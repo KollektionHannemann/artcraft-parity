@@ -429,16 +429,16 @@
     "level": "active",
     "score": 14.6,
     "active_days_7d": 6,
-    "changes_7d": 55,
-    "changes_14d": 90,
+    "changes_7d": 56,
+    "changes_14d": 91,
     "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-05T06:44:24Z",
-      "commit": "eaef01e",
-      "commit_full": "eaef01e986537152809f4973bd564b7175b1a46f",
-      "subject": "Light tests allow a level of 8-bit dither (#3779)"
+      "ts": "2026-11-05T07:32:26Z",
+      "commit": "61005f3",
+      "commit_full": "61005f3dc119625608d357a1dbb57d4f67ce3ccb",
+      "subject": "Culling: the loupe uses built previews; photos prepared ahead and in the background (#3077)"
     },
-    "last_commit_ts": "2026-11-05T06:44:24Z",
+    "last_commit_ts": "2026-11-05T07:32:26Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
       7,
@@ -454,7 +454,7 @@
       2,
       9,
       17,
-      18
+      19
     ],
     "days": [
       {
@@ -1051,9 +1051,13 @@
       },
       {
         "d": "2026-11-05",
-        "code": 18,
+        "code": 19,
         "other": 0,
         "samples": [
+          {
+            "commit": "61005f3",
+            "subject": "Culling: the loupe uses built previews; photos prepared ahead and in the background (#3077)"
+          },
           {
             "commit": "eaef01e",
             "subject": "Light tests allow a level of 8-bit dither (#3779)"
@@ -1061,10 +1065,6 @@
           {
             "commit": "8972565",
             "subject": "LR-PROF-IMPORT: import the user's own DNG camera profiles (.dcp) (#1063)"
-          },
-          {
-            "commit": "56d1cc2",
-            "subject": "pipeline: apply 8x8 ordered Bayer dithering to prevent display banding (#3509)"
           }
         ]
       }
@@ -1631,5 +1631,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T06:50:47+00:00"
+  "updated_at": "2026-11-05T08:06:37+00:00"
 }
