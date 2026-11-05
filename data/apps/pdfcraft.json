@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "42bc4f1",
-  "latest_commit_date": "2026-11-05T16:41:45+01:00",
-  "latest_message": "M5: copy and paste comments between documents, select several, finish connected lines from the menu (#3484)",
+  "latest_commit": "496e37d",
+  "latest_commit_date": "2026-11-05T17:32:01+01:00",
+  "latest_message": "M5: text boxes and typed text take an oval or a circle for their border (#4543)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -430,6 +430,10 @@
       },
       {
         "date": "2026-10-24",
+        "text": "(M5, border shape): Text boxes and Fill & Sign's typed text take an oval or a circle for their border (Comment Properties ▸ Border shape, Fill & Sign's toolbar): the text box keeps its place and the shape goes around it, the text centred, a circle snug around the text (its box no wider than the text needs); stored as /RD and /PCBorderShape and drawn in the appearance. commentadd / commentedit / fillsignadd bordershape. One new label in every catalog. Synthetic annot, UI and automation regressions. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-24",
         "text": "(M5, Escape in Fill & Sign): Escape leaves a Fill & Sign tool as it leaves a comment tool: the first press closes the open type box, the next goes back to Select, so the Text tool no longer opens a box at every click with no way out by the keyboard. A synthetic UI regression covers the Text and Checkmark tools. Estimates unchanged."
       },
       {
@@ -447,10 +451,6 @@
       {
         "date": "2026-10-23",
         "text": "(M11, monochrome compression): The PDF Optimizer and Reduce File Size store black-and-white images (scans, image masks) losslessly as CCITT Group 4 when that is smaller, with a Monochrome Images setting in the Optimizer and docoptimize mono. JBIG2 and monochrome downsampling are next."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "(M6, calculation checks): The calculation order now flags a formula that reads a field the form doesn't have (a field deleted from under a sum, a typo in notation, a script's getField) and a script that builds the names it reads at run time. Prepare a form ▸ Calculation order marks both on the row and in a card that names the broken formulas, in place of its all-clear. formcalculationorder gives each field's formula, and formfields shows a custom Calculate script."
       }
     ]
   },
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 110,
+    "revisions_since": 111,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 198,
-    "revisions_7d": 24,
+    "revisions": 199,
+    "revisions_7d": 25,
     "last_revision": {
-      "ts": "2026-11-05T15:41:45Z",
+      "ts": "2026-11-05T16:32:01Z",
       "kind": "content",
-      "commit": "42bc4f1",
-      "commit_full": "42bc4f117d849b58cf01f5c65f0aadfa1d4f24cf",
-      "message": "M5: copy and paste comments between documents, select several, finish connected lines from the menu (#3484)"
+      "commit": "496e37d",
+      "commit_full": "496e37d72be8d5f041520a59312830ad8a98d029",
+      "message": "M5: text boxes and typed text take an oval or a circle for their border (#4543)"
     },
     "last_update": {
-      "ts": "2026-11-05T15:41:45Z",
+      "ts": "2026-11-05T16:32:01Z",
       "kind": "content",
-      "commit": "42bc4f1",
-      "commit_full": "42bc4f117d849b58cf01f5c65f0aadfa1d4f24cf",
-      "message": "M5: copy and paste comments between documents, select several, finish connected lines from the menu (#3484)"
+      "commit": "496e37d",
+      "commit_full": "496e37d72be8d5f041520a59312830ad8a98d029",
+      "message": "M5: text boxes and typed text take an oval or a circle for their border (#4543)"
     },
     "self_reported": "2026-11-03"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.6,
+    "score": 20.8,
     "active_days_7d": 7,
-    "changes_7d": 112,
-    "changes_14d": 254,
+    "changes_7d": 114,
+    "changes_14d": 256,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-05T15:41:45Z",
-      "commit": "42bc4f1",
-      "commit_full": "42bc4f117d849b58cf01f5c65f0aadfa1d4f24cf",
-      "subject": "M5: copy and paste comments between documents, select several, finish connected lines from the menu (#3484)"
+      "ts": "2026-11-05T16:32:01Z",
+      "commit": "496e37d",
+      "commit_full": "496e37d72be8d5f041520a59312830ad8a98d029",
+      "subject": "M5: text boxes and typed text take an oval or a circle for their border (#4543)"
     },
-    "last_commit_ts": "2026-11-05T15:41:45Z",
+    "last_commit_ts": "2026-11-05T16:32:01Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       44,
@@ -524,7 +524,7 @@
       11,
       26,
       23,
-      15
+      17
     ],
     "days": [
       {
@@ -1200,20 +1200,20 @@
       },
       {
         "d": "2026-11-05",
-        "code": 15,
+        "code": 17,
         "other": 0,
         "samples": [
           {
+            "commit": "496e37d",
+            "subject": "M5: text boxes and typed text take an oval or a circle for their border (#4543)"
+          },
+          {
+            "commit": "0839c1e",
+            "subject": "Fill & Sign: a Border control for typed text, and a border colour of its own (#4146)"
+          },
+          {
             "commit": "42bc4f1",
             "subject": "M5: copy and paste comments between documents, select several, finish connected lines from the menu (#3484)"
-          },
-          {
-            "commit": "6427357",
-            "subject": "Forms: date fields name months in the date language, not always English (#5303) (#5464)"
-          },
-          {
-            "commit": "c3c36f7",
-            "subject": "M5: a comment's text, border or line, and fill each at an opacity of its own (#4542)"
           }
         ]
       }
@@ -5980,7 +5980,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "496e37d",
+      "commit_full": "496e37d72be8d5f041520a59312830ad8a98d029",
+      "commit_date": "2026-11-05T17:32:01+01:00",
+      "ts": "2026-11-05T16:32:01Z",
+      "message": "M5: text boxes and typed text take an oval or a circle for their border (#4543)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T15:43:50+00:00"
+  "updated_at": "2026-11-05T16:51:51+00:00"
 }
