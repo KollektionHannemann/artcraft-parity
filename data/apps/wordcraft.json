@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "2f49c8a",
-  "latest_commit_date": "2026-11-05T21:56:00+01:00",
-  "latest_message": "Layout: keep a cell's floats laid out in the cell inside it (layoutInCell) (#4545)",
+  "latest_commit": "83bef65",
+  "latest_commit_date": "2026-11-05T23:09:30+01:00",
+  "latest_message": "CLI: reject malformed conversion format options (#5610)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -330,6 +330,10 @@
     "progress": [
       {
         "date": "2026-11-04",
+        "text": "CLI convert rejects a missing or repeated --format value before opening the input or writing output, matching the existing page/scale option checks. Readiness estimates unchanged."
+      },
+      {
+        "date": "2026-11-04",
         "text": "OpenDocument files have no display settings any more (gap 19): File › Options › Advanced › OpenDocument files, file.options odf, WORDCRAFTODF, the LibreOffice style and custom values are gone. WordCraft makes one choice for each case the standard leaves open, the one the default made, and still follows what a file states (docs/odf-interpretation.md)."
       },
       {
@@ -483,10 +487,6 @@
       {
         "date": "2026-11-01",
         "text": "ODT read and written nearly whole (gap 19, ~82%): drawing shapes, groups, rotation, arrowheads, dashes, gradients, polygons and paths; tables of contents and indexes (with their marks, so Update Index rebuilds them); bookmarks over text; dates in their formats, sequences, captions, chapters and references; page settings (page colour, borders, note numbering, line numbering); flat .fodt; drop caps; tracked formatting changes; charts, opened as editable charts and saved as LibreOffice charts; embedded spreadsheets and OLE objects kept whole (they were lost); form controls as content controls; password-protected files (LibreOffice's AES encryption) opened and saved; ruby; page breaks after paragraphs, kept lines, widow control, hyphenation, table alignment and row heights. Layout: in-line pictures move with their run's raise or lowering, and text in a turned text box turns with it. Every change checked against LibreOffice by round trips compared page by page and against the ODF 1.3 schema. Readiness unchanged."
-      },
-      {
-        "date": "2026-11-01",
-        "text": "ODT: text boxes keep their text on open (it was dropped) and save as text boxes (gap 19). Readiness unchanged."
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 490,
+    "revisions_since": 491,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,21 +520,21 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 494,
-    "revisions_7d": 75,
+    "revisions": 495,
+    "revisions_7d": 76,
     "last_revision": {
-      "ts": "2026-11-05T20:56:00Z",
+      "ts": "2026-11-05T22:09:30Z",
       "kind": "content",
-      "commit": "2f49c8a",
-      "commit_full": "2f49c8ad2ec0ff301000a8322bd45f1228013bcf",
-      "message": "Layout: keep a cell's floats laid out in the cell inside it (layoutInCell) (#4545)"
+      "commit": "83bef65",
+      "commit_full": "83bef65a1d134b0c42d6c6916db18090287bcc92",
+      "message": "CLI: reject malformed conversion format options (#5610)"
     },
     "last_update": {
-      "ts": "2026-11-05T20:56:00Z",
+      "ts": "2026-11-05T22:09:30Z",
       "kind": "content",
-      "commit": "2f49c8a",
-      "commit_full": "2f49c8ad2ec0ff301000a8322bd45f1228013bcf",
-      "message": "Layout: keep a cell's floats laid out in the cell inside it (layoutInCell) (#4545)"
+      "commit": "83bef65",
+      "commit_full": "83bef65a1d134b0c42d6c6916db18090287bcc92",
+      "message": "CLI: reject malformed conversion format options (#5610)"
     },
     "self_reported": "2026-11-05"
   },
@@ -543,16 +543,16 @@
     "level": "buzzing",
     "score": 22.7,
     "active_days_7d": 7,
-    "changes_7d": 173,
-    "changes_14d": 330,
+    "changes_7d": 174,
+    "changes_14d": 331,
     "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-11-05T20:56:00Z",
-      "commit": "2f49c8a",
-      "commit_full": "2f49c8ad2ec0ff301000a8322bd45f1228013bcf",
-      "subject": "Layout: keep a cell's floats laid out in the cell inside it (layoutInCell) (#4545)"
+      "ts": "2026-11-05T22:09:30Z",
+      "commit": "83bef65",
+      "commit_full": "83bef65a1d134b0c42d6c6916db18090287bcc92",
+      "subject": "CLI: reject malformed conversion format options (#5610)"
     },
-    "last_commit_ts": "2026-11-05T21:11:03Z",
+    "last_commit_ts": "2026-11-05T22:09:30Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       57,
@@ -568,7 +568,7 @@
       11,
       19,
       32,
-      34
+      35
     ],
     "days": [
       {
@@ -1086,9 +1086,13 @@
       },
       {
         "d": "2026-11-05",
-        "code": 34,
+        "code": 35,
         "other": 2,
         "samples": [
+          {
+            "commit": "83bef65",
+            "subject": "CLI: reject malformed conversion format options (#5610)"
+          },
           {
             "commit": "2f49c8a",
             "subject": "Layout: keep a cell's floats laid out in the cell inside it (layoutInCell) (#4545)"
@@ -1096,10 +1100,6 @@
           {
             "commit": "334494a",
             "subject": "Cap equation matrix size when writing OMML (#4000)"
-          },
-          {
-            "commit": "db8d944",
-            "subject": "Fonts: reuse shared MATH construction records (#4660)"
           }
         ]
       }
@@ -12692,7 +12692,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "83bef65",
+      "commit_full": "83bef65a1d134b0c42d6c6916db18090287bcc92",
+      "commit_date": "2026-11-05T23:09:30+01:00",
+      "ts": "2026-11-05T22:09:30Z",
+      "message": "CLI: reject malformed conversion format options (#5610)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-05",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T21:30:42+00:00"
+  "updated_at": "2026-11-05T22:16:15+00:00"
 }

@@ -81,16 +81,16 @@
     "level": "active",
     "score": 12.6,
     "active_days_7d": 5,
-    "changes_7d": 80,
-    "changes_14d": 80,
+    "changes_7d": 81,
+    "changes_14d": 81,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-11-05T21:04:58Z",
-      "commit": "56407b9",
-      "commit_full": "56407b94706837609662a1f50188a829b907d8af",
-      "subject": "Revert the batch rollback and restore prior main"
+      "ts": "2026-11-05T21:46:59Z",
+      "commit": "9e60c40",
+      "commit_full": "9e60c407a687898610ac53b06c5f05c6892aa3e6",
+      "subject": "Post mass-merge fix. (#109)"
     },
-    "last_commit_ts": "2026-11-05T21:04:58Z",
+    "last_commit_ts": "2026-11-05T21:46:59Z",
     "repo_since": "2026-11-01T19:58:46Z",
     "window": [
       0,
@@ -106,7 +106,7 @@
       7,
       3,
       5,
-      53
+      54
     ],
     "days": [
       {
@@ -187,9 +187,13 @@
       },
       {
         "d": "2026-11-05",
-        "code": 53,
+        "code": 54,
         "other": 2,
         "samples": [
+          {
+            "commit": "9e60c40",
+            "subject": "Post mass-merge fix. (#109)"
+          },
           {
             "commit": "56407b9",
             "subject": "Revert the batch rollback and restore prior main"
@@ -197,10 +201,6 @@
           {
             "commit": "a7b9194",
             "subject": "Revert reviewed PR batch and cancel 0.1.3 preparation"
-          },
-          {
-            "commit": "8b4b89c",
-            "subject": "Reject colliding filenames before exporting maps (#99)"
           }
         ]
       }
@@ -283,5 +283,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-05T21:31:03+00:00"
+  "updated_at": "2026-11-05T22:16:28+00:00"
 }

@@ -499,16 +499,16 @@
     "level": "buzzing",
     "score": 21.8,
     "active_days_7d": 7,
-    "changes_7d": 131,
-    "changes_14d": 273,
+    "changes_7d": 132,
+    "changes_14d": 274,
     "housekeeping_7d": 10,
     "last_code_change": {
-      "ts": "2026-11-05T20:25:30Z",
-      "commit": "60f60fc",
-      "commit_full": "60f60fc0a2c3fd58f6679483cfae1d2478e673dd",
-      "subject": "Give a redacted or sanitized copy a new file identifier (#3734)"
+      "ts": "2026-11-05T21:44:29Z",
+      "commit": "250c262",
+      "commit_full": "250c2623d1b6ec92b773585d1a41a551773019ac",
+      "subject": "Tests: pin the file identifier formula, not a whole rewritten file (#6346)"
     },
-    "last_commit_ts": "2026-11-05T20:25:30Z",
+    "last_commit_ts": "2026-11-05T21:44:29Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       44,
@@ -524,7 +524,7 @@
       11,
       26,
       23,
-      34
+      35
     ],
     "days": [
       {
@@ -1200,9 +1200,13 @@
       },
       {
         "d": "2026-11-05",
-        "code": 34,
+        "code": 35,
         "other": 1,
         "samples": [
+          {
+            "commit": "250c262",
+            "subject": "Tests: pin the file identifier formula, not a whole rewritten file (#6346)"
+          },
           {
             "commit": "60f60fc",
             "subject": "Give a redacted or sanitized copy a new file identifier (#3734)"
@@ -1210,10 +1214,6 @@
           {
             "commit": "f16b5d9",
             "subject": "M13 batch: test that results hold no planted secret, and record network-crate reachability (#6297)"
-          },
-          {
-            "commit": "ee39c7e",
-            "subject": "Issue #5081: assembly at revision 3 and later needs bit 11; high-quality print, accessibility and form fill follow the revision (#6309)"
           }
         ]
       }
@@ -6028,5 +6028,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T20:33:37+00:00"
+  "updated_at": "2026-11-05T22:15:59+00:00"
 }
