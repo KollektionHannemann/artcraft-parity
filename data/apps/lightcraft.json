@@ -427,18 +427,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.3,
+    "score": 14.6,
     "active_days_7d": 6,
-    "changes_7d": 52,
-    "changes_14d": 87,
+    "changes_7d": 55,
+    "changes_14d": 90,
     "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-05T05:39:08Z",
-      "commit": "2e66a00",
-      "commit_full": "2e66a00d554508341a83f0942b9224f2161f2ba8",
-      "subject": "Tests: two catalog flakes; a readback waits as long as a render (#3777)"
+      "ts": "2026-11-05T06:44:24Z",
+      "commit": "eaef01e",
+      "commit_full": "eaef01e986537152809f4973bd564b7175b1a46f",
+      "subject": "Light tests allow a level of 8-bit dither (#3779)"
     },
-    "last_commit_ts": "2026-11-05T05:39:08Z",
+    "last_commit_ts": "2026-11-05T06:44:24Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
       7,
@@ -454,7 +454,7 @@
       2,
       9,
       17,
-      15
+      18
     ],
     "days": [
       {
@@ -1051,20 +1051,20 @@
       },
       {
         "d": "2026-11-05",
-        "code": 15,
+        "code": 18,
         "other": 0,
         "samples": [
           {
-            "commit": "2e66a00",
-            "subject": "Tests: two catalog flakes; a readback waits as long as a render (#3777)"
+            "commit": "eaef01e",
+            "subject": "Light tests allow a level of 8-bit dither (#3779)"
           },
           {
-            "commit": "fc97c72",
-            "subject": "LR-BEHAV-RENDER-FIDELITY: calibrated Contrast and Blacks in process V3 (#523) (#1383)"
+            "commit": "8972565",
+            "subject": "LR-PROF-IMPORT: import the user's own DNG camera profiles (.dcp) (#1063)"
           },
           {
-            "commit": "67782d8",
-            "subject": "Auto Sync: As Shot, Auto and Temp apply to each selected photo's own white balance (#3571)"
+            "commit": "56d1cc2",
+            "subject": "pipeline: apply 8x8 ordered Bayer dithering to prevent display banding (#3509)"
           }
         ]
       }
@@ -1631,5 +1631,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T05:46:01+00:00"
+  "updated_at": "2026-11-05T06:50:47+00:00"
 }
