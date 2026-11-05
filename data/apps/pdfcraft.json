@@ -11,13 +11,13 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "15c505d",
-  "latest_commit_date": "2026-11-05T06:03:58+01:00",
-  "latest_message": "M2: scans stay sharp at screen size and smooth when zoomed (area-average shrink, bilinear enlarge) (#3858)",
+  "latest_commit": "863af86",
+  "latest_commit_date": "2026-11-05T09:28:43+01:00",
+  "latest_message": "M1: respect generations in PDF object references and full saves (#1143)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
-    "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
+    "target": null,
     "last_updated": "2026-11-03",
     "metrics": {
       "full": {
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 102,
+    "revisions_since": 103,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 190,
-    "revisions_7d": 16,
+    "revisions": 191,
+    "revisions_7d": 17,
     "last_revision": {
-      "ts": "2026-11-05T05:03:58Z",
+      "ts": "2026-11-05T08:28:43Z",
       "kind": "content",
-      "commit": "15c505d",
-      "commit_full": "15c505d1c656a5d5cb82e5c14193b48d42e6a085",
-      "message": "M2: scans stay sharp at screen size and smooth when zoomed (area-average shrink, bilinear enlarge) (#3858)"
+      "commit": "863af86",
+      "commit_full": "863af864a70f18bcf780a298f1e9923ee792c2ac",
+      "message": "M1: respect generations in PDF object references and full saves (#1143)"
     },
     "last_update": {
-      "ts": "2026-11-05T05:03:58Z",
+      "ts": "2026-11-05T08:28:43Z",
       "kind": "content",
-      "commit": "15c505d",
-      "commit_full": "15c505d1c656a5d5cb82e5c14193b48d42e6a085",
-      "message": "M2: scans stay sharp at screen size and smooth when zoomed (area-average shrink, bilinear enlarge) (#3858)"
+      "commit": "863af86",
+      "commit_full": "863af864a70f18bcf780a298f1e9923ee792c2ac",
+      "message": "M1: respect generations in PDF object references and full saves (#1143)"
     },
     "self_reported": "2026-11-03"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.2,
+    "score": 19.4,
     "active_days_7d": 7,
-    "changes_7d": 102,
-    "changes_14d": 244,
+    "changes_7d": 103,
+    "changes_14d": 245,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-05T05:03:58Z",
-      "commit": "15c505d",
-      "commit_full": "15c505d1c656a5d5cb82e5c14193b48d42e6a085",
-      "subject": "M2: scans stay sharp at screen size and smooth when zoomed (area-average shrink, bilinear enlarge) (#3858)"
+      "ts": "2026-11-05T08:28:43Z",
+      "commit": "863af86",
+      "commit_full": "863af864a70f18bcf780a298f1e9923ee792c2ac",
+      "subject": "M1: respect generations in PDF object references and full saves (#1143)"
     },
-    "last_commit_ts": "2026-11-05T05:03:58Z",
+    "last_commit_ts": "2026-11-05T08:28:43Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       44,
@@ -524,7 +524,7 @@
       11,
       26,
       23,
-      5
+      6
     ],
     "days": [
       {
@@ -1200,9 +1200,13 @@
       },
       {
         "d": "2026-11-05",
-        "code": 5,
+        "code": 6,
         "other": 0,
         "samples": [
+          {
+            "commit": "863af86",
+            "subject": "M1: respect generations in PDF object references and full saves (#1143)"
+          },
           {
             "commit": "15c505d",
             "subject": "M2: scans stay sharp at screen size and smooth when zoomed (area-average shrink, bilinear enlarge) (#3858)"
@@ -1210,10 +1214,6 @@
           {
             "commit": "84e85c1",
             "subject": "M14: Preferences can turn off the update check at start (#5737, #5460) (#5758)"
-          },
-          {
-            "commit": "2154082",
-            "subject": "M5.7: the Fill & Sign text controls use a colour dot and a size flyout (#5754)"
           }
         ]
       }
@@ -5796,7 +5796,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "863af86",
+      "commit_full": "863af864a70f18bcf780a298f1e9923ee792c2ac",
+      "commit_date": "2026-11-05T09:28:43+01:00",
+      "ts": "2026-11-05T08:28:43Z",
+      "message": "M1: respect generations in PDF object references and full saves (#1143)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T05:46:12+00:00"
+  "updated_at": "2026-11-05T09:25:01+00:00"
 }

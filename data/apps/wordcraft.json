@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "650a97b",
-  "latest_commit_date": "2026-11-04T23:08:09+01:00",
-  "latest_message": "ODT: remove the display settings; one choice for each open case (#5609)",
+  "latest_commit": "12a840f",
+  "latest_commit_date": "2026-11-05T09:14:03+01:00",
+  "latest_message": "Preserve section settings when saving DOCX (#5311)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 484,
+    "revisions_since": 487,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 488,
-    "revisions_7d": 69,
+    "revisions": 491,
+    "revisions_7d": 72,
     "last_revision": {
-      "ts": "2026-11-04T22:08:09Z",
+      "ts": "2026-11-05T08:14:03Z",
       "kind": "content",
-      "commit": "650a97b",
-      "commit_full": "650a97b623a32ebd604c04cfa555f47accaa06f8",
-      "message": "ODT: remove the display settings; one choice for each open case (#5609)"
+      "commit": "12a840f",
+      "commit_full": "12a840f6539dfd6b174b2163b9310bea3042b7aa",
+      "message": "Preserve section settings when saving DOCX (#5311)"
     },
     "last_update": {
-      "ts": "2026-11-04T22:08:09Z",
+      "ts": "2026-11-05T08:14:03Z",
       "kind": "content",
-      "commit": "650a97b",
-      "commit_full": "650a97b623a32ebd604c04cfa555f47accaa06f8",
-      "message": "ODT: remove the display settings; one choice for each open case (#5609)"
+      "commit": "12a840f",
+      "commit_full": "12a840f6539dfd6b174b2163b9310bea3042b7aa",
+      "message": "Preserve section settings when saving DOCX (#5311)"
     },
     "self_reported": "2026-11-04"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.5,
+    "score": 22.2,
     "active_days_7d": 7,
-    "changes_7d": 154,
-    "changes_14d": 311,
+    "changes_7d": 164,
+    "changes_14d": 321,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-11-05T03:33:16Z",
-      "commit": "5a4c45e",
-      "commit_full": "5a4c45e79aec9757a0277d5dbe83c666704820df",
-      "subject": "About: let every credits column be dragged and refit changed tables (#5588)"
+      "ts": "2026-11-05T08:14:56Z",
+      "commit": "c0ab7e2",
+      "commit_full": "c0ab7e29f9deffbf1461f1d50ecdd6953647e1f2",
+      "subject": ".doc import: a field's cached result keeps its formatting per run, not per character (#5477) (#5489)"
     },
-    "last_commit_ts": "2026-11-05T03:33:16Z",
+    "last_commit_ts": "2026-11-05T08:14:56Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       57,
@@ -568,7 +568,7 @@
       11,
       19,
       32,
-      15
+      25
     ],
     "days": [
       {
@@ -1086,20 +1086,20 @@
       },
       {
         "d": "2026-11-05",
-        "code": 15,
+        "code": 25,
         "other": 1,
         "samples": [
           {
-            "commit": "5a4c45e",
-            "subject": "About: let every credits column be dragged and refit changed tables (#5588)"
+            "commit": "c0ab7e2",
+            "subject": ".doc import: a field's cached result keeps its formatting per run, not per character (#5477) (#5489)"
           },
           {
-            "commit": "6f552ab",
-            "subject": "chore: follow craft-libs c5a1cbf for craft-pdf and krilla (#5281)"
+            "commit": "fede86c",
+            "subject": "Tests: comment export discovery counts work steps instead of timing (#5618)"
           },
           {
-            "commit": "5f87d74",
-            "subject": "packaging: RPM installs on openSUSE (library sonames, no shared directories) (#5369)"
+            "commit": "c230e2b",
+            "subject": "Alt codes type their character in Find and other text boxes (#4403) (#5405)"
           }
         ]
       }
@@ -12554,7 +12554,76 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "96286f0",
+      "commit_full": "96286f0e966ce2d971f4551ac8314508184d3f71",
+      "commit_date": "2026-11-05T09:13:27+01:00",
+      "ts": "2026-11-05T08:13:27Z",
+      "message": "Avoid repeated paragraph scans when picking ink (#3614) (#4763)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-04",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "107996d",
+      "commit_full": "107996dd248507435e20254618418458b703d093",
+      "commit_date": "2026-11-05T09:13:52+01:00",
+      "ts": "2026-11-05T08:13:52Z",
+      "message": "REF: preserve paragraph numbers when updating cross-references (#4609)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-04",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "12a840f",
+      "commit_full": "12a840f6539dfd6b174b2163b9310bea3042b7aa",
+      "commit_date": "2026-11-05T09:14:03+01:00",
+      "ts": "2026-11-05T08:14:03Z",
+      "message": "Preserve section settings when saving DOCX (#5311)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-04",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T03:40:13+00:00"
+  "updated_at": "2026-11-05T09:25:24+00:00"
 }
