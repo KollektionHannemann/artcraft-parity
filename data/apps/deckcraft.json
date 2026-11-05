@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/deckcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/deckcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "2b6d27d",
-  "latest_commit_date": "2026-11-05T05:59:48+01:00",
-  "latest_message": "Fix Copying Images, Ctrl-C/Ctrl-V and within Deckcraft (#1658)",
+  "latest_commit": "73de990",
+  "latest_commit_date": "2026-11-05T12:51:16+01:00",
+  "latest_message": "Show: Presenter View only with a second display (#1156)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -332,6 +332,10 @@
       },
       {
         "date": "2026-11-02",
+        "text": "Slide show on Linux and the BSDs: Presenter View stays off when winit lists exactly one display, as in PowerPoint; if it lists none, the setting is kept. On one display the presenter window covered the show, and the hidden window stalled every frame: slide changes took up to ~1.7 s under Hyprland (#1156)"
+      },
+      {
+        "date": "2026-11-02",
         "text": "Native and PPTX saves retain optional table right-to-left direction, including explicit false and omission; two-save round-trip tests keep labeled columns in order"
       },
       {
@@ -473,10 +477,6 @@
       {
         "date": "2026-10-24",
         "text": "Edit Points: right-click a segment for Add Point (at the pointer), Delete Segment (a closed outline opens there; grayed out on an open one) and Open/Close Path, as in PowerPoint (shape.deleteSegment)"
-      },
-      {
-        "date": "2026-10-23",
-        "text": "Chart text colour: chart.options {textColor} and Font Color on a selected chart colour its title, axes, legend and data labels; the colour is written to the chart part (c:txPr on the axes, legend, labels and chart, the title's run defaults) so an imported chart keeps its txPr colours through an edit and a save; text without a colour of its own takes PowerPoint's default, the theme's text colour at 65 % plus 35 % (595959 on a light theme, light grey on a dark one)"
       }
     ]
   },
@@ -485,7 +485,7 @@
     "value_since": "2026-10-10T18:09:21Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 132,
+    "revisions_since": 133,
     "hours_since": null,
     "areas_since": {
       "up": 1,
@@ -504,39 +504,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 136,
-    "revisions_7d": 29,
+    "revisions": 137,
+    "revisions_7d": 30,
     "last_revision": {
-      "ts": "2026-11-05T04:59:48Z",
+      "ts": "2026-11-05T11:51:16Z",
       "kind": "content",
-      "commit": "2b6d27d",
-      "commit_full": "2b6d27d52575aa283df65dcab754e9e22307b094",
-      "message": "Fix Copying Images, Ctrl-C/Ctrl-V and within Deckcraft (#1658)"
+      "commit": "73de990",
+      "commit_full": "73de9900a7105340bec8505c14f322a9037990ad",
+      "message": "Show: Presenter View only with a second display (#1156)"
     },
     "last_update": {
-      "ts": "2026-11-05T04:59:48Z",
+      "ts": "2026-11-05T11:51:16Z",
       "kind": "content",
-      "commit": "2b6d27d",
-      "commit_full": "2b6d27d52575aa283df65dcab754e9e22307b094",
-      "message": "Fix Copying Images, Ctrl-C/Ctrl-V and within Deckcraft (#1658)"
+      "commit": "73de990",
+      "commit_full": "73de9900a7105340bec8505c14f322a9037990ad",
+      "message": "Show: Presenter View only with a second display (#1156)"
     },
     "self_reported": "2026-11-04"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.3,
+    "score": 20.4,
     "active_days_7d": 7,
-    "changes_7d": 170,
-    "changes_14d": 307,
+    "changes_7d": 171,
+    "changes_14d": 308,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-11-05T04:59:48Z",
-      "commit": "2b6d27d",
-      "commit_full": "2b6d27d52575aa283df65dcab754e9e22307b094",
-      "subject": "Fix Copying Images, Ctrl-C/Ctrl-V and within Deckcraft (#1658)"
+      "ts": "2026-11-05T11:51:16Z",
+      "commit": "73de990",
+      "commit_full": "73de9900a7105340bec8505c14f322a9037990ad",
+      "subject": "Show: Presenter View only with a second display (#1156)"
     },
-    "last_commit_ts": "2026-11-05T04:59:48Z",
+    "last_commit_ts": "2026-11-05T11:51:16Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
       54,
@@ -552,7 +552,7 @@
       15,
       31,
       27,
-      11
+      12
     ],
     "days": [
       {
@@ -1053,9 +1053,13 @@
       },
       {
         "d": "2026-11-05",
-        "code": 11,
+        "code": 12,
         "other": 0,
         "samples": [
+          {
+            "commit": "73de990",
+            "subject": "Show: Presenter View only with a second display (#1156)"
+          },
           {
             "commit": "2b6d27d",
             "subject": "Fix Copying Images, Ctrl-C/Ctrl-V and within Deckcraft (#1658)"
@@ -1063,10 +1067,6 @@
           {
             "commit": "9998ee5",
             "subject": "Web: open and save through a framing page (?host=parent) (#1809)"
-          },
-          {
-            "commit": "0b5cd0f",
-            "subject": "shape.connect glues to a shape inside a group, and the connector follows it (#1876)"
           }
         ]
       }
@@ -4414,7 +4414,30 @@
       "breadth_pct": 62.0,
       "full_prev": 55.0,
       "kind": "content"
+    },
+    {
+      "commit": "73de990",
+      "commit_full": "73de9900a7105340bec8505c14f322a9037990ad",
+      "commit_date": "2026-11-05T12:51:16+01:00",
+      "ts": "2026-11-05T11:51:16Z",
+      "message": "Show: Presenter View only with a second display (#1156)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-04",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T05:46:44+00:00"
+  "updated_at": "2026-11-05T12:17:03+00:00"
 }

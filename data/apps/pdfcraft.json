@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "863af86",
-  "latest_commit_date": "2026-11-05T09:28:43+01:00",
-  "latest_message": "M1: respect generations in PDF object references and full saves (#1143)",
+  "latest_commit": "8d56906",
+  "latest_commit_date": "2026-11-05T13:13:56+01:00",
+  "latest_message": "M5: Escape leaves a Fill & Sign tool, as it leaves a comment tool (#4539)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -421,6 +421,10 @@
         "text": "(M5, move preview): A comment being moved is drawn where it goes while it is dragged (a rectangle or oval showed only its blue frame): the comment is rendered alone once as the drag starts and laid over the page, which shows it where it was until the move is applied. Engine Document::commentlayer; synthetic engine and UI regressions. Estimates unchanged."
       },
       {
+        "date": "2026-10-24",
+        "text": "(M5, Escape in Fill & Sign): Escape leaves a Fill & Sign tool as it leaves a comment tool: the first press closes the open type box, the next goes back to Select, so the Text tool no longer opens a box at every click with no way out by the keyboard. A synthetic UI regression covers the Text and Checkmark tools. Estimates unchanged."
+      },
+      {
         "date": "2026-10-23",
         "text": "(M11, JBIG2): The PDF Optimizer can store black-and-white images as lossless JBIG2 (a generic region, written from the JBIG2 draft standard and checked against its arithmetic-coder test sequence), about a third smaller than Group 4 on 300 dpi text, and Export ▸ Images reads JBIG2 images. JBIG2 symbol coding, where its largest gains on text are, is next."
       },
@@ -447,10 +451,6 @@
       {
         "date": "2026-10-23",
         "text": "(M11, optimizer resolution): Image downsampling includes each page's /UserUnit scale, preserving images already below the physical resolution threshold, including shared nested forms."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "(M10, Word table widths): Word export sizes each cell from the grid columns it spans, keeping unequal columns and cells after a merged cell consistent with the table grid."
       }
     ]
   },
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 103,
+    "revisions_since": 104,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 191,
-    "revisions_7d": 17,
+    "revisions": 192,
+    "revisions_7d": 18,
     "last_revision": {
-      "ts": "2026-11-05T08:28:43Z",
+      "ts": "2026-11-05T12:13:56Z",
       "kind": "content",
-      "commit": "863af86",
-      "commit_full": "863af864a70f18bcf780a298f1e9923ee792c2ac",
-      "message": "M1: respect generations in PDF object references and full saves (#1143)"
+      "commit": "8d56906",
+      "commit_full": "8d569066b8dd5ce97d71fa50dd121b577ed818ce",
+      "message": "M5: Escape leaves a Fill & Sign tool, as it leaves a comment tool (#4539)"
     },
     "last_update": {
-      "ts": "2026-11-05T08:28:43Z",
+      "ts": "2026-11-05T12:13:56Z",
       "kind": "content",
-      "commit": "863af86",
-      "commit_full": "863af864a70f18bcf780a298f1e9923ee792c2ac",
-      "message": "M1: respect generations in PDF object references and full saves (#1143)"
+      "commit": "8d56906",
+      "commit_full": "8d569066b8dd5ce97d71fa50dd121b577ed818ce",
+      "message": "M5: Escape leaves a Fill & Sign tool, as it leaves a comment tool (#4539)"
     },
     "self_reported": "2026-11-03"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.4,
+    "score": 19.6,
     "active_days_7d": 7,
-    "changes_7d": 103,
-    "changes_14d": 245,
+    "changes_7d": 104,
+    "changes_14d": 246,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-05T08:28:43Z",
-      "commit": "863af86",
-      "commit_full": "863af864a70f18bcf780a298f1e9923ee792c2ac",
-      "subject": "M1: respect generations in PDF object references and full saves (#1143)"
+      "ts": "2026-11-05T12:13:56Z",
+      "commit": "8d56906",
+      "commit_full": "8d569066b8dd5ce97d71fa50dd121b577ed818ce",
+      "subject": "M5: Escape leaves a Fill & Sign tool, as it leaves a comment tool (#4539)"
     },
-    "last_commit_ts": "2026-11-05T08:28:43Z",
+    "last_commit_ts": "2026-11-05T12:13:56Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       44,
@@ -524,7 +524,7 @@
       11,
       26,
       23,
-      6
+      7
     ],
     "days": [
       {
@@ -1200,9 +1200,13 @@
       },
       {
         "d": "2026-11-05",
-        "code": 6,
+        "code": 7,
         "other": 0,
         "samples": [
+          {
+            "commit": "8d56906",
+            "subject": "M5: Escape leaves a Fill & Sign tool, as it leaves a comment tool (#4539)"
+          },
           {
             "commit": "863af86",
             "subject": "M1: respect generations in PDF object references and full saves (#1143)"
@@ -1210,10 +1214,6 @@
           {
             "commit": "15c505d",
             "subject": "M2: scans stay sharp at screen size and smooth when zoomed (area-average shrink, bilinear enlarge) (#3858)"
-          },
-          {
-            "commit": "84e85c1",
-            "subject": "M14: Preferences can turn off the update check at start (#5737, #5460) (#5758)"
           }
         ]
       }
@@ -5819,7 +5819,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "8d56906",
+      "commit_full": "8d569066b8dd5ce97d71fa50dd121b577ed818ce",
+      "commit_date": "2026-11-05T13:13:56+01:00",
+      "ts": "2026-11-05T12:13:56Z",
+      "message": "M5: Escape leaves a Fill & Sign tool, as it leaves a comment tool (#4539)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T09:25:01+00:00"
+  "updated_at": "2026-11-05T12:16:35+00:00"
 }
