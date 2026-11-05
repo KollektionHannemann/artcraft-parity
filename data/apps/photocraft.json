@@ -375,18 +375,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.7,
+    "score": 20.8,
     "active_days_7d": 7,
-    "changes_7d": 99,
-    "changes_14d": 291,
+    "changes_7d": 100,
+    "changes_14d": 292,
     "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-05T07:44:21Z",
-      "commit": "51131b8",
-      "commit_full": "51131b82cf994bd57401ba444aa3ba703d131a68",
-      "subject": "UI: 2-column Home screen with recent file cards and centered workspace (#7231)"
+      "ts": "2026-11-05T09:33:29Z",
+      "commit": "98bcbfa",
+      "commit_full": "98bcbfab9005b4915b3143b4daed91df365db107",
+      "subject": "perf(io): build JPEG/PNG tiles straight from the decoded rows, in parallel (#10259) (#10281)"
     },
-    "last_commit_ts": "2026-11-05T07:44:21Z",
+    "last_commit_ts": "2026-11-05T09:33:29Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       89,
@@ -402,7 +402,7 @@
       7,
       24,
       27,
-      15
+      16
     ],
     "days": [
       {
@@ -1091,9 +1091,13 @@
       },
       {
         "d": "2026-11-05",
-        "code": 15,
+        "code": 16,
         "other": 0,
         "samples": [
+          {
+            "commit": "98bcbfa",
+            "subject": "perf(io): build JPEG/PNG tiles straight from the decoded rows, in parallel (#10259) (#10281)"
+          },
           {
             "commit": "51131b8",
             "subject": "UI: 2-column Home screen with recent file cards and centered workspace (#7231)"
@@ -1101,10 +1105,6 @@
           {
             "commit": "d7d138b",
             "subject": "Art History Brush: Opacity on the options bar (#10263) (#10278)"
-          },
-          {
-            "commit": "316e00a",
-            "subject": "Bound Photomerge memory and safely reject out-of-budget jobs (#7851) (#10463)"
           }
         ]
       }
@@ -1526,5 +1526,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T08:06:22+00:00"
+  "updated_at": "2026-11-05T10:27:10+00:00"
 }
