@@ -483,8 +483,8 @@
   "parity": {
     "tracked_since": "2026-10-10T18:09:21Z",
     "value_since": "2026-10-10T18:09:21Z",
-    "releases_since": 11,
-    "releases_since_capped": false,
+    "releases_since": 12,
+    "releases_since_capped": true,
     "revisions_since": 130,
     "hours_since": null,
     "areas_since": {
@@ -525,18 +525,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.7,
+    "score": 18.3,
     "active_days_7d": 7,
-    "changes_7d": 160,
-    "changes_14d": 297,
+    "changes_7d": 161,
+    "changes_14d": 298,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-11-05T00:03:38Z",
-      "commit": "dfee4c1",
-      "commit_full": "dfee4c1e88b4b21dc17031af883af23daba214ac",
-      "subject": "Make Previous/Next work in the web presenter popup (#1870)"
+      "ts": "2026-11-05T00:17:57Z",
+      "commit": "52f87ac",
+      "commit_full": "52f87aca133c39539b10c18ea30e209d1955797b",
+      "subject": "PPTX: Show media controls survives a save and reopen (#1474)"
     },
-    "last_commit_ts": "2026-11-05T00:03:38Z",
+    "last_commit_ts": "2026-11-05T00:17:57Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
       54,
@@ -552,7 +552,7 @@
       15,
       31,
       27,
-      1
+      2
     ],
     "days": [
       {
@@ -1053,9 +1053,13 @@
       },
       {
         "d": "2026-11-05",
-        "code": 1,
+        "code": 2,
         "other": 0,
         "samples": [
+          {
+            "commit": "52f87ac",
+            "subject": "PPTX: Show media controls survives a save and reopen (#1474)"
+          },
           {
             "commit": "dfee4c1",
             "subject": "Make Previous/Next work in the web presenter popup (#1870)"
@@ -1065,6 +1069,23 @@
     ]
   },
   "releases": [
+    {
+      "tag": "v0.15.1",
+      "name": "DeckCraft v0.15.1",
+      "ts": "2026-11-05T01:24:47Z",
+      "url": "https://github.com/storytold/deckcraft/releases/tag/v0.15.1",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "patch"
+    },
     {
       "tag": "v0.15.0",
       "name": "DeckCraft v0.15.0",
@@ -1242,23 +1263,6 @@
       "url": "https://github.com/storytold/deckcraft/releases/tag/v0.5.0",
       "changes": 18,
       "new_contributors": 5,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.4.0",
-      "name": "DeckCraft v0.4.0",
-      "ts": "2026-10-10T02:51:18Z",
-      "url": "https://github.com/storytold/deckcraft/releases/tag/v0.4.0",
-      "changes": 12,
-      "new_contributors": 8,
       "platforms": [
         "macOS",
         "Windows",
@@ -4362,5 +4366,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T00:06:24+00:00"
+  "updated_at": "2026-11-05T01:37:24+00:00"
 }

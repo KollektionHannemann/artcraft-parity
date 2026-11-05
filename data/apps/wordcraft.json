@@ -540,19 +540,19 @@
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 17.5,
-    "active_days_7d": 6,
-    "changes_7d": 139,
-    "changes_14d": 296,
-    "housekeeping_7d": 14,
+    "level": "buzzing",
+    "score": 21.5,
+    "active_days_7d": 7,
+    "changes_7d": 153,
+    "changes_14d": 310,
+    "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-11-04T22:08:09Z",
-      "commit": "650a97b",
-      "commit_full": "650a97b623a32ebd604c04cfa555f47accaa06f8",
-      "subject": "ODT: remove the display settings; one choice for each open case (#5609)"
+      "ts": "2026-11-05T01:10:16Z",
+      "commit": "6f552ab",
+      "commit_full": "6f552abf8e8d9f8861706b3cd8313d4328fdb7b5",
+      "subject": "chore: follow craft-libs c5a1cbf for craft-pdf and krilla (#5281)"
     },
-    "last_commit_ts": "2026-11-04T22:44:46Z",
+    "last_commit_ts": "2026-11-05T01:10:16Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       57,
@@ -568,7 +568,7 @@
       11,
       19,
       32,
-      0
+      14
     ],
     "days": [
       {
@@ -1083,10 +1083,46 @@
             "subject": "Dialogs are modal, as in Word (#4076)"
           }
         ]
+      },
+      {
+        "d": "2026-11-05",
+        "code": 14,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "6f552ab",
+            "subject": "chore: follow craft-libs c5a1cbf for craft-pdf and krilla (#5281)"
+          },
+          {
+            "commit": "5f87d74",
+            "subject": "packaging: RPM installs on openSUSE (library sonames, no shared directories) (#5369)"
+          },
+          {
+            "commit": "6a50c1e",
+            "subject": "#5289: a section's page start flushes the page before with its own margins and separators (#5291)"
+          }
+        ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.15.2",
+      "name": "WordCraft v0.15.2",
+      "ts": "2026-11-05T01:34:30Z",
+      "url": "https://github.com/storytold/wordcraft/releases/tag/v0.15.2",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "patch"
+    },
     {
       "tag": "v0.15.1",
       "name": "WordCraft v0.15.1",
@@ -1264,23 +1300,6 @@
       "url": "https://github.com/storytold/wordcraft/releases/tag/v0.6.1",
       "changes": 221,
       "new_contributors": 39,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.5.0",
-      "name": "WordCraft v0.5.0",
-      "ts": "2026-10-11T00:36:07Z",
-      "url": "https://github.com/storytold/wordcraft/releases/tag/v0.5.0",
-      "changes": 132,
-      "new_contributors": 22,
       "platforms": [
         "macOS",
         "Windows",
@@ -12537,5 +12556,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T00:06:16+00:00"
+  "updated_at": "2026-11-05T01:37:16+00:00"
 }
