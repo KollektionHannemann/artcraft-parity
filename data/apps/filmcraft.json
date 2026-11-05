@@ -444,18 +444,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.3,
-    "active_days_7d": 6,
-    "changes_7d": 152,
-    "changes_14d": 312,
+    "score": 17.3,
+    "active_days_7d": 7,
+    "changes_7d": 153,
+    "changes_14d": 313,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-04T23:28:58Z",
-      "commit": "0b780f6",
-      "commit_full": "0b780f6f11dc28783b6d4dede60d3e6f1fbc5eb0",
-      "subject": "ogg: stop reading when the packet list passes 256 MiB (#4066)"
+      "ts": "2026-11-05T02:19:24Z",
+      "commit": "8544894",
+      "commit_full": "85448940efe97c295650dcc7c49f09c9433467de",
+      "subject": "render: turn display-rotated video on the GPU (#3467) (#3484)"
     },
-    "last_commit_ts": "2026-11-04T23:28:58Z",
+    "last_commit_ts": "2026-11-05T02:19:24Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       62,
@@ -471,7 +471,7 @@
       3,
       55,
       20,
-      0
+      1
     ],
     "days": [
       {
@@ -1096,10 +1096,38 @@
             "subject": "media: validate offline slate audio before allocating silence (#4199)"
           }
         ]
+      },
+      {
+        "d": "2026-11-05",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "8544894",
+            "subject": "render: turn display-rotated video on the GPU (#3467) (#3484)"
+          }
+        ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.17.1",
+      "name": "FilmCraft v0.17.1",
+      "ts": "2026-11-05T01:47:53Z",
+      "url": "https://github.com/storytold/filmcraft/releases/tag/v0.17.1",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "patch"
+    },
     {
       "tag": "v0.17.0",
       "name": "FilmCraft v0.17.0",
@@ -1277,23 +1305,6 @@
       "url": "https://github.com/storytold/filmcraft/releases/tag/v0.7.2",
       "changes": 136,
       "new_contributors": 16,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.6.0",
-      "name": "FilmCraft v0.6.0",
-      "ts": "2026-10-11T00:28:54Z",
-      "url": "https://github.com/storytold/filmcraft/releases/tag/v0.6.0",
-      "changes": 188,
-      "new_contributors": 35,
       "platforms": [
         "macOS",
         "Windows",
@@ -1653,5 +1664,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T00:05:37+00:00"
+  "updated_at": "2026-11-05T02:42:34+00:00"
 }

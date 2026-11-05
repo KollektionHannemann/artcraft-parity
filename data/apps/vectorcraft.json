@@ -561,18 +561,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 30.5,
+    "score": 31.1,
     "active_days_7d": 7,
-    "changes_7d": 691,
-    "changes_14d": 1222,
+    "changes_7d": 696,
+    "changes_14d": 1227,
     "housekeeping_7d": 33,
     "last_code_change": {
-      "ts": "2026-11-05T01:17:37Z",
-      "commit": "4cce336",
-      "commit_full": "4cce3363da5874340367d66a779ff18c239cb38a",
-      "subject": "Type: a copy elsewhere during a refused write wins the paste (#5719)"
+      "ts": "2026-11-05T02:23:06Z",
+      "commit": "ffcc10e",
+      "commit_full": "ffcc10e16571df1c6cb783c5cc68a71432b45d06",
+      "subject": "PDF import: a DeviceN gradient of a spot ink over process plates keeps the ink and the plates, and PDF export writes it as DeviceN again (#3235) (#5724)"
     },
-    "last_commit_ts": "2026-11-05T01:17:37Z",
+    "last_commit_ts": "2026-11-05T02:23:06Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       108,
@@ -588,7 +588,7 @@
       113,
       117,
       187,
-      8
+      13
     ],
     "days": [
       {
@@ -1264,26 +1264,43 @@
       },
       {
         "d": "2026-11-05",
-        "code": 8,
+        "code": 13,
         "other": 1,
         "samples": [
           {
-            "commit": "4cce336",
-            "subject": "Type: a copy elsewhere during a refused write wins the paste (#5719)"
+            "commit": "ffcc10e",
+            "subject": "PDF import: a DeviceN gradient of a spot ink over process plates keeps the ink and the plates, and PDF export writes it as DeviceN again (#3235) (#5724)"
           },
           {
-            "commit": "644acb8",
-            "subject": "Glyphs: the Glyphs query reports the fallback glyph of an overflowing character (#5718)"
+            "commit": "49b5246",
+            "subject": "Tests: the Type › Font menu test waits for the installed fonts' scan (#5647) (#5723)"
           },
           {
-            "commit": "1fc630e",
-            "subject": "Symbols: an instance fill with no opacity keeps the art's swatch links (#5717)"
+            "commit": "3856218",
+            "subject": "Type: a refused copy is dropped when a textless clipboard can't track it (#5722)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.21.1",
+      "name": "VectorCraft v0.21.1",
+      "ts": "2026-11-05T02:06:59Z",
+      "url": "https://github.com/storytold/vectorcraft/releases/tag/v0.21.1",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "patch"
+    },
     {
       "tag": "v0.21.0",
       "name": "VectorCraft v0.21.0",
@@ -1461,23 +1478,6 @@
       "url": "https://github.com/storytold/vectorcraft/releases/tag/v0.11.0",
       "changes": 248,
       "new_contributors": 17,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.10.0",
-      "name": "VectorCraft v0.10.0",
-      "ts": "2026-10-12T15:56:13Z",
-      "url": "https://github.com/storytold/vectorcraft/releases/tag/v0.10.0",
-      "changes": 190,
-      "new_contributors": 26,
       "platforms": [
         "macOS",
         "Windows",
@@ -7008,5 +7008,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T01:36:30+00:00"
+  "updated_at": "2026-11-05T02:42:29+00:00"
 }
