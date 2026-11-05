@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "c3c36f7",
-  "latest_commit_date": "2026-11-05T14:39:36+01:00",
-  "latest_message": "M5: a comment's text, border or line, and fill each at an opacity of its own (#4542)",
+  "latest_commit": "42bc4f1",
+  "latest_commit_date": "2026-11-05T16:41:45+01:00",
+  "latest_message": "M5: copy and paste comments between documents, select several, finish connected lines from the menu (#3484)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 109,
+    "revisions_since": 110,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 197,
-    "revisions_7d": 23,
+    "revisions": 198,
+    "revisions_7d": 24,
     "last_revision": {
-      "ts": "2026-11-05T13:39:36Z",
+      "ts": "2026-11-05T15:41:45Z",
       "kind": "content",
-      "commit": "c3c36f7",
-      "commit_full": "c3c36f77cf1f1beb8785ad5caccf6cb654f598c5",
-      "message": "M5: a comment's text, border or line, and fill each at an opacity of its own (#4542)"
+      "commit": "42bc4f1",
+      "commit_full": "42bc4f117d849b58cf01f5c65f0aadfa1d4f24cf",
+      "message": "M5: copy and paste comments between documents, select several, finish connected lines from the menu (#3484)"
     },
     "last_update": {
-      "ts": "2026-11-05T13:39:36Z",
+      "ts": "2026-11-05T15:41:45Z",
       "kind": "content",
-      "commit": "c3c36f7",
-      "commit_full": "c3c36f77cf1f1beb8785ad5caccf6cb654f598c5",
-      "message": "M5: a comment's text, border or line, and fill each at an opacity of its own (#4542)"
+      "commit": "42bc4f1",
+      "commit_full": "42bc4f117d849b58cf01f5c65f0aadfa1d4f24cf",
+      "message": "M5: copy and paste comments between documents, select several, finish connected lines from the menu (#3484)"
     },
     "self_reported": "2026-11-03"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.4,
+    "score": 20.6,
     "active_days_7d": 7,
-    "changes_7d": 110,
-    "changes_14d": 252,
+    "changes_7d": 112,
+    "changes_14d": 254,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-05T13:39:36Z",
-      "commit": "c3c36f7",
-      "commit_full": "c3c36f77cf1f1beb8785ad5caccf6cb654f598c5",
-      "subject": "M5: a comment's text, border or line, and fill each at an opacity of its own (#4542)"
+      "ts": "2026-11-05T15:41:45Z",
+      "commit": "42bc4f1",
+      "commit_full": "42bc4f117d849b58cf01f5c65f0aadfa1d4f24cf",
+      "subject": "M5: copy and paste comments between documents, select several, finish connected lines from the menu (#3484)"
     },
-    "last_commit_ts": "2026-11-05T13:39:36Z",
+    "last_commit_ts": "2026-11-05T15:41:45Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       44,
@@ -524,7 +524,7 @@
       11,
       26,
       23,
-      13
+      15
     ],
     "days": [
       {
@@ -1200,20 +1200,20 @@
       },
       {
         "d": "2026-11-05",
-        "code": 13,
+        "code": 15,
         "other": 0,
         "samples": [
           {
+            "commit": "42bc4f1",
+            "subject": "M5: copy and paste comments between documents, select several, finish connected lines from the menu (#3484)"
+          },
+          {
+            "commit": "6427357",
+            "subject": "Forms: date fields name months in the date language, not always English (#5303) (#5464)"
+          },
+          {
             "commit": "c3c36f7",
             "subject": "M5: a comment's text, border or line, and fill each at an opacity of its own (#4542)"
-          },
-          {
-            "commit": "983e2f2",
-            "subject": "M3: → / ← scroll a page wider than the window before turning it (#4540)"
-          },
-          {
-            "commit": "c56a63b",
-            "subject": "feat(web): page host mode, so a page can host PdfCraft in its own document (#4731) (#4732)"
           }
         ]
       }
@@ -5957,7 +5957,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "42bc4f1",
+      "commit_full": "42bc4f117d849b58cf01f5c65f0aadfa1d4f24cf",
+      "commit_date": "2026-11-05T16:41:45+01:00",
+      "ts": "2026-11-05T15:41:45Z",
+      "message": "M5: copy and paste comments between documents, select several, finish connected lines from the menu (#3484)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T13:40:44+00:00"
+  "updated_at": "2026-11-05T15:43:50+00:00"
 }
