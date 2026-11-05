@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "84e85c1",
-  "latest_commit_date": "2026-11-05T05:39:12+01:00",
-  "latest_message": "M14: Preferences can turn off the update check at start (#5737, #5460) (#5758)",
+  "latest_commit": "15c505d",
+  "latest_commit_date": "2026-11-05T06:03:58+01:00",
+  "latest_message": "M2: scans stay sharp at screen size and smooth when zoomed (area-average shrink, bilinear enlarge) (#3858)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -361,6 +361,10 @@
         "text": "(M7, #2517): Widening a paragraph rejoins a wrap with the number of spaces that wrap consumed, including a typed run and none for a Chinese or Japanese word split. The count survives an incremental save and a full rewrite, and a width-only textedit uses it. Estimates unchanged."
       },
       {
+        "date": "2026-10-29",
+        "text": "(M2): Scanned pages look like the paper again. An image that doesn't ask for /Interpolate was shrunk by nearest-neighbour (since #635), which kept one sample in N per axis, so the text of a 300 dpi scan at 100% lost most of its strokes; it is now area-averaged to whole device pixels (on a 13-page 300 dpi scan every sample at 96–192 dpi is within 1 of the exact area average; it was up to 255 off). Enlarged, an image of page-scan size is smoothed bilinearly, so a zoomed scan has no staircases; icons, QR codes and pixel art keep hard pixels. Estimates unchanged."
+      },
+      {
         "date": "2026-10-28",
         "text": "(M2, PR #4172): Integrated main 5af10276, preserving both roadmap histories and reviewing auto-merged export tests and accessibility UI changes. Validation: 488 scoped tests passed (18 engine, 412 renderer unit, 43 renderer integration, 15 Combine; one existing renderer integration test ignored); scoped all-target Clippy with -D warnings, formatting, layers, assets, parity and renderer/engine WASM checks passed. Viewer-only CJK fallback and print/output font policy remain unchanged; estimates unchanged."
       },
@@ -447,10 +451,6 @@
       {
         "date": "2026-10-23",
         "text": "(M10, Word table widths): Word export sizes each cell from the grid columns it spans, keeping unequal columns and cells after a merged cell consistent with the table grid."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "(M10, table continuation text): Office exporters retain text from table slots covered by another cell's span as paragraph text."
       }
     ]
   },
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 101,
+    "revisions_since": 102,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 189,
-    "revisions_7d": 15,
+    "revisions": 190,
+    "revisions_7d": 16,
     "last_revision": {
-      "ts": "2026-11-05T04:39:12Z",
+      "ts": "2026-11-05T05:03:58Z",
       "kind": "content",
-      "commit": "84e85c1",
-      "commit_full": "84e85c1ff36861a6dade7089abc761ed6ad55718",
-      "message": "M14: Preferences can turn off the update check at start (#5737, #5460) (#5758)"
+      "commit": "15c505d",
+      "commit_full": "15c505d1c656a5d5cb82e5c14193b48d42e6a085",
+      "message": "M2: scans stay sharp at screen size and smooth when zoomed (area-average shrink, bilinear enlarge) (#3858)"
     },
     "last_update": {
-      "ts": "2026-11-05T04:39:12Z",
+      "ts": "2026-11-05T05:03:58Z",
       "kind": "content",
-      "commit": "84e85c1",
-      "commit_full": "84e85c1ff36861a6dade7089abc761ed6ad55718",
-      "message": "M14: Preferences can turn off the update check at start (#5737, #5460) (#5758)"
+      "commit": "15c505d",
+      "commit_full": "15c505d1c656a5d5cb82e5c14193b48d42e6a085",
+      "message": "M2: scans stay sharp at screen size and smooth when zoomed (area-average shrink, bilinear enlarge) (#3858)"
     },
     "self_reported": "2026-11-03"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.0,
+    "score": 19.2,
     "active_days_7d": 7,
-    "changes_7d": 101,
-    "changes_14d": 243,
+    "changes_7d": 102,
+    "changes_14d": 244,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-05T04:39:12Z",
-      "commit": "84e85c1",
-      "commit_full": "84e85c1ff36861a6dade7089abc761ed6ad55718",
-      "subject": "M14: Preferences can turn off the update check at start (#5737, #5460) (#5758)"
+      "ts": "2026-11-05T05:03:58Z",
+      "commit": "15c505d",
+      "commit_full": "15c505d1c656a5d5cb82e5c14193b48d42e6a085",
+      "subject": "M2: scans stay sharp at screen size and smooth when zoomed (area-average shrink, bilinear enlarge) (#3858)"
     },
-    "last_commit_ts": "2026-11-05T04:39:12Z",
+    "last_commit_ts": "2026-11-05T05:03:58Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       44,
@@ -524,7 +524,7 @@
       11,
       26,
       23,
-      4
+      5
     ],
     "days": [
       {
@@ -1200,9 +1200,13 @@
       },
       {
         "d": "2026-11-05",
-        "code": 4,
+        "code": 5,
         "other": 0,
         "samples": [
+          {
+            "commit": "15c505d",
+            "subject": "M2: scans stay sharp at screen size and smooth when zoomed (area-average shrink, bilinear enlarge) (#3858)"
+          },
           {
             "commit": "84e85c1",
             "subject": "M14: Preferences can turn off the update check at start (#5737, #5460) (#5758)"
@@ -1210,10 +1214,6 @@
           {
             "commit": "2154082",
             "subject": "M5.7: the Fill & Sign text controls use a colour dot and a size flyout (#5754)"
-          },
-          {
-            "commit": "943718e",
-            "subject": "fix(ui): About credits tables fit without side-scrolling and their columns resize (#6052)"
           }
         ]
       }
@@ -5773,7 +5773,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "15c505d",
+      "commit_full": "15c505d1c656a5d5cb82e5c14193b48d42e6a085",
+      "commit_date": "2026-11-05T06:03:58+01:00",
+      "ts": "2026-11-05T05:03:58Z",
+      "message": "M2: scans stay sharp at screen size and smooth when zoomed (area-average shrink, bilinear enlarge) (#3858)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": "Adobe Acrobat Pro (Acrobat DC, continuous track 26.002.21931, macOS)",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T04:43:55+00:00"
+  "updated_at": "2026-11-05T05:46:12+00:00"
 }

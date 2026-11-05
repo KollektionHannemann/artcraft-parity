@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/deckcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/deckcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "9d36b59",
-  "latest_commit_date": "2026-11-04T15:15:59-05:00",
-  "latest_message": "Ogg: include recovered tail packets in Opus duration (#1862)",
+  "latest_commit": "2b6d27d",
+  "latest_commit_date": "2026-11-05T05:59:48+01:00",
+  "latest_message": "Fix Copying Images, Ctrl-C/Ctrl-V and within Deckcraft (#1658)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -324,6 +324,10 @@
       },
       {
         "date": "2026-11-03",
+        "text": "Web: the ?host=parent bridge (as in GridCraft, WordCraft and PdfCraft) lets a same-origin page that frames DeckCraft send a presentation and store its saves; Save writes an opened .pptx back as .pptx under its own name, as on the desktop"
+      },
+      {
+        "date": "2026-11-03",
         "text": "Reuse Slides brings along referenced custom table styles, including grouped tables, and remaps conflicting style ids without changing destination tables"
       },
       {
@@ -357,6 +361,18 @@
       {
         "date": "2026-11-02",
         "text": "Tiled picture fills in groups: a tile (a:blipFill with a:tile) keeps its size, offset and anchor in slide points whatever the group's child-coordinate scale, uniform or stretched unevenly, nested or flipped (also a group's own tile fill passed to its members, and a picture shape's own tile, with its shadow and reflection), and tiles with rotWithShape=\"0\" keep their size in points at any zoom, as PowerPoint draws them (measured on its own PNG export of a synthetic probe deck: every grouped case within ~3/255 of the ungrouped control's own difference from PowerPoint, which is ~13/255 from resampling). Before, a group whose child space was ~1800 times smaller than its box showed one flat texel of the texture (a Venn diagram with paper-textured circles and a hatched intersection)"
+      },
+      {
+        "date": "2026-11-01",
+        "text": "Ctrl+V of a picture copied in a browser (Copy Image) pastes the picture, not a text box with its link and alt text; the link still pastes as text when no picture came with it"
+      },
+      {
+        "date": "2026-11-01",
+        "text": "Copy, Cut, Paste, Duplicate and Alt+drag of a title, body or other placeholder on a slide keep its look: the copy is a regular shape that takes the size, font, bullets, indents, autofit and box its layout and master gave it, instead of 18 pt unbulleted text"
+      },
+      {
+        "date": "2026-11-01",
+        "text": "Clipboard: Ctrl+C, Ctrl+X and Ctrl+V use the system clipboard again, so text and pictures paste from other apps and in-app copies paste back. Since the egui 0.37 migration (#1350) the desktop build had a clipboard that only worked inside the app. On native Wayland, text goes through egui's Wayland clipboard; HTML stays on X11, macOS and Windows"
       },
       {
         "date": "2026-10-31",
@@ -461,22 +477,6 @@
       {
         "date": "2026-10-23",
         "text": "Chart text colour: chart.options {textColor} and Font Color on a selected chart colour its title, axes, legend and data labels; the colour is written to the chart part (c:txPr on the axes, legend, labels and chart, the title's run defaults) so an imported chart keeps its txPr colours through an edit and a save; text without a colour of its own takes PowerPoint's default, the theme's text colour at 65 % plus 35 % (595959 on a light theme, light grey on a dark one)"
-      },
-      {
-        "date": "2026-10-23",
-        "text": "Format Background ▸ Apply to All also sets the background of the slide masters the slides use (and clears their layouts' overrides), so new slides keep it (#891)"
-      },
-      {
-        "date": "2026-10-23",
-        "text": "A shape with no fill and no line (a text box) no longer draws its shape-level glow as a halo round its box; the text's own glow is all PowerPoint shows"
-      },
-      {
-        "date": "2026-10-23",
-        "text": "Normal view: a slide zoomed past the window gets a horizontal and a vertical scroll bar on the axes that overflow; drag the thumb or click the track to reach every edge (#1157)"
-      },
-      {
-        "date": "2026-10-22",
-        "text": "Table text takes the master's other-text style (otherStyle), shapes and text boxes the presentation's default text style, as PowerPoint for Mac draws them (synthetic probe: 14 pt cells under a 14 pt otherStyle and a 26 pt defaultTextStyle); a private deck's table had been drawn 20 pt instead of 18"
       }
     ]
   },
@@ -485,7 +485,7 @@
     "value_since": "2026-10-10T18:09:21Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 130,
+    "revisions_since": 132,
     "hours_since": null,
     "areas_since": {
       "up": 1,
@@ -504,39 +504,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 134,
-    "revisions_7d": 27,
+    "revisions": 136,
+    "revisions_7d": 29,
     "last_revision": {
-      "ts": "2026-11-04T20:15:59Z",
+      "ts": "2026-11-05T04:59:48Z",
       "kind": "content",
-      "commit": "9d36b59",
-      "commit_full": "9d36b5931cf93b36605eb5c8173260a2a346ccf5",
-      "message": "Ogg: include recovered tail packets in Opus duration (#1862)"
+      "commit": "2b6d27d",
+      "commit_full": "2b6d27d52575aa283df65dcab754e9e22307b094",
+      "message": "Fix Copying Images, Ctrl-C/Ctrl-V and within Deckcraft (#1658)"
     },
     "last_update": {
-      "ts": "2026-11-04T20:15:59Z",
+      "ts": "2026-11-05T04:59:48Z",
       "kind": "content",
-      "commit": "9d36b59",
-      "commit_full": "9d36b5931cf93b36605eb5c8173260a2a346ccf5",
-      "message": "Ogg: include recovered tail packets in Opus duration (#1862)"
+      "commit": "2b6d27d",
+      "commit_full": "2b6d27d52575aa283df65dcab754e9e22307b094",
+      "message": "Fix Copying Images, Ctrl-C/Ctrl-V and within Deckcraft (#1658)"
     },
     "self_reported": "2026-11-04"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.0,
+    "score": 20.3,
     "active_days_7d": 7,
-    "changes_7d": 168,
-    "changes_14d": 305,
+    "changes_7d": 170,
+    "changes_14d": 307,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-11-05T04:43:49Z",
-      "commit": "0b5cd0f",
-      "commit_full": "0b5cd0f2d62f796b3157645d7e260ef33007d037",
-      "subject": "shape.connect glues to a shape inside a group, and the connector follows it (#1876)"
+      "ts": "2026-11-05T04:59:48Z",
+      "commit": "2b6d27d",
+      "commit_full": "2b6d27d52575aa283df65dcab754e9e22307b094",
+      "subject": "Fix Copying Images, Ctrl-C/Ctrl-V and within Deckcraft (#1658)"
     },
-    "last_commit_ts": "2026-11-05T04:43:49Z",
+    "last_commit_ts": "2026-11-05T04:59:48Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
       54,
@@ -552,7 +552,7 @@
       15,
       31,
       27,
-      9
+      11
     ],
     "days": [
       {
@@ -1053,20 +1053,20 @@
       },
       {
         "d": "2026-11-05",
-        "code": 9,
+        "code": 11,
         "other": 0,
         "samples": [
           {
+            "commit": "2b6d27d",
+            "subject": "Fix Copying Images, Ctrl-C/Ctrl-V and within Deckcraft (#1658)"
+          },
+          {
+            "commit": "9998ee5",
+            "subject": "Web: open and save through a framing page (?host=parent) (#1809)"
+          },
+          {
             "commit": "0b5cd0f",
             "subject": "shape.connect glues to a shape inside a group, and the connector follows it (#1876)"
-          },
-          {
-            "commit": "8435cc3",
-            "subject": "UI: follow Grayscale view mode in slide thumbnails (#1886)"
-          },
-          {
-            "commit": "75885b4",
-            "subject": "Flip is refused on a SmartArt graphic instead of turning it into a plain group (#1881)"
           }
         ]
       }
@@ -4368,7 +4368,53 @@
       "breadth_pct": 62.0,
       "full_prev": 55.0,
       "kind": "content"
+    },
+    {
+      "commit": "9998ee5",
+      "commit_full": "9998ee5e07a7821cf7a6577a2f2d98125bc90b57",
+      "commit_date": "2026-11-05T05:59:44+01:00",
+      "ts": "2026-11-05T04:59:44Z",
+      "message": "Web: open and save through a framing page (?host=parent) (#1809)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-04",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
+    },
+    {
+      "commit": "2b6d27d",
+      "commit_full": "2b6d27d52575aa283df65dcab754e9e22307b094",
+      "commit_date": "2026-11-05T05:59:48+01:00",
+      "ts": "2026-11-05T04:59:48Z",
+      "message": "Fix Copying Images, Ctrl-C/Ctrl-V and within Deckcraft (#1658)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-04",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T04:44:17+00:00"
+  "updated_at": "2026-11-05T05:46:44+00:00"
 }
