@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/gridcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/gridcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "7bb397a",
-  "latest_commit_date": "2026-11-02T21:23:18+01:00",
-  "latest_message": "UI: RefEdit reference boxes in dialogs (Goal Seek, Solver, Data Analysis) (#494)",
+  "latest_commit": "642980b",
+  "latest_commit_date": "2026-11-05T04:16:46+01:00",
+  "latest_message": "Form controls: buttons, sliders and spin buttons, with Assign Action, Format Control and XLSX round trip (#481)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -270,6 +270,10 @@
     "progress": [
       {
         "date": "2026-11-02",
+        "text": "Form controls: Insert › Controls places buttons, sliders (scroll bars) and spin buttons on the sheet. A slider or spin button holds a whole number from 0 to 30000 in a linked cell (a drag or a held arrow is one undo step, and editing the cell moves the control); a button runs a macro or one command through the macro policy, asking first in a workbook opened from a file; Assign Action and Format Control edit them, and XLSX files read and write them (control properties, <controls> and VML), alongside the form controls GridCraft keeps unchanged"
+      },
+      {
+        "date": "2026-11-02",
         "text": "Dialogs take ranges by selection on the grid: reference boxes (RefEdit) with a collapse button that shrinks the dialog while the person selects, in Goal Seek, Solver (including the Model Range of Load/Save) and Data Analysis; while collapsed, the arrow keys move the selection and Shift+arrow extends it, and F4 cycles a reference's anchors"
       },
       {
@@ -423,10 +427,6 @@
       {
         "date": "2026-10-16",
         "text": "Memory: the interface and script fallback fonts are read once per run and shared with egui instead of copied into it: an empty workbook settles at 158 MB instead of 258 MB on macOS"
-      },
-      {
-        "date": "2026-10-15",
-        "text": "File › Options › Formulas: Maximum Iterations and Maximum Change fields for iterative calculation, disabled while it is off, with Excel's limits (1 to 32767, 0 or more)"
       }
     ]
   },
@@ -435,7 +435,7 @@
     "value_since": "2026-10-10T18:09:06Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 85,
+    "revisions_since": 86,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -443,39 +443,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 87,
-    "revisions_7d": 13,
+    "revisions": 88,
+    "revisions_7d": 14,
     "last_revision": {
-      "ts": "2026-11-02T20:23:18Z",
+      "ts": "2026-11-05T03:16:46Z",
       "kind": "content",
-      "commit": "7bb397a",
-      "commit_full": "7bb397a3c1015e2a445edcd8feb01789850f4bdd",
-      "message": "UI: RefEdit reference boxes in dialogs (Goal Seek, Solver, Data Analysis) (#494)"
+      "commit": "642980b",
+      "commit_full": "642980b724a14afb182335e05f0d9f1be8b7bbe2",
+      "message": "Form controls: buttons, sliders and spin buttons, with Assign Action, Format Control and XLSX round trip (#481)"
     },
     "last_update": {
-      "ts": "2026-11-02T20:23:18Z",
+      "ts": "2026-11-05T03:16:46Z",
       "kind": "content",
-      "commit": "7bb397a",
-      "commit_full": "7bb397a3c1015e2a445edcd8feb01789850f4bdd",
-      "message": "UI: RefEdit reference boxes in dialogs (Goal Seek, Solver, Data Analysis) (#494)"
+      "commit": "642980b",
+      "commit_full": "642980b724a14afb182335e05f0d9f1be8b7bbe2",
+      "message": "Form controls: buttons, sliders and spin buttons, with Assign Action, Format Control and XLSX round trip (#481)"
     },
     "self_reported": "2026-11-02"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.4,
-    "active_days_7d": 6,
-    "changes_7d": 140,
-    "changes_14d": 236,
+    "score": 19.0,
+    "active_days_7d": 7,
+    "changes_7d": 142,
+    "changes_14d": 238,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-04T23:30:08Z",
-      "commit": "919a6b5",
-      "commit_full": "919a6b58fe6661de27af0609d02443ac9db467bf",
-      "subject": "link: require confirmation for programmatic link.open (#2181) (#2203)"
+      "ts": "2026-11-05T03:33:46Z",
+      "commit": "ede12f9",
+      "commit_full": "ede12f9da631c4cbfe9253ab633be44e5eb356a7",
+      "subject": "About: credits tables fit without side-scrolling and their columns resize (#3320)"
     },
-    "last_commit_ts": "2026-11-04T23:30:08Z",
+    "last_commit_ts": "2026-11-05T03:33:46Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       29,
@@ -491,7 +491,7 @@
       16,
       36,
       16,
-      0
+      2
     ],
     "days": [
       {
@@ -978,6 +978,21 @@
           {
             "commit": "632e4a1",
             "subject": "formula, calc: LET/LAMBDA names looked up through a map; ragged array literals refused before reserving (#3312)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-05",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "ede12f9",
+            "subject": "About: credits tables fit without side-scrolling and their columns resize (#3320)"
+          },
+          {
+            "commit": "642980b",
+            "subject": "Form controls: buttons, sliders and spin buttons, with Assign Action, Format Control and XLSX round trip (#481)"
           }
         ]
       }
@@ -3191,7 +3206,30 @@
       "breadth_pct": 75.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "642980b",
+      "commit_full": "642980b724a14afb182335e05f0d9f1be8b7bbe2",
+      "commit_date": "2026-11-05T04:16:46+01:00",
+      "ts": "2026-11-05T03:16:46Z",
+      "message": "Form controls: buttons, sliders and spin buttons, with Assign Action, Format Control and XLSX round trip (#481)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-02",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T01:37:33+00:00"
+  "updated_at": "2026-11-05T03:40:20+00:00"
 }
