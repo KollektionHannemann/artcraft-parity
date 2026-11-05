@@ -377,16 +377,16 @@
     "level": "buzzing",
     "score": 22.2,
     "active_days_7d": 7,
-    "changes_7d": 129,
-    "changes_14d": 321,
+    "changes_7d": 130,
+    "changes_14d": 322,
     "housekeeping_7d": 10,
     "last_code_change": {
-      "ts": "2026-11-05T21:49:52Z",
-      "commit": "e55e2f3",
-      "commit_full": "e55e2f3577ad08cb5ff84779a4eee1b8003bf98f",
-      "subject": "Place decodes and fits in the background: dropping a large file no longer freezes the window (#10147)"
+      "ts": "2026-11-05T22:34:12Z",
+      "commit": "e4e2607",
+      "commit_full": "e4e2607c85eb8c293633fc566b96f040e4152da7",
+      "subject": "Preview spot inks over the RGB/CMYK composite as an overprint (#10276)"
     },
-    "last_commit_ts": "2026-11-05T21:49:52Z",
+    "last_commit_ts": "2026-11-05T22:34:12Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       89,
@@ -402,7 +402,7 @@
       7,
       24,
       27,
-      45
+      46
     ],
     "days": [
       {
@@ -1091,9 +1091,13 @@
       },
       {
         "d": "2026-11-05",
-        "code": 45,
+        "code": 46,
         "other": 2,
         "samples": [
+          {
+            "commit": "e4e2607",
+            "subject": "Preview spot inks over the RGB/CMYK composite as an overprint (#10276)"
+          },
           {
             "commit": "e55e2f3",
             "subject": "Place decodes and fits in the background: dropping a large file no longer freezes the window (#10147)"
@@ -1101,10 +1105,6 @@
           {
             "commit": "5c157e8",
             "subject": "Build the GPU compositor off the UI thread (#9969)"
-          },
-          {
-            "commit": "c441fd3",
-            "subject": "perf(paint): sampled, textured and wet-edge dabs rasterize on all cores (#11369)"
           }
         ]
       }
@@ -1526,5 +1526,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T22:15:34+00:00"
+  "updated_at": "2026-11-05T23:06:49+00:00"
 }
