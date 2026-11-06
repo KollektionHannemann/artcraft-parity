@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "8c57b07",
-  "latest_commit_date": "2026-11-06T00:27:28+01:00",
-  "latest_message": "Status bar: the live count shows words, characters, or characters without spaces (#3187)",
+  "latest_commit": "ae0692e",
+  "latest_commit_date": "2026-11-06T02:33:02+01:00",
+  "latest_message": "Layout: avoid repeated text-box lookups during page drawing (#4837)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 499,
+    "revisions_since": 502,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 503,
-    "revisions_7d": 64,
+    "revisions": 506,
+    "revisions_7d": 67,
     "last_revision": {
-      "ts": "2026-11-05T23:27:28Z",
+      "ts": "2026-11-06T01:33:02Z",
       "kind": "content",
-      "commit": "8c57b07",
-      "commit_full": "8c57b0775ce70736047db6d291ae77c53b27da7c",
-      "message": "Status bar: the live count shows words, characters, or characters without spaces (#3187)"
+      "commit": "ae0692e",
+      "commit_full": "ae0692ee663200ed7b7b247b27a0c65711015d72",
+      "message": "Layout: avoid repeated text-box lookups during page drawing (#4837)"
     },
     "last_update": {
-      "ts": "2026-11-05T23:27:28Z",
+      "ts": "2026-11-06T01:33:02Z",
       "kind": "content",
-      "commit": "8c57b07",
-      "commit_full": "8c57b0775ce70736047db6d291ae77c53b27da7c",
-      "message": "Status bar: the live count shows words, characters, or characters without spaces (#3187)"
+      "commit": "ae0692e",
+      "commit_full": "ae0692ee663200ed7b7b247b27a0c65711015d72",
+      "message": "Layout: avoid repeated text-box lookups during page drawing (#4837)"
     },
     "self_reported": "2026-11-05"
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 18.5,
-    "active_days_7d": 6,
-    "changes_7d": 136,
-    "changes_14d": 282,
+    "level": "buzzing",
+    "score": 20.5,
+    "active_days_7d": 7,
+    "changes_7d": 139,
+    "changes_14d": 285,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-05T23:27:28Z",
-      "commit": "8c57b07",
-      "commit_full": "8c57b0775ce70736047db6d291ae77c53b27da7c",
-      "subject": "Status bar: the live count shows words, characters, or characters without spaces (#3187)"
+      "ts": "2026-11-06T01:33:02Z",
+      "commit": "ae0692e",
+      "commit_full": "ae0692ee663200ed7b7b247b27a0c65711015d72",
+      "subject": "Layout: avoid repeated text-box lookups during page drawing (#4837)"
     },
-    "last_commit_ts": "2026-11-05T23:27:28Z",
+    "last_commit_ts": "2026-11-06T01:33:02Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       22,
@@ -568,7 +568,7 @@
       19,
       32,
       43,
-      0
+      3
     ],
     "days": [
       {
@@ -1100,6 +1100,25 @@
           {
             "commit": "35e960c",
             "subject": "Align ordinary tabs with paragraph alignment (#3915)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-06",
+        "code": 3,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "ae0692e",
+            "subject": "Layout: avoid repeated text-box lookups during page drawing (#4837)"
+          },
+          {
+            "commit": "4a48a58",
+            "subject": "References: index source lookups during citation refresh (#4890)"
+          },
+          {
+            "commit": "9a92469",
+            "subject": "Layout: Times and Courier take Times New Roman's and Courier New's line spacing (#3241)"
           }
         ]
       }
@@ -12899,7 +12918,76 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "9a92469",
+      "commit_full": "9a9246915c14d51903316abf15e6628dbe67a00a",
+      "commit_date": "2026-11-06T02:03:34+01:00",
+      "ts": "2026-11-06T01:03:34Z",
+      "message": "Layout: Times and Courier take Times New Roman's and Courier New's line spacing (#3241)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-05",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "4a48a58",
+      "commit_full": "4a48a584966dc205f39c9d084d028c4adcca3385",
+      "commit_date": "2026-11-06T02:18:01+01:00",
+      "ts": "2026-11-06T01:18:01Z",
+      "message": "References: index source lookups during citation refresh (#4890)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-05",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "ae0692e",
+      "commit_full": "ae0692ee663200ed7b7b247b27a0c65711015d72",
+      "commit_date": "2026-11-06T02:33:02+01:00",
+      "ts": "2026-11-06T01:33:02Z",
+      "message": "Layout: avoid repeated text-box lookups during page drawing (#4837)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-05",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-06T00:01:32+00:00"
+  "updated_at": "2026-11-06T01:39:33+00:00"
 }

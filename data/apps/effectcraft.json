@@ -378,18 +378,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.4,
-    "active_days_7d": 6,
-    "changes_7d": 122,
-    "changes_14d": 384,
+    "score": 18.0,
+    "active_days_7d": 7,
+    "changes_7d": 124,
+    "changes_14d": 386,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-05T23:20:44Z",
-      "commit": "3768ff4",
-      "commit_full": "3768ff40a300758e9055ab87bfaaeea6d4bd774e",
-      "subject": ".aep import: read effect values stored as default-state records (#3134)"
+      "ts": "2026-11-06T01:26:23Z",
+      "commit": "3102b6e",
+      "commit_full": "3102b6e6324fa9f782c8e1b14bd070b84214e07f",
+      "subject": "Render Queue OpenEXR: choose compression and half or 32-bit float (#2915)"
     },
-    "last_commit_ts": "2026-11-05T23:20:44Z",
+    "last_commit_ts": "2026-11-06T01:26:23Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       5,
@@ -405,7 +405,7 @@
       46,
       4,
       15,
-      0
+      2
     ],
     "days": [
       {
@@ -1038,6 +1038,21 @@
             "subject": "EXR export: no compand / tone mapping, and the output space's own curve (#2913) (#2916)"
           }
         ]
+      },
+      {
+        "d": "2026-11-06",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "3102b6e",
+            "subject": "Render Queue OpenEXR: choose compression and half or 32-bit float (#2915)"
+          },
+          {
+            "commit": "e201089",
+            "subject": "Cryptomatte: Matte Only puts the matte in RGB with alpha 1, as After Effects does (#3130)"
+          }
+        ]
       }
     ]
   },
@@ -1595,5 +1610,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-06T00:01:18+00:00"
+  "updated_at": "2026-11-06T01:39:19+00:00"
 }
