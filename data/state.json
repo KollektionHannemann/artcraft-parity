@@ -990,10 +990,12 @@
       "15de36614b2d1039ed68bffcc36e0e92053b3f12",
       "17e420047943de5a28aac326b27d4464b833c12b",
       "19b2fea8e842cb98a07ab10ddd69b1bf5475e841",
+      "1a694a9d2d58b81cc21a169bfe45775bd2ce9f31",
       "1d66a6ba4b0e1de161b18ced8fc4c4504b2153d1",
       "1dcb46b2f8eeea58fa57aecc45fafd5a0d1a8318",
       "1fbff715b5175c68089c44e47799856f6418ef5a",
       "2122a619e946acd445c156561996a51a1258d877",
+      "2271338ae89ef3a74544895e3175753ad155891a",
       "2546042d4cf2353e3d82c09ee6edfd920e6f203a",
       "257476e396de232d287e3e473b4f0e5e6caf5fd1",
       "26bf3635f104616ada952bcef9adfd80c95232b3",
@@ -1027,6 +1029,8 @@
       "48759fb5fccde45405c2db29d162ac55edbc6562",
       "489f2976b438ea9ec7187f1f178fd48856fc5ef4",
       "4d6e3b01bfe11895758138fbabbe4ed97d3de032",
+      "4ffa36505930d016d6b3e520f0ff5b8f51dfc4f3",
+      "50829156e20246968b017b4ec0ecc42647de8c60",
       "512ff768189bade427b301883967b19d6fcaa8a5",
       "5a45b3cd781110ece57c16f369fdf6fd4684d0e4",
       "5a65542b88d1063f9dff2898952a76c8226ba494",
@@ -1049,6 +1053,7 @@
       "6e9fc1a3d2b884b6a5ffd554eb562b9235f0792e",
       "73fe0b661b3f220fb36fe9ecb03eb837730d455e",
       "75bf5a3f0df284296cba16500352b2eb9a805932",
+      "785539196a1863ee1a49c8cb69639d02f385bbbe",
       "78e1f7dce0e440b514c4673ba0b91c42b7903d27",
       "7a0d7de0e4343dac35acb58cc64d021febcb7157",
       "7c158c77cdfa808320f91bf8fc51f5a89901794d",
@@ -1369,7 +1374,7 @@
     "craft-libs": "2026-11-06",
     "craft-common-actions": "2026-11-06",
     "craft-launcher-assets": "2026-11-06",
-    "AniCraft": "2026-11-03",
+    "AniCraft": "2026-11-06",
     "crafthub": "2026-11-06",
     "craft-contrib": "2026-11-06",
     "craft-ai-integrations": "2026-11-06",
@@ -1421,6 +1426,23 @@
   },
   "releases": {
     "photocraft": [
+      {
+        "tag": "v0.21.0",
+        "name": "PhotoCraft v0.21.0",
+        "ts": "2026-11-06T20:22:03Z",
+        "url": "https://github.com/storytold/photocraft/releases/tag/v0.21.0",
+        "changes": 219,
+        "new_contributors": 19,
+        "platforms": [
+          "macOS",
+          "Windows",
+          "Linux",
+          "Web"
+        ],
+        "prerelease": false,
+        "source": "release",
+        "kind": "minor"
+      },
       {
         "tag": "v0.20.2",
         "name": "PhotoCraft v0.20.2",
@@ -1606,15 +1628,17 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
-      },
+        "kind": null
+      }
+    ],
+    "vectorcraft": [
       {
-        "tag": "v0.10.0",
-        "name": "PhotoCraft v0.10.0",
-        "ts": "2026-10-18T04:01:42Z",
-        "url": "https://github.com/storytold/photocraft/releases/tag/v0.10.0",
-        "changes": 263,
-        "new_contributors": 28,
+        "tag": "v0.22.0",
+        "name": "VectorCraft v0.22.0",
+        "ts": "2026-11-06T20:22:17Z",
+        "url": "https://github.com/storytold/vectorcraft/releases/tag/v0.22.0",
+        "changes": 495,
+        "new_contributors": 15,
         "platforms": [
           "macOS",
           "Windows",
@@ -1623,10 +1647,8 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": null
-      }
-    ],
-    "vectorcraft": [
+        "kind": "minor"
+      },
       {
         "tag": "v0.21.1",
         "name": "VectorCraft v0.21.1",
@@ -1812,15 +1834,17 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
-      },
+        "kind": null
+      }
+    ],
+    "filmcraft": [
       {
-        "tag": "v0.11.0",
-        "name": "VectorCraft v0.11.0",
-        "ts": "2026-10-14T14:54:46Z",
-        "url": "https://github.com/storytold/vectorcraft/releases/tag/v0.11.0",
-        "changes": 248,
-        "new_contributors": 17,
+        "tag": "v0.18.0",
+        "name": "FilmCraft v0.18.0",
+        "ts": "2026-11-06T20:21:40Z",
+        "url": "https://github.com/storytold/filmcraft/releases/tag/v0.18.0",
+        "changes": 91,
+        "new_contributors": 12,
         "platforms": [
           "macOS",
           "Windows",
@@ -1829,10 +1853,8 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": null
-      }
-    ],
-    "filmcraft": [
+        "kind": "minor"
+      },
       {
         "tag": "v0.17.1",
         "name": "FilmCraft v0.17.1",
@@ -2018,15 +2040,17 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
-      },
+        "kind": null
+      }
+    ],
+    "lightcraft": [
       {
-        "tag": "v0.7.2",
-        "name": "FilmCraft v0.7.2",
-        "ts": "2026-10-12T21:22:57Z",
-        "url": "https://github.com/storytold/filmcraft/releases/tag/v0.7.2",
-        "changes": 136,
-        "new_contributors": 16,
+        "tag": "v0.19.0",
+        "name": "LightCraft v0.19.0",
+        "ts": "2026-11-06T20:21:50Z",
+        "url": "https://github.com/storytold/lightcraft/releases/tag/v0.19.0",
+        "changes": 99,
+        "new_contributors": 8,
         "platforms": [
           "macOS",
           "Windows",
@@ -2035,10 +2059,8 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": null
-      }
-    ],
-    "lightcraft": [
+        "kind": "minor"
+      },
       {
         "tag": "v0.18.1",
         "name": "LightCraft v0.18.1",
@@ -2224,15 +2246,17 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
-      },
+        "kind": null
+      }
+    ],
+    "pdfcraft": [
       {
-        "tag": "v0.8.0",
-        "name": "LightCraft v0.8.0",
-        "ts": "2026-10-14T15:30:00Z",
-        "url": "https://github.com/storytold/lightcraft/releases/tag/v0.8.0",
-        "changes": 167,
-        "new_contributors": 27,
+        "tag": "v0.19.0",
+        "name": "PdfCraft v0.19.0",
+        "ts": "2026-11-06T20:21:58Z",
+        "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.19.0",
+        "changes": 71,
+        "new_contributors": 4,
         "platforms": [
           "macOS",
           "Windows",
@@ -2241,10 +2265,8 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": null
-      }
-    ],
-    "pdfcraft": [
+        "kind": "minor"
+      },
       {
         "tag": "v0.18.2",
         "name": "PdfCraft v0.18.2",
@@ -2430,15 +2452,17 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
-      },
+        "kind": null
+      }
+    ],
+    "effectcraft": [
       {
-        "tag": "v0.9.0",
-        "name": "PdfCraft v0.9.0",
-        "ts": "2026-10-18T03:55:00Z",
-        "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.9.0",
-        "changes": 220,
-        "new_contributors": 38,
+        "tag": "v0.22.0",
+        "name": "EffectCraft v0.22.0",
+        "ts": "2026-11-06T20:26:02Z",
+        "url": "https://github.com/storytold/effectcraft/releases/tag/v0.22.0",
+        "changes": 95,
+        "new_contributors": 11,
         "platforms": [
           "macOS",
           "Windows",
@@ -2447,10 +2471,8 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": null
-      }
-    ],
-    "effectcraft": [
+        "kind": "minor"
+      },
       {
         "tag": "v0.21.1",
         "name": "EffectCraft v0.21.1",
@@ -2636,15 +2658,17 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
-      },
+        "kind": null
+      }
+    ],
+    "designcraft": [
       {
-        "tag": "v0.10.0",
-        "name": "EffectCraft v0.10.0",
-        "ts": "2026-10-14T16:16:19Z",
-        "url": "https://github.com/storytold/effectcraft/releases/tag/v0.10.0",
-        "changes": 101,
-        "new_contributors": 12,
+        "tag": "v0.18.0",
+        "name": "DesignCraft v0.18.0",
+        "ts": "2026-11-06T20:21:31Z",
+        "url": "https://github.com/storytold/designcraft/releases/tag/v0.18.0",
+        "changes": 14,
+        "new_contributors": 2,
         "platforms": [
           "macOS",
           "Windows",
@@ -2653,10 +2677,8 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": null
-      }
-    ],
-    "designcraft": [
+        "kind": "minor"
+      },
       {
         "tag": "v0.17.2",
         "name": "DesignCraft v0.17.2",
@@ -2842,15 +2864,17 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
-      },
+        "kind": null
+      }
+    ],
+    "figcraft": [
       {
-        "tag": "v0.8.0",
-        "name": "DesignCraft v0.8.0",
-        "ts": "2026-10-14T14:15:00Z",
-        "url": "https://github.com/storytold/designcraft/releases/tag/v0.8.0",
-        "changes": 57,
-        "new_contributors": 9,
+        "tag": "v0.16.0",
+        "name": "FigCraft v0.16.0",
+        "ts": "2026-11-06T20:21:35Z",
+        "url": "https://github.com/storytold/figcraft/releases/tag/v0.16.0",
+        "changes": 49,
+        "new_contributors": 3,
         "platforms": [
           "macOS",
           "Windows",
@@ -2859,10 +2883,8 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": null
-      }
-    ],
-    "figcraft": [
+        "kind": "minor"
+      },
       {
         "tag": "v0.15.1",
         "name": "FigCraft v0.15.1",
@@ -3048,15 +3070,17 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
-      },
+        "kind": null
+      }
+    ],
+    "wordcraft": [
       {
-        "tag": "v0.5.1",
-        "name": "FigCraft v0.5.1",
-        "ts": "2026-10-12T15:51:49Z",
-        "url": "https://github.com/storytold/figcraft/releases/tag/v0.5.1",
-        "changes": 5,
-        "new_contributors": null,
+        "tag": "v0.16.0",
+        "name": "WordCraft v0.16.0",
+        "ts": "2026-11-06T20:22:22Z",
+        "url": "https://github.com/storytold/wordcraft/releases/tag/v0.16.0",
+        "changes": 93,
+        "new_contributors": 9,
         "platforms": [
           "macOS",
           "Windows",
@@ -3065,10 +3089,8 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": null
-      }
-    ],
-    "wordcraft": [
+        "kind": "minor"
+      },
       {
         "tag": "v0.15.2",
         "name": "WordCraft v0.15.2",
@@ -3254,15 +3276,17 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
-      },
+        "kind": null
+      }
+    ],
+    "soundcraft": [
       {
-        "tag": "v0.6.1",
-        "name": "WordCraft v0.6.1",
-        "ts": "2026-10-12T16:22:15Z",
-        "url": "https://github.com/storytold/wordcraft/releases/tag/v0.6.1",
-        "changes": 221,
-        "new_contributors": 39,
+        "tag": "v0.18.0",
+        "name": "SoundCraft v0.18.0",
+        "ts": "2026-11-06T20:22:08Z",
+        "url": "https://github.com/storytold/soundcraft/releases/tag/v0.18.0",
+        "changes": 34,
+        "new_contributors": 6,
         "platforms": [
           "macOS",
           "Windows",
@@ -3271,10 +3295,8 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": null
-      }
-    ],
-    "soundcraft": [
+        "kind": "minor"
+      },
       {
         "tag": "v0.17.1",
         "name": "SoundCraft v0.17.1",
@@ -3460,15 +3482,17 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
-      },
+        "kind": null
+      }
+    ],
+    "deckcraft": [
       {
-        "tag": "v0.6.1",
-        "name": "SoundCraft v0.6.1",
-        "ts": "2026-10-12T15:57:05Z",
-        "url": "https://github.com/storytold/soundcraft/releases/tag/v0.6.1",
-        "changes": 42,
-        "new_contributors": 7,
+        "tag": "v0.16.0",
+        "name": "DeckCraft v0.16.0",
+        "ts": "2026-11-06T20:21:27Z",
+        "url": "https://github.com/storytold/deckcraft/releases/tag/v0.16.0",
+        "changes": 72,
+        "new_contributors": 6,
         "platforms": [
           "macOS",
           "Windows",
@@ -3477,10 +3501,8 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": null
-      }
-    ],
-    "deckcraft": [
+        "kind": "minor"
+      },
       {
         "tag": "v0.15.1",
         "name": "DeckCraft v0.15.1",
@@ -3666,15 +3688,17 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
-      },
+        "kind": null
+      }
+    ],
+    "cadcraft": [
       {
-        "tag": "v0.5.0",
-        "name": "DeckCraft v0.5.0",
-        "ts": "2026-10-11T01:17:33Z",
-        "url": "https://github.com/storytold/deckcraft/releases/tag/v0.5.0",
-        "changes": 18,
-        "new_contributors": 5,
+        "tag": "v0.18.0",
+        "name": "CADCraft v0.18.0",
+        "ts": "2026-11-06T20:21:13Z",
+        "url": "https://github.com/storytold/cadcraft/releases/tag/v0.18.0",
+        "changes": 69,
+        "new_contributors": 9,
         "platforms": [
           "macOS",
           "Windows",
@@ -3683,10 +3707,8 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": null
-      }
-    ],
-    "cadcraft": [
+        "kind": "minor"
+      },
       {
         "tag": "v0.17.1",
         "name": "CADCraft v0.17.1",
@@ -3872,15 +3894,17 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
-      },
+        "kind": null
+      }
+    ],
+    "gridcraft": [
       {
-        "tag": "v0.6.2",
-        "name": "CADCraft v0.6.2",
-        "ts": "2026-10-12T16:40:01Z",
-        "url": "https://github.com/storytold/cadcraft/releases/tag/v0.6.2",
-        "changes": 153,
-        "new_contributors": 20,
+        "tag": "v0.17.0",
+        "name": "GridCraft v0.17.0",
+        "ts": "2026-11-06T20:21:45Z",
+        "url": "https://github.com/storytold/gridcraft/releases/tag/v0.17.0",
+        "changes": 60,
+        "new_contributors": 7,
         "platforms": [
           "macOS",
           "Windows",
@@ -3889,10 +3913,8 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": null
-      }
-    ],
-    "gridcraft": [
+        "kind": "minor"
+      },
       {
         "tag": "v0.16.1",
         "name": "GridCraft v0.16.1",
@@ -4078,15 +4100,17 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
-      },
+        "kind": null
+      }
+    ],
+    "texturecraft": [
       {
-        "tag": "v0.6.1",
-        "name": "GridCraft v0.6.1",
-        "ts": "2026-10-12T17:07:30Z",
-        "url": "https://github.com/storytold/gridcraft/releases/tag/v0.6.1",
-        "changes": 124,
-        "new_contributors": 26,
+        "tag": "v0.4.0",
+        "name": "TextureCraft v0.4.0",
+        "ts": "2026-11-06T20:22:12Z",
+        "url": "https://github.com/storytold/texturecraft/releases/tag/v0.4.0",
+        "changes": 17,
+        "new_contributors": 2,
         "platforms": [
           "macOS",
           "Windows",
@@ -4095,10 +4119,8 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": null
-      }
-    ],
-    "texturecraft": [
+        "kind": "minor"
+      },
       {
         "tag": "v0.3.2",
         "name": "TextureCraft v0.3.2",
@@ -4187,6 +4209,23 @@
     ],
     "materialcraft": [
       {
+        "tag": "v0.2.0",
+        "name": "MaterialCraft v0.2.0",
+        "ts": "2026-11-06T20:21:54Z",
+        "url": "https://github.com/storytold/materialcraft/releases/tag/v0.2.0",
+        "changes": 63,
+        "new_contributors": 11,
+        "platforms": [
+          "macOS",
+          "Windows",
+          "Linux",
+          "Web"
+        ],
+        "prerelease": false,
+        "source": "release",
+        "kind": "minor"
+      },
+      {
         "tag": "v0.1.2",
         "name": "MaterialCraft v0.1.2",
         "ts": "2026-11-05T01:24:43Z",
@@ -4239,6 +4278,23 @@
       }
     ],
     "craft-anything": [
+      {
+        "tag": "v0.5.0",
+        "name": "Craft Anything v0.5.0",
+        "ts": "2026-11-06T20:21:17Z",
+        "url": "https://github.com/storytold/craft-anything/releases/tag/v0.5.0",
+        "changes": 60,
+        "new_contributors": 13,
+        "platforms": [
+          "macOS",
+          "Windows",
+          "Linux",
+          "Web"
+        ],
+        "prerelease": false,
+        "source": "release",
+        "kind": "minor"
+      },
       {
         "tag": "v0.4.0",
         "name": "Craft Anything v0.4.0",
@@ -4513,7 +4569,8 @@
         "source": "release",
         "kind": null
       }
-    ]
+    ],
+    "AniCraft": []
   },
   "schema": 3,
   "catalog_sources": {
@@ -4755,11 +4812,6 @@
     ]
   },
   "discovery_candidates": {
-    "AniCraft": {
-      "id": "AniCraft",
-      "repo": "storytold/AniCraft",
-      "reason": "Empty repository; no published app yet"
-    },
     "autocraft": {
       "id": "autocraft",
       "repo": "storytold/autocraft",
@@ -4771,11 +4823,6 @@
     "tracked_from_catalog": 17,
     "missing": [],
     "candidates": [
-      {
-        "id": "AniCraft",
-        "repo": "storytold/AniCraft",
-        "reason": "Empty repository; no published app yet"
-      },
       {
         "id": "autocraft",
         "repo": "storytold/autocraft",
@@ -4868,6 +4915,11 @@
       "tangency-labs/solidcraft",
       "main",
       "ROADMAP.md"
+    ],
+    "AniCraft": [
+      "storytold/AniCraft",
+      "main",
+      null
     ]
   }
 }

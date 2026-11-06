@@ -380,16 +380,16 @@
     "level": "buzzing",
     "score": 21.4,
     "active_days_7d": 7,
-    "changes_7d": 152,
-    "changes_14d": 414,
+    "changes_7d": 153,
+    "changes_14d": 415,
     "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-06T19:26:58Z",
-      "commit": "4d21269",
-      "commit_full": "4d21269adb221cd1a137f6d838af33e09a2fd32b",
-      "subject": "Display pass tests: a virtual GPU gets the software tolerance (#3182)"
+      "ts": "2026-11-06T20:22:40Z",
+      "commit": "69114a8",
+      "commit_full": "69114a8294e94072f7de5f5f71004b8cc313dc99",
+      "subject": "Roto Brush: per-split scratch vectors in the parallel distance transform (#2333)"
     },
-    "last_commit_ts": "2026-11-06T19:26:58Z",
+    "last_commit_ts": "2026-11-06T20:22:40Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       5,
@@ -405,7 +405,7 @@
       46,
       4,
       15,
-      30
+      31
     ],
     "days": [
       {
@@ -1041,9 +1041,13 @@
       },
       {
         "d": "2026-11-06",
-        "code": 30,
+        "code": 31,
         "other": 1,
         "samples": [
+          {
+            "commit": "69114a8",
+            "subject": "Roto Brush: per-split scratch vectors in the parallel distance transform (#2333)"
+          },
           {
             "commit": "4d21269",
             "subject": "Display pass tests: a virtual GPU gets the software tolerance (#3182)"
@@ -1051,16 +1055,29 @@
           {
             "commit": "4465c0e",
             "subject": "EXR golden test: compare samples near, not bit for bit (#3181)"
-          },
-          {
-            "commit": "5047d8b",
-            "subject": "Posterize on the GPU: divide by the levels exactly, as the CPU does (#3179)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.22.0",
+      "name": "EffectCraft v0.22.0",
+      "ts": "2026-11-06T20:26:02Z",
+      "url": "https://github.com/storytold/effectcraft/releases/tag/v0.22.0",
+      "changes": 95,
+      "new_contributors": 11,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.21.1",
       "name": "EffectCraft v0.21.1",
@@ -1238,23 +1255,6 @@
       "url": "https://github.com/storytold/effectcraft/releases/tag/v0.11.1",
       "changes": 80,
       "new_contributors": 11,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.10.0",
-      "name": "EffectCraft v0.10.0",
-      "ts": "2026-10-14T16:16:19Z",
-      "url": "https://github.com/storytold/effectcraft/releases/tag/v0.10.0",
-      "changes": 101,
-      "new_contributors": 12,
       "platforms": [
         "macOS",
         "Windows",
@@ -1614,5 +1614,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-06T19:40:53+00:00"
+  "updated_at": "2026-11-06T20:32:28+00:00"
 }
