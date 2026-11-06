@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "a0cd993",
-  "latest_commit_date": "2026-11-06T23:30:35+08:00",
-  "latest_message": "Keep the model discovery test from depending on OpenCode being installed (#980)",
+  "latest_commit": "9201a67",
+  "latest_commit_date": "2026-11-07T00:31:26+08:00",
+  "latest_message": "Record idle CPU on an AMD Radeon: a core in AMD's driver on DX12 and Vulkan, none on GL (#993)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 131,
-    "revisions_7d": 131,
+    "revisions": 149,
+    "revisions_7d": 149,
     "last_revision": {
-      "ts": "2026-11-06T15:30:35Z",
+      "ts": "2026-11-06T16:31:26Z",
       "kind": "content",
-      "commit": "a0cd993",
-      "commit_full": "a0cd99325d2d2fcba0f12ad3a29a708a84a63283",
-      "message": "Keep the model discovery test from depending on OpenCode being installed (#980)"
+      "commit": "9201a67",
+      "commit_full": "9201a67f3850b09d3314164964a25ffc390dad55",
+      "message": "Record idle CPU on an AMD Radeon: a core in AMD's driver on DX12 and Vulkan, none on GL (#993)"
     },
     "last_update": {
-      "ts": "2026-11-06T15:30:35Z",
+      "ts": "2026-11-06T16:31:26Z",
       "kind": "content",
-      "commit": "a0cd993",
-      "commit_full": "a0cd99325d2d2fcba0f12ad3a29a708a84a63283",
-      "message": "Keep the model discovery test from depending on OpenCode being installed (#980)"
+      "commit": "9201a67",
+      "commit_full": "9201a67f3850b09d3314164964a25ffc390dad55",
+      "message": "Record idle CPU on an AMD Radeon: a core in AMD's driver on DX12 and Vulkan, none on GL (#993)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.2,
+    "score": 19.1,
     "active_days_7d": 7,
-    "changes_7d": 334,
-    "changes_14d": 334,
-    "housekeeping_7d": 26,
+    "changes_7d": 359,
+    "changes_14d": 359,
+    "housekeeping_7d": 33,
     "last_code_change": {
-      "ts": "2026-11-06T15:30:35Z",
-      "commit": "a0cd993",
-      "commit_full": "a0cd99325d2d2fcba0f12ad3a29a708a84a63283",
-      "subject": "Keep the model discovery test from depending on OpenCode being installed (#980)"
+      "ts": "2026-11-06T16:32:46Z",
+      "commit": "3c5092a",
+      "commit_full": "3c5092a6c58110f4ce45d1398445432184419d99",
+      "subject": "Send a tool call's thought signature back to Gemini, and show errors it wraps in an array (#991)"
     },
-    "last_commit_ts": "2026-11-06T15:30:35Z",
+    "last_commit_ts": "2026-11-06T16:32:46Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       88,
       49,
       1,
-      3
+      28
     ],
     "days": [
       {
@@ -204,20 +204,20 @@
       },
       {
         "d": "2026-11-06",
-        "code": 3,
-        "other": 0,
+        "code": 28,
+        "other": 7,
         "samples": [
           {
-            "commit": "a0cd993",
-            "subject": "Keep the model discovery test from depending on OpenCode being installed (#980)"
+            "commit": "3c5092a",
+            "subject": "Send a tool call's thought signature back to Gemini, and show errors it wraps in an array (#991)"
           },
           {
-            "commit": "ccfb5d4",
-            "subject": "Stabilize loopback request and cancellation fixtures (#767)"
+            "commit": "a389ac0",
+            "subject": "Tell the builder what was asked in Just ask when the next message comes (#934)"
           },
           {
-            "commit": "92109f0",
-            "subject": "Give native OpenCode runs the Craft Anything tools and show their tool calls (#800)"
+            "commit": "c858a61",
+            "subject": "Find browsers under their other Linux names, and say why one isn't found (#927)"
           }
         ]
       }
@@ -1210,8 +1210,134 @@
       "commit": "a0cd993",
       "commit_full": "a0cd99325d2d2fcba0f12ad3a29a708a84a63283",
       "message": "Keep the model discovery test from depending on OpenCode being installed (#980)"
+    },
+    {
+      "ts": "2026-11-06T15:34:51Z",
+      "kind": "content",
+      "commit": "8a587bc",
+      "commit_full": "8a587bc0b3ad366cc5651b7646e8d729480c2fab",
+      "message": "Start the Advanced console's prompt box at three lines (#979)"
+    },
+    {
+      "ts": "2026-11-06T15:40:09Z",
+      "kind": "content",
+      "commit": "6e0978a",
+      "commit_full": "6e0978a08598ef0e46a81b29c11471dac23cd95b",
+      "message": "Stop counting a video or music player as a game (#970)"
+    },
+    {
+      "ts": "2026-11-06T15:59:51Z",
+      "kind": "content",
+      "commit": "fb54699",
+      "commit_full": "fb546998b084d183f3572ac2d8451c964548800a",
+      "message": "Compare remote query test paths canonically on macOS (#949)"
+    },
+    {
+      "ts": "2026-11-06T16:00:26Z",
+      "kind": "content",
+      "commit": "30ebeb8",
+      "commit_full": "30ebeb8a24a583150ac0e45caf30bde4aa53a655",
+      "message": "Keep zoom between 50% and 200% (#908)"
+    },
+    {
+      "ts": "2026-11-06T16:00:35Z",
+      "kind": "content",
+      "commit": "4041784",
+      "commit_full": "4041784fcb39de83f289694f9731d0887ae5146f",
+      "message": "Keep the Advanced console's status clear of its tabs when narrow (#984)"
+    },
+    {
+      "ts": "2026-11-06T16:06:58Z",
+      "kind": "content",
+      "commit": "ba91c9f",
+      "commit_full": "ba91c9fbf90b030c6bc3626baf365dab6c8d746e",
+      "message": "Report a denied macOS Accessibility permission as an error (#887)"
+    },
+    {
+      "ts": "2026-11-06T16:10:42Z",
+      "kind": "content",
+      "commit": "60409b6",
+      "commit_full": "60409b684c805482cfa3965fbc368bcc26de106d",
+      "message": "More format parsers keep to their declared lengths and refuse impossible values (#986)"
+    },
+    {
+      "ts": "2026-11-06T16:11:16Z",
+      "kind": "content",
+      "commit": "c84ab25",
+      "commit_full": "c84ab2585ebd8102088892ffe8b8fae0e4c4b324",
+      "message": "Record the Windows start-fallback live check (#911)"
+    },
+    {
+      "ts": "2026-11-06T16:11:24Z",
+      "kind": "content",
+      "commit": "19b2fea",
+      "commit_full": "19b2fea8e842cb98a07ab10ddd69b1bf5475e841",
+      "message": "Check packaged Deep builds before publishing a release (#982)"
+    },
+    {
+      "ts": "2026-11-06T16:20:45Z",
+      "kind": "content",
+      "commit": "843d56b",
+      "commit_full": "843d56b0315afdc9cd2b2a11bd7dc190ef0c01e8",
+      "message": "Hide the home scrollbar when scrolling is not needed (#988)"
+    },
+    {
+      "ts": "2026-11-06T16:21:42Z",
+      "kind": "content",
+      "commit": "7c158c7",
+      "commit_full": "7c158c77cdfa808320f91bf8fc51f5a89901794d",
+      "message": "Add Spanish, Italian and Vietnamese to the app's languages (#990)"
+    },
+    {
+      "ts": "2026-11-06T16:24:29Z",
+      "kind": "content",
+      "commit": "e2eff95",
+      "commit_full": "e2eff95784a173d15cab3efe56451974d424ed8a",
+      "message": "A hand-off that ends just before a kill reports its exit (#910)"
+    },
+    {
+      "ts": "2026-11-06T16:26:55Z",
+      "kind": "content",
+      "commit": "826d3f6",
+      "commit_full": "826d3f640bc2f736868a640030cd9bd062a13fa7",
+      "message": "Count cached tokens in usage.json (#958)"
+    },
+    {
+      "ts": "2026-11-06T16:29:22Z",
+      "kind": "content",
+      "commit": "9fc397e",
+      "commit_full": "9fc397e5157461c324603d62e2bdb162e5c41cdf",
+      "message": "Mark open plan steps as stopped when a run ends (#876)"
+    },
+    {
+      "ts": "2026-11-06T16:29:29Z",
+      "kind": "content",
+      "commit": "8314b7e",
+      "commit_full": "8314b7e12779cd70e11ef7bb448a7bb808970255",
+      "message": "Refuse a switched-off or unknown --backend name (#840)"
+    },
+    {
+      "ts": "2026-11-06T16:29:35Z",
+      "kind": "content",
+      "commit": "c858a61",
+      "commit_full": "c858a61c8d5ca8273349442e6d116c4ff5a05618",
+      "message": "Find browsers under their other Linux names, and say why one isn't found (#927)"
+    },
+    {
+      "ts": "2026-11-06T16:29:41Z",
+      "kind": "content",
+      "commit": "a389ac0",
+      "commit_full": "a389ac0d68147867db8c824d9e130de3dfb17c81",
+      "message": "Tell the builder what was asked in Just ask when the next message comes (#934)"
+    },
+    {
+      "ts": "2026-11-06T16:31:26Z",
+      "kind": "content",
+      "commit": "9201a67",
+      "commit_full": "9201a67f3850b09d3314164964a25ffc390dad55",
+      "message": "Record idle CPU on an AMD Radeon: a core in AMD's driver on DX12 and Vulkan, none on GL (#993)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-06T15:32:59+00:00"
+  "updated_at": "2026-11-06T16:37:24+00:00"
 }
