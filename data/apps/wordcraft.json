@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "035982e",
-  "latest_commit_date": "2026-11-06T08:52:57+01:00",
-  "latest_message": "Printing: the printer list doesn't wait on drivers, and a job stuck on its driver can be cancelled (#5710) (#5732)",
+  "latest_commit": "502256d",
+  "latest_commit_date": "2026-11-06T10:07:41+01:00",
+  "latest_message": "Layout: justified lines keep the width of the spaces before their first character (#4307)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 503,
+    "revisions_since": 504,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 507,
-    "revisions_7d": 68,
+    "revisions": 508,
+    "revisions_7d": 69,
     "last_revision": {
-      "ts": "2026-11-06T07:52:57Z",
+      "ts": "2026-11-06T09:07:41Z",
       "kind": "content",
-      "commit": "035982e",
-      "commit_full": "035982e34e15d8212b82960ee7fbf4a0dc1140a1",
-      "message": "Printing: the printer list doesn't wait on drivers, and a job stuck on its driver can be cancelled (#5710) (#5732)"
+      "commit": "502256d",
+      "commit_full": "502256d1257e7edece323b9ad3173a2ae1c0ae76",
+      "message": "Layout: justified lines keep the width of the spaces before their first character (#4307)"
     },
     "last_update": {
-      "ts": "2026-11-06T07:52:57Z",
+      "ts": "2026-11-06T09:07:41Z",
       "kind": "content",
-      "commit": "035982e",
-      "commit_full": "035982e34e15d8212b82960ee7fbf4a0dc1140a1",
-      "message": "Printing: the printer list doesn't wait on drivers, and a job stuck on its driver can be cancelled (#5710) (#5732)"
+      "commit": "502256d",
+      "commit_full": "502256d1257e7edece323b9ad3173a2ae1c0ae76",
+      "message": "Layout: justified lines keep the width of the spaces before their first character (#4307)"
     },
     "self_reported": "2026-11-06"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.8,
+    "score": 21.7,
     "active_days_7d": 7,
-    "changes_7d": 140,
-    "changes_14d": 286,
+    "changes_7d": 144,
+    "changes_14d": 290,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-06T07:52:57Z",
-      "commit": "035982e",
-      "commit_full": "035982e34e15d8212b82960ee7fbf4a0dc1140a1",
-      "subject": "Printing: the printer list doesn't wait on drivers, and a job stuck on its driver can be cancelled (#5710) (#5732)"
+      "ts": "2026-11-06T09:07:41Z",
+      "commit": "502256d",
+      "commit_full": "502256d1257e7edece323b9ad3173a2ae1c0ae76",
+      "subject": "Layout: justified lines keep the width of the spaces before their first character (#4307)"
     },
-    "last_commit_ts": "2026-11-06T07:52:57Z",
+    "last_commit_ts": "2026-11-06T09:07:41Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       22,
@@ -568,7 +568,7 @@
       19,
       32,
       43,
-      4
+      8
     ],
     "days": [
       {
@@ -1105,20 +1105,20 @@
       },
       {
         "d": "2026-11-06",
-        "code": 4,
+        "code": 8,
         "other": 0,
         "samples": [
           {
-            "commit": "035982e",
-            "subject": "Printing: the printer list doesn't wait on drivers, and a job stuck on its driver can be cancelled (#5710) (#5732)"
+            "commit": "502256d",
+            "subject": "Layout: justified lines keep the width of the spaces before their first character (#4307)"
           },
           {
-            "commit": "ae0692e",
-            "subject": "Layout: avoid repeated text-box lookups during page drawing (#4837)"
+            "commit": "615597b",
+            "subject": "Shapes: the resize arrow over a turned object's handle turns with it (#3932) (#3939)"
           },
           {
-            "commit": "4a48a58",
-            "subject": "References: index source lookups during citation refresh (#4890)"
+            "commit": "6053546",
+            "subject": "Font dialog: the preview also shows the font, small caps, super/subscript and hidden (#4058) (#4059)"
           }
         ]
       }
@@ -13010,7 +13010,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "502256d",
+      "commit_full": "502256d1257e7edece323b9ad3173a2ae1c0ae76",
+      "commit_date": "2026-11-06T10:07:41+01:00",
+      "ts": "2026-11-06T09:07:41Z",
+      "message": "Layout: justified lines keep the width of the spaces before their first character (#4307)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-06T08:01:14+00:00"
+  "updated_at": "2026-11-06T09:19:22+00:00"
 }

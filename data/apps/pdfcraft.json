@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "9f04acc",
-  "latest_commit_date": "2026-11-05T23:39:55+01:00",
-  "latest_message": "M10: OCR engines, confidence, preprocessing and a review workflow (#977)",
+  "latest_commit": "97cef90",
+  "latest_commit_date": "2026-11-06T10:01:42+01:00",
+  "latest_message": "Redaction: a pattern nothing paints with any more leaves the page (#3680)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 113,
+    "revisions_since": 114,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 201,
-    "revisions_7d": 26,
+    "revisions": 202,
+    "revisions_7d": 27,
     "last_revision": {
-      "ts": "2026-11-05T22:39:55Z",
+      "ts": "2026-11-06T09:01:42Z",
       "kind": "content",
-      "commit": "9f04acc",
-      "commit_full": "9f04accceff67174fc2817035f8ab4577bef8285",
-      "message": "M10: OCR engines, confidence, preprocessing and a review workflow (#977)"
+      "commit": "97cef90",
+      "commit_full": "97cef90e016fc81d6683996e88c6eed13c1b8be7",
+      "message": "Redaction: a pattern nothing paints with any more leaves the page (#3680)"
     },
     "last_update": {
-      "ts": "2026-11-05T22:39:55Z",
+      "ts": "2026-11-06T09:01:42Z",
       "kind": "content",
-      "commit": "9f04acc",
-      "commit_full": "9f04accceff67174fc2817035f8ab4577bef8285",
-      "message": "M10: OCR engines, confidence, preprocessing and a review workflow (#977)"
+      "commit": "97cef90",
+      "commit_full": "97cef90e016fc81d6683996e88c6eed13c1b8be7",
+      "message": "Redaction: a pattern nothing paints with any more leaves the page (#3680)"
     },
     "self_reported": "2026-11-03"
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 19.6,
+    "level": "buzzing",
+    "score": 20.4,
     "active_days_7d": 7,
-    "changes_7d": 132,
-    "changes_14d": 234,
+    "changes_7d": 135,
+    "changes_14d": 237,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-06T03:00:25Z",
-      "commit": "5aaa818",
-      "commit_full": "5aaa8186fd88d4c59f139665ff7809bd03775626",
-      "subject": "sign: land the still-valid parts of #6358, #5187 and #5173 (#6375)"
+      "ts": "2026-11-06T09:10:16Z",
+      "commit": "af76b5c",
+      "commit_full": "af76b5ca89ed0902c30f4da97677cea38b58709d",
+      "subject": "Delete key removes selected content object in edit mode (#6384)"
     },
-    "last_commit_ts": "2026-11-06T03:00:25Z",
+    "last_commit_ts": "2026-11-06T09:10:16Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       33,
@@ -524,7 +524,7 @@
       26,
       23,
       36,
-      3
+      6
     ],
     "days": [
       {
@@ -1219,20 +1219,20 @@
       },
       {
         "d": "2026-11-06",
-        "code": 3,
+        "code": 6,
         "other": 0,
         "samples": [
           {
-            "commit": "5aaa818",
-            "subject": "sign: land the still-valid parts of #6358, #5187 and #5173 (#6375)"
+            "commit": "af76b5c",
+            "subject": "Delete key removes selected content object in edit mode (#6384)"
           },
           {
-            "commit": "9afa126",
-            "subject": "sign: under no-changes certification, only invisible document timestamps may follow (#6364)"
+            "commit": "97cef90",
+            "subject": "Redaction: a pattern nothing paints with any more leaves the page (#3680)"
           },
           {
-            "commit": "102cae3",
-            "subject": "sign: classify changes by signed object role (#6361)"
+            "commit": "d7ce875",
+            "subject": "redact: independent redaction proof machinery (snapshot, sweep, budget) (#5557)"
           }
         ]
       }
@@ -6068,7 +6068,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "97cef90",
+      "commit_full": "97cef90e016fc81d6683996e88c6eed13c1b8be7",
+      "commit_date": "2026-11-06T10:01:42+01:00",
+      "ts": "2026-11-06T09:01:42Z",
+      "message": "Redaction: a pattern nothing paints with any more leaves the page (#3680)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-06T03:39:02+00:00"
+  "updated_at": "2026-11-06T09:19:06+00:00"
 }
