@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "9201a67",
-  "latest_commit_date": "2026-11-07T00:31:26+08:00",
-  "latest_message": "Record idle CPU on an AMD Radeon: a core in AMD's driver on DX12 and Vulkan, none on GL (#993)",
+  "latest_commit": "67963ec",
+  "latest_commit_date": "2026-11-07T01:21:11+08:00",
+  "latest_message": "Hand OpenCode runs over SSH the Craft Anything MCP server (#1003)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 149,
-    "revisions_7d": 149,
+    "revisions": 159,
+    "revisions_7d": 159,
     "last_revision": {
-      "ts": "2026-11-06T16:31:26Z",
+      "ts": "2026-11-06T17:21:11Z",
       "kind": "content",
-      "commit": "9201a67",
-      "commit_full": "9201a67f3850b09d3314164964a25ffc390dad55",
-      "message": "Record idle CPU on an AMD Radeon: a core in AMD's driver on DX12 and Vulkan, none on GL (#993)"
+      "commit": "67963ec",
+      "commit_full": "67963ecb63ba0f1688f2da277944477e371f63f1",
+      "message": "Hand OpenCode runs over SSH the Craft Anything MCP server (#1003)"
     },
     "last_update": {
-      "ts": "2026-11-06T16:31:26Z",
+      "ts": "2026-11-06T17:21:11Z",
       "kind": "content",
-      "commit": "9201a67",
-      "commit_full": "9201a67f3850b09d3314164964a25ffc390dad55",
-      "message": "Record idle CPU on an AMD Radeon: a core in AMD's driver on DX12 and Vulkan, none on GL (#993)"
+      "commit": "67963ec",
+      "commit_full": "67963ecb63ba0f1688f2da277944477e371f63f1",
+      "message": "Hand OpenCode runs over SSH the Craft Anything MCP server (#1003)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.1,
+    "score": 19.5,
     "active_days_7d": 7,
-    "changes_7d": 359,
-    "changes_14d": 359,
-    "housekeeping_7d": 33,
+    "changes_7d": 369,
+    "changes_14d": 369,
+    "housekeeping_7d": 34,
     "last_code_change": {
-      "ts": "2026-11-06T16:32:46Z",
-      "commit": "3c5092a",
-      "commit_full": "3c5092a6c58110f4ce45d1398445432184419d99",
-      "subject": "Send a tool call's thought signature back to Gemini, and show errors it wraps in an array (#991)"
+      "ts": "2026-11-06T17:23:08Z",
+      "commit": "bd10255",
+      "commit_full": "bd102559a9feca227434dddc6023fa3a8b8aa398",
+      "subject": "Fill in the French catalog and add a Vietnamese README (#1004)"
     },
-    "last_commit_ts": "2026-11-06T16:32:46Z",
+    "last_commit_ts": "2026-11-06T17:23:08Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       88,
       49,
       1,
-      28
+      38
     ],
     "days": [
       {
@@ -204,20 +204,20 @@
       },
       {
         "d": "2026-11-06",
-        "code": 28,
-        "other": 7,
+        "code": 38,
+        "other": 8,
         "samples": [
           {
-            "commit": "3c5092a",
-            "subject": "Send a tool call's thought signature back to Gemini, and show errors it wraps in an array (#991)"
+            "commit": "bd10255",
+            "subject": "Fill in the French catalog and add a Vietnamese README (#1004)"
           },
           {
-            "commit": "a389ac0",
-            "subject": "Tell the builder what was asked in Just ask when the next message comes (#934)"
+            "commit": "67963ec",
+            "subject": "Hand OpenCode runs over SSH the Craft Anything MCP server (#1003)"
           },
           {
-            "commit": "c858a61",
-            "subject": "Find browsers under their other Linux names, and say why one isn't found (#927)"
+            "commit": "17e4200",
+            "subject": "Build and run new projects through their toolchains (#1002)"
           }
         ]
       }
@@ -1336,8 +1336,78 @@
       "commit": "9201a67",
       "commit_full": "9201a67f3850b09d3314164964a25ffc390dad55",
       "message": "Record idle CPU on an AMD Radeon: a core in AMD's driver on DX12 and Vulkan, none on GL (#993)"
+    },
+    {
+      "ts": "2026-11-06T16:44:00Z",
+      "kind": "content",
+      "commit": "73fe0b6",
+      "commit_full": "73fe0b661b3f220fb36fe9ecb03eb837730d455e",
+      "message": "Stop programs started alongside a console capture from holding it open (#997)"
+    },
+    {
+      "ts": "2026-11-06T16:50:18Z",
+      "kind": "content",
+      "commit": "e0922f4",
+      "commit_full": "e0922f4ff4568af4118618951dab5ca4378ee995",
+      "message": "Keep pasted picture names unique, create atomic-write temp files exclusively, and keep distinct replay samples (#995)"
+    },
+    {
+      "ts": "2026-11-06T16:51:57Z",
+      "kind": "content",
+      "commit": "5a65542",
+      "commit_full": "5a65542b88d1063f9dff2898952a76c8226ba494",
+      "message": "Keep macOS's own window buttons and frame (#994)"
+    },
+    {
+      "ts": "2026-11-06T16:54:21Z",
+      "kind": "content",
+      "commit": "fb8f304",
+      "commit_full": "fb8f304417b9ec04c7abf5a61f983a4d4f7a6b6e",
+      "message": "Say where a build command ran, give API-key builds their asset keys, and respect the macOS accessibility flag (#999)"
+    },
+    {
+      "ts": "2026-11-06T16:59:53Z",
+      "kind": "content",
+      "commit": "512ff76",
+      "commit_full": "512ff768189bade427b301883967b19d6fcaa8a5",
+      "message": "Add Spanish, Traditional Chinese and French READMEs (#992)"
+    },
+    {
+      "ts": "2026-11-06T17:03:03Z",
+      "kind": "content",
+      "commit": "025d66f",
+      "commit_full": "025d66f86bcaeee62ddc08f5568ac334c287ef07",
+      "message": "Add a restricted MCP mode without the tools that act on the machine or reach the network (#1000)"
+    },
+    {
+      "ts": "2026-11-06T17:11:26Z",
+      "kind": "content",
+      "commit": "827fdb7",
+      "commit_full": "827fdb793d11efdbfbee4b108c9bf036a5b74187",
+      "message": "Try the next renderer after a Windows start that can't draw, and close the gaps in the Claude desktop hint (#1001)"
+    },
+    {
+      "ts": "2026-11-06T17:18:47Z",
+      "kind": "content",
+      "commit": "31f6ae6",
+      "commit_full": "31f6ae653973204e96fd20e16ab2e5817d45a373",
+      "message": "List an edited-in-place project's own files (#996)"
+    },
+    {
+      "ts": "2026-11-06T17:21:01Z",
+      "kind": "content",
+      "commit": "17e4200",
+      "commit_full": "17e420047943de5a28aac326b27d4464b833c12b",
+      "message": "Build and run new projects through their toolchains (#1002)"
+    },
+    {
+      "ts": "2026-11-06T17:21:11Z",
+      "kind": "content",
+      "commit": "67963ec",
+      "commit_full": "67963ecb63ba0f1688f2da277944477e371f63f1",
+      "message": "Hand OpenCode runs over SSH the Craft Anything MCP server (#1003)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-06T16:37:24+00:00"
+  "updated_at": "2026-11-06T17:37:44+00:00"
 }
