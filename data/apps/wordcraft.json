@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "ae0692e",
-  "latest_commit_date": "2026-11-06T02:33:02+01:00",
-  "latest_message": "Layout: avoid repeated text-box lookups during page drawing (#4837)",
+  "latest_commit": "035982e",
+  "latest_commit_date": "2026-11-06T08:52:57+01:00",
+  "latest_message": "Printing: the printer list doesn't wait on drivers, and a job stuck on its driver can be cancelled (#5710) (#5732)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
-    "last_updated": "2026-11-05",
+    "last_updated": "2026-11-06",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -329,6 +329,18 @@
     ],
     "progress": [
       {
+        "date": "2026-11-06",
+        "text": "Windows print submissions run in separate helper processes (#5710). A helper acknowledges cancellation before it stops, so a driver stalled in a cancelled job cannot hold another job’s provider lock. A private temporary PDF and bounded settings messages cross the process boundary; normal shutdown reaps helpers and removes their inputs. The helper erases its plaintext inputs before driver work; a hard app crash during startup can still leave private temporary files. Jobs already sending still complete. Readiness estimates unchanged."
+      },
+      {
+        "date": "2026-11-06",
+        "text": "File › Print: before sending starts, Cancel printing stops a waiting job, frees the Print page and keeps the settings; a successfully cancelled job is never sent. Cancellation remains available after the last document closes. Quitting cancels waiting jobs and joins jobs already sending (#5710). On Windows, winprint repeats the DEVMODE conversion after sending starts. A stall during that repeat prevents cancellation and can keep shutdown waiting, even before a native job exists. Readiness estimates unchanged."
+      },
+      {
+        "date": "2026-11-06",
+        "text": "File › Print on Windows no longer waits on printer drivers to list printers (#5710). The list used to wait until each printer's driver said whether it prints on both sides, and a networked printer asleep in power save could keep it empty with Refresh unavailable; now discovery asks no driver (the Windows spooler still supplies the list), and printing still checks the job's options with the driver. The reporter's sleeping printer has not been retested yet. Readiness estimates unchanged."
+      },
+      {
         "date": "2026-11-04",
         "text": "CLI convert rejects a missing or repeated --format value before opening the input or writing output, matching the existing page/scale option checks. Readiness estimates unchanged."
       },
@@ -475,18 +487,6 @@
       {
         "date": "2026-11-02",
         "text": "Emphasis marks (Font › Emphasis mark: a dot, comma or circle over each character, or a dot under it) are new: drawn with room made in the line, set by format.emphasisMark, kept in DOCX (w:em) and ODT. SET fields now give REF their value, so ODT variables open and update as fields. A page break before a table's first row moves the table, as in Word. ODT: page background pictures, fixed-width tables, tables starting a page, the document's default font size and dates in the locale's order (gap 19). Readiness unchanged."
-      },
-      {
-        "date": "2026-11-02",
-        "text": "ODT checked against LibreOffice's own 78 bundled templates (letters, faxes, agendas, reports, CVs), all of which now open and round-trip (gap 19): placeholders (\"<Recipient's name>\") open as content controls you click and type over; a \"First Page\" style followed by another is a different first page; pages without a size take the regional default and LibreOffice's 2 cm margins; WMF and EMF logos are kept; template dates show the day; USERNAME shows your name; hidden form controls and .ott templates (open and save, with a password too) are kept. Readiness unchanged."
-      },
-      {
-        "date": "2026-11-02",
-        "text": "Language packs (CP4.4): craft-i18n's first pack release, language-packs-1, is published and WordCraft pins its index (sha256): 61 languages install from File › Options › Language, among them Lithuanian (#4707), Romanian (#3438), Catalan (#2895, #4947), French (#1325), Greek (#2561), Slovak (#3806), Serbian (#4968) and Latvian (#4438). Dutch (#4145, #2505), German and the other compounding languages wait on craft-proof engine support. Readiness unchanged."
-      },
-      {
-        "date": "2026-11-01",
-        "text": "ODT at ~90% (gap 19): custom shapes LibreOffice draws from formulas (hexagons, smileys, cans, block arcs…) are drawn from their own geometry instead of as rectangles; table cell formulas open as formula fields that Update Field recalculates, and are saved as formulas LibreOffice calculates; macros and other package parts WordCraft doesn't read are kept on save; text turned down or up in table cells and text boxes stays turned; form controls keep their size, and buttons survive as buttons. Every change checked against LibreOffice by round trips compared page by page and against the ODF 1.3 schema. Readiness unchanged."
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 502,
+    "revisions_since": 503,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 506,
-    "revisions_7d": 67,
+    "revisions": 507,
+    "revisions_7d": 68,
     "last_revision": {
-      "ts": "2026-11-06T01:33:02Z",
+      "ts": "2026-11-06T07:52:57Z",
       "kind": "content",
-      "commit": "ae0692e",
-      "commit_full": "ae0692ee663200ed7b7b247b27a0c65711015d72",
-      "message": "Layout: avoid repeated text-box lookups during page drawing (#4837)"
+      "commit": "035982e",
+      "commit_full": "035982e34e15d8212b82960ee7fbf4a0dc1140a1",
+      "message": "Printing: the printer list doesn't wait on drivers, and a job stuck on its driver can be cancelled (#5710) (#5732)"
     },
     "last_update": {
-      "ts": "2026-11-06T01:33:02Z",
+      "ts": "2026-11-06T07:52:57Z",
       "kind": "content",
-      "commit": "ae0692e",
-      "commit_full": "ae0692ee663200ed7b7b247b27a0c65711015d72",
-      "message": "Layout: avoid repeated text-box lookups during page drawing (#4837)"
+      "commit": "035982e",
+      "commit_full": "035982e34e15d8212b82960ee7fbf4a0dc1140a1",
+      "message": "Printing: the printer list doesn't wait on drivers, and a job stuck on its driver can be cancelled (#5710) (#5732)"
     },
-    "self_reported": "2026-11-05"
+    "self_reported": "2026-11-06"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.5,
+    "score": 20.8,
     "active_days_7d": 7,
-    "changes_7d": 139,
-    "changes_14d": 285,
+    "changes_7d": 140,
+    "changes_14d": 286,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-06T01:33:02Z",
-      "commit": "ae0692e",
-      "commit_full": "ae0692ee663200ed7b7b247b27a0c65711015d72",
-      "subject": "Layout: avoid repeated text-box lookups during page drawing (#4837)"
+      "ts": "2026-11-06T07:52:57Z",
+      "commit": "035982e",
+      "commit_full": "035982e34e15d8212b82960ee7fbf4a0dc1140a1",
+      "subject": "Printing: the printer list doesn't wait on drivers, and a job stuck on its driver can be cancelled (#5710) (#5732)"
     },
-    "last_commit_ts": "2026-11-06T01:33:02Z",
+    "last_commit_ts": "2026-11-06T07:52:57Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       22,
@@ -568,7 +568,7 @@
       19,
       32,
       43,
-      3
+      4
     ],
     "days": [
       {
@@ -1105,9 +1105,13 @@
       },
       {
         "d": "2026-11-06",
-        "code": 3,
+        "code": 4,
         "other": 0,
         "samples": [
+          {
+            "commit": "035982e",
+            "subject": "Printing: the printer list doesn't wait on drivers, and a job stuck on its driver can be cancelled (#5710) (#5732)"
+          },
           {
             "commit": "ae0692e",
             "subject": "Layout: avoid repeated text-box lookups during page drawing (#4837)"
@@ -1115,10 +1119,6 @@
           {
             "commit": "4a48a58",
             "subject": "References: index source lookups during citation refresh (#4890)"
-          },
-          {
-            "commit": "9a92469",
-            "subject": "Layout: Times and Courier take Times New Roman's and Courier New's line spacing (#3241)"
           }
         ]
       }
@@ -12987,7 +12987,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "035982e",
+      "commit_full": "035982e34e15d8212b82960ee7fbf4a0dc1140a1",
+      "commit_date": "2026-11-06T08:52:57+01:00",
+      "ts": "2026-11-06T07:52:57Z",
+      "message": "Printing: the printer list doesn't wait on drivers, and a job stuck on its driver can be cancelled (#5710) (#5732)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-06T01:39:33+00:00"
+  "updated_at": "2026-11-06T08:01:14+00:00"
 }
