@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "a951642",
-  "latest_commit_date": "2026-11-06T11:16:36+01:00",
-  "latest_message": "Shapes: Shape Format › Size shows the interface unit (#4196) (#4212)",
+  "latest_commit": "beca3f3",
+  "latest_commit_date": "2026-11-06T12:13:11+01:00",
+  "latest_message": "Layout: a float anchored on a later page of a long paragraph is drawn there (#4250) (#4267)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -369,6 +369,10 @@
         "text": "Pictures keep the brightness, contrast and transparency their file gives them (#1711, #1766): a \"Washout\" picture watermark (VML gain/blacklevel) and a washed-out letterhead picture behind the text (a:lum) are drawn faded on screen and in PDF instead of at full colour, with the pixel curve measured on Word's own PDF export; a:alphaModFix transparency too. Saved back as DrawingML (and as VML gain/blacklevel in Word 2003 XML, without the transparency). Picture Format › Corrections, Transparency and Color › Washout replace the file's values (other Color modes leave them alone), and Reset Picture discards them all, as in Word; the PDF embeds the corrected pixels once per picture"
       },
       {
+        "date": "2026-11-04",
+        "text": "Quitting over the control channel and MCP bridge is refused while any open document has unsaved changes — a programmatic call never prompts — and {\"force\": true} quits without saving. The Save Changes prompt and the refusal now share one predicate, so they cannot drift apart (#3274)."
+      },
+      {
         "date": "2026-11-03",
         "text": "ODT paragraphs holding bookmarks, notes, formulas and objects, and the page-anchored frames before a paragraph, are written as read while unchanged (gap 19); styles of different families sharing a name are kept apart. Over the corpus 123 of 133 files round-trip pixel-identical (118), 132 with the same text, and the attributes and values a save loses fall from 539 to under 315."
       },
@@ -483,10 +487,6 @@
       {
         "date": "2026-11-02",
         "text": "ODT, from LibreOffice's report templates and agenda: tables filling the margins fit them, and a table's own space above and below is kept and laid out (new TableProps::spacebefore/spaceafter); a header's spacing stays below one taller than its band (new SectionProps::headergap/footergap); a picture alone in a paragraph keeps the paragraph's size and its raise. The corpus round-trip difference falls from 241k to 155k pixels, 62% below this morning's 408k (gap 19). Readiness unchanged."
-      },
-      {
-        "date": "2026-11-02",
-        "text": "ODT: none of the 125 test documents (LibreOffice's 78 templates among them) changes its page count through a WordCraft save any more, and their round-trip difference falls by 40%: the default font size, page-anchored frames, styles used only in text boxes, empty paragraphs' size (a new paragraph-mark field in the flow model) and frames anchored by their style (gap 19). Readiness unchanged."
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 507,
+    "revisions_since": 510,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 511,
-    "revisions_7d": 72,
+    "revisions": 514,
+    "revisions_7d": 75,
     "last_revision": {
-      "ts": "2026-11-06T10:16:36Z",
+      "ts": "2026-11-06T11:13:11Z",
       "kind": "content",
-      "commit": "a951642",
-      "commit_full": "a951642cd0e5a069216959d2674fa17ad7a37c17",
-      "message": "Shapes: Shape Format › Size shows the interface unit (#4196) (#4212)"
+      "commit": "beca3f3",
+      "commit_full": "beca3f348555a01332f834ed9f228549ff1778cb",
+      "message": "Layout: a float anchored on a later page of a long paragraph is drawn there (#4250) (#4267)"
     },
     "last_update": {
-      "ts": "2026-11-06T10:16:36Z",
+      "ts": "2026-11-06T11:13:11Z",
       "kind": "content",
-      "commit": "a951642",
-      "commit_full": "a951642cd0e5a069216959d2674fa17ad7a37c17",
-      "message": "Shapes: Shape Format › Size shows the interface unit (#4196) (#4212)"
+      "commit": "beca3f3",
+      "commit_full": "beca3f348555a01332f834ed9f228549ff1778cb",
+      "message": "Layout: a float anchored on a later page of a long paragraph is drawn there (#4250) (#4267)"
     },
     "self_reported": "2026-11-06"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.2,
+    "score": 22.5,
     "active_days_7d": 7,
-    "changes_7d": 148,
-    "changes_14d": 294,
+    "changes_7d": 151,
+    "changes_14d": 297,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-06T10:16:36Z",
-      "commit": "a951642",
-      "commit_full": "a951642cd0e5a069216959d2674fa17ad7a37c17",
-      "subject": "Shapes: Shape Format › Size shows the interface unit (#4196) (#4212)"
+      "ts": "2026-11-06T11:13:11Z",
+      "commit": "beca3f3",
+      "commit_full": "beca3f348555a01332f834ed9f228549ff1778cb",
+      "subject": "Layout: a float anchored on a later page of a long paragraph is drawn there (#4250) (#4267)"
     },
-    "last_commit_ts": "2026-11-06T10:16:36Z",
+    "last_commit_ts": "2026-11-06T11:13:11Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       22,
@@ -568,7 +568,7 @@
       19,
       32,
       43,
-      12
+      15
     ],
     "days": [
       {
@@ -1105,20 +1105,20 @@
       },
       {
         "d": "2026-11-06",
-        "code": 12,
+        "code": 15,
         "other": 0,
         "samples": [
           {
-            "commit": "a951642",
-            "subject": "Shapes: Shape Format › Size shows the interface unit (#4196) (#4212)"
+            "commit": "beca3f3",
+            "subject": "Layout: a float anchored on a later page of a long paragraph is drawn there (#4250) (#4267)"
           },
           {
-            "commit": "dc388cf",
-            "subject": "Layout: a line of only pictures takes no descent; multiple spacing adds its share (#3984)"
+            "commit": "ef35d79",
+            "subject": "Control channel: a command that discards unsaved work is refused, not carried out (#3284)"
           },
           {
-            "commit": "ce29610",
-            "subject": "Equations: \\int + Space waits for its limits, so _x^y decorates the operator (#4917) (#4938)"
+            "commit": "3d79fff",
+            "subject": "Layout: reserve flow space below bottom paragraph borders (#2437)"
           }
         ]
       }
@@ -13102,7 +13102,76 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "3d79fff",
+      "commit_full": "3d79fff0ad455ed5962d43601ca6a7c4de26336a",
+      "commit_date": "2026-11-06T11:29:32+01:00",
+      "ts": "2026-11-06T10:29:32Z",
+      "message": "Layout: reserve flow space below bottom paragraph borders (#2437)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "ef35d79",
+      "commit_full": "ef35d79cb81ea1067de0cf80e6e7cd7b1cf9489c",
+      "commit_date": "2026-11-06T11:44:29+01:00",
+      "ts": "2026-11-06T10:44:29Z",
+      "message": "Control channel: a command that discards unsaved work is refused, not carried out (#3284)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "beca3f3",
+      "commit_full": "beca3f348555a01332f834ed9f228549ff1778cb",
+      "commit_date": "2026-11-06T12:13:11+01:00",
+      "ts": "2026-11-06T11:13:11Z",
+      "message": "Layout: a float anchored on a later page of a long paragraph is drawn there (#4250) (#4267)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-06T10:25:28+00:00"
+  "updated_at": "2026-11-06T11:20:18+00:00"
 }
