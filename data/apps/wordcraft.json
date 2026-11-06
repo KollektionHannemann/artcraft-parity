@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "8833c60",
-  "latest_commit_date": "2026-11-06T13:12:16+01:00",
-  "latest_message": "Layout: a shape dropped just after a page break stays on the new page (#4262) (#4297)",
+  "latest_commit": "729cd0a",
+  "latest_commit_date": "2026-11-06T16:07:28+01:00",
+  "latest_message": "Typing: avoid repeated scans at protected typing boundaries (#3614) (#4754)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 511,
+    "revisions_since": 512,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 515,
-    "revisions_7d": 76,
+    "revisions": 516,
+    "revisions_7d": 77,
     "last_revision": {
-      "ts": "2026-11-06T12:12:16Z",
+      "ts": "2026-11-06T15:07:28Z",
       "kind": "content",
-      "commit": "8833c60",
-      "commit_full": "8833c604e0144b384ad7cc3a3802bce66d03611d",
-      "message": "Layout: a shape dropped just after a page break stays on the new page (#4262) (#4297)"
+      "commit": "729cd0a",
+      "commit_full": "729cd0a5fc953bbedbfdec4f6af18ad6d1780b3b",
+      "message": "Typing: avoid repeated scans at protected typing boundaries (#3614) (#4754)"
     },
     "last_update": {
-      "ts": "2026-11-06T12:12:16Z",
+      "ts": "2026-11-06T15:07:28Z",
       "kind": "content",
-      "commit": "8833c60",
-      "commit_full": "8833c604e0144b384ad7cc3a3802bce66d03611d",
-      "message": "Layout: a shape dropped just after a page break stays on the new page (#4262) (#4297)"
+      "commit": "729cd0a",
+      "commit_full": "729cd0a5fc953bbedbfdec4f6af18ad6d1780b3b",
+      "message": "Typing: avoid repeated scans at protected typing boundaries (#3614) (#4754)"
     },
     "self_reported": "2026-11-06"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.8,
+    "score": 22.9,
     "active_days_7d": 7,
-    "changes_7d": 154,
-    "changes_14d": 300,
+    "changes_7d": 156,
+    "changes_14d": 302,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-11-06T12:19:38Z",
-      "commit": "247c7fe",
-      "commit_full": "247c7feaab699e3df36879bba3072593de2c65cb",
-      "subject": "i18n: craft-i18n pin follows its main (watermark strings, lv, fr, ar rows) (#5787)"
+      "ts": "2026-11-06T15:07:28Z",
+      "commit": "729cd0a",
+      "commit_full": "729cd0a5fc953bbedbfdec4f6af18ad6d1780b3b",
+      "subject": "Typing: avoid repeated scans at protected typing boundaries (#3614) (#4754)"
     },
-    "last_commit_ts": "2026-11-06T13:59:01Z",
+    "last_commit_ts": "2026-11-06T15:07:28Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       22,
@@ -568,7 +568,7 @@
       19,
       32,
       43,
-      18
+      20
     ],
     "days": [
       {
@@ -1105,20 +1105,20 @@
       },
       {
         "d": "2026-11-06",
-        "code": 18,
+        "code": 20,
         "other": 1,
         "samples": [
           {
+            "commit": "729cd0a",
+            "subject": "Typing: avoid repeated scans at protected typing boundaries (#3614) (#4754)"
+          },
+          {
+            "commit": "8c46f4f",
+            "subject": "Pictures: a bold insertion cursor while dragging an inline picture (#4195) (#4208)"
+          },
+          {
             "commit": "247c7fe",
             "subject": "i18n: craft-i18n pin follows its main (watermark strings, lv, fr, ar rows) (#5787)"
-          },
-          {
-            "commit": "8833c60",
-            "subject": "Layout: a shape dropped just after a page break stays on the new page (#4262) (#4297)"
-          },
-          {
-            "commit": "cad8ede",
-            "subject": "Shapes: pictures and text boxes inside a drawing canvas are selected and moved on their own (#2637) (#2670)"
           }
         ]
       }
@@ -13194,7 +13194,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "729cd0a",
+      "commit_full": "729cd0a5fc953bbedbfdec4f6af18ad6d1780b3b",
+      "commit_date": "2026-11-06T16:07:28+01:00",
+      "ts": "2026-11-06T15:07:28Z",
+      "message": "Typing: avoid repeated scans at protected typing boundaries (#3614) (#4754)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-06T14:41:29+00:00"
+  "updated_at": "2026-11-06T15:32:40+00:00"
 }
