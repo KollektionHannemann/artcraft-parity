@@ -374,22 +374,21 @@
   },
   "milestone": null,
   "activity": {
-    "level": "buzzing",
-    "score": 22.2,
-    "active_days_7d": 7,
-    "changes_7d": 130,
-    "changes_14d": 322,
-    "housekeeping_7d": 10,
+    "level": "active",
+    "score": 17.8,
+    "active_days_7d": 6,
+    "changes_7d": 124,
+    "changes_14d": 234,
+    "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-05T22:34:12Z",
-      "commit": "e4e2607",
-      "commit_full": "e4e2607c85eb8c293633fc566b96f040e4152da7",
-      "subject": "Preview spot inks over the RGB/CMYK composite as an overprint (#10276)"
+      "ts": "2026-11-05T23:32:49Z",
+      "commit": "e59dcc9",
+      "commit_full": "e59dcc9c4496328217be95579707cc5f9b4debb0",
+      "subject": "GPU plan: cache adjustment LUT rows between plans (#11498) (#11539)"
     },
-    "last_commit_ts": "2026-11-05T22:34:12Z",
+    "last_commit_ts": "2026-11-05T23:32:49Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
-      89,
       14,
       45,
       7,
@@ -402,7 +401,8 @@
       7,
       24,
       27,
-      46
+      47,
+      0
     ],
     "days": [
       {
@@ -1091,9 +1091,13 @@
       },
       {
         "d": "2026-11-05",
-        "code": 46,
+        "code": 47,
         "other": 2,
         "samples": [
+          {
+            "commit": "e59dcc9",
+            "subject": "GPU plan: cache adjustment LUT rows between plans (#11498) (#11539)"
+          },
           {
             "commit": "e4e2607",
             "subject": "Preview spot inks over the RGB/CMYK composite as an overprint (#10276)"
@@ -1101,10 +1105,6 @@
           {
             "commit": "e55e2f3",
             "subject": "Place decodes and fits in the background: dropping a large file no longer freezes the window (#10147)"
-          },
-          {
-            "commit": "5c157e8",
-            "subject": "Build the GPU compositor off the UI thread (#9969)"
           }
         ]
       }
@@ -1526,5 +1526,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T23:06:49+00:00"
+  "updated_at": "2026-11-06T00:00:45+00:00"
 }

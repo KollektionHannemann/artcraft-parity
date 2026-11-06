@@ -409,7 +409,7 @@
   },
   "roadmap": {
     "revisions": 17,
-    "revisions_7d": 5,
+    "revisions_7d": 4,
     "last_revision": {
       "ts": "2026-11-05T21:23:31Z",
       "kind": "parity",
@@ -429,21 +429,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.0,
-    "active_days_7d": 6,
-    "changes_7d": 87,
-    "changes_14d": 122,
-    "housekeeping_7d": 10,
+    "score": 13.0,
+    "active_days_7d": 5,
+    "changes_7d": 86,
+    "changes_14d": 117,
+    "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-05T22:45:53Z",
-      "commit": "96f3fd2",
-      "commit_full": "96f3fd2d6120c9e0730cf6f768a0491645ea540d",
-      "subject": "Tests: the next folder drop gets 20 seconds to land (#3834)"
+      "ts": "2026-11-05T23:35:26Z",
+      "commit": "8268754",
+      "commit_full": "826875470a94e5e1b1bf43c9e604497f01413c08",
+      "subject": "Paint clipped pixels red/blue when clipping warnings (J) are on (#3638)"
     },
-    "last_commit_ts": "2026-11-05T22:45:53Z",
+    "last_commit_ts": "2026-11-05T23:35:26Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
-      7,
       5,
       8,
       3,
@@ -456,7 +455,8 @@
       2,
       9,
       17,
-      50
+      52,
+      0
     ],
     "days": [
       {
@@ -1053,20 +1053,20 @@
       },
       {
         "d": "2026-11-05",
-        "code": 50,
+        "code": 52,
         "other": 2,
         "samples": [
           {
+            "commit": "8268754",
+            "subject": "Paint clipped pixels red/blue when clipping warnings (J) are on (#3638)"
+          },
+          {
+            "commit": "0429844",
+            "subject": "never-crash: deny the panic lints in every crate root; GPU asserts become fail paths (#2137) (#2170)"
+          },
+          {
             "commit": "96f3fd2",
             "subject": "Tests: the next folder drop gets 20 seconds to land (#3834)"
-          },
-          {
-            "commit": "dcc8a62",
-            "subject": "ui: first-run onboarding tour and What's New after an update (#2206)"
-          },
-          {
-            "commit": "fe632e0",
-            "subject": "Keep a stitched panorama at the photos' own resolution (#3806)"
           }
         ]
       }
@@ -1679,5 +1679,5 @@
       "kind": "parity"
     }
   ],
-  "updated_at": "2026-11-05T23:07:06+00:00"
+  "updated_at": "2026-11-06T00:01:05+00:00"
 }

@@ -358,7 +358,7 @@
   },
   "roadmap": {
     "revisions": 15,
-    "revisions_7d": 6,
+    "revisions_7d": 3,
     "last_revision": {
       "ts": "2026-11-05T21:45:23Z",
       "kind": "content",
@@ -378,21 +378,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.8,
-    "active_days_7d": 7,
-    "changes_7d": 196,
-    "changes_14d": 400,
-    "housekeeping_7d": 14,
+    "score": 16.4,
+    "active_days_7d": 6,
+    "changes_7d": 122,
+    "changes_14d": 384,
+    "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-05T21:51:11Z",
-      "commit": "4a89e68",
-      "commit_full": "4a89e68f9fb69ff444cc08e4064305d4760e5d2b",
-      "subject": "Content-Aware Fill: spill the range and stream the output (#2570 phases 2-4) (#3079)"
+      "ts": "2026-11-05T23:20:44Z",
+      "commit": "3768ff4",
+      "commit_full": "3768ff40a300758e9055ab87bfaaeea6d4bd774e",
+      "subject": ".aep import: read effect values stored as default-state records (#3134)"
     },
-    "last_commit_ts": "2026-11-05T21:51:11Z",
+    "last_commit_ts": "2026-11-05T23:20:44Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
-      21,
       5,
       8,
       7,
@@ -405,7 +404,8 @@
       19,
       46,
       4,
-      10
+      15,
+      0
     ],
     "days": [
       {
@@ -1022,20 +1022,20 @@
       },
       {
         "d": "2026-11-05",
-        "code": 10,
+        "code": 15,
         "other": 0,
         "samples": [
           {
-            "commit": "4a89e68",
-            "subject": "Content-Aware Fill: spill the range and stream the output (#2570 phases 2-4) (#3079)"
+            "commit": "3768ff4",
+            "subject": ".aep import: read effect values stored as default-state records (#3134)"
           },
           {
-            "commit": "a408d99",
-            "subject": "Export: use conformant ProRes alpha run termination (#2225)"
+            "commit": "d1e6393",
+            "subject": "HDR Highlight Compression: match After Effects' compression curve (#3133)"
           },
           {
-            "commit": "7ce61c6",
-            "subject": "Grow the buffer to the pinned quad so Corner Pin draws outside the layer rectangle (#1938) (#1967)"
+            "commit": "8b63d43",
+            "subject": "EXR export: no compand / tone mapping, and the output space's own curve (#2913) (#2916)"
           }
         ]
       }
@@ -1595,5 +1595,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T22:16:03+00:00"
+  "updated_at": "2026-11-06T00:01:18+00:00"
 }

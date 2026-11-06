@@ -486,7 +486,7 @@
   },
   "roadmap": {
     "revisions": 191,
-    "revisions_7d": 45,
+    "revisions_7d": 32,
     "last_revision": {
       "ts": "2026-11-05T12:16:42Z",
       "kind": "content",
@@ -505,22 +505,21 @@
   },
   "milestone": null,
   "activity": {
-    "level": "buzzing",
-    "score": 20.1,
-    "active_days_7d": 7,
-    "changes_7d": 152,
-    "changes_14d": 300,
-    "housekeeping_7d": 10,
+    "level": "active",
+    "score": 16.3,
+    "active_days_7d": 6,
+    "changes_7d": 116,
+    "changes_14d": 254,
+    "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-05T21:24:10Z",
-      "commit": "4b63d26",
-      "commit_full": "4b63d26ac62e564b71484b7ab617f1ec688bf2a5",
-      "subject": "A hyperlink can point at a text anchor (#1446) (#1555)"
+      "ts": "2026-11-05T23:41:06Z",
+      "commit": "33b6768",
+      "commit_full": "33b6768dd734cba5382a632abd2a157da6e218f6",
+      "subject": "Frame edges: a frame holding pasted-in content draws its own edge, not its content's (#2345) (#2368)"
     },
-    "last_commit_ts": "2026-11-05T21:24:10Z",
+    "last_commit_ts": "2026-11-05T23:41:06Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
-      47,
       38,
       39,
       11,
@@ -533,7 +532,8 @@
       3,
       40,
       26,
-      7
+      8,
+      0
     ],
     "days": [
       {
@@ -1153,9 +1153,13 @@
       },
       {
         "d": "2026-11-05",
-        "code": 7,
+        "code": 8,
         "other": 0,
         "samples": [
+          {
+            "commit": "33b6768",
+            "subject": "Frame edges: a frame holding pasted-in content draws its own edge, not its content's (#2345) (#2368)"
+          },
           {
             "commit": "4b63d26",
             "subject": "A hyperlink can point at a text anchor (#1446) (#1555)"
@@ -1163,10 +1167,6 @@
           {
             "commit": "59501a2",
             "subject": "An item a parent overrode and deleted is gone from the pages that use it (#1469) (#1558)"
-          },
-          {
-            "commit": "e16785e",
-            "subject": "Fix CLI build warnings on Windows (#2356)"
           }
         ]
       }
@@ -5774,5 +5774,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-05T21:30:33+00:00"
+  "updated_at": "2026-11-06T00:01:23+00:00"
 }
