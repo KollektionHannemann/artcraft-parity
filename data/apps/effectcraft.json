@@ -378,18 +378,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.6,
+    "score": 21.7,
     "active_days_7d": 7,
-    "changes_7d": 157,
-    "changes_14d": 419,
+    "changes_7d": 159,
+    "changes_14d": 421,
     "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-06T21:58:00Z",
-      "commit": "a17e1f2",
-      "commit_full": "a17e1f20d68f66c4be57770a4eefb72cbcf10d8e",
-      "subject": "av1enc: motion search with visited set and early-exit SAD, fixed-size SATD, region-only snapshots (#2406)"
+      "ts": "2026-11-06T22:38:34Z",
+      "commit": "c5bb8bf",
+      "commit_full": "c5bb8bfda4c20f577f341deb3ae71211989f3933",
+      "subject": "SAM 2 mask decoder: transposed convolutions as matrix product plus pixel shuffle (#3031) (#3035)"
     },
-    "last_commit_ts": "2026-11-06T21:58:00Z",
+    "last_commit_ts": "2026-11-06T22:38:34Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       5,
@@ -405,7 +405,7 @@
       46,
       4,
       15,
-      35
+      37
     ],
     "days": [
       {
@@ -1041,20 +1041,20 @@
       },
       {
         "d": "2026-11-06",
-        "code": 35,
+        "code": 37,
         "other": 1,
         "samples": [
           {
+            "commit": "c5bb8bf",
+            "subject": "SAM 2 mask decoder: transposed convolutions as matrix product plus pixel shuffle (#3031) (#3035)"
+          },
+          {
+            "commit": "1ac3315",
+            "subject": "SAM 2 tracking: prompt frames in frame order, no second fetch for the size check (#3030) (#3034)"
+          },
+          {
             "commit": "a17e1f2",
             "subject": "av1enc: motion search with visited set and early-exit SAD, fixed-size SATD, region-only snapshots (#2406)"
-          },
-          {
-            "commit": "68a637a",
-            "subject": "opusenc: memoise SILK rate-loop trials, ring buffer for noise feedback (#2399)"
-          },
-          {
-            "commit": "46f04d1",
-            "subject": "Subspace Warp: a symmetric QR eigen solver and a banded mesh solve make plan() 5x cheaper (#2319) (#2332)"
           }
         ]
       }
@@ -1614,5 +1614,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-06T22:03:00+00:00"
+  "updated_at": "2026-11-06T23:03:09+00:00"
 }
