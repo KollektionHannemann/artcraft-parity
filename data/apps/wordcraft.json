@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "beca3f3",
-  "latest_commit_date": "2026-11-06T12:13:11+01:00",
-  "latest_message": "Layout: a float anchored on a later page of a long paragraph is drawn there (#4250) (#4267)",
+  "latest_commit": "8833c60",
+  "latest_commit_date": "2026-11-06T13:12:16+01:00",
+  "latest_message": "Layout: a shape dropped just after a page break stays on the new page (#4262) (#4297)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 510,
+    "revisions_since": 511,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 514,
-    "revisions_7d": 75,
+    "revisions": 515,
+    "revisions_7d": 76,
     "last_revision": {
-      "ts": "2026-11-06T11:13:11Z",
+      "ts": "2026-11-06T12:12:16Z",
       "kind": "content",
-      "commit": "beca3f3",
-      "commit_full": "beca3f348555a01332f834ed9f228549ff1778cb",
-      "message": "Layout: a float anchored on a later page of a long paragraph is drawn there (#4250) (#4267)"
+      "commit": "8833c60",
+      "commit_full": "8833c604e0144b384ad7cc3a3802bce66d03611d",
+      "message": "Layout: a shape dropped just after a page break stays on the new page (#4262) (#4297)"
     },
     "last_update": {
-      "ts": "2026-11-06T11:13:11Z",
+      "ts": "2026-11-06T12:12:16Z",
       "kind": "content",
-      "commit": "beca3f3",
-      "commit_full": "beca3f348555a01332f834ed9f228549ff1778cb",
-      "message": "Layout: a float anchored on a later page of a long paragraph is drawn there (#4250) (#4267)"
+      "commit": "8833c60",
+      "commit_full": "8833c604e0144b384ad7cc3a3802bce66d03611d",
+      "message": "Layout: a shape dropped just after a page break stays on the new page (#4262) (#4297)"
     },
     "self_reported": "2026-11-06"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.6,
+    "score": 22.8,
     "active_days_7d": 7,
-    "changes_7d": 152,
-    "changes_14d": 298,
+    "changes_7d": 154,
+    "changes_14d": 300,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-06T11:44:48Z",
-      "commit": "cad8ede",
-      "commit_full": "cad8ede1e8d7d8ee61b9d0f0c639961643ddda46",
-      "subject": "Shapes: pictures and text boxes inside a drawing canvas are selected and moved on their own (#2637) (#2670)"
+      "ts": "2026-11-06T12:19:38Z",
+      "commit": "247c7fe",
+      "commit_full": "247c7feaab699e3df36879bba3072593de2c65cb",
+      "subject": "i18n: craft-i18n pin follows its main (watermark strings, lv, fr, ar rows) (#5787)"
     },
-    "last_commit_ts": "2026-11-06T11:44:48Z",
+    "last_commit_ts": "2026-11-06T12:19:38Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       22,
@@ -568,7 +568,7 @@
       19,
       32,
       43,
-      16
+      18
     ],
     "days": [
       {
@@ -1105,20 +1105,20 @@
       },
       {
         "d": "2026-11-06",
-        "code": 16,
+        "code": 18,
         "other": 0,
         "samples": [
           {
+            "commit": "247c7fe",
+            "subject": "i18n: craft-i18n pin follows its main (watermark strings, lv, fr, ar rows) (#5787)"
+          },
+          {
+            "commit": "8833c60",
+            "subject": "Layout: a shape dropped just after a page break stays on the new page (#4262) (#4297)"
+          },
+          {
             "commit": "cad8ede",
             "subject": "Shapes: pictures and text boxes inside a drawing canvas are selected and moved on their own (#2637) (#2670)"
-          },
-          {
-            "commit": "beca3f3",
-            "subject": "Layout: a float anchored on a later page of a long paragraph is drawn there (#4250) (#4267)"
-          },
-          {
-            "commit": "ef35d79",
-            "subject": "Control channel: a command that discards unsaved work is refused, not carried out (#3284)"
           }
         ]
       }
@@ -13171,7 +13171,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "8833c60",
+      "commit_full": "8833c604e0144b384ad7cc3a3802bce66d03611d",
+      "commit_date": "2026-11-06T13:12:16+01:00",
+      "ts": "2026-11-06T12:12:16Z",
+      "message": "Layout: a shape dropped just after a page break stays on the new page (#4262) (#4297)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-06T12:11:20+00:00"
+  "updated_at": "2026-11-06T13:34:31+00:00"
 }
