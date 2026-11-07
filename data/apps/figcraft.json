@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/figcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "e603c34",
-  "latest_commit_date": "2026-11-07T11:30:52+08:00",
-  "latest_message": "M3: the Local variables window selects several variables with Shift and Cmd/Ctrl, and acts on them at once (#2002) (#2025)",
+  "latest_commit": "7c86905",
+  "latest_commit_date": "2026-11-07T11:57:49+08:00",
+  "latest_message": "M2: Suggest auto layout adds nested auto layout frames by rows and columns and keeps the placement (#1823) (#2020)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -340,6 +340,10 @@
     "progress": [
       {
         "date": "2026-11-05",
+        "text": "· M2, #1823: Suggest auto layout is its own command. layout.suggest used to run layout.add and made one row of everything. It now splits a frame's layers into rows or columns by the gaps between them, wraps each band of several layers in a hugging frame without fill and repeats inside it, so the design gets as many auto layout frames as it needs and keeps its placement where the gaps are even (the frame keeps its size). Uneven gaps, bands that start at different offsets across the flow (lined up at the smallest) and layers that overlap along both axes are reported as warnings, and instances and layers inside them are refused. layout.add is unchanged. Tests in layoutsuggesttests.rs. Numbers unchanged."
+      },
+      {
+        "date": "2026-11-05",
         "text": "· M3, #2002: the Local variables window selects several variables with a click, Shift+click (range) and Cmd/Ctrl+click (toggle), cleared by Escape or a click on the empty space; delete, move to a group and scope act on the selected local variables as one undo step (command.batch); inherited variables can be selected but are left out, since they change in their own collection, and the bulk menu needs two or more local variables selected (otherwise the row shows its own menu). Rename and value edits stay single-row."
       },
       {
@@ -493,10 +497,6 @@
       {
         "date": "2026-10-15",
         "text": "· Web clipboard (M1, #375): copy and paste in the browser go through the system clipboard. Numbers unchanged."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "· Alt-drag copies snap to their original and Duplicate (Cmd+D) repeats the last copy's offset (M1, #283). Numbers unchanged."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-11T21:41:28Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 220,
+    "revisions_since": 221,
     "hours_since": {
       "from": [
         273,
@@ -560,39 +560,39 @@
     }
   },
   "roadmap": {
-    "revisions": 269,
-    "revisions_7d": 16,
+    "revisions": 270,
+    "revisions_7d": 17,
     "last_revision": {
-      "ts": "2026-11-07T03:30:52Z",
+      "ts": "2026-11-07T03:57:49Z",
       "kind": "content",
-      "commit": "e603c34",
-      "commit_full": "e603c341ff567dbf98b29e7d19a9f10b2ae5ae22",
-      "message": "M3: the Local variables window selects several variables with Shift and Cmd/Ctrl, and acts on them at once (#2002) (#2025)"
+      "commit": "7c86905",
+      "commit_full": "7c869057c4c21be0c293752fbf027e74b54c08ff",
+      "message": "M2: Suggest auto layout adds nested auto layout frames by rows and columns and keeps the placement (#1823) (#2020)"
     },
     "last_update": {
-      "ts": "2026-11-07T03:30:52Z",
+      "ts": "2026-11-07T03:57:49Z",
       "kind": "content",
-      "commit": "e603c34",
-      "commit_full": "e603c341ff567dbf98b29e7d19a9f10b2ae5ae22",
-      "message": "M3: the Local variables window selects several variables with Shift and Cmd/Ctrl, and acts on them at once (#2002) (#2025)"
+      "commit": "7c86905",
+      "commit_full": "7c869057c4c21be0c293752fbf027e74b54c08ff",
+      "message": "M2: Suggest auto layout adds nested auto layout frames by rows and columns and keeps the placement (#1823) (#2020)"
     },
     "self_reported": "2026-11-06"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.3,
+    "score": 20.8,
     "active_days_7d": 6,
-    "changes_7d": 142,
-    "changes_14d": 487,
+    "changes_7d": 173,
+    "changes_14d": 518,
     "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-07T03:34:16Z",
-      "commit": "2e0d24d",
-      "commit_full": "2e0d24dc09a4659412a1d41d315441fb71bad9c4",
-      "subject": "fix(engine): refuse document URLs with shell syntax or a malformed authority (#1936)"
+      "ts": "2026-11-07T04:36:34Z",
+      "commit": "eec8abe",
+      "commit_full": "eec8abec39499dae621982f14da3d358398033db",
+      "subject": ".fig import: resolve library variables and collections by asset key (newest copy) (#1801)"
     },
-    "last_commit_ts": "2026-11-07T03:34:16Z",
+    "last_commit_ts": "2026-11-07T04:36:34Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       26,
@@ -608,7 +608,7 @@
       23,
       8,
       0,
-      67
+      98
     ],
     "days": [
       {
@@ -1138,20 +1138,20 @@
       },
       {
         "d": "2026-11-07",
-        "code": 67,
+        "code": 98,
         "other": 2,
         "samples": [
           {
-            "commit": "2e0d24d",
-            "subject": "fix(engine): refuse document URLs with shell syntax or a malformed authority (#1936)"
+            "commit": "eec8abe",
+            "subject": ".fig import: resolve library variables and collections by asset key (newest copy) (#1801)"
           },
           {
-            "commit": "ece7c3c",
-            "subject": "Web fonts: FIGCRAFT_EMBED_SCRIPTS embeds other scripts' craft-fonts faces, so Persian and Arabic draw (#1902) (#1908)"
+            "commit": "1fcd8f8",
+            "subject": "M8: posting a comment in the browser no longer stops the app (#1764) (#1766)"
           },
           {
-            "commit": "e603c34",
-            "subject": "M3: the Local variables window selects several variables with Shift and Cmd/Ctrl, and acts on them at once (#2002) (#2025)"
+            "commit": "2ed72be",
+            "subject": "M7: a gap between Import and Export in the Local variables window (#1754) (#1769)"
           }
         ]
       }
@@ -7823,7 +7823,30 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "7c86905",
+      "commit_full": "7c869057c4c21be0c293752fbf027e74b54c08ff",
+      "commit_date": "2026-11-07T11:57:49+08:00",
+      "ts": "2026-11-07T03:57:49Z",
+      "message": "M2: Suggest auto layout adds nested auto layout frames by rows and columns and keeps the placement (#1823) (#2020)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-07T03:34:26+00:00"
+  "updated_at": "2026-11-07T04:36:55+00:00"
 }
