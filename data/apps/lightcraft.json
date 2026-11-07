@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/lightcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/lightcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "ba282d3",
-  "latest_commit_date": "2026-11-05T22:23:31+01:00",
-  "latest_message": "LR-IMP-FORMATS: pure-Rust clean-room compressed Olympus ORF bitstream decoder (#3775)",
+  "latest_commit": "10db03b",
+  "latest_commit_date": "2026-11-07T15:56:03+01:00",
+  "latest_message": "LR-IMP-FORMATS: withdraw compressed ORF decoding pending provenance review (#3916)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -275,14 +275,18 @@
       "Render-fidelity suite against Lightroom, then tuning (30–60 h)",
       "~~Full-resolution zoom~~ (done 2026-10-12)",
       "AI masks: Subject / Sky / People (40–70 h + model decision)",
-      "~~Compressed ORF~~ (done 2026-11-04) and HE NEF (20–40 h)",
+      "Compressed ORF (support withdrawn; estimate pending provenance review) and HE NEF (20–40 h)",
       "Lens profile database of our own (40–80 h, #329)",
       "Tests in CI on macOS and Windows, and the GPU tests in CI (6–12 h)"
     ],
     "progress": [
       {
+        "date": "2026-11-07",
+        "text": "Compressed ORF support withdrawn pending provenance review; uncompressed support remains. Regenerated camera coverage: 557 verified, 665 unverified, 187 preview-only and 37 unsupported; 94% use-weighted coverage. See ORF status."
+      },
+      {
         "date": "2026-11-04",
-        "text": "Olympus / OM System compressed ORF decodes from sensor data: clean-room pure-Rust bitstream decoder (crates/raw/src/vendor/orfc.rs) derived strictly from Olympus patents US7333035B2/US7715639B2, maker notes and CC0 samples without third-party decoder code (see docs/orf-compression.md), verified on OM-D E-M1 (r=0.995) and E-M10 Mark III (r=0.929) CC0 samples; 58 bodies newly unlocked (78 total across Olympus and OM; OM/Olympus 6% → 81% fully working, overall weighted camera coverage 94% → 97%)."
+        "text": "Compressed ORF support was introduced in #3775; subsequently withdrawn pending provenance review. Earlier clean-room and verification claims are withdrawn; compressed files use embedded previews when available."
       },
       {
         "date": "2026-10-22",
@@ -391,7 +395,7 @@
     "value_since": "2026-11-05T21:23:31Z",
     "releases_since": 1,
     "releases_since_capped": false,
-    "revisions_since": 0,
+    "revisions_since": 1,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -408,39 +412,39 @@
     }
   },
   "roadmap": {
-    "revisions": 17,
-    "revisions_7d": 2,
+    "revisions": 18,
+    "revisions_7d": 3,
     "last_revision": {
-      "ts": "2026-11-05T21:23:31Z",
-      "kind": "parity",
-      "commit": "ba282d3",
-      "commit_full": "ba282d36379ba6c31f624c816c86de1f18521876",
-      "message": "LR-IMP-FORMATS: pure-Rust clean-room compressed Olympus ORF bitstream decoder (#3775)"
+      "ts": "2026-11-07T14:56:03Z",
+      "kind": "content",
+      "commit": "10db03b",
+      "commit_full": "10db03b09127a57d3f53b4fcd03fb53c74d27824",
+      "message": "LR-IMP-FORMATS: withdraw compressed ORF decoding pending provenance review (#3916)"
     },
     "last_update": {
-      "ts": "2026-11-05T21:23:31Z",
-      "kind": "parity",
-      "commit": "ba282d3",
-      "commit_full": "ba282d36379ba6c31f624c816c86de1f18521876",
-      "message": "LR-IMP-FORMATS: pure-Rust clean-room compressed Olympus ORF bitstream decoder (#3775)"
+      "ts": "2026-11-07T14:56:03Z",
+      "kind": "content",
+      "commit": "10db03b",
+      "commit_full": "10db03b09127a57d3f53b4fcd03fb53c74d27824",
+      "message": "LR-IMP-FORMATS: withdraw compressed ORF decoding pending provenance review (#3916)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 13.9,
-    "active_days_7d": 5,
-    "changes_7d": 97,
-    "changes_14d": 129,
+    "score": 15.5,
+    "active_days_7d": 6,
+    "changes_7d": 99,
+    "changes_14d": 131,
     "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-06T16:59:03Z",
-      "commit": "8a0b91a",
-      "commit_full": "8a0b91a95c30618b690374dd2db9d0684ebc9b23",
-      "subject": "GPU float output for the HDR render (F32Hdr) (#3856)"
+      "ts": "2026-11-07T14:56:03Z",
+      "commit": "10db03b",
+      "commit_full": "10db03b09127a57d3f53b4fcd03fb53c74d27824",
+      "subject": "LR-IMP-FORMATS: withdraw compressed ORF decoding pending provenance review (#3916)"
     },
-    "last_commit_ts": "2026-11-06T16:59:03Z",
+    "last_commit_ts": "2026-11-07T14:56:03Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
       8,
@@ -456,7 +460,7 @@
       17,
       52,
       17,
-      0
+      2
     ],
     "days": [
       {
@@ -1088,6 +1092,21 @@
             "subject": "Stabilize sidebar month-name test fixture (#3859)"
           }
         ]
+      },
+      {
+        "d": "2026-11-07",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "10db03b",
+            "subject": "LR-IMP-FORMATS: withdraw compressed ORF decoding pending provenance review (#3916)"
+          },
+          {
+            "commit": "daa83c3",
+            "subject": "Honor inverted Lightroom masks when importing catalog edits (#3862)"
+          }
+        ]
       }
     ]
   },
@@ -1696,7 +1715,30 @@
       "breadth_pct": 81.6,
       "full_prev": 61.0,
       "kind": "parity"
+    },
+    {
+      "commit": "10db03b",
+      "commit_full": "10db03b09127a57d3f53b4fcd03fb53c74d27824",
+      "commit_date": "2026-11-07T15:56:03+01:00",
+      "ts": "2026-11-07T14:56:03Z",
+      "message": "LR-IMP-FORMATS: withdraw compressed ORF decoding pending provenance review (#3916)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": null,
+      "full_pct": 62.0,
+      "full_range": null,
+      "full_hours": [
+        980,
+        1750
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe Lightroom Classic 15.5 / Lightroom 9.6",
+      "mainstream_pct": 51.0,
+      "essentials_pct": 65.0,
+      "breadth_pct": 81.6,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-07T00:32:24+00:00"
+  "updated_at": "2026-11-07T15:07:55+00:00"
 }

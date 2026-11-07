@@ -79,18 +79,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.2,
+    "score": 14.4,
     "active_days_7d": 7,
-    "changes_7d": 97,
-    "changes_14d": 97,
+    "changes_7d": 98,
+    "changes_14d": 98,
     "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-11-07T06:19:24Z",
-      "commit": "0bfbbf1",
-      "commit_full": "0bfbbf1887c80f3d2a17c0a4e01cb1cd0fa315b7",
-      "subject": "Reject export filenames that already exist in the destination (#127)"
+      "ts": "2026-11-07T14:38:47Z",
+      "commit": "6c387db",
+      "commit_full": "6c387db41fbf2c5fa60af8116f851728fc4a826a",
+      "subject": "Bound mesh vertex memory before collecting positions (#142)"
     },
-    "last_commit_ts": "2026-11-07T06:19:24Z",
+    "last_commit_ts": "2026-11-07T14:38:47Z",
     "repo_since": "2026-11-01T19:58:46Z",
     "window": [
       0,
@@ -106,7 +106,7 @@
       5,
       54,
       8,
-      8
+      9
     ],
     "days": [
       {
@@ -225,9 +225,13 @@
       },
       {
         "d": "2026-11-07",
-        "code": 8,
+        "code": 9,
         "other": 0,
         "samples": [
+          {
+            "commit": "6c387db",
+            "subject": "Bound mesh vertex memory before collecting positions (#142)"
+          },
           {
             "commit": "0bfbbf1",
             "subject": "Reject export filenames that already exist in the destination (#127)"
@@ -235,10 +239,6 @@
           {
             "commit": "efb93a2",
             "subject": "Decode material input bitmaps as linear for data usages (#130)"
-          },
-          {
-            "commit": "5cee091",
-            "subject": "Let a parameter be exposed as a graph input on more than one node (#145)"
           }
         ]
       }
@@ -345,5 +345,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-07T06:35:04+00:00"
+  "updated_at": "2026-11-07T15:08:20+00:00"
 }

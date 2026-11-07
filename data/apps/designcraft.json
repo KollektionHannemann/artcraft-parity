@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/designcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "0e85e9e",
-  "latest_commit_date": "2026-11-05T13:16:42+01:00",
-  "latest_message": "Esperanto as a text language (#1142) (#1204)",
+  "latest_commit": "7e32b5f",
+  "latest_commit_date": "2026-11-07T15:38:00+01:00",
+  "latest_message": "Preflight: white or [Paper] set to overprint is reported (#2401) (#2412)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -311,6 +311,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-06",
+        "text": "· Preflight warns about white or [Paper] set to overprint (#2401): a fill, stroke or stroke gap, or ruby and kenten, in [Paper] or a colour that lays down no ink (C=0 M=0 Y=0 K=0, a 0% tint; a spot ink, such as a white ink or a varnish, prints whatever colour stands in for it), is reported as whiteOverprint, since it disappears on press. Text itself has no overprint, so white text in a frame set to Overprint Fill still knocks out and prints, and is not reported. Preflight no longer says PDF export drops ruby and kenten overprint, which it writes. No readiness percentage change."
+      },
+      {
         "date": "2026-11-04",
         "text": "· Striped strokes retain out-and-back cubic segments whose second control point is away from the coincident endpoints and first control point. A geometry regression checks the offset extent and both stripe bands. No readiness percentage change."
       },
@@ -465,10 +469,6 @@
       {
         "date": "2026-10-24",
         "text": "· Type › Notes › Convert to Note (note.convertFromText {author?}): as in InDesign, the selected text leaves the story and becomes the text of a new note, whose anchor takes its place; Convert Note to Text puts it back. DesignCraft refuses a selection in a table cell, or one that holds a note, footnote, endnote, anchored object, index marker, text anchor, cross-reference or table. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "· Story panel (Window › Type & Tables › Story): Optical Margin Alignment and its size for the stories of the text selection or the selected text frames, disabled without either; type.selectionAttrs reports them as storyOptions, null where the stories differ. The Paragraph panel menu has Ignore Optical Margin in place of the per-paragraph Optical Margin Alignment switch, which stays in type.para, and Paragraph Style Options › Indents and Spacing has Ignore Optical Margin (#947). No readiness percentage change."
       }
     ]
   },
@@ -477,7 +477,7 @@
     "value_since": "2026-10-10T18:09:17Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 190,
+    "revisions_since": 191,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -485,39 +485,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 191,
-    "revisions_7d": 24,
+    "revisions": 192,
+    "revisions_7d": 25,
     "last_revision": {
-      "ts": "2026-11-05T12:16:42Z",
+      "ts": "2026-11-07T14:38:00Z",
       "kind": "content",
-      "commit": "0e85e9e",
-      "commit_full": "0e85e9e5ec6913c5189d2d3e575ca7834473f0de",
-      "message": "Esperanto as a text language (#1142) (#1204)"
+      "commit": "7e32b5f",
+      "commit_full": "7e32b5ffd5d217e16731d2e3c8220fac64d6d203",
+      "message": "Preflight: white or [Paper] set to overprint is reported (#2401) (#2412)"
     },
     "last_update": {
-      "ts": "2026-11-05T12:16:42Z",
+      "ts": "2026-11-07T14:38:00Z",
       "kind": "content",
-      "commit": "0e85e9e",
-      "commit_full": "0e85e9e5ec6913c5189d2d3e575ca7834473f0de",
-      "message": "Esperanto as a text language (#1142) (#1204)"
+      "commit": "7e32b5f",
+      "commit_full": "7e32b5ffd5d217e16731d2e3c8220fac64d6d203",
+      "message": "Preflight: white or [Paper] set to overprint is reported (#2401) (#2412)"
     },
     "self_reported": "2026-11-04"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.5,
+    "score": 16.9,
     "active_days_7d": 7,
-    "changes_7d": 100,
-    "changes_14d": 222,
+    "changes_7d": 101,
+    "changes_14d": 223,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-07T13:12:01Z",
-      "commit": "894968e",
-      "commit_full": "894968eeee1182d0d70a458a0aa195bb61c41b06",
-      "subject": "Keep Lab::hue within 0..360 for tiny negative b (#2442)"
+      "ts": "2026-11-07T14:38:00Z",
+      "commit": "7e32b5f",
+      "commit_full": "7e32b5ffd5d217e16731d2e3c8220fac64d6d203",
+      "subject": "Preflight: white or [Paper] set to overprint is reported (#2401) (#2412)"
     },
-    "last_commit_ts": "2026-11-07T13:12:01Z",
+    "last_commit_ts": "2026-11-07T14:38:00Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       39,
@@ -533,7 +533,7 @@
       26,
       8,
       4,
-      2
+      3
     ],
     "days": [
       {
@@ -1191,9 +1191,13 @@
       },
       {
         "d": "2026-11-07",
-        "code": 2,
+        "code": 3,
         "other": 0,
         "samples": [
+          {
+            "commit": "7e32b5f",
+            "subject": "Preflight: white or [Paper] set to overprint is reported (#2401) (#2412)"
+          },
           {
             "commit": "894968e",
             "subject": "Keep Lab::hue within 0..360 for tiny negative b (#2442)"
@@ -5806,7 +5810,30 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "7e32b5f",
+      "commit_full": "7e32b5ffd5d217e16731d2e3c8220fac64d6d203",
+      "commit_date": "2026-11-07T15:38:00+01:00",
+      "ts": "2026-11-07T14:38:00Z",
+      "message": "Preflight: white or [Paper] set to overprint is reported (#2401) (#2412)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-04",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-07T13:39:57+00:00"
+  "updated_at": "2026-11-07T15:08:05+00:00"
 }
