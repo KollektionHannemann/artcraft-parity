@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "595cdda",
-  "latest_commit_date": "2026-11-07T23:17:53+01:00",
-  "latest_message": "ODT: a frame offering several picture formats shows one it can read (gap 19) (#5706)",
+  "latest_commit": "fa153b9",
+  "latest_commit_date": "2026-11-08T00:24:37+01:00",
+  "latest_message": "ODT: a heading's text of another size keeps it (gap 19) (#5725)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -342,6 +342,10 @@
       },
       {
         "date": "2026-11-05",
+        "text": "ODT heading text of another size keeps it (gap 19): a smaller word in a heading came back at the heading's size in LibreOffice after a save."
+      },
+      {
+        "date": "2026-11-05",
         "text": "ODT pictures offered in several formats show and survive a save (gap 19): LibreOffice's letter templates lost theirs."
       },
       {
@@ -483,10 +487,6 @@
       {
         "date": "2026-11-02",
         "text": "ODT: saving no longer makes a table's first row repeat on every page (a table style's header row had been taken for Repeat as header row), so LibreOffice's 16 agenda templates round-trip with their text the same; 91 of the 125 corpus documents now do, and the round-trip difference falls to 60k pixels (408k this morning) (gap 19). Readiness unchanged."
-      },
-      {
-        "date": "2026-11-02",
-        "text": "ODT documents open with LibreOffice's layout where it differs from Word (new Settings::odflayout): a line of only pictures is as tall as they are, and a paragraph's padding without a border takes room. Unequal columns and column breaks are kept. The corpus round-trip difference falls to 82k pixels, 80% below this morning's 408k; LibreOffice's report templates and one-page résumé now round-trip almost pixel-identical (gap 19). Readiness unchanged."
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 513,
+    "revisions_since": 514,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 517,
-    "revisions_7d": 72,
+    "revisions": 518,
+    "revisions_7d": 73,
     "last_revision": {
-      "ts": "2026-11-07T22:17:53Z",
+      "ts": "2026-11-07T23:24:37Z",
       "kind": "content",
-      "commit": "595cdda",
-      "commit_full": "595cddaaeff115e11ae7f7d524ecc71b3e53abe6",
-      "message": "ODT: a frame offering several picture formats shows one it can read (gap 19) (#5706)"
+      "commit": "fa153b9",
+      "commit_full": "fa153b932c8365281ed2e1a33742090d93219ce8",
+      "message": "ODT: a heading's text of another size keeps it (gap 19) (#5725)"
     },
     "last_update": {
-      "ts": "2026-11-07T22:17:53Z",
+      "ts": "2026-11-07T23:24:37Z",
       "kind": "content",
-      "commit": "595cdda",
-      "commit_full": "595cddaaeff115e11ae7f7d524ecc71b3e53abe6",
-      "message": "ODT: a frame offering several picture formats shows one it can read (gap 19) (#5706)"
+      "commit": "fa153b9",
+      "commit_full": "fa153b932c8365281ed2e1a33742090d93219ce8",
+      "message": "ODT: a heading's text of another size keeps it (gap 19) (#5725)"
     },
     "self_reported": "2026-11-06"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.1,
+    "score": 20.5,
     "active_days_7d": 7,
-    "changes_7d": 141,
-    "changes_14d": 282,
+    "changes_7d": 142,
+    "changes_14d": 283,
     "housekeeping_7d": 10,
     "last_code_change": {
-      "ts": "2026-11-07T22:17:53Z",
-      "commit": "595cdda",
-      "commit_full": "595cddaaeff115e11ae7f7d524ecc71b3e53abe6",
-      "subject": "ODT: a frame offering several picture formats shows one it can read (gap 19) (#5706)"
+      "ts": "2026-11-07T23:24:37Z",
+      "commit": "fa153b9",
+      "commit_full": "fa153b932c8365281ed2e1a33742090d93219ce8",
+      "subject": "ODT: a heading's text of another size keeps it (gap 19) (#5725)"
     },
-    "last_commit_ts": "2026-11-07T22:17:53Z",
+    "last_commit_ts": "2026-11-07T23:24:37Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       37,
@@ -568,7 +568,7 @@
       32,
       43,
       20,
-      2
+      3
     ],
     "days": [
       {
@@ -1124,9 +1124,13 @@
       },
       {
         "d": "2026-11-07",
-        "code": 2,
+        "code": 3,
         "other": 0,
         "samples": [
+          {
+            "commit": "fa153b9",
+            "subject": "ODT: a heading's text of another size keeps it (gap 19) (#5725)"
+          },
           {
             "commit": "595cdda",
             "subject": "ODT: a frame offering several picture formats shows one it can read (gap 19) (#5706)"
@@ -13255,7 +13259,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "fa153b9",
+      "commit_full": "fa153b932c8365281ed2e1a33742090d93219ce8",
+      "commit_date": "2026-11-08T00:24:37+01:00",
+      "ts": "2026-11-07T23:24:37Z",
+      "message": "ODT: a heading's text of another size keeps it (gap 19) (#5725)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-07T22:25:39+00:00"
+  "updated_at": "2026-11-07T23:26:18+00:00"
 }
