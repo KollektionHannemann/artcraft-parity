@@ -79,18 +79,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 11.1,
-    "active_days_7d": 6,
-    "changes_7d": 89,
-    "changes_14d": 89,
+    "score": 14.2,
+    "active_days_7d": 7,
+    "changes_7d": 97,
+    "changes_14d": 97,
     "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-11-06T09:23:13Z",
-      "commit": "3d399dd",
-      "commit_full": "3d399dd1a5f22e12100dfa5bd68fc4a7d3ec9adf",
-      "subject": "Keep typed graph name and attribute text across frames (#124)"
+      "ts": "2026-11-07T06:19:24Z",
+      "commit": "0bfbbf1",
+      "commit_full": "0bfbbf1887c80f3d2a17c0a4e01cb1cd0fa315b7",
+      "subject": "Reject export filenames that already exist in the destination (#127)"
     },
-    "last_commit_ts": "2026-11-06T13:59:31Z",
+    "last_commit_ts": "2026-11-07T06:19:24Z",
     "repo_since": "2026-11-01T19:58:46Z",
     "window": [
       0,
@@ -106,7 +106,7 @@
       5,
       54,
       8,
-      0
+      8
     ],
     "days": [
       {
@@ -222,6 +222,25 @@
             "subject": "Fix 4K preview texture refresh in 2D view (#122)"
           }
         ]
+      },
+      {
+        "d": "2026-11-07",
+        "code": 8,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "0bfbbf1",
+            "subject": "Reject export filenames that already exist in the destination (#127)"
+          },
+          {
+            "commit": "efb93a2",
+            "subject": "Decode material input bitmaps as linear for data usages (#130)"
+          },
+          {
+            "commit": "5cee091",
+            "subject": "Let a parameter be exposed as a graph input on more than one node (#145)"
+          }
+        ]
       }
     ]
   },
@@ -326,5 +345,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-07T00:32:56+00:00"
+  "updated_at": "2026-11-07T06:35:04+00:00"
 }

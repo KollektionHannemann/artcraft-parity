@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 10.8,
-    "active_days_7d": 6,
-    "changes_7d": 117,
-    "changes_14d": 117,
+    "score": 12.8,
+    "active_days_7d": 7,
+    "changes_7d": 120,
+    "changes_14d": 120,
     "housekeeping_7d": 20,
     "last_code_change": {
-      "ts": "2026-11-06T15:40:45Z",
-      "commit": "30414ca",
-      "commit_full": "30414caa6b66c9d805cd5ada31271aee44f2c601",
-      "subject": "Masks and content stacks run every neighbourhood filter (#298)"
+      "ts": "2026-11-07T06:24:45Z",
+      "commit": "eb9b736",
+      "commit_full": "eb9b7365200c523d233abdf935fbea6496b33031",
+      "subject": "Bake curvature from the mesh by default (#311)"
     },
-    "last_commit_ts": "2026-11-06T15:40:45Z",
+    "last_commit_ts": "2026-11-07T06:24:45Z",
     "repo_since": "2026-10-14T18:33:13Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       4,
       7,
       6,
-      0
+      3
     ],
     "days": [
       {
@@ -283,6 +283,25 @@
           {
             "commit": "21c7166",
             "subject": "256 bake settings edits only apply to the active texture set (#293)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-07",
+        "code": 3,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "eb9b736",
+            "subject": "Bake curvature from the mesh by default (#311)"
+          },
+          {
+            "commit": "d649edd",
+            "subject": "Right-click in a view opens the Properties panel's contents at the cursor (#321)"
+          },
+          {
+            "commit": "8b4c3e0",
+            "subject": "Bake: curvature from the normal map follows the surface, with one band per edge (#322)"
           }
         ]
       }
@@ -626,5 +645,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-07T00:32:54+00:00"
+  "updated_at": "2026-11-07T06:35:01+00:00"
 }
