@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/photocraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/photocraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "2c68cc6",
-  "latest_commit_date": "2026-11-04T14:18:54+01:00",
-  "latest_message": "Integration batch 15: Crop, Free Transform and Actions epic PRs (#11203)",
+  "latest_commit": "3c000ea",
+  "latest_commit_date": "2026-11-07T14:11:19+01:00",
+  "latest_message": "Print: Japanese paper sizes (はがき・往復はがき・JIS B5/B4・L判) (#8307)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Adobe Photoshop 2026",
-    "last_updated": "2026-10-17",
+    "last_updated": "2026-10-22",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -300,6 +300,10 @@
         "text": "Load Actions: Mac Roman step names with é ä ö ü Ä or ° read as Mac Roman instead of windows-1252 or Cyrillic (#10774): windows-1252's rare 0x80–0x9F letters and a lone Cyrillic letter in a Latin word no longer count as common text, the degree sign does, and the file's own Unicode text settles a word-initial rare letter and breaks exact ties toward windows-1252 or Mac Roman"
       },
       {
+        "date": "2026-10-22",
+        "text": "Print paper sizes: はがき (100 × 148 mm), 往復はがき (148 × 200), JIS B5 (182 × 257), JIS B4 (257 × 364), A6, L判 (89 × 127), 2L判 (127 × 178), KG判 (102 × 152), 六切 (203 × 254) and 四切 (254 × 305) are selectable in the Print dialog and file.print, matched by their customary names (はがき, L判, JIS B5…), and the PDF page takes their exact size. Existing papers unchanged."
+      },
+      {
         "date": "2026-10-21",
         "text": "Linux can use font-free Adwaita controls when System Title Bar is selected, while the integrated CSD title bar remains the default (as in #4439). Saved preferences are respected; startup and preference-dialog regressions cover both choices (#6266)."
       },
@@ -346,7 +350,7 @@
     "value_since": "2026-10-10T19:09:04Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 8,
+    "revisions_since": 9,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -354,39 +358,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 9,
-    "revisions_7d": 2,
+    "revisions": 10,
+    "revisions_7d": 3,
     "last_revision": {
-      "ts": "2026-11-04T13:18:54Z",
+      "ts": "2026-11-07T13:11:19Z",
       "kind": "content",
-      "commit": "2c68cc6",
-      "commit_full": "2c68cc6b9590f7100417a8f42bca9b9d67c40406",
-      "message": "Integration batch 15: Crop, Free Transform and Actions epic PRs (#11203)"
+      "commit": "3c000ea",
+      "commit_full": "3c000ea2381745d5208d93f9d8063fe87f865c10",
+      "message": "Print: Japanese paper sizes (はがき・往復はがき・JIS B5/B4・L判) (#8307)"
     },
     "last_update": {
-      "ts": "2026-11-04T13:18:54Z",
+      "ts": "2026-11-07T13:11:19Z",
       "kind": "content",
-      "commit": "2c68cc6",
-      "commit_full": "2c68cc6b9590f7100417a8f42bca9b9d67c40406",
-      "message": "Integration batch 15: Crop, Free Transform and Actions epic PRs (#11203)"
+      "commit": "3c000ea",
+      "commit_full": "3c000ea2381745d5208d93f9d8063fe87f865c10",
+      "message": "Print: Japanese paper sizes (はがき・往復はがき・JIS B5/B4・L判) (#8307)"
     },
-    "self_reported": "2026-10-17"
+    "self_reported": "2026-10-22"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.8,
+    "score": 23.4,
     "active_days_7d": 7,
-    "changes_7d": 177,
-    "changes_14d": 281,
-    "housekeeping_7d": 9,
+    "changes_7d": 184,
+    "changes_14d": 288,
+    "housekeeping_7d": 10,
     "last_code_change": {
-      "ts": "2026-11-07T11:16:19Z",
-      "commit": "eb3b17b",
-      "commit_full": "eb3b17b76568dc6923d635d74534fb01aa177d88",
-      "subject": "Actions: typed text records as one step; Batch says which files failed (#10113, #10682) (#10730)"
+      "ts": "2026-11-07T13:11:59Z",
+      "commit": "b28b2f6",
+      "commit_full": "b28b2f665ed7413c129af8f7bf2c522f68a0bd2c",
+      "subject": "feat(psd): parse legacy frame-animation metadata (#8633)"
     },
-    "last_commit_ts": "2026-11-07T11:16:19Z",
+    "last_commit_ts": "2026-11-07T13:11:59Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       45,
@@ -402,7 +406,7 @@
       27,
       47,
       48,
-      13
+      20
     ],
     "days": [
       {
@@ -1129,20 +1133,20 @@
       },
       {
         "d": "2026-11-07",
-        "code": 13,
-        "other": 0,
+        "code": 20,
+        "other": 1,
         "samples": [
           {
-            "commit": "eb3b17b",
-            "subject": "Actions: typed text records as one step; Batch says which files failed (#10113, #10682) (#10730)"
+            "commit": "b28b2f6",
+            "subject": "feat(psd): parse legacy frame-animation metadata (#8633)"
           },
           {
-            "commit": "eaba29c",
-            "subject": "Sample the targeted layer mask with the Eyedropper (#11862)"
+            "commit": "3c000ea",
+            "subject": "Print: Japanese paper sizes (はがき・往復はがき・JIS B5/B4・L判) (#8307)"
           },
           {
-            "commit": "1cc2e08",
-            "subject": "Show notes after creating one with the Note tool (#11865)"
+            "commit": "d4db4d7",
+            "subject": "Preferences: Skip Transform when Placing (#8492) (#9075)"
           }
         ]
       }
@@ -1562,7 +1566,30 @@
       "breadth_pct": 76.0,
       "full_prev": 45.0,
       "kind": "content"
+    },
+    {
+      "commit": "3c000ea",
+      "commit_full": "3c000ea2381745d5208d93f9d8063fe87f865c10",
+      "commit_date": "2026-11-07T14:11:19+01:00",
+      "ts": "2026-11-07T13:11:19Z",
+      "message": "Print: Japanese paper sizes (はがき・往復はがき・JIS B5/B4・L判) (#8307)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-22",
+      "full_pct": 45.0,
+      "full_range": null,
+      "full_hours": [
+        2300,
+        4100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe Photoshop 2026",
+      "mainstream_pct": 43.0,
+      "essentials_pct": 61.0,
+      "breadth_pct": 76.0,
+      "full_prev": 45.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-07T11:59:23+00:00"
+  "updated_at": "2026-11-07T13:39:22+00:00"
 }

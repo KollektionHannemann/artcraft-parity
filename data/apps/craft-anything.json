@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.6,
+    "score": 21.7,
     "active_days_7d": 7,
-    "changes_7d": 423,
-    "changes_14d": 426,
+    "changes_7d": 424,
+    "changes_14d": 427,
     "housekeeping_7d": 45,
     "last_code_change": {
-      "ts": "2026-11-07T11:13:53Z",
-      "commit": "935b646",
-      "commit_full": "935b646f3ceb67b32c8bb5c20405d45c81bc5ef9",
-      "subject": "Let an API backend's timeout_secs give a slow model longer to answer (#1098)"
+      "ts": "2026-11-07T13:33:18Z",
+      "commit": "8313a2a",
+      "commit_full": "8313a2a5539ea00ec6d695e1c8fad0646b917080",
+      "subject": "Add Anthropic's own address as an Anthropic backend (#1101)"
     },
-    "last_commit_ts": "2026-11-07T12:22:22Z",
+    "last_commit_ts": "2026-11-07T13:33:18Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       49,
       1,
       64,
-      31
+      32
     ],
     "days": [
       {
@@ -223,9 +223,13 @@
       },
       {
         "d": "2026-11-07",
-        "code": 31,
+        "code": 32,
         "other": 5,
         "samples": [
+          {
+            "commit": "8313a2a",
+            "subject": "Add Anthropic's own address as an Anthropic backend (#1101)"
+          },
           {
             "commit": "935b646",
             "subject": "Let an API backend's timeout_secs give a slow model longer to answer (#1098)"
@@ -233,10 +237,6 @@
           {
             "commit": "4ddf72b",
             "subject": "Keep the start guard tests from releasing each other's lock (#1097)"
-          },
-          {
-            "commit": "f672d50",
-            "subject": "Keep adb's clipped text within its byte limit on multi-byte text (#1095)"
           }
         ]
       }
@@ -1725,5 +1725,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-07T12:37:38+00:00"
+  "updated_at": "2026-11-07T13:40:24+00:00"
 }
