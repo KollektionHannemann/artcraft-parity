@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/figcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "8eb0b87",
-  "latest_commit_date": "2026-11-05T22:59:27+01:00",
-  "latest_message": "M3: glass bends towards its core, and rounded rectangles work it out in closed form (#1889)",
+  "latest_commit": "401db4b",
+  "latest_commit_date": "2026-11-07T09:39:12+08:00",
+  "latest_message": "M9: one auto layout edit on each side of a branch is one conflict (#2026) (#2046)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Figma Design (desktop app 126.10.7)",
-    "last_updated": "2026-11-02",
+    "last_updated": "2026-11-06",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -339,6 +339,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-05",
+        "text": "· M1, #2003: the Design panel's Boolean groups menu leads Union, Subtract, Intersect and Exclude with original icons drawn in code from rectangles and polygons (two offset squares, the result filled at reduced alpha); each entry still runs its command."
+      },
+      {
         "date": "2026-10-30",
         "text": "M8, #1125: damaged trak size-table offsets are checked instead of wrapping on 32-bit targets, and an incomplete normal track is dropped entirely, never returned in part. Font indexing makes its existing bounds explicit, preserving later faces and sparse name-table reads. Synthetic regression tests in fontdbtests.rs. Numbers unchanged."
       },
@@ -493,10 +497,6 @@
       {
         "date": "2026-10-14",
         "text": "· Home screen recent files as cards (M7): each card shows the picture its file carries on its first page's colour, the file's icon, name and \"Edited ... ago\"; sort by name, creation or last change either way; a table view; a click selects, a double-click or Enter opens, arrow keys move; Open, Show in folder and Remove from recents on right-click. Numbers unchanged."
-      },
-      {
-        "date": "2026-10-14",
-        "text": "· SVG/PDF export depth (M0.9, #208): visible descendants deeper than 256 levels below an exported root are refused before bounds or drawing, including masks and raster fallbacks. SVG has a checked API; the engine and CLI report the limit and suggest selecting an inner layer. Existing destination files survive refusal. Boundary, inner-root, hidden-subtree, multi-root/page and command/CLI regressions cover the change. Numbers unchanged."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-11T21:41:28Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 209,
+    "revisions_since": 212,
     "hours_since": {
       "from": [
         273,
@@ -560,39 +560,39 @@
     }
   },
   "roadmap": {
-    "revisions": 258,
-    "revisions_7d": 5,
+    "revisions": 261,
+    "revisions_7d": 8,
     "last_revision": {
-      "ts": "2026-11-05T21:59:27Z",
+      "ts": "2026-11-07T01:39:12Z",
       "kind": "content",
-      "commit": "8eb0b87",
-      "commit_full": "8eb0b87646c5aef712326d6c431ccde5408630de",
-      "message": "M3: glass bends towards its core, and rounded rectangles work it out in closed form (#1889)"
+      "commit": "401db4b",
+      "commit_full": "401db4beb0520de174d986da7f175dc2f8ad16a3",
+      "message": "M9: one auto layout edit on each side of a branch is one conflict (#2026) (#2046)"
     },
     "last_update": {
-      "ts": "2026-11-05T21:59:27Z",
+      "ts": "2026-11-07T01:39:12Z",
       "kind": "content",
-      "commit": "8eb0b87",
-      "commit_full": "8eb0b87646c5aef712326d6c431ccde5408630de",
-      "message": "M3: glass bends towards its core, and rounded rectangles work it out in closed form (#1889)"
+      "commit": "401db4b",
+      "commit_full": "401db4beb0520de174d986da7f175dc2f8ad16a3",
+      "message": "M9: one auto layout edit on each side of a branch is one conflict (#2026) (#2046)"
     },
-    "self_reported": "2026-11-02"
+    "self_reported": "2026-11-06"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.2,
-    "active_days_7d": 5,
-    "changes_7d": 75,
-    "changes_14d": 420,
-    "housekeeping_7d": 6,
+    "score": 18.8,
+    "active_days_7d": 6,
+    "changes_7d": 98,
+    "changes_14d": 443,
+    "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-05T21:59:27Z",
-      "commit": "8eb0b87",
-      "commit_full": "8eb0b87646c5aef712326d6c431ccde5408630de",
-      "subject": "M3: glass bends towards its core, and rounded rectangles work it out in closed form (#1889)"
+      "ts": "2026-11-07T01:43:25Z",
+      "commit": "cbe6c41",
+      "commit_full": "cbe6c414b85cc9c2af7f155f12d8c9a0ae75216e",
+      "subject": "perf(format): index the lookups that made style-heavy files quadratic (#2064)"
     },
-    "last_commit_ts": "2026-11-06T13:59:45Z",
+    "last_commit_ts": "2026-11-07T01:43:25Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       26,
@@ -608,7 +608,7 @@
       23,
       8,
       0,
-      0
+      23
     ],
     "days": [
       {
@@ -1135,6 +1135,25 @@
         "code": 0,
         "other": 1,
         "samples": []
+      },
+      {
+        "d": "2026-11-07",
+        "code": 23,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "cbe6c41",
+            "subject": "perf(format): index the lookups that made style-heavy files quadratic (#2064)"
+          },
+          {
+            "commit": "6bbaa27",
+            "subject": "fix(engine): an unknown stroke cap lists the caps node.set takes (#2005) (#2007)"
+          },
+          {
+            "commit": "401db4b",
+            "subject": "M9: one auto layout edit on each side of a branch is one conflict (#2026) (#2046)"
+          }
+        ]
       }
     ]
   },
@@ -7551,7 +7570,76 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "0497723",
+      "commit_full": "049772335ba8a5ee18d9094afbeade18478b8967",
+      "commit_date": "2026-11-07T08:53:12+08:00",
+      "ts": "2026-11-07T00:53:12Z",
+      "message": "M8: glass takes one sample where its colours split under 1/256 px (#2057)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "8cbac00",
+      "commit_full": "8cbac00beada45f51014549e3a4a2d2584280537",
+      "commit_date": "2026-11-07T09:24:44+08:00",
+      "ts": "2026-11-07T01:24:44Z",
+      "message": "M1: the boolean operation buttons carry original icons (#2003) (#2024)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "401db4b",
+      "commit_full": "401db4beb0520de174d986da7f175dc2f8ad16a3",
+      "commit_date": "2026-11-07T09:39:12+08:00",
+      "ts": "2026-11-07T01:39:12Z",
+      "message": "M9: one auto layout edit on each side of a branch is one conflict (#2026) (#2046)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-07T00:32:39+00:00"
+  "updated_at": "2026-11-07T01:45:46+00:00"
 }

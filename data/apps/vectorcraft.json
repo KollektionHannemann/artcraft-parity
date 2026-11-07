@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "27e9f33",
-  "latest_commit_date": "2026-11-06T13:55:48+08:00",
-  "latest_message": "i18n: add Hindi interface and message catalog (#5882)",
+  "latest_commit": "4b29225",
+  "latest_commit_date": "2026-11-07T09:10:24+08:00",
+  "latest_message": ".ai save: the editing copy keeps type as type (#5965)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -509,7 +509,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 213,
+    "revisions_since": 214,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -540,39 +540,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 214,
-    "revisions_7d": 14,
+    "revisions": 215,
+    "revisions_7d": 15,
     "last_revision": {
-      "ts": "2026-11-06T05:55:48Z",
+      "ts": "2026-11-07T01:10:24Z",
       "kind": "content",
-      "commit": "27e9f33",
-      "commit_full": "27e9f331ad4306c4bda4e4c1e84516485759c8ea",
-      "message": "i18n: add Hindi interface and message catalog (#5882)"
+      "commit": "4b29225",
+      "commit_full": "4b29225c30a4aab8e922929db1d8b54d53b681d2",
+      "message": ".ai save: the editing copy keeps type as type (#5965)"
     },
     "last_update": {
-      "ts": "2026-11-06T05:55:48Z",
+      "ts": "2026-11-07T01:10:24Z",
       "kind": "content",
-      "commit": "27e9f33",
-      "commit_full": "27e9f331ad4306c4bda4e4c1e84516485759c8ea",
-      "message": "i18n: add Hindi interface and message catalog (#5882)"
+      "commit": "4b29225",
+      "commit_full": "4b29225c30a4aab8e922929db1d8b54d53b681d2",
+      "message": ".ai save: the editing copy keeps type as type (#5965)"
     },
     "self_reported": "2026-11-06"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 26.8,
-    "active_days_7d": 6,
-    "changes_7d": 625,
-    "changes_14d": 1179,
-    "housekeeping_7d": 31,
+    "score": 32.4,
+    "active_days_7d": 7,
+    "changes_7d": 670,
+    "changes_14d": 1224,
+    "housekeeping_7d": 32,
     "last_code_change": {
-      "ts": "2026-11-06T10:27:56Z",
-      "commit": "f3d9970",
-      "commit_full": "f3d9970f690fdc1a018980b00fc68863efb3f006",
-      "subject": "Drop Shadow and Outer Glow: spinner arrows step Opacity, the offsets, Blur and Darkness (#5367, #5368) (#5916)"
+      "ts": "2026-11-07T01:36:04Z",
+      "commit": "2908e6f",
+      "commit_full": "2908e6f9f8b93e9387cbbbe0df5e54d41f5fbdf7",
+      "subject": "Image Trace: the logo fitter keeps no piece over its tolerance (#6008)"
     },
-    "last_commit_ts": "2026-11-06T13:58:56Z",
+    "last_commit_ts": "2026-11-07T01:36:04Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       32,
@@ -588,7 +588,7 @@
       187,
       121,
       46,
-      0
+      45
     ],
     "days": [
       {
@@ -1297,6 +1297,25 @@
           {
             "commit": "e83bfa5",
             "subject": "Keep the other library when two names share a file name (#5914)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-07",
+        "code": 45,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "2908e6f",
+            "subject": "Image Trace: the logo fitter keeps no piece over its tolerance (#6008)"
+          },
+          {
+            "commit": "389e6fa",
+            "subject": "EPS import: an image too large to read skips its data instead of failing the file (#6003)"
+          },
+          {
+            "commit": "baab0ea",
+            "subject": "EPS import: cvi and cvr read radix numbers (eps2write spot colours with spaces) (#6002)"
           }
         ]
       }
@@ -7129,7 +7148,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "4b29225",
+      "commit_full": "4b29225c30a4aab8e922929db1d8b54d53b681d2",
+      "commit_date": "2026-11-07T09:10:24+08:00",
+      "ts": "2026-11-07T01:10:24Z",
+      "message": ".ai save: the editing copy keeps type as type (#5965)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-07T00:32:17+00:00"
+  "updated_at": "2026-11-07T01:45:21+00:00"
 }
