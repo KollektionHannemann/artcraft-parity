@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.5,
+    "score": 21.6,
     "active_days_7d": 7,
-    "changes_7d": 421,
-    "changes_14d": 424,
+    "changes_7d": 423,
+    "changes_14d": 426,
     "housekeeping_7d": 44,
     "last_code_change": {
-      "ts": "2026-11-07T10:14:27Z",
-      "commit": "f672d50",
-      "commit_full": "f672d50f0103983ca8149d80a5103f12e91b888c",
-      "subject": "Keep adb's clipped text within its byte limit on multi-byte text (#1095)"
+      "ts": "2026-11-07T11:13:53Z",
+      "commit": "935b646",
+      "commit_full": "935b646f3ceb67b32c8bb5c20405d45c81bc5ef9",
+      "subject": "Let an API backend's timeout_secs give a slow model longer to answer (#1098)"
     },
-    "last_commit_ts": "2026-11-07T10:14:27Z",
+    "last_commit_ts": "2026-11-07T11:13:53Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       49,
       1,
       64,
-      29
+      31
     ],
     "days": [
       {
@@ -223,20 +223,20 @@
       },
       {
         "d": "2026-11-07",
-        "code": 29,
+        "code": 31,
         "other": 4,
         "samples": [
           {
+            "commit": "935b646",
+            "subject": "Let an API backend's timeout_secs give a slow model longer to answer (#1098)"
+          },
+          {
+            "commit": "4ddf72b",
+            "subject": "Keep the start guard tests from releasing each other's lock (#1097)"
+          },
+          {
             "commit": "f672d50",
             "subject": "Keep adb's clipped text within its byte limit on multi-byte text (#1095)"
-          },
-          {
-            "commit": "c9b81ff",
-            "subject": "Tell a running build what was asked in Just ask (R2.9) (#1094)"
-          },
-          {
-            "commit": "464935e",
-            "subject": "Launch Go apps with a single command package (R2.7) (#1092)"
           }
         ]
       }
@@ -1718,5 +1718,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-07T10:28:17+00:00"
+  "updated_at": "2026-11-07T12:00:21+00:00"
 }
