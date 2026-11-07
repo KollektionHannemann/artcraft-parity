@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/gridcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/gridcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "8774fa4",
-  "latest_commit_date": "2026-11-07T15:38:25+01:00",
-  "latest_message": "View: a sheet keeps its own scroll position when sheets move (#3485) (#3507)",
+  "latest_commit": "505cae3",
+  "latest_commit_date": "2026-11-07T16:52:46+01:00",
+  "latest_message": "Charts: one combo plot-kind function, no dead scale helpers (#1146) (#1150)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -435,7 +435,7 @@
     "value_since": "2026-10-10T18:09:06Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 88,
+    "revisions_since": 89,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -443,39 +443,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 90,
-    "revisions_7d": 15,
+    "revisions": 91,
+    "revisions_7d": 16,
     "last_revision": {
-      "ts": "2026-11-07T14:38:25Z",
+      "ts": "2026-11-07T15:52:46Z",
       "kind": "content",
-      "commit": "8774fa4",
-      "commit_full": "8774fa45fb3252fa7155cd9f5031f6732541065f",
-      "message": "View: a sheet keeps its own scroll position when sheets move (#3485) (#3507)"
+      "commit": "505cae3",
+      "commit_full": "505cae34c85bb831b48bdcfd4b571321f0d36701",
+      "message": "Charts: one combo plot-kind function, no dead scale helpers (#1146) (#1150)"
     },
     "last_update": {
-      "ts": "2026-11-07T14:38:25Z",
+      "ts": "2026-11-07T15:52:46Z",
       "kind": "content",
-      "commit": "8774fa4",
-      "commit_full": "8774fa45fb3252fa7155cd9f5031f6732541065f",
-      "message": "View: a sheet keeps its own scroll position when sheets move (#3485) (#3507)"
+      "commit": "505cae3",
+      "commit_full": "505cae34c85bb831b48bdcfd4b571321f0d36701",
+      "message": "Charts: one combo plot-kind function, no dead scale helpers (#1146) (#1150)"
     },
     "self_reported": "2026-11-02"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.4,
+    "score": 17.4,
     "active_days_7d": 7,
-    "changes_7d": 98,
-    "changes_14d": 202,
+    "changes_7d": 103,
+    "changes_14d": 207,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-07T14:38:37Z",
-      "commit": "4fc2c9c",
-      "commit_full": "4fc2c9c3b3a84c25f235992e3e3979666237d5f4",
-      "subject": "gridcraft-web: window.gridcraft, the page command API from craft-web-api (#3524)"
+      "ts": "2026-11-07T15:52:46Z",
+      "commit": "505cae3",
+      "commit_full": "505cae34c85bb831b48bdcfd4b571321f0d36701",
+      "subject": "Charts: one combo plot-kind function, no dead scale helpers (#1146) (#1150)"
     },
-    "last_commit_ts": "2026-11-07T14:38:37Z",
+    "last_commit_ts": "2026-11-07T15:52:46Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       31,
@@ -491,7 +491,7 @@
       16,
       8,
       1,
-      4
+      9
     ],
     "days": [
       {
@@ -1013,20 +1013,20 @@
       },
       {
         "d": "2026-11-07",
-        "code": 4,
+        "code": 9,
         "other": 0,
         "samples": [
           {
-            "commit": "4fc2c9c",
-            "subject": "gridcraft-web: window.gridcraft, the page command API from craft-web-api (#3524)"
+            "commit": "505cae3",
+            "subject": "Charts: one combo plot-kind function, no dead scale helpers (#1146) (#1150)"
           },
           {
-            "commit": "546a546",
-            "subject": "Selection: Ctrl+Shift+Arrow searches the active cell's line (#3484) (#3508)"
+            "commit": "ee1b5df",
+            "subject": "calc: rebuild the dependency graph from shared syntax trees (#2693)"
           },
           {
-            "commit": "8774fa4",
-            "subject": "View: a sheet keeps its own scroll position when sheets move (#3485) (#3507)"
+            "commit": "cbd7653",
+            "subject": "perf: select instead of sort in MEDIAN, PERCENTILE, QUARTILE, LARGE, SMALL (#2686)"
           }
         ]
       }
@@ -3309,7 +3309,30 @@
       "breadth_pct": 75.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "505cae3",
+      "commit_full": "505cae34c85bb831b48bdcfd4b571321f0d36701",
+      "commit_date": "2026-11-07T16:52:46+01:00",
+      "ts": "2026-11-07T15:52:46Z",
+      "message": "Charts: one combo plot-kind function, no dead scale helpers (#1146) (#1150)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-02",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-07T15:08:17+00:00"
+  "updated_at": "2026-11-07T15:59:56+00:00"
 }

@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/photocraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/photocraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "3c000ea",
-  "latest_commit_date": "2026-11-07T14:11:19+01:00",
-  "latest_message": "Print: Japanese paper sizes (はがき・往復はがき・JIS B5/B4・L判) (#8307)",
+  "latest_commit": "e3f3465",
+  "latest_commit_date": "2026-11-07T16:11:57+01:00",
+  "latest_message": "Layer Style: a drag on the image moves a Gradient Overlay (#10763) (#10840)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -297,6 +297,10 @@
     "progress": [
       {
         "date": "2026-11-02",
+        "text": "Layer Style: with Gradient Overlay selected, a drag on the image moves the gradient (its centre as a fraction of the layer's bounds, params.offset), as a drag moves a shadow (#10763)"
+      },
+      {
+        "date": "2026-11-02",
         "text": "Load Actions: Mac Roman step names with é ä ö ü Ä or ° read as Mac Roman instead of windows-1252 or Cyrillic (#10774): windows-1252's rare 0x80–0x9F letters and a lone Cyrillic letter in a Latin word no longer count as common text, the degree sign does, and the file's own Unicode text settles a word-initial rare letter and breaks exact ties toward windows-1252 or Mac Roman"
       },
       {
@@ -350,7 +354,7 @@
     "value_since": "2026-10-10T19:09:04Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 9,
+    "revisions_since": 10,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -358,39 +362,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 10,
-    "revisions_7d": 3,
+    "revisions": 11,
+    "revisions_7d": 4,
     "last_revision": {
-      "ts": "2026-11-07T13:11:19Z",
+      "ts": "2026-11-07T15:11:57Z",
       "kind": "content",
-      "commit": "3c000ea",
-      "commit_full": "3c000ea2381745d5208d93f9d8063fe87f865c10",
-      "message": "Print: Japanese paper sizes (はがき・往復はがき・JIS B5/B4・L判) (#8307)"
+      "commit": "e3f3465",
+      "commit_full": "e3f3465fe822a317fe894adaf4a4aea7a4420ded",
+      "message": "Layer Style: a drag on the image moves a Gradient Overlay (#10763) (#10840)"
     },
     "last_update": {
-      "ts": "2026-11-07T13:11:19Z",
+      "ts": "2026-11-07T15:11:57Z",
       "kind": "content",
-      "commit": "3c000ea",
-      "commit_full": "3c000ea2381745d5208d93f9d8063fe87f865c10",
-      "message": "Print: Japanese paper sizes (はがき・往復はがき・JIS B5/B4・L判) (#8307)"
+      "commit": "e3f3465",
+      "commit_full": "e3f3465fe822a317fe894adaf4a4aea7a4420ded",
+      "message": "Layer Style: a drag on the image moves a Gradient Overlay (#10763) (#10840)"
     },
     "self_reported": "2026-10-22"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 24.6,
+    "score": 24.7,
     "active_days_7d": 7,
-    "changes_7d": 211,
-    "changes_14d": 315,
+    "changes_7d": 216,
+    "changes_14d": 320,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-11-07T15:06:23Z",
-      "commit": "f98218c",
-      "commit_full": "f98218cbe80c248def2597b84386ca73c6dbba84",
-      "subject": "raw: decode Nikon \"lossy after split\" NEFs (#10529)"
+      "ts": "2026-11-07T15:49:49Z",
+      "commit": "6d40884",
+      "commit_full": "6d408847ae38a47fc8be4de6c6bd8b4b9798711e",
+      "subject": "Guide dialogs: add Position Tab navigation and preserve exact positions (#9876)"
     },
-    "last_commit_ts": "2026-11-07T15:06:23Z",
+    "last_commit_ts": "2026-11-07T15:49:49Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       45,
@@ -406,7 +410,7 @@
       27,
       47,
       48,
-      47
+      52
     ],
     "days": [
       {
@@ -1133,20 +1137,20 @@
       },
       {
         "d": "2026-11-07",
-        "code": 47,
+        "code": 52,
         "other": 2,
         "samples": [
           {
-            "commit": "f98218c",
-            "subject": "raw: decode Nikon \"lossy after split\" NEFs (#10529)"
+            "commit": "6d40884",
+            "subject": "Guide dialogs: add Position Tab navigation and preserve exact positions (#9876)"
           },
           {
-            "commit": "f1ce47c",
-            "subject": "Layers panel: Convert to Shape and Create Work Path on type layers (#9821)"
+            "commit": "6ef1032",
+            "subject": "raw: LinearRaw fill works out the black level once per row and phase (stacked on #9455) (#9460)"
           },
           {
-            "commit": "d512293",
-            "subject": "Curves: Option/Alt+2..6 select the dialog's channel (#7325) (#10475)"
+            "commit": "c70ab0a",
+            "subject": "fix(ui): Escape in the Brush Preset picker reverts what was typed (#11816) (#11850)"
           }
         ]
       }
@@ -1589,7 +1593,30 @@
       "breadth_pct": 76.0,
       "full_prev": 45.0,
       "kind": "content"
+    },
+    {
+      "commit": "e3f3465",
+      "commit_full": "e3f3465fe822a317fe894adaf4a4aea7a4420ded",
+      "commit_date": "2026-11-07T16:11:57+01:00",
+      "ts": "2026-11-07T15:11:57Z",
+      "message": "Layer Style: a drag on the image moves a Gradient Overlay (#10763) (#10840)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-10-22",
+      "full_pct": 45.0,
+      "full_range": null,
+      "full_hours": [
+        2300,
+        4100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe Photoshop 2026",
+      "mainstream_pct": 43.0,
+      "essentials_pct": 61.0,
+      "breadth_pct": 76.0,
+      "full_prev": 45.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-07T15:07:45+00:00"
+  "updated_at": "2026-11-07T15:58:42+00:00"
 }
