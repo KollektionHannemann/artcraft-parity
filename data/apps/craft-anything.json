@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "e85e28b",
-  "latest_commit_date": "2026-11-09T05:45:29+08:00",
-  "latest_message": "Remove opencode.md's second doubled passage (R5.2) (#1228)",
+  "latest_commit": "02e51b0",
+  "latest_commit_date": "2026-11-09T06:16:35+08:00",
+  "latest_message": "Keep SQLite values on their columns when a table has VIRTUAL generated columns (R3.12) (#1231)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,21 +45,21 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 219,
-    "revisions_7d": 201,
+    "revisions": 220,
+    "revisions_7d": 202,
     "last_revision": {
-      "ts": "2026-11-08T21:45:29Z",
+      "ts": "2026-11-08T22:16:35Z",
       "kind": "content",
-      "commit": "e85e28b",
-      "commit_full": "e85e28be5ba5b276ad311546cc640ee26dc3f49b",
-      "message": "Remove opencode.md's second doubled passage (R5.2) (#1228)"
+      "commit": "02e51b0",
+      "commit_full": "02e51b024309d65e534c74475826a46ccfd3ca62",
+      "message": "Keep SQLite values on their columns when a table has VIRTUAL generated columns (R3.12) (#1231)"
     },
     "last_update": {
-      "ts": "2026-11-08T21:45:29Z",
+      "ts": "2026-11-08T22:16:35Z",
       "kind": "content",
-      "commit": "e85e28b",
-      "commit_full": "e85e28be5ba5b276ad311546cc640ee26dc3f49b",
-      "message": "Remove opencode.md's second doubled passage (R5.2) (#1228)"
+      "commit": "02e51b0",
+      "commit_full": "02e51b024309d65e534c74475826a46ccfd3ca62",
+      "message": "Keep SQLite values on their columns when a table has VIRTUAL generated columns (R3.12) (#1231)"
     },
     "self_reported": null
   },
@@ -68,16 +68,16 @@
     "level": "buzzing",
     "score": 23.0,
     "active_days_7d": 7,
-    "changes_7d": 388,
-    "changes_14d": 464,
+    "changes_7d": 389,
+    "changes_14d": 465,
     "housekeeping_7d": 40,
     "last_code_change": {
-      "ts": "2026-11-08T20:41:07Z",
-      "commit": "f7df485",
-      "commit_full": "f7df485ffdd7c2c5018d75aa1b47e9cd9585fa2f",
-      "subject": "Always send OpenCode Go its session header (#1227)"
+      "ts": "2026-11-08T22:16:35Z",
+      "commit": "02e51b0",
+      "commit_full": "02e51b024309d65e534c74475826a46ccfd3ca62",
+      "subject": "Keep SQLite values on their columns when a table has VIRTUAL generated columns (R3.12) (#1231)"
     },
-    "last_commit_ts": "2026-11-08T21:45:29Z",
+    "last_commit_ts": "2026-11-08T22:16:35Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       1,
       64,
       34,
-      35
+      36
     ],
     "days": [
       {
@@ -242,9 +242,13 @@
       },
       {
         "d": "2026-11-08",
-        "code": 35,
+        "code": 36,
         "other": 2,
         "samples": [
+          {
+            "commit": "02e51b0",
+            "subject": "Keep SQLite values on their columns when a table has VIRTUAL generated columns (R3.12) (#1231)"
+          },
           {
             "commit": "f7df485",
             "subject": "Always send OpenCode Go its session header (#1227)"
@@ -252,10 +256,6 @@
           {
             "commit": "0326b4d",
             "subject": "Refuse saved Claude session reuse of a Deep session in Clean room (R2.9) (#1224)"
-          },
-          {
-            "commit": "0a8cc08",
-            "subject": "Accept binary plist arrays that repeat one stored value (R3.12) (#1219)"
           }
         ]
       }
@@ -1881,8 +1881,15 @@
       "commit": "e85e28b",
       "commit_full": "e85e28be5ba5b276ad311546cc640ee26dc3f49b",
       "message": "Remove opencode.md's second doubled passage (R5.2) (#1228)"
+    },
+    {
+      "ts": "2026-11-08T22:16:35Z",
+      "kind": "content",
+      "commit": "02e51b0",
+      "commit_full": "02e51b024309d65e534c74475826a46ccfd3ca62",
+      "message": "Keep SQLite values on their columns when a table has VIRTUAL generated columns (R3.12) (#1231)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-08T22:00:32+00:00"
+  "updated_at": "2026-11-08T22:30:13+00:00"
 }
