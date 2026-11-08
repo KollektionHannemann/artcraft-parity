@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "cb0bb9d",
-  "latest_commit_date": "2026-11-09T01:55:01+08:00",
-  "latest_message": "Bound format readers and resolve launch paths (#1217)",
+  "latest_commit": "0e7e43f",
+  "latest_commit_date": "2026-11-09T02:11:26+08:00",
+  "latest_message": "Record a builder session's mode so Clean room never resumes a Deep one (R2.9) (#1202)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 209,
-    "revisions_7d": 191,
+    "revisions": 212,
+    "revisions_7d": 194,
     "last_revision": {
-      "ts": "2026-11-08T17:55:01Z",
+      "ts": "2026-11-08T18:11:26Z",
       "kind": "content",
-      "commit": "cb0bb9d",
-      "commit_full": "cb0bb9d8fa4536ba44ef2c86f5ed759b879cc2d3",
-      "message": "Bound format readers and resolve launch paths (#1217)"
+      "commit": "0e7e43f",
+      "commit_full": "0e7e43f41869e9c7bd21b71c26838cba4cf54598",
+      "message": "Record a builder session's mode so Clean room never resumes a Deep one (R2.9) (#1202)"
     },
     "last_update": {
-      "ts": "2026-11-08T17:55:01Z",
+      "ts": "2026-11-08T18:11:26Z",
       "kind": "content",
-      "commit": "cb0bb9d",
-      "commit_full": "cb0bb9d8fa4536ba44ef2c86f5ed759b879cc2d3",
-      "message": "Bound format readers and resolve launch paths (#1217)"
+      "commit": "0e7e43f",
+      "commit_full": "0e7e43f41869e9c7bd21b71c26838cba4cf54598",
+      "message": "Record a builder session's mode so Clean room never resumes a Deep one (R2.9) (#1202)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.4,
+    "score": 22.6,
     "active_days_7d": 7,
-    "changes_7d": 375,
-    "changes_14d": 451,
+    "changes_7d": 379,
+    "changes_14d": 455,
     "housekeeping_7d": 38,
     "last_code_change": {
-      "ts": "2026-11-08T17:55:01Z",
-      "commit": "cb0bb9d",
-      "commit_full": "cb0bb9d8fa4536ba44ef2c86f5ed759b879cc2d3",
-      "subject": "Bound format readers and resolve launch paths (#1217)"
+      "ts": "2026-11-08T18:11:26Z",
+      "commit": "0e7e43f",
+      "commit_full": "0e7e43f41869e9c7bd21b71c26838cba4cf54598",
+      "subject": "Record a builder session's mode so Clean room never resumes a Deep one (R2.9) (#1202)"
     },
-    "last_commit_ts": "2026-11-08T17:55:01Z",
+    "last_commit_ts": "2026-11-08T18:11:26Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       1,
       64,
       34,
-      22
+      26
     ],
     "days": [
       {
@@ -242,20 +242,20 @@
       },
       {
         "d": "2026-11-08",
-        "code": 22,
+        "code": 26,
         "other": 0,
         "samples": [
           {
-            "commit": "cb0bb9d",
-            "subject": "Bound format readers and resolve launch paths (#1217)"
+            "commit": "0e7e43f",
+            "subject": "Record a builder session's mode so Clean room never resumes a Deep one (R2.9) (#1202)"
           },
           {
-            "commit": "51e6132",
-            "subject": "Refit to a server's context window once per backend, only when room was made (#1170)"
+            "commit": "40feee0",
+            "subject": "Add Estonian UI translations (#1205)"
           },
           {
-            "commit": "1704834",
-            "subject": "Keep one line ending on a CRLF YAML line cut off after its CR (#1190)"
+            "commit": "8826ce2",
+            "subject": "Read tool calls a model writes in Qwen's markup, and answer calls to tools it wasn't offered (R5.4) (#1173)"
           }
         ]
       }
@@ -1811,8 +1811,29 @@
       "commit": "cb0bb9d",
       "commit_full": "cb0bb9d8fa4536ba44ef2c86f5ed759b879cc2d3",
       "message": "Bound format readers and resolve launch paths (#1217)"
+    },
+    {
+      "ts": "2026-11-08T17:57:41Z",
+      "kind": "content",
+      "commit": "f379a4e",
+      "commit_full": "f379a4ec3ff4ae2e4bc59800d21f507ed3e2fcd4",
+      "message": "Stop sending builders that can't see pictures to screenshots (R5.4) (#1159)"
+    },
+    {
+      "ts": "2026-11-08T17:57:47Z",
+      "kind": "content",
+      "commit": "8826ce2",
+      "commit_full": "8826ce266f0a946eeaa08bf87684a4a77b8ddcb7",
+      "message": "Read tool calls a model writes in Qwen's markup, and answer calls to tools it wasn't offered (R5.4) (#1173)"
+    },
+    {
+      "ts": "2026-11-08T18:11:26Z",
+      "kind": "content",
+      "commit": "0e7e43f",
+      "commit_full": "0e7e43f41869e9c7bd21b71c26838cba4cf54598",
+      "message": "Record a builder session's mode so Clean room never resumes a Deep one (R2.9) (#1202)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-08T17:55:53+00:00"
+  "updated_at": "2026-11-08T18:23:38+00:00"
 }

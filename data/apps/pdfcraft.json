@@ -497,18 +497,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.4,
+    "score": 20.5,
     "active_days_7d": 7,
-    "changes_7d": 135,
-    "changes_14d": 201,
+    "changes_7d": 136,
+    "changes_14d": 202,
     "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-08T17:51:21Z",
-      "commit": "83c6780",
-      "commit_full": "83c67803da76e4adcaee41030ecaca4c729b4935",
-      "subject": "M7: edit grouped Thai text with one click, on Ungroup's form expansion (#6249 + review fixes) (#6627)"
+      "ts": "2026-11-08T18:06:24Z",
+      "commit": "1afbc12",
+      "commit_full": "1afbc1254a1746139f8d5c6d3c00839d2d7b5a92",
+      "subject": "redact: treat unusable /QuadPoints as absent in every reader (#6525)"
     },
-    "last_commit_ts": "2026-11-08T17:51:21Z",
+    "last_commit_ts": "2026-11-08T18:06:24Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       5,
@@ -524,7 +524,7 @@
       36,
       9,
       6,
-      24
+      25
     ],
     "days": [
       {
@@ -1257,9 +1257,13 @@
       },
       {
         "d": "2026-11-08",
-        "code": 24,
+        "code": 25,
         "other": 3,
         "samples": [
+          {
+            "commit": "1afbc12",
+            "subject": "redact: treat unusable /QuadPoints as absent in every reader (#6525)"
+          },
           {
             "commit": "83c6780",
             "subject": "M7: edit grouped Thai text with one click, on Ungroup's form expansion (#6249 + review fixes) (#6627)"
@@ -1267,10 +1271,6 @@
           {
             "commit": "da6ee1e",
             "subject": "OCR in the web build (#1641, merged with main, two fixes) (#6634)"
-          },
-          {
-            "commit": "c659211",
-            "subject": "An edited OCR phrase is drawn at one size (#5454, with the requested test) (#6633)"
           }
         ]
       }
@@ -6269,5 +6269,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-08T17:55:25+00:00"
+  "updated_at": "2026-11-08T18:23:17+00:00"
 }
