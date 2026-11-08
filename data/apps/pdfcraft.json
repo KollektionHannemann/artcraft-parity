@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "5e0619d",
-  "latest_commit_date": "2026-11-08T13:30:34+01:00",
-  "latest_message": "Redact: mark text by caller-supplied regex (#1886) (#1977)",
+  "latest_commit": "883ab41",
+  "latest_commit_date": "2026-11-08T17:39:19+01:00",
+  "latest_message": "M10: adopt file-backed Windows printing with approved dependencies and the crash fix (#6514)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": null,
-    "last_updated": "2026-11-03",
+    "last_updated": "2026-11-08",
     "metrics": {
       "full": {
         "label": "Full Acrobat Pro (ready for real work)",
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 117,
+    "revisions_since": 118,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 205,
-    "revisions_7d": 23,
+    "revisions": 206,
+    "revisions_7d": 24,
     "last_revision": {
-      "ts": "2026-11-08T12:30:34Z",
+      "ts": "2026-11-08T16:39:19Z",
       "kind": "content",
-      "commit": "5e0619d",
-      "commit_full": "5e0619d7eb187b26f0b7cb8b62029381ebb4d365",
-      "message": "Redact: mark text by caller-supplied regex (#1886) (#1977)"
+      "commit": "883ab41",
+      "commit_full": "883ab41bca5a4547718a04281522bf9f64d7b6f5",
+      "message": "M10: adopt file-backed Windows printing with approved dependencies and the crash fix (#6514)"
     },
     "last_update": {
-      "ts": "2026-11-08T12:30:34Z",
+      "ts": "2026-11-08T16:39:19Z",
       "kind": "content",
-      "commit": "5e0619d",
-      "commit_full": "5e0619d7eb187b26f0b7cb8b62029381ebb4d365",
-      "message": "Redact: mark text by caller-supplied regex (#1886) (#1977)"
+      "commit": "883ab41",
+      "commit_full": "883ab41bca5a4547718a04281522bf9f64d7b6f5",
+      "message": "M10: adopt file-backed Windows printing with approved dependencies and the crash fix (#6514)"
     },
-    "self_reported": "2026-11-03"
+    "self_reported": "2026-11-08"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.0,
+    "score": 20.2,
     "active_days_7d": 7,
-    "changes_7d": 129,
-    "changes_14d": 195,
+    "changes_7d": 132,
+    "changes_14d": 198,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-08T16:09:23Z",
-      "commit": "edc5c75",
-      "commit_full": "edc5c757d3fa81c695b77fefa17375515fecca95",
-      "subject": "Word tables get outer borders only where the page rules them (#6626)"
+      "ts": "2026-11-08T16:57:18Z",
+      "commit": "485bc14",
+      "commit_full": "485bc143a9fc7f6e19b1434f32cac3b4c546cdbe",
+      "subject": "Word and HTML exports name the document's language (#5498, merged with main) (#6631)"
     },
-    "last_commit_ts": "2026-11-08T16:09:23Z",
+    "last_commit_ts": "2026-11-08T16:57:18Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       5,
@@ -524,7 +524,7 @@
       36,
       9,
       6,
-      18
+      21
     ],
     "days": [
       {
@@ -1257,20 +1257,20 @@
       },
       {
         "d": "2026-11-08",
-        "code": 18,
+        "code": 21,
         "other": 2,
         "samples": [
           {
-            "commit": "edc5c75",
-            "subject": "Word tables get outer borders only where the page rules them (#6626)"
+            "commit": "485bc14",
+            "subject": "Word and HTML exports name the document's language (#5498, merged with main) (#6631)"
           },
           {
-            "commit": "981193a",
-            "subject": "fix(edit): restore page rules after the content stream API change (#6619)"
+            "commit": "883ab41",
+            "subject": "M10: adopt file-backed Windows printing with approved dependencies and the crash fix (#6514)"
           },
           {
-            "commit": "7d1dea0",
-            "subject": "M7: Ungroup draws Form artwork in place, so its text can be edited (#3067)"
+            "commit": "8802485",
+            "subject": "M10: Correct recognized text keeps the window's tabs and toolbar and shows the page (ocr.correct-recognized-text) (#6490)"
           }
         ]
       }
@@ -6198,7 +6198,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "883ab41",
+      "commit_full": "883ab41bca5a4547718a04281522bf9f64d7b6f5",
+      "commit_date": "2026-11-08T17:39:19+01:00",
+      "ts": "2026-11-08T16:39:19Z",
+      "message": "M10: adopt file-backed Windows printing with approved dependencies and the crash fix (#6514)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-08T16:27:10+00:00"
+  "updated_at": "2026-11-08T17:01:34+00:00"
 }

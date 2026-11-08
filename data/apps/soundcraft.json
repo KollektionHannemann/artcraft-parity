@@ -462,18 +462,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 12.1,
+    "score": 12.5,
     "active_days_7d": 7,
-    "changes_7d": 44,
-    "changes_14d": 116,
+    "changes_7d": 45,
+    "changes_14d": 117,
     "housekeeping_7d": 4,
     "last_code_change": {
-      "ts": "2026-11-08T16:07:09Z",
-      "commit": "a7b7fb9",
-      "commit_full": "a7b7fb949ead732eb538b41c2295ac54213c910a",
-      "subject": "fix(ui): holding a zoom key keeps zooming (#1377) (#1398)"
+      "ts": "2026-11-08T16:54:53Z",
+      "commit": "ddeb7e7",
+      "commit_full": "ddeb7e791faa33db05277f3347ed9b91928b7733",
+      "subject": "fix(ui): restore plain arrow guard after zoom shortcut extraction (#1454)"
     },
-    "last_commit_ts": "2026-11-08T16:07:09Z",
+    "last_commit_ts": "2026-11-08T16:54:53Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
       3,
@@ -489,7 +489,7 @@
       6,
       2,
       3,
-      3
+      4
     ],
     "days": [
       {
@@ -995,9 +995,13 @@
       },
       {
         "d": "2026-11-08",
-        "code": 3,
+        "code": 4,
         "other": 1,
         "samples": [
+          {
+            "commit": "ddeb7e7",
+            "subject": "fix(ui): restore plain arrow guard after zoom shortcut extraction (#1454)"
+          },
           {
             "commit": "a7b7fb9",
             "subject": "fix(ui): holding a zoom key keeps zooming (#1377) (#1398)"
@@ -1005,10 +1009,6 @@
           {
             "commit": "16e4955",
             "subject": "fix(ui): double-clicking a track's colour strip opens the Color Palette (#1254) (#1397)"
-          },
-          {
-            "commit": "76cc2ae",
-            "subject": "Render strips serially on the audio thread instead of using rayon (#1006)"
           }
         ]
       }
@@ -1752,5 +1752,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-08T16:27:30+00:00"
+  "updated_at": "2026-11-08T17:01:52+00:00"
 }

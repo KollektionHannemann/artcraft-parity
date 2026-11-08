@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "0495fbb",
-  "latest_commit_date": "2026-11-08T17:24:43+01:00",
-  "latest_message": "#2729: Layout tests use pinned bundled fonts (#2783)",
+  "latest_commit": "c5fe6c6",
+  "latest_commit_date": "2026-11-08T17:55:10+01:00",
+  "latest_message": "Dark-theme interface text on Linux no longer looks semi-bold (#3197)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 573,
+    "revisions_since": 576,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 577,
-    "revisions_7d": 123,
+    "revisions": 580,
+    "revisions_7d": 126,
     "last_revision": {
-      "ts": "2026-11-08T16:24:43Z",
+      "ts": "2026-11-08T16:55:10Z",
       "kind": "content",
-      "commit": "0495fbb",
-      "commit_full": "0495fbb78984a4018cad99f1b7286f4e6a6fc822",
-      "message": "#2729: Layout tests use pinned bundled fonts (#2783)"
+      "commit": "c5fe6c6",
+      "commit_full": "c5fe6c681681eb8ef4a68bcdfd93005452a3f596",
+      "message": "Dark-theme interface text on Linux no longer looks semi-bold (#3197)"
     },
     "last_update": {
-      "ts": "2026-11-08T16:24:43Z",
+      "ts": "2026-11-08T16:55:10Z",
       "kind": "content",
-      "commit": "0495fbb",
-      "commit_full": "0495fbb78984a4018cad99f1b7286f4e6a6fc822",
-      "message": "#2729: Layout tests use pinned bundled fonts (#2783)"
+      "commit": "c5fe6c6",
+      "commit_full": "c5fe6c681681eb8ef4a68bcdfd93005452a3f596",
+      "message": "Dark-theme interface text on Linux no longer looks semi-bold (#3197)"
     },
     "self_reported": "2026-11-08"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.9,
+    "score": 23.0,
     "active_days_7d": 7,
-    "changes_7d": 214,
-    "changes_14d": 332,
+    "changes_7d": 217,
+    "changes_14d": 335,
     "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-08T16:24:43Z",
-      "commit": "0495fbb",
-      "commit_full": "0495fbb78984a4018cad99f1b7286f4e6a6fc822",
-      "subject": "#2729: Layout tests use pinned bundled fonts (#2783)"
+      "ts": "2026-11-08T16:55:10Z",
+      "commit": "c5fe6c6",
+      "commit_full": "c5fe6c681681eb8ef4a68bcdfd93005452a3f596",
+      "subject": "Dark-theme interface text on Linux no longer looks semi-bold (#3197)"
     },
-    "last_commit_ts": "2026-11-08T16:24:43Z",
+    "last_commit_ts": "2026-11-08T16:55:10Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       28,
@@ -568,7 +568,7 @@
       43,
       20,
       3,
-      86
+      89
     ],
     "days": [
       {
@@ -1143,20 +1143,20 @@
       },
       {
         "d": "2026-11-08",
-        "code": 86,
+        "code": 89,
         "other": 2,
         "samples": [
           {
-            "commit": "0495fbb",
-            "subject": "#2729: Layout tests use pinned bundled fonts (#2783)"
+            "commit": "c5fe6c6",
+            "subject": "Dark-theme interface text on Linux no longer looks semi-bold (#3197)"
           },
           {
-            "commit": "aa262cf",
-            "subject": "MCP: insert_table tool for filled tables (#2242) (#2595)"
+            "commit": "438f829",
+            "subject": "Remove documents from the recent list, one by one or all at once (#2723)"
           },
           {
-            "commit": "2d97c84",
-            "subject": "RTF: footnotes, endnotes and comments are read and written (#1053) (#1056)"
+            "commit": "0e3f4dd",
+            "subject": "Control/MCP: no replay of mutations with unknown outcome; queued requests honour timeouts (#1326, #1331) (#2596)"
           }
         ]
       }
@@ -14658,7 +14658,76 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "0e3f4dd",
+      "commit_full": "0e3f4dd31564f610cc5f167da563cb863e57b04d",
+      "commit_date": "2026-11-08T17:32:33+01:00",
+      "ts": "2026-11-08T16:32:33Z",
+      "message": "Control/MCP: no replay of mutations with unknown outcome; queued requests honour timeouts (#1326, #1331) (#2596)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "438f829",
+      "commit_full": "438f82977a8d430bab8eab2802eb8f9ee89a1bcc",
+      "commit_date": "2026-11-08T17:53:13+01:00",
+      "ts": "2026-11-08T16:53:13Z",
+      "message": "Remove documents from the recent list, one by one or all at once (#2723)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "c5fe6c6",
+      "commit_full": "c5fe6c681681eb8ef4a68bcdfd93005452a3f596",
+      "commit_date": "2026-11-08T17:55:10+01:00",
+      "ts": "2026-11-08T16:55:10Z",
+      "message": "Dark-theme interface text on Linux no longer looks semi-bold (#3197)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-08T16:27:27+00:00"
+  "updated_at": "2026-11-08T17:01:49+00:00"
 }
