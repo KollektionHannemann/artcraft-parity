@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "0e7e43f",
-  "latest_commit_date": "2026-11-09T02:11:26+08:00",
-  "latest_message": "Record a builder session's mode so Clean room never resumes a Deep one (R2.9) (#1202)",
+  "latest_commit": "f347247",
+  "latest_commit_date": "2026-11-09T03:08:30+08:00",
+  "latest_message": "Don't continue a Deep chat's session in a Clean room shared chat (R2.9) (#1223)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 212,
-    "revisions_7d": 194,
+    "revisions": 215,
+    "revisions_7d": 197,
     "last_revision": {
-      "ts": "2026-11-08T18:11:26Z",
+      "ts": "2026-11-08T19:08:30Z",
       "kind": "content",
-      "commit": "0e7e43f",
-      "commit_full": "0e7e43f41869e9c7bd21b71c26838cba4cf54598",
-      "message": "Record a builder session's mode so Clean room never resumes a Deep one (R2.9) (#1202)"
+      "commit": "f347247",
+      "commit_full": "f34724796beefd10f43bca6cbccbb6a2583464d4",
+      "message": "Don't continue a Deep chat's session in a Clean room shared chat (R2.9) (#1223)"
     },
     "last_update": {
-      "ts": "2026-11-08T18:11:26Z",
+      "ts": "2026-11-08T19:08:30Z",
       "kind": "content",
-      "commit": "0e7e43f",
-      "commit_full": "0e7e43f41869e9c7bd21b71c26838cba4cf54598",
-      "message": "Record a builder session's mode so Clean room never resumes a Deep one (R2.9) (#1202)"
+      "commit": "f347247",
+      "commit_full": "f34724796beefd10f43bca6cbccbb6a2583464d4",
+      "message": "Don't continue a Deep chat's session in a Clean room shared chat (R2.9) (#1223)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.6,
+    "score": 22.9,
     "active_days_7d": 7,
-    "changes_7d": 379,
-    "changes_14d": 455,
+    "changes_7d": 385,
+    "changes_14d": 461,
     "housekeeping_7d": 38,
     "last_code_change": {
-      "ts": "2026-11-08T18:11:26Z",
-      "commit": "0e7e43f",
-      "commit_full": "0e7e43f41869e9c7bd21b71c26838cba4cf54598",
-      "subject": "Record a builder session's mode so Clean room never resumes a Deep one (R2.9) (#1202)"
+      "ts": "2026-11-08T19:08:30Z",
+      "commit": "f347247",
+      "commit_full": "f34724796beefd10f43bca6cbccbb6a2583464d4",
+      "subject": "Don't continue a Deep chat's session in a Clean room shared chat (R2.9) (#1223)"
     },
-    "last_commit_ts": "2026-11-08T18:11:26Z",
+    "last_commit_ts": "2026-11-08T19:08:30Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       1,
       64,
       34,
-      26
+      32
     ],
     "days": [
       {
@@ -242,20 +242,20 @@
       },
       {
         "d": "2026-11-08",
-        "code": 26,
+        "code": 32,
         "other": 0,
         "samples": [
           {
-            "commit": "0e7e43f",
-            "subject": "Record a builder session's mode so Clean room never resumes a Deep one (R2.9) (#1202)"
+            "commit": "f347247",
+            "subject": "Don't continue a Deep chat's session in a Clean room shared chat (R2.9) (#1223)"
           },
           {
-            "commit": "40feee0",
-            "subject": "Add Estonian UI translations (#1205)"
+            "commit": "e440907",
+            "subject": "Play Python packages and built Java jars (R2.7) (#1209)"
           },
           {
-            "commit": "8826ce2",
-            "subject": "Read tool calls a model writes in Qwen's markup, and answer calls to tools it wasn't offered (R5.4) (#1173)"
+            "commit": "d68d5db",
+            "subject": "Reject '+' sign in plist XML numeric character references (#1222)"
           }
         ]
       }
@@ -1832,8 +1832,29 @@
       "commit": "0e7e43f",
       "commit_full": "0e7e43f41869e9c7bd21b71c26838cba4cf54598",
       "message": "Record a builder session's mode so Clean room never resumes a Deep one (R2.9) (#1202)"
+    },
+    {
+      "ts": "2026-11-08T18:35:24Z",
+      "kind": "content",
+      "commit": "5f839d8",
+      "commit_full": "5f839d8778052f135c5f855e763cf17bbc43f2d3",
+      "message": "Cut truncated SQLite TEXT at a character boundary (R3.12) (#1220)"
+    },
+    {
+      "ts": "2026-11-08T19:03:45Z",
+      "kind": "content",
+      "commit": "e440907",
+      "commit_full": "e440907a933d245c63b9d9401f03af0cae6bfb50",
+      "message": "Play Python packages and built Java jars (R2.7) (#1209)"
+    },
+    {
+      "ts": "2026-11-08T19:08:30Z",
+      "kind": "content",
+      "commit": "f347247",
+      "commit_full": "f34724796beefd10f43bca6cbccbb6a2583464d4",
+      "message": "Don't continue a Deep chat's session in a Clean room shared chat (R2.9) (#1223)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-08T18:23:38+00:00"
+  "updated_at": "2026-11-08T19:13:31+00:00"
 }

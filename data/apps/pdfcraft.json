@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "83c6780",
-  "latest_commit_date": "2026-11-09T01:51:21+08:00",
-  "latest_message": "M7: edit grouped Thai text with one click, on Ungroup's form expansion (#6249 + review fixes) (#6627)",
+  "latest_commit": "c07e092",
+  "latest_commit_date": "2026-11-09T02:25:04+08:00",
+  "latest_message": "M7: break Thai rows between dictionary words (#3492, merged with main) (#6637)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -314,6 +314,10 @@
       },
       {
         "date": "2026-11-03",
+        "text": "(community, M7, Thai word breaking): Thai rows end between words, found with ICU4X's dictionary line segmenter (icusegmenter 2.3, compiled dictionary data, no LSTM model; Unicode-3.0), instead of only at spaces when rewrapping and at any cluster in Add text. A row never starts with a following vowel, tone or other mark, Mai Yamok or Paiyannoi, nor ends with a leading vowel; a word wider than the row still breaks between clusters, and the spaces where an Add text row ends are dropped as in Latin text. Rewrapping existing text works out the breaks once per run of non-space characters. Rewriting a paragraph into Thai still needs a source font with the Thai glyphs (there is no Thai fallback face for it yet). The compiled dictionaries (Thai, Lao, Khmer, Burmese) add about 1.8 MB to a stripped release binary. Estimates unchanged."
+      },
+      {
+        "date": "2026-11-03",
         "text": "(M7, #5835): In image crop mode, a right-click on the image, its crop box or its handles keeps the crop and opens no menu, so the menu no longer switches as the pointer moves. A right-click elsewhere clears the selection and opens the page menu. UI tests cover all four page rotations, overlapping images, a 45° image, and a check that the Done/Cancel/Remove Crop pills at a page edge still keep the crop."
       },
       {
@@ -447,10 +451,6 @@
       {
         "date": "2026-10-24",
         "text": "(M11, black-and-white pictures): A scan saved as a 1-bit PNG became an eight-bit grey image when made into a PDF, larger than the PNG; Create PDF now stores pictures of only black and white at one bit (Group 4 when smaller), the optimizer packs eight-bit black-and-white grey images to one bit unless the grey settings make them smaller, as they can a dithered scan, soft mask counted, and Export ▸ Images reads CCITT fax images."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "(M5, move preview): A comment being moved is drawn where it goes while it is dragged (a rectangle or oval showed only its blue frame): the comment is rendered alone once as the drag starts and laid over the page, which shows it where it was until the move is applied. Engine Document::commentlayer; synthetic engine and UI regressions. Estimates unchanged."
       }
     ]
   },
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 120,
+    "revisions_since": 121,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 208,
-    "revisions_7d": 26,
+    "revisions": 209,
+    "revisions_7d": 27,
     "last_revision": {
-      "ts": "2026-11-08T17:51:21Z",
+      "ts": "2026-11-08T18:25:04Z",
       "kind": "content",
-      "commit": "83c6780",
-      "commit_full": "83c67803da76e4adcaee41030ecaca4c729b4935",
-      "message": "M7: edit grouped Thai text with one click, on Ungroup's form expansion (#6249 + review fixes) (#6627)"
+      "commit": "c07e092",
+      "commit_full": "c07e092ff5739310649e16eb8e671e776316086b",
+      "message": "M7: break Thai rows between dictionary words (#3492, merged with main) (#6637)"
     },
     "last_update": {
-      "ts": "2026-11-08T17:51:21Z",
+      "ts": "2026-11-08T18:25:04Z",
       "kind": "content",
-      "commit": "83c6780",
-      "commit_full": "83c67803da76e4adcaee41030ecaca4c729b4935",
-      "message": "M7: edit grouped Thai text with one click, on Ungroup's form expansion (#6249 + review fixes) (#6627)"
+      "commit": "c07e092",
+      "commit_full": "c07e092ff5739310649e16eb8e671e776316086b",
+      "message": "M7: break Thai rows between dictionary words (#3492, merged with main) (#6637)"
     },
     "self_reported": "2026-11-08"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.5,
+    "score": 20.6,
     "active_days_7d": 7,
-    "changes_7d": 136,
-    "changes_14d": 202,
+    "changes_7d": 139,
+    "changes_14d": 205,
     "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-08T18:06:24Z",
-      "commit": "1afbc12",
-      "commit_full": "1afbc1254a1746139f8d5c6d3c00839d2d7b5a92",
-      "subject": "redact: treat unusable /QuadPoints as absent in every reader (#6525)"
+      "ts": "2026-11-08T18:56:34Z",
+      "commit": "43f24aa",
+      "commit_full": "43f24aa1692c7ee39ae8117482896f5264ad994a",
+      "subject": "Draw Thai in Fill & Sign, text boxes, form fields, headers, footers and watermarks (#6632)"
     },
-    "last_commit_ts": "2026-11-08T18:06:24Z",
+    "last_commit_ts": "2026-11-08T18:56:34Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       5,
@@ -524,7 +524,7 @@
       36,
       9,
       6,
-      25
+      28
     ],
     "days": [
       {
@@ -1257,20 +1257,20 @@
       },
       {
         "d": "2026-11-08",
-        "code": 25,
+        "code": 28,
         "other": 3,
         "samples": [
           {
-            "commit": "1afbc12",
-            "subject": "redact: treat unusable /QuadPoints as absent in every reader (#6525)"
+            "commit": "43f24aa",
+            "subject": "Draw Thai in Fill & Sign, text boxes, form fields, headers, footers and watermarks (#6632)"
           },
           {
-            "commit": "83c6780",
-            "subject": "M7: edit grouped Thai text with one click, on Ungroup's form expansion (#6249 + review fixes) (#6627)"
+            "commit": "e0f90d5",
+            "subject": "Edit a PDF: select all, copy, cut and paste page objects within and between documents (#6639)"
           },
           {
-            "commit": "da6ee1e",
-            "subject": "OCR in the web build (#1641, merged with main, two fixes) (#6634)"
+            "commit": "c07e092",
+            "subject": "M7: break Thai rows between dictionary words (#3492, merged with main) (#6637)"
           }
         ]
       }
@@ -6267,7 +6267,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "c07e092",
+      "commit_full": "c07e092ff5739310649e16eb8e671e776316086b",
+      "commit_date": "2026-11-09T02:25:04+08:00",
+      "ts": "2026-11-08T18:25:04Z",
+      "message": "M7: break Thai rows between dictionary words (#3492, merged with main) (#6637)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-08T18:23:17+00:00"
+  "updated_at": "2026-11-08T19:13:11+00:00"
 }
