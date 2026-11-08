@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "4b29225",
-  "latest_commit_date": "2026-11-07T09:10:24+08:00",
-  "latest_message": ".ai save: the editing copy keeps type as type (#5965)",
+  "latest_commit": "d573b25",
+  "latest_commit_date": "2026-11-08T14:15:30+08:00",
+  "latest_message": ".ai save: the editing copy keeps live effects (#6150)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -509,7 +509,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 214,
+    "revisions_since": 215,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -540,39 +540,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 215,
-    "revisions_7d": 11,
+    "revisions": 216,
+    "revisions_7d": 12,
     "last_revision": {
-      "ts": "2026-11-07T01:10:24Z",
+      "ts": "2026-11-08T06:15:30Z",
       "kind": "content",
-      "commit": "4b29225",
-      "commit_full": "4b29225c30a4aab8e922929db1d8b54d53b681d2",
-      "message": ".ai save: the editing copy keeps type as type (#5965)"
+      "commit": "d573b25",
+      "commit_full": "d573b25d68561afaab31ff2aab28d3016721a13b",
+      "message": ".ai save: the editing copy keeps live effects (#6150)"
     },
     "last_update": {
-      "ts": "2026-11-07T01:10:24Z",
+      "ts": "2026-11-08T06:15:30Z",
       "kind": "content",
-      "commit": "4b29225",
-      "commit_full": "4b29225c30a4aab8e922929db1d8b54d53b681d2",
-      "message": ".ai save: the editing copy keeps type as type (#5965)"
+      "commit": "d573b25",
+      "commit_full": "d573b25d68561afaab31ff2aab28d3016721a13b",
+      "message": ".ai save: the editing copy keeps live effects (#6150)"
     },
     "self_reported": "2026-11-06"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 31.4,
+    "score": 32.5,
     "active_days_7d": 7,
-    "changes_7d": 670,
-    "changes_14d": 1233,
+    "changes_7d": 706,
+    "changes_14d": 1269,
     "housekeeping_7d": 30,
     "last_code_change": {
-      "ts": "2026-11-08T05:20:32Z",
-      "commit": "3362176",
-      "commit_full": "3362176c1001264308215efe37ddc74681e71b13",
-      "subject": "Canvas: a pan by whole pixels copies the pixels that stay on screen (#6070)"
+      "ts": "2026-11-08T06:15:56Z",
+      "commit": "b72dc56",
+      "commit_full": "b72dc566609f05214acadc7d476786abf63fff39",
+      "subject": "3D and Materials: Window › 3D and Materials edits the selection's 3D effect in place (#6153)"
     },
-    "last_commit_ts": "2026-11-08T05:20:32Z",
+    "last_commit_ts": "2026-11-08T06:15:56Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       98,
@@ -588,7 +588,7 @@
       121,
       46,
       56,
-      30
+      66
     ],
     "days": [
       {
@@ -1321,20 +1321,20 @@
       },
       {
         "d": "2026-11-08",
-        "code": 30,
+        "code": 66,
         "other": 2,
         "samples": [
           {
-            "commit": "3362176",
-            "subject": "Canvas: a pan by whole pixels copies the pixels that stay on screen (#6070)"
+            "commit": "b72dc56",
+            "subject": "3D and Materials: Window › 3D and Materials edits the selection's 3D effect in place (#6153)"
           },
           {
-            "commit": "effc494",
-            "subject": "Graphs: Appearance commands and the Eyedropper update a series' stored paint (#6069)"
+            "commit": "e77c410",
+            "subject": "Fields: Tab moves from a field to the next past its spinner and preset chevron (#6151)"
           },
           {
-            "commit": "5a82085",
-            "subject": "Keyboard Shortcuts: Export Text saves the shortcut list as a text file (#6068)"
+            "commit": "d573b25",
+            "subject": ".ai save: the editing copy keeps live effects (#6150)"
           }
         ]
       }
@@ -7193,7 +7193,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "d573b25",
+      "commit_full": "d573b25d68561afaab31ff2aab28d3016721a13b",
+      "commit_date": "2026-11-08T14:15:30+08:00",
+      "ts": "2026-11-08T06:15:30Z",
+      "message": ".ai save: the editing copy keeps live effects (#6150)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-08T05:35:27+00:00"
+  "updated_at": "2026-11-08T06:35:45+00:00"
 }
