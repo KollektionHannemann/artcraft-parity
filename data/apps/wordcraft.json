@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "2d97c84",
-  "latest_commit_date": "2026-11-08T16:38:59+01:00",
-  "latest_message": "RTF: footnotes, endnotes and comments are read and written (#1053) (#1056)",
+  "latest_commit": "0495fbb",
+  "latest_commit_date": "2026-11-08T17:24:43+01:00",
+  "latest_message": "#2729: Layout tests use pinned bundled fonts (#2783)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 571,
+    "revisions_since": 573,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,21 +520,21 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 575,
-    "revisions_7d": 121,
+    "revisions": 577,
+    "revisions_7d": 123,
     "last_revision": {
-      "ts": "2026-11-08T15:38:59Z",
+      "ts": "2026-11-08T16:24:43Z",
       "kind": "content",
-      "commit": "2d97c84",
-      "commit_full": "2d97c8443e5e63df77dcc4ab016a84902f6141f0",
-      "message": "RTF: footnotes, endnotes and comments are read and written (#1053) (#1056)"
+      "commit": "0495fbb",
+      "commit_full": "0495fbb78984a4018cad99f1b7286f4e6a6fc822",
+      "message": "#2729: Layout tests use pinned bundled fonts (#2783)"
     },
     "last_update": {
-      "ts": "2026-11-08T15:38:59Z",
+      "ts": "2026-11-08T16:24:43Z",
       "kind": "content",
-      "commit": "2d97c84",
-      "commit_full": "2d97c8443e5e63df77dcc4ab016a84902f6141f0",
-      "message": "RTF: footnotes, endnotes and comments are read and written (#1053) (#1056)"
+      "commit": "0495fbb",
+      "commit_full": "0495fbb78984a4018cad99f1b7286f4e6a6fc822",
+      "message": "#2729: Layout tests use pinned bundled fonts (#2783)"
     },
     "self_reported": "2026-11-08"
   },
@@ -543,16 +543,16 @@
     "level": "buzzing",
     "score": 22.9,
     "active_days_7d": 7,
-    "changes_7d": 212,
-    "changes_14d": 330,
+    "changes_7d": 214,
+    "changes_14d": 332,
     "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-08T15:38:59Z",
-      "commit": "2d97c84",
-      "commit_full": "2d97c8443e5e63df77dcc4ab016a84902f6141f0",
-      "subject": "RTF: footnotes, endnotes and comments are read and written (#1053) (#1056)"
+      "ts": "2026-11-08T16:24:43Z",
+      "commit": "0495fbb",
+      "commit_full": "0495fbb78984a4018cad99f1b7286f4e6a6fc822",
+      "subject": "#2729: Layout tests use pinned bundled fonts (#2783)"
     },
-    "last_commit_ts": "2026-11-08T15:38:59Z",
+    "last_commit_ts": "2026-11-08T16:24:43Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       28,
@@ -568,7 +568,7 @@
       43,
       20,
       3,
-      84
+      86
     ],
     "days": [
       {
@@ -1143,20 +1143,20 @@
       },
       {
         "d": "2026-11-08",
-        "code": 84,
+        "code": 86,
         "other": 2,
         "samples": [
           {
+            "commit": "0495fbb",
+            "subject": "#2729: Layout tests use pinned bundled fonts (#2783)"
+          },
+          {
+            "commit": "aa262cf",
+            "subject": "MCP: insert_table tool for filled tables (#2242) (#2595)"
+          },
+          {
             "commit": "2d97c84",
             "subject": "RTF: footnotes, endnotes and comments are read and written (#1053) (#1056)"
-          },
-          {
-            "commit": "d5d2b22",
-            "subject": "View › Window: Switch Windows, Arrange All, View Side by Side and Synchronous Scrolling (#331)"
-          },
-          {
-            "commit": "2794ae4",
-            "subject": "Add persistent screen-only paper color presets (#3398) (#5115)"
           }
         ]
       }
@@ -14612,7 +14612,53 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "aa262cf",
+      "commit_full": "aa262cf7d85faf2f3f7051c1fa7fe34a61877cfb",
+      "commit_date": "2026-11-08T17:11:08+01:00",
+      "ts": "2026-11-08T16:11:08Z",
+      "message": "MCP: insert_table tool for filled tables (#2242) (#2595)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "0495fbb",
+      "commit_full": "0495fbb78984a4018cad99f1b7286f4e6a6fc822",
+      "commit_date": "2026-11-08T17:24:43+01:00",
+      "ts": "2026-11-08T16:24:43Z",
+      "message": "#2729: Layout tests use pinned bundled fonts (#2783)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-08T15:58:19+00:00"
+  "updated_at": "2026-11-08T16:27:27+00:00"
 }

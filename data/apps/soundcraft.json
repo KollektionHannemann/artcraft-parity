@@ -462,18 +462,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 11.1,
+    "score": 12.1,
     "active_days_7d": 7,
-    "changes_7d": 42,
-    "changes_14d": 114,
+    "changes_7d": 44,
+    "changes_14d": 116,
     "housekeeping_7d": 4,
     "last_code_change": {
-      "ts": "2026-11-08T01:21:27Z",
-      "commit": "76cc2ae",
-      "commit_full": "76cc2aeac657aa971303ee522f36cafe86b3ef93",
-      "subject": "Render strips serially on the audio thread instead of using rayon (#1006)"
+      "ts": "2026-11-08T16:07:09Z",
+      "commit": "a7b7fb9",
+      "commit_full": "a7b7fb949ead732eb538b41c2295ac54213c910a",
+      "subject": "fix(ui): holding a zoom key keeps zooming (#1377) (#1398)"
     },
-    "last_commit_ts": "2026-11-08T01:21:27Z",
+    "last_commit_ts": "2026-11-08T16:07:09Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
       3,
@@ -489,7 +489,7 @@
       6,
       2,
       3,
-      1
+      3
     ],
     "days": [
       {
@@ -995,9 +995,17 @@
       },
       {
         "d": "2026-11-08",
-        "code": 1,
+        "code": 3,
         "other": 1,
         "samples": [
+          {
+            "commit": "a7b7fb9",
+            "subject": "fix(ui): holding a zoom key keeps zooming (#1377) (#1398)"
+          },
+          {
+            "commit": "16e4955",
+            "subject": "fix(ui): double-clicking a track's colour strip opens the Color Palette (#1254) (#1397)"
+          },
           {
             "commit": "76cc2ae",
             "subject": "Render strips serially on the audio thread instead of using rayon (#1006)"
@@ -1744,5 +1752,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-08T01:39:41+00:00"
+  "updated_at": "2026-11-08T16:27:30+00:00"
 }
