@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "7c3a5cc",
-  "latest_commit_date": "2026-11-08T01:07:49+01:00",
-  "latest_message": "ODT: a table row that doesn't break across pages stays so (gap 19) (#5726)",
+  "latest_commit": "e53cae3",
+  "latest_commit_date": "2026-11-08T02:10:58+01:00",
+  "latest_message": "RTF: honor Unicode fallback counts above eight (#5607)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -329,6 +329,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-07",
+        "text": "Page Setup also bounds the unfocused margin display after a long numeric paste; the accepted value is retained (#5650)."
+      },
+      {
         "date": "2026-11-06",
         "text": "Windows print submissions run in separate helper processes (#5710). A helper acknowledges cancellation before it stops, so a driver stalled in a cancelled job cannot hold another job’s provider lock. A private temporary PDF and bounded settings messages cross the process boundary; normal shutdown reaps helpers and removes their inputs. The helper erases its plaintext inputs before driver work; a hard app crash during startup can still leave private temporary files. Jobs already sending still complete. Readiness estimates unchanged."
       },
@@ -350,7 +354,15 @@
       },
       {
         "date": "2026-11-05",
+        "text": "ODT: a watermark added, changed or removed, and Different Odd & Even Pages turned on or off, in a file read from ODT are saved."
+      },
+      {
+        "date": "2026-11-05",
         "text": "ODT pictures offered in several formats show and survive a save (gap 19): LibreOffice's letter templates lost theirs."
+      },
+      {
+        "date": "2026-11-05",
+        "text": "Page Setup's margin, paper-size and document-grid number boxes scroll long text inside the field instead of enlarging the dialog (#5650). Readiness estimates unchanged."
       },
       {
         "date": "2026-11-04",
@@ -359,6 +371,10 @@
       {
         "date": "2026-11-04",
         "text": "MHT import keeps semicolons and escaped quotes inside quoted MIME parameters, so an unrelated parameter cannot supply a false multipart boundary and hide the document text. Readiness estimates unchanged."
+      },
+      {
+        "date": "2026-11-04",
+        "text": "RTF import skips the declared Unicode fallback count even when it exceeds eight fallback units, so longer ANSI alternatives do not leak into the document text. Skipping stays bounded by the available input and ends at a group boundary. Readiness estimates unchanged."
       },
       {
         "date": "2026-11-04",
@@ -471,22 +487,6 @@
       {
         "date": "2026-11-03",
         "text": "Arabic interface (#1195): ar selectable (and every ar- system locale); craft-i18n catalog; mirrored ribbon, panes, File page, dialogs and menus; Arabic UI font fallback; document direction stays independent. No kashida or Arabic proofing yet; Hebrew UI still open."
-      },
-      {
-        "date": "2026-11-03",
-        "text": "A password-protected file named on the command line (double-clicked in the file manager) asks for its password when the first blank document was replaced because File › Options chose a region; the window now follows that replacement at once, so the first frame no longer takes it for a document switch and drops the Password box (#5299)"
-      },
-      {
-        "date": "2026-11-02",
-        "text": "ODT files follow their standard wherever it says something, and a setting wherever it doesn't (gap 19). File › Options › Advanced › OpenDocument files (and file.options odf) chooses between two display styles, Microsoft Word style (the default) and LibreOffice style, or custom values for each of twelve cases the standard leaves open: header heights and spacing, column gaps, shape colours and hairlines, where tab stops are measured from, frame relations the standard doesn't define, and lines of only pictures. A page layout that states no margins follows the setting too: 0 in Microsoft Word style (XSL's initial value), 2 cm for LibreOffice. Every case is listed in docs/odf-interpretation.md; Google Docs and ONLYOFFICE files checked, and neither needs a preset of its own yet."
-      },
-      {
-        "date": "2026-11-02",
-        "text": "ODT form controls keep their place on the line and multi-line text fields their lines; custom shapes keep their own geometry (LibreOffice draws its own shape after a save). In-line pictures placed against the text are raised from its size, and saved standing on the baseline. The corpus round-trip difference falls to 41k pixels, 90% below this morning's 408k; 42 of 125 documents round-trip pixel-identical (gap 19). Readiness unchanged."
-      },
-      {
-        "date": "2026-11-02",
-        "text": "ODT charts keep their whole look through a save: the chart object as read is written back while the chart is unchanged (edited, it's written from WordCraft's chart). Frames outlined by a drawn stroke keep it, and a header with no stated height is LibreOffice's 0.5 cm. The corpus round-trip difference falls to 47k pixels (408k this morning); 41 of 125 documents round-trip pixel-identical (gap 19). Readiness unchanged."
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 515,
+    "revisions_since": 519,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 519,
-    "revisions_7d": 65,
+    "revisions": 523,
+    "revisions_7d": 69,
     "last_revision": {
-      "ts": "2026-11-08T00:07:49Z",
+      "ts": "2026-11-08T01:10:58Z",
       "kind": "content",
-      "commit": "7c3a5cc",
-      "commit_full": "7c3a5ccd34ad7da99790106becc58f9f2183ad40",
-      "message": "ODT: a table row that doesn't break across pages stays so (gap 19) (#5726)"
+      "commit": "e53cae3",
+      "commit_full": "e53cae3482d4e080a15dc2320eb4929ea7722db2",
+      "message": "RTF: honor Unicode fallback counts above eight (#5607)"
     },
     "last_update": {
-      "ts": "2026-11-08T00:07:49Z",
+      "ts": "2026-11-08T01:10:58Z",
       "kind": "content",
-      "commit": "7c3a5cc",
-      "commit_full": "7c3a5ccd34ad7da99790106becc58f9f2183ad40",
-      "message": "ODT: a table row that doesn't break across pages stays so (gap 19) (#5726)"
+      "commit": "e53cae3",
+      "commit_full": "e53cae3482d4e080a15dc2320eb4929ea7722db2",
+      "message": "RTF: honor Unicode fallback counts above eight (#5607)"
     },
     "self_reported": "2026-11-06"
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 17.5,
+    "level": "buzzing",
+    "score": 20.2,
     "active_days_7d": 7,
-    "changes_7d": 129,
-    "changes_14d": 247,
-    "housekeeping_7d": 6,
+    "changes_7d": 140,
+    "changes_14d": 258,
+    "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-08T00:07:49Z",
-      "commit": "7c3a5cc",
-      "commit_full": "7c3a5ccd34ad7da99790106becc58f9f2183ad40",
-      "subject": "ODT: a table row that doesn't break across pages stays so (gap 19) (#5726)"
+      "ts": "2026-11-08T01:10:58Z",
+      "commit": "e53cae3",
+      "commit_full": "e53cae3482d4e080a15dc2320eb4929ea7722db2",
+      "subject": "RTF: honor Unicode fallback counts above eight (#5607)"
     },
-    "last_commit_ts": "2026-11-08T00:07:49Z",
+    "last_commit_ts": "2026-11-08T01:10:58Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       28,
@@ -568,7 +568,7 @@
       43,
       20,
       3,
-      1
+      12
     ],
     "days": [
       {
@@ -1143,12 +1143,20 @@
       },
       {
         "d": "2026-11-08",
-        "code": 1,
-        "other": 0,
+        "code": 12,
+        "other": 1,
         "samples": [
           {
-            "commit": "7c3a5cc",
-            "subject": "ODT: a table row that doesn't break across pages stays so (gap 19) (#5726)"
+            "commit": "e53cae3",
+            "subject": "RTF: honor Unicode fallback counts above eight (#5607)"
+          },
+          {
+            "commit": "7855a2d",
+            "subject": "fix(fields): quoted-argument backslash escapes; body PAGE in a cardinal-text section (#4579)"
+          },
+          {
+            "commit": "8714015",
+            "subject": "Scrolling: the document's scroll bars show without the pointer on them (#5746) (#5828)"
           }
         ]
       }
@@ -13316,7 +13324,99 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "3b6547d",
+      "commit_full": "3b6547de8f1227fcd3f5a7ab578da2e5765cb493",
+      "commit_date": "2026-11-08T01:36:03+01:00",
+      "ts": "2026-11-08T00:36:03Z",
+      "message": "ODT: watermark and odd/even page changes to a file are saved (gap 19) (#5729)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "fa59ed0",
+      "commit_full": "fa59ed0e8a6f271f6b5b9f1b14176f2e167a70e1",
+      "commit_date": "2026-11-08T01:51:01+01:00",
+      "ts": "2026-11-08T00:51:01Z",
+      "message": "fix(ui): keep Page Setup fields bounded after long paste (#5696)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "7855a2d",
+      "commit_full": "7855a2d814ab8a49f6b1ea259fc5de61168ada8c",
+      "commit_date": "2026-11-08T02:08:54+01:00",
+      "ts": "2026-11-08T01:08:54Z",
+      "message": "fix(fields): quoted-argument backslash escapes; body PAGE in a cardinal-text section (#4579)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "e53cae3",
+      "commit_full": "e53cae3482d4e080a15dc2320eb4929ea7722db2",
+      "commit_date": "2026-11-08T02:10:58+01:00",
+      "ts": "2026-11-08T01:10:58Z",
+      "message": "RTF: honor Unicode fallback counts above eight (#5607)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-08T00:29:33+00:00"
+  "updated_at": "2026-11-08T01:39:39+00:00"
 }
