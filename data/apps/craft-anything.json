@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "56aa319",
-  "latest_commit_date": "2026-11-08T01:33:00+01:00",
-  "latest_message": "Say in a build's feed when it runs another program than the saved one (R2.2) (#1150)",
+  "latest_commit": "cb0bb9d",
+  "latest_commit_date": "2026-11-09T01:55:01+08:00",
+  "latest_message": "Bound format readers and resolve launch paths (#1217)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 201,
-    "revisions_7d": 183,
+    "revisions": 209,
+    "revisions_7d": 191,
     "last_revision": {
-      "ts": "2026-11-08T00:33:00Z",
+      "ts": "2026-11-08T17:55:01Z",
       "kind": "content",
-      "commit": "56aa319",
-      "commit_full": "56aa31976b4ff0950e6b34ba020b0a568d2462fa",
-      "message": "Say in a build's feed when it runs another program than the saved one (R2.2) (#1150)"
+      "commit": "cb0bb9d",
+      "commit_full": "cb0bb9d8fa4536ba44ef2c86f5ed759b879cc2d3",
+      "message": "Bound format readers and resolve launch paths (#1217)"
     },
     "last_update": {
-      "ts": "2026-11-08T00:33:00Z",
+      "ts": "2026-11-08T17:55:01Z",
       "kind": "content",
-      "commit": "56aa319",
-      "commit_full": "56aa31976b4ff0950e6b34ba020b0a568d2462fa",
-      "message": "Say in a build's feed when it runs another program than the saved one (R2.2) (#1150)"
+      "commit": "cb0bb9d",
+      "commit_full": "cb0bb9d8fa4536ba44ef2c86f5ed759b879cc2d3",
+      "message": "Bound format readers and resolve launch paths (#1217)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 18.8,
+    "level": "buzzing",
+    "score": 22.4,
     "active_days_7d": 7,
-    "changes_7d": 354,
-    "changes_14d": 430,
+    "changes_7d": 375,
+    "changes_14d": 451,
     "housekeeping_7d": 38,
     "last_code_change": {
-      "ts": "2026-11-08T00:33:00Z",
-      "commit": "56aa319",
-      "commit_full": "56aa31976b4ff0950e6b34ba020b0a568d2462fa",
-      "subject": "Say in a build's feed when it runs another program than the saved one (R2.2) (#1150)"
+      "ts": "2026-11-08T17:55:01Z",
+      "commit": "cb0bb9d",
+      "commit_full": "cb0bb9d8fa4536ba44ef2c86f5ed759b879cc2d3",
+      "subject": "Bound format readers and resolve launch paths (#1217)"
     },
-    "last_commit_ts": "2026-11-08T00:33:00Z",
+    "last_commit_ts": "2026-11-08T17:55:01Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       1,
       64,
       34,
-      1
+      22
     ],
     "days": [
       {
@@ -242,12 +242,20 @@
       },
       {
         "d": "2026-11-08",
-        "code": 1,
+        "code": 22,
         "other": 0,
         "samples": [
           {
-            "commit": "56aa319",
-            "subject": "Say in a build's feed when it runs another program than the saved one (R2.2) (#1150)"
+            "commit": "cb0bb9d",
+            "subject": "Bound format readers and resolve launch paths (#1217)"
+          },
+          {
+            "commit": "51e6132",
+            "subject": "Refit to a server's context window once per backend, only when room was made (#1170)"
+          },
+          {
+            "commit": "1704834",
+            "subject": "Keep one line ending on a CRLF YAML line cut off after its CR (#1190)"
           }
         ]
       }
@@ -1747,8 +1755,64 @@
       "commit": "56aa319",
       "commit_full": "56aa31976b4ff0950e6b34ba020b0a568d2462fa",
       "message": "Say in a build's feed when it runs another program than the saved one (R2.2) (#1150)"
+    },
+    {
+      "ts": "2026-11-08T17:28:00Z",
+      "kind": "content",
+      "commit": "76f6297",
+      "commit_full": "76f62972bc337de644dd42a72678687f167d401c",
+      "message": "Cut adb and Frida parser lines at a UTF-8 boundary (R3.3) (#1215)"
+    },
+    {
+      "ts": "2026-11-08T17:28:07Z",
+      "kind": "content",
+      "commit": "9edd483",
+      "commit_full": "9edd4838a711ae2a5f45eaca08544a2a597b061e",
+      "message": "Say to try again later when an engine download's server is busy (#1203)"
+    },
+    {
+      "ts": "2026-11-08T17:38:18Z",
+      "kind": "content",
+      "commit": "5c17d90",
+      "commit_full": "5c17d9059e63ee8bf474aab31c92fdf111c91097",
+      "message": "Delete OpenCode sessions a build left unfinished, including after a killed app and over SSH (R2.2) (#1185)"
+    },
+    {
+      "ts": "2026-11-08T17:39:34Z",
+      "kind": "content",
+      "commit": "26b6835",
+      "commit_full": "26b68359cd0b7b5f0a2c8d6544393d6e375049e9",
+      "message": "Make the preview connection-limit test pass on macOS (R5.2) (#1207)"
+    },
+    {
+      "ts": "2026-11-08T17:44:12Z",
+      "kind": "content",
+      "commit": "4d95d6c",
+      "commit_full": "4d95d6c1bacaa9cbde9a04106c6c5015a38ad0db",
+      "message": "Stop the secrets check refusing the committer's own name (R5.2) (#1160)"
+    },
+    {
+      "ts": "2026-11-08T17:47:09Z",
+      "kind": "content",
+      "commit": "1a202ce",
+      "commit_full": "1a202ceadea347eaaf69585fe7da3eecbac03f44",
+      "message": "Read Aider's project-folder settings before a run (R2.2) (#1210)"
+    },
+    {
+      "ts": "2026-11-08T17:47:15Z",
+      "kind": "content",
+      "commit": "2d5c0cc",
+      "commit_full": "2d5c0cc15aecbc346b8fbf45b39a92376ad79cfe",
+      "message": "Check a remote host's tool server before a build, and pin what it is sent (R2.8) (#1211)"
+    },
+    {
+      "ts": "2026-11-08T17:55:01Z",
+      "kind": "content",
+      "commit": "cb0bb9d",
+      "commit_full": "cb0bb9d8fa4536ba44ef2c86f5ed759b879cc2d3",
+      "message": "Bound format readers and resolve launch paths (#1217)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-08T01:39:58+00:00"
+  "updated_at": "2026-11-08T17:55:53+00:00"
 }

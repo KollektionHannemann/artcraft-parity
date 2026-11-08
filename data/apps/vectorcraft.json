@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "d573b25",
-  "latest_commit_date": "2026-11-08T14:15:30+08:00",
-  "latest_message": ".ai save: the editing copy keeps live effects (#6150)",
+  "latest_commit": "0b0d2f0",
+  "latest_commit_date": "2026-11-09T01:19:05+08:00",
+  "latest_message": "Type: upright glyphs on a vertical path face the path's start, so ligatures read in order (#5557)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -344,6 +344,10 @@
     "progress": [
       {
         "date": "2026-11-05",
+        "text": "Window › Toolbars › Keep Tools Beside the Canvas, off by default, docks the Tools panel between left-side panels and the canvas instead of at the window's left edge, and the canvas's left edge then also docks a floating Tools panel (window.toolsBesideCanvas, #5395). Workspaces keep the setting; workspaces saved without it keep Tools at the window's edge. An optional VectorCraft layout choice; headline numbers unchanged."
+      },
+      {
+        "date": "2026-11-05",
         "text": "Release Type on a Path joins the Type Tools add-on (Object › Plug-ins › Type Tools): each selected type on a path splits into point type with the same text and attributes, on one straight line starting where its first character sat, and the plain path it was set on, with its exact shape and place in the stacking order and no paint; or keeps only the path or only the text, optionally leaving the original. A dialog with Preview, one undo step (addon.type.releasePath, #5532). A VectorCraft addition: headline numbers unchanged."
       },
       {
@@ -497,10 +501,6 @@
       {
         "date": "2026-10-15",
         "text": "Cursors: 36 more tool states get cursors of their own. Node editing follows the public manual (Direct Selection's anchor squares, Reshape Segment, Group Selection's plus, the arrow hollow on a snap, the Alt-copy arrowheads), the Anchor Point caret, the Curvature pen and Free Transform's side-shear arrows are drawn; Lasso, the freehand, symbolism and other tools borrow a drawn cursor until theirs is drawn. crates/tools/src/cursors.toml lists every cursor for whoever draws them, and cargo xtask cursors warns about one missing from it. Scores unchanged."
-      },
-      {
-        "date": "2026-10-14",
-        "text": "Document fonts register every explicitly supplied craft-fonts family after the existing Japanese, Arabic and Thai prefix; optional empty input remains supported. Headline scores and estimates are unchanged."
       }
     ]
   },
@@ -509,7 +509,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 215,
+    "revisions_since": 218,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -540,39 +540,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 216,
-    "revisions_7d": 12,
+    "revisions": 219,
+    "revisions_7d": 15,
     "last_revision": {
-      "ts": "2026-11-08T06:15:30Z",
+      "ts": "2026-11-08T17:19:05Z",
       "kind": "content",
-      "commit": "d573b25",
-      "commit_full": "d573b25d68561afaab31ff2aab28d3016721a13b",
-      "message": ".ai save: the editing copy keeps live effects (#6150)"
+      "commit": "0b0d2f0",
+      "commit_full": "0b0d2f0ab7c58dea687b089f0e25ae94a842001d",
+      "message": "Type: upright glyphs on a vertical path face the path's start, so ligatures read in order (#5557)"
     },
     "last_update": {
-      "ts": "2026-11-08T06:15:30Z",
+      "ts": "2026-11-08T17:19:05Z",
       "kind": "content",
-      "commit": "d573b25",
-      "commit_full": "d573b25d68561afaab31ff2aab28d3016721a13b",
-      "message": ".ai save: the editing copy keeps live effects (#6150)"
+      "commit": "0b0d2f0",
+      "commit_full": "0b0d2f0ab7c58dea687b089f0e25ae94a842001d",
+      "message": "Type: upright glyphs on a vertical path face the path's start, so ligatures read in order (#5557)"
     },
     "self_reported": "2026-11-06"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 32.8,
+    "score": 33.2,
     "active_days_7d": 7,
-    "changes_7d": 721,
-    "changes_14d": 1284,
+    "changes_7d": 741,
+    "changes_14d": 1304,
     "housekeeping_7d": 31,
     "last_code_change": {
-      "ts": "2026-11-08T16:01:22Z",
-      "commit": "65adb7b",
-      "commit_full": "65adb7b211f92bb441bcb4bde184be7c7e080005",
-      "subject": "SVG: keep CSS classes of imported elements on export (#2414) (#2480)"
+      "ts": "2026-11-08T17:19:05Z",
+      "commit": "0b0d2f0",
+      "commit_full": "0b0d2f0ab7c58dea687b089f0e25ae94a842001d",
+      "subject": "Type: upright glyphs on a vertical path face the path's start, so ligatures read in order (#5557)"
     },
-    "last_commit_ts": "2026-11-08T16:01:22Z",
+    "last_commit_ts": "2026-11-08T17:19:05Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       98,
@@ -588,7 +588,7 @@
       121,
       46,
       56,
-      81
+      101
     ],
     "days": [
       {
@@ -1321,20 +1321,20 @@
       },
       {
         "d": "2026-11-08",
-        "code": 81,
+        "code": 101,
         "other": 3,
         "samples": [
           {
-            "commit": "65adb7b",
-            "subject": "SVG: keep CSS classes of imported elements on export (#2414) (#2480)"
+            "commit": "0b0d2f0",
+            "subject": "Type: upright glyphs on a vertical path face the path's start, so ligatures read in order (#5557)"
           },
           {
-            "commit": "0a702cc",
-            "subject": "Plug-ins: a run keeps the fuel left in a slice at a bulk memory instruction (#6190)"
+            "commit": "d4e9d0d",
+            "subject": "File formats: HEIC and HEIF images open and place (#5518)"
           },
           {
-            "commit": "cc8770a",
-            "subject": ".ai import: Scatter brushes in Tints open in Tints, and brush art drops its frame (#6188)"
+            "commit": "6ff760d",
+            "subject": "Workspace: add an option to keep Tools beside the canvas with left-side panels (#5395)"
           }
         ]
       }
@@ -7219,7 +7219,85 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "96d1570",
+      "commit_full": "96d15708b20bbba61a555c36292cacb4420b589b",
+      "commit_date": "2026-11-09T01:18:09+08:00",
+      "ts": "2026-11-08T17:18:09Z",
+      "message": "Selection QoL: marquee modes with visible feedback (#5313)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
+    },
+    {
+      "commit": "6ff760d",
+      "commit_full": "6ff760dbb165e654fbb0f54f0caafff256e16cdd",
+      "commit_date": "2026-11-09T01:18:27+08:00",
+      "ts": "2026-11-08T17:18:27Z",
+      "message": "Workspace: add an option to keep Tools beside the canvas with left-side panels (#5395)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
+    },
+    {
+      "commit": "0b0d2f0",
+      "commit_full": "0b0d2f0ab7c58dea687b089f0e25ae94a842001d",
+      "commit_date": "2026-11-09T01:19:05+08:00",
+      "ts": "2026-11-08T17:19:05Z",
+      "message": "Type: upright glyphs on a vertical path face the path's start, so ligatures read in order (#5557)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-08T16:26:52+00:00"
+  "updated_at": "2026-11-08T17:55:12+00:00"
 }

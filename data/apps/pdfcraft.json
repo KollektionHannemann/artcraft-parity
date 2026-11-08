@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "883ab41",
-  "latest_commit_date": "2026-11-08T17:39:19+01:00",
-  "latest_message": "M10: adopt file-backed Windows printing with approved dependencies and the crash fix (#6514)",
+  "latest_commit": "83c6780",
+  "latest_commit_date": "2026-11-09T01:51:21+08:00",
+  "latest_message": "M7: edit grouped Thai text with one click, on Ungroup's form expansion (#6249 + review fixes) (#6627)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -293,6 +293,14 @@
     ],
     "progress": [
       {
+        "date": "2026-11-07",
+        "text": "(M7, #2964 / #3185): Supported Form text can be prepared for direct editing; groups left grouped (unsafe compositing, text nested past eight levels) are reported. Legacy Thai keeps the original font programs, Regular/Bold and text settings, also across same-face subsets; the narrow THSarabunPSK map repair is checked glyph by glyph against the font program; cross-family replacement is explicit. Builds on #3067 and #2811. Unsafe groups and mixed contextual styles remain partial; estimates unchanged."
+      },
+      {
+        "date": "2026-11-07",
+        "text": "(M10, ocr.ocr-web, port onto #977): Web OCR rebuilt on main's engines and preprocessing (#977). OcrJob::run is now OcrJob::steps a page at a time: the page renders, crops to the region and cleans each page, a Web Worker runs ocrs on the result, and OcrShot::place maps the words back through the region and preprocessing. Every strategy reads like this when only one engine is present, and the web build has only ocrs. The downloaded models are installed into the engine cache (ocr::install), so the Verify screen and the engine-status checks see them too. The batch keeps main's skipped-files bucket, low-confidence notes and cancel. The translations moved to craft-i18n (storytold/craft-i18n#141). The Verify screen starts the model download itself and runs once the models land; before, on a fresh page it failed with the desktop's \"set PDFCRAFTMODELS\" message. Known limits: the cleaning steps, and the Verify screen's Run OCR and re-reads, run on the page. Estimates unchanged."
+      },
+      {
         "date": "2026-11-03",
         "text": "(M11, shared JBIG2 dictionary): With Monochrome Images set to JBIG2, Optimize has up to 16 JBIG2 images share one symbol dictionary (/JBIG2Globals), the letters found on more than one page stored once, when that is smaller (pdfcraftfilters::encodejbig2shared). Eight pages of 10 pt text rendered at 300 dpi take 41% less in Helvetica and 42% in Times than coded alone, 10% in Courier; groups of 16 save 45%, of 32 only 47%. Only images redaction can store again without the dictionary share one (image masks and DeviceGray named directly, at most 64 Mi pixels), and redacting one stores the rest of its group so, which the group bounds to 15."
       },
@@ -386,6 +394,10 @@
       },
       {
         "date": "2026-10-27",
+        "text": "(M10, ocr.ocr-web, rebase fix): The web build loads OCR models only when their SHA-256 matches ATTRIBUTION.toml. With ONNX loading now on, rten's parser spins forever on some bytes that aren't a model (a corrupt or wrong download), so a bad file now fails at once instead of hanging a worker."
+      },
+      {
+        "date": "2026-10-27",
         "text": "(M10, OCR models): Model staging downloads and verifies the ONNX pair after the upstream RTEN URL brownout; runtime discovery prefers complete ONNX pairs per directory, retains complete RTEN fallback and preserves directory precedence."
       },
       {
@@ -395,6 +407,10 @@
       {
         "date": "2026-10-26",
         "text": "(M11, JBIG2 symbols): Lossless JBIG2 now stores each distinct mark of a black-and-white image once, as a symbol, and places its exact copies, when that is smaller than the generic region: on six pages of rendered 300 dpi text 28% of the generic region's size and 17% of Group 4's, and the same bits back through two independent decoders (hayro-jbig2 and Poppler). Scans, whose letters are seldom identical, gain little until refinement coding; a dictionary shared between pages (/JBIG2Globals) is next. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-26",
+        "text": "(M10, ocr.ocr-web, review fix): On the web, Edit on a scanned page starts the OCR model download, and the page is read once the models load; it was taken for no scan and left unread until the document changed."
       },
       {
         "date": "2026-10-25",
@@ -411,6 +427,10 @@
       {
         "date": "2026-10-24",
         "text": "(M3, window move on Wayland, #3970 follow-up): After a move or resize by PdfCraft's own title bar or edges, the button release given back to egui goes before the pointer leaving the window, so hover no longer sticks at the old place until the pointer moves. Found by CodeRabbit in review of #3970; a unit test covers it. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-24",
+        "text": "(M10, ocr.ocr-web, review fix): On the web, single-file and multiple-file OCR running at once no longer lose a page: the workers' answers go to the run that sent each page, instead of to whichever run collected first, and a cancelled run's late answers are let go. Regression tests cover both start orders and cancellation. Files chosen for Recognize Text in Multiple Files before the models have downloaded now wait for them instead of having to be chosen again, and idle workers close on time even when nothing is happening on the page, a full minute after their last page comes back rather than after it was handed out (checked by hand in Firefox); estimates unchanged."
       },
       {
         "date": "2026-10-24",
@@ -431,26 +451,6 @@
       {
         "date": "2026-10-24",
         "text": "(M5, move preview): A comment being moved is drawn where it goes while it is dragged (a rectangle or oval showed only its blue frame): the comment is rendered alone once as the drag starts and laid over the page, which shows it where it was until the move is applied. Engine Document::commentlayer; synthetic engine and UI regressions. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "(M5, border shape): Text boxes and Fill & Sign's typed text take an oval or a circle for their border (Comment Properties ▸ Border shape, Fill & Sign's toolbar): the text box keeps its place and the shape goes around it, the text centred, a circle snug around the text (its box no wider than the text needs); stored as /RD and /PCBorderShape and drawn in the appearance. commentadd / commentedit / fillsignadd bordershape. One new label in every catalog. Synthetic annot, UI and automation regressions. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "(M5, Escape in Fill & Sign): Escape leaves a Fill & Sign tool as it leaves a comment tool: the first press closes the open type box, the next goes back to Select, so the Text tool no longer opens a box at every click with no way out by the keyboard. A synthetic UI regression covers the Text and Checkmark tools. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "(M3, arrow keys on a wide page): → / ← scroll a page wider than the window (a plan zoomed in) sideways a line at a time and turn the page at its edge, as ↓ / ↑ do in single-page view; ⌘→ / ⌘← turn it at once, and a page that fits across turns as before (#185). A synthetic viewer regression covers both. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "(M5, part opacity): Comment Properties sets a text box's text, border and fill, and a shape's line and fill, each at an opacity of its own (a see-through fill with an opaque line on a plan); stored as /CA, /ca (PDF 2.0) and /PCTextOpacity and drawn with separate graphics states, so other viewers show it. Make Properties Default and the settings carry it; commentadd / commentedit fillopacity, textopacity. Four new labels in every catalog. Synthetic annot, UI and automation regressions. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "(M11, JBIG2): The PDF Optimizer can store black-and-white images as lossless JBIG2 (a generic region, written from the JBIG2 draft standard and checked against its arithmetic-coder test sequence), about a third smaller than Group 4 on 300 dpi text, and Export ▸ Images reads JBIG2 images. JBIG2 symbol coding, where its largest gains on text are, is next."
       }
     ]
   },
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 118,
+    "revisions_since": 120,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 206,
-    "revisions_7d": 24,
+    "revisions": 208,
+    "revisions_7d": 26,
     "last_revision": {
-      "ts": "2026-11-08T16:39:19Z",
+      "ts": "2026-11-08T17:51:21Z",
       "kind": "content",
-      "commit": "883ab41",
-      "commit_full": "883ab41bca5a4547718a04281522bf9f64d7b6f5",
-      "message": "M10: adopt file-backed Windows printing with approved dependencies and the crash fix (#6514)"
+      "commit": "83c6780",
+      "commit_full": "83c67803da76e4adcaee41030ecaca4c729b4935",
+      "message": "M7: edit grouped Thai text with one click, on Ungroup's form expansion (#6249 + review fixes) (#6627)"
     },
     "last_update": {
-      "ts": "2026-11-08T16:39:19Z",
+      "ts": "2026-11-08T17:51:21Z",
       "kind": "content",
-      "commit": "883ab41",
-      "commit_full": "883ab41bca5a4547718a04281522bf9f64d7b6f5",
-      "message": "M10: adopt file-backed Windows printing with approved dependencies and the crash fix (#6514)"
+      "commit": "83c6780",
+      "commit_full": "83c67803da76e4adcaee41030ecaca4c729b4935",
+      "message": "M7: edit grouped Thai text with one click, on Ungroup's form expansion (#6249 + review fixes) (#6627)"
     },
     "self_reported": "2026-11-08"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.2,
+    "score": 20.4,
     "active_days_7d": 7,
-    "changes_7d": 132,
-    "changes_14d": 198,
-    "housekeeping_7d": 7,
+    "changes_7d": 135,
+    "changes_14d": 201,
+    "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-08T16:57:18Z",
-      "commit": "485bc14",
-      "commit_full": "485bc143a9fc7f6e19b1434f32cac3b4c546cdbe",
-      "subject": "Word and HTML exports name the document's language (#5498, merged with main) (#6631)"
+      "ts": "2026-11-08T17:51:21Z",
+      "commit": "83c6780",
+      "commit_full": "83c67803da76e4adcaee41030ecaca4c729b4935",
+      "subject": "M7: edit grouped Thai text with one click, on Ungroup's form expansion (#6249 + review fixes) (#6627)"
     },
-    "last_commit_ts": "2026-11-08T16:57:18Z",
+    "last_commit_ts": "2026-11-08T17:51:21Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       5,
@@ -524,7 +524,7 @@
       36,
       9,
       6,
-      21
+      24
     ],
     "days": [
       {
@@ -1257,20 +1257,20 @@
       },
       {
         "d": "2026-11-08",
-        "code": 21,
-        "other": 2,
+        "code": 24,
+        "other": 3,
         "samples": [
           {
-            "commit": "485bc14",
-            "subject": "Word and HTML exports name the document's language (#5498, merged with main) (#6631)"
+            "commit": "83c6780",
+            "subject": "M7: edit grouped Thai text with one click, on Ungroup's form expansion (#6249 + review fixes) (#6627)"
           },
           {
-            "commit": "883ab41",
-            "subject": "M10: adopt file-backed Windows printing with approved dependencies and the crash fix (#6514)"
+            "commit": "da6ee1e",
+            "subject": "OCR in the web build (#1641, merged with main, two fixes) (#6634)"
           },
           {
-            "commit": "8802485",
-            "subject": "M10: Correct recognized text keeps the window's tabs and toolbar and shows the page (ocr.correct-recognized-text) (#6490)"
+            "commit": "c659211",
+            "subject": "An edited OCR phrase is drawn at one size (#5454, with the requested test) (#6633)"
           }
         ]
       }
@@ -6221,7 +6221,53 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "da6ee1e",
+      "commit_full": "da6ee1e62ad3b27d61dd4dc9e3ba0353ef358c2e",
+      "commit_date": "2026-11-09T01:10:19+08:00",
+      "ts": "2026-11-08T17:10:19Z",
+      "message": "OCR in the web build (#1641, merged with main, two fixes) (#6634)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "83c6780",
+      "commit_full": "83c67803da76e4adcaee41030ecaca4c729b4935",
+      "commit_date": "2026-11-09T01:51:21+08:00",
+      "ts": "2026-11-08T17:51:21Z",
+      "message": "M7: edit grouped Thai text with one click, on Ungroup's form expansion (#6249 + review fixes) (#6627)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-08T17:01:34+00:00"
+  "updated_at": "2026-11-08T17:55:25+00:00"
 }
