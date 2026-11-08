@@ -525,18 +525,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.5,
+    "score": 14.8,
     "active_days_7d": 6,
-    "changes_7d": 93,
-    "changes_14d": 197,
+    "changes_7d": 94,
+    "changes_14d": 198,
     "housekeeping_7d": 4,
     "last_code_change": {
-      "ts": "2026-11-08T08:35:42Z",
-      "commit": "48e2203",
-      "commit_full": "48e22031239338adc7b9c5a48206f06f5dc07839",
-      "subject": "Don't capitalize the word after a decimal point in sentence case (#1969)"
+      "ts": "2026-11-08T20:46:38Z",
+      "commit": "c4674f2",
+      "commit_full": "c4674f24fb11eda1cdb440253c88fac686cbbafe",
+      "subject": "Make polynomial trendline fits independent of x scale and offset (#1982)"
     },
-    "last_commit_ts": "2026-11-08T08:35:42Z",
+    "last_commit_ts": "2026-11-08T20:46:38Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
       10,
@@ -552,7 +552,7 @@
       13,
       0,
       3,
-      4
+      5
     ],
     "days": [
       {
@@ -1097,9 +1097,13 @@
       },
       {
         "d": "2026-11-08",
-        "code": 4,
+        "code": 5,
         "other": 0,
         "samples": [
+          {
+            "commit": "c4674f2",
+            "subject": "Make polynomial trendline fits independent of x scale and offset (#1982)"
+          },
           {
             "commit": "48e2203",
             "subject": "Don't capitalize the word after a decimal point in sentence case (#1969)"
@@ -1107,10 +1111,6 @@
           {
             "commit": "02fbb6a",
             "subject": "Notes: pin that Paste reaches the focused speaker-notes field, bare and inside the ⌘V batch (refs #1855) (#1856)"
-          },
-          {
-            "commit": "c16db2e",
-            "subject": "pptx: preserve 3-D scene and extrusion XML on text bodies and groups (#1943)"
           }
         ]
       }
@@ -4483,5 +4483,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-08T08:37:48+00:00"
+  "updated_at": "2026-11-08T21:00:14+00:00"
 }
