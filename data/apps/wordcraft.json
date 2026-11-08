@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "4259dd1",
-  "latest_commit_date": "2026-11-08T05:31:43+01:00",
-  "latest_message": "Layout: before Word 2013 layout a floating table moved below another keeps its own left edge (#5442)",
+  "latest_commit": "c8618d3",
+  "latest_commit_date": "2026-11-08T06:34:27+01:00",
+  "latest_message": "fix(docx): look relationships up by id through an index (#5410)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -333,6 +333,14 @@
         "text": "Layout: a turned inline picture whose file keeps no room for the turn (no or a zero wp:effectExtent, as other tools write) keeps its line to its frame and overhangs it, cut at the line's top and bottom, as Word does: the frame as it is in Word 2007 layout, with width and height exchanged from 45° to 135° and 225° to 315° in Word 2013+ layout. Such a file saves the same way. Pictures with the room recorded (Word's own files) still take their rotated bounds. Readiness unchanged."
       },
       {
+        "date": "2026-11-08",
+        "text": "XML text and CDATA read with their line ends normalised (XML 1.0 §2.11): CR LF and a lone CR are one line feed, &#13; stays a CR, so a line break inside w:t in a file saved with Windows line ends is one space, not two (#5897); readiness estimates unchanged."
+      },
+      {
+        "date": "2026-11-08",
+        "text": "Layout: contextual spacing drops the space after a table cell's last paragraph when that paragraph is in the Normal style, the end-of-cell mark counting as a Normal paragraph next to it; a last paragraph in another style keeps its space after. The rule is inferred from docxide-pdf's notes and its cell-end- fixtures (cell-end-text-context, cell-end-empty-context); a Word comparison that tells it apart from the neighbouring paragraph's style is still open. Readiness unchanged."
+      },
+      {
         "date": "2026-11-07",
         "text": "An in-line picture lowered past its own height (w:position) lowers its line as far, as in Word; all 156 synthetic lines measured for #3984 match Word (#5796). Exact spacing keeps the line's baseline."
       },
@@ -342,11 +350,31 @@
       },
       {
         "date": "2026-11-07",
+        "text": "Deleting a preceding empty paragraph keeps the following paragraph's style, outline and mark formatting rather than promoting body text to a heading (Leaf #152). Non-empty merges and section absorption retain their existing rules; synthetic model, command, DOCX and Undo/Redo coverage."
+      },
+      {
+        "date": "2026-11-07",
+        "text": "A brace or bracket shape in a .doc file is drawn without a fill unless the file gives it one, as in Word, instead of as a white box that hides the text behind it (#5943)"
+      },
+      {
+        "date": "2026-11-07",
         "text": "Page Setup also bounds the unfocused margin display after a long numeric paste; the accepted value is retained (#5650)."
       },
       {
         "date": "2026-11-06",
         "text": "Arabic interface: the Home tab's Styles gallery reads from the right, as the rest of the mirrored ribbon does (#5566). Normal is the rightmost tile, the next styles follow leftwards and the scroll arrows and More sit at the gallery's left end; left to right is unchanged. Readiness unchanged."
+      },
+      {
+        "date": "2026-11-06",
+        "text": "Change Picture keeps the picture's width and takes the new picture's aspect ratio, dropping the old crop, instead of stretching the new picture into the old frame (a revised figure came out about 2% taller in a real manuscript) (#5761). Readiness estimates unchanged."
+      },
+      {
+        "date": "2026-11-06",
+        "text": "Superscript and subscript text is set at 0.65 of its size rounded to the half point, as Word does (8 pt → 5, 11 → 7, 12 → 8, 24 → 15.5; measured in Word for Mac from digit advances with cargo xtask word-compare), not 0.65 exactly: lines with citation numbers and footnote references break where Word's do (the Arial superscript and author-line probes now match Word line for line). Readiness estimates unchanged."
+      },
+      {
+        "date": "2026-11-06",
+        "text": "Line numbers take the document's \"Line Number\" style over its defaults, as in Word (Aptos 12 pt black in a manuscript whose defaults are Aptos 12 pt, measured in Word for Mac), instead of a fixed 10 pt grey. Readiness estimates unchanged."
       },
       {
         "date": "2026-11-06",
@@ -459,34 +487,6 @@
       {
         "date": "2026-11-03",
         "text": "ODT paragraphs showing text boxes and shapes holding text are written as read while that text is unchanged (gap 19). Over the corpus 111 of 133 files now round-trip pixel-identical (103), the round-trip difference falls from 44k to 39k pixels, and the element kinds a save loses fall from 16 to 8."
-      },
-      {
-        "date": "2026-11-03",
-        "text": "ODT paragraphs holding comments or tracked changes are written as read while those are unchanged (gap 19): a comment edited, resolved or answered, or a change accepted, sends its paragraph to the model; the file's change regions are kept beside WordCraft's own. Over the corpus the words a save loses fall from 29 to 4."
-      },
-      {
-        "date": "2026-11-03",
-        "text": "ODT paragraphs and tables holding pictures and shapes are written as read while unchanged (gap 19), with their pictures and frame styles; over the corpus the attributes and values a save loses halve (1,551 → 789), the pages unchanged."
-      },
-      {
-        "date": "2026-11-03",
-        "text": "ODT sections inside text boxes are written as read (gap 19), as LibreOffice's letter and fax templates hold the sender's address; seven of those templates now round-trip pixel-identical; over the corpus 103 of 133 files do (95), the round-trip difference falls from 51k to 44k pixels, and the losses a save makes fall from 59 to 35."
-      },
-      {
-        "date": "2026-11-03",
-        "text": "ODT saves lose less (gap 19): list styles sharing a paragraph style's name are kept apart (§16.2), named sections around tables (nested too) are written as read, unchanged charts keep their replacement picture, note citations follow the document's numbering, and frames keep their stacking order. Over the 133-file corpus the losses a save makes, file by file, fall from 242 to 59 (19 kinds), with the pages unchanged."
-      },
-      {
-        "date": "2026-11-03",
-        "text": "ODT form definitions and indexes are written back as read (gap 19): a file's forms keep their settings, properties and event listeners, and an index nobody edited keeps its source settings and entry templates. Over the 133-file corpus the element kinds a save loses fall from 38 to 22 (losses per file 354 → 242), with the pages unchanged (95 pixel-identical, 130 with identical text)."
-      },
-      {
-        "date": "2026-11-03",
-        "text": "ODT saves without edits lose (almost) nothing (gap 19): tables, page layouts and master pages, named sections, document properties and declarations WordCraft doesn't model are written back as read, and a test saves seven samples of our own and finds nothing missing. Over the 133-file corpus 95 files come back pixel-identical (62 before) and the round-trip difference falls to 51k pixels (191k)"
-      },
-      {
-        "date": "2026-11-03",
-        "text": "ODT saves what WordCraft doesn't model (gap 19): a paragraph nobody edited is written back with its own markup, and while no style changed, the file's own style definitions are written, so unknown elements, attributes, unused list styles and note settings survive a save that doesn't touch them. Over the 133-file corpus (LibreOffice, Google Docs and ONLYOFFICE files) the round-trip difference falls by 64% and 62 files come back pixel-identical (46 before)"
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 547,
+    "revisions_since": 556,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 551,
-    "revisions_7d": 97,
+    "revisions": 560,
+    "revisions_7d": 106,
     "last_revision": {
-      "ts": "2026-11-08T04:31:43Z",
+      "ts": "2026-11-08T05:34:27Z",
       "kind": "content",
-      "commit": "4259dd1",
-      "commit_full": "4259dd1b2e02dcb310bb98ecc6b6d53c38bf1f6c",
-      "message": "Layout: before Word 2013 layout a floating table moved below another keeps its own left edge (#5442)"
+      "commit": "c8618d3",
+      "commit_full": "c8618d3e05d0972e1321ca87b1c018078fc65fea",
+      "message": "fix(docx): look relationships up by id through an index (#5410)"
     },
     "last_update": {
-      "ts": "2026-11-08T04:31:43Z",
+      "ts": "2026-11-08T05:34:27Z",
       "kind": "content",
-      "commit": "4259dd1",
-      "commit_full": "4259dd1b2e02dcb310bb98ecc6b6d53c38bf1f6c",
-      "message": "Layout: before Word 2013 layout a floating table moved below another keeps its own left edge (#5442)"
+      "commit": "c8618d3",
+      "commit_full": "c8618d3e05d0972e1321ca87b1c018078fc65fea",
+      "message": "fix(docx): look relationships up by id through an index (#5410)"
     },
     "self_reported": "2026-11-08"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.3,
+    "score": 22.6,
     "active_days_7d": 7,
-    "changes_7d": 183,
-    "changes_14d": 301,
+    "changes_7d": 196,
+    "changes_14d": 314,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-08T04:31:43Z",
-      "commit": "4259dd1",
-      "commit_full": "4259dd1b2e02dcb310bb98ecc6b6d53c38bf1f6c",
-      "subject": "Layout: before Word 2013 layout a floating table moved below another keeps its own left edge (#5442)"
+      "ts": "2026-11-08T05:34:27Z",
+      "commit": "c8618d3",
+      "commit_full": "c8618d3e05d0972e1321ca87b1c018078fc65fea",
+      "subject": "fix(docx): look relationships up by id through an index (#5410)"
     },
-    "last_commit_ts": "2026-11-08T04:31:43Z",
+    "last_commit_ts": "2026-11-08T05:34:27Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       28,
@@ -568,7 +568,7 @@
       43,
       20,
       3,
-      55
+      68
     ],
     "days": [
       {
@@ -1143,20 +1143,20 @@
       },
       {
         "d": "2026-11-08",
-        "code": 55,
+        "code": 68,
         "other": 1,
         "samples": [
           {
-            "commit": "4259dd1",
-            "subject": "Layout: before Word 2013 layout a floating table moved below another keeps its own left edge (#5442)"
+            "commit": "c8618d3",
+            "subject": "fix(docx): look relationships up by id through an index (#5410)"
           },
           {
-            "commit": "5c0a62a",
-            "subject": "Layout: no line break between a full stop and an opening parenthesis (#5437)"
+            "commit": "a891d86",
+            "subject": "Layout: contextual spacing drops the space after a cell's last Normal paragraph (#5450)"
           },
           {
-            "commit": "855a0fe",
-            "subject": "Layout: a nested table's Can't Split row moves on with its outer row (#5456)"
+            "commit": "85434d2",
+            "subject": "layout: line numbers take the \"Line Number\" style, not a fixed 10 pt grey (#5788)"
           }
         ]
       }
@@ -14060,7 +14060,214 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "5dfb3ac",
+      "commit_full": "5dfb3acf1511e14d4f3c04975579063859625078",
+      "commit_date": "2026-11-08T05:40:51+01:00",
+      "ts": "2026-11-08T04:40:51Z",
+      "message": "picture.change: keep the width and take the new picture's aspect ratio (#5761)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "3291be0",
+      "commit_full": "3291be0fbf02ecc7eafcf8473c6f2d83e3bd20cd",
+      "commit_date": "2026-11-08T05:45:17+01:00",
+      "ts": "2026-11-08T04:45:17Z",
+      "message": "Layout: an empty paragraph after a leading floating table takes no space before (#5440)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "52934ef",
+      "commit_full": "52934ef11073786d677980ffc79692cfbea65921",
+      "commit_date": "2026-11-08T05:45:35+01:00",
+      "ts": "2026-11-08T04:45:35Z",
+      "message": "docbin: brace and bracket shapes are unfilled unless the file fills them (#5943) (#5945)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "4cd6ffa",
+      "commit_full": "4cd6ffa5648879ccc45b57877afa7e04803b0bf1",
+      "commit_date": "2026-11-08T05:48:03+01:00",
+      "ts": "2026-11-08T04:48:03Z",
+      "message": "doc: preserve following formatting when deleting an empty paragraph (#5929)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "f0fb31c",
+      "commit_full": "f0fb31c0c97cb31c402c8ba40ab48b26b0a828fa",
+      "commit_date": "2026-11-08T05:48:20+01:00",
+      "ts": "2026-11-08T04:48:20Z",
+      "message": "XML: normalise line ends in text and CDATA (XML 1.0 §2.11) (#5897) (#5898)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "7634553",
+      "commit_full": "7634553900e6f3cd7f42d587fa3ed57d82f12832",
+      "commit_date": "2026-11-08T06:02:01+01:00",
+      "ts": "2026-11-08T05:02:01Z",
+      "message": "Layout: superscript and subscript text at 0.65 of its size rounded to the half point (#5802)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "85434d2",
+      "commit_full": "85434d2c20adbf3a270d9e320167c08251eec8ec",
+      "commit_date": "2026-11-08T06:26:44+01:00",
+      "ts": "2026-11-08T05:26:44Z",
+      "message": "layout: line numbers take the \"Line Number\" style, not a fixed 10 pt grey (#5788)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "a891d86",
+      "commit_full": "a891d861b7b881cb0681d52d4ec57c32eeea2e09",
+      "commit_date": "2026-11-08T06:27:07+01:00",
+      "ts": "2026-11-08T05:27:07Z",
+      "message": "Layout: contextual spacing drops the space after a cell's last Normal paragraph (#5450)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "c8618d3",
+      "commit_full": "c8618d3e05d0972e1321ca87b1c018078fc65fea",
+      "commit_date": "2026-11-08T06:34:27+01:00",
+      "ts": "2026-11-08T05:34:27Z",
+      "message": "fix(docx): look relationships up by id through an index (#5410)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-08T04:38:47+00:00"
+  "updated_at": "2026-11-08T05:35:49+00:00"
 }
