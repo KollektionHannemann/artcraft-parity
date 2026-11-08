@@ -378,18 +378,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.3,
+    "score": 16.7,
     "active_days_7d": 6,
-    "changes_7d": 128,
-    "changes_14d": 415,
-    "housekeeping_7d": 5,
+    "changes_7d": 129,
+    "changes_14d": 416,
+    "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-08T01:30:59Z",
-      "commit": "8438248",
-      "commit_full": "84382487bbeaef3d45dde3e1c76a91597132ac57",
-      "subject": "Disk cache: entries keep the files they read, keys from memory (#3184) (#3191)"
+      "ts": "2026-11-08T02:06:55Z",
+      "commit": "ae35ea7",
+      "commit_full": "ae35ea7d54fe5d2e197fd15fcdd60fb6277781d1",
+      "subject": "Preview: each stall doubles the frames the held sound waits for (#3260) (#3272)"
     },
-    "last_commit_ts": "2026-11-08T01:30:59Z",
+    "last_commit_ts": "2026-11-08T02:06:55Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       7,
@@ -405,7 +405,7 @@
       15,
       41,
       0,
-      3
+      4
     ],
     "days": [
       {
@@ -1060,9 +1060,13 @@
       },
       {
         "d": "2026-11-08",
-        "code": 3,
-        "other": 0,
+        "code": 4,
+        "other": 1,
         "samples": [
+          {
+            "commit": "ae35ea7",
+            "subject": "Preview: each stall doubles the frames the held sound waits for (#3260) (#3272)"
+          },
           {
             "commit": "8438248",
             "subject": "Disk cache: entries keep the files they read, keys from memory (#3184) (#3191)"
@@ -1070,10 +1074,6 @@
           {
             "commit": "514e16c",
             "subject": ".aep import: effects without definitions borrow them from another instance (#3223)"
-          },
-          {
-            "commit": "99e24f5",
-            "subject": ".aep import: image sequences without a filename prefix or with Force alphabetical order (#3213)"
           }
         ]
       }
@@ -1633,5 +1633,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-08T01:39:27+00:00"
+  "updated_at": "2026-11-08T02:38:03+00:00"
 }

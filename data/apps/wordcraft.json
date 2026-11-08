@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "e53cae3",
-  "latest_commit_date": "2026-11-08T02:10:58+01:00",
-  "latest_message": "RTF: honor Unicode fallback counts above eight (#5607)",
+  "latest_commit": "4821a13",
+  "latest_commit_date": "2026-11-08T03:36:54+01:00",
+  "latest_message": "Font menus: entries are drawn from a few shared textures, so Windows no longer shows them on black, white or red strips (#5105) (#5111)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -330,7 +330,15 @@
     "progress": [
       {
         "date": "2026-11-07",
+        "text": "An in-line picture lowered past its own height (w:position) lowers its line as far, as in Word; all 156 synthetic lines measured for #3984 match Word (#5796). Exact spacing keeps the line's baseline."
+      },
+      {
+        "date": "2026-11-07",
         "text": "Page Setup also bounds the unfocused margin display after a long numeric paste; the accepted value is retained (#5650)."
+      },
+      {
+        "date": "2026-11-06",
+        "text": "Arabic interface: the Home tab's Styles gallery reads from the right, as the rest of the mirrored ribbon does (#5566). Normal is the rightmost tile, the next styles follow leftwards and the scroll arrows and More sit at the gallery's left end; left to right is unchanged. Readiness unchanged."
       },
       {
         "date": "2026-11-06",
@@ -358,7 +366,19 @@
       },
       {
         "date": "2026-11-05",
+        "text": "ODT font declarations are kept (gap 19): replacing them made LibreOffice pick other substitutes for fonts not installed, reflowing a document from 83 pages to 70 on a save with no edits."
+      },
+      {
+        "date": "2026-11-05",
         "text": "ODT pictures offered in several formats show and survive a save (gap 19): LibreOffice's letter templates lost theirs."
+      },
+      {
+        "date": "2026-11-05",
+        "text": "Linux: a WordCraft started by an AppImage app no longer takes that app's file for its own (#5653). The AppImage runtime's APPIMAGE, APPDIR, ARGV0 and OWD pass to whatever the app starts, so an installed WordCraft opened through xdg-open saw another program's APPIMAGE, and its self-update replaced that program's file. The app now starts over without those variables unless its executable is under APPDIR, so the update goes through the package or plain file it really is. Should starting over fail, the self-update is off in that window and Help › Check for Updates says why. Readiness estimates unchanged."
+      },
+      {
+        "date": "2026-11-05",
+        "text": "A Word template (.dotx, .dotm, .dot) opened from the file manager, the command line or the Finder starts a new, untitled document based on it, as Word's default verb for a template does (#3433). It opened the template itself, so Save (and AutoSave) wrote over it. The new document is attached to the template and Save asks where to write; a protected template asks for its password and still starts a new document. File › Open and a file dropped on the window still open a template itself, to edit it."
       },
       {
         "date": "2026-11-05",
@@ -394,11 +414,19 @@
       },
       {
         "date": "2026-11-04",
+        "text": "The CLI opens a non-Unicode input filename even after options such as --page 2 or --format flatopc; text option values still require Unicode; run --file and run --script retain native paths."
+      },
+      {
+        "date": "2026-11-04",
         "text": "Pictures keep the brightness, contrast and transparency their file gives them (#1711, #1766): a \"Washout\" picture watermark (VML gain/blacklevel) and a washed-out letterhead picture behind the text (a:lum) are drawn faded on screen and in PDF instead of at full colour, with the pixel curve measured on Word's own PDF export; a:alphaModFix transparency too. Saved back as DrawingML (and as VML gain/blacklevel in Word 2003 XML, without the transparency). Picture Format › Corrections, Transparency and Color › Washout replace the file's values (other Color modes leave them alone), and Reset Picture discards them all, as in Word; the PDF embeds the corrected pixels once per picture"
       },
       {
         "date": "2026-11-04",
         "text": "Quitting over the control channel and MCP bridge is refused while any open document has unsaved changes — a programmatic call never prompts — and {\"force\": true} quits without saving. The Save Changes prompt and the refusal now share one predicate, so they cannot drift apart (#3274)."
+      },
+      {
+        "date": "2026-11-03",
+        "text": "Search types in place: a click on the title bar's Search box, or Alt+Q, takes the typing in that box, with the results under it, as in Word, instead of a second box in a dialog (#5398)."
       },
       {
         "date": "2026-11-03",
@@ -459,34 +487,6 @@
       {
         "date": "2026-11-03",
         "text": "Security: pasting text boxes charges each copied story for its formatting too (run, mark, paragraph and section properties), not only its text and objects, so a story with huge style or font names can't copy past the paste's 32 MiB text box budget. Readiness unchanged."
-      },
-      {
-        "date": "2026-11-03",
-        "text": "Security: .doc import keeps one width, shading, alignment and merge override per table cell, the last one winning as before, instead of a copy every time a paragraph's properties repeat the sprm, so a shared PAPX can't pile up copies on every paragraph mark. Readiness unchanged."
-      },
-      {
-        "date": "2026-11-03",
-        "text": "Security: .doc import attaches each section to the paragraph that ends it through an index of paragraph ends, instead of scanning every paragraph for every section, so a file with a thousand sections that end nowhere can't multiply the work over its paragraphs. Readiness unchanged."
-      },
-      {
-        "date": "2026-11-03",
-        "text": "Language packs: language-packs-2 is published and WordCraft pins its index: 75 languages, adding Danish, German (Germany, Austria, Switzerland), Esperanto, Estonian, Persian, Croatian, Hungarian, Norwegian (Bokmål, Nynorsk), Dutch (#4145, #2505) and Swedish (Sweden, Finland), which need craft-proof's flag-based compounding (storytold/craft-libs#497, pinned). English (Australia) is checked against SCOWL's en-AU list as well as en-GB's (storytold/craft-libs#496). Mongolian and Thai stay hidden. Readiness unchanged."
-      },
-      {
-        "date": "2026-11-03",
-        "text": "Language lists (CP4.3): a language installed from a Language pack (Bulgarian, say) can now be chosen. Set Proofing Language lists every built-in language and every installed or available pack's, each once and sorted by name; Review › Language and the status bar's menu add the installed packs' languages to the short list, with one way of working out the check mark, by tag. A pack's language is stored as a tag that finds the pack again (sr-Latn-RS is proofed by the Latin sr-latn pack, not the Cyrillic one; Valencian is Word's ca-ES-valencia). Every pack in language-packs-2 now has an English name (Belarusian used to show its own name, Беларуская). Readiness unchanged."
-      },
-      {
-        "date": "2026-11-03",
-        "text": "Language packs (CP4.3): on a fresh install (or after an upgrade, with the list cached for an older pin) the missing-pack bar still offers a document language that has no dictionary, \"Turkish proofing isn't installed. Install\": the person's click turns on downloading, fetches the list and installs the pack if it lists one (if not, the bar goes). With downloading already on, a missing or stale list is fetched once in the background. Choosing a language with only the caret counts before anything is typed, and the spelling context menu's heading (Possible spelling mistake) is in the interface language, not the text's. Closing the bar is remembered per document, per pack and, before the list is known, per language tag. Readiness unchanged."
-      },
-      {
-        "date": "2026-11-03",
-        "text": "Options › Language (CP4.3): Your languages lists English, every installed Language pack and the languages of the open document, each with where its proofing comes from (Built in, Installed, Your own dictionary, System dictionary, Grammar built in, Not available yet) and Install, Remove and Set as default; Add a language… opens a picker with search (dutch, nederlands, nl), sorted by name, and its first click is the consent to download. The Dictionaries folder moved here from Options › Proofing, with a Dictionary files list of the file each language found (#1063). Gap 8."
-      },
-      {
-        "date": "2026-11-03",
-        "text": "Arabic interface (#1195): ar selectable (and every ar- system locale); craft-i18n catalog; mirrored ribbon, panes, File page, dialogs and menus; Arabic UI font fallback; document direction stays independent. No kashida or Arabic proofing yet; Hebrew UI still open."
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 519,
+    "revisions_since": 528,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 523,
-    "revisions_7d": 69,
+    "revisions": 532,
+    "revisions_7d": 78,
     "last_revision": {
-      "ts": "2026-11-08T01:10:58Z",
+      "ts": "2026-11-08T02:36:54Z",
       "kind": "content",
-      "commit": "e53cae3",
-      "commit_full": "e53cae3482d4e080a15dc2320eb4929ea7722db2",
-      "message": "RTF: honor Unicode fallback counts above eight (#5607)"
+      "commit": "4821a13",
+      "commit_full": "4821a13ee08b62231239d701784298ef395ada24",
+      "message": "Font menus: entries are drawn from a few shared textures, so Windows no longer shows them on black, white or red strips (#5105) (#5111)"
     },
     "last_update": {
-      "ts": "2026-11-08T01:10:58Z",
+      "ts": "2026-11-08T02:36:54Z",
       "kind": "content",
-      "commit": "e53cae3",
-      "commit_full": "e53cae3482d4e080a15dc2320eb4929ea7722db2",
-      "message": "RTF: honor Unicode fallback counts above eight (#5607)"
+      "commit": "4821a13",
+      "commit_full": "4821a13ee08b62231239d701784298ef395ada24",
+      "message": "Font menus: entries are drawn from a few shared textures, so Windows no longer shows them on black, white or red strips (#5105) (#5111)"
     },
     "self_reported": "2026-11-06"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.2,
+    "score": 21.2,
     "active_days_7d": 7,
-    "changes_7d": 140,
-    "changes_14d": 258,
+    "changes_7d": 154,
+    "changes_14d": 272,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-08T01:10:58Z",
-      "commit": "e53cae3",
-      "commit_full": "e53cae3482d4e080a15dc2320eb4929ea7722db2",
-      "subject": "RTF: honor Unicode fallback counts above eight (#5607)"
+      "ts": "2026-11-08T02:36:54Z",
+      "commit": "4821a13",
+      "commit_full": "4821a13ee08b62231239d701784298ef395ada24",
+      "subject": "Font menus: entries are drawn from a few shared textures, so Windows no longer shows them on black, white or red strips (#5105) (#5111)"
     },
-    "last_commit_ts": "2026-11-08T01:10:58Z",
+    "last_commit_ts": "2026-11-08T02:36:54Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       28,
@@ -568,7 +568,7 @@
       43,
       20,
       3,
-      12
+      26
     ],
     "days": [
       {
@@ -1143,20 +1143,20 @@
       },
       {
         "d": "2026-11-08",
-        "code": 12,
+        "code": 26,
         "other": 1,
         "samples": [
           {
-            "commit": "e53cae3",
-            "subject": "RTF: honor Unicode fallback counts above eight (#5607)"
+            "commit": "4821a13",
+            "subject": "Font menus: entries are drawn from a few shared textures, so Windows no longer shows them on black, white or red strips (#5105) (#5111)"
           },
           {
-            "commit": "7855a2d",
-            "subject": "fix(fields): quoted-argument backslash escapes; body PAGE in a cardinal-text section (#4579)"
+            "commit": "852e67d",
+            "subject": "A template opened from the file manager starts a new document (#3433) (#5698)"
           },
           {
-            "commit": "8714015",
-            "subject": "Scrolling: the document's scroll bars show without the pointer on them (#5746) (#5828)"
+            "commit": "9b6e956",
+            "subject": "Lists: a numFmt none level shows its literal text, so RESPONSE: labels the paragraph (#4985) (#5055)"
           }
         ]
       }
@@ -13416,7 +13416,214 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "ea8c45a",
+      "commit_full": "ea8c45a4ca3820ae0d76808eaeb8502d5ef78c04",
+      "commit_date": "2026-11-08T02:52:08+01:00",
+      "ts": "2026-11-08T01:52:08Z",
+      "message": "CLI: preserve non-Unicode input paths after options (#5611)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "bc0f691",
+      "commit_full": "bc0f691c139a395280ce9ec74c656799bc175ccf",
+      "commit_date": "2026-11-08T02:54:47+01:00",
+      "ts": "2026-11-08T01:54:47Z",
+      "message": "Layout: a picture lowered past its height lowers its line as far, as in Word (#5796)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "73356ed",
+      "commit_full": "73356ed82a82dfa824c1c1e58cabb2ad431ed20c",
+      "commit_date": "2026-11-08T03:02:42+01:00",
+      "ts": "2026-11-08T02:02:42Z",
+      "message": "Styles gallery: reads from the right in a right-to-left interface (#5566) (#5708)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "5997aef",
+      "commit_full": "5997aef2f94171ae4764fbb4706904ee53a23865",
+      "commit_date": "2026-11-08T03:05:10+01:00",
+      "ts": "2026-11-08T02:05:10Z",
+      "message": "ODT: a file's font declarations are kept (gap 19) (#5720)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "c38dc17",
+      "commit_full": "c38dc17ba9a358ccf25d02d96aa707c622589b5a",
+      "commit_date": "2026-11-08T03:07:24+01:00",
+      "ts": "2026-11-08T02:07:24Z",
+      "message": "Search: the title bar's box takes the typing in place, its results dropping down under it, as in Word (#5398) (#5475)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "eb100ed",
+      "commit_full": "eb100edfd6ac480fef11a13f4c5fdc18addd545b",
+      "commit_date": "2026-11-08T03:09:52+01:00",
+      "ts": "2026-11-08T02:09:52Z",
+      "message": "Linux: ignore an AppImage environment inherited from another program (#5653) (#5690)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "9b6e956",
+      "commit_full": "9b6e9564a2d276a0a7898c75580bf6708d0a21d8",
+      "commit_date": "2026-11-08T03:20:49+01:00",
+      "ts": "2026-11-08T02:20:49Z",
+      "message": "Lists: a numFmt none level shows its literal text, so RESPONSE: labels the paragraph (#4985) (#5055)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "852e67d",
+      "commit_full": "852e67d587c0727b818304af9014f19cf184a284",
+      "commit_date": "2026-11-08T03:25:17+01:00",
+      "ts": "2026-11-08T02:25:17Z",
+      "message": "A template opened from the file manager starts a new document (#3433) (#5698)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "4821a13",
+      "commit_full": "4821a13ee08b62231239d701784298ef395ada24",
+      "commit_date": "2026-11-08T03:36:54+01:00",
+      "ts": "2026-11-08T02:36:54Z",
+      "message": "Font menus: entries are drawn from a few shared textures, so Windows no longer shows them on black, white or red strips (#5105) (#5111)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-08T01:39:39+00:00"
+  "updated_at": "2026-11-08T02:38:15+00:00"
 }
