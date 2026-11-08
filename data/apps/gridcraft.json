@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/gridcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/gridcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "505cae3",
-  "latest_commit_date": "2026-11-07T16:52:46+01:00",
-  "latest_message": "Charts: one combo plot-kind function, no dead scale helpers (#1146) (#1150)",
+  "latest_commit": "94a8fb0",
+  "latest_commit_date": "2026-11-08T12:08:59+01:00",
+  "latest_message": "Charts: label fitting and legend measuring avoid hundreds of text layouts per render (#1149) (#1152)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -435,7 +435,7 @@
     "value_since": "2026-10-10T18:09:06Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 89,
+    "revisions_since": 91,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -443,39 +443,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 91,
-    "revisions_7d": 11,
+    "revisions": 93,
+    "revisions_7d": 13,
     "last_revision": {
-      "ts": "2026-11-07T15:52:46Z",
+      "ts": "2026-11-08T11:08:59Z",
       "kind": "content",
-      "commit": "505cae3",
-      "commit_full": "505cae34c85bb831b48bdcfd4b571321f0d36701",
-      "message": "Charts: one combo plot-kind function, no dead scale helpers (#1146) (#1150)"
+      "commit": "94a8fb0",
+      "commit_full": "94a8fb084ab2e1676d0d3e6c45548dd8c8920e91",
+      "message": "Charts: label fitting and legend measuring avoid hundreds of text layouts per render (#1149) (#1152)"
     },
     "last_update": {
-      "ts": "2026-11-07T15:52:46Z",
+      "ts": "2026-11-08T11:08:59Z",
       "kind": "content",
-      "commit": "505cae3",
-      "commit_full": "505cae34c85bb831b48bdcfd4b571321f0d36701",
-      "message": "Charts: one combo plot-kind function, no dead scale helpers (#1146) (#1150)"
+      "commit": "94a8fb0",
+      "commit_full": "94a8fb084ab2e1676d0d3e6c45548dd8c8920e91",
+      "message": "Charts: label fitting and legend measuring avoid hundreds of text layouts per render (#1149) (#1152)"
     },
     "self_reported": "2026-11-02"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.1,
+    "score": 17.6,
     "active_days_7d": 7,
-    "changes_7d": 88,
-    "changes_14d": 178,
+    "changes_7d": 97,
+    "changes_14d": 187,
     "housekeeping_7d": 4,
     "last_code_change": {
-      "ts": "2026-11-08T01:30:06Z",
-      "commit": "640fbf2",
-      "commit_full": "640fbf22f64e8726188ff604480a2c6f3e6aad42",
-      "subject": "fix(edit): paste, Ctrl+Enter, Fill and Copy skip rows a filter hides (#1101) (#1175)"
+      "ts": "2026-11-08T11:08:59Z",
+      "commit": "94a8fb0",
+      "commit_full": "94a8fb084ab2e1676d0d3e6c45548dd8c8920e91",
+      "subject": "Charts: label fitting and legend measuring avoid hundreds of text layouts per render (#1149) (#1152)"
     },
-    "last_commit_ts": "2026-11-08T01:30:06Z",
+    "last_commit_ts": "2026-11-08T11:08:59Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       7,
@@ -491,7 +491,7 @@
       8,
       1,
       10,
-      1
+      10
     ],
     "days": [
       {
@@ -1032,12 +1032,20 @@
       },
       {
         "d": "2026-11-08",
-        "code": 1,
+        "code": 10,
         "other": 0,
         "samples": [
           {
-            "commit": "640fbf2",
-            "subject": "fix(edit): paste, Ctrl+Enter, Fill and Copy skip rows a filter hides (#1101) (#1175)"
+            "commit": "94a8fb0",
+            "subject": "Charts: label fitting and legend measuring avoid hundreds of text layouts per render (#1149) (#1152)"
+          },
+          {
+            "commit": "fca22f6",
+            "subject": "Charts: work and memory are bounded by series x points; ranges are clipped before evaluation (#1147) (#1155)"
+          },
+          {
+            "commit": "300b074",
+            "subject": "BINOM.DIST, POISSON.DIST: Loader mass and recurrence sums, error 1e-11 -> 1e-14 (#3324) (#3325)"
           }
         ]
       }
@@ -3343,7 +3351,53 @@
       "breadth_pct": 75.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "fca22f6",
+      "commit_full": "fca22f6e938f93dbf62022cc8e15ae048aca557c",
+      "commit_date": "2026-11-08T12:08:35+01:00",
+      "ts": "2026-11-08T11:08:35Z",
+      "message": "Charts: work and memory are bounded by series x points; ranges are clipped before evaluation (#1147) (#1155)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-02",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "94a8fb0",
+      "commit_full": "94a8fb084ab2e1676d0d3e6c45548dd8c8920e91",
+      "commit_date": "2026-11-08T12:08:59+01:00",
+      "ts": "2026-11-08T11:08:59Z",
+      "message": "Charts: label fitting and legend measuring avoid hundreds of text layouts per render (#1149) (#1152)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-02",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-08T01:39:51+00:00"
+  "updated_at": "2026-11-08T11:09:49+00:00"
 }
