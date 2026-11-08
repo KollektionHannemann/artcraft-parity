@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "7152143",
-  "latest_commit_date": "2026-11-08T04:36:10+01:00",
-  "latest_message": "Layout: a line can break after a hyphen before a slash, like Word (#3408) (#5348)",
+  "latest_commit": "4259dd1",
+  "latest_commit_date": "2026-11-08T05:31:43+01:00",
+  "latest_message": "Layout: before Word 2013 layout a floating table moved below another keeps its own left edge (#5442)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -361,6 +361,10 @@
         "text": "File › Print on Windows no longer waits on printer drivers to list printers (#5710). The list used to wait until each printer's driver said whether it prints on both sides, and a networked printer asleep in power save could keep it empty with Refresh unavailable; now discovery asks no driver (the Windows spooler still supplies the list), and printing still checks the job's options with the driver. The reporter's sleeping printer has not been retested yet. Readiness estimates unchanged."
       },
       {
+        "date": "2026-11-06",
+        "text": "Accept All and Reject All no longer restyle the paragraph after an empty one carrying a section break (#5667): a Compare that added a section, then Reject All, left Body in the removed paragraph's Normal style and indents. The empty paragraph now goes whole and its section joins the following one, as deleting the break does."
+      },
+      {
         "date": "2026-11-05",
         "text": "ODT heading text of another size keeps it (gap 19): a smaller word in a heading came back at the heading's size in LibreOffice after a save."
       },
@@ -483,10 +487,6 @@
       {
         "date": "2026-11-03",
         "text": "ODT saves what WordCraft doesn't model (gap 19): a paragraph nobody edited is written back with its own markup, and while no style changed, the file's own style definitions are written, so unknown elements, attributes, unused list styles and note settings survive a save that doesn't touch them. Over the 133-file corpus (LibreOffice, Google Docs and ONLYOFFICE files) the round-trip difference falls by 64% and 62 files come back pixel-identical (46 before)"
-      },
-      {
-        "date": "2026-11-03",
-        "text": "ODT checked the other way round too (gap 19): 42 documents made in WordCraft (its templates, themes, and one per feature) are saved as ODT and opened in LibreOffice; every one opens with the same page count and passes the ODF 1.3 schema. Found and fixed: table styles were left out of the saved file (now written into each cell), ODT tables were given Word's Table Grid style on opening (which changed their spacing), section columns now say whether they end balanced, and SmartArt diagrams are saved as a group of their shapes and text. The LibreOffice round-trip corpus is at its best yet (40k differing pixels over 125 documents, 42 identical)."
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 541,
+    "revisions_since": 547,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 545,
-    "revisions_7d": 91,
+    "revisions": 551,
+    "revisions_7d": 97,
     "last_revision": {
-      "ts": "2026-11-08T03:36:10Z",
+      "ts": "2026-11-08T04:31:43Z",
       "kind": "content",
-      "commit": "7152143",
-      "commit_full": "7152143e456655c25ae827171fcd929d02393bd9",
-      "message": "Layout: a line can break after a hyphen before a slash, like Word (#3408) (#5348)"
+      "commit": "4259dd1",
+      "commit_full": "4259dd1b2e02dcb310bb98ecc6b6d53c38bf1f6c",
+      "message": "Layout: before Word 2013 layout a floating table moved below another keeps its own left edge (#5442)"
     },
     "last_update": {
-      "ts": "2026-11-08T03:36:10Z",
+      "ts": "2026-11-08T04:31:43Z",
       "kind": "content",
-      "commit": "7152143",
-      "commit_full": "7152143e456655c25ae827171fcd929d02393bd9",
-      "message": "Layout: a line can break after a hyphen before a slash, like Word (#3408) (#5348)"
+      "commit": "4259dd1",
+      "commit_full": "4259dd1b2e02dcb310bb98ecc6b6d53c38bf1f6c",
+      "message": "Layout: before Word 2013 layout a floating table moved below another keeps its own left edge (#5442)"
     },
     "self_reported": "2026-11-08"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.9,
+    "score": 22.3,
     "active_days_7d": 7,
-    "changes_7d": 171,
-    "changes_14d": 289,
+    "changes_7d": 183,
+    "changes_14d": 301,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-08T03:36:10Z",
-      "commit": "7152143",
-      "commit_full": "7152143e456655c25ae827171fcd929d02393bd9",
-      "subject": "Layout: a line can break after a hyphen before a slash, like Word (#3408) (#5348)"
+      "ts": "2026-11-08T04:31:43Z",
+      "commit": "4259dd1",
+      "commit_full": "4259dd1b2e02dcb310bb98ecc6b6d53c38bf1f6c",
+      "subject": "Layout: before Word 2013 layout a floating table moved below another keeps its own left edge (#5442)"
     },
-    "last_commit_ts": "2026-11-08T03:36:10Z",
+    "last_commit_ts": "2026-11-08T04:31:43Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       28,
@@ -568,7 +568,7 @@
       43,
       20,
       3,
-      43
+      55
     ],
     "days": [
       {
@@ -1143,20 +1143,20 @@
       },
       {
         "d": "2026-11-08",
-        "code": 43,
+        "code": 55,
         "other": 1,
         "samples": [
           {
-            "commit": "7152143",
-            "subject": "Layout: a line can break after a hyphen before a slash, like Word (#3408) (#5348)"
+            "commit": "4259dd1",
+            "subject": "Layout: before Word 2013 layout a floating table moved below another keeps its own left edge (#5442)"
           },
           {
-            "commit": "c40719f",
-            "subject": "Layout: a turned inline picture with no recorded room for the turn keeps its line to its frame, as in Word (#5448)"
+            "commit": "5c0a62a",
+            "subject": "Layout: no line break between a full stop and an opening parenthesis (#5437)"
           },
           {
-            "commit": "6d0bd73",
-            "subject": "Preserve paragraph text direction in DOCX (#5392)"
+            "commit": "855a0fe",
+            "subject": "Layout: a nested table's Can't Split row moves on with its outer row (#5456)"
           }
         ]
       }
@@ -13922,7 +13922,145 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "d3fcf10",
+      "commit_full": "d3fcf10bcc4ec8fc2d48258d991774eab95e1eb3",
+      "commit_date": "2026-11-08T04:48:48+01:00",
+      "ts": "2026-11-08T03:48:48Z",
+      "message": "Layout: a picture in a paragraph whose hidden mark closes a section keeps its room (#5288) (#5347)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "efd476c",
+      "commit_full": "efd476cbc71365976070fb53797870fa0b066fac",
+      "commit_date": "2026-11-08T04:51:18+01:00",
+      "ts": "2026-11-08T03:51:18Z",
+      "message": "#5197: the ruler shows the spaces between text columns (#5261)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "33fa77a",
+      "commit_full": "33fa77a89241c88ef1135c4b6f706180bc4f3288",
+      "commit_date": "2026-11-08T04:51:36+01:00",
+      "ts": "2026-11-08T03:51:36Z",
+      "message": "Track Changes: resolving away an empty paragraph with a section break keeps the next paragraph's properties (#5667) (#5734)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "855a0fe",
+      "commit_full": "855a0fe9bde7240d9edcc359e3be7d0b654236e6",
+      "commit_date": "2026-11-08T05:03:54+01:00",
+      "ts": "2026-11-08T04:03:54Z",
+      "message": "Layout: a nested table's Can't Split row moves on with its outer row (#5456)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "5c0a62a",
+      "commit_full": "5c0a62a73669a7bb53a1a470e8dd83bebde8dca4",
+      "commit_date": "2026-11-08T05:18:09+01:00",
+      "ts": "2026-11-08T04:18:09Z",
+      "message": "Layout: no line break between a full stop and an opening parenthesis (#5437)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "4259dd1",
+      "commit_full": "4259dd1b2e02dcb310bb98ecc6b6d53c38bf1f6c",
+      "commit_date": "2026-11-08T05:31:43+01:00",
+      "ts": "2026-11-08T04:31:43Z",
+      "message": "Layout: before Word 2013 layout a floating table moved below another keeps its own left edge (#5442)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-08T03:38:33+00:00"
+  "updated_at": "2026-11-08T04:38:47+00:00"
 }
