@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "fa153b9",
-  "latest_commit_date": "2026-11-08T00:24:37+01:00",
-  "latest_message": "ODT: a heading's text of another size keeps it (gap 19) (#5725)",
+  "latest_commit": "7c3a5cc",
+  "latest_commit_date": "2026-11-08T01:07:49+01:00",
+  "latest_message": "ODT: a table row that doesn't break across pages stays so (gap 19) (#5726)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -346,6 +346,10 @@
       },
       {
         "date": "2026-11-05",
+        "text": "ODT table rows kept from breaking across pages stay so (gap 19): they came back from a save free to break."
+      },
+      {
+        "date": "2026-11-05",
         "text": "ODT pictures offered in several formats show and survive a save (gap 19): LibreOffice's letter templates lost theirs."
       },
       {
@@ -483,10 +487,6 @@
       {
         "date": "2026-11-02",
         "text": "ODT charts keep their whole look through a save: the chart object as read is written back while the chart is unchanged (edited, it's written from WordCraft's chart). Frames outlined by a drawn stroke keep it, and a header with no stated height is LibreOffice's 0.5 cm. The corpus round-trip difference falls to 47k pixels (408k this morning); 41 of 125 documents round-trip pixel-identical (gap 19). Readiness unchanged."
-      },
-      {
-        "date": "2026-11-02",
-        "text": "ODT: saving no longer makes a table's first row repeat on every page (a table style's header row had been taken for Repeat as header row), so LibreOffice's 16 agenda templates round-trip with their text the same; 91 of the 125 corpus documents now do, and the round-trip difference falls to 60k pixels (408k this morning) (gap 19). Readiness unchanged."
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 514,
+    "revisions_since": 515,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,42 +520,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 518,
-    "revisions_7d": 73,
+    "revisions": 519,
+    "revisions_7d": 65,
     "last_revision": {
-      "ts": "2026-11-07T23:24:37Z",
+      "ts": "2026-11-08T00:07:49Z",
       "kind": "content",
-      "commit": "fa153b9",
-      "commit_full": "fa153b932c8365281ed2e1a33742090d93219ce8",
-      "message": "ODT: a heading's text of another size keeps it (gap 19) (#5725)"
+      "commit": "7c3a5cc",
+      "commit_full": "7c3a5ccd34ad7da99790106becc58f9f2183ad40",
+      "message": "ODT: a table row that doesn't break across pages stays so (gap 19) (#5726)"
     },
     "last_update": {
-      "ts": "2026-11-07T23:24:37Z",
+      "ts": "2026-11-08T00:07:49Z",
       "kind": "content",
-      "commit": "fa153b9",
-      "commit_full": "fa153b932c8365281ed2e1a33742090d93219ce8",
-      "message": "ODT: a heading's text of another size keeps it (gap 19) (#5725)"
+      "commit": "7c3a5cc",
+      "commit_full": "7c3a5ccd34ad7da99790106becc58f9f2183ad40",
+      "message": "ODT: a table row that doesn't break across pages stays so (gap 19) (#5726)"
     },
     "self_reported": "2026-11-06"
   },
   "milestone": null,
   "activity": {
-    "level": "buzzing",
-    "score": 20.5,
+    "level": "active",
+    "score": 17.5,
     "active_days_7d": 7,
-    "changes_7d": 142,
-    "changes_14d": 283,
-    "housekeeping_7d": 10,
+    "changes_7d": 129,
+    "changes_14d": 247,
+    "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-07T23:24:37Z",
-      "commit": "fa153b9",
-      "commit_full": "fa153b932c8365281ed2e1a33742090d93219ce8",
-      "subject": "ODT: a heading's text of another size keeps it (gap 19) (#5725)"
+      "ts": "2026-11-08T00:07:49Z",
+      "commit": "7c3a5cc",
+      "commit_full": "7c3a5ccd34ad7da99790106becc58f9f2183ad40",
+      "subject": "ODT: a table row that doesn't break across pages stays so (gap 19) (#5726)"
     },
-    "last_commit_ts": "2026-11-07T23:24:37Z",
+    "last_commit_ts": "2026-11-08T00:07:49Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
-      37,
       28,
       7,
       4,
@@ -568,7 +567,8 @@
       32,
       43,
       20,
-      3
+      3,
+      1
     ],
     "days": [
       {
@@ -1138,6 +1138,17 @@
           {
             "commit": "da914ce",
             "subject": "doc: the CFB guard refuses only more FAT sectors than the file has (#5830)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-08",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "7c3a5cc",
+            "subject": "ODT: a table row that doesn't break across pages stays so (gap 19) (#5726)"
           }
         ]
       }
@@ -13282,7 +13293,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "7c3a5cc",
+      "commit_full": "7c3a5ccd34ad7da99790106becc58f9f2183ad40",
+      "commit_date": "2026-11-08T01:07:49+01:00",
+      "ts": "2026-11-08T00:07:49Z",
+      "message": "ODT: a table row that doesn't break across pages stays so (gap 19) (#5726)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-07T23:26:18+00:00"
+  "updated_at": "2026-11-08T00:29:33+00:00"
 }
