@@ -444,18 +444,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.4,
-    "active_days_7d": 6,
-    "changes_7d": 105,
-    "changes_14d": 195,
+    "score": 18.0,
+    "active_days_7d": 7,
+    "changes_7d": 116,
+    "changes_14d": 206,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-07T15:50:07Z",
-      "commit": "4d571c2",
-      "commit_full": "4d571c2a666cace681209a1f617f68cd9cefefed",
-      "subject": "captions: the export dialog lets you choose the caption track (#4060) (#4220)"
+      "ts": "2026-11-08T15:56:00Z",
+      "commit": "73a6056",
+      "commit_full": "73a60569aa077741f26b3ead3f06d91c7db19909",
+      "subject": "#1354: Backspace in Effect Controls removes the selected effect, not the clip (#1400)"
     },
-    "last_commit_ts": "2026-11-08T00:53:25Z",
+    "last_commit_ts": "2026-11-08T15:56:00Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       5,
@@ -471,7 +471,7 @@
       11,
       2,
       14,
-      0
+      11
     ],
     "days": [
       {
@@ -1152,9 +1152,22 @@
       },
       {
         "d": "2026-11-08",
-        "code": 0,
+        "code": 11,
         "other": 1,
-        "samples": []
+        "samples": [
+          {
+            "commit": "73a6056",
+            "subject": "#1354: Backspace in Effect Controls removes the selected effect, not the clip (#1400)"
+          },
+          {
+            "commit": "7dbfd37",
+            "subject": "audio-dsp: every effect recovers from one NaN or inf input sample (#3152)"
+          },
+          {
+            "commit": "a0323c3",
+            "subject": "audio-dsp: two channels per complex FFT in the STFT effects (#3148)"
+          }
+        ]
       }
     ]
   },
@@ -1712,5 +1725,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-08T01:39:11+00:00"
+  "updated_at": "2026-11-08T15:58:02+00:00"
 }

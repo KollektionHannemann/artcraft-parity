@@ -357,18 +357,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 13.4,
+    "score": 14.4,
     "active_days_7d": 7,
-    "changes_7d": 86,
-    "changes_14d": 209,
+    "changes_7d": 88,
+    "changes_14d": 211,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-08T13:52:50Z",
-      "commit": "e56cc4b",
-      "commit_full": "e56cc4beeb2408a037fe6c62acc1ea8799afad76",
-      "subject": "DWG: another application's objects are kept as proxy objects of their class (#2917)"
+      "ts": "2026-11-08T15:57:04Z",
+      "commit": "bd4a474",
+      "commit_full": "bd4a47491a76a02602789504c2c3443e25711e9e",
+      "subject": "DXF/DWG: an object a kept object holds by a hard owner reference is kept (#2919)"
     },
-    "last_commit_ts": "2026-11-08T13:52:50Z",
+    "last_commit_ts": "2026-11-08T15:57:04Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       6,
@@ -384,7 +384,7 @@
       9,
       3,
       1,
-      1
+      3
     ],
     "days": [
       {
@@ -890,9 +890,17 @@
       },
       {
         "d": "2026-11-08",
-        "code": 1,
+        "code": 3,
         "other": 1,
         "samples": [
+          {
+            "commit": "bd4a474",
+            "subject": "DXF/DWG: an object a kept object holds by a hard owner reference is kept (#2919)"
+          },
+          {
+            "commit": "53962a5",
+            "subject": "DWG: keep opaque registered entities and their source classes (#2654)"
+          },
           {
             "commit": "e56cc4b",
             "subject": "DWG: another application's objects are kept as proxy objects of their class (#2917)"
@@ -1386,5 +1394,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-08T14:28:51+00:00"
+  "updated_at": "2026-11-08T15:58:25+00:00"
 }

@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "661a790",
-  "latest_commit_date": "2026-11-08T08:15:55+01:00",
-  "latest_message": "Render: skip drawing paths far past every canvas before flattening (#5453)",
+  "latest_commit": "2d97c84",
+  "latest_commit_date": "2026-11-08T16:38:59+01:00",
+  "latest_message": "RTF: footnotes, endnotes and comments are read and written (#1053) (#1056)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 566,
+    "revisions_since": 571,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 570,
-    "revisions_7d": 116,
+    "revisions": 575,
+    "revisions_7d": 121,
     "last_revision": {
-      "ts": "2026-11-08T07:15:55Z",
+      "ts": "2026-11-08T15:38:59Z",
       "kind": "content",
-      "commit": "661a790",
-      "commit_full": "661a790540de039b6902b5cc9ffe5d49024bf3c7",
-      "message": "Render: skip drawing paths far past every canvas before flattening (#5453)"
+      "commit": "2d97c84",
+      "commit_full": "2d97c8443e5e63df77dcc4ab016a84902f6141f0",
+      "message": "RTF: footnotes, endnotes and comments are read and written (#1053) (#1056)"
     },
     "last_update": {
-      "ts": "2026-11-08T07:15:55Z",
+      "ts": "2026-11-08T15:38:59Z",
       "kind": "content",
-      "commit": "661a790",
-      "commit_full": "661a790540de039b6902b5cc9ffe5d49024bf3c7",
-      "message": "Render: skip drawing paths far past every canvas before flattening (#5453)"
+      "commit": "2d97c84",
+      "commit_full": "2d97c8443e5e63df77dcc4ab016a84902f6141f0",
+      "message": "RTF: footnotes, endnotes and comments are read and written (#1053) (#1056)"
     },
     "self_reported": "2026-11-08"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.8,
+    "score": 22.9,
     "active_days_7d": 7,
-    "changes_7d": 207,
-    "changes_14d": 325,
+    "changes_7d": 212,
+    "changes_14d": 330,
     "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-08T07:15:55Z",
-      "commit": "661a790",
-      "commit_full": "661a790540de039b6902b5cc9ffe5d49024bf3c7",
-      "subject": "Render: skip drawing paths far past every canvas before flattening (#5453)"
+      "ts": "2026-11-08T15:38:59Z",
+      "commit": "2d97c84",
+      "commit_full": "2d97c8443e5e63df77dcc4ab016a84902f6141f0",
+      "subject": "RTF: footnotes, endnotes and comments are read and written (#1053) (#1056)"
     },
-    "last_commit_ts": "2026-11-08T14:57:36Z",
+    "last_commit_ts": "2026-11-08T15:38:59Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       28,
@@ -568,7 +568,7 @@
       43,
       20,
       3,
-      79
+      84
     ],
     "days": [
       {
@@ -1143,20 +1143,20 @@
       },
       {
         "d": "2026-11-08",
-        "code": 79,
+        "code": 84,
         "other": 2,
         "samples": [
           {
-            "commit": "661a790",
-            "subject": "Render: skip drawing paths far past every canvas before flattening (#5453)"
+            "commit": "2d97c84",
+            "subject": "RTF: footnotes, endnotes and comments are read and written (#1053) (#1056)"
           },
           {
-            "commit": "0421741",
-            "subject": "DOCX save: collect an embedded object's relationship ids in a set (#5414)"
+            "commit": "d5d2b22",
+            "subject": "View › Window: Switch Windows, Arrange All, View Side by Side and Synchronous Scrolling (#331)"
           },
           {
-            "commit": "4afff61",
-            "subject": "fix(geom): measure PNGs from their chunk headers, not the decoder's header read (#5459)"
+            "commit": "2794ae4",
+            "subject": "Add persistent screen-only paper color presets (#3398) (#5115)"
           }
         ]
       }
@@ -14497,7 +14497,122 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "d5a1c0e",
+      "commit_full": "d5a1c0e18136b78e6059a1bf015f947fff4b6f6e",
+      "commit_date": "2026-11-08T16:12:57+01:00",
+      "ts": "2026-11-08T15:12:57Z",
+      "message": "Home › Paragraph Tools: nine paragraph conversion and cleanup commands (#5043) (#5116)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "02e74a5",
+      "commit_full": "02e74a5d9cea0aed6d1f76348c3b4c12b5d6ede9",
+      "commit_date": "2026-11-08T16:13:33+01:00",
+      "ts": "2026-11-08T15:13:33Z",
+      "message": "Add Delete Previous Sentence with Ctrl+Shift+Backspace (#5094)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "2794ae4",
+      "commit_full": "2794ae44e9a4c1bcdfc59b45662d87889771cfac",
+      "commit_date": "2026-11-08T16:36:10+01:00",
+      "ts": "2026-11-08T15:36:10Z",
+      "message": "Add persistent screen-only paper color presets (#3398) (#5115)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "d5d2b22",
+      "commit_full": "d5d2b22dacaa988eeb89cb8759812775dd54b32f",
+      "commit_date": "2026-11-08T16:37:54+01:00",
+      "ts": "2026-11-08T15:37:54Z",
+      "message": "View › Window: Switch Windows, Arrange All, View Side by Side and Synchronous Scrolling (#331)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "2d97c84",
+      "commit_full": "2d97c8443e5e63df77dcc4ab016a84902f6141f0",
+      "commit_date": "2026-11-08T16:38:59+01:00",
+      "ts": "2026-11-08T15:38:59Z",
+      "message": "RTF: footnotes, endnotes and comments are read and written (#1053) (#1056)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-08T15:03:59+00:00"
+  "updated_at": "2026-11-08T15:58:19+00:00"
 }
