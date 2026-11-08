@@ -506,18 +506,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.9,
+    "score": 16.1,
     "active_days_7d": 7,
-    "changes_7d": 88,
-    "changes_14d": 188,
+    "changes_7d": 89,
+    "changes_14d": 189,
     "housekeeping_7d": 4,
     "last_code_change": {
-      "ts": "2026-11-08T13:16:36Z",
-      "commit": "9cf4e3a",
-      "commit_full": "9cf4e3a38012c17b95e3855d91715964551f5ffb",
-      "subject": "Clamp midpoint in Gradient::expanded_stops like sample does (#2477)"
+      "ts": "2026-11-08T14:43:29Z",
+      "commit": "2e9b46c",
+      "commit_full": "2e9b46c1d59216cfce7c9ce2950927de996310c2",
+      "subject": "Clamp negative gutter in file.new and file.savePreset to 0 (#2479)"
     },
-    "last_commit_ts": "2026-11-08T13:16:36Z",
+    "last_commit_ts": "2026-11-08T14:43:29Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       11,
@@ -533,7 +533,7 @@
       8,
       4,
       3,
-      4
+      5
     ],
     "days": [
       {
@@ -1210,9 +1210,13 @@
       },
       {
         "d": "2026-11-08",
-        "code": 4,
+        "code": 5,
         "other": 1,
         "samples": [
+          {
+            "commit": "2e9b46c",
+            "subject": "Clamp negative gutter in file.new and file.savePreset to 0 (#2479)"
+          },
           {
             "commit": "9cf4e3a",
             "subject": "Clamp midpoint in Gradient::expanded_stops like sample does (#2477)"
@@ -1220,10 +1224,6 @@
           {
             "commit": "19c9875",
             "subject": "Drop signed numeric character references in DOCX XML parser (#2470)"
-          },
-          {
-            "commit": "d848948",
-            "subject": "Apply typographic quotes when xref format has an unterminated '<' (#2464)"
           }
         ]
       }
@@ -5854,5 +5854,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-08T13:38:38+00:00"
+  "updated_at": "2026-11-08T15:03:54+00:00"
 }
