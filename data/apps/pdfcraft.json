@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "adbf1dc",
-  "latest_commit_date": "2026-11-07T20:37:17-06:00",
-  "latest_message": "M9: signed appearances show their real validation state (#79) (#2808)",
+  "latest_commit": "5e0619d",
+  "latest_commit_date": "2026-11-08T13:30:34+01:00",
+  "latest_message": "Redact: mark text by caller-supplied regex (#1886) (#1977)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -350,6 +350,10 @@
       },
       {
         "date": "2026-10-31",
+        "text": "(M3/M4, #5330): The document quick toolbar offers Crop pages directly through the existing page.crop command, with the command’s assembly-permission check and an active-tool highlight. The existing crop, undo and headless pagesetbox paths are unchanged. No toolbar customization or new shortcut. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-31",
         "text": "(M2, PR #4172 review): Added same-machine pixel oracles for GBK Song, Hei, Kai and FangSong, including all four subset-prefixed Founder aliases. Reference PDFs use explicit Unicode mappings and independently selected installed faces; font data and rasters remain in memory. All eight cases ran; wrong-glyph and wrong-family production mutations each failed the new assertion and were restored. Validation: 422 renderer unit tests, renderer all-target Clippy with -D warnings, formatting, layers/assets/parity and renderer WASM checks passed; existing optional-patch/WASM warnings and parity notes remain. Estimates unchanged."
       },
       {
@@ -447,10 +451,6 @@
       {
         "date": "2026-10-23",
         "text": "(M11, JBIG2): The PDF Optimizer can store black-and-white images as lossless JBIG2 (a generic region, written from the JBIG2 draft standard and checked against its arithmetic-coder test sequence), about a third smaller than Group 4 on 300 dpi text, and Export ▸ Images reads JBIG2 images. JBIG2 symbol coding, where its largest gains on text are, is next."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "(M11, monochrome compression): The PDF Optimizer and Reduce File Size store black-and-white images (scans, image masks) losslessly as CCITT Group 4 when that is smaller, with a Monochrome Images setting in the Optimizer and docoptimize mono. JBIG2 and monochrome downsampling are next."
       }
     ]
   },
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 115,
+    "revisions_since": 117,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 203,
-    "revisions_7d": 21,
+    "revisions": 205,
+    "revisions_7d": 23,
     "last_revision": {
-      "ts": "2026-11-08T02:37:17Z",
+      "ts": "2026-11-08T12:30:34Z",
       "kind": "content",
-      "commit": "adbf1dc",
-      "commit_full": "adbf1dc01fefbdad070f676d16f442a76ee0c31d",
-      "message": "M9: signed appearances show their real validation state (#79) (#2808)"
+      "commit": "5e0619d",
+      "commit_full": "5e0619d7eb187b26f0b7cb8b62029381ebb4d365",
+      "message": "Redact: mark text by caller-supplied regex (#1886) (#1977)"
     },
     "last_update": {
-      "ts": "2026-11-08T02:37:17Z",
+      "ts": "2026-11-08T12:30:34Z",
       "kind": "content",
-      "commit": "adbf1dc",
-      "commit_full": "adbf1dc01fefbdad070f676d16f442a76ee0c31d",
-      "message": "M9: signed appearances show their real validation state (#79) (#2808)"
+      "commit": "5e0619d",
+      "commit_full": "5e0619d7eb187b26f0b7cb8b62029381ebb4d365",
+      "message": "Redact: mark text by caller-supplied regex (#1886) (#1977)"
     },
     "self_reported": "2026-11-03"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.8,
+    "score": 19.8,
     "active_days_7d": 7,
-    "changes_7d": 114,
-    "changes_14d": 180,
+    "changes_7d": 126,
+    "changes_14d": 192,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-08T11:28:07Z",
-      "commit": "f750589",
-      "commit_full": "f75058981254114c1141f406f66fbddee4cd5368",
-      "subject": "Keep ruled tables when exporting a PDF to Word (#5154)"
+      "ts": "2026-11-08T12:31:20Z",
+      "commit": "82c2009",
+      "commit_full": "82c2009d0959dbf99dd5802cb8197c92763fb55e",
+      "subject": "Signing a form that sets NeedAppearances no longer makes Acrobat ignore the signature (#6208)"
     },
-    "last_commit_ts": "2026-11-08T11:28:07Z",
+    "last_commit_ts": "2026-11-08T12:31:20Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       5,
@@ -524,7 +524,7 @@
       36,
       9,
       6,
-      3
+      15
     ],
     "days": [
       {
@@ -1257,20 +1257,20 @@
       },
       {
         "d": "2026-11-08",
-        "code": 3,
+        "code": 15,
         "other": 1,
         "samples": [
           {
-            "commit": "f750589",
-            "subject": "Keep ruled tables when exporting a PDF to Word (#5154)"
+            "commit": "82c2009",
+            "subject": "Signing a form that sets NeedAppearances no longer makes Acrobat ignore the signature (#6208)"
           },
           {
-            "commit": "adbf1dc",
-            "subject": "M9: signed appearances show their real validation state (#79) (#2808)"
+            "commit": "5e0619d",
+            "subject": "Redact: mark text by caller-supplied regex (#1886) (#1977)"
           },
           {
-            "commit": "5bb8bbf",
-            "subject": "Add dry-run preview to doc_batch without writing outputs (#6486)"
+            "commit": "6fa72b9",
+            "subject": "perf(cos): write_full keeps the objects it parsed while numbering (#4876)"
           }
         ]
       }
@@ -6152,7 +6152,53 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "7d02602",
+      "commit_full": "7d02602bde836640964635e96571be1e4e924e9a",
+      "commit_date": "2026-11-08T13:19:28+01:00",
+      "ts": "2026-11-08T12:19:28Z",
+      "message": "Add Crop pages to the document quick toolbar (#5330) (#5564)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "5e0619d",
+      "commit_full": "5e0619d7eb187b26f0b7cb8b62029381ebb4d365",
+      "commit_date": "2026-11-08T13:30:34+01:00",
+      "ts": "2026-11-08T12:30:34Z",
+      "message": "Redact: mark text by caller-supplied regex (#1886) (#1977)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-03",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-08T12:00:06+00:00"
+  "updated_at": "2026-11-08T12:37:09+00:00"
 }
