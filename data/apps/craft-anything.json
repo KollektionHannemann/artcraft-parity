@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "7411d4a",
-  "latest_commit_date": "2026-11-09T13:46:40+08:00",
-  "latest_message": "Fill added SQLite defaults from hex and parenthesized literals (R3.12) (#1273)",
+  "latest_commit": "b8371ab",
+  "latest_commit_date": "2026-11-09T14:27:03+08:00",
+  "latest_message": "Report truncated SquashFS metadata without losing earlier blocks (R3.12) (#1262)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 257,
-    "revisions_7d": 204,
+    "revisions": 263,
+    "revisions_7d": 210,
     "last_revision": {
-      "ts": "2026-11-09T05:46:40Z",
+      "ts": "2026-11-09T06:27:03Z",
       "kind": "content",
-      "commit": "7411d4a",
-      "commit_full": "7411d4a53792150c5d476953d5c1e7cad0b77ad7",
-      "message": "Fill added SQLite defaults from hex and parenthesized literals (R3.12) (#1273)"
+      "commit": "b8371ab",
+      "commit_full": "b8371ab97bd53d7b9b10289f061eb7e3adacba09",
+      "message": "Report truncated SquashFS metadata without losing earlier blocks (R3.12) (#1262)"
     },
     "last_update": {
-      "ts": "2026-11-09T05:46:40Z",
+      "ts": "2026-11-09T06:27:03Z",
       "kind": "content",
-      "commit": "7411d4a",
-      "commit_full": "7411d4a53792150c5d476953d5c1e7cad0b77ad7",
-      "message": "Fill added SQLite defaults from hex and parenthesized literals (R3.12) (#1273)"
+      "commit": "b8371ab",
+      "commit_full": "b8371ab97bd53d7b9b10289f061eb7e3adacba09",
+      "message": "Report truncated SquashFS metadata without losing earlier blocks (R3.12) (#1262)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 24.2,
+    "score": 24.4,
     "active_days_7d": 7,
-    "changes_7d": 311,
-    "changes_14d": 504,
+    "changes_7d": 317,
+    "changes_14d": 510,
     "housekeeping_7d": 31,
     "last_code_change": {
-      "ts": "2026-11-09T05:46:40Z",
-      "commit": "7411d4a",
-      "commit_full": "7411d4a53792150c5d476953d5c1e7cad0b77ad7",
-      "subject": "Fill added SQLite defaults from hex and parenthesized literals (R3.12) (#1273)"
+      "ts": "2026-11-09T06:27:03Z",
+      "commit": "b8371ab",
+      "commit_full": "b8371ab97bd53d7b9b10289f061eb7e3adacba09",
+      "subject": "Report truncated SquashFS metadata without losing earlier blocks (R3.12) (#1262)"
     },
-    "last_commit_ts": "2026-11-09T05:46:40Z",
+    "last_commit_ts": "2026-11-09T06:27:03Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       64,
       34,
       37,
-      38
+      44
     ],
     "days": [
       {
@@ -261,20 +261,20 @@
       },
       {
         "d": "2026-11-09",
-        "code": 38,
+        "code": 44,
         "other": 1,
         "samples": [
           {
-            "commit": "7411d4a",
-            "subject": "Fill added SQLite defaults from hex and parenthesized literals (R3.12) (#1273)"
+            "commit": "b8371ab",
+            "subject": "Report truncated SquashFS metadata without losing earlier blocks (R3.12) (#1262)"
           },
           {
-            "commit": "40bc673",
-            "subject": "Keep a finished Antigravity turn alive when its result repeats an old conversation error (#1271)"
+            "commit": "6144b79",
+            "subject": "Read filled-in SQLite defaults with their column's affinity (R3.12) (#1275)"
           },
           {
-            "commit": "7b8f8fa",
-            "subject": "Keep a SQLite type's comma inside its parentheses (R3.12) (#1272)"
+            "commit": "764aa37",
+            "subject": "Say Ollama's context is too small when it drops the request to fit, and don't retry it (R5.4, #1245) (#1276)"
           }
         ]
       }
@@ -2166,8 +2166,50 @@
       "commit": "7411d4a",
       "commit_full": "7411d4a53792150c5d476953d5c1e7cad0b77ad7",
       "message": "Fill added SQLite defaults from hex and parenthesized literals (R3.12) (#1273)"
+    },
+    {
+      "ts": "2026-11-09T06:12:14Z",
+      "kind": "content",
+      "commit": "1b61eee",
+      "commit_full": "1b61eee25864082a891ca549eba5c357384bf54a",
+      "message": "Read PE version strings written as binary (R3.12) (#1274)"
+    },
+    {
+      "ts": "2026-11-09T06:21:14Z",
+      "kind": "content",
+      "commit": "f5aad10",
+      "commit_full": "f5aad102b048cb6f01a8a7b90dcf2d7a7a395567",
+      "message": "Decode source map position deltas within the format's 32-bit range (R3.12) (#1133)"
+    },
+    {
+      "ts": "2026-11-09T06:21:19Z",
+      "kind": "content",
+      "commit": "1fab017",
+      "commit_full": "1fab01712915e744ea042154ff81013a19c9bfc5",
+      "message": "Look up source mappings without scanning every segment on a generated line (R3.12) (#1139)"
+    },
+    {
+      "ts": "2026-11-09T06:22:12Z",
+      "kind": "content",
+      "commit": "764aa37",
+      "commit_full": "764aa37c3e9433fed0fd93e2b0d3419f8b75c4f7",
+      "message": "Say Ollama's context is too small when it drops the request to fit, and don't retry it (R5.4, #1245) (#1276)"
+    },
+    {
+      "ts": "2026-11-09T06:26:31Z",
+      "kind": "content",
+      "commit": "6144b79",
+      "commit_full": "6144b79485aef4e1e9e28a61508c7772c5ec3a45",
+      "message": "Read filled-in SQLite defaults with their column's affinity (R3.12) (#1275)"
+    },
+    {
+      "ts": "2026-11-09T06:27:03Z",
+      "kind": "content",
+      "commit": "b8371ab",
+      "commit_full": "b8371ab97bd53d7b9b10289f061eb7e3adacba09",
+      "message": "Report truncated SquashFS metadata without losing earlier blocks (R3.12) (#1262)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-09T05:50:51+00:00"
+  "updated_at": "2026-11-09T06:58:18+00:00"
 }
