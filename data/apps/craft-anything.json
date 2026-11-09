@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "1b5f516",
-  "latest_commit_date": "2026-11-09T19:46:34+07:00",
-  "latest_message": "Verify Cargo package versions before reporting Rust dependencies (R3.12) (#1329)",
+  "latest_commit": "1c0e49f",
+  "latest_commit_date": "2026-11-09T21:00:00+07:00",
+  "latest_message": "Let a Deep build through Claude Code start subagents again (R2.2, #1105) (#1351)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,21 +45,21 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 320,
-    "revisions_7d": 267,
+    "revisions": 322,
+    "revisions_7d": 269,
     "last_revision": {
-      "ts": "2026-11-09T12:46:34Z",
+      "ts": "2026-11-09T14:00:00Z",
       "kind": "content",
-      "commit": "1b5f516",
-      "commit_full": "1b5f516b07277036e9e6cca5e75c0a5ebdfcd9f1",
-      "message": "Verify Cargo package versions before reporting Rust dependencies (R3.12) (#1329)"
+      "commit": "1c0e49f",
+      "commit_full": "1c0e49f284f43a851a5b099d5ac9589e12725c60",
+      "message": "Let a Deep build through Claude Code start subagents again (R2.2, #1105) (#1351)"
     },
     "last_update": {
-      "ts": "2026-11-09T12:46:34Z",
+      "ts": "2026-11-09T14:00:00Z",
       "kind": "content",
-      "commit": "1b5f516",
-      "commit_full": "1b5f516b07277036e9e6cca5e75c0a5ebdfcd9f1",
-      "message": "Verify Cargo package versions before reporting Rust dependencies (R3.12) (#1329)"
+      "commit": "1c0e49f",
+      "commit_full": "1c0e49f284f43a851a5b099d5ac9589e12725c60",
+      "message": "Let a Deep build through Claude Code start subagents again (R2.2, #1105) (#1351)"
     },
     "self_reported": null
   },
@@ -68,16 +68,16 @@
     "level": "buzzing",
     "score": 25.6,
     "active_days_7d": 7,
-    "changes_7d": 374,
-    "changes_14d": 567,
+    "changes_7d": 376,
+    "changes_14d": 569,
     "housekeeping_7d": 31,
     "last_code_change": {
-      "ts": "2026-11-09T12:46:34Z",
-      "commit": "1b5f516",
-      "commit_full": "1b5f516b07277036e9e6cca5e75c0a5ebdfcd9f1",
-      "subject": "Verify Cargo package versions before reporting Rust dependencies (R3.12) (#1329)"
+      "ts": "2026-11-09T14:00:00Z",
+      "commit": "1c0e49f",
+      "commit_full": "1c0e49f284f43a851a5b099d5ac9589e12725c60",
+      "subject": "Let a Deep build through Claude Code start subagents again (R2.2, #1105) (#1351)"
     },
-    "last_commit_ts": "2026-11-09T12:46:34Z",
+    "last_commit_ts": "2026-11-09T14:00:00Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       64,
       34,
       37,
-      101
+      103
     ],
     "days": [
       {
@@ -261,26 +261,43 @@
       },
       {
         "d": "2026-11-09",
-        "code": 101,
+        "code": 103,
         "other": 1,
         "samples": [
           {
+            "commit": "1c0e49f",
+            "subject": "Let a Deep build through Claude Code start subagents again (R2.2, #1105) (#1351)"
+          },
+          {
+            "commit": "3f4c54b",
+            "subject": "Read the Swift standard type SQ as Equatable (R3.12) (#1350)"
+          },
+          {
             "commit": "1b5f516",
             "subject": "Verify Cargo package versions before reporting Rust dependencies (R3.12) (#1329)"
-          },
-          {
-            "commit": "0c4cdd6",
-            "subject": "Read decimal digit separators when filling added SQLite columns (R3.12) (#1318)"
-          },
-          {
-            "commit": "b6a5081",
-            "subject": "Keep Mach-O zero-fill sections out of file-backed section data (R3.12) (#1348)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.6.0",
+      "name": "Craft Anything v0.6.0",
+      "ts": "2026-11-09T12:57:38Z",
+      "url": "https://github.com/storytold/craft-anything/releases/tag/v0.6.0",
+      "changes": 195,
+      "new_contributors": 16,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.5.0",
       "name": "Craft Anything v0.5.0",
@@ -2607,8 +2624,22 @@
       "commit": "1b5f516",
       "commit_full": "1b5f516b07277036e9e6cca5e75c0a5ebdfcd9f1",
       "message": "Verify Cargo package versions before reporting Rust dependencies (R3.12) (#1329)"
+    },
+    {
+      "ts": "2026-11-09T13:38:15Z",
+      "kind": "content",
+      "commit": "3f4c54b",
+      "commit_full": "3f4c54bdd4066f9c6bd1708c215ac64bf776927a",
+      "message": "Read the Swift standard type SQ as Equatable (R3.12) (#1350)"
+    },
+    {
+      "ts": "2026-11-09T14:00:00Z",
+      "kind": "content",
+      "commit": "1c0e49f",
+      "commit_full": "1c0e49f284f43a851a5b099d5ac9589e12725c60",
+      "message": "Let a Deep build through Claude Code start subagents again (R2.2, #1105) (#1351)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-09T12:47:19+00:00"
+  "updated_at": "2026-11-09T14:03:56+00:00"
 }
