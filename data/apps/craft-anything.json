@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "7859973",
-  "latest_commit_date": "2026-11-09T11:26:09+08:00",
-  "latest_message": "Keep a continuing run's API transcript (R2.9) (#1260)",
+  "latest_commit": "0003362",
+  "latest_commit_date": "2026-11-09T11:45:13+08:00",
+  "latest_message": "Read a SQLite CREATE TABLE longer than 4 KiB whole (R3.12) (#1261)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,21 +45,21 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 254,
-    "revisions_7d": 201,
+    "revisions": 255,
+    "revisions_7d": 202,
     "last_revision": {
-      "ts": "2026-11-09T03:26:09Z",
+      "ts": "2026-11-09T03:45:13Z",
       "kind": "content",
-      "commit": "7859973",
-      "commit_full": "7859973d7ca41b0f19c5fa5d11ac93e053ec39e6",
-      "message": "Keep a continuing run's API transcript (R2.9) (#1260)"
+      "commit": "0003362",
+      "commit_full": "00033627e6abf1fe02696ae477e18685eb73a161",
+      "message": "Read a SQLite CREATE TABLE longer than 4 KiB whole (R3.12) (#1261)"
     },
     "last_update": {
-      "ts": "2026-11-09T03:26:09Z",
+      "ts": "2026-11-09T03:45:13Z",
       "kind": "content",
-      "commit": "7859973",
-      "commit_full": "7859973d7ca41b0f19c5fa5d11ac93e053ec39e6",
-      "message": "Keep a continuing run's API transcript (R2.9) (#1260)"
+      "commit": "0003362",
+      "commit_full": "00033627e6abf1fe02696ae477e18685eb73a161",
+      "message": "Read a SQLite CREATE TABLE longer than 4 KiB whole (R3.12) (#1261)"
     },
     "self_reported": null
   },
@@ -68,16 +68,16 @@
     "level": "buzzing",
     "score": 24.1,
     "active_days_7d": 7,
-    "changes_7d": 307,
-    "changes_14d": 500,
+    "changes_7d": 308,
+    "changes_14d": 501,
     "housekeeping_7d": 31,
     "last_code_change": {
-      "ts": "2026-11-09T03:26:09Z",
-      "commit": "7859973",
-      "commit_full": "7859973d7ca41b0f19c5fa5d11ac93e053ec39e6",
-      "subject": "Keep a continuing run's API transcript (R2.9) (#1260)"
+      "ts": "2026-11-09T03:45:13Z",
+      "commit": "0003362",
+      "commit_full": "00033627e6abf1fe02696ae477e18685eb73a161",
+      "subject": "Read a SQLite CREATE TABLE longer than 4 KiB whole (R3.12) (#1261)"
     },
-    "last_commit_ts": "2026-11-09T03:26:09Z",
+    "last_commit_ts": "2026-11-09T03:45:13Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       64,
       34,
       37,
-      34
+      35
     ],
     "days": [
       {
@@ -261,9 +261,13 @@
       },
       {
         "d": "2026-11-09",
-        "code": 34,
+        "code": 35,
         "other": 1,
         "samples": [
+          {
+            "commit": "0003362",
+            "subject": "Read a SQLite CREATE TABLE longer than 4 KiB whole (R3.12) (#1261)"
+          },
           {
             "commit": "7859973",
             "subject": "Keep a continuing run's API transcript (R2.9) (#1260)"
@@ -271,10 +275,6 @@
           {
             "commit": "37d07a0",
             "subject": "Read whole numbers in SQLite REAL columns as REAL (R3.12) (#1259)"
-          },
-          {
-            "commit": "564d78e",
-            "subject": "Require complete sBPF relocation records and honor their stride (R3.12) (#1128)"
           }
         ]
       }
@@ -2145,8 +2145,15 @@
       "commit": "7859973",
       "commit_full": "7859973d7ca41b0f19c5fa5d11ac93e053ec39e6",
       "message": "Keep a continuing run's API transcript (R2.9) (#1260)"
+    },
+    {
+      "ts": "2026-11-09T03:45:13Z",
+      "kind": "content",
+      "commit": "0003362",
+      "commit_full": "00033627e6abf1fe02696ae477e18685eb73a161",
+      "message": "Read a SQLite CREATE TABLE longer than 4 KiB whole (R3.12) (#1261)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-09T03:41:52+00:00"
+  "updated_at": "2026-11-09T04:50:19+00:00"
 }

@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "cde331f",
-  "latest_commit_date": "2026-11-09T10:54:50+08:00",
-  "latest_message": "Land render and font patches (#6292, #6287, #6314, #6353, #6359, #6368, #6409, #6491, #6545, #6516, #6521, #6528, #6533, #6529, #6542, #6543, #6569, #6572) (#66",
+  "latest_commit": "ca9e3c2",
+  "latest_commit_date": "2026-11-09T11:50:22+08:00",
+  "latest_message": "Land redaction, organize, forms, annotation, text, measure, XFA, XFDF and edit fixes (#6458, #6459, #6460, #6463, #6474, #5969, #5761, #5852, #6231, #6366, #650",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -293,6 +293,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-08",
+        "text": "(M5, comment exchange): Comments keep their formatting and appearance through XFDF and FDF. XFDF export and import carry rich text, default style, border width, style and dash pattern, rotation, justification, fringe, line leaders and captions, the caret symbol and redaction overlay text as XFDF 3.0 (ISO 19444-1) names them, and a stamp's appearance as <appearance> (the DICT/STREAM/DATA encoding, bounded); copy and paste carries every comment's appearance. FDF export keeps a stamp's /AP with its forms and images, as XFDF does, and FDF import keeps any /AP the file carries (ISO 32000-2 §12.7.8.3.4). The intent goes out as both intent and IT. An unreadable XFDF appearance is left out, said in the import report and the repair log, and the comment is drawn by PdfCraft; an FDF past the import budget is refused whole. A redaction mark is always drawn by PdfCraft."
+      },
+      {
         "date": "2026-11-07",
         "text": "(M2, #6449): A non-embedded Times New Roman set as a TrueType CID font (TimesNewRoman,Bold, TimesNewRomanPSMT and the other faces) draws the glyphs its codes name, as the non-embedded Arial does: its first 258 glyphs follow the same standard Macintosh order, which the embedded Times New Roman subsets of a public French form confirm in 941 of 942 /ToUnicode entries (vendored hayro-interpret patch 88). That form drew \"Salarié(e) du régime général\" as \"Salari²g+f w't²i lo g'ì²p²tcn\" and \"changement\" as \"ej angement\". Times and Times New Roman MT Std are not read this way."
       },
@@ -339,6 +343,10 @@
       {
         "date": "2026-11-02",
         "text": "(M3, #5708): Pages shorter than the window sit in its middle, one page or row at a time and when scrolling continuously with every page in view."
+      },
+      {
+        "date": "2026-11-02",
+        "text": "(M3, #5716): A snapshot is drawn at 300 ppi, or at the zoom if that is finer, so one taken zoomed out stays readable; an area too large for one 4096-pixel tile comes out as fine as a tile allows (about 147 ppi for 2000 pt). A choice of resolution and a selection that stays active remain."
       },
       {
         "date": "2026-11-02",
@@ -443,14 +451,6 @@
       {
         "date": "2026-10-24",
         "text": "(M3, window move on Wayland, #3970 follow-up): After a move or resize by PdfCraft's own title bar or edges, the button release given back to egui goes before the pointer leaving the window, so hover no longer sticks at the old place until the pointer moves. Found by CodeRabbit in review of #3970; a unit test covers it. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "(M10, ocr.ocr-web, review fix): On the web, single-file and multiple-file OCR running at once no longer lose a page: the workers' answers go to the run that sent each page, instead of to whichever run collected first, and a cancelled run's late answers are let go. Regression tests cover both start orders and cancellation. Files chosen for Recognize Text in Multiple Files before the models have downloaded now wait for them instead of having to be chosen again, and idle workers close on time even when nothing is happening on the page, a full minute after their last page comes back rather than after it was handed out (checked by hand in Firefox); estimates unchanged."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "(M14, #4253): The annotation quick bar remembers Keep tool selected across restarts, including unpinning. Old and malformed settings keep safe defaults; the opt-in UI control channel reads and changes the same preference. Estimates unchanged."
       }
     ]
   },
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 125,
+    "revisions_since": 126,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,21 +476,21 @@
     }
   },
   "roadmap": {
-    "revisions": 213,
-    "revisions_7d": 30,
+    "revisions": 214,
+    "revisions_7d": 31,
     "last_revision": {
-      "ts": "2026-11-09T02:54:50Z",
+      "ts": "2026-11-09T03:50:22Z",
       "kind": "content",
-      "commit": "cde331f",
-      "commit_full": "cde331fb7eaea9bb87e4b046f5450e884323a9b4",
-      "message": "Land render and font patches (#6292, #6287, #6314, #6353, #6359, #6368, #6409, #6491, #6545, #6516, #6521, #6528, #6533, #6529, #6542, #6543, #6569, #6572) (#66"
+      "commit": "ca9e3c2",
+      "commit_full": "ca9e3c2c33356593a3f4cdd55eb7b0320cb83c39",
+      "message": "Land redaction, organize, forms, annotation, text, measure, XFA, XFDF and edit fixes (#6458, #6459, #6460, #6463, #6474, #5969, #5761, #5852, #6231, #6366, #650"
     },
     "last_update": {
-      "ts": "2026-11-09T02:54:50Z",
+      "ts": "2026-11-09T03:50:22Z",
       "kind": "content",
-      "commit": "cde331f",
-      "commit_full": "cde331fb7eaea9bb87e4b046f5450e884323a9b4",
-      "message": "Land render and font patches (#6292, #6287, #6314, #6353, #6359, #6368, #6409, #6491, #6545, #6516, #6521, #6528, #6533, #6529, #6542, #6543, #6569, #6572) (#66"
+      "commit": "ca9e3c2",
+      "commit_full": "ca9e3c2c33356593a3f4cdd55eb7b0320cb83c39",
+      "message": "Land redaction, organize, forms, annotation, text, measure, XFA, XFDF and edit fixes (#6458, #6459, #6460, #6463, #6474, #5969, #5761, #5852, #6231, #6366, #650"
     },
     "self_reported": "2026-11-08"
   },
@@ -499,16 +499,16 @@
     "level": "buzzing",
     "score": 23.7,
     "active_days_7d": 7,
-    "changes_7d": 240,
-    "changes_14d": 312,
+    "changes_7d": 242,
+    "changes_14d": 314,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-11-09T03:31:32Z",
-      "commit": "5dbd007",
-      "commit_full": "5dbd0076ad2c2bc94af50ef41637d9559a9c1fce",
-      "subject": "Land PDF/A verify and convert checks (#6232, #6254, #6172, #6202, #6203, #6206, #6207, #6214, #6215, #6219) (#6662)"
+      "ts": "2026-11-09T04:30:05Z",
+      "commit": "25025fa",
+      "commit_full": "25025fa271d3488c474a292f4b1a9352ab16dedf",
+      "subject": "Updates: take craft-update from craft-libs main at 1b34eba41 (#6674)"
     },
-    "last_commit_ts": "2026-11-09T03:31:32Z",
+    "last_commit_ts": "2026-11-09T04:30:05Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       5,
@@ -524,7 +524,7 @@
       9,
       6,
       31,
-      109
+      111
     ],
     "days": [
       {
@@ -1276,20 +1276,20 @@
       },
       {
         "d": "2026-11-09",
-        "code": 109,
+        "code": 111,
         "other": 6,
         "samples": [
           {
+            "commit": "25025fa",
+            "subject": "Updates: take craft-update from craft-libs main at 1b34eba41 (#6674)"
+          },
+          {
+            "commit": "ca9e3c2",
+            "subject": "Land redaction, organize, forms, annotation, text, measure, XFA, XFDF and edit fixes (#6458, #6459, #6460, #6463, #6474, #5969, #5761, #5852, #6231, #6366, #650"
+          },
+          {
             "commit": "5dbd007",
             "subject": "Land PDF/A verify and convert checks (#6232, #6254, #6172, #6202, #6203, #6206, #6207, #6214, #6215, #6219) (#6662)"
-          },
-          {
-            "commit": "d8c2b9f",
-            "subject": "Revert \"fix(ui): show creation and modification dates in Document Properties (#5534) (#5536)\" (#6671)"
-          },
-          {
-            "commit": "cde331f",
-            "subject": "Land render and font patches (#6292, #6287, #6314, #6353, #6359, #6368, #6409, #6491, #6545, #6516, #6521, #6528, #6533, #6529, #6542, #6543, #6569, #6572) (#66"
           }
         ]
       }
@@ -6401,7 +6401,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "ca9e3c2",
+      "commit_full": "ca9e3c2c33356593a3f4cdd55eb7b0320cb83c39",
+      "commit_date": "2026-11-09T11:50:22+08:00",
+      "ts": "2026-11-09T03:50:22Z",
+      "message": "Land redaction, organize, forms, annotation, text, measure, XFA, XFDF and edit fixes (#6458, #6459, #6460, #6463, #6474, #5969, #5761, #5852, #6231, #6366, #650",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-09T03:41:22+00:00"
+  "updated_at": "2026-11-09T04:49:48+00:00"
 }

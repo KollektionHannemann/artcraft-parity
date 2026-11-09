@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/filmcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/filmcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "5ed4952",
-  "latest_commit_date": "2026-11-01T03:04:14+01:00",
-  "latest_message": "Add shared custom colors and complete marker editing (#1435)",
+  "latest_commit": "41977ba",
+  "latest_commit_date": "2026-11-09T04:45:53+01:00",
+  "latest_message": "Naming: Color Grading and Video Scopes for Lumetri; External Video Output (#1880)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Adobe Premiere Pro 2026 (26.5.2)",
-    "last_updated": "2026-10-22",
+    "last_updated": "2026-11-08",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -270,7 +270,7 @@
       },
       {
         "date": "2026-10-10",
-        "text": "~75 community PRs merged: GPU export rendering (Auto) with Vignette, Video Limiter and Lumetri basic / creative / vignette on the GPU (#421); Linux NVDEC H.264 / HEVC decode (#549); text-to-speech narrations with Kokoro-82M (#278); Japanese for the whole interface (#449) and Ukrainian menus (#407); ALSA default-device fallback (#254, fixes #23); drop import into the timeline (#517); system appearance (#505); timecode scrub editing (#576); NVENC RGBA input (#486); marker CSV export (#454); many fixes (#526–#575)."
+        "text": "~75 community PRs merged: GPU export rendering (Auto) with Vignette, Video Limiter and Color Grading basic / creative / vignette on the GPU (#421); Linux NVDEC H.264 / HEVC decode (#549); text-to-speech narrations with Kokoro-82M (#278); Japanese for the whole interface (#449) and Ukrainian menus (#407); ALSA default-device fallback (#254, fixes #23); drop import into the timeline (#517); system appearance (#505); timecode scrub editing (#576); NVENC RGBA input (#486); marker CSV export (#454); many fixes (#526–#575)."
       },
       {
         "date": "2026-10-09",
@@ -338,7 +338,7 @@
       },
       {
         "date": "2026-10-02",
-        "text": "(panels): complete Lumetri Scopes (new filmcraft-scopes crate: Vectorscope YUV/HLS, Histogram, Parade RGB/YUV/RGB-White, Waveform RGB/Luma/YC/YC no Chroma; wrench menu with presets, colour space, brightness, scale; < 1 ms per scope at 1080p; scopes.read returns the numbers); Metadata panel (editable log fields, undoable metadata.set), Timecode panel, Events panel (event log of failed commands, jobs, auto-save), Progress panel (jobs with Cancel), Reference Monitor (parked or ganged, picture or scopes)."
+        "text": "(panels): complete Video Scopes (new filmcraft-scopes crate: Vectorscope YUV/HLS, Histogram, Parade RGB/YUV/RGB-White, Waveform RGB/Luma/YC/YC no Chroma; wrench menu with presets, colour space, brightness, scale; < 1 ms per scope at 1080p; scopes.read returns the numbers); Metadata panel (editable log fields, undoable metadata.set), Timecode panel, Events panel (event log of failed commands, jobs, auto-save), Progress panel (jobs with Cancel), Reference Monitor (parked or ganged, picture or scopes)."
       },
       {
         "date": "2026-10-02",
@@ -370,7 +370,7 @@
       },
       {
         "date": "2026-10-01",
-        "text": "(night): M8 colour: camera log curves and gamuts from published specs, colour-managed pipeline (PQ/HLG working spaces, Interpret Footage, BT.2390 tone mapping), HDR export signalling verified with ffprobe, LUTs (.cube/.3dl, tetrahedral CPU + WGSL, project library, Lumetri Input LUT / Look), Colour Match, Lumetri section bypass, HDR scopes."
+        "text": "(night): M8 colour: camera log curves and gamuts from published specs, colour-managed pipeline (PQ/HLG working spaces, Interpret Footage, BT.2390 tone mapping), HDR export signalling verified with ffprobe, LUTs (.cube/.3dl, tetrahedral CPU + WGSL, project library, Color Grading Input LUT / Look), Colour Match, Color Grading section bypass, HDR scopes."
       },
       {
         "date": "2026-10-01",
@@ -402,7 +402,7 @@
       },
       {
         "date": "2026-09-30",
-        "text": "(late morning): keyframe value/velocity graphs; xtask gates; H.264 MP4 export; Lumetri curves, wheels, looks, HSL secondary."
+        "text": "(late morning): keyframe value/velocity graphs; xtask gates; H.264 MP4 export; Color Grading curves, wheels, looks, HSL secondary."
       },
       {
         "date": "2026-09-30",
@@ -415,7 +415,7 @@
     "value_since": "2026-10-10T18:09:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 14,
+    "revisions_since": 15,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -423,39 +423,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 15,
-    "revisions_7d": 0,
+    "revisions": 16,
+    "revisions_7d": 1,
     "last_revision": {
-      "ts": "2026-11-01T02:04:14Z",
+      "ts": "2026-11-09T03:45:53Z",
       "kind": "content",
-      "commit": "5ed4952",
-      "commit_full": "5ed4952d43f6328d9c2bf7990f1c2e15dfa25011",
-      "message": "Add shared custom colors and complete marker editing (#1435)"
+      "commit": "41977ba",
+      "commit_full": "41977bab41737247c7eb6a86e751f79a3bf9fc45",
+      "message": "Naming: Color Grading and Video Scopes for Lumetri; External Video Output (#1880)"
     },
     "last_update": {
-      "ts": "2026-11-01T02:04:14Z",
+      "ts": "2026-11-09T03:45:53Z",
       "kind": "content",
-      "commit": "5ed4952",
-      "commit_full": "5ed4952d43f6328d9c2bf7990f1c2e15dfa25011",
-      "message": "Add shared custom colors and complete marker editing (#1435)"
+      "commit": "41977ba",
+      "commit_full": "41977bab41737247c7eb6a86e751f79a3bf9fc45",
+      "message": "Naming: Color Grading and Video Scopes for Lumetri; External Video Output (#1880)"
     },
-    "self_reported": "2026-10-22"
+    "self_reported": "2026-11-08"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.3,
+    "score": 17.3,
     "active_days_7d": 7,
-    "changes_7d": 124,
-    "changes_14d": 212,
+    "changes_7d": 126,
+    "changes_14d": 214,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-09T03:13:04Z",
-      "commit": "bbe8ae2",
-      "commit_full": "bbe8ae217a76ee776ffb2ac0b1756078351a7326",
-      "subject": "Updates: the updater reports installing, ready, installed and failed, and installs at exit (#4537)"
+      "ts": "2026-11-09T04:06:04Z",
+      "commit": "29e6937",
+      "commit_full": "29e6937ec0e2e27c98719b208362be55e54ae2d8",
+      "subject": "Updates: take craft-update from craft-libs main at 1b34eba41 (#4565)"
     },
-    "last_commit_ts": "2026-11-09T03:13:04Z",
+    "last_commit_ts": "2026-11-09T04:06:04Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       7,
@@ -471,7 +471,7 @@
       2,
       14,
       21,
-      1
+      3
     ],
     "days": [
       {
@@ -1171,9 +1171,17 @@
       },
       {
         "d": "2026-11-09",
-        "code": 1,
+        "code": 3,
         "other": 0,
         "samples": [
+          {
+            "commit": "29e6937",
+            "subject": "Updates: take craft-update from craft-libs main at 1b34eba41 (#4565)"
+          },
+          {
+            "commit": "41977ba",
+            "subject": "Naming: Color Grading and Video Scopes for Lumetri; External Video Output (#1880)"
+          },
           {
             "commit": "bbe8ae2",
             "subject": "Updates: the updater reports installing, ready, installed and failed, and installs at exit (#4537)"
@@ -1734,7 +1742,30 @@
       "breadth_pct": 86.0,
       "full_prev": 56.0,
       "kind": "content"
+    },
+    {
+      "commit": "41977ba",
+      "commit_full": "41977bab41737247c7eb6a86e751f79a3bf9fc45",
+      "commit_date": "2026-11-09T04:45:53+01:00",
+      "ts": "2026-11-09T03:45:53Z",
+      "message": "Naming: Color Grading and Video Scopes for Lumetri; External Video Output (#1880)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 56.0,
+      "full_range": null,
+      "full_hours": [
+        1450,
+        2600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe Premiere Pro 2026 (26.5.2)",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 60.0,
+      "breadth_pct": 86.0,
+      "full_prev": 56.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-09T03:41:13+00:00"
+  "updated_at": "2026-11-09T04:49:37+00:00"
 }
