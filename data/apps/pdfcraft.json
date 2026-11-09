@@ -477,7 +477,7 @@
   },
   "roadmap": {
     "revisions": 209,
-    "revisions_7d": 27,
+    "revisions_7d": 26,
     "last_revision": {
       "ts": "2026-11-08T18:25:04Z",
       "kind": "content",
@@ -497,21 +497,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.8,
+    "score": 20.1,
     "active_days_7d": 7,
-    "changes_7d": 142,
-    "changes_14d": 208,
+    "changes_7d": 139,
+    "changes_14d": 211,
     "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-08T20:10:08Z",
-      "commit": "8d5d39e",
-      "commit_full": "8d5d39ef5e87abc4012e3a224148fa5958ea1389",
-      "subject": "Combine files: a drop is one undo step, in order, and names what it can't take (#6645)"
+      "ts": "2026-11-09T00:32:08Z",
+      "commit": "1f48670",
+      "commit_full": "1f48670fcef2e5b9f5294650cb7dc51cdf5a3cff",
+      "subject": "refactor(cos): consolidate duplicate civil_from_days onto pdfcraft_cos::civil_from_days (#6540)"
     },
-    "last_commit_ts": "2026-11-08T20:10:08Z",
+    "last_commit_ts": "2026-11-09T00:32:08Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
-      5,
       5,
       16,
       3,
@@ -524,7 +523,8 @@
       36,
       9,
       6,
-      31
+      31,
+      8
     ],
     "days": [
       {
@@ -1271,6 +1271,25 @@
           {
             "commit": "71aa902",
             "subject": "Exports keep a wrapped paragraph and a bulleted list as paragraphs (#5404, merged with main) (#6643)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-09",
+        "code": 8,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "1f48670",
+            "subject": "refactor(cos): consolidate duplicate civil_from_days onto pdfcraft_cos::civil_from_days (#6540)"
+          },
+          {
+            "commit": "ca21968",
+            "subject": "fix(js): decode &apos;, numeric, and HTML named character references in FormCalc Decode (#6538)"
+          },
+          {
+            "commit": "90def11",
+            "subject": "fix(engine): map URL text line rects with view_rect_to_user and filter non-finite coordinates (#6536)"
           }
         ]
       }
@@ -6292,5 +6311,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-08T20:59:47+00:00"
+  "updated_at": "2026-11-09T00:33:26+00:00"
 }

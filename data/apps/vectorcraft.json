@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "0b0d2f0",
-  "latest_commit_date": "2026-11-09T01:19:05+08:00",
-  "latest_message": "Type: upright glyphs on a vertical path face the path's start, so ligatures read in order (#5557)",
+  "latest_commit": "2fe33b1",
+  "latest_commit_date": "2026-11-09T08:02:10+08:00",
+  "latest_message": "UI: show or hide the Help Bar independently (#5355)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -509,7 +509,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 218,
+    "revisions_since": 219,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -540,42 +540,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 219,
-    "revisions_7d": 15,
+    "revisions": 220,
+    "revisions_7d": 14,
     "last_revision": {
-      "ts": "2026-11-08T17:19:05Z",
+      "ts": "2026-11-09T00:02:10Z",
       "kind": "content",
-      "commit": "0b0d2f0",
-      "commit_full": "0b0d2f0ab7c58dea687b089f0e25ae94a842001d",
-      "message": "Type: upright glyphs on a vertical path face the path's start, so ligatures read in order (#5557)"
+      "commit": "2fe33b1",
+      "commit_full": "2fe33b1fc63d6a46f5616deab0ee97b465f6ffc5",
+      "message": "UI: show or hide the Help Bar independently (#5355)"
     },
     "last_update": {
-      "ts": "2026-11-08T17:19:05Z",
+      "ts": "2026-11-09T00:02:10Z",
       "kind": "content",
-      "commit": "0b0d2f0",
-      "commit_full": "0b0d2f0ab7c58dea687b089f0e25ae94a842001d",
-      "message": "Type: upright glyphs on a vertical path face the path's start, so ligatures read in order (#5557)"
+      "commit": "2fe33b1",
+      "commit_full": "2fe33b1fc63d6a46f5616deab0ee97b465f6ffc5",
+      "message": "UI: show or hide the Help Bar independently (#5355)"
     },
     "self_reported": "2026-11-06"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 34.1,
+    "score": 30.2,
     "active_days_7d": 7,
-    "changes_7d": 837,
-    "changes_14d": 1400,
-    "housekeeping_7d": 34,
+    "changes_7d": 731,
+    "changes_14d": 1309,
+    "housekeeping_7d": 32,
     "last_code_change": {
-      "ts": "2026-11-08T23:55:33Z",
-      "commit": "52ee41f",
-      "commit_full": "52ee41f897550495277f783ae320a0cbb384be66",
-      "subject": "Reject non-digit object ids in MCP object resource URIs (#6253)"
+      "ts": "2026-11-09T00:27:10Z",
+      "commit": "a5c166f",
+      "commit_full": "a5c166fbeaa7b7f20c2193f2f944a19b7e97acfe",
+      "subject": "Type: type in a composite font is measured in its own document's definition (#6260)"
     },
-    "last_commit_ts": "2026-11-08T23:55:33Z",
+    "last_commit_ts": "2026-11-09T00:27:10Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
-      98,
       15,
       4,
       180,
@@ -588,7 +587,8 @@
       121,
       46,
       56,
-      197
+      199,
+      5
     ],
     "days": [
       {
@@ -1321,20 +1321,39 @@
       },
       {
         "d": "2026-11-08",
-        "code": 197,
+        "code": 199,
         "other": 6,
         "samples": [
           {
+            "commit": "ab0cadc",
+            "subject": "Numeric fields: step on wheel hover without taking focus (#6113)"
+          },
+          {
+            "commit": "7724463",
+            "subject": "EPS import: gradients drawn as abutting strips come in as one gradient, without seams (#5991)"
+          },
+          {
             "commit": "52ee41f",
             "subject": "Reject non-digit object ids in MCP object resource URIs (#6253)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-09",
+        "code": 5,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "a5c166f",
+            "subject": "Type: type in a composite font is measured in its own document's definition (#6260)"
           },
           {
-            "commit": "22f5ede",
-            "subject": ".ai save: the editing copy keeps graphic styles and links to them (#6161)"
+            "commit": "49c8b86",
+            "subject": "i18n(ka): update the Georgian catalog (59 strings) (#6262)"
           },
           {
-            "commit": "302c057",
-            "subject": "JavaScript: a realm has the String, Number, RegExp and Date built-ins (#6194)"
+            "commit": "0c4fd6a",
+            "subject": "Tests: the filter plug-in shortcut test accepts the macOS chord text (#6261)"
           }
         ]
       }
@@ -7297,7 +7316,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "2fe33b1",
+      "commit_full": "2fe33b1fc63d6a46f5616deab0ee97b465f6ffc5",
+      "commit_date": "2026-11-09T08:02:10+08:00",
+      "ts": "2026-11-09T00:02:10Z",
+      "message": "UI: show or hide the Help Bar independently (#5355)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-06",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-08T23:56:39+00:00"
+  "updated_at": "2026-11-09T00:33:07+00:00"
 }
