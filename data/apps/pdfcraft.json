@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "c07e092",
-  "latest_commit_date": "2026-11-09T02:25:04+08:00",
-  "latest_message": "M7: break Thai rows between dictionary words (#3492, merged with main) (#6637)",
+  "latest_commit": "ccbfa6d",
+  "latest_commit_date": "2026-11-09T08:40:07+08:00",
+  "latest_message": "M14: localization parity counts every catalog with the i18n report (#5805) (#5894)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -321,12 +321,16 @@
         "text": "(M7, #5835): In image crop mode, a right-click on the image, its crop box or its handles keeps the crop and opens no menu, so the menu no longer switches as the pointer moves. A right-click elsewhere clears the selection and opens the page menu. UI tests cover all four page rotations, overlapping images, a 45° image, and a check that the Done/Cancel/Remove Crop pills at a page edge still keep the crop."
       },
       {
-        "date": "2026-11-02",
-        "text": "(M12, #1297): modeladd embeds a U3D or PRC file, recognised by its header, as a 3D annotation with a chosen activation and a poster (an image or PDF page fitted in the box, or a labelled frame); an older file's catalog /Version is raised to what the model needs. Views, a rendered poster and a UI command are later steps. Estimates unchanged."
+        "date": "2026-11-03",
+        "text": "(M14 docs, #5805): docs/localization-parity.md and the Languages table here count every catalog with cargo xtask i18n-report: the share of the 2,897 strings in its denominator, on 14ae839a. The catalog-union measure it replaces had grown to 2,895 keys and left four catalogs at \"100%\" that were 44 keys short. Hindi, Indonesian and Korean are listed with their catalogs (97.5% each) instead of 0, and Thai, Lao and Central Kurdish join the table. The ≈ 68% localization score is not re-scored."
       },
       {
         "date": "2026-11-02",
         "text": "(M10, #5743): macOS print jobs name their title and owner (com.apple.print.JobInfo.PMJobName, PMJobOwner), as the system print dialog does, because a Kyocera filter crashes on a job without them. Checked by a test and through docprint against a stand-in lp; not yet on a physical printer."
+      },
+      {
+        "date": "2026-11-02",
+        "text": "(M3, #5708): Pages shorter than the window sit in its middle, one page or row at a time and when scrolling continuously with every page in view."
       },
       {
         "date": "2026-11-02",
@@ -447,10 +451,6 @@
       {
         "date": "2026-10-24",
         "text": "(M11, monochrome downsampling): The PDF Optimizer and Reduce File Size average black-and-white images above 450 ppi down to 300 ppi (Monochrome Images ▸ Downsample to), Group 4 scans included, so a 600 ppi text page goes from 79 KB to 40 KB. CCITT decoding moved into pdfcraft-filters (decodeccitt), shared by Export ▸ Images and the optimizer through Document::decodedimage."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "(M11, black-and-white pictures): A scan saved as a 1-bit PNG became an eight-bit grey image when made into a PDF, larger than the PNG; Create PDF now stores pictures of only black and white at one bit (Group 4 when smaller), the optimizer packs eight-bit black-and-white grey images to one bit unless the grey settings make them smaller, as they can a dithered scan, soft mask counted, and Export ▸ Images reads CCITT fax images."
       }
     ]
   },
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 121,
+    "revisions_since": 123,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 209,
-    "revisions_7d": 26,
+    "revisions": 211,
+    "revisions_7d": 28,
     "last_revision": {
-      "ts": "2026-11-08T18:25:04Z",
+      "ts": "2026-11-09T00:40:07Z",
       "kind": "content",
-      "commit": "c07e092",
-      "commit_full": "c07e092ff5739310649e16eb8e671e776316086b",
-      "message": "M7: break Thai rows between dictionary words (#3492, merged with main) (#6637)"
+      "commit": "ccbfa6d",
+      "commit_full": "ccbfa6d24a9e450066dad5192e2f4404bec778d3",
+      "message": "M14: localization parity counts every catalog with the i18n report (#5805) (#5894)"
     },
     "last_update": {
-      "ts": "2026-11-08T18:25:04Z",
+      "ts": "2026-11-09T00:40:07Z",
       "kind": "content",
-      "commit": "c07e092",
-      "commit_full": "c07e092ff5739310649e16eb8e671e776316086b",
-      "message": "M7: break Thai rows between dictionary words (#3492, merged with main) (#6637)"
+      "commit": "ccbfa6d",
+      "commit_full": "ccbfa6d24a9e450066dad5192e2f4404bec778d3",
+      "message": "M14: localization parity counts every catalog with the i18n report (#5805) (#5894)"
     },
     "self_reported": "2026-11-08"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.1,
+    "score": 23.0,
     "active_days_7d": 7,
-    "changes_7d": 139,
-    "changes_14d": 211,
-    "housekeeping_7d": 8,
+    "changes_7d": 199,
+    "changes_14d": 271,
+    "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-11-09T00:32:08Z",
-      "commit": "1f48670",
-      "commit_full": "1f48670fcef2e5b9f5294650cb7dc51cdf5a3cff",
-      "subject": "refactor(cos): consolidate duplicate civil_from_days onto pdfcraft_cos::civil_from_days (#6540)"
+      "ts": "2026-11-09T01:43:17Z",
+      "commit": "bfed7bb",
+      "commit_full": "bfed7bbabe963cdec035e303cc1b9826991363ba",
+      "subject": "Fix main's build after the latest merges (#6660)"
     },
-    "last_commit_ts": "2026-11-09T00:32:08Z",
+    "last_commit_ts": "2026-11-09T01:43:17Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       5,
@@ -524,7 +524,7 @@
       9,
       6,
       31,
-      8
+      68
     ],
     "days": [
       {
@@ -1276,20 +1276,20 @@
       },
       {
         "d": "2026-11-09",
-        "code": 8,
-        "other": 0,
+        "code": 68,
+        "other": 6,
         "samples": [
           {
-            "commit": "1f48670",
-            "subject": "refactor(cos): consolidate duplicate civil_from_days onto pdfcraft_cos::civil_from_days (#6540)"
+            "commit": "bfed7bb",
+            "subject": "Fix main's build after the latest merges (#6660)"
           },
           {
-            "commit": "ca21968",
-            "subject": "fix(js): decode &apos;, numeric, and HTML named character references in FormCalc Decode (#6538)"
+            "commit": "d65ae42",
+            "subject": "M6: a calculate script that sets its own field through the field object keeps that value (form.custom-scripts) (#6616)"
           },
           {
-            "commit": "90def11",
-            "subject": "fix(engine): map URL text line rects with view_rect_to_user and filter non-finite coordinates (#6536)"
+            "commit": "87bc00a",
+            "subject": "M3: Find matches words divided by soft hyphens, zero width characters or a Chinese or Japanese line end (view.find) (#6595)"
           }
         ]
       }
@@ -6309,7 +6309,53 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "bf409db",
+      "commit_full": "bf409db55c22f125284ea376c9bbf9cb2e47ad69",
+      "commit_date": "2026-11-09T08:38:40+08:00",
+      "ts": "2026-11-09T00:38:40Z",
+      "message": "M3: pages shorter than the window sit in its middle (#5708) (#5759)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "ccbfa6d",
+      "commit_full": "ccbfa6d24a9e450066dad5192e2f4404bec778d3",
+      "commit_date": "2026-11-09T08:40:07+08:00",
+      "ts": "2026-11-09T00:40:07Z",
+      "message": "M14: localization parity counts every catalog with the i18n report (#5805) (#5894)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-09T00:33:26+00:00"
+  "updated_at": "2026-11-09T01:55:56+00:00"
 }
