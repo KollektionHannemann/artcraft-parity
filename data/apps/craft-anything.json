@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "cdc8a88",
-  "latest_commit_date": "2026-11-09T23:11:29+07:00",
-  "latest_message": "Enforce standalone LZMA budgets before large dictionary growth (#1381)",
+  "latest_commit": "2174cac",
+  "latest_commit_date": "2026-11-10T00:27:22+07:00",
+  "latest_message": "Reject GNU tar long-name records that end before their padding (#1402)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 354,
-    "revisions_7d": 301,
+    "revisions": 360,
+    "revisions_7d": 307,
     "last_revision": {
-      "ts": "2026-11-09T16:11:29Z",
+      "ts": "2026-11-09T17:27:22Z",
       "kind": "content",
-      "commit": "cdc8a88",
-      "commit_full": "cdc8a880f1e60bce757ebac59e3f7983f084a1f8",
-      "message": "Enforce standalone LZMA budgets before large dictionary growth (#1381)"
+      "commit": "2174cac",
+      "commit_full": "2174cac80b3616524f2062fbaa6c37d40aea34e8",
+      "message": "Reject GNU tar long-name records that end before their padding (#1402)"
     },
     "last_update": {
-      "ts": "2026-11-09T16:11:29Z",
+      "ts": "2026-11-09T17:27:22Z",
       "kind": "content",
-      "commit": "cdc8a88",
-      "commit_full": "cdc8a880f1e60bce757ebac59e3f7983f084a1f8",
-      "message": "Enforce standalone LZMA budgets before large dictionary growth (#1381)"
+      "commit": "2174cac",
+      "commit_full": "2174cac80b3616524f2062fbaa6c37d40aea34e8",
+      "message": "Reject GNU tar long-name records that end before their padding (#1402)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 26.0,
+    "score": 26.1,
     "active_days_7d": 7,
-    "changes_7d": 408,
-    "changes_14d": 601,
+    "changes_7d": 414,
+    "changes_14d": 607,
     "housekeeping_7d": 32,
     "last_code_change": {
-      "ts": "2026-11-09T16:11:29Z",
-      "commit": "cdc8a88",
-      "commit_full": "cdc8a880f1e60bce757ebac59e3f7983f084a1f8",
-      "subject": "Enforce standalone LZMA budgets before large dictionary growth (#1381)"
+      "ts": "2026-11-09T17:27:22Z",
+      "commit": "2174cac",
+      "commit_full": "2174cac80b3616524f2062fbaa6c37d40aea34e8",
+      "subject": "Reject GNU tar long-name records that end before their padding (#1402)"
     },
-    "last_commit_ts": "2026-11-09T16:11:29Z",
+    "last_commit_ts": "2026-11-09T17:27:22Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       64,
       34,
       37,
-      135
+      141
     ],
     "days": [
       {
@@ -261,20 +261,20 @@
       },
       {
         "d": "2026-11-09",
-        "code": 135,
+        "code": 141,
         "other": 2,
         "samples": [
           {
-            "commit": "cdc8a88",
-            "subject": "Enforce standalone LZMA budgets before large dictionary growth (#1381)"
+            "commit": "2174cac",
+            "subject": "Reject GNU tar long-name records that end before their padding (#1402)"
           },
           {
-            "commit": "f2392fe",
-            "subject": "Extract ZIP entries compressed with bzip2 or XZ (#1374)"
+            "commit": "a80cc82",
+            "subject": "Reject ASAR manifest nodes with invalid file metadata (#1364)"
           },
           {
-            "commit": "a9f7cf1",
-            "subject": "Read complete gzip packed members and verify their trailers (#1372)"
+            "commit": "69e7f57",
+            "subject": "Refuse incomplete tar engine installs after GNU metadata stops (#1394)"
           }
         ]
       }
@@ -2862,8 +2862,50 @@
       "commit": "cdc8a88",
       "commit_full": "cdc8a880f1e60bce757ebac59e3f7983f084a1f8",
       "message": "Enforce standalone LZMA budgets before large dictionary growth (#1381)"
+    },
+    {
+      "ts": "2026-11-09T16:29:56Z",
+      "kind": "content",
+      "commit": "4a0c164",
+      "commit_full": "4a0c164da8b2de270afe773098b5282571cccc5a",
+      "message": "Preserve unambiguous ELF import slots across version-library metadata (R3.12) (#1393)"
+    },
+    {
+      "ts": "2026-11-09T16:31:22Z",
+      "kind": "content",
+      "commit": "aa8bba9",
+      "commit_full": "aa8bba98e29e7625ea4146e52d5c049f6816e3c8",
+      "message": "Keep GNU sparse tar payloads out of regular-file extraction (#1382)"
+    },
+    {
+      "ts": "2026-11-09T16:31:28Z",
+      "kind": "content",
+      "commit": "092aef2",
+      "commit_full": "092aef247498a8cac24a63c9f36b8790dd8b8b1a",
+      "message": "Extract ZIP LZMA members with checked framing and output limits (#1375)"
+    },
+    {
+      "ts": "2026-11-09T16:34:38Z",
+      "kind": "content",
+      "commit": "69e7f57",
+      "commit_full": "69e7f5773d48368b18f22c2e7abe79d115589174",
+      "message": "Refuse incomplete tar engine installs after GNU metadata stops (#1394)"
+    },
+    {
+      "ts": "2026-11-09T17:25:55Z",
+      "kind": "content",
+      "commit": "a80cc82",
+      "commit_full": "a80cc8253930afc70f46c2692500e072877efbd9",
+      "message": "Reject ASAR manifest nodes with invalid file metadata (#1364)"
+    },
+    {
+      "ts": "2026-11-09T17:27:22Z",
+      "kind": "content",
+      "commit": "2174cac",
+      "commit_full": "2174cac80b3616524f2062fbaa6c37d40aea34e8",
+      "message": "Reject GNU tar long-name records that end before their padding (#1402)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-09T16:27:49+00:00"
+  "updated_at": "2026-11-09T17:28:06+00:00"
 }
