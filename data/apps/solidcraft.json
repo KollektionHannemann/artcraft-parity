@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 33.5,
+    "score": 33.6,
     "active_days_7d": 7,
-    "changes_7d": 565,
-    "changes_14d": 1821,
-    "housekeeping_7d": 33,
+    "changes_7d": 567,
+    "changes_14d": 1823,
+    "housekeeping_7d": 34,
     "last_code_change": {
-      "ts": "2026-11-09T14:56:50Z",
-      "commit": "42918fe",
-      "commit_full": "42918fe51b3bb4ae2200ae1f5ef32f0373276566",
-      "subject": "Components: reject ambiguous names in command targets (#13388)"
+      "ts": "2026-11-09T20:15:37Z",
+      "commit": "0bb7cce",
+      "commit_full": "0bb7cce47c8fec66c0a86394b288e2f4d47466f0",
+      "subject": "Move SolidCraft's mesher into solidcore-tess and its evaluator into the kernel, one mesher (RFC 0003 item 1.1) (#14003)"
     },
-    "last_commit_ts": "2026-11-09T14:56:50Z",
+    "last_commit_ts": "2026-11-09T20:15:52Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       143,
@@ -93,7 +93,7 @@
       44,
       85,
       70,
-      61
+      63
     ],
     "days": [
       {
@@ -725,20 +725,20 @@
       },
       {
         "d": "2026-11-09",
-        "code": 61,
-        "other": 8,
+        "code": 63,
+        "other": 9,
         "samples": [
+          {
+            "commit": "0bb7cce",
+            "subject": "Move SolidCraft's mesher into solidcore-tess and its evaluator into the kernel, one mesher (RFC 0003 item 1.1) (#14003)"
+          },
+          {
+            "commit": "343a5b8",
+            "subject": "Display: a G2 corner's side to its round is drawn again, and a fillet chain pick stops there (#13542) (#14226)"
+          },
           {
             "commit": "42918fe",
             "subject": "Components: reject ambiguous names in command targets (#13388)"
-          },
-          {
-            "commit": "5c99792",
-            "subject": "Viewport: three shared crates (viewport, viewport-gpu, viewport-egui) over solidcore-tess plans (#14125)"
-          },
-          {
-            "commit": "ca171fe",
-            "subject": "Parameters: resize the window and drag column widths (#13422)"
           }
         ]
       }
@@ -2318,5 +2318,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-09T19:23:46+00:00"
+  "updated_at": "2026-11-09T20:17:03+00:00"
 }
