@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "28cccdb",
-  "latest_commit_date": "2026-11-09T16:50:18+08:00",
-  "latest_message": "Stop a build's check rounds from stalling silently (#1287)",
+  "latest_commit": "32e7c9b",
+  "latest_commit_date": "2026-11-09T18:43:54+08:00",
+  "latest_message": "Find app configs under the user profile on Windows, not HOME (R2.2) (#1306)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 274,
-    "revisions_7d": 221,
+    "revisions": 278,
+    "revisions_7d": 225,
     "last_revision": {
-      "ts": "2026-11-09T08:50:18Z",
+      "ts": "2026-11-09T10:43:54Z",
       "kind": "content",
-      "commit": "28cccdb",
-      "commit_full": "28cccdb998fe8d748d41e677099d7149dcccdbc0",
-      "message": "Stop a build's check rounds from stalling silently (#1287)"
+      "commit": "32e7c9b",
+      "commit_full": "32e7c9b6d41ddeff7b93fc682e5602de2d109870",
+      "message": "Find app configs under the user profile on Windows, not HOME (R2.2) (#1306)"
     },
     "last_update": {
-      "ts": "2026-11-09T08:50:18Z",
+      "ts": "2026-11-09T10:43:54Z",
       "kind": "content",
-      "commit": "28cccdb",
-      "commit_full": "28cccdb998fe8d748d41e677099d7149dcccdbc0",
-      "message": "Stop a build's check rounds from stalling silently (#1287)"
+      "commit": "32e7c9b",
+      "commit_full": "32e7c9b6d41ddeff7b93fc682e5602de2d109870",
+      "message": "Find app configs under the user profile on Windows, not HOME (R2.2) (#1306)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 24.7,
+    "score": 24.8,
     "active_days_7d": 7,
-    "changes_7d": 328,
-    "changes_14d": 521,
+    "changes_7d": 332,
+    "changes_14d": 525,
     "housekeeping_7d": 31,
     "last_code_change": {
-      "ts": "2026-11-09T08:50:18Z",
-      "commit": "28cccdb",
-      "commit_full": "28cccdb998fe8d748d41e677099d7149dcccdbc0",
-      "subject": "Stop a build's check rounds from stalling silently (#1287)"
+      "ts": "2026-11-09T10:43:54Z",
+      "commit": "32e7c9b",
+      "commit_full": "32e7c9b6d41ddeff7b93fc682e5602de2d109870",
+      "subject": "Find app configs under the user profile on Windows, not HOME (R2.2) (#1306)"
     },
-    "last_commit_ts": "2026-11-09T08:50:18Z",
+    "last_commit_ts": "2026-11-09T10:43:54Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       64,
       34,
       37,
-      55
+      59
     ],
     "days": [
       {
@@ -261,20 +261,20 @@
       },
       {
         "d": "2026-11-09",
-        "code": 55,
+        "code": 59,
         "other": 1,
         "samples": [
           {
-            "commit": "28cccdb",
-            "subject": "Stop a build's check rounds from stalling silently (#1287)"
+            "commit": "32e7c9b",
+            "subject": "Find app configs under the user profile on Windows, not HOME (R2.2) (#1306)"
           },
           {
-            "commit": "2307e12",
-            "subject": "Keep one OpenCode Go session id per installation (#1293)"
+            "commit": "fbdbedb",
+            "subject": "Look a bare registration command up on PATH in doctor (R2.2) (#1305)"
           },
           {
-            "commit": "30d8842",
-            "subject": "Devin as a coding agent over ACP, authenticated with the backend's key (#562)"
+            "commit": "7eead65",
+            "subject": "Edit a YAML config that starts with a byte-order mark in place (R2.2) (#1304)"
           }
         ]
       }
@@ -2285,8 +2285,36 @@
       "commit": "28cccdb",
       "commit_full": "28cccdb998fe8d748d41e677099d7149dcccdbc0",
       "message": "Stop a build's check rounds from stalling silently (#1287)"
+    },
+    {
+      "ts": "2026-11-09T09:47:23Z",
+      "kind": "content",
+      "commit": "5870bce",
+      "commit_full": "5870bcebed4f5ee897e0ad89dff09dcb5cc29935",
+      "message": "Keep a check that worked while nothing it looks at changes, so an unchanged build isn't built and started again (R2.9) (#1296)"
+    },
+    {
+      "ts": "2026-11-09T10:36:17Z",
+      "kind": "content",
+      "commit": "7eead65",
+      "commit_full": "7eead65cf8ff2b3bf4ebe40f9ff94cfb8d2987fc",
+      "message": "Edit a YAML config that starts with a byte-order mark in place (R2.2) (#1304)"
+    },
+    {
+      "ts": "2026-11-09T10:43:45Z",
+      "kind": "content",
+      "commit": "fbdbedb",
+      "commit_full": "fbdbedbc615050bd2fc3cbb2a49fbe7db96d8609",
+      "message": "Look a bare registration command up on PATH in doctor (R2.2) (#1305)"
+    },
+    {
+      "ts": "2026-11-09T10:43:54Z",
+      "kind": "content",
+      "commit": "32e7c9b",
+      "commit_full": "32e7c9b6d41ddeff7b93fc682e5602de2d109870",
+      "message": "Find app configs under the user profile on Windows, not HOME (R2.2) (#1306)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-09T09:34:57+00:00"
+  "updated_at": "2026-11-09T10:44:07+00:00"
 }
