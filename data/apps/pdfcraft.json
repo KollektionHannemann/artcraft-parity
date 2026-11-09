@@ -499,16 +499,16 @@
     "level": "buzzing",
     "score": 24.6,
     "active_days_7d": 7,
-    "changes_7d": 333,
-    "changes_14d": 405,
+    "changes_7d": 337,
+    "changes_14d": 409,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-11-09T22:09:03Z",
-      "commit": "abb06c7",
-      "commit_full": "abb06c70f8caf6e444378003adc490ac8c9ef7ef",
-      "subject": "M10: the Print dialog remembers two-sided, grayscale, collate, sizing, comments & forms and Print as image (#2001, #6392) (#2103)"
+      "ts": "2026-11-09T23:57:33Z",
+      "commit": "821636f",
+      "commit_full": "821636fbeb49ba5694bbf6695b8df001edc1ab8b",
+      "subject": "Print: each printer keeps its paper, sizing and two-sided choice across restarts (#2001) (#6779)"
     },
-    "last_commit_ts": "2026-11-09T22:09:03Z",
+    "last_commit_ts": "2026-11-09T23:57:33Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       5,
@@ -524,7 +524,7 @@
       9,
       6,
       31,
-      202
+      206
     ],
     "days": [
       {
@@ -1276,20 +1276,20 @@
       },
       {
         "d": "2026-11-09",
-        "code": 202,
+        "code": 206,
         "other": 7,
         "samples": [
           {
-            "commit": "abb06c7",
-            "subject": "M10: the Print dialog remembers two-sided, grayscale, collate, sizing, comments & forms and Print as image (#2001, #6392) (#2103)"
+            "commit": "821636f",
+            "subject": "Print: each printer keeps its paper, sizing and two-sided choice across restarts (#2001) (#6779)"
           },
           {
-            "commit": "a1ea2d3",
-            "subject": "Align stream decode cap with renderer at 256 MiB (#6585)"
+            "commit": "0c0f0b6",
+            "subject": "M10: grayscale with Print as image prints on a driver that keeps no grayscale (#5806) (#5882)"
           },
           {
-            "commit": "ba28458",
-            "subject": "M3: a password prompt keeps a place in the open queue for its retry (#6731)"
+            "commit": "efd7c9f",
+            "subject": "fix(print): fall back to the lpoptions listing when the PPD is unreadable (#4699) (#4703)"
           }
         ]
       }
@@ -6587,5 +6587,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-09T23:06:32+00:00"
+  "updated_at": "2026-11-09T23:58:20+00:00"
 }
