@@ -563,16 +563,16 @@
     "level": "buzzing",
     "score": 33.8,
     "active_days_7d": 7,
-    "changes_7d": 797,
-    "changes_14d": 1375,
+    "changes_7d": 800,
+    "changes_14d": 1378,
     "housekeeping_7d": 36,
     "last_code_change": {
-      "ts": "2026-11-09T16:16:56Z",
-      "commit": "9086ff3",
-      "commit_full": "9086ff3e96f4ec8be86fe6cfe35f7aac740078a5",
-      "subject": "Strip leading byte-order mark in graph CSV parser (#6325)"
+      "ts": "2026-11-09T18:29:17Z",
+      "commit": "9dc4c33",
+      "commit_full": "9dc4c33529bd88c1a9f94b00716f441e42d11d7a",
+      "subject": "PDF export: letters with marks are written once in the text layer (#6330)"
     },
-    "last_commit_ts": "2026-11-09T16:16:56Z",
+    "last_commit_ts": "2026-11-09T18:29:17Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       15,
@@ -588,7 +588,7 @@
       46,
       56,
       199,
-      71
+      74
     ],
     "days": [
       {
@@ -1340,20 +1340,20 @@
       },
       {
         "d": "2026-11-09",
-        "code": 71,
+        "code": 74,
         "other": 4,
         "samples": [
           {
-            "commit": "9086ff3",
-            "subject": "Strip leading byte-order mark in graph CSV parser (#6325)"
+            "commit": "9dc4c33",
+            "subject": "PDF export: letters with marks are written once in the text layer (#6330)"
           },
           {
-            "commit": "09aedd4",
-            "subject": "Fix #6320: EPS import warns about fonts that aren't available (#6326)"
+            "commit": "9cf3a4e",
+            "subject": "EPS import names the missing fonts of the document's type (#6326 follow-up) (#6334)"
           },
           {
-            "commit": "7875114",
-            "subject": "G5: dynamic symbol parts take opacity, blend and non-solid paint (#6308)"
+            "commit": "14d545e",
+            "subject": "G5: built-in UI Frames symbol library with default 9-slice (#6329)"
           }
         ]
       }
@@ -7377,5 +7377,5 @@
       "kind": "estimates"
     }
   ],
-  "updated_at": "2026-11-09T16:27:16+00:00"
+  "updated_at": "2026-11-09T19:22:29+00:00"
 }

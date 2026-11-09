@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "2174cac",
-  "latest_commit_date": "2026-11-10T00:27:22+07:00",
-  "latest_message": "Reject GNU tar long-name records that end before their padding (#1402)",
+  "latest_commit": "e09888e",
+  "latest_commit_date": "2026-11-10T02:06:22+07:00",
+  "latest_message": "Sweep leftover agent sessions when the desktop app starts (R2.2) (#1422)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 360,
-    "revisions_7d": 307,
+    "revisions": 366,
+    "revisions_7d": 313,
     "last_revision": {
-      "ts": "2026-11-09T17:27:22Z",
+      "ts": "2026-11-09T19:06:22Z",
       "kind": "content",
-      "commit": "2174cac",
-      "commit_full": "2174cac80b3616524f2062fbaa6c37d40aea34e8",
-      "message": "Reject GNU tar long-name records that end before their padding (#1402)"
+      "commit": "e09888e",
+      "commit_full": "e09888e14641d71eca7951ac6248fa207b16881a",
+      "message": "Sweep leftover agent sessions when the desktop app starts (R2.2) (#1422)"
     },
     "last_update": {
-      "ts": "2026-11-09T17:27:22Z",
+      "ts": "2026-11-09T19:06:22Z",
       "kind": "content",
-      "commit": "2174cac",
-      "commit_full": "2174cac80b3616524f2062fbaa6c37d40aea34e8",
-      "message": "Reject GNU tar long-name records that end before their padding (#1402)"
+      "commit": "e09888e",
+      "commit_full": "e09888e14641d71eca7951ac6248fa207b16881a",
+      "message": "Sweep leftover agent sessions when the desktop app starts (R2.2) (#1422)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 26.1,
+    "score": 26.2,
     "active_days_7d": 7,
-    "changes_7d": 414,
-    "changes_14d": 607,
-    "housekeeping_7d": 32,
+    "changes_7d": 422,
+    "changes_14d": 615,
+    "housekeeping_7d": 38,
     "last_code_change": {
-      "ts": "2026-11-09T17:27:22Z",
-      "commit": "2174cac",
-      "commit_full": "2174cac80b3616524f2062fbaa6c37d40aea34e8",
-      "subject": "Reject GNU tar long-name records that end before their padding (#1402)"
+      "ts": "2026-11-09T19:06:22Z",
+      "commit": "e09888e",
+      "commit_full": "e09888e14641d71eca7951ac6248fa207b16881a",
+      "subject": "Sweep leftover agent sessions when the desktop app starts (R2.2) (#1422)"
     },
-    "last_commit_ts": "2026-11-09T17:27:22Z",
+    "last_commit_ts": "2026-11-09T19:06:22Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       64,
       34,
       37,
-      141
+      149
     ],
     "days": [
       {
@@ -261,20 +261,20 @@
       },
       {
         "d": "2026-11-09",
-        "code": 141,
-        "other": 2,
+        "code": 149,
+        "other": 8,
         "samples": [
           {
-            "commit": "2174cac",
-            "subject": "Reject GNU tar long-name records that end before their padding (#1402)"
+            "commit": "e09888e",
+            "subject": "Sweep leftover agent sessions when the desktop app starts (R2.2) (#1422)"
           },
           {
-            "commit": "a80cc82",
-            "subject": "Reject ASAR manifest nodes with invalid file metadata (#1364)"
+            "commit": "133e29d",
+            "subject": "Find bundled Codex on macOS and check an agent's sign-in (R2.2) (#1414)"
           },
           {
-            "commit": "69e7f57",
-            "subject": "Refuse incomplete tar engine installs after GNU metadata stops (#1394)"
+            "commit": "cf2a8ad",
+            "subject": "Study again when a build's kept conversation is from the other mode (R2.9) (#1418)"
           }
         ]
       }
@@ -2904,8 +2904,50 @@
       "commit": "2174cac",
       "commit_full": "2174cac80b3616524f2062fbaa6c37d40aea34e8",
       "message": "Reject GNU tar long-name records that end before their padding (#1402)"
+    },
+    {
+      "ts": "2026-11-09T17:32:59Z",
+      "kind": "content",
+      "commit": "d52d1a0",
+      "commit_full": "d52d1a0531d302262301f6b8066059a3a366eb88",
+      "message": "Count a Claude Code question's own cost (R2.9) (#1404)"
+    },
+    {
+      "ts": "2026-11-09T17:36:19Z",
+      "kind": "content",
+      "commit": "1b4352c",
+      "commit_full": "1b4352cb0c3ffafcc406ae53b61a1823bbdc9152",
+      "message": "Remember a Deep-mode decompile across requests, so the builder isn't told it hasn't decompiled after each one (R2.9) (#1403)"
+    },
+    {
+      "ts": "2026-11-09T18:17:07Z",
+      "kind": "content",
+      "commit": "eb03911",
+      "commit_full": "eb03911dbb6ec51f17cc92dd5567f5e7a02f85b9",
+      "message": "Tell a builder's check that is still going from no build running, and wait past the run's own limit (R2.9) (#1417)"
+    },
+    {
+      "ts": "2026-11-09T18:28:05Z",
+      "kind": "content",
+      "commit": "cf2a8ad",
+      "commit_full": "cf2a8ad0b04345b661c7d944e79b72ed36df132e",
+      "message": "Study again when a build's kept conversation is from the other mode (R2.9) (#1418)"
+    },
+    {
+      "ts": "2026-11-09T18:28:29Z",
+      "kind": "content",
+      "commit": "133e29d",
+      "commit_full": "133e29d6194baa907efdf44285e169c87eef89f9",
+      "message": "Find bundled Codex on macOS and check an agent's sign-in (R2.2) (#1414)"
+    },
+    {
+      "ts": "2026-11-09T19:06:22Z",
+      "kind": "content",
+      "commit": "e09888e",
+      "commit_full": "e09888e14641d71eca7951ac6248fa207b16881a",
+      "message": "Sweep leftover agent sessions when the desktop app starts (R2.2) (#1422)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-09T17:28:06+00:00"
+  "updated_at": "2026-11-09T19:23:29+00:00"
 }

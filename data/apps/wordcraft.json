@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "05f781c",
-  "latest_commit_date": "2026-11-09T16:35:36+01:00",
-  "latest_message": "ODT: columns stating only their shares keep their proportions (gap 19) (#5722)",
+  "latest_commit": "d40d1b2",
+  "latest_commit_date": "2026-11-09T20:16:05+01:00",
+  "latest_message": "CLI: --strict on convert and render refuses missing glyphs and pictures (#6039)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -330,6 +330,10 @@
     "progress": [
       {
         "date": "2026-11-08",
+        "text": "wordcraft-cli convert --strict (#6005) and render --strict (#6008): a PDF or PNG export (render: the page it writes) refuses, exit 3 and nothing written, when it would draw a character no font has or leave out a picture (missing part, external target, link only, undecodable or unsupported format); the report is on stderr with one JSON line. Engine: strict: true on file.save, file.saveAs, file.exportPdf and file.exportPng, and the pure file.strictReport. External picture targets are never fetched. The result depends on the host's installed fonts (#5624); readiness estimates unchanged."
+      },
+      {
+        "date": "2026-11-08",
         "text": "Layout: a turned inline picture whose file keeps no room for the turn (no or a zero wp:effectExtent, as other tools write) keeps its line to its frame and overhangs it, cut at the line's top and bottom, as Word does: the frame as it is in Word 2007 layout, with width and height exchanged from 45° to 135° and 225° to 315° in Word 2013+ layout. Such a file saves the same way. Pictures with the room recorded (Word's own files) still take their rotated bounds. Readiness unchanged."
       },
       {
@@ -483,10 +487,6 @@
       {
         "date": "2026-11-04",
         "text": "MHT import keeps semicolons and escaped quotes inside quoted MIME parameters, so an unrelated parameter cannot supply a false multipart boundary and hide the document text. Readiness estimates unchanged."
-      },
-      {
-        "date": "2026-11-04",
-        "text": "RTF import skips the declared Unicode fallback count even when it exceeds eight fallback units, so longer ANSI alternatives do not leak into the document text. Skipping stays bounded by the available input and ends at a group boundary. Readiness estimates unchanged."
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 585,
+    "revisions_since": 586,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 589,
-    "revisions_7d": 129,
+    "revisions": 590,
+    "revisions_7d": 130,
     "last_revision": {
-      "ts": "2026-11-09T15:35:36Z",
+      "ts": "2026-11-09T19:16:05Z",
       "kind": "content",
-      "commit": "05f781c",
-      "commit_full": "05f781cfdac1d89034c0f4f5824b597ff845f2ef",
-      "message": "ODT: columns stating only their shares keep their proportions (gap 19) (#5722)"
+      "commit": "d40d1b2",
+      "commit_full": "d40d1b27181b61990c84c75f77d5fd23ef81d452",
+      "message": "CLI: --strict on convert and render refuses missing glyphs and pictures (#6039)"
     },
     "last_update": {
-      "ts": "2026-11-09T15:35:36Z",
+      "ts": "2026-11-09T19:16:05Z",
       "kind": "content",
-      "commit": "05f781c",
-      "commit_full": "05f781cfdac1d89034c0f4f5824b597ff845f2ef",
-      "message": "ODT: columns stating only their shares keep their proportions (gap 19) (#5722)"
+      "commit": "d40d1b2",
+      "commit_full": "d40d1b27181b61990c84c75f77d5fd23ef81d452",
+      "message": "CLI: --strict on convert and render refuses missing glyphs and pictures (#6039)"
     },
     "self_reported": "2026-11-08"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.3,
+    "score": 22.4,
     "active_days_7d": 7,
-    "changes_7d": 219,
-    "changes_14d": 320,
+    "changes_7d": 220,
+    "changes_14d": 321,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-09T15:35:36Z",
-      "commit": "05f781c",
-      "commit_full": "05f781cfdac1d89034c0f4f5824b597ff845f2ef",
-      "subject": "ODT: columns stating only their shares keep their proportions (gap 19) (#5722)"
+      "ts": "2026-11-09T19:16:05Z",
+      "commit": "d40d1b2",
+      "commit_full": "d40d1b27181b61990c84c75f77d5fd23ef81d452",
+      "subject": "CLI: --strict on convert and render refuses missing glyphs and pictures (#6039)"
     },
-    "last_commit_ts": "2026-11-09T15:35:36Z",
+    "last_commit_ts": "2026-11-09T19:16:05Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       7,
@@ -568,7 +568,7 @@
       20,
       3,
       90,
-      12
+      13
     ],
     "days": [
       {
@@ -1162,9 +1162,13 @@
       },
       {
         "d": "2026-11-09",
-        "code": 12,
+        "code": 13,
         "other": 1,
         "samples": [
+          {
+            "commit": "d40d1b2",
+            "subject": "CLI: --strict on convert and render refuses missing glyphs and pictures (#6039)"
+          },
           {
             "commit": "05f781c",
             "subject": "ODT: columns stating only their shares keep their proportions (gap 19) (#5722)"
@@ -1172,10 +1176,6 @@
           {
             "commit": "8a97427",
             "subject": "ODT: a font size reaches every script's text (gap 19) (#5728)"
-          },
-          {
-            "commit": "92eac2a",
-            "subject": "ODT: text can turn off what its style turns on (gap 19) (#5724)"
           }
         ]
       }
@@ -14953,7 +14953,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "d40d1b2",
+      "commit_full": "d40d1b27181b61990c84c75f77d5fd23ef81d452",
+      "commit_date": "2026-11-09T20:16:05+01:00",
+      "ts": "2026-11-09T19:16:05Z",
+      "message": "CLI: --strict on convert and render refuses missing glyphs and pictures (#6039)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-09T16:27:37+00:00"
+  "updated_at": "2026-11-09T19:23:06+00:00"
 }
