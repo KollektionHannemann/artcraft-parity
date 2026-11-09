@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "ccbfa6d",
-  "latest_commit_date": "2026-11-09T08:40:07+08:00",
-  "latest_message": "M14: localization parity counts every catalog with the i18n report (#5805) (#5894)",
+  "latest_commit": "b8c8616",
+  "latest_commit_date": "2026-11-09T10:13:38+08:00",
+  "latest_message": "M14: the Windows installer lets the user choose the install folder (#1139) (#2480)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 123,
+    "revisions_since": 124,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 211,
-    "revisions_7d": 28,
+    "revisions": 212,
+    "revisions_7d": 29,
     "last_revision": {
-      "ts": "2026-11-09T00:40:07Z",
+      "ts": "2026-11-09T02:13:38Z",
       "kind": "content",
-      "commit": "ccbfa6d",
-      "commit_full": "ccbfa6d24a9e450066dad5192e2f4404bec778d3",
-      "message": "M14: localization parity counts every catalog with the i18n report (#5805) (#5894)"
+      "commit": "b8c8616",
+      "commit_full": "b8c8616d057ac4d55f5e88fb26e5c26618b22d72",
+      "message": "M14: the Windows installer lets the user choose the install folder (#1139) (#2480)"
     },
     "last_update": {
-      "ts": "2026-11-09T00:40:07Z",
+      "ts": "2026-11-09T02:13:38Z",
       "kind": "content",
-      "commit": "ccbfa6d",
-      "commit_full": "ccbfa6d24a9e450066dad5192e2f4404bec778d3",
-      "message": "M14: localization parity counts every catalog with the i18n report (#5805) (#5894)"
+      "commit": "b8c8616",
+      "commit_full": "b8c8616d057ac4d55f5e88fb26e5c26618b22d72",
+      "message": "M14: the Windows installer lets the user choose the install folder (#1139) (#2480)"
     },
     "self_reported": "2026-11-08"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 23.0,
+    "score": 23.6,
     "active_days_7d": 7,
-    "changes_7d": 199,
-    "changes_14d": 271,
+    "changes_7d": 236,
+    "changes_14d": 308,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-11-09T01:43:17Z",
-      "commit": "bfed7bb",
-      "commit_full": "bfed7bbabe963cdec035e303cc1b9826991363ba",
-      "subject": "Fix main's build after the latest merges (#6660)"
+      "ts": "2026-11-09T02:14:43Z",
+      "commit": "28093ed",
+      "commit_full": "28093ed4cfea728e5fb9c712a92dbb45db874f3e",
+      "subject": "UI: a panic in a frame no longer closes the app and its tabs (#3914) (#4201)"
     },
-    "last_commit_ts": "2026-11-09T01:43:17Z",
+    "last_commit_ts": "2026-11-09T02:14:43Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       5,
@@ -524,7 +524,7 @@
       9,
       6,
       31,
-      68
+      105
     ],
     "days": [
       {
@@ -1276,20 +1276,20 @@
       },
       {
         "d": "2026-11-09",
-        "code": 68,
+        "code": 105,
         "other": 6,
         "samples": [
           {
-            "commit": "bfed7bb",
-            "subject": "Fix main's build after the latest merges (#6660)"
+            "commit": "28093ed",
+            "subject": "UI: a panic in a frame no longer closes the app and its tabs (#3914) (#4201)"
           },
           {
-            "commit": "d65ae42",
-            "subject": "M6: a calculate script that sets its own field through the field object keeps that value (form.custom-scripts) (#6616)"
+            "commit": "fdfdf6e",
+            "subject": "Attachments: a saved attachment keeps the PDF's Mark-of-the-Web on Windows (#3990) (#4091)"
           },
           {
-            "commit": "87bc00a",
-            "subject": "M3: Find matches words divided by soft hyphens, zero width characters or a Chinese or Japanese line end (view.find) (#6595)"
+            "commit": "9792328",
+            "subject": "fix(edit): preserve annotation optional-content membership in marked content (#3213) (#3275)"
           }
         ]
       }
@@ -6355,7 +6355,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "b8c8616",
+      "commit_full": "b8c8616d057ac4d55f5e88fb26e5c26618b22d72",
+      "commit_date": "2026-11-09T10:13:38+08:00",
+      "ts": "2026-11-09T02:13:38Z",
+      "message": "M14: the Windows installer lets the user choose the install folder (#1139) (#2480)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-09T01:55:56+00:00"
+  "updated_at": "2026-11-09T02:41:07+00:00"
 }
