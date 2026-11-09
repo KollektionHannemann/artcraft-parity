@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "c813f6b",
-  "latest_commit_date": "2026-11-10T03:30:50+07:00",
-  "latest_message": "Stop waiting on a builder's process once its stream says it's done (#1426)",
+  "latest_commit": "2e7f276",
+  "latest_commit_date": "2026-11-10T04:56:56+07:00",
+  "latest_message": "Prefer the model a server has loaded when adding it by address without one (R5.4) (#1435)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,21 +45,21 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 369,
-    "revisions_7d": 316,
+    "revisions": 371,
+    "revisions_7d": 318,
     "last_revision": {
-      "ts": "2026-11-09T20:30:50Z",
+      "ts": "2026-11-09T21:56:56Z",
       "kind": "content",
-      "commit": "c813f6b",
-      "commit_full": "c813f6bec57d6ce2d2d4ee6efd482caaffc2e6c4",
-      "message": "Stop waiting on a builder's process once its stream says it's done (#1426)"
+      "commit": "2e7f276",
+      "commit_full": "2e7f27631be78d499ca61d29f5cdee701e71b54f",
+      "message": "Prefer the model a server has loaded when adding it by address without one (R5.4) (#1435)"
     },
     "last_update": {
-      "ts": "2026-11-09T20:30:50Z",
+      "ts": "2026-11-09T21:56:56Z",
       "kind": "content",
-      "commit": "c813f6b",
-      "commit_full": "c813f6bec57d6ce2d2d4ee6efd482caaffc2e6c4",
-      "message": "Stop waiting on a builder's process once its stream says it's done (#1426)"
+      "commit": "2e7f276",
+      "commit_full": "2e7f27631be78d499ca61d29f5cdee701e71b54f",
+      "message": "Prefer the model a server has loaded when adding it by address without one (R5.4) (#1435)"
     },
     "self_reported": null
   },
@@ -68,16 +68,16 @@
     "level": "buzzing",
     "score": 26.2,
     "active_days_7d": 7,
-    "changes_7d": 427,
-    "changes_14d": 620,
+    "changes_7d": 429,
+    "changes_14d": 622,
     "housekeeping_7d": 38,
     "last_code_change": {
-      "ts": "2026-11-09T21:14:28Z",
-      "commit": "bfdddb4",
-      "commit_full": "bfdddb4715203bb2c9a2d44850a6094aa8792103",
-      "subject": "Start the tool server on an SSH host by absolute path (#1431)"
+      "ts": "2026-11-09T21:56:56Z",
+      "commit": "2e7f276",
+      "commit_full": "2e7f27631be78d499ca61d29f5cdee701e71b54f",
+      "subject": "Prefer the model a server has loaded when adding it by address without one (R5.4) (#1435)"
     },
-    "last_commit_ts": "2026-11-09T21:14:28Z",
+    "last_commit_ts": "2026-11-09T21:56:56Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       64,
       34,
       37,
-      154
+      156
     ],
     "days": [
       {
@@ -261,20 +261,20 @@
       },
       {
         "d": "2026-11-09",
-        "code": 154,
+        "code": 156,
         "other": 8,
         "samples": [
           {
+            "commit": "2e7f276",
+            "subject": "Prefer the model a server has loaded when adding it by address without one (R5.4) (#1435)"
+          },
+          {
+            "commit": "1c7c462",
+            "subject": "Show a server connecting and give it a minute when adding it by address (R5.4) (#1430)"
+          },
+          {
             "commit": "bfdddb4",
             "subject": "Start the tool server on an SSH host by absolute path (#1431)"
-          },
-          {
-            "commit": "10ac170",
-            "subject": "Fail a Gemini turn whose result event itself reports an error (#1427)"
-          },
-          {
-            "commit": "c813f6b",
-            "subject": "Stop waiting on a builder's process once its stream says it's done (#1426)"
           }
         ]
       }
@@ -2967,8 +2967,22 @@
       "commit": "c813f6b",
       "commit_full": "c813f6bec57d6ce2d2d4ee6efd482caaffc2e6c4",
       "message": "Stop waiting on a builder's process once its stream says it's done (#1426)"
+    },
+    {
+      "ts": "2026-11-09T21:44:31Z",
+      "kind": "content",
+      "commit": "1c7c462",
+      "commit_full": "1c7c462f5b1e3d9d554fd92837cdac0ac60acc8b",
+      "message": "Show a server connecting and give it a minute when adding it by address (R5.4) (#1430)"
+    },
+    {
+      "ts": "2026-11-09T21:56:56Z",
+      "kind": "content",
+      "commit": "2e7f276",
+      "commit_full": "2e7f27631be78d499ca61d29f5cdee701e71b54f",
+      "message": "Prefer the model a server has loaded when adding it by address without one (R5.4) (#1435)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-09T21:14:49+00:00"
+  "updated_at": "2026-11-09T22:08:26+00:00"
 }
