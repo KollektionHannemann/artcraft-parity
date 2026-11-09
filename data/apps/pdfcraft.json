@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "ba2846c",
-  "latest_commit_date": "2026-11-09T18:33:33+08:00",
-  "latest_message": "M4: a recovered document's first Save asks where instead of writing the sidecar's path (#3923) (#4327)",
+  "latest_commit": "2c30c14",
+  "latest_commit_date": "2026-11-09T21:14:02+07:00",
+  "latest_message": "Land comment groups, appearance defaults, callout parts, pop-ups and stamp lines (#4358, #4365, #4094, #2137, #2345) (#6713)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 130,
+    "revisions_since": 131,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,21 +476,21 @@
     }
   },
   "roadmap": {
-    "revisions": 218,
-    "revisions_7d": 35,
+    "revisions": 219,
+    "revisions_7d": 36,
     "last_revision": {
-      "ts": "2026-11-09T10:33:33Z",
+      "ts": "2026-11-09T14:14:02Z",
       "kind": "content",
-      "commit": "ba2846c",
-      "commit_full": "ba2846cba800926c63a64996f089c3fc4f5255ec",
-      "message": "M4: a recovered document's first Save asks where instead of writing the sidecar's path (#3923) (#4327)"
+      "commit": "2c30c14",
+      "commit_full": "2c30c14e10b28fcdbf1eb0d453392b4274730952",
+      "message": "Land comment groups, appearance defaults, callout parts, pop-ups and stamp lines (#4358, #4365, #4094, #2137, #2345) (#6713)"
     },
     "last_update": {
-      "ts": "2026-11-09T10:33:33Z",
+      "ts": "2026-11-09T14:14:02Z",
       "kind": "content",
-      "commit": "ba2846c",
-      "commit_full": "ba2846cba800926c63a64996f089c3fc4f5255ec",
-      "message": "M4: a recovered document's first Save asks where instead of writing the sidecar's path (#3923) (#4327)"
+      "commit": "2c30c14",
+      "commit_full": "2c30c14e10b28fcdbf1eb0d453392b4274730952",
+      "message": "Land comment groups, appearance defaults, callout parts, pop-ups and stamp lines (#4358, #4365, #4094, #2137, #2345) (#6713)"
     },
     "self_reported": "2026-11-08"
   },
@@ -499,16 +499,16 @@
     "level": "buzzing",
     "score": 24.5,
     "active_days_7d": 7,
-    "changes_7d": 326,
-    "changes_14d": 398,
+    "changes_7d": 329,
+    "changes_14d": 401,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-11-09T11:45:39Z",
-      "commit": "b6cbf9b",
-      "commit_full": "b6cbf9bb300424b8c14f4d2b62f5e7407e8b6805",
-      "subject": "Land forms, links, find and redaction-save fixes (#4496, #4532, #3567, #3773, #4470, #4474, #4497, #5658) (#6710)"
+      "ts": "2026-11-09T15:02:14Z",
+      "commit": "d2139e5",
+      "commit_full": "d2139e58aecc46700a23daf760fac5204ab8414d",
+      "subject": "Land XFA layout, scripting and form fixes (#3589, #4336, #4359, #4517, #4537, #4608, #4662, #4664, #4784, #4791, #5010, #5122, #5124, #5153, #5225, #5368, #5369"
     },
-    "last_commit_ts": "2026-11-09T11:45:39Z",
+    "last_commit_ts": "2026-11-09T15:02:14Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       5,
@@ -524,7 +524,7 @@
       9,
       6,
       31,
-      195
+      198
     ],
     "days": [
       {
@@ -1276,20 +1276,20 @@
       },
       {
         "d": "2026-11-09",
-        "code": 195,
+        "code": 198,
         "other": 7,
         "samples": [
           {
-            "commit": "b6cbf9b",
-            "subject": "Land forms, links, find and redaction-save fixes (#4496, #4532, #3567, #3773, #4470, #4474, #4497, #5658) (#6710)"
+            "commit": "d2139e5",
+            "subject": "Land XFA layout, scripting and form fixes (#3589, #4336, #4359, #4517, #4537, #4608, #4662, #4664, #4784, #4791, #5010, #5122, #5124, #5153, #5225, #5368, #5369"
           },
           {
-            "commit": "6b56de9",
-            "subject": "Land renderer patches, layer auto state, auto-tag artifacts, export clips and print page lookup (#3969, #4393, #4396, #4410, #4433, #4459, #4159, #5075, #5973) "
+            "commit": "fe3879b",
+            "subject": "Windows gate: the owner-rights test allows an elevated run to replace the list, if it then restricts the file (#6729)"
           },
           {
-            "commit": "9f41913",
-            "subject": "xtask: the private temp folder builder is mutable only on Unix (#6712)"
+            "commit": "2c30c14",
+            "subject": "Land comment groups, appearance defaults, callout parts, pop-ups and stamp lines (#4358, #4365, #4094, #2137, #2345) (#6713)"
           }
         ]
       }
@@ -6516,7 +6516,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "2c30c14",
+      "commit_full": "2c30c14e10b28fcdbf1eb0d453392b4274730952",
+      "commit_date": "2026-11-09T21:14:02+07:00",
+      "ts": "2026-11-09T14:14:02Z",
+      "message": "Land comment groups, appearance defaults, callout parts, pop-ups and stamp lines (#4358, #4365, #4094, #2137, #2345) (#6713)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-09T14:03:01+00:00"
+  "updated_at": "2026-11-09T15:18:09+00:00"
 }

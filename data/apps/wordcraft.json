@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "4b0d399",
-  "latest_commit_date": "2026-11-08T18:14:29+01:00",
-  "latest_message": "Pointer zoom stretches page rasters until it stops (#3195)",
+  "latest_commit": "29a5abf",
+  "latest_commit_date": "2026-11-09T16:16:06+01:00",
+  "latest_message": "ODT: custom styles with an outline level keep their name when edited (gap 19) (#5770)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -370,6 +370,10 @@
       },
       {
         "date": "2026-11-06",
+        "text": "An edited ODT paragraph keeps its custom paragraph style when that style has an outline level, or is based on a heading, Title, Quotations or Preformatted Text (gap 19). It was saved under the built-in style instead, such as WordCraft's blue Heading 1, and looked wrong in LibreOffice; a style with an outline level also drew that way in WordCraft. The style's outline level and numbering still work in WordCraft."
+      },
+      {
+        "date": "2026-11-06",
         "text": "Arabic interface: the Home tab's Styles gallery reads from the right, as the rest of the mirrored ribbon does (#5566). Normal is the rightmost tile, the next styles follow leftwards and the scroll arrows and More sit at the gallery's left end; left to right is unchanged. Readiness unchanged."
       },
       {
@@ -399,6 +403,22 @@
       {
         "date": "2026-11-06",
         "text": "Accept All and Reject All no longer restyle the paragraph after an empty one carrying a section break (#5667): a Compare that added a section, then Reject All, left Body in the removed paragraph's Normal style and indents. The empty paragraph now goes whole and its section joins the following one, as deleting the break does."
+      },
+      {
+        "date": "2026-11-05",
+        "text": "ODT pictures keep the size their file gives (gap 19): opening a file shrank ones wider than the text, so a save with no edit to them changed how LibreOffice laid them out."
+      },
+      {
+        "date": "2026-11-05",
+        "text": "ODT frames keep the page they are anchored to (gap 19): written without its number, a frame on page 3 came back on page 1 in LibreOffice after a save."
+      },
+      {
+        "date": "2026-11-05",
+        "text": "ODT documents keep their language (gap 19). It was lost on save after numbering or a new style, and LibreOffice then showed the document in its own default language; a document in another language was also proofed as English."
+      },
+      {
+        "date": "2026-11-05",
+        "text": "ODT table and row backgrounds are kept (gap 19): they were dropped, and gone in LibreOffice after a save."
       },
       {
         "date": "2026-11-05",
@@ -438,6 +458,10 @@
       },
       {
         "date": "2026-11-05",
+        "text": "trivial · Progress log: ODT documents keep their language (gap 19)"
+      },
+      {
+        "date": "2026-11-05",
         "text": "Page Setup's margin, paper-size and document-grid number boxes scroll long text inside the field instead of enlarging the dialog (#5650). Readiness estimates unchanged."
       },
       {
@@ -463,30 +487,6 @@
       {
         "date": "2026-11-04",
         "text": "ODT element audit (gap 19, docs/odt-element-audit.md): every element of the ODF 1.3 schema checked against 365 files and a document of our own for each one no file held that a text document can hold (the presentation:, anim: and db: elements only presentations and databases hold stay unseen); all open and save, and a save without edits keeps them (password, number, time and grid form controls included). Over the 220 files from other applications, 177 round-trip pixel-identical, 201 with the same text and 218 with the same page count (the latest measurement, after the groups and form-control work)."
-      },
-      {
-        "date": "2026-11-04",
-        "text": "ODT checked against 220 files from other applications (Microsoft Office, OpenOffice.org, StarOffice, Calligra, Lotus Symphony; local only): every file LibreOffice opens opens again after a WordCraft save (a manifest entry was missing), 166 round-trip pixel-identical and 194 with the same text at the time (an earlier measurement; the element-audit entry above has the current figures); hidden sections stay hidden and unedited lists are written as read (gap 19)."
-      },
-      {
-        "date": "2026-11-04",
-        "text": "Table Sort refuses malformed and nonexistent explicit columns before reordering rows (#5531). Omitted column 0, valid columns, header/order/language behavior and Undo/Redo are retained. Original Linux CLI/MCP controls and repeated native/DOCX reopens cover the command; native Word and desktop comparison remain untested. Readiness estimates unchanged."
-      },
-      {
-        "date": "2026-11-04",
-        "text": "The CLI opens a non-Unicode input filename even after options such as --page 2 or --format flatopc; text option values still require Unicode; run --file and run --script retain native paths."
-      },
-      {
-        "date": "2026-11-04",
-        "text": "Pictures keep the brightness, contrast and transparency their file gives them (#1711, #1766): a \"Washout\" picture watermark (VML gain/blacklevel) and a washed-out letterhead picture behind the text (a:lum) are drawn faded on screen and in PDF instead of at full colour, with the pixel curve measured on Word's own PDF export; a:alphaModFix transparency too. Saved back as DrawingML (and as VML gain/blacklevel in Word 2003 XML, without the transparency). Picture Format › Corrections, Transparency and Color › Washout replace the file's values (other Color modes leave them alone), and Reset Picture discards them all, as in Word; the PDF embeds the corrected pixels once per picture"
-      },
-      {
-        "date": "2026-11-04",
-        "text": "Quitting over the control channel and MCP bridge is refused while any open document has unsaved changes — a programmatic call never prompts — and {\"force\": true} quits without saving. The Save Changes prompt and the refusal now share one predicate, so they cannot drift apart (#3274)."
-      },
-      {
-        "date": "2026-11-03",
-        "text": "Search types in place: a click on the title bar's Search box, or Alt+Q, takes the typing in that box, with the results under it, as in Word, instead of a second box in a dialog (#5398)."
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 577,
+    "revisions_since": 582,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 581,
-    "revisions_7d": 121,
+    "revisions": 586,
+    "revisions_7d": 126,
     "last_revision": {
-      "ts": "2026-11-08T17:14:29Z",
+      "ts": "2026-11-09T15:16:06Z",
       "kind": "content",
-      "commit": "4b0d399",
-      "commit_full": "4b0d39959968a34e462cb53099e76fb108d0e96f",
-      "message": "Pointer zoom stretches page rasters until it stops (#3195)"
+      "commit": "29a5abf",
+      "commit_full": "29a5abf3e7a43002bf132bb52e21fc230b6374bc",
+      "message": "ODT: custom styles with an outline level keep their name when edited (gap 19) (#5770)"
     },
     "last_update": {
-      "ts": "2026-11-08T17:14:29Z",
+      "ts": "2026-11-09T15:16:06Z",
       "kind": "content",
-      "commit": "4b0d399",
-      "commit_full": "4b0d39959968a34e462cb53099e76fb108d0e96f",
-      "message": "Pointer zoom stretches page rasters until it stops (#3195)"
+      "commit": "29a5abf",
+      "commit_full": "29a5abf3e7a43002bf132bb52e21fc230b6374bc",
+      "message": "ODT: custom styles with an outline level keep their name when edited (gap 19) (#5770)"
     },
     "self_reported": "2026-11-08"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.9,
+    "score": 21.9,
     "active_days_7d": 7,
-    "changes_7d": 211,
-    "changes_14d": 312,
+    "changes_7d": 216,
+    "changes_14d": 317,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-09T10:55:52Z",
-      "commit": "8dc3f0c",
-      "commit_full": "8dc3f0cd5fe2e0dd113f188c9b2ce09f64820724",
-      "subject": "Dialogs: draw real tabs in five more dialogs (#4481)"
+      "ts": "2026-11-09T15:16:06Z",
+      "commit": "29a5abf",
+      "commit_full": "29a5abf3e7a43002bf132bb52e21fc230b6374bc",
+      "subject": "ODT: custom styles with an outline level keep their name when edited (gap 19) (#5770)"
     },
-    "last_commit_ts": "2026-11-09T12:41:02Z",
+    "last_commit_ts": "2026-11-09T15:16:06Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       7,
@@ -568,7 +568,7 @@
       20,
       3,
       90,
-      4
+      9
     ],
     "days": [
       {
@@ -1162,20 +1162,20 @@
       },
       {
         "d": "2026-11-09",
-        "code": 4,
+        "code": 9,
         "other": 1,
         "samples": [
           {
-            "commit": "8dc3f0c",
-            "subject": "Dialogs: draw real tabs in five more dialogs (#4481)"
+            "commit": "29a5abf",
+            "subject": "ODT: custom styles with an outline level keep their name when edited (gap 19) (#5770)"
           },
           {
-            "commit": "f1b1077",
-            "subject": "Search box: the placeholder text is centred vertically (#3779) (#3802)"
+            "commit": "bd9e726",
+            "subject": "ODT: pictures keep the size their file gives (gap 19) (#5721)"
           },
           {
-            "commit": "7b8c0ba",
-            "subject": "Updates: take craft-update from craft-libs main at 1b34eba41 (#6070)"
+            "commit": "15b6086",
+            "subject": "ODT: frames keep the page they are anchored to (gap 19) (#5705)"
           }
         ]
       }
@@ -14769,7 +14769,122 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "d753640",
+      "commit_full": "d75364067de80e2721982f763a0583064fbbcf54",
+      "commit_date": "2026-11-09T15:56:09+01:00",
+      "ts": "2026-11-09T14:56:09Z",
+      "message": "ODT: table and row backgrounds show behind their cells (gap 19) (#5727)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "52fbc7f",
+      "commit_full": "52fbc7f0681d654900577f2152d51988c755b756",
+      "commit_date": "2026-11-09T15:56:59+01:00",
+      "ts": "2026-11-09T14:56:59Z",
+      "message": "ODT: a document keeps its language when styles are rewritten (gap 19) (#5704)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "15b6086",
+      "commit_full": "15b608660ff337bdc3e6b77aa48a31acecd273c6",
+      "commit_date": "2026-11-09T15:57:37+01:00",
+      "ts": "2026-11-09T14:57:37Z",
+      "message": "ODT: frames keep the page they are anchored to (gap 19) (#5705)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "bd9e726",
+      "commit_full": "bd9e726cdaae18f73a29b57324e4833b033fd98f",
+      "commit_date": "2026-11-09T16:15:23+01:00",
+      "ts": "2026-11-09T15:15:23Z",
+      "message": "ODT: pictures keep the size their file gives (gap 19) (#5721)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "29a5abf",
+      "commit_full": "29a5abf3e7a43002bf132bb52e21fc230b6374bc",
+      "commit_date": "2026-11-09T16:16:06+01:00",
+      "ts": "2026-11-09T15:16:06Z",
+      "message": "ODT: custom styles with an outline level keep their name when edited (gap 19) (#5770)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-09T14:03:25+00:00"
+  "updated_at": "2026-11-09T15:18:31+00:00"
 }

@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/gridcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/gridcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "94a8fb0",
-  "latest_commit_date": "2026-11-08T12:08:59+01:00",
-  "latest_message": "Charts: label fitting and legend measuring avoid hundreds of text layouts per render (#1149) (#1152)",
+  "latest_commit": "e9addf5",
+  "latest_commit_date": "2026-11-09T15:55:43+01:00",
+  "latest_message": "Arabic bidi layout and cell reading direction in the grid and editors (#947)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -325,6 +325,14 @@
         "text": "Formulas › Function Library as a big Insert Function button, the AutoSum split button and three columns of labelled small buttons, each category book in its own colour; category menus end with Insert Function… on that category; More Functions cascades into the remaining categories; Home › Editing shares the AutoSum menu; the MR key tip opens Recently Used"
       },
       {
+        "date": "2026-10-26",
+        "text": "Arabic bidi display/editing preserve logical source text; per-cell reading direction is editable and survives undo, XLSX and conditional-format priority"
+      },
+      {
+        "date": "2026-10-26",
+        "text": "Arabic text shows in cells and the interface through a system, fontconfig or craft-fonts Arabic face; workbook fonts keep their script fallbacks"
+      },
+      {
         "date": "2026-10-25",
         "text": "AutoSum over a selection does what Excel does: a selected row gets one total to its right (in its last cell if that is empty), not a one-cell total under each cell; a block whose last column is empty gets each row's total there, one whose last row is empty each column's, and with both the corner gets the total of the block; otherwise totals go under each column as before"
       },
@@ -419,14 +427,6 @@
       {
         "date": "2026-10-16",
         "text": "Memory: undo steps share a sheet's picture bytes and the workbook's VBA project instead of copying them: 50 edits on a sheet with a 20 MB picture keep 22 MB instead of 992 MB"
-      },
-      {
-        "date": "2026-10-16",
-        "text": "Memory: floating pictures are decoded at about the size they are drawn, with limits, into a cache bounded by bytes and dropped with their workbook, instead of at full size into one that never let go; two open workbooks no longer show each other's picture. 12 large pictures scrolled through keep 40 MB of textures instead of 258 MB, and none once the workbook closes"
-      },
-      {
-        "date": "2026-10-16",
-        "text": "The web app keeps its preferences between visits (#1562): theme (dark mode), interface size, language, editing options and the rest of what the desktop app saves in ui.json and prefs.json are kept in the browser's localStorage, written as soon as they change"
       }
     ]
   },
@@ -435,7 +435,7 @@
     "value_since": "2026-10-10T18:09:06Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 91,
+    "revisions_since": 93,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -443,39 +443,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 93,
-    "revisions_7d": 6,
+    "revisions": 95,
+    "revisions_7d": 8,
     "last_revision": {
-      "ts": "2026-11-08T11:08:59Z",
+      "ts": "2026-11-09T14:55:43Z",
       "kind": "content",
-      "commit": "94a8fb0",
-      "commit_full": "94a8fb084ab2e1676d0d3e6c45548dd8c8920e91",
-      "message": "Charts: label fitting and legend measuring avoid hundreds of text layouts per render (#1149) (#1152)"
+      "commit": "e9addf5",
+      "commit_full": "e9addf52fe68847e6c1310fcfa5d42b7aa8b9650",
+      "message": "Arabic bidi layout and cell reading direction in the grid and editors (#947)"
     },
     "last_update": {
-      "ts": "2026-11-08T11:08:59Z",
+      "ts": "2026-11-09T14:55:43Z",
       "kind": "content",
-      "commit": "94a8fb0",
-      "commit_full": "94a8fb084ab2e1676d0d3e6c45548dd8c8920e91",
-      "message": "Charts: label fitting and legend measuring avoid hundreds of text layouts per render (#1149) (#1152)"
+      "commit": "e9addf5",
+      "commit_full": "e9addf52fe68847e6c1310fcfa5d42b7aa8b9650",
+      "message": "Arabic bidi layout and cell reading direction in the grid and editors (#947)"
     },
     "self_reported": "2026-11-02"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.5,
+    "score": 17.7,
     "active_days_7d": 7,
-    "changes_7d": 87,
-    "changes_14d": 186,
+    "changes_7d": 92,
+    "changes_14d": 191,
     "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-09T07:46:53Z",
-      "commit": "7102429",
-      "commit_full": "7102429a9a2fd9f6fba8e06238a1cce5807fb1b0",
-      "subject": "perf(grid): skip hidden row runs and keep sheet geometry and CF statistics between frames (#3580) (#3629)"
+      "ts": "2026-11-09T14:55:43Z",
+      "commit": "e9addf5",
+      "commit_full": "e9addf52fe68847e6c1310fcfa5d42b7aa8b9650",
+      "subject": "Arabic bidi layout and cell reading direction in the grid and editors (#947)"
     },
-    "last_commit_ts": "2026-11-09T07:46:53Z",
+    "last_commit_ts": "2026-11-09T14:55:43Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       5,
@@ -491,7 +491,7 @@
       1,
       10,
       13,
-      3
+      8
     ],
     "days": [
       {
@@ -1051,20 +1051,20 @@
       },
       {
         "d": "2026-11-09",
-        "code": 3,
+        "code": 8,
         "other": 0,
         "samples": [
           {
-            "commit": "7102429",
-            "subject": "perf(grid): skip hidden row runs and keep sheet geometry and CF statistics between frames (#3580) (#3629)"
+            "commit": "e9addf5",
+            "subject": "Arabic bidi layout and cell reading direction in the grid and editors (#947)"
           },
           {
-            "commit": "76416d4",
-            "subject": "Updates: take craft-update from craft-libs main at 1b34eba41 (#3641)"
+            "commit": "cda767b",
+            "subject": "Arabic font fallback in cells, the formula bar and the web (#931)"
           },
           {
-            "commit": "01033f2",
-            "subject": "Updates: the updater reports installing, ready, installed and failed, and installs at exit (#3621)"
+            "commit": "c35234e",
+            "subject": "Number formats: honour the B1/B2 calendar prefixes (Hijri dates for B2) (#1918)"
           }
         ]
       }
@@ -3416,7 +3416,53 @@
       "breadth_pct": 75.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "cda767b",
+      "commit_full": "cda767b49b1b4fdf691cb4cc4b95bdd40c9262d0",
+      "commit_date": "2026-11-09T15:54:55+01:00",
+      "ts": "2026-11-09T14:54:55Z",
+      "message": "Arabic font fallback in cells, the formula bar and the web (#931)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-02",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "e9addf5",
+      "commit_full": "e9addf52fe68847e6c1310fcfa5d42b7aa8b9650",
+      "commit_date": "2026-11-09T15:55:43+01:00",
+      "ts": "2026-11-09T14:55:43Z",
+      "message": "Arabic bidi layout and cell reading direction in the grid and editors (#947)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-02",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-09T14:03:43+00:00"
+  "updated_at": "2026-11-09T15:18:45+00:00"
 }

@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "1c0e49f",
-  "latest_commit_date": "2026-11-09T21:00:00+07:00",
-  "latest_message": "Let a Deep build through Claude Code start subagents again (R2.2, #1105) (#1351)",
+  "latest_commit": "a561c0d",
+  "latest_commit_date": "2026-11-09T21:53:21+07:00",
+  "latest_message": "Decode Swift enum case symbols (R3.12) (#1359)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 322,
-    "revisions_7d": 269,
+    "revisions": 328,
+    "revisions_7d": 275,
     "last_revision": {
-      "ts": "2026-11-09T14:00:00Z",
+      "ts": "2026-11-09T14:53:21Z",
       "kind": "content",
-      "commit": "1c0e49f",
-      "commit_full": "1c0e49f284f43a851a5b099d5ac9589e12725c60",
-      "message": "Let a Deep build through Claude Code start subagents again (R2.2, #1105) (#1351)"
+      "commit": "a561c0d",
+      "commit_full": "a561c0d3717ae73fece6039f623c345ca89f42bc",
+      "message": "Decode Swift enum case symbols (R3.12) (#1359)"
     },
     "last_update": {
-      "ts": "2026-11-09T14:00:00Z",
+      "ts": "2026-11-09T14:53:21Z",
       "kind": "content",
-      "commit": "1c0e49f",
-      "commit_full": "1c0e49f284f43a851a5b099d5ac9589e12725c60",
-      "message": "Let a Deep build through Claude Code start subagents again (R2.2, #1105) (#1351)"
+      "commit": "a561c0d",
+      "commit_full": "a561c0d3717ae73fece6039f623c345ca89f42bc",
+      "message": "Decode Swift enum case symbols (R3.12) (#1359)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 25.6,
+    "score": 25.7,
     "active_days_7d": 7,
-    "changes_7d": 376,
-    "changes_14d": 569,
-    "housekeeping_7d": 31,
+    "changes_7d": 382,
+    "changes_14d": 575,
+    "housekeeping_7d": 32,
     "last_code_change": {
-      "ts": "2026-11-09T14:00:00Z",
-      "commit": "1c0e49f",
-      "commit_full": "1c0e49f284f43a851a5b099d5ac9589e12725c60",
-      "subject": "Let a Deep build through Claude Code start subagents again (R2.2, #1105) (#1351)"
+      "ts": "2026-11-09T14:53:21Z",
+      "commit": "a561c0d",
+      "commit_full": "a561c0d3717ae73fece6039f623c345ca89f42bc",
+      "subject": "Decode Swift enum case symbols (R3.12) (#1359)"
     },
-    "last_commit_ts": "2026-11-09T14:00:00Z",
+    "last_commit_ts": "2026-11-09T15:10:58Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       64,
       34,
       37,
-      103
+      109
     ],
     "days": [
       {
@@ -261,20 +261,20 @@
       },
       {
         "d": "2026-11-09",
-        "code": 103,
-        "other": 1,
+        "code": 109,
+        "other": 2,
         "samples": [
           {
-            "commit": "1c0e49f",
-            "subject": "Let a Deep build through Claude Code start subagents again (R2.2, #1105) (#1351)"
+            "commit": "a561c0d",
+            "subject": "Decode Swift enum case symbols (R3.12) (#1359)"
           },
           {
-            "commit": "3f4c54b",
-            "subject": "Read the Swift standard type SQ as Equatable (R3.12) (#1350)"
+            "commit": "1391640",
+            "subject": "Keep parentheses around Swift optional function types (R3.12) (#1357)"
           },
           {
-            "commit": "1b5f516",
-            "subject": "Verify Cargo package versions before reporting Rust dependencies (R3.12) (#1329)"
+            "commit": "8fb279e",
+            "subject": "Name Swift allocating initialisers init outside classes (R3.12) (#1356)"
           }
         ]
       }
@@ -2638,8 +2638,50 @@
       "commit": "1c0e49f",
       "commit_full": "1c0e49f284f43a851a5b099d5ac9589e12725c60",
       "message": "Let a Deep build through Claude Code start subagents again (R2.2, #1105) (#1351)"
+    },
+    {
+      "ts": "2026-11-09T14:04:14Z",
+      "kind": "content",
+      "commit": "d9c069a",
+      "commit_full": "d9c069a8bdf1b97dab2e7317cbf5f7e263f94f85",
+      "message": "Decode Swift protocols named in a protocol list (R3.12) (#1353)"
+    },
+    {
+      "ts": "2026-11-09T14:04:20Z",
+      "kind": "content",
+      "commit": "ef9f33f",
+      "commit_full": "ef9f33f99025839bcc95d0a4d4282526d7c9e062",
+      "message": "Read the kind letter of Swift addressors (R3.12) (#1354)"
+    },
+    {
+      "ts": "2026-11-09T14:30:56Z",
+      "kind": "content",
+      "commit": "ee1dbf4",
+      "commit_full": "ee1dbf4d3a292f0f4020412be11487ff571b56b8",
+      "message": "Name the right generic parameter in Swift associated types (R3.12) (#1355)"
+    },
+    {
+      "ts": "2026-11-09T14:31:02Z",
+      "kind": "content",
+      "commit": "8fb279e",
+      "commit_full": "8fb279e499155f8d9120ff770fd585863642df00",
+      "message": "Name Swift allocating initialisers init outside classes (R3.12) (#1356)"
+    },
+    {
+      "ts": "2026-11-09T14:31:09Z",
+      "kind": "content",
+      "commit": "1391640",
+      "commit_full": "13916403c4ba7e908d823e4c6d13f39852449fb1",
+      "message": "Keep parentheses around Swift optional function types (R3.12) (#1357)"
+    },
+    {
+      "ts": "2026-11-09T14:53:21Z",
+      "kind": "content",
+      "commit": "a561c0d",
+      "commit_full": "a561c0d3717ae73fece6039f623c345ca89f42bc",
+      "message": "Decode Swift enum case symbols (R3.12) (#1359)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-09T14:03:56+00:00"
+  "updated_at": "2026-11-09T15:18:55+00:00"
 }
