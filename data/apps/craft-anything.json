@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "32e7c9b",
-  "latest_commit_date": "2026-11-09T18:43:54+08:00",
-  "latest_message": "Find app configs under the user profile on Windows, not HOME (R2.2) (#1306)",
+  "latest_commit": "ff2e872",
+  "latest_commit_date": "2026-11-09T19:40:21+08:00",
+  "latest_message": "Read signed quoted SQLite defaults with SQLite's coercion (R3.12) (#1314)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 278,
-    "revisions_7d": 225,
+    "revisions": 288,
+    "revisions_7d": 235,
     "last_revision": {
-      "ts": "2026-11-09T10:43:54Z",
+      "ts": "2026-11-09T11:40:21Z",
       "kind": "content",
-      "commit": "32e7c9b",
-      "commit_full": "32e7c9b6d41ddeff7b93fc682e5602de2d109870",
-      "message": "Find app configs under the user profile on Windows, not HOME (R2.2) (#1306)"
+      "commit": "ff2e872",
+      "commit_full": "ff2e8720acb8258dae9906ccf2a7029f9d19dc97",
+      "message": "Read signed quoted SQLite defaults with SQLite's coercion (R3.12) (#1314)"
     },
     "last_update": {
-      "ts": "2026-11-09T10:43:54Z",
+      "ts": "2026-11-09T11:40:21Z",
       "kind": "content",
-      "commit": "32e7c9b",
-      "commit_full": "32e7c9b6d41ddeff7b93fc682e5602de2d109870",
-      "message": "Find app configs under the user profile on Windows, not HOME (R2.2) (#1306)"
+      "commit": "ff2e872",
+      "commit_full": "ff2e8720acb8258dae9906ccf2a7029f9d19dc97",
+      "message": "Read signed quoted SQLite defaults with SQLite's coercion (R3.12) (#1314)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 24.8,
+    "score": 25.1,
     "active_days_7d": 7,
-    "changes_7d": 332,
-    "changes_14d": 525,
+    "changes_7d": 342,
+    "changes_14d": 535,
     "housekeeping_7d": 31,
     "last_code_change": {
-      "ts": "2026-11-09T10:43:54Z",
-      "commit": "32e7c9b",
-      "commit_full": "32e7c9b6d41ddeff7b93fc682e5602de2d109870",
-      "subject": "Find app configs under the user profile on Windows, not HOME (R2.2) (#1306)"
+      "ts": "2026-11-09T11:40:21Z",
+      "commit": "ff2e872",
+      "commit_full": "ff2e8720acb8258dae9906ccf2a7029f9d19dc97",
+      "subject": "Read signed quoted SQLite defaults with SQLite's coercion (R3.12) (#1314)"
     },
-    "last_commit_ts": "2026-11-09T10:43:54Z",
+    "last_commit_ts": "2026-11-09T11:40:21Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       64,
       34,
       37,
-      59
+      69
     ],
     "days": [
       {
@@ -261,20 +261,20 @@
       },
       {
         "d": "2026-11-09",
-        "code": 59,
+        "code": 69,
         "other": 1,
         "samples": [
           {
-            "commit": "32e7c9b",
-            "subject": "Find app configs under the user profile on Windows, not HOME (R2.2) (#1306)"
+            "commit": "ff2e872",
+            "subject": "Read signed quoted SQLite defaults with SQLite's coercion (R3.12) (#1314)"
           },
           {
-            "commit": "fbdbedb",
-            "subject": "Look a bare registration command up on PATH in doctor (R2.2) (#1305)"
+            "commit": "a2d6f22",
+            "subject": "Count each Claude Code turn's own cost, not the session's total (#1294)"
           },
           {
-            "commit": "7eead65",
-            "subject": "Edit a YAML config that starts with a byte-order mark in place (R2.2) (#1304)"
+            "commit": "8808230",
+            "subject": "Keep Swift demangler substitutions in step with optionals, associated types and extensions (R3.12) (#1313)"
           }
         ]
       }
@@ -2313,8 +2313,78 @@
       "commit": "32e7c9b",
       "commit_full": "32e7c9b6d41ddeff7b93fc682e5602de2d109870",
       "message": "Find app configs under the user profile on Windows, not HOME (R2.2) (#1306)"
+    },
+    {
+      "ts": "2026-11-09T10:46:52Z",
+      "kind": "content",
+      "commit": "acebfd0",
+      "commit_full": "acebfd04484eb0d13ca595644cf4ea5617b21e88",
+      "message": "Remove a JSONC config's last member without leaving a trailing comma (R3.12) (#1303)"
+    },
+    {
+      "ts": "2026-11-09T10:47:05Z",
+      "kind": "content",
+      "commit": "8858ca3",
+      "commit_full": "8858ca36188dffa6c7d59790a4a382a22d65c92e",
+      "message": "Count .pyc files from Python 3.5.0 to 3.5.2 as releases, not pre-releases (R3.12) (#1310)"
+    },
+    {
+      "ts": "2026-11-09T10:47:41Z",
+      "kind": "content",
+      "commit": "2d9f2cc",
+      "commit_full": "2d9f2ccb7e8a637ddc78bdc6fc2a7ff671952c2a",
+      "message": "Name DriverKit and visionOS simulator Mach-O platforms in the binary view (R3.12) (#1302)"
+    },
+    {
+      "ts": "2026-11-09T10:54:13Z",
+      "kind": "content",
+      "commit": "b919dc7",
+      "commit_full": "b919dc72b8f52af1f4001068b502d1918d3daabb",
+      "message": "Treat a null YAML table as empty when adding our entry (R2.2) (#1307)"
+    },
+    {
+      "ts": "2026-11-09T10:59:26Z",
+      "kind": "content",
+      "commit": "225a5c0",
+      "commit_full": "225a5c06a4ef40ef34a5da58567e3248795c0cef",
+      "message": "Keep a TOML config's Windows line endings when setup edits it (R2.2) (#1308)"
+    },
+    {
+      "ts": "2026-11-09T11:09:18Z",
+      "kind": "content",
+      "commit": "41ed852",
+      "commit_full": "41ed85224512cc98793af646942a19e9767ee9ba",
+      "message": "Name the glyph weight and glyph size asset catalog attributes (R3.12) (#1312)"
+    },
+    {
+      "ts": "2026-11-09T11:09:24Z",
+      "kind": "content",
+      "commit": "465663f",
+      "commit_full": "465663fe65846fcd5f51bc452274c340f5064998",
+      "message": "Read bare, quoted and separated SQLite defaults (R3.12) (#1311)"
+    },
+    {
+      "ts": "2026-11-09T11:15:10Z",
+      "kind": "content",
+      "commit": "8808230",
+      "commit_full": "88082304753fc9f07741f5abc91e6c34664a0a5c",
+      "message": "Keep Swift demangler substitutions in step with optionals, associated types and extensions (R3.12) (#1313)"
+    },
+    {
+      "ts": "2026-11-09T11:33:02Z",
+      "kind": "content",
+      "commit": "a2d6f22",
+      "commit_full": "a2d6f2297554a6273fc3958fa28c55476e9f7a57",
+      "message": "Count each Claude Code turn's own cost, not the session's total (#1294)"
+    },
+    {
+      "ts": "2026-11-09T11:40:21Z",
+      "kind": "content",
+      "commit": "ff2e872",
+      "commit_full": "ff2e8720acb8258dae9906ccf2a7029f9d19dc97",
+      "message": "Read signed quoted SQLite defaults with SQLite's coercion (R3.12) (#1314)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-09T10:44:07+00:00"
+  "updated_at": "2026-11-09T11:43:06+00:00"
 }
