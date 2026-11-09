@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "2c30c14",
-  "latest_commit_date": "2026-11-09T21:14:02+07:00",
-  "latest_message": "Land comment groups, appearance defaults, callout parts, pop-ups and stamp lines (#4358, #4365, #4094, #2137, #2345) (#6713)",
+  "latest_commit": "5aae0c3",
+  "latest_commit_date": "2026-11-09T22:20:37+07:00",
+  "latest_message": "Land print production, viewer, attachment and optimizer changes (#1918, #1998, #2539, #2348, #2701, #3806, #4139, #4378, #4401, #4763, #5259, #5508, #5316, #443",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 131,
+    "revisions_since": 132,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,21 +476,21 @@
     }
   },
   "roadmap": {
-    "revisions": 219,
-    "revisions_7d": 36,
+    "revisions": 220,
+    "revisions_7d": 37,
     "last_revision": {
-      "ts": "2026-11-09T14:14:02Z",
+      "ts": "2026-11-09T15:20:37Z",
       "kind": "content",
-      "commit": "2c30c14",
-      "commit_full": "2c30c14e10b28fcdbf1eb0d453392b4274730952",
-      "message": "Land comment groups, appearance defaults, callout parts, pop-ups and stamp lines (#4358, #4365, #4094, #2137, #2345) (#6713)"
+      "commit": "5aae0c3",
+      "commit_full": "5aae0c3b827b216cadbc2daa7c19da1e82e167fc",
+      "message": "Land print production, viewer, attachment and optimizer changes (#1918, #1998, #2539, #2348, #2701, #3806, #4139, #4378, #4401, #4763, #5259, #5508, #5316, #443"
     },
     "last_update": {
-      "ts": "2026-11-09T14:14:02Z",
+      "ts": "2026-11-09T15:20:37Z",
       "kind": "content",
-      "commit": "2c30c14",
-      "commit_full": "2c30c14e10b28fcdbf1eb0d453392b4274730952",
-      "message": "Land comment groups, appearance defaults, callout parts, pop-ups and stamp lines (#4358, #4365, #4094, #2137, #2345) (#6713)"
+      "commit": "5aae0c3",
+      "commit_full": "5aae0c3b827b216cadbc2daa7c19da1e82e167fc",
+      "message": "Land print production, viewer, attachment and optimizer changes (#1918, #1998, #2539, #2348, #2701, #3806, #4139, #4378, #4401, #4763, #5259, #5508, #5316, #443"
     },
     "self_reported": "2026-11-08"
   },
@@ -499,16 +499,16 @@
     "level": "buzzing",
     "score": 24.5,
     "active_days_7d": 7,
-    "changes_7d": 329,
-    "changes_14d": 401,
+    "changes_7d": 331,
+    "changes_14d": 403,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-11-09T15:02:14Z",
-      "commit": "d2139e5",
-      "commit_full": "d2139e58aecc46700a23daf760fac5204ab8414d",
-      "subject": "Land XFA layout, scripting and form fixes (#3589, #4336, #4359, #4517, #4537, #4608, #4662, #4664, #4784, #4791, #5010, #5122, #5124, #5153, #5225, #5368, #5369"
+      "ts": "2026-11-09T15:21:21Z",
+      "commit": "ba28458",
+      "commit_full": "ba28458ad8bd8d8b5b83c14f643bfa8ce9592f60",
+      "subject": "M3: a password prompt keeps a place in the open queue for its retry (#6731)"
     },
-    "last_commit_ts": "2026-11-09T15:02:14Z",
+    "last_commit_ts": "2026-11-09T15:21:21Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       5,
@@ -524,7 +524,7 @@
       9,
       6,
       31,
-      198
+      200
     ],
     "days": [
       {
@@ -1276,20 +1276,20 @@
       },
       {
         "d": "2026-11-09",
-        "code": 198,
+        "code": 200,
         "other": 7,
         "samples": [
           {
+            "commit": "ba28458",
+            "subject": "M3: a password prompt keeps a place in the open queue for its retry (#6731)"
+          },
+          {
+            "commit": "5aae0c3",
+            "subject": "Land print production, viewer, attachment and optimizer changes (#1918, #1998, #2539, #2348, #2701, #3806, #4139, #4378, #4401, #4763, #5259, #5508, #5316, #443"
+          },
+          {
             "commit": "d2139e5",
             "subject": "Land XFA layout, scripting and form fixes (#3589, #4336, #4359, #4517, #4537, #4608, #4662, #4664, #4784, #4791, #5010, #5122, #5124, #5153, #5225, #5368, #5369"
-          },
-          {
-            "commit": "fe3879b",
-            "subject": "Windows gate: the owner-rights test allows an elevated run to replace the list, if it then restricts the file (#6729)"
-          },
-          {
-            "commit": "2c30c14",
-            "subject": "Land comment groups, appearance defaults, callout parts, pop-ups and stamp lines (#4358, #4365, #4094, #2137, #2345) (#6713)"
           }
         ]
       }
@@ -6539,7 +6539,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "5aae0c3",
+      "commit_full": "5aae0c3b827b216cadbc2daa7c19da1e82e167fc",
+      "commit_date": "2026-11-09T22:20:37+07:00",
+      "ts": "2026-11-09T15:20:37Z",
+      "message": "Land print production, viewer, attachment and optimizer changes (#1918, #1998, #2539, #2348, #2701, #3806, #4139, #4378, #4401, #4763, #5259, #5508, #5316, #443",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-09T15:18:09+00:00"
+  "updated_at": "2026-11-09T16:27:26+00:00"
 }

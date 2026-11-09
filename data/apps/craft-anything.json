@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "a561c0d",
-  "latest_commit_date": "2026-11-09T21:53:21+07:00",
-  "latest_message": "Decode Swift enum case symbols (R3.12) (#1359)",
+  "latest_commit": "cdc8a88",
+  "latest_commit_date": "2026-11-09T23:11:29+07:00",
+  "latest_message": "Enforce standalone LZMA budgets before large dictionary growth (#1381)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 328,
-    "revisions_7d": 275,
+    "revisions": 354,
+    "revisions_7d": 301,
     "last_revision": {
-      "ts": "2026-11-09T14:53:21Z",
+      "ts": "2026-11-09T16:11:29Z",
       "kind": "content",
-      "commit": "a561c0d",
-      "commit_full": "a561c0d3717ae73fece6039f623c345ca89f42bc",
-      "message": "Decode Swift enum case symbols (R3.12) (#1359)"
+      "commit": "cdc8a88",
+      "commit_full": "cdc8a880f1e60bce757ebac59e3f7983f084a1f8",
+      "message": "Enforce standalone LZMA budgets before large dictionary growth (#1381)"
     },
     "last_update": {
-      "ts": "2026-11-09T14:53:21Z",
+      "ts": "2026-11-09T16:11:29Z",
       "kind": "content",
-      "commit": "a561c0d",
-      "commit_full": "a561c0d3717ae73fece6039f623c345ca89f42bc",
-      "message": "Decode Swift enum case symbols (R3.12) (#1359)"
+      "commit": "cdc8a88",
+      "commit_full": "cdc8a880f1e60bce757ebac59e3f7983f084a1f8",
+      "message": "Enforce standalone LZMA budgets before large dictionary growth (#1381)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 25.7,
+    "score": 26.0,
     "active_days_7d": 7,
-    "changes_7d": 382,
-    "changes_14d": 575,
+    "changes_7d": 408,
+    "changes_14d": 601,
     "housekeeping_7d": 32,
     "last_code_change": {
-      "ts": "2026-11-09T14:53:21Z",
-      "commit": "a561c0d",
-      "commit_full": "a561c0d3717ae73fece6039f623c345ca89f42bc",
-      "subject": "Decode Swift enum case symbols (R3.12) (#1359)"
+      "ts": "2026-11-09T16:11:29Z",
+      "commit": "cdc8a88",
+      "commit_full": "cdc8a880f1e60bce757ebac59e3f7983f084a1f8",
+      "subject": "Enforce standalone LZMA budgets before large dictionary growth (#1381)"
     },
-    "last_commit_ts": "2026-11-09T15:10:58Z",
+    "last_commit_ts": "2026-11-09T16:11:29Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       64,
       34,
       37,
-      109
+      135
     ],
     "days": [
       {
@@ -261,20 +261,20 @@
       },
       {
         "d": "2026-11-09",
-        "code": 109,
+        "code": 135,
         "other": 2,
         "samples": [
           {
-            "commit": "a561c0d",
-            "subject": "Decode Swift enum case symbols (R3.12) (#1359)"
+            "commit": "cdc8a88",
+            "subject": "Enforce standalone LZMA budgets before large dictionary growth (#1381)"
           },
           {
-            "commit": "1391640",
-            "subject": "Keep parentheses around Swift optional function types (R3.12) (#1357)"
+            "commit": "f2392fe",
+            "subject": "Extract ZIP entries compressed with bzip2 or XZ (#1374)"
           },
           {
-            "commit": "8fb279e",
-            "subject": "Name Swift allocating initialisers init outside classes (R3.12) (#1356)"
+            "commit": "a9f7cf1",
+            "subject": "Read complete gzip packed members and verify their trailers (#1372)"
           }
         ]
       }
@@ -2680,8 +2680,190 @@
       "commit": "a561c0d",
       "commit_full": "a561c0d3717ae73fece6039f623c345ca89f42bc",
       "message": "Decode Swift enum case symbols (R3.12) (#1359)"
+    },
+    {
+      "ts": "2026-11-09T15:26:54Z",
+      "kind": "content",
+      "commit": "87d9ec0",
+      "commit_full": "87d9ec0e5fbdb3f22e7d707a909ef750348238a5",
+      "message": "Preserve GNU tar member identities at the long-name limit (#1362)"
+    },
+    {
+      "ts": "2026-11-09T15:31:13Z",
+      "kind": "content",
+      "commit": "0cb327f",
+      "commit_full": "0cb327f9c9059f5cde451a95be7810773087f5c0",
+      "message": "Keep ELF symbol versions inside their declared sections (R3.12) (#1368)"
+    },
+    {
+      "ts": "2026-11-09T15:31:20Z",
+      "kind": "content",
+      "commit": "5b1bf92",
+      "commit_full": "5b1bf92ba35846958a28638f44d2fc83ad8032d8",
+      "message": "Reject PE virtual addresses that wrap past the address space (R3.12) (#1370)"
+    },
+    {
+      "ts": "2026-11-09T15:34:26Z",
+      "kind": "content",
+      "commit": "ee73141",
+      "commit_full": "ee73141313d66905e6e715e70f592b1f00fbc8ed",
+      "message": "Bound retained metadata when listing Node SEA programs (R3.12) (#1377)"
+    },
+    {
+      "ts": "2026-11-09T15:34:33Z",
+      "kind": "content",
+      "commit": "2474de3",
+      "commit_full": "2474de39fe3f5e503433beba39f61e70bd018bf5",
+      "message": "Decode Unity R16 and RG16 textures (R3.9) (#1378)"
+    },
+    {
+      "ts": "2026-11-09T15:34:46Z",
+      "kind": "content",
+      "commit": "78af11c",
+      "commit_full": "78af11ce4dc62cbc0430d4f725c5caebb93e3fb0",
+      "message": "Keep same-named imports attached to their own library slots (R3.12) (#1365)"
+    },
+    {
+      "ts": "2026-11-09T15:34:53Z",
+      "kind": "content",
+      "commit": "7779fc2",
+      "commit_full": "7779fc244928f0f695ecdeb55df0b1e19bbf331e",
+      "message": "Advance ELF core mapping paths by their original bytes (R3.12) (#1366)"
+    },
+    {
+      "ts": "2026-11-09T15:35:00Z",
+      "kind": "content",
+      "commit": "a5ea19c",
+      "commit_full": "a5ea19cf10ef6d04d209f1a372e1a1c3a3bc93eb",
+      "message": "Recover dynamic symbols when retained ELF sections omit the symbol table (R3.12) (#1367)"
+    },
+    {
+      "ts": "2026-11-09T15:40:03Z",
+      "kind": "content",
+      "commit": "131cac4",
+      "commit_full": "131cac4f56dfe07700100388b4360f37b29bd841",
+      "message": "Respect the UTF-8 output budget for IL2CPP literals (R3.12) (#1380)"
+    },
+    {
+      "ts": "2026-11-09T15:41:29Z",
+      "kind": "content",
+      "commit": "25f4db2",
+      "commit_full": "25f4db213ec721b0687602b18ed0506609050ad0",
+      "message": "Apply PE export limits to aliases and empty function slots (R3.12) (#1384)"
+    },
+    {
+      "ts": "2026-11-09T15:41:35Z",
+      "kind": "content",
+      "commit": "fbdc304",
+      "commit_full": "fbdc3049dbc5cb5c436bd12b3b38d19b1228a90f",
+      "message": "Read Mach-O thread entry points from the matching complete CPU state (R3.12) (#1385)"
+    },
+    {
+      "ts": "2026-11-09T15:41:42Z",
+      "kind": "content",
+      "commit": "efddbde",
+      "commit_full": "efddbdeb6868f10a3d8d53f114d47aed72b89612",
+      "message": "Bound Mach-O indirect import slots across all sections (R3.12) (#1386)"
+    },
+    {
+      "ts": "2026-11-09T15:51:21Z",
+      "kind": "content",
+      "commit": "c7606c4",
+      "commit_full": "c7606c45518a2a89b33ce94b887820ee6d69fda5",
+      "message": "Stop a private browser and delete its profile when the app ends without closing it (R2.9, #810) (#1376)"
+    },
+    {
+      "ts": "2026-11-09T15:51:28Z",
+      "kind": "content",
+      "commit": "34d9450",
+      "commit_full": "34d9450b75f402217a7243c04d6c5ed3d2d3f8d4",
+      "message": "Preserve DEX boundaries when member or handler lists are capped (R3.12) (#1388)"
+    },
+    {
+      "ts": "2026-11-09T15:51:34Z",
+      "kind": "content",
+      "commit": "98c8a0c",
+      "commit_full": "98c8a0ceaec575dc8306096c43d7edcafab5af87",
+      "message": "Keep Android resource children inside their parent chunks (R3.12) (#1389)"
+    },
+    {
+      "ts": "2026-11-09T15:51:41Z",
+      "kind": "content",
+      "commit": "37ec555",
+      "commit_full": "37ec5557f07eff39050b0bd448a4a52d155d130e",
+      "message": "Bound WebAssembly metadata across repeated custom sections (R3.12) (#1390)"
+    },
+    {
+      "ts": "2026-11-09T15:51:49Z",
+      "kind": "content",
+      "commit": "9d7217e",
+      "commit_full": "9d7217e437e8eb5963d467854fd539b008c549e9",
+      "message": "Validate Unity serialized metadata ranges before reading (R3.12) (#1391)"
+    },
+    {
+      "ts": "2026-11-09T15:51:55Z",
+      "kind": "content",
+      "commit": "7073462",
+      "commit_full": "7073462fcca6088989f9127f3473b95471a758b1",
+      "message": "Decode Unreal floating-point texture formats (R3.9) (#1392)"
+    },
+    {
+      "ts": "2026-11-09T15:54:35Z",
+      "kind": "content",
+      "commit": "1c4f233",
+      "commit_full": "1c4f233f08caf2c54391d611d2f5781229d89ee6",
+      "message": "Reject Java constants that exceed the constant-pool slots (R3.12) (#1373)"
+    },
+    {
+      "ts": "2026-11-09T15:55:43Z",
+      "kind": "content",
+      "commit": "4824e31",
+      "commit_full": "4824e31d5f9fb8864eff32d468cd58a5eef91eaa",
+      "message": "Keep embedded Godot pack reads before the trailer (R3.12) (#1379)"
+    },
+    {
+      "ts": "2026-11-09T16:05:42Z",
+      "kind": "content",
+      "commit": "f7b985c",
+      "commit_full": "f7b985cd3f6eaddca030aa7a4124024edffef99a",
+      "message": "Reject Objective-C method records shorter than their declared layout (R3.12) (#1387)"
+    },
+    {
+      "ts": "2026-11-09T16:09:00Z",
+      "kind": "content",
+      "commit": "f19f304",
+      "commit_full": "f19f304482af2753bc4f9c2eff03440e0a571a30",
+      "message": "Keep PyInstaller CArchive members inside the payload (#1363)"
+    },
+    {
+      "ts": "2026-11-09T16:09:07Z",
+      "kind": "content",
+      "commit": "a1c93f1",
+      "commit_full": "a1c93f15b79d8679a5ea9c06a9afff6c6fae356a",
+      "message": "Validate gzip header checksums without rejecting informational fields (#1371)"
+    },
+    {
+      "ts": "2026-11-09T16:11:16Z",
+      "kind": "content",
+      "commit": "a9f7cf1",
+      "commit_full": "a9f7cf1fa5d5fdeae1ff787d2cc88ab72ee492a6",
+      "message": "Read complete gzip packed members and verify their trailers (#1372)"
+    },
+    {
+      "ts": "2026-11-09T16:11:22Z",
+      "kind": "content",
+      "commit": "f2392fe",
+      "commit_full": "f2392fe9c7fc353451ca35a8182b335ae615673b",
+      "message": "Extract ZIP entries compressed with bzip2 or XZ (#1374)"
+    },
+    {
+      "ts": "2026-11-09T16:11:29Z",
+      "kind": "content",
+      "commit": "cdc8a88",
+      "commit_full": "cdc8a880f1e60bce757ebac59e3f7983f084a1f8",
+      "message": "Enforce standalone LZMA budgets before large dictionary growth (#1381)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-09T15:18:55+00:00"
+  "updated_at": "2026-11-09T16:27:49+00:00"
 }

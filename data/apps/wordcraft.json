@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "29a5abf",
-  "latest_commit_date": "2026-11-09T16:16:06+01:00",
-  "latest_message": "ODT: custom styles with an outline level keep their name when edited (gap 19) (#5770)",
+  "latest_commit": "05f781c",
+  "latest_commit_date": "2026-11-09T16:35:36+01:00",
+  "latest_message": "ODT: columns stating only their shares keep their proportions (gap 19) (#5722)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -406,6 +406,18 @@
       },
       {
         "date": "2026-11-05",
+        "text": "ODT tables with a usable width keep their column proportions when the file gives only shares (gap 19): LibreOffice's CV template opened and saved with equal columns."
+      },
+      {
+        "date": "2026-11-05",
+        "text": "ODT font sizes reach Asian and complex-script text (gap 19): Chinese text set to 24 pt stayed at the default size in LibreOffice."
+      },
+      {
+        "date": "2026-11-05",
+        "text": "ODT text can turn off what its style turns on (gap 19): a word not bold in a bold heading showed bold, and came back bold in LibreOffice after a save."
+      },
+      {
+        "date": "2026-11-05",
         "text": "ODT pictures keep the size their file gives (gap 19): opening a file shrank ones wider than the text, so a save with no edit to them changed how LibreOffice laid them out."
       },
       {
@@ -475,18 +487,6 @@
       {
         "date": "2026-11-04",
         "text": "RTF import skips the declared Unicode fallback count even when it exceeds eight fallback units, so longer ANSI alternatives do not leak into the document text. Skipping stays bounded by the available input and ends at a group boundary. Readiness estimates unchanged."
-      },
-      {
-        "date": "2026-11-04",
-        "text": "OpenDocument files have no display settings any more (gap 19): File › Options › Advanced › OpenDocument files, file.options odf, WORDCRAFTODF, the LibreOffice style and custom values are gone. WordCraft makes one choice for each case the standard leaves open, the one the default made, and still follows what a file states (docs/odf-interpretation.md)."
-      },
-      {
-        "date": "2026-11-04",
-        "text": "OpenDocument files are shown in one of two styles (gap 19): Microsoft Word style, the default, or LibreOffice style (File › Options › Advanced › OpenDocument files; file.options {\"odf\": {\"preset\": \"word\"}} or \"libreoffice\"; WORDCRAFTODF=word or WORDCRAFTODF=libreoffice). Custom stays for one's own value per case; wordcraft, the earlier id of Word's style, is still taken."
-      },
-      {
-        "date": "2026-11-04",
-        "text": "ODT element audit (gap 19, docs/odt-element-audit.md): every element of the ODF 1.3 schema checked against 365 files and a document of our own for each one no file held that a text document can hold (the presentation:, anim: and db: elements only presentations and databases hold stay unseen); all open and save, and a save without edits keeps them (password, number, time and grid form controls included). Over the 220 files from other applications, 177 round-trip pixel-identical, 201 with the same text and 218 with the same page count (the latest measurement, after the groups and form-control work)."
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 582,
+    "revisions_since": 585,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 586,
-    "revisions_7d": 126,
+    "revisions": 589,
+    "revisions_7d": 129,
     "last_revision": {
-      "ts": "2026-11-09T15:16:06Z",
+      "ts": "2026-11-09T15:35:36Z",
       "kind": "content",
-      "commit": "29a5abf",
-      "commit_full": "29a5abf3e7a43002bf132bb52e21fc230b6374bc",
-      "message": "ODT: custom styles with an outline level keep their name when edited (gap 19) (#5770)"
+      "commit": "05f781c",
+      "commit_full": "05f781cfdac1d89034c0f4f5824b597ff845f2ef",
+      "message": "ODT: columns stating only their shares keep their proportions (gap 19) (#5722)"
     },
     "last_update": {
-      "ts": "2026-11-09T15:16:06Z",
+      "ts": "2026-11-09T15:35:36Z",
       "kind": "content",
-      "commit": "29a5abf",
-      "commit_full": "29a5abf3e7a43002bf132bb52e21fc230b6374bc",
-      "message": "ODT: custom styles with an outline level keep their name when edited (gap 19) (#5770)"
+      "commit": "05f781c",
+      "commit_full": "05f781cfdac1d89034c0f4f5824b597ff845f2ef",
+      "message": "ODT: columns stating only their shares keep their proportions (gap 19) (#5722)"
     },
     "self_reported": "2026-11-08"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.9,
+    "score": 22.3,
     "active_days_7d": 7,
-    "changes_7d": 216,
-    "changes_14d": 317,
+    "changes_7d": 219,
+    "changes_14d": 320,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-09T15:16:06Z",
-      "commit": "29a5abf",
-      "commit_full": "29a5abf3e7a43002bf132bb52e21fc230b6374bc",
-      "subject": "ODT: custom styles with an outline level keep their name when edited (gap 19) (#5770)"
+      "ts": "2026-11-09T15:35:36Z",
+      "commit": "05f781c",
+      "commit_full": "05f781cfdac1d89034c0f4f5824b597ff845f2ef",
+      "subject": "ODT: columns stating only their shares keep their proportions (gap 19) (#5722)"
     },
-    "last_commit_ts": "2026-11-09T15:16:06Z",
+    "last_commit_ts": "2026-11-09T15:35:36Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       7,
@@ -568,7 +568,7 @@
       20,
       3,
       90,
-      9
+      12
     ],
     "days": [
       {
@@ -1162,20 +1162,20 @@
       },
       {
         "d": "2026-11-09",
-        "code": 9,
+        "code": 12,
         "other": 1,
         "samples": [
           {
-            "commit": "29a5abf",
-            "subject": "ODT: custom styles with an outline level keep their name when edited (gap 19) (#5770)"
+            "commit": "05f781c",
+            "subject": "ODT: columns stating only their shares keep their proportions (gap 19) (#5722)"
           },
           {
-            "commit": "bd9e726",
-            "subject": "ODT: pictures keep the size their file gives (gap 19) (#5721)"
+            "commit": "8a97427",
+            "subject": "ODT: a font size reaches every script's text (gap 19) (#5728)"
           },
           {
-            "commit": "15b6086",
-            "subject": "ODT: frames keep the page they are anchored to (gap 19) (#5705)"
+            "commit": "92eac2a",
+            "subject": "ODT: text can turn off what its style turns on (gap 19) (#5724)"
           }
         ]
       }
@@ -14884,7 +14884,76 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "92eac2a",
+      "commit_full": "92eac2aa7c8e54232f25ea68fd61d43f3cd0079e",
+      "commit_date": "2026-11-09T16:33:58+01:00",
+      "ts": "2026-11-09T15:33:58Z",
+      "message": "ODT: text can turn off what its style turns on (gap 19) (#5724)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "8a97427",
+      "commit_full": "8a97427f51f1b17cf7d006047180ae958faa09e9",
+      "commit_date": "2026-11-09T16:34:47+01:00",
+      "ts": "2026-11-09T15:34:47Z",
+      "message": "ODT: a font size reaches every script's text (gap 19) (#5728)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "05f781c",
+      "commit_full": "05f781cfdac1d89034c0f4f5824b597ff845f2ef",
+      "commit_date": "2026-11-09T16:35:36+01:00",
+      "ts": "2026-11-09T15:35:36Z",
+      "message": "ODT: columns stating only their shares keep their proportions (gap 19) (#5722)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-09T15:18:31+00:00"
+  "updated_at": "2026-11-09T16:27:37+00:00"
 }

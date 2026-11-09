@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "2fe33b1",
-  "latest_commit_date": "2026-11-09T08:02:10+08:00",
-  "latest_message": "UI: show or hide the Help Bar independently (#5355)",
+  "latest_commit": "7875114",
+  "latest_commit_date": "2026-11-09T22:31:51+07:00",
+  "latest_message": "G5: dynamic symbol parts take opacity, blend and non-solid paint (#6308)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Adobe Illustrator 2026 (30.x)",
-    "last_updated": "2026-11-06",
+    "last_updated": "2026-11-09",
     "metrics": {
       "full": {
         "label": "Full Illustrator (ready for real work; decides the stage)",
@@ -238,10 +238,10 @@
       },
       {
         "label": "Symbols, blends, envelopes, Repeat, perspective",
-        "pct": 87.0,
+        "pct": 88.0,
         "hours": [
-          5,
-          9
+          4,
+          7
         ]
       },
       {
@@ -509,23 +509,23 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 219,
+    "revisions_since": 220,
     "hours_since": null,
     "areas_since": {
       "up": 3,
       "down": 0,
       "moves": [
         {
+          "label": "Symbols, blends, envelopes, Repeat, perspective",
+          "from": 85.0,
+          "to": 88.0,
+          "ts": "2026-11-09T15:31:51Z"
+        },
+        {
           "label": "Raster effects (Effect Gallery) — effects-parity.md",
           "from": 40.0,
           "to": 85.0,
           "ts": "2026-10-22T20:48:43Z"
-        },
-        {
-          "label": "Symbols, blends, envelopes, Repeat, perspective",
-          "from": 85.0,
-          "to": 87.0,
-          "ts": "2026-10-16T08:42:21Z"
         },
         {
           "label": "3D and Materials",
@@ -540,39 +540,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 220,
-    "revisions_7d": 14,
+    "revisions": 221,
+    "revisions_7d": 15,
     "last_revision": {
-      "ts": "2026-11-09T00:02:10Z",
-      "kind": "content",
-      "commit": "2fe33b1",
-      "commit_full": "2fe33b1fc63d6a46f5616deab0ee97b465f6ffc5",
-      "message": "UI: show or hide the Help Bar independently (#5355)"
+      "ts": "2026-11-09T15:31:51Z",
+      "kind": "estimates",
+      "commit": "7875114",
+      "commit_full": "7875114168c86f6aecf2cd27cd2b0cb30c87b824",
+      "message": "G5: dynamic symbol parts take opacity, blend and non-solid paint (#6308)"
     },
     "last_update": {
-      "ts": "2026-11-09T00:02:10Z",
-      "kind": "content",
-      "commit": "2fe33b1",
-      "commit_full": "2fe33b1fc63d6a46f5616deab0ee97b465f6ffc5",
-      "message": "UI: show or hide the Help Bar independently (#5355)"
+      "ts": "2026-11-09T15:31:51Z",
+      "kind": "estimates",
+      "commit": "7875114",
+      "commit_full": "7875114168c86f6aecf2cd27cd2b0cb30c87b824",
+      "message": "G5: dynamic symbol parts take opacity, blend and non-solid paint (#6308)"
     },
-    "self_reported": "2026-11-06"
+    "self_reported": "2026-11-09"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 33.7,
+    "score": 33.8,
     "active_days_7d": 7,
-    "changes_7d": 793,
-    "changes_14d": 1371,
+    "changes_7d": 797,
+    "changes_14d": 1375,
     "housekeeping_7d": 36,
     "last_code_change": {
-      "ts": "2026-11-09T14:46:10Z",
-      "commit": "c66cb51",
-      "commit_full": "c66cb516e234b615b06ffa19abb77a98131d7e19",
-      "subject": "PDF export: dithered and Perceptual CMYK gradients stay CMYK (#6317)"
+      "ts": "2026-11-09T16:16:56Z",
+      "commit": "9086ff3",
+      "commit_full": "9086ff3e96f4ec8be86fe6cfe35f7aac740078a5",
+      "subject": "Strip leading byte-order mark in graph CSV parser (#6325)"
     },
-    "last_commit_ts": "2026-11-09T14:46:10Z",
+    "last_commit_ts": "2026-11-09T16:16:56Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       15,
@@ -588,7 +588,7 @@
       46,
       56,
       199,
-      67
+      71
     ],
     "days": [
       {
@@ -1340,20 +1340,20 @@
       },
       {
         "d": "2026-11-09",
-        "code": 67,
+        "code": 71,
         "other": 4,
         "samples": [
           {
-            "commit": "c66cb51",
-            "subject": "PDF export: dithered and Perceptual CMYK gradients stay CMYK (#6317)"
+            "commit": "9086ff3",
+            "subject": "Strip leading byte-order mark in graph CSV parser (#6325)"
           },
           {
-            "commit": "b4cb6a6",
-            "subject": "macOS: deliver canvas cursors through AppKit pending a winit fix (#6306)"
+            "commit": "09aedd4",
+            "subject": "Fix #6320: EPS import warns about fonts that aren't available (#6326)"
           },
           {
-            "commit": "1eaf678",
-            "subject": "Type: colouring Arabic marks preserves joining and glyph ownership (#6158)"
+            "commit": "7875114",
+            "subject": "G5: dynamic symbol parts take opacity, blend and non-solid paint (#6308)"
           }
         ]
       }
@@ -7342,7 +7342,40 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "7875114",
+      "commit_full": "7875114168c86f6aecf2cd27cd2b0cb30c87b824",
+      "commit_date": "2026-11-09T22:31:51+07:00",
+      "ts": "2026-11-09T15:31:51Z",
+      "message": "G5: dynamic symbol parts take opacity, blend and non-solid paint (#6308)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-09",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "area_moves": [
+        {
+          "label": "Symbols, blends, envelopes, Repeat, perspective",
+          "from": 87.0,
+          "to": 88.0
+        }
+      ],
+      "full_prev": 62.0,
+      "kind": "estimates"
     }
   ],
-  "updated_at": "2026-11-09T15:17:48+00:00"
+  "updated_at": "2026-11-09T16:27:16+00:00"
 }
