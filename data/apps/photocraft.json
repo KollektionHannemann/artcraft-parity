@@ -383,18 +383,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 25.2,
+    "score": 25.5,
     "active_days_7d": 7,
-    "changes_7d": 320,
-    "changes_14d": 390,
+    "changes_7d": 323,
+    "changes_14d": 393,
     "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-09T10:55:33Z",
-      "commit": "885a6dd",
-      "commit_full": "885a6ddf27cc58c07faf1722e5c327cd38953657",
-      "subject": "fix(ui-egui): the rasterize prompt no longer replays the click that opened it (#8806) (#9864)"
+      "ts": "2026-11-09T12:19:08Z",
+      "commit": "4dd25af",
+      "commit_full": "4dd25afb7774eec88e1844d09c9e7b1a2ccac96c",
+      "subject": "fix(ui): Shift plus a digit sets the Pencil's Opacity (#11967) (#12371)"
     },
-    "last_commit_ts": "2026-11-09T10:55:33Z",
+    "last_commit_ts": "2026-11-09T12:19:08Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       9,
@@ -410,7 +410,7 @@
       48,
       85,
       80,
-      9
+      12
     ],
     "days": [
       {
@@ -1175,26 +1175,43 @@
       },
       {
         "d": "2026-11-09",
-        "code": 9,
+        "code": 12,
         "other": 0,
         "samples": [
           {
-            "commit": "885a6dd",
-            "subject": "fix(ui-egui): the rasterize prompt no longer replays the click that opened it (#8806) (#9864)"
+            "commit": "4dd25af",
+            "subject": "fix(ui): Shift plus a digit sets the Pencil's Opacity (#11967) (#12371)"
           },
           {
-            "commit": "e496125",
-            "subject": "fix(text): size faux bold by Photoshop's size/72 ring instead of a flat 3.6% (#9008) (#10344)"
+            "commit": "ccac986",
+            "subject": "fix(engine): the Magic Eraser measures Tolerance by colour spread (#11995) (#12406)"
           },
           {
-            "commit": "c06fbdc",
-            "subject": "Perspective Crop: dim the image outside the quad with a shield (#12227)"
+            "commit": "b9d3d40",
+            "subject": "Magnetic Lasso: Caps Lock swaps in the Width circle cursor (#11690) (#12151)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.22.0",
+      "name": "PhotoCraft v0.22.0",
+      "ts": "2026-11-09T12:19:04Z",
+      "url": "https://github.com/storytold/photocraft/releases/tag/v0.22.0",
+      "changes": 421,
+      "new_contributors": 44,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.21.0",
       "name": "PhotoCraft v0.21.0",
@@ -1372,23 +1389,6 @@
       "url": "https://github.com/storytold/photocraft/releases/tag/v0.12.0",
       "changes": 105,
       "new_contributors": 7,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.11.1",
-      "name": "PhotoCraft v0.11.1",
-      "ts": "2026-10-20T19:34:02Z",
-      "url": "https://github.com/storytold/photocraft/releases/tag/v0.11.1",
-      "changes": 211,
-      "new_contributors": 24,
       "platforms": [
         "macOS",
         "Windows",
@@ -1656,5 +1656,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-09T11:42:07+00:00"
+  "updated_at": "2026-11-09T12:45:57+00:00"
 }

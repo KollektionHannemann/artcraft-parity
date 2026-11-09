@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "ff2e872",
-  "latest_commit_date": "2026-11-09T19:40:21+08:00",
-  "latest_message": "Read signed quoted SQLite defaults with SQLite's coercion (R3.12) (#1314)",
+  "latest_commit": "1b5f516",
+  "latest_commit_date": "2026-11-09T19:46:34+07:00",
+  "latest_message": "Verify Cargo package versions before reporting Rust dependencies (R3.12) (#1329)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 288,
-    "revisions_7d": 235,
+    "revisions": 320,
+    "revisions_7d": 267,
     "last_revision": {
-      "ts": "2026-11-09T11:40:21Z",
+      "ts": "2026-11-09T12:46:34Z",
       "kind": "content",
-      "commit": "ff2e872",
-      "commit_full": "ff2e8720acb8258dae9906ccf2a7029f9d19dc97",
-      "message": "Read signed quoted SQLite defaults with SQLite's coercion (R3.12) (#1314)"
+      "commit": "1b5f516",
+      "commit_full": "1b5f516b07277036e9e6cca5e75c0a5ebdfcd9f1",
+      "message": "Verify Cargo package versions before reporting Rust dependencies (R3.12) (#1329)"
     },
     "last_update": {
-      "ts": "2026-11-09T11:40:21Z",
+      "ts": "2026-11-09T12:46:34Z",
       "kind": "content",
-      "commit": "ff2e872",
-      "commit_full": "ff2e8720acb8258dae9906ccf2a7029f9d19dc97",
-      "message": "Read signed quoted SQLite defaults with SQLite's coercion (R3.12) (#1314)"
+      "commit": "1b5f516",
+      "commit_full": "1b5f516b07277036e9e6cca5e75c0a5ebdfcd9f1",
+      "message": "Verify Cargo package versions before reporting Rust dependencies (R3.12) (#1329)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 25.1,
+    "score": 25.6,
     "active_days_7d": 7,
-    "changes_7d": 342,
-    "changes_14d": 535,
+    "changes_7d": 374,
+    "changes_14d": 567,
     "housekeeping_7d": 31,
     "last_code_change": {
-      "ts": "2026-11-09T11:40:21Z",
-      "commit": "ff2e872",
-      "commit_full": "ff2e8720acb8258dae9906ccf2a7029f9d19dc97",
-      "subject": "Read signed quoted SQLite defaults with SQLite's coercion (R3.12) (#1314)"
+      "ts": "2026-11-09T12:46:34Z",
+      "commit": "1b5f516",
+      "commit_full": "1b5f516b07277036e9e6cca5e75c0a5ebdfcd9f1",
+      "subject": "Verify Cargo package versions before reporting Rust dependencies (R3.12) (#1329)"
     },
-    "last_commit_ts": "2026-11-09T11:40:21Z",
+    "last_commit_ts": "2026-11-09T12:46:34Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       64,
       34,
       37,
-      69
+      101
     ],
     "days": [
       {
@@ -261,20 +261,20 @@
       },
       {
         "d": "2026-11-09",
-        "code": 69,
+        "code": 101,
         "other": 1,
         "samples": [
           {
-            "commit": "ff2e872",
-            "subject": "Read signed quoted SQLite defaults with SQLite's coercion (R3.12) (#1314)"
+            "commit": "1b5f516",
+            "subject": "Verify Cargo package versions before reporting Rust dependencies (R3.12) (#1329)"
           },
           {
-            "commit": "a2d6f22",
-            "subject": "Count each Claude Code turn's own cost, not the session's total (#1294)"
+            "commit": "0c4cdd6",
+            "subject": "Read decimal digit separators when filling added SQLite columns (R3.12) (#1318)"
           },
           {
-            "commit": "8808230",
-            "subject": "Keep Swift demangler substitutions in step with optionals, associated types and extensions (R3.12) (#1313)"
+            "commit": "b6a5081",
+            "subject": "Keep Mach-O zero-fill sections out of file-backed section data (R3.12) (#1348)"
           }
         ]
       }
@@ -2383,8 +2383,232 @@
       "commit": "ff2e872",
       "commit_full": "ff2e8720acb8258dae9906ccf2a7029f9d19dc97",
       "message": "Read signed quoted SQLite defaults with SQLite's coercion (R3.12) (#1314)"
+    },
+    {
+      "ts": "2026-11-09T12:04:04Z",
+      "kind": "content",
+      "commit": "dc4c6bb",
+      "commit_full": "dc4c6bbd4d75bc52994d5f0a342013353cbc68e2",
+      "message": "Ask builders to open a check's window without focus, and behind other windows on Windows (R2.9) (#1309)"
+    },
+    {
+      "ts": "2026-11-09T12:11:07Z",
+      "kind": "content",
+      "commit": "5d85377",
+      "commit_full": "5d853773d58edd651054f36808d6e2327bd434bd",
+      "message": "Bound the header used to read Android process lists (R3.3) (#1316)"
+    },
+    {
+      "ts": "2026-11-09T12:12:10Z",
+      "kind": "content",
+      "commit": "b648eae",
+      "commit_full": "b648eaef80d430a462d1afe68c336c3bcac6bd34",
+      "message": "Keep ELF dynamic names inside the declared string table (R3.12) (#1344)"
+    },
+    {
+      "ts": "2026-11-09T12:12:14Z",
+      "kind": "content",
+      "commit": "850a706",
+      "commit_full": "850a7062cec3bc2bb78ef0f9d49d73f9d8438878",
+      "message": "Fail CI when a status table repeats an area (R5.2) (#1317)"
+    },
+    {
+      "ts": "2026-11-09T12:12:20Z",
+      "kind": "content",
+      "commit": "43f4a06",
+      "commit_full": "43f4a069bacc7b1dc6fa6428dc0ad178f404a962",
+      "message": "Give resumed API builders the check their loop can run (R5.4) (#1319)"
+    },
+    {
+      "ts": "2026-11-09T12:12:27Z",
+      "kind": "content",
+      "commit": "a689a4e",
+      "commit_full": "a689a4e5d110fde7d599275c9fc30c2295c9919a",
+      "message": "Show the size of copied pinned builds in Settings (R2.10) (#1320)"
+    },
+    {
+      "ts": "2026-11-09T12:12:32Z",
+      "kind": "content",
+      "commit": "234b5dc",
+      "commit_full": "234b5dc968895f773bc1c706262cd19965243c1e",
+      "message": "Extract Bun modules' stored source maps and bytecode (R3.11) (#1321)"
+    },
+    {
+      "ts": "2026-11-09T12:14:11Z",
+      "kind": "content",
+      "commit": "b8eb242",
+      "commit_full": "b8eb2427615603f8bafa5f40bb99ff88322dddee",
+      "message": "Start games requested in Phaser or Bevy without an editor install (R2.7) (#1331)"
+    },
+    {
+      "ts": "2026-11-09T12:15:43Z",
+      "kind": "content",
+      "commit": "fedafbe",
+      "commit_full": "fedafbe2c1dccae038cfe8dd839fc07a1ad10be0",
+      "message": "Extract PYZ resources without adding Python bytecode headers (R3.12) (#1322)"
+    },
+    {
+      "ts": "2026-11-09T12:15:48Z",
+      "kind": "content",
+      "commit": "3f7b9a3",
+      "commit_full": "3f7b9a36158f7f732254051c0cc2df7832aec8d3",
+      "message": "Require a rejecting branch before labelling EVM dispatch nonpayable (R3.12) (#1323)"
+    },
+    {
+      "ts": "2026-11-09T12:15:54Z",
+      "kind": "content",
+      "commit": "22d949d",
+      "commit_full": "22d949dbfdbb76923a9b7403b5a822628f7d5ab2",
+      "message": "Keep Apple asset catalog directories within their declared byte ranges (R3.12) (#1324)"
+    },
+    {
+      "ts": "2026-11-09T12:15:59Z",
+      "kind": "content",
+      "commit": "8a6e74e",
+      "commit_full": "8a6e74e498d696bd4b82186408a59b18e12edf99",
+      "message": "Check IL2CPP method ranges against their declaring types (R3.12) (#1325)"
+    },
+    {
+      "ts": "2026-11-09T12:16:05Z",
+      "kind": "content",
+      "commit": "78b5f86",
+      "commit_full": "78b5f86f1b151d775b6f3a34ddc8fbd494f91581",
+      "message": "Reject missing file and chunk references in IoStore directory listings (R3.12) (#1326)"
+    },
+    {
+      "ts": "2026-11-09T12:16:11Z",
+      "kind": "content",
+      "commit": "9a1dfd0",
+      "commit_full": "9a1dfd0d65ed8f2d9749581bc0f33bb459d97113",
+      "message": "Count received HAR response bytes separately from decoded content (R3.13) (#1327)"
+    },
+    {
+      "ts": "2026-11-09T12:16:17Z",
+      "kind": "content",
+      "commit": "f0d4490",
+      "commit_full": "f0d449005e8d5f52248eedb8a1592a39cdae78a3",
+      "message": "Keep the earliest binary strings across narrow and UTF-16LE encodings (R3.12) (#1328)"
+    },
+    {
+      "ts": "2026-11-09T12:16:20Z",
+      "kind": "content",
+      "commit": "7fd2440",
+      "commit_full": "7fd244005da7a37a6389ac09643fb759420f72a2",
+      "message": "Preserve source map URL roots when joining relative sources (R3.12) (#1332)"
+    },
+    {
+      "ts": "2026-11-09T12:16:23Z",
+      "kind": "content",
+      "commit": "722a363",
+      "commit_full": "722a363c2ac7b27344c82cd83ac0d73cd8854496",
+      "message": "Read JSONC settings after carriage-return line comments (R3.12) (#1330)"
+    },
+    {
+      "ts": "2026-11-09T12:16:25Z",
+      "kind": "content",
+      "commit": "9aefab4",
+      "commit_full": "9aefab4e7af0cd2874620b5287ee09d8e2a85002",
+      "message": "Identify hard-linked regular files in newc and CRC archives (R3.12) (#1333)"
+    },
+    {
+      "ts": "2026-11-09T12:16:31Z",
+      "kind": "content",
+      "commit": "9db798f",
+      "commit_full": "9db798f0262abeabedaf88bcbbcd5227ed417106",
+      "message": "Write non-separated SQLite REAL defaults in SQLite's text form (R3.12) (#1315)"
+    },
+    {
+      "ts": "2026-11-09T12:17:20Z",
+      "kind": "content",
+      "commit": "d6c6d12",
+      "commit_full": "d6c6d12480104fdd6c6f564408de6e3d2799dd20",
+      "message": "Stop PE header lookups at the declared header size (R3.12) (#1334)"
+    },
+    {
+      "ts": "2026-11-09T12:17:25Z",
+      "kind": "content",
+      "commit": "66d80d1",
+      "commit_full": "66d80d19b868561b256cfbedf42f3515f8dbdb4e",
+      "message": "Keep X.509 name separators distinct from attribute values (R3.12) (#1335)"
+    },
+    {
+      "ts": "2026-11-09T12:17:31Z",
+      "kind": "content",
+      "commit": "dd95209",
+      "commit_full": "dd95209f21148808f5a106aa12be08be7bc23dfd",
+      "message": "Distinguish Android resource locales with explicit scripts and variants (R3.12) (#1336)"
+    },
+    {
+      "ts": "2026-11-09T12:17:37Z",
+      "kind": "content",
+      "commit": "9877acc",
+      "commit_full": "9877acc34b113872ea8adb36c0535b6c311e5fe0",
+      "message": "Read checked Info-ZIP Unicode path metadata for legacy member names (R3.12) (#1337)"
+    },
+    {
+      "ts": "2026-11-09T12:17:43Z",
+      "kind": "content",
+      "commit": "96413a8",
+      "commit_full": "96413a8e65161205e7e50033d9710a2b21b181b1",
+      "message": "Expand overlapping LZ4 matches in blocks in Unity bundles (R3.12) (#1338)"
+    },
+    {
+      "ts": "2026-11-09T12:17:49Z",
+      "kind": "content",
+      "commit": "bd279b1",
+      "commit_full": "bd279b18f106ae64d1ec701d86d4da7aec219fba",
+      "message": "Decode VLAN tags in Linux cooked packet captures (R3.12) (#1339)"
+    },
+    {
+      "ts": "2026-11-09T12:17:55Z",
+      "kind": "content",
+      "commit": "25a8f17",
+      "commit_full": "25a8f179f8b6b7730bc138fa8633180323c5d11c",
+      "message": "Read concatenated Zstandard frames without dropping member data (R3.12) (#1340)"
+    },
+    {
+      "ts": "2026-11-09T12:18:01Z",
+      "kind": "content",
+      "commit": "de18c10",
+      "commit_full": "de18c1066e96ccce2b58d9738d23ac7d08f4b3d6",
+      "message": "Attribute instantiated Go function names to their owning package (R3.12) (#1341)"
+    },
+    {
+      "ts": "2026-11-09T12:18:06Z",
+      "kind": "content",
+      "commit": "fb4c437",
+      "commit_full": "fb4c437fe613f7c29fd8d32033c9574cd48107dc",
+      "message": "Read JVM method parameters containing parentheses in class names (R3.12) (#1342)"
+    },
+    {
+      "ts": "2026-11-09T12:18:12Z",
+      "kind": "content",
+      "commit": "41c3bdd",
+      "commit_full": "41c3bdd9f83df450c2698dba8775e4e22f74b573",
+      "message": "Keep Dart snapshot metadata inside its declared extent (R3.12) (#1343)"
+    },
+    {
+      "ts": "2026-11-09T12:39:28Z",
+      "kind": "content",
+      "commit": "b6a5081",
+      "commit_full": "b6a50815a702bf3efe087ecceb7a15eed7c1722f",
+      "message": "Keep Mach-O zero-fill sections out of file-backed section data (R3.12) (#1348)"
+    },
+    {
+      "ts": "2026-11-09T12:44:26Z",
+      "kind": "content",
+      "commit": "0c4cdd6",
+      "commit_full": "0c4cdd63cc7c6e46180c9892f8439067356a064f",
+      "message": "Read decimal digit separators when filling added SQLite columns (R3.12) (#1318)"
+    },
+    {
+      "ts": "2026-11-09T12:46:34Z",
+      "kind": "content",
+      "commit": "1b5f516",
+      "commit_full": "1b5f516b07277036e9e6cca5e75c0a5ebdfcd9f1",
+      "message": "Verify Cargo package versions before reporting Rust dependencies (R3.12) (#1329)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-09T11:43:06+00:00"
+  "updated_at": "2026-11-09T12:47:19+00:00"
 }

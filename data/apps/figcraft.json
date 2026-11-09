@@ -581,18 +581,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.1,
+    "score": 17.4,
     "active_days_7d": 6,
-    "changes_7d": 165,
-    "changes_14d": 435,
+    "changes_7d": 166,
+    "changes_14d": 436,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-09T05:24:44Z",
-      "commit": "3839fe4",
-      "commit_full": "3839fe4a0cb4897c1fed1fb03e0b60e191ff61cb",
-      "subject": "Naming: use Developer Mode instead of Figma's Dev Mode (#2135)"
+      "ts": "2026-11-09T11:59:31Z",
+      "commit": "79c3634",
+      "commit_full": "79c363466a46b96f989b73c7cf20240bc168b7a2",
+      "subject": "fix(web): allow up to Cloudflare 25 MiB cap in package.sh (#2155)"
     },
-    "last_commit_ts": "2026-11-09T05:24:44Z",
+    "last_commit_ts": "2026-11-09T11:59:31Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       4,
@@ -608,7 +608,7 @@
       0,
       112,
       2,
-      4
+      5
     ],
     "days": [
       {
@@ -1172,9 +1172,13 @@
       },
       {
         "d": "2026-11-09",
-        "code": 4,
+        "code": 5,
         "other": 0,
         "samples": [
+          {
+            "commit": "79c3634",
+            "subject": "fix(web): allow up to Cloudflare 25 MiB cap in package.sh (#2155)"
+          },
           {
             "commit": "3839fe4",
             "subject": "Naming: use Developer Mode instead of Figma's Dev Mode (#2135)"
@@ -1182,16 +1186,29 @@
           {
             "commit": "72cfe7b",
             "subject": "fix(naming): use direct FigCraft feature descriptions (#2131)"
-          },
-          {
-            "commit": "970cdfe",
-            "subject": "Updates: take craft-update from craft-libs main at 1b34eba41 (#2136)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.17.0",
+      "name": "FigCraft v0.17.0",
+      "ts": "2026-11-09T12:21:12Z",
+      "url": "https://github.com/storytold/figcraft/releases/tag/v0.17.0",
+      "changes": 176,
+      "new_contributors": 14,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.16.0",
       "name": "FigCraft v0.16.0",
@@ -1369,23 +1386,6 @@
       "url": "https://github.com/storytold/figcraft/releases/tag/v0.7.0",
       "changes": 245,
       "new_contributors": 42,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.6.0",
-      "name": "FigCraft v0.6.0",
-      "ts": "2026-10-14T14:26:24Z",
-      "url": "https://github.com/storytold/figcraft/releases/tag/v0.6.0",
-      "changes": 36,
-      "new_contributors": 11,
       "platforms": [
         "macOS",
         "Windows",
@@ -7974,5 +7974,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-09T05:50:27+00:00"
+  "updated_at": "2026-11-09T12:46:46+00:00"
 }

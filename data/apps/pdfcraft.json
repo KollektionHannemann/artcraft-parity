@@ -499,16 +499,16 @@
     "level": "buzzing",
     "score": 24.5,
     "active_days_7d": 7,
-    "changes_7d": 323,
-    "changes_14d": 395,
+    "changes_7d": 326,
+    "changes_14d": 398,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-11-09T11:12:07Z",
-      "commit": "9ee213e",
-      "commit_full": "9ee213eff725e39f4450f0160cfe6ea5a9120f20",
-      "subject": "Fix main's build and tests after the latest merges (#6706)"
+      "ts": "2026-11-09T11:45:39Z",
+      "commit": "b6cbf9b",
+      "commit_full": "b6cbf9bb300424b8c14f4d2b62f5e7407e8b6805",
+      "subject": "Land forms, links, find and redaction-save fixes (#4496, #4532, #3567, #3773, #4470, #4474, #4497, #5658) (#6710)"
     },
-    "last_commit_ts": "2026-11-09T11:12:07Z",
+    "last_commit_ts": "2026-11-09T11:45:39Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       5,
@@ -524,7 +524,7 @@
       9,
       6,
       31,
-      192
+      195
     ],
     "days": [
       {
@@ -1276,26 +1276,43 @@
       },
       {
         "d": "2026-11-09",
-        "code": 192,
+        "code": 195,
         "other": 7,
         "samples": [
           {
-            "commit": "9ee213e",
-            "subject": "Fix main's build and tests after the latest merges (#6706)"
+            "commit": "b6cbf9b",
+            "subject": "Land forms, links, find and redaction-save fixes (#4496, #4532, #3567, #3773, #4470, #4474, #4497, #5658) (#6710)"
           },
           {
-            "commit": "dafb3be",
-            "subject": "fix(xfa): one decoding allowance for all XFA packets (#6000)"
+            "commit": "6b56de9",
+            "subject": "Land renderer patches, layer auto state, auto-tag artifacts, export clips and print page lookup (#3969, #4393, #4396, #4410, #4433, #4459, #4159, #5075, #5973) "
           },
           {
-            "commit": "b4679de",
-            "subject": "fix(cli): cap input reads, budget check's edit pass and escape its stderr records (#5997)"
+            "commit": "9f41913",
+            "subject": "xtask: the private temp folder builder is mutable only on Unix (#6712)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.20.0",
+      "name": "PdfCraft v0.20.0",
+      "ts": "2026-11-09T12:10:51Z",
+      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.20.0",
+      "changes": 363,
+      "new_contributors": 14,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.19.0",
       "name": "PdfCraft v0.19.0",
@@ -1473,23 +1490,6 @@
       "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.11.0",
       "changes": 4,
       "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.10.1",
-      "name": "PdfCraft v0.10.1",
-      "ts": "2026-10-21T07:46:31Z",
-      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.10.1",
-      "changes": 124,
-      "new_contributors": 29,
       "platforms": [
         "macOS",
         "Windows",
@@ -6518,5 +6518,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-09T11:42:31+00:00"
+  "updated_at": "2026-11-09T12:46:30+00:00"
 }
