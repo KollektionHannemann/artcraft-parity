@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "5311b1d",
-  "latest_commit_date": "2026-11-09T10:39:14+08:00",
-  "latest_message": "Resolve sBPF relocation symbols within the linked table (R3.12) (#1124)",
+  "latest_commit": "7859973",
+  "latest_commit_date": "2026-11-09T11:26:09+08:00",
+  "latest_message": "Keep a continuing run's API transcript (R2.9) (#1260)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 238,
-    "revisions_7d": 185,
+    "revisions": 254,
+    "revisions_7d": 201,
     "last_revision": {
-      "ts": "2026-11-09T02:39:14Z",
+      "ts": "2026-11-09T03:26:09Z",
       "kind": "content",
-      "commit": "5311b1d",
-      "commit_full": "5311b1d43a8e41b444f36128a15a2d598daf5e0b",
-      "message": "Resolve sBPF relocation symbols within the linked table (R3.12) (#1124)"
+      "commit": "7859973",
+      "commit_full": "7859973d7ca41b0f19c5fa5d11ac93e053ec39e6",
+      "message": "Keep a continuing run's API transcript (R2.9) (#1260)"
     },
     "last_update": {
-      "ts": "2026-11-09T02:39:14Z",
+      "ts": "2026-11-09T03:26:09Z",
       "kind": "content",
-      "commit": "5311b1d",
-      "commit_full": "5311b1d43a8e41b444f36128a15a2d598daf5e0b",
-      "message": "Resolve sBPF relocation symbols within the linked table (R3.12) (#1124)"
+      "commit": "7859973",
+      "commit_full": "7859973d7ca41b0f19c5fa5d11ac93e053ec39e6",
+      "message": "Keep a continuing run's API transcript (R2.9) (#1260)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 23.2,
+    "score": 24.1,
     "active_days_7d": 7,
-    "changes_7d": 291,
-    "changes_14d": 484,
+    "changes_7d": 307,
+    "changes_14d": 500,
     "housekeeping_7d": 31,
     "last_code_change": {
-      "ts": "2026-11-09T02:39:14Z",
-      "commit": "5311b1d",
-      "commit_full": "5311b1d43a8e41b444f36128a15a2d598daf5e0b",
-      "subject": "Resolve sBPF relocation symbols within the linked table (R3.12) (#1124)"
+      "ts": "2026-11-09T03:26:09Z",
+      "commit": "7859973",
+      "commit_full": "7859973d7ca41b0f19c5fa5d11ac93e053ec39e6",
+      "subject": "Keep a continuing run's API transcript (R2.9) (#1260)"
     },
-    "last_commit_ts": "2026-11-09T02:39:14Z",
+    "last_commit_ts": "2026-11-09T03:26:09Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       64,
       34,
       37,
-      18
+      34
     ],
     "days": [
       {
@@ -261,20 +261,20 @@
       },
       {
         "d": "2026-11-09",
-        "code": 18,
+        "code": 34,
         "other": 1,
         "samples": [
           {
-            "commit": "5311b1d",
-            "subject": "Resolve sBPF relocation symbols within the linked table (R3.12) (#1124)"
+            "commit": "7859973",
+            "subject": "Keep a continuing run's API transcript (R2.9) (#1260)"
           },
           {
-            "commit": "0e69d2c",
-            "subject": "Read sBPF section headers within their declared records (R3.12) (#1123)"
+            "commit": "37d07a0",
+            "subject": "Read whole numbers in SQLite REAL columns as REAL (R3.12) (#1259)"
           },
           {
-            "commit": "d065d0d",
-            "subject": "Keep damaged CBOR metadata in the contract bytecode (R3.12) (#1122)"
+            "commit": "564d78e",
+            "subject": "Require complete sBPF relocation records and honor their stride (R3.12) (#1128)"
           }
         ]
       }
@@ -2033,8 +2033,120 @@
       "commit": "5311b1d",
       "commit_full": "5311b1d43a8e41b444f36128a15a2d598daf5e0b",
       "message": "Resolve sBPF relocation symbols within the linked table (R3.12) (#1124)"
+    },
+    {
+      "ts": "2026-11-09T02:44:45Z",
+      "kind": "content",
+      "commit": "aa9db80",
+      "commit_full": "aa9db802184df1d55b7844f197e15823dece794f",
+      "message": "Keep the columns of SQLite tables whose name holds a parenthesis (R3.12) (#1248) (#1248)"
+    },
+    {
+      "ts": "2026-11-09T02:45:52Z",
+      "kind": "content",
+      "commit": "ddedb6f",
+      "commit_full": "ddedb6f314da806ffaa89270b1cde97c88f7dff0",
+      "message": "Resolve references throughout a keyed archive (R3.12) (#1255)"
+    },
+    {
+      "ts": "2026-11-09T02:45:57Z",
+      "kind": "content",
+      "commit": "c8686f9",
+      "commit_full": "c8686f95fa08bc8d28777ae7aed9128a07e371ee",
+      "message": "Read Android XML events within their declared records (R3.12) (#1256)"
+    },
+    {
+      "ts": "2026-11-09T02:47:38Z",
+      "kind": "content",
+      "commit": "7a38723",
+      "commit_full": "7a38723c0bc1ecc173ca303164209c1c3b559f29",
+      "message": "Resume an API builder's transcript only in its mode (R2.9) (#1258)"
+    },
+    {
+      "ts": "2026-11-09T02:49:39Z",
+      "kind": "content",
+      "commit": "ad4d57d",
+      "commit_full": "ad4d57d4ae5993e157a280b4237a0aa8a7a7fdb7",
+      "message": "Count all local declaration groups in a WebAssembly function (R3.12) (#1125)"
+    },
+    {
+      "ts": "2026-11-09T02:49:44Z",
+      "kind": "content",
+      "commit": "07a5f86",
+      "commit_full": "07a5f8686f63bff6d0efe19af56bf129e0fee9f7",
+      "message": "Read WebAssembly debug URLs as length-prefixed UTF-8 names (R3.12) (#1126)"
+    },
+    {
+      "ts": "2026-11-09T02:49:50Z",
+      "kind": "content",
+      "commit": "f4479f3",
+      "commit_full": "f4479f3f04524476bf343b60ab7c6d3b57023729",
+      "message": "Require extracted bundle files to match the manifest size (R3.12) (#1127)"
+    },
+    {
+      "ts": "2026-11-09T02:50:35Z",
+      "kind": "content",
+      "commit": "58402ab",
+      "commit_full": "58402ab226ce1a417d250e789dce9a0613158567",
+      "message": "Compare WebAssembly body counts with all declared functions (R3.12) (#1129)"
+    },
+    {
+      "ts": "2026-11-09T02:55:15Z",
+      "kind": "content",
+      "commit": "a205f1d",
+      "commit_full": "a205f1d1571cbce001c546f4753943a569d7a7fe",
+      "message": "Keep source lookups inside their declared index map section (R3.12) (#1130)"
+    },
+    {
+      "ts": "2026-11-09T02:55:22Z",
+      "kind": "content",
+      "commit": "43d8862",
+      "commit_full": "43d8862cf2bd47f30c6e1d24e4e40448c837c6b2",
+      "message": "Decode one complete XML plist document (R3.12) (#1253)"
+    },
+    {
+      "ts": "2026-11-09T02:55:29Z",
+      "kind": "content",
+      "commit": "b0c4d4b",
+      "commit_full": "b0c4d4bcbf4ff2057f3b9c114524673f4f61aa6c",
+      "message": "Check cpio pathnames and the end marker before reporting a complete archive (R3.12) (#1134)"
+    },
+    {
+      "ts": "2026-11-09T02:56:36Z",
+      "kind": "content",
+      "commit": "d12c458",
+      "commit_full": "d12c458376d06dcb77f1972948543ed1842d52c4",
+      "message": "Only apply complete length-framed PAX metadata to tar members (R3.12) (#1136)"
+    },
+    {
+      "ts": "2026-11-09T02:57:07Z",
+      "kind": "content",
+      "commit": "a9487a0",
+      "commit_full": "a9487a078bae37e338f7ca38e255ff25f8273be5",
+      "message": "Check certificate field tags and bit strings before verification (R3.12) (#1131)"
+    },
+    {
+      "ts": "2026-11-09T03:01:21Z",
+      "kind": "content",
+      "commit": "564d78e",
+      "commit_full": "564d78e75d5258c32b67ddfab1abaa24ed5dd2f2",
+      "message": "Require complete sBPF relocation records and honor their stride (R3.12) (#1128)"
+    },
+    {
+      "ts": "2026-11-09T03:21:02Z",
+      "kind": "content",
+      "commit": "37d07a0",
+      "commit_full": "37d07a0a2ca48a941cf154c1c6353d88f0c0d6ed",
+      "message": "Read whole numbers in SQLite REAL columns as REAL (R3.12) (#1259)"
+    },
+    {
+      "ts": "2026-11-09T03:26:09Z",
+      "kind": "content",
+      "commit": "7859973",
+      "commit_full": "7859973d7ca41b0f19c5fa5d11ac93e053ec39e6",
+      "message": "Keep a continuing run's API transcript (R2.9) (#1260)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-09T02:41:26+00:00"
+  "updated_at": "2026-11-09T03:41:52+00:00"
 }

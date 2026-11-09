@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "b8c8616",
-  "latest_commit_date": "2026-11-09T10:13:38+08:00",
-  "latest_message": "M14: the Windows installer lets the user choose the install folder (#1139) (#2480)",
+  "latest_commit": "cde331f",
+  "latest_commit_date": "2026-11-09T10:54:50+08:00",
+  "latest_message": "Land render and font patches (#6292, #6287, #6314, #6353, #6359, #6368, #6409, #6491, #6545, #6516, #6521, #6528, #6533, #6529, #6542, #6543, #6569, #6572) (#66",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -294,11 +294,19 @@
     "progress": [
       {
         "date": "2026-11-07",
+        "text": "(M2, #6449): A non-embedded Times New Roman set as a TrueType CID font (TimesNewRoman,Bold, TimesNewRomanPSMT and the other faces) draws the glyphs its codes name, as the non-embedded Arial does: its first 258 glyphs follow the same standard Macintosh order, which the embedded Times New Roman subsets of a public French form confirm in 941 of 942 /ToUnicode entries (vendored hayro-interpret patch 88). That form drew \"Salarié(e) du régime général\" as \"Salari²g+f w't²i lo g'ì²p²tcn\" and \"changement\" as \"ej angement\". Times and Times New Roman MT Std are not read this way."
+      },
+      {
+        "date": "2026-11-07",
         "text": "(M7, #2964 / #3185): Supported Form text can be prepared for direct editing; groups left grouped (unsafe compositing, text nested past eight levels) are reported. Legacy Thai keeps the original font programs, Regular/Bold and text settings, also across same-face subsets; the narrow THSarabunPSK map repair is checked glyph by glyph against the font program; cross-family replacement is explicit. Builds on #3067 and #2811. Unsafe groups and mixed contextual styles remain partial; estimates unchanged."
       },
       {
         "date": "2026-11-07",
         "text": "(M10, ocr.ocr-web, port onto #977): Web OCR rebuilt on main's engines and preprocessing (#977). OcrJob::run is now OcrJob::steps a page at a time: the page renders, crops to the region and cleans each page, a Web Worker runs ocrs on the result, and OcrShot::place maps the words back through the region and preprocessing. Every strategy reads like this when only one engine is present, and the web build has only ocrs. The downloaded models are installed into the engine cache (ocr::install), so the Verify screen and the engine-status checks see them too. The batch keeps main's skipped-files bucket, low-confidence notes and cancel. The translations moved to craft-i18n (storytold/craft-i18n#141). The Verify screen starts the model download itself and runs once the models land; before, on a fresh page it failed with the desktop's \"set PDFCRAFTMODELS\" message. Known limits: the cleaning steps, and the Verify screen's Run OCR and re-reads, run on the page. Estimates unchanged."
+      },
+      {
+        "date": "2026-11-05",
+        "text": "(M2, #5889): A non-embedded Arial set as a TrueType CID font (CIDFontType2, Identity-H, as Word and PDFMaker write it) draws the glyphs its codes name. Those codes are glyph indexes in the author's Arial, whose first 258 glyphs follow the standard Macintosh order, so the standard substitute now draws each glyph by name (vendored hayro-interpret patch 76). Before, it took each code as one of its own glyph indexes, and \"Low Power\" drew as \"@ck 'Dck Yf\". Arial Narrow, Black and Unicode MS, and CIDFontType0 fonts, are not read this way. Copying or searching those runs still needs a /ToUnicode."
       },
       {
         "date": "2026-11-03",
@@ -443,14 +451,6 @@
       {
         "date": "2026-10-24",
         "text": "(M14, #4253): The annotation quick bar remembers Keep tool selected across restarts, including unpinning. Old and malformed settings keep safe defaults; the opt-in UI control channel reads and changes the same preference. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "(M11, more black-and-white images): The optimizer re-stores Group 3 fax images as Group 4 when that is smaller, instead of leaving any CCITT image it doesn't resample as it is. Black-and-white images stored as eight-bit RGB (as some phone and scanner apps write them) become one-bit grey, and indexed images that use only their first two palette entries become one bit with their palette, so Monochrome Images compresses and downsamples them too."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "(M11, monochrome downsampling): The PDF Optimizer and Reduce File Size average black-and-white images above 450 ppi down to 300 ppi (Monochrome Images ▸ Downsample to), Group 4 scans included, so a 600 ppi text page goes from 79 KB to 40 KB. CCITT decoding moved into pdfcraft-filters (decodeccitt), shared by Export ▸ Images and the optimizer through Document::decodedimage."
       }
     ]
   },
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 124,
+    "revisions_since": 125,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 212,
-    "revisions_7d": 29,
+    "revisions": 213,
+    "revisions_7d": 30,
     "last_revision": {
-      "ts": "2026-11-09T02:13:38Z",
+      "ts": "2026-11-09T02:54:50Z",
       "kind": "content",
-      "commit": "b8c8616",
-      "commit_full": "b8c8616d057ac4d55f5e88fb26e5c26618b22d72",
-      "message": "M14: the Windows installer lets the user choose the install folder (#1139) (#2480)"
+      "commit": "cde331f",
+      "commit_full": "cde331fb7eaea9bb87e4b046f5450e884323a9b4",
+      "message": "Land render and font patches (#6292, #6287, #6314, #6353, #6359, #6368, #6409, #6491, #6545, #6516, #6521, #6528, #6533, #6529, #6542, #6543, #6569, #6572) (#66"
     },
     "last_update": {
-      "ts": "2026-11-09T02:13:38Z",
+      "ts": "2026-11-09T02:54:50Z",
       "kind": "content",
-      "commit": "b8c8616",
-      "commit_full": "b8c8616d057ac4d55f5e88fb26e5c26618b22d72",
-      "message": "M14: the Windows installer lets the user choose the install folder (#1139) (#2480)"
+      "commit": "cde331f",
+      "commit_full": "cde331fb7eaea9bb87e4b046f5450e884323a9b4",
+      "message": "Land render and font patches (#6292, #6287, #6314, #6353, #6359, #6368, #6409, #6491, #6545, #6516, #6521, #6528, #6533, #6529, #6542, #6543, #6569, #6572) (#66"
     },
     "self_reported": "2026-11-08"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 23.6,
+    "score": 23.7,
     "active_days_7d": 7,
-    "changes_7d": 236,
-    "changes_14d": 308,
+    "changes_7d": 240,
+    "changes_14d": 312,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-11-09T02:14:43Z",
-      "commit": "28093ed",
-      "commit_full": "28093ed4cfea728e5fb9c712a92dbb45db874f3e",
-      "subject": "UI: a panic in a frame no longer closes the app and its tabs (#3914) (#4201)"
+      "ts": "2026-11-09T03:31:32Z",
+      "commit": "5dbd007",
+      "commit_full": "5dbd0076ad2c2bc94af50ef41637d9559a9c1fce",
+      "subject": "Land PDF/A verify and convert checks (#6232, #6254, #6172, #6202, #6203, #6206, #6207, #6214, #6215, #6219) (#6662)"
     },
-    "last_commit_ts": "2026-11-09T02:14:43Z",
+    "last_commit_ts": "2026-11-09T03:31:32Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       5,
@@ -524,7 +524,7 @@
       9,
       6,
       31,
-      105
+      109
     ],
     "days": [
       {
@@ -1276,20 +1276,20 @@
       },
       {
         "d": "2026-11-09",
-        "code": 105,
+        "code": 109,
         "other": 6,
         "samples": [
           {
-            "commit": "28093ed",
-            "subject": "UI: a panic in a frame no longer closes the app and its tabs (#3914) (#4201)"
+            "commit": "5dbd007",
+            "subject": "Land PDF/A verify and convert checks (#6232, #6254, #6172, #6202, #6203, #6206, #6207, #6214, #6215, #6219) (#6662)"
           },
           {
-            "commit": "fdfdf6e",
-            "subject": "Attachments: a saved attachment keeps the PDF's Mark-of-the-Web on Windows (#3990) (#4091)"
+            "commit": "d8c2b9f",
+            "subject": "Revert \"fix(ui): show creation and modification dates in Document Properties (#5534) (#5536)\" (#6671)"
           },
           {
-            "commit": "9792328",
-            "subject": "fix(edit): preserve annotation optional-content membership in marked content (#3213) (#3275)"
+            "commit": "cde331f",
+            "subject": "Land render and font patches (#6292, #6287, #6314, #6353, #6359, #6368, #6409, #6491, #6545, #6516, #6521, #6528, #6533, #6529, #6542, #6543, #6569, #6572) (#66"
           }
         ]
       }
@@ -6378,7 +6378,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "cde331f",
+      "commit_full": "cde331fb7eaea9bb87e4b046f5450e884323a9b4",
+      "commit_date": "2026-11-09T10:54:50+08:00",
+      "ts": "2026-11-09T02:54:50Z",
+      "message": "Land render and font patches (#6292, #6287, #6314, #6353, #6359, #6368, #6409, #6491, #6545, #6516, #6521, #6528, #6533, #6529, #6542, #6543, #6569, #6572) (#66",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-08",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-09T02:41:07+00:00"
+  "updated_at": "2026-11-09T03:41:22+00:00"
 }
