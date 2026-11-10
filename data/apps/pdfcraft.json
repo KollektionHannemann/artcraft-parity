@@ -497,18 +497,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.6,
+    "score": 22.8,
     "active_days_7d": 7,
-    "changes_7d": 316,
-    "changes_14d": 409,
+    "changes_7d": 317,
+    "changes_14d": 410,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-11-10T01:38:14Z",
-      "commit": "a71b512",
-      "commit_full": "a71b5124bc388e6b86ec0ee5ec16d31fa1955117",
-      "subject": "M10 #5130: resolve Windows printer-default duplex before spooling (#5180)"
+      "ts": "2026-11-10T02:22:11Z",
+      "commit": "5e114c7",
+      "commit_full": "5e114c716f51bf74b617e1796d9eea79581811b8",
+      "subject": "Windows printing: craft-print 0e4943cb (winprint 3c978dfc): pages at the printer's resolution, QName tickets, padded integers (#4941) (#6793)"
     },
-    "last_commit_ts": "2026-11-10T01:38:14Z",
+    "last_commit_ts": "2026-11-10T02:22:11Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       16,
@@ -524,7 +524,7 @@
       6,
       31,
       206,
-      5
+      6
     ],
     "days": [
       {
@@ -1295,9 +1295,13 @@
       },
       {
         "d": "2026-11-10",
-        "code": 5,
+        "code": 6,
         "other": 0,
         "samples": [
+          {
+            "commit": "5e114c7",
+            "subject": "Windows printing: craft-print 0e4943cb (winprint 3c978dfc): pages at the printer's resolution, QName tickets, padded integers (#4941) (#6793)"
+          },
           {
             "commit": "a71b512",
             "subject": "M10 #5130: resolve Windows printer-default duplex before spooling (#5180)"
@@ -1305,10 +1309,6 @@
           {
             "commit": "dff0282",
             "subject": "Print: list printers without asking drivers; ask only about the one picked (#2192) (#3554)"
-          },
-          {
-            "commit": "ca66667",
-            "subject": "fix: cap print dialog height to the screen so it can't overflow top/b… (#6223)"
           }
         ]
       }
@@ -6652,5 +6652,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T01:50:19+00:00"
+  "updated_at": "2026-11-10T02:37:34+00:00"
 }
