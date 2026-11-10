@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "a71b512",
-  "latest_commit_date": "2026-11-10T02:38:14+01:00",
-  "latest_message": "M10 #5130: resolve Windows printer-default duplex before spooling (#5180)",
+  "latest_commit": "45d51d8",
+  "latest_commit_date": "2026-11-10T14:23:54+07:00",
+  "latest_message": "M3: a file named with open parameters opens at their destination (#3425) (#5049)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -426,6 +426,10 @@
       },
       {
         "date": "2026-10-27",
+        "text": "(M3, #3425): A file named with open parameters, as help systems start a PDF reader (manual.pdf#nameddest=Intro, #page=12 or #Intro), opens at that destination instead of failing to read manual.pdf#…: at launch, when another launch hands it over, and in its tab when it is already open. Other parameters are ignored. The app and linkopen now also apply a GoToR link's named destination, looked up in the target's /Names /Dests or catalog /Dests, instead of warning that it wasn't applied; the app looks names up off the UI thread. docopen reports the destination of a path with open parameters. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-27",
         "text": "(M10, OCR models): Model staging downloads and verifies the ONNX pair after the upstream RTEN URL brownout; runtime discovery prefers complete ONNX pairs per directory, retains complete RTEN fallback and preserves directory precedence."
       },
       {
@@ -446,11 +450,7 @@
       },
       {
         "date": "2026-10-25",
-        "text": "(web, same-document host mode): A page that loads the PdfCraft web module into its own document (no iframe) can opt into the host bridge with data-host=\"page\" on the app's canvas — the exact value page; any other value keeps the normal app with downloads, unless a same-origin framed ?host=parent selects the parent bridge (unframed or cross-origin, ?host=parent also keeps the normal app). It is the ?host=parent bridge with the transport swapped: the same five messages travel as non-bubbling CustomEvents on the canvas (detail holds the parent messages' fields without type; the host answers with a pdfcraft:open event), so saves reach the host instead of downloading and dirty and start-up-failure reporting are unchanged. Unit tests cover the opt-in rule; no parity or estimate changes."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "(M10, #4158 partial): Word, HTML, RTF and PowerPoint export keep a block that continues another on its line (an italic case name, a link, a superscript) as a run in its own style inside that paragraph, with the source's word space, instead of a paragraph of its own. Style changes that wrap onto the next line still split paragraphs (the reading blocks keep style boundaries). Estimates unchanged."
+        "text": "(M7, #2750): Single-style Keep source fonts edits retain source glyphs and batch only missing glyphs in fallback fonts. Per-rewrite character eligibility and widths are cached; source and fallback edge spaces stay extractable. Estimates unchanged."
       }
     ]
   },
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 135,
+    "revisions_since": 137,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 223,
-    "revisions_7d": 37,
+    "revisions": 225,
+    "revisions_7d": 39,
     "last_revision": {
-      "ts": "2026-11-10T01:38:14Z",
+      "ts": "2026-11-10T07:23:54Z",
       "kind": "content",
-      "commit": "a71b512",
-      "commit_full": "a71b5124bc388e6b86ec0ee5ec16d31fa1955117",
-      "message": "M10 #5130: resolve Windows printer-default duplex before spooling (#5180)"
+      "commit": "45d51d8",
+      "commit_full": "45d51d8c464523ddedffdf22d4838535cd5c87fb",
+      "message": "M3: a file named with open parameters opens at their destination (#3425) (#5049)"
     },
     "last_update": {
-      "ts": "2026-11-10T01:38:14Z",
+      "ts": "2026-11-10T07:23:54Z",
       "kind": "content",
-      "commit": "a71b512",
-      "commit_full": "a71b5124bc388e6b86ec0ee5ec16d31fa1955117",
-      "message": "M10 #5130: resolve Windows printer-default duplex before spooling (#5180)"
+      "commit": "45d51d8",
+      "commit_full": "45d51d8c464523ddedffdf22d4838535cd5c87fb",
+      "message": "M3: a file named with open parameters opens at their destination (#3425) (#5049)"
     },
     "self_reported": "2026-11-09"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 24.5,
+    "score": 24.9,
     "active_days_7d": 7,
-    "changes_7d": 332,
-    "changes_14d": 425,
+    "changes_7d": 340,
+    "changes_14d": 433,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-11-10T03:43:29Z",
-      "commit": "274b7a0",
-      "commit_full": "274b7a0424dcadff9b16fb28a51ecd0e2d44a06b",
-      "subject": "M7: a font's metrics can be read within a caller's decode allowance (#6239, merged with main) (#6800)"
+      "ts": "2026-11-10T07:24:09Z",
+      "commit": "2b46f8b",
+      "commit_full": "2b46f8bf8cc3c9a36ccd72375c3115923dbfdb14",
+      "subject": "fix(redact): a shared JBIG2 dictionary leaves with whatever used it, by any route (#5698)"
     },
-    "last_commit_ts": "2026-11-10T03:43:29Z",
+    "last_commit_ts": "2026-11-10T07:24:09Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       16,
@@ -524,7 +524,7 @@
       6,
       31,
       206,
-      21
+      29
     ],
     "days": [
       {
@@ -1295,20 +1295,20 @@
       },
       {
         "d": "2026-11-10",
-        "code": 21,
+        "code": 29,
         "other": 0,
         "samples": [
           {
-            "commit": "274b7a0",
-            "subject": "M7: a font's metrics can be read within a caller's decode allowance (#6239, merged with main) (#6800)"
+            "commit": "2b46f8b",
+            "subject": "fix(redact): a shared JBIG2 dictionary leaves with whatever used it, by any route (#5698)"
           },
           {
-            "commit": "e2464e1",
-            "subject": "M2: a JBIG2 mask with a large symbol dictionary draws, and one a decoder limit refuses takes its picture with it (#6722) (#6784)"
+            "commit": "45d51d8",
+            "subject": "M3: a file named with open parameters opens at their destination (#3425) (#5049)"
           },
           {
-            "commit": "d9ec802",
-            "subject": "M12: XFA forms with many repeated rows lay out in linear time (form.xfa-dynamic) (#6776)"
+            "commit": "dec9f36",
+            "subject": "Windows: Tesseract and the --control tools start without a console window (#6735)"
           }
         ]
       }
@@ -6650,7 +6650,53 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "f48cf6e",
+      "commit_full": "f48cf6eeba748e26c116335165651b68f1d582c9",
+      "commit_date": "2026-11-10T14:22:36+07:00",
+      "ts": "2026-11-10T07:22:36Z",
+      "message": "fix(edit): preserve source fonts in mixed-script paragraphs (#2778, merged with main) (#6806)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-09",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "45d51d8",
+      "commit_full": "45d51d8c464523ddedffdf22d4838535cd5c87fb",
+      "commit_date": "2026-11-10T14:23:54+07:00",
+      "ts": "2026-11-10T07:23:54Z",
+      "message": "M3: a file named with open parameters opens at their destination (#3425) (#5049)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-09",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T04:38:27+00:00"
+  "updated_at": "2026-11-10T07:58:40+00:00"
 }
