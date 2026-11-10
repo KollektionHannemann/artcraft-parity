@@ -11,12 +11,12 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "debb826",
-  "latest_commit_date": "2026-11-10T15:17:15+01:00",
-  "latest_message": "M10: preserve annotation placement precision (#4995) (#5002)",
+  "latest_commit": "afca38a",
+  "latest_commit_date": "2026-11-10T16:05:43+01:00",
+  "latest_message": "M10: retain printed artwork with indirect annotation metadata (lands #4668) (#6855)",
   "parsed": {
-    "stage": "alpha",
-    "next_stage": "beta",
+    "stage": null,
+    "next_stage": null,
     "target": null,
     "last_updated": "2026-11-09",
     "metrics": {
@@ -386,6 +386,10 @@
       },
       {
         "date": "2026-10-31",
+        "text": "(M6, PR #4166/#4088 integration): Integrated main f137a289 (0.16.1), preserving upstream progress entries and automatic-field Print suppression with its console diagnostic. ShowPanel/SaveAs filtering, explicit button/console printing, field effects and document-error provenance remain intact, together with all three engine regressions and the headless automation regression. Manifests, lockfile and CI match incoming main. Windows x64 / Rust 1.95 validation: 761 engine/automation tests passed, zero failed and four existing ignored; formatting, scoped all-target Clippy with -D warnings, layers/assets/parity and the engine/automation WebAssembly check passed. A fresh CLI build and the 13-step synthetic form exercise passed; the inspected render shows Qty=4 and Total=8, and explicit button/console Print requests are retained. Main's 100 headless parity notices, five renderer WebAssembly warnings and three optional egui patch notices remain. Estimates unchanged."
+      },
+      {
+        "date": "2026-10-31",
         "text": "(M3/M4, #5330): The document quick toolbar offers Crop pages directly through the existing page.crop command, with the command’s assembly-permission check and an active-tool highlight. The existing crop, undo and headless pagesetbox paths are unchanged. No toolbar customization or new shortcut. Estimates unchanged."
       },
       {
@@ -395,6 +399,10 @@
       {
         "date": "2026-10-31",
         "text": "(M2, PR #4172): Integrated main fa5f9f8c, retaining both roadmap histories and raster regression groups. Restored displayconfig and thumbnailconfig imports after the upstream explicit-import migration. Validation: 422 renderer unit tests, engine/UI all-target checks, scoped all-target Clippy with -D warnings, formatting, layers, assets, parity and renderer/engine WASM checks passed. Existing optional-patch/WASM warnings and parity notes remain; no full engine/UI runtime test rerun. Display-only font policy and estimates unchanged."
+      },
+      {
+        "date": "2026-10-29",
+        "text": "(M6, PR #4166/#4088 integration): Retained automatic-field Print suppression, ShowPanel/SaveAs filtering, explicit button/console printing and document-error provenance while integrating upstream 0.15. All three engine regressions and the headless regression remain in their current test modules, with matching parity evidence. Dependency manifests retain main's integrated craft-libs revision, which includes #366. Estimates unchanged."
       },
       {
         "date": "2026-10-29",
@@ -443,14 +451,6 @@
       {
         "date": "2026-10-26",
         "text": "(M11, JBIG2 symbols): Lossless JBIG2 now stores each distinct mark of a black-and-white image once, as a symbol, and places its exact copies, when that is smaller than the generic region: on six pages of rendered 300 dpi text 28% of the generic region's size and 17% of Group 4's, and the same bits back through two independent decoders (hayro-jbig2 and Poppler). Scans, whose letters are seldom identical, gain little until refinement coding; a dictionary shared between pages (/JBIG2Globals) is next. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-26",
-        "text": "(M10, ocr.ocr-web, review fix): On the web, Edit on a scanned page starts the OCR model download, and the page is read once the models load; it was taken for no scan and left unread until the document changed."
-      },
-      {
-        "date": "2026-10-25",
-        "text": "(M5, comment replies): One reply can be deleted from the Comments panel without its thread. On the selected card each reply has its own \"…\" menu (Edit, Copy text, Delete); Delete takes that reply with its pop-up and the replies to it, as commentdelete already did headlessly, and the comment and its other replies stay. The card stays selected, and the panel's editor stays open, on what they were on though the delete moved it in /Annots. Undo and Redo close the editor, since either can move what it was open on. A locked reply can't be deleted. Estimates unchanged."
       }
     ]
   },
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 141,
+    "revisions_since": 143,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 229,
-    "revisions_7d": 43,
+    "revisions": 231,
+    "revisions_7d": 45,
     "last_revision": {
-      "ts": "2026-11-10T14:17:15Z",
+      "ts": "2026-11-10T15:05:43Z",
       "kind": "content",
-      "commit": "debb826",
-      "commit_full": "debb826f29b9c430d51b09842f9b90da8e9dbec7",
-      "message": "M10: preserve annotation placement precision (#4995) (#5002)"
+      "commit": "afca38a",
+      "commit_full": "afca38ad714879f54ace023429ab1e4739f95fc2",
+      "message": "M10: retain printed artwork with indirect annotation metadata (lands #4668) (#6855)"
     },
     "last_update": {
-      "ts": "2026-11-10T14:17:15Z",
+      "ts": "2026-11-10T15:05:43Z",
       "kind": "content",
-      "commit": "debb826",
-      "commit_full": "debb826f29b9c430d51b09842f9b90da8e9dbec7",
-      "message": "M10: preserve annotation placement precision (#4995) (#5002)"
+      "commit": "afca38a",
+      "commit_full": "afca38ad714879f54ace023429ab1e4739f95fc2",
+      "message": "M10: retain printed artwork with indirect annotation metadata (lands #4668) (#6855)"
     },
     "self_reported": "2026-11-09"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 25.3,
+    "score": 25.4,
     "active_days_7d": 7,
-    "changes_7d": 348,
-    "changes_14d": 441,
+    "changes_7d": 352,
+    "changes_14d": 445,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-11-10T14:17:15Z",
-      "commit": "debb826",
-      "commit_full": "debb826f29b9c430d51b09842f9b90da8e9dbec7",
-      "subject": "M10: preserve annotation placement precision (#4995) (#5002)"
+      "ts": "2026-11-10T15:24:33Z",
+      "commit": "0e4b917",
+      "commit_full": "0e4b9171c0fa3a04d36aaa83b45c60aa7f79b8d6",
+      "subject": "fix(ui-egui): keep hotbar picker stationary while resizing (#6513)"
     },
-    "last_commit_ts": "2026-11-10T14:17:15Z",
+    "last_commit_ts": "2026-11-10T15:24:33Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       16,
@@ -524,7 +524,7 @@
       6,
       31,
       206,
-      37
+      41
     ],
     "days": [
       {
@@ -1295,20 +1295,20 @@
       },
       {
         "d": "2026-11-10",
-        "code": 37,
+        "code": 41,
         "other": 0,
         "samples": [
           {
-            "commit": "debb826",
-            "subject": "M10: preserve annotation placement precision (#4995) (#5002)"
+            "commit": "0e4b917",
+            "subject": "fix(ui-egui): keep hotbar picker stationary while resizing (#6513)"
           },
           {
-            "commit": "1a159c5",
-            "subject": "Print a selected area from Take a Snapshot (lands #2491) (#6820)"
+            "commit": "3bcaacc",
+            "subject": "fix(print): keep the localized reset label off the properties panel title (#5550)"
           },
           {
-            "commit": "4ddf52e",
-            "subject": "Bump storytold/egui to 725a39fc (lands #6699) (#6824)"
+            "commit": "afca38a",
+            "subject": "M10: retain printed artwork with indirect annotation metadata (lands #4668) (#6855)"
           }
         ]
       }
@@ -6788,7 +6788,53 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "905e9ab",
+      "commit_full": "905e9abf6f891b9dc8eeee9df3a65bb402bf1441",
+      "commit_date": "2026-11-10T15:50:16+01:00",
+      "ts": "2026-11-10T14:50:16Z",
+      "message": "fix(forms): ignore print requests from automatic field scripts (#4166)",
+      "stage": null,
+      "next_stage": null,
+      "last_updated": "2026-11-09",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "estimates"
+    },
+    {
+      "commit": "afca38a",
+      "commit_full": "afca38ad714879f54ace023429ab1e4739f95fc2",
+      "commit_date": "2026-11-10T16:05:43+01:00",
+      "ts": "2026-11-10T15:05:43Z",
+      "message": "M10: retain printed artwork with indirect annotation metadata (lands #4668) (#6855)",
+      "stage": null,
+      "next_stage": null,
+      "last_updated": "2026-11-09",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T14:41:51+00:00"
+  "updated_at": "2026-11-10T15:32:22+00:00"
 }

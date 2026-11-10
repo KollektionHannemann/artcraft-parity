@@ -49,6 +49,17 @@
   ],
   "latest_events": [
     {
+      "id": "solidcraft",
+      "name": "SolidCraft",
+      "type": "release",
+      "ts": "2026-11-10T14:59:32Z",
+      "tag": "v0.40.0-nightly.20261110.117.1",
+      "kind": "minor",
+      "changes": 424,
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.40.0-nightly.20261110.117.1",
+      "prerelease": true
+    },
+    {
       "id": "effectcraft",
       "name": "EffectCraft",
       "type": "release",
@@ -468,13 +479,6 @@
       "changes": 219,
       "url": "https://github.com/storytold/craft-anything/releases/tag/v0.4.0",
       "prerelease": false
-    },
-    {
-      "id": "AniCraft",
-      "name": "AniCraft",
-      "type": "new_app",
-      "ts": "2026-11-06T00:00:00Z",
-      "adobe": "Unknown"
     }
   ],
   "release_waves": [
@@ -645,18 +649,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 33.2,
+        "score": 33.3,
         "active_days_7d": 7,
-        "changes_7d": 737,
-        "changes_14d": 1417,
+        "changes_7d": 740,
+        "changes_14d": 1420,
         "housekeeping_7d": 30,
         "last_code_change": {
-          "ts": "2026-11-10T13:19:11Z",
-          "commit": "73dc058",
-          "commit_full": "73dc058596e42ad621d3d875a87dfcbde14eac55",
-          "subject": "Tests: synchronize the thumbnail queue priority assertion (#6352)"
+          "ts": "2026-11-10T15:19:35Z",
+          "commit": "e113787",
+          "commit_full": "e1137877ac7d156548958cfc66a201bb8b81a2a9",
+          "subject": "G5: built-in Game HUD graphic style library (#6424)"
         },
-        "last_commit_ts": "2026-11-10T13:19:11Z",
+        "last_commit_ts": "2026-11-10T15:19:35Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           4,
@@ -672,7 +676,7 @@
           56,
           199,
           81,
-          47
+          50
         ]
       },
       "release": {
@@ -1424,8 +1428,8 @@
       "is_new": false,
       "target": null,
       "order": 5,
-      "stage": "alpha",
-      "next_stage": "beta",
+      "stage": null,
+      "next_stage": null,
       "full_pct": 50.0,
       "full_range": null,
       "full_hours": [
@@ -1440,7 +1444,7 @@
         "value_since": "2026-10-15T06:21:11Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 141,
+        "revisions_since": 143,
         "hours_since": null,
         "areas_since": null,
         "changes": 1,
@@ -1457,39 +1461,39 @@
         }
       },
       "roadmap": {
-        "revisions": 229,
-        "revisions_7d": 43,
+        "revisions": 231,
+        "revisions_7d": 45,
         "last_revision": {
-          "ts": "2026-11-10T14:17:15Z",
+          "ts": "2026-11-10T15:05:43Z",
           "kind": "content",
-          "commit": "debb826",
-          "commit_full": "debb826f29b9c430d51b09842f9b90da8e9dbec7",
-          "message": "M10: preserve annotation placement precision (#4995) (#5002)"
+          "commit": "afca38a",
+          "commit_full": "afca38ad714879f54ace023429ab1e4739f95fc2",
+          "message": "M10: retain printed artwork with indirect annotation metadata (lands #4668) (#6855)"
         },
         "last_update": {
-          "ts": "2026-11-10T14:17:15Z",
+          "ts": "2026-11-10T15:05:43Z",
           "kind": "content",
-          "commit": "debb826",
-          "commit_full": "debb826f29b9c430d51b09842f9b90da8e9dbec7",
-          "message": "M10: preserve annotation placement precision (#4995) (#5002)"
+          "commit": "afca38a",
+          "commit_full": "afca38ad714879f54ace023429ab1e4739f95fc2",
+          "message": "M10: retain printed artwork with indirect annotation metadata (lands #4668) (#6855)"
         },
         "self_reported": "2026-11-09"
       },
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 25.3,
+        "score": 25.4,
         "active_days_7d": 7,
-        "changes_7d": 348,
-        "changes_14d": 441,
+        "changes_7d": 352,
+        "changes_14d": 445,
         "housekeeping_7d": 14,
         "last_code_change": {
-          "ts": "2026-11-10T14:17:15Z",
-          "commit": "debb826",
-          "commit_full": "debb826f29b9c430d51b09842f9b90da8e9dbec7",
-          "subject": "M10: preserve annotation placement precision (#4995) (#5002)"
+          "ts": "2026-11-10T15:24:33Z",
+          "commit": "0e4b917",
+          "commit_full": "0e4b9171c0fa3a04d36aaa83b45c60aa7f79b8d6",
+          "subject": "fix(ui-egui): keep hotbar picker stationary while resizing (#6513)"
         },
-        "last_commit_ts": "2026-11-10T14:17:15Z",
+        "last_commit_ts": "2026-11-10T15:24:33Z",
         "repo_since": "2026-09-30T09:17:08Z",
         "window": [
           16,
@@ -1505,7 +1509,7 @@
           6,
           31,
           206,
-          37
+          41
         ]
       },
       "release": {
@@ -1535,11 +1539,11 @@
           "v": 50.0
         },
         {
-          "t": "2026-11-10T14:17:15Z",
+          "t": "2026-11-10T15:05:43Z",
           "v": 50.0
         }
       ],
-      "history_len": 229
+      "history_len": 231
     },
     {
       "repo_url": "https://github.com/storytold/gridcraft",
@@ -1602,18 +1606,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 16.7,
+        "score": 16.9,
         "active_days_7d": 7,
-        "changes_7d": 60,
-        "changes_14d": 190,
+        "changes_7d": 61,
+        "changes_14d": 191,
         "housekeeping_7d": 2,
         "last_code_change": {
-          "ts": "2026-11-10T14:05:02Z",
-          "commit": "50a9e9e",
-          "commit_full": "50a9e9ede44a0c9bd1840fa78e12fcdc204f0c73",
-          "subject": "XLS: formulas open as legacy formulas with Excel's implicit @ (#410) (#1367)"
+          "ts": "2026-11-10T15:13:13Z",
+          "commit": "457bc7e",
+          "commit_full": "457bc7e374afbcd9a99c4f4c52c0017149ec8bb9",
+          "subject": "Naming: use Diagram and Decorative Text in the feature catalog (#3622)"
         },
-        "last_commit_ts": "2026-11-10T14:05:02Z",
+        "last_commit_ts": "2026-11-10T15:13:13Z",
         "repo_since": "2026-10-06T02:09:42Z",
         "window": [
           3,
@@ -1629,7 +1633,7 @@
           10,
           13,
           8,
-          4
+          5
         ]
       },
       "release": {
@@ -1842,18 +1846,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 26.8,
+        "score": 27.4,
         "active_days_7d": 7,
-        "changes_7d": 354,
-        "changes_14d": 439,
+        "changes_7d": 365,
+        "changes_14d": 450,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-10T13:51:20Z",
-          "commit": "fb3b6a4",
-          "commit_full": "fb3b6a4b70438bf17aebc38fcf6c23930afc0457",
-          "subject": "Eraser: add Erase to History (Brush, Pencil and Block modes) (#10692)"
+          "ts": "2026-11-10T15:28:51Z",
+          "commit": "e1145b6",
+          "commit_full": "e1145b604e6b4740be016497c3260dc21e69c855",
+          "subject": "Make text-on-path placement editable (#11629)"
         },
-        "last_commit_ts": "2026-11-10T13:51:20Z",
+        "last_commit_ts": "2026-11-10T15:28:51Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           10,
@@ -1869,7 +1873,7 @@
           85,
           80,
           43,
-          24
+          35
         ]
       },
       "release": {
@@ -2321,16 +2325,16 @@
         "level": "active",
         "score": 19.2,
         "active_days_7d": 7,
-        "changes_7d": 92,
-        "changes_14d": 181,
+        "changes_7d": 93,
+        "changes_14d": 182,
         "housekeeping_7d": 13,
         "last_code_change": {
-          "ts": "2026-11-10T14:05:51Z",
-          "commit": "2320a5c",
-          "commit_full": "2320a5cc1ca802081664732374bc3d48717c8d2f",
-          "subject": "#602: pictures written into a message go with a reply or forward (#826)"
+          "ts": "2026-11-10T14:54:01Z",
+          "commit": "4bd1c92",
+          "commit_full": "4bd1c927790277c0abecce4c77bdc47705e0d25f",
+          "subject": "#978: dates follow the system's regional format (#982)"
         },
-        "last_commit_ts": "2026-11-10T14:05:51Z",
+        "last_commit_ts": "2026-11-10T14:54:01Z",
         "repo_since": "2026-10-12T18:17:00Z",
         "window": [
           15,
@@ -2346,7 +2350,7 @@
           15,
           8,
           7,
-          17
+          18
         ]
       },
       "release": {
@@ -2631,39 +2635,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 393,
-        "revisions_7d": 299,
+        "revisions": 399,
+        "revisions_7d": 305,
         "last_revision": {
-          "ts": "2026-11-10T14:10:20Z",
+          "ts": "2026-11-10T15:27:14Z",
           "kind": "content",
-          "commit": "d159915",
-          "commit_full": "d1599159a26a0ae1610791e706db1ebe85b54f0d",
-          "message": "Check quantized GGUF tensor byte ranges (R3.12) (#1491)"
+          "commit": "770856d",
+          "commit_full": "770856d031896ba632411f2d11b4679a9b9f5d69",
+          "message": "Validate CIL exception section framing (R3.12) (#1499)"
         },
         "last_update": {
-          "ts": "2026-11-10T14:10:20Z",
+          "ts": "2026-11-10T15:27:14Z",
           "kind": "content",
-          "commit": "d159915",
-          "commit_full": "d1599159a26a0ae1610791e706db1ebe85b54f0d",
-          "message": "Check quantized GGUF tensor byte ranges (R3.12) (#1491)"
+          "commit": "770856d",
+          "commit_full": "770856d031896ba632411f2d11b4679a9b9f5d69",
+          "message": "Validate CIL exception section framing (R3.12) (#1499)"
         },
         "self_reported": null
       },
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 26.3,
+        "score": 26.6,
         "active_days_7d": 7,
-        "changes_7d": 369,
-        "changes_14d": 650,
-        "housekeeping_7d": 36,
+        "changes_7d": 374,
+        "changes_14d": 655,
+        "housekeeping_7d": 37,
         "last_code_change": {
-          "ts": "2026-11-10T14:40:47Z",
-          "commit": "ca6f2f9",
-          "commit_full": "ca6f2f9695a6abbe54f698d3fc87c940a2cf6a45",
-          "subject": "Don't let a key save outlive the backend it belongs to (R5.5) (#1495)"
+          "ts": "2026-11-10T15:27:14Z",
+          "commit": "770856d",
+          "commit_full": "770856d031896ba632411f2d11b4679a9b9f5d69",
+          "subject": "Validate CIL exception section framing (R3.12) (#1499)"
         },
-        "last_commit_ts": "2026-11-10T14:40:47Z",
+        "last_commit_ts": "2026-11-10T15:27:14Z",
         "repo_since": "2026-10-31T14:52:14Z",
         "window": [
           0,
@@ -2679,7 +2683,7 @@
           34,
           37,
           157,
-          27
+          32
         ]
       },
       "release": {
@@ -2762,16 +2766,16 @@
         "level": "buzzing",
         "score": 35.5,
         "active_days_7d": 7,
-        "changes_7d": 782,
-        "changes_14d": 1933,
+        "changes_7d": 787,
+        "changes_14d": 1938,
         "housekeeping_7d": 41,
         "last_code_change": {
-          "ts": "2026-11-10T14:11:22Z",
-          "commit": "2b26c17",
-          "commit_full": "2b26c1729e747c04d0ea6b1029e7a5188c8896f9",
-          "subject": "Kernel: all farthest pairs of two identical ellipse arcs are found (#13964)"
+          "ts": "2026-11-10T14:59:48Z",
+          "commit": "023b552",
+          "commit_full": "023b55277f9714dc470b981dec8c82f54c2cb7a3",
+          "subject": "Booleans skip the curve intersection of straight edges whose boxes are apart: same results, joins of prisms about 1.5× faster (#14329) (#14585)"
         },
-        "last_commit_ts": "2026-11-10T14:11:22Z",
+        "last_commit_ts": "2026-11-10T14:59:48Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           225,
@@ -2787,7 +2791,7 @@
           85,
           70,
           151,
-          165
+          170
         ]
       },
       "release": {
@@ -2984,5 +2988,5 @@
       }
     ]
   },
-  "generated_at": "2026-11-10T14:43:01+00:00"
+  "generated_at": "2026-11-10T15:34:00+00:00"
 }

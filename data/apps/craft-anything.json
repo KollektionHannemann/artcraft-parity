@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "d159915",
-  "latest_commit_date": "2026-11-10T21:10:20+07:00",
-  "latest_message": "Check quantized GGUF tensor byte ranges (R3.12) (#1491)",
+  "latest_commit": "770856d",
+  "latest_commit_date": "2026-11-10T22:27:14+07:00",
+  "latest_message": "Validate CIL exception section framing (R3.12) (#1499)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 393,
-    "revisions_7d": 299,
+    "revisions": 399,
+    "revisions_7d": 305,
     "last_revision": {
-      "ts": "2026-11-10T14:10:20Z",
+      "ts": "2026-11-10T15:27:14Z",
       "kind": "content",
-      "commit": "d159915",
-      "commit_full": "d1599159a26a0ae1610791e706db1ebe85b54f0d",
-      "message": "Check quantized GGUF tensor byte ranges (R3.12) (#1491)"
+      "commit": "770856d",
+      "commit_full": "770856d031896ba632411f2d11b4679a9b9f5d69",
+      "message": "Validate CIL exception section framing (R3.12) (#1499)"
     },
     "last_update": {
-      "ts": "2026-11-10T14:10:20Z",
+      "ts": "2026-11-10T15:27:14Z",
       "kind": "content",
-      "commit": "d159915",
-      "commit_full": "d1599159a26a0ae1610791e706db1ebe85b54f0d",
-      "message": "Check quantized GGUF tensor byte ranges (R3.12) (#1491)"
+      "commit": "770856d",
+      "commit_full": "770856d031896ba632411f2d11b4679a9b9f5d69",
+      "message": "Validate CIL exception section framing (R3.12) (#1499)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 26.3,
+    "score": 26.6,
     "active_days_7d": 7,
-    "changes_7d": 369,
-    "changes_14d": 650,
-    "housekeeping_7d": 36,
+    "changes_7d": 374,
+    "changes_14d": 655,
+    "housekeeping_7d": 37,
     "last_code_change": {
-      "ts": "2026-11-10T14:40:47Z",
-      "commit": "ca6f2f9",
-      "commit_full": "ca6f2f9695a6abbe54f698d3fc87c940a2cf6a45",
-      "subject": "Don't let a key save outlive the backend it belongs to (R5.5) (#1495)"
+      "ts": "2026-11-10T15:27:14Z",
+      "commit": "770856d",
+      "commit_full": "770856d031896ba632411f2d11b4679a9b9f5d69",
+      "subject": "Validate CIL exception section framing (R3.12) (#1499)"
     },
-    "last_commit_ts": "2026-11-10T14:40:47Z",
+    "last_commit_ts": "2026-11-10T15:27:14Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       34,
       37,
       157,
-      27
+      32
     ],
     "days": [
       {
@@ -280,20 +280,20 @@
       },
       {
         "d": "2026-11-10",
-        "code": 27,
-        "other": 1,
+        "code": 32,
+        "other": 2,
         "samples": [
           {
-            "commit": "ca6f2f9",
-            "subject": "Don't let a key save outlive the backend it belongs to (R5.5) (#1495)"
+            "commit": "770856d",
+            "subject": "Validate CIL exception section framing (R3.12) (#1499)"
           },
           {
-            "commit": "d159915",
-            "subject": "Check quantized GGUF tensor byte ranges (R3.12) (#1491)"
+            "commit": "5db53dd",
+            "subject": "Bound shared NIB object copies by retained bytes (R3.12) (#1498)"
           },
           {
-            "commit": "16f05f6",
-            "subject": "Scroll the AI settings page in the add-by-address smoke test (#1492)"
+            "commit": "cd20987",
+            "subject": "Validate complete sBPF symbol records (R3.12) (#1496)"
           }
         ]
       }
@@ -3154,8 +3154,50 @@
       "commit": "d159915",
       "commit_full": "d1599159a26a0ae1610791e706db1ebe85b54f0d",
       "message": "Check quantized GGUF tensor byte ranges (R3.12) (#1491)"
+    },
+    {
+      "ts": "2026-11-10T15:01:38Z",
+      "kind": "content",
+      "commit": "11d0042",
+      "commit_full": "11d0042272d7b141b965e0257df2b7fb5374a222",
+      "message": "Recognise text files in target lists and triage (R3.11) (#1490)"
+    },
+    {
+      "ts": "2026-11-10T15:01:46Z",
+      "kind": "content",
+      "commit": "4d270ab",
+      "commit_full": "4d270ab83f1549a58a48f7cf4d397796c16a577b",
+      "message": "Record a live chat paging a big comparison result (R5.7) (#1493)"
+    },
+    {
+      "ts": "2026-11-10T15:08:40Z",
+      "kind": "content",
+      "commit": "b3518a8",
+      "commit_full": "b3518a82ab39c7b66a6143684f169e464ee2b64b",
+      "message": "Reject overflowing NIB length and index encodings (R3.12) (#1497)"
+    },
+    {
+      "ts": "2026-11-10T15:11:44Z",
+      "kind": "content",
+      "commit": "cd20987",
+      "commit_full": "cd209873b0ce825fe30ec0e5bff21836406729fd",
+      "message": "Validate complete sBPF symbol records (R3.12) (#1496)"
+    },
+    {
+      "ts": "2026-11-10T15:20:07Z",
+      "kind": "content",
+      "commit": "5db53dd",
+      "commit_full": "5db53ddf9d56963d055e041e28b5b6acf352f035",
+      "message": "Bound shared NIB object copies by retained bytes (R3.12) (#1498)"
+    },
+    {
+      "ts": "2026-11-10T15:27:14Z",
+      "kind": "content",
+      "commit": "770856d",
+      "commit_full": "770856d031896ba632411f2d11b4679a9b9f5d69",
+      "message": "Validate CIL exception section framing (R3.12) (#1499)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-10T14:42:34+00:00"
+  "updated_at": "2026-11-10T15:33:22+00:00"
 }

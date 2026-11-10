@@ -68,16 +68,16 @@
     "level": "buzzing",
     "score": 35.5,
     "active_days_7d": 7,
-    "changes_7d": 782,
-    "changes_14d": 1933,
+    "changes_7d": 787,
+    "changes_14d": 1938,
     "housekeeping_7d": 41,
     "last_code_change": {
-      "ts": "2026-11-10T14:11:22Z",
-      "commit": "2b26c17",
-      "commit_full": "2b26c1729e747c04d0ea6b1029e7a5188c8896f9",
-      "subject": "Kernel: all farthest pairs of two identical ellipse arcs are found (#13964)"
+      "ts": "2026-11-10T14:59:48Z",
+      "commit": "023b552",
+      "commit_full": "023b55277f9714dc470b981dec8c82f54c2cb7a3",
+      "subject": "Booleans skip the curve intersection of straight edges whose boxes are apart: same results, joins of prisms about 1.5× faster (#14329) (#14585)"
     },
-    "last_commit_ts": "2026-11-10T14:11:22Z",
+    "last_commit_ts": "2026-11-10T14:59:48Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       225,
@@ -93,7 +93,7 @@
       85,
       70,
       151,
-      165
+      170
     ],
     "days": [
       {
@@ -744,26 +744,43 @@
       },
       {
         "d": "2026-11-10",
-        "code": 165,
+        "code": 170,
         "other": 9,
         "samples": [
           {
-            "commit": "2b26c17",
-            "subject": "Kernel: all farthest pairs of two identical ellipse arcs are found (#13964)"
+            "commit": "023b552",
+            "subject": "Booleans skip the curve intersection of straight edges whose boxes are apart: same results, joins of prisms about 1.5× faster (#14329) (#14585)"
           },
           {
-            "commit": "99270af",
-            "subject": "solidcore: the G^n certificate bounds the feet over wide pieces with Taylor models (#14405) (#14535)"
+            "commit": "3e2cc27",
+            "subject": "About: the licences under Licences are indented so they read as its contents (#14442)"
           },
           {
-            "commit": "4647e30",
-            "subject": "Agent chat: Pick context takes History and Browser steps into Features and lists its picks (#11318) (#11383)"
+            "commit": "5f46248",
+            "subject": "Construct: group tools by planes, axes and points (#10149) (#10236)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.40.0-nightly.20261110.117.1",
+      "name": "SolidCraft v0.40.0-nightly.20261110.117.1 (nightly)",
+      "ts": "2026-11-10T14:59:32Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.40.0-nightly.20261110.117.1",
+      "changes": 424,
+      "new_contributors": 33,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.40.0-rc.3",
       "name": "SolidCraft v0.40.0-rc.3",
@@ -948,23 +965,6 @@
         "Web"
       ],
       "prerelease": false,
-      "source": "release",
-      "kind": null
-    },
-    {
-      "tag": "v0.25.1-nightly.20261028.90.1",
-      "name": "SolidCraft v0.25.1-nightly.20261028.90.1 (nightly)",
-      "ts": "2026-10-28T10:51:28Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.25.1-nightly.20261028.90.1",
-      "changes": 108,
-      "new_contributors": 7,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": true,
       "source": "release",
       "kind": null
     }
@@ -2337,5 +2337,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-10T14:42:55+00:00"
+  "updated_at": "2026-11-10T15:33:53+00:00"
 }
