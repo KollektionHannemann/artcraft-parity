@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.0,
+    "score": 14.3,
     "active_days_7d": 7,
-    "changes_7d": 39,
-    "changes_14d": 139,
+    "changes_7d": 40,
+    "changes_14d": 140,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-10T15:46:36Z",
-      "commit": "24062ad",
-      "commit_full": "24062ad6c019ec034612dd0a7706114a37a4c002",
-      "subject": "X inverts the mask paint value (#335)"
+      "ts": "2026-11-10T17:43:35Z",
+      "commit": "b855e54",
+      "commit_full": "b855e542fb94cc328546994296e779f9201f2ee7",
+      "subject": "packaging(linux): refuse non-HTTPS redirects when fetching appimagetool (#378)"
     },
-    "last_commit_ts": "2026-11-10T15:46:36Z",
+    "last_commit_ts": "2026-11-10T17:43:35Z",
     "repo_since": "2026-10-14T18:33:13Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       4,
       7,
       7,
-      4
+      5
     ],
     "days": [
       {
@@ -345,9 +345,13 @@
       },
       {
         "d": "2026-11-10",
-        "code": 4,
+        "code": 5,
         "other": 2,
         "samples": [
+          {
+            "commit": "b855e54",
+            "subject": "packaging(linux): refuse non-HTTPS redirects when fetching appimagetool (#378)"
+          },
           {
             "commit": "24062ad",
             "subject": "X inverts the mask paint value (#335)"
@@ -355,10 +359,6 @@
           {
             "commit": "1de6bb2",
             "subject": "Fix the Rust 1.99 clippy findings (#234)"
-          },
-          {
-            "commit": "c54f3fd",
-            "subject": "Live bake preview: each mesh map shows on the model as it finishes (#270)"
           }
         ]
       }
@@ -719,5 +719,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-10T16:37:32+00:00"
+  "updated_at": "2026-11-10T18:31:22+00:00"
 }

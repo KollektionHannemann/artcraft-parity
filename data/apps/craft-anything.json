@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "09ef67d",
-  "latest_commit_date": "2026-11-11T00:36:01+07:00",
-  "latest_message": "Retain only the requested SQLite row page (R3.12) (#1544)",
+  "latest_commit": "febd46b",
+  "latest_commit_date": "2026-11-11T01:29:05+07:00",
+  "latest_message": "Decode Unity textures with unsigned 16-bit channels (R3.9) (#1516)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 431,
-    "revisions_7d": 337,
+    "revisions": 444,
+    "revisions_7d": 350,
     "last_revision": {
-      "ts": "2026-11-10T17:36:01Z",
+      "ts": "2026-11-10T18:29:05Z",
       "kind": "content",
-      "commit": "09ef67d",
-      "commit_full": "09ef67dcff6e32c0dd5a326d20accad12945d951",
-      "message": "Retain only the requested SQLite row page (R3.12) (#1544)"
+      "commit": "febd46b",
+      "commit_full": "febd46bf30badd3f49647925d74419700bd51814",
+      "message": "Decode Unity textures with unsigned 16-bit channels (R3.9) (#1516)"
     },
     "last_update": {
-      "ts": "2026-11-10T17:36:01Z",
+      "ts": "2026-11-10T18:29:05Z",
       "kind": "content",
-      "commit": "09ef67d",
-      "commit_full": "09ef67dcff6e32c0dd5a326d20accad12945d951",
-      "message": "Retain only the requested SQLite row page (R3.12) (#1544)"
+      "commit": "febd46b",
+      "commit_full": "febd46bf30badd3f49647925d74419700bd51814",
+      "message": "Decode Unity textures with unsigned 16-bit channels (R3.9) (#1516)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 27.6,
+    "score": 27.8,
     "active_days_7d": 7,
-    "changes_7d": 408,
-    "changes_14d": 689,
+    "changes_7d": 421,
+    "changes_14d": 702,
     "housekeeping_7d": 37,
     "last_code_change": {
-      "ts": "2026-11-10T17:36:01Z",
-      "commit": "09ef67d",
-      "commit_full": "09ef67dcff6e32c0dd5a326d20accad12945d951",
-      "subject": "Retain only the requested SQLite row page (R3.12) (#1544)"
+      "ts": "2026-11-10T18:29:05Z",
+      "commit": "febd46b",
+      "commit_full": "febd46bf30badd3f49647925d74419700bd51814",
+      "subject": "Decode Unity textures with unsigned 16-bit channels (R3.9) (#1516)"
     },
-    "last_commit_ts": "2026-11-10T17:36:01Z",
+    "last_commit_ts": "2026-11-10T18:29:05Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       34,
       37,
       157,
-      66
+      79
     ],
     "days": [
       {
@@ -280,20 +280,20 @@
       },
       {
         "d": "2026-11-10",
-        "code": 66,
+        "code": 79,
         "other": 2,
         "samples": [
           {
-            "commit": "09ef67d",
-            "subject": "Retain only the requested SQLite row page (R3.12) (#1544)"
+            "commit": "febd46b",
+            "subject": "Decode Unity textures with unsigned 16-bit channels (R3.9) (#1516)"
           },
           {
-            "commit": "d56d03c",
-            "subject": "Refuse multi-document YAML configs before editing them (R2.2) (#1534)"
+            "commit": "19f30cf",
+            "subject": "Require definition or reference handles in CLI type signatures (R3.12) (#1556)"
           },
           {
-            "commit": "a7e66ab",
-            "subject": "Preserve EVM bytecode when metadata map keys are ambiguous (R3.12) (#1508)"
+            "commit": "94835fb",
+            "subject": "Validate CMS signed attributes before reporting authentication (R3.12) (#1536)"
           }
         ]
       }
@@ -3420,8 +3420,99 @@
       "commit": "09ef67d",
       "commit_full": "09ef67dcff6e32c0dd5a326d20accad12945d951",
       "message": "Retain only the requested SQLite row page (R3.12) (#1544)"
+    },
+    {
+      "ts": "2026-11-10T17:43:57Z",
+      "kind": "content",
+      "commit": "3360c6d",
+      "commit_full": "3360c6dc149ed7dcd1f2fa68a429695c36d695a4",
+      "message": "Resolve CMS signer certificates from their declared identity (R3.12) (#1504)"
+    },
+    {
+      "ts": "2026-11-10T17:44:04Z",
+      "kind": "content",
+      "commit": "01e79e5",
+      "commit_full": "01e79e52f72d2be345c75fd480c221879e53131c",
+      "message": "Decode Swift special types such as non-escaping closures and AnyObject (R3.12) (#1546)"
+    },
+    {
+      "ts": "2026-11-10T17:51:41Z",
+      "kind": "content",
+      "commit": "940db64",
+      "commit_full": "940db64bbc44efcc334bfb0509533bff84af7ebc",
+      "message": "Decode Swift witness table accessor symbols (R3.12) (#1545)"
+    },
+    {
+      "ts": "2026-11-10T17:58:50Z",
+      "kind": "content",
+      "commit": "76fcdaa",
+      "commit_full": "76fcdaadb776ce692aa27e1262c9c71f4c8d3c80",
+      "message": "Reuse constant-pool names while reading Java attributes (R3.12) (#1549)"
+    },
+    {
+      "ts": "2026-11-10T18:09:33Z",
+      "kind": "content",
+      "commit": "1ebdb78",
+      "commit_full": "1ebdb78760d6bfd31f1a70e6389e0d441adb3d2e",
+      "message": "Bound retained DEX payload attachments (R3.12) (#1548)"
+    },
+    {
+      "ts": "2026-11-10T18:09:39Z",
+      "kind": "content",
+      "commit": "bcede83",
+      "commit_full": "bcede83fc6d1ad1db433aaa03afde93871bbe732",
+      "message": "Apply Android package type offsets to resource identities (R3.12) (#1547)"
+    },
+    {
+      "ts": "2026-11-10T18:09:45Z",
+      "kind": "content",
+      "commit": "d1aa3c1",
+      "commit_full": "d1aa3c13888500307e4a49c4576c7e50e219824e",
+      "message": "Decode Swift operator function names (R3.12) (#1551)"
+    },
+    {
+      "ts": "2026-11-10T18:10:49Z",
+      "kind": "content",
+      "commit": "18f3e8c",
+      "commit_full": "18f3e8c63c40a21bb0385a172dcaabf90b0954f7",
+      "message": "Decode Swift concurrency standard types (R3.12) (#1553)"
+    },
+    {
+      "ts": "2026-11-10T18:10:56Z",
+      "kind": "content",
+      "commit": "90ec857",
+      "commit_full": "90ec857f6152c9a61086dbb55caba3f52468f7a7",
+      "message": "Bound retained Go function names when pclntab references are shared (R3.12) (#1554)"
+    },
+    {
+      "ts": "2026-11-10T18:17:48Z",
+      "kind": "content",
+      "commit": "76b52be",
+      "commit_full": "76b52be3f5b2e66c13f14bfbd55c1d6d7d40f3b4",
+      "message": "Keep fixed PE versions inside their declared values (R3.12) (#1555)"
+    },
+    {
+      "ts": "2026-11-10T18:24:15Z",
+      "kind": "content",
+      "commit": "94835fb",
+      "commit_full": "94835fbb9e0163f71ffbc3679583be523c5b9ae2",
+      "message": "Validate CMS signed attributes before reporting authentication (R3.12) (#1536)"
+    },
+    {
+      "ts": "2026-11-10T18:24:21Z",
+      "kind": "content",
+      "commit": "19f30cf",
+      "commit_full": "19f30cf82a78b91705c3dad47d803b9f4bb5e2cc",
+      "message": "Require definition or reference handles in CLI type signatures (R3.12) (#1556)"
+    },
+    {
+      "ts": "2026-11-10T18:29:05Z",
+      "kind": "content",
+      "commit": "febd46b",
+      "commit_full": "febd46bf30badd3f49647925d74419700bd51814",
+      "message": "Decode Unity textures with unsigned 16-bit channels (R3.9) (#1516)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-10T17:36:51+00:00"
+  "updated_at": "2026-11-10T18:31:30+00:00"
 }
