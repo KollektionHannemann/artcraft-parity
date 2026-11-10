@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "d47adef",
-  "latest_commit_date": "2026-11-10T20:22:58+01:00",
-  "latest_message": "M4: bind property drafts with edit-session and replay UI scenarios (#4594)",
+  "latest_commit": "d0b17ef",
+  "latest_commit_date": "2026-11-10T23:21:48+01:00",
+  "latest_message": "Add JavaScript push-button caption methods (#5505)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -409,6 +409,10 @@
         "text": "(M2, PR #4172): Integrated main fa5f9f8c, retaining both roadmap histories and raster regression groups. Restored displayconfig and thumbnailconfig imports after the upstream explicit-import migration. Validation: 422 renderer unit tests, engine/UI all-target checks, scoped all-target Clippy with -D warnings, formatting, layers, assets, parity and renderer/engine WASM checks passed. Existing optional-patch/WASM warnings and parity notes remain; no full engine/UI runtime test rerun. Display-only font policy and estimates unchanged."
       },
       {
+        "date": "2026-10-30",
+        "text": "(M6): Button scripts can read and change the normal push-button caption with buttonGetCaption and buttonSetCaption. The caption is drawn and retained through undo/redo and save/reopen; unsupported face indices are refused. Estimates unchanged."
+      },
+      {
         "date": "2026-10-29",
         "text": "(M10, #5029): Vector printing also honours the implicit NoRotate behavior of existing Text appearances when the flag is clear."
       },
@@ -447,10 +451,6 @@
       {
         "date": "2026-10-27",
         "text": "(M10, annotation print precision): Vector printing preserves small placement coefficients for existing form, comment and stamp appearances with large bounding boxes or matrices."
-      },
-      {
-        "date": "2026-10-27",
-        "text": "(M10, annotation print precision): Vector printing preserves small placement coefficients for existing form, comment and stamp appearances with large bounding boxes or matrices."
       }
     ]
   },
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 146,
+    "revisions_since": 147,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 234,
-    "revisions_7d": 48,
+    "revisions": 235,
+    "revisions_7d": 49,
     "last_revision": {
-      "ts": "2026-11-10T19:22:58Z",
+      "ts": "2026-11-10T22:21:48Z",
       "kind": "content",
-      "commit": "d47adef",
-      "commit_full": "d47adeff89653e1240dbf02019f0eaf9e8742625",
-      "message": "M4: bind property drafts with edit-session and replay UI scenarios (#4594)"
+      "commit": "d0b17ef",
+      "commit_full": "d0b17ef95fd9434197b4a06207c423b3e4a78c6d",
+      "message": "Add JavaScript push-button caption methods (#5505)"
     },
     "last_update": {
-      "ts": "2026-11-10T19:22:58Z",
+      "ts": "2026-11-10T22:21:48Z",
       "kind": "content",
-      "commit": "d47adef",
-      "commit_full": "d47adeff89653e1240dbf02019f0eaf9e8742625",
-      "message": "M4: bind property drafts with edit-session and replay UI scenarios (#4594)"
+      "commit": "d0b17ef",
+      "commit_full": "d0b17ef95fd9434197b4a06207c423b3e4a78c6d",
+      "message": "Add JavaScript push-button caption methods (#5505)"
     },
     "self_reported": "2026-11-09"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 25.9,
+    "score": 26.0,
     "active_days_7d": 7,
-    "changes_7d": 368,
-    "changes_14d": 461,
+    "changes_7d": 372,
+    "changes_14d": 465,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-11-10T21:48:50Z",
-      "commit": "c73a537",
-      "commit_full": "c73a53705b405f6b9f7c71be64e338c6474cc93b",
-      "subject": "Fix #5211: make calculateNow synchronous (#5304)"
+      "ts": "2026-11-10T22:53:58Z",
+      "commit": "ad3e6d4",
+      "commit_full": "ad3e6d4b85cd8d16eaad652f1704bfe6ad1c7481",
+      "subject": "fix(optimize): bound each unused-resource decode by the remaining shared budget (#6046)"
     },
-    "last_commit_ts": "2026-11-10T21:48:50Z",
+    "last_commit_ts": "2026-11-10T22:53:58Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       16,
@@ -524,7 +524,7 @@
       6,
       31,
       206,
-      57
+      61
     ],
     "days": [
       {
@@ -1295,20 +1295,20 @@
       },
       {
         "d": "2026-11-10",
-        "code": 57,
+        "code": 61,
         "other": 1,
         "samples": [
           {
-            "commit": "c73a537",
-            "subject": "Fix #5211: make calculateNow synchronous (#5304)"
+            "commit": "ad3e6d4",
+            "subject": "fix(optimize): bound each unused-resource decode by the remaining shared budget (#6046)"
           },
           {
-            "commit": "85987ba",
-            "subject": "Test: at the minimum width on macOS the main menu may be the folded Menu button (#6920)"
+            "commit": "832a51e",
+            "subject": "Fix #5211: persist JavaScript field colours (#5499)"
           },
           {
-            "commit": "3df6be4",
-            "subject": "feat(js): expose document page boxes (#5501)"
+            "commit": "d0b17ef",
+            "subject": "Add JavaScript push-button caption methods (#5505)"
           }
         ]
       }
@@ -6903,7 +6903,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "d0b17ef",
+      "commit_full": "d0b17ef95fd9434197b4a06207c423b3e4a78c6d",
+      "commit_date": "2026-11-10T23:21:48+01:00",
+      "ts": "2026-11-10T22:21:48Z",
+      "message": "Add JavaScript push-button caption methods (#5505)",
+      "stage": null,
+      "next_stage": null,
+      "last_updated": "2026-11-09",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T22:03:28+00:00"
+  "updated_at": "2026-11-10T23:02:30+00:00"
 }
