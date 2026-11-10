@@ -378,18 +378,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.3,
+    "score": 18.4,
     "active_days_7d": 6,
-    "changes_7d": 93,
-    "changes_14d": 434,
+    "changes_7d": 94,
+    "changes_14d": 435,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-10T14:40:39Z",
-      "commit": "b23bbf9",
-      "commit_full": "b23bbf927f3dabaa9d248c83754262fdd9b3a0e0",
-      "subject": "Timeline: Shift-dragging a layer bar snaps to layer ends, the current time, markers and keys (#1828) (#3412)"
+      "ts": "2026-11-10T15:55:42Z",
+      "commit": "feaa113",
+      "commit_full": "feaa1138d3aa9f5d8c8946fd94b4377d64b45670",
+      "subject": "xtask: skip the non-UTF-8 changed-file test on macOS, where APFS can't hold such names (#3421)"
     },
-    "last_commit_ts": "2026-11-10T14:40:39Z",
+    "last_commit_ts": "2026-11-10T15:55:42Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       3,
@@ -405,7 +405,7 @@
       0,
       11,
       11,
-      11
+      12
     ],
     "days": [
       {
@@ -1098,9 +1098,13 @@
       },
       {
         "d": "2026-11-10",
-        "code": 11,
+        "code": 12,
         "other": 0,
         "samples": [
+          {
+            "commit": "feaa113",
+            "subject": "xtask: skip the non-UTF-8 changed-file test on macOS, where APFS can't hold such names (#3421)"
+          },
           {
             "commit": "b23bbf9",
             "subject": "Timeline: Shift-dragging a layer bar snaps to layer ends, the current time, markers and keys (#1828) (#3412)"
@@ -1108,10 +1112,6 @@
           {
             "commit": "9143393",
             "subject": "#945: play preview audio at the selected frame rate (#3416)"
-          },
-          {
-            "commit": "13470ca",
-            "subject": "Add affected CI and replayable crash repros (#1224)"
           }
         ]
       }
@@ -1671,5 +1671,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T14:41:56+00:00"
+  "updated_at": "2026-11-10T16:36:48+00:00"
 }

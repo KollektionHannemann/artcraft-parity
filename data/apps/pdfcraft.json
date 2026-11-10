@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "afca38a",
-  "latest_commit_date": "2026-11-10T16:05:43+01:00",
-  "latest_message": "M10: retain printed artwork with indirect annotation metadata (lands #4668) (#6855)",
+  "latest_commit": "919db9b",
+  "latest_commit_date": "2026-11-10T17:04:04+01:00",
+  "latest_message": "M10: preserve NoRotate appearance geometry in vector printing (#5036)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -402,6 +402,10 @@
       },
       {
         "date": "2026-10-29",
+        "text": "(M10, #5029): Vector printing also honours the implicit NoRotate behavior of existing Text appearances when the flag is clear."
+      },
+      {
+        "date": "2026-10-29",
         "text": "(M6, PR #4166/#4088 integration): Retained automatic-field Print suppression, ShowPanel/SaveAs filtering, explicit button/console printing and document-error provenance while integrating upstream 0.15. All three engine regressions and the headless regression remain in their current test modules, with matching parity evidence. Dependency manifests retain main's integrated craft-libs revision, which includes #366. Estimates unchanged."
       },
       {
@@ -426,6 +430,14 @@
       },
       {
         "date": "2026-10-27",
+        "text": "(M10, #5029): Vector printing retains the orientation and upper-left anchor of existing NoRotate annotation appearances on rotated source pages."
+      },
+      {
+        "date": "2026-10-27",
+        "text": "(M10, annotation print precision): Vector printing preserves small placement coefficients for existing form, comment and stamp appearances with large bounding boxes or matrices."
+      },
+      {
+        "date": "2026-10-27",
         "text": "(M10, annotation print precision): Vector printing preserves small placement coefficients for existing form, comment and stamp appearances with large bounding boxes or matrices."
       },
       {
@@ -439,18 +451,6 @@
       {
         "date": "2026-10-27",
         "text": "(M3, #3425): A file named with open parameters, as help systems start a PDF reader (manual.pdf#nameddest=Intro, #page=12 or #Intro), opens at that destination instead of failing to read manual.pdf#…: at launch, when another launch hands it over, and in its tab when it is already open. Other parameters are ignored. The app and linkopen now also apply a GoToR link's named destination, looked up in the target's /Names /Dests or catalog /Dests, instead of warning that it wasn't applied; the app looks names up off the UI thread. docopen reports the destination of a path with open parameters. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-27",
-        "text": "(M10, OCR models): Model staging downloads and verifies the ONNX pair after the upstream RTEN URL brownout; runtime discovery prefers complete ONNX pairs per directory, retains complete RTEN fallback and preserves directory precedence."
-      },
-      {
-        "date": "2026-10-26",
-        "text": "(M2, PR #4172): Reconciled current main, preserving its Japanese serif/weight selection and both branches' progress records. Installed CJK viewer and preview fallback remains display-only; estimates unchanged."
-      },
-      {
-        "date": "2026-10-26",
-        "text": "(M11, JBIG2 symbols): Lossless JBIG2 now stores each distinct mark of a black-and-white image once, as a symbol, and places its exact copies, when that is smaller than the generic region: on six pages of rendered 300 dpi text 28% of the generic region's size and 17% of Group 4's, and the same bits back through two independent decoders (hayro-jbig2 and Poppler). Scans, whose letters are seldom identical, gain little until refinement coding; a dictionary shared between pages (/JBIG2Globals) is next. Estimates unchanged."
       }
     ]
   },
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 143,
+    "revisions_since": 144,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 231,
-    "revisions_7d": 45,
+    "revisions": 232,
+    "revisions_7d": 46,
     "last_revision": {
-      "ts": "2026-11-10T15:05:43Z",
+      "ts": "2026-11-10T16:04:04Z",
       "kind": "content",
-      "commit": "afca38a",
-      "commit_full": "afca38ad714879f54ace023429ab1e4739f95fc2",
-      "message": "M10: retain printed artwork with indirect annotation metadata (lands #4668) (#6855)"
+      "commit": "919db9b",
+      "commit_full": "919db9bd5154ad26b937c3c7761f278635864790",
+      "message": "M10: preserve NoRotate appearance geometry in vector printing (#5036)"
     },
     "last_update": {
-      "ts": "2026-11-10T15:05:43Z",
+      "ts": "2026-11-10T16:04:04Z",
       "kind": "content",
-      "commit": "afca38a",
-      "commit_full": "afca38ad714879f54ace023429ab1e4739f95fc2",
-      "message": "M10: retain printed artwork with indirect annotation metadata (lands #4668) (#6855)"
+      "commit": "919db9b",
+      "commit_full": "919db9bd5154ad26b937c3c7761f278635864790",
+      "message": "M10: preserve NoRotate appearance geometry in vector printing (#5036)"
     },
     "self_reported": "2026-11-09"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 25.4,
+    "score": 25.5,
     "active_days_7d": 7,
-    "changes_7d": 352,
-    "changes_14d": 445,
+    "changes_7d": 355,
+    "changes_14d": 448,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-11-10T15:24:33Z",
-      "commit": "0e4b917",
-      "commit_full": "0e4b9171c0fa3a04d36aaa83b45c60aa7f79b8d6",
-      "subject": "fix(ui-egui): keep hotbar picker stationary while resizing (#6513)"
+      "ts": "2026-11-10T16:31:12Z",
+      "commit": "fe70ecc",
+      "commit_full": "fe70ecce73bd982e80887a4d70fdc3f3913e21e4",
+      "subject": "Print in grayscale prints on a Windows driver with no grey option (#5806) (#6863)"
     },
-    "last_commit_ts": "2026-11-10T15:24:33Z",
+    "last_commit_ts": "2026-11-10T16:31:12Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       16,
@@ -524,7 +524,7 @@
       6,
       31,
       206,
-      41
+      44
     ],
     "days": [
       {
@@ -1295,20 +1295,20 @@
       },
       {
         "d": "2026-11-10",
-        "code": 41,
+        "code": 44,
         "other": 0,
         "samples": [
           {
-            "commit": "0e4b917",
-            "subject": "fix(ui-egui): keep hotbar picker stationary while resizing (#6513)"
+            "commit": "fe70ecc",
+            "subject": "Print in grayscale prints on a Windows driver with no grey option (#5806) (#6863)"
           },
           {
-            "commit": "3bcaacc",
-            "subject": "fix(print): keep the localized reset label off the properties panel title (#5550)"
+            "commit": "919db9b",
+            "subject": "M10: preserve NoRotate appearance geometry in vector printing (#5036)"
           },
           {
-            "commit": "afca38a",
-            "subject": "M10: retain printed artwork with indirect annotation metadata (lands #4668) (#6855)"
+            "commit": "6cded6a",
+            "subject": "M10: a booklet's both sides follow a driver that keeps its own two-sided setting (#5772) (#5903)"
           }
         ]
       }
@@ -6834,7 +6834,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "919db9b",
+      "commit_full": "919db9bd5154ad26b937c3c7761f278635864790",
+      "commit_date": "2026-11-10T17:04:04+01:00",
+      "ts": "2026-11-10T16:04:04Z",
+      "message": "M10: preserve NoRotate appearance geometry in vector printing (#5036)",
+      "stage": null,
+      "next_stage": null,
+      "last_updated": "2026-11-09",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T15:32:22+00:00"
+  "updated_at": "2026-11-10T16:36:40+00:00"
 }

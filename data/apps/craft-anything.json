@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "770856d",
-  "latest_commit_date": "2026-11-10T22:27:14+07:00",
-  "latest_message": "Validate CIL exception section framing (R3.12) (#1499)",
+  "latest_commit": "f975b6b",
+  "latest_commit_date": "2026-11-10T23:36:41+07:00",
+  "latest_message": "Don't hand a build a capture made in the other mode (R2.9) (#1520)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 399,
-    "revisions_7d": 305,
+    "revisions": 410,
+    "revisions_7d": 316,
     "last_revision": {
-      "ts": "2026-11-10T15:27:14Z",
+      "ts": "2026-11-10T16:36:41Z",
       "kind": "content",
-      "commit": "770856d",
-      "commit_full": "770856d031896ba632411f2d11b4679a9b9f5d69",
-      "message": "Validate CIL exception section framing (R3.12) (#1499)"
+      "commit": "f975b6b",
+      "commit_full": "f975b6b369c3d52796428ae278345b5afccb5ff7",
+      "message": "Don't hand a build a capture made in the other mode (R2.9) (#1520)"
     },
     "last_update": {
-      "ts": "2026-11-10T15:27:14Z",
+      "ts": "2026-11-10T16:36:41Z",
       "kind": "content",
-      "commit": "770856d",
-      "commit_full": "770856d031896ba632411f2d11b4679a9b9f5d69",
-      "message": "Validate CIL exception section framing (R3.12) (#1499)"
+      "commit": "f975b6b",
+      "commit_full": "f975b6b369c3d52796428ae278345b5afccb5ff7",
+      "message": "Don't hand a build a capture made in the other mode (R2.9) (#1520)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 26.6,
+    "score": 27.0,
     "active_days_7d": 7,
-    "changes_7d": 374,
-    "changes_14d": 655,
+    "changes_7d": 385,
+    "changes_14d": 666,
     "housekeeping_7d": 37,
     "last_code_change": {
-      "ts": "2026-11-10T15:27:14Z",
-      "commit": "770856d",
-      "commit_full": "770856d031896ba632411f2d11b4679a9b9f5d69",
-      "subject": "Validate CIL exception section framing (R3.12) (#1499)"
+      "ts": "2026-11-10T16:36:41Z",
+      "commit": "f975b6b",
+      "commit_full": "f975b6b369c3d52796428ae278345b5afccb5ff7",
+      "subject": "Don't hand a build a capture made in the other mode (R2.9) (#1520)"
     },
-    "last_commit_ts": "2026-11-10T15:27:14Z",
+    "last_commit_ts": "2026-11-10T16:36:41Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       34,
       37,
       157,
-      32
+      43
     ],
     "days": [
       {
@@ -280,20 +280,20 @@
       },
       {
         "d": "2026-11-10",
-        "code": 32,
+        "code": 43,
         "other": 2,
         "samples": [
           {
-            "commit": "770856d",
-            "subject": "Validate CIL exception section framing (R3.12) (#1499)"
+            "commit": "f975b6b",
+            "subject": "Don't hand a build a capture made in the other mode (R2.9) (#1520)"
           },
           {
-            "commit": "5db53dd",
-            "subject": "Bound shared NIB object copies by retained bytes (R3.12) (#1498)"
+            "commit": "4d53f29",
+            "subject": "Verify issuer candidates before extending certificate chains (R3.12) (#1518)"
           },
           {
-            "commit": "cd20987",
-            "subject": "Validate complete sBPF symbol records (R3.12) (#1496)"
+            "commit": "4d52aac",
+            "subject": "Use the declared named curve for ECDSA verification (R3.12) (#1517)"
           }
         ]
       }
@@ -3196,8 +3196,85 @@
       "commit": "770856d",
       "commit_full": "770856d031896ba632411f2d11b4679a9b9f5d69",
       "message": "Validate CIL exception section framing (R3.12) (#1499)"
+    },
+    {
+      "ts": "2026-11-10T15:36:17Z",
+      "kind": "content",
+      "commit": "0d80de6",
+      "commit_full": "0d80de615edfff3b7c3e142f03fdecf91b8b767b",
+      "message": "Name the lists a saved result can page in its summary and browse errors (R5.7) (#1500)"
+    },
+    {
+      "ts": "2026-11-10T15:43:35Z",
+      "kind": "content",
+      "commit": "38d7102",
+      "commit_full": "38d7102df128dee594c73aefcb7bd7ccfc4aefa2",
+      "message": "Preserve JAR manifest bytes when unfolding attributes (R3.12) (#1505)"
+    },
+    {
+      "ts": "2026-11-10T15:56:23Z",
+      "kind": "content",
+      "commit": "b40c56e",
+      "commit_full": "b40c56ef5cb52d377d6e8a2078235ce6e98bef57",
+      "message": "Validate JVM switch tables before allocating decoded pairs (R3.12) (#1503)"
+    },
+    {
+      "ts": "2026-11-10T16:00:08Z",
+      "kind": "content",
+      "commit": "87aec13",
+      "commit_full": "87aec133d5de3ed09d7a463206ec13ecffb690a2",
+      "message": "Keep recovered Go functions before a damaged table record (R3.12) (#1509)"
+    },
+    {
+      "ts": "2026-11-10T16:00:15Z",
+      "kind": "content",
+      "commit": "d795795",
+      "commit_full": "d7957953dc8d5af3b440d2aa3f5072d0d2ac66ce",
+      "message": "Avoid quadratic SQLite b-tree page walks (R3.12) (#1510)"
+    },
+    {
+      "ts": "2026-11-10T16:09:37Z",
+      "kind": "content",
+      "commit": "f9a7e74",
+      "commit_full": "f9a7e749e82ef7f3087110a32ab34293e1c67297",
+      "message": "Bound shared Android string-pool copies by retained bytes (R3.12) (#1513)"
+    },
+    {
+      "ts": "2026-11-10T16:23:40Z",
+      "kind": "content",
+      "commit": "9e2d625",
+      "commit_full": "9e2d625ce155d3f2d1b8ee4e5f97257e74ce4f9d",
+      "message": "Reject conflicting certificate signature algorithm OIDs (R3.12) (#1514)"
+    },
+    {
+      "ts": "2026-11-10T16:26:33Z",
+      "kind": "content",
+      "commit": "07717bf",
+      "commit_full": "07717bf52f59a4f7271b7eb9f4d608c8b9fce412",
+      "message": "Decode Unreal DXT3 textures with explicit alpha (R3.9) (#1512)"
+    },
+    {
+      "ts": "2026-11-10T16:28:11Z",
+      "kind": "content",
+      "commit": "4d52aac",
+      "commit_full": "4d52aaca6a84b9ca20e86ea2787a24788ad844e1",
+      "message": "Use the declared named curve for ECDSA verification (R3.12) (#1517)"
+    },
+    {
+      "ts": "2026-11-10T16:34:32Z",
+      "kind": "content",
+      "commit": "4d53f29",
+      "commit_full": "4d53f29b4d3429c4a6148808baab4e0db3e84cad",
+      "message": "Verify issuer candidates before extending certificate chains (R3.12) (#1518)"
+    },
+    {
+      "ts": "2026-11-10T16:36:41Z",
+      "kind": "content",
+      "commit": "f975b6b",
+      "commit_full": "f975b6b369c3d52796428ae278345b5afccb5ff7",
+      "message": "Don't hand a build a capture made in the other mode (R2.9) (#1520)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-10T15:33:22+00:00"
+  "updated_at": "2026-11-10T16:37:40+00:00"
 }
