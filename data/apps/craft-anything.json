@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "1fc942a",
-  "latest_commit_date": "2026-11-11T02:23:22+07:00",
-  "latest_message": "Recover files from big-endian cramfs images (R3.12) (#1575)",
+  "latest_commit": "994d0e1",
+  "latest_commit_date": "2026-11-11T02:53:35+07:00",
+  "latest_message": "Decode Swift one-time initialization symbols (R3.12) (#1583)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 460,
-    "revisions_7d": 366,
+    "revisions": 470,
+    "revisions_7d": 376,
     "last_revision": {
-      "ts": "2026-11-10T19:23:22Z",
+      "ts": "2026-11-10T19:53:35Z",
       "kind": "content",
-      "commit": "1fc942a",
-      "commit_full": "1fc942a04fd417dbff641e87daf0cd84b051a7fa",
-      "message": "Recover files from big-endian cramfs images (R3.12) (#1575)"
+      "commit": "994d0e1",
+      "commit_full": "994d0e1b3002f6b036ee9d865b8476223268d620",
+      "message": "Decode Swift one-time initialization symbols (R3.12) (#1583)"
     },
     "last_update": {
-      "ts": "2026-11-10T19:23:22Z",
+      "ts": "2026-11-10T19:53:35Z",
       "kind": "content",
-      "commit": "1fc942a",
-      "commit_full": "1fc942a04fd417dbff641e87daf0cd84b051a7fa",
-      "message": "Recover files from big-endian cramfs images (R3.12) (#1575)"
+      "commit": "994d0e1",
+      "commit_full": "994d0e1b3002f6b036ee9d865b8476223268d620",
+      "message": "Decode Swift one-time initialization symbols (R3.12) (#1583)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 28.1,
+    "score": 28.3,
     "active_days_7d": 7,
-    "changes_7d": 437,
-    "changes_14d": 718,
+    "changes_7d": 448,
+    "changes_14d": 729,
     "housekeeping_7d": 37,
     "last_code_change": {
-      "ts": "2026-11-10T19:23:22Z",
-      "commit": "1fc942a",
-      "commit_full": "1fc942a04fd417dbff641e87daf0cd84b051a7fa",
-      "subject": "Recover files from big-endian cramfs images (R3.12) (#1575)"
+      "ts": "2026-11-10T20:12:01Z",
+      "commit": "6e42206",
+      "commit_full": "6e4220632af60e9b21e38a2a36e83e1b7980d938",
+      "subject": "sonar: leave out vendor/ and record why SHA-1 stays in the WebSocket handshake and signature checks (#1483)"
     },
-    "last_commit_ts": "2026-11-10T19:23:22Z",
+    "last_commit_ts": "2026-11-10T20:12:01Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       34,
       37,
       157,
-      95
+      106
     ],
     "days": [
       {
@@ -280,20 +280,20 @@
       },
       {
         "d": "2026-11-10",
-        "code": 95,
+        "code": 106,
         "other": 2,
         "samples": [
           {
-            "commit": "1fc942a",
-            "subject": "Recover files from big-endian cramfs images (R3.12) (#1575)"
+            "commit": "6e42206",
+            "subject": "sonar: leave out vendor/ and record why SHA-1 stays in the WebSocket handshake and signature checks (#1483)"
           },
           {
-            "commit": "36ff598",
-            "subject": "Bound expanded PYZ identities across archive listings (R3.12) (#1567)"
+            "commit": "994d0e1",
+            "subject": "Decode Swift one-time initialization symbols (R3.12) (#1583)"
           },
           {
-            "commit": "e957c1d",
-            "subject": "Use version-specific Python headers for extracted PYZ code (R3.12) (#1563)"
+            "commit": "e7c1980",
+            "subject": "Keep Unity bundle members within their uncompressed stream (R3.12) (#1574)"
           }
         ]
       }
@@ -3623,8 +3623,78 @@
       "commit": "1fc942a",
       "commit_full": "1fc942a04fd417dbff641e87daf0cd84b051a7fa",
       "message": "Recover files from big-endian cramfs images (R3.12) (#1575)"
+    },
+    {
+      "ts": "2026-11-10T19:29:14Z",
+      "kind": "content",
+      "commit": "ffaef85",
+      "commit_full": "ffaef8564dab3b1fa07e30b4a707ad5dbd688e44",
+      "message": "Apply global PAX attributes to TAR members (R3.12) (#1570)"
+    },
+    {
+      "ts": "2026-11-10T19:32:09Z",
+      "kind": "content",
+      "commit": "5120403",
+      "commit_full": "5120403cb8eba32f9099c71992b9bb66788a05ae",
+      "message": "Read requested ranges from stored Unity bundle blocks (R3.12) (#1576)"
+    },
+    {
+      "ts": "2026-11-10T19:34:09Z",
+      "kind": "content",
+      "commit": "3fbd47a",
+      "commit_full": "3fbd47a6b3498d95e9c2938be6a7eeb420af0bf9",
+      "message": "Name Swift noncanonical specialized metadata symbols (R3.12) (#1578)"
+    },
+    {
+      "ts": "2026-11-10T19:36:34Z",
+      "kind": "content",
+      "commit": "0f2f4d7",
+      "commit_full": "0f2f4d7d2d11e8f495f6b1d73729f67a35b161a5",
+      "message": "Decode Swift key path getter and setter symbols (R3.12) (#1579)"
+    },
+    {
+      "ts": "2026-11-10T19:39:45Z",
+      "kind": "content",
+      "commit": "5cb423e",
+      "commit_full": "5cb423e814d4564376e1b92751864b63dffd15ba",
+      "message": "Decode Swift function type attributes (R3.12) (#1582)"
+    },
+    {
+      "ts": "2026-11-10T19:40:34Z",
+      "kind": "content",
+      "commit": "675a7d7",
+      "commit_full": "675a7d77249fafb8ba7621c59fb1b2dcb0620dfd",
+      "message": "Recognize required volatile modifiers in CLI signatures (R3.12) (#1580)"
+    },
+    {
+      "ts": "2026-11-10T19:41:44Z",
+      "kind": "content",
+      "commit": "f790c3a",
+      "commit_full": "f790c3ae9e9ef1d35d66f4bb3463b40c3fea5b14",
+      "message": "Decode Swift outlined variable symbols (R3.12) (#1581)"
+    },
+    {
+      "ts": "2026-11-10T19:47:30Z",
+      "kind": "content",
+      "commit": "2d4f83e",
+      "commit_full": "2d4f83ebf4b0f48350d53889617f141b6fcb7f48",
+      "message": "Recover ordinary uncompressed cramfs blocks (R3.12) (#1577)"
+    },
+    {
+      "ts": "2026-11-10T19:47:44Z",
+      "kind": "content",
+      "commit": "e7c1980",
+      "commit_full": "e7c1980a193ee8c08ee6d23f80f127f492512423",
+      "message": "Keep Unity bundle members within their uncompressed stream (R3.12) (#1574)"
+    },
+    {
+      "ts": "2026-11-10T19:53:35Z",
+      "kind": "content",
+      "commit": "994d0e1",
+      "commit_full": "994d0e1b3002f6b036ee9d865b8476223268d620",
+      "message": "Decode Swift one-time initialization symbols (R3.12) (#1583)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-10T19:28:08+00:00"
+  "updated_at": "2026-11-10T20:15:25+00:00"
 }
