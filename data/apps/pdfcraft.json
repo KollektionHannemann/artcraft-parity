@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "1a159c5",
-  "latest_commit_date": "2026-11-10T19:58:04+07:00",
-  "latest_message": "Print a selected area from Take a Snapshot (lands #2491) (#6820)",
+  "latest_commit": "debb826",
+  "latest_commit_date": "2026-11-10T15:17:15+01:00",
+  "latest_message": "M10: preserve annotation placement precision (#4995) (#5002)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -418,6 +418,10 @@
       },
       {
         "date": "2026-10-27",
+        "text": "(M10, annotation print precision): Vector printing preserves small placement coefficients for existing form, comment and stamp appearances with large bounding boxes or matrices."
+      },
+      {
+        "date": "2026-10-27",
         "text": "(M2, PR #4172 module-split conflicts): Integrated main 1dd2737b, retaining viewer-only CJK fallback in split session modules and Combine thumbnail workers, and moving renderer regressions to the new test module. Validation: 798 scoped tests passed (371 engine, 412 renderer, 15 Combine; two existing engine tests ignored); scoped all-target Clippy with -D warnings, formatting, layers, assets, parity and renderer/engine WASM checks passed. Estimates unchanged."
       },
       {
@@ -447,10 +451,6 @@
       {
         "date": "2026-10-25",
         "text": "(M5, comment replies): One reply can be deleted from the Comments panel without its thread. On the selected card each reply has its own \"…\" menu (Edit, Copy text, Delete); Delete takes that reply with its pop-up and the replies to it, as commentdelete already did headlessly, and the comment and its other replies stay. The card stays selected, and the panel's editor stays open, on what they were on though the delete moved it in /Annots. Undo and Redo close the editor, since either can move what it was open on. A locked reply can't be deleted. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-25",
-        "text": "(M7, #2750): Single-style Keep source fonts edits retain source glyphs and batch only missing glyphs in fallback fonts. Per-rewrite character eligibility and widths are cached; source and fallback edge spaces stay extractable. Estimates unchanged."
       }
     ]
   },
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 140,
+    "revisions_since": 141,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 228,
-    "revisions_7d": 42,
+    "revisions": 229,
+    "revisions_7d": 43,
     "last_revision": {
-      "ts": "2026-11-10T12:58:04Z",
+      "ts": "2026-11-10T14:17:15Z",
       "kind": "content",
-      "commit": "1a159c5",
-      "commit_full": "1a159c57fc48e7106cb3373b17941a3899c9135f",
-      "message": "Print a selected area from Take a Snapshot (lands #2491) (#6820)"
+      "commit": "debb826",
+      "commit_full": "debb826f29b9c430d51b09842f9b90da8e9dbec7",
+      "message": "M10: preserve annotation placement precision (#4995) (#5002)"
     },
     "last_update": {
-      "ts": "2026-11-10T12:58:04Z",
+      "ts": "2026-11-10T14:17:15Z",
       "kind": "content",
-      "commit": "1a159c5",
-      "commit_full": "1a159c57fc48e7106cb3373b17941a3899c9135f",
-      "message": "Print a selected area from Take a Snapshot (lands #2491) (#6820)"
+      "commit": "debb826",
+      "commit_full": "debb826f29b9c430d51b09842f9b90da8e9dbec7",
+      "message": "M10: preserve annotation placement precision (#4995) (#5002)"
     },
     "self_reported": "2026-11-09"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 25.2,
+    "score": 25.3,
     "active_days_7d": 7,
-    "changes_7d": 347,
-    "changes_14d": 440,
+    "changes_7d": 348,
+    "changes_14d": 441,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-11-10T12:58:04Z",
-      "commit": "1a159c5",
-      "commit_full": "1a159c57fc48e7106cb3373b17941a3899c9135f",
-      "subject": "Print a selected area from Take a Snapshot (lands #2491) (#6820)"
+      "ts": "2026-11-10T14:17:15Z",
+      "commit": "debb826",
+      "commit_full": "debb826f29b9c430d51b09842f9b90da8e9dbec7",
+      "subject": "M10: preserve annotation placement precision (#4995) (#5002)"
     },
-    "last_commit_ts": "2026-11-10T12:58:04Z",
+    "last_commit_ts": "2026-11-10T14:17:15Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       16,
@@ -524,7 +524,7 @@
       6,
       31,
       206,
-      36
+      37
     ],
     "days": [
       {
@@ -1295,9 +1295,13 @@
       },
       {
         "d": "2026-11-10",
-        "code": 36,
+        "code": 37,
         "other": 0,
         "samples": [
+          {
+            "commit": "debb826",
+            "subject": "M10: preserve annotation placement precision (#4995) (#5002)"
+          },
           {
             "commit": "1a159c5",
             "subject": "Print a selected area from Take a Snapshot (lands #2491) (#6820)"
@@ -1305,10 +1309,6 @@
           {
             "commit": "4ddf52e",
             "subject": "Bump storytold/egui to 725a39fc (lands #6699) (#6824)"
-          },
-          {
-            "commit": "8864903",
-            "subject": "M10: Recognize text no longer clips the first and last letters of a line (#5058)"
           }
         ]
       }
@@ -6765,7 +6765,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "debb826",
+      "commit_full": "debb826f29b9c430d51b09842f9b90da8e9dbec7",
+      "commit_date": "2026-11-10T15:17:15+01:00",
+      "ts": "2026-11-10T14:17:15Z",
+      "message": "M10: preserve annotation placement precision (#4995) (#5002)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-09",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T13:57:27+00:00"
+  "updated_at": "2026-11-10T14:41:51+00:00"
 }

@@ -464,18 +464,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.3,
+    "score": 16.7,
     "active_days_7d": 7,
-    "changes_7d": 59,
-    "changes_14d": 189,
+    "changes_7d": 60,
+    "changes_14d": 190,
     "housekeeping_7d": 2,
     "last_code_change": {
-      "ts": "2026-11-10T12:54:53Z",
-      "commit": "74ab5cc",
-      "commit_full": "74ab5cc96930cad7d05e4553859b96c746dc5919",
-      "subject": "M12: regional format data (Region, 20 regions) (#3048)"
+      "ts": "2026-11-10T14:05:02Z",
+      "commit": "50a9e9e",
+      "commit_full": "50a9e9ede44a0c9bd1840fa78e12fcdc204f0c73",
+      "subject": "XLS: formulas open as legacy formulas with Excel's implicit @ (#410) (#1367)"
     },
-    "last_commit_ts": "2026-11-10T12:54:53Z",
+    "last_commit_ts": "2026-11-10T14:05:02Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       3,
@@ -491,7 +491,7 @@
       10,
       13,
       8,
-      3
+      4
     ],
     "days": [
       {
@@ -1070,9 +1070,13 @@
       },
       {
         "d": "2026-11-10",
-        "code": 3,
+        "code": 4,
         "other": 0,
         "samples": [
+          {
+            "commit": "50a9e9e",
+            "subject": "XLS: formulas open as legacy formulas with Excel's implicit @ (#410) (#1367)"
+          },
           {
             "commit": "74ab5cc",
             "subject": "M12: regional format data (Region, 20 regions) (#3048)"
@@ -1080,10 +1084,6 @@
           {
             "commit": "ec12eba",
             "subject": "UI.1265: align CJK fallback text with the Latin baseline (#3081)"
-          },
-          {
-            "commit": "ca39b5a",
-            "subject": "XLSX: legacy formulas (no dynamic-array `cm`) open with Excel's implicit `@` and calculate like Excel (#417)"
           }
         ]
       }
@@ -3506,5 +3506,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T13:57:51+00:00"
+  "updated_at": "2026-11-10T14:42:24+00:00"
 }

@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "6db3a29",
-  "latest_commit_date": "2026-11-10T20:09:44+07:00",
-  "latest_message": "Replace a saved API key from Settings and the CLI (R5.5) (#1486)",
+  "latest_commit": "d159915",
+  "latest_commit_date": "2026-11-10T21:10:20+07:00",
+  "latest_message": "Check quantized GGUF tensor byte ranges (R3.12) (#1491)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 392,
-    "revisions_7d": 298,
+    "revisions": 393,
+    "revisions_7d": 299,
     "last_revision": {
-      "ts": "2026-11-10T13:09:44Z",
+      "ts": "2026-11-10T14:10:20Z",
       "kind": "content",
-      "commit": "6db3a29",
-      "commit_full": "6db3a29665c9468e0b7e2972fb8d0398715de78d",
-      "message": "Replace a saved API key from Settings and the CLI (R5.5) (#1486)"
+      "commit": "d159915",
+      "commit_full": "d1599159a26a0ae1610791e706db1ebe85b54f0d",
+      "message": "Check quantized GGUF tensor byte ranges (R3.12) (#1491)"
     },
     "last_update": {
-      "ts": "2026-11-10T13:09:44Z",
+      "ts": "2026-11-10T14:10:20Z",
       "kind": "content",
-      "commit": "6db3a29",
-      "commit_full": "6db3a29665c9468e0b7e2972fb8d0398715de78d",
-      "message": "Replace a saved API key from Settings and the CLI (R5.5) (#1486)"
+      "commit": "d159915",
+      "commit_full": "d1599159a26a0ae1610791e706db1ebe85b54f0d",
+      "message": "Check quantized GGUF tensor byte ranges (R3.12) (#1491)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 26.2,
+    "score": 26.3,
     "active_days_7d": 7,
-    "changes_7d": 366,
-    "changes_14d": 647,
+    "changes_7d": 369,
+    "changes_14d": 650,
     "housekeeping_7d": 36,
     "last_code_change": {
-      "ts": "2026-11-10T13:09:44Z",
-      "commit": "6db3a29",
-      "commit_full": "6db3a29665c9468e0b7e2972fb8d0398715de78d",
-      "subject": "Replace a saved API key from Settings and the CLI (R5.5) (#1486)"
+      "ts": "2026-11-10T14:40:47Z",
+      "commit": "ca6f2f9",
+      "commit_full": "ca6f2f9695a6abbe54f698d3fc87c940a2cf6a45",
+      "subject": "Don't let a key save outlive the backend it belongs to (R5.5) (#1495)"
     },
-    "last_commit_ts": "2026-11-10T13:09:44Z",
+    "last_commit_ts": "2026-11-10T14:40:47Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       34,
       37,
       157,
-      24
+      27
     ],
     "days": [
       {
@@ -280,20 +280,20 @@
       },
       {
         "d": "2026-11-10",
-        "code": 24,
+        "code": 27,
         "other": 1,
         "samples": [
           {
-            "commit": "6db3a29",
-            "subject": "Replace a saved API key from Settings and the CLI (R5.5) (#1486)"
+            "commit": "ca6f2f9",
+            "subject": "Don't let a key save outlive the backend it belongs to (R5.5) (#1495)"
           },
           {
-            "commit": "c066169",
-            "subject": "Keep mechanics behavior unverified without runtime measurements (R2.5) (#362)"
+            "commit": "d159915",
+            "subject": "Check quantized GGUF tensor byte ranges (R3.12) (#1491)"
           },
           {
-            "commit": "9a3eee4",
-            "subject": "Read the process list on FreeBSD: one ps -o per column (#1487)"
+            "commit": "16f05f6",
+            "subject": "Scroll the AI settings page in the add-by-address smoke test (#1492)"
           }
         ]
       }
@@ -3147,8 +3147,15 @@
       "commit": "6db3a29",
       "commit_full": "6db3a29665c9468e0b7e2972fb8d0398715de78d",
       "message": "Replace a saved API key from Settings and the CLI (R5.5) (#1486)"
+    },
+    {
+      "ts": "2026-11-10T14:10:20Z",
+      "kind": "content",
+      "commit": "d159915",
+      "commit_full": "d1599159a26a0ae1610791e706db1ebe85b54f0d",
+      "message": "Check quantized GGUF tensor byte ranges (R3.12) (#1491)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-10T13:57:57+00:00"
+  "updated_at": "2026-11-10T14:42:34+00:00"
 }
