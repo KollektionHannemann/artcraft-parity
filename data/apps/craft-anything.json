@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "ec813af",
-  "latest_commit_date": "2026-11-10T11:33:59+07:00",
-  "latest_message": "Print _: for Swift arguments without a label (R3.12) (#1453)",
+  "latest_commit": "d8d0abb",
+  "latest_commit_date": "2026-11-10T12:17:41+07:00",
+  "latest_message": "Let a person stop adding a server while it's asked for its models (R5.4) (#1460)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 375,
-    "revisions_7d": 281,
+    "revisions": 380,
+    "revisions_7d": 286,
     "last_revision": {
-      "ts": "2026-11-10T04:33:59Z",
+      "ts": "2026-11-10T05:17:41Z",
       "kind": "content",
-      "commit": "ec813af",
-      "commit_full": "ec813af4bda3d29713dccb8eff5b39e78bb0c8e5",
-      "message": "Print _: for Swift arguments without a label (R3.12) (#1453)"
+      "commit": "d8d0abb",
+      "commit_full": "d8d0abb8ab59c4b1ec69c0a035c16589c14323c6",
+      "message": "Let a person stop adding a server while it's asked for its models (R5.4) (#1460)"
     },
     "last_update": {
-      "ts": "2026-11-10T04:33:59Z",
+      "ts": "2026-11-10T05:17:41Z",
       "kind": "content",
-      "commit": "ec813af",
-      "commit_full": "ec813af4bda3d29713dccb8eff5b39e78bb0c8e5",
-      "message": "Print _: for Swift arguments without a label (R3.12) (#1453)"
+      "commit": "d8d0abb",
+      "commit_full": "d8d0abb8ab59c4b1ec69c0a035c16589c14323c6",
+      "message": "Let a person stop adding a server while it's asked for its models (R5.4) (#1460)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 24.1,
+    "score": 25.2,
     "active_days_7d": 7,
-    "changes_7d": 347,
-    "changes_14d": 628,
+    "changes_7d": 354,
+    "changes_14d": 635,
     "housekeeping_7d": 35,
     "last_code_change": {
-      "ts": "2026-11-10T04:33:59Z",
-      "commit": "ec813af",
-      "commit_full": "ec813af4bda3d29713dccb8eff5b39e78bb0c8e5",
-      "subject": "Print _: for Swift arguments without a label (R3.12) (#1453)"
+      "ts": "2026-11-10T05:21:33Z",
+      "commit": "08d6a97",
+      "commit_full": "08d6a973cd8ac77d1441c6d83024741c8d9970a9",
+      "subject": "Build CheckStop::limited only for the Unix tests that use it (#1461)"
     },
-    "last_commit_ts": "2026-11-10T04:33:59Z",
+    "last_commit_ts": "2026-11-10T05:21:33Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       34,
       37,
       157,
-      5
+      12
     ],
     "days": [
       {
@@ -280,20 +280,20 @@
       },
       {
         "d": "2026-11-10",
-        "code": 5,
+        "code": 12,
         "other": 0,
         "samples": [
           {
-            "commit": "ec813af",
-            "subject": "Print _: for Swift arguments without a label (R3.12) (#1453)"
+            "commit": "08d6a97",
+            "subject": "Build CheckStop::limited only for the Unix tests that use it (#1461)"
           },
           {
-            "commit": "202275f",
-            "subject": "Name Swift type metadata singleton initialization caches (R3.12) (#1452)"
+            "commit": "d8d0abb",
+            "subject": "Let a person stop adding a server while it's asked for its models (R5.4) (#1460)"
           },
           {
-            "commit": "a56e0cc",
-            "subject": "Pace the jobs list's progress bar (R5.2) (#1440)"
+            "commit": "6d1084a",
+            "subject": "Print Swift subscript accessors the way swift-demangle does (R3.12) (#1458)"
           }
         ]
       }
@@ -3028,8 +3028,43 @@
       "commit": "ec813af",
       "commit_full": "ec813af4bda3d29713dccb8eff5b39e78bb0c8e5",
       "message": "Print _: for Swift arguments without a label (R3.12) (#1453)"
+    },
+    {
+      "ts": "2026-11-10T04:45:08Z",
+      "kind": "content",
+      "commit": "1ce50d5",
+      "commit_full": "1ce50d5005540b4481fa6a684c7a0bc3b442f9f7",
+      "message": "Wait only 5 s for a program that was stopped, so a check's time limit and Pause always take effect (R5.3) (#1454)"
+    },
+    {
+      "ts": "2026-11-10T05:07:25Z",
+      "kind": "content",
+      "commit": "f83c357",
+      "commit_full": "f83c357bd5d59a25050a9b70407946bd00eaf37a",
+      "message": "Decode Swift private declarations (R3.12) (#1456)"
+    },
+    {
+      "ts": "2026-11-10T05:07:31Z",
+      "kind": "content",
+      "commit": "b3b7428",
+      "commit_full": "b3b7428ebacb828b2003aaf17ea98ca86242b853",
+      "message": "Decode Swift value witness symbols (R3.12) (#1457)"
+    },
+    {
+      "ts": "2026-11-10T05:12:32Z",
+      "kind": "content",
+      "commit": "6d1084a",
+      "commit_full": "6d1084a522d5c3e92945e0eba873d300f1135c44",
+      "message": "Print Swift subscript accessors the way swift-demangle does (R3.12) (#1458)"
+    },
+    {
+      "ts": "2026-11-10T05:17:41Z",
+      "kind": "content",
+      "commit": "d8d0abb",
+      "commit_full": "d8d0abb8ab59c4b1ec69c0a035c16589c14323c6",
+      "message": "Let a person stop adding a server while it's asked for its models (R5.4) (#1460)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-10T04:39:07+00:00"
+  "updated_at": "2026-11-10T05:40:20+00:00"
 }
