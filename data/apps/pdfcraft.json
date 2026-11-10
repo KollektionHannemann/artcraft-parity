@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "919db9b",
-  "latest_commit_date": "2026-11-10T17:04:04+01:00",
-  "latest_message": "M10: preserve NoRotate appearance geometry in vector printing (#5036)",
+  "latest_commit": "92b965d",
+  "latest_commit_date": "2026-11-10T18:26:50+01:00",
+  "latest_message": "M10: preserve annotation layers in vector print output (#5019)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -430,6 +430,10 @@
       },
       {
         "date": "2026-10-27",
+        "text": "(M10, #5005): Vector printing retains each annotation's optional-content membership when drawing its appearance."
+      },
+      {
+        "date": "2026-10-27",
         "text": "(M10, #5029): Vector printing retains the orientation and upper-left anchor of existing NoRotate annotation appearances on rotated source pages."
       },
       {
@@ -447,10 +451,6 @@
       {
         "date": "2026-10-27",
         "text": "(M10, ocr.ocr-web, rebase fix): The web build loads OCR models only when their SHA-256 matches ATTRIBUTION.toml. With ONNX loading now on, rten's parser spins forever on some bytes that aren't a model (a corrupt or wrong download), so a bad file now fails at once instead of hanging a worker."
-      },
-      {
-        "date": "2026-10-27",
-        "text": "(M3, #3425): A file named with open parameters, as help systems start a PDF reader (manual.pdf#nameddest=Intro, #page=12 or #Intro), opens at that destination instead of failing to read manual.pdf#…: at launch, when another launch hands it over, and in its tab when it is already open. Other parameters are ignored. The app and linkopen now also apply a GoToR link's named destination, looked up in the target's /Names /Dests or catalog /Dests, instead of warning that it wasn't applied; the app looks names up off the UI thread. docopen reports the destination of a path with open parameters. Estimates unchanged."
       }
     ]
   },
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 144,
+    "revisions_since": 145,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 232,
-    "revisions_7d": 46,
+    "revisions": 233,
+    "revisions_7d": 47,
     "last_revision": {
-      "ts": "2026-11-10T16:04:04Z",
+      "ts": "2026-11-10T17:26:50Z",
       "kind": "content",
-      "commit": "919db9b",
-      "commit_full": "919db9bd5154ad26b937c3c7761f278635864790",
-      "message": "M10: preserve NoRotate appearance geometry in vector printing (#5036)"
+      "commit": "92b965d",
+      "commit_full": "92b965dba324a15c3c3a48e5d7b1e78fb5e4e6bc",
+      "message": "M10: preserve annotation layers in vector print output (#5019)"
     },
     "last_update": {
-      "ts": "2026-11-10T16:04:04Z",
+      "ts": "2026-11-10T17:26:50Z",
       "kind": "content",
-      "commit": "919db9b",
-      "commit_full": "919db9bd5154ad26b937c3c7761f278635864790",
-      "message": "M10: preserve NoRotate appearance geometry in vector printing (#5036)"
+      "commit": "92b965d",
+      "commit_full": "92b965dba324a15c3c3a48e5d7b1e78fb5e4e6bc",
+      "message": "M10: preserve annotation layers in vector print output (#5019)"
     },
     "self_reported": "2026-11-09"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 25.5,
+    "score": 25.6,
     "active_days_7d": 7,
-    "changes_7d": 355,
-    "changes_14d": 448,
+    "changes_7d": 359,
+    "changes_14d": 452,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-11-10T16:31:12Z",
-      "commit": "fe70ecc",
-      "commit_full": "fe70ecce73bd982e80887a4d70fdc3f3913e21e4",
-      "subject": "Print in grayscale prints on a Windows driver with no grey option (#5806) (#6863)"
+      "ts": "2026-11-10T17:26:50Z",
+      "commit": "92b965d",
+      "commit_full": "92b965dba324a15c3c3a48e5d7b1e78fb5e4e6bc",
+      "subject": "M10: preserve annotation layers in vector print output (#5019)"
     },
-    "last_commit_ts": "2026-11-10T16:31:12Z",
+    "last_commit_ts": "2026-11-10T17:26:50Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       16,
@@ -524,7 +524,7 @@
       6,
       31,
       206,
-      44
+      48
     ],
     "days": [
       {
@@ -1295,20 +1295,20 @@
       },
       {
         "d": "2026-11-10",
-        "code": 44,
+        "code": 48,
         "other": 0,
         "samples": [
           {
-            "commit": "fe70ecc",
-            "subject": "Print in grayscale prints on a Windows driver with no grey option (#5806) (#6863)"
+            "commit": "92b965d",
+            "subject": "M10: preserve annotation layers in vector print output (#5019)"
           },
           {
-            "commit": "919db9b",
-            "subject": "M10: preserve NoRotate appearance geometry in vector printing (#5036)"
+            "commit": "655aa92",
+            "subject": "fix(print): auto-detect printer paper size and add page setup sync (fixes #5861) (#6100)"
           },
           {
-            "commit": "6cded6a",
-            "subject": "M10: a booklet's both sides follow a driver that keeps its own two-sided setting (#5772) (#5903)"
+            "commit": "e03d5a1",
+            "subject": "Render: an isolated CMYK group of any size blends in CMYK, in bands (#6885)"
           }
         ]
       }
@@ -6857,7 +6857,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "92b965d",
+      "commit_full": "92b965dba324a15c3c3a48e5d7b1e78fb5e4e6bc",
+      "commit_date": "2026-11-10T18:26:50+01:00",
+      "ts": "2026-11-10T17:26:50Z",
+      "message": "M10: preserve annotation layers in vector print output (#5019)",
+      "stage": null,
+      "next_stage": null,
+      "last_updated": "2026-11-09",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T16:36:40+00:00"
+  "updated_at": "2026-11-10T17:36:02+00:00"
 }
