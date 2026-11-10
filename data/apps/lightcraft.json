@@ -433,18 +433,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 11.9,
+    "score": 13.7,
     "active_days_7d": 7,
-    "changes_7d": 95,
-    "changes_14d": 120,
+    "changes_7d": 100,
+    "changes_14d": 125,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-10T17:00:44Z",
-      "commit": "e60a725",
-      "commit_full": "e60a7251338c8ab80a62a31ff5c4a139c26513e1",
-      "subject": "LR-VIEW-SURVEY: the survey fits its tiles to the photos' shapes, and tiles glide to their new places (#3632)"
+      "ts": "2026-11-10T23:07:21Z",
+      "commit": "c2e9c45",
+      "commit_full": "c2e9c456c9bfdcd4d56d8b88b8a5b546b69a3223",
+      "subject": "security(segment): Object selections take at most 64 clicks at the engine API and the model (#3717)"
     },
-    "last_commit_ts": "2026-11-10T19:59:36Z",
+    "last_commit_ts": "2026-11-10T23:07:21Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
       5,
@@ -460,7 +460,7 @@
       3,
       1,
       4,
-      1
+      6
     ],
     "days": [
       {
@@ -1144,12 +1144,20 @@
       },
       {
         "d": "2026-11-10",
-        "code": 1,
+        "code": 6,
         "other": 1,
         "samples": [
           {
-            "commit": "e60a725",
-            "subject": "LR-VIEW-SURVEY: the survey fits its tiles to the photos' shapes, and tiles glide to their new places (#3632)"
+            "commit": "c2e9c45",
+            "subject": "security(segment): Object selections take at most 64 clicks at the engine API and the model (#3717)"
+          },
+          {
+            "commit": "0121e0c",
+            "subject": "security: check caller-supplied image dimensions before sizing from them (codecs, merge, inpaint, slideshow) (#3712)"
+          },
+          {
+            "commit": "cb86952",
+            "subject": "security(raw): CR3 timed maker notes are parsed once per distinct range under a shared budget; Sony quad tiles' frames may not exceed the tile (#3700)"
           }
         ]
       }
@@ -1785,5 +1793,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T20:14:39+00:00"
+  "updated_at": "2026-11-10T23:55:37+00:00"
 }

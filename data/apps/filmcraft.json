@@ -444,18 +444,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.8,
+    "score": 17.3,
     "active_days_7d": 7,
-    "changes_7d": 77,
-    "changes_14d": 213,
+    "changes_7d": 79,
+    "changes_14d": 215,
     "housekeeping_7d": 4,
     "last_code_change": {
-      "ts": "2026-11-10T19:13:22Z",
-      "commit": "a64b3d3",
-      "commit_full": "a64b3d37d8511dfcf974b694e270e841e599d47f",
-      "subject": "Narration: ship natural voices in official packages (#2318, #3773)"
+      "ts": "2026-11-10T23:03:13Z",
+      "commit": "2658614",
+      "commit_full": "26586148b86fe55c390491062b2a57da08d695c2",
+      "subject": "codecs, dng: refuse a LATM payload longer than its frame and a raw sample vector shorter than its image before allocating (#4263)"
     },
-    "last_commit_ts": "2026-11-10T19:13:22Z",
+    "last_commit_ts": "2026-11-10T23:03:13Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       4,
@@ -471,7 +471,7 @@
       14,
       21,
       5,
-      4
+      6
     ],
     "days": [
       {
@@ -1190,20 +1190,20 @@
       },
       {
         "d": "2026-11-10",
-        "code": 4,
+        "code": 6,
         "other": 0,
         "samples": [
           {
+            "commit": "2658614",
+            "subject": "codecs, dng: refuse a LATM payload longer than its frame and a raw sample vector shorter than its image before allocating (#4263)"
+          },
+          {
+            "commit": "601ff3d",
+            "subject": "render: do not give style runs without glyphs a colour group, and hold graphic shadow values to their range (#4227)"
+          },
+          {
             "commit": "a64b3d3",
             "subject": "Narration: ship natural voices in official packages (#2318, #3773)"
-          },
-          {
-            "commit": "2d536e6",
-            "subject": "#2553: fall back to the integrated GPU when the chosen one can't draw to the window (#2558)"
-          },
-          {
-            "commit": "0dba3b1",
-            "subject": "Graphics start: test the mode in a child process first, so a hanging driver moves on or reports (#1061, #2634) (#4617)"
           }
         ]
       }
@@ -1786,5 +1786,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T19:27:25+00:00"
+  "updated_at": "2026-11-10T23:55:34+00:00"
 }

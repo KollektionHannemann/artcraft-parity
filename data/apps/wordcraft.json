@@ -541,18 +541,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.5,
+    "score": 20.7,
     "active_days_7d": 7,
-    "changes_7d": 205,
-    "changes_14d": 318,
+    "changes_7d": 206,
+    "changes_14d": 319,
     "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-10T17:43:18Z",
-      "commit": "a42c9ea",
-      "commit_full": "a42c9eaab3768ca609d78a032d179ddafe5334bd",
-      "subject": "sonar: SHA-1 in ODT decryption is the format's, not a choice (#6187)"
+      "ts": "2026-11-10T23:45:02Z",
+      "commit": "a34c94e",
+      "commit_full": "a34c94e4c1fce1b33776706a27be9396686f11d4",
+      "subject": "packaging: use [[ for bash tests (SonarCloud S7688) (#6224)"
     },
-    "last_commit_ts": "2026-11-10T17:43:18Z",
+    "last_commit_ts": "2026-11-10T23:45:02Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       4,
@@ -568,7 +568,7 @@
       3,
       90,
       13,
-      4
+      5
     ],
     "days": [
       {
@@ -1181,9 +1181,13 @@
       },
       {
         "d": "2026-11-10",
-        "code": 4,
+        "code": 5,
         "other": 0,
         "samples": [
+          {
+            "commit": "a34c94e",
+            "subject": "packaging: use [[ for bash tests (SonarCloud S7688) (#6224)"
+          },
           {
             "commit": "a42c9ea",
             "subject": "sonar: SHA-1 in ODT decryption is the format's, not a choice (#6187)"
@@ -1191,10 +1195,6 @@
           {
             "commit": "8548b33",
             "subject": "MacOS: the window moves by its title bar behind a modal dialog (#5124) (#5125)"
-          },
-          {
-            "commit": "2922fe5",
-            "subject": "RTF: style-sheet names take Unicode escapes; a malformed \\' escape leaks no bytes (#6165)"
           }
         ]
       }
@@ -15020,5 +15020,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T18:30:58+00:00"
+  "updated_at": "2026-11-10T23:55:51+00:00"
 }

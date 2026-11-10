@@ -499,16 +499,16 @@
     "level": "buzzing",
     "score": 26.0,
     "active_days_7d": 7,
-    "changes_7d": 372,
-    "changes_14d": 465,
+    "changes_7d": 373,
+    "changes_14d": 466,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-11-10T22:53:58Z",
-      "commit": "ad3e6d4",
-      "commit_full": "ad3e6d4b85cd8d16eaad652f1704bfe6ad1c7481",
-      "subject": "fix(optimize): bound each unused-resource decode by the remaining shared budget (#6046)"
+      "ts": "2026-11-10T23:54:55Z",
+      "commit": "9345b5c",
+      "commit_full": "9345b5caaa8e355a9f3058cee32ab03374b706b3",
+      "subject": "cos: drop the second decoded_strict_within that #6046 merged in (#6933)"
     },
-    "last_commit_ts": "2026-11-10T22:53:58Z",
+    "last_commit_ts": "2026-11-10T23:54:55Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       16,
@@ -524,7 +524,7 @@
       6,
       31,
       206,
-      61
+      62
     ],
     "days": [
       {
@@ -1295,9 +1295,13 @@
       },
       {
         "d": "2026-11-10",
-        "code": 61,
+        "code": 62,
         "other": 1,
         "samples": [
+          {
+            "commit": "9345b5c",
+            "subject": "cos: drop the second decoded_strict_within that #6046 merged in (#6933)"
+          },
           {
             "commit": "ad3e6d4",
             "subject": "fix(optimize): bound each unused-resource decode by the remaining shared budget (#6046)"
@@ -1305,10 +1309,6 @@
           {
             "commit": "832a51e",
             "subject": "Fix #5211: persist JavaScript field colours (#5499)"
-          },
-          {
-            "commit": "d0b17ef",
-            "subject": "Add JavaScript push-button caption methods (#5505)"
           }
         ]
       }
@@ -6928,5 +6928,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T23:02:30+00:00"
+  "updated_at": "2026-11-10T23:55:42+00:00"
 }
