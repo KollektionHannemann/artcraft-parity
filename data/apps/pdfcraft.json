@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "45d51d8",
-  "latest_commit_date": "2026-11-10T14:23:54+07:00",
-  "latest_message": "M3: a file named with open parameters opens at their destination (#3425) (#5049)",
+  "latest_commit": "b7cfbd3",
+  "latest_commit_date": "2026-11-10T15:19:55+07:00",
+  "latest_message": "Find and replace text in Edit text mode: a Replace row in the Find box, Replace all as one undo step (#2467)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 137,
+    "revisions_since": 138,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 225,
-    "revisions_7d": 39,
+    "revisions": 226,
+    "revisions_7d": 40,
     "last_revision": {
-      "ts": "2026-11-10T07:23:54Z",
+      "ts": "2026-11-10T08:19:55Z",
       "kind": "content",
-      "commit": "45d51d8",
-      "commit_full": "45d51d8c464523ddedffdf22d4838535cd5c87fb",
-      "message": "M3: a file named with open parameters opens at their destination (#3425) (#5049)"
+      "commit": "b7cfbd3",
+      "commit_full": "b7cfbd3980d6e045c91bc944bf91c5cd0506ba29",
+      "message": "Find and replace text in Edit text mode: a Replace row in the Find box, Replace all as one undo step (#2467)"
     },
     "last_update": {
-      "ts": "2026-11-10T07:23:54Z",
+      "ts": "2026-11-10T08:19:55Z",
       "kind": "content",
-      "commit": "45d51d8",
-      "commit_full": "45d51d8c464523ddedffdf22d4838535cd5c87fb",
-      "message": "M3: a file named with open parameters opens at their destination (#3425) (#5049)"
+      "commit": "b7cfbd3",
+      "commit_full": "b7cfbd3980d6e045c91bc944bf91c5cd0506ba29",
+      "message": "Find and replace text in Edit text mode: a Replace row in the Find box, Replace all as one undo step (#2467)"
     },
     "self_reported": "2026-11-09"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 24.9,
+    "score": 25.0,
     "active_days_7d": 7,
-    "changes_7d": 340,
-    "changes_14d": 433,
+    "changes_7d": 341,
+    "changes_14d": 434,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-11-10T07:24:09Z",
-      "commit": "2b46f8b",
-      "commit_full": "2b46f8bf8cc3c9a36ccd72375c3115923dbfdb14",
-      "subject": "fix(redact): a shared JBIG2 dictionary leaves with whatever used it, by any route (#5698)"
+      "ts": "2026-11-10T08:19:55Z",
+      "commit": "b7cfbd3",
+      "commit_full": "b7cfbd3980d6e045c91bc944bf91c5cd0506ba29",
+      "subject": "Find and replace text in Edit text mode: a Replace row in the Find box, Replace all as one undo step (#2467)"
     },
-    "last_commit_ts": "2026-11-10T07:24:09Z",
+    "last_commit_ts": "2026-11-10T08:19:55Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       16,
@@ -524,7 +524,7 @@
       6,
       31,
       206,
-      29
+      30
     ],
     "days": [
       {
@@ -1295,9 +1295,13 @@
       },
       {
         "d": "2026-11-10",
-        "code": 29,
+        "code": 30,
         "other": 0,
         "samples": [
+          {
+            "commit": "b7cfbd3",
+            "subject": "Find and replace text in Edit text mode: a Replace row in the Find box, Replace all as one undo step (#2467)"
+          },
           {
             "commit": "2b46f8b",
             "subject": "fix(redact): a shared JBIG2 dictionary leaves with whatever used it, by any route (#5698)"
@@ -1305,10 +1309,6 @@
           {
             "commit": "45d51d8",
             "subject": "M3: a file named with open parameters opens at their destination (#3425) (#5049)"
-          },
-          {
-            "commit": "dec9f36",
-            "subject": "Windows: Tesseract and the --control tools start without a console window (#6735)"
           }
         ]
       }
@@ -6696,7 +6696,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "b7cfbd3",
+      "commit_full": "b7cfbd3980d6e045c91bc944bf91c5cd0506ba29",
+      "commit_date": "2026-11-10T15:19:55+07:00",
+      "ts": "2026-11-10T08:19:55Z",
+      "message": "Find and replace text in Edit text mode: a Replace row in the Find box, Replace all as one undo step (#2467)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-09",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T07:58:40+00:00"
+  "updated_at": "2026-11-10T08:48:44+00:00"
 }
