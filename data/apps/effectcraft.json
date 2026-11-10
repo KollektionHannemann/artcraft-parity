@@ -378,18 +378,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.5,
+    "score": 18.6,
     "active_days_7d": 6,
-    "changes_7d": 95,
-    "changes_14d": 436,
+    "changes_7d": 96,
+    "changes_14d": 437,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-10T17:36:23Z",
-      "commit": "f85f18e",
-      "commit_full": "f85f18e0b48bacb3f2d2725a287173abd49c3aaa",
-      "subject": "Preview: smoother first playback of uncached comps (#3401)"
+      "ts": "2026-11-10T18:31:29Z",
+      "commit": "d5a8eb0",
+      "commit_full": "d5a8eb064a64c324af95cf718c7192a1f446650a",
+      "subject": "sonar: leave out the AEP corpus generators and document the expression eval wrappers (#3407)"
     },
-    "last_commit_ts": "2026-11-10T17:36:23Z",
+    "last_commit_ts": "2026-11-10T18:31:29Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       3,
@@ -405,7 +405,7 @@
       0,
       11,
       11,
-      13
+      14
     ],
     "days": [
       {
@@ -1098,9 +1098,13 @@
       },
       {
         "d": "2026-11-10",
-        "code": 13,
+        "code": 14,
         "other": 0,
         "samples": [
+          {
+            "commit": "d5a8eb0",
+            "subject": "sonar: leave out the AEP corpus generators and document the expression eval wrappers (#3407)"
+          },
           {
             "commit": "f85f18e",
             "subject": "Preview: smoother first playback of uncached comps (#3401)"
@@ -1108,10 +1112,6 @@
           {
             "commit": "feaa113",
             "subject": "xtask: skip the non-UTF-8 changed-file test on macOS, where APFS can't hold such names (#3421)"
-          },
-          {
-            "commit": "b23bbf9",
-            "subject": "Timeline: Shift-dragging a layer bar snaps to layer ends, the current time, markers and keys (#1828) (#3412)"
           }
         ]
       }
@@ -1671,5 +1671,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T18:30:40+00:00"
+  "updated_at": "2026-11-10T19:27:38+00:00"
 }

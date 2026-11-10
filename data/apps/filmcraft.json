@@ -444,18 +444,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.5,
+    "score": 16.8,
     "active_days_7d": 7,
-    "changes_7d": 76,
-    "changes_14d": 212,
+    "changes_7d": 77,
+    "changes_14d": 213,
     "housekeeping_7d": 4,
     "last_code_change": {
-      "ts": "2026-11-10T13:21:43Z",
-      "commit": "2d536e6",
-      "commit_full": "2d536e6af1c886887e8299edfb34b5d565e30a69",
-      "subject": "#2553: fall back to the integrated GPU when the chosen one can't draw to the window (#2558)"
+      "ts": "2026-11-10T19:13:22Z",
+      "commit": "a64b3d3",
+      "commit_full": "a64b3d37d8511dfcf974b694e270e841e599d47f",
+      "subject": "Narration: ship natural voices in official packages (#2318, #3773)"
     },
-    "last_commit_ts": "2026-11-10T13:21:43Z",
+    "last_commit_ts": "2026-11-10T19:13:22Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       4,
@@ -471,7 +471,7 @@
       14,
       21,
       5,
-      3
+      4
     ],
     "days": [
       {
@@ -1190,9 +1190,13 @@
       },
       {
         "d": "2026-11-10",
-        "code": 3,
+        "code": 4,
         "other": 0,
         "samples": [
+          {
+            "commit": "a64b3d3",
+            "subject": "Narration: ship natural voices in official packages (#2318, #3773)"
+          },
           {
             "commit": "2d536e6",
             "subject": "#2553: fall back to the integrated GPU when the chosen one can't draw to the window (#2558)"
@@ -1200,10 +1204,6 @@
           {
             "commit": "0dba3b1",
             "subject": "Graphics start: test the mode in a child process first, so a hanging driver moves on or reports (#1061, #2634) (#4617)"
-          },
-          {
-            "commit": "a65d1e9",
-            "subject": "Graphics start: a failed fallback goes back up, and the error lists every mode tried (#2581) (#4616)"
           }
         ]
       }
@@ -1786,5 +1786,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T13:57:15+00:00"
+  "updated_at": "2026-11-10T19:27:25+00:00"
 }

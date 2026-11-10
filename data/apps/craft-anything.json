@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "febd46b",
-  "latest_commit_date": "2026-11-11T01:29:05+07:00",
-  "latest_message": "Decode Unity textures with unsigned 16-bit channels (R3.9) (#1516)",
+  "latest_commit": "1fc942a",
+  "latest_commit_date": "2026-11-11T02:23:22+07:00",
+  "latest_message": "Recover files from big-endian cramfs images (R3.12) (#1575)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 444,
-    "revisions_7d": 350,
+    "revisions": 460,
+    "revisions_7d": 366,
     "last_revision": {
-      "ts": "2026-11-10T18:29:05Z",
+      "ts": "2026-11-10T19:23:22Z",
       "kind": "content",
-      "commit": "febd46b",
-      "commit_full": "febd46bf30badd3f49647925d74419700bd51814",
-      "message": "Decode Unity textures with unsigned 16-bit channels (R3.9) (#1516)"
+      "commit": "1fc942a",
+      "commit_full": "1fc942a04fd417dbff641e87daf0cd84b051a7fa",
+      "message": "Recover files from big-endian cramfs images (R3.12) (#1575)"
     },
     "last_update": {
-      "ts": "2026-11-10T18:29:05Z",
+      "ts": "2026-11-10T19:23:22Z",
       "kind": "content",
-      "commit": "febd46b",
-      "commit_full": "febd46bf30badd3f49647925d74419700bd51814",
-      "message": "Decode Unity textures with unsigned 16-bit channels (R3.9) (#1516)"
+      "commit": "1fc942a",
+      "commit_full": "1fc942a04fd417dbff641e87daf0cd84b051a7fa",
+      "message": "Recover files from big-endian cramfs images (R3.12) (#1575)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 27.8,
+    "score": 28.1,
     "active_days_7d": 7,
-    "changes_7d": 421,
-    "changes_14d": 702,
+    "changes_7d": 437,
+    "changes_14d": 718,
     "housekeeping_7d": 37,
     "last_code_change": {
-      "ts": "2026-11-10T18:29:05Z",
-      "commit": "febd46b",
-      "commit_full": "febd46bf30badd3f49647925d74419700bd51814",
-      "subject": "Decode Unity textures with unsigned 16-bit channels (R3.9) (#1516)"
+      "ts": "2026-11-10T19:23:22Z",
+      "commit": "1fc942a",
+      "commit_full": "1fc942a04fd417dbff641e87daf0cd84b051a7fa",
+      "subject": "Recover files from big-endian cramfs images (R3.12) (#1575)"
     },
-    "last_commit_ts": "2026-11-10T18:29:05Z",
+    "last_commit_ts": "2026-11-10T19:23:22Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       34,
       37,
       157,
-      79
+      95
     ],
     "days": [
       {
@@ -280,20 +280,20 @@
       },
       {
         "d": "2026-11-10",
-        "code": 79,
+        "code": 95,
         "other": 2,
         "samples": [
           {
-            "commit": "febd46b",
-            "subject": "Decode Unity textures with unsigned 16-bit channels (R3.9) (#1516)"
+            "commit": "1fc942a",
+            "subject": "Recover files from big-endian cramfs images (R3.12) (#1575)"
           },
           {
-            "commit": "19f30cf",
-            "subject": "Require definition or reference handles in CLI type signatures (R3.12) (#1556)"
+            "commit": "36ff598",
+            "subject": "Bound expanded PYZ identities across archive listings (R3.12) (#1567)"
           },
           {
-            "commit": "94835fb",
-            "subject": "Validate CMS signed attributes before reporting authentication (R3.12) (#1536)"
+            "commit": "e957c1d",
+            "subject": "Use version-specific Python headers for extracted PYZ code (R3.12) (#1563)"
           }
         ]
       }
@@ -3511,8 +3511,120 @@
       "commit": "febd46b",
       "commit_full": "febd46bf30badd3f49647925d74419700bd51814",
       "message": "Decode Unity textures with unsigned 16-bit channels (R3.9) (#1516)"
+    },
+    {
+      "ts": "2026-11-10T18:36:50Z",
+      "kind": "content",
+      "commit": "9e393e4",
+      "commit_full": "9e393e42f281219010defcc87770d70fbf24c8cd",
+      "message": "Disclose WebAssembly metadata limits in both tool views (R3.12) (#1557)"
+    },
+    {
+      "ts": "2026-11-10T18:42:20Z",
+      "kind": "content",
+      "commit": "935a079",
+      "commit_full": "935a079ff2fe6939175d7e3ad7da71c397dc84c9",
+      "message": "Account for copied Swift substitution nodes (R3.12) (#1560)"
+    },
+    {
+      "ts": "2026-11-10T18:46:32Z",
+      "kind": "content",
+      "commit": "3595efb",
+      "commit_full": "3595efb4c2ef80798e8c55c77111c2ee2aec0148",
+      "message": "Decode Unity ETC1 RGB textures (R3.9) (#1561)"
+    },
+    {
+      "ts": "2026-11-10T18:48:09Z",
+      "kind": "content",
+      "commit": "7b0b082",
+      "commit_full": "7b0b0822193146ad1a5340119e836c7198a6d740",
+      "message": "Read module formats in current Node SEA archives (R3.12) (#1562)"
+    },
+    {
+      "ts": "2026-11-10T18:55:51Z",
+      "kind": "content",
+      "commit": "d777e0e",
+      "commit_full": "d777e0e1c4e908832b7e88d2ecf10a610b999e71",
+      "message": "Recover zero-filled cramfs hole blocks (R3.12) (#1566)"
+    },
+    {
+      "ts": "2026-11-10T18:56:40Z",
+      "kind": "content",
+      "commit": "1e962a5",
+      "commit_full": "1e962a5142aab5631023e39c958a6a11d02fb8a7",
+      "message": "List Objective-C classes and categories once per address (R3.12) (#1559)"
+    },
+    {
+      "ts": "2026-11-10T18:56:49Z",
+      "kind": "content",
+      "commit": "f2c7a3c",
+      "commit_full": "f2c7a3ce00c450dfb7ae287acfeae84abe5609ed",
+      "message": "Decode Swift lazy witness table cache variable symbols (R3.12) (#1564)"
+    },
+    {
+      "ts": "2026-11-10T18:56:55Z",
+      "kind": "content",
+      "commit": "3839858",
+      "commit_full": "38398581544e9431c885e67b4c60f618a9b4e678",
+      "message": "Verify RSA-PSS signatures using their declared parameters (R3.12) (#1565)"
+    },
+    {
+      "ts": "2026-11-10T19:03:54Z",
+      "kind": "content",
+      "commit": "71d97a4",
+      "commit_full": "71d97a481b46480b005b8f40f6466268eadaca31",
+      "message": "Merge repeated JAR entry sections before checking file digests (R3.12) (#1568)"
+    },
+    {
+      "ts": "2026-11-10T19:04:00Z",
+      "kind": "content",
+      "commit": "6f00929",
+      "commit_full": "6f0092949cea6b088099d399ea13db7a71ef3a9b",
+      "message": "Bound retained PE import and export names (R3.12) (#1571)"
+    },
+    {
+      "ts": "2026-11-10T19:05:02Z",
+      "kind": "content",
+      "commit": "80c96e2",
+      "commit_full": "80c96e205b658c3213b8bf71ffaea7f15fec1054",
+      "message": "Decode Swift opaque result types (R3.12) (#1569)"
+    },
+    {
+      "ts": "2026-11-10T19:09:21Z",
+      "kind": "content",
+      "commit": "be003e1",
+      "commit_full": "be003e1224227923675e98b6519f22ecc2595ff0",
+      "message": "Decode Swift outlined value operation symbols (R3.12) (#1572)"
+    },
+    {
+      "ts": "2026-11-10T19:22:14Z",
+      "kind": "content",
+      "commit": "893134c",
+      "commit_full": "893134c3427619d1fca162a04b15af70070d00d3",
+      "message": "Bound expanded ASAR paths and say when an extraction is incomplete (#1558)"
+    },
+    {
+      "ts": "2026-11-10T19:22:26Z",
+      "kind": "content",
+      "commit": "e957c1d",
+      "commit_full": "e957c1d8cb5f35f5a9b43411b9b0723a3f3ef138",
+      "message": "Use version-specific Python headers for extracted PYZ code (R3.12) (#1563)"
+    },
+    {
+      "ts": "2026-11-10T19:22:32Z",
+      "kind": "content",
+      "commit": "36ff598",
+      "commit_full": "36ff598a4456d5fc074bd0cd9e44f85a1dfe1d97",
+      "message": "Bound expanded PYZ identities across archive listings (R3.12) (#1567)"
+    },
+    {
+      "ts": "2026-11-10T19:23:22Z",
+      "kind": "content",
+      "commit": "1fc942a",
+      "commit_full": "1fc942a04fd417dbff641e87daf0cd84b051a7fa",
+      "message": "Recover files from big-endian cramfs images (R3.12) (#1575)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-10T18:31:30+00:00"
+  "updated_at": "2026-11-10T19:28:08+00:00"
 }

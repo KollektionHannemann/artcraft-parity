@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "92b965d",
-  "latest_commit_date": "2026-11-10T18:26:50+01:00",
-  "latest_message": "M10: preserve annotation layers in vector print output (#5019)",
+  "latest_commit": "d47adef",
+  "latest_commit_date": "2026-11-10T20:22:58+01:00",
+  "latest_message": "M4: bind property drafts with edit-session and replay UI scenarios (#4594)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -293,8 +293,16 @@
     ],
     "progress": [
       {
+        "date": "2026-11-10",
+        "text": "(M4, #4594): Reconcile current main and keep the original draft-safety entry in this progress log instead of duplicating it in the shared roadmap header. Preserve inactive password cleanup and the Properties guard; behavior and estimates unchanged."
+      },
+      {
         "date": "2026-11-09",
         "text": "(M10, #5130): Windows Printer default sends native two-sided bindings only when automatic duplex support is confirmed, preserving manual driver defaults (#5130/#5772); physical output remains unqualified. Both Windows submission paths preserve DLL guards and current spooler fixes. Review follow-up validates both duplex scopes through craft-print 9fe50c94 and corrects CI formatting. Estimates unchanged."
+      },
+      {
+        "date": "2026-11-09",
+        "text": "(M4, #4594): Reconcile upstream changes in the license ledger, roadmap and UI test registry; retain the vendored draft guard, local interaction replay and upstream split-view tests. Behavior and estimates unchanged; maintainer review remains pending."
       },
       {
         "date": "2026-11-08",
@@ -443,14 +451,6 @@
       {
         "date": "2026-10-27",
         "text": "(M10, annotation print precision): Vector printing preserves small placement coefficients for existing form, comment and stamp appearances with large bounding boxes or matrices."
-      },
-      {
-        "date": "2026-10-27",
-        "text": "(M2, PR #4172 module-split conflicts): Integrated main 1dd2737b, retaining viewer-only CJK fallback in split session modules and Combine thumbnail workers, and moving renderer regressions to the new test module. Validation: 798 scoped tests passed (371 engine, 412 renderer, 15 Combine; two existing engine tests ignored); scoped all-target Clippy with -D warnings, formatting, layers, assets, parity and renderer/engine WASM checks passed. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-27",
-        "text": "(M10, ocr.ocr-web, rebase fix): The web build loads OCR models only when their SHA-256 matches ATTRIBUTION.toml. With ONNX loading now on, rten's parser spins forever on some bytes that aren't a model (a corrupt or wrong download), so a bad file now fails at once instead of hanging a worker."
       }
     ]
   },
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 145,
+    "revisions_since": 146,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 233,
-    "revisions_7d": 47,
+    "revisions": 234,
+    "revisions_7d": 48,
     "last_revision": {
-      "ts": "2026-11-10T17:26:50Z",
+      "ts": "2026-11-10T19:22:58Z",
       "kind": "content",
-      "commit": "92b965d",
-      "commit_full": "92b965dba324a15c3c3a48e5d7b1e78fb5e4e6bc",
-      "message": "M10: preserve annotation layers in vector print output (#5019)"
+      "commit": "d47adef",
+      "commit_full": "d47adeff89653e1240dbf02019f0eaf9e8742625",
+      "message": "M4: bind property drafts with edit-session and replay UI scenarios (#4594)"
     },
     "last_update": {
-      "ts": "2026-11-10T17:26:50Z",
+      "ts": "2026-11-10T19:22:58Z",
       "kind": "content",
-      "commit": "92b965d",
-      "commit_full": "92b965dba324a15c3c3a48e5d7b1e78fb5e4e6bc",
-      "message": "M10: preserve annotation layers in vector print output (#5019)"
+      "commit": "d47adef",
+      "commit_full": "d47adeff89653e1240dbf02019f0eaf9e8742625",
+      "message": "M4: bind property drafts with edit-session and replay UI scenarios (#4594)"
     },
     "self_reported": "2026-11-09"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 25.6,
+    "score": 25.7,
     "active_days_7d": 7,
-    "changes_7d": 359,
-    "changes_14d": 452,
+    "changes_7d": 363,
+    "changes_14d": 456,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-11-10T17:26:50Z",
-      "commit": "92b965d",
-      "commit_full": "92b965dba324a15c3c3a48e5d7b1e78fb5e4e6bc",
-      "subject": "M10: preserve annotation layers in vector print output (#5019)"
+      "ts": "2026-11-10T19:22:58Z",
+      "commit": "d47adef",
+      "commit_full": "d47adeff89653e1240dbf02019f0eaf9e8742625",
+      "subject": "M4: bind property drafts with edit-session and replay UI scenarios (#4594)"
     },
-    "last_commit_ts": "2026-11-10T17:26:50Z",
+    "last_commit_ts": "2026-11-10T19:22:58Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       16,
@@ -524,7 +524,7 @@
       6,
       31,
       206,
-      48
+      52
     ],
     "days": [
       {
@@ -1295,20 +1295,20 @@
       },
       {
         "d": "2026-11-10",
-        "code": 48,
+        "code": 52,
         "other": 0,
         "samples": [
           {
-            "commit": "92b965d",
-            "subject": "M10: preserve annotation layers in vector print output (#5019)"
+            "commit": "d47adef",
+            "subject": "M4: bind property drafts with edit-session and replay UI scenarios (#4594)"
           },
           {
-            "commit": "655aa92",
-            "subject": "fix(print): auto-detect printer paper size and add page setup sync (fixes #5861) (#6100)"
+            "commit": "8e6ec92",
+            "subject": "macOS: a job that names no paper tray asks for Auto Select (craft-print 1ee01a4c, #3752) (#6905)"
           },
           {
-            "commit": "e03d5a1",
-            "subject": "Render: an isolated CMYK group of any size blends in CMYK, in bands (#6885)"
+            "commit": "0bffa42",
+            "subject": "fix: Continuous Scrolling toggle not working in Preference tab (#6780) (#6889)"
           }
         ]
       }
@@ -6880,7 +6880,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "d47adef",
+      "commit_full": "d47adeff89653e1240dbf02019f0eaf9e8742625",
+      "commit_date": "2026-11-10T20:22:58+01:00",
+      "ts": "2026-11-10T19:22:58Z",
+      "message": "M4: bind property drafts with edit-session and replay UI scenarios (#4594)",
+      "stage": null,
+      "next_stage": null,
+      "last_updated": "2026-11-09",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T17:36:02+00:00"
+  "updated_at": "2026-11-10T19:27:35+00:00"
 }
