@@ -521,7 +521,7 @@
   },
   "roadmap": {
     "revisions": 590,
-    "revisions_7d": 130,
+    "revisions_7d": 121,
     "last_revision": {
       "ts": "2026-11-09T19:16:05Z",
       "kind": "content",
@@ -540,22 +540,21 @@
   },
   "milestone": null,
   "activity": {
-    "level": "buzzing",
-    "score": 22.4,
+    "level": "active",
+    "score": 19.7,
     "active_days_7d": 7,
-    "changes_7d": 220,
-    "changes_14d": 321,
-    "housekeeping_7d": 9,
+    "changes_7d": 203,
+    "changes_14d": 316,
+    "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-09T19:16:05Z",
-      "commit": "d40d1b2",
-      "commit_full": "d40d1b27181b61990c84c75f77d5fd23ef81d452",
-      "subject": "CLI: --strict on convert and render refuses missing glyphs and pictures (#6039)"
+      "ts": "2026-11-10T00:24:23Z",
+      "commit": "2922fe5",
+      "commit_full": "2922fe566b575794f896077467cf92825ccba7c9",
+      "subject": "RTF: style-sheet names take Unicode escapes; a malformed \\' escape leaks no bytes (#6165)"
     },
-    "last_commit_ts": "2026-11-09T19:16:05Z",
+    "last_commit_ts": "2026-11-10T00:24:23Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
-      7,
       4,
       2,
       46,
@@ -568,7 +567,8 @@
       20,
       3,
       90,
-      13
+      13,
+      2
     ],
     "days": [
       {
@@ -1176,6 +1176,21 @@
           {
             "commit": "8a97427",
             "subject": "ODT: a font size reaches every script's text (gap 19) (#5728)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-10",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "2922fe5",
+            "subject": "RTF: style-sheet names take Unicode escapes; a malformed \\' escape leaks no bytes (#6165)"
+          },
+          {
+            "commit": "43f94a5",
+            "subject": "Paste: composite CSS colours with alpha over the page instead of dropping it (#6164)"
           }
         ]
       }
@@ -14978,5 +14993,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-09T19:23:06+00:00"
+  "updated_at": "2026-11-10T00:36:27+00:00"
 }
