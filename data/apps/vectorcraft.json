@@ -557,18 +557,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 28.6,
+    "score": 29.9,
     "active_days_7d": 7,
-    "changes_7d": 691,
-    "changes_14d": 1371,
+    "changes_7d": 694,
+    "changes_14d": 1374,
     "housekeeping_7d": 29,
     "last_code_change": {
-      "ts": "2026-11-10T00:27:46Z",
-      "commit": "e64a5f1",
-      "commit_full": "e64a5f19965188d51154d5b334b50802be890cdc",
-      "subject": "Canvas: a 3D effect changed on type or a group redraws where its solid was (#6290)"
+      "ts": "2026-11-10T01:35:40Z",
+      "commit": "15f34f5",
+      "commit_full": "15f34f5083a6c04e7a7964e79c0d036bbf4933da",
+      "subject": "Path ops: Unite sweeps a single path once when its own sweep leaves its segments as they are (#6357)"
     },
-    "last_commit_ts": "2026-11-10T00:27:46Z",
+    "last_commit_ts": "2026-11-10T01:35:40Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       4,
@@ -584,7 +584,7 @@
       56,
       199,
       81,
-      1
+      4
     ],
     "days": [
       {
@@ -1355,12 +1355,20 @@
       },
       {
         "d": "2026-11-10",
-        "code": 1,
+        "code": 4,
         "other": 0,
         "samples": [
           {
-            "commit": "e64a5f1",
-            "subject": "Canvas: a 3D effect changed on type or a group redraws where its solid was (#6290)"
+            "commit": "15f34f5",
+            "subject": "Path ops: Unite sweeps a single path once when its own sweep leaves its segments as they are (#6357)"
+          },
+          {
+            "commit": "bca9846",
+            "subject": "Part of #5632: Convert to Grayscale stores an image with one gray channel (#6366)"
+          },
+          {
+            "commit": "c7c6c12",
+            "subject": "Commands: the View commands check their params against machine-readable schemas (#6364)"
           }
         ]
       }
@@ -7417,5 +7425,5 @@
       "kind": "estimates"
     }
   ],
-  "updated_at": "2026-11-10T00:35:54+00:00"
+  "updated_at": "2026-11-10T01:49:58+00:00"
 }

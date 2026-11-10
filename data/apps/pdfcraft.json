@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "6914607",
-  "latest_commit_date": "2026-11-10T01:33:32+01:00",
-  "latest_message": "fix(print): M10 — Windows ya no cambia las letras de las fuentes TrueType incrustadas (#3132) (#4098)",
+  "latest_commit": "a71b512",
+  "latest_commit_date": "2026-11-10T02:38:14+01:00",
+  "latest_message": "M10 #5130: resolve Windows printer-default duplex before spooling (#5180)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": null,
-    "last_updated": "2026-11-08",
+    "last_updated": "2026-11-09",
     "metrics": {
       "full": {
         "label": "Full Acrobat Pro (ready for real work)",
@@ -293,6 +293,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-09",
+        "text": "(M10, #5130): Windows Printer default sends native two-sided bindings only when automatic duplex support is confirmed, preserving manual driver defaults (#5130/#5772); physical output remains unqualified. Both Windows submission paths preserve DLL guards and current spooler fixes. Review follow-up validates both duplex scopes through craft-print 9fe50c94 and corrects CI formatting. Estimates unchanged."
+      },
+      {
         "date": "2026-11-08",
         "text": "(M5, comment exchange): Comments keep their formatting and appearance through XFDF and FDF. XFDF export and import carry rich text, default style, border width, style and dash pattern, rotation, justification, fringe, line leaders and captions, the caret symbol and redaction overlay text as XFDF 3.0 (ISO 19444-1) names them, and a stamp's appearance as <appearance> (the DICT/STREAM/DATA encoding, bounded); copy and paste carries every comment's appearance. FDF export keeps a stamp's /AP with its forms and images, as XFDF does, and FDF import keeps any /AP the file carries (ISO 32000-2 §12.7.8.3.4). The intent goes out as both intent and IT. An unreadable XFDF appearance is left out, said in the import report and the repair log, and the comment is drawn by PdfCraft; an FDF past the import budget is refused whole. A redaction mark is always drawn by PdfCraft."
       },
@@ -447,10 +451,6 @@
       {
         "date": "2026-10-24",
         "text": "(M10, #4158 partial): Word, HTML, RTF and PowerPoint export keep a block that continues another on its line (an italic case name, a link, a superscript) as a run in its own style inside that paragraph, with the source's word space, instead of a paragraph of its own. Style changes that wrap onto the next line still split paragraphs (the reading blocks keep style boundaries). Estimates unchanged."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "(M3, window move on Wayland, #3970 follow-up): After a move or resize by PdfCraft's own title bar or edges, the button release given back to egui goes before the pointer leaving the window, so hover no longer sticks at the old place until the pointer moves. Found by CodeRabbit in review of #3970; a unit test covers it. Estimates unchanged."
       }
     ]
   },
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 134,
+    "revisions_since": 135,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 222,
-    "revisions_7d": 36,
+    "revisions": 223,
+    "revisions_7d": 37,
     "last_revision": {
-      "ts": "2026-11-10T00:33:32Z",
+      "ts": "2026-11-10T01:38:14Z",
       "kind": "content",
-      "commit": "6914607",
-      "commit_full": "6914607f175c882254de84ac1fa5109afa5a4e4b",
-      "message": "fix(print): M10 — Windows ya no cambia las letras de las fuentes TrueType incrustadas (#3132) (#4098)"
+      "commit": "a71b512",
+      "commit_full": "a71b5124bc388e6b86ec0ee5ec16d31fa1955117",
+      "message": "M10 #5130: resolve Windows printer-default duplex before spooling (#5180)"
     },
     "last_update": {
-      "ts": "2026-11-10T00:33:32Z",
+      "ts": "2026-11-10T01:38:14Z",
       "kind": "content",
-      "commit": "6914607",
-      "commit_full": "6914607f175c882254de84ac1fa5109afa5a4e4b",
-      "message": "fix(print): M10 — Windows ya no cambia las letras de las fuentes TrueType incrustadas (#3132) (#4098)"
+      "commit": "a71b512",
+      "commit_full": "a71b5124bc388e6b86ec0ee5ec16d31fa1955117",
+      "message": "M10 #5130: resolve Windows printer-default duplex before spooling (#5180)"
     },
-    "self_reported": "2026-11-08"
+    "self_reported": "2026-11-09"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.6,
+    "score": 22.6,
     "active_days_7d": 7,
-    "changes_7d": 313,
-    "changes_14d": 406,
+    "changes_7d": 316,
+    "changes_14d": 409,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-11-10T00:33:32Z",
-      "commit": "6914607",
-      "commit_full": "6914607f175c882254de84ac1fa5109afa5a4e4b",
-      "subject": "fix(print): M10 — Windows ya no cambia las letras de las fuentes TrueType incrustadas (#3132) (#4098)"
+      "ts": "2026-11-10T01:38:14Z",
+      "commit": "a71b512",
+      "commit_full": "a71b5124bc388e6b86ec0ee5ec16d31fa1955117",
+      "subject": "M10 #5130: resolve Windows printer-default duplex before spooling (#5180)"
     },
-    "last_commit_ts": "2026-11-10T00:33:32Z",
+    "last_commit_ts": "2026-11-10T01:38:14Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       16,
@@ -524,7 +524,7 @@
       6,
       31,
       206,
-      2
+      5
     ],
     "days": [
       {
@@ -1295,16 +1295,20 @@
       },
       {
         "d": "2026-11-10",
-        "code": 2,
+        "code": 5,
         "other": 0,
         "samples": [
           {
-            "commit": "6914607",
-            "subject": "fix(print): M10 — Windows ya no cambia las letras de las fuentes TrueType incrustadas (#3132) (#4098)"
+            "commit": "a71b512",
+            "subject": "M10 #5130: resolve Windows printer-default duplex before spooling (#5180)"
           },
           {
-            "commit": "72e0bec",
-            "subject": "FormCalc: a script its own clock stops is abandoned, as when the wait runs out first (#6783)"
+            "commit": "dff0282",
+            "subject": "Print: list printers without asking drivers; ask only about the one picked (#2192) (#3554)"
+          },
+          {
+            "commit": "ca66667",
+            "subject": "fix: cap print dialog height to the screen so it can't overflow top/b… (#6223)"
           }
         ]
       }
@@ -6623,7 +6627,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "a71b512",
+      "commit_full": "a71b5124bc388e6b86ec0ee5ec16d31fa1955117",
+      "commit_date": "2026-11-10T02:38:14+01:00",
+      "ts": "2026-11-10T01:38:14Z",
+      "message": "M10 #5130: resolve Windows printer-default duplex before spooling (#5180)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-09",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T00:36:12+00:00"
+  "updated_at": "2026-11-10T01:50:19+00:00"
 }
