@@ -444,18 +444,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.1,
+    "score": 16.5,
     "active_days_7d": 7,
-    "changes_7d": 75,
-    "changes_14d": 211,
+    "changes_7d": 76,
+    "changes_14d": 212,
     "housekeeping_7d": 4,
     "last_code_change": {
-      "ts": "2026-11-10T12:18:44Z",
-      "commit": "0dba3b1",
-      "commit_full": "0dba3b1e9bd7cc7bc4817c27b3f3ae6185a39138",
-      "subject": "Graphics start: test the mode in a child process first, so a hanging driver moves on or reports (#1061, #2634) (#4617)"
+      "ts": "2026-11-10T13:21:43Z",
+      "commit": "2d536e6",
+      "commit_full": "2d536e6af1c886887e8299edfb34b5d565e30a69",
+      "subject": "#2553: fall back to the integrated GPU when the chosen one can't draw to the window (#2558)"
     },
-    "last_commit_ts": "2026-11-10T12:18:44Z",
+    "last_commit_ts": "2026-11-10T13:21:43Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       4,
@@ -471,7 +471,7 @@
       14,
       21,
       5,
-      2
+      3
     ],
     "days": [
       {
@@ -1190,9 +1190,13 @@
       },
       {
         "d": "2026-11-10",
-        "code": 2,
+        "code": 3,
         "other": 0,
         "samples": [
+          {
+            "commit": "2d536e6",
+            "subject": "#2553: fall back to the integrated GPU when the chosen one can't draw to the window (#2558)"
+          },
           {
             "commit": "0dba3b1",
             "subject": "Graphics start: test the mode in a child process first, so a hanging driver moves on or reports (#1061, #2634) (#4617)"
@@ -1782,5 +1786,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T12:42:56+00:00"
+  "updated_at": "2026-11-10T13:57:15+00:00"
 }

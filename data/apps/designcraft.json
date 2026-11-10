@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/designcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "7e32b5f",
-  "latest_commit_date": "2026-11-07T15:38:00+01:00",
-  "latest_message": "Preflight: white or [Paper] set to overprint is reported (#2401) (#2412)",
+  "latest_commit": "95abb2b",
+  "latest_commit_date": "2026-11-10T13:50:31+01:00",
+  "latest_message": "pt-BR: translate 996 missing interface strings and the unit names (#1539)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -323,6 +323,10 @@
         "text": "· Esperanto is a text language (Character › Language, type.char {language: \"Esperanto\"}, IDML $ID/Esperanto): tag eo, English-style quotes; not hyphenated yet (#1201). No readiness percentage change."
       },
       {
+        "date": "2026-11-04",
+        "text": "· Interface Language › Português (Brasil) translates the whole interface: 996 strings the catalog lacked (tool names, window and guide commands, Keyboard Shortcuts sets, panel docking, Edit › Menus paths, the Japanese typesetting dialogs, special characters, Load Styles, Data Merge, Preflight, font replacement, the Package summary, OpenType features, page presets, About) and File › New's unit names, and a path is \"demarcador\" throughout. cargo xtask i18n-report counts 2,936 of 2,939 strings for pt-BR (1,933 before); only the Control panel's IT, VA and Y: captions stay English, as in every language. No readiness percentage change."
+      },
+      {
         "date": "2026-11-03",
         "text": "· type.char says when the font it applies isn't available (#2189): it returns {\"warnings\": [\"Missing font: Courier Prime (using Source Sans 3)\"]}, or Missing font style: … for a style the family doesn't have, in preflight's words. The font is still applied, as before, so Find Font and preflight list it. A script that asked for a font the machine doesn't have exported in the substitute with no word about it. No readiness percentage change."
       },
@@ -465,10 +469,6 @@
       {
         "date": "2026-10-24",
         "text": "· Type › Notes › Previous Note and Next Note (note.previous, note.next): as in InDesign, they move the insertion point from note to note in the story, putting the caret after the note's anchor. Each item is unavailable when no note lies in its direction in the story, or when the insertion point is in a table cell or a footnote. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "· Type › Notes › Convert to Note (note.convertFromText {author?}): as in InDesign, the selected text leaves the story and becomes the text of a new note, whose anchor takes its place; Convert Note to Text puts it back. DesignCraft refuses a selection in a table cell, or one that holds a note, footnote, endnote, anchored object, index marker, text anchor, cross-reference or table. No readiness percentage change."
       }
     ]
   },
@@ -477,7 +477,7 @@
     "value_since": "2026-10-10T18:09:17Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 191,
+    "revisions_since": 192,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -485,39 +485,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 192,
-    "revisions_7d": 7,
+    "revisions": 193,
+    "revisions_7d": 8,
     "last_revision": {
-      "ts": "2026-11-07T14:38:00Z",
+      "ts": "2026-11-10T12:50:31Z",
       "kind": "content",
-      "commit": "7e32b5f",
-      "commit_full": "7e32b5ffd5d217e16731d2e3c8220fac64d6d203",
-      "message": "Preflight: white or [Paper] set to overprint is reported (#2401) (#2412)"
+      "commit": "95abb2b",
+      "commit_full": "95abb2b03b6d510a72d687b2e5ee41ef3cbd7485",
+      "message": "pt-BR: translate 996 missing interface strings and the unit names (#1539)"
     },
     "last_update": {
-      "ts": "2026-11-07T14:38:00Z",
+      "ts": "2026-11-10T12:50:31Z",
       "kind": "content",
-      "commit": "7e32b5f",
-      "commit_full": "7e32b5ffd5d217e16731d2e3c8220fac64d6d203",
-      "message": "Preflight: white or [Paper] set to overprint is reported (#2401) (#2412)"
+      "commit": "95abb2b",
+      "commit_full": "95abb2b03b6d510a72d687b2e5ee41ef3cbd7485",
+      "message": "pt-BR: translate 996 missing interface strings and the unit names (#1539)"
     },
     "self_reported": "2026-11-04"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.2,
+    "score": 14.8,
     "active_days_7d": 7,
-    "changes_7d": 56,
-    "changes_14d": 181,
+    "changes_7d": 57,
+    "changes_14d": 182,
     "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-10T02:23:30Z",
-      "commit": "0078f83",
-      "commit_full": "0078f832a7ab8fee64f091b01fed151a512a5901",
-      "subject": "GREP: refuse subroutine calls and bound the empty-match scan (#2179)"
+      "ts": "2026-11-10T12:50:31Z",
+      "commit": "95abb2b",
+      "commit_full": "95abb2b03b6d510a72d687b2e5ee41ef3cbd7485",
+      "subject": "pt-BR: translate 996 missing interface strings and the unit names (#1539)"
     },
-    "last_commit_ts": "2026-11-10T02:23:30Z",
+    "last_commit_ts": "2026-11-10T12:50:31Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       5,
@@ -533,7 +533,7 @@
       3,
       8,
       6,
-      1
+      2
     ],
     "days": [
       {
@@ -1248,9 +1248,13 @@
       },
       {
         "d": "2026-11-10",
-        "code": 1,
+        "code": 2,
         "other": 0,
         "samples": [
+          {
+            "commit": "95abb2b",
+            "subject": "pt-BR: translate 996 missing interface strings and the unit names (#1539)"
+          },
           {
             "commit": "0078f83",
             "subject": "GREP: refuse subroutine calls and bound the empty-match scan (#2179)"
@@ -5882,7 +5886,30 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "95abb2b",
+      "commit_full": "95abb2b03b6d510a72d687b2e5ee41ef3cbd7485",
+      "commit_date": "2026-11-10T13:50:31+01:00",
+      "ts": "2026-11-10T12:50:31Z",
+      "message": "pt-BR: translate 996 missing interface strings and the unit names (#1539)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-04",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T02:37:43+00:00"
+  "updated_at": "2026-11-10T13:57:34+00:00"
 }
