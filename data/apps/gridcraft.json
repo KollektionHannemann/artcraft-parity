@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/gridcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/gridcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "e9addf5",
-  "latest_commit_date": "2026-11-09T15:55:43+01:00",
-  "latest_message": "Arabic bidi layout and cell reading direction in the grid and editors (#947)",
+  "latest_commit": "ec12eba",
+  "latest_commit_date": "2026-11-10T12:44:19+01:00",
+  "latest_message": "UI.1265: align CJK fallback text with the Latin baseline (#3081)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Microsoft Excel (Microsoft 365)",
-    "last_updated": "2026-11-02",
+    "last_updated": "2026-11-05",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -325,6 +325,10 @@
         "text": "Formulas › Function Library as a big Insert Function button, the AutoSum split button and three columns of labelled small buttons, each category book in its own colour; category menus end with Insert Function… on that category; More Functions cascades into the remaining categories; Home › Editing shares the AutoSum menu; the MR key tip opens Recently Used"
       },
       {
+        "date": "2026-10-31",
+        "text": "System and embedded CJK fallback text shares the Latin baseline in cells, editors and window titles (#1265, #2621). Symbol and emoji alignment, manual row heights and clipping are unchanged"
+      },
+      {
         "date": "2026-10-26",
         "text": "Arabic bidi display/editing preserve logical source text; per-cell reading direction is editable and survives undo, XLSX and conditional-format priority"
       },
@@ -423,10 +427,6 @@
       {
         "date": "2026-10-19",
         "text": "Linux: \"Use system setting\" for the theme keeps following the desktop when the XDG Desktop Portal stops answering: each read gives up after 2 s and the next poll reconnects, where one unanswered call stalled the watcher for the rest of the session"
-      },
-      {
-        "date": "2026-10-16",
-        "text": "Memory: undo steps share a sheet's picture bytes and the workbook's VBA project instead of copying them: 50 edits on a sheet with a 20 MB picture keep 22 MB instead of 992 MB"
       }
     ]
   },
@@ -435,7 +435,7 @@
     "value_since": "2026-10-10T18:09:06Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 93,
+    "revisions_since": 94,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -443,39 +443,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 95,
-    "revisions_7d": 8,
+    "revisions": 96,
+    "revisions_7d": 9,
     "last_revision": {
-      "ts": "2026-11-09T14:55:43Z",
+      "ts": "2026-11-10T11:44:19Z",
       "kind": "content",
-      "commit": "e9addf5",
-      "commit_full": "e9addf52fe68847e6c1310fcfa5d42b7aa8b9650",
-      "message": "Arabic bidi layout and cell reading direction in the grid and editors (#947)"
+      "commit": "ec12eba",
+      "commit_full": "ec12eba83e75816b9bbb9eac191159572dbc5d27",
+      "message": "UI.1265: align CJK fallback text with the Latin baseline (#3081)"
     },
     "last_update": {
-      "ts": "2026-11-09T14:55:43Z",
+      "ts": "2026-11-10T11:44:19Z",
       "kind": "content",
-      "commit": "e9addf5",
-      "commit_full": "e9addf52fe68847e6c1310fcfa5d42b7aa8b9650",
-      "message": "Arabic bidi layout and cell reading direction in the grid and editors (#947)"
+      "commit": "ec12eba",
+      "commit_full": "ec12eba83e75816b9bbb9eac191159572dbc5d27",
+      "message": "UI.1265: align CJK fallback text with the Latin baseline (#3081)"
     },
-    "self_reported": "2026-11-02"
+    "self_reported": "2026-11-05"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.3,
-    "active_days_7d": 6,
-    "changes_7d": 56,
-    "changes_14d": 186,
+    "score": 15.9,
+    "active_days_7d": 7,
+    "changes_7d": 58,
+    "changes_14d": 188,
     "housekeeping_7d": 2,
     "last_code_change": {
-      "ts": "2026-11-09T14:55:43Z",
-      "commit": "e9addf5",
-      "commit_full": "e9addf52fe68847e6c1310fcfa5d42b7aa8b9650",
-      "subject": "Arabic bidi layout and cell reading direction in the grid and editors (#947)"
+      "ts": "2026-11-10T11:44:19Z",
+      "commit": "ec12eba",
+      "commit_full": "ec12eba83e75816b9bbb9eac191159572dbc5d27",
+      "subject": "UI.1265: align CJK fallback text with the Latin baseline (#3081)"
     },
-    "last_commit_ts": "2026-11-09T14:55:43Z",
+    "last_commit_ts": "2026-11-10T11:44:19Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       3,
@@ -491,7 +491,7 @@
       10,
       13,
       8,
-      0
+      2
     ],
     "days": [
       {
@@ -1065,6 +1065,21 @@
           {
             "commit": "c35234e",
             "subject": "Number formats: honour the B1/B2 calendar prefixes (Hijri dates for B2) (#1918)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-10",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "ec12eba",
+            "subject": "UI.1265: align CJK fallback text with the Latin baseline (#3081)"
+          },
+          {
+            "commit": "ca39b5a",
+            "subject": "XLSX: legacy formulas (no dynamic-array `cm`) open with Excel's implicit `@` and calculate like Excel (#417)"
           }
         ]
       }
@@ -3462,7 +3477,30 @@
       "breadth_pct": 75.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "ec12eba",
+      "commit_full": "ec12eba83e75816b9bbb9eac191159572dbc5d27",
+      "commit_date": "2026-11-10T12:44:19+01:00",
+      "ts": "2026-11-10T11:44:19Z",
+      "message": "UI.1265: align CJK fallback text with the Latin baseline (#3081)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-05",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T00:36:37+00:00"
+  "updated_at": "2026-11-10T12:43:41+00:00"
 }

@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "b7cfbd3",
-  "latest_commit_date": "2026-11-10T15:19:55+07:00",
-  "latest_message": "Find and replace text in Edit text mode: a Replace row in the Find box, Replace all as one undo step (#2467)",
+  "latest_commit": "8864903",
+  "latest_commit_date": "2026-11-10T19:23:21+07:00",
+  "latest_message": "M10: Recognize text no longer clips the first and last letters of a line (#5058)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 138,
+    "revisions_since": 139,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 226,
-    "revisions_7d": 40,
+    "revisions": 227,
+    "revisions_7d": 41,
     "last_revision": {
-      "ts": "2026-11-10T08:19:55Z",
+      "ts": "2026-11-10T12:23:21Z",
       "kind": "content",
-      "commit": "b7cfbd3",
-      "commit_full": "b7cfbd3980d6e045c91bc944bf91c5cd0506ba29",
-      "message": "Find and replace text in Edit text mode: a Replace row in the Find box, Replace all as one undo step (#2467)"
+      "commit": "8864903",
+      "commit_full": "8864903795373b3b23d13cb98ab0a1df692f2e16",
+      "message": "M10: Recognize text no longer clips the first and last letters of a line (#5058)"
     },
     "last_update": {
-      "ts": "2026-11-10T08:19:55Z",
+      "ts": "2026-11-10T12:23:21Z",
       "kind": "content",
-      "commit": "b7cfbd3",
-      "commit_full": "b7cfbd3980d6e045c91bc944bf91c5cd0506ba29",
-      "message": "Find and replace text in Edit text mode: a Replace row in the Find box, Replace all as one undo step (#2467)"
+      "commit": "8864903",
+      "commit_full": "8864903795373b3b23d13cb98ab0a1df692f2e16",
+      "message": "M10: Recognize text no longer clips the first and last letters of a line (#5058)"
     },
     "self_reported": "2026-11-09"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 25.1,
+    "score": 25.2,
     "active_days_7d": 7,
-    "changes_7d": 344,
-    "changes_14d": 437,
+    "changes_7d": 346,
+    "changes_14d": 439,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-11-10T11:38:55Z",
-      "commit": "4a83ec8",
-      "commit_full": "4a83ec87f52c384ce22c130f8c87182a40e4f109",
-      "subject": "fix(annot): drop Apple Markup's stale copy when a page's annotations change (#2829)"
+      "ts": "2026-11-10T12:23:37Z",
+      "commit": "4ddf52e",
+      "commit_full": "4ddf52ef90ca56011b04f57b82a80722aca2fc62",
+      "subject": "Bump storytold/egui to 725a39fc (lands #6699) (#6824)"
     },
-    "last_commit_ts": "2026-11-10T11:38:55Z",
+    "last_commit_ts": "2026-11-10T12:23:37Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       16,
@@ -524,7 +524,7 @@
       6,
       31,
       206,
-      33
+      35
     ],
     "days": [
       {
@@ -1295,20 +1295,20 @@
       },
       {
         "d": "2026-11-10",
-        "code": 33,
+        "code": 35,
         "other": 0,
         "samples": [
           {
+            "commit": "4ddf52e",
+            "subject": "Bump storytold/egui to 725a39fc (lands #6699) (#6824)"
+          },
+          {
+            "commit": "8864903",
+            "subject": "M10: Recognize text no longer clips the first and last letters of a line (#5058)"
+          },
+          {
             "commit": "4a83ec8",
             "subject": "fix(annot): drop Apple Markup's stale copy when a page's annotations change (#2829)"
-          },
-          {
-            "commit": "e243022",
-            "subject": "Print: custom paper sizes in the Print dialog, kept per printer with its setup (re-lands #2381) (#6830)"
-          },
-          {
-            "commit": "4bff30c",
-            "subject": "M10: Windows prints a large image whole: drawn as tiles under Windows.Data.Pdf's cap (#5131) (#5897)"
           }
         ]
       }
@@ -6719,7 +6719,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "8864903",
+      "commit_full": "8864903795373b3b23d13cb98ab0a1df692f2e16",
+      "commit_date": "2026-11-10T19:23:21+07:00",
+      "ts": "2026-11-10T12:23:21Z",
+      "message": "M10: Recognize text no longer clips the first and last letters of a line (#5058)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-09",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T11:39:13+00:00"
+  "updated_at": "2026-11-10T12:43:10+00:00"
 }

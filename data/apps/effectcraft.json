@@ -378,18 +378,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.0,
+    "score": 17.5,
     "active_days_7d": 6,
-    "changes_7d": 86,
-    "changes_14d": 427,
+    "changes_7d": 88,
+    "changes_14d": 429,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-10T09:43:16Z",
-      "commit": "8700033",
-      "commit_full": "87000339ed920a967c5cebea62a64b9cac3c084b",
-      "subject": "Build: drop the unused egui patches and fail CI on [[patch.unused]] (#3404)"
+      "ts": "2026-11-10T12:21:16Z",
+      "commit": "47e804f",
+      "commit_full": "47e804f86fbdf5713f4be319d7cd7db62756c033",
+      "subject": "Fix launch guard ownership during concurrent startup (#1459)"
     },
-    "last_commit_ts": "2026-11-10T09:43:16Z",
+    "last_commit_ts": "2026-11-10T12:21:16Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       3,
@@ -405,7 +405,7 @@
       0,
       11,
       11,
-      4
+      6
     ],
     "days": [
       {
@@ -1098,20 +1098,20 @@
       },
       {
         "d": "2026-11-10",
-        "code": 4,
+        "code": 6,
         "other": 0,
         "samples": [
           {
+            "commit": "47e804f",
+            "subject": "Fix launch guard ownership during concurrent startup (#1459)"
+          },
+          {
+            "commit": "d9fde92",
+            "subject": "Viewer: a click selects the topmost layer over a selected one (#3389) (#3405)"
+          },
+          {
             "commit": "8700033",
             "subject": "Build: drop the unused egui patches and fail CI on [[patch.unused]] (#3404)"
-          },
-          {
-            "commit": "f31463a",
-            "subject": "Build: take craft-libs at e11f9d9a so its workspace loads with current Cargo (#3351)"
-          },
-          {
-            "commit": "bb908a6",
-            "subject": "Timeline: keep marquee selection anchored while scrolling (#3393)"
           }
         ]
       }
@@ -1671,5 +1671,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T10:42:35+00:00"
+  "updated_at": "2026-11-10T12:43:14+00:00"
 }
