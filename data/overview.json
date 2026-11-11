@@ -49,6 +49,28 @@
   ],
   "latest_events": [
     {
+      "id": "anicraft",
+      "name": "AniCraft",
+      "type": "release",
+      "ts": "2026-11-11T01:03:14Z",
+      "tag": "v0.1.0",
+      "kind": null,
+      "changes": 69,
+      "url": "https://github.com/storytold/anicraft/releases/tag/v0.1.0",
+      "prerelease": false
+    },
+    {
+      "id": "AniCraft",
+      "name": "AniCraft",
+      "type": "release",
+      "ts": "2026-11-11T01:03:14Z",
+      "tag": "v0.1.0",
+      "kind": null,
+      "changes": 69,
+      "url": "https://github.com/storytold/anicraft/releases/tag/v0.1.0",
+      "prerelease": false
+    },
+    {
       "id": "solidcraft",
       "name": "SolidCraft",
       "type": "release",
@@ -457,31 +479,20 @@
       "changes": 60,
       "url": "https://github.com/storytold/craft-anything/releases/tag/v0.5.0",
       "prerelease": false
-    },
-    {
-      "id": "cadcraft",
-      "name": "CADCraft",
-      "type": "release",
-      "ts": "2026-11-06T20:21:13Z",
-      "tag": "v0.18.0",
-      "kind": "minor",
-      "changes": 69,
-      "url": "https://github.com/storytold/cadcraft/releases/tag/v0.18.0",
-      "prerelease": false
-    },
-    {
-      "id": "craft-anything",
-      "name": "Craft Anything",
-      "type": "release",
-      "ts": "2026-11-06T04:08:45Z",
-      "tag": "v0.4.0",
-      "kind": "minor",
-      "changes": 219,
-      "url": "https://github.com/storytold/craft-anything/releases/tag/v0.4.0",
-      "prerelease": false
     }
   ],
   "release_waves": [
+    {
+      "day": "2026-11-11",
+      "apps": 2,
+      "changes": 138,
+      "largest": {
+        "id": "AniCraft",
+        "name": "AniCraft",
+        "tag": "v0.1.0",
+        "changes": 69
+      }
+    },
     {
       "day": "2026-11-10",
       "apps": 1,
@@ -547,17 +558,6 @@
         "name": "VectorCraft",
         "tag": "v0.21.0",
         "changes": 122
-      }
-    },
-    {
-      "day": "2026-11-02",
-      "apps": 3,
-      "changes": 109,
-      "largest": {
-        "id": "craft-anything",
-        "name": "Craft Anything",
-        "tag": "v0.3.0",
-        "changes": 109
       }
     }
   ],
@@ -649,18 +649,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 30.3,
+        "score": 31.3,
         "active_days_7d": 7,
-        "changes_7d": 589,
-        "changes_14d": 1452,
-        "housekeeping_7d": 20,
+        "changes_7d": 595,
+        "changes_14d": 1458,
+        "housekeeping_7d": 21,
         "last_code_change": {
-          "ts": "2026-11-11T00:26:40Z",
-          "commit": "e60da87",
-          "commit_full": "e60da871bcb4a6d1a478c61ac3996aa66e839749",
-          "subject": "Docs: spot gradients with RGB or Lab stops keep the ink in a CMYK document (#6485)"
+          "ts": "2026-11-11T01:31:45Z",
+          "commit": "4302b7b",
+          "commit_full": "4302b7bde4f37bcf1cef3a4d0e32c28dc3d4fd67",
+          "subject": "Reshape: a drag stretches an open path from the dragged point to its two ends (#6492)"
         },
-        "last_commit_ts": "2026-11-11T00:26:40Z",
+        "last_commit_ts": "2026-11-11T01:31:45Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           180,
@@ -676,7 +676,7 @@
           199,
           81,
           81,
-          5
+          11
         ]
       },
       "release": {
@@ -1846,18 +1846,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 25.9,
+        "score": 27.1,
         "active_days_7d": 7,
-        "changes_7d": 384,
-        "changes_14d": 486,
+        "changes_7d": 393,
+        "changes_14d": 495,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-11T00:27:21Z",
-          "commit": "e99e07c",
-          "commit_full": "e99e07c04a1270a5f452c2d4d7f1fe6b6eafb01e",
-          "subject": "Sponge: the options bar has a Flow field and strokes use it (#12976) (#13022)"
+          "ts": "2026-11-11T01:32:16Z",
+          "commit": "799e4b8",
+          "commit_full": "799e4b8c59bc784f5e44808911bd83976ee008b9",
+          "subject": "fix(ui): the Classic gradient's refusals are the reference application's alerts (#12017) (#12646)"
         },
-        "last_commit_ts": "2026-11-11T00:27:21Z",
+        "last_commit_ts": "2026-11-11T01:32:16Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           18,
@@ -1873,7 +1873,7 @@
           80,
           43,
           75,
-          6
+          15
         ]
       },
       "release": {
@@ -2323,18 +2323,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.8,
-        "active_days_7d": 6,
-        "changes_7d": 80,
-        "changes_14d": 171,
+        "score": 16.8,
+        "active_days_7d": 7,
+        "changes_7d": 81,
+        "changes_14d": 172,
         "housekeeping_7d": 14,
         "last_code_change": {
-          "ts": "2026-11-10T23:16:54Z",
-          "commit": "a425b81",
-          "commit_full": "a425b8119a1b4f96c4d23c25490134133c3e7962",
-          "subject": "deps: bump the crates group across 1 directory with 5 updates (#994)"
+          "ts": "2026-11-11T00:47:53Z",
+          "commit": "2f0672c",
+          "commit_full": "2f0672c38a53297a15b3d8d7061acc715f8f037d",
+          "subject": "#815: a .pst mail kept as rich text alone comes in as its text (#1025)"
         },
-        "last_commit_ts": "2026-11-10T23:17:22Z",
+        "last_commit_ts": "2026-11-11T00:47:53Z",
         "repo_since": "2026-10-12T18:17:00Z",
         "window": [
           7,
@@ -2350,7 +2350,7 @@
           8,
           7,
           22,
-          0
+          1
         ]
       },
       "release": {
@@ -2764,18 +2764,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 30.0,
+        "score": 31.0,
         "active_days_7d": 7,
-        "changes_7d": 696,
-        "changes_14d": 1780,
+        "changes_7d": 701,
+        "changes_14d": 1785,
         "housekeeping_7d": 36,
         "last_code_change": {
-          "ts": "2026-11-11T00:02:50Z",
-          "commit": "6b63b3c",
-          "commit_full": "6b63b3ce6e3850b9e8bcb5c009ad98d077304cee",
-          "subject": "Fold the assembly constraint format change into format 52 for 0.40.0-rc.4 (#14790)"
+          "ts": "2026-11-11T00:51:32Z",
+          "commit": "794cfde",
+          "commit_full": "794cfde212a61a00c00e6f5e3d83ce1351aa328a",
+          "subject": "solidcore: topology failures carry a typed reason instead of bare statuses (part of #13790) (#14746)"
         },
-        "last_commit_ts": "2026-11-11T00:02:50Z",
+        "last_commit_ts": "2026-11-11T00:51:32Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           191,
@@ -2790,8 +2790,8 @@
           85,
           70,
           151,
-          236,
-          1
+          239,
+          3
         ]
       },
       "release": {
@@ -2890,7 +2890,22 @@
           2
         ]
       },
-      "release": null,
+      "release": {
+        "tag": "v0.1.0",
+        "name": "AniCraft v0.1.0",
+        "ts": "2026-11-11T01:03:14Z",
+        "url": "https://github.com/storytold/anicraft/releases/tag/v0.1.0",
+        "changes": 69,
+        "new_contributors": 4,
+        "platforms": [
+          "macOS",
+          "Windows",
+          "Linux"
+        ],
+        "prerelease": false,
+        "source": "release",
+        "kind": null
+      },
       "series": [],
       "history_len": 0
     },
@@ -2970,7 +2985,22 @@
           2
         ]
       },
-      "release": null,
+      "release": {
+        "tag": "v0.1.0",
+        "name": "AniCraft v0.1.0",
+        "ts": "2026-11-11T01:03:14Z",
+        "url": "https://github.com/storytold/anicraft/releases/tag/v0.1.0",
+        "changes": 69,
+        "new_contributors": 4,
+        "platforms": [
+          "macOS",
+          "Windows",
+          "Linux"
+        ],
+        "prerelease": false,
+        "source": "release",
+        "kind": null
+      },
       "series": [],
       "history_len": 0
     }
@@ -2988,5 +3018,5 @@
       }
     ]
   },
-  "generated_at": "2026-11-11T00:30:49+00:00"
+  "generated_at": "2026-11-11T01:34:59+00:00"
 }
