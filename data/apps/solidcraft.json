@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 31.0,
+    "score": 32.4,
     "active_days_7d": 7,
-    "changes_7d": 701,
-    "changes_14d": 1785,
-    "housekeeping_7d": 36,
+    "changes_7d": 707,
+    "changes_14d": 1791,
+    "housekeeping_7d": 37,
     "last_code_change": {
-      "ts": "2026-11-11T00:51:32Z",
-      "commit": "794cfde",
-      "commit_full": "794cfde212a61a00c00e6f5e3d83ce1351aa328a",
-      "subject": "solidcore: topology failures carry a typed reason instead of bare statuses (part of #13790) (#14746)"
+      "ts": "2026-11-11T01:46:43Z",
+      "commit": "a17e1d2",
+      "commit_full": "a17e1d2c9b18d053c7839150c24e680a2297091e",
+      "subject": "mcp: inspect_design and check_parameters can give compact replies on large designs (#14162) (#14186)"
     },
-    "last_commit_ts": "2026-11-11T00:51:32Z",
+    "last_commit_ts": "2026-11-11T02:05:11Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       191,
@@ -93,7 +93,7 @@
       70,
       151,
       239,
-      3
+      9
     ],
     "days": [
       {
@@ -763,26 +763,43 @@
       },
       {
         "d": "2026-11-11",
-        "code": 3,
-        "other": 0,
+        "code": 9,
+        "other": 1,
         "samples": [
           {
-            "commit": "794cfde",
-            "subject": "solidcore: topology failures carry a typed reason instead of bare statuses (part of #13790) (#14746)"
+            "commit": "a17e1d2",
+            "subject": "mcp: inspect_design and check_parameters can give compact replies on large designs (#14162) (#14186)"
           },
           {
-            "commit": "0f8112b",
-            "subject": "Sweep: a body's edge can be the path of a sweep (#2216) (#12263)"
+            "commit": "c7ce501",
+            "subject": "Timeline: an edit in one component keeps the other components' results (#6183) (#6295)"
           },
           {
-            "commit": "6b63b3c",
-            "subject": "Fold the assembly constraint format change into format 52 for 0.40.0-rc.4 (#14790)"
+            "commit": "32528d4",
+            "subject": "Sketch Move/Copy: a moved shape stays whole when it is tied to the origin, and the status line says which constraints were released (#2980) (#3581)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.40.0-rc.4",
+      "name": "SolidCraft v0.40.0-rc.4",
+      "ts": "2026-11-11T01:44:57Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.40.0-rc.4",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.40.0-nightly.20261110.117.1",
       "name": "SolidCraft v0.40.0-nightly.20261110.117.1 (nightly)",
@@ -958,23 +975,6 @@
       "name": "v0.26.1",
       "ts": "2026-10-29T11:46:12Z",
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.26.1",
-      "changes": null,
-      "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "patch"
-    },
-    {
-      "tag": "v0.26.0",
-      "name": "v0.26.0",
-      "ts": "2026-10-29T00:47:35Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.26.0",
       "changes": null,
       "new_contributors": null,
       "platforms": [
@@ -2356,5 +2356,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-11T01:34:55+00:00"
+  "updated_at": "2026-11-11T02:35:53+00:00"
 }

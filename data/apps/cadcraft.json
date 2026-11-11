@@ -357,18 +357,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 11.1,
-    "active_days_7d": 6,
-    "changes_7d": 28,
-    "changes_14d": 202,
+    "score": 14.1,
+    "active_days_7d": 7,
+    "changes_7d": 35,
+    "changes_14d": 209,
     "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-10T18:20:25Z",
-      "commit": "2f8f186",
-      "commit_full": "2f8f1861886412f529900b37e3f80f8d1e2af119",
-      "subject": "macOS: file dialogs no longer run inside the window's event handler (#1534)"
+      "ts": "2026-11-11T02:33:51Z",
+      "commit": "6d74488",
+      "commit_full": "6d744887f445bb98ac8c81bfdf79db67b1e23757",
+      "subject": "fix(mcp): send the control token only to 127.0.0.1:PORT and read it only from a private file (#2718)"
     },
-    "last_commit_ts": "2026-11-10T18:20:25Z",
+    "last_commit_ts": "2026-11-11T02:33:51Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       0,
@@ -384,7 +384,7 @@
       9,
       4,
       2,
-      0
+      7
     ],
     "days": [
       {
@@ -940,6 +940,25 @@
             "subject": "Fonts: the MTEXT strip test expects a short \\U+ escape to keep its digits (#2954)"
           }
         ]
+      },
+      {
+        "d": "2026-11-11",
+        "code": 7,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "6d74488",
+            "subject": "fix(mcp): send the control token only to 127.0.0.1:PORT and read it only from a private file (#2718)"
+          },
+          {
+            "commit": "2c25c2d",
+            "subject": "fix: index or bound array replacements, DIM field spellings, path samples, hatch refills and broken tables (#2734)"
+          },
+          {
+            "commit": "95fdf8d",
+            "subject": "fix: bound region grid registrations, island containment tests, snap_ends visits, inference duplicate searches and font name decoding (#2742)"
+          }
+        ]
       }
     ]
   },
@@ -1451,5 +1470,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T00:29:58+00:00"
+  "updated_at": "2026-11-11T02:35:22+00:00"
 }

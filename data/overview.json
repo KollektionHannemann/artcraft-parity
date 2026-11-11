@@ -49,6 +49,17 @@
   ],
   "latest_events": [
     {
+      "id": "solidcraft",
+      "name": "SolidCraft",
+      "type": "release",
+      "ts": "2026-11-11T01:44:57Z",
+      "tag": "v0.40.0-rc.4",
+      "kind": "minor",
+      "changes": null,
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.40.0-rc.4",
+      "prerelease": true
+    },
+    {
       "id": "anicraft",
       "name": "AniCraft",
       "type": "release",
@@ -468,17 +479,6 @@
       "changes": 72,
       "url": "https://github.com/storytold/deckcraft/releases/tag/v0.16.0",
       "prerelease": false
-    },
-    {
-      "id": "craft-anything",
-      "name": "Craft Anything",
-      "type": "release",
-      "ts": "2026-11-06T20:21:17Z",
-      "tag": "v0.5.0",
-      "kind": "minor",
-      "changes": 60,
-      "url": "https://github.com/storytold/craft-anything/releases/tag/v0.5.0",
-      "prerelease": false
     }
   ],
   "release_waves": [
@@ -649,18 +649,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 31.3,
+        "score": 31.7,
         "active_days_7d": 7,
-        "changes_7d": 595,
-        "changes_14d": 1458,
+        "changes_7d": 599,
+        "changes_14d": 1462,
         "housekeeping_7d": 21,
         "last_code_change": {
-          "ts": "2026-11-11T01:31:45Z",
-          "commit": "4302b7b",
-          "commit_full": "4302b7bde4f37bcf1cef3a4d0e32c28dc3d4fd67",
-          "subject": "Reshape: a drag stretches an open path from the dragged point to its two ends (#6492)"
+          "ts": "2026-11-11T02:26:08Z",
+          "commit": "4c2b8df",
+          "commit_full": "4c2b8df86573f35eb5cef3fe6dc72a66798f5cb5",
+          "subject": "Smart Guides: tools do not snap to Smart Guides while Pixel Preview is on (#6498)"
         },
-        "last_commit_ts": "2026-11-11T01:31:45Z",
+        "last_commit_ts": "2026-11-11T02:26:08Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           180,
@@ -676,7 +676,7 @@
           199,
           81,
           81,
-          11
+          15
         ]
       },
       "release": {
@@ -873,7 +873,7 @@
         "value_since": "2026-10-10T18:11:53Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 587,
+        "revisions_since": 588,
         "hours_since": null,
         "areas_since": {
           "up": 2,
@@ -898,39 +898,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 591,
-        "revisions_7d": 103,
+        "revisions": 592,
+        "revisions_7d": 104,
         "last_revision": {
-          "ts": "2026-11-10T13:04:45Z",
+          "ts": "2026-11-11T02:33:46Z",
           "kind": "content",
-          "commit": "8548b33",
-          "commit_full": "8548b33be1c9238e6d42fb2a72fe27ccdd56be7f",
-          "message": "MacOS: the window moves by its title bar behind a modal dialog (#5124) (#5125)"
+          "commit": "92e0e67",
+          "commit_full": "92e0e67f3abc335941bc8a57690c24848ddd76ed",
+          "message": "Clipboard: size-check a Wayland clipboard picture before anything decodes it (#5441)"
         },
         "last_update": {
-          "ts": "2026-11-10T13:04:45Z",
+          "ts": "2026-11-11T02:33:46Z",
           "kind": "content",
-          "commit": "8548b33",
-          "commit_full": "8548b33be1c9238e6d42fb2a72fe27ccdd56be7f",
-          "message": "MacOS: the window moves by its title bar behind a modal dialog (#5124) (#5125)"
+          "commit": "92e0e67",
+          "commit_full": "92e0e67f3abc335941bc8a57690c24848ddd76ed",
+          "message": "Clipboard: size-check a Wayland clipboard picture before anything decodes it (#5441)"
         },
         "self_reported": "2026-11-08"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 16.9,
-        "active_days_7d": 6,
-        "changes_7d": 174,
-        "changes_14d": 315,
+        "score": 17.9,
+        "active_days_7d": 7,
+        "changes_7d": 175,
+        "changes_14d": 316,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-10T23:45:02Z",
-          "commit": "a34c94e",
-          "commit_full": "a34c94e4c1fce1b33776706a27be9396686f11d4",
-          "subject": "packaging: use [[ for bash tests (SonarCloud S7688) (#6224)"
+          "ts": "2026-11-11T02:33:46Z",
+          "commit": "92e0e67",
+          "commit_full": "92e0e67f3abc335941bc8a57690c24848ddd76ed",
+          "subject": "Clipboard: size-check a Wayland clipboard picture before anything decodes it (#5441)"
         },
-        "last_commit_ts": "2026-11-10T23:45:02Z",
+        "last_commit_ts": "2026-11-11T02:33:46Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
           2,
@@ -946,7 +946,7 @@
           90,
           13,
           5,
-          0
+          1
         ]
       },
       "release": {
@@ -972,11 +972,11 @@
           "v": 60.0
         },
         {
-          "t": "2026-11-10T13:04:45Z",
+          "t": "2026-11-11T02:33:46Z",
           "v": 60.0
         }
       ],
-      "history_len": 591
+      "history_len": 592
     },
     {
       "repo_url": "https://github.com/storytold/filmcraft",
@@ -1846,18 +1846,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 27.1,
+        "score": 27.6,
         "active_days_7d": 7,
-        "changes_7d": 393,
-        "changes_14d": 495,
+        "changes_7d": 400,
+        "changes_14d": 502,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-11T01:32:16Z",
-          "commit": "799e4b8",
-          "commit_full": "799e4b8c59bc784f5e44808911bd83976ee008b9",
-          "subject": "fix(ui): the Classic gradient's refusals are the reference application's alerts (#12017) (#12646)"
+          "ts": "2026-11-11T01:59:37Z",
+          "commit": "2772ac1",
+          "commit_full": "2772ac1e77ee612479c636557e28b4128849bfbc",
+          "subject": "Smudge: Mode dropdown in the options bar (#12959) (#13031)"
         },
-        "last_commit_ts": "2026-11-11T01:32:16Z",
+        "last_commit_ts": "2026-11-11T01:59:37Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           18,
@@ -1873,7 +1873,7 @@
           80,
           43,
           75,
-          15
+          22
         ]
       },
       "release": {
@@ -2206,18 +2206,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 11.1,
-        "active_days_7d": 6,
-        "changes_7d": 28,
-        "changes_14d": 202,
+        "score": 14.1,
+        "active_days_7d": 7,
+        "changes_7d": 35,
+        "changes_14d": 209,
         "housekeeping_7d": 3,
         "last_code_change": {
-          "ts": "2026-11-10T18:20:25Z",
-          "commit": "2f8f186",
-          "commit_full": "2f8f1861886412f529900b37e3f80f8d1e2af119",
-          "subject": "macOS: file dialogs no longer run inside the window's event handler (#1534)"
+          "ts": "2026-11-11T02:33:51Z",
+          "commit": "6d74488",
+          "commit_full": "6d744887f445bb98ac8c81bfdf79db67b1e23757",
+          "subject": "fix(mcp): send the control token only to 127.0.0.1:PORT and read it only from a private file (#2718)"
         },
-        "last_commit_ts": "2026-11-10T18:20:25Z",
+        "last_commit_ts": "2026-11-11T02:33:51Z",
         "repo_since": "2026-10-06T00:15:47Z",
         "window": [
           0,
@@ -2233,7 +2233,7 @@
           9,
           4,
           2,
-          0
+          7
         ]
       },
       "release": {
@@ -2764,18 +2764,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 31.0,
+        "score": 32.4,
         "active_days_7d": 7,
-        "changes_7d": 701,
-        "changes_14d": 1785,
-        "housekeeping_7d": 36,
+        "changes_7d": 707,
+        "changes_14d": 1791,
+        "housekeeping_7d": 37,
         "last_code_change": {
-          "ts": "2026-11-11T00:51:32Z",
-          "commit": "794cfde",
-          "commit_full": "794cfde212a61a00c00e6f5e3d83ce1351aa328a",
-          "subject": "solidcore: topology failures carry a typed reason instead of bare statuses (part of #13790) (#14746)"
+          "ts": "2026-11-11T01:46:43Z",
+          "commit": "a17e1d2",
+          "commit_full": "a17e1d2c9b18d053c7839150c24e680a2297091e",
+          "subject": "mcp: inspect_design and check_parameters can give compact replies on large designs (#14162) (#14186)"
         },
-        "last_commit_ts": "2026-11-11T00:51:32Z",
+        "last_commit_ts": "2026-11-11T02:05:11Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           191,
@@ -2791,7 +2791,7 @@
           70,
           151,
           239,
-          3
+          9
         ]
       },
       "release": {
@@ -2860,18 +2860,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 10.9,
+        "score": 11.6,
         "active_days_7d": 5,
-        "changes_7d": 64,
-        "changes_14d": 64,
+        "changes_7d": 66,
+        "changes_14d": 66,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-11T00:28:46Z",
-          "commit": "d44dba1",
-          "commit_full": "d44dba1468e6300e50ba8a63ae8dad5bf6b03afc",
-          "subject": "feat(actions): run the ActionScript 3.0 timeline subset (M6) (#112)"
+          "ts": "2026-11-11T02:32:08Z",
+          "commit": "d49d312",
+          "commit_full": "d49d31203f1f39eba268c14a34bd2814991c64af",
+          "subject": "feat(stroke): caps, joins, miter limit, dashed and dotted lines (M7) (#113)"
         },
-        "last_commit_ts": "2026-11-11T00:28:46Z",
+        "last_commit_ts": "2026-11-11T02:32:08Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
           0,
@@ -2887,7 +2887,7 @@
           0,
           20,
           19,
-          2
+          4
         ]
       },
       "release": {
@@ -2955,18 +2955,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 10.9,
+        "score": 11.6,
         "active_days_7d": 5,
-        "changes_7d": 64,
-        "changes_14d": 64,
+        "changes_7d": 66,
+        "changes_14d": 66,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-11T00:28:46Z",
-          "commit": "d44dba1",
-          "commit_full": "d44dba1468e6300e50ba8a63ae8dad5bf6b03afc",
-          "subject": "feat(actions): run the ActionScript 3.0 timeline subset (M6) (#112)"
+          "ts": "2026-11-11T02:32:08Z",
+          "commit": "d49d312",
+          "commit_full": "d49d31203f1f39eba268c14a34bd2814991c64af",
+          "subject": "feat(stroke): caps, joins, miter limit, dashed and dotted lines (M7) (#113)"
         },
-        "last_commit_ts": "2026-11-11T00:28:46Z",
+        "last_commit_ts": "2026-11-11T02:32:08Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
           0,
@@ -2982,7 +2982,7 @@
           0,
           20,
           19,
-          2
+          4
         ]
       },
       "release": {
@@ -3018,5 +3018,5 @@
       }
     ]
   },
-  "generated_at": "2026-11-11T01:34:59+00:00"
+  "generated_at": "2026-11-11T02:35:58+00:00"
 }
