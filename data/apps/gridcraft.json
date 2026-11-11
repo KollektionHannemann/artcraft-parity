@@ -464,18 +464,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.7,
+    "score": 19.8,
     "active_days_7d": 7,
-    "changes_7d": 82,
-    "changes_14d": 225,
-    "housekeeping_7d": 1,
+    "changes_7d": 83,
+    "changes_14d": 226,
+    "housekeeping_7d": 2,
     "last_code_change": {
-      "ts": "2026-11-11T13:50:20Z",
-      "commit": "94fc52e",
-      "commit_full": "94fc52efae962a1613a440a03fc77a6df7fec801",
-      "subject": "xlsx: share inline dxf number formats within a styles part (#3260)"
+      "ts": "2026-11-11T16:35:44Z",
+      "commit": "90180f4",
+      "commit_full": "90180f4d8755e5425af122ce9d4c4e07f0464a9a",
+      "subject": "Sandbox: build on riscv64, where libc names no kexec_file_load (#3777)"
     },
-    "last_commit_ts": "2026-11-11T13:50:20Z",
+    "last_commit_ts": "2026-11-11T16:35:44Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       3,
@@ -491,7 +491,7 @@
       13,
       8,
       14,
-      28
+      29
     ],
     "days": [
       {
@@ -1089,9 +1089,13 @@
       },
       {
         "d": "2026-11-11",
-        "code": 28,
-        "other": 0,
+        "code": 29,
+        "other": 1,
         "samples": [
+          {
+            "commit": "90180f4",
+            "subject": "Sandbox: build on riscv64, where libc names no kexec_file_load (#3777)"
+          },
           {
             "commit": "94fc52e",
             "subject": "xlsx: share inline dxf number formats within a styles part (#3260)"
@@ -1099,10 +1103,6 @@
           {
             "commit": "7b825d0",
             "subject": "Save as Web Page: a byte budget for the charts' SVG (an error past it) (#3209)"
-          },
-          {
-            "commit": "7726e9c",
-            "subject": "xls: charge expanded shared-formula text to the import's text allowance (#3256)"
           }
         ]
       }
@@ -3548,5 +3548,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T14:41:17+00:00"
+  "updated_at": "2026-11-11T16:43:21+00:00"
 }

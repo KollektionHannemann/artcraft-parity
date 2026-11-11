@@ -444,18 +444,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.1,
+    "score": 18.3,
     "active_days_7d": 7,
-    "changes_7d": 75,
-    "changes_14d": 227,
-    "housekeeping_7d": 3,
+    "changes_7d": 77,
+    "changes_14d": 229,
+    "housekeeping_7d": 4,
     "last_code_change": {
-      "ts": "2026-11-11T15:14:43Z",
-      "commit": "824a325",
-      "commit_full": "824a3258e71823d1ee53118afb137622ff70340b",
-      "subject": "audio-dsp, aac, dng: bound the remix joint loop, the encoder's batch copying, pack depth and tag merging (#4238)"
+      "ts": "2026-11-11T16:29:46Z",
+      "commit": "617e0aa",
+      "commit_full": "617e0aa7ba4870bb6fdfd5b40a86b92bc54540fc",
+      "subject": "render: refuse mixer graphs whose latency or compensation delays are absurd (#4225)"
     },
-    "last_commit_ts": "2026-11-11T15:14:43Z",
+    "last_commit_ts": "2026-11-11T16:29:46Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       0,
@@ -471,7 +471,7 @@
       21,
       5,
       6,
-      16
+      18
     ],
     "days": [
       {
@@ -1209,26 +1209,43 @@
       },
       {
         "d": "2026-11-11",
-        "code": 16,
-        "other": 0,
+        "code": 18,
+        "other": 1,
         "samples": [
+          {
+            "commit": "617e0aa",
+            "subject": "render: refuse mixer graphs whose latency or compensation delays are absurd (#4225)"
+          },
+          {
+            "commit": "cdf0523",
+            "subject": "av1: refuse a chunk that shows an absurd number of pictures (#4230)"
+          },
           {
             "commit": "824a325",
             "subject": "audio-dsp, aac, dng: bound the remix joint loop, the encoder's batch copying, pack depth and tag merging (#4238)"
-          },
-          {
-            "commit": "9599eb5",
-            "subject": "render: cap the effect scale a mismatched stored media width can produce (#4237)"
-          },
-          {
-            "commit": "a9251b5",
-            "subject": "engine: stream Render Audio previews to disk instead of sizing buffers from the segment length (#4233)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.20.0",
+      "name": "FilmCraft v0.20.0",
+      "ts": "2026-11-11T16:35:54Z",
+      "url": "https://github.com/storytold/filmcraft/releases/tag/v0.20.0",
+      "changes": 26,
+      "new_contributors": 1,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.19.0",
       "name": "FilmCraft v0.19.0",
@@ -1406,23 +1423,6 @@
       "url": "https://github.com/storytold/filmcraft/releases/tag/v0.10.0",
       "changes": 45,
       "new_contributors": 10,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.9.0",
-      "name": "FilmCraft v0.9.0",
-      "ts": "2026-10-18T03:55:32Z",
-      "url": "https://github.com/storytold/filmcraft/releases/tag/v0.9.0",
-      "changes": 7,
-      "new_contributors": 1,
       "platforms": [
         "macOS",
         "Windows",
@@ -1805,5 +1805,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T15:34:37+00:00"
+  "updated_at": "2026-11-11T16:42:33+00:00"
 }
