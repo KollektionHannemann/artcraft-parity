@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "d0b17ef",
-  "latest_commit_date": "2026-11-10T23:21:48+01:00",
-  "latest_message": "Add JavaScript push-button caption methods (#5505)",
+  "latest_commit": "f6c59c0",
+  "latest_commit_date": "2026-11-11T08:42:04+01:00",
+  "latest_message": "fix: integrate persistent AcroForm script workflows with native prompts and appearance writeback (#5699)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 147,
+    "revisions_since": 148,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 235,
-    "revisions_7d": 47,
+    "revisions": 236,
+    "revisions_7d": 48,
     "last_revision": {
-      "ts": "2026-11-10T22:21:48Z",
+      "ts": "2026-11-11T07:42:04Z",
       "kind": "content",
-      "commit": "d0b17ef",
-      "commit_full": "d0b17ef95fd9434197b4a06207c423b3e4a78c6d",
-      "message": "Add JavaScript push-button caption methods (#5505)"
+      "commit": "f6c59c0",
+      "commit_full": "f6c59c0b93ec1671ff5e3d4acf28608a04cc7e6b",
+      "message": "fix: integrate persistent AcroForm script workflows with native prompts and appearance writeback (#5699)"
     },
     "last_update": {
-      "ts": "2026-11-10T22:21:48Z",
+      "ts": "2026-11-11T07:42:04Z",
       "kind": "content",
-      "commit": "d0b17ef",
-      "commit_full": "d0b17ef95fd9434197b4a06207c423b3e4a78c6d",
-      "message": "Add JavaScript push-button caption methods (#5505)"
+      "commit": "f6c59c0",
+      "commit_full": "f6c59c0b93ec1671ff5e3d4acf28608a04cc7e6b",
+      "message": "fix: integrate persistent AcroForm script workflows with native prompts and appearance writeback (#5699)"
     },
     "self_reported": "2026-11-09"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 24.1,
+    "score": 24.9,
     "active_days_7d": 7,
-    "changes_7d": 357,
-    "changes_14d": 457,
+    "changes_7d": 363,
+    "changes_14d": 463,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-11-11T06:48:32Z",
-      "commit": "e51654b",
-      "commit_full": "e51654bc836689679c35356c09246880f270ad29",
-      "subject": "fix: anchor comments to highlighted text"
+      "ts": "2026-11-11T07:56:34Z",
+      "commit": "c04925c",
+      "commit_full": "c04925c5803e0cf1678d22eb091aee0d5a88cf85",
+      "subject": "fix(cos): a clone that edits an object stream or a /Length stops reading what other clones cached (#6910)"
     },
-    "last_commit_ts": "2026-11-11T06:48:32Z",
+    "last_commit_ts": "2026-11-11T07:56:34Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       3,
@@ -524,7 +524,7 @@
       31,
       206,
       62,
-      7
+      13
     ],
     "days": [
       {
@@ -1314,20 +1314,20 @@
       },
       {
         "d": "2026-11-11",
-        "code": 7,
+        "code": 13,
         "other": 1,
         "samples": [
           {
-            "commit": "e51654b",
-            "subject": "fix: anchor comments to highlighted text"
+            "commit": "c04925c",
+            "subject": "fix(cos): a clone that edits an object stream or a /Length stops reading what other clones cached (#6910)"
           },
           {
-            "commit": "f51ce3c",
-            "subject": "fix(render): bound the objects lopdf's fallback parses from object streams and arrays (#5083)"
+            "commit": "6b993d9",
+            "subject": "perf(organize): decode the XMP packet once for repeated document-information reads (#6918)"
           },
           {
-            "commit": "e317cca",
-            "subject": "Print: the printer's own paper sizes in the Paper list, named as the job's media (#2672)"
+            "commit": "532bdc8",
+            "subject": "feat(prc): PrcFile::units, the model's unit from its model file (#6919)"
           }
         ]
       }
@@ -6945,7 +6945,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "f6c59c0",
+      "commit_full": "f6c59c0b93ec1671ff5e3d4acf28608a04cc7e6b",
+      "commit_date": "2026-11-11T08:42:04+01:00",
+      "ts": "2026-11-11T07:42:04Z",
+      "message": "fix: integrate persistent AcroForm script workflows with native prompts and appearance writeback (#5699)",
+      "stage": null,
+      "next_stage": null,
+      "last_updated": "2026-11-09",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T06:49:15+00:00"
+  "updated_at": "2026-11-11T08:04:38+00:00"
 }

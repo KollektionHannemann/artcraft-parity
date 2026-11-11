@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/designcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "9da8814",
-  "latest_commit_date": "2026-11-10T17:39:39+01:00",
-  "latest_message": "Fix Links panel stalls on network paths (#1444)",
+  "latest_commit": "c64378d",
+  "latest_commit_date": "2026-11-11T07:57:58+01:00",
+  "latest_message": "Canvas: a spine line where the pages of a spread meet (#1838) (#1936)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -395,6 +395,10 @@
         "text": "· IDML import reads TOC separators and entry styles written with the $ID/ prefix or as Properties children, and the TOC separator notation (^t, ^y, ^m, ^>) is shared by the dialog and IDML, with a special-character menu on the separator field (#1249, #1255)."
       },
       {
+        "date": "2026-10-30",
+        "text": "· Spreads show a line at each edge where two of their pages meet, on the canvas only (it isn't printed or exported), so the page boundaries inside a spread are visible while laying out across them, in the spread edge's colour. Right-to-left spreads and pages of different sizes put it on the edge the pages share; pages that don't touch, as an imported spread can keep them, get none (#1838). No readiness percentage change."
+      },
+      {
         "date": "2026-10-29",
         "text": "· Inserting text with many returns no longer takes time that grows with their square (part of #1588): each return copied its paragraph's format with its own insert, moving every format after it. Splitting 20,000 returns into paragraphs took 15.8 s; placing a text file of them now takes 0.2 s, and one of a million returns 5.5 s. No readiness percentage change."
       },
@@ -465,10 +469,6 @@
       {
         "date": "2026-10-24",
         "text": "· Split Note (note.split {story, id, at}, the Notes panel's Split Note button): as in InDesign, a note splits in two at the insertion point in its text. DesignCraft moves the text after it into a new note by the same author, anchored right after the first. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "· Type › Notes › Previous Note and Next Note (note.previous, note.next): as in InDesign, they move the insertion point from note to note in the story, putting the caret after the note's anchor. Each item is unavailable when no note lies in its direction in the story, or when the insertion point is in a table cell or a footnote. No readiness percentage change."
       }
     ]
   },
@@ -477,7 +477,7 @@
     "value_since": "2026-10-10T18:09:17Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 193,
+    "revisions_since": 194,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -485,39 +485,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 194,
-    "revisions_7d": 5,
+    "revisions": 195,
+    "revisions_7d": 6,
     "last_revision": {
-      "ts": "2026-11-10T16:39:39Z",
+      "ts": "2026-11-11T06:57:58Z",
       "kind": "content",
-      "commit": "9da8814",
-      "commit_full": "9da88149be2e093721b2659765f682a7aa839a4e",
-      "message": "Fix Links panel stalls on network paths (#1444)"
+      "commit": "c64378d",
+      "commit_full": "c64378ded9c8d664d52dd87767cbe6ff082c8100",
+      "message": "Canvas: a spine line where the pages of a spread meet (#1838) (#1936)"
     },
     "last_update": {
-      "ts": "2026-11-10T16:39:39Z",
+      "ts": "2026-11-11T06:57:58Z",
       "kind": "content",
-      "commit": "9da8814",
-      "commit_full": "9da88149be2e093721b2659765f682a7aa839a4e",
-      "message": "Fix Links panel stalls on network paths (#1444)"
+      "commit": "c64378d",
+      "commit_full": "c64378ded9c8d664d52dd87767cbe6ff082c8100",
+      "message": "Canvas: a spine line where the pages of a spread meet (#1838) (#1936)"
     },
     "self_reported": "2026-11-04"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 13.8,
+    "score": 14.4,
     "active_days_7d": 7,
-    "changes_7d": 35,
-    "changes_14d": 181,
+    "changes_7d": 36,
+    "changes_14d": 182,
     "housekeeping_7d": 2,
     "last_code_change": {
-      "ts": "2026-11-11T05:35:09Z",
-      "commit": "276716c",
-      "commit_full": "276716cadaddfff59c6e7cce6940a88fab04140a",
-      "subject": "Engine: variable deletion and merge-marker scans that end, a depth and step budget for nested scripts (#2233)"
+      "ts": "2026-11-11T06:57:58Z",
+      "commit": "c64378d",
+      "commit_full": "c64378ded9c8d664d52dd87767cbe6ff082c8100",
+      "subject": "Canvas: a spine line where the pages of a spread meet (#1838) (#1936)"
     },
-    "last_commit_ts": "2026-11-11T05:35:09Z",
+    "last_commit_ts": "2026-11-11T06:57:58Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       1,
@@ -533,7 +533,7 @@
       8,
       6,
       5,
-      1
+      2
     ],
     "days": [
       {
@@ -1267,9 +1267,13 @@
       },
       {
         "d": "2026-11-11",
-        "code": 1,
+        "code": 2,
         "other": 0,
         "samples": [
+          {
+            "commit": "c64378d",
+            "subject": "Canvas: a spine line where the pages of a spread meet (#1838) (#1936)"
+          },
           {
             "commit": "276716c",
             "subject": "Engine: variable deletion and merge-marker scans that end, a depth and step budget for nested scripts (#2233)"
@@ -5947,7 +5951,30 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "c64378d",
+      "commit_full": "c64378ded9c8d664d52dd87767cbe6ff082c8100",
+      "commit_date": "2026-11-11T07:57:58+01:00",
+      "ts": "2026-11-11T06:57:58Z",
+      "message": "Canvas: a spine line where the pages of a spread meet (#1838) (#1936)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-04",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T05:44:44+00:00"
+  "updated_at": "2026-11-11T08:04:46+00:00"
 }
