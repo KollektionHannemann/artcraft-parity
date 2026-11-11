@@ -464,18 +464,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.2,
+    "score": 19.6,
     "active_days_7d": 7,
-    "changes_7d": 74,
-    "changes_14d": 217,
+    "changes_7d": 80,
+    "changes_14d": 223,
     "housekeeping_7d": 1,
     "last_code_change": {
-      "ts": "2026-11-11T12:06:18Z",
-      "commit": "12d26d5",
-      "commit_full": "12d26d53cc5c03832fddb109d79667623f3f2b11",
-      "subject": "xlsx: analyse each kept chart sheet's graph once per save (#3261)"
+      "ts": "2026-11-11T13:28:28Z",
+      "commit": "7726e9c",
+      "commit_full": "7726e9c6effb18d4d4ab3444cc3a66c2e87550e7",
+      "subject": "xls: charge expanded shared-formula text to the import's text allowance (#3256)"
     },
-    "last_commit_ts": "2026-11-11T12:06:18Z",
+    "last_commit_ts": "2026-11-11T13:28:28Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       3,
@@ -491,7 +491,7 @@
       13,
       8,
       14,
-      20
+      26
     ],
     "days": [
       {
@@ -1089,20 +1089,20 @@
       },
       {
         "d": "2026-11-11",
-        "code": 20,
+        "code": 26,
         "other": 0,
         "samples": [
           {
-            "commit": "12d26d5",
-            "subject": "xlsx: analyse each kept chart sheet's graph once per save (#3261)"
+            "commit": "7726e9c",
+            "subject": "xls: charge expanded shared-formula text to the import's text allowance (#3256)"
           },
           {
-            "commit": "9dc7e38",
-            "subject": "numfmt: TEXT returns #VALUE! when its result passes a cell's 32,767 characters (#3264)"
+            "commit": "9a02520",
+            "subject": "pivot: Rank and Running Total computed once per sibling set; accumulator, caption and chart-series bounds (#3306)"
           },
           {
-            "commit": "f79a425",
-            "subject": "xlsx: find a reused picture through a content hash instead of comparing every media part (#3214)"
+            "commit": "01abd95",
+            "subject": "xlsx: resolve cell pictures through a per-structure layout and a relationship index (#3255)"
           }
         ]
       }
@@ -3548,5 +3548,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T12:16:40+00:00"
+  "updated_at": "2026-11-11T13:39:17+00:00"
 }
