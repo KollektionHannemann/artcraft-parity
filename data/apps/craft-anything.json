@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "0fd1e7b",
-  "latest_commit_date": "2026-11-11T16:18:52+07:00",
-  "latest_message": "Keep PE import descriptors inside their mapped file bytes (R3.12) (#1369)",
+  "latest_commit": "a719d8d",
+  "latest_commit_date": "2026-11-11T17:13:44+07:00",
+  "latest_message": "Add a Thai README (#1643)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 502,
-    "revisions_7d": 374,
+    "revisions": 519,
+    "revisions_7d": 391,
     "last_revision": {
-      "ts": "2026-11-11T09:18:52Z",
+      "ts": "2026-11-11T10:13:44Z",
       "kind": "content",
-      "commit": "0fd1e7b",
-      "commit_full": "0fd1e7b6f10aa5dfb44cb1c30a1dae876c8f13f0",
-      "message": "Keep PE import descriptors inside their mapped file bytes (R3.12) (#1369)"
+      "commit": "a719d8d",
+      "commit_full": "a719d8dc80ecde89395f293f2875f7e20752997e",
+      "message": "Add a Thai README (#1643)"
     },
     "last_update": {
-      "ts": "2026-11-11T09:18:52Z",
+      "ts": "2026-11-11T10:13:44Z",
       "kind": "content",
-      "commit": "0fd1e7b",
-      "commit_full": "0fd1e7b6f10aa5dfb44cb1c30a1dae876c8f13f0",
-      "message": "Keep PE import descriptors inside their mapped file bytes (R3.12) (#1369)"
+      "commit": "a719d8d",
+      "commit_full": "a719d8dc80ecde89395f293f2875f7e20752997e",
+      "message": "Add a Thai README (#1643)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 28.3,
+    "score": 28.9,
     "active_days_7d": 7,
-    "changes_7d": 437,
-    "changes_14d": 767,
-    "housekeeping_7d": 31,
+    "changes_7d": 455,
+    "changes_14d": 785,
+    "housekeeping_7d": 33,
     "last_code_change": {
-      "ts": "2026-11-11T09:18:52Z",
-      "commit": "0fd1e7b",
-      "commit_full": "0fd1e7b6f10aa5dfb44cb1c30a1dae876c8f13f0",
-      "subject": "Keep PE import descriptors inside their mapped file bytes (R3.12) (#1369)"
+      "ts": "2026-11-11T10:10:48Z",
+      "commit": "e755c87",
+      "commit_full": "e755c874e6bcfa02b88c9f91274878489a15fb3b",
+      "subject": "Don't open a different Godot project when its path isn't valid UTF-8 (R2.7) (#1649)"
     },
-    "last_commit_ts": "2026-11-11T09:18:52Z",
+    "last_commit_ts": "2026-11-11T10:13:44Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       37,
       157,
       111,
-      33
+      51
     ],
     "days": [
       {
@@ -299,20 +299,20 @@
       },
       {
         "d": "2026-11-11",
-        "code": 33,
-        "other": 0,
+        "code": 51,
+        "other": 2,
         "samples": [
           {
-            "commit": "0fd1e7b",
-            "subject": "Keep PE import descriptors inside their mapped file bytes (R3.12) (#1369)"
+            "commit": "e755c87",
+            "subject": "Don't open a different Godot project when its path isn't valid UTF-8 (R2.7) (#1649)"
           },
           {
-            "commit": "15e8282",
-            "subject": "Reject sign characters in hex addresses (#1625)"
+            "commit": "97983e5",
+            "subject": "Keep Android device configuration qualifiers distinct (R3.12) (#1653)"
           },
           {
-            "commit": "1163dab",
-            "subject": "Reject a '+' sign in cpio hex and octal header fields (#1624)"
+            "commit": "341dd7d",
+            "subject": "Require matching operands before reporting EVM dispatch facts (R3.12) (#1651)"
           }
         ]
       }
@@ -3936,8 +3936,127 @@
       "commit": "0fd1e7b",
       "commit_full": "0fd1e7b6f10aa5dfb44cb1c30a1dae876c8f13f0",
       "message": "Keep PE import descriptors inside their mapped file bytes (R3.12) (#1369)"
+    },
+    {
+      "ts": "2026-11-11T09:21:56Z",
+      "kind": "content",
+      "commit": "c08696f",
+      "commit_full": "c08696f33883822ab78ba78a2940db46917c236d",
+      "message": "Reject CIL branch destinations outside the method body (R3.12) (#1630)"
+    },
+    {
+      "ts": "2026-11-11T09:25:30Z",
+      "kind": "content",
+      "commit": "fa7d9b6",
+      "commit_full": "fa7d9b68e7620fff6c2b674aa2924b58e157a613",
+      "message": "Read short ext symlinks stored in data blocks (R3.12) (#1633)"
+    },
+    {
+      "ts": "2026-11-11T09:27:22Z",
+      "kind": "content",
+      "commit": "b63e1f9",
+      "commit_full": "b63e1f9aae36d36ec002d83bc9df3b136501dbe5",
+      "message": "Recover cramfs files with direct block pointers (R3.12) (#1637)"
+    },
+    {
+      "ts": "2026-11-11T09:27:25Z",
+      "kind": "content",
+      "commit": "839b05a",
+      "commit_full": "839b05a764a427bb1bbad87182bcb6558fe14646",
+      "message": "Reject duplicate GGUF metadata keys and tensor names (R3.12) (#1635)"
+    },
+    {
+      "ts": "2026-11-11T09:28:14Z",
+      "kind": "content",
+      "commit": "d1eb619",
+      "commit_full": "d1eb619005ada1d12111d42b0c81ff5977071728",
+      "message": "Keep CLI array ranks and declared bounds in .NET type names (R3.12) (#1631)"
+    },
+    {
+      "ts": "2026-11-11T09:31:33Z",
+      "kind": "content",
+      "commit": "4f74a23",
+      "commit_full": "4f74a23bcda44fee9f83cf333ecbdb214f48fb67",
+      "message": "Decode Unity EAC channel textures (R3.9) (#1638)"
+    },
+    {
+      "ts": "2026-11-11T09:31:40Z",
+      "kind": "content",
+      "commit": "31f19ce",
+      "commit_full": "31f19ceef3259d8d60ce0b12768c55ca4768802b",
+      "message": "Decode Unreal packed 10:10:10:2 and 11:11:10 float textures (R3.9) (#1640)"
+    },
+    {
+      "ts": "2026-11-11T09:43:16Z",
+      "kind": "content",
+      "commit": "cbd7ebf",
+      "commit_full": "cbd7ebfb406484b317612a8d9540b8f329c74eea",
+      "message": "Decode concatenated XZ streams and standard stream padding (R3.12) (#1383)"
+    },
+    {
+      "ts": "2026-11-11T10:01:52Z",
+      "kind": "content",
+      "commit": "726fba1",
+      "commit_full": "726fba13684840e64ab5ef79ae2e70b61c22e3be",
+      "message": "Send a note left waiting when the app closed, instead of deleting it (R2.9) (#1644)"
+    },
+    {
+      "ts": "2026-11-11T10:07:27Z",
+      "kind": "content",
+      "commit": "f8ef412",
+      "commit_full": "f8ef412721b5ce73e1ba4e43935810c73de2bbe5",
+      "message": "Require bound-import names to end inside the PE directory (R3.12) (#1645)"
+    },
+    {
+      "ts": "2026-11-11T10:07:33Z",
+      "kind": "content",
+      "commit": "901f99f",
+      "commit_full": "901f99f8465b3dc26b4c1b047388bcd78579f7f5",
+      "message": "Decode DNS service binding, naming and authentication records (R3.12) (#1647)"
+    },
+    {
+      "ts": "2026-11-11T10:09:41Z",
+      "kind": "content",
+      "commit": "c5e524d",
+      "commit_full": "c5e524dd084fb265d0aad9991188d76c77eaf233",
+      "message": "Trace JVM bootstrap dependencies at their bytecode use sites (R3.12) (#1648)"
+    },
+    {
+      "ts": "2026-11-11T10:10:31Z",
+      "kind": "content",
+      "commit": "025ba55",
+      "commit_full": "025ba55e845bef4878e26057c0f831a62fcb4053",
+      "message": "Recognise macOS and VFAT ZIP entry attributes (R3.12) (#1650)"
+    },
+    {
+      "ts": "2026-11-11T10:10:38Z",
+      "kind": "content",
+      "commit": "341dd7d",
+      "commit_full": "341dd7def502be2925c8f3c111c4d51a0afea39b",
+      "message": "Require matching operands before reporting EVM dispatch facts (R3.12) (#1651)"
+    },
+    {
+      "ts": "2026-11-11T10:10:43Z",
+      "kind": "content",
+      "commit": "97983e5",
+      "commit_full": "97983e5f3db0ba8680ccad374494ce075daeeb5c",
+      "message": "Keep Android device configuration qualifiers distinct (R3.12) (#1653)"
+    },
+    {
+      "ts": "2026-11-11T10:10:48Z",
+      "kind": "content",
+      "commit": "e755c87",
+      "commit_full": "e755c874e6bcfa02b88c9f91274878489a15fb3b",
+      "message": "Don't open a different Godot project when its path isn't valid UTF-8 (R2.7) (#1649)"
+    },
+    {
+      "ts": "2026-11-11T10:13:44Z",
+      "kind": "content",
+      "commit": "a719d8d",
+      "commit_full": "a719d8dc80ecde89395f293f2875f7e20752997e",
+      "message": "Add a Thai README (#1643)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-11T09:19:15+00:00"
+  "updated_at": "2026-11-11T10:23:11+00:00"
 }

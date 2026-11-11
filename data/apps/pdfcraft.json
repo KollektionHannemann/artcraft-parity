@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "f6c59c0",
-  "latest_commit_date": "2026-11-11T08:42:04+01:00",
-  "latest_message": "fix: integrate persistent AcroForm script workflows with native prompts and appearance writeback (#5699)",
+  "latest_commit": "3a117c3",
+  "latest_commit_date": "2026-11-11T11:06:01+01:00",
+  "latest_message": "M10: open Word, Excel and PowerPoint files through LibreOffice",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 148,
+    "revisions_since": 149,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 236,
-    "revisions_7d": 48,
+    "revisions": 237,
+    "revisions_7d": 49,
     "last_revision": {
-      "ts": "2026-11-11T07:42:04Z",
+      "ts": "2026-11-11T10:06:01Z",
       "kind": "content",
-      "commit": "f6c59c0",
-      "commit_full": "f6c59c0b93ec1671ff5e3d4acf28608a04cc7e6b",
-      "message": "fix: integrate persistent AcroForm script workflows with native prompts and appearance writeback (#5699)"
+      "commit": "3a117c3",
+      "commit_full": "3a117c3c0e361c04a525e6d1f144e52428b2bea6",
+      "message": "M10: open Word, Excel and PowerPoint files through LibreOffice"
     },
     "last_update": {
-      "ts": "2026-11-11T07:42:04Z",
+      "ts": "2026-11-11T10:06:01Z",
       "kind": "content",
-      "commit": "f6c59c0",
-      "commit_full": "f6c59c0b93ec1671ff5e3d4acf28608a04cc7e6b",
-      "message": "fix: integrate persistent AcroForm script workflows with native prompts and appearance writeback (#5699)"
+      "commit": "3a117c3",
+      "commit_full": "3a117c3c0e361c04a525e6d1f144e52428b2bea6",
+      "message": "M10: open Word, Excel and PowerPoint files through LibreOffice"
     },
     "self_reported": "2026-11-09"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 25.0,
+    "score": 25.1,
     "active_days_7d": 7,
-    "changes_7d": 364,
-    "changes_14d": 464,
+    "changes_7d": 365,
+    "changes_14d": 465,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-11-11T08:06:48Z",
-      "commit": "4efcfa6",
-      "commit_full": "4efcfa6ea3020eb36c49b96c71a6cf8e2ce42278",
-      "subject": "fix(crypt, engine): refuse page extraction when Protect allows any change except extracting pages (#5081)"
+      "ts": "2026-11-11T10:06:01Z",
+      "commit": "3a117c3",
+      "commit_full": "3a117c3c0e361c04a525e6d1f144e52428b2bea6",
+      "subject": "M10: open Word, Excel and PowerPoint files through LibreOffice"
     },
-    "last_commit_ts": "2026-11-11T08:06:48Z",
+    "last_commit_ts": "2026-11-11T10:06:01Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       3,
@@ -524,7 +524,7 @@
       31,
       206,
       62,
-      14
+      15
     ],
     "days": [
       {
@@ -1314,9 +1314,13 @@
       },
       {
         "d": "2026-11-11",
-        "code": 14,
+        "code": 15,
         "other": 1,
         "samples": [
+          {
+            "commit": "3a117c3",
+            "subject": "M10: open Word, Excel and PowerPoint files through LibreOffice"
+          },
           {
             "commit": "4efcfa6",
             "subject": "fix(crypt, engine): refuse page extraction when Protect allows any change except extracting pages (#5081)"
@@ -1324,10 +1328,6 @@
           {
             "commit": "c04925c",
             "subject": "fix(cos): a clone that edits an object stream or a /Length stops reading what other clones cached (#6910)"
-          },
-          {
-            "commit": "6b993d9",
-            "subject": "perf(organize): decode the XMP packet once for repeated document-information reads (#6918)"
           }
         ]
       }
@@ -6968,7 +6968,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "3a117c3",
+      "commit_full": "3a117c3c0e361c04a525e6d1f144e52428b2bea6",
+      "commit_date": "2026-11-11T11:06:01+01:00",
+      "ts": "2026-11-11T10:06:01Z",
+      "message": "M10: open Word, Excel and PowerPoint files through LibreOffice",
+      "stage": null,
+      "next_stage": null,
+      "last_updated": "2026-11-09",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T09:18:43+00:00"
+  "updated_at": "2026-11-11T10:22:49+00:00"
 }

@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/UCS-Care-Group/mailcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/UCS-Care-Group/mailcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "c15955d",
-  "latest_commit_date": "2026-11-11T09:07:33+01:00",
-  "latest_message": "#815 part 4: calendar items and tasks from a .pst file (#1033)",
+  "latest_commit": "e0f32d3",
+  "latest_commit_date": "2026-11-11T11:00:50+01:00",
+  "latest_message": "#815 part 5: .pst notes, journal entries and HTML kept in rich text (#1051)",
   "parsed": {
     "stage": "public beta",
     "next_stage": "leaving",
@@ -208,7 +208,7 @@
     "value_since": "2026-10-12T18:17:00Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 238,
+    "revisions_since": 239,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -216,39 +216,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 242,
-    "revisions_7d": 6,
+    "revisions": 243,
+    "revisions_7d": 7,
     "last_revision": {
-      "ts": "2026-11-11T08:07:33Z",
+      "ts": "2026-11-11T10:00:50Z",
       "kind": "content",
-      "commit": "c15955d",
-      "commit_full": "c15955d8ba7b25839bfe8504f7ced7c2a6178323",
-      "message": "#815 part 4: calendar items and tasks from a .pst file (#1033)"
+      "commit": "e0f32d3",
+      "commit_full": "e0f32d362db3bb75aed13f89c9f15fdf5aed1512",
+      "message": "#815 part 5: .pst notes, journal entries and HTML kept in rich text (#1051)"
     },
     "last_update": {
-      "ts": "2026-11-11T08:07:33Z",
+      "ts": "2026-11-11T10:00:50Z",
       "kind": "content",
-      "commit": "c15955d",
-      "commit_full": "c15955d8ba7b25839bfe8504f7ced7c2a6178323",
-      "message": "#815 part 4: calendar items and tasks from a .pst file (#1033)"
+      "commit": "e0f32d3",
+      "commit_full": "e0f32d362db3bb75aed13f89c9f15fdf5aed1512",
+      "message": "#815 part 5: .pst notes, journal entries and HTML kept in rich text (#1051)"
     },
     "self_reported": "2026-11-07"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.3,
+    "score": 18.6,
     "active_days_7d": 7,
-    "changes_7d": 85,
-    "changes_14d": 176,
-    "housekeeping_7d": 14,
+    "changes_7d": 86,
+    "changes_14d": 177,
+    "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-11-11T08:58:49Z",
-      "commit": "3537cde",
-      "commit_full": "3537cde96d085ec30d56b070f87822c973c4cc8f",
-      "subject": "net: standin's loopback flag is read in the crate's own tests too (#1052)"
+      "ts": "2026-11-11T10:00:50Z",
+      "commit": "e0f32d3",
+      "commit_full": "e0f32d362db3bb75aed13f89c9f15fdf5aed1512",
+      "subject": "#815 part 5: .pst notes, journal entries and HTML kept in rich text (#1051)"
     },
-    "last_commit_ts": "2026-11-11T08:58:49Z",
+    "last_commit_ts": "2026-11-11T10:00:50Z",
     "repo_since": "2026-10-12T18:17:00Z",
     "window": [
       7,
@@ -264,7 +264,7 @@
       8,
       7,
       22,
-      5
+      6
     ],
     "days": [
       {
@@ -831,9 +831,13 @@
       },
       {
         "d": "2026-11-11",
-        "code": 5,
-        "other": 0,
+        "code": 6,
+        "other": 1,
         "samples": [
+          {
+            "commit": "e0f32d3",
+            "subject": "#815 part 5: .pst notes, journal entries and HTML kept in rich text (#1051)"
+          },
           {
             "commit": "3537cde",
             "subject": "net: standin's loopback flag is read in the crate's own tests too (#1052)"
@@ -841,10 +845,6 @@
           {
             "commit": "248cd3e",
             "subject": "i18n: an old text kept twice by a merge is kept once (#1029)"
-          },
-          {
-            "commit": "078503f",
-            "subject": "#956 part 3: Send report in Report a Problem (#1034)"
           }
         ]
       }
@@ -5897,7 +5897,27 @@
       "breadth_pct": null,
       "full_prev": 25.0,
       "kind": "content"
+    },
+    {
+      "commit": "e0f32d3",
+      "commit_full": "e0f32d362db3bb75aed13f89c9f15fdf5aed1512",
+      "commit_date": "2026-11-11T11:00:50+01:00",
+      "ts": "2026-11-11T10:00:50Z",
+      "message": "#815 part 5: .pst notes, journal entries and HTML kept in rich text (#1051)",
+      "stage": "public beta",
+      "next_stage": "leaving",
+      "last_updated": "2026-11-07",
+      "full_pct": 25.0,
+      "full_range": null,
+      "full_hours": null,
+      "full_label": "Ready for real work with a real account",
+      "target": "Microsoft Outlook (Microsoft 365, classic desktop)",
+      "mainstream_pct": null,
+      "essentials_pct": null,
+      "breadth_pct": null,
+      "full_prev": 25.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T09:19:37+00:00"
+  "updated_at": "2026-11-11T10:23:26+00:00"
 }

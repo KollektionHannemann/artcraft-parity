@@ -357,18 +357,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.5,
+    "score": 14.8,
     "active_days_7d": 7,
-    "changes_7d": 38,
-    "changes_14d": 212,
+    "changes_7d": 40,
+    "changes_14d": 214,
     "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-11T09:06:57Z",
-      "commit": "a157478",
-      "commit_full": "a1574780c224f168c0839d6c841dff1c89c55a2a",
-      "subject": "fix(render): bound hatch swatches, charge boundary sweeps and cap linetype label points (#2744)"
+      "ts": "2026-11-11T10:01:27Z",
+      "commit": "d6d16bd",
+      "commit_full": "d6d16bd474d3b223f5edd89180204bddf17040da",
+      "subject": "fix(io): make four DXF/SVG passes linear in their input (#2721)"
     },
-    "last_commit_ts": "2026-11-11T09:06:57Z",
+    "last_commit_ts": "2026-11-11T10:01:27Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       0,
@@ -384,7 +384,7 @@
       9,
       4,
       2,
-      10
+      12
     ],
     "days": [
       {
@@ -943,20 +943,20 @@
       },
       {
         "d": "2026-11-11",
-        "code": 10,
+        "code": 12,
         "other": 0,
         "samples": [
           {
+            "commit": "d6d16bd",
+            "subject": "fix(io): make four DXF/SVG passes linear in their input (#2721)"
+          },
+          {
+            "commit": "2410a1f",
+            "subject": "hatch: one canonical key per source loop before tessellation (#3043)"
+          },
+          {
             "commit": "a157478",
             "subject": "fix(render): bound hatch swatches, charge boundary sweeps and cap linetype label points (#2744)"
-          },
-          {
-            "commit": "ea2637a",
-            "subject": "fix(lisp): charge READ text, EQUAL string bytes, SETVAR and ENTMAKE copies, and nested callbacks against one budget (#2741)"
-          },
-          {
-            "commit": "7e78054",
-            "subject": "fix: bound MOCORO copies, array EXPLODE, COMPARE bounds, attribute extraction, PDF links and control-server parsing (#2738)"
           }
         ]
       }
@@ -1470,5 +1470,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T09:19:05+00:00"
+  "updated_at": "2026-11-11T10:23:04+00:00"
 }
