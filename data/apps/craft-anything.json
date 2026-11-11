@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "cbf7c17",
-  "latest_commit_date": "2026-11-12T00:49:27+07:00",
-  "latest_message": "Resolve relative project paths before builds, option runs and Play (R2.7) (#1702)",
+  "latest_commit": "ab79ec8",
+  "latest_commit_date": "2026-11-12T02:43:59+07:00",
+  "latest_message": "Count source-map sections, check skipped values and keep refused maps' sources uncertain (R3.12) (#1705)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,21 +45,21 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 562,
-    "revisions_7d": 434,
+    "revisions": 565,
+    "revisions_7d": 437,
     "last_revision": {
-      "ts": "2026-11-11T17:49:27Z",
+      "ts": "2026-11-11T19:43:59Z",
       "kind": "content",
-      "commit": "cbf7c17",
-      "commit_full": "cbf7c179812b43ee3828bbba109164cfc6497535",
-      "message": "Resolve relative project paths before builds, option runs and Play (R2.7) (#1702)"
+      "commit": "ab79ec8",
+      "commit_full": "ab79ec87a4da58d8965b6d4f95b751464ba6e999",
+      "message": "Count source-map sections, check skipped values and keep refused maps' sources uncertain (R3.12) (#1705)"
     },
     "last_update": {
-      "ts": "2026-11-11T17:49:27Z",
+      "ts": "2026-11-11T19:43:59Z",
       "kind": "content",
-      "commit": "cbf7c17",
-      "commit_full": "cbf7c179812b43ee3828bbba109164cfc6497535",
-      "message": "Resolve relative project paths before builds, option runs and Play (R2.7) (#1702)"
+      "commit": "ab79ec8",
+      "commit_full": "ab79ec87a4da58d8965b6d4f95b751464ba6e999",
+      "message": "Count source-map sections, check skipped values and keep refused maps' sources uncertain (R3.12) (#1705)"
     },
     "self_reported": null
   },
@@ -68,16 +68,16 @@
     "level": "buzzing",
     "score": 29.9,
     "active_days_7d": 7,
-    "changes_7d": 502,
-    "changes_14d": 832,
-    "housekeeping_7d": 35,
+    "changes_7d": 504,
+    "changes_14d": 834,
+    "housekeeping_7d": 36,
     "last_code_change": {
-      "ts": "2026-11-11T17:49:27Z",
-      "commit": "cbf7c17",
-      "commit_full": "cbf7c179812b43ee3828bbba109164cfc6497535",
-      "subject": "Resolve relative project paths before builds, option runs and Play (R2.7) (#1702)"
+      "ts": "2026-11-11T19:43:59Z",
+      "commit": "ab79ec8",
+      "commit_full": "ab79ec87a4da58d8965b6d4f95b751464ba6e999",
+      "subject": "Count source-map sections, check skipped values and keep refused maps' sources uncertain (R3.12) (#1705)"
     },
-    "last_commit_ts": "2026-11-11T17:49:27Z",
+    "last_commit_ts": "2026-11-11T19:43:59Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       37,
       157,
       111,
-      98
+      100
     ],
     "days": [
       {
@@ -299,20 +299,20 @@
       },
       {
         "d": "2026-11-11",
-        "code": 98,
-        "other": 4,
+        "code": 100,
+        "other": 5,
         "samples": [
+          {
+            "commit": "ab79ec8",
+            "subject": "Count source-map sections, check skipped values and keep refused maps' sources uncertain (R3.12) (#1705)"
+          },
+          {
+            "commit": "ba83da2",
+            "subject": "Refuse source maps with more entries than the parser keeps (R3.12) (#1703)"
+          },
           {
             "commit": "cbf7c17",
             "subject": "Resolve relative project paths before builds, option runs and Play (R2.7) (#1702)"
-          },
-          {
-            "commit": "3ce1ce9",
-            "subject": "Bound source-map recovery manifest paths and report partial recovery (R3.12) (#1700)"
-          },
-          {
-            "commit": "86d047c",
-            "subject": "Stop with a plain error when the OpenCode found is 1.x (R2.2) (#1151)"
           }
         ]
       }
@@ -4356,8 +4356,29 @@
       "commit": "cbf7c17",
       "commit_full": "cbf7c179812b43ee3828bbba109164cfc6497535",
       "message": "Resolve relative project paths before builds, option runs and Play (R2.7) (#1702)"
+    },
+    {
+      "ts": "2026-11-11T19:17:19Z",
+      "kind": "content",
+      "commit": "ba83da2",
+      "commit_full": "ba83da2bc567611d0c8aef124c2c3d1ba03ade58",
+      "message": "Refuse source maps with more entries than the parser keeps (R3.12) (#1703)"
+    },
+    {
+      "ts": "2026-11-11T19:22:36Z",
+      "kind": "content",
+      "commit": "a33c2c3",
+      "commit_full": "a33c2c357f19a479f494983596201b3a40ab48be",
+      "message": "Drop a cut-off roadmap line and a pending line that is already done (#1704)"
+    },
+    {
+      "ts": "2026-11-11T19:43:59Z",
+      "kind": "content",
+      "commit": "ab79ec8",
+      "commit_full": "ab79ec87a4da58d8965b6d4f95b751464ba6e999",
+      "message": "Count source-map sections, check skipped values and keep refused maps' sources uncertain (R3.12) (#1705)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-11T18:40:05+00:00"
+  "updated_at": "2026-11-11T19:46:31+00:00"
 }

@@ -49,6 +49,28 @@
   ],
   "latest_events": [
     {
+      "id": "wordcraft",
+      "name": "WordCraft",
+      "type": "release",
+      "ts": "2026-11-11T19:12:52Z",
+      "tag": "v0.18.0",
+      "kind": "minor",
+      "changes": 35,
+      "url": "https://github.com/storytold/wordcraft/releases/tag/v0.18.0",
+      "prerelease": false
+    },
+    {
+      "id": "vectorcraft",
+      "name": "VectorCraft",
+      "type": "release",
+      "ts": "2026-11-11T18:59:22Z",
+      "tag": "v0.24.0",
+      "kind": "minor",
+      "changes": 218,
+      "url": "https://github.com/storytold/vectorcraft/releases/tag/v0.24.0",
+      "prerelease": false
+    },
+    {
       "id": "pdfcraft",
       "name": "PdfCraft",
       "type": "release",
@@ -457,40 +479,18 @@
       "changes": 93,
       "url": "https://github.com/storytold/wordcraft/releases/tag/v0.16.0",
       "prerelease": false
-    },
-    {
-      "id": "vectorcraft",
-      "name": "VectorCraft",
-      "type": "release",
-      "ts": "2026-11-06T20:22:17Z",
-      "tag": "v0.22.0",
-      "kind": "minor",
-      "changes": 495,
-      "url": "https://github.com/storytold/vectorcraft/releases/tag/v0.22.0",
-      "prerelease": false
-    },
-    {
-      "id": "texturecraft",
-      "name": "TextureCraft",
-      "type": "release",
-      "ts": "2026-11-06T20:22:12Z",
-      "tag": "v0.4.0",
-      "kind": "minor",
-      "changes": 17,
-      "url": "https://github.com/storytold/texturecraft/releases/tag/v0.4.0",
-      "prerelease": false
     }
   ],
   "release_waves": [
     {
       "day": "2026-11-11",
-      "apps": 11,
-      "changes": 485,
+      "apps": 13,
+      "changes": 738,
       "largest": {
-        "id": "pdfcraft",
-        "name": "PdfCraft",
-        "tag": "v0.21.0",
-        "changes": 132
+        "id": "vectorcraft",
+        "name": "VectorCraft",
+        "tag": "v0.24.0",
+        "changes": 218
       }
     },
     {
@@ -649,18 +649,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 34.5,
+        "score": 34.6,
         "active_days_7d": 7,
-        "changes_7d": 694,
-        "changes_14d": 1557,
+        "changes_7d": 702,
+        "changes_14d": 1565,
         "housekeeping_7d": 31,
         "last_code_change": {
-          "ts": "2026-11-11T18:35:54Z",
-          "commit": "9840b65",
-          "commit_full": "9840b65a85d888d66dfbd791ee3a6313984a9ad2",
-          "subject": "JavaScript: new XML copies a one-item list's node, and insertChildAfter and insertChildBefore take fuel per child scanned (#6626)"
+          "ts": "2026-11-11T19:28:28Z",
+          "commit": "e0779c6",
+          "commit_full": "e0779c6266b8602ea895b7f38c93dec4fa89301b",
+          "subject": "Plug-ins: the fuzz test reads the runtime's fuel slice instead of a copy (#6646)"
         },
-        "last_commit_ts": "2026-11-11T18:35:54Z",
+        "last_commit_ts": "2026-11-11T19:28:28Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           180,
@@ -676,16 +676,16 @@
           199,
           81,
           81,
-          110
+          118
         ]
       },
       "release": {
-        "tag": "v0.23.0",
-        "name": "VectorCraft v0.23.0",
-        "ts": "2026-11-09T12:10:57Z",
-        "url": "https://github.com/storytold/vectorcraft/releases/tag/v0.23.0",
-        "changes": 331,
-        "new_contributors": 10,
+        "tag": "v0.24.0",
+        "name": "VectorCraft v0.24.0",
+        "ts": "2026-11-11T18:59:22Z",
+        "url": "https://github.com/storytold/vectorcraft/releases/tag/v0.24.0",
+        "changes": 218,
+        "new_contributors": 5,
         "platforms": [
           "macOS",
           "Windows",
@@ -778,18 +778,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.7,
+        "score": 14.3,
         "active_days_7d": 7,
-        "changes_7d": 88,
-        "changes_14d": 125,
+        "changes_7d": 91,
+        "changes_14d": 128,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-11T17:44:43Z",
-          "commit": "5ff567a",
-          "commit_full": "5ff567a4a2e067bef1b6bce152c11e7f727ccbaf",
-          "subject": "Updates: take craft-update from craft-libs main at 6e03f65bf (#4131)"
+          "ts": "2026-11-11T19:34:39Z",
+          "commit": "d6ae2e9",
+          "commit_full": "d6ae2e9e7e7717a58dad8b160d19e81945d26486",
+          "subject": "security(engine): read user-named files through the opened regular file under a byte cap (#3703)"
         },
-        "last_commit_ts": "2026-11-11T17:44:43Z",
+        "last_commit_ts": "2026-11-11T19:34:39Z",
         "repo_since": "2026-09-30T14:04:12Z",
         "window": [
           0,
@@ -805,7 +805,7 @@
           1,
           4,
           6,
-          5
+          8
         ]
       },
       "release": {
@@ -919,18 +919,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 21.0,
+        "score": 21.1,
         "active_days_7d": 7,
-        "changes_7d": 191,
-        "changes_14d": 332,
+        "changes_7d": 192,
+        "changes_14d": 333,
         "housekeeping_7d": 9,
         "last_code_change": {
-          "ts": "2026-11-11T18:11:33Z",
-          "commit": "4706420",
-          "commit_full": "4706420e948ac6d24bbca7c61dc240c8d9bf09f2",
-          "subject": "tools: chunk LCS alignment past MAX_LCS window to prevent false revisions (#6110) (#6124)"
+          "ts": "2026-11-11T19:24:25Z",
+          "commit": "d86d2b6",
+          "commit_full": "d86d2b69f8b6de0aefdabb28e46e1d1287991265",
+          "subject": "Fix Flatpak permissions for update checks and self-updates (#6339)"
         },
-        "last_commit_ts": "2026-11-11T18:35:57Z",
+        "last_commit_ts": "2026-11-11T19:24:25Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
           2,
@@ -946,16 +946,16 @@
           90,
           13,
           5,
-          17
+          18
         ]
       },
       "release": {
-        "tag": "v0.17.0",
-        "name": "WordCraft v0.17.0",
-        "ts": "2026-11-09T12:07:17Z",
-        "url": "https://github.com/storytold/wordcraft/releases/tag/v0.17.0",
-        "changes": 99,
-        "new_contributors": 12,
+        "tag": "v0.18.0",
+        "name": "WordCraft v0.18.0",
+        "ts": "2026-11-11T19:12:52Z",
+        "url": "https://github.com/storytold/wordcraft/releases/tag/v0.18.0",
+        "changes": 35,
+        "new_contributors": 1,
         "platforms": [
           "macOS",
           "Windows",
@@ -1039,18 +1039,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 18.6,
+        "score": 18.7,
         "active_days_7d": 7,
-        "changes_7d": 81,
-        "changes_14d": 233,
+        "changes_7d": 83,
+        "changes_14d": 235,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-11T18:08:21Z",
-          "commit": "4556158",
-          "commit_full": "455615826fc93ad34e6f9aa933b5b90d484f76df",
-          "subject": "Updates: take craft-update from craft-libs main at 6e03f65bf (#4675)"
+          "ts": "2026-11-11T19:01:00Z",
+          "commit": "4bec22b",
+          "commit_full": "4bec22bd03bd1d995c9cf72e02a284f96d3d72cd",
+          "subject": "codecs: bound the search for a random-access sample and honour cancellation in it (#4229)"
         },
-        "last_commit_ts": "2026-11-11T18:08:21Z",
+        "last_commit_ts": "2026-11-11T19:01:00Z",
         "repo_since": "2026-09-30T09:22:00Z",
         "window": [
           0,
@@ -1066,7 +1066,7 @@
           21,
           5,
           6,
-          22
+          24
         ]
       },
       "release": {
@@ -1170,18 +1170,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.8,
+        "score": 14.8,
         "active_days_7d": 6,
-        "changes_7d": 35,
-        "changes_14d": 194,
+        "changes_7d": 45,
+        "changes_14d": 204,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-11T17:43:51Z",
-          "commit": "203fa79",
-          "commit_full": "203fa79211971cedeba3aa1d7d814afc0820a089",
-          "subject": "Updates: take craft-update from craft-libs main at 6e03f65bf (#2041)"
+          "ts": "2026-11-11T19:33:58Z",
+          "commit": "b57b4cc",
+          "commit_full": "b57b4ccfcfd8a084cc3349cba3642d5faba49329",
+          "subject": "PPTX: charge repeated chart decodes and sidecar copies to presentation-wide budgets (#1790)"
         },
-        "last_commit_ts": "2026-11-11T17:43:51Z",
+        "last_commit_ts": "2026-11-11T19:33:58Z",
         "repo_since": "2026-10-06T02:13:02Z",
         "window": [
           0,
@@ -1197,7 +1197,7 @@
           5,
           2,
           3,
-          9
+          19
         ]
       },
       "release": {
@@ -1337,18 +1337,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.7,
+        "score": 15.9,
         "active_days_7d": 6,
-        "changes_7d": 136,
-        "changes_14d": 437,
+        "changes_7d": 137,
+        "changes_14d": 438,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-11T17:44:22Z",
-          "commit": "41c1ad3",
-          "commit_full": "41c1ad345845bc3e8a7773c562a81b3c30de8b35",
-          "subject": "Updates: take craft-update from craft-libs main at 6e03f65bf (#2263)"
+          "ts": "2026-11-11T19:23:45Z",
+          "commit": "74698fa",
+          "commit_full": "74698fa89fb1219d219a9e1bbd102f1154f4cedd",
+          "subject": "M7: links open in the browser in the desktop app, What's new on the update prompt among them (#2216)"
         },
-        "last_commit_ts": "2026-11-11T17:44:22Z",
+        "last_commit_ts": "2026-11-11T19:23:45Z",
         "repo_since": "2026-10-09T15:38:50Z",
         "window": [
           107,
@@ -1364,7 +1364,7 @@
           2,
           6,
           2,
-          6
+          7
         ]
       },
       "release": {
@@ -1606,18 +1606,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 19.8,
+        "score": 19.9,
         "active_days_7d": 7,
-        "changes_7d": 84,
-        "changes_14d": 227,
+        "changes_7d": 86,
+        "changes_14d": 229,
         "housekeeping_7d": 3,
         "last_code_change": {
-          "ts": "2026-11-11T17:44:31Z",
-          "commit": "6dbfbc4",
-          "commit_full": "6dbfbc4058a86a62753a8acbf030e76e6fda006b",
-          "subject": "Updates: take craft-update from craft-libs main at 6e03f65bf (#3795)"
+          "ts": "2026-11-11T19:33:16Z",
+          "commit": "0c5b1e8",
+          "commit_full": "0c5b1e85e6d85072a2430f12e46f168adabcbc8b",
+          "subject": "sonar: stop counting the locale table as duplicated code (#3805)"
         },
-        "last_commit_ts": "2026-11-11T17:44:31Z",
+        "last_commit_ts": "2026-11-11T19:33:16Z",
         "repo_since": "2026-10-06T02:09:42Z",
         "window": [
           3,
@@ -1633,7 +1633,7 @@
           13,
           8,
           14,
-          30
+          32
         ]
       },
       "release": {
@@ -1726,18 +1726,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.8,
+        "score": 15.1,
         "active_days_7d": 7,
-        "changes_7d": 37,
-        "changes_14d": 183,
+        "changes_7d": 38,
+        "changes_14d": 184,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-11T17:44:02Z",
-          "commit": "da740d4",
-          "commit_full": "da740d44cf59799a3fb5e6bd613d5187fbf26538",
-          "subject": "Updates: take craft-update from craft-libs main at 6e03f65bf (#2622)"
+          "ts": "2026-11-11T19:24:07Z",
+          "commit": "19815eb",
+          "commit_full": "19815eba4a739bced64956f247fb2fe989c50a8f",
+          "subject": "Fix Flatpak permissions for update checks and self-updates (#2626)"
         },
-        "last_commit_ts": "2026-11-11T17:44:02Z",
+        "last_commit_ts": "2026-11-11T19:24:07Z",
         "repo_since": "2026-10-01T13:00:02Z",
         "window": [
           1,
@@ -1753,7 +1753,7 @@
           8,
           6,
           5,
-          3
+          4
         ]
       },
       "release": {
@@ -1848,16 +1848,16 @@
         "level": "buzzing",
         "score": 30.4,
         "active_days_7d": 7,
-        "changes_7d": 529,
-        "changes_14d": 631,
+        "changes_7d": 533,
+        "changes_14d": 635,
         "housekeeping_7d": 8,
         "last_code_change": {
-          "ts": "2026-11-11T18:35:07Z",
-          "commit": "7f148de",
-          "commit_full": "7f148de8258aad3a4a751aad3c9fcbfe936d122f",
-          "subject": "Delete Anchor Point: deleting a live shape's anchor asks first, with Don't show again (#12768) (#13150)"
+          "ts": "2026-11-11T19:29:21Z",
+          "commit": "1247303",
+          "commit_full": "1247303e781859384f83cdb1651b75d191e7b77e",
+          "subject": "Remove tool: 19 px brush after Reset Tool and on first use (#13151)"
         },
-        "last_commit_ts": "2026-11-11T18:35:07Z",
+        "last_commit_ts": "2026-11-11T19:29:21Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           18,
@@ -1873,7 +1873,7 @@
           80,
           43,
           75,
-          151
+          155
         ]
       },
       "release": {
@@ -1966,18 +1966,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 20.1,
+        "score": 21.2,
         "active_days_7d": 6,
-        "changes_7d": 122,
-        "changes_14d": 464,
+        "changes_7d": 145,
+        "changes_14d": 487,
         "housekeeping_7d": 8,
         "last_code_change": {
-          "ts": "2026-11-11T17:44:13Z",
-          "commit": "bed7148",
-          "commit_full": "bed71484a89f9499dbce219fdfbda9fb8b981bb1",
-          "subject": "Updates: take craft-update from craft-libs main at 6e03f65bf (#3511)"
+          "ts": "2026-11-11T19:40:29Z",
+          "commit": "6c1391d",
+          "commit_full": "6c1391d4de9c2647f24327bbdb8559cdec004154",
+          "subject": "Text: run lookup by bisection, bounded path flattening, font folders and files shared (#2991)"
         },
-        "last_commit_ts": "2026-11-11T17:44:13Z",
+        "last_commit_ts": "2026-11-11T19:40:29Z",
         "repo_since": "2026-10-01T16:48:39Z",
         "window": [
           156,
@@ -1993,7 +1993,7 @@
           11,
           11,
           26,
-          18
+          41
         ]
       },
       "release": {
@@ -2086,18 +2086,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 12.7,
+        "score": 13.2,
         "active_days_7d": 7,
-        "changes_7d": 29,
-        "changes_14d": 120,
+        "changes_7d": 32,
+        "changes_14d": 123,
         "housekeeping_7d": 3,
         "last_code_change": {
-          "ts": "2026-11-11T17:45:08Z",
-          "commit": "9f342bf",
-          "commit_full": "9f342bf4032613f07d63682b82b486d99dee9784",
-          "subject": "Updates: take craft-update from craft-libs main at 6e03f65bf (#1502)"
+          "ts": "2026-11-11T19:37:20Z",
+          "commit": "d255ca4",
+          "commit_full": "d255ca4fe953e9248cbf22008615320aed0b8bc3",
+          "subject": "Keep time- and edit-locked clips whole on separate and range edits (#1436)"
         },
-        "last_commit_ts": "2026-11-11T17:45:08Z",
+        "last_commit_ts": "2026-11-11T19:37:20Z",
         "repo_since": "2026-10-06T00:08:04Z",
         "window": [
           0,
@@ -2113,7 +2113,7 @@
           4,
           4,
           3,
-          7
+          10
         ]
       },
       "release": {
@@ -2206,18 +2206,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.0,
+        "score": 15.1,
         "active_days_7d": 7,
-        "changes_7d": 42,
-        "changes_14d": 216,
+        "changes_7d": 43,
+        "changes_14d": 217,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-11T17:56:45Z",
-          "commit": "e5021f0",
-          "commit_full": "e5021f01753c5cf1d91985435d4391f40e309ece",
-          "subject": "Block Editor: BSAVEAS keeps the source block's last saved definition (#3047)"
+          "ts": "2026-11-11T19:24:01Z",
+          "commit": "dc7f382",
+          "commit_full": "dc7f382cecb4d2f0e3930ac41565c886a5df2086",
+          "subject": "Fix Flatpak permissions for update checks and self-updates (#3075)"
         },
-        "last_commit_ts": "2026-11-11T17:56:45Z",
+        "last_commit_ts": "2026-11-11T19:24:01Z",
         "repo_since": "2026-10-06T00:15:47Z",
         "window": [
           0,
@@ -2233,7 +2233,7 @@
           9,
           4,
           2,
-          14
+          15
         ]
       },
       "release": {
@@ -2548,18 +2548,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.6,
+        "score": 14.0,
         "active_days_7d": 7,
-        "changes_7d": 88,
-        "changes_14d": 115,
+        "changes_7d": 89,
+        "changes_14d": 116,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-11T17:44:52Z",
-          "commit": "08b2cfb",
-          "commit_full": "08b2cfb632fec96892c0c82e7a1c5310fe020719",
-          "subject": "Updates: take craft-update from craft-libs main at 6e03f65bf (#203)"
+          "ts": "2026-11-11T19:24:20Z",
+          "commit": "d8aceb5",
+          "commit_full": "d8aceb5cc811ee2d32cbbceb43892d8c2919bfe2",
+          "subject": "Fix Flatpak permissions for update checks and self-updates (#205)"
         },
-        "last_commit_ts": "2026-11-11T17:44:52Z",
+        "last_commit_ts": "2026-11-11T19:24:20Z",
         "repo_since": "2026-11-01T19:58:46Z",
         "window": [
           0,
@@ -2575,7 +2575,7 @@
           3,
           6,
           5,
-          3
+          4
         ]
       },
       "release": {
@@ -2635,21 +2635,21 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 562,
-        "revisions_7d": 434,
+        "revisions": 565,
+        "revisions_7d": 437,
         "last_revision": {
-          "ts": "2026-11-11T17:49:27Z",
+          "ts": "2026-11-11T19:43:59Z",
           "kind": "content",
-          "commit": "cbf7c17",
-          "commit_full": "cbf7c179812b43ee3828bbba109164cfc6497535",
-          "message": "Resolve relative project paths before builds, option runs and Play (R2.7) (#1702)"
+          "commit": "ab79ec8",
+          "commit_full": "ab79ec87a4da58d8965b6d4f95b751464ba6e999",
+          "message": "Count source-map sections, check skipped values and keep refused maps' sources uncertain (R3.12) (#1705)"
         },
         "last_update": {
-          "ts": "2026-11-11T17:49:27Z",
+          "ts": "2026-11-11T19:43:59Z",
           "kind": "content",
-          "commit": "cbf7c17",
-          "commit_full": "cbf7c179812b43ee3828bbba109164cfc6497535",
-          "message": "Resolve relative project paths before builds, option runs and Play (R2.7) (#1702)"
+          "commit": "ab79ec8",
+          "commit_full": "ab79ec87a4da58d8965b6d4f95b751464ba6e999",
+          "message": "Count source-map sections, check skipped values and keep refused maps' sources uncertain (R3.12) (#1705)"
         },
         "self_reported": null
       },
@@ -2658,16 +2658,16 @@
         "level": "buzzing",
         "score": 29.9,
         "active_days_7d": 7,
-        "changes_7d": 502,
-        "changes_14d": 832,
-        "housekeeping_7d": 35,
+        "changes_7d": 504,
+        "changes_14d": 834,
+        "housekeeping_7d": 36,
         "last_code_change": {
-          "ts": "2026-11-11T17:49:27Z",
-          "commit": "cbf7c17",
-          "commit_full": "cbf7c179812b43ee3828bbba109164cfc6497535",
-          "subject": "Resolve relative project paths before builds, option runs and Play (R2.7) (#1702)"
+          "ts": "2026-11-11T19:43:59Z",
+          "commit": "ab79ec8",
+          "commit_full": "ab79ec87a4da58d8965b6d4f95b751464ba6e999",
+          "subject": "Count source-map sections, check skipped values and keep refused maps' sources uncertain (R3.12) (#1705)"
         },
-        "last_commit_ts": "2026-11-11T17:49:27Z",
+        "last_commit_ts": "2026-11-11T19:43:59Z",
         "repo_since": "2026-10-31T14:52:14Z",
         "window": [
           0,
@@ -2683,7 +2683,7 @@
           37,
           157,
           111,
-          98
+          100
         ]
       },
       "release": {
@@ -2764,18 +2764,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 35.9,
+        "score": 36.0,
         "active_days_7d": 7,
-        "changes_7d": 814,
-        "changes_14d": 1898,
+        "changes_7d": 822,
+        "changes_14d": 1906,
         "housekeeping_7d": 38,
         "last_code_change": {
-          "ts": "2026-11-11T18:17:26Z",
-          "commit": "5d0b21b",
-          "commit_full": "5d0b21b7e098b0fa37004a920def6a57bb58619a",
-          "subject": "Arabic: vertical term in the text alignment row, real first letters in the dialog-button help, clearer file-wait note, Select term in Construct (#15081)"
+          "ts": "2026-11-11T19:03:03Z",
+          "commit": "a2e7947",
+          "commit_full": "a2e7947eacea3fe0581d6fb452f419698d3c34a9",
+          "subject": "solidcore: three routines return their warning with the result instead of as an error (#15020) (#15023)"
         },
-        "last_commit_ts": "2026-11-11T18:17:26Z",
+        "last_commit_ts": "2026-11-11T19:03:03Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           191,
@@ -2791,7 +2791,7 @@
           70,
           151,
           239,
-          116
+          124
         ]
       },
       "release": {
@@ -3020,5 +3020,5 @@
       }
     ]
   },
-  "generated_at": "2026-11-11T18:40:42+00:00"
+  "generated_at": "2026-11-11T19:46:57+00:00"
 }

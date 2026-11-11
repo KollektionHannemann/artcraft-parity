@@ -557,18 +557,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 34.5,
+    "score": 34.6,
     "active_days_7d": 7,
-    "changes_7d": 694,
-    "changes_14d": 1557,
+    "changes_7d": 702,
+    "changes_14d": 1565,
     "housekeeping_7d": 31,
     "last_code_change": {
-      "ts": "2026-11-11T18:35:54Z",
-      "commit": "9840b65",
-      "commit_full": "9840b65a85d888d66dfbd791ee3a6313984a9ad2",
-      "subject": "JavaScript: new XML copies a one-item list's node, and insertChildAfter and insertChildBefore take fuel per child scanned (#6626)"
+      "ts": "2026-11-11T19:28:28Z",
+      "commit": "e0779c6",
+      "commit_full": "e0779c6266b8602ea895b7f38c93dec4fa89301b",
+      "subject": "Plug-ins: the fuzz test reads the runtime's fuel slice instead of a copy (#6646)"
     },
-    "last_commit_ts": "2026-11-11T18:35:54Z",
+    "last_commit_ts": "2026-11-11T19:28:28Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       180,
@@ -584,7 +584,7 @@
       199,
       81,
       81,
-      110
+      118
     ],
     "days": [
       {
@@ -1374,26 +1374,43 @@
       },
       {
         "d": "2026-11-11",
-        "code": 110,
+        "code": 118,
         "other": 11,
         "samples": [
           {
-            "commit": "9840b65",
-            "subject": "JavaScript: new XML copies a one-item list's node, and insertChildAfter and insertChildBefore take fuel per child scanned (#6626)"
+            "commit": "e0779c6",
+            "subject": "Plug-ins: the fuzz test reads the runtime's fuel slice instead of a copy (#6646)"
           },
           {
-            "commit": "1e76791",
-            "subject": "Scripts: File and Folder read files in the script's own folder (#6615)"
+            "commit": "1c04923",
+            "subject": "Scripts: Math.random gets a new seed on every web page load (#6645)"
           },
           {
-            "commit": "f83d916",
-            "subject": "Commands: every angle and rotation param says which way it turns (#6340) (#6631)"
+            "commit": "541f8be",
+            "subject": "PDF: an option writes pages longer than 200 in at full size in points (#6643)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.24.0",
+      "name": "VectorCraft v0.24.0",
+      "ts": "2026-11-11T18:59:22Z",
+      "url": "https://github.com/storytold/vectorcraft/releases/tag/v0.24.0",
+      "changes": 218,
+      "new_contributors": 5,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.23.0",
       "name": "VectorCraft v0.23.0",
@@ -1571,23 +1588,6 @@
       "url": "https://github.com/storytold/vectorcraft/releases/tag/v0.14.0",
       "changes": 188,
       "new_contributors": 20,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.13.1",
-      "name": "VectorCraft v0.13.1",
-      "ts": "2026-10-18T04:36:37Z",
-      "url": "https://github.com/storytold/vectorcraft/releases/tag/v0.13.1",
-      "changes": 199,
-      "new_contributors": 8,
       "platforms": [
         "macOS",
         "Windows",
@@ -7470,5 +7470,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T18:38:44+00:00"
+  "updated_at": "2026-11-11T19:45:34+00:00"
 }
