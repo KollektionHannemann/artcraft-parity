@@ -466,16 +466,16 @@
     "level": "active",
     "score": 19.8,
     "active_days_7d": 7,
-    "changes_7d": 83,
-    "changes_14d": 226,
-    "housekeeping_7d": 2,
+    "changes_7d": 84,
+    "changes_14d": 227,
+    "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-11T16:35:44Z",
-      "commit": "90180f4",
-      "commit_full": "90180f4d8755e5425af122ce9d4c4e07f0464a9a",
-      "subject": "Sandbox: build on riscv64, where libc names no kexec_file_load (#3777)"
+      "ts": "2026-11-11T17:44:31Z",
+      "commit": "6dbfbc4",
+      "commit_full": "6dbfbc4058a86a62753a8acbf030e76e6fda006b",
+      "subject": "Updates: take craft-update from craft-libs main at 6e03f65bf (#3795)"
     },
-    "last_commit_ts": "2026-11-11T16:35:44Z",
+    "last_commit_ts": "2026-11-11T17:44:31Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       3,
@@ -491,7 +491,7 @@
       13,
       8,
       14,
-      29
+      30
     ],
     "days": [
       {
@@ -1089,9 +1089,13 @@
       },
       {
         "d": "2026-11-11",
-        "code": 29,
-        "other": 1,
+        "code": 30,
+        "other": 2,
         "samples": [
+          {
+            "commit": "6dbfbc4",
+            "subject": "Updates: take craft-update from craft-libs main at 6e03f65bf (#3795)"
+          },
           {
             "commit": "90180f4",
             "subject": "Sandbox: build on riscv64, where libc names no kexec_file_load (#3777)"
@@ -1099,16 +1103,29 @@
           {
             "commit": "94fc52e",
             "subject": "xlsx: share inline dxf number formats within a styles part (#3260)"
-          },
-          {
-            "commit": "7b825d0",
-            "subject": "Save as Web Page: a byte budget for the charts' SVG (an error past it) (#3209)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.19.0",
+      "name": "GridCraft v0.19.0",
+      "ts": "2026-11-11T16:54:48Z",
+      "url": "https://github.com/storytold/gridcraft/releases/tag/v0.19.0",
+      "changes": 49,
+      "new_contributors": 2,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.18.0",
       "name": "GridCraft v0.18.0",
@@ -1286,23 +1303,6 @@
       "url": "https://github.com/storytold/gridcraft/releases/tag/v0.9.0",
       "changes": 32,
       "new_contributors": 8,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.8.0",
-      "name": "GridCraft v0.8.0",
-      "ts": "2026-10-18T01:47:37Z",
-      "url": "https://github.com/storytold/gridcraft/releases/tag/v0.8.0",
-      "changes": 6,
-      "new_contributors": null,
       "platforms": [
         "macOS",
         "Windows",
@@ -3548,5 +3548,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T16:43:21+00:00"
+  "updated_at": "2026-11-11T17:44:57+00:00"
 }

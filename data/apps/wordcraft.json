@@ -541,18 +541,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.6,
+    "score": 20.7,
     "active_days_7d": 7,
-    "changes_7d": 186,
-    "changes_14d": 327,
-    "housekeeping_7d": 6,
+    "changes_7d": 187,
+    "changes_14d": 328,
+    "housekeeping_7d": 8,
     "last_code_change": {
-      "ts": "2026-11-11T13:22:51Z",
-      "commit": "ad5e1a6",
-      "commit_full": "ad5e1a65fc4854dba4dea23da655ba6e1dc6b21f",
-      "subject": "#6159: refuse ui.screenshot on secondary document windows and support root window selection (#6169)"
+      "ts": "2026-11-11T17:04:55Z",
+      "commit": "639b813",
+      "commit_full": "639b8133ea31efb63aac381a7ced8b8aed32aa30",
+      "subject": "Linux: stay on native Wayland when the X11 libraries are missing (#3359)"
     },
-    "last_commit_ts": "2026-11-11T13:22:51Z",
+    "last_commit_ts": "2026-11-11T17:44:00Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       2,
@@ -568,7 +568,7 @@
       90,
       13,
       5,
-      12
+      13
     ],
     "days": [
       {
@@ -1200,9 +1200,13 @@
       },
       {
         "d": "2026-11-11",
-        "code": 12,
-        "other": 0,
+        "code": 13,
+        "other": 2,
         "samples": [
+          {
+            "commit": "639b813",
+            "subject": "Linux: stay on native Wayland when the X11 libraries are missing (#3359)"
+          },
           {
             "commit": "ad5e1a6",
             "subject": "#6159: refuse ui.screenshot on secondary document windows and support root window selection (#6169)"
@@ -1210,10 +1214,6 @@
           {
             "commit": "bf426c1",
             "subject": "Insert > Date & Time: Word-style dialog with regional formats and field support (#5093) (#6022)"
-          },
-          {
-            "commit": "b67d3b8",
-            "subject": "Engine: fall back to fsync on Apple targets when full flush is unsupported (#6155) (#6161)"
           }
         ]
       }
@@ -15085,5 +15085,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T13:39:02+00:00"
+  "updated_at": "2026-11-11T17:44:45+00:00"
 }

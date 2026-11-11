@@ -385,16 +385,16 @@
     "level": "buzzing",
     "score": 30.3,
     "active_days_7d": 7,
-    "changes_7d": 518,
-    "changes_14d": 620,
-    "housekeeping_7d": 6,
+    "changes_7d": 520,
+    "changes_14d": 622,
+    "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-11T15:42:20Z",
-      "commit": "d0299c4",
-      "commit_full": "d0299c417928374c89bb9e3e1e30774005a2caa1",
-      "subject": "Fix main: eyedropper cursor tests accept the native pipette bitmap (#12523) (#13199)"
+      "ts": "2026-11-11T17:11:21Z",
+      "commit": "0277194",
+      "commit_full": "0277194a7dc5f81fbeafb9e8fb02e51c3aa1aeaa",
+      "subject": "Keep document window canvases inert under a modal dialog (#12948)"
     },
-    "last_commit_ts": "2026-11-11T15:42:20Z",
+    "last_commit_ts": "2026-11-11T17:12:50Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       18,
@@ -410,7 +410,7 @@
       80,
       43,
       75,
-      140
+      142
     ],
     "days": [
       {
@@ -1213,20 +1213,20 @@
       },
       {
         "d": "2026-11-11",
-        "code": 140,
-        "other": 1,
+        "code": 142,
+        "other": 2,
         "samples": [
+          {
+            "commit": "0277194",
+            "subject": "Keep document window canvases inert under a modal dialog (#12948)"
+          },
+          {
+            "commit": "0143b14",
+            "subject": "fix(ui): use vector path icon for shape layers in Properties (#10787)"
+          },
           {
             "commit": "d0299c4",
             "subject": "Fix main: eyedropper cursor tests accept the native pipette bitmap (#12523) (#13199)"
-          },
-          {
-            "commit": "58e0a15",
-            "subject": "Delete Anchor Point: Delete with an anchor selected edits the path, never the layer (#12761) (#13073)"
-          },
-          {
-            "commit": "6bef11e",
-            "subject": "Perspective Crop: regression tests for the shield and for Alt corner drags past the opposite corner (#13004)"
           }
         ]
       }
@@ -1717,5 +1717,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T16:42:19+00:00"
+  "updated_at": "2026-11-11T17:44:04+00:00"
 }

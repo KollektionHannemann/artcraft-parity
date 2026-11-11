@@ -462,18 +462,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 11.3,
+    "score": 12.5,
     "active_days_7d": 7,
-    "changes_7d": 24,
-    "changes_14d": 115,
-    "housekeeping_7d": 2,
+    "changes_7d": 28,
+    "changes_14d": 119,
+    "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-11T14:07:54Z",
-      "commit": "ff4be04",
-      "commit_full": "ff4be0493677ee6d2dd9bc5b6693d8ed786c8c26",
-      "subject": "CLAP host: a reset keeps the queued note-offs, so instruments stop at Stop, Play and Locate (#1464) (#1470)"
+      "ts": "2026-11-11T17:41:07Z",
+      "commit": "927c4f7",
+      "commit_full": "927c4f7b7290b9f9bd59448fdf4def6f841e4b14",
+      "subject": "Read volume automation at every sample, not once per block (#1355)"
     },
-    "last_commit_ts": "2026-11-11T14:07:54Z",
+    "last_commit_ts": "2026-11-11T17:41:53Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
       0,
@@ -489,7 +489,7 @@
       4,
       4,
       3,
-      2
+      6
     ],
     "days": [
       {
@@ -1052,16 +1052,20 @@
       },
       {
         "d": "2026-11-11",
-        "code": 2,
-        "other": 0,
+        "code": 6,
+        "other": 1,
         "samples": [
           {
-            "commit": "ff4be04",
-            "subject": "CLAP host: a reset keeps the queued note-offs, so instruments stop at Stop, Play and Locate (#1464) (#1470)"
+            "commit": "927c4f7",
+            "subject": "Read volume automation at every sample, not once per block (#1355)"
           },
           {
-            "commit": "1483dc8",
-            "subject": "Fix AutomationLane::value_at overflow between extreme opposite-sign points (#1444)"
+            "commit": "69af50a",
+            "subject": "fix(engine): trim skips locked clips (#1432) (#1442)"
+          },
+          {
+            "commit": "e86d09a",
+            "subject": "Compensate a hosted instrument's latency (#1476)"
           }
         ]
       }
@@ -1805,5 +1809,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T14:41:06+00:00"
+  "updated_at": "2026-11-11T17:44:47+00:00"
 }

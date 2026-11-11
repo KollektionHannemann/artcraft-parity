@@ -49,6 +49,50 @@
   ],
   "latest_events": [
     {
+      "id": "pdfcraft",
+      "name": "PdfCraft",
+      "type": "release",
+      "ts": "2026-11-11T17:39:29Z",
+      "tag": "v0.21.0",
+      "kind": "minor",
+      "changes": 132,
+      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.21.0",
+      "prerelease": false
+    },
+    {
+      "id": "materialcraft",
+      "name": "MaterialCraft",
+      "type": "release",
+      "ts": "2026-11-11T17:13:24Z",
+      "tag": "v0.4.0",
+      "kind": "minor",
+      "changes": 11,
+      "url": "https://github.com/storytold/materialcraft/releases/tag/v0.4.0",
+      "prerelease": false
+    },
+    {
+      "id": "effectcraft",
+      "name": "EffectCraft",
+      "type": "release",
+      "ts": "2026-11-11T17:01:40Z",
+      "tag": "v0.24.0",
+      "kind": "minor",
+      "changes": 45,
+      "url": "https://github.com/storytold/effectcraft/releases/tag/v0.24.0",
+      "prerelease": false
+    },
+    {
+      "id": "gridcraft",
+      "name": "GridCraft",
+      "type": "release",
+      "ts": "2026-11-11T16:54:48Z",
+      "tag": "v0.19.0",
+      "kind": "minor",
+      "changes": 49,
+      "url": "https://github.com/storytold/gridcraft/releases/tag/v0.19.0",
+      "prerelease": false
+    },
+    {
       "id": "filmcraft",
       "name": "FilmCraft",
       "type": "release",
@@ -404,17 +448,6 @@
       "prerelease": false
     },
     {
-      "id": "effectcraft",
-      "name": "EffectCraft",
-      "type": "release",
-      "ts": "2026-11-06T20:26:02Z",
-      "tag": "v0.22.0",
-      "kind": "minor",
-      "changes": 95,
-      "url": "https://github.com/storytold/effectcraft/releases/tag/v0.22.0",
-      "prerelease": false
-    },
-    {
       "id": "wordcraft",
       "name": "WordCraft",
       "type": "release",
@@ -446,51 +479,18 @@
       "changes": 17,
       "url": "https://github.com/storytold/texturecraft/releases/tag/v0.4.0",
       "prerelease": false
-    },
-    {
-      "id": "soundcraft",
-      "name": "SoundCraft",
-      "type": "release",
-      "ts": "2026-11-06T20:22:08Z",
-      "tag": "v0.18.0",
-      "kind": "minor",
-      "changes": 34,
-      "url": "https://github.com/storytold/soundcraft/releases/tag/v0.18.0",
-      "prerelease": false
-    },
-    {
-      "id": "photocraft",
-      "name": "PhotoCraft",
-      "type": "release",
-      "ts": "2026-11-06T20:22:03Z",
-      "tag": "v0.21.0",
-      "kind": "minor",
-      "changes": 219,
-      "url": "https://github.com/storytold/photocraft/releases/tag/v0.21.0",
-      "prerelease": false
-    },
-    {
-      "id": "pdfcraft",
-      "name": "PdfCraft",
-      "type": "release",
-      "ts": "2026-11-06T20:21:58Z",
-      "tag": "v0.19.0",
-      "kind": "minor",
-      "changes": 71,
-      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.19.0",
-      "prerelease": false
     }
   ],
   "release_waves": [
     {
       "day": "2026-11-11",
-      "apps": 7,
-      "changes": 248,
+      "apps": 11,
+      "changes": 485,
       "largest": {
-        "id": "AniCraft",
-        "name": "AniCraft",
-        "tag": "v0.1.0",
-        "changes": 69
+        "id": "pdfcraft",
+        "name": "PdfCraft",
+        "tag": "v0.21.0",
+        "changes": 132
       }
     },
     {
@@ -649,18 +649,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 34.3,
+        "score": 34.4,
         "active_days_7d": 7,
-        "changes_7d": 679,
-        "changes_14d": 1542,
-        "housekeeping_7d": 28,
+        "changes_7d": 686,
+        "changes_14d": 1549,
+        "housekeeping_7d": 29,
         "last_code_change": {
-          "ts": "2026-11-11T16:25:21Z",
-          "commit": "b6b2370",
-          "commit_full": "b6b23703b0fe0400a17b03c2c0faf8098f0d5950",
-          "subject": "MCP: ui.inspect leaves out paths outside the read roots (#6608)"
+          "ts": "2026-11-11T17:39:30Z",
+          "commit": "25433ed",
+          "commit_full": "25433ede657f4478162aaff112d155655c5564e5",
+          "subject": "Type: aligned lines leave the tracking after their last character out (#6619)"
         },
-        "last_commit_ts": "2026-11-11T16:25:21Z",
+        "last_commit_ts": "2026-11-11T17:42:58Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           180,
@@ -676,7 +676,7 @@
           199,
           81,
           81,
-          95
+          102
         ]
       },
       "release": {
@@ -782,14 +782,14 @@
         "active_days_7d": 7,
         "changes_7d": 87,
         "changes_14d": 124,
-        "housekeeping_7d": 5,
+        "housekeeping_7d": 6,
         "last_code_change": {
           "ts": "2026-11-11T09:26:21Z",
           "commit": "f786b87",
           "commit_full": "f786b87533e58c6d31c7f9f2897814904448f39a",
           "subject": "security(meta): linear entity decoding, indexed keyword de-duplication, bounded XMP path building (#3672)"
         },
-        "last_commit_ts": "2026-11-11T09:26:21Z",
+        "last_commit_ts": "2026-11-11T17:12:17Z",
         "repo_since": "2026-09-30T14:04:12Z",
         "window": [
           0,
@@ -919,18 +919,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 20.6,
+        "score": 20.7,
         "active_days_7d": 7,
-        "changes_7d": 186,
-        "changes_14d": 327,
-        "housekeeping_7d": 6,
+        "changes_7d": 187,
+        "changes_14d": 328,
+        "housekeeping_7d": 8,
         "last_code_change": {
-          "ts": "2026-11-11T13:22:51Z",
-          "commit": "ad5e1a6",
-          "commit_full": "ad5e1a65fc4854dba4dea23da655ba6e1dc6b21f",
-          "subject": "#6159: refuse ui.screenshot on secondary document windows and support root window selection (#6169)"
+          "ts": "2026-11-11T17:04:55Z",
+          "commit": "639b813",
+          "commit_full": "639b8133ea31efb63aac381a7ced8b8aed32aa30",
+          "subject": "Linux: stay on native Wayland when the X11 libraries are missing (#3359)"
         },
-        "last_commit_ts": "2026-11-11T13:22:51Z",
+        "last_commit_ts": "2026-11-11T17:44:00Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
           2,
@@ -946,7 +946,7 @@
           90,
           13,
           5,
-          12
+          13
         ]
       },
       "release": {
@@ -1039,18 +1039,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 18.3,
+        "score": 18.5,
         "active_days_7d": 7,
-        "changes_7d": 77,
-        "changes_14d": 229,
-        "housekeeping_7d": 4,
+        "changes_7d": 80,
+        "changes_14d": 232,
+        "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-11T16:29:46Z",
-          "commit": "617e0aa",
-          "commit_full": "617e0aa7ba4870bb6fdfd5b40a86b92bc54540fc",
-          "subject": "render: refuse mixer graphs whose latency or compensation delays are absurd (#4225)"
+          "ts": "2026-11-11T17:23:26Z",
+          "commit": "70dd1a5",
+          "commit_full": "70dd1a53c8c35421ec78b08a6cdfb395332530b6",
+          "subject": "engine, ui: default screenshot, session log and voice-over folders go in a private temp folder (#4264)"
         },
-        "last_commit_ts": "2026-11-11T16:29:46Z",
+        "last_commit_ts": "2026-11-11T17:23:26Z",
         "repo_since": "2026-09-30T09:22:00Z",
         "window": [
           0,
@@ -1066,7 +1066,7 @@
           21,
           5,
           6,
-          18
+          21
         ]
       },
       "release": {
@@ -1170,18 +1170,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.6,
+        "score": 13.8,
         "active_days_7d": 6,
-        "changes_7d": 34,
-        "changes_14d": 193,
-        "housekeeping_7d": 3,
+        "changes_7d": 35,
+        "changes_14d": 194,
+        "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-11T09:16:05Z",
-          "commit": "a55457e",
-          "commit_full": "a55457ee53d23628c3df77095cf19840d634a25e",
-          "subject": "Spelling: stop an affix header's count at the end of the file, share aliased dictionaries (#1794)"
+          "ts": "2026-11-11T17:43:51Z",
+          "commit": "203fa79",
+          "commit_full": "203fa79211971cedeba3aa1d7d814afc0820a089",
+          "subject": "Updates: take craft-update from craft-libs main at 6e03f65bf (#2041)"
         },
-        "last_commit_ts": "2026-11-11T15:35:45Z",
+        "last_commit_ts": "2026-11-11T17:43:51Z",
         "repo_since": "2026-10-06T02:13:02Z",
         "window": [
           0,
@@ -1197,7 +1197,7 @@
           5,
           2,
           3,
-          8
+          9
         ]
       },
       "release": {
@@ -1337,18 +1337,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.5,
+        "score": 15.7,
         "active_days_7d": 6,
-        "changes_7d": 135,
-        "changes_14d": 436,
-        "housekeeping_7d": 3,
+        "changes_7d": 136,
+        "changes_14d": 437,
+        "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-11T14:37:20Z",
-          "commit": "7bf098d",
-          "commit_full": "7bf098d75d187416633d9ebcceb9eb83fbb10df8",
-          "subject": "fix(ui): paste uses the event's clipboard text instead of re-reading it (#2021) (#2243)"
+          "ts": "2026-11-11T17:44:22Z",
+          "commit": "41c1ad3",
+          "commit_full": "41c1ad345845bc3e8a7773c562a81b3c30de8b35",
+          "subject": "Updates: take craft-update from craft-libs main at 6e03f65bf (#2263)"
         },
-        "last_commit_ts": "2026-11-11T14:37:20Z",
+        "last_commit_ts": "2026-11-11T17:44:22Z",
         "repo_since": "2026-10-09T15:38:50Z",
         "window": [
           107,
@@ -1364,7 +1364,7 @@
           2,
           6,
           2,
-          5
+          6
         ]
       },
       "release": {
@@ -1486,14 +1486,14 @@
         "active_days_7d": 7,
         "changes_7d": 376,
         "changes_14d": 476,
-        "housekeeping_7d": 14,
+        "housekeeping_7d": 16,
         "last_code_change": {
           "ts": "2026-11-11T15:57:36Z",
           "commit": "f44ea83",
           "commit_full": "f44ea8380d996351069835c09e86dd8cd3a8a708",
           "subject": "redact: a covered clip-and-paint path leaves an empty clip, not its outline (#6996)"
         },
-        "last_commit_ts": "2026-11-11T15:57:36Z",
+        "last_commit_ts": "2026-11-11T17:12:27Z",
         "repo_since": "2026-09-30T09:17:08Z",
         "window": [
           3,
@@ -1513,12 +1513,12 @@
         ]
       },
       "release": {
-        "tag": "v0.20.0",
-        "name": "PdfCraft v0.20.0",
-        "ts": "2026-11-09T12:10:51Z",
-        "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.20.0",
-        "changes": 292,
-        "new_contributors": 10,
+        "tag": "v0.21.0",
+        "name": "PdfCraft v0.21.0",
+        "ts": "2026-11-11T17:39:29Z",
+        "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.21.0",
+        "changes": 132,
+        "new_contributors": 11,
         "platforms": [
           "macOS",
           "Windows",
@@ -1608,16 +1608,16 @@
         "level": "active",
         "score": 19.8,
         "active_days_7d": 7,
-        "changes_7d": 83,
-        "changes_14d": 226,
-        "housekeeping_7d": 2,
+        "changes_7d": 84,
+        "changes_14d": 227,
+        "housekeeping_7d": 3,
         "last_code_change": {
-          "ts": "2026-11-11T16:35:44Z",
-          "commit": "90180f4",
-          "commit_full": "90180f4d8755e5425af122ce9d4c4e07f0464a9a",
-          "subject": "Sandbox: build on riscv64, where libc names no kexec_file_load (#3777)"
+          "ts": "2026-11-11T17:44:31Z",
+          "commit": "6dbfbc4",
+          "commit_full": "6dbfbc4058a86a62753a8acbf030e76e6fda006b",
+          "subject": "Updates: take craft-update from craft-libs main at 6e03f65bf (#3795)"
         },
-        "last_commit_ts": "2026-11-11T16:35:44Z",
+        "last_commit_ts": "2026-11-11T17:44:31Z",
         "repo_since": "2026-10-06T02:09:42Z",
         "window": [
           3,
@@ -1633,16 +1633,16 @@
           13,
           8,
           14,
-          29
+          30
         ]
       },
       "release": {
-        "tag": "v0.18.0",
-        "name": "GridCraft v0.18.0",
-        "ts": "2026-11-09T11:51:15Z",
-        "url": "https://github.com/storytold/gridcraft/releases/tag/v0.18.0",
-        "changes": 27,
-        "new_contributors": null,
+        "tag": "v0.19.0",
+        "name": "GridCraft v0.19.0",
+        "ts": "2026-11-11T16:54:48Z",
+        "url": "https://github.com/storytold/gridcraft/releases/tag/v0.19.0",
+        "changes": 49,
+        "new_contributors": 2,
         "platforms": [
           "macOS",
           "Windows",
@@ -1726,18 +1726,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.4,
+        "score": 14.8,
         "active_days_7d": 7,
-        "changes_7d": 36,
-        "changes_14d": 182,
-        "housekeeping_7d": 3,
+        "changes_7d": 37,
+        "changes_14d": 183,
+        "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-11T06:57:58Z",
-          "commit": "c64378d",
-          "commit_full": "c64378ded9c8d664d52dd87767cbe6ff082c8100",
-          "subject": "Canvas: a spine line where the pages of a spread meet (#1838) (#1936)"
+          "ts": "2026-11-11T17:44:02Z",
+          "commit": "da740d4",
+          "commit_full": "da740d44cf59799a3fb5e6bd613d5187fbf26538",
+          "subject": "Updates: take craft-update from craft-libs main at 6e03f65bf (#2622)"
         },
-        "last_commit_ts": "2026-11-11T15:40:22Z",
+        "last_commit_ts": "2026-11-11T17:44:02Z",
         "repo_since": "2026-10-01T13:00:02Z",
         "window": [
           1,
@@ -1753,7 +1753,7 @@
           8,
           6,
           5,
-          2
+          3
         ]
       },
       "release": {
@@ -1848,16 +1848,16 @@
         "level": "buzzing",
         "score": 30.3,
         "active_days_7d": 7,
-        "changes_7d": 518,
-        "changes_14d": 620,
-        "housekeeping_7d": 6,
+        "changes_7d": 520,
+        "changes_14d": 622,
+        "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-11T15:42:20Z",
-          "commit": "d0299c4",
-          "commit_full": "d0299c417928374c89bb9e3e1e30774005a2caa1",
-          "subject": "Fix main: eyedropper cursor tests accept the native pipette bitmap (#12523) (#13199)"
+          "ts": "2026-11-11T17:11:21Z",
+          "commit": "0277194",
+          "commit_full": "0277194a7dc5f81fbeafb9e8fb02e51c3aa1aeaa",
+          "subject": "Keep document window canvases inert under a modal dialog (#12948)"
         },
-        "last_commit_ts": "2026-11-11T15:42:20Z",
+        "last_commit_ts": "2026-11-11T17:12:50Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           18,
@@ -1873,7 +1873,7 @@
           80,
           43,
           75,
-          140
+          142
         ]
       },
       "release": {
@@ -1966,18 +1966,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 20.0,
+        "score": 20.1,
         "active_days_7d": 6,
-        "changes_7d": 121,
-        "changes_14d": 463,
-        "housekeeping_7d": 7,
+        "changes_7d": 122,
+        "changes_14d": 464,
+        "housekeeping_7d": 8,
         "last_code_change": {
-          "ts": "2026-11-11T16:03:09Z",
-          "commit": "2e3c7f0",
-          "commit_full": "2e3c7f05d31db9ce02d70534690be566b7704b52",
-          "subject": ".aep import: every loss detail in the prompt; no false shape loss; Orientation expressions (#3365, #3087) (#3448)"
+          "ts": "2026-11-11T17:44:13Z",
+          "commit": "bed7148",
+          "commit_full": "bed71484a89f9499dbce219fdfbda9fb8b981bb1",
+          "subject": "Updates: take craft-update from craft-libs main at 6e03f65bf (#3511)"
         },
-        "last_commit_ts": "2026-11-11T16:03:09Z",
+        "last_commit_ts": "2026-11-11T17:44:13Z",
         "repo_since": "2026-10-01T16:48:39Z",
         "window": [
           156,
@@ -1993,16 +1993,16 @@
           11,
           11,
           26,
-          17
+          18
         ]
       },
       "release": {
-        "tag": "v0.23.1",
-        "name": "EffectCraft v0.23.1",
-        "ts": "2026-11-10T00:49:57Z",
-        "url": "https://github.com/storytold/effectcraft/releases/tag/v0.23.1",
-        "changes": 8,
-        "new_contributors": null,
+        "tag": "v0.24.0",
+        "name": "EffectCraft v0.24.0",
+        "ts": "2026-11-11T17:01:40Z",
+        "url": "https://github.com/storytold/effectcraft/releases/tag/v0.24.0",
+        "changes": 45,
+        "new_contributors": 2,
         "platforms": [
           "macOS",
           "Windows",
@@ -2011,7 +2011,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "patch"
+        "kind": "minor"
       },
       "series": [
         {
@@ -2086,18 +2086,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 11.3,
+        "score": 12.5,
         "active_days_7d": 7,
-        "changes_7d": 24,
-        "changes_14d": 115,
-        "housekeeping_7d": 2,
+        "changes_7d": 28,
+        "changes_14d": 119,
+        "housekeeping_7d": 3,
         "last_code_change": {
-          "ts": "2026-11-11T14:07:54Z",
-          "commit": "ff4be04",
-          "commit_full": "ff4be0493677ee6d2dd9bc5b6693d8ed786c8c26",
-          "subject": "CLAP host: a reset keeps the queued note-offs, so instruments stop at Stop, Play and Locate (#1464) (#1470)"
+          "ts": "2026-11-11T17:41:07Z",
+          "commit": "927c4f7",
+          "commit_full": "927c4f7b7290b9f9bd59448fdf4def6f841e4b14",
+          "subject": "Read volume automation at every sample, not once per block (#1355)"
         },
-        "last_commit_ts": "2026-11-11T14:07:54Z",
+        "last_commit_ts": "2026-11-11T17:41:53Z",
         "repo_since": "2026-10-06T00:08:04Z",
         "window": [
           0,
@@ -2113,7 +2113,7 @@
           4,
           4,
           3,
-          2
+          6
         ]
       },
       "release": {
@@ -2206,18 +2206,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.8,
+        "score": 14.9,
         "active_days_7d": 7,
-        "changes_7d": 40,
-        "changes_14d": 214,
-        "housekeeping_7d": 4,
+        "changes_7d": 41,
+        "changes_14d": 215,
+        "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-11T10:01:27Z",
-          "commit": "d6d16bd",
-          "commit_full": "d6d16bd474d3b223f5edd89180204bddf17040da",
-          "subject": "fix(io): make four DXF/SVG passes linear in their input (#2721)"
+          "ts": "2026-11-11T17:43:38Z",
+          "commit": "2d25308",
+          "commit_full": "2d25308cfcb1fca9b3d52a9753c8042b50a55c6e",
+          "subject": "Updates: take craft-update from craft-libs main at 6e03f65bf (#3068)"
         },
-        "last_commit_ts": "2026-11-11T15:38:50Z",
+        "last_commit_ts": "2026-11-11T17:43:38Z",
         "repo_since": "2026-10-06T00:15:47Z",
         "window": [
           0,
@@ -2233,7 +2233,7 @@
           9,
           4,
           2,
-          12
+          13
         ]
       },
       "release": {
@@ -2548,18 +2548,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.2,
+        "score": 13.6,
         "active_days_7d": 7,
-        "changes_7d": 87,
-        "changes_14d": 114,
+        "changes_7d": 88,
+        "changes_14d": 115,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-11T15:35:45Z",
-          "commit": "a3167cc",
-          "commit_full": "a3167cc6ec63e733c88c9ffb548a04b957711efe",
-          "subject": "Release: MaterialCraft v0.4.0 (#199)"
+          "ts": "2026-11-11T17:44:52Z",
+          "commit": "08b2cfb",
+          "commit_full": "08b2cfb632fec96892c0c82e7a1c5310fe020719",
+          "subject": "Updates: take craft-update from craft-libs main at 6e03f65bf (#203)"
         },
-        "last_commit_ts": "2026-11-11T16:41:41Z",
+        "last_commit_ts": "2026-11-11T17:44:52Z",
         "repo_since": "2026-11-01T19:58:46Z",
         "window": [
           0,
@@ -2575,16 +2575,16 @@
           3,
           6,
           5,
-          2
+          3
         ]
       },
       "release": {
-        "tag": "v0.3.0",
-        "name": "MaterialCraft v0.3.0",
-        "ts": "2026-11-09T11:49:44Z",
-        "url": "https://github.com/storytold/materialcraft/releases/tag/v0.3.0",
-        "changes": 18,
-        "new_contributors": 1,
+        "tag": "v0.4.0",
+        "name": "MaterialCraft v0.4.0",
+        "ts": "2026-11-11T17:13:24Z",
+        "url": "https://github.com/storytold/materialcraft/releases/tag/v0.4.0",
+        "changes": 11,
+        "new_contributors": null,
         "platforms": [
           "macOS",
           "Windows",
@@ -2764,18 +2764,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 35.7,
+        "score": 35.8,
         "active_days_7d": 7,
-        "changes_7d": 796,
-        "changes_14d": 1880,
+        "changes_7d": 805,
+        "changes_14d": 1889,
         "housekeeping_7d": 38,
         "last_code_change": {
-          "ts": "2026-11-11T16:38:58Z",
-          "commit": "2a802b2",
-          "commit_full": "2a802b228b3e8143e173024e6b43673dd30d93f8",
-          "subject": "Regenerate generated files and fold pending files [skip ci]"
+          "ts": "2026-11-11T16:52:42Z",
+          "commit": "30b7a56",
+          "commit_full": "30b7a56a940cf605a898c96973eb354f5effeeac",
+          "subject": "Web: inserting a file from the browser's file panel uses the staged loader (#15042)"
         },
-        "last_commit_ts": "2026-11-11T16:38:58Z",
+        "last_commit_ts": "2026-11-11T16:52:42Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           191,
@@ -2791,7 +2791,7 @@
           70,
           151,
           239,
-          98
+          107
         ]
       },
       "release": {
@@ -2864,14 +2864,14 @@
         "active_days_7d": 5,
         "changes_7d": 74,
         "changes_14d": 74,
-        "housekeeping_7d": 8,
+        "housekeeping_7d": 9,
         "last_code_change": {
           "ts": "2026-11-11T14:19:27Z",
           "commit": "531a470",
           "commit_full": "531a4701affd191f464acbc54238fc817f9747c5",
           "subject": "fix(gpu): wrap repeating bitmaps without a signed remainder, undefined on GL (M3) (#156)"
         },
-        "last_commit_ts": "2026-11-11T15:35:45Z",
+        "last_commit_ts": "2026-11-11T17:08:43Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
           0,
@@ -2959,14 +2959,14 @@
         "active_days_7d": 5,
         "changes_7d": 74,
         "changes_14d": 74,
-        "housekeeping_7d": 8,
+        "housekeeping_7d": 9,
         "last_code_change": {
           "ts": "2026-11-11T14:19:27Z",
           "commit": "531a470",
           "commit_full": "531a4701affd191f464acbc54238fc817f9747c5",
           "subject": "fix(gpu): wrap repeating bitmaps without a signed remainder, undefined on GL (M3) (#156)"
         },
-        "last_commit_ts": "2026-11-11T15:35:45Z",
+        "last_commit_ts": "2026-11-11T17:08:43Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
           0,
@@ -3020,5 +3020,5 @@
       }
     ]
   },
-  "generated_at": "2026-11-11T16:43:58+00:00"
+  "generated_at": "2026-11-11T17:45:29+00:00"
 }
