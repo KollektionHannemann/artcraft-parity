@@ -444,18 +444,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.0,
+    "score": 18.1,
     "active_days_7d": 7,
-    "changes_7d": 73,
-    "changes_14d": 225,
+    "changes_7d": 75,
+    "changes_14d": 227,
     "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-11T14:00:16Z",
-      "commit": "a9251b5",
-      "commit_full": "a9251b552eb69345852db10f3314537b9e011ccd",
-      "subject": "engine: stream Render Audio previews to disk instead of sizing buffers from the segment length (#4233)"
+      "ts": "2026-11-11T15:14:43Z",
+      "commit": "824a325",
+      "commit_full": "824a3258e71823d1ee53118afb137622ff70340b",
+      "subject": "audio-dsp, aac, dng: bound the remix joint loop, the encoder's batch copying, pack depth and tag merging (#4238)"
     },
-    "last_commit_ts": "2026-11-11T14:00:16Z",
+    "last_commit_ts": "2026-11-11T15:14:43Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       0,
@@ -471,7 +471,7 @@
       21,
       5,
       6,
-      14
+      16
     ],
     "days": [
       {
@@ -1209,20 +1209,20 @@
       },
       {
         "d": "2026-11-11",
-        "code": 14,
+        "code": 16,
         "other": 0,
         "samples": [
           {
+            "commit": "824a325",
+            "subject": "audio-dsp, aac, dng: bound the remix joint loop, the encoder's batch copying, pack depth and tag merging (#4238)"
+          },
+          {
+            "commit": "9599eb5",
+            "subject": "render: cap the effect scale a mismatched stored media width can produce (#4237)"
+          },
+          {
             "commit": "a9251b5",
             "subject": "engine: stream Render Audio previews to disk instead of sizing buffers from the segment length (#4233)"
-          },
-          {
-            "commit": "ff7fc8d",
-            "subject": "engine: size proxy and scene-detect work from the media, not stored durations (#4184)"
-          },
-          {
-            "commit": "25ceb25",
-            "subject": "media, engine, export, cli: read only regular files, and check before opening (#4243)"
           }
         ]
       }
@@ -1805,5 +1805,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T14:40:34+00:00"
+  "updated_at": "2026-11-11T15:34:37+00:00"
 }
