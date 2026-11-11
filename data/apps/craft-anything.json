@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "8031499",
-  "latest_commit_date": "2026-11-11T18:18:40+07:00",
-  "latest_message": "Keep version-two cramfs reads inside the filesystem's size (R3.12) (#1664)",
+  "latest_commit": "007aeeb",
+  "latest_commit_date": "2026-11-11T19:16:30+07:00",
+  "latest_message": "Compare stable numbers in console run checks (R2.5) (#1679)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 531,
-    "revisions_7d": 403,
+    "revisions": 549,
+    "revisions_7d": 421,
     "last_revision": {
-      "ts": "2026-11-11T11:18:40Z",
+      "ts": "2026-11-11T12:16:30Z",
       "kind": "content",
-      "commit": "8031499",
-      "commit_full": "8031499657636ac3cc9bb76d0ec85e964f81d3da",
-      "message": "Keep version-two cramfs reads inside the filesystem's size (R3.12) (#1664)"
+      "commit": "007aeeb",
+      "commit_full": "007aeebb02895fbfcba0ce964217081509ff0431",
+      "message": "Compare stable numbers in console run checks (R2.5) (#1679)"
     },
     "last_update": {
-      "ts": "2026-11-11T11:18:40Z",
+      "ts": "2026-11-11T12:16:30Z",
       "kind": "content",
-      "commit": "8031499",
-      "commit_full": "8031499657636ac3cc9bb76d0ec85e964f81d3da",
-      "message": "Keep version-two cramfs reads inside the filesystem's size (R3.12) (#1664)"
+      "commit": "007aeeb",
+      "commit_full": "007aeebb02895fbfcba0ce964217081509ff0431",
+      "message": "Compare stable numbers in console run checks (R2.5) (#1679)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 29.3,
+    "score": 29.7,
     "active_days_7d": 7,
-    "changes_7d": 469,
-    "changes_14d": 799,
-    "housekeeping_7d": 33,
+    "changes_7d": 489,
+    "changes_14d": 819,
+    "housekeeping_7d": 34,
     "last_code_change": {
-      "ts": "2026-11-11T11:18:40Z",
-      "commit": "8031499",
-      "commit_full": "8031499657636ac3cc9bb76d0ec85e964f81d3da",
-      "subject": "Keep version-two cramfs reads inside the filesystem's size (R3.12) (#1664)"
+      "ts": "2026-11-11T12:16:30Z",
+      "commit": "007aeeb",
+      "commit_full": "007aeebb02895fbfcba0ce964217081509ff0431",
+      "subject": "Compare stable numbers in console run checks (R2.5) (#1679)"
     },
-    "last_commit_ts": "2026-11-11T11:18:40Z",
+    "last_commit_ts": "2026-11-11T12:16:30Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       37,
       157,
       111,
-      65
+      85
     ],
     "days": [
       {
@@ -299,20 +299,20 @@
       },
       {
         "d": "2026-11-11",
-        "code": 65,
-        "other": 2,
+        "code": 85,
+        "other": 3,
         "samples": [
           {
-            "commit": "8031499",
-            "subject": "Keep version-two cramfs reads inside the filesystem's size (R3.12) (#1664)"
+            "commit": "007aeeb",
+            "subject": "Compare stable numbers in console run checks (R2.5) (#1679)"
           },
           {
-            "commit": "0f283ad",
-            "subject": "Stop JavaScript operators splitting before a non-ASCII identifier (#1661)"
+            "commit": "500a09a",
+            "subject": "Apply source map root prefixes before interpreting source paths (R3.12) (#1680)"
           },
           {
-            "commit": "28198b6",
-            "subject": "Keep special inode kinds when reading ext filesystems (R3.12) (#1634)"
+            "commit": "b12816c",
+            "subject": "Recover classic ext triple-indirect file blocks (R3.12) (#1666)"
           }
         ]
       }
@@ -4139,8 +4139,134 @@
       "commit": "8031499",
       "commit_full": "8031499657636ac3cc9bb76d0ec85e964f81d3da",
       "message": "Keep version-two cramfs reads inside the filesystem's size (R3.12) (#1664)"
+    },
+    {
+      "ts": "2026-11-11T11:20:41Z",
+      "kind": "content",
+      "commit": "a1581c0",
+      "commit_full": "a1581c04007a95b5f9966b3501d7faecec23c630",
+      "message": "Keep warnings from every view in the .NET application graph (R3.12) (#1663)"
+    },
+    {
+      "ts": "2026-11-11T11:22:58Z",
+      "kind": "content",
+      "commit": "0b35448",
+      "commit_full": "0b35448ed5146510e0ca0870081de0cc66c691a3",
+      "message": "Check every SquashFS data block against its share of the file (R3.12) (#1670)"
+    },
+    {
+      "ts": "2026-11-11T11:23:14Z",
+      "kind": "content",
+      "commit": "a9bb6df",
+      "commit_full": "a9bb6df7903ae87d7349ee24dccb2bd862d73d11",
+      "message": "Recover LZ4-compressed SquashFS metadata and file data (R3.12) (#1668)"
+    },
+    {
+      "ts": "2026-11-11T11:24:03Z",
+      "kind": "content",
+      "commit": "8d8e05c",
+      "commit_full": "8d8e05c609cb94ca7129c49516c40ddb2c68658a",
+      "message": "Keep unavailable ext4 extent mappings from fabricating file bytes (R3.12) (#1671)"
+    },
+    {
+      "ts": "2026-11-11T11:25:46Z",
+      "kind": "content",
+      "commit": "d26ee55",
+      "commit_full": "d26ee55bc2ed187b55130abd43150d36e3f629bd",
+      "message": "Recover ext4 files stored entirely inside their inode (R3.12) (#1667)"
+    },
+    {
+      "ts": "2026-11-11T11:33:38Z",
+      "kind": "content",
+      "commit": "ebc5a24",
+      "commit_full": "ebc5a24d9f6126cd84abed4fb59c9ab95261ee9d",
+      "message": "Recover ZIP64 end records shifted by prepended data (R3.12) (#1676)"
+    },
+    {
+      "ts": "2026-11-11T11:34:37Z",
+      "kind": "content",
+      "commit": "34774fd",
+      "commit_full": "34774fd3b3addd9c0537ec7890f2de939261911b",
+      "message": "Report packet evidence only for valid capture and protocol fields (R3.12) (#1247)"
+    },
+    {
+      "ts": "2026-11-11T11:35:05Z",
+      "kind": "content",
+      "commit": "f376711",
+      "commit_full": "f376711d9bbb5681b261ad5796fadf9c837e127e",
+      "message": "Keep literal $null strings in keyed archives (R3.12) (#1674)"
+    },
+    {
+      "ts": "2026-11-11T11:35:12Z",
+      "kind": "content",
+      "commit": "f04d745",
+      "commit_full": "f04d7456e00aea406a86a6e468d0b68fbb934edb",
+      "message": "Reject impossible JVM array allocation operands (R3.12) (#1675)"
+    },
+    {
+      "ts": "2026-11-11T11:35:44Z",
+      "kind": "content",
+      "commit": "037ca0d",
+      "commit_full": "037ca0d047a3783186bc2ac11a3b7979530ac7cf",
+      "message": "Recover JFFS2 files from big-endian images (R3.12) (#1665)"
+    },
+    {
+      "ts": "2026-11-11T11:48:37Z",
+      "kind": "content",
+      "commit": "bf34284",
+      "commit_full": "bf342840fbcd15167cda3b8255f4004a3326d1ff",
+      "message": "Report unavailable cramfs block-pointer tables as incomplete (R3.12) (#1681)"
+    },
+    {
+      "ts": "2026-11-11T11:50:45Z",
+      "kind": "content",
+      "commit": "67ba231",
+      "commit_full": "67ba23122d636a60525b137dbdae35d6fe383782",
+      "message": "Keep sBPF symbol and relocation limits global across ELF tables (R3.12) (#1678)"
+    },
+    {
+      "ts": "2026-11-11T11:50:53Z",
+      "kind": "content",
+      "commit": "aad1a6d",
+      "commit_full": "aad1a6d62bf68e58d8217a97d06a0d4c402984a2",
+      "message": "Return the first XZ stream from SquashFS blocks (R3.12) (#1669)"
+    },
+    {
+      "ts": "2026-11-11T11:56:37Z",
+      "kind": "content",
+      "commit": "842a76a",
+      "commit_full": "842a76a41a07aceafc0236c2b413c9afbce7fece",
+      "message": "Tell nonfinite CIL constants apart in method fingerprints (R3.12) (#1673)"
+    },
+    {
+      "ts": "2026-11-11T11:56:44Z",
+      "kind": "content",
+      "commit": "b12816c",
+      "commit_full": "b12816c2b39bd1e91a848b0af5e4c615b1573943",
+      "message": "Recover classic ext triple-indirect file blocks (R3.12) (#1666)"
+    },
+    {
+      "ts": "2026-11-11T12:04:22Z",
+      "kind": "content",
+      "commit": "500a09a",
+      "commit_full": "500a09a217b9a6ce03b2c93035167ce983a83897",
+      "message": "Apply source map root prefixes before interpreting source paths (R3.12) (#1680)"
+    },
+    {
+      "ts": "2026-11-11T12:15:43Z",
+      "kind": "content",
+      "commit": "93a5057",
+      "commit_full": "93a5057ff95891ba4cc2015a2fc4658d3fb5a98f",
+      "message": "Record the Windows run of the watched-launch descendant tests (R5.2) (#1683)"
+    },
+    {
+      "ts": "2026-11-11T12:16:30Z",
+      "kind": "content",
+      "commit": "007aeeb",
+      "commit_full": "007aeebb02895fbfcba0ce964217081509ff0431",
+      "message": "Compare stable numbers in console run checks (R2.5) (#1679)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-11T11:19:59+00:00"
+  "updated_at": "2026-11-11T12:16:49+00:00"
 }
