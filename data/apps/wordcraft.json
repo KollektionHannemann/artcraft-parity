@@ -540,19 +540,19 @@
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 19.9,
+    "level": "buzzing",
+    "score": 20.0,
     "active_days_7d": 7,
-    "changes_7d": 181,
-    "changes_14d": 322,
+    "changes_7d": 182,
+    "changes_14d": 323,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-11T07:51:03Z",
-      "commit": "45db128",
-      "commit_full": "45db128c150074a7f6d127ba71626ce4a30d8f3c",
-      "subject": "fix(wordcraft): satisfy clippy on clipboard.rs after #5441"
+      "ts": "2026-11-11T08:06:18Z",
+      "commit": "060768f",
+      "commit_full": "060768f1ed7f310e639bc49d7af7256e129f7409",
+      "subject": "Preserve header/footer content when adding page numbers (#2201)"
     },
-    "last_commit_ts": "2026-11-11T07:51:03Z",
+    "last_commit_ts": "2026-11-11T08:06:18Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       2,
@@ -568,7 +568,7 @@
       90,
       13,
       5,
-      7
+      8
     ],
     "days": [
       {
@@ -1200,9 +1200,13 @@
       },
       {
         "d": "2026-11-11",
-        "code": 7,
+        "code": 8,
         "other": 0,
         "samples": [
+          {
+            "commit": "060768f",
+            "subject": "Preserve header/footer content when adding page numbers (#2201)"
+          },
           {
             "commit": "45db128",
             "subject": "fix(wordcraft): satisfy clippy on clipboard.rs after #5441"
@@ -1210,10 +1214,6 @@
           {
             "commit": "118eb8a",
             "subject": "DOCX: save and load tracked revision marks around equations (#6011) (#6033)"
-          },
-          {
-            "commit": "30c1279",
-            "subject": ".doc: first body line no longer starts too low under a header (#6047)"
           }
         ]
       }
@@ -15085,5 +15085,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T08:04:53+00:00"
+  "updated_at": "2026-11-11T09:18:57+00:00"
 }

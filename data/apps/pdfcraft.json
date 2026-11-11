@@ -497,18 +497,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 24.9,
+    "score": 25.0,
     "active_days_7d": 7,
-    "changes_7d": 363,
-    "changes_14d": 463,
+    "changes_7d": 364,
+    "changes_14d": 464,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-11-11T07:56:34Z",
-      "commit": "c04925c",
-      "commit_full": "c04925c5803e0cf1678d22eb091aee0d5a88cf85",
-      "subject": "fix(cos): a clone that edits an object stream or a /Length stops reading what other clones cached (#6910)"
+      "ts": "2026-11-11T08:06:48Z",
+      "commit": "4efcfa6",
+      "commit_full": "4efcfa6ea3020eb36c49b96c71a6cf8e2ce42278",
+      "subject": "fix(crypt, engine): refuse page extraction when Protect allows any change except extracting pages (#5081)"
     },
-    "last_commit_ts": "2026-11-11T07:56:34Z",
+    "last_commit_ts": "2026-11-11T08:06:48Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       3,
@@ -524,7 +524,7 @@
       31,
       206,
       62,
-      13
+      14
     ],
     "days": [
       {
@@ -1314,9 +1314,13 @@
       },
       {
         "d": "2026-11-11",
-        "code": 13,
+        "code": 14,
         "other": 1,
         "samples": [
+          {
+            "commit": "4efcfa6",
+            "subject": "fix(crypt, engine): refuse page extraction when Protect allows any change except extracting pages (#5081)"
+          },
           {
             "commit": "c04925c",
             "subject": "fix(cos): a clone that edits an object stream or a /Length stops reading what other clones cached (#6910)"
@@ -1324,10 +1328,6 @@
           {
             "commit": "6b993d9",
             "subject": "perf(organize): decode the XMP packet once for repeated document-information reads (#6918)"
-          },
-          {
-            "commit": "532bdc8",
-            "subject": "feat(prc): PrcFile::units, the model's unit from its model file (#6919)"
           }
         ]
       }
@@ -6970,5 +6970,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T08:04:38+00:00"
+  "updated_at": "2026-11-11T09:18:43+00:00"
 }
