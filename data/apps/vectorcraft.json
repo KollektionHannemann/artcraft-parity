@@ -537,7 +537,7 @@
   },
   "roadmap": {
     "revisions": 223,
-    "revisions_7d": 14,
+    "revisions_7d": 13,
     "last_revision": {
       "ts": "2026-11-10T17:10:59Z",
       "kind": "content",
@@ -557,21 +557,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 33.9,
+    "score": 30.3,
     "active_days_7d": 7,
-    "changes_7d": 770,
-    "changes_14d": 1450,
-    "housekeeping_7d": 32,
+    "changes_7d": 589,
+    "changes_14d": 1452,
+    "housekeeping_7d": 20,
     "last_code_change": {
-      "ts": "2026-11-10T23:52:41Z",
-      "commit": "fb10a60",
-      "commit_full": "fb10a6092fa48fecaad254f5212070275f9c9f20",
-      "subject": "Scissors: a cut leaves one of the two new end points selected (#6479)"
+      "ts": "2026-11-11T00:26:40Z",
+      "commit": "e60da87",
+      "commit_full": "e60da871bcb4a6d1a478c61ac3996aa66e839749",
+      "subject": "Docs: spot gradients with RGB or Lab stops keep the ink in a CMYK document (#6485)"
     },
-    "last_commit_ts": "2026-11-10T23:52:41Z",
+    "last_commit_ts": "2026-11-11T00:26:40Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
-      4,
       180,
       99,
       126,
@@ -584,7 +583,8 @@
       56,
       199,
       81,
-      80
+      81,
+      5
     ],
     "days": [
       {
@@ -1355,9 +1355,13 @@
       },
       {
         "d": "2026-11-10",
-        "code": 80,
+        "code": 81,
         "other": 3,
         "samples": [
+          {
+            "commit": "c6f8618",
+            "subject": "Repeat, Pattern: the Repeat and pattern commands reject a param of the wrong type (#6481)"
+          },
           {
             "commit": "fb10a60",
             "subject": "Scissors: a cut leaves one of the two new end points selected (#6479)"
@@ -1365,10 +1369,25 @@
           {
             "commit": "8b34f0f",
             "subject": "MCP: answer_dialog sets the fields and answers the dialog in one request (#6476)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-11",
+        "code": 5,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "e60da87",
+            "subject": "Docs: spot gradients with RGB or Lab stops keep the ink in a CMYK document (#6485)"
           },
           {
-            "commit": "400a3b7",
-            "subject": "3D: expanded solids keep the art's curves in caps and the walls' cap edges (#6469)"
+            "commit": "b3bb905",
+            "subject": "Actions: test Batch folder names that differ only in case or are empty (#6484)"
+          },
+          {
+            "commit": "745fb4e",
+            "subject": "Preferences: Reset Preferences leaves the open document's units alone (#6482)"
           }
         ]
       }
@@ -7451,5 +7470,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T23:55:31+00:00"
+  "updated_at": "2026-11-11T00:28:59+00:00"
 }

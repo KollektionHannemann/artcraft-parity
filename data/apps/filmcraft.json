@@ -444,21 +444,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.3,
+    "score": 15.1,
     "active_days_7d": 7,
-    "changes_7d": 79,
-    "changes_14d": 215,
-    "housekeeping_7d": 4,
+    "changes_7d": 60,
+    "changes_14d": 212,
+    "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-10T23:03:13Z",
-      "commit": "2658614",
-      "commit_full": "26586148b86fe55c390491062b2a57da08d695c2",
-      "subject": "codecs, dng: refuse a LATM payload longer than its frame and a raw sample vector shorter than its image before allocating (#4263)"
+      "ts": "2026-11-11T00:04:40Z",
+      "commit": "4ed10d7",
+      "commit_full": "4ed10d7ad68d5e300e6526a97800b2c39e84de8d",
+      "subject": "tools: split spec table cells by line instead of a backtracking regex (SonarCloud S8786) (#4644)"
     },
-    "last_commit_ts": "2026-11-10T23:03:13Z",
+    "last_commit_ts": "2026-11-11T00:04:40Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
-      4,
       0,
       39,
       5,
@@ -471,7 +470,8 @@
       14,
       21,
       5,
-      6
+      6,
+      1
     ],
     "days": [
       {
@@ -1206,6 +1206,17 @@
             "subject": "Narration: ship natural voices in official packages (#2318, #3773)"
           }
         ]
+      },
+      {
+        "d": "2026-11-11",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "4ed10d7",
+            "subject": "tools: split spec table cells by line instead of a backtracking regex (SonarCloud S8786) (#4644)"
+          }
+        ]
       }
     ]
   },
@@ -1786,5 +1797,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-10T23:55:34+00:00"
+  "updated_at": "2026-11-11T00:29:07+00:00"
 }

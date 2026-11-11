@@ -46,7 +46,7 @@
   },
   "roadmap": {
     "revisions": 33,
-    "revisions_7d": 1,
+    "revisions_7d": 0,
     "last_revision": {
       "ts": "2026-11-04T09:37:19Z",
       "kind": "content",
@@ -66,21 +66,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.0,
+    "score": 14.0,
     "active_days_7d": 7,
-    "changes_7d": 44,
-    "changes_14d": 144,
-    "housekeeping_7d": 12,
+    "changes_7d": 43,
+    "changes_14d": 147,
+    "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-10T23:45:30Z",
-      "commit": "85ca306",
-      "commit_full": "85ca306ffb957e36829c6ea276b7871dab36ac70",
-      "subject": "Reset icon on each brush section header (#331)"
+      "ts": "2026-11-11T00:20:28Z",
+      "commit": "c00735c",
+      "commit_full": "c00735cb7f6ddadfa7f44d22f2d33c3d38747f05",
+      "subject": "Drop a shelf image on the texture set under the cursor, as a channel or a mask (#312)"
     },
-    "last_commit_ts": "2026-11-10T23:45:30Z",
+    "last_commit_ts": "2026-11-11T00:20:28Z",
     "repo_since": "2026-10-14T18:33:13Z",
     "window": [
-      0,
       0,
       0,
       0,
@@ -93,7 +92,8 @@
       4,
       7,
       7,
-      9
+      10,
+      2
     ],
     "days": [
       {
@@ -345,9 +345,13 @@
       },
       {
         "d": "2026-11-10",
-        "code": 9,
+        "code": 10,
         "other": 2,
         "samples": [
+          {
+            "commit": "21b3046",
+            "subject": "packaging: use [[ for bash tests (SonarCloud S7688) (#403)"
+          },
           {
             "commit": "85ca306",
             "subject": "Reset icon on each brush section header (#331)"
@@ -355,10 +359,21 @@
           {
             "commit": "a6389f8",
             "subject": "Revert \"Show a whole material at once: coarse first look, then the exact result\" (#392)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-11",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "c00735c",
+            "subject": "Drop a shelf image on the texture set under the cursor, as a channel or a mask (#312)"
           },
           {
-            "commit": "783cbdc",
-            "subject": "Show a whole material at once: coarse first look, then the exact result (#381)"
+            "commit": "4362017",
+            "subject": "Levels: edit the input range, gamma and output range on the histogram (#342)"
           }
         ]
       }
@@ -719,5 +734,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-10T23:56:00+00:00"
+  "updated_at": "2026-11-11T00:30:08+00:00"
 }
