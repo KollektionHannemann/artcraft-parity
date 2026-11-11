@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "3ce1ce9",
-  "latest_commit_date": "2026-11-11T23:34:20+07:00",
-  "latest_message": "Bound source-map recovery manifest paths and report partial recovery (R3.12) (#1700)",
+  "latest_commit": "cbf7c17",
+  "latest_commit_date": "2026-11-12T00:49:27+07:00",
+  "latest_message": "Resolve relative project paths before builds, option runs and Play (R2.7) (#1702)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,21 +45,21 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 561,
-    "revisions_7d": 433,
+    "revisions": 562,
+    "revisions_7d": 434,
     "last_revision": {
-      "ts": "2026-11-11T16:34:20Z",
+      "ts": "2026-11-11T17:49:27Z",
       "kind": "content",
-      "commit": "3ce1ce9",
-      "commit_full": "3ce1ce9f52077a53811be8a0309fdbe85b16b417",
-      "message": "Bound source-map recovery manifest paths and report partial recovery (R3.12) (#1700)"
+      "commit": "cbf7c17",
+      "commit_full": "cbf7c179812b43ee3828bbba109164cfc6497535",
+      "message": "Resolve relative project paths before builds, option runs and Play (R2.7) (#1702)"
     },
     "last_update": {
-      "ts": "2026-11-11T16:34:20Z",
+      "ts": "2026-11-11T17:49:27Z",
       "kind": "content",
-      "commit": "3ce1ce9",
-      "commit_full": "3ce1ce9f52077a53811be8a0309fdbe85b16b417",
-      "message": "Bound source-map recovery manifest paths and report partial recovery (R3.12) (#1700)"
+      "commit": "cbf7c17",
+      "commit_full": "cbf7c179812b43ee3828bbba109164cfc6497535",
+      "message": "Resolve relative project paths before builds, option runs and Play (R2.7) (#1702)"
     },
     "self_reported": null
   },
@@ -68,16 +68,16 @@
     "level": "buzzing",
     "score": 29.9,
     "active_days_7d": 7,
-    "changes_7d": 501,
-    "changes_14d": 831,
+    "changes_7d": 502,
+    "changes_14d": 832,
     "housekeeping_7d": 35,
     "last_code_change": {
-      "ts": "2026-11-11T16:34:20Z",
-      "commit": "3ce1ce9",
-      "commit_full": "3ce1ce9f52077a53811be8a0309fdbe85b16b417",
-      "subject": "Bound source-map recovery manifest paths and report partial recovery (R3.12) (#1700)"
+      "ts": "2026-11-11T17:49:27Z",
+      "commit": "cbf7c17",
+      "commit_full": "cbf7c179812b43ee3828bbba109164cfc6497535",
+      "subject": "Resolve relative project paths before builds, option runs and Play (R2.7) (#1702)"
     },
-    "last_commit_ts": "2026-11-11T16:34:20Z",
+    "last_commit_ts": "2026-11-11T17:49:27Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       37,
       157,
       111,
-      97
+      98
     ],
     "days": [
       {
@@ -299,9 +299,13 @@
       },
       {
         "d": "2026-11-11",
-        "code": 97,
+        "code": 98,
         "other": 4,
         "samples": [
+          {
+            "commit": "cbf7c17",
+            "subject": "Resolve relative project paths before builds, option runs and Play (R2.7) (#1702)"
+          },
           {
             "commit": "3ce1ce9",
             "subject": "Bound source-map recovery manifest paths and report partial recovery (R3.12) (#1700)"
@@ -309,10 +313,6 @@
           {
             "commit": "86d047c",
             "subject": "Stop with a plain error when the OpenCode found is 1.x (R2.2) (#1151)"
-          },
-          {
-            "commit": "0634265",
-            "subject": "Stop malformed code-signature requirement OIDs showing as a different OID (R3.12) (#1698)"
           }
         ]
       }
@@ -4349,8 +4349,15 @@
       "commit": "3ce1ce9",
       "commit_full": "3ce1ce9f52077a53811be8a0309fdbe85b16b417",
       "message": "Bound source-map recovery manifest paths and report partial recovery (R3.12) (#1700)"
+    },
+    {
+      "ts": "2026-11-11T17:49:27Z",
+      "kind": "content",
+      "commit": "cbf7c17",
+      "commit_full": "cbf7c179812b43ee3828bbba109164cfc6497535",
+      "message": "Resolve relative project paths before builds, option runs and Play (R2.7) (#1702)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-11T16:43:30+00:00"
+  "updated_at": "2026-11-11T18:40:05+00:00"
 }
