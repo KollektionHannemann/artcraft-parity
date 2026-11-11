@@ -464,18 +464,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.8,
-    "active_days_7d": 6,
-    "changes_7d": 54,
-    "changes_14d": 197,
+    "score": 15.8,
+    "active_days_7d": 7,
+    "changes_7d": 55,
+    "changes_14d": 198,
     "housekeeping_7d": 1,
     "last_code_change": {
-      "ts": "2026-11-10T23:05:44Z",
-      "commit": "6a08240",
-      "commit_full": "6a08240eb6ce7051a8ae796596446887750608a7",
-      "subject": "io: refuse a FIFO before opening it; keep the replaced file's group on save (#3313)"
+      "ts": "2026-11-11T06:31:42Z",
+      "commit": "0fed26a",
+      "commit_full": "0fed26a14fb64296ff7a97af5db9311e4a57fc36",
+      "subject": "Sandbox: a crate that runs a helper program confined (Landlock and seccomp on Linux, sandbox-exec on macOS)"
     },
-    "last_commit_ts": "2026-11-10T23:05:44Z",
+    "last_commit_ts": "2026-11-11T06:31:42Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       3,
@@ -491,7 +491,7 @@
       13,
       8,
       14,
-      0
+      1
     ],
     "days": [
       {
@@ -1084,6 +1084,17 @@
           {
             "commit": "fe39331",
             "subject": "engine: Consolidate finds keys through hash maps and refuses an oversized table (#3285)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-11",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "0fed26a",
+            "subject": "Sandbox: a crate that runs a helper program confined (Landlock and seccomp on Linux, sandbox-exec on macOS)"
           }
         ]
       }
@@ -3506,5 +3517,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T00:30:03+00:00"
+  "updated_at": "2026-11-11T06:49:51+00:00"
 }

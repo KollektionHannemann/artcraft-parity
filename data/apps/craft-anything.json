@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "d552493",
-  "latest_commit_date": "2026-11-11T12:42:40+07:00",
-  "latest_message": "Resolve webpack loaders by their parameter bindings (R3.12) (#1614)",
+  "latest_commit": "439dae0",
+  "latest_commit_date": "2026-11-11T13:42:34+07:00",
+  "latest_message": "Keep module roles when dependency imports repeat (R3.12) (#1617)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 488,
-    "revisions_7d": 360,
+    "revisions": 498,
+    "revisions_7d": 370,
     "last_revision": {
-      "ts": "2026-11-11T05:42:40Z",
+      "ts": "2026-11-11T06:42:34Z",
       "kind": "content",
-      "commit": "d552493",
-      "commit_full": "d552493da2290515f58e821dbc878deba83930d2",
-      "message": "Resolve webpack loaders by their parameter bindings (R3.12) (#1614)"
+      "commit": "439dae0",
+      "commit_full": "439dae070e24cb6dbf18dff52016637333abdeed",
+      "message": "Keep module roles when dependency imports repeat (R3.12) (#1617)"
     },
     "last_update": {
-      "ts": "2026-11-11T05:42:40Z",
+      "ts": "2026-11-11T06:42:34Z",
       "kind": "content",
-      "commit": "d552493",
-      "commit_full": "d552493da2290515f58e821dbc878deba83930d2",
-      "message": "Resolve webpack loaders by their parameter bindings (R3.12) (#1614)"
+      "commit": "439dae0",
+      "commit_full": "439dae070e24cb6dbf18dff52016637333abdeed",
+      "message": "Keep module roles when dependency imports repeat (R3.12) (#1617)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 27.1,
+    "score": 28.0,
     "active_days_7d": 7,
-    "changes_7d": 418,
-    "changes_14d": 748,
+    "changes_7d": 430,
+    "changes_14d": 760,
     "housekeeping_7d": 31,
     "last_code_change": {
-      "ts": "2026-11-11T05:42:40Z",
-      "commit": "d552493",
-      "commit_full": "d552493da2290515f58e821dbc878deba83930d2",
-      "subject": "Resolve webpack loaders by their parameter bindings (R3.12) (#1614)"
+      "ts": "2026-11-11T06:42:34Z",
+      "commit": "439dae0",
+      "commit_full": "439dae070e24cb6dbf18dff52016637333abdeed",
+      "subject": "Keep module roles when dependency imports repeat (R3.12) (#1617)"
     },
-    "last_commit_ts": "2026-11-11T05:42:40Z",
+    "last_commit_ts": "2026-11-11T06:42:34Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       37,
       157,
       111,
-      14
+      26
     ],
     "days": [
       {
@@ -299,20 +299,20 @@
       },
       {
         "d": "2026-11-11",
-        "code": 14,
+        "code": 26,
         "other": 0,
         "samples": [
           {
-            "commit": "d552493",
-            "subject": "Resolve webpack loaders by their parameter bindings (R3.12) (#1614)"
+            "commit": "439dae0",
+            "subject": "Keep module roles when dependency imports repeat (R3.12) (#1617)"
           },
           {
-            "commit": "2897b15",
-            "subject": "Keep capped byte-search results in global file-offset order (R3.11) (#1609)"
+            "commit": "0757863",
+            "subject": "End JavaScript comments at every line terminator (R3.12) (#1616)"
           },
           {
-            "commit": "503e80f",
-            "subject": "Report incomplete SQLite b-tree walks (R3.12) (#1608)"
+            "commit": "99ee49d",
+            "subject": "Match numeric bundle identifiers by their JavaScript value (R3.12) (#1615)"
           }
         ]
       }
@@ -3838,8 +3838,78 @@
       "commit": "d552493",
       "commit_full": "d552493da2290515f58e821dbc878deba83930d2",
       "message": "Resolve webpack loaders by their parameter bindings (R3.12) (#1614)"
+    },
+    {
+      "ts": "2026-11-11T05:47:22Z",
+      "kind": "content",
+      "commit": "6c32b3b",
+      "commit_full": "6c32b3b5a2cabe6c65e47c9e36f56afb0052de3d",
+      "message": "Preserve AArch64 control-transfer register effects (R3.11) (#1599)"
+    },
+    {
+      "ts": "2026-11-11T06:05:48Z",
+      "kind": "content",
+      "commit": "25b7aca",
+      "commit_full": "25b7aca8419edb13a019778d224f9ae8974f6e31",
+      "message": "Preserve AArch64 inputs when arithmetic results are discarded (R3.11) (#1593)"
+    },
+    {
+      "ts": "2026-11-11T06:08:26Z",
+      "kind": "content",
+      "commit": "25f6c07",
+      "commit_full": "25f6c0720d58d57418b24ea6aa499aa37d048082",
+      "message": "Warn about undefined Python bytecode header flags (R3.12) (#1595)"
+    },
+    {
+      "ts": "2026-11-11T06:11:26Z",
+      "kind": "content",
+      "commit": "6a4dee8",
+      "commit_full": "6a4dee893eab0f9f033e2325f21b201e8ed3e2eb",
+      "message": "Keep native function evidence from blocks before its entry (R3.11) (#1600)"
+    },
+    {
+      "ts": "2026-11-11T06:14:35Z",
+      "kind": "content",
+      "commit": "28d1063",
+      "commit_full": "28d1063a525344e053450b5f3ceaeab17730f15e",
+      "message": "Bound input reads and refuse non-regular files before reading (R3.11) (#1611)"
+    },
+    {
+      "ts": "2026-11-11T06:17:54Z",
+      "kind": "content",
+      "commit": "b11ba97",
+      "commit_full": "b11ba9742778add79f840df005de2cc744c72892",
+      "message": "Keep evidence-based call paths within one input binary (R3.11) (#1612)"
+    },
+    {
+      "ts": "2026-11-11T06:36:32Z",
+      "kind": "content",
+      "commit": "9480cc0",
+      "commit_full": "9480cc0108deb3980583f2928280174243dbac66",
+      "message": "Report partial text coverage when the final line is cut (R3.11) (#1610)"
+    },
+    {
+      "ts": "2026-11-11T06:38:17Z",
+      "kind": "content",
+      "commit": "99ee49d",
+      "commit_full": "99ee49dd999c7a4690752d97ac103ec3f6e27831",
+      "message": "Match numeric bundle identifiers by their JavaScript value (R3.12) (#1615)"
+    },
+    {
+      "ts": "2026-11-11T06:39:24Z",
+      "kind": "content",
+      "commit": "0757863",
+      "commit_full": "0757863ece75a6178acca42adba7c60643e42400",
+      "message": "End JavaScript comments at every line terminator (R3.12) (#1616)"
+    },
+    {
+      "ts": "2026-11-11T06:42:34Z",
+      "kind": "content",
+      "commit": "439dae0",
+      "commit_full": "439dae070e24cb6dbf18dff52016637333abdeed",
+      "message": "Keep module roles when dependency imports repeat (R3.12) (#1617)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-11T05:45:00+00:00"
+  "updated_at": "2026-11-11T06:50:02+00:00"
 }
