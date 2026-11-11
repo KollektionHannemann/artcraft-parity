@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "4f61975",
-  "latest_commit_date": "2026-11-11T07:29:35+07:00",
-  "latest_message": "Pair Rust functions across toolchains by their names without the crate hash (R5.7) (#1589)",
+  "latest_commit": "d552493",
+  "latest_commit_date": "2026-11-11T12:42:40+07:00",
+  "latest_message": "Resolve webpack loaders by their parameter bindings (R3.12) (#1614)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 475,
-    "revisions_7d": 347,
+    "revisions": 488,
+    "revisions_7d": 360,
     "last_revision": {
-      "ts": "2026-11-11T00:29:35Z",
+      "ts": "2026-11-11T05:42:40Z",
       "kind": "content",
-      "commit": "4f61975",
-      "commit_full": "4f61975f25d96c71635bacb07619b5b5bd0a0bd1",
-      "message": "Pair Rust functions across toolchains by their names without the crate hash (R5.7) (#1589)"
+      "commit": "d552493",
+      "commit_full": "d552493da2290515f58e821dbc878deba83930d2",
+      "message": "Resolve webpack loaders by their parameter bindings (R3.12) (#1614)"
     },
     "last_update": {
-      "ts": "2026-11-11T00:29:35Z",
+      "ts": "2026-11-11T05:42:40Z",
       "kind": "content",
-      "commit": "4f61975",
-      "commit_full": "4f61975f25d96c71635bacb07619b5b5bd0a0bd1",
-      "message": "Pair Rust functions across toolchains by their names without the crate hash (R5.7) (#1589)"
+      "commit": "d552493",
+      "commit_full": "d552493da2290515f58e821dbc878deba83930d2",
+      "message": "Resolve webpack loaders by their parameter bindings (R3.12) (#1614)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 24.2,
+    "score": 27.1,
     "active_days_7d": 7,
-    "changes_7d": 405,
-    "changes_14d": 735,
+    "changes_7d": 418,
+    "changes_14d": 748,
     "housekeeping_7d": 31,
     "last_code_change": {
-      "ts": "2026-11-11T00:29:35Z",
-      "commit": "4f61975",
-      "commit_full": "4f61975f25d96c71635bacb07619b5b5bd0a0bd1",
-      "subject": "Pair Rust functions across toolchains by their names without the crate hash (R5.7) (#1589)"
+      "ts": "2026-11-11T05:42:40Z",
+      "commit": "d552493",
+      "commit_full": "d552493da2290515f58e821dbc878deba83930d2",
+      "subject": "Resolve webpack loaders by their parameter bindings (R3.12) (#1614)"
     },
-    "last_commit_ts": "2026-11-11T00:29:35Z",
+    "last_commit_ts": "2026-11-11T05:42:40Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       37,
       157,
       111,
-      1
+      14
     ],
     "days": [
       {
@@ -299,12 +299,20 @@
       },
       {
         "d": "2026-11-11",
-        "code": 1,
+        "code": 14,
         "other": 0,
         "samples": [
           {
-            "commit": "4f61975",
-            "subject": "Pair Rust functions across toolchains by their names without the crate hash (R5.7) (#1589)"
+            "commit": "d552493",
+            "subject": "Resolve webpack loaders by their parameter bindings (R3.12) (#1614)"
+          },
+          {
+            "commit": "2897b15",
+            "subject": "Keep capped byte-search results in global file-offset order (R3.11) (#1609)"
+          },
+          {
+            "commit": "503e80f",
+            "subject": "Report incomplete SQLite b-tree walks (R3.12) (#1608)"
           }
         ]
       }
@@ -3739,8 +3747,99 @@
       "commit": "4f61975",
       "commit_full": "4f61975f25d96c71635bacb07619b5b5bd0a0bd1",
       "message": "Pair Rust functions across toolchains by their names without the crate hash (R5.7) (#1589)"
+    },
+    {
+      "ts": "2026-11-11T04:51:17Z",
+      "kind": "content",
+      "commit": "b929311",
+      "commit_full": "b92931196dc8d9d62b495d9b79d9040eb54511ad",
+      "message": "Preserve AArch64 exclusive-memory results and semantics (R3.11) (#1592)"
+    },
+    {
+      "ts": "2026-11-11T04:51:38Z",
+      "kind": "content",
+      "commit": "221d9c1",
+      "commit_full": "221d9c1911eaa6797863fccfb3de41597f6c673f",
+      "message": "Reject duplicate keys before summarizing safetensors files (R3.12) (#1597)"
+    },
+    {
+      "ts": "2026-11-11T05:28:36Z",
+      "kind": "content",
+      "commit": "9c4f081",
+      "commit_full": "9c4f081e9222ca38d55f22ee2b2451f02a6c2d81",
+      "message": "Bound native value-flow work before decoding instructions (R3.11) (#1598)"
+    },
+    {
+      "ts": "2026-11-11T05:31:53Z",
+      "kind": "content",
+      "commit": "6b3cb62",
+      "commit_full": "6b3cb629dec00267bb92d15505b8cf483a4aca0e",
+      "message": "Mark shortened Python code inventories as partial (R3.12) (#1596)"
+    },
+    {
+      "ts": "2026-11-11T05:33:30Z",
+      "kind": "content",
+      "commit": "150fabc",
+      "commit_full": "150fabc9c0c127e4f1f9f8f6ea5a64f3802225a8",
+      "message": "Apply keyed archive pagination before copying object rows (R3.12) (#1602)"
+    },
+    {
+      "ts": "2026-11-11T05:36:40Z",
+      "kind": "content",
+      "commit": "f57fa23",
+      "commit_full": "f57fa2378093f3f469e32ffde5cdf2da38488e71",
+      "message": "Disclose incomplete asset catalog tree reads (R3.12) (#1603)"
+    },
+    {
+      "ts": "2026-11-11T05:38:18Z",
+      "kind": "content",
+      "commit": "0028b7c",
+      "commit_full": "0028b7cbd86a24b1acf7df10203fc1aab2f2dd15",
+      "message": "Reuse recovered filesystem bytes during firmware extraction (R3.12) (#1604)"
+    },
+    {
+      "ts": "2026-11-11T05:38:25Z",
+      "kind": "content",
+      "commit": "a67ba2c",
+      "commit_full": "a67ba2caa9884af4090dbb71f14537049acb5ee6",
+      "message": "Bound firmware ZIP decoding by the remaining output budget (R3.12) (#1605)"
+    },
+    {
+      "ts": "2026-11-11T05:39:34Z",
+      "kind": "content",
+      "commit": "2fb99e2",
+      "commit_full": "2fb99e2ba3b6329a346587e3f63ad49da3e56743",
+      "message": "Keep nested ZIP members inside the outer firmware archive (R3.12) (#1606)"
+    },
+    {
+      "ts": "2026-11-11T05:39:39Z",
+      "kind": "content",
+      "commit": "d4a3956",
+      "commit_full": "d4a39569e3d29b951ff99ea168a0d24d12087b63",
+      "message": "Report incomplete firmware archive member scans (R3.12) (#1607)"
+    },
+    {
+      "ts": "2026-11-11T05:39:45Z",
+      "kind": "content",
+      "commit": "503e80f",
+      "commit_full": "503e80fa81a4e3f56e554004045775c0fa79ad8f",
+      "message": "Report incomplete SQLite b-tree walks (R3.12) (#1608)"
+    },
+    {
+      "ts": "2026-11-11T05:39:51Z",
+      "kind": "content",
+      "commit": "2897b15",
+      "commit_full": "2897b15894e6e013759dc373c74cb765e97bd6af",
+      "message": "Keep capped byte-search results in global file-offset order (R3.11) (#1609)"
+    },
+    {
+      "ts": "2026-11-11T05:42:40Z",
+      "kind": "content",
+      "commit": "d552493",
+      "commit_full": "d552493da2290515f58e821dbc878deba83930d2",
+      "message": "Resolve webpack loaders by their parameter bindings (R3.12) (#1614)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-11T00:30:15+00:00"
+  "updated_at": "2026-11-11T05:45:00+00:00"
 }
