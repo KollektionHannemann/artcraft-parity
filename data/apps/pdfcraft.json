@@ -497,18 +497,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 25.5,
+    "score": 25.7,
     "active_days_7d": 7,
-    "changes_7d": 371,
-    "changes_14d": 471,
+    "changes_7d": 374,
+    "changes_14d": 474,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-11-11T13:38:05Z",
-      "commit": "203c4fd",
-      "commit_full": "203c4fd8fabf8053739da9d4616c31cfc8a515a3",
-      "subject": "M8: redaction reads an operator's operands from the end, as the renderer does (#6927)"
+      "ts": "2026-11-11T14:17:32Z",
+      "commit": "a23b7c7",
+      "commit_full": "a23b7c7f738e130f05ad8daa4c57f4ef56a356ab",
+      "subject": "fix(redact): apply marks with an indirect /Subtype and judge inline annotations (#5849)"
     },
-    "last_commit_ts": "2026-11-11T13:38:05Z",
+    "last_commit_ts": "2026-11-11T14:17:32Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       3,
@@ -524,7 +524,7 @@
       31,
       206,
       62,
-      21
+      24
     ],
     "days": [
       {
@@ -1314,20 +1314,20 @@
       },
       {
         "d": "2026-11-11",
-        "code": 21,
+        "code": 24,
         "other": 1,
         "samples": [
           {
-            "commit": "203c4fd",
-            "subject": "M8: redaction reads an operator's operands from the end, as the renderer does (#6927)"
+            "commit": "a23b7c7",
+            "subject": "fix(redact): apply marks with an indirect /Subtype and judge inline annotations (#5849)"
           },
           {
-            "commit": "209bb40",
-            "subject": "M8: the redaction walk reads a form's /Matrix entries by reference (#6886)"
+            "commit": "2c39b1d",
+            "subject": "M8: redaction refuses a page whose content it can't fully parse (#6882)"
           },
           {
-            "commit": "825ba80",
-            "subject": "M8: the Type 3 cleanup charges the page only when there is a Type 3 font (#6860)"
+            "commit": "9659043",
+            "subject": "M11: Optimize stores one-bit images and masks past 80 million pixels as monochrome images (#6935)"
           }
         ]
       }
@@ -6993,5 +6993,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T13:38:43+00:00"
+  "updated_at": "2026-11-11T14:40:47+00:00"
 }

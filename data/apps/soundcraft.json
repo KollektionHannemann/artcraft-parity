@@ -462,18 +462,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 9.7,
-    "active_days_7d": 6,
-    "changes_7d": 22,
-    "changes_14d": 113,
+    "score": 11.3,
+    "active_days_7d": 7,
+    "changes_7d": 24,
+    "changes_14d": 115,
     "housekeeping_7d": 2,
     "last_code_change": {
-      "ts": "2026-11-10T23:45:08Z",
-      "commit": "dc4f82e",
-      "commit_full": "dc4f82ea9fd2d620c65fc74fcce94276f258b9ed",
-      "subject": "packaging: use [[ for bash tests (SonarCloud S7688) (#1488)"
+      "ts": "2026-11-11T14:07:54Z",
+      "commit": "ff4be04",
+      "commit_full": "ff4be0493677ee6d2dd9bc5b6693d8ed786c8c26",
+      "subject": "CLAP host: a reset keeps the queued note-offs, so instruments stop at Stop, Play and Locate (#1464) (#1470)"
     },
-    "last_commit_ts": "2026-11-10T23:45:08Z",
+    "last_commit_ts": "2026-11-11T14:07:54Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
       0,
@@ -489,7 +489,7 @@
       4,
       4,
       3,
-      0
+      2
     ],
     "days": [
       {
@@ -1047,6 +1047,21 @@
           {
             "commit": "44e80dc",
             "subject": "Import: refuse sample-rate conversions that grow audio more than 128-fold (#1327)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-11",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "ff4be04",
+            "subject": "CLAP host: a reset keeps the queued note-offs, so instruments stop at Stop, Play and Locate (#1464) (#1470)"
+          },
+          {
+            "commit": "1483dc8",
+            "subject": "Fix AutomationLane::value_at overflow between extreme opposite-sign points (#1444)"
           }
         ]
       }
@@ -1790,5 +1805,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T00:29:49+00:00"
+  "updated_at": "2026-11-11T14:41:06+00:00"
 }

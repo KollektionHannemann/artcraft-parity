@@ -444,18 +444,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.8,
+    "score": 18.0,
     "active_days_7d": 7,
-    "changes_7d": 71,
-    "changes_14d": 223,
+    "changes_7d": 73,
+    "changes_14d": 225,
     "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-11T13:18:13Z",
-      "commit": "25ceb25",
-      "commit_full": "25ceb25f3e30659a04ade27727083b9932d97c04",
-      "subject": "media, engine, export, cli: read only regular files, and check before opening (#4243)"
+      "ts": "2026-11-11T14:00:16Z",
+      "commit": "a9251b5",
+      "commit_full": "a9251b552eb69345852db10f3314537b9e011ccd",
+      "subject": "engine: stream Render Audio previews to disk instead of sizing buffers from the segment length (#4233)"
     },
-    "last_commit_ts": "2026-11-11T13:18:13Z",
+    "last_commit_ts": "2026-11-11T14:00:16Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       0,
@@ -471,7 +471,7 @@
       21,
       5,
       6,
-      12
+      14
     ],
     "days": [
       {
@@ -1209,20 +1209,20 @@
       },
       {
         "d": "2026-11-11",
-        "code": 12,
+        "code": 14,
         "other": 0,
         "samples": [
           {
+            "commit": "a9251b5",
+            "subject": "engine: stream Render Audio previews to disk instead of sizing buffers from the segment length (#4233)"
+          },
+          {
+            "commit": "ff7fc8d",
+            "subject": "engine: size proxy and scene-detect work from the media, not stored durations (#4184)"
+          },
+          {
             "commit": "25ceb25",
             "subject": "media, engine, export, cli: read only regular files, and check before opening (#4243)"
-          },
-          {
-            "commit": "4607909",
-            "subject": "xtask: bound the parity reference walk and report grouping, and the preview server's threads (#4261)"
-          },
-          {
-            "commit": "26e89c7",
-            "subject": "engine: hold each clip once in Frame Hold Options and stop Project Manager folder walks following links (#4240)"
           }
         ]
       }
@@ -1805,5 +1805,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T13:38:30+00:00"
+  "updated_at": "2026-11-11T14:40:34+00:00"
 }
