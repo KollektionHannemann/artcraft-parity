@@ -444,18 +444,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.9,
+    "score": 17.1,
     "active_days_7d": 7,
-    "changes_7d": 65,
-    "changes_14d": 217,
+    "changes_7d": 66,
+    "changes_14d": 218,
     "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-11T10:02:22Z",
-      "commit": "b743481",
-      "commit_full": "b743481a37e5e9a4d8a217e93cbf98e0ea36d986",
-      "subject": "hevc: a failed decode call keeps only the newest queued pictures (#4208)"
+      "ts": "2026-11-11T10:59:26Z",
+      "commit": "db7fa4d",
+      "commit_full": "db7fa4d0efe3750ec2994fb39bf4e7a9f2b8891b",
+      "subject": "mpeg2v: stop decoding pictures once an access unit has overflowed (#4211)"
     },
-    "last_commit_ts": "2026-11-11T10:02:22Z",
+    "last_commit_ts": "2026-11-11T10:59:26Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       0,
@@ -471,7 +471,7 @@
       21,
       5,
       6,
-      6
+      7
     ],
     "days": [
       {
@@ -1209,9 +1209,13 @@
       },
       {
         "d": "2026-11-11",
-        "code": 6,
+        "code": 7,
         "other": 0,
         "samples": [
+          {
+            "commit": "db7fa4d",
+            "subject": "mpeg2v: stop decoding pictures once an access unit has overflowed (#4211)"
+          },
           {
             "commit": "b743481",
             "subject": "hevc: a failed decode call keeps only the newest queued pictures (#4208)"
@@ -1219,10 +1223,6 @@
           {
             "commit": "97bb466",
             "subject": "#2633: the scrub playhead no longer waits for the audio device (#3000)"
-          },
-          {
-            "commit": "36779d3",
-            "subject": "export: write a reserved GIF output through its handle (#4194)"
           }
         ]
       }
@@ -1805,5 +1805,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T10:22:41+00:00"
+  "updated_at": "2026-11-11T11:19:04+00:00"
 }

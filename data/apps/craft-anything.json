@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "a719d8d",
-  "latest_commit_date": "2026-11-11T17:13:44+07:00",
-  "latest_message": "Add a Thai README (#1643)",
+  "latest_commit": "8031499",
+  "latest_commit_date": "2026-11-11T18:18:40+07:00",
+  "latest_message": "Keep version-two cramfs reads inside the filesystem's size (R3.12) (#1664)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 519,
-    "revisions_7d": 391,
+    "revisions": 531,
+    "revisions_7d": 403,
     "last_revision": {
-      "ts": "2026-11-11T10:13:44Z",
+      "ts": "2026-11-11T11:18:40Z",
       "kind": "content",
-      "commit": "a719d8d",
-      "commit_full": "a719d8dc80ecde89395f293f2875f7e20752997e",
-      "message": "Add a Thai README (#1643)"
+      "commit": "8031499",
+      "commit_full": "8031499657636ac3cc9bb76d0ec85e964f81d3da",
+      "message": "Keep version-two cramfs reads inside the filesystem's size (R3.12) (#1664)"
     },
     "last_update": {
-      "ts": "2026-11-11T10:13:44Z",
+      "ts": "2026-11-11T11:18:40Z",
       "kind": "content",
-      "commit": "a719d8d",
-      "commit_full": "a719d8dc80ecde89395f293f2875f7e20752997e",
-      "message": "Add a Thai README (#1643)"
+      "commit": "8031499",
+      "commit_full": "8031499657636ac3cc9bb76d0ec85e964f81d3da",
+      "message": "Keep version-two cramfs reads inside the filesystem's size (R3.12) (#1664)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 28.9,
+    "score": 29.3,
     "active_days_7d": 7,
-    "changes_7d": 455,
-    "changes_14d": 785,
+    "changes_7d": 469,
+    "changes_14d": 799,
     "housekeeping_7d": 33,
     "last_code_change": {
-      "ts": "2026-11-11T10:10:48Z",
-      "commit": "e755c87",
-      "commit_full": "e755c874e6bcfa02b88c9f91274878489a15fb3b",
-      "subject": "Don't open a different Godot project when its path isn't valid UTF-8 (R2.7) (#1649)"
+      "ts": "2026-11-11T11:18:40Z",
+      "commit": "8031499",
+      "commit_full": "8031499657636ac3cc9bb76d0ec85e964f81d3da",
+      "subject": "Keep version-two cramfs reads inside the filesystem's size (R3.12) (#1664)"
     },
-    "last_commit_ts": "2026-11-11T10:13:44Z",
+    "last_commit_ts": "2026-11-11T11:18:40Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       37,
       157,
       111,
-      51
+      65
     ],
     "days": [
       {
@@ -299,20 +299,20 @@
       },
       {
         "d": "2026-11-11",
-        "code": 51,
+        "code": 65,
         "other": 2,
         "samples": [
           {
-            "commit": "e755c87",
-            "subject": "Don't open a different Godot project when its path isn't valid UTF-8 (R2.7) (#1649)"
+            "commit": "8031499",
+            "subject": "Keep version-two cramfs reads inside the filesystem's size (R3.12) (#1664)"
           },
           {
-            "commit": "97983e5",
-            "subject": "Keep Android device configuration qualifiers distinct (R3.12) (#1653)"
+            "commit": "0f283ad",
+            "subject": "Stop JavaScript operators splitting before a non-ASCII identifier (#1661)"
           },
           {
-            "commit": "341dd7d",
-            "subject": "Require matching operands before reporting EVM dispatch facts (R3.12) (#1651)"
+            "commit": "28198b6",
+            "subject": "Keep special inode kinds when reading ext filesystems (R3.12) (#1634)"
           }
         ]
       }
@@ -4055,8 +4055,92 @@
       "commit": "a719d8d",
       "commit_full": "a719d8dc80ecde89395f293f2875f7e20752997e",
       "message": "Add a Thai README (#1643)"
+    },
+    {
+      "ts": "2026-11-11T10:23:14Z",
+      "kind": "content",
+      "commit": "e9e7848",
+      "commit_full": "e9e78485cb9ca461598859c68bb36538aec94450",
+      "message": "Report trailing bytes after .NET signatures instead of ignoring them (R3.12) (#1632)"
+    },
+    {
+      "ts": "2026-11-11T10:23:23Z",
+      "kind": "content",
+      "commit": "c68090d",
+      "commit_full": "c68090d1827f4f83a2096b9d769d0da68278b59a",
+      "message": "Keep certificate name values distinct when they aren't plain text (R3.12) (#1652)"
+    },
+    {
+      "ts": "2026-11-11T10:26:06Z",
+      "kind": "content",
+      "commit": "fdf958e",
+      "commit_full": "fdf958e443ae0ea1081fa18b9182798d99d25952",
+      "message": "Note non-minimal DER lengths in signatures and certificates (R3.12) (#1646)"
+    },
+    {
+      "ts": "2026-11-11T10:34:05Z",
+      "kind": "content",
+      "commit": "49af55e",
+      "commit_full": "49af55e4e4f4b729152a1e61c845a5b10f7b6d9b",
+      "message": "Don't recover JFFS2 files from data nodes that didn't decode (R3.12) (#1636)"
+    },
+    {
+      "ts": "2026-11-11T10:34:46Z",
+      "kind": "content",
+      "commit": "88993fa",
+      "commit_full": "88993fabc1dcbe73ab9fc6975323758b4a2bb5b9",
+      "message": "Keep fractional seconds in property-list dates (R3.12) (#1656)"
+    },
+    {
+      "ts": "2026-11-11T10:49:57Z",
+      "kind": "content",
+      "commit": "65fad01",
+      "commit_full": "65fad01a0d303546a49049e14b59cf296d75600a",
+      "message": "Require complete Android resource entry payloads (R3.12) (#1654)"
+    },
+    {
+      "ts": "2026-11-11T10:50:03Z",
+      "kind": "content",
+      "commit": "3876d7f",
+      "commit_full": "3876d7fbb26b70c7b417b18c5cdd7d520053c817",
+      "message": "Recognise UTF-16 keyed-archive NIB files (R3.12) (#1657)"
+    },
+    {
+      "ts": "2026-11-11T11:02:25Z",
+      "kind": "content",
+      "commit": "35a5a14",
+      "commit_full": "35a5a1446dc34c2fdce442e1e670b918142c7be8",
+      "message": "Check the ZIP64 end record's extent against its locator (R3.12) (#1137)"
+    },
+    {
+      "ts": "2026-11-11T11:03:32Z",
+      "kind": "content",
+      "commit": "cb2571b",
+      "commit_full": "cb2571bf50269d228c100694da132ef081e302c1",
+      "message": "Keep a note left by an earlier run waiting until the builder takes it (R2.9) (#1660)"
+    },
+    {
+      "ts": "2026-11-11T11:10:15Z",
+      "kind": "content",
+      "commit": "4a07851",
+      "commit_full": "4a078510d475441e7586a8d1fb786745ce0216a3",
+      "message": "Read PKCS#7 certificates only from SignedData's certificate field (R3.12) (#1132)"
+    },
+    {
+      "ts": "2026-11-11T11:10:21Z",
+      "kind": "content",
+      "commit": "28198b6",
+      "commit_full": "28198b6986b80ef7cce01b89020002c0af30c45f",
+      "message": "Keep special inode kinds when reading ext filesystems (R3.12) (#1634)"
+    },
+    {
+      "ts": "2026-11-11T11:18:40Z",
+      "kind": "content",
+      "commit": "8031499",
+      "commit_full": "8031499657636ac3cc9bb76d0ec85e964f81d3da",
+      "message": "Keep version-two cramfs reads inside the filesystem's size (R3.12) (#1664)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-11T10:23:11+00:00"
+  "updated_at": "2026-11-11T11:19:59+00:00"
 }

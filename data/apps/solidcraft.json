@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 35.0,
+    "score": 35.1,
     "active_days_7d": 7,
-    "changes_7d": 759,
-    "changes_14d": 1843,
+    "changes_7d": 762,
+    "changes_14d": 1846,
     "housekeeping_7d": 38,
     "last_code_change": {
-      "ts": "2026-11-11T09:51:51Z",
-      "commit": "525171e",
-      "commit_full": "525171eb861f172bdc1e23c7c5c070a44a8fc831",
-      "subject": "Extrude: a Bézier piece whose control points fold back goes in as its halves (#13243, #12107) (#13324)"
+      "ts": "2026-11-11T10:24:36Z",
+      "commit": "27423c2",
+      "commit_full": "27423c2b7863db6782f513ed73a106993d7819ef",
+      "subject": "Extrude To Object: refuse an offset past a curved face instead of cutting nothing (#12617) (#13463)"
     },
-    "last_commit_ts": "2026-11-11T09:51:51Z",
+    "last_commit_ts": "2026-11-11T10:24:36Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       191,
@@ -93,7 +93,7 @@
       70,
       151,
       239,
-      61
+      64
     ],
     "days": [
       {
@@ -763,20 +763,20 @@
       },
       {
         "d": "2026-11-11",
-        "code": 61,
+        "code": 64,
         "other": 2,
         "samples": [
           {
-            "commit": "525171e",
-            "subject": "Extrude: a Bézier piece whose control points fold back goes in as its halves (#13243, #12107) (#13324)"
+            "commit": "27423c2",
+            "subject": "Extrude To Object: refuse an offset past a curved face instead of cutting nothing (#12617) (#13463)"
           },
           {
-            "commit": "bb81f13",
-            "subject": "Fillet: the inside edge of a boss builds when the fillet is wider than the flat face beside it (#14894) (#14895)"
+            "commit": "f5d9538",
+            "subject": "Pattern on Path: curves listed out of chain order make the same path (#12199) (#12965)"
           },
           {
-            "commit": "211a904",
-            "subject": "Sketch profiles: treat pieces shorter than the end join tolerance as a point (#14520)"
+            "commit": "32f7910",
+            "subject": "Hole: a sketch on an offset plane inside the part starts at the plane (#11538) (#12919)"
           }
         ]
       }
@@ -2356,5 +2356,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-11T10:23:23+00:00"
+  "updated_at": "2026-11-11T11:20:20+00:00"
 }
