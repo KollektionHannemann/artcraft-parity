@@ -385,16 +385,16 @@
     "level": "buzzing",
     "score": 30.4,
     "active_days_7d": 7,
-    "changes_7d": 533,
-    "changes_14d": 635,
-    "housekeeping_7d": 8,
+    "changes_7d": 535,
+    "changes_14d": 637,
+    "housekeeping_7d": 10,
     "last_code_change": {
-      "ts": "2026-11-11T19:29:21Z",
-      "commit": "1247303",
-      "commit_full": "1247303e781859384f83cdb1651b75d191e7b77e",
-      "subject": "Remove tool: 19 px brush after Reset Tool and on first use (#13151)"
+      "ts": "2026-11-11T20:15:51Z",
+      "commit": "63b641b",
+      "commit_full": "63b641b55e54bf8f5c83efd977fdb16a2c255431",
+      "subject": "Pen: Undo after finishing a path gives it back to the Pen instead of deleting it (#6619) (#6413)"
     },
-    "last_commit_ts": "2026-11-11T19:29:21Z",
+    "last_commit_ts": "2026-11-11T21:02:46Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       18,
@@ -410,7 +410,7 @@
       80,
       43,
       75,
-      155
+      157
     ],
     "days": [
       {
@@ -1213,20 +1213,20 @@
       },
       {
         "d": "2026-11-11",
-        "code": 155,
-        "other": 3,
+        "code": 157,
+        "other": 5,
         "samples": [
+          {
+            "commit": "63b641b",
+            "subject": "Pen: Undo after finishing a path gives it back to the Pen instead of deleting it (#6619) (#6413)"
+          },
+          {
+            "commit": "0549be8",
+            "subject": "Remove: alert on a pixel layer with Lock All (#13171)"
+          },
           {
             "commit": "1247303",
             "subject": "Remove tool: 19 px brush after Reset Tool and on first use (#13151)"
-          },
-          {
-            "commit": "c1b22bd",
-            "subject": "fix(ui): the Arbitrary angle rounds in f64 and keeps that value (#13067) (#13217)"
-          },
-          {
-            "commit": "5a7889d",
-            "subject": "fix(ui): keep the Color Sampler cursor while a sampler is dragged (#13063) (#13212)"
           }
         ]
       }
@@ -1717,5 +1717,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T19:45:26+00:00"
+  "updated_at": "2026-11-11T21:17:33+00:00"
 }

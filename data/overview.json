@@ -49,6 +49,17 @@
   ],
   "latest_events": [
     {
+      "id": "solidcraft",
+      "name": "SolidCraft",
+      "type": "release",
+      "ts": "2026-11-11T20:04:50Z",
+      "tag": "v0.40.0",
+      "kind": "minor",
+      "changes": null,
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.40.0",
+      "prerelease": true
+    },
+    {
       "id": "wordcraft",
       "name": "WordCraft",
       "type": "release",
@@ -448,17 +459,6 @@
       "prerelease": false
     },
     {
-      "id": "solidcraft",
-      "name": "SolidCraft",
-      "type": "release",
-      "ts": "2026-11-07T22:46:21Z",
-      "tag": "v0.40.0-rc.3",
-      "kind": "minor",
-      "changes": null,
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.40.0-rc.3",
-      "prerelease": true
-    },
-    {
       "id": "mailcraft",
       "name": "MailCraft",
       "type": "release",
@@ -649,18 +649,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 34.6,
+        "score": 34.7,
         "active_days_7d": 7,
-        "changes_7d": 702,
-        "changes_14d": 1565,
-        "housekeeping_7d": 31,
+        "changes_7d": 707,
+        "changes_14d": 1570,
+        "housekeeping_7d": 32,
         "last_code_change": {
-          "ts": "2026-11-11T19:28:28Z",
-          "commit": "e0779c6",
-          "commit_full": "e0779c6266b8602ea895b7f38c93dec4fa89301b",
-          "subject": "Plug-ins: the fuzz test reads the runtime's fuel slice instead of a copy (#6646)"
+          "ts": "2026-11-11T21:11:34Z",
+          "commit": "566f720",
+          "commit_full": "566f720868c180c862311fb174cefe91e81e7abd",
+          "subject": "SVG import: references follow an id's first element, one read per linked file, bounded blank lines (#5409)"
         },
-        "last_commit_ts": "2026-11-11T19:28:28Z",
+        "last_commit_ts": "2026-11-11T21:11:34Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           180,
@@ -676,7 +676,7 @@
           199,
           81,
           81,
-          118
+          123
         ]
       },
       "release": {
@@ -778,18 +778,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.3,
+        "score": 14.4,
         "active_days_7d": 7,
-        "changes_7d": 91,
-        "changes_14d": 128,
-        "housekeeping_7d": 6,
+        "changes_7d": 92,
+        "changes_14d": 129,
+        "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-11T19:34:39Z",
-          "commit": "d6ae2e9",
-          "commit_full": "d6ae2e9e7e7717a58dad8b160d19e81945d26486",
-          "subject": "security(engine): read user-named files through the opened regular file under a byte cap (#3703)"
+          "ts": "2026-11-11T20:14:21Z",
+          "commit": "8ef3598",
+          "commit_full": "8ef35987d454d3a5d03be4f976132abaa8b55023",
+          "subject": "security: mask.exportEffects refuses originals and sidecars, writes atomically (#4125)"
         },
-        "last_commit_ts": "2026-11-11T19:34:39Z",
+        "last_commit_ts": "2026-11-11T20:14:21Z",
         "repo_since": "2026-09-30T14:04:12Z",
         "window": [
           0,
@@ -805,7 +805,7 @@
           1,
           4,
           6,
-          8
+          9
         ]
       },
       "release": {
@@ -919,18 +919,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 21.1,
+        "score": 21.2,
         "active_days_7d": 7,
-        "changes_7d": 192,
-        "changes_14d": 333,
-        "housekeeping_7d": 9,
+        "changes_7d": 193,
+        "changes_14d": 334,
+        "housekeeping_7d": 10,
         "last_code_change": {
-          "ts": "2026-11-11T19:24:25Z",
-          "commit": "d86d2b6",
-          "commit_full": "d86d2b69f8b6de0aefdabb28e46e1d1287991265",
-          "subject": "Fix Flatpak permissions for update checks and self-updates (#6339)"
+          "ts": "2026-11-11T19:56:11Z",
+          "commit": "a58b41a",
+          "commit_full": "a58b41a716cf4c205edc7db295febc97c82dad4c",
+          "subject": "chore: bump version to 0.18.1 for the Flatpak update fix (#6344)"
         },
-        "last_commit_ts": "2026-11-11T19:24:25Z",
+        "last_commit_ts": "2026-11-11T19:59:04Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
           2,
@@ -946,7 +946,7 @@
           90,
           13,
           5,
-          18
+          19
         ]
       },
       "release": {
@@ -1039,18 +1039,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 18.7,
+        "score": 18.8,
         "active_days_7d": 7,
-        "changes_7d": 83,
-        "changes_14d": 235,
+        "changes_7d": 84,
+        "changes_14d": 236,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-11T19:01:00Z",
-          "commit": "4bec22b",
-          "commit_full": "4bec22bd03bd1d995c9cf72e02a284f96d3d72cd",
-          "subject": "codecs: bound the search for a random-access sample and honour cancellation in it (#4229)"
+          "ts": "2026-11-11T20:25:17Z",
+          "commit": "7a27c23",
+          "commit_full": "7a27c230df496d25252b2fab3e8970b4d36050a8",
+          "subject": "Fix Flatpak updates and bump to 0.20.1 (#4678)"
         },
-        "last_commit_ts": "2026-11-11T19:01:00Z",
+        "last_commit_ts": "2026-11-11T20:25:17Z",
         "repo_since": "2026-09-30T09:22:00Z",
         "window": [
           0,
@@ -1066,7 +1066,7 @@
           21,
           5,
           6,
-          24
+          25
         ]
       },
       "release": {
@@ -1130,7 +1130,7 @@
         "value_since": "2026-10-10T18:09:21Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 133,
+        "revisions_since": 134,
         "hours_since": null,
         "areas_since": {
           "up": 1,
@@ -1149,39 +1149,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 137,
-        "revisions_7d": 3,
+        "revisions": 138,
+        "revisions_7d": 4,
         "last_revision": {
-          "ts": "2026-11-05T11:51:16Z",
+          "ts": "2026-11-11T19:47:18Z",
           "kind": "content",
-          "commit": "73de990",
-          "commit_full": "73de9900a7105340bec8505c14f322a9037990ad",
-          "message": "Show: Presenter View only with a second display (#1156)"
+          "commit": "35166b3",
+          "commit_full": "35166b384184199bbc8883c873e87bbca2edf62d",
+          "message": "Media: Opus, Ogg, MP4 and Matroska come from craft-libs (#2047)"
         },
         "last_update": {
-          "ts": "2026-11-05T11:51:16Z",
+          "ts": "2026-11-11T19:47:18Z",
           "kind": "content",
-          "commit": "73de990",
-          "commit_full": "73de9900a7105340bec8505c14f322a9037990ad",
-          "message": "Show: Presenter View only with a second display (#1156)"
+          "commit": "35166b3",
+          "commit_full": "35166b384184199bbc8883c873e87bbca2edf62d",
+          "message": "Media: Opus, Ogg, MP4 and Matroska come from craft-libs (#2047)"
         },
-        "self_reported": "2026-11-04"
+        "self_reported": "2026-11-11"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.8,
+        "score": 15.2,
         "active_days_7d": 6,
-        "changes_7d": 45,
-        "changes_14d": 204,
+        "changes_7d": 52,
+        "changes_14d": 211,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-11T19:33:58Z",
-          "commit": "b57b4cc",
-          "commit_full": "b57b4ccfcfd8a084cc3349cba3642d5faba49329",
-          "subject": "PPTX: charge repeated chart decodes and sidecar copies to presentation-wide budgets (#1790)"
+          "ts": "2026-11-11T21:15:23Z",
+          "commit": "988a492",
+          "commit_full": "988a4920970e7c40eb969601f42a1013e6f1c239",
+          "subject": "PPTX: copy only used, bounded namespace declarations onto imported fragments (#1740)"
         },
-        "last_commit_ts": "2026-11-11T19:33:58Z",
+        "last_commit_ts": "2026-11-11T21:15:23Z",
         "repo_since": "2026-10-06T02:13:02Z",
         "window": [
           0,
@@ -1197,7 +1197,7 @@
           5,
           2,
           3,
-          19
+          26
         ]
       },
       "release": {
@@ -1223,11 +1223,11 @@
           "v": 55.0
         },
         {
-          "t": "2026-11-05T11:51:16Z",
+          "t": "2026-11-11T19:47:18Z",
           "v": 55.0
         }
       ],
-      "history_len": 137
+      "history_len": 138
     },
     {
       "repo_url": "https://github.com/storytold/figcraft",
@@ -1337,18 +1337,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.9,
+        "score": 17.0,
         "active_days_7d": 6,
-        "changes_7d": 137,
-        "changes_14d": 438,
+        "changes_7d": 146,
+        "changes_14d": 447,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-11T19:23:45Z",
-          "commit": "74698fa",
-          "commit_full": "74698fa89fb1219d219a9e1bbd102f1154f4cedd",
-          "subject": "M7: links open in the browser in the desktop app, What's new on the update prompt among them (#2216)"
+          "ts": "2026-11-11T20:55:11Z",
+          "commit": "3b9bf8c",
+          "commit_full": "3b9bf8c9a27045bc0109af75a9085981e7b62c02",
+          "subject": "batch: bound how much referenced data one step's params copy (#2257)"
         },
-        "last_commit_ts": "2026-11-11T19:23:45Z",
+        "last_commit_ts": "2026-11-11T20:55:11Z",
         "repo_since": "2026-10-09T15:38:50Z",
         "window": [
           107,
@@ -1364,7 +1364,7 @@
           2,
           6,
           2,
-          7
+          16
         ]
       },
       "release": {
@@ -1482,18 +1482,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 25.9,
+        "score": 26.5,
         "active_days_7d": 7,
-        "changes_7d": 377,
-        "changes_14d": 477,
-        "housekeeping_7d": 16,
+        "changes_7d": 392,
+        "changes_14d": 492,
+        "housekeeping_7d": 17,
         "last_code_change": {
-          "ts": "2026-11-11T17:45:01Z",
-          "commit": "37fde37",
-          "commit_full": "37fde37781274111973b864b38df75233c1b9191",
-          "subject": "Updates: take craft-update from craft-libs main at 6e03f65bf (#7008)"
+          "ts": "2026-11-11T20:51:22Z",
+          "commit": "1d7a9f9",
+          "commit_full": "1d7a9f9ffe45247dbc20a2047a4d2b151cb8385c",
+          "subject": "fix(edit,a11y): font aliases share the metrics built for their font (#5998)"
         },
-        "last_commit_ts": "2026-11-11T17:45:01Z",
+        "last_commit_ts": "2026-11-11T20:51:22Z",
         "repo_since": "2026-09-30T09:17:08Z",
         "window": [
           3,
@@ -1509,7 +1509,7 @@
           31,
           206,
           62,
-          27
+          42
         ]
       },
       "release": {
@@ -1605,19 +1605,19 @@
       },
       "milestone": null,
       "activity": {
-        "level": "active",
-        "score": 19.9,
+        "level": "buzzing",
+        "score": 20.2,
         "active_days_7d": 7,
-        "changes_7d": 86,
-        "changes_14d": 229,
+        "changes_7d": 95,
+        "changes_14d": 238,
         "housekeeping_7d": 3,
         "last_code_change": {
-          "ts": "2026-11-11T19:33:16Z",
-          "commit": "0c5b1e8",
-          "commit_full": "0c5b1e85e6d85072a2430f12e46f168adabcbc8b",
-          "subject": "sonar: stop counting the locale table as duplicated code (#3805)"
+          "ts": "2026-11-11T21:10:10Z",
+          "commit": "572bec2",
+          "commit_full": "572bec289bdf5caaced596a11e272033cf7891b6",
+          "subject": "engine: work limits for Advanced Filter, Remove Duplicates, filters, AutoFit, macro footprints; range sizes saturate (#3295)"
         },
-        "last_commit_ts": "2026-11-11T19:33:16Z",
+        "last_commit_ts": "2026-11-11T21:10:10Z",
         "repo_since": "2026-10-06T02:09:42Z",
         "window": [
           3,
@@ -1633,7 +1633,7 @@
           13,
           8,
           14,
-          32
+          41
         ]
       },
       "release": {
@@ -1726,18 +1726,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.1,
+        "score": 16.6,
         "active_days_7d": 7,
-        "changes_7d": 38,
-        "changes_14d": 184,
+        "changes_7d": 47,
+        "changes_14d": 193,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-11T19:24:07Z",
-          "commit": "19815eb",
-          "commit_full": "19815eba4a739bced64956f247fb2fe989c50a8f",
-          "subject": "Fix Flatpak permissions for update checks and self-updates (#2626)"
+          "ts": "2026-11-11T21:18:07Z",
+          "commit": "eba5b9f",
+          "commit_full": "eba5b9f8456f37c366f42396dddca520599a492c",
+          "subject": "datamerge: all further pages in one insertion, page lookups by start index (#2279)"
         },
-        "last_commit_ts": "2026-11-11T19:24:07Z",
+        "last_commit_ts": "2026-11-11T21:18:07Z",
         "repo_since": "2026-10-01T13:00:02Z",
         "window": [
           1,
@@ -1753,7 +1753,7 @@
           8,
           6,
           5,
-          4
+          13
         ]
       },
       "release": {
@@ -1848,16 +1848,16 @@
         "level": "buzzing",
         "score": 30.4,
         "active_days_7d": 7,
-        "changes_7d": 533,
-        "changes_14d": 635,
-        "housekeeping_7d": 8,
+        "changes_7d": 535,
+        "changes_14d": 637,
+        "housekeeping_7d": 10,
         "last_code_change": {
-          "ts": "2026-11-11T19:29:21Z",
-          "commit": "1247303",
-          "commit_full": "1247303e781859384f83cdb1651b75d191e7b77e",
-          "subject": "Remove tool: 19 px brush after Reset Tool and on first use (#13151)"
+          "ts": "2026-11-11T20:15:51Z",
+          "commit": "63b641b",
+          "commit_full": "63b641b55e54bf8f5c83efd977fdb16a2c255431",
+          "subject": "Pen: Undo after finishing a path gives it back to the Pen instead of deleting it (#6619) (#6413)"
         },
-        "last_commit_ts": "2026-11-11T19:29:21Z",
+        "last_commit_ts": "2026-11-11T21:02:46Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           18,
@@ -1873,7 +1873,7 @@
           80,
           43,
           75,
-          155
+          157
         ]
       },
       "release": {
@@ -1966,18 +1966,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 21.2,
+        "score": 21.6,
         "active_days_7d": 6,
-        "changes_7d": 145,
-        "changes_14d": 487,
+        "changes_7d": 156,
+        "changes_14d": 498,
         "housekeeping_7d": 8,
         "last_code_change": {
-          "ts": "2026-11-11T19:40:29Z",
-          "commit": "6c1391d",
-          "commit_full": "6c1391d4de9c2647f24327bbdb8559cdec004154",
-          "subject": "Text: run lookup by bisection, bounded path flattening, font folders and files shared (#2991)"
+          "ts": "2026-11-11T20:54:55Z",
+          "commit": "b47a710",
+          "commit_full": "b47a7104ac9abdf987619047a61f70ed77de8652",
+          "subject": "Scripting: run-time compiled code passes the nesting check; bounded file masks, socket line search and file reads (#2975)"
         },
-        "last_commit_ts": "2026-11-11T19:40:29Z",
+        "last_commit_ts": "2026-11-11T20:54:55Z",
         "repo_since": "2026-10-01T16:48:39Z",
         "window": [
           156,
@@ -1993,7 +1993,7 @@
           11,
           11,
           26,
-          41
+          52
         ]
       },
       "release": {
@@ -2086,18 +2086,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.2,
+        "score": 14.1,
         "active_days_7d": 7,
-        "changes_7d": 32,
-        "changes_14d": 123,
+        "changes_7d": 41,
+        "changes_14d": 132,
         "housekeeping_7d": 3,
         "last_code_change": {
-          "ts": "2026-11-11T19:37:20Z",
-          "commit": "d255ca4",
-          "commit_full": "d255ca4fe953e9248cbf22008615320aed0b8bc3",
-          "subject": "Keep time- and edit-locked clips whole on separate and range edits (#1436)"
+          "ts": "2026-11-11T21:15:08Z",
+          "commit": "c25b12b",
+          "commit_full": "c25b12ba46286a8d2588fa97fa3bddf5e7d3d0bb",
+          "subject": "Engine I/O: exclusive output files, read-checked probes, resolved clip-group paths (#1328)"
         },
-        "last_commit_ts": "2026-11-11T19:37:20Z",
+        "last_commit_ts": "2026-11-11T21:15:08Z",
         "repo_since": "2026-10-06T00:08:04Z",
         "window": [
           0,
@@ -2113,7 +2113,7 @@
           4,
           4,
           3,
-          10
+          19
         ]
       },
       "release": {
@@ -2206,18 +2206,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.1,
+        "score": 15.4,
         "active_days_7d": 7,
-        "changes_7d": 43,
-        "changes_14d": 217,
+        "changes_7d": 47,
+        "changes_14d": 221,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-11T19:24:01Z",
-          "commit": "dc7f382",
-          "commit_full": "dc7f382cecb4d2f0e3930ac41565c886a5df2086",
-          "subject": "Fix Flatpak permissions for update checks and self-updates (#3075)"
+          "ts": "2026-11-11T21:11:19Z",
+          "commit": "5a6aa9b",
+          "commit_full": "5a6aa9b65ff86c5da13517f7685513feab6ca7af",
+          "subject": "fix: bound or confine seven name, path and file inputs (#2732)"
         },
-        "last_commit_ts": "2026-11-11T19:24:01Z",
+        "last_commit_ts": "2026-11-11T21:11:19Z",
         "repo_since": "2026-10-06T00:15:47Z",
         "window": [
           0,
@@ -2233,7 +2233,7 @@
           9,
           4,
           2,
-          15
+          19
         ]
       },
       "release": {
@@ -2323,18 +2323,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 19.3,
+        "score": 19.7,
         "active_days_7d": 7,
-        "changes_7d": 91,
-        "changes_14d": 182,
-        "housekeeping_7d": 15,
+        "changes_7d": 94,
+        "changes_14d": 185,
+        "housekeeping_7d": 16,
         "last_code_change": {
-          "ts": "2026-11-11T18:29:27Z",
-          "commit": "b6391da",
-          "commit_full": "b6391da19c6a4eb0ea8c7f6391c6bb7a20762529",
-          "subject": "Preview attachments in the reading pane with optional local renderers (#1071)"
+          "ts": "2026-11-11T21:01:20Z",
+          "commit": "e8907f0",
+          "commit_full": "e8907f038e79b6812acb659b0f5e4622325d2837",
+          "subject": "#1069: a folder the server keeps can't be deleted, and a refused delete puts it back (#1088)"
         },
-        "last_commit_ts": "2026-11-11T18:29:27Z",
+        "last_commit_ts": "2026-11-11T21:01:20Z",
         "repo_since": "2026-10-12T18:17:00Z",
         "window": [
           7,
@@ -2350,7 +2350,7 @@
           8,
           7,
           22,
-          11
+          14
         ]
       },
       "release": {
@@ -2548,18 +2548,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.0,
+        "score": 14.2,
         "active_days_7d": 7,
-        "changes_7d": 89,
-        "changes_14d": 116,
+        "changes_7d": 90,
+        "changes_14d": 117,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-11T19:24:20Z",
-          "commit": "d8aceb5",
-          "commit_full": "d8aceb5cc811ee2d32cbbceb43892d8c2919bfe2",
-          "subject": "Fix Flatpak permissions for update checks and self-updates (#205)"
+          "ts": "2026-11-11T19:55:58Z",
+          "commit": "c0a5a70",
+          "commit_full": "c0a5a70d4ad190c94e714fdf5343e165928fb77c",
+          "subject": "chore: bump version to 0.4.1 for the Flatpak update fix (#207)"
         },
-        "last_commit_ts": "2026-11-11T19:24:20Z",
+        "last_commit_ts": "2026-11-11T19:55:58Z",
         "repo_since": "2026-11-01T19:58:46Z",
         "window": [
           0,
@@ -2575,7 +2575,7 @@
           3,
           6,
           5,
-          4
+          5
         ]
       },
       "release": {
@@ -2766,16 +2766,16 @@
         "level": "buzzing",
         "score": 36.0,
         "active_days_7d": 7,
-        "changes_7d": 822,
-        "changes_14d": 1906,
+        "changes_7d": 824,
+        "changes_14d": 1908,
         "housekeeping_7d": 38,
         "last_code_change": {
-          "ts": "2026-11-11T19:03:03Z",
-          "commit": "a2e7947",
-          "commit_full": "a2e7947eacea3fe0581d6fb452f419698d3c34a9",
-          "subject": "solidcore: three routines return their warning with the result instead of as an error (#15020) (#15023)"
+          "ts": "2026-11-11T19:30:50Z",
+          "commit": "9e805b7",
+          "commit_full": "9e805b7bdc843eeae419c7008561f829348acb57",
+          "subject": "blend certificate: a cone's continued part is checked off the axis back to its end, so a box wholly past the apex is refused (#14284) (#15092)"
         },
-        "last_commit_ts": "2026-11-11T19:03:03Z",
+        "last_commit_ts": "2026-11-11T19:30:50Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           191,
@@ -2791,7 +2791,7 @@
           70,
           151,
           239,
-          124
+          126
         ]
       },
       "release": {
@@ -2860,18 +2860,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.0,
+        "score": 13.2,
         "active_days_7d": 5,
-        "changes_7d": 74,
-        "changes_14d": 74,
+        "changes_7d": 76,
+        "changes_14d": 76,
         "housekeeping_7d": 9,
         "last_code_change": {
-          "ts": "2026-11-11T14:19:27Z",
-          "commit": "531a470",
-          "commit_full": "531a4701affd191f464acbc54238fc817f9747c5",
-          "subject": "fix(gpu): wrap repeating bitmaps without a signed remainder, undefined on GL (M3) (#156)"
+          "ts": "2026-11-11T20:50:03Z",
+          "commit": "01599c9",
+          "commit_full": "01599c9c86d50e1be5f4903dae74cf9cf970d78b",
+          "subject": "feat(symbols): 9-slice scaling for symbols (M2) (#149)"
         },
-        "last_commit_ts": "2026-11-11T17:08:43Z",
+        "last_commit_ts": "2026-11-11T20:50:03Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
           0,
@@ -2887,7 +2887,7 @@
           0,
           20,
           19,
-          12
+          14
         ]
       },
       "release": {
@@ -2955,18 +2955,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.0,
+        "score": 13.2,
         "active_days_7d": 5,
-        "changes_7d": 74,
-        "changes_14d": 74,
+        "changes_7d": 76,
+        "changes_14d": 76,
         "housekeeping_7d": 9,
         "last_code_change": {
-          "ts": "2026-11-11T14:19:27Z",
-          "commit": "531a470",
-          "commit_full": "531a4701affd191f464acbc54238fc817f9747c5",
-          "subject": "fix(gpu): wrap repeating bitmaps without a signed remainder, undefined on GL (M3) (#156)"
+          "ts": "2026-11-11T20:50:03Z",
+          "commit": "01599c9",
+          "commit_full": "01599c9c86d50e1be5f4903dae74cf9cf970d78b",
+          "subject": "feat(symbols): 9-slice scaling for symbols (M2) (#149)"
         },
-        "last_commit_ts": "2026-11-11T17:08:43Z",
+        "last_commit_ts": "2026-11-11T20:50:03Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
           0,
@@ -2982,7 +2982,7 @@
           0,
           20,
           19,
-          12
+          14
         ]
       },
       "release": {
@@ -3020,5 +3020,5 @@
       }
     ]
   },
-  "generated_at": "2026-11-11T19:46:57+00:00"
+  "generated_at": "2026-11-11T21:19:40+00:00"
 }

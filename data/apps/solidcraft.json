@@ -68,16 +68,16 @@
     "level": "buzzing",
     "score": 36.0,
     "active_days_7d": 7,
-    "changes_7d": 822,
-    "changes_14d": 1906,
+    "changes_7d": 824,
+    "changes_14d": 1908,
     "housekeeping_7d": 38,
     "last_code_change": {
-      "ts": "2026-11-11T19:03:03Z",
-      "commit": "a2e7947",
-      "commit_full": "a2e7947eacea3fe0581d6fb452f419698d3c34a9",
-      "subject": "solidcore: three routines return their warning with the result instead of as an error (#15020) (#15023)"
+      "ts": "2026-11-11T19:30:50Z",
+      "commit": "9e805b7",
+      "commit_full": "9e805b7bdc843eeae419c7008561f829348acb57",
+      "subject": "blend certificate: a cone's continued part is checked off the axis back to its end, so a box wholly past the apex is refused (#14284) (#15092)"
     },
-    "last_commit_ts": "2026-11-11T19:03:03Z",
+    "last_commit_ts": "2026-11-11T19:30:50Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       191,
@@ -93,7 +93,7 @@
       70,
       151,
       239,
-      124
+      126
     ],
     "days": [
       {
@@ -763,26 +763,43 @@
       },
       {
         "d": "2026-11-11",
-        "code": 124,
+        "code": 126,
         "other": 2,
         "samples": [
           {
+            "commit": "9e805b7",
+            "subject": "blend certificate: a cone's continued part is checked off the axis back to its end, so a box wholly past the apex is refused (#14284) (#15092)"
+          },
+          {
+            "commit": "b6aeff5",
+            "subject": "Move Render panels to the shared host (#11312) (#14800)"
+          },
+          {
             "commit": "a2e7947",
             "subject": "solidcore: three routines return their warning with the result instead of as an error (#15020) (#15023)"
-          },
-          {
-            "commit": "47c57ec",
-            "subject": "CI: the web offline test no longer blocks while #14591 is open, and prints how the leaked request was served (#15074)"
-          },
-          {
-            "commit": "96c8949",
-            "subject": "solidcore: blend failures carry a typed reason (part 9: the solvers) (#14973)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.40.0",
+      "name": "SolidCraft v0.40.0",
+      "ts": "2026-11-11T20:04:50Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.40.0",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.40.0-rc.4",
       "name": "SolidCraft v0.40.0-rc.4",
@@ -958,23 +975,6 @@
       "name": "v0.27.0",
       "ts": "2026-10-30T00:54:39Z",
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.27.0",
-      "changes": null,
-      "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.26.1",
-      "name": "v0.26.1",
-      "ts": "2026-10-29T11:46:12Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.26.1",
       "changes": null,
       "new_contributors": null,
       "platforms": [
@@ -2363,5 +2363,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-11T19:46:51+00:00"
+  "updated_at": "2026-11-11T21:19:32+00:00"
 }
