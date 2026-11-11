@@ -393,7 +393,7 @@
   "parity": {
     "tracked_since": "2026-10-10T18:25:15Z",
     "value_since": "2026-11-05T21:23:31Z",
-    "releases_since": 2,
+    "releases_since": 3,
     "releases_since_capped": false,
     "revisions_since": 1,
     "hours_since": null,
@@ -437,14 +437,14 @@
     "active_days_7d": 7,
     "changes_7d": 92,
     "changes_14d": 129,
-    "housekeeping_7d": 7,
+    "housekeeping_7d": 8,
     "last_code_change": {
       "ts": "2026-11-11T20:14:21Z",
       "commit": "8ef3598",
       "commit_full": "8ef35987d454d3a5d03be4f976132abaa8b55023",
       "subject": "security: mask.exportEffects refuses originals and sidecars, writes atomically (#4125)"
     },
-    "last_commit_ts": "2026-11-11T20:14:21Z",
+    "last_commit_ts": "2026-11-11T22:04:22Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
       0,
@@ -1164,7 +1164,7 @@
       {
         "d": "2026-11-11",
         "code": 9,
-        "other": 2,
+        "other": 3,
         "samples": [
           {
             "commit": "8ef3598",
@@ -1183,6 +1183,23 @@
     ]
   },
   "releases": [
+    {
+      "tag": "v0.21.0",
+      "name": "LightCraft v0.21.0",
+      "ts": "2026-11-11T21:33:13Z",
+      "url": "https://github.com/storytold/lightcraft/releases/tag/v0.21.0",
+      "changes": 14,
+      "new_contributors": 1,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.20.0",
       "name": "LightCraft v0.20.0",
@@ -1360,23 +1377,6 @@
       "url": "https://github.com/storytold/lightcraft/releases/tag/v0.11.0",
       "changes": 49,
       "new_contributors": 12,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.10.0",
-      "name": "LightCraft v0.10.0",
-      "ts": "2026-10-21T07:46:22Z",
-      "url": "https://github.com/storytold/lightcraft/releases/tag/v0.10.0",
-      "changes": 34,
-      "new_contributors": 8,
       "platforms": [
         "macOS",
         "Windows",
@@ -1812,5 +1812,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T21:18:00+00:00"
+  "updated_at": "2026-11-11T22:37:28+00:00"
 }

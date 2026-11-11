@@ -49,6 +49,39 @@
   ],
   "latest_events": [
     {
+      "id": "soundcraft",
+      "name": "SoundCraft",
+      "type": "release",
+      "ts": "2026-11-11T22:30:40Z",
+      "tag": "v0.20.0",
+      "kind": "minor",
+      "changes": 24,
+      "url": "https://github.com/storytold/soundcraft/releases/tag/v0.20.0",
+      "prerelease": false
+    },
+    {
+      "id": "photocraft",
+      "name": "PhotoCraft",
+      "type": "release",
+      "ts": "2026-11-11T21:59:33Z",
+      "tag": "v0.23.0",
+      "kind": "minor",
+      "changes": 265,
+      "url": "https://github.com/storytold/photocraft/releases/tag/v0.23.0",
+      "prerelease": false
+    },
+    {
+      "id": "lightcraft",
+      "name": "LightCraft",
+      "type": "release",
+      "ts": "2026-11-11T21:33:13Z",
+      "tag": "v0.21.0",
+      "kind": "minor",
+      "changes": 14,
+      "url": "https://github.com/storytold/lightcraft/releases/tag/v0.21.0",
+      "prerelease": false
+    },
+    {
       "id": "solidcraft",
       "name": "SolidCraft",
       "type": "release",
@@ -446,51 +479,18 @@
       "type": "new_app",
       "ts": "2026-11-09T00:00:00Z",
       "adobe": "Unknown"
-    },
-    {
-      "id": "mailcraft",
-      "name": "MailCraft",
-      "type": "release",
-      "ts": "2026-11-08T12:24:26Z",
-      "tag": "v0.11.1",
-      "kind": "patch",
-      "changes": null,
-      "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.11.1",
-      "prerelease": false
-    },
-    {
-      "id": "mailcraft",
-      "name": "MailCraft",
-      "type": "release",
-      "ts": "2026-11-06T21:14:37Z",
-      "tag": "v0.11.0",
-      "kind": "minor",
-      "changes": null,
-      "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.11.0",
-      "prerelease": false
-    },
-    {
-      "id": "wordcraft",
-      "name": "WordCraft",
-      "type": "release",
-      "ts": "2026-11-06T20:22:22Z",
-      "tag": "v0.16.0",
-      "kind": "minor",
-      "changes": 93,
-      "url": "https://github.com/storytold/wordcraft/releases/tag/v0.16.0",
-      "prerelease": false
     }
   ],
   "release_waves": [
     {
       "day": "2026-11-11",
-      "apps": 13,
-      "changes": 738,
+      "apps": 16,
+      "changes": 1041,
       "largest": {
-        "id": "vectorcraft",
-        "name": "VectorCraft",
-        "tag": "v0.24.0",
-        "changes": 218
+        "id": "photocraft",
+        "name": "PhotoCraft",
+        "tag": "v0.23.0",
+        "changes": 265
       }
     },
     {
@@ -653,14 +653,14 @@
         "active_days_7d": 7,
         "changes_7d": 707,
         "changes_14d": 1570,
-        "housekeeping_7d": 32,
+        "housekeeping_7d": 33,
         "last_code_change": {
           "ts": "2026-11-11T21:11:34Z",
           "commit": "566f720",
           "commit_full": "566f720868c180c862311fb174cefe91e81e7abd",
           "subject": "SVG import: references follow an id's first element, one read per linked file, bounded blank lines (#5409)"
         },
-        "last_commit_ts": "2026-11-11T21:11:34Z",
+        "last_commit_ts": "2026-11-11T22:04:49Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           180,
@@ -738,7 +738,7 @@
       "parity": {
         "tracked_since": "2026-10-10T18:25:15Z",
         "value_since": "2026-11-05T21:23:31Z",
-        "releases_since": 2,
+        "releases_since": 3,
         "releases_since_capped": false,
         "revisions_since": 1,
         "hours_since": null,
@@ -782,14 +782,14 @@
         "active_days_7d": 7,
         "changes_7d": 92,
         "changes_14d": 129,
-        "housekeeping_7d": 7,
+        "housekeeping_7d": 8,
         "last_code_change": {
           "ts": "2026-11-11T20:14:21Z",
           "commit": "8ef3598",
           "commit_full": "8ef35987d454d3a5d03be4f976132abaa8b55023",
           "subject": "security: mask.exportEffects refuses originals and sidecars, writes atomically (#4125)"
         },
-        "last_commit_ts": "2026-11-11T20:14:21Z",
+        "last_commit_ts": "2026-11-11T22:04:22Z",
         "repo_since": "2026-09-30T14:04:12Z",
         "window": [
           0,
@@ -809,12 +809,12 @@
         ]
       },
       "release": {
-        "tag": "v0.20.0",
-        "name": "LightCraft v0.20.0",
-        "ts": "2026-11-09T11:57:03Z",
-        "url": "https://github.com/storytold/lightcraft/releases/tag/v0.20.0",
-        "changes": 8,
-        "new_contributors": 3,
+        "tag": "v0.21.0",
+        "name": "LightCraft v0.21.0",
+        "ts": "2026-11-11T21:33:13Z",
+        "url": "https://github.com/storytold/lightcraft/releases/tag/v0.21.0",
+        "changes": 14,
+        "new_contributors": 1,
         "platforms": [
           "macOS",
           "Windows",
@@ -923,14 +923,14 @@
         "active_days_7d": 7,
         "changes_7d": 193,
         "changes_14d": 334,
-        "housekeeping_7d": 10,
+        "housekeeping_7d": 11,
         "last_code_change": {
           "ts": "2026-11-11T19:56:11Z",
           "commit": "a58b41a",
           "commit_full": "a58b41a716cf4c205edc7db295febc97c82dad4c",
           "subject": "chore: bump version to 0.18.1 for the Flatpak update fix (#6344)"
         },
-        "last_commit_ts": "2026-11-11T19:59:04Z",
+        "last_commit_ts": "2026-11-11T22:04:54Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
           2,
@@ -1039,18 +1039,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 18.8,
+        "score": 18.9,
         "active_days_7d": 7,
-        "changes_7d": 84,
-        "changes_14d": 236,
-        "housekeeping_7d": 5,
+        "changes_7d": 87,
+        "changes_14d": 239,
+        "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-11T20:25:17Z",
-          "commit": "7a27c23",
-          "commit_full": "7a27c230df496d25252b2fab3e8970b4d36050a8",
-          "subject": "Fix Flatpak updates and bump to 0.20.1 (#4678)"
+          "ts": "2026-11-11T22:26:13Z",
+          "commit": "db60ee4",
+          "commit_full": "db60ee45c2f5a5a125f26e4f6fc5de0b74fb811b",
+          "subject": "Audio codecs and Ogg come from craft-libs (#4676)"
         },
-        "last_commit_ts": "2026-11-11T20:25:17Z",
+        "last_commit_ts": "2026-11-11T22:26:13Z",
         "repo_since": "2026-09-30T09:22:00Z",
         "window": [
           0,
@@ -1066,7 +1066,7 @@
           21,
           5,
           6,
-          25
+          28
         ]
       },
       "release": {
@@ -1170,18 +1170,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.2,
+        "score": 15.3,
         "active_days_7d": 6,
-        "changes_7d": 52,
-        "changes_14d": 211,
-        "housekeeping_7d": 4,
+        "changes_7d": 53,
+        "changes_14d": 212,
+        "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-11T21:15:23Z",
-          "commit": "988a492",
-          "commit_full": "988a4920970e7c40eb969601f42a1013e6f1c239",
-          "subject": "PPTX: copy only used, bounded namespace declarations onto imported fragments (#1740)"
+          "ts": "2026-11-11T22:00:12Z",
+          "commit": "eec4f59",
+          "commit_full": "eec4f595356dbb4dc5d8ab146d89fe517978454e",
+          "subject": "AV1: decode tiles serially when parallel tile metadata copies would be huge (#1841)"
         },
-        "last_commit_ts": "2026-11-11T21:15:23Z",
+        "last_commit_ts": "2026-11-11T22:03:54Z",
         "repo_since": "2026-10-06T02:13:02Z",
         "window": [
           0,
@@ -1197,7 +1197,7 @@
           5,
           2,
           3,
-          26
+          27
         ]
       },
       "release": {
@@ -1341,14 +1341,14 @@
         "active_days_7d": 6,
         "changes_7d": 146,
         "changes_14d": 447,
-        "housekeeping_7d": 4,
+        "housekeeping_7d": 6,
         "last_code_change": {
           "ts": "2026-11-11T20:55:11Z",
           "commit": "3b9bf8c",
           "commit_full": "3b9bf8c9a27045bc0109af75a9085981e7b62c02",
           "subject": "batch: bound how much referenced data one step's params copy (#2257)"
         },
-        "last_commit_ts": "2026-11-11T20:55:11Z",
+        "last_commit_ts": "2026-11-11T22:27:43Z",
         "repo_since": "2026-10-09T15:38:50Z",
         "window": [
           107,
@@ -1486,14 +1486,14 @@
         "active_days_7d": 7,
         "changes_7d": 392,
         "changes_14d": 492,
-        "housekeeping_7d": 17,
+        "housekeeping_7d": 18,
         "last_code_change": {
           "ts": "2026-11-11T20:51:22Z",
           "commit": "1d7a9f9",
           "commit_full": "1d7a9f9ffe45247dbc20a2047a4d2b151cb8385c",
           "subject": "fix(edit,a11y): font aliases share the metrics built for their font (#5998)"
         },
-        "last_commit_ts": "2026-11-11T20:51:22Z",
+        "last_commit_ts": "2026-11-11T22:04:31Z",
         "repo_since": "2026-09-30T09:17:08Z",
         "window": [
           3,
@@ -1610,14 +1610,14 @@
         "active_days_7d": 7,
         "changes_7d": 95,
         "changes_14d": 238,
-        "housekeeping_7d": 3,
+        "housekeeping_7d": 4,
         "last_code_change": {
           "ts": "2026-11-11T21:10:10Z",
           "commit": "572bec2",
           "commit_full": "572bec289bdf5caaced596a11e272033cf7891b6",
           "subject": "engine: work limits for Advanced Filter, Remove Duplicates, filters, AutoFit, macro footprints; range sizes saturate (#3295)"
         },
-        "last_commit_ts": "2026-11-11T21:10:10Z",
+        "last_commit_ts": "2026-11-11T22:04:17Z",
         "repo_since": "2026-10-06T02:09:42Z",
         "window": [
           3,
@@ -1726,18 +1726,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 16.6,
+        "score": 17.2,
         "active_days_7d": 7,
-        "changes_7d": 47,
-        "changes_14d": 193,
-        "housekeeping_7d": 4,
+        "changes_7d": 55,
+        "changes_14d": 201,
+        "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-11T21:18:07Z",
-          "commit": "eba5b9f",
-          "commit_full": "eba5b9f8456f37c366f42396dddca520599a492c",
-          "subject": "datamerge: all further pages in one insertion, page lookups by start index (#2279)"
+          "ts": "2026-11-11T21:21:23Z",
+          "commit": "d6a0963",
+          "commit_full": "d6a09639bf5fea750b599e73e289217e17624a13",
+          "subject": "Repagination, IDML swatch import and style folders: linear work, bounded depth (#2237)"
         },
-        "last_commit_ts": "2026-11-11T21:18:07Z",
+        "last_commit_ts": "2026-11-11T22:03:58Z",
         "repo_since": "2026-10-01T13:00:02Z",
         "window": [
           1,
@@ -1753,7 +1753,7 @@
           8,
           6,
           5,
-          13
+          21
         ]
       },
       "release": {
@@ -1846,18 +1846,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 30.4,
+        "score": 30.6,
         "active_days_7d": 7,
-        "changes_7d": 535,
-        "changes_14d": 637,
-        "housekeeping_7d": 10,
+        "changes_7d": 558,
+        "changes_14d": 660,
+        "housekeeping_7d": 11,
         "last_code_change": {
-          "ts": "2026-11-11T20:15:51Z",
-          "commit": "63b641b",
-          "commit_full": "63b641b55e54bf8f5c83efd977fdb16a2c255431",
-          "subject": "Pen: Undo after finishing a path gives it back to the Pen instead of deleting it (#6619) (#6413)"
+          "ts": "2026-11-11T21:31:47Z",
+          "commit": "abeb16c",
+          "commit_full": "abeb16c96bb6c55c70f11a50f57138d17d546db1",
+          "subject": "paint: refuse a sequential-dab stroke whose working copy is too large (#11070)"
         },
-        "last_commit_ts": "2026-11-11T21:02:46Z",
+        "last_commit_ts": "2026-11-11T22:04:35Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           18,
@@ -1873,16 +1873,16 @@
           80,
           43,
           75,
-          157
+          180
         ]
       },
       "release": {
-        "tag": "v0.22.0",
-        "name": "PhotoCraft v0.22.0",
-        "ts": "2026-11-09T12:19:04Z",
-        "url": "https://github.com/storytold/photocraft/releases/tag/v0.22.0",
-        "changes": 202,
-        "new_contributors": 24,
+        "tag": "v0.23.0",
+        "name": "PhotoCraft v0.23.0",
+        "ts": "2026-11-11T21:59:33Z",
+        "url": "https://github.com/storytold/photocraft/releases/tag/v0.23.0",
+        "changes": 265,
+        "new_contributors": 17,
         "platforms": [
           "macOS",
           "Windows",
@@ -1970,14 +1970,14 @@
         "active_days_7d": 6,
         "changes_7d": 156,
         "changes_14d": 498,
-        "housekeeping_7d": 8,
+        "housekeeping_7d": 9,
         "last_code_change": {
           "ts": "2026-11-11T20:54:55Z",
           "commit": "b47a710",
           "commit_full": "b47a7104ac9abdf987619047a61f70ed77de8652",
           "subject": "Scripting: run-time compiled code passes the nesting check; bounded file masks, socket line search and file reads (#2975)"
         },
-        "last_commit_ts": "2026-11-11T20:54:55Z",
+        "last_commit_ts": "2026-11-11T22:04:03Z",
         "repo_since": "2026-10-01T16:48:39Z",
         "window": [
           156,
@@ -2090,14 +2090,14 @@
         "active_days_7d": 7,
         "changes_7d": 41,
         "changes_14d": 132,
-        "housekeeping_7d": 3,
+        "housekeeping_7d": 5,
         "last_code_change": {
           "ts": "2026-11-11T21:15:08Z",
           "commit": "c25b12b",
           "commit_full": "c25b12ba46286a8d2588fa97fa3bddf5e7d3d0bb",
           "subject": "Engine I/O: exclusive output files, read-checked probes, resolved clip-group paths (#1328)"
         },
-        "last_commit_ts": "2026-11-11T21:15:08Z",
+        "last_commit_ts": "2026-11-11T22:20:08Z",
         "repo_since": "2026-10-06T00:08:04Z",
         "window": [
           0,
@@ -2117,12 +2117,12 @@
         ]
       },
       "release": {
-        "tag": "v0.19.0",
-        "name": "SoundCraft v0.19.0",
-        "ts": "2026-11-09T11:54:20Z",
-        "url": "https://github.com/storytold/soundcraft/releases/tag/v0.19.0",
-        "changes": 12,
-        "new_contributors": 1,
+        "tag": "v0.20.0",
+        "name": "SoundCraft v0.20.0",
+        "ts": "2026-11-11T22:30:40Z",
+        "url": "https://github.com/storytold/soundcraft/releases/tag/v0.20.0",
+        "changes": 24,
+        "new_contributors": 3,
         "platforms": [
           "macOS",
           "Windows",
@@ -2210,14 +2210,14 @@
         "active_days_7d": 7,
         "changes_7d": 47,
         "changes_14d": 221,
-        "housekeeping_7d": 5,
+        "housekeeping_7d": 6,
         "last_code_change": {
           "ts": "2026-11-11T21:11:19Z",
           "commit": "5a6aa9b",
           "commit_full": "5a6aa9b65ff86c5da13517f7685513feab6ca7af",
           "subject": "fix: bound or confine seven name, path and file inputs (#2732)"
         },
-        "last_commit_ts": "2026-11-11T21:11:19Z",
+        "last_commit_ts": "2026-11-11T22:03:49Z",
         "repo_since": "2026-10-06T00:15:47Z",
         "window": [
           0,
@@ -2322,19 +2322,19 @@
       },
       "milestone": null,
       "activity": {
-        "level": "active",
-        "score": 19.7,
+        "level": "buzzing",
+        "score": 20.0,
         "active_days_7d": 7,
-        "changes_7d": 94,
-        "changes_14d": 185,
+        "changes_7d": 98,
+        "changes_14d": 189,
         "housekeeping_7d": 16,
         "last_code_change": {
-          "ts": "2026-11-11T21:01:20Z",
-          "commit": "e8907f0",
-          "commit_full": "e8907f038e79b6812acb659b0f5e4622325d2837",
-          "subject": "#1069: a folder the server keeps can't be deleted, and a refused delete puts it back (#1088)"
+          "ts": "2026-11-11T21:52:42Z",
+          "commit": "2030f74",
+          "commit_full": "2030f7484d893f61808973c66e63e02fde28e1cb",
+          "subject": "Keep colons inside a bare address's IPv6 domain literal (#1042)"
         },
-        "last_commit_ts": "2026-11-11T21:01:20Z",
+        "last_commit_ts": "2026-11-11T21:52:42Z",
         "repo_since": "2026-10-12T18:17:00Z",
         "window": [
           7,
@@ -2350,7 +2350,7 @@
           8,
           7,
           22,
-          14
+          18
         ]
       },
       "release": {
@@ -2444,14 +2444,14 @@
         "active_days_7d": 7,
         "changes_7d": 50,
         "changes_14d": 154,
-        "housekeeping_7d": 7,
+        "housekeeping_7d": 9,
         "last_code_change": {
           "ts": "2026-11-11T17:45:16Z",
           "commit": "5303e98",
           "commit_full": "5303e98398a2612ac399aa53e67d4249dd669851",
           "subject": "Updates: take craft-update from craft-libs main at 6e03f65bf (#424)"
         },
-        "last_commit_ts": "2026-11-11T17:45:16Z",
+        "last_commit_ts": "2026-11-11T22:04:44Z",
         "repo_since": "2026-10-14T18:33:13Z",
         "window": [
           0,
@@ -2552,14 +2552,14 @@
         "active_days_7d": 7,
         "changes_7d": 90,
         "changes_14d": 117,
-        "housekeeping_7d": 7,
+        "housekeeping_7d": 9,
         "last_code_change": {
           "ts": "2026-11-11T19:55:58Z",
           "commit": "c0a5a70",
           "commit_full": "c0a5a70d4ad190c94e714fdf5343e165928fb77c",
           "subject": "chore: bump version to 0.4.1 for the Flatpak update fix (#207)"
         },
-        "last_commit_ts": "2026-11-11T19:55:58Z",
+        "last_commit_ts": "2026-11-11T22:04:26Z",
         "repo_since": "2026-11-01T19:58:46Z",
         "window": [
           0,
@@ -2764,18 +2764,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 36.0,
+        "score": 36.2,
         "active_days_7d": 7,
-        "changes_7d": 824,
-        "changes_14d": 1908,
-        "housekeeping_7d": 38,
+        "changes_7d": 839,
+        "changes_14d": 1923,
+        "housekeeping_7d": 39,
         "last_code_change": {
-          "ts": "2026-11-11T19:30:50Z",
-          "commit": "9e805b7",
-          "commit_full": "9e805b7bdc843eeae419c7008561f829348acb57",
-          "subject": "blend certificate: a cone's continued part is checked off the axis back to its end, so a box wholly past the apex is refused (#14284) (#15092)"
+          "ts": "2026-11-11T22:06:18Z",
+          "commit": "fc40397",
+          "commit_full": "fc403974bed7a8249eedefce5c5f1370d686b62f",
+          "subject": "Agent commands: the window no longer freezes when you edit the design while the agent pointer is showing a batch (#15155)"
         },
-        "last_commit_ts": "2026-11-11T19:30:50Z",
+        "last_commit_ts": "2026-11-11T22:06:18Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           191,
@@ -2791,7 +2791,7 @@
           70,
           151,
           239,
-          126
+          141
         ]
       },
       "release": {
@@ -2860,18 +2860,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.2,
+        "score": 13.4,
         "active_days_7d": 5,
-        "changes_7d": 76,
-        "changes_14d": 76,
-        "housekeeping_7d": 9,
+        "changes_7d": 78,
+        "changes_14d": 78,
+        "housekeeping_7d": 10,
         "last_code_change": {
-          "ts": "2026-11-11T20:50:03Z",
-          "commit": "01599c9",
-          "commit_full": "01599c9c86d50e1be5f4903dae74cf9cf970d78b",
-          "subject": "feat(symbols): 9-slice scaling for symbols (M2) (#149)"
+          "ts": "2026-11-11T21:56:19Z",
+          "commit": "666f93e",
+          "commit_full": "666f93ed4d8e72cccd934b97d1f44c3b25a2b54d",
+          "subject": "feat(find): Find and Replace and the Movie Explorer (M8) (#167)"
         },
-        "last_commit_ts": "2026-11-11T20:50:03Z",
+        "last_commit_ts": "2026-11-11T22:03:44Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
           0,
@@ -2887,7 +2887,7 @@
           0,
           20,
           19,
-          14
+          16
         ]
       },
       "release": {
@@ -2955,18 +2955,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.2,
+        "score": 13.4,
         "active_days_7d": 5,
-        "changes_7d": 76,
-        "changes_14d": 76,
-        "housekeeping_7d": 9,
+        "changes_7d": 78,
+        "changes_14d": 78,
+        "housekeeping_7d": 10,
         "last_code_change": {
-          "ts": "2026-11-11T20:50:03Z",
-          "commit": "01599c9",
-          "commit_full": "01599c9c86d50e1be5f4903dae74cf9cf970d78b",
-          "subject": "feat(symbols): 9-slice scaling for symbols (M2) (#149)"
+          "ts": "2026-11-11T21:56:19Z",
+          "commit": "666f93e",
+          "commit_full": "666f93ed4d8e72cccd934b97d1f44c3b25a2b54d",
+          "subject": "feat(find): Find and Replace and the Movie Explorer (M8) (#167)"
         },
-        "last_commit_ts": "2026-11-11T20:50:03Z",
+        "last_commit_ts": "2026-11-11T22:03:44Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
           0,
@@ -2982,7 +2982,7 @@
           0,
           20,
           19,
-          14
+          16
         ]
       },
       "release": {
@@ -3020,5 +3020,5 @@
       }
     ]
   },
-  "generated_at": "2026-11-11T21:19:40+00:00"
+  "generated_at": "2026-11-11T22:38:28+00:00"
 }
