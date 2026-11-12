@@ -380,16 +380,16 @@
     "level": "buzzing",
     "score": 21.8,
     "active_days_7d": 6,
-    "changes_7d": 164,
-    "changes_14d": 365,
+    "changes_7d": 165,
+    "changes_14d": 366,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-12T13:39:25Z",
-      "commit": "d43b33d",
-      "commit_full": "d43b33db55ef9a951f119c894541e961f04a0247",
-      "subject": "Fix opening and closing manually drawn paths (#2876)"
+      "ts": "2026-11-12T13:41:21Z",
+      "commit": "fbfeed2",
+      "commit_full": "fbfeed29745840ee8f69de9a7e3a301950de813a",
+      "subject": "Fix Effect Controls arrow-key collapse and expand (#2869) (#2875)"
     },
-    "last_commit_ts": "2026-11-12T13:39:25Z",
+    "last_commit_ts": "2026-11-12T13:41:21Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       79,
@@ -405,7 +405,7 @@
       11,
       26,
       53,
-      22
+      23
     ],
     "days": [
       {
@@ -1136,9 +1136,13 @@
       },
       {
         "d": "2026-11-12",
-        "code": 22,
+        "code": 23,
         "other": 0,
         "samples": [
+          {
+            "commit": "fbfeed2",
+            "subject": "Fix Effect Controls arrow-key collapse and expand (#2869) (#2875)"
+          },
           {
             "commit": "d43b33d",
             "subject": "Fix opening and closing manually drawn paths (#2876)"
@@ -1146,10 +1150,6 @@
           {
             "commit": "63fda85",
             "subject": "3D models: bound and share decoded textures, share skin matrices, index OBJ materials"
-          },
-          {
-            "commit": "b9da77c",
-            "subject": "Effects: 18 parameters take After Effects' valid ranges (Levels IC, 4-Color Gradient, Change Color, Noise HLS, Grid, Venetian Blinds, Radial Wipe, Scatter, Beam"
           }
         ]
       }
@@ -1709,5 +1709,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-12T13:41:18+00:00"
+  "updated_at": "2026-11-12T14:42:05+00:00"
 }
