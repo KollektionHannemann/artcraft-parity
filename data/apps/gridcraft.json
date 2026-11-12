@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/gridcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/gridcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "efc11ac",
-  "latest_commit_date": "2026-11-12T18:59:02+01:00",
-  "latest_message": "PDF: writer cleanup, q nesting limit, image dedupe, style only on change (#816) (#818)",
+  "latest_commit": "c0ee120",
+  "latest_commit_date": "2026-11-12T19:55:40+01:00",
+  "latest_message": "Charts: resolved data and rendering are cached between frames (#1139) (#1140)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -435,7 +435,7 @@
     "value_since": "2026-10-10T18:09:06Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 98,
+    "revisions_since": 99,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -443,39 +443,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 100,
-    "revisions_7d": 11,
+    "revisions": 101,
+    "revisions_7d": 12,
     "last_revision": {
-      "ts": "2026-11-12T17:59:02Z",
+      "ts": "2026-11-12T18:55:40Z",
       "kind": "content",
-      "commit": "efc11ac",
-      "commit_full": "efc11acede7d876215a774b6c55853f9700b1728",
-      "message": "PDF: writer cleanup, q nesting limit, image dedupe, style only on change (#816) (#818)"
+      "commit": "c0ee120",
+      "commit_full": "c0ee120ac2d9b59630f5abf1151dd9b471fe2926",
+      "message": "Charts: resolved data and rendering are cached between frames (#1139) (#1140)"
     },
     "last_update": {
-      "ts": "2026-11-12T17:59:02Z",
+      "ts": "2026-11-12T18:55:40Z",
       "kind": "content",
-      "commit": "efc11ac",
-      "commit_full": "efc11acede7d876215a774b6c55853f9700b1728",
-      "message": "PDF: writer cleanup, q nesting limit, image dedupe, style only on change (#816) (#818)"
+      "commit": "c0ee120",
+      "commit_full": "c0ee120ac2d9b59630f5abf1151dd9b471fe2926",
+      "message": "Charts: resolved data and rendering are cached between frames (#1139) (#1140)"
     },
     "self_reported": "2026-11-05"
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 19.9,
+    "level": "buzzing",
+    "score": 20.1,
     "active_days_7d": 7,
-    "changes_7d": 97,
-    "changes_14d": 245,
+    "changes_7d": 98,
+    "changes_14d": 246,
     "housekeeping_7d": 4,
     "last_code_change": {
-      "ts": "2026-11-12T17:59:02Z",
-      "commit": "efc11ac",
-      "commit_full": "efc11acede7d876215a774b6c55853f9700b1728",
-      "subject": "PDF: writer cleanup, q nesting limit, image dedupe, style only on change (#816) (#818)"
+      "ts": "2026-11-12T18:55:40Z",
+      "commit": "c0ee120",
+      "commit_full": "c0ee120ac2d9b59630f5abf1151dd9b471fe2926",
+      "subject": "Charts: resolved data and rendering are cached between frames (#1139) (#1140)"
     },
-    "last_commit_ts": "2026-11-12T17:59:02Z",
+    "last_commit_ts": "2026-11-12T18:55:40Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       25,
@@ -491,7 +491,7 @@
       8,
       14,
       41,
-      10
+      11
     ],
     "days": [
       {
@@ -1108,9 +1108,13 @@
       },
       {
         "d": "2026-11-12",
-        "code": 10,
+        "code": 11,
         "other": 0,
         "samples": [
+          {
+            "commit": "c0ee120",
+            "subject": "Charts: resolved data and rendering are cached between frames (#1139) (#1140)"
+          },
           {
             "commit": "efc11ac",
             "subject": "PDF: writer cleanup, q nesting limit, image dedupe, style only on change (#816) (#818)"
@@ -1118,10 +1122,6 @@
           {
             "commit": "a60db4f",
             "subject": "LINEST, LOGEST, TREND, GROWTH: solve by Householder QR (#3322) (#3323)"
-          },
-          {
-            "commit": "a3366cf",
-            "subject": "Grid: resizing several selected columns applies the width on release (#1082) (#1135)"
           }
         ]
       }
@@ -3634,7 +3634,30 @@
       "breadth_pct": 75.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "c0ee120",
+      "commit_full": "c0ee120ac2d9b59630f5abf1151dd9b471fe2926",
+      "commit_date": "2026-11-12T19:55:40+01:00",
+      "ts": "2026-11-12T18:55:40Z",
+      "message": "Charts: resolved data and rendering are cached between frames (#1139) (#1140)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-05",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-12T18:33:29+00:00"
+  "updated_at": "2026-11-12T19:42:15+00:00"
 }

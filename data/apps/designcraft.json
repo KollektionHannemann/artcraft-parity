@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/designcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "e9cc26d",
-  "latest_commit_date": "2026-11-12T19:31:45+01:00",
-  "latest_message": "Type: Justify All Lines ⇧⌘F, Em Space ⇧⌘M, En Space ⇧⌘N and Paragraph Rules ⌥⌘J (#2664)",
+  "latest_commit": "1c3552d",
+  "latest_commit_date": "2026-11-12T20:11:53+01:00",
+  "latest_message": "Compose: an edit composes only the paragraphs it can change (#2699)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -312,6 +312,10 @@
     "progress": [
       {
         "date": "2026-11-12",
+        "text": "· An edit of a long threaded story composes the paragraphs it can change and copies the other lines from the composition before the edit; every typed character composed the whole story. In a 240-paragraph story a typed character composes 3 paragraphs (240 before). An edit that moves lines into other frames composes on until a paragraph starts in the same frame and place as before, or to the story's end, and stories with footnotes, tables, anchored objects, balanced columns or keep options that move lines are composed whole. No readiness percentage change."
+      },
+      {
+        "date": "2026-11-12",
         "text": "· Type shortcuts: Justify All Lines ⇧⌘F, Insert White Space › Em Space ⇧⌘M and En Space ⇧⌘N (shown in the menu, enabled at an insertion point), Paragraph Rules… ⌥⌘J (shown in the Paragraph panel menu). On the Mac a menu-bar insert (Em/En Space, Current Page Number) no longer types into the document while a text field has focus, a dialog or Quick Apply is open, or an input method is composing. An alignment the paragraphs already have records no undo step (#1138). No readiness percentage change."
       },
       {
@@ -465,10 +469,6 @@
       {
         "date": "2026-10-24",
         "text": "· Quick Apply and the application bar's search leave out the interface commands that failed or reset a setting when chosen there: those that need a workspace, a command and shortcut, a menu item, a panel, a window edge, an app page, a recent file or a swatch they can't give them, a Contextual Task Bar place, and Interface Color Theme, UI Scaling, Reset Shortcuts, the flattener preset, Screen Mode and Zoom To, which without a value switched to the dark theme, set 100%, cleared every custom shortcut or the preset, or went to Normal mode or 100% zoom. Each stays in the menu, panel or dialog that gives it the value. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "· EPUB Export Options › Split Document, a dialog before File › Export EPUB… saves (document.epubSplit, stored with the document): off, a single paragraph style, or based on paragraph style export tags, with Paragraph Style Options › Export Tagging's Split Document flag marking those styles. A reflowable EPUB is one content file unless Split Document is on; the split before each top-level h1 from #791 is gone. A split before a list item or preformatted line no longer leaves an unclosed list or block in a content file. IDML import and export keep the setting and the flag, and Load Styles the flag. No readiness percentage change."
       }
     ]
   },
@@ -477,7 +477,7 @@
     "value_since": "2026-10-10T18:09:17Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 199,
+    "revisions_since": 200,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -485,39 +485,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 200,
-    "revisions_7d": 9,
+    "revisions": 201,
+    "revisions_7d": 10,
     "last_revision": {
-      "ts": "2026-11-12T18:31:45Z",
+      "ts": "2026-11-12T19:11:53Z",
       "kind": "content",
-      "commit": "e9cc26d",
-      "commit_full": "e9cc26df8aafe3298c68ad32b92bc8efb76ddcd4",
-      "message": "Type: Justify All Lines ⇧⌘F, Em Space ⇧⌘M, En Space ⇧⌘N and Paragraph Rules ⌥⌘J (#2664)"
+      "commit": "1c3552d",
+      "commit_full": "1c3552de8b4f1885b5b2bc0f8b9063f95b64cf68",
+      "message": "Compose: an edit composes only the paragraphs it can change (#2699)"
     },
     "last_update": {
-      "ts": "2026-11-12T18:31:45Z",
+      "ts": "2026-11-12T19:11:53Z",
       "kind": "content",
-      "commit": "e9cc26d",
-      "commit_full": "e9cc26df8aafe3298c68ad32b92bc8efb76ddcd4",
-      "message": "Type: Justify All Lines ⇧⌘F, Em Space ⇧⌘M, En Space ⇧⌘N and Paragraph Rules ⌥⌘J (#2664)"
+      "commit": "1c3552d",
+      "commit_full": "1c3552de8b4f1885b5b2bc0f8b9063f95b64cf68",
+      "message": "Compose: an edit composes only the paragraphs it can change (#2699)"
     },
     "self_reported": "2026-11-06"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.3,
+    "score": 19.4,
     "active_days_7d": 7,
-    "changes_7d": 84,
-    "changes_14d": 237,
+    "changes_7d": 85,
+    "changes_14d": 238,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-12T18:40:26Z",
-      "commit": "113d196",
-      "commit_full": "113d196168cb857fefad89dea21e943a5a636e75",
-      "subject": "Render: a feathered object's bevel and inner effects fade with it (#2668)"
+      "ts": "2026-11-12T19:11:53Z",
+      "commit": "1c3552d",
+      "commit_full": "1c3552de8b4f1885b5b2bc0f8b9063f95b64cf68",
+      "subject": "Compose: an edit composes only the paragraphs it can change (#2699)"
     },
-    "last_commit_ts": "2026-11-12T18:40:26Z",
+    "last_commit_ts": "2026-11-12T19:11:53Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       37,
@@ -533,7 +533,7 @@
       6,
       5,
       21,
-      37
+      38
     ],
     "days": [
       {
@@ -1286,9 +1286,13 @@
       },
       {
         "d": "2026-11-12",
-        "code": 37,
+        "code": 38,
         "other": 0,
         "samples": [
+          {
+            "commit": "1c3552d",
+            "subject": "Compose: an edit composes only the paragraphs it can change (#2699)"
+          },
           {
             "commit": "113d196",
             "subject": "Render: a feathered object's bevel and inner effects fade with it (#2668)"
@@ -1296,10 +1300,6 @@
           {
             "commit": "17b7460",
             "subject": "Text Wrap: Alpha Channel contours follow a transparent image's visible pixels (#2663)"
-          },
-          {
-            "commit": "e9cc26d",
-            "subject": "Type: Justify All Lines ⇧⌘F, Em Space ⇧⌘M, En Space ⇧⌘N and Paragraph Rules ⌥⌘J (#2664)"
           }
         ]
       }
@@ -6112,7 +6112,30 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "1c3552d",
+      "commit_full": "1c3552de8b4f1885b5b2bc0f8b9063f95b64cf68",
+      "commit_date": "2026-11-12T20:11:53+01:00",
+      "ts": "2026-11-12T19:11:53Z",
+      "message": "Compose: an edit composes only the paragraphs it can change (#2699)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-06",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-12T18:44:06+00:00"
+  "updated_at": "2026-11-12T19:42:01+00:00"
 }
