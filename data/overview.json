@@ -49,6 +49,17 @@
   ],
   "latest_events": [
     {
+      "id": "solidcraft",
+      "name": "SolidCraft",
+      "type": "release",
+      "ts": "2026-11-12T03:10:48Z",
+      "tag": "v0.40.1",
+      "kind": "minor",
+      "changes": null,
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.40.1",
+      "prerelease": false
+    },
+    {
       "id": "pdfcraft",
       "name": "PdfCraft",
       "type": "release",
@@ -456,17 +467,6 @@
       "prerelease": false
     },
     {
-      "id": "solidcraft",
-      "name": "SolidCraft",
-      "type": "release",
-      "ts": "2026-11-10T14:59:32Z",
-      "tag": "v0.40.0-nightly.20261110.117.1",
-      "kind": "minor",
-      "changes": 424,
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.40.0-nightly.20261110.117.1",
-      "prerelease": true
-    },
-    {
       "id": "effectcraft",
       "name": "EffectCraft",
       "type": "release",
@@ -488,7 +488,7 @@
   "release_waves": [
     {
       "day": "2026-11-12",
-      "apps": 16,
+      "apps": 17,
       "changes": 405,
       "largest": {
         "id": "craft-anything",
@@ -653,18 +653,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 33.7,
+        "score": 33.9,
         "active_days_7d": 7,
-        "changes_7d": 639,
-        "changes_14d": 1443,
+        "changes_7d": 647,
+        "changes_14d": 1451,
         "housekeeping_7d": 31,
         "last_code_change": {
-          "ts": "2026-11-12T02:32:21Z",
-          "commit": "7dd71a6",
-          "commit_full": "7dd71a6972dc2d528a77ced040164a0acbb7488c",
-          "subject": "Type: Mojikumi spacing at line ends counts when lines break (#6708)"
+          "ts": "2026-11-12T03:06:12Z",
+          "commit": "6b8be09",
+          "commit_full": "6b8be096996da4c321ac000fb30d7cf2235cfabf",
+          "subject": "Edit: a command that ends a drag keeps its unapplied preview (#6688)"
         },
-        "last_commit_ts": "2026-11-12T02:32:21Z",
+        "last_commit_ts": "2026-11-12T03:06:12Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           99,
@@ -680,7 +680,7 @@
           81,
           81,
           123,
-          53
+          61
         ]
       },
       "release": {
@@ -1341,18 +1341,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 18.0,
+        "score": 18.9,
         "active_days_7d": 6,
-        "changes_7d": 159,
-        "changes_14d": 361,
+        "changes_7d": 177,
+        "changes_14d": 379,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-12T02:37:23Z",
-          "commit": "c2d61d3",
-          "commit_full": "c2d61d36bb209fa5f16ae6f69509211fa2ca376f",
-          "subject": "M12: a sticky's text keeps its size and the note grows taller (#2157) (#2164)"
+          "ts": "2026-11-12T03:15:18Z",
+          "commit": "e7de819",
+          "commit_full": "e7de819ab26e5518df662906f2fc82b7870edcd7",
+          "subject": "i18n(sv): translate 69 new strings (#2069)"
         },
-        "last_commit_ts": "2026-11-12T02:37:23Z",
+        "last_commit_ts": "2026-11-12T03:15:18Z",
         "repo_since": "2026-10-09T15:38:50Z",
         "window": [
           100,
@@ -1368,7 +1368,7 @@
           6,
           2,
           17,
-          20
+          38
         ]
       },
       "release": {
@@ -2444,18 +2444,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.1,
+        "score": 14.6,
         "active_days_7d": 7,
-        "changes_7d": 45,
-        "changes_14d": 156,
+        "changes_7d": 46,
+        "changes_14d": 157,
         "housekeeping_7d": 9,
         "last_code_change": {
-          "ts": "2026-11-12T01:52:04Z",
-          "commit": "b1806e4",
-          "commit_full": "b1806e401006d6e2fb042e29714539e21ef82bc6",
-          "subject": "Add an offset slider to mesh-map generators (#231)"
+          "ts": "2026-11-12T03:22:41Z",
+          "commit": "42c8ea5",
+          "commit_full": "42c8ea5b3c3a4cabdda03f535355cd61ac756479",
+          "subject": "Migrate TextureCraft UI translations to shared craft-i18n (#427)"
         },
-        "last_commit_ts": "2026-11-12T01:52:04Z",
+        "last_commit_ts": "2026-11-12T03:22:41Z",
         "repo_since": "2026-10-14T18:33:13Z",
         "window": [
           0,
@@ -2471,7 +2471,7 @@
           7,
           10,
           10,
-          1
+          2
         ]
       },
       "release": {
@@ -2660,18 +2660,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 26.5,
+        "score": 27.1,
         "active_days_7d": 7,
-        "changes_7d": 506,
-        "changes_14d": 837,
+        "changes_7d": 508,
+        "changes_14d": 839,
         "housekeeping_7d": 36,
         "last_code_change": {
-          "ts": "2026-11-12T02:26:47Z",
-          "commit": "12aad97",
-          "commit_full": "12aad97757d692e8dbc8af03ceb60c6b44f53339",
-          "subject": "Keep the sources of a source map refused for bad mappings or section offsets (R3.12) (#1717)"
+          "ts": "2026-11-12T03:25:38Z",
+          "commit": "a17b072",
+          "commit_full": "a17b072bb0360582d1d476a8e567753493e1fea6",
+          "subject": "Build the Unix-only test helper one_turn only on Unix, so clippy passes on Windows (R5.2) (#1719)"
         },
-        "last_commit_ts": "2026-11-12T02:26:47Z",
+        "last_commit_ts": "2026-11-12T03:25:38Z",
         "repo_since": "2026-10-31T14:52:14Z",
         "window": [
           0,
@@ -2687,7 +2687,7 @@
           157,
           111,
           100,
-          3
+          5
         ]
       },
       "release": {
@@ -2768,18 +2768,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 34.0,
+        "score": 34.2,
         "active_days_7d": 7,
-        "changes_7d": 764,
-        "changes_14d": 1766,
+        "changes_7d": 768,
+        "changes_14d": 1770,
         "housekeeping_7d": 36,
         "last_code_change": {
-          "ts": "2026-11-12T02:04:34Z",
-          "commit": "9377222",
-          "commit_full": "937722290a26088db14e56a8fe2155d026f04900",
-          "subject": "solidcore-ops: every kernel offset refusal has a named reason, no text catch-all (#15035) (#15160)"
+          "ts": "2026-11-12T02:43:36Z",
+          "commit": "01c86d9",
+          "commit_full": "01c86d9cb16b59f6d80bf7d93ff22edb6ede471d",
+          "subject": "solidcore: affine maps from an application's numbers, and ops::affine (#15239)"
         },
-        "last_commit_ts": "2026-11-12T02:04:34Z",
+        "last_commit_ts": "2026-11-12T02:43:36Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           208,
@@ -2795,14 +2795,14 @@
           151,
           239,
           149,
-          26
+          30
         ]
       },
       "release": {
-        "tag": "v0.30.1",
-        "name": "v0.30.1",
-        "ts": "2026-11-02T17:21:52Z",
-        "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.30.1",
+        "tag": "v0.40.1",
+        "name": "SolidCraft v0.40.1",
+        "ts": "2026-11-12T03:10:48Z",
+        "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.40.1",
         "changes": null,
         "new_contributors": null,
         "platforms": [
@@ -2813,7 +2813,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "patch"
+        "kind": "minor"
       },
       "series": [],
       "history_len": 0
@@ -2864,18 +2864,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.9,
+        "score": 14.3,
         "active_days_7d": 6,
-        "changes_7d": 86,
-        "changes_14d": 86,
+        "changes_7d": 88,
+        "changes_14d": 88,
         "housekeeping_7d": 10,
         "last_code_change": {
-          "ts": "2026-11-12T02:23:48Z",
-          "commit": "07e5bee",
-          "commit_full": "07e5bee2ae653be54244e9bf3f07246043345d67",
-          "subject": "feat(a11y): stage elements, timeline frames, keyboard menu bar, system contrast (M8) (#188)"
+          "ts": "2026-11-12T03:12:51Z",
+          "commit": "3c3c996",
+          "commit_full": "3c3c99682afbc683c30ea2adc03f19d075002775",
+          "subject": "feat(text): dynamic and input text fields (M5) (#191)"
         },
-        "last_commit_ts": "2026-11-12T02:23:48Z",
+        "last_commit_ts": "2026-11-12T03:12:51Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
           0,
@@ -2891,7 +2891,7 @@
           20,
           19,
           18,
-          6
+          8
         ]
       },
       "release": {
@@ -2959,18 +2959,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.9,
+        "score": 14.3,
         "active_days_7d": 6,
-        "changes_7d": 86,
-        "changes_14d": 86,
+        "changes_7d": 88,
+        "changes_14d": 88,
         "housekeeping_7d": 10,
         "last_code_change": {
-          "ts": "2026-11-12T02:23:48Z",
-          "commit": "07e5bee",
-          "commit_full": "07e5bee2ae653be54244e9bf3f07246043345d67",
-          "subject": "feat(a11y): stage elements, timeline frames, keyboard menu bar, system contrast (M8) (#188)"
+          "ts": "2026-11-12T03:12:51Z",
+          "commit": "3c3c996",
+          "commit_full": "3c3c99682afbc683c30ea2adc03f19d075002775",
+          "subject": "feat(text): dynamic and input text fields (M5) (#191)"
         },
-        "last_commit_ts": "2026-11-12T02:23:48Z",
+        "last_commit_ts": "2026-11-12T03:12:51Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
           0,
@@ -2986,7 +2986,7 @@
           20,
           19,
           18,
-          6
+          8
         ]
       },
       "release": {
@@ -3024,5 +3024,5 @@
       }
     ]
   },
-  "generated_at": "2026-11-12T02:39:30+00:00"
+  "generated_at": "2026-11-12T03:39:36+00:00"
 }

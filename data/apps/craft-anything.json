@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 26.5,
+    "score": 27.1,
     "active_days_7d": 7,
-    "changes_7d": 506,
-    "changes_14d": 837,
+    "changes_7d": 508,
+    "changes_14d": 839,
     "housekeeping_7d": 36,
     "last_code_change": {
-      "ts": "2026-11-12T02:26:47Z",
-      "commit": "12aad97",
-      "commit_full": "12aad97757d692e8dbc8af03ceb60c6b44f53339",
-      "subject": "Keep the sources of a source map refused for bad mappings or section offsets (R3.12) (#1717)"
+      "ts": "2026-11-12T03:25:38Z",
+      "commit": "a17b072",
+      "commit_full": "a17b072bb0360582d1d476a8e567753493e1fea6",
+      "subject": "Build the Unix-only test helper one_turn only on Unix, so clippy passes on Windows (R5.2) (#1719)"
     },
-    "last_commit_ts": "2026-11-12T02:26:47Z",
+    "last_commit_ts": "2026-11-12T03:25:38Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       157,
       111,
       100,
-      3
+      5
     ],
     "days": [
       {
@@ -318,20 +318,20 @@
       },
       {
         "d": "2026-11-12",
-        "code": 3,
+        "code": 5,
         "other": 0,
         "samples": [
           {
+            "commit": "a17b072",
+            "subject": "Build the Unix-only test helper one_turn only on Unix, so clippy passes on Windows (R5.2) (#1719)"
+          },
+          {
+            "commit": "475aab6",
+            "subject": "Start a run from the project as it is on disk, not the copy it was handed (R2.9) (#1718)"
+          },
+          {
             "commit": "12aad97",
             "subject": "Keep the sources of a source map refused for bad mappings or section offsets (R3.12) (#1717)"
-          },
-          {
-            "commit": "438c800",
-            "subject": "Report sources of unreadable source maps as uncertain, not missing (R3.12) (#1708)"
-          },
-          {
-            "commit": "5b3f1d8",
-            "subject": "Add Help > Check for Updates and bump to 0.6.1 (#1706)"
           }
         ]
       }
@@ -4430,5 +4430,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-12T02:39:05+00:00"
+  "updated_at": "2026-11-12T03:39:14+00:00"
 }

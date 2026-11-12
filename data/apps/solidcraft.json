@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 34.0,
+    "score": 34.2,
     "active_days_7d": 7,
-    "changes_7d": 764,
-    "changes_14d": 1766,
+    "changes_7d": 768,
+    "changes_14d": 1770,
     "housekeeping_7d": 36,
     "last_code_change": {
-      "ts": "2026-11-12T02:04:34Z",
-      "commit": "9377222",
-      "commit_full": "937722290a26088db14e56a8fe2155d026f04900",
-      "subject": "solidcore-ops: every kernel offset refusal has a named reason, no text catch-all (#15035) (#15160)"
+      "ts": "2026-11-12T02:43:36Z",
+      "commit": "01c86d9",
+      "commit_full": "01c86d9cb16b59f6d80bf7d93ff22edb6ede471d",
+      "subject": "solidcore: affine maps from an application's numbers, and ops::affine (#15239)"
     },
-    "last_commit_ts": "2026-11-12T02:04:34Z",
+    "last_commit_ts": "2026-11-12T02:43:36Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       208,
@@ -93,7 +93,7 @@
       151,
       239,
       149,
-      26
+      30
     ],
     "days": [
       {
@@ -782,26 +782,43 @@
       },
       {
         "d": "2026-11-12",
-        "code": 26,
+        "code": 30,
         "other": 2,
         "samples": [
           {
-            "commit": "9377222",
-            "subject": "solidcore-ops: every kernel offset refusal has a named reason, no text catch-all (#15035) (#15160)"
+            "commit": "01c86d9",
+            "subject": "solidcore: affine maps from an application's numbers, and ops::affine (#15239)"
           },
           {
-            "commit": "fdc13ea",
-            "subject": "Split Face: a loops option splits a face along a sketch's closed shapes (#15225)"
+            "commit": "e64c6af",
+            "subject": "solidcore: a line skew to the revolve axis sweeps its hyperboloid, not a cone (#15209)"
           },
           {
-            "commit": "fa3d016",
-            "subject": "solidcore: offset reach: a meeting's distance takes the trace's |u| (#14830) (#15201)"
+            "commit": "295a5e1",
+            "subject": "solidcraft-control: the control client, shared; the MCP bridge on top of it (#15125)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.40.1",
+      "name": "SolidCraft v0.40.1",
+      "ts": "2026-11-12T03:10:48Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.40.1",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.40.0",
       "name": "SolidCraft v0.40.0",
@@ -977,23 +994,6 @@
       "name": "v0.27.1",
       "ts": "2026-10-30T04:24:22Z",
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.27.1",
-      "changes": null,
-      "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "patch"
-    },
-    {
-      "tag": "v0.27.0",
-      "name": "v0.27.0",
-      "ts": "2026-10-30T00:54:39Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.27.0",
       "changes": null,
       "new_contributors": null,
       "platforms": [
@@ -2382,5 +2382,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-12T02:39:24+00:00"
+  "updated_at": "2026-11-12T03:39:31+00:00"
 }
