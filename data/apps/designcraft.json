@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/designcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "3ebeb2a",
-  "latest_commit_date": "2026-11-12T15:25:59-05:00",
-  "latest_message": "Object styles: a style sets its frames' paragraph styles and Text Frame General Options (#2669)",
+  "latest_commit": "520aeee",
+  "latest_commit_date": "2026-11-12T16:09:26-05:00",
+  "latest_message": "Text: Text Frame Options open from the Type tool and change the frame holding the caret (#2652)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -324,6 +324,10 @@
       },
       {
         "date": "2026-11-12",
+        "text": "· Object › Text Frame Options… (Cmd+B) opens with the Type tool in a frame, so inset spacing and vertical justification can be changed while typing; it changes the frame that shows the insertion point, or every frame that holds part of the selected text (#2396). No readiness percentage change."
+      },
+      {
+        "date": "2026-11-12",
         "text": "· An idle canvas frame no longer does work for the spreads out of view (part of #1343): page shadows, paper, guides, margins, frame edges and overset marks are painted for the spreads and objects in view, and only their stories are looked up. In a 400-page document with two frames a page, an idle frame painted 5,099 shapes and looked up 400 stories; it now paints 311 and looks up 1, the same as in a 4-page document. No readiness percentage change."
       },
       {
@@ -465,10 +469,6 @@
       {
         "date": "2026-10-24",
         "text": "· Renaming a paragraph or character style, or moving it into a style group, keeps its Export Tagging under the new name, and undo puts it back under the old one. Deleting a tagged style drops its tagging and leaves the replacement style's own tagging as it was. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "· Quick Apply and the application bar's search leave out the interface commands that failed or reset a setting when chosen there: those that need a workspace, a command and shortcut, a menu item, a panel, a window edge, an app page, a recent file or a swatch they can't give them, a Contextual Task Bar place, and Interface Color Theme, UI Scaling, Reset Shortcuts, the flattener preset, Screen Mode and Zoom To, which without a value switched to the dark theme, set 100%, cleared every custom shortcut or the preset, or went to Normal mode or 100% zoom. Each stays in the menu, panel or dialog that gives it the value. No readiness percentage change."
       }
     ]
   },
@@ -477,7 +477,7 @@
     "value_since": "2026-10-10T18:09:17Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 201,
+    "revisions_since": 203,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -485,39 +485,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 202,
-    "revisions_7d": 11,
+    "revisions": 204,
+    "revisions_7d": 13,
     "last_revision": {
-      "ts": "2026-11-12T20:25:59Z",
+      "ts": "2026-11-12T21:09:26Z",
       "kind": "content",
-      "commit": "3ebeb2a",
-      "commit_full": "3ebeb2ac9619ffae675b4fad8db08769d511b58e",
-      "message": "Object styles: a style sets its frames' paragraph styles and Text Frame General Options (#2669)"
+      "commit": "520aeee",
+      "commit_full": "520aeeefe1a8afec3cbeca9ec9ce420d96af8c7c",
+      "message": "Text: Text Frame Options open from the Type tool and change the frame holding the caret (#2652)"
     },
     "last_update": {
-      "ts": "2026-11-12T20:25:59Z",
+      "ts": "2026-11-12T21:09:26Z",
       "kind": "content",
-      "commit": "3ebeb2a",
-      "commit_full": "3ebeb2ac9619ffae675b4fad8db08769d511b58e",
-      "message": "Object styles: a style sets its frames' paragraph styles and Text Frame General Options (#2669)"
+      "commit": "520aeee",
+      "commit_full": "520aeeefe1a8afec3cbeca9ec9ce420d96af8c7c",
+      "message": "Text: Text Frame Options open from the Type tool and change the frame holding the caret (#2652)"
     },
     "self_reported": "2026-11-06"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.4,
+    "score": 19.6,
     "active_days_7d": 7,
-    "changes_7d": 87,
-    "changes_14d": 240,
+    "changes_7d": 91,
+    "changes_14d": 244,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-12T20:25:59Z",
-      "commit": "3ebeb2a",
-      "commit_full": "3ebeb2ac9619ffae675b4fad8db08769d511b58e",
-      "subject": "Object styles: a style sets its frames' paragraph styles and Text Frame General Options (#2669)"
+      "ts": "2026-11-12T21:09:26Z",
+      "commit": "520aeee",
+      "commit_full": "520aeeefe1a8afec3cbeca9ec9ce420d96af8c7c",
+      "subject": "Text: Text Frame Options open from the Type tool and change the frame holding the caret (#2652)"
     },
-    "last_commit_ts": "2026-11-12T20:25:59Z",
+    "last_commit_ts": "2026-11-12T21:09:26Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       37,
@@ -533,7 +533,7 @@
       6,
       5,
       21,
-      40
+      44
     ],
     "days": [
       {
@@ -1286,20 +1286,20 @@
       },
       {
         "d": "2026-11-12",
-        "code": 40,
+        "code": 44,
         "other": 0,
         "samples": [
           {
-            "commit": "3ebeb2a",
-            "subject": "Object styles: a style sets its frames' paragraph styles and Text Frame General Options (#2669)"
+            "commit": "520aeee",
+            "subject": "Text: Text Frame Options open from the Type tool and change the frame holding the caret (#2652)"
           },
           {
-            "commit": "6790d00",
-            "subject": "Place: images come in at the resolution stored in the file (#2651)"
+            "commit": "9fe0dd5",
+            "subject": "Recovery: the timer writes recovery data on a background thread (#2666)"
           },
           {
-            "commit": "1c3552d",
-            "subject": "Compose: an edit composes only the paragraphs it can change (#2699)"
+            "commit": "7362fff",
+            "subject": "Canvas: moving an object with a drop shadow repaints only its area (#2654)"
           }
         ]
       }
@@ -6158,7 +6158,53 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "9fe0dd5",
+      "commit_full": "9fe0dd51971d90813439f08482adbd52962aef74",
+      "commit_date": "2026-11-12T16:01:55-05:00",
+      "ts": "2026-11-12T21:01:55Z",
+      "message": "Recovery: the timer writes recovery data on a background thread (#2666)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-06",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "520aeee",
+      "commit_full": "520aeeefe1a8afec3cbeca9ec9ce420d96af8c7c",
+      "commit_date": "2026-11-12T16:09:26-05:00",
+      "ts": "2026-11-12T21:09:26Z",
+      "message": "Text: Text Frame Options open from the Type tool and change the frame holding the caret (#2652)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-06",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-12T20:36:36+00:00"
+  "updated_at": "2026-11-12T21:33:55+00:00"
 }
