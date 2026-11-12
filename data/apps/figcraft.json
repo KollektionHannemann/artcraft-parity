@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/figcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "a2e8743",
-  "latest_commit_date": "2026-11-09T15:44:02+01:00",
-  "latest_message": "Naming: Developer Mode follow-ups (#2165)",
+  "latest_commit": "20f02bb",
+  "latest_commit_date": "2026-11-12T00:47:05+01:00",
+  "latest_message": "M12: Boards: mind maps in the document and engine (#2226, step 1) (#2228)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Figma Design (desktop app 126.10.7)",
-    "last_updated": "2026-11-07",
+    "last_updated": "2026-11-10",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -505,7 +505,7 @@
     "value_since": "2026-10-11T21:41:28Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 226,
+    "revisions_since": 227,
     "hours_since": {
       "from": [
         273,
@@ -560,42 +560,41 @@
     }
   },
   "roadmap": {
-    "revisions": 275,
-    "revisions_7d": 22,
+    "revisions": 276,
+    "revisions_7d": 18,
     "last_revision": {
-      "ts": "2026-11-09T14:44:02Z",
+      "ts": "2026-11-11T23:47:05Z",
       "kind": "content",
-      "commit": "a2e8743",
-      "commit_full": "a2e87433d8bda2b0c909587da08cb27c51e3b17e",
-      "message": "Naming: Developer Mode follow-ups (#2165)"
+      "commit": "20f02bb",
+      "commit_full": "20f02bb7c136d8d20c080863c1b065355d725bc0",
+      "message": "M12: Boards: mind maps in the document and engine (#2226, step 1) (#2228)"
     },
     "last_update": {
-      "ts": "2026-11-09T14:44:02Z",
+      "ts": "2026-11-11T23:47:05Z",
       "kind": "content",
-      "commit": "a2e8743",
-      "commit_full": "a2e87433d8bda2b0c909587da08cb27c51e3b17e",
-      "message": "Naming: Developer Mode follow-ups (#2165)"
+      "commit": "20f02bb",
+      "commit_full": "20f02bb7c136d8d20c080863c1b065355d725bc0",
+      "message": "M12: Boards: mind maps in the document and engine (#2226, step 1) (#2228)"
     },
-    "self_reported": "2026-11-07"
+    "self_reported": "2026-11-10"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.0,
+    "score": 14.6,
     "active_days_7d": 6,
-    "changes_7d": 146,
-    "changes_14d": 447,
+    "changes_7d": 140,
+    "changes_14d": 342,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-11T20:55:11Z",
-      "commit": "3b9bf8c",
-      "commit_full": "3b9bf8c9a27045bc0109af75a9085981e7b62c02",
-      "subject": "batch: bound how much referenced data one step's params copy (#2257)"
+      "ts": "2026-11-12T00:01:50Z",
+      "commit": "e2b6b4c",
+      "commit_full": "e2b6b4cd877cf403135e78645dbaa555e7adbf49",
+      "subject": "chore: bump to 0.18.1 for the Flatpak updater patch release (#2279)"
     },
-    "last_commit_ts": "2026-11-11T22:27:43Z",
+    "last_commit_ts": "2026-11-12T00:01:50Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
-      107,
       100,
       27,
       4,
@@ -608,7 +607,8 @@
       2,
       6,
       2,
-      16
+      17,
+      1
     ],
     "days": [
       {
@@ -1206,9 +1206,13 @@
       },
       {
         "d": "2026-11-11",
-        "code": 16,
+        "code": 17,
         "other": 3,
         "samples": [
+          {
+            "commit": "20f02bb",
+            "subject": "M12: Boards: mind maps in the document and engine (#2226, step 1) (#2228)"
+          },
           {
             "commit": "3b9bf8c",
             "subject": "batch: bound how much referenced data one step's params copy (#2257)"
@@ -1216,10 +1220,17 @@
           {
             "commit": "24cf703",
             "subject": "M5: Locked layers follow Figma's rules: no nudge, a locked parent's children stay locked (#1560) (#2219)"
-          },
+          }
+        ]
+      },
+      {
+        "d": "2026-11-12",
+        "code": 1,
+        "other": 0,
+        "samples": [
           {
-            "commit": "898bfc2",
-            "subject": "Fix Flatpak updates and bump to 0.17.1 (#2267)"
+            "commit": "e2b6b4c",
+            "subject": "chore: bump to 0.18.1 for the Flatpak updater patch release (#2279)"
           }
         ]
       }
@@ -8029,7 +8040,30 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "20f02bb",
+      "commit_full": "20f02bb7c136d8d20c080863c1b065355d725bc0",
+      "commit_date": "2026-11-12T00:47:05+01:00",
+      "ts": "2026-11-11T23:47:05Z",
+      "message": "M12: Boards: mind maps in the document and engine (#2226, step 1) (#2228)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-10",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T23:14:30+00:00"
+  "updated_at": "2026-11-12T00:07:55+00:00"
 }

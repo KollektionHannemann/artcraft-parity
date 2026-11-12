@@ -49,6 +49,39 @@
   ],
   "latest_events": [
     {
+      "id": "deckcraft",
+      "name": "DeckCraft",
+      "type": "release",
+      "ts": "2026-11-12T00:07:42Z",
+      "tag": "v0.18.1",
+      "kind": "patch",
+      "changes": 1,
+      "url": "https://github.com/storytold/deckcraft/releases/tag/v0.18.1",
+      "prerelease": false
+    },
+    {
+      "id": "gridcraft",
+      "name": "GridCraft",
+      "type": "release",
+      "ts": "2026-11-12T00:06:29Z",
+      "tag": "v0.19.1",
+      "kind": "patch",
+      "changes": 1,
+      "url": "https://github.com/storytold/gridcraft/releases/tag/v0.19.1",
+      "prerelease": false
+    },
+    {
+      "id": "wordcraft",
+      "name": "WordCraft",
+      "type": "release",
+      "ts": "2026-11-12T00:04:47Z",
+      "tag": "v0.18.1",
+      "kind": "patch",
+      "changes": 4,
+      "url": "https://github.com/storytold/wordcraft/releases/tag/v0.18.1",
+      "prerelease": false
+    },
+    {
       "id": "figcraft",
       "name": "FigCraft",
       "type": "release",
@@ -450,42 +483,20 @@
       "changes": 39,
       "url": "https://github.com/storytold/filmcraft/releases/tag/v0.19.0",
       "prerelease": false
-    },
-    {
-      "id": "texturecraft",
-      "name": "TextureCraft",
-      "type": "release",
-      "ts": "2026-11-09T11:52:51Z",
-      "tag": "v0.5.0",
-      "kind": "minor",
-      "changes": 19,
-      "url": "https://github.com/storytold/texturecraft/releases/tag/v0.5.0",
-      "prerelease": false
-    },
-    {
-      "id": "gridcraft",
-      "name": "GridCraft",
-      "type": "release",
-      "ts": "2026-11-09T11:51:15Z",
-      "tag": "v0.18.0",
-      "kind": "minor",
-      "changes": 27,
-      "url": "https://github.com/storytold/gridcraft/releases/tag/v0.18.0",
-      "prerelease": false
-    },
-    {
-      "id": "materialcraft",
-      "name": "MaterialCraft",
-      "type": "release",
-      "ts": "2026-11-09T11:49:44Z",
-      "tag": "v0.3.0",
-      "kind": "minor",
-      "changes": 18,
-      "url": "https://github.com/storytold/materialcraft/releases/tag/v0.3.0",
-      "prerelease": false
     }
   ],
   "release_waves": [
+    {
+      "day": "2026-11-12",
+      "apps": 3,
+      "changes": 6,
+      "largest": {
+        "id": "wordcraft",
+        "name": "WordCraft",
+        "tag": "v0.18.1",
+        "changes": 4
+      }
+    },
     {
       "day": "2026-11-11",
       "apps": 17,
@@ -551,17 +562,6 @@
         "name": "DesignCraft",
         "tag": "v0.17.1",
         "changes": 82
-      }
-    },
-    {
-      "day": "2026-11-03",
-      "apps": 15,
-      "changes": 488,
-      "largest": {
-        "id": "vectorcraft",
-        "name": "VectorCraft",
-        "tag": "v0.21.0",
-        "changes": 122
       }
     }
   ],
@@ -633,7 +633,7 @@
       },
       "roadmap": {
         "revisions": 223,
-        "revisions_7d": 13,
+        "revisions_7d": 10,
         "last_revision": {
           "ts": "2026-11-10T17:10:59Z",
           "kind": "content",
@@ -653,11 +653,11 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 34.7,
-        "active_days_7d": 7,
-        "changes_7d": 707,
-        "changes_14d": 1570,
-        "housekeeping_7d": 33,
+        "score": 28.0,
+        "active_days_7d": 6,
+        "changes_7d": 586,
+        "changes_14d": 1390,
+        "housekeeping_7d": 30,
         "last_code_change": {
           "ts": "2026-11-11T21:11:34Z",
           "commit": "566f720",
@@ -667,7 +667,6 @@
         "last_commit_ts": "2026-11-11T22:04:49Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
-          180,
           99,
           126,
           41,
@@ -680,7 +679,8 @@
           199,
           81,
           81,
-          123
+          123,
+          0
         ]
       },
       "release": {
@@ -762,7 +762,7 @@
       },
       "roadmap": {
         "revisions": 18,
-        "revisions_7d": 2,
+        "revisions_7d": 1,
         "last_revision": {
           "ts": "2026-11-07T14:56:03Z",
           "kind": "content",
@@ -782,11 +782,11 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.4,
-        "active_days_7d": 7,
-        "changes_7d": 92,
+        "score": 11.8,
+        "active_days_7d": 6,
+        "changes_7d": 40,
         "changes_14d": 129,
-        "housekeeping_7d": 8,
+        "housekeeping_7d": 6,
         "last_code_change": {
           "ts": "2026-11-11T20:14:21Z",
           "commit": "8ef3598",
@@ -796,7 +796,6 @@
         "last_commit_ts": "2026-11-11T22:04:22Z",
         "repo_since": "2026-09-30T14:04:12Z",
         "window": [
-          0,
           3,
           6,
           0,
@@ -809,7 +808,8 @@
           1,
           4,
           6,
-          9
+          9,
+          0
         ]
       },
       "release": {
@@ -903,7 +903,7 @@
       },
       "roadmap": {
         "revisions": 593,
-        "revisions_7d": 105,
+        "revisions_7d": 90,
         "last_revision": {
           "ts": "2026-11-11T06:32:14Z",
           "kind": "content",
@@ -922,12 +922,12 @@
       },
       "milestone": null,
       "activity": {
-        "level": "buzzing",
-        "score": 21.2,
-        "active_days_7d": 7,
-        "changes_7d": 193,
-        "changes_14d": 334,
-        "housekeeping_7d": 11,
+        "level": "active",
+        "score": 17.3,
+        "active_days_7d": 6,
+        "changes_7d": 150,
+        "changes_14d": 332,
+        "housekeeping_7d": 9,
         "last_code_change": {
           "ts": "2026-11-11T19:56:11Z",
           "commit": "a58b41a",
@@ -937,7 +937,6 @@
         "last_commit_ts": "2026-11-11T22:04:54Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
-          2,
           46,
           17,
           14,
@@ -950,16 +949,17 @@
           90,
           13,
           5,
-          19
+          19,
+          0
         ]
       },
       "release": {
-        "tag": "v0.18.0",
-        "name": "WordCraft v0.18.0",
-        "ts": "2026-11-11T19:12:52Z",
-        "url": "https://github.com/storytold/wordcraft/releases/tag/v0.18.0",
-        "changes": 35,
-        "new_contributors": 1,
+        "tag": "v0.18.1",
+        "name": "WordCraft v0.18.1",
+        "ts": "2026-11-12T00:04:47Z",
+        "url": "https://github.com/storytold/wordcraft/releases/tag/v0.18.1",
+        "changes": 4,
+        "new_contributors": null,
         "platforms": [
           "macOS",
           "Windows",
@@ -968,7 +968,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
+        "kind": "patch"
       },
       "series": [
         {
@@ -1043,11 +1043,11 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 18.9,
-        "active_days_7d": 7,
-        "changes_7d": 87,
+        "score": 15.5,
+        "active_days_7d": 6,
+        "changes_7d": 76,
         "changes_14d": 239,
-        "housekeeping_7d": 6,
+        "housekeeping_7d": 5,
         "last_code_change": {
           "ts": "2026-11-11T22:26:13Z",
           "commit": "db60ee4",
@@ -1057,7 +1057,6 @@
         "last_commit_ts": "2026-11-11T22:26:13Z",
         "repo_since": "2026-09-30T09:22:00Z",
         "window": [
-          0,
           39,
           5,
           30,
@@ -1070,7 +1069,8 @@
           21,
           5,
           6,
-          28
+          28,
+          0
         ]
       },
       "release": {
@@ -1154,7 +1154,7 @@
       },
       "roadmap": {
         "revisions": 138,
-        "revisions_7d": 4,
+        "revisions_7d": 1,
         "last_revision": {
           "ts": "2026-11-11T19:47:18Z",
           "kind": "content",
@@ -1174,11 +1174,11 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.3,
-        "active_days_7d": 6,
-        "changes_7d": 53,
+        "score": 12.5,
+        "active_days_7d": 5,
+        "changes_7d": 40,
         "changes_14d": 212,
-        "housekeeping_7d": 5,
+        "housekeeping_7d": 4,
         "last_code_change": {
           "ts": "2026-11-11T22:00:12Z",
           "commit": "eec4f59",
@@ -1188,7 +1188,6 @@
         "last_commit_ts": "2026-11-11T22:03:54Z",
         "repo_since": "2026-10-06T02:13:02Z",
         "window": [
-          0,
           60,
           23,
           3,
@@ -1201,15 +1200,16 @@
           5,
           2,
           3,
-          27
+          27,
+          0
         ]
       },
       "release": {
-        "tag": "v0.18.0",
-        "name": "DeckCraft v0.18.0",
-        "ts": "2026-11-11T16:16:55Z",
-        "url": "https://github.com/storytold/deckcraft/releases/tag/v0.18.0",
-        "changes": 12,
+        "tag": "v0.18.1",
+        "name": "DeckCraft v0.18.1",
+        "ts": "2026-11-12T00:07:42Z",
+        "url": "https://github.com/storytold/deckcraft/releases/tag/v0.18.1",
+        "changes": 1,
         "new_contributors": null,
         "platforms": [
           "macOS",
@@ -1219,7 +1219,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
+        "kind": "patch"
       },
       "series": [
         {
@@ -1265,7 +1265,7 @@
         "value_since": "2026-10-11T21:41:28Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 226,
+        "revisions_since": 227,
         "hours_since": {
           "from": [
             273,
@@ -1320,42 +1320,41 @@
         }
       },
       "roadmap": {
-        "revisions": 275,
-        "revisions_7d": 22,
+        "revisions": 276,
+        "revisions_7d": 18,
         "last_revision": {
-          "ts": "2026-11-09T14:44:02Z",
+          "ts": "2026-11-11T23:47:05Z",
           "kind": "content",
-          "commit": "a2e8743",
-          "commit_full": "a2e87433d8bda2b0c909587da08cb27c51e3b17e",
-          "message": "Naming: Developer Mode follow-ups (#2165)"
+          "commit": "20f02bb",
+          "commit_full": "20f02bb7c136d8d20c080863c1b065355d725bc0",
+          "message": "M12: Boards: mind maps in the document and engine (#2226, step 1) (#2228)"
         },
         "last_update": {
-          "ts": "2026-11-09T14:44:02Z",
+          "ts": "2026-11-11T23:47:05Z",
           "kind": "content",
-          "commit": "a2e8743",
-          "commit_full": "a2e87433d8bda2b0c909587da08cb27c51e3b17e",
-          "message": "Naming: Developer Mode follow-ups (#2165)"
+          "commit": "20f02bb",
+          "commit_full": "20f02bb7c136d8d20c080863c1b065355d725bc0",
+          "message": "M12: Boards: mind maps in the document and engine (#2226, step 1) (#2228)"
         },
-        "self_reported": "2026-11-07"
+        "self_reported": "2026-11-10"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 17.0,
+        "score": 14.6,
         "active_days_7d": 6,
-        "changes_7d": 146,
-        "changes_14d": 447,
+        "changes_7d": 140,
+        "changes_14d": 342,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-11T20:55:11Z",
-          "commit": "3b9bf8c",
-          "commit_full": "3b9bf8c9a27045bc0109af75a9085981e7b62c02",
-          "subject": "batch: bound how much referenced data one step's params copy (#2257)"
+          "ts": "2026-11-12T00:01:50Z",
+          "commit": "e2b6b4c",
+          "commit_full": "e2b6b4cd877cf403135e78645dbaa555e7adbf49",
+          "subject": "chore: bump to 0.18.1 for the Flatpak updater patch release (#2279)"
         },
-        "last_commit_ts": "2026-11-11T22:27:43Z",
+        "last_commit_ts": "2026-11-12T00:01:50Z",
         "repo_since": "2026-10-09T15:38:50Z",
         "window": [
-          107,
           100,
           27,
           4,
@@ -1368,7 +1367,8 @@
           2,
           6,
           2,
-          16
+          17,
+          1
         ]
       },
       "release": {
@@ -1410,11 +1410,11 @@
           "v": 53.0
         },
         {
-          "t": "2026-11-09T14:44:02Z",
+          "t": "2026-11-11T23:47:05Z",
           "v": 53.0
         }
       ],
-      "history_len": 275
+      "history_len": 276
     },
     {
       "repo_url": "https://github.com/storytold/pdfcraft",
@@ -1466,7 +1466,7 @@
       },
       "roadmap": {
         "revisions": 237,
-        "revisions_7d": 49,
+        "revisions_7d": 36,
         "last_revision": {
           "ts": "2026-11-11T10:06:01Z",
           "kind": "content",
@@ -1486,21 +1486,20 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 26.5,
-        "active_days_7d": 7,
-        "changes_7d": 392,
+        "score": 21.7,
+        "active_days_7d": 6,
+        "changes_7d": 359,
         "changes_14d": 492,
-        "housekeeping_7d": 18,
+        "housekeeping_7d": 17,
         "last_code_change": {
-          "ts": "2026-11-11T20:51:22Z",
-          "commit": "1d7a9f9",
-          "commit_full": "1d7a9f9ffe45247dbc20a2047a4d2b151cb8385c",
-          "subject": "fix(edit,a11y): font aliases share the metrics built for their font (#5998)"
+          "ts": "2026-11-11T23:38:09Z",
+          "commit": "1d2af99",
+          "commit_full": "1d2af9907ba772b368f6b54811359805fa5428e9",
+          "subject": "Fix Flatpak updates and bump to 0.21.1 (#7020)"
         },
-        "last_commit_ts": "2026-11-11T22:04:31Z",
+        "last_commit_ts": "2026-11-11T23:38:09Z",
         "repo_since": "2026-09-30T09:17:08Z",
         "window": [
-          3,
           4,
           11,
           22,
@@ -1513,7 +1512,8 @@
           31,
           206,
           62,
-          42
+          45,
+          0
         ]
       },
       "release": {
@@ -1590,7 +1590,7 @@
       },
       "roadmap": {
         "revisions": 97,
-        "revisions_7d": 10,
+        "revisions_7d": 8,
         "last_revision": {
           "ts": "2026-11-11T07:57:06Z",
           "kind": "content",
@@ -1609,11 +1609,11 @@
       },
       "milestone": null,
       "activity": {
-        "level": "buzzing",
-        "score": 20.2,
-        "active_days_7d": 7,
-        "changes_7d": 95,
-        "changes_14d": 238,
+        "level": "active",
+        "score": 16.5,
+        "active_days_7d": 6,
+        "changes_7d": 87,
+        "changes_14d": 235,
         "housekeeping_7d": 4,
         "last_code_change": {
           "ts": "2026-11-11T21:10:10Z",
@@ -1624,7 +1624,6 @@
         "last_commit_ts": "2026-11-11T22:04:17Z",
         "repo_since": "2026-10-06T02:09:42Z",
         "window": [
-          3,
           25,
           30,
           17,
@@ -1637,16 +1636,17 @@
           13,
           8,
           14,
-          41
+          41,
+          0
         ]
       },
       "release": {
-        "tag": "v0.19.0",
-        "name": "GridCraft v0.19.0",
-        "ts": "2026-11-11T16:54:48Z",
-        "url": "https://github.com/storytold/gridcraft/releases/tag/v0.19.0",
-        "changes": 49,
-        "new_contributors": 2,
+        "tag": "v0.19.1",
+        "name": "GridCraft v0.19.1",
+        "ts": "2026-11-12T00:06:29Z",
+        "url": "https://github.com/storytold/gridcraft/releases/tag/v0.19.1",
+        "changes": 1,
+        "new_contributors": null,
         "platforms": [
           "macOS",
           "Windows",
@@ -1655,7 +1655,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
+        "kind": "patch"
       },
       "series": [
         {
@@ -1710,7 +1710,7 @@
       },
       "roadmap": {
         "revisions": 195,
-        "revisions_7d": 6,
+        "revisions_7d": 4,
         "last_revision": {
           "ts": "2026-11-11T06:57:58Z",
           "kind": "content",
@@ -1730,10 +1730,10 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 17.2,
-        "active_days_7d": 7,
-        "changes_7d": 55,
-        "changes_14d": 201,
+        "score": 14.1,
+        "active_days_7d": 6,
+        "changes_7d": 47,
+        "changes_14d": 200,
         "housekeeping_7d": 5,
         "last_code_change": {
           "ts": "2026-11-11T21:21:23Z",
@@ -1744,7 +1744,6 @@
         "last_commit_ts": "2026-11-11T22:03:58Z",
         "repo_since": "2026-10-01T13:00:02Z",
         "window": [
-          1,
           37,
           22,
           17,
@@ -1757,7 +1756,8 @@
           8,
           6,
           5,
-          21
+          21,
+          0
         ]
       },
       "release": {
@@ -1850,11 +1850,11 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 30.6,
-        "active_days_7d": 7,
-        "changes_7d": 558,
-        "changes_14d": 660,
-        "housekeeping_7d": 11,
+        "score": 24.8,
+        "active_days_7d": 6,
+        "changes_7d": 511,
+        "changes_14d": 642,
+        "housekeeping_7d": 9,
         "last_code_change": {
           "ts": "2026-11-11T21:31:47Z",
           "commit": "abeb16c",
@@ -1864,7 +1864,6 @@
         "last_commit_ts": "2026-11-11T22:04:35Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
-          18,
           7,
           8,
           11,
@@ -1877,7 +1876,8 @@
           80,
           43,
           75,
-          180
+          180,
+          0
         ]
       },
       "release": {
@@ -1950,7 +1950,7 @@
       },
       "roadmap": {
         "revisions": 15,
-        "revisions_7d": 1,
+        "revisions_7d": 0,
         "last_revision": {
           "ts": "2026-11-05T21:45:23Z",
           "kind": "content",
@@ -1969,22 +1969,21 @@
       },
       "milestone": null,
       "activity": {
-        "level": "buzzing",
-        "score": 21.6,
-        "active_days_7d": 6,
-        "changes_7d": 156,
-        "changes_14d": 498,
+        "level": "active",
+        "score": 17.3,
+        "active_days_7d": 5,
+        "changes_7d": 142,
+        "changes_14d": 343,
         "housekeeping_7d": 9,
         "last_code_change": {
-          "ts": "2026-11-11T20:54:55Z",
-          "commit": "b47a710",
-          "commit_full": "b47a7104ac9abdf987619047a61f70ed77de8652",
-          "subject": "Scripting: run-time compiled code passes the nesting check; bounded file masks, socket line search and file reads (#2975)"
+          "ts": "2026-11-11T23:46:50Z",
+          "commit": "79c4274",
+          "commit_full": "79c42749a85ee0f8df50bc1b9eb2b01db088d2cb",
+          "subject": "Export, Media: codecs and containers from craft-libs; remove hevcenc, av1enc, vp9enc (#3522)"
         },
-        "last_commit_ts": "2026-11-11T22:04:03Z",
+        "last_commit_ts": "2026-11-11T23:46:50Z",
         "repo_since": "2026-10-01T16:48:39Z",
         "window": [
-          156,
           79,
           37,
           1,
@@ -1997,7 +1996,8 @@
           11,
           11,
           26,
-          52
+          53,
+          0
         ]
       },
       "release": {
@@ -2090,21 +2090,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.1,
-        "active_days_7d": 7,
-        "changes_7d": 41,
-        "changes_14d": 132,
+        "score": 11.6,
+        "active_days_7d": 6,
+        "changes_7d": 36,
+        "changes_14d": 133,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-11T21:15:08Z",
-          "commit": "c25b12b",
-          "commit_full": "c25b12ba46286a8d2588fa97fa3bddf5e7d3d0bb",
-          "subject": "Engine I/O: exclusive output files, read-checked probes, resolved clip-group paths (#1328)"
+          "ts": "2026-11-11T23:46:56Z",
+          "commit": "9195209",
+          "commit_full": "91952090eccb05a35cc947e10bc206330605f6fb",
+          "subject": "Take audio file formats from craft-audio; remove crates/audio-io (#1506)"
         },
-        "last_commit_ts": "2026-11-11T22:20:08Z",
+        "last_commit_ts": "2026-11-11T23:46:56Z",
         "repo_since": "2026-10-06T00:08:04Z",
         "window": [
-          0,
           38,
           23,
           0,
@@ -2117,7 +2116,8 @@
           4,
           4,
           3,
-          19
+          20,
+          0
         ]
       },
       "release": {
@@ -2210,9 +2210,9 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.4,
-        "active_days_7d": 7,
-        "changes_7d": 47,
+        "score": 12.6,
+        "active_days_7d": 6,
+        "changes_7d": 38,
         "changes_14d": 221,
         "housekeeping_7d": 6,
         "last_code_change": {
@@ -2224,7 +2224,6 @@
         "last_commit_ts": "2026-11-11T22:03:49Z",
         "repo_since": "2026-10-06T00:15:47Z",
         "window": [
-          0,
           42,
           43,
           17,
@@ -2237,7 +2236,8 @@
           9,
           4,
           2,
-          19
+          19,
+          0
         ]
       },
       "release": {
@@ -2307,7 +2307,7 @@
       },
       "roadmap": {
         "revisions": 243,
-        "revisions_7d": 7,
+        "revisions_7d": 6,
         "last_revision": {
           "ts": "2026-11-11T10:00:50Z",
           "kind": "content",
@@ -2326,11 +2326,11 @@
       },
       "milestone": null,
       "activity": {
-        "level": "buzzing",
-        "score": 20.1,
-        "active_days_7d": 7,
-        "changes_7d": 99,
-        "changes_14d": 190,
+        "level": "active",
+        "score": 16.3,
+        "active_days_7d": 6,
+        "changes_7d": 88,
+        "changes_14d": 183,
         "housekeeping_7d": 16,
         "last_code_change": {
           "ts": "2026-11-11T22:40:24Z",
@@ -2341,7 +2341,6 @@
         "last_commit_ts": "2026-11-11T22:40:24Z",
         "repo_since": "2026-10-12T18:17:00Z",
         "window": [
-          7,
           20,
           20,
           11,
@@ -2354,7 +2353,8 @@
           8,
           7,
           22,
-          19
+          19,
+          0
         ]
       },
       "release": {
@@ -2444,21 +2444,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.8,
-        "active_days_7d": 7,
-        "changes_7d": 50,
-        "changes_14d": 154,
+        "score": 13.1,
+        "active_days_7d": 6,
+        "changes_7d": 44,
+        "changes_14d": 155,
         "housekeeping_7d": 9,
         "last_code_change": {
-          "ts": "2026-11-11T17:45:16Z",
-          "commit": "5303e98",
-          "commit_full": "5303e98398a2612ac399aa53e67d4249dd669851",
-          "subject": "Updates: take craft-update from craft-libs main at 6e03f65bf (#424)"
+          "ts": "2026-11-11T23:38:56Z",
+          "commit": "55015a7",
+          "commit_full": "55015a76313c9ec30dfd5a853b5a8d40f5ad38fe",
+          "subject": "Fix Flatpak updates and bump to 0.6.1 (#426)"
         },
-        "last_commit_ts": "2026-11-11T22:04:44Z",
+        "last_commit_ts": "2026-11-11T23:38:56Z",
         "repo_since": "2026-10-14T18:33:13Z",
         "window": [
-          0,
           0,
           0,
           40,
@@ -2471,7 +2470,8 @@
           7,
           7,
           10,
-          9
+          10,
+          0
         ]
       },
       "release": {
@@ -2552,21 +2552,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.2,
+        "score": 12.7,
         "active_days_7d": 7,
-        "changes_7d": 90,
-        "changes_14d": 117,
-        "housekeeping_7d": 9,
+        "changes_7d": 37,
+        "changes_14d": 118,
+        "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-11T19:55:58Z",
-          "commit": "c0a5a70",
-          "commit_full": "c0a5a70d4ad190c94e714fdf5343e165928fb77c",
-          "subject": "chore: bump version to 0.4.1 for the Flatpak update fix (#207)"
+          "ts": "2026-11-12T00:06:20Z",
+          "commit": "b73facd",
+          "commit_full": "b73facdc7b8b5ce102cd9e14d964058a15182dc0",
+          "subject": "fix(flatpak): honor the launcher version choices (#208)"
         },
-        "last_commit_ts": "2026-11-11T22:04:26Z",
+        "last_commit_ts": "2026-11-12T00:06:20Z",
         "repo_since": "2026-11-01T19:58:46Z",
         "window": [
-          0,
           0,
           0,
           12,
@@ -2579,7 +2578,8 @@
           3,
           6,
           5,
-          5
+          5,
+          1
         ]
       },
       "release": {
@@ -2660,9 +2660,9 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 29.9,
-        "active_days_7d": 7,
-        "changes_7d": 504,
+        "score": 24.5,
+        "active_days_7d": 6,
+        "changes_7d": 503,
         "changes_14d": 834,
         "housekeeping_7d": 36,
         "last_code_change": {
@@ -2675,7 +2675,6 @@
         "repo_since": "2026-10-31T14:52:14Z",
         "window": [
           0,
-          0,
           3,
           73,
           117,
@@ -2687,7 +2686,8 @@
           37,
           157,
           111,
-          100
+          100,
+          0
         ]
       },
       "release": {
@@ -2748,7 +2748,7 @@
       },
       "roadmap": {
         "revisions": 196,
-        "revisions_7d": 3,
+        "revisions_7d": 2,
         "last_revision": {
           "ts": "2026-11-11T11:19:58Z",
           "kind": "content",
@@ -2768,21 +2768,20 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 36.2,
+        "score": 30.9,
         "active_days_7d": 7,
-        "changes_7d": 843,
-        "changes_14d": 1927,
-        "housekeeping_7d": 39,
+        "changes_7d": 738,
+        "changes_14d": 1740,
+        "housekeeping_7d": 34,
         "last_code_change": {
-          "ts": "2026-11-11T22:35:52Z",
-          "commit": "865497c",
-          "commit_full": "865497c702b6a8b19ef3b189be141aff731cab08",
-          "subject": "theme: an isoparm colour, lighter than a body's edges (#15143)"
+          "ts": "2026-11-12T00:05:54Z",
+          "commit": "7081f99",
+          "commit_full": "7081f99b1cb268a1658b05628025e4998e4fb0a0",
+          "subject": "UI kit: the view toast is a kit component; the history bar's reorder can be turned off (#15003)"
         },
-        "last_commit_ts": "2026-11-11T22:35:52Z",
+        "last_commit_ts": "2026-11-12T00:05:54Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
-          191,
           208,
           201,
           128,
@@ -2795,7 +2794,8 @@
           70,
           151,
           239,
-          145
+          147,
+          2
         ]
       },
       "release": {
@@ -2864,21 +2864,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.4,
-        "active_days_7d": 5,
-        "changes_7d": 78,
-        "changes_14d": 78,
+        "score": 12.1,
+        "active_days_7d": 6,
+        "changes_7d": 81,
+        "changes_14d": 81,
         "housekeeping_7d": 10,
         "last_code_change": {
-          "ts": "2026-11-11T21:56:19Z",
-          "commit": "666f93e",
-          "commit_full": "666f93ed4d8e72cccd934b97d1f44c3b25a2b54d",
-          "subject": "feat(find): Find and Replace and the Movie Explorer (M8) (#167)"
+          "ts": "2026-11-12T00:00:05Z",
+          "commit": "1e92b09",
+          "commit_full": "1e92b09dc56fb642d816f6f024afcb2bffde1fb7",
+          "subject": "feat(publish): Publish Settings and Publish (M8) (#173)"
         },
-        "last_commit_ts": "2026-11-11T22:03:44Z",
+        "last_commit_ts": "2026-11-12T00:00:05Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
-          0,
           0,
           0,
           0,
@@ -2891,7 +2890,8 @@
           0,
           20,
           19,
-          16
+          18,
+          1
         ]
       },
       "release": {
@@ -2959,21 +2959,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.4,
-        "active_days_7d": 5,
-        "changes_7d": 78,
-        "changes_14d": 78,
+        "score": 12.1,
+        "active_days_7d": 6,
+        "changes_7d": 81,
+        "changes_14d": 81,
         "housekeeping_7d": 10,
         "last_code_change": {
-          "ts": "2026-11-11T21:56:19Z",
-          "commit": "666f93e",
-          "commit_full": "666f93ed4d8e72cccd934b97d1f44c3b25a2b54d",
-          "subject": "feat(find): Find and Replace and the Movie Explorer (M8) (#167)"
+          "ts": "2026-11-12T00:00:05Z",
+          "commit": "1e92b09",
+          "commit_full": "1e92b09dc56fb642d816f6f024afcb2bffde1fb7",
+          "subject": "feat(publish): Publish Settings and Publish (M8) (#173)"
         },
-        "last_commit_ts": "2026-11-11T22:03:44Z",
+        "last_commit_ts": "2026-11-12T00:00:05Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
-          0,
           0,
           0,
           0,
@@ -2986,7 +2985,8 @@
           0,
           20,
           19,
-          16
+          18,
+          1
         ]
       },
       "release": {
@@ -3024,5 +3024,5 @@
       }
     ]
   },
-  "generated_at": "2026-11-11T23:15:10+00:00"
+  "generated_at": "2026-11-12T00:08:52+00:00"
 }

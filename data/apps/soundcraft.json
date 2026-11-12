@@ -462,21 +462,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.1,
-    "active_days_7d": 7,
-    "changes_7d": 41,
-    "changes_14d": 132,
+    "score": 11.6,
+    "active_days_7d": 6,
+    "changes_7d": 36,
+    "changes_14d": 133,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-11T21:15:08Z",
-      "commit": "c25b12b",
-      "commit_full": "c25b12ba46286a8d2588fa97fa3bddf5e7d3d0bb",
-      "subject": "Engine I/O: exclusive output files, read-checked probes, resolved clip-group paths (#1328)"
+      "ts": "2026-11-11T23:46:56Z",
+      "commit": "9195209",
+      "commit_full": "91952090eccb05a35cc947e10bc206330605f6fb",
+      "subject": "Take audio file formats from craft-audio; remove crates/audio-io (#1506)"
     },
-    "last_commit_ts": "2026-11-11T22:20:08Z",
+    "last_commit_ts": "2026-11-11T23:46:56Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
-      0,
       38,
       23,
       0,
@@ -489,7 +488,8 @@
       4,
       4,
       3,
-      19
+      20,
+      0
     ],
     "days": [
       {
@@ -1052,9 +1052,13 @@
       },
       {
         "d": "2026-11-11",
-        "code": 19,
+        "code": 20,
         "other": 3,
         "samples": [
+          {
+            "commit": "9195209",
+            "subject": "Take audio file formats from craft-audio; remove crates/audio-io (#1506)"
+          },
           {
             "commit": "c25b12b",
             "subject": "Engine I/O: exclusive output files, read-checked probes, resolved clip-group paths (#1328)"
@@ -1062,10 +1066,6 @@
           {
             "commit": "296bfbb",
             "subject": "Strip Silence: cut and remove pieces in one pass over the playlist (#1349)"
-          },
-          {
-            "commit": "f7a5adb",
-            "subject": "ui: read-check movie paths, regular files only, private take folder (#1337)"
           }
         ]
       }
@@ -1809,5 +1809,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-11T22:37:51+00:00"
+  "updated_at": "2026-11-12T00:08:02+00:00"
 }
