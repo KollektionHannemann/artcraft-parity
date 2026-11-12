@@ -385,16 +385,16 @@
     "level": "buzzing",
     "score": 30.1,
     "active_days_7d": 7,
-    "changes_7d": 548,
-    "changes_14d": 679,
+    "changes_7d": 549,
+    "changes_14d": 680,
     "housekeeping_7d": 10,
     "last_code_change": {
-      "ts": "2026-11-12T20:56:57Z",
-      "commit": "e660b49",
-      "commit_full": "e660b4906bc809cfdf58e936d015e252f6811981",
-      "subject": "Clear the clippy 1.100 lints that fail the gate on main (#13531) (#13535)"
+      "ts": "2026-11-12T22:14:22Z",
+      "commit": "337dbff",
+      "commit_full": "337dbff472f810be7ed9bfaee821ce01cb0ea79f",
+      "subject": "fix(raster): handle empty /sys/fs/cgroup mount point and empty mountinfo source in Linux sandboxes (#12441)"
     },
-    "last_commit_ts": "2026-11-12T20:56:57Z",
+    "last_commit_ts": "2026-11-12T22:14:22Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       7,
@@ -410,7 +410,7 @@
       43,
       75,
       180,
-      37
+      38
     ],
     "days": [
       {
@@ -1232,9 +1232,13 @@
       },
       {
         "d": "2026-11-12",
-        "code": 37,
+        "code": 38,
         "other": 1,
         "samples": [
+          {
+            "commit": "337dbff",
+            "subject": "fix(raster): handle empty /sys/fs/cgroup mount point and empty mountinfo source in Linux sandboxes (#12441)"
+          },
           {
             "commit": "e660b49",
             "subject": "Clear the clippy 1.100 lints that fail the gate on main (#13531) (#13535)"
@@ -1242,10 +1246,6 @@
           {
             "commit": "134208d",
             "subject": "Triangle tool: shape layers are named Triangle N, not Polygon N (#13353) (#13371)"
-          },
-          {
-            "commit": "60c4d85",
-            "subject": "Freeform Pen: anchors on the trace's turning points, rounded joins (#12838) (#13500)"
           }
         ]
       }
@@ -1736,5 +1736,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-12T21:33:21+00:00"
+  "updated_at": "2026-11-12T22:30:33+00:00"
 }
