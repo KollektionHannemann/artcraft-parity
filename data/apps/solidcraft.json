@@ -68,16 +68,16 @@
     "level": "buzzing",
     "score": 36.1,
     "active_days_7d": 7,
-    "changes_7d": 851,
-    "changes_14d": 1853,
+    "changes_7d": 853,
+    "changes_14d": 1855,
     "housekeeping_7d": 37,
     "last_code_change": {
-      "ts": "2026-11-12T15:23:07Z",
-      "commit": "bf8f1c1",
-      "commit_full": "bf8f1c16ecf6d66487d85ef952fd783c46cbadd6",
-      "subject": "Fillet and chamfer: a blend wider than the flat face beside it has each step of its build checked (#15470)"
+      "ts": "2026-11-12T15:57:49Z",
+      "commit": "200ef82",
+      "commit_full": "200ef82e2cf16611cd72685efeb057923cce7835",
+      "subject": "Fillet and Chamfer: an edge saved under a face's old neighbour list is found at its pick (#15476)"
     },
-    "last_commit_ts": "2026-11-12T15:23:07Z",
+    "last_commit_ts": "2026-11-12T15:57:49Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       208,
@@ -93,7 +93,7 @@
       151,
       239,
       149,
-      113
+      115
     ],
     "days": [
       {
@@ -782,20 +782,20 @@
       },
       {
         "d": "2026-11-12",
-        "code": 113,
+        "code": 115,
         "other": 3,
         "samples": [
           {
+            "commit": "200ef82",
+            "subject": "Fillet and Chamfer: an edge saved under a face's old neighbour list is found at its pick (#15476)"
+          },
+          {
+            "commit": "5dd8810",
+            "subject": "Sketch: the \"Tool at the cursor\" icon no longer covers the snap hint next to the pointer (#15391) (#15439)"
+          },
+          {
             "commit": "bf8f1c1",
             "subject": "Fillet and chamfer: a blend wider than the flat face beside it has each step of its build checked (#15470)"
-          },
-          {
-            "commit": "2534c28",
-            "subject": "Orbit about exactly the point Home centres the model on (#14651) (#15462)"
-          },
-          {
-            "commit": "e988252",
-            "subject": "Fillet, chamfer, shell and edge selection: one 2° angle for a tangent chain (#15445)"
           }
         ]
       }
@@ -2382,5 +2382,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-12T15:44:48+00:00"
+  "updated_at": "2026-11-12T16:47:26+00:00"
 }
