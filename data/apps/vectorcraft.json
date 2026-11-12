@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "4306a1d",
-  "latest_commit_date": "2026-11-12T18:19:57+07:00",
-  "latest_message": "Cutting Tools: Stencil Bridges keeps the islands of a stencil attached (#6808)",
+  "latest_commit": "c44103f",
+  "latest_commit_date": "2026-11-12T22:00:23+07:00",
+  "latest_message": "Swatch libraries: Patterns › Optical Effects adds wave, moiré and op-art patterns (#6853)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -348,6 +348,10 @@
       },
       {
         "date": "2026-11-11",
+        "text": "Pattern libraries: Patterns › Optical Effects, a third built-in pattern library, of VectorCraft's own designs, holds eight black wave, moiré and op-art tiles (Sine Bands, Ripple Lines, Interference Rings, Offset Rings, Warped Checks, Pinched Stripes, Chevron Pulse and Radiating Lenses) of 32 to 48 pt, each drawn the same way every time; each tile is one period of its design, and art that reaches past a tile edge continues on the next tile, so the tiles join without a seam (swatch.library.add). Scores and estimates unchanged."
+      },
+      {
+        "date": "2026-11-11",
         "text": "Window › Swatch Libraries › Gradients › Organic Fades: fifteen soft fades (ten linear, five radial) through three to five unevenly spaced stops with off-center midpoints, mixed with the Perceptual method, that thin out to transparent at the end of a linear one and at the edge of a radial one; they also list in the Swatches panel's library menu, swatch.library.list and the Gradient panel's Presets."
       },
       {
@@ -493,10 +497,6 @@
       {
         "date": "2026-10-18",
         "text": "About 85 community PRs landed in two batches through the full gate, with our fixes on top. New: Word .docx files place as area type with their formatting (#2766), CCITT Group 3 TIFF files open (#2770), Paragraph panel menu › Roman Hanging Punctuation (#2775), the Anchor Point tool edits blend spine points and handles (#2643, fixes #2544), shadows and glows each draw from the art with the effects before them, without the old exponential cost (#2395), one to ten coloured lights in 3D effects (#2706), Artboard Options X and Y with a reference point (#2739), more Contextual Task Bar actions (#2471), Optical Margin Alignment for a whole thread (#2773), History panel Step Backward/Forward and Set History Limit (#2764), Edit › Undo and Redo name the step as the History panel does (#2774), bounding-box handles snap to the grid, pixels and guides (#2715), Ctrl/Cmd+A in the Artboards panel (#2761), Tabs panel menu items (#2742), Import Data Sets defines variables from header cells (#2736), a Linux option to use X11 when a pen is attached (#2717). Fidelity and robustness: variable fonts named by their default weight and fallback glyphs keep bold and italic (#2733, #2732), legacy .ai layer names in Windows Latin-1 (#2722), WMF window mapping (#2721), Magic Wand inside isolation (#2720), type values out of range in files are clamped (#2728, #2757), raster effects stay responsive in drags (#2745), exports and Save for Web report undecodable images (#2762, #2737, #2684), Windows-safe exported file names (#2738), a marquee skips a Shaper Group's originals (#2772). Second batch: an export progress dialog with Cancel on the shared cancel token (#2564), CMYK gradient meshes drawn several times faster within a 16 MB cap (#2802), Paragraph panel menu › Justification… with file values clamped (#2771), Edit › Clear History (#2843), SVG image links keep their spelling (#2837, fixes main's Windows test failures), the Linux save dialog through the XDG portal (#2783), RGB input stored as CMYK in CMYK documents (#2812), legacy .ai export of images and radial highlights (#2801, #2807), .ai import notes for damaged editing data, page sizes and variable libraries (#2799, #2800, #2842), PDF and .ai keep their creation date (#2838), undecodable images left out of PDF exports with a note (#2790), MCP input waits for queue room (#2776), slice, snapping, selection, type and accessibility fixes (#2794–#2797, #2805, #2806, #2809, #2815, #2844–#2846), dropdowns close after a keyboard pick (#2824), plug-in dialogs scroll (#2840). Languages: the Dutch catalog completed (#2730). Headline numbers unchanged (estimated)."
-      },
-      {
-        "date": "2026-10-17",
-        "text": "Background Export shows a progress dialog: the file being exported, the artboard count and a bar, Cancel (Esc) and Continue in Background. It runs on the shared cancel token of #2546, so a cancelled export writes no file and keeps no half-drawn pattern tile or effect raster; translated in every language with complete menus (#2564). Headline numbers unchanged."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 226,
+    "revisions_since": 227,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,39 +536,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 227,
-    "revisions_7d": 14,
+    "revisions": 228,
+    "revisions_7d": 15,
     "last_revision": {
-      "ts": "2026-11-12T11:19:57Z",
+      "ts": "2026-11-12T15:00:23Z",
       "kind": "content",
-      "commit": "4306a1d",
-      "commit_full": "4306a1d1fb6f8a2ae989b8ec884d7eb8c7814f95",
-      "message": "Cutting Tools: Stencil Bridges keeps the islands of a stencil attached (#6808)"
+      "commit": "c44103f",
+      "commit_full": "c44103f8c3dc7830349ccd17f75a6ce347eb35a2",
+      "message": "Swatch libraries: Patterns › Optical Effects adds wave, moiré and op-art patterns (#6853)"
     },
     "last_update": {
-      "ts": "2026-11-12T11:19:57Z",
+      "ts": "2026-11-12T15:00:23Z",
       "kind": "content",
-      "commit": "4306a1d",
-      "commit_full": "4306a1d1fb6f8a2ae989b8ec884d7eb8c7814f95",
-      "message": "Cutting Tools: Stencil Bridges keeps the islands of a stencil attached (#6808)"
+      "commit": "c44103f",
+      "commit_full": "c44103f8c3dc7830349ccd17f75a6ce347eb35a2",
+      "message": "Swatch libraries: Patterns › Optical Effects adds wave, moiré and op-art patterns (#6853)"
     },
     "self_reported": "2026-11-10"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 35.3,
+    "score": 35.4,
     "active_days_7d": 7,
-    "changes_7d": 743,
-    "changes_14d": 1547,
+    "changes_7d": 758,
+    "changes_14d": 1562,
     "housekeeping_7d": 33,
     "last_code_change": {
-      "ts": "2026-11-12T14:04:31Z",
-      "commit": "71b8896",
-      "commit_full": "71b889605d649d6924b5cb38079fefaa48827971",
-      "subject": "Type: Center on Top and Center on Bottom for type on a closed path (#6717)"
+      "ts": "2026-11-12T15:21:11Z",
+      "commit": "10ea235",
+      "commit_full": "10ea235ee45f5eef6f05bab8390687f23c2684bf",
+      "subject": "Numeric fields: a sub-threshold pointer movement keeps its caret (#1326) (#6659)"
     },
-    "last_commit_ts": "2026-11-12T14:04:31Z",
+    "last_commit_ts": "2026-11-12T15:21:11Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       99,
@@ -584,7 +584,7 @@
       81,
       81,
       123,
-      157
+      172
     ],
     "days": [
       {
@@ -1393,20 +1393,20 @@
       },
       {
         "d": "2026-11-12",
-        "code": 157,
+        "code": 172,
         "other": 3,
         "samples": [
           {
-            "commit": "71b8896",
-            "subject": "Type: Center on Top and Center on Bottom for type on a closed path (#6717)"
+            "commit": "10ea235",
+            "subject": "Numeric fields: a sub-threshold pointer movement keeps its caret (#1326) (#6659)"
           },
           {
-            "commit": "9fcddf6",
-            "subject": "Warp: the Warp effects bend an image's pixels with its frame (#6849)"
+            "commit": "6bd9b9e",
+            "subject": "Save As: a save goes ahead when the portal answers with a file type of another shape (#6870)"
           },
           {
-            "commit": "e280b28",
-            "subject": "EPS import: CIDFonts only named, over a predefined CJK CMap, set their characters as live type (#6871)"
+            "commit": "f5c5d9a",
+            "subject": "Type: Dynamic Text turns point type into area type with Block on (#6829)"
           }
         ]
       }
@@ -7591,7 +7591,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "c44103f",
+      "commit_full": "c44103f8c3dc7830349ccd17f75a6ce347eb35a2",
+      "commit_date": "2026-11-12T22:00:23+07:00",
+      "ts": "2026-11-12T15:00:23Z",
+      "message": "Swatch libraries: Patterns › Optical Effects adds wave, moiré and op-art patterns (#6853)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-10",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-12T14:41:51+00:00"
+  "updated_at": "2026-11-12T15:43:55+00:00"
 }
