@@ -49,6 +49,39 @@
   ],
   "latest_events": [
     {
+      "id": "lightcraft",
+      "name": "LightCraft",
+      "type": "release",
+      "ts": "2026-11-12T05:08:23Z",
+      "tag": "v0.21.1",
+      "kind": "patch",
+      "changes": 8,
+      "url": "https://github.com/storytold/lightcraft/releases/tag/v0.21.1",
+      "prerelease": false
+    },
+    {
+      "id": "photocraft",
+      "name": "PhotoCraft",
+      "type": "release",
+      "ts": "2026-11-12T05:07:51Z",
+      "tag": "v0.23.1",
+      "kind": "patch",
+      "changes": 47,
+      "url": "https://github.com/storytold/photocraft/releases/tag/v0.23.1",
+      "prerelease": false
+    },
+    {
+      "id": "vectorcraft",
+      "name": "VectorCraft",
+      "type": "release",
+      "ts": "2026-11-12T05:07:34Z",
+      "tag": "v0.24.1",
+      "kind": "patch",
+      "changes": 73,
+      "url": "https://github.com/storytold/vectorcraft/releases/tag/v0.24.1",
+      "prerelease": false
+    },
+    {
       "id": "solidcraft",
       "name": "SolidCraft",
       "type": "release",
@@ -454,42 +487,13 @@
       "changes": 69,
       "url": "https://github.com/storytold/anicraft/releases/tag/v0.1.0",
       "prerelease": false
-    },
-    {
-      "id": "AniCraft",
-      "name": "AniCraft",
-      "type": "release",
-      "ts": "2026-11-11T01:03:14Z",
-      "tag": "v0.1.0",
-      "kind": null,
-      "changes": 69,
-      "url": "https://github.com/storytold/anicraft/releases/tag/v0.1.0",
-      "prerelease": false
-    },
-    {
-      "id": "effectcraft",
-      "name": "EffectCraft",
-      "type": "release",
-      "ts": "2026-11-10T00:49:57Z",
-      "tag": "v0.23.1",
-      "kind": "patch",
-      "changes": 8,
-      "url": "https://github.com/storytold/effectcraft/releases/tag/v0.23.1",
-      "prerelease": false
-    },
-    {
-      "id": "mailcraft",
-      "name": "MailCraft",
-      "type": "new_app",
-      "ts": "2026-11-10T00:00:00Z",
-      "adobe": "Outlook"
     }
   ],
   "release_waves": [
     {
       "day": "2026-11-12",
-      "apps": 17,
-      "changes": 405,
+      "apps": 20,
+      "changes": 533,
       "largest": {
         "id": "craft-anything",
         "name": "Craft Anything",
@@ -653,18 +657,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 34.2,
+        "score": 34.5,
         "active_days_7d": 7,
-        "changes_7d": 661,
-        "changes_14d": 1465,
+        "changes_7d": 675,
+        "changes_14d": 1479,
         "housekeeping_7d": 31,
         "last_code_change": {
-          "ts": "2026-11-12T04:43:06Z",
-          "commit": "aa4657e",
-          "commit_full": "aa4657e1cedfda1396cd6f5b67dfb37d3dacc3b5",
-          "subject": "Shape tools: a drag on a bounding-box handle scales the selection (#6704)"
+          "ts": "2026-11-12T05:41:15Z",
+          "commit": "485d4e3",
+          "commit_full": "485d4e3fff19d35a4eefa242af501598e48426fa",
+          "subject": "Plug-ins: only an approval records a grant, and installs need one (#6747)"
         },
-        "last_commit_ts": "2026-11-12T04:43:06Z",
+        "last_commit_ts": "2026-11-12T05:41:15Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           99,
@@ -680,16 +684,16 @@
           81,
           81,
           123,
-          75
+          89
         ]
       },
       "release": {
-        "tag": "v0.24.0",
-        "name": "VectorCraft v0.24.0",
-        "ts": "2026-11-11T18:59:22Z",
-        "url": "https://github.com/storytold/vectorcraft/releases/tag/v0.24.0",
-        "changes": 218,
-        "new_contributors": 5,
+        "tag": "v0.24.1",
+        "name": "VectorCraft v0.24.1",
+        "ts": "2026-11-12T05:07:34Z",
+        "url": "https://github.com/storytold/vectorcraft/releases/tag/v0.24.1",
+        "changes": 73,
+        "new_contributors": null,
         "platforms": [
           "macOS",
           "Windows",
@@ -698,7 +702,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
+        "kind": "patch"
       },
       "series": [
         {
@@ -742,7 +746,7 @@
       "parity": {
         "tracked_since": "2026-10-10T18:25:15Z",
         "value_since": "2026-11-05T21:23:31Z",
-        "releases_since": 3,
+        "releases_since": 4,
         "releases_since_capped": false,
         "revisions_since": 1,
         "hours_since": null,
@@ -782,18 +786,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.4,
+        "score": 13.8,
         "active_days_7d": 7,
-        "changes_7d": 42,
-        "changes_14d": 131,
+        "changes_7d": 43,
+        "changes_14d": 132,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-12T02:30:32Z",
-          "commit": "5a96dfc",
-          "commit_full": "5a96dfc2951d3672a2769fdb1aaa202d3803778b",
-          "subject": "Fix Flatpak updates and bump to 0.21.1 (#4151)"
+          "ts": "2026-11-12T05:43:54Z",
+          "commit": "e4dd081",
+          "commit_full": "e4dd081dd4d2173db33b06483ab35f67ce8939fb",
+          "subject": "Use craft-gainmap from craft-libs for gain map metadata and arithmetic"
         },
-        "last_commit_ts": "2026-11-12T02:30:32Z",
+        "last_commit_ts": "2026-11-12T05:43:54Z",
         "repo_since": "2026-09-30T14:04:12Z",
         "window": [
           3,
@@ -809,16 +813,16 @@
           4,
           6,
           9,
-          2
+          3
         ]
       },
       "release": {
-        "tag": "v0.21.0",
-        "name": "LightCraft v0.21.0",
-        "ts": "2026-11-11T21:33:13Z",
-        "url": "https://github.com/storytold/lightcraft/releases/tag/v0.21.0",
-        "changes": 14,
-        "new_contributors": 1,
+        "tag": "v0.21.1",
+        "name": "LightCraft v0.21.1",
+        "ts": "2026-11-12T05:08:23Z",
+        "url": "https://github.com/storytold/lightcraft/releases/tag/v0.21.1",
+        "changes": 8,
+        "new_contributors": null,
         "platforms": [
           "macOS",
           "Windows",
@@ -827,7 +831,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
+        "kind": "patch"
       },
       "series": [
         {
@@ -1174,18 +1178,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 12.5,
-        "active_days_7d": 5,
-        "changes_7d": 40,
-        "changes_14d": 212,
+        "score": 13.5,
+        "active_days_7d": 6,
+        "changes_7d": 41,
+        "changes_14d": 213,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-11T22:00:12Z",
-          "commit": "eec4f59",
-          "commit_full": "eec4f595356dbb4dc5d8ab146d89fe517978454e",
-          "subject": "AV1: decode tiles serially when parallel tile metadata copies would be huge (#1841)"
+          "ts": "2026-11-12T05:02:30Z",
+          "commit": "a82e37d",
+          "commit_full": "a82e37dee2735a9572087b260cb6ad227077c18e",
+          "subject": "Video: decode H.264, HEVC, VP9 and AV1 with craft-video (#2065)"
         },
-        "last_commit_ts": "2026-11-11T22:03:54Z",
+        "last_commit_ts": "2026-11-12T05:02:30Z",
         "repo_since": "2026-10-06T02:13:02Z",
         "window": [
           60,
@@ -1201,7 +1205,7 @@
           2,
           3,
           27,
-          0
+          1
         ]
       },
       "release": {
@@ -1341,18 +1345,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 19.3,
+        "score": 19.5,
         "active_days_7d": 6,
-        "changes_7d": 192,
-        "changes_14d": 394,
+        "changes_7d": 198,
+        "changes_14d": 400,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-12T04:37:50Z",
-          "commit": "8e033c0",
-          "commit_full": "8e033c0258a0f12fa2a5a3a536e3ac99808b7b1a",
-          "subject": "M1: a click highlights a fill, stroke or effect row, and Cmd/Ctrl+C and Cmd/Ctrl+V copy and paste it (#1494) (#2203)"
+          "ts": "2026-11-12T05:37:01Z",
+          "commit": "10e9686",
+          "commit_full": "10e9686d0375595c9b4c41fb168123d72c0da8a3",
+          "subject": "Preferences: Invert zoom direction reverses wheel zoom (#2145) (#2147)"
         },
-        "last_commit_ts": "2026-11-12T04:37:50Z",
+        "last_commit_ts": "2026-11-12T05:37:01Z",
         "repo_since": "2026-10-09T15:38:50Z",
         "window": [
           100,
@@ -1368,7 +1372,7 @@
           6,
           2,
           17,
-          53
+          59
         ]
       },
       "release": {
@@ -1486,18 +1490,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 21.7,
-        "active_days_7d": 6,
-        "changes_7d": 359,
-        "changes_14d": 492,
+        "score": 22.7,
+        "active_days_7d": 7,
+        "changes_7d": 360,
+        "changes_14d": 493,
         "housekeeping_7d": 17,
         "last_code_change": {
-          "ts": "2026-11-11T23:38:09Z",
-          "commit": "1d2af99",
-          "commit_full": "1d2af9907ba772b368f6b54811359805fa5428e9",
-          "subject": "Fix Flatpak updates and bump to 0.21.1 (#7020)"
+          "ts": "2026-11-12T05:28:18Z",
+          "commit": "d749fd8",
+          "commit_full": "d749fd8062655c333c0733d8456bd8d4c9925a12",
+          "subject": "Print colour management: the app converts printed pictures into a printer profile (#6269) (#6853)"
         },
-        "last_commit_ts": "2026-11-11T23:38:09Z",
+        "last_commit_ts": "2026-11-12T05:28:18Z",
         "repo_since": "2026-09-30T09:17:08Z",
         "window": [
           4,
@@ -1513,7 +1517,7 @@
           206,
           62,
           45,
-          0
+          1
         ]
       },
       "release": {
@@ -1730,18 +1734,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.7,
+        "score": 16.1,
         "active_days_7d": 7,
-        "changes_7d": 49,
-        "changes_14d": 202,
+        "changes_7d": 50,
+        "changes_14d": 203,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-12T01:30:21Z",
-          "commit": "b284052",
-          "commit_full": "b284052acc966a6d0e0b298805a04a7f4407b05e",
-          "subject": "Type: type.align without a value is an error (#2645)"
+          "ts": "2026-11-12T04:52:41Z",
+          "commit": "6fff532",
+          "commit_full": "6fff5328eb59a5fdff5d91df44034212cc07e670",
+          "subject": "Tests: type.align refusal cases name the check that refuses each (#2662)"
         },
-        "last_commit_ts": "2026-11-12T01:30:21Z",
+        "last_commit_ts": "2026-11-12T04:52:41Z",
         "repo_since": "2026-10-01T13:00:02Z",
         "window": [
           37,
@@ -1757,7 +1761,7 @@
           6,
           5,
           21,
-          2
+          3
         ]
       },
       "release": {
@@ -1881,12 +1885,12 @@
         ]
       },
       "release": {
-        "tag": "v0.23.0",
-        "name": "PhotoCraft v0.23.0",
-        "ts": "2026-11-11T21:59:33Z",
-        "url": "https://github.com/storytold/photocraft/releases/tag/v0.23.0",
-        "changes": 265,
-        "new_contributors": 17,
+        "tag": "v0.23.1",
+        "name": "PhotoCraft v0.23.1",
+        "ts": "2026-11-12T05:07:51Z",
+        "url": "https://github.com/storytold/photocraft/releases/tag/v0.23.1",
+        "changes": 47,
+        "new_contributors": null,
         "platforms": [
           "macOS",
           "Windows",
@@ -1895,7 +1899,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
+        "kind": "patch"
       },
       "series": [
         {
@@ -2639,39 +2643,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 568,
-        "revisions_7d": 440,
+        "revisions": 577,
+        "revisions_7d": 449,
         "last_revision": {
-          "ts": "2026-11-12T04:00:59Z",
+          "ts": "2026-11-12T05:29:49Z",
           "kind": "content",
-          "commit": "88d67ce",
-          "commit_full": "88d67cebf40cc1c9f3cf9e515431a213808e04a2",
-          "message": "Refuse Clean room for native Aider runs (R2.2) (#1110)"
+          "commit": "52e6817",
+          "commit_full": "52e6817bf012e2156b1c89cd368df4582ca1a09f",
+          "message": "Stop CArchive listings at unterminated member names (R3.12) (#1733) (#1733)"
         },
         "last_update": {
-          "ts": "2026-11-12T04:00:59Z",
+          "ts": "2026-11-12T05:29:49Z",
           "kind": "content",
-          "commit": "88d67ce",
-          "commit_full": "88d67cebf40cc1c9f3cf9e515431a213808e04a2",
-          "message": "Refuse Clean room for native Aider runs (R2.2) (#1110)"
+          "commit": "52e6817",
+          "commit_full": "52e6817bf012e2156b1c89cd368df4582ca1a09f",
+          "message": "Stop CArchive listings at unterminated member names (R3.12) (#1733) (#1733)"
         },
         "self_reported": null
       },
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 27.5,
+        "score": 28.7,
         "active_days_7d": 7,
-        "changes_7d": 510,
-        "changes_14d": 841,
+        "changes_7d": 520,
+        "changes_14d": 851,
         "housekeeping_7d": 36,
         "last_code_change": {
-          "ts": "2026-11-12T04:00:59Z",
-          "commit": "88d67ce",
-          "commit_full": "88d67cebf40cc1c9f3cf9e515431a213808e04a2",
-          "subject": "Refuse Clean room for native Aider runs (R2.2) (#1110)"
+          "ts": "2026-11-12T05:31:04Z",
+          "commit": "52b6c43",
+          "commit_full": "52b6c43d8c225abfa0247aef71396907fb2bfde0",
+          "subject": "Keep showing what a tool waits on while it holds the session (R1.5) (#1734) (#1734)"
         },
-        "last_commit_ts": "2026-11-12T04:00:59Z",
+        "last_commit_ts": "2026-11-12T05:31:04Z",
         "repo_since": "2026-10-31T14:52:14Z",
         "window": [
           0,
@@ -2687,7 +2691,7 @@
           157,
           111,
           100,
-          7
+          17
         ]
       },
       "release": {
@@ -2768,18 +2772,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 34.6,
+        "score": 34.8,
         "active_days_7d": 7,
-        "changes_7d": 777,
-        "changes_14d": 1779,
-        "housekeeping_7d": 36,
+        "changes_7d": 784,
+        "changes_14d": 1786,
+        "housekeeping_7d": 37,
         "last_code_change": {
-          "ts": "2026-11-12T03:38:22Z",
-          "commit": "b1ebc2c",
-          "commit_full": "b1ebc2c2da9cc8f86f292e02bcb0787dd0ab65f3",
-          "subject": "Orbit: the default pivot is the middle of the visible view, where Home puts the model (#14651) (#14667)"
+          "ts": "2026-11-12T04:21:16Z",
+          "commit": "a2dd5a3",
+          "commit_full": "a2dd5a3bafcba279d5665e58afda628611186dc4",
+          "subject": "Save: progress and Cancel until the file is replaced (#9560)"
         },
-        "last_commit_ts": "2026-11-12T03:38:22Z",
+        "last_commit_ts": "2026-11-12T05:26:26Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           208,
@@ -2795,7 +2799,7 @@
           151,
           239,
           149,
-          39
+          46
         ]
       },
       "release": {
@@ -3024,5 +3028,5 @@
       }
     ]
   },
-  "generated_at": "2026-11-12T04:45:00+00:00"
+  "generated_at": "2026-11-12T05:48:02+00:00"
 }

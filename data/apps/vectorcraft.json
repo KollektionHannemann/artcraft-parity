@@ -557,18 +557,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 34.2,
+    "score": 34.5,
     "active_days_7d": 7,
-    "changes_7d": 661,
-    "changes_14d": 1465,
+    "changes_7d": 675,
+    "changes_14d": 1479,
     "housekeeping_7d": 31,
     "last_code_change": {
-      "ts": "2026-11-12T04:43:06Z",
-      "commit": "aa4657e",
-      "commit_full": "aa4657e1cedfda1396cd6f5b67dfb37d3dacc3b5",
-      "subject": "Shape tools: a drag on a bounding-box handle scales the selection (#6704)"
+      "ts": "2026-11-12T05:41:15Z",
+      "commit": "485d4e3",
+      "commit_full": "485d4e3fff19d35a4eefa242af501598e48426fa",
+      "subject": "Plug-ins: only an approval records a grant, and installs need one (#6747)"
     },
-    "last_commit_ts": "2026-11-12T04:43:06Z",
+    "last_commit_ts": "2026-11-12T05:41:15Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       99,
@@ -584,7 +584,7 @@
       81,
       81,
       123,
-      75
+      89
     ],
     "days": [
       {
@@ -1393,26 +1393,43 @@
       },
       {
         "d": "2026-11-12",
-        "code": 75,
+        "code": 89,
         "other": 1,
         "samples": [
           {
-            "commit": "aa4657e",
-            "subject": "Shape tools: a drag on a bounding-box handle scales the selection (#6704)"
+            "commit": "485d4e3",
+            "subject": "Plug-ins: only an approval records a grant, and installs need one (#6747)"
           },
           {
-            "commit": "a5312e7",
-            "subject": "Keyboard Shortcuts: a plug-in installed while the menus are walked no longer leaves the keymap a row short (#6745)"
+            "commit": "a8ac772",
+            "subject": "Transform: Align New Objects to Pixel Grid makes new paths pixel-aligned (#6753)"
           },
           {
-            "commit": "dec6717",
-            "subject": "File formats: HP-GL (.plt) plot files open and place (#6726)"
+            "commit": "7e27e6e",
+            "subject": "Type: Dynamic Text Presets put type on a circle, arch or bow (#6761)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.24.1",
+      "name": "VectorCraft v0.24.1",
+      "ts": "2026-11-12T05:07:34Z",
+      "url": "https://github.com/storytold/vectorcraft/releases/tag/v0.24.1",
+      "changes": 73,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "patch"
+    },
     {
       "tag": "v0.24.0",
       "name": "VectorCraft v0.24.0",
@@ -1590,23 +1607,6 @@
       "url": "https://github.com/storytold/vectorcraft/releases/tag/v0.15.0",
       "changes": 253,
       "new_contributors": 15,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.14.0",
-      "name": "VectorCraft v0.14.0",
-      "ts": "2026-10-21T07:46:25Z",
-      "url": "https://github.com/storytold/vectorcraft/releases/tag/v0.14.0",
-      "changes": 188,
-      "new_contributors": 20,
       "platforms": [
         "macOS",
         "Windows",
@@ -7489,5 +7489,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-12T04:43:41+00:00"
+  "updated_at": "2026-11-12T05:46:56+00:00"
 }

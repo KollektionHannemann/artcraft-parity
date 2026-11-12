@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "88d67ce",
-  "latest_commit_date": "2026-11-12T11:00:59+07:00",
-  "latest_message": "Refuse Clean room for native Aider runs (R2.2) (#1110)",
+  "latest_commit": "52e6817",
+  "latest_commit_date": "2026-11-12T12:29:49+07:00",
+  "latest_message": "Stop CArchive listings at unterminated member names (R3.12) (#1733) (#1733)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 568,
-    "revisions_7d": 440,
+    "revisions": 577,
+    "revisions_7d": 449,
     "last_revision": {
-      "ts": "2026-11-12T04:00:59Z",
+      "ts": "2026-11-12T05:29:49Z",
       "kind": "content",
-      "commit": "88d67ce",
-      "commit_full": "88d67cebf40cc1c9f3cf9e515431a213808e04a2",
-      "message": "Refuse Clean room for native Aider runs (R2.2) (#1110)"
+      "commit": "52e6817",
+      "commit_full": "52e6817bf012e2156b1c89cd368df4582ca1a09f",
+      "message": "Stop CArchive listings at unterminated member names (R3.12) (#1733) (#1733)"
     },
     "last_update": {
-      "ts": "2026-11-12T04:00:59Z",
+      "ts": "2026-11-12T05:29:49Z",
       "kind": "content",
-      "commit": "88d67ce",
-      "commit_full": "88d67cebf40cc1c9f3cf9e515431a213808e04a2",
-      "message": "Refuse Clean room for native Aider runs (R2.2) (#1110)"
+      "commit": "52e6817",
+      "commit_full": "52e6817bf012e2156b1c89cd368df4582ca1a09f",
+      "message": "Stop CArchive listings at unterminated member names (R3.12) (#1733) (#1733)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 27.5,
+    "score": 28.7,
     "active_days_7d": 7,
-    "changes_7d": 510,
-    "changes_14d": 841,
+    "changes_7d": 520,
+    "changes_14d": 851,
     "housekeeping_7d": 36,
     "last_code_change": {
-      "ts": "2026-11-12T04:00:59Z",
-      "commit": "88d67ce",
-      "commit_full": "88d67cebf40cc1c9f3cf9e515431a213808e04a2",
-      "subject": "Refuse Clean room for native Aider runs (R2.2) (#1110)"
+      "ts": "2026-11-12T05:31:04Z",
+      "commit": "52b6c43",
+      "commit_full": "52b6c43d8c225abfa0247aef71396907fb2bfde0",
+      "subject": "Keep showing what a tool waits on while it holds the session (R1.5) (#1734) (#1734)"
     },
-    "last_commit_ts": "2026-11-12T04:00:59Z",
+    "last_commit_ts": "2026-11-12T05:31:04Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       157,
       111,
       100,
-      7
+      17
     ],
     "days": [
       {
@@ -318,20 +318,20 @@
       },
       {
         "d": "2026-11-12",
-        "code": 7,
+        "code": 17,
         "other": 0,
         "samples": [
           {
-            "commit": "88d67ce",
-            "subject": "Refuse Clean room for native Aider runs (R2.2) (#1110)"
+            "commit": "52b6c43",
+            "subject": "Keep showing what a tool waits on while it holds the session (R1.5) (#1734) (#1734)"
           },
           {
-            "commit": "8abe544",
-            "subject": "Decide whether a queued run must build alone from the project on disk (R2.9) (#1720)"
+            "commit": "52e6817",
+            "subject": "Stop CArchive listings at unterminated member names (R3.12) (#1733) (#1733)"
           },
           {
-            "commit": "a17b072",
-            "subject": "Build the Unix-only test helper one_turn only on Unix, so clippy passes on Windows (R5.2) (#1719)"
+            "commit": "726fa4d",
+            "subject": "Keep ordinary EVM metadata arrays typed (R3.12) (#1732) (#1732)"
           }
         ]
       }
@@ -4434,8 +4434,71 @@
       "commit": "88d67ce",
       "commit_full": "88d67cebf40cc1c9f3cf9e515431a213808e04a2",
       "message": "Refuse Clean room for native Aider runs (R2.2) (#1110)"
+    },
+    {
+      "ts": "2026-11-12T04:50:40Z",
+      "kind": "content",
+      "commit": "573d84e",
+      "commit_full": "573d84e75196957c6e45525f760fbf426ed5d017",
+      "message": "Say in the feed while a decompile waits on Ghidra, and for how long (R1.5) (#1722)"
+    },
+    {
+      "ts": "2026-11-12T05:02:39Z",
+      "kind": "content",
+      "commit": "e0c70c2",
+      "commit_full": "e0c70c2926ccdb213947e06f9d8c5f9e841fc841",
+      "message": "Normalize XML plist line endings before decoding text (R3.12) (#1726)"
+    },
+    {
+      "ts": "2026-11-12T05:06:26Z",
+      "kind": "content",
+      "commit": "96bf9c2",
+      "commit_full": "96bf9c2017da55c266900d070ddfdc42d13631b7",
+      "message": "Move the source, not the zero register, in AArch64 move aliases (R3.11) (#1727)"
+    },
+    {
+      "ts": "2026-11-12T05:06:44Z",
+      "kind": "content",
+      "commit": "b2c2219",
+      "commit_full": "b2c221971a30edd48fa7b8cf1629fc6bdcf53094",
+      "message": "Keep the value of AArch64 MOVK and MOVN immediates (R3.11) (#1728)"
+    },
+    {
+      "ts": "2026-11-12T05:07:02Z",
+      "kind": "content",
+      "commit": "0453ec4",
+      "commit_full": "0453ec4a9bfa566aeef5aa4a96c51bdf6cda89bf",
+      "message": "Keep the shift on AArch64 shifted and extended register operands (R3.11) (#1729)"
+    },
+    {
+      "ts": "2026-11-12T05:08:33Z",
+      "kind": "content",
+      "commit": "5756393",
+      "commit_full": "5756393c83a3970356d829e6e715d7e224d4e2a0",
+      "message": "Keep CRLF when adding the first JSONC object (R3.12) (#1730) (#1730)"
+    },
+    {
+      "ts": "2026-11-12T05:13:49Z",
+      "kind": "content",
+      "commit": "744e5c9",
+      "commit_full": "744e5c9838519e24a6bda3066fea4ec3aad5f47e",
+      "message": "Read source map annotations with optional marker spacing (R3.12) (#1731) (#1731)"
+    },
+    {
+      "ts": "2026-11-12T05:23:25Z",
+      "kind": "content",
+      "commit": "726fa4d",
+      "commit_full": "726fa4d25ba49e2742d88860b3adcb83df46d5c2",
+      "message": "Keep ordinary EVM metadata arrays typed (R3.12) (#1732) (#1732)"
+    },
+    {
+      "ts": "2026-11-12T05:29:49Z",
+      "kind": "content",
+      "commit": "52e6817",
+      "commit_full": "52e6817bf012e2156b1c89cd368df4582ca1a09f",
+      "message": "Stop CArchive listings at unterminated member names (R3.12) (#1733) (#1733)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-12T04:44:36+00:00"
+  "updated_at": "2026-11-12T05:47:42+00:00"
 }

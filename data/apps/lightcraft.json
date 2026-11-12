@@ -393,7 +393,7 @@
   "parity": {
     "tracked_since": "2026-10-10T18:25:15Z",
     "value_since": "2026-11-05T21:23:31Z",
-    "releases_since": 3,
+    "releases_since": 4,
     "releases_since_capped": false,
     "revisions_since": 1,
     "hours_since": null,
@@ -433,18 +433,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 13.4,
+    "score": 13.8,
     "active_days_7d": 7,
-    "changes_7d": 42,
-    "changes_14d": 131,
+    "changes_7d": 43,
+    "changes_14d": 132,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-12T02:30:32Z",
-      "commit": "5a96dfc",
-      "commit_full": "5a96dfc2951d3672a2769fdb1aaa202d3803778b",
-      "subject": "Fix Flatpak updates and bump to 0.21.1 (#4151)"
+      "ts": "2026-11-12T05:43:54Z",
+      "commit": "e4dd081",
+      "commit_full": "e4dd081dd4d2173db33b06483ab35f67ce8939fb",
+      "subject": "Use craft-gainmap from craft-libs for gain map metadata and arithmetic"
     },
-    "last_commit_ts": "2026-11-12T02:30:32Z",
+    "last_commit_ts": "2026-11-12T05:43:54Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
       3,
@@ -460,7 +460,7 @@
       4,
       6,
       9,
-      2
+      3
     ],
     "days": [
       {
@@ -1182,9 +1182,13 @@
       },
       {
         "d": "2026-11-12",
-        "code": 2,
+        "code": 3,
         "other": 0,
         "samples": [
+          {
+            "commit": "e4dd081",
+            "subject": "Use craft-gainmap from craft-libs for gain map metadata and arithmetic"
+          },
           {
             "commit": "5a96dfc",
             "subject": "Fix Flatpak updates and bump to 0.21.1 (#4151)"
@@ -1198,6 +1202,23 @@
     ]
   },
   "releases": [
+    {
+      "tag": "v0.21.1",
+      "name": "LightCraft v0.21.1",
+      "ts": "2026-11-12T05:08:23Z",
+      "url": "https://github.com/storytold/lightcraft/releases/tag/v0.21.1",
+      "changes": 8,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "patch"
+    },
     {
       "tag": "v0.21.0",
       "name": "LightCraft v0.21.0",
@@ -1375,23 +1396,6 @@
       "url": "https://github.com/storytold/lightcraft/releases/tag/v0.12.0",
       "changes": 88,
       "new_contributors": 17,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.11.0",
-      "name": "LightCraft v0.11.0",
-      "ts": "2026-10-21T18:29:19Z",
-      "url": "https://github.com/storytold/lightcraft/releases/tag/v0.11.0",
-      "changes": 49,
-      "new_contributors": 12,
       "platforms": [
         "macOS",
         "Windows",
@@ -1827,5 +1831,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-12T02:38:20+00:00"
+  "updated_at": "2026-11-12T05:47:05+00:00"
 }
