@@ -559,16 +559,16 @@
     "level": "buzzing",
     "score": 35.0,
     "active_days_7d": 7,
-    "changes_7d": 718,
-    "changes_14d": 1522,
+    "changes_7d": 719,
+    "changes_14d": 1523,
     "housekeeping_7d": 32,
     "last_code_change": {
-      "ts": "2026-11-12T09:02:52Z",
-      "commit": "61650e4",
-      "commit_full": "61650e44a2303d934604323931f475d21263324f",
-      "subject": "Brushes: Alt-drag art onto a brush to replace its art (#6814)"
+      "ts": "2026-11-12T10:20:45Z",
+      "commit": "1467b71",
+      "commit_full": "1467b71f0d1875d02748009164d39fa92ed73b63",
+      "subject": "Revert #6656: it breaks a #6785 save-reply test on main (#6850)"
     },
-    "last_commit_ts": "2026-11-12T09:02:52Z",
+    "last_commit_ts": "2026-11-12T10:20:45Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       99,
@@ -584,7 +584,7 @@
       81,
       81,
       123,
-      132
+      133
     ],
     "days": [
       {
@@ -1393,9 +1393,13 @@
       },
       {
         "d": "2026-11-12",
-        "code": 132,
+        "code": 133,
         "other": 2,
         "samples": [
+          {
+            "commit": "1467b71",
+            "subject": "Revert #6656: it breaks a #6785 save-reply test on main (#6850)"
+          },
           {
             "commit": "61650e4",
             "subject": "Brushes: Alt-drag art onto a brush to replace its art (#6814)"
@@ -1403,10 +1407,6 @@
           {
             "commit": "87c0d5c",
             "subject": "3D (Classic): Rotate (Classic) turns flat art in 3D with the No Shading and Diffuse surfaces (#6826)"
-          },
-          {
-            "commit": "744c37d",
-            "subject": "Type: Release Type on a Path keeps the size Dynamic Text drew the type at (#6669)"
           }
         ]
       }
@@ -7541,5 +7541,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-12T09:23:55+00:00"
+  "updated_at": "2026-11-12T10:25:34+00:00"
 }
