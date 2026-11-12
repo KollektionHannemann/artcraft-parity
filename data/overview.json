@@ -49,6 +49,28 @@
   ],
   "latest_events": [
     {
+      "id": "pdfcraft",
+      "name": "PdfCraft",
+      "type": "release",
+      "ts": "2026-11-12T02:18:37Z",
+      "tag": "v0.21.1",
+      "kind": "patch",
+      "changes": 22,
+      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.21.1",
+      "prerelease": false
+    },
+    {
+      "id": "mailcraft",
+      "name": "MailCraft",
+      "type": "release",
+      "ts": "2026-11-12T02:12:06Z",
+      "tag": "v0.12.0",
+      "kind": "minor",
+      "changes": null,
+      "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.12.0",
+      "prerelease": false
+    },
+    {
       "id": "craft-anything",
       "name": "Craft Anything",
       "type": "release",
@@ -461,35 +483,13 @@
       "type": "new_app",
       "ts": "2026-11-10T00:00:00Z",
       "adobe": "Outlook"
-    },
-    {
-      "id": "craft-anything",
-      "name": "Craft Anything",
-      "type": "release",
-      "ts": "2026-11-09T12:57:38Z",
-      "tag": "v0.6.0",
-      "kind": "minor",
-      "changes": 195,
-      "url": "https://github.com/storytold/craft-anything/releases/tag/v0.6.0",
-      "prerelease": false
-    },
-    {
-      "id": "figcraft",
-      "name": "FigCraft",
-      "type": "release",
-      "ts": "2026-11-09T12:21:12Z",
-      "tag": "v0.17.0",
-      "kind": "minor",
-      "changes": 127,
-      "url": "https://github.com/storytold/figcraft/releases/tag/v0.17.0",
-      "prerelease": false
     }
   ],
   "release_waves": [
     {
       "day": "2026-11-12",
-      "apps": 14,
-      "changes": 383,
+      "apps": 16,
+      "changes": 405,
       "largest": {
         "id": "craft-anything",
         "name": "Craft Anything",
@@ -653,18 +653,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 28.0,
-        "active_days_7d": 6,
-        "changes_7d": 586,
-        "changes_14d": 1390,
-        "housekeeping_7d": 30,
+        "score": 33.7,
+        "active_days_7d": 7,
+        "changes_7d": 639,
+        "changes_14d": 1443,
+        "housekeeping_7d": 31,
         "last_code_change": {
-          "ts": "2026-11-11T21:11:34Z",
-          "commit": "566f720",
-          "commit_full": "566f720868c180c862311fb174cefe91e81e7abd",
-          "subject": "SVG import: references follow an id's first element, one read per linked file, bounded blank lines (#5409)"
+          "ts": "2026-11-12T02:32:21Z",
+          "commit": "7dd71a6",
+          "commit_full": "7dd71a6972dc2d528a77ced040164a0acbb7488c",
+          "subject": "Type: Mojikumi spacing at line ends counts when lines break (#6708)"
         },
-        "last_commit_ts": "2026-11-11T22:04:49Z",
+        "last_commit_ts": "2026-11-12T02:32:21Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           99,
@@ -680,7 +680,7 @@
           81,
           81,
           123,
-          0
+          53
         ]
       },
       "release": {
@@ -782,18 +782,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 12.8,
+        "score": 13.4,
         "active_days_7d": 7,
-        "changes_7d": 41,
-        "changes_14d": 130,
+        "changes_7d": 42,
+        "changes_14d": 131,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-12T00:51:47Z",
-          "commit": "c5d60d2",
-          "commit_full": "c5d60d2fa7afa4e0d29bfba25dd30a64e71b62a4",
-          "subject": "Use craft-tiff from craft-libs for TIFF/IFD (#4088)"
+          "ts": "2026-11-12T02:30:32Z",
+          "commit": "5a96dfc",
+          "commit_full": "5a96dfc2951d3672a2769fdb1aaa202d3803778b",
+          "subject": "Fix Flatpak updates and bump to 0.21.1 (#4151)"
         },
-        "last_commit_ts": "2026-11-12T00:51:47Z",
+        "last_commit_ts": "2026-11-12T02:30:32Z",
         "repo_since": "2026-09-30T14:04:12Z",
         "window": [
           3,
@@ -809,7 +809,7 @@
           4,
           6,
           9,
-          1
+          2
         ]
       },
       "release": {
@@ -1341,18 +1341,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.6,
+        "score": 18.0,
         "active_days_7d": 6,
-        "changes_7d": 140,
-        "changes_14d": 342,
+        "changes_7d": 159,
+        "changes_14d": 361,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-12T00:01:50Z",
-          "commit": "e2b6b4c",
-          "commit_full": "e2b6b4cd877cf403135e78645dbaa555e7adbf49",
-          "subject": "chore: bump to 0.18.1 for the Flatpak updater patch release (#2279)"
+          "ts": "2026-11-12T02:37:23Z",
+          "commit": "c2d61d3",
+          "commit_full": "c2d61d36bb209fa5f16ae6f69509211fa2ca376f",
+          "subject": "M12: a sticky's text keeps its size and the note grows taller (#2157) (#2164)"
         },
-        "last_commit_ts": "2026-11-12T00:01:50Z",
+        "last_commit_ts": "2026-11-12T02:37:23Z",
         "repo_since": "2026-10-09T15:38:50Z",
         "window": [
           100,
@@ -1368,7 +1368,7 @@
           6,
           2,
           17,
-          1
+          20
         ]
       },
       "release": {
@@ -1517,12 +1517,12 @@
         ]
       },
       "release": {
-        "tag": "v0.21.0",
-        "name": "PdfCraft v0.21.0",
-        "ts": "2026-11-11T17:39:29Z",
-        "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.21.0",
-        "changes": 132,
-        "new_contributors": 11,
+        "tag": "v0.21.1",
+        "name": "PdfCraft v0.21.1",
+        "ts": "2026-11-12T02:18:37Z",
+        "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.21.1",
+        "changes": 22,
+        "new_contributors": null,
         "platforms": [
           "macOS",
           "Windows",
@@ -1531,7 +1531,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
+        "kind": "patch"
       },
       "series": [
         {
@@ -1850,18 +1850,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 28.7,
+        "score": 28.8,
         "active_days_7d": 7,
-        "changes_7d": 524,
-        "changes_14d": 655,
-        "housekeeping_7d": 9,
+        "changes_7d": 526,
+        "changes_14d": 657,
+        "housekeeping_7d": 10,
         "last_code_change": {
-          "ts": "2026-11-12T01:20:01Z",
-          "commit": "de7cb6c",
-          "commit_full": "de7cb6c0c4876e15921326ac5dedb7613967c254",
-          "subject": "fix(ui): a Perspective Crop drag with no area keeps the clicked corners (#13065) (#13234)"
+          "ts": "2026-11-12T02:30:36Z",
+          "commit": "eee667f",
+          "commit_full": "eee667f1d92e34db6c438ddd20f3e4f5339cf8a7",
+          "subject": "Fix Flatpak updates and bump to 0.23.1 (#13322)"
         },
-        "last_commit_ts": "2026-11-12T01:20:01Z",
+        "last_commit_ts": "2026-11-12T02:30:36Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           7,
@@ -1877,7 +1877,7 @@
           43,
           75,
           180,
-          13
+          15
         ]
       },
       "release": {
@@ -2298,7 +2298,7 @@
         "value_since": "2026-10-12T18:17:00Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 239,
+        "revisions_since": 240,
         "hours_since": null,
         "areas_since": null,
         "changes": 0,
@@ -2306,39 +2306,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 243,
-        "revisions_7d": 6,
+        "revisions": 244,
+        "revisions_7d": 7,
         "last_revision": {
-          "ts": "2026-11-11T10:00:50Z",
+          "ts": "2026-11-12T01:46:48Z",
           "kind": "content",
-          "commit": "e0f32d3",
-          "commit_full": "e0f32d362db3bb75aed13f89c9f15fdf5aed1512",
-          "message": "#815 part 5: .pst notes, journal entries and HTML kept in rich text (#1051)"
+          "commit": "92eb10c",
+          "commit_full": "92eb10c080d2da131bde71dd448bf37413a74d03",
+          "message": "Release 0.12.0 (#1127)"
         },
         "last_update": {
-          "ts": "2026-11-11T10:00:50Z",
+          "ts": "2026-11-12T01:46:48Z",
           "kind": "content",
-          "commit": "e0f32d3",
-          "commit_full": "e0f32d362db3bb75aed13f89c9f15fdf5aed1512",
-          "message": "#815 part 5: .pst notes, journal entries and HTML kept in rich text (#1051)"
+          "commit": "92eb10c",
+          "commit_full": "92eb10c080d2da131bde71dd448bf37413a74d03",
+          "message": "Release 0.12.0 (#1127)"
         },
-        "self_reported": "2026-11-07"
+        "self_reported": "2026-11-11"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 16.3,
-        "active_days_7d": 6,
-        "changes_7d": 88,
-        "changes_14d": 183,
+        "score": 17.3,
+        "active_days_7d": 7,
+        "changes_7d": 89,
+        "changes_14d": 184,
         "housekeeping_7d": 16,
         "last_code_change": {
-          "ts": "2026-11-11T22:40:24Z",
-          "commit": "f0fe897",
-          "commit_full": "f0fe897ca60720fb7dd39685c443ef66c8e4d423",
-          "subject": "#986: show administrator approval instead of asking again when reading favorites is forbidden (#1055)"
+          "ts": "2026-11-12T01:46:48Z",
+          "commit": "92eb10c",
+          "commit_full": "92eb10c080d2da131bde71dd448bf37413a74d03",
+          "subject": "Release 0.12.0 (#1127)"
         },
-        "last_commit_ts": "2026-11-11T22:40:24Z",
+        "last_commit_ts": "2026-11-12T01:46:48Z",
         "repo_since": "2026-10-12T18:17:00Z",
         "window": [
           20,
@@ -2354,14 +2354,14 @@
           7,
           22,
           19,
-          0
+          1
         ]
       },
       "release": {
-        "tag": "v0.11.1",
-        "name": "MailCraft v0.11.1",
-        "ts": "2026-11-08T12:24:26Z",
-        "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.11.1",
+        "tag": "v0.12.0",
+        "name": "MailCraft v0.12.0",
+        "ts": "2026-11-12T02:12:06Z",
+        "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.12.0",
         "changes": null,
         "new_contributors": null,
         "platforms": [
@@ -2372,7 +2372,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "patch"
+        "kind": "minor"
       },
       "series": [
         {
@@ -2380,11 +2380,11 @@
           "v": 25.0
         },
         {
-          "t": "2026-11-11T10:00:50Z",
+          "t": "2026-11-12T01:46:48Z",
           "v": 25.0
         }
       ],
-      "history_len": 243
+      "history_len": 244
     },
     {
       "repo_url": "https://github.com/storytold/texturecraft",
@@ -2444,18 +2444,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.1,
-        "active_days_7d": 6,
-        "changes_7d": 44,
-        "changes_14d": 155,
+        "score": 14.1,
+        "active_days_7d": 7,
+        "changes_7d": 45,
+        "changes_14d": 156,
         "housekeeping_7d": 9,
         "last_code_change": {
-          "ts": "2026-11-11T23:38:56Z",
-          "commit": "55015a7",
-          "commit_full": "55015a76313c9ec30dfd5a853b5a8d40f5ad38fe",
-          "subject": "Fix Flatpak updates and bump to 0.6.1 (#426)"
+          "ts": "2026-11-12T01:52:04Z",
+          "commit": "b1806e4",
+          "commit_full": "b1806e401006d6e2fb042e29714539e21ef82bc6",
+          "subject": "Add an offset slider to mesh-map generators (#231)"
         },
-        "last_commit_ts": "2026-11-11T23:38:56Z",
+        "last_commit_ts": "2026-11-12T01:52:04Z",
         "repo_since": "2026-10-14T18:33:13Z",
         "window": [
           0,
@@ -2471,7 +2471,7 @@
           7,
           10,
           10,
-          0
+          1
         ]
       },
       "release": {
@@ -2639,39 +2639,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 565,
-        "revisions_7d": 437,
+        "revisions": 567,
+        "revisions_7d": 439,
         "last_revision": {
-          "ts": "2026-11-11T19:43:59Z",
+          "ts": "2026-11-12T02:26:47Z",
           "kind": "content",
-          "commit": "ab79ec8",
-          "commit_full": "ab79ec87a4da58d8965b6d4f95b751464ba6e999",
-          "message": "Count source-map sections, check skipped values and keep refused maps' sources uncertain (R3.12) (#1705)"
+          "commit": "12aad97",
+          "commit_full": "12aad97757d692e8dbc8af03ceb60c6b44f53339",
+          "message": "Keep the sources of a source map refused for bad mappings or section offsets (R3.12) (#1717)"
         },
         "last_update": {
-          "ts": "2026-11-11T19:43:59Z",
+          "ts": "2026-11-12T02:26:47Z",
           "kind": "content",
-          "commit": "ab79ec8",
-          "commit_full": "ab79ec87a4da58d8965b6d4f95b751464ba6e999",
-          "message": "Count source-map sections, check skipped values and keep refused maps' sources uncertain (R3.12) (#1705)"
+          "commit": "12aad97",
+          "commit_full": "12aad97757d692e8dbc8af03ceb60c6b44f53339",
+          "message": "Keep the sources of a source map refused for bad mappings or section offsets (R3.12) (#1717)"
         },
         "self_reported": null
       },
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 25.5,
+        "score": 26.5,
         "active_days_7d": 7,
-        "changes_7d": 504,
-        "changes_14d": 835,
+        "changes_7d": 506,
+        "changes_14d": 837,
         "housekeeping_7d": 36,
         "last_code_change": {
-          "ts": "2026-11-12T00:43:41Z",
-          "commit": "5b3f1d8",
-          "commit_full": "5b3f1d818f1ec3c0d7a760af1168ad68f7badf08",
-          "subject": "Add Help > Check for Updates and bump to 0.6.1 (#1706)"
+          "ts": "2026-11-12T02:26:47Z",
+          "commit": "12aad97",
+          "commit_full": "12aad97757d692e8dbc8af03ceb60c6b44f53339",
+          "subject": "Keep the sources of a source map refused for bad mappings or section offsets (R3.12) (#1717)"
         },
-        "last_commit_ts": "2026-11-12T00:43:41Z",
+        "last_commit_ts": "2026-11-12T02:26:47Z",
         "repo_since": "2026-10-31T14:52:14Z",
         "window": [
           0,
@@ -2687,7 +2687,7 @@
           157,
           111,
           100,
-          1
+          3
         ]
       },
       "release": {
@@ -2768,18 +2768,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 33.2,
+        "score": 34.0,
         "active_days_7d": 7,
-        "changes_7d": 752,
-        "changes_14d": 1754,
-        "housekeeping_7d": 35,
+        "changes_7d": 764,
+        "changes_14d": 1766,
+        "housekeeping_7d": 36,
         "last_code_change": {
-          "ts": "2026-11-12T01:11:25Z",
-          "commit": "1ecfb4e",
-          "commit_full": "1ecfb4ef307af31c314597213a4c2b0c2d533004",
-          "subject": "Release 0.40.1 (#15213)"
+          "ts": "2026-11-12T02:04:34Z",
+          "commit": "9377222",
+          "commit_full": "937722290a26088db14e56a8fe2155d026f04900",
+          "subject": "solidcore-ops: every kernel offset refusal has a named reason, no text catch-all (#15035) (#15160)"
         },
-        "last_commit_ts": "2026-11-12T01:18:49Z",
+        "last_commit_ts": "2026-11-12T02:04:34Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           208,
@@ -2795,7 +2795,7 @@
           151,
           239,
           149,
-          14
+          26
         ]
       },
       "release": {
@@ -2864,18 +2864,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.1,
+        "score": 13.9,
         "active_days_7d": 6,
-        "changes_7d": 83,
-        "changes_14d": 83,
+        "changes_7d": 86,
+        "changes_14d": 86,
         "housekeeping_7d": 10,
         "last_code_change": {
-          "ts": "2026-11-12T01:24:38Z",
-          "commit": "29ba42f",
-          "commit_full": "29ba42f0743ef5dfb574ede8802aeff65c4042c9",
-          "subject": "feat(export): animated PNG and animated WebP export (M4) (#184)"
+          "ts": "2026-11-12T02:23:48Z",
+          "commit": "07e5bee",
+          "commit_full": "07e5bee2ae653be54244e9bf3f07246043345d67",
+          "subject": "feat(a11y): stage elements, timeline frames, keyboard menu bar, system contrast (M8) (#188)"
         },
-        "last_commit_ts": "2026-11-12T01:24:38Z",
+        "last_commit_ts": "2026-11-12T02:23:48Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
           0,
@@ -2891,7 +2891,7 @@
           20,
           19,
           18,
-          3
+          6
         ]
       },
       "release": {
@@ -2959,18 +2959,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.1,
+        "score": 13.9,
         "active_days_7d": 6,
-        "changes_7d": 83,
-        "changes_14d": 83,
+        "changes_7d": 86,
+        "changes_14d": 86,
         "housekeeping_7d": 10,
         "last_code_change": {
-          "ts": "2026-11-12T01:24:38Z",
-          "commit": "29ba42f",
-          "commit_full": "29ba42f0743ef5dfb574ede8802aeff65c4042c9",
-          "subject": "feat(export): animated PNG and animated WebP export (M4) (#184)"
+          "ts": "2026-11-12T02:23:48Z",
+          "commit": "07e5bee",
+          "commit_full": "07e5bee2ae653be54244e9bf3f07246043345d67",
+          "subject": "feat(a11y): stage elements, timeline frames, keyboard menu bar, system contrast (M8) (#188)"
         },
-        "last_commit_ts": "2026-11-12T01:24:38Z",
+        "last_commit_ts": "2026-11-12T02:23:48Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
           0,
@@ -2986,7 +2986,7 @@
           20,
           19,
           18,
-          3
+          6
         ]
       },
       "release": {
@@ -3024,5 +3024,5 @@
       }
     ]
   },
-  "generated_at": "2026-11-12T01:41:42+00:00"
+  "generated_at": "2026-11-12T02:39:30+00:00"
 }
