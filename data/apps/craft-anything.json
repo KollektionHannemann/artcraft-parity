@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "bd72993",
-  "latest_commit_date": "2026-11-12T14:54:11+07:00",
-  "latest_message": "Keep the extension on AArch64 memory index operands (R3.11) (#1745) (#1745)",
+  "latest_commit": "fb34282",
+  "latest_commit_date": "2026-11-12T16:18:22+07:00",
+  "latest_message": "Reject required WASM font builds when filtering leaves no fonts (R2.9) (#1755) (#1755)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 586,
-    "revisions_7d": 458,
+    "revisions": 590,
+    "revisions_7d": 462,
     "last_revision": {
-      "ts": "2026-11-12T07:54:11Z",
+      "ts": "2026-11-12T09:18:22Z",
       "kind": "content",
-      "commit": "bd72993",
-      "commit_full": "bd729936048628599683d47debf6d9f1e8957540",
-      "message": "Keep the extension on AArch64 memory index operands (R3.11) (#1745) (#1745)"
+      "commit": "fb34282",
+      "commit_full": "fb3428280b7aa9a5d745f16f341939d1e8ea08db",
+      "message": "Reject required WASM font builds when filtering leaves no fonts (R2.9) (#1755) (#1755)"
     },
     "last_update": {
-      "ts": "2026-11-12T07:54:11Z",
+      "ts": "2026-11-12T09:18:22Z",
       "kind": "content",
-      "commit": "bd72993",
-      "commit_full": "bd729936048628599683d47debf6d9f1e8957540",
-      "message": "Keep the extension on AArch64 memory index operands (R3.11) (#1745) (#1745)"
+      "commit": "fb34282",
+      "commit_full": "fb3428280b7aa9a5d745f16f341939d1e8ea08db",
+      "message": "Reject required WASM font builds when filtering leaves no fonts (R2.9) (#1755) (#1755)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 29.3,
+    "score": 29.5,
     "active_days_7d": 7,
-    "changes_7d": 529,
-    "changes_14d": 860,
+    "changes_7d": 534,
+    "changes_14d": 865,
     "housekeeping_7d": 36,
     "last_code_change": {
-      "ts": "2026-11-12T07:54:11Z",
-      "commit": "bd72993",
-      "commit_full": "bd729936048628599683d47debf6d9f1e8957540",
-      "subject": "Keep the extension on AArch64 memory index operands (R3.11) (#1745) (#1745)"
+      "ts": "2026-11-12T09:18:22Z",
+      "commit": "fb34282",
+      "commit_full": "fb3428280b7aa9a5d745f16f341939d1e8ea08db",
+      "subject": "Reject required WASM font builds when filtering leaves no fonts (R2.9) (#1755) (#1755)"
     },
-    "last_commit_ts": "2026-11-12T07:54:11Z",
+    "last_commit_ts": "2026-11-12T09:18:22Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       157,
       111,
       100,
-      26
+      31
     ],
     "days": [
       {
@@ -318,20 +318,20 @@
       },
       {
         "d": "2026-11-12",
-        "code": 26,
+        "code": 31,
         "other": 0,
         "samples": [
           {
-            "commit": "bd72993",
-            "subject": "Keep the extension on AArch64 memory index operands (R3.11) (#1745) (#1745)"
+            "commit": "fb34282",
+            "subject": "Reject required WASM font builds when filtering leaves no fonts (R2.9) (#1755) (#1755)"
           },
           {
-            "commit": "b9de86c",
-            "subject": "Bound Ghidra's jump tables that have no bounds check before decompiling (R1.5) (#1743) (#1743)"
+            "commit": "0a5ab0d",
+            "subject": "Stop a launched program without an unlimited wait under its lock (R5.3) (#1756) (#1756)"
           },
           {
-            "commit": "d67583b",
-            "subject": "Recognize HTTP extension methods in packet captures (R3.12) (#1741) (#1741)"
+            "commit": "f513e2d",
+            "subject": "Read the context window from the server (R5.4) (#1754) (#1754)"
           }
         ]
       }
@@ -4560,8 +4560,36 @@
       "commit": "bd72993",
       "commit_full": "bd729936048628599683d47debf6d9f1e8957540",
       "message": "Keep the extension on AArch64 memory index operands (R3.11) (#1745) (#1745)"
+    },
+    {
+      "ts": "2026-11-12T08:26:06Z",
+      "kind": "content",
+      "commit": "7049097",
+      "commit_full": "7049097d35c701883726349baf17c28f28455560",
+      "message": "Fall back to app/ for relative build tool paths (R5.4) (#1752) (#1752)"
+    },
+    {
+      "ts": "2026-11-12T08:40:55Z",
+      "kind": "content",
+      "commit": "f513e2d",
+      "commit_full": "f513e2d3292e242f4ebfd9e1c8744e6a8c0cb94e",
+      "message": "Read the context window from the server (R5.4) (#1754) (#1754)"
+    },
+    {
+      "ts": "2026-11-12T08:57:32Z",
+      "kind": "content",
+      "commit": "0a5ab0d",
+      "commit_full": "0a5ab0dba7d7b9ab8721bf4ffb9e9d93a80b43a1",
+      "message": "Stop a launched program without an unlimited wait under its lock (R5.3) (#1756) (#1756)"
+    },
+    {
+      "ts": "2026-11-12T09:18:22Z",
+      "kind": "content",
+      "commit": "fb34282",
+      "commit_full": "fb3428280b7aa9a5d745f16f341939d1e8ea08db",
+      "message": "Reject required WASM font builds when filtering leaves no fonts (R2.9) (#1755) (#1755)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-12T08:07:41+00:00"
+  "updated_at": "2026-11-12T09:24:52+00:00"
 }
