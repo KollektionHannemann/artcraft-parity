@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 30.9,
+    "score": 33.2,
     "active_days_7d": 7,
-    "changes_7d": 738,
-    "changes_14d": 1740,
-    "housekeeping_7d": 34,
+    "changes_7d": 752,
+    "changes_14d": 1754,
+    "housekeeping_7d": 35,
     "last_code_change": {
-      "ts": "2026-11-12T00:05:54Z",
-      "commit": "7081f99",
-      "commit_full": "7081f99b1cb268a1658b05628025e4998e4fb0a0",
-      "subject": "UI kit: the view toast is a kit component; the history bar's reorder can be turned off (#15003)"
+      "ts": "2026-11-12T01:11:25Z",
+      "commit": "1ecfb4e",
+      "commit_full": "1ecfb4ef307af31c314597213a4c2b0c2d533004",
+      "subject": "Release 0.40.1 (#15213)"
     },
-    "last_commit_ts": "2026-11-12T00:05:54Z",
+    "last_commit_ts": "2026-11-12T01:18:49Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       208,
@@ -92,8 +92,8 @@
       70,
       151,
       239,
-      147,
-      2
+      149,
+      14
     ],
     "days": [
       {
@@ -763,35 +763,39 @@
       },
       {
         "d": "2026-11-11",
-        "code": 147,
+        "code": 149,
         "other": 4,
         "samples": [
           {
+            "commit": "08ad6f1",
+            "subject": "GPU path tracer: shaders compile in seconds, not up to 21.6 minutes and 61 GB of memory (#14105) (#14834)"
+          },
+          {
+            "commit": "83ba62f",
+            "subject": "query::tangent_edge: the #13575 review fixes, a tight pcurve box and a centred net normal (tangency-labs/solidcraft#14611) (#15005)"
+          },
+          {
             "commit": "94242dc",
             "subject": "Projected nearest point on a curve: return the end of the interval when the answer is there (#13658) (#14964)"
-          },
-          {
-            "commit": "9ebf0e9",
-            "subject": "Operations panel: each operation says how it ended; an agent's Stop stops it (#9501)"
-          },
-          {
-            "commit": "865497c",
-            "subject": "theme: an isoparm colour, lighter than a body's edges (#15143)"
           }
         ]
       },
       {
         "d": "2026-11-12",
-        "code": 2,
-        "other": 0,
+        "code": 14,
+        "other": 1,
         "samples": [
           {
-            "commit": "7081f99",
-            "subject": "UI kit: the view toast is a kit component; the history bar's reorder can be turned off (#15003)"
+            "commit": "1ecfb4e",
+            "subject": "Release 0.40.1 (#15213)"
           },
           {
-            "commit": "61f8aa0",
-            "subject": "solidcore: transform a curve; the curve seen in two views (#15178)"
+            "commit": "d063e81",
+            "subject": "Format machinery and design container in a shared crate: solidcraft-format (#14997)"
+          },
+          {
+            "commit": "86e9351",
+            "subject": "Show Dimensions: a dimension is sized from whichever sketch direction reaches the screen (#14826) (#15197)"
           }
         ]
       }
@@ -2378,5 +2382,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-12T00:08:47+00:00"
+  "updated_at": "2026-11-12T01:41:38+00:00"
 }

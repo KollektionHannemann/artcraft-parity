@@ -506,18 +506,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.1,
-    "active_days_7d": 6,
-    "changes_7d": 47,
-    "changes_14d": 200,
+    "score": 15.7,
+    "active_days_7d": 7,
+    "changes_7d": 49,
+    "changes_14d": 202,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-11T21:21:23Z",
-      "commit": "d6a0963",
-      "commit_full": "d6a09639bf5fea750b599e73e289217e17624a13",
-      "subject": "Repagination, IDML swatch import and style folders: linear work, bounded depth (#2237)"
+      "ts": "2026-11-12T01:30:21Z",
+      "commit": "b284052",
+      "commit_full": "b284052acc966a6d0e0b298805a04a7f4407b05e",
+      "subject": "Type: type.align without a value is an error (#2645)"
     },
-    "last_commit_ts": "2026-11-11T22:03:58Z",
+    "last_commit_ts": "2026-11-12T01:30:21Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       37,
@@ -533,7 +533,7 @@
       6,
       5,
       21,
-      0
+      2
     ],
     "days": [
       {
@@ -1283,10 +1283,42 @@
             "subject": "Opening documents: index lookups in Document::check and the format-1 style upgrade (#2218)"
           }
         ]
+      },
+      {
+        "d": "2026-11-12",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "b284052",
+            "subject": "Type: type.align without a value is an error (#2645)"
+          },
+          {
+            "commit": "27d8eab",
+            "subject": "Render: clamp the blur size before the filter planner squares it (#2640)"
+          }
+        ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.20.1",
+      "name": "DesignCraft v0.20.1",
+      "ts": "2026-11-12T00:16:10Z",
+      "url": "https://github.com/storytold/designcraft/releases/tag/v0.20.1",
+      "changes": 1,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "patch"
+    },
     {
       "tag": "v0.20.0",
       "name": "DesignCraft v0.20.0",
@@ -1464,23 +1496,6 @@
       "url": "https://github.com/storytold/designcraft/releases/tag/v0.12.0",
       "changes": 24,
       "new_contributors": 2,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.11.0",
-      "name": "DesignCraft v0.11.0",
-      "ts": "2026-10-21T18:26:30Z",
-      "url": "https://github.com/storytold/designcraft/releases/tag/v0.11.0",
-      "changes": 6,
-      "new_contributors": 1,
       "platforms": [
         "macOS",
         "Windows",
@@ -5980,5 +5995,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-12T00:07:51+00:00"
+  "updated_at": "2026-11-12T01:41:09+00:00"
 }
