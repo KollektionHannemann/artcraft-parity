@@ -383,18 +383,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 28.8,
+    "score": 28.9,
     "active_days_7d": 7,
-    "changes_7d": 526,
-    "changes_14d": 657,
+    "changes_7d": 527,
+    "changes_14d": 658,
     "housekeeping_7d": 10,
     "last_code_change": {
-      "ts": "2026-11-12T02:30:36Z",
-      "commit": "eee667f",
-      "commit_full": "eee667f1d92e34db6c438ddd20f3e4f5339cf8a7",
-      "subject": "Fix Flatpak updates and bump to 0.23.1 (#13322)"
+      "ts": "2026-11-12T06:29:33Z",
+      "commit": "21bb9fd",
+      "commit_full": "21bb9fda63960af78e44af66857a6069c96a61af",
+      "subject": "Use shared crates for raster codecs (#13416)"
     },
-    "last_commit_ts": "2026-11-12T02:30:36Z",
+    "last_commit_ts": "2026-11-12T06:29:33Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       7,
@@ -410,7 +410,7 @@
       43,
       75,
       180,
-      15
+      16
     ],
     "days": [
       {
@@ -1232,9 +1232,13 @@
       },
       {
         "d": "2026-11-12",
-        "code": 15,
+        "code": 16,
         "other": 1,
         "samples": [
+          {
+            "commit": "21bb9fd",
+            "subject": "Use shared crates for raster codecs (#13416)"
+          },
           {
             "commit": "eee667f",
             "subject": "Fix Flatpak updates and bump to 0.23.1 (#13322)"
@@ -1242,10 +1246,6 @@
           {
             "commit": "eb3c99d",
             "subject": "Perspective Crop: W, H and Resolution clamp to the measured ranges with alerts (#12237)"
-          },
-          {
-            "commit": "de7cb6c",
-            "subject": "fix(ui): a Perspective Crop drag with no area keeps the clicked corners (#13065) (#13234)"
           }
         ]
       }
@@ -1736,5 +1736,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-12T05:46:49+00:00"
+  "updated_at": "2026-11-12T06:50:39+00:00"
 }

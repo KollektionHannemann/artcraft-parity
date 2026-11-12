@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "52e6817",
-  "latest_commit_date": "2026-11-12T12:29:49+07:00",
-  "latest_message": "Stop CArchive listings at unterminated member names (R3.12) (#1733) (#1733)",
+  "latest_commit": "d67583b",
+  "latest_commit_date": "2026-11-12T13:33:56+07:00",
+  "latest_message": "Recognize HTTP extension methods in packet captures (R3.12) (#1741) (#1741)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 577,
-    "revisions_7d": 449,
+    "revisions": 584,
+    "revisions_7d": 456,
     "last_revision": {
-      "ts": "2026-11-12T05:29:49Z",
+      "ts": "2026-11-12T06:33:56Z",
       "kind": "content",
-      "commit": "52e6817",
-      "commit_full": "52e6817bf012e2156b1c89cd368df4582ca1a09f",
-      "message": "Stop CArchive listings at unterminated member names (R3.12) (#1733) (#1733)"
+      "commit": "d67583b",
+      "commit_full": "d67583b183e42bdb69a5ab440d2403eea58c7b0d",
+      "message": "Recognize HTTP extension methods in packet captures (R3.12) (#1741) (#1741)"
     },
     "last_update": {
-      "ts": "2026-11-12T05:29:49Z",
+      "ts": "2026-11-12T06:33:56Z",
       "kind": "content",
-      "commit": "52e6817",
-      "commit_full": "52e6817bf012e2156b1c89cd368df4582ca1a09f",
-      "message": "Stop CArchive listings at unterminated member names (R3.12) (#1733) (#1733)"
+      "commit": "d67583b",
+      "commit_full": "d67583b183e42bdb69a5ab440d2403eea58c7b0d",
+      "message": "Recognize HTTP extension methods in packet captures (R3.12) (#1741) (#1741)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 28.7,
+    "score": 29.2,
     "active_days_7d": 7,
-    "changes_7d": 520,
-    "changes_14d": 851,
+    "changes_7d": 527,
+    "changes_14d": 858,
     "housekeeping_7d": 36,
     "last_code_change": {
-      "ts": "2026-11-12T05:31:04Z",
-      "commit": "52b6c43",
-      "commit_full": "52b6c43d8c225abfa0247aef71396907fb2bfde0",
-      "subject": "Keep showing what a tool waits on while it holds the session (R1.5) (#1734) (#1734)"
+      "ts": "2026-11-12T06:33:56Z",
+      "commit": "d67583b",
+      "commit_full": "d67583b183e42bdb69a5ab440d2403eea58c7b0d",
+      "subject": "Recognize HTTP extension methods in packet captures (R3.12) (#1741) (#1741)"
     },
-    "last_commit_ts": "2026-11-12T05:31:04Z",
+    "last_commit_ts": "2026-11-12T06:33:56Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       157,
       111,
       100,
-      17
+      24
     ],
     "days": [
       {
@@ -318,20 +318,20 @@
       },
       {
         "d": "2026-11-12",
-        "code": 17,
+        "code": 24,
         "other": 0,
         "samples": [
           {
-            "commit": "52b6c43",
-            "subject": "Keep showing what a tool waits on while it holds the session (R1.5) (#1734) (#1734)"
+            "commit": "d67583b",
+            "subject": "Recognize HTTP extension methods in packet captures (R3.12) (#1741) (#1741)"
           },
           {
-            "commit": "52e6817",
-            "subject": "Stop CArchive listings at unterminated member names (R3.12) (#1733) (#1733)"
+            "commit": "ff7311a",
+            "subject": "Separate SQLite column names at SQL line breaks (R3.12) (#1740) (#1740)"
           },
           {
-            "commit": "726fa4d",
-            "subject": "Keep ordinary EVM metadata arrays typed (R3.12) (#1732) (#1732)"
+            "commit": "a618797",
+            "subject": "Stop TAR listings at invalid local PAX sizes (R3.12) (#1739) (#1739)"
           }
         ]
       }
@@ -4497,8 +4497,57 @@
       "commit": "52e6817",
       "commit_full": "52e6817bf012e2156b1c89cd368df4582ca1a09f",
       "message": "Stop CArchive listings at unterminated member names (R3.12) (#1733) (#1733)"
+    },
+    {
+      "ts": "2026-11-12T05:57:24Z",
+      "kind": "content",
+      "commit": "699464d",
+      "commit_full": "699464db8dac6a42f67846064489372ab4b4ec50",
+      "message": "Never save defaults over a config.toml that couldn't be read (R2.9) (#1735) (#1735)"
+    },
+    {
+      "ts": "2026-11-12T06:03:41Z",
+      "kind": "content",
+      "commit": "2c97ec7",
+      "commit_full": "2c97ec7e8abafa30969d595a71d86be28aff2434",
+      "message": "Fail a build that requires craft-fonts when CRAFT_FONTS_DIR is missing (R2.9) (#1736) (#1736)"
+    },
+    {
+      "ts": "2026-11-12T06:03:51Z",
+      "kind": "content",
+      "commit": "a01669b",
+      "commit_full": "a01669bc239dd86f5d9a46a4d5485213c3bc1802",
+      "message": "Bound folder walks by the entries examined, not only the files kept (R3.11) (#1737) (#1737)"
+    },
+    {
+      "ts": "2026-11-12T06:18:12Z",
+      "kind": "content",
+      "commit": "befb291",
+      "commit_full": "befb291a1f1d9ba7a6b3928c0d2ddc5c60c0e244",
+      "message": "Keep quoted delimiters inside XML plist tags (R3.12) (#1738) (#1738)"
+    },
+    {
+      "ts": "2026-11-12T06:26:30Z",
+      "kind": "content",
+      "commit": "a618797",
+      "commit_full": "a61879758a538c1d2685b79f31950747790334bc",
+      "message": "Stop TAR listings at invalid local PAX sizes (R3.12) (#1739) (#1739)"
+    },
+    {
+      "ts": "2026-11-12T06:32:43Z",
+      "kind": "content",
+      "commit": "ff7311a",
+      "commit_full": "ff7311ae94604a017eb153e7a2b462c95ef3e26e",
+      "message": "Separate SQLite column names at SQL line breaks (R3.12) (#1740) (#1740)"
+    },
+    {
+      "ts": "2026-11-12T06:33:56Z",
+      "kind": "content",
+      "commit": "d67583b",
+      "commit_full": "d67583b183e42bdb69a5ab440d2403eea58c7b0d",
+      "message": "Recognize HTTP extension methods in packet captures (R3.12) (#1741) (#1741)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-12T05:47:42+00:00"
+  "updated_at": "2026-11-12T06:51:15+00:00"
 }

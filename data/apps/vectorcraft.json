@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "1d57048",
-  "latest_commit_date": "2026-11-11T00:10:59+07:00",
-  "latest_message": "Docs: move stray notes at the top of ROADMAP.md into Revision history (#6443)",
+  "latest_commit": "880033c",
+  "latest_commit_date": "2026-11-12T13:17:19+07:00",
+  "latest_message": "Swatch libraries: Gradients › Organic Fades adds soft multi-stop fades that thin out to transparent (#6793)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -339,6 +339,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-11",
+        "text": "Window › Swatch Libraries › Gradients › Organic Fades: fifteen soft fades (ten linear, five radial) through three to five unevenly spaced stops with off-center midpoints, mixed with the Perceptual method, that thin out to transparent at the end of a linear one and at the edge of a radial one; they also list in the Swatches panel's library menu, swatch.library.list and the Gradient panel's Presets."
+      },
+      {
         "date": "2026-11-05",
         "text": "Window › Toolbars › Keep Tools Beside the Canvas, off by default, docks the Tools panel between left-side panels and the canvas instead of at the window's left edge, and the canvas's left edge then also docks a floating Tools panel (window.toolsBesideCanvas, #5395). Workspaces keep the setting; workspaces saved without it keep Tools at the window's edge. An optional VectorCraft layout choice; headline numbers unchanged."
       },
@@ -493,10 +497,6 @@
       {
         "date": "2026-10-16",
         "text": "About 160 community PRs landed, each through the full gate. Crashes and hostile files: damaged PDF dictionaries and arrays no longer crash import (#2133, #2240, #2244, #2271), area type with huge row or column counts opens (#2109), hostile mesh edges are bounded (#2051). New: Dimension tool (#1788), legacy version 7 .ai save (#1794), Object › Intertwine (#2095), Apple Pencil and touch input on the web (#1740), Sample Color from Screen (#2257), Drop Shadow Darkness (#2252), Smart Blur edge modes (#2154), Scribble variations (#2180), Free Distort corners in its dialog (#2134), Rotate View presets (#2106), tritanopia proofing (#2234), Layers panel filters (#2087), Hide Template (#2117), File › Automate Batch through the Actions panel (#1938), dataset and graph CSV (#1929, #1941), Reset Tracking and Kerning (#2274), Alt+Enter copies in Transform fields (#2236), Shift+Tab panels (#2254), Control bar isolation, Recolor and image Replace (#2258, #2079, #2081). Revolve renders smooth with Cap on by default (#1193); Image Trace keeps tiny parts, thin outlines and shared corners, and Grayscale gradients are grey (#2012, #2025, #2263, #2264, #2265, #1879). Import: many .ai, EPS and PDF fidelity fixes (#2014–#2016, #2029, #2030, #2044, #2046, #2050–#2052, #2058, #2129, #2199, #2202, #2218), images up to 1 GB decoded (#2060), .ai/.ait/.svgz files paste from a file manager (#2148, #2201). Fixes across fields (arithmetic #2069, #2209, #2022; caret #1403), New Document (#2158, #2176), menus (#2232), shortcuts (#2235, #2146), Transform Each axes (#2227), Paste in Place (#1926), Color Picker tab order (#1937, #1939) and more. Languages: Bulgarian, Greek, Swedish and Finnish complete under the tests, pt-br completed. Details per PR in the PRs; headline numbers unchanged (estimated)."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "Cursors: 36 more tool states get cursors of their own. Node editing follows the public manual (Direct Selection's anchor squares, Reshape Segment, Group Selection's plus, the arrow hollow on a snap, the Alt-copy arrowheads), the Anchor Point caret, the Curvature pen and Free Transform's side-shear arrows are drawn; Lasso, the freehand, symbolism and other tools borrow a drawn cursor until theirs is drawn. crates/tools/src/cursors.toml lists every cursor for whoever draws them, and cargo xtask cursors warns about one missing from it. Scores unchanged."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 222,
+    "revisions_since": 223,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,39 +536,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 223,
-    "revisions_7d": 10,
+    "revisions": 224,
+    "revisions_7d": 11,
     "last_revision": {
-      "ts": "2026-11-10T17:10:59Z",
+      "ts": "2026-11-12T06:17:19Z",
       "kind": "content",
-      "commit": "1d57048",
-      "commit_full": "1d57048645ac679fbf889574f360295166ffb22e",
-      "message": "Docs: move stray notes at the top of ROADMAP.md into Revision history (#6443)"
+      "commit": "880033c",
+      "commit_full": "880033c2bbcb856f9d04a2a3d3bbea4c39ff559d",
+      "message": "Swatch libraries: Gradients › Organic Fades adds soft multi-stop fades that thin out to transparent (#6793)"
     },
     "last_update": {
-      "ts": "2026-11-10T17:10:59Z",
+      "ts": "2026-11-12T06:17:19Z",
       "kind": "content",
-      "commit": "1d57048",
-      "commit_full": "1d57048645ac679fbf889574f360295166ffb22e",
-      "message": "Docs: move stray notes at the top of ROADMAP.md into Revision history (#6443)"
+      "commit": "880033c",
+      "commit_full": "880033c2bbcb856f9d04a2a3d3bbea4c39ff559d",
+      "message": "Swatch libraries: Gradients › Organic Fades adds soft multi-stop fades that thin out to transparent (#6793)"
     },
     "self_reported": "2026-11-10"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 34.5,
+    "score": 34.6,
     "active_days_7d": 7,
-    "changes_7d": 675,
-    "changes_14d": 1479,
+    "changes_7d": 686,
+    "changes_14d": 1490,
     "housekeeping_7d": 31,
     "last_code_change": {
-      "ts": "2026-11-12T05:41:15Z",
-      "commit": "485d4e3",
-      "commit_full": "485d4e3fff19d35a4eefa242af501598e48426fa",
-      "subject": "Plug-ins: only an approval records a grant, and installs need one (#6747)"
+      "ts": "2026-11-12T06:18:28Z",
+      "commit": "5eefe7d",
+      "commit_full": "5eefe7d1c5167ceaccb2b1424ab2c93a814b7d10",
+      "subject": "Help: a stalled interface writes a hang report, and Copy Troubleshooting Info copies it (#6709)"
     },
-    "last_commit_ts": "2026-11-12T05:41:15Z",
+    "last_commit_ts": "2026-11-12T06:18:28Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       99,
@@ -584,7 +584,7 @@
       81,
       81,
       123,
-      89
+      100
     ],
     "days": [
       {
@@ -1393,20 +1393,20 @@
       },
       {
         "d": "2026-11-12",
-        "code": 89,
+        "code": 100,
         "other": 1,
         "samples": [
           {
-            "commit": "485d4e3",
-            "subject": "Plug-ins: only an approval records a grant, and installs need one (#6747)"
+            "commit": "5eefe7d",
+            "subject": "Help: a stalled interface writes a hang report, and Copy Troubleshooting Info copies it (#6709)"
           },
           {
-            "commit": "a8ac772",
-            "subject": "Transform: Align New Objects to Pixel Grid makes new paths pixel-aligned (#6753)"
+            "commit": "e65da61",
+            "subject": "Artboards: Convert to Artboards gives each new artboard its id without reading every artboard (#6787)"
           },
           {
-            "commit": "7e27e6e",
-            "subject": "Type: Dynamic Text Presets put type on a circle, arch or bow (#6761)"
+            "commit": "959f3dc",
+            "subject": "Scripts: a canceled request stops a run asleep in $.sleep at its next slice (#6779)"
           }
         ]
       }
@@ -7487,7 +7487,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "880033c",
+      "commit_full": "880033c2bbcb856f9d04a2a3d3bbea4c39ff559d",
+      "commit_date": "2026-11-12T13:17:19+07:00",
+      "ts": "2026-11-12T06:17:19Z",
+      "message": "Swatch libraries: Gradients › Organic Fades adds soft multi-stop fades that thin out to transparent (#6793)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-10",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-12T05:46:56+00:00"
+  "updated_at": "2026-11-12T06:50:43+00:00"
 }
