@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/designcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "67a5cb2",
-  "latest_commit_date": "2026-11-12T17:27:13-05:00",
-  "latest_message": "Tables: table commands are disabled with the caret in footnote text (#2706)",
+  "latest_commit": "437c532",
+  "latest_commit_date": "2026-11-12T17:42:10-05:00",
+  "latest_message": "Compose: count endnote, anchored object and cross-reference marks once per story (#2705)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -320,6 +320,10 @@
       },
       {
         "date": "2026-11-12",
+        "text": "· Composing a story with endnotes, anchored objects or cross-references counts their marks in one pass over the story, instead of counting again from the story start for every paragraph. No readiness percentage change."
+      },
+      {
+        "date": "2026-11-12",
         "text": "· Center, Bottom and Justify vertical justification in a shaped frame test each moved line against the outline down to its baseline. The descenders of earlier lines may cross the outline, as the last line's do, so an outline that narrows under an earlier line no longer holds the text higher by that line's descent. No readiness percentage change."
       },
       {
@@ -465,10 +469,6 @@
       {
         "date": "2026-10-26",
         "text": "· Inner Shadow, Inner Glow (from the edges) and Bevel and Emboss on a frame holding an image follow what the image paints: a transparent part is outside the object, so the effect lines the image's opaque edge, not the frame (#1622). Satin and a centred Inner Glow still follow the frame. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-25",
-        "text": "· Duplicate Layer (layer.duplicate; the layer's context menu in the Layers panel, or a layer dropped on Create New Layer) adds a copy named after the layer with \" copy\" added (\"Art copy\" for Art) above the layer, with its settings, a copy of every object on it and copies of its ruler guides, on document and parent pages, in one undo step. Copied frames stay threaded to the copies of frames on the same layer and are not threaded to frames on other layers. A copied override of a parent item overrides that item's copy, and pages hide the copy where they hide the parent item. Hyperlinks on copied objects and text get copies that go to the same destinations. No readiness percentage change."
       }
     ]
   },
@@ -477,7 +477,7 @@
     "value_since": "2026-10-10T18:09:17Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 209,
+    "revisions_since": 210,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -485,21 +485,21 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 210,
-    "revisions_7d": 19,
+    "revisions": 211,
+    "revisions_7d": 20,
     "last_revision": {
-      "ts": "2026-11-12T22:27:13Z",
+      "ts": "2026-11-12T22:42:10Z",
       "kind": "content",
-      "commit": "67a5cb2",
-      "commit_full": "67a5cb273ef40ff3190900bd2e2d2df6241d41e4",
-      "message": "Tables: table commands are disabled with the caret in footnote text (#2706)"
+      "commit": "437c532",
+      "commit_full": "437c53251152b651f2352edb0a4f803000bda24d",
+      "message": "Compose: count endnote, anchored object and cross-reference marks once per story (#2705)"
     },
     "last_update": {
-      "ts": "2026-11-12T22:27:13Z",
+      "ts": "2026-11-12T22:42:10Z",
       "kind": "content",
-      "commit": "67a5cb2",
-      "commit_full": "67a5cb273ef40ff3190900bd2e2d2df6241d41e4",
-      "message": "Tables: table commands are disabled with the caret in footnote text (#2706)"
+      "commit": "437c532",
+      "commit_full": "437c53251152b651f2352edb0a4f803000bda24d",
+      "message": "Compose: count endnote, anchored object and cross-reference marks once per story (#2705)"
     },
     "self_reported": "2026-11-06"
   },
@@ -508,16 +508,16 @@
     "level": "active",
     "score": 19.9,
     "active_days_7d": 7,
-    "changes_7d": 101,
-    "changes_14d": 254,
+    "changes_7d": 103,
+    "changes_14d": 256,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-12T22:27:13Z",
-      "commit": "67a5cb2",
-      "commit_full": "67a5cb273ef40ff3190900bd2e2d2df6241d41e4",
-      "subject": "Tables: table commands are disabled with the caret in footnote text (#2706)"
+      "ts": "2026-11-12T22:42:10Z",
+      "commit": "437c532",
+      "commit_full": "437c53251152b651f2352edb0a4f803000bda24d",
+      "subject": "Compose: count endnote, anchored object and cross-reference marks once per story (#2705)"
     },
-    "last_commit_ts": "2026-11-12T22:27:13Z",
+    "last_commit_ts": "2026-11-12T22:42:10Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       37,
@@ -533,7 +533,7 @@
       6,
       5,
       21,
-      54
+      56
     ],
     "days": [
       {
@@ -1286,20 +1286,20 @@
       },
       {
         "d": "2026-11-12",
-        "code": 54,
+        "code": 56,
         "other": 0,
         "samples": [
           {
+            "commit": "437c532",
+            "subject": "Compose: count endnote, anchored object and cross-reference marks once per story (#2705)"
+          },
+          {
+            "commit": "0f792e1",
+            "subject": "Compose: vertical justification moves an object kept within its column with its line (#2720)"
+          },
+          {
             "commit": "67a5cb2",
             "subject": "Tables: table commands are disabled with the caret in footnote text (#2706)"
-          },
-          {
-            "commit": "5fb75aa",
-            "subject": "Properties: Text Frame section shows inset spacing and vertical justification (#2661)"
-          },
-          {
-            "commit": "66b8c8b",
-            "subject": "Object styles: checks and fixes for corners, strokes and the style dialog (#2721)"
           }
         ]
       }
@@ -6342,7 +6342,30 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "437c532",
+      "commit_full": "437c53251152b651f2352edb0a4f803000bda24d",
+      "commit_date": "2026-11-12T17:42:10-05:00",
+      "ts": "2026-11-12T22:42:10Z",
+      "message": "Compose: count endnote, anchored object and cross-reference marks once per story (#2705)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-06",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-12T22:31:13+00:00"
+  "updated_at": "2026-11-12T23:29:02+00:00"
 }
