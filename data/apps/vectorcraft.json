@@ -559,16 +559,16 @@
     "level": "buzzing",
     "score": 35.2,
     "active_days_7d": 7,
-    "changes_7d": 736,
-    "changes_14d": 1540,
+    "changes_7d": 737,
+    "changes_14d": 1541,
     "housekeeping_7d": 32,
     "last_code_change": {
-      "ts": "2026-11-12T12:14:06Z",
-      "commit": "81247fd",
-      "commit_full": "81247fdae90434c210ba153cb1d6a560d546d954",
-      "subject": "MCP: a malformed object id is refused as such, not reported as missing (#6666)"
+      "ts": "2026-11-12T13:09:15Z",
+      "commit": "89fba4e",
+      "commit_full": "89fba4ebfd5a1aad610ef51c268aea5ccf174a54",
+      "subject": "Fix #3626: an imported document takes the title the file carries (#5446)"
     },
-    "last_commit_ts": "2026-11-12T12:14:06Z",
+    "last_commit_ts": "2026-11-12T13:09:15Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       99,
@@ -584,7 +584,7 @@
       81,
       81,
       123,
-      150
+      151
     ],
     "days": [
       {
@@ -1393,9 +1393,13 @@
       },
       {
         "d": "2026-11-12",
-        "code": 150,
+        "code": 151,
         "other": 2,
         "samples": [
+          {
+            "commit": "89fba4e",
+            "subject": "Fix #3626: an imported document takes the title the file carries (#5446)"
+          },
           {
             "commit": "81247fd",
             "subject": "MCP: a malformed object id is refused as such, not reported as missing (#6666)"
@@ -1403,10 +1407,6 @@
           {
             "commit": "7f9866f",
             "subject": "Type: Korean words break at spaces unless Korean Line Break Anywhere is on (#6818)"
-          },
-          {
-            "commit": "0b4ccdf",
-            "subject": "Save and Export: files written beside the picked one ask before replacing a file there (#6830)"
           }
         ]
       }
@@ -7593,5 +7593,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-12T12:17:38+00:00"
+  "updated_at": "2026-11-12T13:41:01+00:00"
 }
