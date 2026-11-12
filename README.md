@@ -70,7 +70,8 @@ reference product.
 | [Craft Anything](https://github.com/storytold/craft-anything) | No single reference product | Software |
 | [SolidCraft](https://github.com/tangency-labs/solidcraft) | Parametric 3D CAD workflow | 3D CAD (community) |
 
-The current launcher catalog contains 16 official apps and SolidCraft, a community app by Tangency Labs.
+The current launcher catalog contains 17 official apps and two community apps: SolidCraft by Tangency Labs and
+MailCraft by UCS Care Group.
 An app does not need to publish a readiness percentage to appear. Missing comparable estimates stay unknown;
 they are not treated as zero, included in readiness averages or inferred from unrelated parity scores.
 
@@ -197,17 +198,18 @@ To add the ntfy push, pick a random topic name, subscribe to it in the ntfy app,
 Every scheduled run reconciles two authoritative sources:
 
 - The [official Crafting Apps directory](https://getartcraft.com/apps).
-- The complete [ArtCraft Launcher SUITE catalog](https://github.com/storytold/craft-launcher/blob/main/crates/core/src/catalog.rs), including community apps and their own GitHub accounts.
+- The complete [ArtCraft Launcher catalog](https://github.com/storytold/craft-launcher/blob/main/crates/core/catalog.toml), including community apps and their own GitHub accounts.
 
 A catalog app is added regardless of whether it has a roadmap or a recognizable readiness percentage.
-The launcher's declared app count is checked against the parsed inventory: a format change cannot silently return
-only some apps. Each source's last good inventory is saved in `data/state.json`; a failed source produces a visible
+Every `[[apps]]` table of the launcher catalog must yield an id, name, repository, kind and tagline, and app IDs must
+be unique: a format change raises a visible notice instead of silently returning only some apps. Repository names are
+compared case-insensitively, as on GitHub, so `AniCraft` and `anicraft` are one app. Each source's last good inventory is saved in `data/state.json`; a failed source produces a visible
 notice and keeps its saved members, while the other source continues to discover apps. Existing apps are never
 removed automatically when an upstream catalog changes.
 
 The public repositories of `storytold` are also checked. Nonempty, non-fork, non-archived repositories whose names end
 in `craft` are admitted without needing a metric; repositories with a recognizable full-target roadmap remain eligible
-too. Empty app repositories such as AniCraft are listed as candidates with a reason and reconsidered every run.
+too. Empty app repositories such as AutoCraft are listed as candidates with a reason and reconsidered every run.
 Libraries, assets and developer tooling are not assumed to be consumer apps merely because their name starts with
 `craft-`. `ignored_repos` continues to exclude ArtCraft Studio and the launcher itself.
 
@@ -240,7 +242,7 @@ touched. The icons are drawn by `scripts/make_icons.py`.
 | `scripts/notify.py` | Opens the notification issue and sends the optional ntfy message |
 | `scripts/make_icons.py` | Draws the tracker mark and writes the icons |
 | `tests/test_pipeline.py` | End-to-end tests, including all 17 apps, external repositories and missing metrics |
-| `tests/test_app_catalog.py`, `tests/fixtures/launcher-catalog.rs` | Catalog completeness and outage regression tests |
+| `tests/test_app_catalog.py`, `tests/fixtures/launcher-catalog.toml` | Catalog completeness and outage regression tests |
 | `data/overview.json` | Data for the overview page, including the latest events across all apps |
 | `data/apps/<app>.json` | Current state, history, activity and releases per app |
 | `data/history/<app>.json` | One entry per roadmap revision on the main line |

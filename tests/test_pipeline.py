@@ -131,7 +131,7 @@ class PipelineTest(unittest.TestCase):
         data = self.root / "data"
         values = {
             "APPS_FILE": apps_file, "CONFIG": cfg, "ORG": "storytold", "BRANCH": "main", "PATH": "ROADMAP.md",
-            "IGNORED": set(cfg["ignored_repos"]), "DATA": data, "HISTORY": data / "history",
+            "IGNORED": {r.lower() for r in cfg["ignored_repos"]}, "DATA": data, "HISTORY": data / "history",
             "APPS_DIR": data / "apps", "STATE": data / "state.json", "STATUS": data / "status.json",
             "CHANGELOG": data / "changelog.json", "CACHE": self.root / ".cache",
             "EVENTS_FILE": self.root / ".cache" / "events.json", "REPOS_CACHE": self.root / ".cache" / "repos",
@@ -513,7 +513,7 @@ class PipelineTest(unittest.TestCase):
 
     def test_all_seventeen_catalog_apps_reach_overview_and_details(self):
         from app_catalog import parse_launcher_catalog
-        self.catalog = parse_launcher_catalog((ROOT / "tests/fixtures/launcher-catalog.rs").read_text())
+        self.catalog = parse_launcher_catalog((ROOT / "tests/fixtures/launcher-catalog.toml").read_text())
         self.apps = []
         for app in self.catalog:
             name = app["id"]
@@ -539,6 +539,21 @@ class PipelineTest(unittest.TestCase):
             self.assertIsNotNone(a["activity"])
         self.assertEqual(sum(a["full_pct"] is not None for a in ov["apps"]), 13)
         self.assertEqual(self.run_update(), [])
+
+    def test_discovery_matches_repository_names_case_insensitively(self):
+        # GitHub names are case-insensitive: AniCraft and anicraft were once tracked as two apps.
+        self.base_history()
+        ani = Repo(self.tmp, "anicraft")
+        self.repos["anicraft"] = ani
+        ani.commit(NOW - timedelta(days=1), "Start app", {"ROADMAP.md": roadmap(30), "src/main.rs": "code"})
+        self.remote_listing = [{"name": "testcraft"}, {"name": "anicraft", "default_branch": "main"}]
+        self.assertEqual([e["id"] for e in self.run_update() if e["type"] == "new_app"], ["anicraft"])
+        self.remote_listing = [{"name": "testcraft"}, {"name": "AniCraft", "default_branch": "main"}]
+        self.catalog = [{"id": "AniCraft", "name": "AniCraft", "repo": "storytold/AniCraft", "kind": "official"}]
+        self.assertEqual([e for e in self.run_update() if e["type"] == "new_app"], [])
+        cfg = json.loads((self.root / "apps.json").read_text())
+        self.assertEqual([a["id"] for a in cfg["apps"]], ["testcraft", "anicraft"])
+        self.assertEqual(self.read("data/overview.json")["discovery"]["missing"], [])
 
     def test_catalog_apps_without_percentages_and_external_repository(self):
         self.base_history()

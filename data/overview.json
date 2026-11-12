@@ -35,16 +35,10 @@
       "added": "2026-11-03"
     },
     {
-      "id": "AniCraft",
-      "name": "AniCraft",
-      "adobe": "Unknown",
-      "added": "2026-11-06"
-    },
-    {
       "id": "anicraft",
       "name": "AniCraft",
       "adobe": "Unknown",
-      "added": "2026-11-09"
+      "added": "2026-11-06"
     }
   ],
   "latest_events": [
@@ -127,17 +121,6 @@
     },
     {
       "id": "anicraft",
-      "name": "AniCraft",
-      "type": "release",
-      "ts": "2026-11-12T01:41:19Z",
-      "tag": "v0.2.1",
-      "kind": "patch",
-      "changes": 10,
-      "url": "https://github.com/storytold/anicraft/releases/tag/v0.2.1",
-      "prerelease": false
-    },
-    {
-      "id": "AniCraft",
       "name": "AniCraft",
       "type": "release",
       "ts": "2026-11-12T01:41:19Z",
@@ -456,17 +439,6 @@
       "prerelease": false
     },
     {
-      "id": "AniCraft",
-      "name": "AniCraft",
-      "type": "release",
-      "ts": "2026-11-11T16:08:50Z",
-      "tag": "v0.2.0",
-      "kind": "minor",
-      "changes": 11,
-      "url": "https://github.com/storytold/anicraft/releases/tag/v0.2.0",
-      "prerelease": false
-    },
-    {
       "id": "solidcraft",
       "name": "SolidCraft",
       "type": "release",
@@ -487,13 +459,31 @@
       "changes": 69,
       "url": "https://github.com/storytold/anicraft/releases/tag/v0.1.0",
       "prerelease": false
+    },
+    {
+      "id": "effectcraft",
+      "name": "EffectCraft",
+      "type": "release",
+      "ts": "2026-11-10T00:49:57Z",
+      "tag": "v0.23.1",
+      "kind": "patch",
+      "changes": 8,
+      "url": "https://github.com/storytold/effectcraft/releases/tag/v0.23.1",
+      "prerelease": false
+    },
+    {
+      "id": "mailcraft",
+      "name": "MailCraft",
+      "type": "new_app",
+      "ts": "2026-11-10T00:00:00Z",
+      "adobe": "Outlook"
     }
   ],
   "release_waves": [
     {
       "day": "2026-11-12",
-      "apps": 20,
-      "changes": 533,
+      "apps": 19,
+      "changes": 523,
       "largest": {
         "id": "craft-anything",
         "name": "Craft Anything",
@@ -503,8 +493,8 @@
     },
     {
       "day": "2026-11-11",
-      "apps": 17,
-      "changes": 1061,
+      "apps": 16,
+      "changes": 981,
       "largest": {
         "id": "photocraft",
         "name": "PhotoCraft",
@@ -659,16 +649,16 @@
         "level": "buzzing",
         "score": 35.6,
         "active_days_7d": 7,
-        "changes_7d": 788,
-        "changes_14d": 1592,
+        "changes_7d": 789,
+        "changes_14d": 1593,
         "housekeeping_7d": 35,
         "last_code_change": {
-          "ts": "2026-11-12T17:51:58Z",
-          "commit": "a15a4ab",
-          "commit_full": "a15a4abc5cf66226c80cb3e4926cd98d97694257",
-          "subject": "EPS: Save As shows Use Artboards, off by default, and the box fits all visible art (#6751)"
+          "ts": "2026-11-12T18:43:44Z",
+          "commit": "fa29ea6",
+          "commit_full": "fa29ea67b94d59058184acfeac23ad93fd962b0e",
+          "subject": "Dashes fitted to corners take a subpath with no segments (#6933)"
         },
-        "last_commit_ts": "2026-11-12T17:51:58Z",
+        "last_commit_ts": "2026-11-12T18:43:44Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           99,
@@ -684,7 +674,7 @@
           81,
           81,
           123,
-          202
+          203
         ]
       },
       "release": {
@@ -1734,18 +1724,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 19.2,
+        "score": 19.3,
         "active_days_7d": 7,
-        "changes_7d": 82,
-        "changes_14d": 235,
+        "changes_7d": 84,
+        "changes_14d": 237,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-12T18:31:45Z",
-          "commit": "e9cc26d",
-          "commit_full": "e9cc26df8aafe3298c68ad32b92bc8efb76ddcd4",
-          "subject": "Type: Justify All Lines ⇧⌘F, Em Space ⇧⌘M, En Space ⇧⌘N and Paragraph Rules ⌥⌘J (#2664)"
+          "ts": "2026-11-12T18:40:26Z",
+          "commit": "113d196",
+          "commit_full": "113d196168cb857fefad89dea21e943a5a636e75",
+          "subject": "Render: a feathered object's bevel and inner effects fade with it (#2668)"
         },
-        "last_commit_ts": "2026-11-12T18:31:45Z",
+        "last_commit_ts": "2026-11-12T18:40:26Z",
         "repo_since": "2026-10-01T13:00:02Z",
         "window": [
           37,
@@ -1761,7 +1751,7 @@
           6,
           5,
           21,
-          35
+          37
         ]
       },
       "release": {
@@ -2288,7 +2278,7 @@
       "added": "2026-11-10",
       "is_new": true,
       "target": "Microsoft Outlook (Microsoft 365, classic desktop)",
-      "order": 20,
+      "order": 19,
       "stage": "public beta",
       "next_stage": "leaving",
       "full_pct": 25.0,
@@ -2776,14 +2766,14 @@
         "active_days_7d": 7,
         "changes_7d": 868,
         "changes_14d": 1870,
-        "housekeeping_7d": 38,
+        "housekeeping_7d": 39,
         "last_code_change": {
           "ts": "2026-11-12T18:08:38Z",
           "commit": "f1acf57",
           "commit_full": "f1acf574986ce093eb42b7391270b43135d78c82",
           "subject": "Ukrainian: translate 115 interface strings (#15532)"
         },
-        "last_commit_ts": "2026-11-12T18:08:38Z",
+        "last_commit_ts": "2026-11-12T18:19:31Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           208,
@@ -2823,17 +2813,17 @@
       "history_len": 0
     },
     {
-      "repo_url": "https://github.com/storytold/AniCraft",
+      "repo_url": "https://github.com/storytold/anicraft",
       "branch": "main",
       "kind": "official",
       "roadmap_url": null,
       "roadmap_history_url": null,
       "metric_status": "roadmap_missing",
-      "id": "AniCraft",
+      "id": "anicraft",
       "name": "AniCraft",
       "adobe": "Unknown",
-      "category": "Other",
-      "color": "#1ab394",
+      "category": "2D vector animation",
+      "color": "#dac604",
       "added": "2026-11-06",
       "is_new": true,
       "target": null,
@@ -2916,106 +2906,9 @@
       },
       "series": [],
       "history_len": 0
-    },
-    {
-      "repo_url": "https://github.com/storytold/anicraft",
-      "branch": "main",
-      "kind": "official",
-      "roadmap_url": null,
-      "roadmap_history_url": null,
-      "metric_status": "roadmap_missing",
-      "id": "anicraft",
-      "name": "AniCraft",
-      "adobe": "Unknown",
-      "category": "Other",
-      "color": "#e8448a",
-      "added": "2026-11-09",
-      "is_new": true,
-      "target": null,
-      "order": 19,
-      "stage": null,
-      "next_stage": null,
-      "full_pct": null,
-      "full_range": null,
-      "full_hours": null,
-      "mainstream_pct": null,
-      "essentials_pct": null,
-      "breadth_pct": null,
-      "parity": {
-        "tracked_since": null,
-        "value_since": null,
-        "releases_since": 0,
-        "releases_since_capped": false,
-        "revisions_since": 0,
-        "hours_since": null,
-        "areas_since": null,
-        "changes": 0,
-        "truncated": false,
-        "last_change": null
-      },
-      "roadmap": {
-        "revisions": 0,
-        "revisions_7d": 0,
-        "last_revision": null,
-        "last_update": null,
-        "self_reported": null
-      },
-      "milestone": null,
-      "activity": {
-        "level": "active",
-        "score": 14.7,
-        "active_days_7d": 6,
-        "changes_7d": 91,
-        "changes_14d": 91,
-        "housekeeping_7d": 10,
-        "last_code_change": {
-          "ts": "2026-11-12T07:36:03Z",
-          "commit": "9e49ae9",
-          "commit_full": "9e49ae93a7ee167f19e0b7035eb3ebed0ccbe805",
-          "subject": "ci(workflows): the gate on macOS and Windows (M8) (#190)"
-        },
-        "last_commit_ts": "2026-11-12T07:36:03Z",
-        "repo_since": "2026-11-06T06:58:25Z",
-        "window": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          4,
-          19,
-          0,
-          20,
-          19,
-          18,
-          11
-        ]
-      },
-      "release": {
-        "tag": "v0.2.1",
-        "name": "AniCraft v0.2.1",
-        "ts": "2026-11-12T01:41:19Z",
-        "url": "https://github.com/storytold/anicraft/releases/tag/v0.2.1",
-        "changes": 10,
-        "new_contributors": null,
-        "platforms": [
-          "macOS",
-          "Windows",
-          "Linux"
-        ],
-        "prerelease": false,
-        "source": "release",
-        "kind": "patch"
-      },
-      "series": [],
-      "history_len": 0
     }
   ],
-  "errors": [
-    "discovery: https://raw.githubusercontent.com/storytold/craft-launcher/main/crates/core/src/catalog.rs unavailable (launcher SUITE declaration not recognized); using saved catalog if available"
-  ],
+  "errors": [],
   "discovery": {
     "catalog_count": 19,
     "tracked_from_catalog": 19,
@@ -3028,5 +2921,5 @@
       }
     ]
   },
-  "generated_at": "2026-11-12T18:39:21+00:00"
+  "generated_at": "2026-11-12T18:44:41+00:00"
 }

@@ -10,7 +10,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 import update
 from app_catalog import LAUNCHER_URL, DIRECTORY_URL, parse_launcher_catalog, parse_app_directory
 
-SOURCE = (Path(__file__).parent / "fixtures/launcher-catalog.rs").read_text()
+SOURCE = (Path(__file__).parent / "fixtures/launcher-catalog.toml").read_text()
 
 
 class CatalogTest(unittest.TestCase):
@@ -21,10 +21,15 @@ class CatalogTest(unittest.TestCase):
         solid = next(a for a in apps if a["id"] == "solidcraft")
         self.assertEqual((solid["repo"], solid["kind"]), ("tangency-labs/solidcraft", "community"))
         self.assertEqual(next(a for a in apps if a["id"] == "craft-anything")["name"], "Craft Anything")
+        photo = apps[0]  # keys in [apps.details] sub-tables never leak into the app
+        self.assertEqual((photo["id"], photo["name"], photo["category"], photo["color"]),
+                         ("photocraft", "PhotoCraft", "Image editing", "#2f7bf5"))
+        self.assertNotIn("not-an-app", [a["id"] for a in apps])
 
     def test_launcher_format_change_and_partial_parse_cannot_silently_drop_apps(self):
-        for source in ("format changed", SOURCE.replace('"solidcraft",', 'ID_CONSTANT,', 1),
-                       SOURCE.replace("[CraftApp; 17]", "[CraftApp; 18]")):
+        for source in ("format changed", SOURCE.replace('id = "solidcraft"', "id = SOLID_ID"),
+                       SOURCE.replace('repo = "tangency-labs/solidcraft"\n', ""),
+                       SOURCE.replace('id = "vectorcraft"', 'id = "PhotoCraft"')):
             with self.subTest(source=source[:40]), self.assertRaises(ValueError):
                 parse_launcher_catalog(source)
 

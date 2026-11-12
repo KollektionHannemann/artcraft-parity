@@ -44,7 +44,7 @@ from app_catalog import LAUNCHER_URL, DIRECTORY_URL, parse_launcher_catalog, par
 APPS_FILE = ROOT / "apps.json"
 CONFIG = json.loads(APPS_FILE.read_text(encoding="utf-8"))
 ORG, BRANCH, PATH = CONFIG["org"], CONFIG["branch"], CONFIG["roadmap_path"]
-IGNORED = set(CONFIG.get("ignored_repos", []))
+IGNORED = {r.lower() for r in CONFIG.get("ignored_repos", [])}  # GitHub names are case-insensitive
 DATA = ROOT / "data"
 HISTORY = DATA / "history"
 APPS_DIR = DATA / "apps"
@@ -241,23 +241,24 @@ def discover_new_apps(state: dict, errors: list) -> list:
     except (urllib.error.URLError, RuntimeError, json.JSONDecodeError) as exc:
         errors.append(f"discovery: repository list not available ({exc})")
         repos = []  # catalog discovery still works when repository listing fails
-    listing = {r["name"]: r for r in repos}
+    listing = {r["name"].lower(): r for r in repos}
     before = json.dumps(CONFIG, sort_keys=True)
-    known = {a["id"]: a for a in CONFIG["apps"]}
+    known = {a["id"].lower(): a for a in CONFIG["apps"]}  # AniCraft and anicraft are one repo
     checked = state.setdefault("discovery_checked", {})
     candidates = state.setdefault("discovery_candidates", {})
     added = []
-    catalog_ids = {a["id"] for a in catalog}
+    catalog_ids = {a["id"].lower() for a in catalog}
 
     for source in catalog + [{"id": r["name"], "repo": r.get("full_name", f"{ORG}/{r['name']}")} for r in repos
-                             if r["name"] not in catalog_ids]:
+                             if r["name"].lower() not in catalog_ids]:
         name = source["id"]
+        key = name.lower()
         full_repo = source["repo"]
-        r = listing.get(name, {}) if full_repo.startswith(f"{ORG}/") else {}
-        if name in IGNORED or full_repo in IGNORED or r.get("fork") or r.get("archived"):
+        r = listing.get(key, {}) if full_repo.startswith(f"{ORG}/") else {}
+        if key in IGNORED or full_repo.lower() in IGNORED or r.get("fork") or r.get("archived"):
             continue
-        is_catalog = name in catalog_ids
-        existing = known.get(name)
+        is_catalog = key in catalog_ids
+        existing = known.get(key)
         app_like = bool(re.fullmatch(r"[a-z0-9_-]+craft", name, re.I))
         if not is_catalog and not existing and app_like and r.get("size") == 0:
             candidates[name] = {"id": name, "repo": full_repo, "reason": "Empty repository; no published app yet"}
@@ -311,7 +312,7 @@ def discover_new_apps(state: dict, errors: list) -> list:
             entry["roadmap_path"] = path
         if not existing:
             CONFIG["apps"].append(entry)
-            known[name] = entry
+            known[key] = entry
             candidates.pop(name, None)
             added.append(entry)
     missing = sorted(catalog_ids - set(known) - IGNORED)

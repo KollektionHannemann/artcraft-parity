@@ -3,35 +3,56 @@ import json
 import re
 from html.parser import HTMLParser
 
-LAUNCHER_URL = "https://raw.githubusercontent.com/storytold/craft-launcher/main/crates/core/src/catalog.rs"
+LAUNCHER_URL = "https://raw.githubusercontent.com/storytold/craft-launcher/main/crates/core/catalog.toml"
 DIRECTORY_URL = "https://getartcraft.com/apps"
 REPOSITORY = re.compile(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+\Z")
 
 
+LAUNCHER_KEYS = ("id", "name", "repo", "kind", "tagline", "color")
+TABLE_HEADER = re.compile(r"\[\[?\s*([A-Za-z0-9_.-]+)\s*\]\]?")
+
+
 def parse_launcher_catalog(source):
-    """Validate the declared SUITE count, so a format change cannot silently lose apps."""
-    # Strip comments while preserving quoted strings (including URLs and escaped quotes).
-    source = re.sub(r'"(?:\\.|[^"\\])*"|//[^\n]*|/\*[\s\S]*?\*/',
-                    lambda m: m[0] if m[0].startswith('"') else " ", source)
-    suite = re.search(r"pub\s+const\s+SUITE\s*:\s*\[CraftApp;\s*(\d+)\s*\]\s*=\s*\[([\s\S]*?)\n\];", source)
-    if not suite:
-        raise ValueError("launcher SUITE declaration not recognized")
-    calls = re.finditer(r'\bapp\s*\(\s*("(?:\\.|[^"\\])*")\s*,\s*("(?:\\.|[^"\\])*")'
-                        r'\s*,\s*("(?:\\.|[^"\\])*")\s*,\s*\[([\s\S]*?)\]\s*,\s*"([\w.-]+/[\w.-]+)"\s*,?\s*\)',
-                        suite[2])
-    entries = []
-    for call in calls:
-        app_id, name, category = (json.loads(call[i]) for i in (1, 2, 3))
-        repo = call[5]
-        if not re.fullmatch(r"[A-Za-z0-9_-]+", app_id) or not REPOSITORY.fullmatch(repo):
+    """Read the top-level keys of each [[apps]] table in the launcher's catalog.toml.
+
+    Python 3.10 has no tomllib, so this reads only the single-line string and integer-array keys the
+    tracker needs and skips sub-tables like [apps.details]. Every app must carry all of them, so a
+    format change raises instead of silently losing apps.
+    """
+    entries, table = [], None
+    for line in source.splitlines():
+        line = line.strip()
+        header = TABLE_HEADER.fullmatch(line)
+        if header:
+            table = {} if line.startswith("[[") and header[1] == "apps" else None
+            if table is not None:
+                entries.append(table)
+            continue
+        key = re.fullmatch(r"([A-Za-z0-9_-]+)\s*=\s*(.+)", line)
+        if table is not None and key and key[1] in LAUNCHER_KEYS:
+            try:
+                table[key[1]] = json.loads(key[2])
+            except json.JSONDecodeError:
+                raise ValueError(f"launcher catalog value for {key[1]} not recognized") from None
+    if not entries:
+        raise ValueError("launcher catalog contains no [[apps]] tables")
+    apps = []
+    for app in entries:
+        if set(LAUNCHER_KEYS) - set(app) - {"color"}:
+            raise ValueError("launcher catalog app is missing id, name, repo, kind or tagline")
+        app_id, repo, kind = app["id"], app["repo"], app["kind"]
+        if not (isinstance(app_id, str) and re.fullmatch(r"[A-Za-z0-9_-]+", app_id)
+                and isinstance(repo, str) and REPOSITORY.fullmatch(repo) and kind in ("official", "community")):
             raise ValueError("invalid launcher app identity")
-        rgb = re.findall(r"0x([a-fA-F0-9]{2})", call[4])[:3]
-        entries.append({"id": app_id, "name": name, "repo": repo, "category": category,
-                        "kind": "official" if repo.startswith("storytold/") else "community",
-                        **({"color": "#" + "".join(rgb)} if len(rgb) == 3 else {})})
-    if not entries or len(entries) != int(suite[1]) or len({e["id"] for e in entries}) != len(entries):
-        raise ValueError("launcher catalog incomplete or contains duplicate app IDs")
-    return entries
+        rgb = app.get("color")
+        color = ({"color": "#" + "".join(f"{c:02x}" for c in rgb)}
+                 if isinstance(rgb, list) and len(rgb) == 3 and all(isinstance(c, int) and 0 <= c <= 255 for c in rgb)
+                 else {})
+        apps.append({"id": app_id, "name": app["name"], "repo": repo, "category": app["tagline"],
+                     "kind": kind, **color})
+    if len({a["id"].lower() for a in apps}) != len(apps):
+        raise ValueError("launcher catalog contains duplicate app IDs")
+    return apps
 
 
 class AppDirectory(HTMLParser):
