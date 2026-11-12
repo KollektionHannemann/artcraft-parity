@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 35.7,
+    "score": 35.8,
     "active_days_7d": 7,
-    "changes_7d": 823,
-    "changes_14d": 1825,
+    "changes_7d": 827,
+    "changes_14d": 1829,
     "housekeeping_7d": 37,
     "last_code_change": {
-      "ts": "2026-11-12T10:01:16Z",
-      "commit": "ebf6277",
-      "commit_full": "ebf6277d08be5fb34d5bc66d823d2ddbb7a2e701",
-      "subject": "Agent commands: the agent's pointer stays on the face, edge or point it picked when you turn the view (#15361)"
+      "ts": "2026-11-12T10:33:11Z",
+      "commit": "3a10543",
+      "commit_full": "3a105438a9bf77c31e60414ab8c14ece3a32953f",
+      "subject": "SolidCraft's errors carry solidcore-ops' offset refusal as data, and its bare SMLib statuses become a shrinking set (#15032) (#15253)"
     },
-    "last_commit_ts": "2026-11-12T10:01:16Z",
+    "last_commit_ts": "2026-11-12T10:33:11Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       208,
@@ -93,7 +93,7 @@
       151,
       239,
       149,
-      85
+      89
     ],
     "days": [
       {
@@ -782,20 +782,20 @@
       },
       {
         "d": "2026-11-12",
-        "code": 85,
+        "code": 89,
         "other": 3,
         "samples": [
           {
-            "commit": "ebf6277",
-            "subject": "Agent commands: the agent's pointer stays on the face, edge or point it picked when you turn the view (#15361)"
+            "commit": "3a10543",
+            "subject": "SolidCraft's errors carry solidcore-ops' offset refusal as data, and its bare SMLib statuses become a shrinking set (#15032) (#15253)"
           },
           {
-            "commit": "7c1f818",
-            "subject": "Sheet metal: an Extrude Cut that passes a hair off a flange's corner builds instead of failing with \"the faces do not close\" (#15346)"
+            "commit": "60abf29",
+            "subject": "Local operation: a face next to a round's tangent edge builds instead of being refused (#13718) (#15138)"
           },
           {
-            "commit": "f93890f",
-            "subject": "solidcore: an open profile turned part way is built, and a planar path's sweep frame is on its plane (#14246 batch B43) (#15264)"
+            "commit": "977c7c7",
+            "subject": "Sheet metal: contour curves in chain order, a lone folded panel's perforations, path flange text (#15364)"
           }
         ]
       }
@@ -2382,5 +2382,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-12T10:26:48+00:00"
+  "updated_at": "2026-11-12T11:24:50+00:00"
 }
