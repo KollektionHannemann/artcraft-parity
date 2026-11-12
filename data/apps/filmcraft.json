@@ -444,18 +444,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.0,
+    "score": 19.2,
     "active_days_7d": 7,
-    "changes_7d": 86,
-    "changes_14d": 249,
+    "changes_7d": 88,
+    "changes_14d": 251,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-12T14:56:27Z",
-      "commit": "a6c0f45",
-      "commit_full": "a6c0f45966b422142a84bf855332c4a1833450cf",
-      "subject": "media: stabilize odd-sized YCbCr TIFF oracle fixtures (#4712)"
+      "ts": "2026-11-12T16:59:34Z",
+      "commit": "0ed546f",
+      "commit_full": "0ed546f8df6edc5a77c99641dcc2ac1ef1a99b36",
+      "subject": "codecs: resampled audio does not depend on where a read starts (#4710)"
     },
-    "last_commit_ts": "2026-11-12T14:56:27Z",
+    "last_commit_ts": "2026-11-12T16:59:34Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       39,
@@ -471,7 +471,7 @@
       5,
       6,
       28,
-      10
+      12
     ],
     "days": [
       {
@@ -1228,20 +1228,20 @@
       },
       {
         "d": "2026-11-12",
-        "code": 10,
+        "code": 12,
         "other": 0,
         "samples": [
           {
+            "commit": "0ed546f",
+            "subject": "codecs: resampled audio does not depend on where a read starts (#4710)"
+          },
+          {
+            "commit": "a02bec6",
+            "subject": "export: APV 4:4:4 profiles carry full-resolution chroma (#4656) (#4661)"
+          },
+          {
             "commit": "a6c0f45",
             "subject": "media: stabilize odd-sized YCbCr TIFF oracle fixtures (#4712)"
-          },
-          {
-            "commit": "5f37739",
-            "subject": "interchange: bound diagnostic, AAF property, XML DTD and OMF reference work"
-          },
-          {
-            "commit": "0e84808",
-            "subject": "media: apply still/animated decode limits before allocating"
           }
         ]
       }
@@ -1824,5 +1824,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-12T15:43:58+00:00"
+  "updated_at": "2026-11-12T17:40:58+00:00"
 }

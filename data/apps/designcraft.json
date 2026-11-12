@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/designcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "92043b4",
-  "latest_commit_date": "2026-11-12T15:09:39Z",
-  "latest_message": "Automation roots: refuse COM¹ to LPT³ and a device name before a colon (#2383)",
+  "latest_commit": "ed6bb0e",
+  "latest_commit_date": "2026-11-12T18:07:19+01:00",
+  "latest_message": "Canvas: an idle frame paints and looks up only the spreads in view (#2696)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -311,6 +311,14 @@
     ],
     "progress": [
       {
+        "date": "2026-11-12",
+        "text": "· The status bar's preflight count and the Preflight panel take their issues from a check on a background worker, which checks the newest state of the document and shows the issues last found meanwhile. Moving or resizing a frame and typing no longer wait for a check of the whole document on every drag step and keystroke. No readiness percentage change."
+      },
+      {
+        "date": "2026-11-12",
+        "text": "· An idle canvas frame no longer does work for the spreads out of view (part of #1343): page shadows, paper, guides, margins, frame edges and overset marks are painted for the spreads and objects in view, and only their stories are looked up. In a 400-page document with two frames a page, an idle frame painted 5,099 shapes and looked up 400 stories; it now paints 311 and looks up 1, the same as in a 4-page document. No readiness percentage change."
+      },
+      {
         "date": "2026-11-06",
         "text": "· Preflight warns about white or [Paper] set to overprint (#2401): a fill, stroke or stroke gap, or ruby and kenten, in [Paper] or a colour that lays down no ink (C=0 M=0 Y=0 K=0, a 0% tint; a spot ink, such as a white ink or a varnish, prints whatever colour stands in for it), is reported as whiteOverprint, since it disappears on press. Text itself has no overprint, so white text in a frame set to Overprint Fill still knocks out and prints, and is not reported. Preflight no longer says PDF export drops ruby and kenten overprint, which it writes. No readiness percentage change."
       },
@@ -461,14 +469,6 @@
       {
         "date": "2026-10-24",
         "text": "· Optical Margin Alignment and hanging punctuation apply to lines with a tab or a right indent tab, as both composers already measured them: the edge glyphs hang, and tab stops stay where they are. Such a line was set without the hang: a justified line that fit only because its period or closing quote hangs had its word spaces squeezed to make up for it, and text after a right indent tab stopped at the measure instead of hanging. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "· The Story Editor has InDesign's vertical depth ruler between the style column and the text, and View › Story Editor › Show/Hide Depth Ruler (view.storyEditorDepthRuler) shows or hides it in the Story Editor, remembered with the preferences. The ruler is marked in the document's vertical ruler units with how deep the story's text fills its frames, counted through its columns and threaded frames (lines set side by side, in the sub-columns of a split paragraph or on both sides of a wrap object, count once), and is shaded down to the overset point, where a red line now crosses the editor. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-24",
-        "text": "· Split Note (note.split {story, id, at}, the Notes panel's Split Note button): as in InDesign, a note splits in two at the insertion point in its text. DesignCraft moves the text after it into a new note by the same author, anchored right after the first. No readiness percentage change."
       }
     ]
   },
@@ -477,7 +477,7 @@
     "value_since": "2026-10-10T18:09:17Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 195,
+    "revisions_since": 197,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -485,39 +485,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 196,
-    "revisions_7d": 5,
+    "revisions": 198,
+    "revisions_7d": 7,
     "last_revision": {
-      "ts": "2026-11-12T15:09:39Z",
+      "ts": "2026-11-12T17:07:19Z",
       "kind": "content",
-      "commit": "92043b4",
-      "commit_full": "92043b4c4892224a14d1441160ad25bf4508e523",
-      "message": "Automation roots: refuse COM¹ to LPT³ and a device name before a colon (#2383)"
+      "commit": "ed6bb0e",
+      "commit_full": "ed6bb0e093439031fb9d1e4726df811f0931d925",
+      "message": "Canvas: an idle frame paints and looks up only the spreads in view (#2696)"
     },
     "last_update": {
-      "ts": "2026-11-12T15:09:39Z",
+      "ts": "2026-11-12T17:07:19Z",
       "kind": "content",
-      "commit": "92043b4",
-      "commit_full": "92043b4c4892224a14d1441160ad25bf4508e523",
-      "message": "Automation roots: refuse COM¹ to LPT³ and a device name before a colon (#2383)"
+      "commit": "ed6bb0e",
+      "commit_full": "ed6bb0e093439031fb9d1e4726df811f0931d925",
+      "message": "Canvas: an idle frame paints and looks up only the spreads in view (#2696)"
     },
     "self_reported": "2026-11-06"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.2,
+    "score": 19.1,
     "active_days_7d": 7,
-    "changes_7d": 64,
-    "changes_14d": 217,
+    "changes_7d": 79,
+    "changes_14d": 232,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-12T16:29:27Z",
-      "commit": "e2b5dba",
-      "commit_full": "e2b5dbaa8a66ac3025d985c1b6b4f82e5a7e9290",
-      "subject": "Compose: vertical Center, Bottom and Justify measure to the last baseline (#2648)"
+      "ts": "2026-11-12T17:07:19Z",
+      "commit": "ed6bb0e",
+      "commit_full": "ed6bb0e093439031fb9d1e4726df811f0931d925",
+      "subject": "Canvas: an idle frame paints and looks up only the spreads in view (#2696)"
     },
-    "last_commit_ts": "2026-11-12T16:29:27Z",
+    "last_commit_ts": "2026-11-12T17:07:19Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       37,
@@ -533,7 +533,7 @@
       6,
       5,
       21,
-      17
+      32
     ],
     "days": [
       {
@@ -1286,20 +1286,20 @@
       },
       {
         "d": "2026-11-12",
-        "code": 17,
+        "code": 32,
         "other": 0,
         "samples": [
           {
-            "commit": "e2b5dba",
-            "subject": "Compose: vertical Center, Bottom and Justify measure to the last baseline (#2648)"
+            "commit": "ed6bb0e",
+            "subject": "Canvas: an idle frame paints and looks up only the spreads in view (#2696)"
           },
           {
-            "commit": "5c48461",
-            "subject": "Save: a TIFF, BMP or PSD too big for opening to inflate is stored as is, so the document reopens (#2283) (#2701)"
+            "commit": "65dd56d",
+            "subject": "Render: satin and center inner glow on an image follow its painted edge (#2671)"
           },
           {
-            "commit": "92043b4",
-            "subject": "Automation roots: refuse COM¹ to LPT³ and a device name before a colon (#2383)"
+            "commit": "04597b0",
+            "subject": "Render: keep drop shadow and outer glow images while an object moves (#2657)"
           }
         ]
       }
@@ -6020,7 +6020,53 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "2522b78",
+      "commit_full": "2522b78ef358a81c7876c049d33d8ef6ee6bc393",
+      "commit_date": "2026-11-12T17:56:38+01:00",
+      "ts": "2026-11-12T16:56:38Z",
+      "message": "Preflight: check the document on a background worker, not on every edit (#2656)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-06",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "ed6bb0e",
+      "commit_full": "ed6bb0e093439031fb9d1e4726df811f0931d925",
+      "commit_date": "2026-11-12T18:07:19+01:00",
+      "ts": "2026-11-12T17:07:19Z",
+      "message": "Canvas: an idle frame paints and looks up only the spreads in view (#2696)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-06",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-12T16:46:55+00:00"
+  "updated_at": "2026-11-12T17:41:24+00:00"
 }

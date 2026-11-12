@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/gridcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/gridcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "55f3004",
-  "latest_commit_date": "2026-11-11T08:57:06+01:00",
-  "latest_message": "Numfmt: one built-in format table, fewer allocations rendering numbers and General (#817) (#820)",
+  "latest_commit": "a3366cf",
+  "latest_commit_date": "2026-11-12T17:58:46+01:00",
+  "latest_message": "Grid: resizing several selected columns applies the width on release (#1082) (#1135)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -435,7 +435,7 @@
     "value_since": "2026-10-10T18:09:06Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 95,
+    "revisions_since": 97,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -443,39 +443,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 97,
-    "revisions_7d": 8,
+    "revisions": 99,
+    "revisions_7d": 10,
     "last_revision": {
-      "ts": "2026-11-11T07:57:06Z",
+      "ts": "2026-11-12T16:58:46Z",
       "kind": "content",
-      "commit": "55f3004",
-      "commit_full": "55f3004cb21e4e66c1bb4363867ac2d9d66c67dc",
-      "message": "Numfmt: one built-in format table, fewer allocations rendering numbers and General (#817) (#820)"
+      "commit": "a3366cf",
+      "commit_full": "a3366cff6548cf65db028e6ed0b4f42a35a6dca7",
+      "message": "Grid: resizing several selected columns applies the width on release (#1082) (#1135)"
     },
     "last_update": {
-      "ts": "2026-11-11T07:57:06Z",
+      "ts": "2026-11-12T16:58:46Z",
       "kind": "content",
-      "commit": "55f3004",
-      "commit_full": "55f3004cb21e4e66c1bb4363867ac2d9d66c67dc",
-      "message": "Numfmt: one built-in format table, fewer allocations rendering numbers and General (#817) (#820)"
+      "commit": "a3366cf",
+      "commit_full": "a3366cff6548cf65db028e6ed0b4f42a35a6dca7",
+      "message": "Grid: resizing several selected columns applies the width on release (#1082) (#1135)"
     },
     "self_reported": "2026-11-05"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.1,
+    "score": 19.8,
     "active_days_7d": 7,
-    "changes_7d": 92,
-    "changes_14d": 240,
+    "changes_7d": 96,
+    "changes_14d": 244,
     "housekeeping_7d": 4,
     "last_code_change": {
-      "ts": "2026-11-12T06:43:22Z",
-      "commit": "37941f0",
-      "commit_full": "37941f06244565bdc91d32394d74fb9b0e48fae4",
-      "subject": "xlsx: .xls data validation from craft-xls (#3844)"
+      "ts": "2026-11-12T16:59:31Z",
+      "commit": "a60db4f",
+      "commit_full": "a60db4f1c75413f62f58ce2381ee06f5fcf6356e",
+      "subject": "LINEST, LOGEST, TREND, GROWTH: solve by Householder QR (#3322) (#3323)"
     },
-    "last_commit_ts": "2026-11-12T06:43:22Z",
+    "last_commit_ts": "2026-11-12T16:59:31Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       25,
@@ -491,7 +491,7 @@
       8,
       14,
       41,
-      5
+      9
     ],
     "days": [
       {
@@ -1108,20 +1108,20 @@
       },
       {
         "d": "2026-11-12",
-        "code": 5,
+        "code": 9,
         "other": 0,
         "samples": [
           {
-            "commit": "37941f0",
-            "subject": "xlsx: .xls data validation from craft-xls (#3844)"
+            "commit": "a60db4f",
+            "subject": "LINEST, LOGEST, TREND, GROWTH: solve by Householder QR (#3322) (#3323)"
           },
           {
-            "commit": "6308fc9",
-            "subject": "xlsx: OPC packages through craft-opc; craft-libs at aa84415b (#3843)"
+            "commit": "a3366cf",
+            "subject": "Grid: resizing several selected columns applies the width on release (#1082) (#1135)"
           },
           {
-            "commit": "48659c1",
-            "subject": "xlsx: encrypted workbooks through craft-offcrypto and craft-cfb (#3842)"
+            "commit": "591b835",
+            "subject": "Shift+arrows, Enter and Tab no longer get stuck on a merged cell (#3624)"
           }
         ]
       }
@@ -3565,7 +3565,53 @@
       "breadth_pct": 75.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "0b31ceb",
+      "commit_full": "0b31cebe5d4a9245258d6bee2f9a2cedc4d494b5",
+      "commit_date": "2026-11-12T17:56:55+01:00",
+      "ts": "2026-11-12T16:56:55Z",
+      "message": "Insert: WordArt (insert.wordArt) (#784) (#789)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-05",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "a3366cf",
+      "commit_full": "a3366cff6548cf65db028e6ed0b4f42a35a6dca7",
+      "commit_date": "2026-11-12T17:58:46+01:00",
+      "ts": "2026-11-12T16:58:46Z",
+      "message": "Grid: resizing several selected columns applies the width on release (#1082) (#1135)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-05",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-12T06:51:10+00:00"
+  "updated_at": "2026-11-12T17:41:47+00:00"
 }

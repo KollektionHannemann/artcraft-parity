@@ -497,18 +497,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.7,
+    "score": 24.0,
     "active_days_7d": 7,
-    "changes_7d": 360,
-    "changes_14d": 493,
+    "changes_7d": 363,
+    "changes_14d": 496,
     "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-11-12T05:28:18Z",
-      "commit": "d749fd8",
-      "commit_full": "d749fd8062655c333c0733d8456bd8d4c9925a12",
-      "subject": "Print colour management: the app converts printed pictures into a printer profile (#6269) (#6853)"
+      "ts": "2026-11-12T16:58:31Z",
+      "commit": "120c62f",
+      "commit_full": "120c62fb82f41998ecdf6dbbfe39f27d4c9a410e",
+      "subject": "Auto-tag Apply tags headings by size and weight (#7062) (#7069)"
     },
-    "last_commit_ts": "2026-11-12T05:28:18Z",
+    "last_commit_ts": "2026-11-12T16:58:31Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       4,
@@ -524,7 +524,7 @@
       206,
       62,
       45,
-      1
+      4
     ],
     "days": [
       {
@@ -1333,12 +1333,20 @@
       },
       {
         "d": "2026-11-12",
-        "code": 1,
+        "code": 4,
         "other": 0,
         "samples": [
           {
-            "commit": "d749fd8",
-            "subject": "Print colour management: the app converts printed pictures into a printer profile (#6269) (#6853)"
+            "commit": "120c62f",
+            "subject": "Auto-tag Apply tags headings by size and weight (#7062) (#7069)"
+          },
+          {
+            "commit": "490287f",
+            "subject": "prc: rebuild compressed tessellations whose normals are recalculated (#1297) (#7034)"
+          },
+          {
+            "commit": "72c607f",
+            "subject": "fix(render): an RGB colour in an isolated DeviceCMYK group blends in CMYK, as its ink (#7031)"
           }
         ]
       }
@@ -7004,5 +7012,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-12T05:47:11+00:00"
+  "updated_at": "2026-11-12T17:41:12+00:00"
 }

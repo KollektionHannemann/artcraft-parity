@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.6,
+    "score": 15.6,
     "active_days_7d": 7,
-    "changes_7d": 46,
-    "changes_14d": 157,
+    "changes_7d": 49,
+    "changes_14d": 160,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-12T03:22:41Z",
-      "commit": "42c8ea5",
-      "commit_full": "42c8ea5b3c3a4cabdda03f535355cd61ac756479",
-      "subject": "Migrate TextureCraft UI translations to shared craft-i18n (#427)"
+      "ts": "2026-11-12T16:56:41Z",
+      "commit": "6270aec",
+      "commit_full": "6270aeca05d92527c6e09461efc9b0a35d415137",
+      "subject": "fix(engine): reset paint target to content when undoing mask (#307) (#398)"
     },
-    "last_commit_ts": "2026-11-12T03:22:41Z",
+    "last_commit_ts": "2026-11-12T16:56:41Z",
     "repo_since": "2026-10-14T18:33:13Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       7,
       10,
       10,
-      2
+      5
     ],
     "days": [
       {
@@ -383,16 +383,20 @@
       },
       {
         "d": "2026-11-12",
-        "code": 2,
+        "code": 5,
         "other": 0,
         "samples": [
           {
-            "commit": "42c8ea5",
-            "subject": "Migrate TextureCraft UI translations to shared craft-i18n (#427)"
+            "commit": "6270aec",
+            "subject": "fix(engine): reset paint target to content when undoing mask (#307) (#398)"
           },
           {
-            "commit": "b1806e4",
-            "subject": "Add an offset slider to mesh-map generators (#231)"
+            "commit": "a969983",
+            "subject": "fix(engine): resolve resource stem and list available names in layer.add.image (#337) (#391)"
+          },
+          {
+            "commit": "e03e6fa",
+            "subject": "fix(engine): reject unparseable colour parameters with an error (#369) (#390)"
           }
         ]
       }
@@ -787,5 +791,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-12T03:39:10+00:00"
+  "updated_at": "2026-11-12T17:41:51+00:00"
 }
