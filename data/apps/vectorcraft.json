@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "1c1bb2f",
-  "latest_commit_date": "2026-11-14T01:53:39+07:00",
-  "latest_message": "Gradients: Hue Clockwise and Hue Counterclockwise mix stops around the hue wheel (#7191)",
+  "latest_commit": "df581b2",
+  "latest_commit_date": "2026-11-14T05:41:10+07:00",
+  "latest_message": "Cutting Tools: Banner Hems and Grommets marks a banner's hems and grommet holes (#7282)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -340,6 +340,10 @@
     "progress": [
       {
         "date": "2026-11-13",
+        "text": "Banner Hems and Grommets in the Cutting Tools add-on (Object › Plug-ins › Cutting Tools): on the chosen sides of the selected art's bounds, or of each artboard, a hem line at a set depth inside the edge and grommet marks (a circle with a cross) at a set inset, one at each end of a side and the rest spread evenly at most a set spacing apart, stroked in a chosen swatch; a dialog with Preview, one undo step (addon.cutting.banner). A VectorCraft addition: headline numbers unchanged."
+      },
+      {
+        "date": "2026-11-13",
         "text": "Gradient panel › Method: Hue Clockwise and Hue Counterclockwise mix a linear, radial, conic or diamond gradient's colors around the hue wheel in one direction, so red to blue passes through magenta one way and through yellow and green the other (paint.editGradient method: hue-clockwise, hue-counterclockwise); SVG and PDF exports write such a gradient as an image."
       },
       {
@@ -493,10 +497,6 @@
       {
         "date": "2026-10-18",
         "text": "Inch rulers divide the inch in half, not in ten. Zooming in stepped an inch ruler through 0.2, 0.1 and 0.05 of an inch, marks an inch ruler does not carry; below an inch the steps are binary fractions now, 1/2 down to 1/16, with the unlabelled ticks between them binary too (down to 1/128, so the 32nds, 64ths and 128ths appear as the report expects), while the metric units, points, pixels and picas keep their tenths. A label carries the decimals its step needs, so a sixteenth reads 0.0625 rather than the rounded 0.06, with trailing zeros dropped (#2827). Headline numbers unchanged."
-      },
-      {
-        "date": "2026-10-18",
-        "text": "Exported and saved files can repeat their bytes: PNG, PDF, EPS, legacy .ai, packaged zips and .vectorcraft saves recorded the wall-clock time they were made in, so the same commands run twice gave different bytes though the pixels matched. SOURCEDATEEPOCH now stands in for the clock in everything a file records, as the reproducible-builds specification defines it; a date a command is given still wins, and a malformed value is ignored rather than refusing the export. The recovery heartbeat and the seed PDF encryption draws on keep the real clock, so a password-protected PDF still differs between runs (#2880). Headline numbers unchanged."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 228,
+    "revisions_since": 229,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,39 +536,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 229,
-    "revisions_7d": 15,
+    "revisions": 230,
+    "revisions_7d": 16,
     "last_revision": {
-      "ts": "2026-11-13T18:53:39Z",
+      "ts": "2026-11-13T22:41:10Z",
       "kind": "content",
-      "commit": "1c1bb2f",
-      "commit_full": "1c1bb2f96e6739694ea2ca4f314008bd55eef7d9",
-      "message": "Gradients: Hue Clockwise and Hue Counterclockwise mix stops around the hue wheel (#7191)"
+      "commit": "df581b2",
+      "commit_full": "df581b2521be5ed215454b9f4cc20ed405a7ba63",
+      "message": "Cutting Tools: Banner Hems and Grommets marks a banner's hems and grommet holes (#7282)"
     },
     "last_update": {
-      "ts": "2026-11-13T18:53:39Z",
+      "ts": "2026-11-13T22:41:10Z",
       "kind": "content",
-      "commit": "1c1bb2f",
-      "commit_full": "1c1bb2f96e6739694ea2ca4f314008bd55eef7d9",
-      "message": "Gradients: Hue Clockwise and Hue Counterclockwise mix stops around the hue wheel (#7191)"
+      "commit": "df581b2",
+      "commit_full": "df581b2521be5ed215454b9f4cc20ed405a7ba63",
+      "message": "Cutting Tools: Banner Hems and Grommets marks a banner's hems and grommet holes (#7282)"
     },
     "self_reported": "2026-11-10"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 36.8,
+    "score": 37.0,
     "active_days_7d": 7,
-    "changes_7d": 1002,
-    "changes_14d": 1753,
+    "changes_7d": 1034,
+    "changes_14d": 1785,
     "housekeeping_7d": 40,
     "last_code_change": {
-      "ts": "2026-11-13T21:32:40Z",
-      "commit": "4558196",
-      "commit_full": "4558196e16a1ad5ef296d34be33a53e3de2407c5",
-      "subject": "Type: Warichu stacks selected characters on lines inside their line (#7053)"
+      "ts": "2026-11-13T23:27:27Z",
+      "commit": "0b29b2b",
+      "commit_full": "0b29b2b1f60d4ff5c4c3defe53c063fa17a55645",
+      "subject": "Document Info: values show in the interface language (#7267)"
     },
-    "last_commit_ts": "2026-11-13T21:32:40Z",
+    "last_commit_ts": "2026-11-13T23:27:27Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       126,
@@ -584,7 +584,7 @@
       81,
       123,
       254,
-      208
+      240
     ],
     "days": [
       {
@@ -1412,20 +1412,20 @@
       },
       {
         "d": "2026-11-13",
-        "code": 208,
+        "code": 240,
         "other": 8,
         "samples": [
           {
-            "commit": "4558196",
-            "subject": "Type: Warichu stacks selected characters on lines inside their line (#7053)"
+            "commit": "0b29b2b",
+            "subject": "Document Info: values show in the interface language (#7267)"
           },
           {
-            "commit": "ce1e688",
-            "subject": "Status bar: a line about linked files keeps the open's notes listed (#7138)"
+            "commit": "4a0f4b9",
+            "subject": "Path: anchor edits on a long selected path skip measuring it for the canvas check (#7305)"
           },
           {
-            "commit": "f8751a8",
-            "subject": "Type: Space types a space while editing text instead of panning (#7221)"
+            "commit": "b6fb221",
+            "subject": "Canvas range: removed guides are looked up through sets, and nested layers are walked once (#7308)"
           }
         ]
       }
@@ -7662,7 +7662,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "df581b2",
+      "commit_full": "df581b2521be5ed215454b9f4cc20ed405a7ba63",
+      "commit_date": "2026-11-14T05:41:10+07:00",
+      "ts": "2026-11-13T22:41:10Z",
+      "message": "Cutting Tools: Banner Hems and Grommets marks a banner's hems and grommet holes (#7282)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-10",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-13T21:34:28+00:00"
+  "updated_at": "2026-11-13T23:27:40+00:00"
 }

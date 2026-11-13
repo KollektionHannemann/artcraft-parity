@@ -237,18 +237,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.6,
+    "score": 21.7,
     "active_days_7d": 7,
-    "changes_7d": 124,
-    "changes_14d": 216,
+    "changes_7d": 126,
+    "changes_14d": 218,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-11-13T22:30:43Z",
-      "commit": "db94273",
-      "commit_full": "db9427325e0017f5bbe0c184105b5d981f07eca7",
-      "subject": "M1: Undo steps let go of what the memory budget lets go of (#1331)"
+      "ts": "2026-11-13T23:12:03Z",
+      "commit": "2e639c2",
+      "commit_full": "2e639c26486198b926fc862d7854993cb2b4f10c",
+      "subject": "M2: smaller caches for showing things again quickly (#1332)"
     },
-    "last_commit_ts": "2026-11-13T22:30:43Z",
+    "last_commit_ts": "2026-11-13T23:12:03Z",
     "repo_since": "2026-10-12T18:17:00Z",
     "window": [
       20,
@@ -264,7 +264,7 @@
       22,
       19,
       15,
-      38
+      40
     ],
     "days": [
       {
@@ -869,20 +869,20 @@
       },
       {
         "d": "2026-11-13",
-        "code": 38,
+        "code": 40,
         "other": 3,
         "samples": [
           {
+            "commit": "2e639c2",
+            "subject": "M2: smaller caches for showing things again quickly (#1332)"
+          },
+          {
+            "commit": "4b72b6c",
+            "subject": "#276: IMAP reads its Inbox before listing its folders (#1322)"
+          },
+          {
             "commit": "db94273",
             "subject": "M1: Undo steps let go of what the memory budget lets go of (#1331)"
-          },
-          {
-            "commit": "fed2e61",
-            "subject": "#276: IMAP folders whose STATUS is unchanged are passed over (#1320)"
-          },
-          {
-            "commit": "edf0941",
-            "subject": "Google testers-only note no longer asks people to email for access (#1330)"
           }
         ]
       }
@@ -6057,5 +6057,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-13T22:32:53+00:00"
+  "updated_at": "2026-11-13T23:29:06+00:00"
 }
