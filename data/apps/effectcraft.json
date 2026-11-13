@@ -378,18 +378,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.7,
-    "active_days_7d": 5,
-    "changes_7d": 128,
-    "changes_14d": 291,
+    "score": 19.3,
+    "active_days_7d": 6,
+    "changes_7d": 130,
+    "changes_14d": 293,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-12T23:54:29Z",
-      "commit": "a4bde72",
-      "commit_full": "a4bde72bcab611cdcb7f92d17e691ddba4c447f0",
-      "subject": ".aep: import twice as fast, faster export (#3302)"
+      "ts": "2026-11-13T04:06:17Z",
+      "commit": "8f21de0",
+      "commit_full": "8f21de0a0ccaeea69deed33205193ce9469945e3",
+      "subject": "ci: limit concurrent GPU tests in nextest (#3323)"
     },
-    "last_commit_ts": "2026-11-12T23:54:29Z",
+    "last_commit_ts": "2026-11-13T04:06:17Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       37,
@@ -405,7 +405,7 @@
       26,
       53,
       27,
-      0
+      2
     ],
     "days": [
       {
@@ -1152,6 +1152,21 @@
             "subject": ".aep import: a test pins the Orientation expression import (#3087) (#3313)"
           }
         ]
+      },
+      {
+        "d": "2026-11-13",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "8f21de0",
+            "subject": "ci: limit concurrent GPU tests in nextest (#3323)"
+          },
+          {
+            "commit": "547368f",
+            "subject": "test: resolve xtask from relocated nextest archives (#3322)"
+          }
+        ]
       }
     ]
   },
@@ -1709,5 +1724,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-13T00:08:21+00:00"
+  "updated_at": "2026-11-13T04:44:11+00:00"
 }
