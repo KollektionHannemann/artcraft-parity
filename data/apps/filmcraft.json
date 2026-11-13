@@ -444,18 +444,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.5,
+    "score": 18.1,
     "active_days_7d": 7,
-    "changes_7d": 90,
-    "changes_14d": 216,
-    "housekeeping_7d": 4,
+    "changes_7d": 92,
+    "changes_14d": 218,
+    "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-13T06:42:47Z",
-      "commit": "a08e6d4",
-      "commit_full": "a08e6d49dcbb16ae08963f4f75b7ac60fb064a6d",
-      "subject": "Updates: take the craft-libs crates from craft-libs main at 47b6bbad (#4674)"
+      "ts": "2026-11-13T07:59:30Z",
+      "commit": "a216b6e",
+      "commit_full": "a216b6e446cca0bc5c790896d252d2a433d85e24",
+      "subject": "codecs: use shared craft-video VP8 decoder (#4742)"
     },
-    "last_commit_ts": "2026-11-13T06:42:47Z",
+    "last_commit_ts": "2026-11-13T07:59:30Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       5,
@@ -471,7 +471,7 @@
       6,
       28,
       13,
-      3
+      5
     ],
     "days": [
       {
@@ -1247,20 +1247,20 @@
       },
       {
         "d": "2026-11-13",
-        "code": 3,
-        "other": 0,
+        "code": 5,
+        "other": 1,
         "samples": [
+          {
+            "commit": "a216b6e",
+            "subject": "codecs: use shared craft-video VP8 decoder (#4742)"
+          },
+          {
+            "commit": "c504dda",
+            "subject": "test: locate CLI executable in relocated nextest archives (#4754)"
+          },
           {
             "commit": "a08e6d4",
             "subject": "Updates: take the craft-libs crates from craft-libs main at 47b6bbad (#4674)"
-          },
-          {
-            "commit": "353a66e",
-            "subject": "interchange: use shared EDL parser and writer (#4745)"
-          },
-          {
-            "commit": "3ed8caa",
-            "subject": "export: say which encoder ran, and when hardware encoding fell back to software (#3952) (#3953)"
           }
         ]
       }
@@ -1843,5 +1843,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-13T06:49:50+00:00"
+  "updated_at": "2026-11-13T08:05:51+00:00"
 }
