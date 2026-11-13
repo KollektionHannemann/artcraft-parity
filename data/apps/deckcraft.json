@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/deckcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/deckcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "6166cb0",
-  "latest_commit_date": "2026-11-13T10:36:39+01:00",
-  "latest_message": "PPTX: report missing slide relationships and refuse over-limit lists (#1951)",
+  "latest_commit": "7a24b20",
+  "latest_commit_date": "2026-11-13T16:28:51Z",
+  "latest_message": "Document the PPTX slide-list import limit (#2103)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -324,7 +324,7 @@
       },
       {
         "date": "2026-11-07",
-        "text": "PPTX slide-list entries with missing relationships are reported in lostSlides instead of silently omitted. The engine opens the partial deck as a repaired copy with no original save path. Synthetic 13-slide regression; does not establish the cause of #1910's field report."
+        "text": "PPTX slide-list entries with missing relationships are reported in lostSlides instead of silently omitted. The engine opens the partial deck as a repaired copy with no original save path. Slide lists over 10,000 entries are explicitly refused before a partial load; exactly 10,000 remain supported. Synthetic 13-slide regression; does not establish the cause of #1910's field report."
       },
       {
         "date": "2026-11-04",
@@ -485,7 +485,7 @@
     "value_since": "2026-10-10T18:09:21Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 135,
+    "revisions_since": 136,
     "hours_since": null,
     "areas_since": {
       "up": 1,
@@ -504,39 +504,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 139,
-    "revisions_7d": 2,
+    "revisions": 140,
+    "revisions_7d": 3,
     "last_revision": {
-      "ts": "2026-11-13T09:36:39Z",
+      "ts": "2026-11-13T16:28:51Z",
       "kind": "content",
-      "commit": "6166cb0",
-      "commit_full": "6166cb0870e80e9510c049653d3534bff1b8c04f",
-      "message": "PPTX: report missing slide relationships and refuse over-limit lists (#1951)"
+      "commit": "7a24b20",
+      "commit_full": "7a24b20c8e82fdbd3317f90f237f290e0d1c38be",
+      "message": "Document the PPTX slide-list import limit (#2103)"
     },
     "last_update": {
-      "ts": "2026-11-13T09:36:39Z",
+      "ts": "2026-11-13T16:28:51Z",
       "kind": "content",
-      "commit": "6166cb0",
-      "commit_full": "6166cb0870e80e9510c049653d3534bff1b8c04f",
-      "message": "PPTX: report missing slide relationships and refuse over-limit lists (#1951)"
+      "commit": "7a24b20",
+      "commit_full": "7a24b20c8e82fdbd3317f90f237f290e0d1c38be",
+      "message": "Document the PPTX slide-list import limit (#2103)"
     },
     "self_reported": "2026-11-11"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.3,
+    "score": 16.4,
     "active_days_7d": 7,
-    "changes_7d": 61,
-    "changes_14d": 173,
+    "changes_7d": 62,
+    "changes_14d": 174,
     "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-13T09:41:19Z",
-      "commit": "ef9ac9a",
-      "commit_full": "ef9ac9ac7a1f610656144981b53688efdb9ef518",
-      "subject": "PPTX: preserve large connector adjustment guides (#2062)"
+      "ts": "2026-11-13T16:28:51Z",
+      "commit": "7a24b20",
+      "commit_full": "7a24b20c8e82fdbd3317f90f237f290e0d1c38be",
+      "subject": "Document the PPTX slide-list import limit (#2103)"
     },
-    "last_commit_ts": "2026-11-13T09:41:19Z",
+    "last_commit_ts": "2026-11-13T16:28:51Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
       23,
@@ -552,7 +552,7 @@
       3,
       27,
       7,
-      14
+      15
     ],
     "days": [
       {
@@ -1188,9 +1188,13 @@
       },
       {
         "d": "2026-11-13",
-        "code": 14,
+        "code": 15,
         "other": 0,
         "samples": [
+          {
+            "commit": "7a24b20",
+            "subject": "Document the PPTX slide-list import limit (#2103)"
+          },
           {
             "commit": "ef9ac9a",
             "subject": "PPTX: preserve large connector adjustment guides (#2062)"
@@ -1198,10 +1202,6 @@
           {
             "commit": "eebede8",
             "subject": "PPTX: preserve empty imported master text styles (#2058)"
-          },
-          {
-            "commit": "a024a0e",
-            "subject": "Fix pPTX bar chart: series-level `<c:dLbls><c:delete val=\"1\"/></c:dLbls>` (#1978)"
           }
         ]
       }
@@ -4618,7 +4618,30 @@
       "breadth_pct": 62.0,
       "full_prev": 55.0,
       "kind": "content"
+    },
+    {
+      "commit": "7a24b20",
+      "commit_full": "7a24b20c8e82fdbd3317f90f237f290e0d1c38be",
+      "commit_date": "2026-11-13T16:28:51Z",
+      "ts": "2026-11-13T16:28:51Z",
+      "message": "Document the PPTX slide-list import limit (#2103)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-11",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-13T10:23:44+00:00"
+  "updated_at": "2026-11-13T16:39:46+00:00"
 }
