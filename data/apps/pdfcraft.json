@@ -497,18 +497,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 23.5,
+    "score": 23.7,
     "active_days_7d": 7,
-    "changes_7d": 367,
-    "changes_14d": 505,
+    "changes_7d": 369,
+    "changes_14d": 507,
     "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-11-13T16:31:17Z",
-      "commit": "8034990",
-      "commit_full": "8034990072fcc745d7af54bd52f27fbe029aafaa",
-      "subject": "fix(startup): an OPENSSL_ia32cap naming a missing CPU feature no longer stops PdfCraft (#2916) (#7141)"
+      "ts": "2026-11-13T18:47:48Z",
+      "commit": "0f22627",
+      "commit_full": "0f22627bff6cde9930817e891290f653d882bbda",
+      "subject": "Link JavaScript actions and app.openDoc (port of #2081) (#7144)"
     },
-    "last_commit_ts": "2026-11-13T16:31:17Z",
+    "last_commit_ts": "2026-11-13T18:47:48Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       11,
@@ -524,7 +524,7 @@
       62,
       45,
       5,
-      12
+      14
     ],
     "days": [
       {
@@ -1352,20 +1352,20 @@
       },
       {
         "d": "2026-11-13",
-        "code": 12,
+        "code": 14,
         "other": 1,
         "samples": [
           {
+            "commit": "0f22627",
+            "subject": "Link JavaScript actions and app.openDoc (port of #2081) (#7144)"
+          },
+          {
+            "commit": "c83c9dd",
+            "subject": "test(ui): run the Home recent Reveal test inline so its toast check can't race (#7202)"
+          },
+          {
             "commit": "8034990",
             "subject": "fix(startup): an OPENSSL_ia32cap naming a missing CPU feature no longer stops PdfCraft (#2916) (#7141)"
-          },
-          {
-            "commit": "ec31c55",
-            "subject": "fix(ocr): main builds on Windows again: the executable check is its own function per platform (#7222)"
-          },
-          {
-            "commit": "785e7e5",
-            "subject": "fix(forms): finding the first character a simple font cannot hold encodes the whole string once, then each distinct character once (#7047)"
           }
         ]
       }
@@ -7054,5 +7054,5 @@
       "kind": "editorial"
     }
   ],
-  "updated_at": "2026-11-13T16:39:31+00:00"
+  "updated_at": "2026-11-13T19:40:43+00:00"
 }

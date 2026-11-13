@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "c44103f",
-  "latest_commit_date": "2026-11-12T22:00:23+07:00",
-  "latest_message": "Swatch libraries: Patterns › Optical Effects adds wave, moiré and op-art patterns (#6853)",
+  "latest_commit": "1c1bb2f",
+  "latest_commit_date": "2026-11-14T01:53:39+07:00",
+  "latest_message": "Gradients: Hue Clockwise and Hue Counterclockwise mix stops around the hue wheel (#7191)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -339,6 +339,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-13",
+        "text": "Gradient panel › Method: Hue Clockwise and Hue Counterclockwise mix a linear, radial, conic or diamond gradient's colors around the hue wheel in one direction, so red to blue passes through magenta one way and through yellow and green the other (paint.editGradient method: hue-clockwise, hue-counterclockwise); SVG and PDF exports write such a gradient as an image."
+      },
+      {
         "date": "2026-11-12",
         "text": "Stencil Bridges in the Cutting Tools add-on (Object › Plug-ins › Cutting Tools): strips of a set width are cut out of the selected art so that every island of a stencil cut from it (the inside of an O, a hole in a shape) stays attached to the sheet, by the shortest crossings first, vertical, horizontal or the shortest among 12 directions 15° apart, with up to 16 bridges per island; type is measured by its glyph outlines and stays type, and the original goes to a hidden layer or is replaced. One undo step (addon.cutting.bridges). A VectorCraft addition: headline numbers unchanged."
       },
@@ -493,10 +497,6 @@
       {
         "date": "2026-10-18",
         "text": "Exported and saved files can repeat their bytes: PNG, PDF, EPS, legacy .ai, packaged zips and .vectorcraft saves recorded the wall-clock time they were made in, so the same commands run twice gave different bytes though the pixels matched. SOURCEDATEEPOCH now stands in for the clock in everything a file records, as the reproducible-builds specification defines it; a date a command is given still wins, and a malformed value is ignored rather than refusing the export. The recovery heartbeat and the seed PDF encryption draws on keep the real clock, so a password-protected PDF still differs between runs (#2880). Headline numbers unchanged."
-      },
-      {
-        "date": "2026-10-18",
-        "text": "About 85 community PRs landed in two batches through the full gate, with our fixes on top. New: Word .docx files place as area type with their formatting (#2766), CCITT Group 3 TIFF files open (#2770), Paragraph panel menu › Roman Hanging Punctuation (#2775), the Anchor Point tool edits blend spine points and handles (#2643, fixes #2544), shadows and glows each draw from the art with the effects before them, without the old exponential cost (#2395), one to ten coloured lights in 3D effects (#2706), Artboard Options X and Y with a reference point (#2739), more Contextual Task Bar actions (#2471), Optical Margin Alignment for a whole thread (#2773), History panel Step Backward/Forward and Set History Limit (#2764), Edit › Undo and Redo name the step as the History panel does (#2774), bounding-box handles snap to the grid, pixels and guides (#2715), Ctrl/Cmd+A in the Artboards panel (#2761), Tabs panel menu items (#2742), Import Data Sets defines variables from header cells (#2736), a Linux option to use X11 when a pen is attached (#2717). Fidelity and robustness: variable fonts named by their default weight and fallback glyphs keep bold and italic (#2733, #2732), legacy .ai layer names in Windows Latin-1 (#2722), WMF window mapping (#2721), Magic Wand inside isolation (#2720), type values out of range in files are clamped (#2728, #2757), raster effects stay responsive in drags (#2745), exports and Save for Web report undecodable images (#2762, #2737, #2684), Windows-safe exported file names (#2738), a marquee skips a Shaper Group's originals (#2772). Second batch: an export progress dialog with Cancel on the shared cancel token (#2564), CMYK gradient meshes drawn several times faster within a 16 MB cap (#2802), Paragraph panel menu › Justification… with file values clamped (#2771), Edit › Clear History (#2843), SVG image links keep their spelling (#2837, fixes main's Windows test failures), the Linux save dialog through the XDG portal (#2783), RGB input stored as CMYK in CMYK documents (#2812), legacy .ai export of images and radial highlights (#2801, #2807), .ai import notes for damaged editing data, page sizes and variable libraries (#2799, #2800, #2842), PDF and .ai keep their creation date (#2838), undecodable images left out of PDF exports with a note (#2790), MCP input waits for queue room (#2776), slice, snapping, selection, type and accessibility fixes (#2794–#2797, #2805, #2806, #2809, #2815, #2844–#2846), dropdowns close after a keyboard pick (#2824), plug-in dialogs scroll (#2840). Languages: the Dutch catalog completed (#2730). Headline numbers unchanged (estimated)."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 227,
+    "revisions_since": 228,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,39 +536,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 228,
-    "revisions_7d": 14,
+    "revisions": 229,
+    "revisions_7d": 15,
     "last_revision": {
-      "ts": "2026-11-12T15:00:23Z",
+      "ts": "2026-11-13T18:53:39Z",
       "kind": "content",
-      "commit": "c44103f",
-      "commit_full": "c44103f8c3dc7830349ccd17f75a6ce347eb35a2",
-      "message": "Swatch libraries: Patterns › Optical Effects adds wave, moiré and op-art patterns (#6853)"
+      "commit": "1c1bb2f",
+      "commit_full": "1c1bb2f96e6739694ea2ca4f314008bd55eef7d9",
+      "message": "Gradients: Hue Clockwise and Hue Counterclockwise mix stops around the hue wheel (#7191)"
     },
     "last_update": {
-      "ts": "2026-11-12T15:00:23Z",
+      "ts": "2026-11-13T18:53:39Z",
       "kind": "content",
-      "commit": "c44103f",
-      "commit_full": "c44103f8c3dc7830349ccd17f75a6ce347eb35a2",
-      "message": "Swatch libraries: Patterns › Optical Effects adds wave, moiré and op-art patterns (#6853)"
+      "commit": "1c1bb2f",
+      "commit_full": "1c1bb2f96e6739694ea2ca4f314008bd55eef7d9",
+      "message": "Gradients: Hue Clockwise and Hue Counterclockwise mix stops around the hue wheel (#7191)"
     },
     "self_reported": "2026-11-10"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 36.4,
+    "score": 36.6,
     "active_days_7d": 7,
-    "changes_7d": 950,
-    "changes_14d": 1701,
-    "housekeeping_7d": 37,
+    "changes_7d": 976,
+    "changes_14d": 1727,
+    "housekeeping_7d": 39,
     "last_code_change": {
-      "ts": "2026-11-13T17:52:08Z",
-      "commit": "608830d",
-      "commit_full": "608830d6838e29cf8cddad204c6628949bd63323",
-      "subject": "Actions: script runs and tool edits name a recording limit as they end (#7162)"
+      "ts": "2026-11-13T19:40:06Z",
+      "commit": "90a9e00",
+      "commit_full": "90a9e00fddc368638c31934f00c5b04e1ea7769e",
+      "subject": "SVG Interactivity: replies name JavaScript files outside the read roots by file name (#7205)"
     },
-    "last_commit_ts": "2026-11-13T17:52:08Z",
+    "last_commit_ts": "2026-11-13T19:40:06Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       126,
@@ -584,7 +584,7 @@
       81,
       123,
       254,
-      156
+      182
     ],
     "days": [
       {
@@ -1412,20 +1412,20 @@
       },
       {
         "d": "2026-11-13",
-        "code": 156,
-        "other": 5,
+        "code": 182,
+        "other": 7,
         "samples": [
           {
-            "commit": "608830d",
-            "subject": "Actions: script runs and tool edits name a recording limit as they end (#7162)"
+            "commit": "90a9e00",
+            "subject": "SVG Interactivity: replies name JavaScript files outside the read roots by file name (#7205)"
           },
           {
-            "commit": "7553c1f",
-            "subject": "Objects on Path: Detach takes the chosen object off the path (#7182)"
+            "commit": "3a7295e",
+            "subject": "Place: File › Revert drops reads started for the content it discards (#7201)"
           },
           {
-            "commit": "88a5b49",
-            "subject": "Tabs: the ruler shows when a non-text object is first in the selection (#7113)"
+            "commit": "95b328d",
+            "subject": "Image Trace: blurred edges no longer trace as rings of in-between colors (#7193)"
           }
         ]
       }
@@ -7636,7 +7636,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "1c1bb2f",
+      "commit_full": "1c1bb2f96e6739694ea2ca4f314008bd55eef7d9",
+      "commit_date": "2026-11-14T01:53:39+07:00",
+      "ts": "2026-11-13T18:53:39Z",
+      "message": "Gradients: Hue Clockwise and Hue Counterclockwise mix stops around the hue wheel (#7191)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-10",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-13T18:33:49+00:00"
+  "updated_at": "2026-11-13T19:40:23+00:00"
 }
