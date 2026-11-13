@@ -237,18 +237,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.2,
+    "score": 19.5,
     "active_days_7d": 7,
-    "changes_7d": 92,
-    "changes_14d": 184,
-    "housekeeping_7d": 12,
+    "changes_7d": 94,
+    "changes_14d": 186,
+    "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-11-13T02:26:06Z",
-      "commit": "83b4384",
-      "commit_full": "83b438448f5cfc7ebf08ba20155d0f424fb67c5b",
-      "subject": "MB1.2: mailcraft-host Platform trait, init and memory budget (#1239)"
+      "ts": "2026-11-13T03:19:05Z",
+      "commit": "9b732f9",
+      "commit_full": "9b732f91844b7b4fcb431240b87652e8b756a503",
+      "subject": "#1121: the authorities trusted for mail from NSS's own list where the system has no bundle for mail (#1139)"
     },
-    "last_commit_ts": "2026-11-13T02:26:06Z",
+    "last_commit_ts": "2026-11-13T03:19:05Z",
     "repo_since": "2026-10-12T18:17:00Z",
     "window": [
       20,
@@ -264,7 +264,7 @@
       22,
       19,
       15,
-      6
+      8
     ],
     "days": [
       {
@@ -869,20 +869,20 @@
       },
       {
         "d": "2026-11-13",
-        "code": 6,
-        "other": 0,
+        "code": 8,
+        "other": 2,
         "samples": [
+          {
+            "commit": "9b732f9",
+            "subject": "#1121: the authorities trusted for mail from NSS's own list where the system has no bundle for mail (#1139)"
+          },
+          {
+            "commit": "5db56f5",
+            "subject": "#949: a snooze given up after refused returns is told in the run's problems for IMAP too (#1247)"
+          },
           {
             "commit": "83b4384",
             "subject": "MB1.2: mailcraft-host Platform trait, init and memory budget (#1239)"
-          },
-          {
-            "commit": "9e99f3f",
-            "subject": "#949 part 1: mail snooze in the model and engine (#1246)"
-          },
-          {
-            "commit": "6101c8b",
-            "subject": "#1063: Add Account finds IMAP and SMTP servers from SRV records (RFC 6186) (#1117)"
           }
         ]
       }
@@ -6017,5 +6017,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-13T02:34:58+00:00"
+  "updated_at": "2026-11-13T03:40:37+00:00"
 }
