@@ -66,21 +66,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 36.8,
-    "active_days_7d": 7,
-    "changes_7d": 920,
-    "changes_14d": 1922,
-    "housekeeping_7d": 48,
+    "score": 29.8,
+    "active_days_7d": 6,
+    "changes_7d": 885,
+    "changes_14d": 1723,
+    "housekeeping_7d": 50,
     "last_code_change": {
-      "ts": "2026-11-12T22:54:17Z",
-      "commit": "548fc30",
-      "commit_full": "548fc300428ff676667c7e8232567c402d848312",
-      "subject": "Nearest and farthest point on a curve: a wide tolerance no longer returns a nearest point as a farthest one, or points beside the answer (#13677) (#15258)"
+      "ts": "2026-11-12T23:49:32Z",
+      "commit": "297bc82",
+      "commit_full": "297bc8264e4cd9e33c41e9f81757addffff255d0",
+      "subject": "Motion: evaluate occurrence body centres from exact body bounds instead of display mesh (#15703)"
     },
-    "last_commit_ts": "2026-11-12T22:54:17Z",
+    "last_commit_ts": "2026-11-12T23:49:32Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
-      208,
       201,
       128,
       160,
@@ -93,7 +92,8 @@
       151,
       239,
       149,
-      182
+      191,
+      0
     ],
     "days": [
       {
@@ -782,20 +782,20 @@
       },
       {
         "d": "2026-11-12",
-        "code": 182,
-        "other": 14,
+        "code": 191,
+        "other": 16,
         "samples": [
           {
-            "commit": "548fc30",
-            "subject": "Nearest and farthest point on a curve: a wide tolerance no longer returns a nearest point as a farthest one, or points beside the answer (#13677) (#15258)"
+            "commit": "297bc82",
+            "subject": "Motion: evaluate occurrence body centres from exact body bounds instead of display mesh (#15703)"
           },
           {
-            "commit": "73459b2",
-            "subject": "Sweep along a path with a sharp corner: a thin profile gives a valid solid, not one with vertices off its faces (#13687) (#15534)"
+            "commit": "114bdff",
+            "subject": "GLB export: keep the assembly's components and occurrences as named nodes (#5296) (#15662)"
           },
           {
-            "commit": "c17bd55",
-            "subject": "Eval: pick nearest body using exact bounds instead of display mesh (#15676)"
+            "commit": "e6890a8",
+            "subject": "Sketch projection: keep projected model vertices on their corners via persistent topological names (#15324) (#15704)"
           }
         ]
       }
@@ -2382,5 +2382,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-12T23:29:44+00:00"
+  "updated_at": "2026-11-13T00:09:22+00:00"
 }

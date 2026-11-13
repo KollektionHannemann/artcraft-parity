@@ -377,22 +377,21 @@
   },
   "milestone": null,
   "activity": {
-    "level": "buzzing",
-    "score": 22.0,
-    "active_days_7d": 6,
-    "changes_7d": 168,
-    "changes_14d": 369,
-    "housekeeping_7d": 9,
+    "level": "active",
+    "score": 17.7,
+    "active_days_7d": 5,
+    "changes_7d": 128,
+    "changes_14d": 291,
+    "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-12T23:16:37Z",
-      "commit": "10a34b8",
-      "commit_full": "10a34b854fe028187ee5f2cd19fbd6da74850732",
-      "subject": ".aep import/export: text animator Stroke Opacity and Source Text expressions (#3170) (#3305)"
+      "ts": "2026-11-12T23:54:29Z",
+      "commit": "a4bde72",
+      "commit_full": "a4bde72bcab611cdcb7f92d17e691ddba4c447f0",
+      "subject": ".aep: import twice as fast, faster export (#3302)"
     },
-    "last_commit_ts": "2026-11-12T23:16:37Z",
+    "last_commit_ts": "2026-11-12T23:54:29Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
-      79,
       37,
       1,
       19,
@@ -405,7 +404,8 @@
       11,
       26,
       53,
-      26
+      27,
+      0
     ],
     "days": [
       {
@@ -1136,9 +1136,13 @@
       },
       {
         "d": "2026-11-12",
-        "code": 26,
+        "code": 27,
         "other": 0,
         "samples": [
+          {
+            "commit": "a4bde72",
+            "subject": ".aep: import twice as fast, faster export (#3302)"
+          },
           {
             "commit": "10a34b8",
             "subject": ".aep import/export: text animator Stroke Opacity and Source Text expressions (#3170) (#3305)"
@@ -1146,10 +1150,6 @@
           {
             "commit": "8028f46",
             "subject": ".aep import: a test pins the Orientation expression import (#3087) (#3313)"
-          },
-          {
-            "commit": "4035d18",
-            "subject": "SVG: support static pattern fills and strokes (#2732)"
           }
         ]
       }
@@ -1709,5 +1709,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-12T23:28:57+00:00"
+  "updated_at": "2026-11-13T00:08:21+00:00"
 }

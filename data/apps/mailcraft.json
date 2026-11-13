@@ -217,7 +217,7 @@
   },
   "roadmap": {
     "revisions": 246,
-    "revisions_7d": 9,
+    "revisions_7d": 7,
     "last_revision": {
       "ts": "2026-11-12T18:52:37Z",
       "kind": "content",
@@ -236,22 +236,21 @@
   },
   "milestone": null,
   "activity": {
-    "level": "buzzing",
-    "score": 20.2,
+    "level": "active",
+    "score": 17.9,
     "active_days_7d": 7,
-    "changes_7d": 102,
-    "changes_14d": 197,
-    "housekeeping_7d": 16,
+    "changes_7d": 88,
+    "changes_14d": 180,
+    "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-12T23:15:01Z",
-      "commit": "6c8728f",
-      "commit_full": "6c8728fcdd4256b86b357d05f752cfef7d0a85a0",
-      "subject": "MB1.6: OAuth redirect as a strategy (loopback or custom scheme) (#1226)"
+      "ts": "2026-11-13T00:02:31Z",
+      "commit": "6bee946",
+      "commit_full": "6bee9462a7e3b2799a7d19c2aafffdadf7665b63",
+      "subject": "MB1.1: SecretStore below L6 in new crate mailcraft-host (#1238)"
     },
-    "last_commit_ts": "2026-11-12T23:15:01Z",
+    "last_commit_ts": "2026-11-13T00:02:31Z",
     "repo_since": "2026-10-12T18:17:00Z",
     "window": [
-      20,
       20,
       11,
       4,
@@ -264,7 +263,8 @@
       7,
       22,
       19,
-      14
+      15,
+      2
     ],
     "days": [
       {
@@ -850,9 +850,13 @@
       },
       {
         "d": "2026-11-12",
-        "code": 14,
+        "code": 15,
         "other": 0,
         "samples": [
+          {
+            "commit": "71a6eac",
+            "subject": "MB1.7: Graph stand-in covers To Do and categories, runs as a loopback server (#1227)"
+          },
           {
             "commit": "6c8728f",
             "subject": "MB1.6: OAuth redirect as a strategy (loopback or custom scheme) (#1226)"
@@ -860,10 +864,21 @@
           {
             "commit": "9ee3fff",
             "subject": "Flatpak: control key file named by the port (#1199) (#1234)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-13",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "6bee946",
+            "subject": "MB1.1: SecretStore below L6 in new crate mailcraft-host (#1238)"
           },
           {
-            "commit": "77f5f59",
-            "subject": "#1224: a window opened while the main window is minimised waits instead of crashing (#1230)"
+            "commit": "f19ba3c",
+            "subject": "Start a domain literal in an address list only after @ (#1145)"
           }
         ]
       }
@@ -5998,5 +6013,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-12T23:29:48+00:00"
+  "updated_at": "2026-11-13T00:09:26+00:00"
 }
