@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/soundcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/soundcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "99895de",
-  "latest_commit_date": "2026-10-31T10:53:23-04:00",
-  "latest_message": "Zoom Toggle: Alt+Shift+E and Alt-click cancel it and keep the current view (#1101)",
+  "latest_commit": "4a5eb15",
+  "latest_commit_date": "2026-11-13T01:38:35+01:00",
+  "latest_message": "Plugins: Alt-click returns a parameter to its default value (#1081)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
     "target": "Avid Pro Tools Ultimate 2026.4.1",
-    "last_updated": "2026-10-25",
+    "last_updated": "2026-10-27",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -280,6 +280,18 @@
       },
       {
         "date": "2026-10-24",
+        "text": "An Alt-click (Option-click on a Mac) on a parameter in the plugin window, the Clip Effects window or an AudioSuite plugin's window returns it to its default value, on a slider or a slider's value box, and in the plugin window on a choice list too, as an Alt-click returns a fader to 0 dB. In the plugin window and the Clip Effects window the reset is one undo step. While Alt is held, a drag on a slider leaves the value where it is. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-24",
+        "text": "The parameter sliders of the plugin window, the Clip Effects window and AudioSuite plugins move a tenth as far for the same drag while Ctrl (Command on a Mac) is held, as the Strip Silence sliders do. Logarithmic sliders move a tenth as far along the slider, and whole-number sliders stay on whole numbers. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-24",
+        "text": "The Strip Silence window's four sliders move a tenth as far for the same drag while Ctrl (Command on a Mac) is held, on the slider and on its value box. Pressing or releasing the key during a drag leaves the value where it is. The Threshold and Clip Start Pad boxes show one decimal place. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-24",
         "text": "Clip List › Auto Rename (clip.autorename) sets the names that editing gives the clips it separates from the selected clips: a name, a starting number, a number of places (zeros before the number) and a suffix. The piece after each cut takes the next name, the piece before it keeps its name, and all the pieces count up one number sequence. Pieces that Strip Silence names with its own Rename fields, or removes, take no Auto Rename name. Copied clips keep their scheme when they are pasted, saved sessions hold the schemes, and Import Session Data brings them along. No readiness percentage change."
       },
       {
@@ -413,18 +425,6 @@
       {
         "date": "2026-10-09",
         "text": "— Light theme and live system appearance, clip-gain fader and nudge, missing-media"
-      },
-      {
-        "date": "2026-10-08",
-        "text": "— v0.2.x–v0.3.0 released (Flatpak, AppImage zsync); VST3 quit crash fixed;"
-      },
-      {
-        "date": "2026-10-07",
-        "text": "— Repository published; About window credits; release CI on macOS runners."
-      },
-      {
-        "date": "2026-10-06",
-        "text": "— Video track, Audio Unit hosting, plugin state and editors, Renderer; Mix"
       }
     ]
   },
@@ -433,7 +433,7 @@
     "value_since": "2026-10-10T18:08:49Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 22,
+    "revisions_since": 23,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -441,39 +441,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 23,
-    "revisions_7d": 0,
+    "revisions": 24,
+    "revisions_7d": 1,
     "last_revision": {
-      "ts": "2026-10-31T14:53:23Z",
+      "ts": "2026-11-13T00:38:35Z",
       "kind": "content",
-      "commit": "99895de",
-      "commit_full": "99895de2c7ffe631cd8b9b4bac47f45e544cdb1f",
-      "message": "Zoom Toggle: Alt+Shift+E and Alt-click cancel it and keep the current view (#1101)"
+      "commit": "4a5eb15",
+      "commit_full": "4a5eb1514abd5ca1f8caf01373dd7e00ecee2d47",
+      "message": "Plugins: Alt-click returns a parameter to its default value (#1081)"
     },
     "last_update": {
-      "ts": "2026-10-31T14:53:23Z",
+      "ts": "2026-11-13T00:38:35Z",
       "kind": "content",
-      "commit": "99895de",
-      "commit_full": "99895de2c7ffe631cd8b9b4bac47f45e544cdb1f",
-      "message": "Zoom Toggle: Alt+Shift+E and Alt-click cancel it and keep the current view (#1101)"
+      "commit": "4a5eb15",
+      "commit_full": "4a5eb1514abd5ca1f8caf01373dd7e00ecee2d47",
+      "message": "Plugins: Alt-click returns a parameter to its default value (#1081)"
     },
-    "self_reported": "2026-10-25"
+    "self_reported": "2026-10-27"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 10.5,
-    "active_days_7d": 6,
-    "changes_7d": 36,
-    "changes_14d": 97,
-    "housekeeping_7d": 4,
+    "score": 14.4,
+    "active_days_7d": 7,
+    "changes_7d": 50,
+    "changes_14d": 111,
+    "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-12T00:51:41Z",
-      "commit": "6a0949d",
-      "commit_full": "6a0949d9d0dc80e9d4fe9bdb008fbe0f1654ccd6",
-      "subject": "Review fixes after the craft-audio switch; MIDI files from craft-midi (#1513)"
+      "ts": "2026-11-13T01:17:51Z",
+      "commit": "2bde8b9",
+      "commit_full": "2bde8b9dbc9546e81978a146f411c74f4a955fc8",
+      "subject": "Draw the playback cursor neutral and keep red for recording (#971)"
     },
-    "last_commit_ts": "2026-11-12T00:51:41Z",
+    "last_commit_ts": "2026-11-13T01:17:51Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
       23,
@@ -489,7 +489,7 @@
       3,
       20,
       2,
-      0
+      14
     ],
     "days": [
       {
@@ -1081,6 +1081,25 @@
           {
             "commit": "4782cfa",
             "subject": "chore: bump to 0.20.1 for the Flatpak updater patch release (#1512)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-13",
+        "code": 14,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "2bde8b9",
+            "subject": "Draw the playback cursor neutral and keep red for recording (#971)"
+          },
+          {
+            "commit": "c542fe9",
+            "subject": "Hide the input selector on the Master strip (#1271) (#1356)"
+          },
+          {
+            "commit": "1110e68",
+            "subject": "io: a missing movie is offline with its checked path (#923) (#1156)"
           }
         ]
       }
@@ -1822,7 +1841,30 @@
       "breadth_pct": 70.0,
       "full_prev": 40.0,
       "kind": "content"
+    },
+    {
+      "commit": "4a5eb15",
+      "commit_full": "4a5eb1514abd5ca1f8caf01373dd7e00ecee2d47",
+      "commit_date": "2026-11-13T01:38:35+01:00",
+      "ts": "2026-11-13T00:38:35Z",
+      "message": "Plugins: Alt-click returns a parameter to its default value (#1081)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-27",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-13T00:08:37+00:00"
+  "updated_at": "2026-11-13T01:36:11+00:00"
 }

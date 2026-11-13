@@ -444,18 +444,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.5,
-    "active_days_7d": 6,
-    "changes_7d": 87,
-    "changes_14d": 213,
+    "score": 16.5,
+    "active_days_7d": 7,
+    "changes_7d": 88,
+    "changes_14d": 214,
     "housekeeping_7d": 4,
     "last_code_change": {
-      "ts": "2026-11-12T19:30:24Z",
-      "commit": "cb9783b",
-      "commit_full": "cb9783ba1a2b658ba2adc7cb131226d156bb2356",
-      "subject": "CI (Windows): clippy and tests of the crates with Windows-only code (#4649)"
+      "ts": "2026-11-13T00:08:41Z",
+      "commit": "3ed8caa",
+      "commit_full": "3ed8caab32379d47d2e4528dc7817a9ed9a9ee71",
+      "subject": "export: say which encoder ran, and when hardware encoding fell back to software (#3952) (#3953)"
     },
-    "last_commit_ts": "2026-11-12T19:30:24Z",
+    "last_commit_ts": "2026-11-13T00:08:41Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       5,
@@ -471,7 +471,7 @@
       6,
       28,
       13,
-      0
+      1
     ],
     "days": [
       {
@@ -1244,6 +1244,17 @@
             "subject": "export: APV 4:4:4 profiles carry full-resolution chroma (#4656) (#4661)"
           }
         ]
+      },
+      {
+        "d": "2026-11-13",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "3ed8caa",
+            "subject": "export: say which encoder ran, and when hardware encoding fell back to software (#3952) (#3953)"
+          }
+        ]
       }
     ]
   },
@@ -1824,5 +1835,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-13T00:08:03+00:00"
+  "updated_at": "2026-11-13T01:35:49+00:00"
 }
