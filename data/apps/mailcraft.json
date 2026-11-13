@@ -239,16 +239,16 @@
     "level": "buzzing",
     "score": 20.8,
     "active_days_7d": 7,
-    "changes_7d": 106,
-    "changes_14d": 198,
+    "changes_7d": 107,
+    "changes_14d": 199,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-11-13T09:05:35Z",
-      "commit": "e5761ad",
-      "commit_full": "e5761adb71f80381c679cb9d13ebf169f1f6563d",
-      "subject": "Fix main: JMAP changes pass typed arguments to one_call (#1264)"
+      "ts": "2026-11-13T09:44:23Z",
+      "commit": "7913352",
+      "commit_full": "79133527b0b082fc309abb83060e66ef74811ad7",
+      "subject": "Flaky test: the word index's progress may not have its total yet (#1268)"
     },
-    "last_commit_ts": "2026-11-13T09:05:35Z",
+    "last_commit_ts": "2026-11-13T09:44:23Z",
     "repo_since": "2026-10-12T18:17:00Z",
     "window": [
       20,
@@ -264,7 +264,7 @@
       22,
       19,
       15,
-      20
+      21
     ],
     "days": [
       {
@@ -869,9 +869,13 @@
       },
       {
         "d": "2026-11-13",
-        "code": 20,
+        "code": 21,
         "other": 2,
         "samples": [
+          {
+            "commit": "7913352",
+            "subject": "Flaky test: the word index's progress may not have its total yet (#1268)"
+          },
           {
             "commit": "e5761ad",
             "subject": "Fix main: JMAP changes pass typed arguments to one_call (#1264)"
@@ -879,10 +883,6 @@
           {
             "commit": "b5cbc3c",
             "subject": "Reject misplaced hyphens in Date::parse_iso (#1187)"
-          },
-          {
-            "commit": "182f68a",
-            "subject": "MB1.5: the calendar jobs and the calendar's pacing move below the window (#1256)"
           }
         ]
       }
@@ -6037,5 +6037,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-13T09:22:47+00:00"
+  "updated_at": "2026-11-13T10:24:11+00:00"
 }

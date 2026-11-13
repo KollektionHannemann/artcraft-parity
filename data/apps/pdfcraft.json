@@ -497,18 +497,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.3,
+    "score": 22.8,
     "active_days_7d": 7,
-    "changes_7d": 357,
-    "changes_14d": 495,
+    "changes_7d": 362,
+    "changes_14d": 500,
     "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-11-13T01:42:37Z",
-      "commit": "175992b",
-      "commit_full": "175992b5a2045d00cdf8a20f812ea4aac522b099",
-      "subject": "fix(ui): Recognize Text's settings scroll in a short window, its buttons stay in reach (#6599) (#6760)"
+      "ts": "2026-11-13T09:38:39Z",
+      "commit": "0c15e3d",
+      "commit_full": "0c15e3de71a420f62b2ffaba5f84c003d9af176c",
+      "subject": "fix(measure): read compound and fractional measurement number formats (ISO 32000-2 12.9.2) (#7115)"
     },
-    "last_commit_ts": "2026-11-13T01:42:37Z",
+    "last_commit_ts": "2026-11-13T09:38:39Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       11,
@@ -524,7 +524,7 @@
       62,
       45,
       5,
-      2
+      7
     ],
     "days": [
       {
@@ -1352,16 +1352,20 @@
       },
       {
         "d": "2026-11-13",
-        "code": 2,
+        "code": 7,
         "other": 0,
         "samples": [
           {
-            "commit": "175992b",
-            "subject": "fix(ui): Recognize Text's settings scroll in a short window, its buttons stay in reach (#6599) (#6760)"
+            "commit": "0c15e3d",
+            "subject": "fix(measure): read compound and fractional measurement number formats (ISO 32000-2 12.9.2) (#7115)"
           },
           {
-            "commit": "330cde8",
-            "subject": "Reveal recent files in the system file manager from Home (#5452) (#5559)"
+            "commit": "623c53f",
+            "subject": "fix(tests): saves compared byte for byte don't fail when the clock crosses a second between them (#7073)"
+          },
+          {
+            "commit": "eb2a2ed",
+            "subject": "M7: a form edit reads the document's fields once (form.fill-text) (#7056)"
           }
         ]
       }
@@ -7050,5 +7054,5 @@
       "kind": "editorial"
     }
   ],
-  "updated_at": "2026-11-13T02:34:01+00:00"
+  "updated_at": "2026-11-13T10:23:28+00:00"
 }
