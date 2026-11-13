@@ -68,16 +68,16 @@
     "level": "buzzing",
     "score": 37.2,
     "active_days_7d": 7,
-    "changes_7d": 1052,
-    "changes_14d": 1890,
+    "changes_7d": 1059,
+    "changes_14d": 1897,
     "housekeeping_7d": 53,
     "last_code_change": {
-      "ts": "2026-11-13T17:21:52Z",
-      "commit": "1d32ad7",
-      "commit_full": "1d32ad7b5a77c88eba385794ad31be2de10f73b3",
-      "subject": "MCP: with verbose: false, sketch.move_points lists only the points that missed their target (#15864) (#16106)"
+      "ts": "2026-11-13T18:15:45Z",
+      "commit": "1786815",
+      "commit_full": "1786815cb96ac7665ca653ecea89f02ad06d241f",
+      "subject": "Kernel booleans: corners of two parts farther apart than tolerance are no longer fused into one vertex (#16131)"
     },
-    "last_commit_ts": "2026-11-13T17:21:52Z",
+    "last_commit_ts": "2026-11-13T18:15:45Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       201,
@@ -93,7 +93,7 @@
       239,
       149,
       191,
-      167
+      174
     ],
     "days": [
       {
@@ -801,20 +801,20 @@
       },
       {
         "d": "2026-11-13",
-        "code": 167,
+        "code": 174,
         "other": 3,
         "samples": [
           {
-            "commit": "1d32ad7",
-            "subject": "MCP: with verbose: false, sketch.move_points lists only the points that missed their target (#15864) (#16106)"
+            "commit": "1786815",
+            "subject": "Kernel booleans: corners of two parts farther apart than tolerance are no longer fused into one vertex (#16131)"
           },
           {
-            "commit": "d11deea",
-            "subject": "Extrude: keep Offset selected while clearing its value (#15363) (#16167)"
+            "commit": "38ab05e",
+            "subject": "Shared panels use shorter headers and wrap their actions (#16021)"
           },
           {
-            "commit": "662bcab",
-            "subject": "solidcore-ops: edit the control points of cone, cylinder, sphere and torus sheets (#16074)"
+            "commit": "a171f1c",
+            "subject": "STEP import: faces through a sphere's pole, bands round an extruded ellipse and splines closed to the file's uncertainty read whole (#16176)"
           }
         ]
       }
@@ -2401,5 +2401,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-13T17:39:00+00:00"
+  "updated_at": "2026-11-13T18:34:39+00:00"
 }

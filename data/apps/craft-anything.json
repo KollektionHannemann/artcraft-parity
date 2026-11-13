@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "77f2b44",
-  "latest_commit_date": "2026-11-13T23:43:43+07:00",
-  "latest_message": "Use the ASAR reader's check to pick a target's kind (R3.12) (#1826) (#1826)",
+  "latest_commit": "6a1588e",
+  "latest_commit_date": "2026-11-14T00:53:34+07:00",
+  "latest_message": "Read config.toml again for up to 2 s at startup before using defaults (R2.9) (#1828) (#1828)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 609,
-    "revisions_7d": 431,
+    "revisions": 610,
+    "revisions_7d": 432,
     "last_revision": {
-      "ts": "2026-11-13T16:43:43Z",
+      "ts": "2026-11-13T17:53:34Z",
       "kind": "content",
-      "commit": "77f2b44",
-      "commit_full": "77f2b4434bdf2f6eae164b8a4f97e74a848ad083",
-      "message": "Use the ASAR reader's check to pick a target's kind (R3.12) (#1826) (#1826)"
+      "commit": "6a1588e",
+      "commit_full": "6a1588e706f13158b8c3fd17e1915d4a1e4da0f2",
+      "message": "Read config.toml again for up to 2 s at startup before using defaults (R2.9) (#1828) (#1828)"
     },
     "last_update": {
-      "ts": "2026-11-13T16:43:43Z",
+      "ts": "2026-11-13T17:53:34Z",
       "kind": "content",
-      "commit": "77f2b44",
-      "commit_full": "77f2b4434bdf2f6eae164b8a4f97e74a848ad083",
-      "message": "Use the ASAR reader's check to pick a target's kind (R3.12) (#1826) (#1826)"
+      "commit": "6a1588e",
+      "commit_full": "6a1588e706f13158b8c3fd17e1915d4a1e4da0f2",
+      "message": "Read config.toml again for up to 2 s at startup before using defaults (R2.9) (#1828) (#1828)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 26.3,
+    "score": 26.8,
     "active_days_7d": 7,
-    "changes_7d": 490,
-    "changes_14d": 885,
+    "changes_7d": 491,
+    "changes_14d": 886,
     "housekeeping_7d": 22,
     "last_code_change": {
-      "ts": "2026-11-13T16:43:43Z",
-      "commit": "77f2b44",
-      "commit_full": "77f2b4434bdf2f6eae164b8a4f97e74a848ad083",
-      "subject": "Use the ASAR reader's check to pick a target's kind (R3.12) (#1826) (#1826)"
+      "ts": "2026-11-13T17:53:34Z",
+      "commit": "6a1588e",
+      "commit_full": "6a1588e706f13158b8c3fd17e1915d4a1e4da0f2",
+      "subject": "Read config.toml again for up to 2 s at startup before using defaults (R2.9) (#1828) (#1828)"
     },
-    "last_commit_ts": "2026-11-13T16:43:43Z",
+    "last_commit_ts": "2026-11-13T17:53:34Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       3,
@@ -93,7 +93,7 @@
       111,
       100,
       49,
-      2
+      3
     ],
     "days": [
       {
@@ -337,9 +337,13 @@
       },
       {
         "d": "2026-11-13",
-        "code": 2,
+        "code": 3,
         "other": 0,
         "samples": [
+          {
+            "commit": "6a1588e",
+            "subject": "Read config.toml again for up to 2 s at startup before using defaults (R2.9) (#1828) (#1828)"
+          },
           {
             "commit": "77f2b44",
             "subject": "Use the ASAR reader's check to pick a target's kind (R3.12) (#1826) (#1826)"
@@ -4736,8 +4740,15 @@
       "commit": "77f2b44",
       "commit_full": "77f2b4434bdf2f6eae164b8a4f97e74a848ad083",
       "message": "Use the ASAR reader's check to pick a target's kind (R3.12) (#1826) (#1826)"
+    },
+    {
+      "ts": "2026-11-13T17:53:34Z",
+      "kind": "content",
+      "commit": "6a1588e",
+      "commit_full": "6a1588e706f13158b8c3fd17e1915d4a1e4da0f2",
+      "message": "Read config.toml again for up to 2 s at startup before using defaults (R2.9) (#1828) (#1828)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-13T17:38:40+00:00"
+  "updated_at": "2026-11-13T18:34:25+00:00"
 }
