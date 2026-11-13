@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.3,
+    "score": 16.6,
     "active_days_7d": 7,
-    "changes_7d": 53,
-    "changes_14d": 170,
+    "changes_7d": 55,
+    "changes_14d": 172,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-13T11:09:02Z",
-      "commit": "8e83ac6",
-      "commit_full": "8e83ac66f10c5efca9d986b77f6254d4a2c00c7d",
-      "subject": "Cap FBX cameras during import (#450)"
+      "ts": "2026-11-13T11:58:42Z",
+      "commit": "386630e",
+      "commit_full": "386630ee85cb22679295b24013575d1aecb39ad2",
+      "subject": "Stop reading Alembic indexed metadata after 255 entries (#464)"
     },
-    "last_commit_ts": "2026-11-13T11:09:02Z",
+    "last_commit_ts": "2026-11-13T11:58:42Z",
     "repo_since": "2026-10-14T18:33:13Z",
     "window": [
       0,
@@ -93,7 +93,7 @@
       10,
       10,
       8,
-      7
+      9
     ],
     "days": [
       {
@@ -402,20 +402,20 @@
       },
       {
         "d": "2026-11-13",
-        "code": 7,
+        "code": 9,
         "other": 0,
         "samples": [
           {
+            "commit": "386630e",
+            "subject": "Stop reading Alembic indexed metadata after 255 entries (#464)"
+          },
+          {
+            "commit": "afc1ee1",
+            "subject": "Preserve invalid ASCII FBX array values (#469)"
+          },
+          {
             "commit": "8e83ac6",
             "subject": "Cap FBX cameras during import (#450)"
-          },
-          {
-            "commit": "fe6ede9",
-            "subject": "Ignore repeated FBX geometry connections (#468)"
-          },
-          {
-            "commit": "9f4ef44",
-            "subject": "Decode half-float Alembic properties (#467)"
           }
         ]
       }
@@ -810,5 +810,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-13T11:19:43+00:00"
+  "updated_at": "2026-11-13T12:19:02+00:00"
 }

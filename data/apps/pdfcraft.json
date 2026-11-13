@@ -497,18 +497,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.8,
+    "score": 23.2,
     "active_days_7d": 7,
-    "changes_7d": 362,
-    "changes_14d": 500,
+    "changes_7d": 365,
+    "changes_14d": 503,
     "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-11-13T09:38:39Z",
-      "commit": "0c15e3d",
-      "commit_full": "0c15e3de71a420f62b2ffaba5f84c003d9af176c",
-      "subject": "fix(measure): read compound and fractional measurement number formats (ISO 32000-2 12.9.2) (#7115)"
+      "ts": "2026-11-13T11:23:58Z",
+      "commit": "785e7e5",
+      "commit_full": "785e7e510ce19e736961feb4c552076feecd4519",
+      "subject": "fix(forms): finding the first character a simple font cannot hold encodes the whole string once, then each distinct character once (#7047)"
     },
-    "last_commit_ts": "2026-11-13T09:38:39Z",
+    "last_commit_ts": "2026-11-13T11:23:58Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       11,
@@ -524,7 +524,7 @@
       62,
       45,
       5,
-      7
+      10
     ],
     "days": [
       {
@@ -1352,20 +1352,20 @@
       },
       {
         "d": "2026-11-13",
-        "code": 7,
+        "code": 10,
         "other": 0,
         "samples": [
           {
-            "commit": "0c15e3d",
-            "subject": "fix(measure): read compound and fractional measurement number formats (ISO 32000-2 12.9.2) (#7115)"
+            "commit": "785e7e5",
+            "subject": "fix(forms): finding the first character a simple font cannot hold encodes the whole string once, then each distinct character once (#7047)"
           },
           {
-            "commit": "623c53f",
-            "subject": "fix(tests): saves compared byte for byte don't fail when the clock crosses a second between them (#7073)"
+            "commit": "b167422",
+            "subject": "fix(sign): every signature's VRI entry shares the store's evidence arrays instead of copying them (#7038)"
           },
           {
-            "commit": "eb2a2ed",
-            "subject": "M7: a form edit reads the document's fields once (form.fill-text) (#7056)"
+            "commit": "b0607f5",
+            "subject": "fix(optimize): a destination name given by reference is copied once however many dictionaries name it (#7035)"
           }
         ]
       }
@@ -7054,5 +7054,5 @@
       "kind": "editorial"
     }
   ],
-  "updated_at": "2026-11-13T10:23:28+00:00"
+  "updated_at": "2026-11-13T12:18:10+00:00"
 }
