@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 32.4,
+    "score": 34.4,
     "active_days_7d": 7,
-    "changes_7d": 890,
-    "changes_14d": 1728,
-    "housekeeping_7d": 50,
+    "changes_7d": 909,
+    "changes_14d": 1747,
+    "housekeeping_7d": 51,
     "last_code_change": {
-      "ts": "2026-11-13T01:21:00Z",
-      "commit": "2ff59f7",
-      "commit_full": "2ff59f798d24b888f307b5d96510d6e912820272",
-      "subject": "solidcore-ops: trim, cut a face along curves on it into regions, and remove faces (#15738)"
+      "ts": "2026-11-13T02:14:48Z",
+      "commit": "134540d",
+      "commit_full": "134540d81ff0289bf134cc904242b2a759d95bdb",
+      "subject": "solidcore: a fillet on a large part no longer walks the whole part once per face after merging (#15755)"
     },
-    "last_commit_ts": "2026-11-13T01:21:00Z",
+    "last_commit_ts": "2026-11-13T02:14:48Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       201,
@@ -93,7 +93,7 @@
       239,
       149,
       191,
-      5
+      24
     ],
     "days": [
       {
@@ -801,20 +801,20 @@
       },
       {
         "d": "2026-11-13",
-        "code": 5,
-        "other": 0,
+        "code": 24,
+        "other": 1,
         "samples": [
           {
-            "commit": "2ff59f7",
-            "subject": "solidcore-ops: trim, cut a face along curves on it into regions, and remove faces (#15738)"
+            "commit": "134540d",
+            "subject": "solidcore: a fillet on a large part no longer walks the whole part once per face after merging (#15755)"
           },
           {
-            "commit": "ae346a7",
-            "subject": "Plugins: a Plugins menu, and a dialog built from each entry's parameters (#15673)"
+            "commit": "fa5db16",
+            "subject": "Chamfer: no extra end face where a chamfer ends between two faces of one cylinder (#15505) (#15597)"
           },
           {
-            "commit": "a30b347",
-            "subject": "Use one docking system in Design and Render (#11317) (#15184)"
+            "commit": "5f87e8e",
+            "subject": "Move: the triad sits on the bodies where their component places them, and a turn there leaves them in place (#11336) (#13523)"
           }
         ]
       }
@@ -2401,5 +2401,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-13T01:36:35+00:00"
+  "updated_at": "2026-11-13T02:34:53+00:00"
 }
