@@ -497,18 +497,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 23.2,
+    "score": 23.3,
     "active_days_7d": 7,
-    "changes_7d": 365,
-    "changes_14d": 503,
+    "changes_7d": 366,
+    "changes_14d": 504,
     "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-11-13T11:23:58Z",
-      "commit": "785e7e5",
-      "commit_full": "785e7e510ce19e736961feb4c552076feecd4519",
-      "subject": "fix(forms): finding the first character a simple font cannot hold encodes the whole string once, then each distinct character once (#7047)"
+      "ts": "2026-11-13T15:28:29Z",
+      "commit": "ec31c55",
+      "commit_full": "ec31c55763e8cd80fb134443bf48137501c4cc27",
+      "subject": "fix(ocr): main builds on Windows again: the executable check is its own function per platform (#7222)"
     },
-    "last_commit_ts": "2026-11-13T13:04:39Z",
+    "last_commit_ts": "2026-11-13T15:28:29Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       11,
@@ -524,7 +524,7 @@
       62,
       45,
       5,
-      10
+      11
     ],
     "days": [
       {
@@ -1352,9 +1352,13 @@
       },
       {
         "d": "2026-11-13",
-        "code": 10,
+        "code": 11,
         "other": 1,
         "samples": [
+          {
+            "commit": "ec31c55",
+            "subject": "fix(ocr): main builds on Windows again: the executable check is its own function per platform (#7222)"
+          },
           {
             "commit": "785e7e5",
             "subject": "fix(forms): finding the first character a simple font cannot hold encodes the whole string once, then each distinct character once (#7047)"
@@ -1362,10 +1366,6 @@
           {
             "commit": "b167422",
             "subject": "fix(sign): every signature's VRI entry shares the store's evidence arrays instead of copying them (#7038)"
-          },
-          {
-            "commit": "b0607f5",
-            "subject": "fix(optimize): a destination name given by reference is copied once however many dictionaries name it (#7035)"
           }
         ]
       }
@@ -7054,5 +7054,5 @@
       "kind": "editorial"
     }
   ],
-  "updated_at": "2026-11-13T13:37:47+00:00"
+  "updated_at": "2026-11-13T15:33:44+00:00"
 }
