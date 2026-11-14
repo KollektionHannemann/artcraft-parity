@@ -68,16 +68,16 @@
     "level": "buzzing",
     "score": 27.5,
     "active_days_7d": 7,
-    "changes_7d": 491,
-    "changes_14d": 917,
+    "changes_7d": 492,
+    "changes_14d": 918,
     "housekeeping_7d": 18,
     "last_code_change": {
-      "ts": "2026-11-14T21:45:09Z",
-      "commit": "8c235c3",
-      "commit_full": "8c235c38f8efdde627ab6113815a7dbcba881b84",
-      "subject": "Resume Codex conversations across builder turns (R2.2) (#1872)"
+      "ts": "2026-11-14T22:14:59Z",
+      "commit": "98b22ac",
+      "commit_full": "98b22ac3e2ab2b14543611c57820b1d345bc7877",
+      "subject": "engine: contain agent reads and stop auto-running generated programs (#1878)"
     },
-    "last_commit_ts": "2026-11-14T21:45:09Z",
+    "last_commit_ts": "2026-11-14T22:14:59Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       73,
@@ -93,7 +93,7 @@
       100,
       49,
       6,
-      31
+      32
     ],
     "days": [
       {
@@ -356,9 +356,13 @@
       },
       {
         "d": "2026-11-14",
-        "code": 31,
+        "code": 32,
         "other": 1,
         "samples": [
+          {
+            "commit": "98b22ac",
+            "subject": "engine: contain agent reads and stop auto-running generated programs (#1878)"
+          },
           {
             "commit": "8c235c3",
             "subject": "Resume Codex conversations across builder turns (R2.2) (#1872)"
@@ -366,10 +370,6 @@
           {
             "commit": "84edfd6",
             "subject": "Fix the private config folder helper path (#1875)"
-          },
-          {
-            "commit": "bc47887",
-            "subject": "journal: redact header-style and env-style credential field names (#1874)"
           }
         ]
       }
@@ -4937,5 +4937,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-14T21:59:27+00:00"
+  "updated_at": "2026-11-14T22:27:13+00:00"
 }
