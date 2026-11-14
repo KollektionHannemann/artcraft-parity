@@ -383,18 +383,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 29.4,
+    "score": 29.5,
     "active_days_7d": 7,
-    "changes_7d": 515,
-    "changes_14d": 764,
+    "changes_7d": 516,
+    "changes_14d": 765,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-11-14T04:53:17Z",
-      "commit": "fc7e376",
-      "commit_full": "fc7e37650d0774fe2f102530a85bee9379026c2c",
-      "subject": "Fix CI formatting, clippy, scorecard, and format routing regressions (#14268)"
+      "ts": "2026-11-14T05:44:24Z",
+      "commit": "5b27ff6",
+      "commit_full": "5b27ff6fe32f4310dee31e7859a95f153e91cb35",
+      "subject": "Fix Open As forced format routing when bytes match another codec (#14286)"
     },
-    "last_commit_ts": "2026-11-14T04:53:17Z",
+    "last_commit_ts": "2026-11-14T05:44:24Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       11,
@@ -410,7 +410,7 @@
       180,
       45,
       74,
-      18
+      19
     ],
     "days": [
       {
@@ -1270,9 +1270,13 @@
       },
       {
         "d": "2026-11-14",
-        "code": 18,
+        "code": 19,
         "other": 0,
         "samples": [
+          {
+            "commit": "5b27ff6",
+            "subject": "Fix Open As forced format routing when bytes match another codec (#14286)"
+          },
           {
             "commit": "fc7e376",
             "subject": "Fix CI formatting, clippy, scorecard, and format routing regressions (#14268)"
@@ -1280,10 +1284,6 @@
           {
             "commit": "7d29291",
             "subject": "format: align store tests with craft-pcraft-bundle (#14248)"
-          },
-          {
-            "commit": "b0e0bcc",
-            "subject": "Move remaining file formats and codecs to craft-libs (#778) (#14236)"
           }
         ]
       }
@@ -1774,5 +1774,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-14T05:36:35+00:00"
+  "updated_at": "2026-11-14T06:37:21+00:00"
 }

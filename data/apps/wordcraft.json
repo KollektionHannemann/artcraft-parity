@@ -541,18 +541,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.6,
+    "score": 17.6,
     "active_days_7d": 7,
-    "changes_7d": 143,
-    "changes_14d": 285,
+    "changes_7d": 145,
+    "changes_14d": 287,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-14T03:13:32Z",
-      "commit": "514085c",
-      "commit_full": "514085ca444ecf0391ee1105a743d225677b391d",
-      "subject": "Migrate DOCX and RTF formats to craft-libs (#778) (#6603)"
+      "ts": "2026-11-14T06:16:29Z",
+      "commit": "0db15a1",
+      "commit_full": "0db15a1d5ebaa125662e20ac6516109bc6403803",
+      "subject": "fix(docx): fix main CI wordcraft-docx integration test failures (#6617)"
     },
-    "last_commit_ts": "2026-11-14T03:13:32Z",
+    "last_commit_ts": "2026-11-14T06:16:29Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       14,
@@ -568,7 +568,7 @@
       19,
       4,
       11,
-      1
+      3
     ],
     "days": [
       {
@@ -1257,9 +1257,17 @@
       },
       {
         "d": "2026-11-14",
-        "code": 1,
+        "code": 3,
         "other": 0,
         "samples": [
+          {
+            "commit": "0db15a1",
+            "subject": "fix(docx): fix main CI wordcraft-docx integration test failures (#6617)"
+          },
+          {
+            "commit": "669d5df",
+            "subject": "Fix CI formatting and clippy lints after craft-libs cutover (#6612)"
+          },
           {
             "commit": "514085c",
             "subject": "Migrate DOCX and RTF formats to craft-libs (#778) (#6603)"
@@ -15272,5 +15280,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-14T03:35:19+00:00"
+  "updated_at": "2026-11-14T06:38:07+00:00"
 }
