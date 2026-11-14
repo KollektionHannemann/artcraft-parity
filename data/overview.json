@@ -39,6 +39,12 @@
       "name": "AniCraft",
       "adobe": "Unknown",
       "added": "2026-11-06"
+    },
+    {
+      "id": "autocraft",
+      "name": "AutoCraft",
+      "adobe": "Unknown",
+      "added": "2026-11-14"
     }
   ],
   "latest_events": [
@@ -52,6 +58,13 @@
       "changes": 347,
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.42.0",
       "prerelease": false
+    },
+    {
+      "id": "autocraft",
+      "name": "AutoCraft",
+      "type": "new_app",
+      "ts": "2026-11-14T00:00:00Z",
+      "adobe": "Unknown"
     },
     {
       "id": "solidcraft",
@@ -470,13 +483,6 @@
       "changes": 8,
       "url": "https://github.com/storytold/effectcraft/releases/tag/v0.23.1",
       "prerelease": false
-    },
-    {
-      "id": "mailcraft",
-      "name": "MailCraft",
-      "type": "new_app",
-      "ts": "2026-11-10T00:00:00Z",
-      "adobe": "Outlook"
     }
   ],
   "release_waves": [
@@ -647,18 +653,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 37.9,
+        "score": 38.0,
         "active_days_7d": 7,
-        "changes_7d": 1224,
-        "changes_14d": 1905,
-        "housekeeping_7d": 47,
+        "changes_7d": 1244,
+        "changes_14d": 1925,
+        "housekeeping_7d": 48,
         "last_code_change": {
-          "ts": "2026-11-14T21:23:09Z",
-          "commit": "9ddbf25",
-          "commit_full": "9ddbf25bef7711c3404549d95b730f7dec3210e7",
-          "subject": "i18n: Danish translates status and error messages (#7553)"
+          "ts": "2026-11-14T22:31:03Z",
+          "commit": "c290957",
+          "commit_full": "c2909579887f8bc59c158bc59f394fe7b785c62b",
+          "subject": "i18n: Ukrainian translates 114 messages that no catalog had a row for (#7483)"
         },
-        "last_commit_ts": "2026-11-14T21:23:09Z",
+        "last_commit_ts": "2026-11-14T22:35:26Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           41,
@@ -674,7 +680,7 @@
           123,
           254,
           240,
-          246
+          266
         ]
       },
       "release": {
@@ -1724,18 +1730,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 18.5,
+        "score": 18.7,
         "active_days_7d": 7,
-        "changes_7d": 112,
-        "changes_14d": 213,
+        "changes_7d": 113,
+        "changes_14d": 214,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-14T20:42:07Z",
-          "commit": "abac0a9",
-          "commit_full": "abac0a9bce707b82ba5485d5ddaaa758a838ace7",
-          "subject": "MCP: cap one request line at 4 MiB (#2803)"
+          "ts": "2026-11-14T22:31:42Z",
+          "commit": "d5f82c2",
+          "commit_full": "d5f82c2143cbc2f86c4a5e0e7f2ff2e1eda269bd",
+          "subject": "links: allow only web and mail URLs (#2809)"
         },
-        "last_commit_ts": "2026-11-14T20:46:13Z",
+        "last_commit_ts": "2026-11-14T22:31:42Z",
         "repo_since": "2026-10-01T13:00:02Z",
         "window": [
           17,
@@ -1751,7 +1757,7 @@
           21,
           56,
           5,
-          11
+          12
         ]
       },
       "release": {
@@ -1846,16 +1852,16 @@
         "level": "buzzing",
         "score": 30.1,
         "active_days_7d": 7,
-        "changes_7d": 526,
-        "changes_14d": 775,
+        "changes_7d": 527,
+        "changes_14d": 776,
         "housekeeping_7d": 12,
         "last_code_change": {
-          "ts": "2026-11-14T20:39:15Z",
-          "commit": "0fd3210",
-          "commit_full": "0fd3210c2058de528b741d192f39315f8331a84c",
-          "subject": "i18n: move the craft-i18n pin to e56d262 (#14689)"
+          "ts": "2026-11-14T22:31:37Z",
+          "commit": "fd105cc",
+          "commit_full": "fd105cccc4ea723b38c010d40cd09980c7b59ab0",
+          "subject": "Pin hardlink write-over behavior in the workspace (#14833)"
         },
-        "last_commit_ts": "2026-11-14T20:39:15Z",
+        "last_commit_ts": "2026-11-14T22:31:37Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           11,
@@ -1871,7 +1877,7 @@
           180,
           45,
           74,
-          29
+          30
         ]
       },
       "release": {
@@ -2321,18 +2327,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 22.8,
+        "score": 23.0,
         "active_days_7d": 7,
-        "changes_7d": 148,
-        "changes_14d": 235,
-        "housekeeping_7d": 17,
+        "changes_7d": 153,
+        "changes_14d": 240,
+        "housekeeping_7d": 18,
         "last_code_change": {
-          "ts": "2026-11-14T22:01:03Z",
-          "commit": "8815cbe",
-          "commit_full": "8815cbebebc53f0b0d493fd8283a5632eb04207d",
-          "subject": "#969: Courier New, a fixed-width font, in the composer's and the signature editor's font list (#1327)"
+          "ts": "2026-11-14T22:43:32Z",
+          "commit": "ed57e8e",
+          "commit_full": "ed57e8efcb33342c6901408e7a12f8b7054c1906",
+          "subject": "Give conversation buttons more space in the reading pane (#1404)"
         },
-        "last_commit_ts": "2026-11-14T22:01:03Z",
+        "last_commit_ts": "2026-11-14T22:43:32Z",
         "repo_since": "2026-10-12T18:17:00Z",
         "window": [
           11,
@@ -2348,7 +2354,7 @@
           19,
           15,
           42,
-          35
+          40
         ]
       },
       "release": {
@@ -2438,18 +2444,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.6,
+        "score": 16.0,
         "active_days_7d": 7,
-        "changes_7d": 54,
-        "changes_14d": 175,
+        "changes_7d": 55,
+        "changes_14d": 176,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-14T22:23:06Z",
-          "commit": "0fa3a39",
-          "commit_full": "0fa3a392fd61b3e02a86e8136bfbaa178be76100",
-          "subject": "formats: create atomic-write temps exclusively so a planted symlink is never followed (#502)"
+          "ts": "2026-11-14T22:28:04Z",
+          "commit": "9ed81da",
+          "commit_full": "9ed81da8cbcfff0bf11d362f0e83fa4baa9d1300",
+          "subject": "formats: account for the USDC path table's real allocation (#507)"
         },
-        "last_commit_ts": "2026-11-14T22:23:06Z",
+        "last_commit_ts": "2026-11-14T22:28:04Z",
         "repo_since": "2026-10-14T18:33:13Z",
         "window": [
           40,
@@ -2465,7 +2471,7 @@
           10,
           8,
           9,
-          3
+          4
         ]
       },
       "release": {
@@ -2546,18 +2552,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 12.1,
+        "score": 12.3,
         "active_days_7d": 7,
-        "changes_7d": 27,
-        "changes_14d": 125,
+        "changes_7d": 28,
+        "changes_14d": 126,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-14T21:55:33Z",
-          "commit": "cd9addc",
-          "commit_full": "cd9addceb4be29908d08a7d8854df52039390c4f",
-          "subject": "formats: use a set for unique SBS resource names (#242)"
+          "ts": "2026-11-14T22:31:30Z",
+          "commit": "6f19501",
+          "commit_full": "6f19501a4bcc524ae2febfe6baa9d8d115dba309",
+          "subject": "automation: cap workspace and trusted-local reads at 2 GiB (#240)"
         },
-        "last_commit_ts": "2026-11-14T21:55:33Z",
+        "last_commit_ts": "2026-11-14T22:31:30Z",
         "repo_since": "2026-11-01T19:58:46Z",
         "window": [
           12,
@@ -2573,7 +2579,7 @@
           5,
           1,
           1,
-          6
+          7
         ]
       },
       "release": {
@@ -2633,39 +2639,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 634,
-        "revisions_7d": 434,
+        "revisions": 635,
+        "revisions_7d": 435,
         "last_revision": {
-          "ts": "2026-11-14T21:45:09Z",
+          "ts": "2026-11-14T22:54:21Z",
           "kind": "content",
-          "commit": "8c235c3",
-          "commit_full": "8c235c38f8efdde627ab6113815a7dbcba881b84",
-          "message": "Resume Codex conversations across builder turns (R2.2) (#1872)"
+          "commit": "3c1926c",
+          "commit_full": "3c1926cd23a026e92240b70066cecc03192b212e",
+          "message": "Save Unity sounds: a WAV for 16-bit PCM, else the FMOD bank (R3.9) (#1879)"
         },
         "last_update": {
-          "ts": "2026-11-14T21:45:09Z",
+          "ts": "2026-11-14T22:54:21Z",
           "kind": "content",
-          "commit": "8c235c3",
-          "commit_full": "8c235c38f8efdde627ab6113815a7dbcba881b84",
-          "message": "Resume Codex conversations across builder turns (R2.2) (#1872)"
+          "commit": "3c1926c",
+          "commit_full": "3c1926cd23a026e92240b70066cecc03192b212e",
+          "message": "Save Unity sounds: a WAV for 16-bit PCM, else the FMOD bank (R3.9) (#1879)"
         },
         "self_reported": null
       },
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 27.5,
+        "score": 27.6,
         "active_days_7d": 7,
-        "changes_7d": 492,
-        "changes_14d": 918,
+        "changes_7d": 493,
+        "changes_14d": 919,
         "housekeeping_7d": 18,
         "last_code_change": {
-          "ts": "2026-11-14T22:14:59Z",
-          "commit": "98b22ac",
-          "commit_full": "98b22ac3e2ab2b14543611c57820b1d345bc7877",
-          "subject": "engine: contain agent reads and stop auto-running generated programs (#1878)"
+          "ts": "2026-11-14T22:54:21Z",
+          "commit": "3c1926c",
+          "commit_full": "3c1926cd23a026e92240b70066cecc03192b212e",
+          "subject": "Save Unity sounds: a WAV for 16-bit PCM, else the FMOD bank (R3.9) (#1879)"
         },
-        "last_commit_ts": "2026-11-14T22:14:59Z",
+        "last_commit_ts": "2026-11-14T22:54:21Z",
         "repo_since": "2026-10-31T14:52:14Z",
         "window": [
           73,
@@ -2681,7 +2687,7 @@
           100,
           49,
           6,
-          32
+          33
         ]
       },
       "release": {
@@ -2764,16 +2770,16 @@
         "level": "buzzing",
         "score": 37.8,
         "active_days_7d": 7,
-        "changes_7d": 1190,
-        "changes_14d": 1912,
+        "changes_7d": 1193,
+        "changes_14d": 1915,
         "housekeeping_7d": 71,
         "last_code_change": {
-          "ts": "2026-11-14T22:03:08Z",
-          "commit": "2a99051",
-          "commit_full": "2a99051c78ab62216ddb123f9cd33a27d41f3850",
-          "subject": "Fillet: a regression test for rounds at the foot of a thin tab that meet across its end (#16900)"
+          "ts": "2026-11-14T22:33:00Z",
+          "commit": "12cf0b2",
+          "commit_full": "12cf0b295e759cfb6c22a914bd53d2c89f001384",
+          "subject": "Sketch Project: a click inside a hole projects its rim (#16343)"
         },
-        "last_commit_ts": "2026-11-14T22:03:08Z",
+        "last_commit_ts": "2026-11-14T22:33:00Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           128,
@@ -2789,7 +2795,7 @@
           149,
           191,
           203,
-          187
+          190
         ]
       },
       "release": {
@@ -2906,6 +2912,86 @@
       },
       "series": [],
       "history_len": 0
+    },
+    {
+      "repo_url": "https://github.com/storytold/autocraft",
+      "branch": "main",
+      "kind": "official",
+      "roadmap_url": null,
+      "roadmap_history_url": null,
+      "metric_status": "roadmap_missing",
+      "id": "autocraft",
+      "name": "AutoCraft",
+      "adobe": "Unknown",
+      "category": "Other",
+      "color": "#8bc53f",
+      "added": "2026-11-14",
+      "is_new": true,
+      "target": null,
+      "order": 20,
+      "stage": null,
+      "next_stage": null,
+      "full_pct": null,
+      "full_range": null,
+      "full_hours": null,
+      "mainstream_pct": null,
+      "essentials_pct": null,
+      "breadth_pct": null,
+      "parity": {
+        "tracked_since": null,
+        "value_since": null,
+        "releases_since": 0,
+        "releases_since_capped": false,
+        "revisions_since": 0,
+        "hours_since": null,
+        "areas_since": null,
+        "changes": 0,
+        "truncated": false,
+        "last_change": null
+      },
+      "roadmap": {
+        "revisions": 0,
+        "revisions_7d": 0,
+        "last_revision": null,
+        "last_update": null,
+        "self_reported": null
+      },
+      "milestone": null,
+      "activity": {
+        "level": "active",
+        "score": 13.5,
+        "active_days_7d": 4,
+        "changes_7d": 89,
+        "changes_14d": 675,
+        "housekeeping_7d": 2,
+        "last_code_change": {
+          "ts": "2026-11-11T20:43:04Z",
+          "commit": "ba13925",
+          "commit_full": "ba139254a8d75fb8ae7a3b469c900fe96315d505",
+          "subject": "CI read for another commit, or workflow runs not yet finished at the head, counts as pending, not as no CI"
+        },
+        "last_commit_ts": "2026-11-11T20:43:04Z",
+        "repo_since": "2026-11-02T14:36:17Z",
+        "window": [
+          0,
+          64,
+          214,
+          143,
+          76,
+          45,
+          44,
+          27,
+          27,
+          19,
+          16,
+          0,
+          0,
+          0
+        ]
+      },
+      "release": null,
+      "series": [],
+      "history_len": 0
     }
   ],
   "errors": [],
@@ -2913,13 +2999,7 @@
     "catalog_count": 19,
     "tracked_from_catalog": 19,
     "missing": [],
-    "candidates": [
-      {
-        "id": "autocraft",
-        "repo": "storytold/autocraft",
-        "reason": "Empty repository; no published app yet"
-      }
-    ]
+    "candidates": []
   },
-  "generated_at": "2026-11-14T22:27:25+00:00"
+  "generated_at": "2026-11-14T22:59:24+00:00"
 }

@@ -1139,6 +1139,7 @@
       "38d7102df128dee594c73aefcb7bd7ccfc4aefa2",
       "3a9ad9c6c5de05701d423b8c7e9cc37b550a7170",
       "3be1d0b8713d500ed524dd7f0967355b70200527",
+      "3c1926cd23a026e92240b70066cecc03192b212e",
       "3ce1ce9f52077a53811be8a0309fdbe85b16b417",
       "3e016c92ee7d6cf5eded072716e29583a446f1fa",
       "3ee164277023a3d76a3859f5796782eba6260f3f",
@@ -1875,7 +1876,8 @@
     "craft-wiki-api": "2026-11-06",
     "anicraft": "2026-11-14",
     "mailcraft": "2026-11-14",
-    "discord-github-ticket-relay": "2026-11-14"
+    "discord-github-ticket-relay": "2026-11-14",
+    "autocraft": "2026-11-14"
   },
   "truncated": {
     "photocraft": false,
@@ -5434,7 +5436,8 @@
         "source": "release",
         "kind": null
       }
-    ]
+    ],
+    "autocraft": []
   },
   "schema": 3,
   "catalog_sources": {
@@ -5851,24 +5854,12 @@
       }
     ]
   },
-  "discovery_candidates": {
-    "autocraft": {
-      "id": "autocraft",
-      "repo": "storytold/autocraft",
-      "reason": "Empty repository; no published app yet"
-    }
-  },
+  "discovery_candidates": {},
   "discovery": {
     "catalog_count": 19,
     "tracked_from_catalog": 19,
     "missing": [],
-    "candidates": [
-      {
-        "id": "autocraft",
-        "repo": "storytold/autocraft",
-        "reason": "Empty repository; no published app yet"
-      }
-    ]
+    "candidates": []
   },
   "history_sources": {
     "photocraft": [
@@ -5965,6 +5956,11 @@
       "UCS-Care-Group/mailcraft",
       "main",
       "ROADMAP.md"
+    ],
+    "autocraft": [
+      "storytold/autocraft",
+      "main",
+      null
     ]
   }
 }

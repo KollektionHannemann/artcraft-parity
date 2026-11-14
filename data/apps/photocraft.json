@@ -385,16 +385,16 @@
     "level": "buzzing",
     "score": 30.1,
     "active_days_7d": 7,
-    "changes_7d": 526,
-    "changes_14d": 775,
+    "changes_7d": 527,
+    "changes_14d": 776,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-14T20:39:15Z",
-      "commit": "0fd3210",
-      "commit_full": "0fd3210c2058de528b741d192f39315f8331a84c",
-      "subject": "i18n: move the craft-i18n pin to e56d262 (#14689)"
+      "ts": "2026-11-14T22:31:37Z",
+      "commit": "fd105cc",
+      "commit_full": "fd105cccc4ea723b38c010d40cd09980c7b59ab0",
+      "subject": "Pin hardlink write-over behavior in the workspace (#14833)"
     },
-    "last_commit_ts": "2026-11-14T20:39:15Z",
+    "last_commit_ts": "2026-11-14T22:31:37Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       11,
@@ -410,7 +410,7 @@
       180,
       45,
       74,
-      29
+      30
     ],
     "days": [
       {
@@ -1270,9 +1270,13 @@
       },
       {
         "d": "2026-11-14",
-        "code": 29,
+        "code": 30,
         "other": 1,
         "samples": [
+          {
+            "commit": "fd105cc",
+            "subject": "Pin hardlink write-over behavior in the workspace (#14833)"
+          },
           {
             "commit": "0fd3210",
             "subject": "i18n: move the craft-i18n pin to e56d262 (#14689)"
@@ -1280,10 +1284,6 @@
           {
             "commit": "6297515",
             "subject": "chore: cut over remaining resvg and roxmltree usages to craft-svg and craft-xml (#14320)"
-          },
-          {
-            "commit": "0d3b1e8",
-            "subject": "Wheel: a panel scrolled past a dropdown, slider or font field keeps scrolling (#11353) (#11699)"
           }
         ]
       }
@@ -1774,5 +1774,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-14T21:04:04+00:00"
+  "updated_at": "2026-11-14T22:58:36+00:00"
 }

@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.6,
+    "score": 16.0,
     "active_days_7d": 7,
-    "changes_7d": 54,
-    "changes_14d": 175,
+    "changes_7d": 55,
+    "changes_14d": 176,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-14T22:23:06Z",
-      "commit": "0fa3a39",
-      "commit_full": "0fa3a392fd61b3e02a86e8136bfbaa178be76100",
-      "subject": "formats: create atomic-write temps exclusively so a planted symlink is never followed (#502)"
+      "ts": "2026-11-14T22:28:04Z",
+      "commit": "9ed81da",
+      "commit_full": "9ed81da8cbcfff0bf11d362f0e83fa4baa9d1300",
+      "subject": "formats: account for the USDC path table's real allocation (#507)"
     },
-    "last_commit_ts": "2026-11-14T22:23:06Z",
+    "last_commit_ts": "2026-11-14T22:28:04Z",
     "repo_since": "2026-10-14T18:33:13Z",
     "window": [
       40,
@@ -93,7 +93,7 @@
       10,
       8,
       9,
-      3
+      4
     ],
     "days": [
       {
@@ -421,9 +421,13 @@
       },
       {
         "d": "2026-11-14",
-        "code": 3,
+        "code": 4,
         "other": 0,
         "samples": [
+          {
+            "commit": "9ed81da",
+            "subject": "formats: account for the USDC path table's real allocation (#507)"
+          },
           {
             "commit": "0fa3a39",
             "subject": "formats: create atomic-write temps exclusively so a planted symlink is never followed (#502)"
@@ -431,10 +435,6 @@
           {
             "commit": "73083d4",
             "subject": "formats: cap default resource image decode at 64 M texels (#506)"
-          },
-          {
-            "commit": "b89badc",
-            "subject": "Budget the total payload of one .mcmat (#499)"
           }
         ]
       }
@@ -829,5 +829,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-14T22:27:10+00:00"
+  "updated_at": "2026-11-14T22:59:07+00:00"
 }

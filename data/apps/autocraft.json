@@ -1,0 +1,266 @@
+{
+  "id": "autocraft",
+  "name": "AutoCraft",
+  "adobe": "Unknown",
+  "category": "Other",
+  "color": "#8bc53f",
+  "added": "2026-11-14",
+  "repo_url": "https://github.com/storytold/autocraft",
+  "branch": "main",
+  "kind": "official",
+  "roadmap_url": null,
+  "roadmap_history_url": null,
+  "metric_status": "roadmap_missing",
+  "latest_commit": null,
+  "latest_commit_date": null,
+  "latest_message": null,
+  "parsed": null,
+  "parity": {
+    "tracked_since": null,
+    "value_since": null,
+    "releases_since": 0,
+    "releases_since_capped": false,
+    "revisions_since": 0,
+    "hours_since": null,
+    "areas_since": null,
+    "changes": 0,
+    "truncated": false,
+    "last_change": null
+  },
+  "roadmap": {
+    "revisions": 0,
+    "revisions_7d": 0,
+    "last_revision": null,
+    "last_update": null,
+    "self_reported": null
+  },
+  "milestone": null,
+  "activity": {
+    "level": "active",
+    "score": 13.5,
+    "active_days_7d": 4,
+    "changes_7d": 89,
+    "changes_14d": 675,
+    "housekeeping_7d": 2,
+    "last_code_change": {
+      "ts": "2026-11-11T20:43:04Z",
+      "commit": "ba13925",
+      "commit_full": "ba139254a8d75fb8ae7a3b469c900fe96315d505",
+      "subject": "CI read for another commit, or workflow runs not yet finished at the head, counts as pending, not as no CI"
+    },
+    "last_commit_ts": "2026-11-11T20:43:04Z",
+    "repo_since": "2026-11-02T14:36:17Z",
+    "window": [
+      0,
+      64,
+      214,
+      143,
+      76,
+      45,
+      44,
+      27,
+      27,
+      19,
+      16,
+      0,
+      0,
+      0
+    ],
+    "days": [
+      {
+        "d": "2026-11-02",
+        "code": 64,
+        "other": 6,
+        "samples": [
+          {
+            "commit": "591ae95",
+            "subject": "Flow tests: track only the test repo"
+          },
+          {
+            "commit": "12342db",
+            "subject": "Merge branch 'priority-levels' into pipeline-full"
+          },
+          {
+            "commit": "73c737d",
+            "subject": "Merge branch 'fix-misc' into pipeline-full"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-03",
+        "code": 214,
+        "other": 9,
+        "samples": [
+          {
+            "commit": "6fecced",
+            "subject": "Merge main into ci-fix"
+          },
+          {
+            "commit": "920b159",
+            "subject": "CI fix: read a failing gate check and fix it (formatter run, once-per-head rerun, checked model patch)"
+          },
+          {
+            "commit": "afd7fb8",
+            "subject": "merge test: the merge-time discussion comment comes from a human contributor"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-04",
+        "code": 143,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "dc7cbb3",
+            "subject": "Merge branch 'review-no-undo'"
+          },
+          {
+            "commit": "1910866",
+            "subject": "Merge branch 'decision-cleanup'"
+          },
+          {
+            "commit": "e3e80a8",
+            "subject": "Merge branch 'item-decisions'"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-05",
+        "code": 76,
+        "other": 3,
+        "samples": [
+          {
+            "commit": "38d2903",
+            "subject": "Merge close-reasons"
+          },
+          {
+            "commit": "b29e8dd",
+            "subject": "Merge app-identity-gaps"
+          },
+          {
+            "commit": "4d3c79f",
+            "subject": "Merge hold-scope-gaps"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-06",
+        "code": 45,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "0212b58",
+            "subject": "Identity guard test accepts the owner argument of the command-line merge recorder"
+          },
+          {
+            "commit": "7a26240",
+            "subject": "Merge write-pacing: pace GitHub writes per identity"
+          },
+          {
+            "commit": "0ee5f81",
+            "subject": "Merge call-queue: one queue for Claude calls with priority classes"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-07",
+        "code": 44,
+        "other": 2,
+        "samples": [
+          {
+            "commit": "6e3ac87",
+            "subject": "Merge signals-followup: signal limits count only messages that name one to five items"
+          },
+          {
+            "commit": "18d0235",
+            "subject": "Merge alerts-followup: alerts keep the last known write permission; memo entries dropped with their rows"
+          },
+          {
+            "commit": "c505f18",
+            "subject": "Merge discord-decisions: /autocraft alerts, DMs for decisions the person may settle, choice buttons with a confirm step for GitHub writes, DMs updated after ans"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-08",
+        "code": 27,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "c1882e3",
+            "subject": "Unassign tests answer the pipeline account lookup with a fake gh"
+          },
+          {
+            "commit": "2695042",
+            "subject": "Merge pipeline-account: the pipeline's own account is always the box account's user, never the app's bot; claims and unassign use it"
+          },
+          {
+            "commit": "d68f4e1",
+            "subject": "Merge outside-limits: per-author daily budget for outside authors and an outside-surge breaker, with settings, Release and Resume in the dashboard"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-09",
+        "code": 27,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "bf1d5da",
+            "subject": "Merge shots-fix: own task step, no informational stage rows, restricted param patterns, switch off cancels renders, image checks"
+          },
+          {
+            "commit": "145243a",
+            "subject": "Merge pr-builds-fix: switch off stops queued builds, no retry after cancel, late CI disagreement, scope as claim"
+          },
+          {
+            "commit": "a260906",
+            "subject": "Merge shots-compare: before/after comparison, hold on a clear regression, item page card (switch off)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-10",
+        "code": 19,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "d063a57",
+            "subject": "Merge hard-review"
+          },
+          {
+            "commit": "e6a158e",
+            "subject": "Cost report's runs list binds only the hidden-repo parameters, artifact names keep a plain filename next to the encoded one, a job may take its own lease again,"
+          },
+          {
+            "commit": "a1be494",
+            "subject": "Merge hard-lead-a"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-11",
+        "code": 16,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "ba13925",
+            "subject": "CI read for another commit, or workflow runs not yet finished at the head, counts as pending, not as no CI"
+          },
+          {
+            "commit": "8f3ccf0",
+            "subject": "Account id lookups skip owners no token can read and bind the rest"
+          },
+          {
+            "commit": "5f24753",
+            "subject": "Account id lookups leave PRs the token may not read unbound, and a failed lookup records its error for the dashboard settings"
+          }
+        ]
+      }
+    ]
+  },
+  "releases": [],
+  "roadmap_history": [],
+  "history": [],
+  "updated_at": "2026-11-14T22:59:24+00:00"
+}
