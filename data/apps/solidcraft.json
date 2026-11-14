@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 37.5,
+    "score": 37.6,
     "active_days_7d": 7,
-    "changes_7d": 1155,
-    "changes_14d": 1877,
+    "changes_7d": 1166,
+    "changes_14d": 1888,
     "housekeeping_7d": 71,
     "last_code_change": {
-      "ts": "2026-11-14T18:28:37Z",
-      "commit": "75c651c",
-      "commit_full": "75c651c50d90dc137d17a1e2bedf9c5763e18386",
-      "subject": "Extrude cut: cuts through an imported STEP body no longer refused for vertex tolerance (#16224)"
+      "ts": "2026-11-14T19:36:29Z",
+      "commit": "564780d",
+      "commit_full": "564780d4c02f43140521e35587e1547f5c5c3143",
+      "subject": "Goldens: blessing keeps the line of every case the check calls unchanged (#16886)"
     },
-    "last_commit_ts": "2026-11-14T18:28:37Z",
+    "last_commit_ts": "2026-11-14T19:36:29Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       128,
@@ -93,7 +93,7 @@
       149,
       191,
       203,
-      152
+      163
     ],
     "days": [
       {
@@ -820,26 +820,43 @@
       },
       {
         "d": "2026-11-14",
-        "code": 152,
+        "code": 163,
         "other": 18,
         "samples": [
           {
-            "commit": "75c651c",
-            "subject": "Extrude cut: cuts through an imported STEP body no longer refused for vertex tolerance (#16224)"
+            "commit": "564780d",
+            "subject": "Goldens: blessing keeps the line of every case the check calls unchanged (#16886)"
           },
           {
-            "commit": "fb3fd96",
-            "subject": "Viewport: hovering a face that is already picked lifts its highlight and outlines edges (#16807) (#16832)"
+            "commit": "47f5a74",
+            "subject": "solidcore: retire the planar_section_face_tolerance flag (#16571)"
           },
           {
-            "commit": "21cd85b",
-            "subject": "Join: a box onto a face that a near-tangent arc grazes no longer fails with 'another entity is already related' (#16643)"
+            "commit": "034381c",
+            "subject": "Extrude, Sweep and other profile dialogs: a region picked twice no longer sends a repeated profile (#16241)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.42.0",
+      "name": "SolidCraft v0.42.0",
+      "ts": "2026-11-14T19:55:43Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.42.0",
+      "changes": 347,
+      "new_contributors": 8,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.41.0",
       "name": "SolidCraft v0.41.0",
@@ -1015,23 +1032,6 @@
       "name": "v0.29.0",
       "ts": "2026-11-01T00:21:27Z",
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.29.0",
-      "changes": null,
-      "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.28.0",
-      "name": "v0.28.0",
-      "ts": "2026-10-31T01:20:03Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.28.0",
       "changes": null,
       "new_contributors": null,
       "platforms": [
@@ -2427,5 +2427,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-14T19:14:00+00:00"
+  "updated_at": "2026-11-14T20:00:43+00:00"
 }

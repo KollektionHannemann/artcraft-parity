@@ -46,6 +46,17 @@
       "id": "solidcraft",
       "name": "SolidCraft",
       "type": "release",
+      "ts": "2026-11-14T19:55:43Z",
+      "tag": "v0.42.0",
+      "kind": "minor",
+      "changes": 347,
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.42.0",
+      "prerelease": true
+    },
+    {
+      "id": "solidcraft",
+      "name": "SolidCraft",
+      "type": "release",
       "ts": "2026-11-13T04:19:07Z",
       "tag": "v0.41.0",
       "kind": "minor",
@@ -305,17 +316,6 @@
       "changes": 14,
       "url": "https://github.com/storytold/lightcraft/releases/tag/v0.21.0",
       "prerelease": false
-    },
-    {
-      "id": "solidcraft",
-      "name": "SolidCraft",
-      "type": "release",
-      "ts": "2026-11-11T20:04:50Z",
-      "tag": "v0.40.0",
-      "kind": "minor",
-      "changes": null,
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.40.0",
-      "prerelease": true
     },
     {
       "id": "wordcraft",
@@ -912,18 +912,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 18.4,
+        "score": 18.6,
         "active_days_7d": 7,
-        "changes_7d": 148,
-        "changes_14d": 290,
+        "changes_7d": 149,
+        "changes_14d": 291,
         "housekeeping_7d": 9,
         "last_code_change": {
-          "ts": "2026-11-14T15:22:19Z",
-          "commit": "f8c66d0",
-          "commit_full": "f8c66d06929a9e039fb0c058d1bfe174aecd6c5c",
-          "subject": "Use Diagram and Decorative Text display names (#6040)"
+          "ts": "2026-11-14T19:51:35Z",
+          "commit": "42a5df5",
+          "commit_full": "42a5df5f94e03288037f731ffd86dee7c7cf1332",
+          "subject": "chore: cut over image codecs and zip to craft-libs (#6661)"
         },
-        "last_commit_ts": "2026-11-14T15:22:19Z",
+        "last_commit_ts": "2026-11-14T19:51:35Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
           14,
@@ -939,7 +939,7 @@
           19,
           4,
           11,
-          6
+          7
         ]
       },
       "release": {
@@ -1032,18 +1032,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 17.5,
+        "score": 18.1,
         "active_days_7d": 7,
-        "changes_7d": 87,
-        "changes_14d": 222,
+        "changes_7d": 89,
+        "changes_14d": 224,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-14T14:20:57Z",
-          "commit": "e4ab3c6",
-          "commit_full": "e4ab3c6a99c355290ad536d012421e06ed33e11b",
-          "subject": "Project panel: Reveal in Project scrolls to the source clip (#4760) (#4782)"
+          "ts": "2026-11-14T19:33:05Z",
+          "commit": "1709a32",
+          "commit_full": "1709a32102442070fd75a7490b7d86f56d92851c",
+          "subject": "engine: cap project files at 256 MiB on every read (#4796)"
         },
-        "last_commit_ts": "2026-11-14T14:20:57Z",
+        "last_commit_ts": "2026-11-14T19:33:05Z",
         "repo_since": "2026-09-30T09:22:00Z",
         "window": [
           30,
@@ -1059,7 +1059,7 @@
           28,
           13,
           11,
-          3
+          5
         ]
       },
       "release": {
@@ -1843,14 +1843,14 @@
         "active_days_7d": 7,
         "changes_7d": 525,
         "changes_14d": 774,
-        "housekeeping_7d": 11,
+        "housekeeping_7d": 12,
         "last_code_change": {
           "ts": "2026-11-14T18:49:42Z",
           "commit": "6297515",
           "commit_full": "629751503165118d5fec5f70e64fe2d6592f7b53",
           "subject": "chore: cut over remaining resvg and roxmltree usages to craft-svg and craft-xml (#14320)"
         },
-        "last_commit_ts": "2026-11-14T18:49:42Z",
+        "last_commit_ts": "2026-11-14T19:33:10Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           11,
@@ -2541,18 +2541,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 10.3,
+        "score": 10.9,
         "active_days_7d": 7,
-        "changes_7d": 22,
-        "changes_14d": 120,
+        "changes_7d": 23,
+        "changes_14d": 121,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-14T07:52:48Z",
-          "commit": "bb74344",
-          "commit_full": "bb7434478ce9cf0c402eb7073181efb8cf76331e",
-          "subject": "Matching CI to TextureCraft (#222)"
+          "ts": "2026-11-14T19:32:52Z",
+          "commit": "3a2b421",
+          "commit_full": "3a2b421e6da6b5891786d1b3a06d355696294a91",
+          "subject": "Refuse oversized .mcraft archives (#235)"
         },
-        "last_commit_ts": "2026-11-14T07:52:48Z",
+        "last_commit_ts": "2026-11-14T19:32:52Z",
         "repo_since": "2026-11-01T19:58:46Z",
         "window": [
           12,
@@ -2568,7 +2568,7 @@
           5,
           1,
           1,
-          1
+          2
         ]
       },
       "release": {
@@ -2649,18 +2649,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 27.3,
+        "score": 27.4,
         "active_days_7d": 7,
-        "changes_7d": 487,
-        "changes_14d": 913,
+        "changes_7d": 489,
+        "changes_14d": 915,
         "housekeeping_7d": 18,
         "last_code_change": {
-          "ts": "2026-11-14T19:08:28Z",
-          "commit": "9b36768",
-          "commit_full": "9b3676825f5ea7b295fd5ce5587cb53fa815a7a6",
-          "subject": "Count the remaining JavaScript nesting shapes (R3.12) (#1870)"
+          "ts": "2026-11-14T19:33:19Z",
+          "commit": "bc47887",
+          "commit_full": "bc47887f4af78ff8e460b8e35d02c97a4be284cb",
+          "subject": "journal: redact header-style and env-style credential field names (#1874)"
         },
-        "last_commit_ts": "2026-11-14T19:08:28Z",
+        "last_commit_ts": "2026-11-14T19:33:19Z",
         "repo_since": "2026-10-31T14:52:14Z",
         "window": [
           73,
@@ -2676,7 +2676,7 @@
           100,
           49,
           6,
-          27
+          29
         ]
       },
       "release": {
@@ -2757,18 +2757,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 37.5,
+        "score": 37.6,
         "active_days_7d": 7,
-        "changes_7d": 1155,
-        "changes_14d": 1877,
+        "changes_7d": 1166,
+        "changes_14d": 1888,
         "housekeeping_7d": 71,
         "last_code_change": {
-          "ts": "2026-11-14T18:28:37Z",
-          "commit": "75c651c",
-          "commit_full": "75c651c50d90dc137d17a1e2bedf9c5763e18386",
-          "subject": "Extrude cut: cuts through an imported STEP body no longer refused for vertex tolerance (#16224)"
+          "ts": "2026-11-14T19:36:29Z",
+          "commit": "564780d",
+          "commit_full": "564780d4c02f43140521e35587e1547f5c5c3143",
+          "subject": "Goldens: blessing keeps the line of every case the check calls unchanged (#16886)"
         },
-        "last_commit_ts": "2026-11-14T18:28:37Z",
+        "last_commit_ts": "2026-11-14T19:36:29Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           128,
@@ -2784,7 +2784,7 @@
           149,
           191,
           203,
-          152
+          163
         ]
       },
       "release": {
@@ -2916,5 +2916,5 @@
       }
     ]
   },
-  "generated_at": "2026-11-14T19:14:05+00:00"
+  "generated_at": "2026-11-14T20:00:48+00:00"
 }

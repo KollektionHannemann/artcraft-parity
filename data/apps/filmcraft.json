@@ -444,18 +444,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.5,
+    "score": 18.1,
     "active_days_7d": 7,
-    "changes_7d": 87,
-    "changes_14d": 222,
+    "changes_7d": 89,
+    "changes_14d": 224,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-14T14:20:57Z",
-      "commit": "e4ab3c6",
-      "commit_full": "e4ab3c6a99c355290ad536d012421e06ed33e11b",
-      "subject": "Project panel: Reveal in Project scrolls to the source clip (#4760) (#4782)"
+      "ts": "2026-11-14T19:33:05Z",
+      "commit": "1709a32",
+      "commit_full": "1709a32102442070fd75a7490b7d86f56d92851c",
+      "subject": "engine: cap project files at 256 MiB on every read (#4796)"
     },
-    "last_commit_ts": "2026-11-14T14:20:57Z",
+    "last_commit_ts": "2026-11-14T19:33:05Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       30,
@@ -471,7 +471,7 @@
       28,
       13,
       11,
-      3
+      5
     ],
     "days": [
       {
@@ -1266,20 +1266,20 @@
       },
       {
         "d": "2026-11-14",
-        "code": 3,
+        "code": 5,
         "other": 0,
         "samples": [
           {
+            "commit": "1709a32",
+            "subject": "engine: cap project files at 256 MiB on every read (#4796)"
+          },
+          {
+            "commit": "161b8f5",
+            "subject": "Interchange: bound XML nesting and node counts (#4795)"
+          },
+          {
             "commit": "e4ab3c6",
             "subject": "Project panel: Reveal in Project scrolls to the source clip (#4760) (#4782)"
-          },
-          {
-            "commit": "9404f68",
-            "subject": "Open update release notes in the desktop browser (#4746)"
-          },
-          {
-            "commit": "6a8e9a8",
-            "subject": "CI: prove the GPU tests run on lavapipe; fail when they skip (#2577)"
           }
         ]
       }
@@ -1862,5 +1862,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-14T14:30:30+00:00"
+  "updated_at": "2026-11-14T19:59:30+00:00"
 }
