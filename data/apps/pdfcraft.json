@@ -497,18 +497,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.5,
+    "score": 21.8,
     "active_days_7d": 7,
-    "changes_7d": 367,
-    "changes_14d": 500,
+    "changes_7d": 368,
+    "changes_14d": 501,
     "housekeeping_7d": 18,
     "last_code_change": {
-      "ts": "2026-11-14T16:13:09Z",
-      "commit": "346d803",
-      "commit_full": "346d8030807d96dd5a06b7025a67e062e490fce4",
-      "subject": "Fix macOS saves for PDFs with extended attributes (#7203)"
+      "ts": "2026-11-14T18:49:46Z",
+      "commit": "eead454",
+      "commit_full": "eead45410575e6bc69e887d744387af6a1555f35",
+      "subject": "Cut over remaining codecs, xfa XML, and export packaging to craft-libs (#7326)"
     },
-    "last_commit_ts": "2026-11-14T16:13:09Z",
+    "last_commit_ts": "2026-11-14T18:49:46Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       22,
@@ -524,7 +524,7 @@
       45,
       5,
       14,
-      4
+      5
     ],
     "days": [
       {
@@ -1371,9 +1371,13 @@
       },
       {
         "d": "2026-11-14",
-        "code": 4,
+        "code": 5,
         "other": 1,
         "samples": [
+          {
+            "commit": "eead454",
+            "subject": "Cut over remaining codecs, xfa XML, and export packaging to craft-libs (#7326)"
+          },
           {
             "commit": "346d803",
             "subject": "Fix macOS saves for PDFs with extended attributes (#7203)"
@@ -1381,10 +1385,6 @@
           {
             "commit": "358e33a",
             "subject": "M7: replacing a line keeps the source font for the words it can show (#2378, re-lands #2955) (#6842)"
-          },
-          {
-            "commit": "e98dc17",
-            "subject": "Move remaining file formats and codecs to craft-libs (#778) (#7261)"
           }
         ]
       }
@@ -7073,5 +7073,5 @@
       "kind": "editorial"
     }
   ],
-  "updated_at": "2026-11-14T17:00:40+00:00"
+  "updated_at": "2026-11-14T19:13:03+00:00"
 }
