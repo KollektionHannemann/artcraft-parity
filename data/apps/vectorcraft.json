@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "8deaeda",
-  "latest_commit_date": "2026-11-14T20:34:29+07:00",
-  "latest_message": "Symbols: built-in Weather Icons symbol library (#7516)",
+  "latest_commit": "a901c02",
+  "latest_commit_date": "2026-11-15T04:22:37+07:00",
+  "latest_message": "Cutting Tools: Nest Shapes packs the selected objects onto a sheet or roll (#7387)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -343,6 +343,10 @@
         "text": "Built-in symbol library Weather Icons: adds a sixth procedural symbol library (Window › Symbol Libraries, the Symbols panel's Symbol Libraries Menu) containing six original vector symbols (Sun, Moon, Cloud, Rain, Thunder, Snow) generated in code without default 9-slice guides (part of Gap 5). Headline numbers unchanged."
       },
       {
+        "date": "2026-11-14",
+        "text": "Nest Shapes in the Cutting Tools add-on (Object › Plug-ins › Cutting Tools): the selected objects move close together onto an artboard, a sheet of a set size or a roll of a set width, packed by their bounding boxes with a margin inside the edges and a spacing between them, optionally turning objects 90° to fit; objects that do not fit go in a column beside the sheet; a dialog with Preview, one undo step (addon.cutting.nest). A VectorCraft addition: headline numbers unchanged."
+      },
+      {
         "date": "2026-11-13",
         "text": "Banner Hems and Grommets in the Cutting Tools add-on (Object › Plug-ins › Cutting Tools): on the chosen sides of the selected art's bounds, or of each artboard, a hem line at a set depth inside the edge and grommet marks (a circle with a cross) at a set inset, one at each end of a side and the rest spread evenly at most a set spacing apart, stroked in a chosen swatch; a dialog with Preview, one undo step (addon.cutting.banner). A VectorCraft addition: headline numbers unchanged."
       },
@@ -493,10 +497,6 @@
       {
         "date": "2026-10-21",
         "text": "Affinity import (AF.5), brought over from DesignCraft's (storytold/designcraft#291): master pages show on the pages that use them (a locked layer at the bottom); tables open as a text frame per cell and a line per edge; each paragraph keeps its alignment, indents, spacing and leading; frame text takes its text scale, not its frame's; drop shadows and outer glows become live effects, outlines strokes, colour and gradient overlays are baked into the paint; embedded Affinity documents open as editable content, and their artboards no longer become artboards; large pixel layers come in at a reduced resolution; text placed as Affinity places it (lines of differently aligned paragraphs, a frame's first baseline at cap height, last lines whose descenders hang out of the frame), underlines and strikethrough, line breaks inside paragraphs, table cells taller than their row, no stroke on shapes whose stroke style is None, CMYK pixel layers (phone photos in CMYK documents) shown through the document's own CMYK profile instead of the profile-free formula and its blue cast, outlines on stroked shapes. Headline numbers unchanged. Hostile files stay bounded (one budget for the whole read, embedded documents included; overlay work; master page copies), covered by the import fuzzer and limit tests."
-      },
-      {
-        "date": "2026-10-19",
-        "text": "About 90 community PRs landed in batches through the full gate, with our fixes on top (formatting, catalog rows, small correctness fixes). New: Objects on Path (#3066), Object › Path › Simplify's slider with Auto-Simplify and More Options (#2555), Pencil Edit Selected Paths redraws the middle of a selected path (#2905), Pencil Tool Options' Alt key toggles to Smooth Tool (#2685), 3D solids built from each stroke's outline (#3049), Live Paint Selection Tool Options (#3052), Locate Selected Objects in the Layers panel (#3033), Snap to Unit for tab stops (#3039), DXF circles and arcs as native entities (#2962), Targa files (#2765), a Georgian interface (#2045), Traditional Chinese status and error messages (#2784), the web page's window.vectorcraft control channel (#2943), select.color (#2939), reproducible export bytes with SOURCEDATEEPOCH (#2947), Spacing Guides on resizes (#2966) and measurement labels on more tools. Fixed: number fields step to the next whole unit (#2916), a click away from edited type makes no new text (#2922), inch rulers in halves (#2951), Recent cards in New Document (#2904), Japanese W-weights in SVG (#2896), the point-type baseline marker (#2897) and the Reshape tool's falloff (#2900). Headline numbers unchanged."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 231,
+    "revisions_since": 232,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,39 +536,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 232,
-    "revisions_7d": 17,
+    "revisions": 233,
+    "revisions_7d": 18,
     "last_revision": {
-      "ts": "2026-11-14T13:34:29Z",
+      "ts": "2026-11-14T21:22:37Z",
       "kind": "content",
-      "commit": "8deaeda",
-      "commit_full": "8deaeda1f5a805336a33a3f3ad474a38b113414b",
-      "message": "Symbols: built-in Weather Icons symbol library (#7516)"
+      "commit": "a901c02",
+      "commit_full": "a901c024e5123ec802de321bce45effcf3c4db0c",
+      "message": "Cutting Tools: Nest Shapes packs the selected objects onto a sheet or roll (#7387)"
     },
     "last_update": {
-      "ts": "2026-11-14T13:34:29Z",
+      "ts": "2026-11-14T21:22:37Z",
       "kind": "content",
-      "commit": "8deaeda",
-      "commit_full": "8deaeda1f5a805336a33a3f3ad474a38b113414b",
-      "message": "Symbols: built-in Weather Icons symbol library (#7516)"
+      "commit": "a901c02",
+      "commit_full": "a901c024e5123ec802de321bce45effcf3c4db0c",
+      "message": "Cutting Tools: Nest Shapes packs the selected objects onto a sheet or roll (#7387)"
     },
     "self_reported": "2026-11-10"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 37.8,
+    "score": 37.9,
     "active_days_7d": 7,
-    "changes_7d": 1215,
-    "changes_14d": 1896,
+    "changes_7d": 1224,
+    "changes_14d": 1905,
     "housekeeping_7d": 47,
     "last_code_change": {
-      "ts": "2026-11-14T20:23:15Z",
-      "commit": "107078a",
-      "commit_full": "107078ad10870f8a8fdeade9bd5627a3eea34a67",
-      "subject": "i18n: Brazilian Portuguese spells Relink correctly and calls process colors \"cor de processo\" in two messages (#7579)"
+      "ts": "2026-11-14T21:23:09Z",
+      "commit": "9ddbf25",
+      "commit_full": "9ddbf25bef7711c3404549d95b730f7dec3210e7",
+      "subject": "i18n: Danish translates status and error messages (#7553)"
     },
-    "last_commit_ts": "2026-11-14T20:23:15Z",
+    "last_commit_ts": "2026-11-14T21:23:09Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       41,
@@ -584,7 +584,7 @@
       123,
       254,
       240,
-      237
+      246
     ],
     "days": [
       {
@@ -1431,20 +1431,20 @@
       },
       {
         "d": "2026-11-14",
-        "code": 237,
+        "code": 246,
         "other": 8,
         "samples": [
           {
-            "commit": "107078a",
-            "subject": "i18n: Brazilian Portuguese spells Relink correctly and calls process colors \"cor de processo\" in two messages (#7579)"
+            "commit": "9ddbf25",
+            "subject": "i18n: Danish translates status and error messages (#7553)"
           },
           {
-            "commit": "b0470e9",
-            "subject": "Learn: the tabs, skill and tutorial rows and Back run commands (#7450)"
+            "commit": "bb59d1c",
+            "subject": "Asset Export: Create Sub-folders, Open Location after Export and Format Settings in the panel menu (#7657)"
           },
           {
-            "commit": "2e3fc0b",
-            "subject": ".ai save: type written as outlines keeps wrapping by its bounds (#7616)"
+            "commit": "3ccafde",
+            "subject": ".ai save: text wrap fixes for cut-away clipping fills and symbols without room (#7466)"
           }
         ]
       }
@@ -7759,7 +7759,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "a901c02",
+      "commit_full": "a901c024e5123ec802de321bce45effcf3c4db0c",
+      "commit_date": "2026-11-15T04:22:37+07:00",
+      "ts": "2026-11-14T21:22:37Z",
+      "message": "Cutting Tools: Nest Shapes packs the selected objects onto a sheet or roll (#7387)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-10",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-14T20:29:02+00:00"
+  "updated_at": "2026-11-14T21:58:33+00:00"
 }

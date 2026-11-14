@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 37.7,
+    "score": 37.8,
     "active_days_7d": 7,
-    "changes_7d": 1177,
-    "changes_14d": 1899,
+    "changes_7d": 1188,
+    "changes_14d": 1910,
     "housekeeping_7d": 71,
     "last_code_change": {
-      "ts": "2026-11-14T20:35:06Z",
-      "commit": "be93b56",
-      "commit_full": "be93b5610fdb52e41a83915abc70345a87186410",
-      "subject": "Curve stretching: make closed curves independent of selection order (#16632) (#16883)"
+      "ts": "2026-11-14T21:36:24Z",
+      "commit": "b0a5b08",
+      "commit_full": "b0a5b080a50980b19f30de7c555c46cfebd2a07f",
+      "subject": "solidcore: a curve extended keeping its proportion reaches the asked length or is refused (#16635) (#16837)"
     },
-    "last_commit_ts": "2026-11-14T20:35:06Z",
+    "last_commit_ts": "2026-11-14T21:36:24Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       128,
@@ -93,7 +93,7 @@
       149,
       191,
       203,
-      174
+      185
     ],
     "days": [
       {
@@ -820,20 +820,20 @@
       },
       {
         "d": "2026-11-14",
-        "code": 174,
+        "code": 185,
         "other": 18,
         "samples": [
           {
-            "commit": "be93b56",
-            "subject": "Curve stretching: make closed curves independent of selection order (#16632) (#16883)"
+            "commit": "b0a5b08",
+            "subject": "solidcore: a curve extended keeping its proportion reaches the asked length or is refused (#16635) (#16837)"
           },
           {
-            "commit": "392356f",
-            "subject": "solidcore: blends at a near-straight corner join only below the B-rep's intersection tolerance (#16627) (#16681)"
+            "commit": "0db6aab",
+            "subject": "Fillet: a round that stops at a crease is no longer refused as overlapping rounds it never reaches (#16729) (#16856)"
           },
           {
-            "commit": "95a0801",
-            "subject": "Chamfer and fillet: a narrow blend on a cylinder's rim builds, because a ray from just under the top no longer misses the wall (#16019, #13673) (#16052)"
+            "commit": "12dae2b",
+            "subject": "solidcore: the shell's exact edges meet a plane square to a cone's axis at its exact circle (#16587) (#16589)"
           }
         ]
       }
@@ -2427,5 +2427,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-14T21:04:48+00:00"
+  "updated_at": "2026-11-14T21:59:46+00:00"
 }
