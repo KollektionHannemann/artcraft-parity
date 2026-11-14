@@ -87,18 +87,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 11.7,
+    "score": 11.9,
     "active_days_7d": 7,
-    "changes_7d": 25,
-    "changes_14d": 123,
+    "changes_7d": 26,
+    "changes_14d": 124,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-14T20:21:33Z",
-      "commit": "703d3b1",
-      "commit_full": "703d3b1cf4ae4633ee12a863df183e6ecdba2433",
-      "subject": "Bound SBS input bytes, wire counts and stored warnings (#237)"
+      "ts": "2026-11-14T20:55:15Z",
+      "commit": "3a08213",
+      "commit_full": "3a08213c552be2830069f7f6d7a19b4a207a7bad",
+      "subject": "formats: create atomic-write temps exclusively so a planted symlink is never followed (#239)"
     },
-    "last_commit_ts": "2026-11-14T20:21:33Z",
+    "last_commit_ts": "2026-11-14T20:55:15Z",
     "repo_since": "2026-11-01T19:58:46Z",
     "window": [
       12,
@@ -114,7 +114,7 @@
       5,
       1,
       1,
-      4
+      5
     ],
     "days": [
       {
@@ -350,9 +350,13 @@
       },
       {
         "d": "2026-11-14",
-        "code": 4,
+        "code": 5,
         "other": 1,
         "samples": [
+          {
+            "commit": "3a08213",
+            "subject": "formats: create atomic-write temps exclusively so a planted symlink is never followed (#239)"
+          },
           {
             "commit": "703d3b1",
             "subject": "Bound SBS input bytes, wire counts and stored warnings (#237)"
@@ -360,10 +364,6 @@
           {
             "commit": "6f5812f",
             "subject": "engine: cap linked SBS resources at 256 MiB (#236)"
-          },
-          {
-            "commit": "3a2b421",
-            "subject": "Refuse oversized .mcraft archives (#235)"
           }
         ]
       }
@@ -528,5 +528,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-14T20:30:03+00:00"
+  "updated_at": "2026-11-14T21:04:38+00:00"
 }

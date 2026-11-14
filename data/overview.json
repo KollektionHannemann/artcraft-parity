@@ -51,7 +51,7 @@
       "kind": "minor",
       "changes": 347,
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.42.0",
-      "prerelease": true
+      "prerelease": false
     },
     {
       "id": "solidcraft",
@@ -481,6 +481,17 @@
   ],
   "release_waves": [
     {
+      "day": "2026-11-14",
+      "apps": 1,
+      "changes": 347,
+      "largest": {
+        "id": "solidcraft",
+        "name": "SolidCraft",
+        "tag": "v0.42.0",
+        "changes": 347
+      }
+    },
+    {
       "day": "2026-11-13",
       "apps": 1,
       "changes": 0,
@@ -546,12 +557,6 @@
         "tag": "v0.22.0",
         "changes": 495
       }
-    },
-    {
-      "day": "2026-11-05",
-      "apps": 15,
-      "changes": 0,
-      "largest": null
     }
   ],
   "apps": [
@@ -916,14 +921,14 @@
         "active_days_7d": 7,
         "changes_7d": 150,
         "changes_14d": 292,
-        "housekeeping_7d": 9,
+        "housekeeping_7d": 10,
         "last_code_change": {
           "ts": "2026-11-14T20:22:27Z",
           "commit": "323cf78",
           "commit_full": "323cf78232ff3c07f9dbb7989ed729d5851c9773",
           "subject": "UI: open font dropdown and select font name on click (#5914) (#5926)"
         },
-        "last_commit_ts": "2026-11-14T20:22:27Z",
+        "last_commit_ts": "2026-11-14T20:40:06Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
           14,
@@ -1032,18 +1037,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 18.1,
+        "score": 18.3,
         "active_days_7d": 7,
-        "changes_7d": 89,
-        "changes_14d": 224,
+        "changes_7d": 90,
+        "changes_14d": 225,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-14T19:33:05Z",
-          "commit": "1709a32",
-          "commit_full": "1709a32102442070fd75a7490b7d86f56d92851c",
-          "subject": "engine: cap project files at 256 MiB on every read (#4796)"
+          "ts": "2026-11-14T20:51:08Z",
+          "commit": "7ac54e9",
+          "commit_full": "7ac54e9727474e9a6ab05ee9c213ae81a01dfe24",
+          "subject": "#2960: target narrow gaps in context menus (#4578)"
         },
-        "last_commit_ts": "2026-11-14T19:33:05Z",
+        "last_commit_ts": "2026-11-14T20:51:08Z",
         "repo_since": "2026-09-30T09:22:00Z",
         "window": [
           30,
@@ -1059,7 +1064,7 @@
           28,
           13,
           11,
-          5
+          6
         ]
       },
       "release": {
@@ -1167,14 +1172,14 @@
         "active_days_7d": 7,
         "changes_7d": 61,
         "changes_14d": 153,
-        "housekeeping_7d": 3,
+        "housekeeping_7d": 4,
         "last_code_change": {
           "ts": "2026-11-14T09:33:39Z",
           "commit": "b0c77eb",
           "commit_full": "b0c77ebd6a6fe6c9037cfbe1c8a7f397304b2205",
           "subject": "ui-egui: cfg `opening_generation` off wasm32 and lint the wasm set with -D warnings (#1954) (#1961)"
         },
-        "last_commit_ts": "2026-11-14T09:33:39Z",
+        "last_commit_ts": "2026-11-14T20:45:54Z",
         "repo_since": "2026-10-06T02:13:02Z",
         "window": [
           3,
@@ -1719,18 +1724,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 18.4,
+        "score": 18.5,
         "active_days_7d": 7,
-        "changes_7d": 111,
-        "changes_14d": 212,
-        "housekeeping_7d": 6,
+        "changes_7d": 112,
+        "changes_14d": 213,
+        "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-14T20:21:20Z",
-          "commit": "f5087ea",
-          "commit_full": "f5087eae963c6f8474abb45669ce2b7275761e6d",
-          "subject": "PDF: allow only web and mail link schemes (#2804)"
+          "ts": "2026-11-14T20:42:07Z",
+          "commit": "abac0a9",
+          "commit_full": "abac0a9bce707b82ba5485d5ddaaa758a838ace7",
+          "subject": "MCP: cap one request line at 4 MiB (#2803)"
         },
-        "last_commit_ts": "2026-11-14T20:21:20Z",
+        "last_commit_ts": "2026-11-14T20:46:13Z",
         "repo_since": "2026-10-01T13:00:02Z",
         "window": [
           17,
@@ -1746,7 +1751,7 @@
           21,
           56,
           5,
-          10
+          11
         ]
       },
       "release": {
@@ -1841,16 +1846,16 @@
         "level": "buzzing",
         "score": 30.1,
         "active_days_7d": 7,
-        "changes_7d": 525,
-        "changes_14d": 774,
+        "changes_7d": 526,
+        "changes_14d": 775,
         "housekeeping_7d": 12,
         "last_code_change": {
-          "ts": "2026-11-14T18:49:42Z",
-          "commit": "6297515",
-          "commit_full": "629751503165118d5fec5f70e64fe2d6592f7b53",
-          "subject": "chore: cut over remaining resvg and roxmltree usages to craft-svg and craft-xml (#14320)"
+          "ts": "2026-11-14T20:39:15Z",
+          "commit": "0fd3210",
+          "commit_full": "0fd3210c2058de528b741d192f39315f8331a84c",
+          "subject": "i18n: move the craft-i18n pin to e56d262 (#14689)"
         },
-        "last_commit_ts": "2026-11-14T19:33:10Z",
+        "last_commit_ts": "2026-11-14T20:39:15Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           11,
@@ -1866,7 +1871,7 @@
           180,
           45,
           74,
-          28
+          29
         ]
       },
       "release": {
@@ -2203,14 +2208,14 @@
         "active_days_7d": 7,
         "changes_7d": 40,
         "changes_14d": 142,
-        "housekeeping_7d": 6,
+        "housekeeping_7d": 7,
         "last_code_change": {
           "ts": "2026-11-14T14:22:22Z",
           "commit": "8e69890",
           "commit_full": "8e6989022398ff5f79adaab77d19fdd7137591f3",
           "subject": "DXF: write a MINSERT with the AcDbMInsertBlock marker (#3127) (#3131)"
         },
-        "last_commit_ts": "2026-11-14T14:22:22Z",
+        "last_commit_ts": "2026-11-14T20:45:54Z",
         "repo_since": "2026-10-06T00:15:47Z",
         "window": [
           17,
@@ -2433,18 +2438,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.6,
-        "active_days_7d": 6,
-        "changes_7d": 51,
-        "changes_14d": 172,
+        "score": 14.6,
+        "active_days_7d": 7,
+        "changes_7d": 52,
+        "changes_14d": 173,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-13T11:58:42Z",
-          "commit": "386630e",
-          "commit_full": "386630ee85cb22679295b24013575d1aecb39ad2",
-          "subject": "Stop reading Alembic indexed metadata after 255 entries (#464)"
+          "ts": "2026-11-14T20:42:13Z",
+          "commit": "b89badc",
+          "commit_full": "b89badcd6f883751f79960f93c554fb77f063885",
+          "subject": "Budget the total payload of one .mcmat (#499)"
         },
-        "last_commit_ts": "2026-11-13T11:58:42Z",
+        "last_commit_ts": "2026-11-14T20:42:13Z",
         "repo_since": "2026-10-14T18:33:13Z",
         "window": [
           40,
@@ -2460,7 +2465,7 @@
           10,
           8,
           9,
-          0
+          1
         ]
       },
       "release": {
@@ -2541,18 +2546,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 11.7,
+        "score": 11.9,
         "active_days_7d": 7,
-        "changes_7d": 25,
-        "changes_14d": 123,
+        "changes_7d": 26,
+        "changes_14d": 124,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-14T20:21:33Z",
-          "commit": "703d3b1",
-          "commit_full": "703d3b1cf4ae4633ee12a863df183e6ecdba2433",
-          "subject": "Bound SBS input bytes, wire counts and stored warnings (#237)"
+          "ts": "2026-11-14T20:55:15Z",
+          "commit": "3a08213",
+          "commit_full": "3a08213c552be2830069f7f6d7a19b4a207a7bad",
+          "subject": "formats: create atomic-write temps exclusively so a planted symlink is never followed (#239)"
         },
-        "last_commit_ts": "2026-11-14T20:21:33Z",
+        "last_commit_ts": "2026-11-14T20:55:15Z",
         "repo_since": "2026-11-01T19:58:46Z",
         "window": [
           12,
@@ -2568,7 +2573,7 @@
           5,
           1,
           1,
-          4
+          5
         ]
       },
       "release": {
@@ -2757,18 +2762,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 37.6,
+        "score": 37.7,
         "active_days_7d": 7,
-        "changes_7d": 1167,
-        "changes_14d": 1889,
+        "changes_7d": 1177,
+        "changes_14d": 1899,
         "housekeeping_7d": 71,
         "last_code_change": {
-          "ts": "2026-11-14T20:02:41Z",
-          "commit": "6836155",
-          "commit_full": "6836155481ce08aabaf51f1adbf60a133d16654e",
-          "subject": "Replace Face and other body-named face features: a face of another body near the pick no longer takes the named body's place (#16915)"
+          "ts": "2026-11-14T20:35:06Z",
+          "commit": "be93b56",
+          "commit_full": "be93b5610fdb52e41a83915abc70345a87186410",
+          "subject": "Curve stretching: make closed curves independent of selection order (#16632) (#16883)"
         },
-        "last_commit_ts": "2026-11-14T20:02:41Z",
+        "last_commit_ts": "2026-11-14T20:35:06Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           128,
@@ -2784,16 +2789,16 @@
           149,
           191,
           203,
-          164
+          174
         ]
       },
       "release": {
-        "tag": "v0.41.0",
-        "name": "SolidCraft v0.41.0",
-        "ts": "2026-11-13T04:19:07Z",
-        "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.41.0",
-        "changes": null,
-        "new_contributors": null,
+        "tag": "v0.42.0",
+        "name": "SolidCraft v0.42.0",
+        "ts": "2026-11-14T19:55:43Z",
+        "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.42.0",
+        "changes": 347,
+        "new_contributors": 8,
         "platforms": [
           "macOS",
           "Windows",
@@ -2857,14 +2862,14 @@
         "active_days_7d": 6,
         "changes_7d": 101,
         "changes_14d": 124,
-        "housekeeping_7d": 13,
+        "housekeeping_7d": 14,
         "last_code_change": {
           "ts": "2026-11-14T15:22:24Z",
           "commit": "6784cf7",
           "commit_full": "6784cf72ce30e99105e1ff6a2dde6aa517e2b047",
           "subject": "fix(naming): remove comparative own-feature wording (#46)"
         },
-        "last_commit_ts": "2026-11-14T18:44:44Z",
+        "last_commit_ts": "2026-11-14T20:45:55Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
           0,
@@ -2916,5 +2921,5 @@
       }
     ]
   },
-  "generated_at": "2026-11-14T20:30:35+00:00"
+  "generated_at": "2026-11-14T21:04:51+00:00"
 }
