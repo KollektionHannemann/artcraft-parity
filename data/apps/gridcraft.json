@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/gridcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/gridcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "c0ee120",
-  "latest_commit_date": "2026-11-12T19:55:40+01:00",
-  "latest_message": "Charts: resolved data and rendering are cached between frames (#1139) (#1140)",
+  "latest_commit": "a8a51e3",
+  "latest_commit_date": "2026-11-14T16:56:12+01:00",
+  "latest_message": "XLSX: warn when a pivot cache can't be read or is too large (#1039) (#2491)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -435,7 +435,7 @@
     "value_since": "2026-10-10T18:09:06Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 99,
+    "revisions_since": 100,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -443,39 +443,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 101,
-    "revisions_7d": 10,
+    "revisions": 102,
+    "revisions_7d": 11,
     "last_revision": {
-      "ts": "2026-11-12T18:55:40Z",
+      "ts": "2026-11-14T15:56:12Z",
       "kind": "content",
-      "commit": "c0ee120",
-      "commit_full": "c0ee120ac2d9b59630f5abf1151dd9b471fe2926",
-      "message": "Charts: resolved data and rendering are cached between frames (#1139) (#1140)"
+      "commit": "a8a51e3",
+      "commit_full": "a8a51e3cf7857ef5f2911e7fd4ba5d9ceef1177b",
+      "message": "XLSX: warn when a pivot cache can't be read or is too large (#1039) (#2491)"
     },
     "last_update": {
-      "ts": "2026-11-12T18:55:40Z",
+      "ts": "2026-11-14T15:56:12Z",
       "kind": "content",
-      "commit": "c0ee120",
-      "commit_full": "c0ee120ac2d9b59630f5abf1151dd9b471fe2926",
-      "message": "Charts: resolved data and rendering are cached between frames (#1139) (#1140)"
+      "commit": "a8a51e3",
+      "commit_full": "a8a51e3cf7857ef5f2911e7fd4ba5d9ceef1177b",
+      "message": "XLSX: warn when a pivot cache can't be read or is too large (#1039) (#2491)"
     },
     "self_reported": "2026-11-05"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.0,
+    "score": 16.0,
     "active_days_7d": 6,
-    "changes_7d": 88,
-    "changes_14d": 192,
+    "changes_7d": 94,
+    "changes_14d": 198,
     "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-14T14:22:59Z",
-      "commit": "40783ab",
-      "commit_full": "40783ab1847046d79b01fbbb74ade04505d3f67f",
-      "subject": "functions: ACCRINTM accrues zero when issue equals settlement (#4096) (#4102)"
+      "ts": "2026-11-14T15:57:27Z",
+      "commit": "c2aba7a",
+      "commit_full": "c2aba7a3f42c35db1de9f29c583accac57d8f701",
+      "subject": "perf: win back formula-entry and XLSX-save time lost since 23829d8c (#2654)"
     },
-    "last_commit_ts": "2026-11-14T14:22:59Z",
+    "last_commit_ts": "2026-11-14T15:57:27Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       17,
@@ -491,7 +491,7 @@
       41,
       11,
       0,
-      1
+      7
     ],
     "days": [
       {
@@ -1127,12 +1127,20 @@
       },
       {
         "d": "2026-11-14",
-        "code": 1,
+        "code": 7,
         "other": 0,
         "samples": [
           {
-            "commit": "40783ab",
-            "subject": "functions: ACCRINTM accrues zero when issue equals settlement (#4096) (#4102)"
+            "commit": "c2aba7a",
+            "subject": "perf: win back formula-entry and XLSX-save time lost since 23829d8c (#2654)"
+          },
+          {
+            "commit": "a8a51e3",
+            "subject": "XLSX: warn when a pivot cache can't be read or is too large (#1039) (#2491)"
+          },
+          {
+            "commit": "45ee4ec",
+            "subject": "Keep mid-field quotes when splitting with Text to Columns (#2438)"
           }
         ]
       }
@@ -3668,7 +3676,30 @@
       "breadth_pct": 75.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "a8a51e3",
+      "commit_full": "a8a51e3cf7857ef5f2911e7fd4ba5d9ceef1177b",
+      "commit_date": "2026-11-14T16:56:12+01:00",
+      "ts": "2026-11-14T15:56:12Z",
+      "message": "XLSX: warn when a pivot cache can't be read or is too large (#1039) (#2491)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-05",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-14T14:31:13+00:00"
+  "updated_at": "2026-11-14T16:01:09+00:00"
 }
