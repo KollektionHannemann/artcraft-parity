@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "b5fa2f9",
-  "latest_commit_date": "2026-11-13T10:33:51+01:00",
-  "latest_message": "Layout: add Fit One Page (#6433) (#6436)",
+  "latest_commit": "b02baeb",
+  "latest_commit_date": "2026-11-14T12:16:34+01:00",
+  "latest_message": "Apply Format Painter on single-click release (#1455) (#2274)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 595,
+    "revisions_since": 596,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 599,
-    "revisions_7d": 81,
+    "revisions": 600,
+    "revisions_7d": 82,
     "last_revision": {
-      "ts": "2026-11-13T09:33:51Z",
+      "ts": "2026-11-14T11:16:34Z",
       "kind": "content",
-      "commit": "b5fa2f9",
-      "commit_full": "b5fa2f9ed415304bfe412c682052e7871b2e22ce",
-      "message": "Layout: add Fit One Page (#6433) (#6436)"
+      "commit": "b02baeb",
+      "commit_full": "b02baeba43129f7acffbcc3f3b7b5d00dd6e94df",
+      "message": "Apply Format Painter on single-click release (#1455) (#2274)"
     },
     "last_update": {
-      "ts": "2026-11-13T09:33:51Z",
+      "ts": "2026-11-14T11:16:34Z",
       "kind": "content",
-      "commit": "b5fa2f9",
-      "commit_full": "b5fa2f9ed415304bfe412c682052e7871b2e22ce",
-      "message": "Layout: add Fit One Page (#6433) (#6436)"
+      "commit": "b02baeb",
+      "commit_full": "b02baeba43129f7acffbcc3f3b7b5d00dd6e94df",
+      "message": "Apply Format Painter on single-click release (#1455) (#2274)"
     },
     "self_reported": "2026-11-12"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.9,
+    "score": 18.2,
     "active_days_7d": 7,
-    "changes_7d": 146,
-    "changes_14d": 288,
+    "changes_7d": 147,
+    "changes_14d": 289,
     "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-14T07:51:29Z",
-      "commit": "60415e0",
-      "commit_full": "60415e055c86738f827f8862576d1cb107a2c818",
-      "subject": "fix(xtask): allow wordcraft-formats -> wordcraft-docx in INTRA_LAYER_ORDER (#6618)"
+      "ts": "2026-11-14T11:16:34Z",
+      "commit": "b02baeb",
+      "commit_full": "b02baeba43129f7acffbcc3f3b7b5d00dd6e94df",
+      "subject": "Apply Format Painter on single-click release (#1455) (#2274)"
     },
-    "last_commit_ts": "2026-11-14T07:51:29Z",
+    "last_commit_ts": "2026-11-14T11:16:34Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       14,
@@ -568,7 +568,7 @@
       19,
       4,
       11,
-      4
+      5
     ],
     "days": [
       {
@@ -1257,9 +1257,13 @@
       },
       {
         "d": "2026-11-14",
-        "code": 4,
+        "code": 5,
         "other": 0,
         "samples": [
+          {
+            "commit": "b02baeb",
+            "subject": "Apply Format Painter on single-click release (#1455) (#2274)"
+          },
           {
             "commit": "60415e0",
             "subject": "fix(xtask): allow wordcraft-formats -> wordcraft-docx in INTRA_LAYER_ORDER (#6618)"
@@ -1267,10 +1271,6 @@
           {
             "commit": "0db15a1",
             "subject": "fix(docx): fix main CI wordcraft-docx integration test failures (#6617)"
-          },
-          {
-            "commit": "669d5df",
-            "subject": "Fix CI formatting and clippy lints after craft-libs cutover (#6612)"
           }
         ]
       }
@@ -15278,7 +15278,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "b02baeb",
+      "commit_full": "b02baeba43129f7acffbcc3f3b7b5d00dd6e94df",
+      "commit_date": "2026-11-14T12:16:34+01:00",
+      "ts": "2026-11-14T11:16:34Z",
+      "message": "Apply Format Painter on single-click release (#1455) (#2274)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-12",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-14T08:36:59+00:00"
+  "updated_at": "2026-11-14T12:01:09+00:00"
 }
