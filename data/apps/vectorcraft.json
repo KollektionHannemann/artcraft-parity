@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "ea0e814",
-  "latest_commit_date": "2026-11-14T16:49:14+07:00",
-  "latest_message": "i18n: add Gujarati (gu) interface catalog (#6613)",
+  "latest_commit": "8deaeda",
+  "latest_commit_date": "2026-11-14T20:34:29+07:00",
+  "latest_message": "Symbols: built-in Weather Icons symbol library (#7516)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -339,6 +339,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-14",
+        "text": "Built-in symbol library Weather Icons: adds a sixth procedural symbol library (Window › Symbol Libraries, the Symbols panel's Symbol Libraries Menu) containing six original vector symbols (Sun, Moon, Cloud, Rain, Thunder, Snow) generated in code without default 9-slice guides (part of Gap 5). Headline numbers unchanged."
+      },
+      {
         "date": "2026-11-13",
         "text": "Banner Hems and Grommets in the Cutting Tools add-on (Object › Plug-ins › Cutting Tools): on the chosen sides of the selected art's bounds, or of each artboard, a hem line at a set depth inside the edge and grommet marks (a circle with a cross) at a set inset, one at each end of a side and the rest spread evenly at most a set spacing apart, stroked in a chosen swatch; a dialog with Preview, one undo step (addon.cutting.banner). A VectorCraft addition: headline numbers unchanged."
       },
@@ -493,10 +497,6 @@
       {
         "date": "2026-10-19",
         "text": "About 90 community PRs landed in batches through the full gate, with our fixes on top (formatting, catalog rows, small correctness fixes). New: Objects on Path (#3066), Object › Path › Simplify's slider with Auto-Simplify and More Options (#2555), Pencil Edit Selected Paths redraws the middle of a selected path (#2905), Pencil Tool Options' Alt key toggles to Smooth Tool (#2685), 3D solids built from each stroke's outline (#3049), Live Paint Selection Tool Options (#3052), Locate Selected Objects in the Layers panel (#3033), Snap to Unit for tab stops (#3039), DXF circles and arcs as native entities (#2962), Targa files (#2765), a Georgian interface (#2045), Traditional Chinese status and error messages (#2784), the web page's window.vectorcraft control channel (#2943), select.color (#2939), reproducible export bytes with SOURCEDATEEPOCH (#2947), Spacing Guides on resizes (#2966) and measurement labels on more tools. Fixed: number fields step to the next whole unit (#2916), a click away from edited type makes no new text (#2922), inch rulers in halves (#2951), Recent cards in New Document (#2904), Japanese W-weights in SVG (#2896), the point-type baseline marker (#2897) and the Reshape tool's falloff (#2900). Headline numbers unchanged."
-      },
-      {
-        "date": "2026-10-18",
-        "text": "Inch rulers divide the inch in half, not in ten. Zooming in stepped an inch ruler through 0.2, 0.1 and 0.05 of an inch, marks an inch ruler does not carry; below an inch the steps are binary fractions now, 1/2 down to 1/16, with the unlabelled ticks between them binary too (down to 1/128, so the 32nds, 64ths and 128ths appear as the report expects), while the metric units, points, pixels and picas keep their tenths. A label carries the decimals its step needs, so a sixteenth reads 0.0625 rather than the rounded 0.06, with trailing zeros dropped (#2827). Headline numbers unchanged."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 230,
+    "revisions_since": 231,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,39 +536,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 231,
-    "revisions_7d": 16,
+    "revisions": 232,
+    "revisions_7d": 17,
     "last_revision": {
-      "ts": "2026-11-14T09:49:14Z",
+      "ts": "2026-11-14T13:34:29Z",
       "kind": "content",
-      "commit": "ea0e814",
-      "commit_full": "ea0e8142e9c9b95230c3fe3765b1a07656d18718",
-      "message": "i18n: add Gujarati (gu) interface catalog (#6613)"
+      "commit": "8deaeda",
+      "commit_full": "8deaeda1f5a805336a33a3f3ad474a38b113414b",
+      "message": "Symbols: built-in Weather Icons symbol library (#7516)"
     },
     "last_update": {
-      "ts": "2026-11-14T09:49:14Z",
+      "ts": "2026-11-14T13:34:29Z",
       "kind": "content",
-      "commit": "ea0e814",
-      "commit_full": "ea0e8142e9c9b95230c3fe3765b1a07656d18718",
-      "message": "i18n: add Gujarati (gu) interface catalog (#6613)"
+      "commit": "8deaeda",
+      "commit_full": "8deaeda1f5a805336a33a3f3ad474a38b113414b",
+      "message": "Symbols: built-in Weather Icons symbol library (#7516)"
     },
     "self_reported": "2026-11-10"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 36.4,
+    "score": 36.8,
     "active_days_7d": 7,
-    "changes_7d": 1069,
-    "changes_14d": 1750,
-    "housekeeping_7d": 39,
+    "changes_7d": 1099,
+    "changes_14d": 1780,
+    "housekeeping_7d": 40,
     "last_code_change": {
-      "ts": "2026-11-14T12:37:29Z",
-      "commit": "9a8b7bc",
-      "commit_full": "9a8b7bc3dbfbf6501dba2a362dc3415343b3bb39",
-      "subject": "Appearance: a group's own fills and strokes follow a clip group's clipping path, not the art it hides (#7289) (#7517)"
+      "ts": "2026-11-14T13:39:02Z",
+      "commit": "9f91f96",
+      "commit_full": "9f91f96f184f85b811b208654ddf3e93ccd2b172",
+      "subject": "Actions: Load Actions reports steps with unknown command ids (#7286)"
     },
-    "last_commit_ts": "2026-11-14T12:37:29Z",
+    "last_commit_ts": "2026-11-14T13:39:02Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       41,
@@ -584,7 +584,7 @@
       123,
       254,
       240,
-      91
+      121
     ],
     "days": [
       {
@@ -1431,20 +1431,20 @@
       },
       {
         "d": "2026-11-14",
-        "code": 91,
-        "other": 0,
+        "code": 121,
+        "other": 1,
         "samples": [
           {
-            "commit": "9a8b7bc",
-            "subject": "Appearance: a group's own fills and strokes follow a clip group's clipping path, not the art it hides (#7289) (#7517)"
+            "commit": "9f91f96",
+            "subject": "Actions: Load Actions reports steps with unknown command ids (#7286)"
           },
           {
-            "commit": "124e3cc",
-            "subject": "i18n: French keeps [subpath, anchor] in English (fix main) (#7537)"
+            "commit": "8d1aa85",
+            "subject": "Contextual Task Bar: Smooth opens the Smooth slider with Direct Selection (#7276)"
           },
           {
-            "commit": "edb228a",
-            "subject": "MCP: path, type, panel, library, style and ruler indices refuse a wrong-type value (#7402)"
+            "commit": "94237e0",
+            "subject": ".ai export: the pieces of a warped image write only the pixels they show (#7268)"
           }
         ]
       }
@@ -7733,7 +7733,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "8deaeda",
+      "commit_full": "8deaeda1f5a805336a33a3f3ad474a38b113414b",
+      "commit_date": "2026-11-14T20:34:29+07:00",
+      "ts": "2026-11-14T13:34:29Z",
+      "message": "Symbols: built-in Weather Icons symbol library (#7516)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-10",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-14T12:37:37+00:00"
+  "updated_at": "2026-11-14T13:39:53+00:00"
 }

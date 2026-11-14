@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/designcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "c509445",
-  "latest_commit_date": "2026-11-14T00:34:31Z",
-  "latest_message": "IDML export: keep endnote reference numbers (#2753) (#2764)",
+  "latest_commit": "e230c4e",
+  "latest_commit_date": "2026-11-14T14:37:17+01:00",
+  "latest_message": "PDF export: attach working CMYK profile as /DefaultCMYK (#2743) (#2751)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -319,6 +319,10 @@
         "text": "· Object › Text Frame Options shows the inset spacing (one Inset for a non-rectangular frame), the column width and gutter and the paragraph spacing limit in the document's ruler units, as the Properties panel does, instead of always in picas, and a bare number typed in any of its measure fields is in those units (#2739). No readiness percentage change."
       },
       {
+        "date": "2026-11-13",
+        "text": "· PDF exports outside PDF/X-1a and PDF/A-2b attach the CMYK working space's ICC profile as /DefaultCMYK ([/ICCBased …]) on every page, inherited /Pages resource dict, Form XObject, SMask form, tiling pattern, and Type3 font resource scope (#2743). Plain print exports and booklets embed one shared Flate-compressed /N 4 profile stream without adding /OutputIntents or /Trapped; PDF/X-4 reuses its catalog /DestOutputProfile; RGB-blend documents attach /DefaultCMYK when they draw in DeviceCMYK and skip it for pure RGB. Viewers that honor /DefaultCMYK instead of /OutputIntents (including Apple Quartz and MuPDF) now render CMYK colors consistently with the working space across both plain and PDF/X-4 exports. No readiness percentage change."
+      },
+      {
         "date": "2026-11-12",
         "text": "· Properties › Text Frame shows the frame's inset spacing (Top, Bottom, Left and Right with a link that makes all four the same; one Inset for a non-rectangular frame) and four Vertical Justification buttons (Top, Center, Bottom, Justify), and the section also shows with the Type tool in a frame, where it changes the frame that shows the insertion point. No readiness percentage change."
       },
@@ -465,10 +469,6 @@
       {
         "date": "2026-10-28",
         "text": "· Autoflow no longer sizes the rest of a story by a frame that a Start Paragraph option (next column, frame, page, or odd or even page) ends early (#1209). With a title before a chapter that starts on the next odd page, it estimated a page per few characters, added up to 2000 pages (the autoflow limit) and removed them again: placing 2000 words took 36 s in the app, now 0.4 s, with the same pages. It looks past tracked-deleted paragraphs for the option, as composing does, and asks for every frame that start options and breaks force in one round: 200 one-line chapters on their own pages take 9 ms (58 ms before). A break and the start option it meets count once, and breaks that tracked changes delete or a hidden condition hides don't count. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-28",
-        "text": "· IDML export writes the document's default StoryPreference in Resources/Preferences.xml, as InDesign does. Only each story carried one, and IDML readers that take the spread reading order from the document's (Okapi's IDML filter) failed on DesignCraft's files. No readiness percentage change."
       }
     ]
   },
@@ -477,7 +477,7 @@
     "value_since": "2026-10-10T18:09:17Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 212,
+    "revisions_since": 213,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -485,39 +485,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 213,
-    "revisions_7d": 21,
+    "revisions": 214,
+    "revisions_7d": 22,
     "last_revision": {
-      "ts": "2026-11-14T00:34:31Z",
+      "ts": "2026-11-14T13:37:17Z",
       "kind": "content",
-      "commit": "c509445",
-      "commit_full": "c509445ed0e811bd74402b05b69af725379aaca4",
-      "message": "IDML export: keep endnote reference numbers (#2753) (#2764)"
+      "commit": "e230c4e",
+      "commit_full": "e230c4e406211d3a5965727d80035563e113be60",
+      "message": "PDF export: attach working CMYK profile as /DefaultCMYK (#2743) (#2751)"
     },
     "last_update": {
-      "ts": "2026-11-14T00:34:31Z",
+      "ts": "2026-11-14T13:37:17Z",
       "kind": "content",
-      "commit": "c509445",
-      "commit_full": "c509445ed0e811bd74402b05b69af725379aaca4",
-      "message": "IDML export: keep endnote reference numbers (#2753) (#2764)"
+      "commit": "e230c4e",
+      "commit_full": "e230c4e406211d3a5965727d80035563e113be60",
+      "message": "PDF export: attach working CMYK profile as /DefaultCMYK (#2743) (#2751)"
     },
     "self_reported": "2026-11-06"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.5,
+    "score": 17.5,
     "active_days_7d": 7,
-    "changes_7d": 103,
-    "changes_14d": 204,
+    "changes_7d": 106,
+    "changes_14d": 207,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-14T03:36:04Z",
-      "commit": "7107a64",
-      "commit_full": "7107a64d6c7d4506604029110130b1b0be377c35",
-      "subject": "Cut over document formats and codecs to craft-libs (#778) (#2766)"
+      "ts": "2026-11-14T13:37:17Z",
+      "commit": "e230c4e",
+      "commit_full": "e230c4e406211d3a5965727d80035563e113be60",
+      "subject": "PDF export: attach working CMYK profile as /DefaultCMYK (#2743) (#2751)"
     },
-    "last_commit_ts": "2026-11-14T03:36:04Z",
+    "last_commit_ts": "2026-11-14T13:37:17Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       17,
@@ -533,7 +533,7 @@
       21,
       56,
       5,
-      2
+      5
     ],
     "days": [
       {
@@ -1324,16 +1324,20 @@
       },
       {
         "d": "2026-11-14",
-        "code": 2,
+        "code": 5,
         "other": 0,
         "samples": [
           {
-            "commit": "7107a64",
-            "subject": "Cut over document formats and codecs to craft-libs (#778) (#2766)"
+            "commit": "e230c4e",
+            "subject": "PDF export: attach working CMYK profile as /DefaultCMYK (#2743) (#2751)"
           },
           {
-            "commit": "c509445",
-            "subject": "IDML export: keep endnote reference numbers (#2753) (#2764)"
+            "commit": "cef0612",
+            "subject": "Pin craft-psd to storytold/craft-libs (#2791)"
+          },
+          {
+            "commit": "b73c3dd",
+            "subject": "Build: restore designcraft_format::write; render decode without the image crate (#2780)"
           }
         ]
       }
@@ -6445,7 +6449,30 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "e230c4e",
+      "commit_full": "e230c4e406211d3a5965727d80035563e113be60",
+      "commit_date": "2026-11-14T14:37:17+01:00",
+      "ts": "2026-11-14T13:37:17Z",
+      "message": "PDF export: attach working CMYK profile as /DefaultCMYK (#2743) (#2751)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-06",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-14T04:38:38+00:00"
+  "updated_at": "2026-11-14T13:40:11+00:00"
 }
