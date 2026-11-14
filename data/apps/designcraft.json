@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/designcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "40cc78d",
-  "latest_commit_date": "2026-11-13T21:08:26Z",
-  "latest_message": "Text Frame Options: insets and gutter in the ruler units (#2739) (#2754)",
+  "latest_commit": "c509445",
+  "latest_commit_date": "2026-11-14T00:34:31Z",
+  "latest_message": "IDML export: keep endnote reference numbers (#2753) (#2764)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -312,6 +312,10 @@
     "progress": [
       {
         "date": "2026-11-14",
+        "text": "· IDML export keeps each endnote reference as its number in superscript text, as the endnote frame lists it, instead of dropping it; the endnotes are still written as plain text, without IDML's endnote elements (#2753). No readiness percentage change."
+      },
+      {
+        "date": "2026-11-14",
         "text": "· Object › Text Frame Options shows the inset spacing (one Inset for a non-rectangular frame), the column width and gutter and the paragraph spacing limit in the document's ruler units, as the Properties panel does, instead of always in picas, and a bare number typed in any of its measure fields is in those units (#2739). No readiness percentage change."
       },
       {
@@ -465,10 +469,6 @@
       {
         "date": "2026-10-28",
         "text": "· IDML export writes the document's default StoryPreference in Resources/Preferences.xml, as InDesign does. Only each story carried one, and IDML readers that take the spread reading order from the document's (Okapi's IDML filter) failed on DesignCraft's files. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-27",
-        "text": "· An iconic panel's flyout stays open while you work in the canvas or a text field: Auto-Collapse Iconic Panels is off by default, and preferences saved with it on start with it off. Preferences › Interface › Panels holds the setting next to the column bar's menu item. No readiness percentage change."
       }
     ]
   },
@@ -477,7 +477,7 @@
     "value_since": "2026-10-10T18:09:17Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 211,
+    "revisions_since": 212,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -485,42 +485,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 212,
+    "revisions": 213,
     "revisions_7d": 21,
     "last_revision": {
-      "ts": "2026-11-13T21:08:26Z",
+      "ts": "2026-11-14T00:34:31Z",
       "kind": "content",
-      "commit": "40cc78d",
-      "commit_full": "40cc78d8f8a917dacfd61328caa5125d38bbd367",
-      "message": "Text Frame Options: insets and gutter in the ruler units (#2739) (#2754)"
+      "commit": "c509445",
+      "commit_full": "c509445ed0e811bd74402b05b69af725379aaca4",
+      "message": "IDML export: keep endnote reference numbers (#2753) (#2764)"
     },
     "last_update": {
-      "ts": "2026-11-13T21:08:26Z",
+      "ts": "2026-11-14T00:34:31Z",
       "kind": "content",
-      "commit": "40cc78d",
-      "commit_full": "40cc78d8f8a917dacfd61328caa5125d38bbd367",
-      "message": "Text Frame Options: insets and gutter in the ruler units (#2739) (#2754)"
+      "commit": "c509445",
+      "commit_full": "c509445ed0e811bd74402b05b69af725379aaca4",
+      "message": "IDML export: keep endnote reference numbers (#2753) (#2764)"
     },
     "self_reported": "2026-11-06"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.6,
+    "score": 16.0,
     "active_days_7d": 7,
-    "changes_7d": 104,
-    "changes_14d": 224,
+    "changes_7d": 102,
+    "changes_14d": 203,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-13T21:08:26Z",
-      "commit": "40cc78d",
-      "commit_full": "40cc78d8f8a917dacfd61328caa5125d38bbd367",
-      "subject": "Text Frame Options: insets and gutter in the ruler units (#2739) (#2754)"
+      "ts": "2026-11-14T00:34:31Z",
+      "commit": "c509445",
+      "commit_full": "c509445ed0e811bd74402b05b69af725379aaca4",
+      "subject": "IDML export: keep endnote reference numbers (#2753) (#2764)"
     },
-    "last_commit_ts": "2026-11-13T21:08:26Z",
+    "last_commit_ts": "2026-11-14T00:34:31Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
-      22,
       17,
       3,
       40,
@@ -533,7 +532,8 @@
       5,
       21,
       56,
-      5
+      5,
+      1
     ],
     "days": [
       {
@@ -1319,6 +1319,17 @@
           {
             "commit": "dbdc5b6",
             "subject": "Tools: snap Gap tool drags to active snapping settings (#2637) (#2749)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-14",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "c509445",
+            "subject": "IDML export: keep endnote reference numbers (#2753) (#2764)"
           }
         ]
       }
@@ -6407,7 +6418,30 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "c509445",
+      "commit_full": "c509445ed0e811bd74402b05b69af725379aaca4",
+      "commit_date": "2026-11-14T00:34:31Z",
+      "ts": "2026-11-14T00:34:31Z",
+      "message": "IDML export: keep endnote reference numbers (#2753) (#2764)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-06",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-13T21:34:56+00:00"
+  "updated_at": "2026-11-14T00:43:46+00:00"
 }

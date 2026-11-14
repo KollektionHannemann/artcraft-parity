@@ -537,7 +537,7 @@
   },
   "roadmap": {
     "revisions": 230,
-    "revisions_7d": 16,
+    "revisions_7d": 15,
     "last_revision": {
       "ts": "2026-11-13T22:41:10Z",
       "kind": "content",
@@ -557,21 +557,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 37.0,
+    "score": 33.6,
     "active_days_7d": 7,
-    "changes_7d": 1034,
-    "changes_14d": 1785,
-    "housekeeping_7d": 40,
+    "changes_7d": 990,
+    "changes_14d": 1671,
+    "housekeeping_7d": 39,
     "last_code_change": {
-      "ts": "2026-11-13T23:27:27Z",
-      "commit": "0b29b2b",
-      "commit_full": "0b29b2b1f60d4ff5c4c3defe53c063fa17a55645",
-      "subject": "Document Info: values show in the interface language (#7267)"
+      "ts": "2026-11-14T00:34:41Z",
+      "commit": "71cef8a",
+      "commit_full": "71cef8ac8db46fd95ab35a2dea981f6c221b6405",
+      "subject": "i18n: the \"select a path\" reason is translated in every complete-message language (#7214)"
     },
-    "last_commit_ts": "2026-11-13T23:27:27Z",
+    "last_commit_ts": "2026-11-14T00:34:41Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
-      126,
       41,
       113,
       117,
@@ -584,7 +583,8 @@
       81,
       123,
       254,
-      240
+      240,
+      12
     ],
     "days": [
       {
@@ -1426,6 +1426,25 @@
           {
             "commit": "b6fb221",
             "subject": "Canvas range: removed guides are looked up through sets, and nested layers are walked once (#7308)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-14",
+        "code": 12,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "71cef8a",
+            "subject": "i18n: the \"select a path\" reason is translated in every complete-message language (#7214)"
+          },
+          {
+            "commit": "92d9604",
+            "subject": "MCP: SVG export by a confined caller refuses script links outside its read roots (#7264)"
+          },
+          {
+            "commit": "02f8a5c",
+            "subject": "Title bar: the app bar places its window buttons by the desktop's button layout (#7317)"
           }
         ]
       }
@@ -7690,5 +7709,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-13T23:27:40+00:00"
+  "updated_at": "2026-11-14T00:43:08+00:00"
 }
