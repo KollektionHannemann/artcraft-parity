@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/designcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "e230c4e",
-  "latest_commit_date": "2026-11-14T14:37:17+01:00",
-  "latest_message": "PDF export: attach working CMYK profile as /DefaultCMYK (#2743) (#2751)",
+  "latest_commit": "fca649e",
+  "latest_commit_date": "2026-11-14T14:25:09Z",
+  "latest_message": "Stroke: object.stroke refuses out-of-range numbers and unknown names (#2787)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -312,6 +312,14 @@
     "progress": [
       {
         "date": "2026-11-14",
+        "text": "· object.stroke refuses a tint or gap tint outside 0 to 1, a weight outside 0 to 1000 pt, a miter limit outside 1 to 500, a gap overprint that isn't true or false, and an alignment, cap, join or arrowhead name it doesn't have, instead of clamping the numbers and skipping the names. The Stroke panel's Weight and Miter Limit fields keep their values in those ranges. No readiness percentage change."
+      },
+      {
+        "date": "2026-11-14",
+        "text": "· Photo books no longer freeze the canvas (#1411; based on #2051 by texjer). The image cache keeps only the mip level each image is drawn at, for every format and display quality: a TIFF, PNG, PSD or CMYK JPEG used to keep its full decode too (48 MB for a 12 MP photo), so after about a dozen photos each edit evicted and decoded them again on the render thread. The canvas no longer waits for decodes: an image not cached at its size shows a light box or another cached level and decodes on one of three background threads (within the same in-flight memory limit as the decodes ahead of a render), and finished decodes are drawn in batches, at most one canvas render every 250 ms. Zooming into an image decodes it at most twice. Thumbnails and exports still wait for every image. No readiness percentage change."
+      },
+      {
+        "date": "2026-11-14",
         "text": "· IDML export keeps each endnote reference as its number in superscript text, as the endnote frame lists it, instead of dropping it; the endnotes are still written as plain text, without IDML's endnote elements (#2753). No readiness percentage change."
       },
       {
@@ -321,6 +329,10 @@
       {
         "date": "2026-11-13",
         "text": "· PDF exports outside PDF/X-1a and PDF/A-2b attach the CMYK working space's ICC profile as /DefaultCMYK ([/ICCBased …]) on every page, inherited /Pages resource dict, Form XObject, SMask form, tiling pattern, and Type3 font resource scope (#2743). Plain print exports and booklets embed one shared Flate-compressed /N 4 profile stream without adding /OutputIntents or /Trapped; PDF/X-4 reuses its catalog /DestOutputProfile; RGB-blend documents attach /DefaultCMYK when they draw in DeviceCMYK and skip it for pure RGB. Viewers that honor /DefaultCMYK instead of /OutputIntents (including Apple Quartz and MuPDF) now render CMYK colors consistently with the working space across both plain and PDF/X-4 exports. No readiness percentage change."
+      },
+      {
+        "date": "2026-11-12",
+        "text": "· A render decodes the placed images in view that are not cached yet on several threads before it draws, instead of one after another while drawing. Page thumbnails, image exports and the first canvas frame of a page with six 24 MP photos take about 1.2 s instead of 2.8 s. No readiness percentage change."
       },
       {
         "date": "2026-11-12",
@@ -440,35 +452,23 @@
       },
       {
         "date": "2026-10-30",
+        "text": "· Dropping images from the file manager works as in InDesign: images dropped together load the place cursor in the order they came, and one image dropped off a frame that takes it loads the place cursor instead of being placed at once (on a frame it still fills it). Documents and text files dropped keep opening and flowing as before. Ported from #1307 and #1666; see multi-image placement. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-30",
+        "text": "· File › Place Contact Sheet… puts every image loaded in the place cursor on new pages, in a grid of equal frames (place.contactSheet), as one undo step. Ported from #1392; see multi-image placement. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-30",
+        "text": "· Placing several images works as in InDesign. File › Place takes several files, and they load the place cursor in the order chosen: it shows the first one's thumbnail with how many are loaded (\"(6)\"), each click places the next, arrow keys while dragging lay out a grid (place.grid), and Escape unloads the rest (place.cancel). Switching, opening or closing a document unloads it too, back to the Selection tool. A drag with the cursor draws the frame at the graphic's proportions, with its scale. Ported from #1307, #1392 and #1432 (multi-image placement, cursor thumbnail and count); see multi-image placement. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-30",
         "text": "· macOS: a file dragged in from the Finder fills the frame it is dropped on. winit sends no pointer events during such a drag, so the drop asks the system where the pointer is (Services::pointer, from NSEvent.mouseLocation), at any UI scale. No readiness percentage change."
       },
       {
         "date": "2026-10-30",
         "text": "· File > Package opens a dialog, as the reference app's: a Summary of fonts, links and images and inks, pages for each, a Printing Instructions step, and a PDF made with the options of a preset (#1514, #1515)."
-      },
-      {
-        "date": "2026-10-30",
-        "text": "· IDML import reads TOC separators and entry styles written with the $ID/ prefix or as Properties children, and the TOC separator notation (^t, ^y, ^m, ^>) is shared by the dialog and IDML, with a special-character menu on the separator field (#1249, #1255)."
-      },
-      {
-        "date": "2026-10-30",
-        "text": "· Spreads show a line at each edge where two of their pages meet, on the canvas only (it isn't printed or exported), so the page boundaries inside a spread are visible while laying out across them, in the spread edge's colour. Right-to-left spreads and pages of different sizes put it on the edge the pages share; pages that don't touch, as an imported spread can keep them, get none (#1838). No readiness percentage change."
-      },
-      {
-        "date": "2026-10-29",
-        "text": "· Inserting text with many returns no longer takes time that grows with their square (part of #1588): each return copied its paragraph's format with its own insert, moving every format after it. Splitting 20,000 returns into paragraphs took 15.8 s; placing a text file of them now takes 0.2 s, and one of a million returns 5.5 s. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-28",
-        "text": "· A placed image whose pixels would decode past 1 GiB of RGBA (256 Mpx) is refused from its header, before decoding (#1586). A 288 KB 23,000 px gray PNG used to hang the first draw for 9 s and take the app to 4.5 GB; it now draws as an empty frame, and PDF export skips it with a warning. A 300 ppi A0 scan still fits. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-28",
-        "text": "· Discretionary hyphens (U+00AD) break in the single-line composer with automatic hyphenation on or off, matching the paragraph composer. Unbroken soft hyphens remain invisible and zero-width, and words containing them keep only their discretionary break points (#1955). No readiness percentage change."
-      },
-      {
-        "date": "2026-10-28",
-        "text": "· Autoflow no longer sizes the rest of a story by a frame that a Start Paragraph option (next column, frame, page, or odd or even page) ends early (#1209). With a title before a chapter that starts on the next odd page, it estimated a page per few characters, added up to 2000 pages (the autoflow limit) and removed them again: placing 2000 words took 36 s in the app, now 0.4 s, with the same pages. It looks past tracked-deleted paragraphs for the option, as composing does, and asks for every frame that start options and breaks force in one round: 200 one-line chapters on their own pages take 9 ms (58 ms before). A break and the start option it meets count once, and breaks that tracked changes delete or a hidden condition hides don't count. No readiness percentage change."
       }
     ]
   },
@@ -477,7 +477,7 @@
     "value_since": "2026-10-10T18:09:17Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 213,
+    "revisions_since": 215,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -485,39 +485,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 214,
-    "revisions_7d": 22,
+    "revisions": 216,
+    "revisions_7d": 24,
     "last_revision": {
-      "ts": "2026-11-14T13:37:17Z",
+      "ts": "2026-11-14T14:25:09Z",
       "kind": "content",
-      "commit": "e230c4e",
-      "commit_full": "e230c4e406211d3a5965727d80035563e113be60",
-      "message": "PDF export: attach working CMYK profile as /DefaultCMYK (#2743) (#2751)"
+      "commit": "fca649e",
+      "commit_full": "fca649eda8850ecdf10bb03c4dc622bee156b74a",
+      "message": "Stroke: object.stroke refuses out-of-range numbers and unknown names (#2787)"
     },
     "last_update": {
-      "ts": "2026-11-14T13:37:17Z",
+      "ts": "2026-11-14T14:25:09Z",
       "kind": "content",
-      "commit": "e230c4e",
-      "commit_full": "e230c4e406211d3a5965727d80035563e113be60",
-      "message": "PDF export: attach working CMYK profile as /DefaultCMYK (#2743) (#2751)"
+      "commit": "fca649e",
+      "commit_full": "fca649eda8850ecdf10bb03c4dc622bee156b74a",
+      "message": "Stroke: object.stroke refuses out-of-range numbers and unknown names (#2787)"
     },
     "self_reported": "2026-11-06"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.5,
+    "score": 18.1,
     "active_days_7d": 7,
-    "changes_7d": 106,
-    "changes_14d": 207,
-    "housekeeping_7d": 5,
+    "changes_7d": 109,
+    "changes_14d": 210,
+    "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-14T13:37:17Z",
-      "commit": "e230c4e",
-      "commit_full": "e230c4e406211d3a5965727d80035563e113be60",
-      "subject": "PDF export: attach working CMYK profile as /DefaultCMYK (#2743) (#2751)"
+      "ts": "2026-11-14T14:25:09Z",
+      "commit": "fca649e",
+      "commit_full": "fca649eda8850ecdf10bb03c4dc622bee156b74a",
+      "subject": "Stroke: object.stroke refuses out-of-range numbers and unknown names (#2787)"
     },
-    "last_commit_ts": "2026-11-14T13:37:17Z",
+    "last_commit_ts": "2026-11-14T14:25:09Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       17,
@@ -533,7 +533,7 @@
       21,
       56,
       5,
-      5
+      8
     ],
     "days": [
       {
@@ -1324,20 +1324,20 @@
       },
       {
         "d": "2026-11-14",
-        "code": 5,
-        "other": 0,
+        "code": 8,
+        "other": 1,
         "samples": [
           {
-            "commit": "e230c4e",
-            "subject": "PDF export: attach working CMYK profile as /DefaultCMYK (#2743) (#2751)"
+            "commit": "fca649e",
+            "subject": "Stroke: object.stroke refuses out-of-range numbers and unknown names (#2787)"
           },
           {
-            "commit": "cef0612",
-            "subject": "Pin craft-psd to storytold/craft-libs (#2791)"
+            "commit": "81a0eb6",
+            "subject": "Linked images: a save waits for link checks; warm accounting from #2717 (#2794)"
           },
           {
-            "commit": "b73c3dd",
-            "subject": "Build: restore designcraft_format::write; render decode without the image crate (#2780)"
+            "commit": "a977747",
+            "subject": "Images: background decoding, linked images and multi-image place (#2765)"
           }
         ]
       }
@@ -6472,7 +6472,53 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "a977747",
+      "commit_full": "a977747ceaa5455ae626a1c65a4d802ad40f7841",
+      "commit_date": "2026-11-14T09:05:22-05:00",
+      "ts": "2026-11-14T14:05:22Z",
+      "message": "Images: background decoding, linked images and multi-image place (#2765)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-06",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "fca649e",
+      "commit_full": "fca649eda8850ecdf10bb03c4dc622bee156b74a",
+      "commit_date": "2026-11-14T14:25:09Z",
+      "ts": "2026-11-14T14:25:09Z",
+      "message": "Stroke: object.stroke refuses out-of-range numbers and unknown names (#2787)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-06",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-14T13:40:11+00:00"
+  "updated_at": "2026-11-14T14:30:52+00:00"
 }
