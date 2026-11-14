@@ -497,18 +497,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.2,
+    "score": 21.5,
     "active_days_7d": 7,
-    "changes_7d": 366,
-    "changes_14d": 499,
+    "changes_7d": 367,
+    "changes_14d": 500,
     "housekeeping_7d": 18,
     "last_code_change": {
-      "ts": "2026-11-14T12:25:27Z",
-      "commit": "358e33a",
-      "commit_full": "358e33a3077bbc116c26a6e6468f984acc3426e1",
-      "subject": "M7: replacing a line keeps the source font for the words it can show (#2378, re-lands #2955) (#6842)"
+      "ts": "2026-11-14T16:13:09Z",
+      "commit": "346d803",
+      "commit_full": "346d8030807d96dd5a06b7025a67e062e490fce4",
+      "subject": "Fix macOS saves for PDFs with extended attributes (#7203)"
     },
-    "last_commit_ts": "2026-11-14T12:25:27Z",
+    "last_commit_ts": "2026-11-14T16:13:09Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       22,
@@ -524,7 +524,7 @@
       45,
       5,
       14,
-      3
+      4
     ],
     "days": [
       {
@@ -1371,9 +1371,13 @@
       },
       {
         "d": "2026-11-14",
-        "code": 3,
+        "code": 4,
         "other": 1,
         "samples": [
+          {
+            "commit": "346d803",
+            "subject": "Fix macOS saves for PDFs with extended attributes (#7203)"
+          },
           {
             "commit": "358e33a",
             "subject": "M7: replacing a line keeps the source font for the words it can show (#2378, re-lands #2955) (#6842)"
@@ -1381,10 +1385,6 @@
           {
             "commit": "e98dc17",
             "subject": "Move remaining file formats and codecs to craft-libs (#778) (#7261)"
-          },
-          {
-            "commit": "9475e50",
-            "subject": "export: migrate zip writer to craft-zip (#778) (#7260)"
           }
         ]
       }
@@ -7073,5 +7073,5 @@
       "kind": "editorial"
     }
   ],
-  "updated_at": "2026-11-14T12:37:46+00:00"
+  "updated_at": "2026-11-14T17:00:40+00:00"
 }
