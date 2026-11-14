@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 35.3,
+    "score": 35.8,
     "active_days_7d": 7,
-    "changes_7d": 1035,
-    "changes_14d": 1757,
+    "changes_7d": 1049,
+    "changes_14d": 1771,
     "housekeeping_7d": 64,
     "last_code_change": {
-      "ts": "2026-11-14T02:35:05Z",
-      "commit": "b1251d4",
-      "commit_full": "b1251d4e6c6966cd1a668024148a841c4a3b612f",
-      "subject": "Measure: count merged topology's zero-area faces from exact face areas instead of a mesh (#16412)"
+      "ts": "2026-11-14T04:20:04Z",
+      "commit": "313cdf4",
+      "commit_full": "313cdf479e706cd6837ce9deebcab4894814bc60",
+      "subject": "Booleans: two solids joined where they touch along a line no longer fail with \"relate: upstream status 1001\" (#16473)"
     },
-    "last_commit_ts": "2026-11-14T02:35:05Z",
+    "last_commit_ts": "2026-11-14T04:20:04Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       128,
@@ -93,7 +93,7 @@
       149,
       191,
       203,
-      32
+      46
     ],
     "days": [
       {
@@ -820,20 +820,20 @@
       },
       {
         "d": "2026-11-14",
-        "code": 32,
+        "code": 46,
         "other": 11,
         "samples": [
           {
-            "commit": "b1251d4",
-            "subject": "Measure: count merged topology's zero-area faces from exact face areas instead of a mesh (#16412)"
+            "commit": "313cdf4",
+            "subject": "Booleans: two solids joined where they touch along a line no longer fail with \"relate: upstream status 1001\" (#16473)"
           },
           {
-            "commit": "15d073a",
-            "subject": "solidcore: a thin face far from the origin gets its loop orientation from a certified area (#15107) (#16383)"
+            "commit": "81d39a7",
+            "subject": "Expressions: 3 in % 1 in is 0, not 25.39999999999999 mm (#16490)"
           },
           {
-            "commit": "6649b35",
-            "subject": "solidcore: an offset cone truncated at its apex keeps a truncated cone's slope (#15165) (#16381)"
+            "commit": "d7f7af1",
+            "subject": "Paint Appearance and Pick Up Appearance: input and output schemas for the two appearance gestures (#16481)"
           }
         ]
       }
@@ -2420,5 +2420,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-14T03:35:56+00:00"
+  "updated_at": "2026-11-14T04:39:28+00:00"
 }
