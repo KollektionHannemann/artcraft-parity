@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "1ea701b",
-  "latest_commit_date": "2026-11-14T13:38:17+07:00",
-  "latest_message": "Stop a new Rust build before its first turn when Cargo isn't installed (R2.9) (#1846)",
+  "latest_commit": "7be84b7",
+  "latest_commit_date": "2026-11-14T14:39:38+07:00",
+  "latest_message": "Take the Ghidra sweep's next function without a loop that always breaks (R1.5) (#1851)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 618,
-    "revisions_7d": 418,
+    "revisions": 622,
+    "revisions_7d": 422,
     "last_revision": {
-      "ts": "2026-11-14T06:38:17Z",
+      "ts": "2026-11-14T07:39:38Z",
       "kind": "content",
-      "commit": "1ea701b",
-      "commit_full": "1ea701bce25852909be7c7ff5b4885fdba26889e",
-      "message": "Stop a new Rust build before its first turn when Cargo isn't installed (R2.9) (#1846)"
+      "commit": "7be84b7",
+      "commit_full": "7be84b7c8d67f40d241ac024f436302beb5493cf",
+      "message": "Take the Ghidra sweep's next function without a loop that always breaks (R1.5) (#1851)"
     },
     "last_update": {
-      "ts": "2026-11-14T06:38:17Z",
+      "ts": "2026-11-14T07:39:38Z",
       "kind": "content",
-      "commit": "1ea701b",
-      "commit_full": "1ea701bce25852909be7c7ff5b4885fdba26889e",
-      "message": "Stop a new Rust build before its first turn when Cargo isn't installed (R2.9) (#1846)"
+      "commit": "7be84b7",
+      "commit_full": "7be84b7c8d67f40d241ac024f436302beb5493cf",
+      "message": "Take the Ghidra sweep's next function without a loop that always breaks (R1.5) (#1851)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 25.5,
+    "score": 26.1,
     "active_days_7d": 7,
-    "changes_7d": 467,
-    "changes_14d": 893,
+    "changes_7d": 471,
+    "changes_14d": 897,
     "housekeeping_7d": 18,
     "last_code_change": {
-      "ts": "2026-11-14T06:38:17Z",
-      "commit": "1ea701b",
-      "commit_full": "1ea701bce25852909be7c7ff5b4885fdba26889e",
-      "subject": "Stop a new Rust build before its first turn when Cargo isn't installed (R2.9) (#1846)"
+      "ts": "2026-11-14T07:39:38Z",
+      "commit": "7be84b7",
+      "commit_full": "7be84b7c8d67f40d241ac024f436302beb5493cf",
+      "subject": "Take the Ghidra sweep's next function without a loop that always breaks (R1.5) (#1851)"
     },
-    "last_commit_ts": "2026-11-14T06:38:17Z",
+    "last_commit_ts": "2026-11-14T07:39:38Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       73,
@@ -93,7 +93,7 @@
       100,
       49,
       6,
-      7
+      11
     ],
     "days": [
       {
@@ -356,20 +356,20 @@
       },
       {
         "d": "2026-11-14",
-        "code": 7,
+        "code": 11,
         "other": 1,
         "samples": [
           {
-            "commit": "1ea701b",
-            "subject": "Stop a new Rust build before its first turn when Cargo isn't installed (R2.9) (#1846)"
+            "commit": "7be84b7",
+            "subject": "Take the Ghidra sweep's next function without a loop that always breaks (R1.5) (#1851)"
           },
           {
-            "commit": "2f99163",
-            "subject": "Let OpenAI-style AIs be set to think harder, sent only once chosen (R2.9) (#1818)"
+            "commit": "a3db764",
+            "subject": "Show ACP token counts as unknown when the agent does not report them (R2.2) (#1843)"
           },
           {
-            "commit": "54c6997",
-            "subject": "Give a heading a script's bold face instead of its regular one (#1839)"
+            "commit": "f5a3d2d",
+            "subject": "Verify Mac call observation with a real debugger (R2.4) (#1844)"
           }
         ]
       }
@@ -4822,8 +4822,36 @@
       "commit": "1ea701b",
       "commit_full": "1ea701bce25852909be7c7ff5b4885fdba26889e",
       "message": "Stop a new Rust build before its first turn when Cargo isn't installed (R2.9) (#1846)"
+    },
+    {
+      "ts": "2026-11-14T07:15:15Z",
+      "kind": "content",
+      "commit": "ddd8283",
+      "commit_full": "ddd82831ffbc45b52842a06bb625bd134950ae1f",
+      "message": "Check the browser exit diagnostic without timing the whole tool call (R5.2) (#1840)"
+    },
+    {
+      "ts": "2026-11-14T07:15:21Z",
+      "kind": "content",
+      "commit": "f5a3d2d",
+      "commit_full": "f5a3d2d5e4d0a3eb121242bae15ab43fb6c0b957",
+      "message": "Verify Mac call observation with a real debugger (R2.4) (#1844)"
+    },
+    {
+      "ts": "2026-11-14T07:36:22Z",
+      "kind": "content",
+      "commit": "a3db764",
+      "commit_full": "a3db7649498f85f6cf9486a891a225c735839ad8",
+      "message": "Show ACP token counts as unknown when the agent does not report them (R2.2) (#1843)"
+    },
+    {
+      "ts": "2026-11-14T07:39:38Z",
+      "kind": "content",
+      "commit": "7be84b7",
+      "commit_full": "7be84b7c8d67f40d241ac024f436302beb5493cf",
+      "message": "Take the Ghidra sweep's next function without a loop that always breaks (R1.5) (#1851)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-14T06:38:28+00:00"
+  "updated_at": "2026-11-14T07:48:31+00:00"
 }
