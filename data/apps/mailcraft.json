@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/UCS-Care-Group/mailcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/UCS-Care-Group/mailcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "50fd343",
-  "latest_commit_date": "2026-11-14T05:06:46+01:00",
-  "latest_message": "#1074 part 2: a JMAP account's mail is sent (#1114)",
+  "latest_commit": "02380a1",
+  "latest_commit_date": "2026-11-14T10:09:13+01:00",
+  "latest_message": "#276: new mail the moment it arrives on IMAP accounts, through IDLE (#1329)",
   "parsed": {
     "stage": "public beta",
     "next_stage": "leaving",
@@ -208,7 +208,7 @@
     "value_since": "2026-10-12T18:17:00Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 245,
+    "revisions_since": 246,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -216,39 +216,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 249,
-    "revisions_7d": 10,
+    "revisions": 250,
+    "revisions_7d": 11,
     "last_revision": {
-      "ts": "2026-11-14T04:06:46Z",
+      "ts": "2026-11-14T09:09:13Z",
       "kind": "content",
-      "commit": "50fd343",
-      "commit_full": "50fd3432ec4862d709ca5efe304e5fe328d823f4",
-      "message": "#1074 part 2: a JMAP account's mail is sent (#1114)"
+      "commit": "02380a1",
+      "commit_full": "02380a1ea9a227a06a49e246fa0a37a115bbe091",
+      "message": "#276: new mail the moment it arrives on IMAP accounts, through IDLE (#1329)"
     },
     "last_update": {
-      "ts": "2026-11-14T04:06:46Z",
+      "ts": "2026-11-14T09:09:13Z",
       "kind": "content",
-      "commit": "50fd343",
-      "commit_full": "50fd3432ec4862d709ca5efe304e5fe328d823f4",
-      "message": "#1074 part 2: a JMAP account's mail is sent (#1114)"
+      "commit": "02380a1",
+      "commit_full": "02380a1ea9a227a06a49e246fa0a37a115bbe091",
+      "message": "#276: new mail the moment it arrives on IMAP accounts, through IDLE (#1329)"
     },
     "self_reported": "2026-11-11"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.2,
+    "score": 22.3,
     "active_days_7d": 7,
-    "changes_7d": 136,
-    "changes_14d": 223,
+    "changes_7d": 138,
+    "changes_14d": 225,
     "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-11-14T06:22:02Z",
-      "commit": "64b35c2",
-      "commit_full": "64b35c2b9da2fa8d44c9cf9a7608fad80f5ac3dc",
-      "subject": "MB3.4: Android app shell (tabs, drawer, tablet rail, Settings frame, language) (#1266)"
+      "ts": "2026-11-14T09:09:20Z",
+      "commit": "f974abb",
+      "commit_full": "f974abb0b6f2bbe1e05cb31fac5afafdd04d8637",
+      "subject": "Keep quick actions clear of floating scrollbars (#1273)"
     },
-    "last_commit_ts": "2026-11-14T06:22:02Z",
+    "last_commit_ts": "2026-11-14T09:09:20Z",
     "repo_since": "2026-10-12T18:17:00Z",
     "window": [
       11,
@@ -264,7 +264,7 @@
       19,
       15,
       42,
-      23
+      25
     ],
     "days": [
       {
@@ -888,20 +888,20 @@
       },
       {
         "d": "2026-11-14",
-        "code": 23,
+        "code": 25,
         "other": 2,
         "samples": [
           {
+            "commit": "f974abb",
+            "subject": "Keep quick actions clear of floating scrollbars (#1273)"
+          },
+          {
+            "commit": "02380a1",
+            "subject": "#276: new mail the moment it arrives on IMAP accounts, through IDLE (#1329)"
+          },
+          {
             "commit": "64b35c2",
             "subject": "MB3.4: Android app shell (tabs, drawer, tablet rail, Settings frame, language) (#1266)"
-          },
-          {
-            "commit": "bc2e452",
-            "subject": "MB1.10: Send/Receive round scheduler and Graph runs for a host with no window (#1351)"
-          },
-          {
-            "commit": "b712949",
-            "subject": "MB3.2: Android Platform in Kotlin (Keystore secrets, Custom Tabs sign-in, files, network, channels) (#1265)"
           }
         ]
       }
@@ -6094,7 +6094,27 @@
       "breadth_pct": null,
       "full_prev": 25.0,
       "kind": "content"
+    },
+    {
+      "commit": "02380a1",
+      "commit_full": "02380a1ea9a227a06a49e246fa0a37a115bbe091",
+      "commit_date": "2026-11-14T10:09:13+01:00",
+      "ts": "2026-11-14T09:09:13Z",
+      "message": "#276: new mail the moment it arrives on IMAP accounts, through IDLE (#1329)",
+      "stage": "public beta",
+      "next_stage": "leaving",
+      "last_updated": "2026-11-11",
+      "full_pct": 25.0,
+      "full_range": null,
+      "full_hours": null,
+      "full_label": "Ready for real work with a real account",
+      "target": "Microsoft Outlook (Microsoft 365, classic desktop)",
+      "mainstream_pct": null,
+      "essentials_pct": null,
+      "breadth_pct": null,
+      "full_prev": 25.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-14T06:38:54+00:00"
+  "updated_at": "2026-11-14T09:31:43+00:00"
 }
