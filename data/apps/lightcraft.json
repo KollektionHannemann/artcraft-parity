@@ -433,18 +433,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.0,
+    "score": 14.1,
     "active_days_7d": 7,
-    "changes_7d": 38,
-    "changes_14d": 138,
+    "changes_7d": 39,
+    "changes_14d": 139,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-14T18:49:38Z",
-      "commit": "25ffe3e",
-      "commit_full": "25ffe3e5d4ac754829b99dd7368d94185adbf8d5",
-      "subject": "codecs,raw,preview,meta,engine: cut over TIFF/JPEG/focus to craft-libs and fix CI (#4244)"
+      "ts": "2026-11-14T20:21:35Z",
+      "commit": "6b2b7e6",
+      "commit_full": "6b2b7e6d1117e683a1701568e56f979d061e4699",
+      "subject": "fix(meta): import DateTime and Gps in exif write_tests (#4263)"
     },
-    "last_commit_ts": "2026-11-14T18:49:38Z",
+    "last_commit_ts": "2026-11-14T20:21:35Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
       0,
@@ -460,7 +460,7 @@
       9,
       7,
       1,
-      10
+      11
     ],
     "days": [
       {
@@ -1212,9 +1212,13 @@
       },
       {
         "d": "2026-11-14",
-        "code": 10,
+        "code": 11,
         "other": 0,
         "samples": [
+          {
+            "commit": "6b2b7e6",
+            "subject": "fix(meta): import DateTime and Gps in exif write_tests (#4263)"
+          },
           {
             "commit": "25ffe3e",
             "subject": "codecs,raw,preview,meta,engine: cut over TIFF/JPEG/focus to craft-libs and fix CI (#4244)"
@@ -1222,10 +1226,6 @@
           {
             "commit": "487833a",
             "subject": "Preserve shutter precision through import and export (#1619) (#1692)"
-          },
-          {
-            "commit": "f72ba11",
-            "subject": "LightCraft: use shared encoder for HDR PNG (#4245)"
           }
         ]
       }
@@ -1861,5 +1861,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-14T19:12:56+00:00"
+  "updated_at": "2026-11-14T20:29:14+00:00"
 }

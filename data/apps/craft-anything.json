@@ -68,16 +68,16 @@
     "level": "buzzing",
     "score": 27.4,
     "active_days_7d": 7,
-    "changes_7d": 489,
-    "changes_14d": 915,
+    "changes_7d": 490,
+    "changes_14d": 916,
     "housekeeping_7d": 18,
     "last_code_change": {
-      "ts": "2026-11-14T19:33:19Z",
-      "commit": "bc47887",
-      "commit_full": "bc47887f4af78ff8e460b8e35d02c97a4be284cb",
-      "subject": "journal: redact header-style and env-style credential field names (#1874)"
+      "ts": "2026-11-14T20:21:24Z",
+      "commit": "84edfd6",
+      "commit_full": "84edfd6010ce2c1d480af6c663edb78f0b4d9cbc",
+      "subject": "Fix the private config folder helper path (#1875)"
     },
-    "last_commit_ts": "2026-11-14T19:33:19Z",
+    "last_commit_ts": "2026-11-14T20:21:24Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       73,
@@ -93,7 +93,7 @@
       100,
       49,
       6,
-      29
+      30
     ],
     "days": [
       {
@@ -356,9 +356,13 @@
       },
       {
         "d": "2026-11-14",
-        "code": 29,
+        "code": 30,
         "other": 1,
         "samples": [
+          {
+            "commit": "84edfd6",
+            "subject": "Fix the private config folder helper path (#1875)"
+          },
           {
             "commit": "bc47887",
             "subject": "journal: redact header-style and env-style credential field names (#1874)"
@@ -366,10 +370,6 @@
           {
             "commit": "88facbb",
             "subject": "settings: write config.toml owner-only in a private folder (#1873)"
-          },
-          {
-            "commit": "9b36768",
-            "subject": "Count the remaining JavaScript nesting shapes (R3.12) (#1870)"
           }
         ]
       }
@@ -4930,5 +4930,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-14T20:00:23+00:00"
+  "updated_at": "2026-11-14T20:30:05+00:00"
 }
