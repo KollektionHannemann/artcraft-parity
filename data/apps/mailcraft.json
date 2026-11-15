@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/UCS-Care-Group/mailcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/UCS-Care-Group/mailcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "02380a1",
-  "latest_commit_date": "2026-11-14T10:09:13+01:00",
-  "latest_message": "#276: new mail the moment it arrives on IMAP accounts, through IDLE (#1329)",
+  "latest_commit": "240d1d4",
+  "latest_commit_date": "2026-11-15T00:44:37+01:00",
+  "latest_message": "Release 0.13.0 (#1419)",
   "parsed": {
     "stage": "public beta",
     "next_stage": "leaving",
     "target": "Microsoft Outlook (Microsoft 365, classic desktop)",
-    "last_updated": "2026-11-11",
+    "last_updated": "2026-11-14",
     "metrics": {
       "full": {
         "label": "Ready for real work with a real account",
@@ -42,164 +42,164 @@
     "upcoming": [],
     "progress": [
       {
-        "date": "2026-11-11",
-        "text": "Add Account recognises legacy Outlook.com custom domains whose MX records end in pamx1.hotmail.com, selecting Outlook.com settings and Microsoft sign-in; after explicit confirmation of a personal-mailbox alias it keeps the entered sending address and uses Microsoft's returned address for authentication. Regression tests cover hostname boundaries, discovery, alias confirmation and mismatched identities."
+        "date": "2026-11-14",
+        "text": "#1311: IONOS's Authentication-Results (kundenserver.de) are believed for its IMAP hosts, so a sender's DMARC pass there vouches for them"
       },
       {
-        "date": "2026-11-11",
-        "text": "#815 part 5: a .pst file's sticky notes and journal entries come in, kept on this computer, read by notes. and journal. and framed as message text for agents; a body kept only as rich text comes in as the HTML inside it ([MS-OXRTFEX]), with property tests and the fuzz target; the report accounts for every item with nothing left for later, and the import is no longer a preview."
+        "date": "2026-11-14",
+        "text": "iCalendar: a skipped occurrence of a series on a day its own zone's clocks skip its time (Pacific/Apia's 30 December 2011, the hour before midnight in America/Nuuk, midnight in Santiago or Havana) is written as the rule names it and read back as that occurrence, not the next day's; a time a file's VTIMEZONE skips no longer makes the definition look unlike the zone of its name"
       },
       {
-        "date": "2026-11-11",
-        "text": "#815 part 4: a .pst file's appointments, meetings and tasks come across: mailcraft-pst reads the recurrence blob and time zone of [MS-OXOCAL], with property tests and the fuzz target; a series keeps its pattern, end, deleted days and zone, changed occurrences come in as events of their own within a budget, what the calendar cannot keep is its first occurrence and named; events go into a calendar named after the file or one the owner picks, tasks into the to-do list on this computer, nothing sent; one undo step and no duplicates on a second import"
+        "date": "2026-11-14",
+        "text": "#1403: Conversation buttons in the reading header have more room around their labels and clearer spacing when they wrap."
       },
       {
-        "date": "2026-11-11",
-        "text": "#1069: a folder a Microsoft server refuses to move or delete as one of its own (RSS Feeds, which no Graph well-known name marks; Graph's or EWS's ErrorMoveDistinguishedFolder/ErrorDeleteDistinguishedFolder) is put back where the server has it, the owner is told, and it is marked as the server's own, so Delete Folder, Rename and Move are greyed out and refused for it; a deletion for good refused so has the folder marked when the listing brings it back; any other last word of Graph's on a folder change (400, 403, 405, 422) puts the folder back, its name too, without marking it, instead of stopping the run"
+        "date": "2026-11-14",
+        "text": "#1401: an import skips mail already whole in the folder it lands in or was meant for (Message-ID, date, sender, subject, To/Cc, compared whole) and says how many; a dropped or system-opened .mbox/.eml asks first with its count and real destination; mail imported into an IMAP, JMAP or Exchange server account's folder goes to the local folder Imported, as for a Microsoft account; every import and export logs its format and counts, never a name or path; exports say what they saved; mail.removeImportedDuplicates (Folder menu) removes unchanged local copies beside their server twins, with a preview, undoable, nothing sent"
       },
       {
-        "date": "2026-11-11",
-        "text": "#1050: an .ics import goes into a calendar on this computer (owncalendarornew), never into a calendar an account's server keeps, where it showed as the owner's own, was never sent, and neither the \"only on this computer\" bar nor Move to Calendar offered it to the account; an event of the owner's own that an earlier import left in a server's calendar is put back in a calendar on this computer at the next download (rehomestrays). Tests in importtests.rs"
+        "date": "2026-11-14",
+        "text": "#1398: Categorized calendar events marked Free show their category tint while keeping their hollow edge."
       },
       {
-        "date": "2026-11-11",
-        "text": "#1037: Empty Folder, Delete, Delete Permanently, Archive and Junk of many messages take time in proportion to their number (a folder of 200,000 took about an hour): the moves and deletions waiting for the server are looked up once for the whole lot (Mailbox::removemessages, deletemessages, moveeach) rather than searched again for each message, with the same changes for the servers and one step to undo; regression tests on 100,000 messages"
+        "date": "2026-11-14",
+        "text": "The pictures bar says beside the greyed \"Always download pictures from\" why it is not offered, and both show the whole reason when pointed at (#1386)"
       },
       {
-        "date": "2026-11-11",
-        "text": "#986: an organisation's server that returns 403 Forbidden for Outlook Favorites after connection transitions to administrator approval instead of asking to connect again"
+        "date": "2026-11-14",
+        "text": "#1385: a shared mailbox has Account Settings of its own (Settings on its card in File › Info) with Account name and Colour, kept on this computer; the folder pane heads it with the name, as #1017 does for an account"
       },
       {
-        "date": "2026-11-11",
-        "text": "#977: a TLS handshake that fails for want of a shared cipher suite (the server's handshake-failure or insufficient-security alert, or no suite in common) says the server offers only older (CBC) encryption MailCraft doesn't use and that its administrator can turn on AES-GCM; no CBC suite added, TLS not loosened"
+        "date": "2026-11-14",
+        "text": "#1384: File › Options › General › Dark theme chooses Neutral grey (default) or Blue grey, the palette from before #1242, in normal and high contrast with every accent (ui.darkStyle, darkStyle in ui.json); contrast tests cover both"
       },
       {
-        "date": "2026-11-11",
-        "text": "#956 part 3: Report a Problem › Send report: what the window shows goes to the project's report relay on the owner's click alone (mailcraftnet::report, HTTPS, capped, its answer read as hostile), and is filed privately for the maintainers; the window says the reference or why it wasn't taken and keeps the draft; an agent or a script can only fill the window. An owner without a GitHub account can report a problem"
+        "date": "2026-11-14",
+        "text": "#1349 Exchange 2010 for Exchange server accounts: a request steps down once from Exchange 2013's version to Exchange2010SP2 when the server answers ErrorInvalidServerVersion, and keeps to it for the run; a server older than Exchange 2013 isn't asked (and its schema fault reads as their lack; a newer server's schema fault is left as an error) for the preview or the flag, nor for the recipients in SyncFolderItems (ErrorInvalidPropertyForOperation steps any server down too), which come with GetItem, a hundred to a request; UpdateItem refused for want of a change key (ErrorChangeKeyRequiredForWriteOperations) asks for the key and goes once more with it, and every change after it in the run asks for the key first; the version learnt isn't kept with the account yet, so each run starts with one refused request; the strict stand-in now behaves as Exchange 2010 on request, and tests keep each of the four refusals the reporter measured"
       },
       {
-        "date": "2026-11-11",
-        "text": "#30 (part 4a): OpenPGP Digital signatures are checked in the reading pane, with the same bar, seal and Details as S/MIME's, against the Public keys kept for the sender's address, a contact's card, the message's own keys and the owner's GnuPG keyring at full or ultimate validity; a key is Verified only by the owner's word in the window or that keyring. The signer's key in a message that checks is kept for the sender's address, and a newer copy of a kept key (a revocation) reaches it. keys.list, keys.import and keys.remove list, import (certificates for mail, OpenPGP Public keys; private keys refused) and remove the Public keys kept, as steps of the history. mailcraft-smime opens PKCS #12 files and mailcraft-openpgp reads OpenPGP secret key files (nothing decrypted), for the window that imports the owner's own keys; property tests and fuzz targets for both"
+        "date": "2026-11-14",
+        "text": "The pictures bar shows \"Always download pictures from {sender}\" greyed out, with the reason, when the server does not vouch for the sender (#1347)"
       },
       {
-        "date": "2026-11-11",
-        "text": "#30 (part 4b): File › Options › Security › Digital signatures and encryption lists the owner's own certificates and keys (the Windows certificate store, the macOS keychain, PKCS#11 tokens, GnuPG's secret keys and keys imported here) and imports a .p12 (into the Windows store or the keychain; on Linux and FreeBSD an ECDSA one only, kept still protected by its passphrase in the credential store) or an OpenPGP secret key (with a passphrase and Ed25519 or ECDSA only, kept the same way); the Public keys kept for other people are listed there, imported and removed, and an OpenPGP key is marked Verified in a dialog that shows its fingerprint, reached from there and from the reading pane's bar, never by an agent. A contact's card shows and edits its certificates and keys. GnuPG's fully valid keys are read at start"
+        "date": "2026-11-14",
+        "text": "#1337: the browser build no longer panics at start-up: what a frame spends taking in a Send/Receive, how long a meeting request took to read, and the wait for a save before removing all data are timed with mailcrafttime::Stopwatch (the browser's clock there; the std clock panics on wasm32-unknown-unknown); cargo xtask wasm-clock, part of ci, reads every crate the browser build links and fails on a std clock or sleep outside native-only code"
       },
       {
-        "date": "2026-11-10",
-        "text": "#956 part 1: Report a Problem drops Send by Email; reports go through GitHub only, ahead of sending reports without a GitHub account"
+        "date": "2026-11-14",
+        "text": "#1309: desktop alerts on Linux and the BSDs ask for a sound from the desktop's sound theme (sound-name: message-new-email for new mail, alarm-clock-elapsed for a reminder), as the notification specification has it; GNOME plays none for an alert that names none. Whether it plays is the notification service's to decide (GNOME's per-app sound switch and Do Not Disturb included); services that ignore the hint (mako, dunst) go on as before. No sound of MailCraft's own."
       },
       {
-        "date": "2026-11-10",
-        "text": "#815: a .pst mail whose body is rich text alone comes in as its text instead of an empty body: the RTF is opened within a 64 MB cap and counted against the item, kept decompressed as message body.rtf, and what cannot be opened stays as it is in the file and is named in the report"
+        "date": "2026-11-14",
+        "text": "#1153: a Gmail message's labels show on it in the list and the reading pane, read only, read with each folder's flags over IMAP; label: searches them; agents see them as message data"
       },
       {
-        "date": "2026-11-10",
-        "text": "#1021: HTML mail keeps font sizes up to 48 px in the reader, uses inline line height and image spacing, and lays out CSS table rows and cells with the same limits as HTML tables"
+        "date": "2026-11-13",
+        "text": "The dark theme is neutral greys, as in the other Craft programs, in place of blue-tinted ones, in normal and high contrast; the accents' washes (a selected row, a selected folder, today) were moved onto the new greys and every pair still meets its contrast"
       },
       {
-        "date": "2026-11-10",
-        "text": "#1016: the Flatpak checks the host's font directories, and links in the reading pane are underlined relative to the text baseline on each wrapped line"
+        "date": "2026-11-13",
+        "text": "MB4.3: the privacy statement gains a section for the phone apps, and docs/mobile-store-listing.md holds the Play data-safety answers and the listing texts"
       },
       {
-        "date": "2026-11-10",
-        "text": "#991: an IMAP account reads up to 10,000 folders a run (was 2,000) and takes them all in (taking in stopped at 2,000), and the folder list keeps up to 12,000 (was 4,000, with a cap on its bytes too); the folder pane shows every folder of an account, drawing only the rows in sight (it listed 4,000); folder parents, states and names are found through indexes rather than by searching every folder, and the waiting pieces of a run are taken in together, the account read once a batch rather than once a piece; more folders than are read says how many were left out, or \"at least\" when the list itself was cut"
+        "date": "2026-11-13",
+        "text": "MB3.4: the Android app's frame: five bottom tabs (a navigation rail on a wide window), the menu drawer with each account's folders, Settings with a real language choice, light and dark, screenshot-tested; Today, Calendar, People and Tasks say \"Pending development\" until their slices land"
       },
       {
-        "date": "2026-11-10",
-        "text": "#978: English dates follow the system's regional format: day first (14/10/2026, 14 Oct 2026) outside the US, Canada and the Philippines, with the region's clock and first day of the week unless the owner chose their own; LCTIME is read on Unix"
+        "date": "2026-11-13",
+        "text": "MB3.2: the Android app's platform layer in Kotlin: credentials sealed by an Android Keystore key (hardware-backed where there is one) in the app's no-backup folder, the provider's sign-in page in a Custom Tab with the redirect handed back by a registered scheme, files, network state and notification channels; the sign-in is not connected to the core yet and notifications and reminders are not built"
       },
       {
-        "date": "2026-11-10",
-        "text": "#973: typing  , - , 1.  or 1)  at the start of a line in an HTML message starts a bulleted or numbered list; Undo puts the marker back; File › Options › Mail can turn it off"
+        "date": "2026-11-13",
+        "text": "MB1.3 to MB1.5: the To Do, Graph, message-fetch and calendar runs, and the pacing of the background jobs (patience, back-off, how often), move below the window, onto the new host crate and the engine; the desktop behaves as before"
       },
       {
-        "date": "2026-11-10",
-        "text": "#966: an Exchange server account fetches whole only the mail within its Mail to keep offline (12 months for a new account) and its Download messages in full, both now in File › Info and Account Settings; older mail keeps its headers and preview"
+        "date": "2026-11-13",
+        "text": "MB1.9 (last part): six sync jobs are asked of the engine and answered to it (calendar, whole-message fetch, to-dos, rules, automatic replies, Find a Time's free and busy), so a host without a window can drive them from the engine's API alone. The automatic replies' job (what is due, a change the owner made first, the back-off, where the permission to change them stands, what is the matter, and the held change that goes once he allows it) and Find a Time's free and busy looks (what is known, when the server is asked again, the answer taken in) have their state and decisions in Session::driver; so have the send gate (what is marked as sending, whether a run may go once the saver has written the marks, when the marks come off, the held-for-doubt marks of the next run) and the shared mailboxes' Outbox that waits for the permission to send from them; the question about the to-dos', the rules' and a shared mailbox's calendars is chosen by the engine (tasksquestion, rulesquestion, sharedcalendarsquestion, given what the window shows); autosync is a setting of the driver the host sets (it outlives a mailbox replace), and working offline (already the engine's preference) now stops the to-dos' and the rules' jobs from starting in the engine, their books going on as before; removing an account makes the whole driver forget it (Driver::forgetaccounts: calendar, Favorites, fetch, to-dos, rules, automatic replies, free/busy, sending), and an answer for a removed account changes nothing. Still in the window: the Send/Receive round scheduler (MailApp::autosync: the round timer, the queue of accounts and what is seen or pushed to it, the time of the last automatic round, what waits to go) and the flows that start and take in a run for each kind of account (IMAP, Graph, EWS, JMAP, shared mailboxes), the dialogs and the provider's pages, the words that tell the owner how a change went, tokens and secrets, the job handles and the threads, the checks of whether a host function exists (services..issome()), and the calendar's offline refusal at the start of a look the owner asked for; MB1.9 is done for these six jobs, and the Send/Receive round scheduling is the next task"
       },
       {
-        "date": "2026-11-09",
-        "text": "#30 (part 4, vCard KEY): a contact's S/MIME certificates and OpenPGP public keys are read from a .vcf in the 2.1, 3.0 and 4.0 forms (inline base64, quoted-printable, data: URIs with application/pkix-cert or application/pgp-keys, armoured or PEM text), known by their bytes rather than the card's label (a certificate kept as DER with the outline of one, an OpenPGP key as the packets of a public key), secret key material never kept (an armour or PEM label saying PRIVATE or SECRET, secret-key and secret-subkey packets, PKCS #8 and PKCS #12); an address of a key is kept as an address and never fetched. Kept on the contact as bytes with their kind (64 KiB a key, 32 a contact, 64 MiB a file; a card of nothing but keys is no contact), written back on export as vCard 3.0 (addresses left out: 3.0 has no form for them), kept by an edit and joined by a merge, which refuses past 32. Nothing is checked or trusted yet"
+        "date": "2026-11-13",
+        "text": "MB1.9 (second part): the calendar's, the fetch of whole messages', the To Do's and the rules' jobs are asked of the engine (what is due, with what plan) and answered to it (what to take in, what the owner is told), with their permission state in Session::driver, so a host without a window can drive them; a mailbox that takes the place of the open one resets the whole driver (tested), which now also makes it forget the calendar consent, the wide-stretch and shared-calendar permission state and the Favorites state of the old mailbox (their account ids belong to it). The calendar's answer also keeps the owner's permission (the calendar's and a shared mailbox's calendars') in the engine, and a part the host's own job couldn't bring down is counted against the answer for the calendar, To Do and rules. Still in the window: the automatic replies' and free/busy's per-job state and consent bookkeeping, the send gate, the shared-calendar and Favorites questions as dialogs, and the autosync/offline facts the host hands in; MB1.9 stays open"
       },
       {
-        "date": "2026-11-09",
-        "text": "#30 (part 2): an S/MIME Digital signature (detached or opaque, DER or BER) is checked from the bytes a message came as, by a crate of our own on RustCrypto's (mailcraft-smime: CMS SignedData, the chain to the system's certification authorities for mail with RFC 5280's constraints, a certificate for mail and for the sender's one address; a signed part inside a wrapper is never verified for the message; MD5, SHA-1 and RSA under 2048 bits refused as no longer safe): the reading pane says which of four it is (verified, signer not verified, changed after signing, can't be checked) with Details (signer, issuer, dates, SHA-256 fingerprint, \"Revocation not checked\"), the message's row wears a seal of the same four, and agents read it (mail.digitalSignature, digitalSignature in mail.get). A signer's certificate that checks is kept for the sender's address. An opaque signed message is read as what it holds, text and files. The browser build trusts no authority, so its signers are \"not verified\". Revocation isn't checked; nothing is fetched. OpenPGP is not checked yet"
+        "date": "2026-11-13",
+        "text": "MB1.9 (part): the decisions and state of the keep-offline thinning, the calendar sync, the Favorites, the fetch of whole messages and the ordering of jobs move into the engine; still in the window: the calendar and fetch orchestration, the permission and consent gates, and the To Do, rules, automatic replies and free/busy per-job state, so MB1.9 stays open"
       },
       {
-        "date": "2026-11-09",
-        "text": "#30 (part 3): mailcraft-openpgp, a new L2 crate on rPGP, checks OpenPGP Digital signatures: a PGP/MIME message over its signed part's canonical bytes, or a cleartext-signed text, with the four results of the coming bar (verified, valid but signer not verified, changed after signing, can't be checked; MD5, SHA-1, DSA and RSA under 2048 bits refused as no longer safe), only a whole message Verified (a signed part inside a wrapper, or words around an inline-signed block, make it partly signed at best), a key revoked once revoked whatever copy comes later, and reads the Public keys a message carries (attached key parts, the Autocrypt: header), self-signatures checked. Property tests and an openpgp fuzz target; builds for the browser. Not wired into the reading pane yet: nothing a user sees changes"
+        "date": "2026-11-13",
+        "text": "MB1.10 (part): the Send/Receive round's scheduler (the line of accounts, the round timer, the look for changes waiting to go, the call-off of a long run) is the engine's; the sign-in decisions of a run (application id, whose sign-in a token is, which refresh token a run starts with, how long a token is kept, whether a Graph mail run starts or asks to sign in) are the engine's; mailcrafthost::sync runs a whole Send/Receive of Microsoft accounts kept in step through Graph for a host with no window (whattorun, takeresult, rundue). Still in the window: the IMAP/SMTP, JMAP, Exchange server and shared-mailbox starts and their pieces, the Inbox pass and the Inbox check, the calendar and Favorites legs of a Graph run, the status lines and dialogs; the window itself still starts and polls Graph mail through its own startgraphmail and pollgraph (which now use the engine's decisions), so MB1.10 stays open. The host's run keeps the window's guards: nothing starts while Work Offline is on or the mailbox is unconfirmed or its data removed, no secret is read or kept then, a long run is called off for what the owner did meanwhile, the fetch driver is woken, an account whose calendar job is at work waits, and a run let go of can no longer call off the next. SendReceive::adopttokens takes in a sign-in a binding made, and takewrittenkeys reports the credential-store entries written, for the binding's index. Still not moved: a host's own first sign-in job (the page, the code exchange; a binding does it and hands the tokens in), the status line of a call-off, the tenant note and the sign-in-again handling of a Graph run, and running accounts of other kinds inside the same round (Step::Unsupported hands them back to the front end)."
       },
       {
-        "date": "2026-11-09",
-        "text": "#30 (groundwork for signing and decrypting): the desktop program can reach S/MIME private keys where the system keeps them, with nothing of the key leaving there: the Windows certificate store (Current User › Personal), the macOS keychains, and PKCS#11 tokens on Linux and FreeBSD (p11-kit's proxy, or a module the owner names; each module loaded once and kept). Each lists the same certificates on every system: a private key that may be used for mail, RSA of 2048 bits or more or P-256/P-384, a certificate without a duplicated or unknown critical extension, expired ones marked (subject and issuer cleaned as every incoming name, addresses, dates, SHA-256 fingerprint); signs a SHA-256, SHA-384 or SHA-512 digest (RSA PKCS#1 v1.5 or PSS, ECDSA P-256 and P-384) only with a certificate for mail that is in its dates, and unwraps an RSA-encrypted message key, an expired certificate's too; a token's key is used only when its public half is the certificate's. Windows and macOS ask for a PIN themselves, a PIN pad asks on the reader, and any other token's PIN goes, for that call alone, only to the token it was asked for (by slot and serial number, or label for a token without one, read through the open session), never logged; a PIN pad's owner is never asked for one in the window. A .p12 can go into the Windows store (Windows asking each time the key is used) or the macOS keychain. A PKCS#11 key that asks for its PIN at every use (a PIV card's signing key) is refused for now. Not reachable from the window yet"
+        "date": "2026-11-13",
+        "text": "HS: a message keeps on itself only the header lines the program reads by name (mailcraftmodel::headers::WORKING, held to the source by a test); the rest, its header block, goes beside the mailbox file when over a kilobyte (the mailbox file in format 4; format 3 read; the window puts its blocks beside it and writes it anew as it opens it, the old file kept as .before-<version>), read by View Source and what writes a message whole. Search, rules, junk and agents read no header lines. Measured (mailboxbench --exchange-headers, 50,000 messages with 6 KB of invented Exchange headers each): the mailbox file 423 MB to 68 MB; held after opening 1,120 MB to 472 MB; a format-3 file of them opened in 7.7 s at most 855 MB, its first save 0.8 s. On a copy of a real mailbox (66,000 messages from Microsoft 365): the file 738 MB to 208 MB, held after opening 1,453 MB to 595 MB, opened in 2.8 s to 0.77 s; its first opening in format 3 took 3.3 s at most 1,016 MB, its first save 1.3 s"
       },
       {
-        "date": "2026-11-09",
-        "text": "#30 (groundwork for signing and decrypting): assuan, L3: an Assuan client over any stream (lines of at most 1000 bytes, percent-escaping, D/S/OK/ERR/INQUIRE/comments, every count and size capped, a hostile agent never a panic) and gpg-agent's operations: whether a key is there and where (HAVEKEY, KEYINFO, READKEY), signing a SHA-256, SHA-384 or SHA-512 digest (SIGKEY, SETHASH, PKSIGN), decrypting a session key (SETKEY, PKDECRYPT, answering INQUIRE CIPHERTEXT), and the hints that let the agent's own pinentry show, so MailCraft never sees a PIN; a bounded canonical S-expression reader; Assuan's socket files (a redirect, and Windows' loopback port and nonce). The desktop program finds the agent with gpgconf --list-dirs agent-socket, run as a program (GnuPG, Gpg4win, GPG Suite), and says \"GnuPG isn't installed\" when there is none. Property tests and a fuzz target (assuan); nothing uses it yet"
+        "date": "2026-11-13",
+        "text": "#276 (part, IMAP 4): new mail the moment it arrives, on IMAP accounts whose server offers IDLE (RFC 2177). While the window is open and Send/Receive runs by itself, each such account has one extra connection to its own server, kept open in IDLE on the Inbox (examined read-only, signed in as Send/Receive is, with the password or token already in memory; the credential store is not read for it). When the server says the Inbox has more messages, the account's Send/Receive is queued quietly: it reads the Inbox first and passes over unchanged folders, so it is cheap. IDLE is renewed every 25 minutes; a dropped connection is made again after a wait doubling from 5 seconds to 5 minutes, at most 12 times an hour, after which the account is left alone for an hour; a server that can't do IDLE is left alone for a day, one that refuses the sign-in for ten minutes. A server that says more than 5,000 lines in one IDLE is left. Turning automatic Send/Receive off, working offline, removing the account or closing the mailbox stops the watch. The browser build has none."
       },
       {
-        "date": "2026-11-08",
-        "text": "#30 (part 1): a Digitally signed or Encrypted message (S/MIME or OpenPGP: multipart/signed, multipart/encrypted, application/pkcs7-mime, or inline armour) keeps the bytes it came as from every way mail comes in but a .pst file, in the content folder beside the mailbox file (by hash, counted, gone with the message; well-formed structures only, up to 64 MB a message and 1 GB a mailbox), and its body is written as those bytes, under a header written from the message with the usual filters, when it goes onto another IMAP server, is saved as .eml or is forwarded as an attachment, so its signature still checks there; mail.checkAgain downloads them for one read before, and one whose bytes went missing asks by itself. A copy into a Microsoft mailbox is still made from its parts. Nothing is checked yet"
+        "date": "2026-11-13",
+        "text": "#276 (part, IMAP 2): a mail-server (IMAP) account whose mailbox already follows the server's INBOX reads the Inbox before the folders are listed, as a Graph account's Inbox pass does: its new mail is handed to the window in a piece of its own, then the folders are listed and the rest read. A run with something to send, push or file first (a message in the Outbox, a read mark or move waiting, a copy to place), a run that only tells the server, and a first run, keep the old order, so that what the Inbox says is read after what was changed here has gone up."
       },
       {
-        "date": "2026-11-08",
-        "text": "#912: a message that says what didn't happen and why is translated as its heading once and each reason by itself, joined by one translated pattern ({heading}: {reason}, with a context for translators): Automatic Replies' \"Your automatic replies weren't changed\" (seven reasons) and File › Options' \"Desktop alerts can't be shown\" (three); the translations there were moved onto the new entries. Table tests in autorepliestests.rs and alertstests.rs"
+        "date": "2026-11-13",
+        "text": "#276 (part, IMAP 1): an IMAP folder other than the Inbox whose STATUS (messages, next UID, unseen, numbering) is what it was when it was last read whole, under the same limit on how many messages to have, is passed over by a Send/Receive: its mailbox is not opened and its messages are not listed. The statuses of all folders are asked in one pipelined go (50 to a write), so a 63-folder Gmail account spends a few round trips on them instead of two for every folder. A reading in full of every folder is due once an hour (a flag changed in another program that no count shows, such as Starred, waits for it), and a folder with messages waiting to be read again, a new numbering or a changed limit is always read. CONDSTORE (which would show flag changes at once) is not used yet. The Inbox is always read."
       },
       {
-        "date": "2026-11-08",
-        "text": "#911 (part 1): Gmail's inbox categories are read at every Send/Receive of a Gmail account's Inbox with four of Gmail's own searches (UID SEARCH UID <set> UNDELETED X-GM-RAW \"category:…\", in sets of at most 5,000 of the messages the server lists, the newest 200,000; Primary is what none found; an answer too long to read leaves the categories out of that run, and the run goes on), with Gmail's id of each message (X-GM-MSGID), and kept on each message as synced state. Five views under the Inbox list them with unread counts (a conversation in each category one of its messages is in); gmail: searches them; agents see gmailCategory; Account Settings hides them or keeps desktop alerts to Primary. Mail moved or copied out of the Inbox leaves its category. Moving between them comes later"
+        "date": "2026-11-13",
+        "text": "Memory (#1340): the Undo and Redo steps let go of the bodies and attachments the memory budget lets go of (each step's copy of a message, the version it kept from before a flag or a move, and for Microsoft, EWS and JMAP accounts the message as the change left it, name their content on disk instead), so a session holds about its budget and not the budget again for each step; regression tests count what the mailbox and every step hold, 1.3 times the budget where it was 8.5 times (5.5 times for a Microsoft account with only the step's copy leaned)."
       },
       {
-        "date": "2026-11-08",
-        "text": "#911 (part 2): View › Gmail Categories shows Gmail's five categories as folders (the default) or as a row of tabs above a Gmail Inbox's message list (view.gmailCategories, kept with the window's View settings, offered only with a Gmail account that shows them): each tab with its unread count, chosen as the folder pane's row is (folder.select with gmail), the chosen one again the whole Inbox, reached and chosen with the keyboard and read out with its count; the rows under the Inbox are not shown meanwhile, and a narrow list takes the tabs on two lines"
+        "date": "2026-11-13",
+        "text": "Memory (#1340): smaller caches for showing things again quickly: picture textures 96 MB (was 160; 64 pictures kept, the count a screen of a newsletter may show), pictures downloaded from the web 48 MB and 150 (was 96 and 300), senders' pictures 300 (was 1,000), content read from disk 64 MB (was 128); what is on screen is never let go of for another. The faces read for messages stay at 64 MB: they are kept for the run, and past the cap a font counts as not installed."
       },
       {
-        "date": "2026-11-08",
-        "text": "#911 (part 3): moving mail between Gmail's categories, built and merged switched off until Google has verified the app: mail.setGmailCategory (undoable, the messages named for agents as for a move, the whole conversation in that Inbox for a selection in conversation view; named messages move with their copies of the same Gmail message and without the rest of their conversations) makes the move here at once and queues it to the next Send/Receive, offline too; the run tells Gmail's API (messages.batchModify on gmail.googleapis.com, one request for each category moved to, with the messages' X-GM-MSGIDs in hex and the category's label, the account's Google token sent there for that call alone) before it reads the Inbox, and a move made here wins over Gmail's reading until Gmail has it; app-password accounts have Move to Category greyed with a note that it needs Google sign-in; drag onto a category's row or tab; a refused request sent again in halves (at most 32 requests a run), a move given up once Gmail has refused it three times; a stand-in for Gmail's API for the tests. Off, nothing is offered (not even in command search), Gmail's reading wins over a move left waiting, and the network layer itself sends nothing to Gmail's API whatever a request asks"
+        "date": "2026-11-13",
+        "text": "Memory (#1340): a main window minimised (or hidden, or covered whole as the system says) for three minutes lets go of what it keeps to show things again quickly: the pictures' textures and bytes, the pictures from the web, senders' pictures, the laid-out bodies, the message fonts, the content cache, and every body and attachment brought into messages, from the Undo steps too, except those of messages open in a window, selected or being written; all of it comes back from disk when shown. Not while a Send/Receive, a download, a save, an import or a sending is under way. The per-message entries the window kept in egui's memory are bounded. Measured with the sample mailbox under a virtual KWin: 253 MB before minimising, 129 MB after (249 MB throughout with the wait set past the test)."
       },
       {
-        "date": "2026-11-08",
-        "text": "#910: the bar above a message with pictures on the web offers \"Download pictures in all mail\", which turns on the switch of File › Options after a question saying that every sender's server learns when a message was opened and from which address; not offered in Junk E-mail, whose mail still never downloads by itself; turning the switch on in File › Options asks the same, off asks nothing. Kittest window test in reading/tests.rs"
+        "date": "2026-11-13",
+        "text": "#1311: a content file a virus scanner removes as it is written (Windows' virus error, or the file gone with its folder still there) is left out of the save and logged, instead of failing every save of the session"
       },
       {
-        "date": "2026-11-08",
-        "text": "#893: each account can have a colour. Account Settings › Colour picks one of the twelve colours categories take, or none; a new account is given the first of them no other account has, and an account from before has none until one is chosen (nothing changes in its file until then). The colour is a dot after the account's name in the folder pane, and in a search of All Mailboxes with more than one account, a stripe down the left edge of each row of that account's mail, selected or not, ringed in the text's colour in High Contrast; lists of one folder or one mailbox stay as they were. account.add and account.edit take color (\"#RRGGBB\", any colour, or null for none), and account.list says it. Not yet: the colour in new-mail alerts and in the From list of a new message"
+        "date": "2026-11-13",
+        "text": "#1311: on Windows a content file write refused with \"access denied\" is tried again for up to about 3.5 s; if still refused while another file can be made in its folder (a scanner refusing that one file), it is left out like a removed one instead of failing every save"
       },
       {
-        "date": "2026-11-08",
-        "text": "#771: the Reminders window is drawn in a pass of its own (a deferred viewport) instead of inside the main window's, so that its clicks no longer wait for a minimized main window to be given frames by the compositor (Wayland); what is clicked is carried out by the main window's logic, which runs every 250 ms while it is minimized, and a window no longer wanted while the main window has no passes is minimized until it does. A message or appointment in a window of its own still waits for the main window there (emilk/egui#8777). Tested in egui with the main window's logic alone, and on Windows with the main window minimized; on Wayland pending"
+        "date": "2026-11-13",
+        "text": "#1272: Mail quick actions stay clear of the floating scrollbar thumb, and People and Tasks use the same themed overlay when floating scrollbars are enabled."
       },
       {
-        "date": "2026-11-08",
-        "text": "#738: a draft begun elsewhere that an earlier version left in the Outbox and that a run then held is still the owner's: it takes MailCraft's marker with the run's answer, so Send Again sends it and letting go of the server's Outbox doesn't forget it"
+        "date": "2026-11-13",
+        "text": "#1251: Italian: the 1,063 texts of the interface that had no translation, marked fuzzy as the rest of the preview catalogue"
       },
       {
-        "date": "2026-11-07",
-        "text": "#872: sign-in and server errors from IMAP and SMTP (mailcraft-proto and mailcraft-net's connection, sign-in, Send/Receive and server changes) are texts with values: English, word for word as before, for the CLI, MCP and the log, and the interface language in Send/Receive problems, the status bar and Add Account's check; a server's own reason stays as the server wrote it; Add Account's one-off translation of the LOGINDISABLED refusal (#819) is gone"
+        "date": "2026-11-13",
+        "text": "#1235: the MIME reader reads and writes messages without the mailbox model, so it can be reused outside the client; MailCraft reads and writes mail as before"
       },
       {
-        "date": "2026-11-07",
-        "text": "#843: a .pst file's large distribution lists, whose members Outlook keeps in a stream of their own past 15,000 bytes, come in with their members (read within the import's caps: 1,000 members, 4 MB) instead of being named as not read"
+        "date": "2026-11-13",
+        "text": "#1213: Folder pane labels, chevrons and highlights align, inline compose controls fit narrow panes, crowded reading headers put the sender address on its own line, and compact Month view chips preserve room for the event title."
       },
       {
-        "date": "2026-11-07",
-        "text": "A draft begun on another device and sent here is queued as the owner's and goes with the next run (Graph and EWS); mail the server itself put in the Outbox is still never sent from here"
+        "date": "2026-11-13",
+        "text": "#1200: a standard folder can be named by its kind (inbox, sent, drafts, deleted, junk, archive, outbox) in mail.list, folder.select, the MCP tool listmessages and mailcraft-cli --folder, whatever the mailbox's language calls it; a path still works, and digits that name no folder are an id; tests for a mailbox with German folder names, a folder called 2024, an id given as text, account and the CLI"
       },
       {
-        "date": "2026-11-07",
-        "text": "AU3-R3: Windows reads the machine's physical memory (through sysinfo, system part alone, Windows only) for the mailbox load budget instead of the fixed 8 GiB; a reading of 0 falls back to it. Tests in storebudgettests.rs"
+        "date": "2026-11-13",
+        "text": "#1174: the switch between Mail, Calendar, People and Tasks sits at the foot of the pane on the left when View › Layout › Navigation Bar says so (view.navigationBar), where older mail programs had it, in place of the bar of icons down the window's edge; the names show beside the icons where the pane is wide enough for all four, and where the module in view has no pane for the row the bar stays, so the switch is never out of reach; tests for the place, a click, the row in every module and what a screen reader hears"
       },
       {
-        "date": "2026-11-07",
-        "text": "AU3-V3, AU3-V4: the attachment verdict refuses nine more kinds of file and folds a kind to lower case by ASCII rules only, asking about any kind with a non-ASCII letter; a table test of names and verdicts, with every refused kind in it, keeps the list and the test together"
+        "date": "2026-11-13",
+        "text": "#969: Courier New, a fixed-width font, in the composer's and the signature editor's font list; drawn in JetBrains Mono where it isn't installed, and a pasted monospace comes in as it"
       },
       {
-        "date": "2026-11-07",
-        "text": "AU3-04: the release workflows build and sign in separate jobs (binaries and release files handed on by digest, no cargo, rustup or built program in a job with signing material, smoke tests in jobs without secrets, the checksums signed with OpenSSL); cargo xtask workflows in cargo xtask ci checks that, permissions: read-all and HTTPS-only curl; Scorecard's workflow asks for the permissions it needs"
+        "date": "2026-11-13",
+        "text": "#544: Optional Close to system tray in General, with an icon only while enabled, Show, Send/Receive and Quit. The first close explains where the icon is; macOS uses AppKit hiding so the Dock restores the window. Linux/FreeBSD choose X11/XWayland only with the option on and a reachable X11 server; other starts keep their usual backend."
       },
       {
-        "date": "2026-11-07",
-        "text": "AU3-24, AU3-25, AU3-23, AU3-20, AU3-V6, H3, H4: the owner's yes to an agent's question reaches only what the question showed. The window keeps, with the question, what the command could take from the window (the selection, the folder in view, the messages being written, whole, the order of the accounts, the windows and who a meeting's window writes to) and the question's text; on the yes a change refuses it and the owner is told, and a folder emptied takes only the messages and folders shown, leaving what came in meanwhile, while a folder deleted with more in it than was shown is not deleted. Every command an agent can be asked about names its object (agent::bind::object), one that doesn't is refused, and a table test holds every one to it. Every file of a sender's bytes (exports, saved attachments, a message window's Save As, what an agent saves with mcp --files) is written through one helper that marks it as from the Internet, with a test listing the writers. Sending local tasks to To Do is never an agent's to do; an id of . or .. from Graph is refused"
+        "date": "2026-11-12",
+        "text": "Parity is reported as two counts, Has a command and Complete; Outlook's drawing items, Recall and Reply with IM are marked Out of scope with a reason, beside the five already out of scope, and left out of the percentages; the ROADMAP lists the parity themes in order, and CONTRIBUTING says how an open pull request holds its feature"
       }
     ]
   },
@@ -208,7 +208,7 @@
     "value_since": "2026-10-12T18:17:00Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 246,
+    "revisions_since": 247,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -216,39 +216,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 250,
-    "revisions_7d": 11,
+    "revisions": 251,
+    "revisions_7d": 12,
     "last_revision": {
-      "ts": "2026-11-14T09:09:13Z",
+      "ts": "2026-11-14T23:44:37Z",
       "kind": "content",
-      "commit": "02380a1",
-      "commit_full": "02380a1ea9a227a06a49e246fa0a37a115bbe091",
-      "message": "#276: new mail the moment it arrives on IMAP accounts, through IDLE (#1329)"
+      "commit": "240d1d4",
+      "commit_full": "240d1d42fe394cf3274402b180663ba9b43ca180",
+      "message": "Release 0.13.0 (#1419)"
     },
     "last_update": {
-      "ts": "2026-11-14T09:09:13Z",
+      "ts": "2026-11-14T23:44:37Z",
       "kind": "content",
-      "commit": "02380a1",
-      "commit_full": "02380a1ea9a227a06a49e246fa0a37a115bbe091",
-      "message": "#276: new mail the moment it arrives on IMAP accounts, through IDLE (#1329)"
+      "commit": "240d1d4",
+      "commit_full": "240d1d42fe394cf3274402b180663ba9b43ca180",
+      "message": "Release 0.13.0 (#1419)"
     },
-    "self_reported": "2026-11-11"
+    "self_reported": "2026-11-14"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
     "score": 23.0,
     "active_days_7d": 7,
-    "changes_7d": 153,
-    "changes_14d": 240,
+    "changes_7d": 154,
+    "changes_14d": 241,
     "housekeeping_7d": 18,
     "last_code_change": {
-      "ts": "2026-11-14T22:43:32Z",
-      "commit": "ed57e8e",
-      "commit_full": "ed57e8efcb33342c6901408e7a12f8b7054c1906",
-      "subject": "Give conversation buttons more space in the reading pane (#1404)"
+      "ts": "2026-11-14T23:44:37Z",
+      "commit": "240d1d4",
+      "commit_full": "240d1d42fe394cf3274402b180663ba9b43ca180",
+      "subject": "Release 0.13.0 (#1419)"
     },
-    "last_commit_ts": "2026-11-14T22:43:32Z",
+    "last_commit_ts": "2026-11-14T23:44:37Z",
     "repo_since": "2026-10-12T18:17:00Z",
     "window": [
       11,
@@ -264,7 +264,7 @@
       19,
       15,
       42,
-      40
+      41
     ],
     "days": [
       {
@@ -888,9 +888,13 @@
       },
       {
         "d": "2026-11-14",
-        "code": 40,
+        "code": 41,
         "other": 3,
         "samples": [
+          {
+            "commit": "240d1d4",
+            "subject": "Release 0.13.0 (#1419)"
+          },
           {
             "commit": "ed57e8e",
             "subject": "Give conversation buttons more space in the reading pane (#1404)"
@@ -898,10 +902,6 @@
           {
             "commit": "a842793",
             "subject": "#1309: desktop alerts on Linux ask for the desktop's new-mail and alarm sounds (#1414)"
-          },
-          {
-            "commit": "a15afb4",
-            "subject": "Show category colors on Free calendar events (#1402)"
           }
         ]
       }
@@ -6114,7 +6114,27 @@
       "breadth_pct": null,
       "full_prev": 25.0,
       "kind": "content"
+    },
+    {
+      "commit": "240d1d4",
+      "commit_full": "240d1d42fe394cf3274402b180663ba9b43ca180",
+      "commit_date": "2026-11-15T00:44:37+01:00",
+      "ts": "2026-11-14T23:44:37Z",
+      "message": "Release 0.13.0 (#1419)",
+      "stage": "public beta",
+      "next_stage": "leaving",
+      "last_updated": "2026-11-14",
+      "full_pct": 25.0,
+      "full_range": null,
+      "full_hours": null,
+      "full_label": "Ready for real work with a real account",
+      "target": "Microsoft Outlook (Microsoft 365, classic desktop)",
+      "mainstream_pct": null,
+      "essentials_pct": null,
+      "breadth_pct": null,
+      "full_prev": 25.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-14T22:59:22+00:00"
+  "updated_at": "2026-11-14T23:59:53+00:00"
 }
