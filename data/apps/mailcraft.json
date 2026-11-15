@@ -237,18 +237,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.3,
+    "score": 22.4,
     "active_days_7d": 7,
-    "changes_7d": 158,
-    "changes_14d": 242,
-    "housekeeping_7d": 17,
+    "changes_7d": 159,
+    "changes_14d": 243,
+    "housekeeping_7d": 18,
     "last_code_change": {
-      "ts": "2026-11-15T10:07:27Z",
-      "commit": "2fc70e7",
-      "commit_full": "2fc70e713d7423025c2979744d08058b21c83896",
-      "subject": "MB3.11: Android background Send/Receive, new-mail notifications, sync now (#1433)"
+      "ts": "2026-11-15T10:50:28Z",
+      "commit": "d91d573",
+      "commit_full": "d91d57305c2a66f4a1d07298a5cbc666069e744d",
+      "subject": "#1152: opening a message no longer asks about the reminder's series (#1432)"
     },
-    "last_commit_ts": "2026-11-15T10:07:27Z",
+    "last_commit_ts": "2026-11-15T11:02:30Z",
     "repo_since": "2026-10-12T18:17:00Z",
     "window": [
       4,
@@ -264,7 +264,7 @@
       15,
       42,
       41,
-      12
+      13
     ],
     "days": [
       {
@@ -907,9 +907,13 @@
       },
       {
         "d": "2026-11-15",
-        "code": 12,
-        "other": 0,
+        "code": 13,
+        "other": 1,
         "samples": [
+          {
+            "commit": "d91d573",
+            "subject": "#1152: opening a message no longer asks about the reminder's series (#1432)"
+          },
           {
             "commit": "2fc70e7",
             "subject": "MB3.11: Android background Send/Receive, new-mail notifications, sync now (#1433)"
@@ -917,10 +921,6 @@
           {
             "commit": "0a630bb",
             "subject": "#1425: a mailbox file that can't be looked at is never taken for a first start (#1431)"
-          },
-          {
-            "commit": "9203ee3",
-            "subject": "i18n: refresh hu.po after #1279 (#1447)"
           }
         ]
       }
@@ -6175,5 +6175,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-15T10:30:25+00:00"
+  "updated_at": "2026-11-15T11:11:20+00:00"
 }
