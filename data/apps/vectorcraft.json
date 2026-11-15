@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "a901c02",
-  "latest_commit_date": "2026-11-15T04:22:37+07:00",
-  "latest_message": "Cutting Tools: Nest Shapes packs the selected objects onto a sheet or roll (#7387)",
+  "latest_commit": "d094a3c",
+  "latest_commit_date": "2026-11-15T10:45:11+07:00",
+  "latest_message": "Brushes: built-in Tech Circuit brush library (#7601)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Adobe Illustrator 2026 (30.x)",
-    "last_updated": "2026-11-10",
+    "last_updated": "2026-11-14",
     "metrics": {
       "full": {
         "label": "Full Illustrator (ready for real work; decides the stage)",
@@ -344,6 +344,10 @@
       },
       {
         "date": "2026-11-14",
+        "text": "Built-in Tech Circuit brush library: Circuit Trace (chamfered art with 45-degree elbows and terminal pads), Bus Lines (parallel conductor pattern) and Terminal Nodes (repeating solder pads, test points and leads), all original geometry generated in code. Ten built-in brush libraries; G5 remaining estimate 3–13 h (estimated), headline numbers unchanged."
+      },
+      {
+        "date": "2026-11-14",
         "text": "Nest Shapes in the Cutting Tools add-on (Object › Plug-ins › Cutting Tools): the selected objects move close together onto an artboard, a sheet of a set size or a roll of a set width, packed by their bounding boxes with a margin inside the edges and a spacing between them, optionally turning objects 90° to fit; objects that do not fit go in a column beside the sheet; a dialog with Preview, one undo step (addon.cutting.nest). A VectorCraft addition: headline numbers unchanged."
       },
       {
@@ -493,10 +497,6 @@
       {
         "date": "2026-10-21",
         "text": "Print: the Print dialog's Media list has the Japanese papers — JIS B4 (257 × 364 mm), JIS B5 (182 × 257 mm) and JIS B6 next to the ISO B4/B5 (which keep their ISO 216 dimensions for settings saved before them), はがき 100 × 148 mm, 往復はがき 148 × 200 mm, 封筒 長形3号 120 × 235 mm / 長形4号 90 × 225 mm / 角形2号 240 × 332 mm / 角形3号 216 × 277 mm and 四六判 127 × 188 mm. A paper is named by its JSON id or its dialog label, any case and spacing (B5 (JIS) or b5jis), and every added size prints as its own PDF page size. Headline numbers unchanged."
-      },
-      {
-        "date": "2026-10-21",
-        "text": "Affinity import (AF.5), brought over from DesignCraft's (storytold/designcraft#291): master pages show on the pages that use them (a locked layer at the bottom); tables open as a text frame per cell and a line per edge; each paragraph keeps its alignment, indents, spacing and leading; frame text takes its text scale, not its frame's; drop shadows and outer glows become live effects, outlines strokes, colour and gradient overlays are baked into the paint; embedded Affinity documents open as editable content, and their artboards no longer become artboards; large pixel layers come in at a reduced resolution; text placed as Affinity places it (lines of differently aligned paragraphs, a frame's first baseline at cap height, last lines whose descenders hang out of the frame), underlines and strikethrough, line breaks inside paragraphs, table cells taller than their row, no stroke on shapes whose stroke style is None, CMYK pixel layers (phone photos in CMYK documents) shown through the document's own CMYK profile instead of the profile-free formula and its blue cast, outlines on stroked shapes. Headline numbers unchanged. Hostile files stay bounded (one budget for the whole read, embedded documents included; overlay work; master page copies), covered by the import fuzzer and limit tests."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 232,
+    "revisions_since": 233,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,39 +536,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 233,
-    "revisions_7d": 14,
+    "revisions": 234,
+    "revisions_7d": 15,
     "last_revision": {
-      "ts": "2026-11-14T21:22:37Z",
+      "ts": "2026-11-15T03:45:11Z",
       "kind": "content",
-      "commit": "a901c02",
-      "commit_full": "a901c024e5123ec802de321bce45effcf3c4db0c",
-      "message": "Cutting Tools: Nest Shapes packs the selected objects onto a sheet or roll (#7387)"
+      "commit": "d094a3c",
+      "commit_full": "d094a3c449446a38e139ad25c30b5fca9557a902",
+      "message": "Brushes: built-in Tech Circuit brush library (#7601)"
     },
     "last_update": {
-      "ts": "2026-11-14T21:22:37Z",
+      "ts": "2026-11-15T03:45:11Z",
       "kind": "content",
-      "commit": "a901c02",
-      "commit_full": "a901c024e5123ec802de321bce45effcf3c4db0c",
-      "message": "Cutting Tools: Nest Shapes packs the selected objects onto a sheet or roll (#7387)"
+      "commit": "d094a3c",
+      "commit_full": "d094a3c449446a38e139ad25c30b5fca9557a902",
+      "message": "Brushes: built-in Tech Circuit brush library (#7601)"
     },
-    "self_reported": "2026-11-10"
+    "self_reported": "2026-11-14"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 36.1,
+    "score": 36.6,
     "active_days_7d": 7,
-    "changes_7d": 1097,
-    "changes_14d": 1936,
+    "changes_7d": 1115,
+    "changes_14d": 1954,
     "housekeeping_7d": 43,
     "last_code_change": {
-      "ts": "2026-11-15T02:47:47Z",
-      "commit": "4830ea0",
-      "commit_full": "4830ea0e833f1bd0dd923e734a9dfa3cb0ea5403",
-      "subject": "i18n: Ukrainian Color Library names colors, not flowers (#7495)"
+      "ts": "2026-11-15T04:38:25Z",
+      "commit": "282559c",
+      "commit_full": "282559c105a7b42f7c0d3a744aed0deb86c19f89",
+      "subject": "i18n: translate the read-root, linked JavaScript and graph design refusals (#7405)"
     },
-    "last_commit_ts": "2026-11-15T02:47:47Z",
+    "last_commit_ts": "2026-11-15T04:38:25Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       113,
@@ -584,7 +584,7 @@
       254,
       240,
       283,
-      35
+      53
     ],
     "days": [
       {
@@ -1450,20 +1450,20 @@
       },
       {
         "d": "2026-11-15",
-        "code": 35,
+        "code": 53,
         "other": 0,
         "samples": [
           {
-            "commit": "4830ea0",
-            "subject": "i18n: Ukrainian Color Library names colors, not flowers (#7495)"
+            "commit": "282559c",
+            "subject": "i18n: translate the read-root, linked JavaScript and graph design refusals (#7405)"
           },
           {
-            "commit": "78d45ee",
-            "subject": "Panels: ui.panelView sets the Swatches, Graphic Styles and Symbols panel views (#7699)"
+            "commit": "6b3ae1c",
+            "subject": "Scripts: File › Scripts runs the text its check read, with includes from the checked folder (#7705)"
           },
           {
-            "commit": "7c12d66",
-            "subject": ".ai save: live graphs are written as graph records (#7627)"
+            "commit": "225947a",
+            "subject": "3D and Materials: the Lighting tab's widget moves lights around the object (#7728)"
           }
         ]
       }
@@ -7804,7 +7804,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "d094a3c",
+      "commit_full": "d094a3c449446a38e139ad25c30b5fca9557a902",
+      "commit_date": "2026-11-15T10:45:11+07:00",
+      "ts": "2026-11-15T03:45:11Z",
+      "message": "Brushes: built-in Tech Circuit brush library (#7601)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-14",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-15T03:38:09+00:00"
+  "updated_at": "2026-11-15T04:40:48+00:00"
 }

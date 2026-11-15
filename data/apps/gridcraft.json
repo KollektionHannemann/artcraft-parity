@@ -464,18 +464,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.0,
+    "score": 14.5,
     "active_days_7d": 6,
-    "changes_7d": 83,
-    "changes_14d": 183,
+    "changes_7d": 84,
+    "changes_14d": 184,
     "housekeeping_7d": 4,
     "last_code_change": {
-      "ts": "2026-11-15T03:12:49Z",
-      "commit": "2f52ae5",
-      "commit_full": "2f52ae5c7eeb147a539dfc74612be4e49de328ff",
-      "subject": "Sandbox: refuse fcntl's asynchronous notification on Linux (#3846)"
+      "ts": "2026-11-15T04:04:39Z",
+      "commit": "8bde636",
+      "commit_full": "8bde636f272cb5ac1d9b945cecf17791febe605d",
+      "subject": "Sandbox: test the socket owner ioctls with a real pointer (#4245)"
     },
-    "last_commit_ts": "2026-11-15T03:12:49Z",
+    "last_commit_ts": "2026-11-15T04:04:39Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       16,
@@ -491,7 +491,7 @@
       11,
       0,
       8,
-      1
+      2
     ],
     "days": [
       {
@@ -1146,9 +1146,13 @@
       },
       {
         "d": "2026-11-15",
-        "code": 1,
+        "code": 2,
         "other": 1,
         "samples": [
+          {
+            "commit": "8bde636",
+            "subject": "Sandbox: test the socket owner ioctls with a real pointer (#4245)"
+          },
           {
             "commit": "2f52ae5",
             "subject": "Sandbox: refuse fcntl's asynchronous notification on Linux (#3846)"
@@ -3712,5 +3716,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-15T03:38:49+00:00"
+  "updated_at": "2026-11-15T04:41:19+00:00"
 }
