@@ -46,7 +46,7 @@
   },
   "roadmap": {
     "revisions": 197,
-    "revisions_7d": 3,
+    "revisions_7d": 2,
     "last_revision": {
       "ts": "2026-11-14T14:13:14Z",
       "kind": "content",
@@ -66,21 +66,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 37.9,
+    "score": 33.2,
     "active_days_7d": 7,
-    "changes_7d": 1200,
-    "changes_14d": 1922,
-    "housekeeping_7d": 71,
+    "changes_7d": 1136,
+    "changes_14d": 1800,
+    "housekeeping_7d": 64,
     "last_code_change": {
-      "ts": "2026-11-14T23:32:36Z",
-      "commit": "fb8c9a7",
-      "commit_full": "fb8c9a7e119c78ebd35bb2c36c80ea96a2ddf05b",
-      "subject": "solidcore: retire the Nx1 and 3x2 corner side-edge flags (#16961)"
+      "ts": "2026-11-15T00:17:26Z",
+      "commit": "3273905",
+      "commit_full": "3273905cab0674d01644d78e08555d2401e4f07e",
+      "subject": "Canvases: show images on Three Points and Along Path planes (#16153) (#16198)"
     },
-    "last_commit_ts": "2026-11-14T23:32:36Z",
+    "last_commit_ts": "2026-11-15T00:17:26Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
-      128,
       160,
       38,
       158,
@@ -93,7 +92,8 @@
       149,
       191,
       203,
-      197
+      198,
+      5
     ],
     "days": [
       {
@@ -820,9 +820,13 @@
       },
       {
         "d": "2026-11-14",
-        "code": 197,
+        "code": 198,
         "other": 18,
         "samples": [
+          {
+            "commit": "ce18daa",
+            "subject": "solidcore: retire the two plane flags (plane_reparameterize_moves_origin, plane_recognition_origin_after_axes) (#16960)"
+          },
           {
             "commit": "fb8c9a7",
             "subject": "solidcore: retire the Nx1 and 3x2 corner side-edge flags (#16961)"
@@ -830,10 +834,25 @@
           {
             "commit": "848a991",
             "subject": "Booleans: a cut with a list of tools sets up its bookkeeping once, not once per tool (#16705) (#16709)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-15",
+        "code": 5,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "3273905",
+            "subject": "Canvases: show images on Three Points and Along Path planes (#16153) (#16198)"
           },
           {
-            "commit": "91f456b",
-            "subject": "solidcore: the section certificate keeps the offset's cancellation near a focal distance (#16652) (#16894)"
+            "commit": "9f53ff0",
+            "subject": "Stitch: a design that stitched on 0.3x is no longer refused by the result check over small edge and vertex gaps (#16373)"
+          },
+          {
+            "commit": "989ad07",
+            "subject": "solidcore: retire the chamfer_cone_stored_as_cone flag (#16573)"
           }
         ]
       }
@@ -2427,5 +2446,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-14T23:59:46+00:00"
+  "updated_at": "2026-11-15T00:37:36+00:00"
 }

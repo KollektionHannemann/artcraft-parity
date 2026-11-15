@@ -49,6 +49,17 @@
   ],
   "latest_events": [
     {
+      "id": "mailcraft",
+      "name": "MailCraft",
+      "type": "release",
+      "ts": "2026-11-15T00:17:18Z",
+      "tag": "v0.13.0",
+      "kind": "minor",
+      "changes": null,
+      "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.13.0",
+      "prerelease": false
+    },
+    {
       "id": "solidcraft",
       "name": "SolidCraft",
       "type": "release",
@@ -472,20 +483,15 @@
       "changes": 69,
       "url": "https://github.com/storytold/anicraft/releases/tag/v0.1.0",
       "prerelease": false
-    },
-    {
-      "id": "effectcraft",
-      "name": "EffectCraft",
-      "type": "release",
-      "ts": "2026-11-10T00:49:57Z",
-      "tag": "v0.23.1",
-      "kind": "patch",
-      "changes": 8,
-      "url": "https://github.com/storytold/effectcraft/releases/tag/v0.23.1",
-      "prerelease": false
     }
   ],
   "release_waves": [
+    {
+      "day": "2026-11-15",
+      "apps": 1,
+      "changes": 0,
+      "largest": null
+    },
     {
       "day": "2026-11-14",
       "apps": 1,
@@ -552,17 +558,6 @@
       "apps": 1,
       "changes": 0,
       "largest": null
-    },
-    {
-      "day": "2026-11-06",
-      "apps": 17,
-      "changes": 1820,
-      "largest": {
-        "id": "vectorcraft",
-        "name": "VectorCraft",
-        "tag": "v0.22.0",
-        "changes": 495
-      }
     }
   ],
   "apps": [
@@ -633,7 +628,7 @@
       },
       "roadmap": {
         "revisions": 233,
-        "revisions_7d": 18,
+        "revisions_7d": 14,
         "last_revision": {
           "ts": "2026-11-14T21:22:37Z",
           "kind": "content",
@@ -653,21 +648,20 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 38.1,
+        "score": 31.9,
         "active_days_7d": 7,
-        "changes_7d": 1261,
-        "changes_14d": 1942,
-        "housekeeping_7d": 49,
+        "changes_7d": 1063,
+        "changes_14d": 1902,
+        "housekeeping_7d": 43,
         "last_code_change": {
-          "ts": "2026-11-14T23:18:12Z",
-          "commit": "dafd993",
-          "commit_full": "dafd99339525d309b5a1152d522d61ea08e71925",
-          "subject": "Effects: Effect › SVG Filters lists default filters (#7658)"
+          "ts": "2026-11-15T00:11:58Z",
+          "commit": "895e949",
+          "commit_full": "895e9493d2dada35bca88044e06b6f63883b2405",
+          "subject": "Tests: each Show Hidden Characters retry sets new text (#7693)"
         },
-        "last_commit_ts": "2026-11-14T23:18:12Z",
+        "last_commit_ts": "2026-11-15T00:11:58Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
-          41,
           113,
           117,
           187,
@@ -680,7 +674,8 @@
           123,
           254,
           240,
-          283
+          283,
+          1
         ]
       },
       "release": {
@@ -782,11 +777,11 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.1,
-        "active_days_7d": 7,
-        "changes_7d": 39,
+        "score": 11.6,
+        "active_days_7d": 6,
+        "changes_7d": 38,
         "changes_14d": 139,
-        "housekeeping_7d": 6,
+        "housekeeping_7d": 5,
         "last_code_change": {
           "ts": "2026-11-14T20:21:35Z",
           "commit": "6b2b7e6",
@@ -796,7 +791,6 @@
         "last_commit_ts": "2026-11-14T20:21:35Z",
         "repo_since": "2026-09-30T14:04:12Z",
         "window": [
-          0,
           2,
           9,
           17,
@@ -809,7 +803,8 @@
           9,
           7,
           1,
-          11
+          11,
+          0
         ]
       },
       "release": {
@@ -903,7 +898,7 @@
       },
       "roadmap": {
         "revisions": 600,
-        "revisions_7d": 82,
+        "revisions_7d": 19,
         "last_revision": {
           "ts": "2026-11-14T11:16:34Z",
           "kind": "content",
@@ -923,11 +918,11 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 18.8,
-        "active_days_7d": 7,
-        "changes_7d": 150,
-        "changes_14d": 292,
-        "housekeeping_7d": 10,
+        "score": 15.1,
+        "active_days_7d": 6,
+        "changes_7d": 60,
+        "changes_14d": 278,
+        "housekeeping_7d": 8,
         "last_code_change": {
           "ts": "2026-11-14T20:22:27Z",
           "commit": "323cf78",
@@ -937,7 +932,6 @@
         "last_commit_ts": "2026-11-14T20:40:06Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
-          14,
           11,
           19,
           32,
@@ -950,7 +944,8 @@
           19,
           4,
           11,
-          8
+          8,
+          0
         ]
       },
       "release": {
@@ -1043,11 +1038,11 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 18.3,
-        "active_days_7d": 7,
-        "changes_7d": 90,
-        "changes_14d": 225,
-        "housekeeping_7d": 6,
+        "score": 14.7,
+        "active_days_7d": 6,
+        "changes_7d": 69,
+        "changes_14d": 195,
+        "housekeeping_7d": 5,
         "last_code_change": {
           "ts": "2026-11-14T20:51:08Z",
           "commit": "7ac54e9",
@@ -1057,7 +1052,6 @@
         "last_commit_ts": "2026-11-14T20:51:08Z",
         "repo_since": "2026-09-30T09:22:00Z",
         "window": [
-          30,
           3,
           55,
           20,
@@ -1070,7 +1064,8 @@
           28,
           13,
           11,
-          6
+          6,
+          0
         ]
       },
       "release": {
@@ -1174,10 +1169,10 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.7,
-        "active_days_7d": 7,
-        "changes_7d": 61,
-        "changes_14d": 153,
+        "score": 11.9,
+        "active_days_7d": 6,
+        "changes_7d": 56,
+        "changes_14d": 150,
         "housekeeping_7d": 4,
         "last_code_change": {
           "ts": "2026-11-14T09:33:39Z",
@@ -1188,7 +1183,6 @@
         "last_commit_ts": "2026-11-14T20:45:54Z",
         "repo_since": "2026-10-06T02:13:02Z",
         "window": [
-          3,
           15,
           31,
           27,
@@ -1201,7 +1195,8 @@
           27,
           7,
           15,
-          2
+          2,
+          0
         ]
       },
       "release": {
@@ -1341,10 +1336,10 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 17.8,
-        "active_days_7d": 7,
-        "changes_7d": 130,
-        "changes_14d": 317,
+        "score": 14.5,
+        "active_days_7d": 6,
+        "changes_7d": 128,
+        "changes_14d": 313,
         "housekeeping_7d": 7,
         "last_code_change": {
           "ts": "2026-11-14T14:20:41Z",
@@ -1355,7 +1350,6 @@
         "last_commit_ts": "2026-11-14T14:20:41Z",
         "repo_since": "2026-10-09T15:38:50Z",
         "window": [
-          4,
           24,
           16,
           23,
@@ -1368,7 +1362,8 @@
           17,
           66,
           36,
-          1
+          1,
+          0
         ]
       },
       "release": {
@@ -1466,7 +1461,7 @@
       },
       "roadmap": {
         "revisions": 238,
-        "revisions_7d": 35,
+        "revisions_7d": 28,
         "last_revision": {
           "ts": "2026-11-13T01:19:00Z",
           "kind": "editorial",
@@ -1485,22 +1480,21 @@
       },
       "milestone": null,
       "activity": {
-        "level": "buzzing",
-        "score": 22.7,
+        "level": "active",
+        "score": 19.3,
         "active_days_7d": 7,
-        "changes_7d": 373,
-        "changes_14d": 506,
-        "housekeeping_7d": 19,
+        "changes_7d": 343,
+        "changes_14d": 485,
+        "housekeeping_7d": 16,
         "last_code_change": {
-          "ts": "2026-11-14T21:37:43Z",
-          "commit": "7d44e65",
-          "commit_full": "7d44e654122d45b24d8db3e7fc1be15cc3c7d277",
-          "subject": "fix(xfa): resolve clippy lints on main (#7354)"
+          "ts": "2026-11-15T00:06:17Z",
+          "commit": "c944f10",
+          "commit_full": "c944f106dd63eb9a33c7348eed1f03548cbd6468",
+          "subject": "Tests: keep the update download test stable in Linux coverage (#7350)"
         },
-        "last_commit_ts": "2026-11-14T21:37:43Z",
+        "last_commit_ts": "2026-11-15T00:06:17Z",
         "repo_since": "2026-09-30T09:17:08Z",
         "window": [
-          22,
           11,
           26,
           23,
@@ -1513,7 +1507,8 @@
           45,
           5,
           14,
-          10
+          10,
+          1
         ]
       },
       "release": {
@@ -1590,7 +1585,7 @@
       },
       "roadmap": {
         "revisions": 102,
-        "revisions_7d": 11,
+        "revisions_7d": 9,
         "last_revision": {
           "ts": "2026-11-14T15:56:12Z",
           "kind": "content",
@@ -1610,10 +1605,10 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 16.1,
-        "active_days_7d": 6,
-        "changes_7d": 95,
-        "changes_14d": 199,
+        "score": 13.0,
+        "active_days_7d": 5,
+        "changes_7d": 82,
+        "changes_14d": 182,
         "housekeeping_7d": 3,
         "last_code_change": {
           "ts": "2026-11-14T17:29:41Z",
@@ -1624,7 +1619,6 @@
         "last_commit_ts": "2026-11-14T17:29:41Z",
         "repo_since": "2026-10-06T02:09:42Z",
         "window": [
-          17,
           16,
           36,
           16,
@@ -1637,7 +1631,8 @@
           41,
           11,
           0,
-          8
+          8,
+          0
         ]
       },
       "release": {
@@ -1730,11 +1725,11 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 18.7,
-        "active_days_7d": 7,
-        "changes_7d": 113,
-        "changes_14d": 214,
-        "housekeeping_7d": 7,
+        "score": 15.0,
+        "active_days_7d": 6,
+        "changes_7d": 105,
+        "changes_14d": 197,
+        "housekeeping_7d": 6,
         "last_code_change": {
           "ts": "2026-11-14T22:31:42Z",
           "commit": "d5f82c2",
@@ -1744,7 +1739,6 @@
         "last_commit_ts": "2026-11-14T22:31:42Z",
         "repo_since": "2026-10-01T13:00:02Z",
         "window": [
-          17,
           3,
           40,
           26,
@@ -1757,7 +1751,8 @@
           21,
           56,
           5,
-          12
+          12,
+          0
         ]
       },
       "release": {
@@ -1850,10 +1845,10 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 30.1,
-        "active_days_7d": 7,
-        "changes_7d": 527,
-        "changes_14d": 776,
+        "score": 24.5,
+        "active_days_7d": 6,
+        "changes_7d": 447,
+        "changes_14d": 765,
         "housekeeping_7d": 12,
         "last_code_change": {
           "ts": "2026-11-14T22:31:37Z",
@@ -1864,7 +1859,6 @@
         "last_commit_ts": "2026-11-14T22:31:37Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
-          11,
           7,
           24,
           27,
@@ -1877,7 +1871,8 @@
           180,
           45,
           74,
-          30
+          30,
+          0
         ]
       },
       "release": {
@@ -1969,12 +1964,12 @@
       },
       "milestone": null,
       "activity": {
-        "level": "buzzing",
-        "score": 21.7,
-        "active_days_7d": 7,
-        "changes_7d": 162,
-        "changes_14d": 288,
-        "housekeeping_7d": 7,
+        "level": "active",
+        "score": 17.7,
+        "active_days_7d": 6,
+        "changes_7d": 151,
+        "changes_14d": 287,
+        "housekeeping_7d": 6,
         "last_code_change": {
           "ts": "2026-11-14T20:22:41Z",
           "commit": "e8a6867",
@@ -1984,7 +1979,6 @@
         "last_commit_ts": "2026-11-14T20:22:41Z",
         "repo_since": "2026-10-01T16:48:39Z",
         "window": [
-          1,
           19,
           46,
           4,
@@ -1997,7 +1991,8 @@
           53,
           27,
           10,
-          24
+          24,
+          0
         ]
       },
       "release": {
@@ -2090,11 +2085,11 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 12.9,
-        "active_days_7d": 7,
-        "changes_7d": 54,
+        "score": 10.6,
+        "active_days_7d": 6,
+        "changes_7d": 50,
         "changes_14d": 95,
-        "housekeeping_7d": 6,
+        "housekeeping_7d": 5,
         "last_code_change": {
           "ts": "2026-11-14T14:55:41Z",
           "commit": "2688cca",
@@ -2104,7 +2099,6 @@
         "last_commit_ts": "2026-11-14T14:55:41Z",
         "repo_since": "2026-10-06T00:08:04Z",
         "window": [
-          0,
           6,
           21,
           3,
@@ -2117,7 +2111,8 @@
           20,
           2,
           20,
-          1
+          1,
+          0
         ]
       },
       "release": {
@@ -2190,7 +2185,7 @@
       },
       "roadmap": {
         "revisions": 13,
-        "revisions_7d": 1,
+        "revisions_7d": 0,
         "last_revision": {
           "ts": "2026-11-08T23:07:54Z",
           "kind": "content",
@@ -2210,11 +2205,11 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 11.8,
-        "active_days_7d": 7,
-        "changes_7d": 40,
-        "changes_14d": 142,
-        "housekeeping_7d": 7,
+        "score": 9.4,
+        "active_days_7d": 6,
+        "changes_7d": 31,
+        "changes_14d": 125,
+        "housekeeping_7d": 5,
         "last_code_change": {
           "ts": "2026-11-14T14:22:22Z",
           "commit": "8e69890",
@@ -2224,7 +2219,6 @@
         "last_commit_ts": "2026-11-14T20:45:54Z",
         "repo_since": "2026-10-06T00:15:47Z",
         "window": [
-          17,
           39,
           29,
           4,
@@ -2237,7 +2231,8 @@
           19,
           2,
           1,
-          3
+          3,
+          0
         ]
       },
       "release": {
@@ -2307,7 +2302,7 @@
       },
       "roadmap": {
         "revisions": 251,
-        "revisions_7d": 12,
+        "revisions_7d": 11,
         "last_revision": {
           "ts": "2026-11-14T23:44:37Z",
           "kind": "content",
@@ -2326,22 +2321,21 @@
       },
       "milestone": null,
       "activity": {
-        "level": "buzzing",
-        "score": 23.0,
+        "level": "active",
+        "score": 19.6,
         "active_days_7d": 7,
-        "changes_7d": 154,
-        "changes_14d": 241,
-        "housekeeping_7d": 18,
+        "changes_7d": 147,
+        "changes_14d": 231,
+        "housekeeping_7d": 17,
         "last_code_change": {
-          "ts": "2026-11-14T23:44:37Z",
-          "commit": "240d1d4",
-          "commit_full": "240d1d42fe394cf3274402b180663ba9b43ca180",
-          "subject": "Release 0.13.0 (#1419)"
+          "ts": "2026-11-15T00:27:18Z",
+          "commit": "6e0b7a1",
+          "commit_full": "6e0b7a196c7c2ba8970826f0e91e0c5d3b85898f",
+          "subject": "MB3.3: accounts and sign-in on Android (#1285)"
         },
-        "last_commit_ts": "2026-11-14T23:44:37Z",
+        "last_commit_ts": "2026-11-15T00:27:18Z",
         "repo_since": "2026-10-12T18:17:00Z",
         "window": [
-          11,
           4,
           12,
           17,
@@ -2354,14 +2348,15 @@
           19,
           15,
           42,
-          41
+          41,
+          1
         ]
       },
       "release": {
-        "tag": "v0.12.0",
-        "name": "MailCraft v0.12.0",
-        "ts": "2026-11-12T02:12:06Z",
-        "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.12.0",
+        "tag": "v0.13.0",
+        "name": "MailCraft v0.13.0",
+        "ts": "2026-11-15T00:17:18Z",
+        "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.13.0",
         "changes": null,
         "new_contributors": null,
         "platforms": [
@@ -2444,11 +2439,11 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 16.0,
-        "active_days_7d": 7,
-        "changes_7d": 55,
-        "changes_14d": 176,
-        "housekeeping_7d": 7,
+        "score": 12.8,
+        "active_days_7d": 6,
+        "changes_7d": 48,
+        "changes_14d": 136,
+        "housekeeping_7d": 6,
         "last_code_change": {
           "ts": "2026-11-14T22:28:04Z",
           "commit": "9ed81da",
@@ -2458,7 +2453,6 @@
         "last_commit_ts": "2026-11-14T22:28:04Z",
         "repo_since": "2026-10-14T18:33:13Z",
         "window": [
-          40,
           52,
           8,
           4,
@@ -2471,7 +2465,8 @@
           10,
           8,
           9,
-          4
+          4,
+          0
         ]
       },
       "release": {
@@ -2552,11 +2547,11 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 12.3,
-        "active_days_7d": 7,
-        "changes_7d": 28,
-        "changes_14d": 126,
-        "housekeeping_7d": 7,
+        "score": 9.9,
+        "active_days_7d": 6,
+        "changes_7d": 25,
+        "changes_14d": 114,
+        "housekeeping_7d": 6,
         "last_code_change": {
           "ts": "2026-11-14T22:31:30Z",
           "commit": "6f19501",
@@ -2566,7 +2561,6 @@
         "last_commit_ts": "2026-11-14T22:31:30Z",
         "repo_since": "2026-11-01T19:58:46Z",
         "window": [
-          12,
           7,
           3,
           5,
@@ -2579,7 +2573,8 @@
           5,
           1,
           1,
-          7
+          7,
+          0
         ]
       },
       "release": {
@@ -2640,7 +2635,7 @@
       },
       "roadmap": {
         "revisions": 635,
-        "revisions_7d": 435,
+        "revisions_7d": 414,
         "last_revision": {
           "ts": "2026-11-14T22:54:21Z",
           "kind": "content",
@@ -2660,11 +2655,11 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 27.6,
-        "active_days_7d": 7,
-        "changes_7d": 493,
-        "changes_14d": 919,
-        "housekeeping_7d": 18,
+        "score": 22.2,
+        "active_days_7d": 6,
+        "changes_7d": 456,
+        "changes_14d": 846,
+        "housekeeping_7d": 16,
         "last_code_change": {
           "ts": "2026-11-14T22:54:21Z",
           "commit": "3c1926c",
@@ -2674,7 +2669,6 @@
         "last_commit_ts": "2026-11-14T22:54:21Z",
         "repo_since": "2026-10-31T14:52:14Z",
         "window": [
-          73,
           117,
           88,
           49,
@@ -2687,7 +2681,8 @@
           100,
           49,
           6,
-          33
+          33,
+          0
         ]
       },
       "release": {
@@ -2748,7 +2743,7 @@
       },
       "roadmap": {
         "revisions": 197,
-        "revisions_7d": 3,
+        "revisions_7d": 2,
         "last_revision": {
           "ts": "2026-11-14T14:13:14Z",
           "kind": "content",
@@ -2768,21 +2763,20 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 37.9,
+        "score": 33.2,
         "active_days_7d": 7,
-        "changes_7d": 1200,
-        "changes_14d": 1922,
-        "housekeeping_7d": 71,
+        "changes_7d": 1136,
+        "changes_14d": 1800,
+        "housekeeping_7d": 64,
         "last_code_change": {
-          "ts": "2026-11-14T23:32:36Z",
-          "commit": "fb8c9a7",
-          "commit_full": "fb8c9a7e119c78ebd35bb2c36c80ea96a2ddf05b",
-          "subject": "solidcore: retire the Nx1 and 3x2 corner side-edge flags (#16961)"
+          "ts": "2026-11-15T00:17:26Z",
+          "commit": "3273905",
+          "commit_full": "3273905cab0674d01644d78e08555d2401e4f07e",
+          "subject": "Canvases: show images on Three Points and Along Path planes (#16153) (#16198)"
         },
-        "last_commit_ts": "2026-11-14T23:32:36Z",
+        "last_commit_ts": "2026-11-15T00:17:26Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
-          128,
           160,
           38,
           158,
@@ -2795,7 +2789,8 @@
           149,
           191,
           203,
-          197
+          198,
+          5
         ]
       },
       "release": {
@@ -2864,7 +2859,7 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 17.4,
+        "score": 14.3,
         "active_days_7d": 6,
         "changes_7d": 102,
         "changes_14d": 125,
@@ -2882,7 +2877,6 @@
           0,
           0,
           0,
-          0,
           4,
           19,
           0,
@@ -2891,7 +2885,8 @@
           18,
           17,
           14,
-          14
+          14,
+          0
         ]
       },
       "release": {
@@ -2959,11 +2954,11 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.5,
-        "active_days_7d": 5,
-        "changes_7d": 90,
+        "score": 11.9,
+        "active_days_7d": 4,
+        "changes_7d": 63,
         "changes_14d": 676,
-        "housekeeping_7d": 2,
+        "housekeeping_7d": 1,
         "last_code_change": {
           "ts": "2026-11-14T23:06:45Z",
           "commit": "50801c9",
@@ -2973,7 +2968,6 @@
         "last_commit_ts": "2026-11-14T23:06:45Z",
         "repo_since": "2026-11-02T14:36:17Z",
         "window": [
-          0,
           64,
           214,
           143,
@@ -2986,7 +2980,8 @@
           16,
           0,
           0,
-          1
+          1,
+          0
         ]
       },
       "release": null,
@@ -3001,5 +2996,5 @@
     "missing": [],
     "candidates": []
   },
-  "generated_at": "2026-11-15T00:00:03+00:00"
+  "generated_at": "2026-11-15T00:37:46+00:00"
 }
