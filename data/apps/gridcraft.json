@@ -464,18 +464,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 13.0,
-    "active_days_7d": 5,
-    "changes_7d": 82,
-    "changes_14d": 182,
+    "score": 14.0,
+    "active_days_7d": 6,
+    "changes_7d": 83,
+    "changes_14d": 183,
     "housekeeping_7d": 4,
     "last_code_change": {
-      "ts": "2026-11-14T17:29:41Z",
-      "commit": "f204433",
-      "commit_full": "f2044337c7e195bdf6bec1b3914937a3dd386749",
-      "subject": "Tests: the oversized pivot cache warning names the part limit (main is red) (#4190)"
+      "ts": "2026-11-15T03:12:49Z",
+      "commit": "2f52ae5",
+      "commit_full": "2f52ae5c7eeb147a539dfc74612be4e49de328ff",
+      "subject": "Sandbox: refuse fcntl's asynchronous notification on Linux (#3846)"
     },
-    "last_commit_ts": "2026-11-15T01:53:30Z",
+    "last_commit_ts": "2026-11-15T03:12:49Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       16,
@@ -491,7 +491,7 @@
       11,
       0,
       8,
-      0
+      1
     ],
     "days": [
       {
@@ -1146,9 +1146,14 @@
       },
       {
         "d": "2026-11-15",
-        "code": 0,
+        "code": 1,
         "other": 1,
-        "samples": []
+        "samples": [
+          {
+            "commit": "2f52ae5",
+            "subject": "Sandbox: refuse fcntl's asynchronous notification on Linux (#3846)"
+          }
+        ]
       }
     ]
   },
@@ -3707,5 +3712,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-15T02:38:59+00:00"
+  "updated_at": "2026-11-15T03:38:49+00:00"
 }

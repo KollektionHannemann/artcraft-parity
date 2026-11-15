@@ -506,18 +506,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.0,
-    "active_days_7d": 6,
-    "changes_7d": 105,
-    "changes_14d": 197,
+    "score": 17.6,
+    "active_days_7d": 7,
+    "changes_7d": 110,
+    "changes_14d": 202,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-14T22:31:42Z",
-      "commit": "d5f82c2",
-      "commit_full": "d5f82c2143cbc2f86c4a5e0e7f2ff2e1eda269bd",
-      "subject": "links: allow only web and mail URLs (#2809)"
+      "ts": "2026-11-15T03:14:34Z",
+      "commit": "59c6fa1",
+      "commit_full": "59c6fa1b49478be717d5db62b94e3a5e80cf2023",
+      "subject": "Recovery: test that a write queued behind a cancelled one keeps its place (#2771)"
     },
-    "last_commit_ts": "2026-11-14T22:31:42Z",
+    "last_commit_ts": "2026-11-15T03:14:34Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       3,
@@ -533,7 +533,7 @@
       56,
       5,
       12,
-      0
+      5
     ],
     "days": [
       {
@@ -1338,6 +1338,25 @@
           {
             "commit": "f5087ea",
             "subject": "PDF: allow only web and mail link schemes (#2804)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-15",
+        "code": 5,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "59c6fa1",
+            "subject": "Recovery: test that a write queued behind a cancelled one keeps its place (#2771)"
+          },
+          {
+            "commit": "147cf23",
+            "subject": "Tables: table.setCell records no undo step when the cells already have the values (#2778)"
+          },
+          {
+            "commit": "ad4683c",
+            "subject": "Paste: params text gives the pasted image's size as its stored resolution (#2783)"
           }
         ]
       }
@@ -6520,5 +6539,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-15T00:36:56+00:00"
+  "updated_at": "2026-11-15T03:38:32+00:00"
 }

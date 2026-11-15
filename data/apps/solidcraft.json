@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 34.8,
+    "score": 35.3,
     "active_days_7d": 7,
-    "changes_7d": 1148,
-    "changes_14d": 1812,
+    "changes_7d": 1156,
+    "changes_14d": 1820,
     "housekeeping_7d": 65,
     "last_code_change": {
-      "ts": "2026-11-15T02:04:08Z",
-      "commit": "f5cd5cc",
-      "commit_full": "f5cd5cc819845aad57f8edf94364ffb69ed82c5b",
-      "subject": "Mirrored copies: a dragged copy's cylinder wall is split into triangles the same way as a fresh copy's (#16815) (#17049)"
+      "ts": "2026-11-15T03:10:34Z",
+      "commit": "f8f6c75",
+      "commit_full": "f8f6c75bd356e3ae754311a62a69a019a985d530",
+      "subject": "Intersect: a tool's rounds all survive where they graze the other body's rounds within the tolerance (#16946)"
     },
-    "last_commit_ts": "2026-11-15T02:04:08Z",
+    "last_commit_ts": "2026-11-15T03:10:34Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       160,
@@ -93,7 +93,7 @@
       191,
       203,
       198,
-      17
+      25
     ],
     "days": [
       {
@@ -839,20 +839,20 @@
       },
       {
         "d": "2026-11-15",
-        "code": 17,
+        "code": 25,
         "other": 1,
         "samples": [
           {
-            "commit": "f5cd5cc",
-            "subject": "Mirrored copies: a dragged copy's cylinder wall is split into triangles the same way as a fresh copy's (#16815) (#17049)"
+            "commit": "f8f6c75",
+            "subject": "Intersect: a tool's rounds all survive where they graze the other body's rounds within the tolerance (#16946)"
           },
           {
-            "commit": "ff107ea",
-            "subject": "Geometry tests: build circular face boundaries in the UV plane (#16495) (#17039)"
+            "commit": "a5b35ab",
+            "subject": "Fillet: rounds joined at a crease of a spline loft's rim keep a certified definition or the fillet fails, never a face that cannot be read back (#17020)"
           },
           {
-            "commit": "abd4433",
-            "subject": "Sweep: a circle along lines and arcs in perpendicular planes no longer gets a control net that doubles back (#16966)"
+            "commit": "ace966f",
+            "subject": "A box selection in a curves input takes the sketch lines under it (#17075) (#17084)"
           }
         ]
       }
@@ -2446,5 +2446,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-15T02:39:26+00:00"
+  "updated_at": "2026-11-15T03:39:13+00:00"
 }
