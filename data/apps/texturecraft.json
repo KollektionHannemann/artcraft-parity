@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 12.8,
-    "active_days_7d": 6,
-    "changes_7d": 48,
-    "changes_14d": 136,
+    "score": 13.8,
+    "active_days_7d": 7,
+    "changes_7d": 49,
+    "changes_14d": 137,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-14T22:28:04Z",
-      "commit": "9ed81da",
-      "commit_full": "9ed81da8cbcfff0bf11d362f0e83fa4baa9d1300",
-      "subject": "formats: account for the USDC path table's real allocation (#507)"
+      "ts": "2026-11-15T05:18:27Z",
+      "commit": "a0e2cf1",
+      "commit_full": "a0e2cf1efcde3577ad4e9b55bf4ed787f7a30bd7",
+      "subject": "Avoid recompositing unrelated texture sets and layers after image imports (#477)"
     },
-    "last_commit_ts": "2026-11-15T03:03:14Z",
+    "last_commit_ts": "2026-11-15T05:18:27Z",
     "repo_since": "2026-10-14T18:33:13Z",
     "window": [
       52,
@@ -93,7 +93,7 @@
       8,
       9,
       4,
-      0
+      1
     ],
     "days": [
       {
@@ -440,9 +440,14 @@
       },
       {
         "d": "2026-11-15",
-        "code": 0,
+        "code": 1,
         "other": 1,
-        "samples": []
+        "samples": [
+          {
+            "commit": "a0e2cf1",
+            "subject": "Avoid recompositing unrelated texture sets and layers after image imports (#477)"
+          }
+        ]
       }
     ]
   },
@@ -835,5 +840,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-15T03:38:52+00:00"
+  "updated_at": "2026-11-15T05:39:58+00:00"
 }

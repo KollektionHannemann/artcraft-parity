@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 35.4,
+    "score": 35.5,
     "active_days_7d": 7,
-    "changes_7d": 1158,
-    "changes_14d": 1822,
+    "changes_7d": 1159,
+    "changes_14d": 1823,
     "housekeeping_7d": 65,
     "last_code_change": {
-      "ts": "2026-11-15T03:34:04Z",
-      "commit": "f3db9ed",
-      "commit_full": "f3db9ed75805c2262e634ebc1235ba301949c945",
-      "subject": "Cell grid: a conic piece whose chord is too short to measure is bounded by its apex's distance to the nearer end (#17051)"
+      "ts": "2026-11-15T04:42:54Z",
+      "commit": "d8ce044",
+      "commit_full": "d8ce0444d360e56032a3c060963d2099279dc810",
+      "subject": "Shell: a rib thinner than two walls stays solid instead of refusing the shell (#17010)"
     },
-    "last_commit_ts": "2026-11-15T03:34:04Z",
+    "last_commit_ts": "2026-11-15T04:42:54Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       160,
@@ -93,7 +93,7 @@
       191,
       203,
       198,
-      27
+      28
     ],
     "days": [
       {
@@ -839,9 +839,13 @@
       },
       {
         "d": "2026-11-15",
-        "code": 27,
+        "code": 28,
         "other": 1,
         "samples": [
+          {
+            "commit": "d8ce044",
+            "subject": "Shell: a rib thinner than two walls stays solid instead of refusing the shell (#17010)"
+          },
           {
             "commit": "f3db9ed",
             "subject": "Cell grid: a conic piece whose chord is too short to measure is bounded by its apex's distance to the nearer end (#17051)"
@@ -849,16 +853,29 @@
           {
             "commit": "8bd829e",
             "subject": "Fillet: small rounds on a shell's lip edges sew into the body instead of being refused at the creases (#17025)"
-          },
-          {
-            "commit": "f8f6c75",
-            "subject": "Intersect: a tool's rounds all survive where they graze the other body's rounds within the tolerance (#16946)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.42.0-nightly.20261115.134.1",
+      "name": "SolidCraft v0.42.0-nightly.20261115.134.1 (nightly)",
+      "ts": "2026-11-15T05:33:57Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.42.0-nightly.20261115.134.1",
+      "changes": 95,
+      "new_contributors": 3,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "patch"
+    },
     {
       "tag": "v0.42.0",
       "name": "SolidCraft v0.42.0",
@@ -1034,23 +1051,6 @@
       "name": "v0.30.0",
       "ts": "2026-11-02T03:54:13Z",
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.30.0",
-      "changes": null,
-      "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.29.0",
-      "name": "v0.29.0",
-      "ts": "2026-11-01T00:21:27Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.29.0",
       "changes": null,
       "new_contributors": null,
       "platforms": [
@@ -2446,5 +2446,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-15T04:41:37+00:00"
+  "updated_at": "2026-11-15T05:40:10+00:00"
 }
