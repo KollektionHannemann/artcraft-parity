@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/gridcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/gridcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "a8a51e3",
-  "latest_commit_date": "2026-11-14T16:56:12+01:00",
-  "latest_message": "XLSX: warn when a pivot cache can't be read or is too large (#1039) (#2491)",
+  "latest_commit": "1d0b311",
+  "latest_commit_date": "2026-11-15T17:55:04+01:00",
+  "latest_message": "Preserve Arabic cell direction and RTL sheet layout in PDF exports (#955)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -330,6 +330,14 @@
       },
       {
         "date": "2026-10-26",
+        "text": "PDF preserves Context/LTR/RTL reading direction through wrapping and drawing; RTL sheet cells, borders, headings, objects and sparklines mirror consistently"
+      },
+      {
+        "date": "2026-10-26",
+        "text": "Arabic PDF export shapes licensed glyph outlines and preserves searchable logical text; characters the font lacks, or a missing Arabic font, fall back to the standard fonts instead of failing the export"
+      },
+      {
+        "date": "2026-10-26",
         "text": "Arabic bidi display/editing preserve logical source text; per-cell reading direction is editable and survives undo, XLSX and conditional-format priority"
       },
       {
@@ -419,14 +427,6 @@
       {
         "date": "2026-10-20",
         "text": "Interface translated into Dutch (518 labels: ribbon, context menus, File view, dialog titles, Options); nl, nl-NL, nl-BE locale tags resolve to Dutch"
-      },
-      {
-        "date": "2026-10-19",
-        "text": "Long flat operator chains (=A1+A2+…) up to Excel's 8,192-character limit (4,096 operands): entering, filling, inserting rows, undo, Evaluate Formula and XLSX save no longer overflow the stack; chains past 64 operands are saved as plain formulas, not dynamic arrays; Spanish formula entry accepts chains past 256 operands (#916)"
-      },
-      {
-        "date": "2026-10-19",
-        "text": "Linux: \"Use system setting\" for the theme keeps following the desktop when the XDG Desktop Portal stops answering: each read gives up after 2 s and the next poll reconnects, where one unanswered call stalled the watcher for the rest of the session"
       }
     ]
   },
@@ -435,7 +435,7 @@
     "value_since": "2026-10-10T18:09:06Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 100,
+    "revisions_since": 102,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -443,39 +443,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 102,
-    "revisions_7d": 9,
+    "revisions": 104,
+    "revisions_7d": 11,
     "last_revision": {
-      "ts": "2026-11-14T15:56:12Z",
+      "ts": "2026-11-15T16:55:04Z",
       "kind": "content",
-      "commit": "a8a51e3",
-      "commit_full": "a8a51e3cf7857ef5f2911e7fd4ba5d9ceef1177b",
-      "message": "XLSX: warn when a pivot cache can't be read or is too large (#1039) (#2491)"
+      "commit": "1d0b311",
+      "commit_full": "1d0b311b4a943e19c86f1bfaf85927c3116ea92a",
+      "message": "Preserve Arabic cell direction and RTL sheet layout in PDF exports (#955)"
     },
     "last_update": {
-      "ts": "2026-11-14T15:56:12Z",
+      "ts": "2026-11-15T16:55:04Z",
       "kind": "content",
-      "commit": "a8a51e3",
-      "commit_full": "a8a51e3cf7857ef5f2911e7fd4ba5d9ceef1177b",
-      "message": "XLSX: warn when a pivot cache can't be read or is too large (#1039) (#2491)"
+      "commit": "1d0b311",
+      "commit_full": "1d0b311b4a943e19c86f1bfaf85927c3116ea92a",
+      "message": "Preserve Arabic cell direction and RTL sheet layout in PDF exports (#955)"
     },
     "self_reported": "2026-11-05"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.5,
+    "score": 15.5,
     "active_days_7d": 6,
-    "changes_7d": 84,
-    "changes_14d": 184,
+    "changes_7d": 87,
+    "changes_14d": 187,
     "housekeeping_7d": 4,
     "last_code_change": {
-      "ts": "2026-11-15T04:04:39Z",
-      "commit": "8bde636",
-      "commit_full": "8bde636f272cb5ac1d9b945cecf17791febe605d",
-      "subject": "Sandbox: test the socket owner ioctls with a real pointer (#4245)"
+      "ts": "2026-11-15T16:55:04Z",
+      "commit": "1d0b311",
+      "commit_full": "1d0b311b4a943e19c86f1bfaf85927c3116ea92a",
+      "subject": "Preserve Arabic cell direction and RTL sheet layout in PDF exports (#955)"
     },
-    "last_commit_ts": "2026-11-15T04:04:39Z",
+    "last_commit_ts": "2026-11-15T16:55:04Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       16,
@@ -491,7 +491,7 @@
       11,
       0,
       8,
-      2
+      5
     ],
     "days": [
       {
@@ -1146,16 +1146,20 @@
       },
       {
         "d": "2026-11-15",
-        "code": 2,
+        "code": 5,
         "other": 1,
         "samples": [
           {
-            "commit": "8bde636",
-            "subject": "Sandbox: test the socket owner ioctls with a real pointer (#4245)"
+            "commit": "1d0b311",
+            "subject": "Preserve Arabic cell direction and RTL sheet layout in PDF exports (#955)"
           },
           {
-            "commit": "2f52ae5",
-            "subject": "Sandbox: refuse fcntl's asynchronous notification on Linux (#3846)"
+            "commit": "92ff21b",
+            "subject": "Shape and preserve Arabic text in PDF exports (#940)"
+          },
+          {
+            "commit": "ee24d50",
+            "subject": "Calc: overlapping spills resolve by anchor order, incremental matches full recalc (#2483)"
           }
         ]
       }
@@ -3714,7 +3718,53 @@
       "breadth_pct": 75.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "92ff21b",
+      "commit_full": "92ff21b9f258d411a9ce82813accfec879545757",
+      "commit_date": "2026-11-15T17:29:22+01:00",
+      "ts": "2026-11-15T16:29:22Z",
+      "message": "Shape and preserve Arabic text in PDF exports (#940)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-05",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "1d0b311",
+      "commit_full": "1d0b311b4a943e19c86f1bfaf85927c3116ea92a",
+      "commit_date": "2026-11-15T17:55:04+01:00",
+      "ts": "2026-11-15T16:55:04Z",
+      "message": "Preserve Arabic cell direction and RTL sheet layout in PDF exports (#955)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-05",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-15T04:41:19+00:00"
+  "updated_at": "2026-11-15T19:53:40+00:00"
 }

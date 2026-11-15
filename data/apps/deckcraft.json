@@ -525,18 +525,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 13.9,
+    "score": 14.9,
     "active_days_7d": 7,
-    "changes_7d": 59,
-    "changes_14d": 153,
+    "changes_7d": 63,
+    "changes_14d": 157,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-15T14:12:23Z",
-      "commit": "1ff3b87",
-      "commit_full": "1ff3b87f5a9ac604c313791821e9bf7e08e2aa1d",
-      "subject": "fix: honor Arabic Letter Mark in paragraph direction detection (#2149)"
+      "ts": "2026-11-15T19:39:46Z",
+      "commit": "e51ff1a",
+      "commit_full": "e51ff1a6a81d08431bc8734c6e591b0154c9eed4",
+      "subject": "Reuse shared RTF text escaping and code-page decoding (#2159)"
     },
-    "last_commit_ts": "2026-11-15T14:12:23Z",
+    "last_commit_ts": "2026-11-15T19:39:46Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
       15,
@@ -552,7 +552,7 @@
       7,
       15,
       2,
-      3
+      7
     ],
     "days": [
       {
@@ -1222,20 +1222,20 @@
       },
       {
         "d": "2026-11-15",
-        "code": 3,
+        "code": 7,
         "other": 1,
         "samples": [
           {
-            "commit": "1ff3b87",
-            "subject": "fix: honor Arabic Letter Mark in paragraph direction detection (#2149)"
+            "commit": "e51ff1a",
+            "subject": "Reuse shared RTF text escaping and code-page decoding (#2159)"
           },
           {
-            "commit": "9f7d1c4",
-            "subject": "fix: round engineering notation after forming the mantissa (#2148)"
+            "commit": "1af5712",
+            "subject": "fix: reject incomplete Base64 character tails (#2152)"
           },
           {
-            "commit": "a4674db",
-            "subject": "fix(xtask): reject numeric prereleases with leading zeroes (#2133)"
+            "commit": "b0c532d",
+            "subject": "fix: lowercase Greek sigma across formatting runs (#2151)"
           }
         ]
       }
@@ -4677,5 +4677,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-15T14:12:27+00:00"
+  "updated_at": "2026-11-15T19:53:30+00:00"
 }

@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "bdfd445",
-  "latest_commit_date": "2026-11-15T13:49:11+07:00",
-  "latest_message": "Graphic Styles: built-in Neon & Glow graphic style library (#7662)",
+  "latest_commit": "957397e",
+  "latest_commit_date": "2026-11-16T01:35:03+07:00",
+  "latest_message": "Packaging Tools: Make … Line gives paths a fold line role that their swatch carries (#7710)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -351,6 +351,10 @@
         "text": "Nest Shapes in the Cutting Tools add-on (Object › Plug-ins › Cutting Tools): the selected objects move close together onto an artboard, a sheet of a set size or a roll of a set width, packed by their bounding boxes with a margin inside the edges and a spacing between them, optionally turning objects 90° to fit; objects that do not fit go in a column beside the sheet; a dialog with Preview, one undo step (addon.cutting.nest). A VectorCraft addition: headline numbers unchanged."
       },
       {
+        "date": "2026-11-14",
+        "text": "Packaging Tools add-on (Object › Plug-ins › Packaging Tools): fold line roles for dielines (Cut, Crease, Partial Cut, Perforation), each carried by the swatch on a path's top stroke through a per-document role table that native files keep; PDF prints a role line on its swatch's separation when that swatch is a spot color, as the default role swatches are, and SVG, DXF and HP-GL keep the stroke's color. Make Cut Line, Make Crease Line, Make Partial Cut Line and Make Perforation Line give the selected paths a role, overprinting by default, and make a missing role swatch; the Fold Lines panel counts each role in the selection or the document, and its Role Swatches… picks another swatch for a role (addon.packaging.setRole, addon.packaging.roles, addon.packaging.setRoleSwatch). A VectorCraft addition: headline numbers unchanged."
+      },
+      {
         "date": "2026-11-13",
         "text": "Banner Hems and Grommets in the Cutting Tools add-on (Object › Plug-ins › Cutting Tools): on the chosen sides of the selected art's bounds, or of each artboard, a hem line at a set depth inside the edge and grommet marks (a circle with a cross) at a set inset, one at each end of a side and the rest spread evenly at most a set spacing apart, stroked in a chosen swatch; a dialog with Preview, one undo step (addon.cutting.banner). A VectorCraft addition: headline numbers unchanged."
       },
@@ -493,10 +497,6 @@
       {
         "date": "2026-10-21",
         "text": "3D lighting: four original lighting presets shared by Revolve, Extrude & Bevel, Inflate and Rotate, with command access and manual Custom settings; scores and estimates unchanged."
-      },
-      {
-        "date": "2026-10-21",
-        "text": "Print: the Print dialog's Media list has the Japanese papers — JIS B4 (257 × 364 mm), JIS B5 (182 × 257 mm) and JIS B6 next to the ISO B4/B5 (which keep their ISO 216 dimensions for settings saved before them), はがき 100 × 148 mm, 往復はがき 148 × 200 mm, 封筒 長形3号 120 × 235 mm / 長形4号 90 × 225 mm / 角形2号 240 × 332 mm / 角形3号 216 × 277 mm and 四六判 127 × 188 mm. A paper is named by its JSON id or its dialog label, any case and spacing (B5 (JIS) or b5jis), and every added size prints as its own PDF page size. Headline numbers unchanged."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 234,
+    "revisions_since": 235,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,39 +536,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 235,
-    "revisions_7d": 16,
+    "revisions": 236,
+    "revisions_7d": 17,
     "last_revision": {
-      "ts": "2026-11-15T06:49:11Z",
+      "ts": "2026-11-15T18:35:03Z",
       "kind": "content",
-      "commit": "bdfd445",
-      "commit_full": "bdfd445eef7c6ff45dde4e8a2e95440df90062c2",
-      "message": "Graphic Styles: built-in Neon & Glow graphic style library (#7662)"
+      "commit": "957397e",
+      "commit_full": "957397e7a180c759949f6f00a23942f49418179b",
+      "message": "Packaging Tools: Make … Line gives paths a fold line role that their swatch carries (#7710)"
     },
     "last_update": {
-      "ts": "2026-11-15T06:49:11Z",
+      "ts": "2026-11-15T18:35:03Z",
       "kind": "content",
-      "commit": "bdfd445",
-      "commit_full": "bdfd445eef7c6ff45dde4e8a2e95440df90062c2",
-      "message": "Graphic Styles: built-in Neon & Glow graphic style library (#7662)"
+      "commit": "957397e",
+      "commit_full": "957397e7a180c759949f6f00a23942f49418179b",
+      "message": "Packaging Tools: Make … Line gives paths a fold line role that their swatch carries (#7710)"
     },
     "self_reported": "2026-11-15"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 37.9,
+    "score": 38.3,
     "active_days_7d": 7,
-    "changes_7d": 1194,
-    "changes_14d": 2033,
-    "housekeeping_7d": 43,
+    "changes_7d": 1226,
+    "changes_14d": 2065,
+    "housekeeping_7d": 46,
     "last_code_change": {
-      "ts": "2026-11-15T13:46:00Z",
-      "commit": "3075889",
-      "commit_full": "3075889f0c31bc3d86c3eabe9fda42c68c27bc56",
-      "subject": "i18n: an effect refusal inside another message is translated with its reason (#7812)"
+      "ts": "2026-11-15T19:30:51Z",
+      "commit": "e34fef8",
+      "commit_full": "e34fef895fb322153097984495e3964deb4bec4c",
+      "subject": "Swatches: add right-click context menu to swatch items (#7732)"
     },
-    "last_commit_ts": "2026-11-15T13:46:00Z",
+    "last_commit_ts": "2026-11-15T19:30:51Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       113,
@@ -584,7 +584,7 @@
       254,
       240,
       283,
-      132
+      164
     ],
     "days": [
       {
@@ -1450,20 +1450,20 @@
       },
       {
         "d": "2026-11-15",
-        "code": 132,
-        "other": 0,
+        "code": 164,
+        "other": 3,
         "samples": [
           {
-            "commit": "3075889",
-            "subject": "i18n: an effect refusal inside another message is translated with its reason (#7812)"
+            "commit": "e34fef8",
+            "subject": "Swatches: add right-click context menu to swatch items (#7732)"
           },
           {
-            "commit": "3239725",
-            "subject": "PSD: Import Slices brings a file's slices in as user slices on Open and Place (#7817)"
+            "commit": "957397e",
+            "subject": "Packaging Tools: Make … Line gives paths a fold line role that their swatch carries (#7710)"
           },
           {
-            "commit": "b389d3e",
-            "subject": ".ai save: live art written as a group keeps wrapping type by its bounds (#7830)"
+            "commit": "9776feb",
+            "subject": "Effects: removing or duplicating several aligned effects of a design's art refuses one that no object has (#7887)"
           }
         ]
       }
@@ -7856,7 +7856,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "957397e",
+      "commit_full": "957397e7a180c759949f6f00a23942f49418179b",
+      "commit_date": "2026-11-16T01:35:03+07:00",
+      "ts": "2026-11-15T18:35:03Z",
+      "message": "Packaging Tools: Make … Line gives paths a fold line role that their swatch carries (#7710)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-15T14:12:06+00:00"
+  "updated_at": "2026-11-15T19:52:28+00:00"
 }

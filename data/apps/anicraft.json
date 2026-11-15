@@ -37,18 +37,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.1,
+    "score": 17.3,
     "active_days_7d": 7,
-    "changes_7d": 108,
-    "changes_14d": 131,
+    "changes_7d": 109,
+    "changes_14d": 132,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-11-15T11:36:41Z",
-      "commit": "d439e3e",
-      "commit_full": "d439e3e10e38eda630aa413871b76f721a2a0719",
-      "subject": "refactor(engine): share animated WebP container writing (M4) (#361)"
+      "ts": "2026-11-15T19:41:40Z",
+      "commit": "69589c5",
+      "commit_full": "69589c5f178a8bfeef7d19e44791858abfedb6fe",
+      "subject": "Use shared Base64 encoding for bitmap payloads (#373)"
     },
-    "last_commit_ts": "2026-11-15T11:36:41Z",
+    "last_commit_ts": "2026-11-15T19:41:40Z",
     "repo_since": "2026-11-06T06:58:25Z",
     "window": [
       0,
@@ -64,7 +64,7 @@
       17,
       14,
       14,
-      6
+      7
     ],
     "days": [
       {
@@ -221,9 +221,13 @@
       },
       {
         "d": "2026-11-15",
-        "code": 6,
+        "code": 7,
         "other": 0,
         "samples": [
+          {
+            "commit": "69589c5",
+            "subject": "Use shared Base64 encoding for bitmap payloads (#373)"
+          },
           {
             "commit": "d439e3e",
             "subject": "refactor(engine): share animated WebP container writing (M4) (#361)"
@@ -231,10 +235,6 @@
           {
             "commit": "7254b82",
             "subject": "refactor(xfl): share native instance color parsing (#362)"
-          },
-          {
-            "commit": "3cc7340",
-            "subject": "refactor(xfl): use shared library metadata views (#360)"
           }
         ]
       }
@@ -292,5 +292,5 @@
   ],
   "roadmap_history": [],
   "history": [],
-  "updated_at": "2026-11-15T12:02:56+00:00"
+  "updated_at": "2026-11-15T19:54:25+00:00"
 }

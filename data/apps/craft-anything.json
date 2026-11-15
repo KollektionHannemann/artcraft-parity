@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "5e809ed",
-  "latest_commit_date": "2026-11-15T18:24:47+07:00",
-  "latest_message": "Drop a saved -v=m from Aider's arguments too (R2.2) (#1900)",
+  "latest_commit": "febf096",
+  "latest_commit_date": "2026-11-16T01:15:53+07:00",
+  "latest_message": "Keep a failure log when an MCP plugin doesn't start, and say what it printed (R5.5) (#1921)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 657,
-    "revisions_7d": 436,
+    "revisions": 664,
+    "revisions_7d": 443,
     "last_revision": {
-      "ts": "2026-11-15T11:24:47Z",
+      "ts": "2026-11-15T18:15:53Z",
       "kind": "content",
-      "commit": "5e809ed",
-      "commit_full": "5e809edfe8d2bdb0591297c1572f07377427b10f",
-      "message": "Drop a saved -v=m from Aider's arguments too (R2.2) (#1900)"
+      "commit": "febf096",
+      "commit_full": "febf096ea4d1416e72135bc6491710d1448f229d",
+      "message": "Keep a failure log when an MCP plugin doesn't start, and say what it printed (R5.5) (#1921)"
     },
     "last_update": {
-      "ts": "2026-11-15T11:24:47Z",
+      "ts": "2026-11-15T18:15:53Z",
       "kind": "content",
-      "commit": "5e809ed",
-      "commit_full": "5e809edfe8d2bdb0591297c1572f07377427b10f",
-      "message": "Drop a saved -v=m from Aider's arguments too (R2.2) (#1900)"
+      "commit": "febf096",
+      "commit_full": "febf096ea4d1416e72135bc6491710d1448f229d",
+      "message": "Keep a failure log when an MCP plugin doesn't start, and say what it printed (R5.5) (#1921)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 26.8,
+    "score": 27.3,
     "active_days_7d": 7,
-    "changes_7d": 478,
-    "changes_14d": 868,
+    "changes_7d": 489,
+    "changes_14d": 879,
     "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-11-15T11:24:47Z",
-      "commit": "5e809ed",
-      "commit_full": "5e809edfe8d2bdb0591297c1572f07377427b10f",
-      "subject": "Drop a saved -v=m from Aider's arguments too (R2.2) (#1900)"
+      "ts": "2026-11-15T18:15:53Z",
+      "commit": "febf096",
+      "commit_full": "febf096ea4d1416e72135bc6491710d1448f229d",
+      "subject": "Keep a failure log when an MCP plugin doesn't start, and say what it printed (R5.5) (#1921)"
     },
-    "last_commit_ts": "2026-11-15T12:04:31Z",
+    "last_commit_ts": "2026-11-15T18:15:53Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       117,
@@ -93,7 +93,7 @@
       49,
       6,
       33,
-      22
+      33
     ],
     "days": [
       {
@@ -375,20 +375,20 @@
       },
       {
         "d": "2026-11-15",
-        "code": 22,
+        "code": 33,
         "other": 1,
         "samples": [
           {
-            "commit": "5e809ed",
-            "subject": "Drop a saved -v=m from Aider's arguments too (R2.2) (#1900)"
+            "commit": "febf096",
+            "subject": "Keep a failure log when an MCP plugin doesn't start, and say what it printed (R5.5) (#1921)"
           },
           {
-            "commit": "1097195",
-            "subject": "Detect ZIP members through the archive directory (R3.12) (#1822)"
+            "commit": "983a301",
+            "subject": "Check Aider's setup on the SSH host (R2.2) (#1912)"
           },
           {
-            "commit": "3a4edea",
-            "subject": "Preserve CR-only JSONC configuration formatting (R3.12) (#1823)"
+            "commit": "773ed61",
+            "subject": "Fix Codex's approval guidance for the inline tools table (R2.2) (#1918)"
           }
         ]
       }
@@ -5114,8 +5114,57 @@
       "commit": "5e809ed",
       "commit_full": "5e809edfe8d2bdb0591297c1572f07377427b10f",
       "message": "Drop a saved -v=m from Aider's arguments too (R2.2) (#1900)"
+    },
+    {
+      "ts": "2026-11-15T16:28:04Z",
+      "kind": "content",
+      "commit": "bd405ce",
+      "commit_full": "bd405ceeb57f7b034327dbd0c4fb8ea14903e823",
+      "message": "Study websites behind a login: save a sign-in you make in a browser window and reuse it (R2.9) (#1459)"
+    },
+    {
+      "ts": "2026-11-15T16:48:43Z",
+      "kind": "content",
+      "commit": "bf50b9e",
+      "commit_full": "bf50b9eb3a2279e7eeadac49de7a97f28517ccc0",
+      "message": "Preserve webpack factory parameters used by direct eval (R3.12) (#1913)"
+    },
+    {
+      "ts": "2026-11-15T17:27:48Z",
+      "kind": "content",
+      "commit": "fd9832c",
+      "commit_full": "fd9832c7a6d0c9f03643704eeef1342b0666f451",
+      "message": "Preserve scoped package names in JavaScript banners (R3.12) (#1916)"
+    },
+    {
+      "ts": "2026-11-15T17:34:26Z",
+      "kind": "content",
+      "commit": "ad9b1c7",
+      "commit_full": "ad9b1c74d1d13b9a4f382b91408334a71ea7f203",
+      "message": "Keep side-effect imports in JavaScript lexer fallback (R3.12) (#1915)"
+    },
+    {
+      "ts": "2026-11-15T17:38:07Z",
+      "kind": "content",
+      "commit": "773ed61",
+      "commit_full": "773ed614430f7d672a34a667ea18abf68fa81a0e",
+      "message": "Fix Codex's approval guidance for the inline tools table (R2.2) (#1918)"
+    },
+    {
+      "ts": "2026-11-15T17:46:03Z",
+      "kind": "content",
+      "commit": "983a301",
+      "commit_full": "983a3013f3995ad7a40e459c6260138be2d08db0",
+      "message": "Check Aider's setup on the SSH host (R2.2) (#1912)"
+    },
+    {
+      "ts": "2026-11-15T18:15:53Z",
+      "kind": "content",
+      "commit": "febf096",
+      "commit_full": "febf096ea4d1416e72135bc6491710d1448f229d",
+      "message": "Keep a failure log when an MCP plugin doesn't start, and say what it printed (R5.5) (#1921)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-15T13:23:10+00:00"
+  "updated_at": "2026-11-15T19:53:54+00:00"
 }
