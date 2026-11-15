@@ -444,18 +444,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.5,
+    "score": 17.9,
     "active_days_7d": 7,
-    "changes_7d": 75,
-    "changes_14d": 201,
+    "changes_7d": 77,
+    "changes_14d": 203,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-15T19:17:57Z",
-      "commit": "59c6de0",
-      "commit_full": "59c6de0b9189c007ddd4eaa6c8b97e5a6c188937",
-      "subject": "codecs, export: DNxHD / DNxHR from craft-video; remove crates/dnx (craft-libs #778) (#4846)"
+      "ts": "2026-11-15T21:53:44Z",
+      "commit": "e854190",
+      "commit_full": "e8541904fccbb09f8da6fe648f885cf2bca540e5",
+      "subject": "codecs: HE-AAC through craft-audio's SBR decoder; drop local upsampler, ADTS and LATM glue (craft-libs #778) (#4849)"
     },
-    "last_commit_ts": "2026-11-15T19:17:57Z",
+    "last_commit_ts": "2026-11-15T21:53:44Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       3,
@@ -471,7 +471,7 @@
       13,
       11,
       6,
-      6
+      8
     ],
     "days": [
       {
@@ -1285,20 +1285,20 @@
       },
       {
         "d": "2026-11-15",
-        "code": 6,
+        "code": 8,
         "other": 1,
         "samples": [
           {
+            "commit": "e854190",
+            "subject": "codecs: HE-AAC through craft-audio's SBR decoder; drop local upsampler, ADTS and LATM glue (craft-libs #778) (#4849)"
+          },
+          {
+            "commit": "937a2f9",
+            "subject": "media: DPX stills from craft-dpx (craft-libs #778) (#4848)"
+          },
+          {
             "commit": "59c6de0",
             "subject": "codecs, export: DNxHD / DNxHR from craft-video; remove crates/dnx (craft-libs #778) (#4846)"
-          },
-          {
-            "commit": "bdb831b",
-            "subject": "codecs: use shared Y4M stream parser (#4862)"
-          },
-          {
-            "commit": "01a36c1",
-            "subject": "bs: Add Bosnian (bs) to the interface languages (#3714)"
           }
         ]
       }
@@ -1881,5 +1881,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-15T19:52:36+00:00"
+  "updated_at": "2026-11-15T23:37:54+00:00"
 }

@@ -433,18 +433,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.4,
+    "score": 14.6,
     "active_days_7d": 7,
-    "changes_7d": 44,
-    "changes_14d": 145,
+    "changes_7d": 45,
+    "changes_14d": 146,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-15T18:57:41Z",
-      "commit": "e87f92f",
-      "commit_full": "e87f92fefba00c704c9cdfe7dca7dda87df87b51",
-      "subject": "Tests: the second folder drop waits for the Missing Photos count (#3822) (#4027)"
+      "ts": "2026-11-15T21:42:04Z",
+      "commit": "2dcb258",
+      "commit_full": "2dcb258ba40738230a07484a95eb27dc84ed66fe",
+      "subject": "codecs: use shared JPEG encoder (#4274)"
     },
-    "last_commit_ts": "2026-11-15T18:57:41Z",
+    "last_commit_ts": "2026-11-15T21:42:04Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
       2,
@@ -460,7 +460,7 @@
       7,
       1,
       11,
-      6
+      7
     ],
     "days": [
       {
@@ -1231,9 +1231,13 @@
       },
       {
         "d": "2026-11-15",
-        "code": 6,
+        "code": 7,
         "other": 0,
         "samples": [
+          {
+            "commit": "2dcb258",
+            "subject": "codecs: use shared JPEG encoder (#4274)"
+          },
           {
             "commit": "e87f92f",
             "subject": "Tests: the second folder drop waits for the Missing Photos count (#3822) (#4027)"
@@ -1241,10 +1245,6 @@
           {
             "commit": "7fc6b7c",
             "subject": "Reuse shared Base64 encoding in masks, MCP and slideshow (#4297)"
-          },
-          {
-            "commit": "050a79b",
-            "subject": "meta: reuse existing shared MRW container parser (#4296)"
           }
         ]
       }
@@ -1880,5 +1880,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-15T19:52:44+00:00"
+  "updated_at": "2026-11-15T23:38:00+00:00"
 }

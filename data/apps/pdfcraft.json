@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "aef2285",
-  "latest_commit_date": "2026-11-15T12:11:23+01:00",
-  "latest_message": "Select a table by rows when a drag crosses its columns (#3669)",
+  "latest_commit": "e191b0e",
+  "latest_commit_date": "2026-11-15T22:55:35+01:00",
+  "latest_message": "M3: select text across pages (view.text-select)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 150,
+    "revisions_since": 151,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 239,
-    "revisions_7d": 29,
+    "revisions": 240,
+    "revisions_7d": 30,
     "last_revision": {
-      "ts": "2026-11-15T11:11:23Z",
+      "ts": "2026-11-15T21:55:35Z",
       "kind": "content",
-      "commit": "aef2285",
-      "commit_full": "aef22858a9a0ddf69c96c402a25d515e410c3a4a",
-      "message": "Select a table by rows when a drag crosses its columns (#3669)"
+      "commit": "e191b0e",
+      "commit_full": "e191b0ea69b7dcc4e554c1c4e51b6214bec1c590",
+      "message": "M3: select text across pages (view.text-select)"
     },
     "last_update": {
-      "ts": "2026-11-15T11:11:23Z",
+      "ts": "2026-11-15T21:55:35Z",
       "kind": "content",
-      "commit": "aef2285",
-      "commit_full": "aef22858a9a0ddf69c96c402a25d515e410c3a4a",
-      "message": "Select a table by rows when a drag crosses its columns (#3669)"
+      "commit": "e191b0e",
+      "commit_full": "e191b0ea69b7dcc4e554c1c4e51b6214bec1c590",
+      "message": "M3: select text across pages (view.text-select)"
     },
     "self_reported": "2026-11-09"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.8,
+    "score": 22.0,
     "active_days_7d": 7,
-    "changes_7d": 352,
-    "changes_14d": 494,
+    "changes_7d": 354,
+    "changes_14d": 496,
     "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-11-15T19:02:29Z",
-      "commit": "a11ea7a",
-      "commit_full": "a11ea7ad8570871bac9e57cff62b0348a0b077f7",
-      "subject": "preflight: use shared ICC v2 sRGB output-intent bytes (#7450)"
+      "ts": "2026-11-15T21:55:35Z",
+      "commit": "e191b0e",
+      "commit_full": "e191b0ea69b7dcc4e554c1c4e51b6214bec1c590",
+      "subject": "M3: select text across pages (view.text-select)"
     },
-    "last_commit_ts": "2026-11-15T19:02:29Z",
+    "last_commit_ts": "2026-11-15T21:55:35Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       11,
@@ -524,7 +524,7 @@
       5,
       14,
       10,
-      10
+      12
     ],
     "days": [
       {
@@ -1390,20 +1390,20 @@
       },
       {
         "d": "2026-11-15",
-        "code": 10,
+        "code": 12,
         "other": 0,
         "samples": [
           {
+            "commit": "e191b0e",
+            "subject": "M3: select text across pages (view.text-select)"
+          },
+          {
+            "commit": "42c0ba8",
+            "subject": "M2: a JPX image on a rotated page draws instead of crashing (#3884) (#5438)"
+          },
+          {
             "commit": "a11ea7a",
             "subject": "preflight: use shared ICC v2 sRGB output-intent bytes (#7450)"
-          },
-          {
-            "commit": "17fc47b",
-            "subject": "sign: replace local BER/DER codec with existing craft-pkcs7 (#7447)"
-          },
-          {
-            "commit": "1b86ace",
-            "subject": "fix(render): cap a JPEG 2000 codestream's SIZ size at 2^28 pixels (#5086)"
           }
         ]
       }
@@ -7113,7 +7113,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "e191b0e",
+      "commit_full": "e191b0ea69b7dcc4e554c1c4e51b6214bec1c590",
+      "commit_date": "2026-11-15T22:55:35+01:00",
+      "ts": "2026-11-15T21:55:35Z",
+      "message": "M3: select text across pages (view.text-select)",
+      "stage": null,
+      "next_stage": null,
+      "last_updated": "2026-11-09",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-15T19:52:54+00:00"
+  "updated_at": "2026-11-15T23:38:06+00:00"
 }

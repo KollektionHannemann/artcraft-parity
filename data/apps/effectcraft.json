@@ -377,19 +377,19 @@
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 19.7,
+    "level": "buzzing",
+    "score": 20.0,
     "active_days_7d": 7,
-    "changes_7d": 154,
-    "changes_14d": 290,
+    "changes_7d": 155,
+    "changes_14d": 291,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-15T11:11:07Z",
-      "commit": "d6c9ad6",
-      "commit_full": "d6c9ad664342c19e1ed473b4356292647117be62",
-      "subject": "Cineon Converter: Gamma 1 gives linear output and saved projects keep their render (#2312)"
+      "ts": "2026-11-15T23:03:34Z",
+      "commit": "6c70694",
+      "commit_full": "6c70694a049552219643cb498556c32e297ae3de",
+      "subject": "encoding: replace four local Base64 writers with existing craft-mime (#3742)"
     },
-    "last_commit_ts": "2026-11-15T11:11:07Z",
+    "last_commit_ts": "2026-11-15T23:03:34Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       19,
@@ -405,7 +405,7 @@
       27,
       10,
       24,
-      3
+      4
     ],
     "days": [
       {
@@ -1193,9 +1193,13 @@
       },
       {
         "d": "2026-11-15",
-        "code": 3,
+        "code": 4,
         "other": 0,
         "samples": [
+          {
+            "commit": "6c70694",
+            "subject": "encoding: replace four local Base64 writers with existing craft-mime (#3742)"
+          },
           {
             "commit": "d6c9ad6",
             "subject": "Cineon Converter: Gamma 1 gives linear output and saved projects keep their render (#2312)"
@@ -1203,10 +1207,6 @@
           {
             "commit": "7cbefaf",
             "subject": "Import: VectorCraft documents import through the PDF they carry (#2901)"
-          },
-          {
-            "commit": "dc2380b",
-            "subject": "fix(ci): stabilize macOS dialog and EXR cache tests (#3704)"
           }
         ]
       }
@@ -1789,5 +1789,5 @@
       "kind": "editorial"
     }
   ],
-  "updated_at": "2026-11-15T12:02:23+00:00"
+  "updated_at": "2026-11-15T23:38:11+00:00"
 }
