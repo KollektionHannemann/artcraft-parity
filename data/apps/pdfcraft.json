@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "330cde8",
-  "latest_commit_date": "2026-11-13T02:19:00+01:00",
-  "latest_message": "Reveal recent files in the system file manager from Home (#5452) (#5559)",
+  "latest_commit": "aef2285",
+  "latest_commit_date": "2026-11-15T12:11:23+01:00",
+  "latest_message": "Select a table by rows when a drag crosses its columns (#3669)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -326,6 +326,10 @@
       },
       {
         "date": "2026-11-03",
+        "text": "(M3, #3669): A drag across a table selects its rows, as Preview does, instead of reading order's detour down each column; a cell padded with spaces reads with the next cell of its row. Synthetic render and UI drag regressions; estimates unchanged."
+      },
+      {
+        "date": "2026-11-03",
         "text": "(M11, shared JBIG2 dictionary): With Monochrome Images set to JBIG2, Optimize has up to 16 JBIG2 images share one symbol dictionary (/JBIG2Globals), the letters found on more than one page stored once, when that is smaller (pdfcraftfilters::encodejbig2shared). Eight pages of 10 pt text rendered at 300 dpi take 41% less in Helvetica and 42% in Times than coded alone, 10% in Courier; groups of 16 save 45%, of 32 only 47%. Only images redaction can store again without the dictionary share one (image masks and DeviceGray named directly, at most 64 Mi pixels), and redacting one stores the rest of its group so, which the group bounds to 15."
       },
       {
@@ -447,10 +451,6 @@
       {
         "date": "2026-10-27",
         "text": "(M10, #5029): Vector printing retains the orientation and upper-left anchor of existing NoRotate annotation appearances on rotated source pages."
-      },
-      {
-        "date": "2026-10-27",
-        "text": "(M10, annotation print precision): Vector printing preserves small placement coefficients for existing form, comment and stamp appearances with large bounding boxes or matrices."
       }
     ]
   },
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 149,
+    "revisions_since": 150,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 238,
-    "revisions_7d": 28,
+    "revisions": 239,
+    "revisions_7d": 29,
     "last_revision": {
-      "ts": "2026-11-13T01:19:00Z",
-      "kind": "editorial",
-      "commit": "330cde8",
-      "commit_full": "330cde803515dfc68f9628139dad20e441489253",
-      "message": "Reveal recent files in the system file manager from Home (#5452) (#5559)"
+      "ts": "2026-11-15T11:11:23Z",
+      "kind": "content",
+      "commit": "aef2285",
+      "commit_full": "aef22858a9a0ddf69c96c402a25d515e410c3a4a",
+      "message": "Select a table by rows when a drag crosses its columns (#3669)"
     },
     "last_update": {
-      "ts": "2026-11-11T10:06:01Z",
+      "ts": "2026-11-15T11:11:23Z",
       "kind": "content",
-      "commit": "3a117c3",
-      "commit_full": "3a117c3c0e361c04a525e6d1f144e52428b2bea6",
-      "message": "M10: open Word, Excel and PowerPoint files through LibreOffice"
+      "commit": "aef2285",
+      "commit_full": "aef22858a9a0ddf69c96c402a25d515e410c3a4a",
+      "message": "Select a table by rows when a drag crosses its columns (#3669)"
     },
     "self_reported": "2026-11-09"
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 19.9,
+    "level": "buzzing",
+    "score": 20.6,
     "active_days_7d": 7,
-    "changes_7d": 344,
-    "changes_14d": 486,
+    "changes_7d": 346,
+    "changes_14d": 488,
     "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-11-15T08:53:06Z",
-      "commit": "27287c2",
-      "commit_full": "27287c297d25d505a8720ea6da2e7af38693bfa9",
-      "subject": "Create: decode PCX through craft-image-codecs (#7378)"
+      "ts": "2026-11-15T11:23:39Z",
+      "commit": "070432c",
+      "commit_full": "070432ca4490737cc3116efb508bda5bbad3392c",
+      "subject": "i18n: move the craft-i18n pin to 866aff71 (#7417)"
     },
-    "last_commit_ts": "2026-11-15T08:53:06Z",
+    "last_commit_ts": "2026-11-15T11:23:39Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       11,
@@ -524,7 +524,7 @@
       5,
       14,
       10,
-      2
+      4
     ],
     "days": [
       {
@@ -1390,16 +1390,20 @@
       },
       {
         "d": "2026-11-15",
-        "code": 2,
+        "code": 4,
         "other": 0,
         "samples": [
           {
-            "commit": "27287c2",
-            "subject": "Create: decode PCX through craft-image-codecs (#7378)"
+            "commit": "070432c",
+            "subject": "i18n: move the craft-i18n pin to 866aff71 (#7417)"
           },
           {
-            "commit": "c944f10",
-            "subject": "Tests: keep the update download test stable in Linux coverage (#7350)"
+            "commit": "aef2285",
+            "subject": "Select a table by rows when a drag crosses its columns (#3669)"
+          },
+          {
+            "commit": "27287c2",
+            "subject": "Create: decode PCX through craft-image-codecs (#7378)"
           }
         ]
       }
@@ -7086,7 +7090,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "editorial"
+    },
+    {
+      "commit": "aef2285",
+      "commit_full": "aef22858a9a0ddf69c96c402a25d515e410c3a4a",
+      "commit_date": "2026-11-15T12:11:23+01:00",
+      "ts": "2026-11-15T11:11:23Z",
+      "message": "Select a table by rows when a drag crosses its columns (#3669)",
+      "stage": null,
+      "next_stage": null,
+      "last_updated": "2026-11-09",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-15T09:32:46+00:00"
+  "updated_at": "2026-11-15T12:02:20+00:00"
 }
