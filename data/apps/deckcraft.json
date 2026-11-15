@@ -525,18 +525,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 12.9,
+    "score": 13.9,
     "active_days_7d": 7,
-    "changes_7d": 57,
-    "changes_14d": 151,
+    "changes_7d": 59,
+    "changes_14d": 153,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-15T03:53:24Z",
-      "commit": "a4674db",
-      "commit_full": "a4674dbd1c03ee981b0ebc415a4b3a829479c318",
-      "subject": "fix(xtask): reject numeric prereleases with leading zeroes (#2133)"
+      "ts": "2026-11-15T14:12:23Z",
+      "commit": "1ff3b87",
+      "commit_full": "1ff3b87f5a9ac604c313791821e9bf7e08e2aa1d",
+      "subject": "fix: honor Arabic Letter Mark in paragraph direction detection (#2149)"
     },
-    "last_commit_ts": "2026-11-15T03:53:24Z",
+    "last_commit_ts": "2026-11-15T14:12:23Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
       15,
@@ -552,7 +552,7 @@
       7,
       15,
       2,
-      1
+      3
     ],
     "days": [
       {
@@ -1222,9 +1222,17 @@
       },
       {
         "d": "2026-11-15",
-        "code": 1,
+        "code": 3,
         "other": 1,
         "samples": [
+          {
+            "commit": "1ff3b87",
+            "subject": "fix: honor Arabic Letter Mark in paragraph direction detection (#2149)"
+          },
+          {
+            "commit": "9f7d1c4",
+            "subject": "fix: round engineering notation after forming the mantissa (#2148)"
+          },
           {
             "commit": "a4674db",
             "subject": "fix(xtask): reject numeric prereleases with leading zeroes (#2133)"
@@ -4669,5 +4677,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-15T04:41:15+00:00"
+  "updated_at": "2026-11-15T14:12:27+00:00"
 }
