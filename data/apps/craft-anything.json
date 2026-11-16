@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "3ef1181",
-  "latest_commit_date": "2026-11-16T17:59:57+07:00",
-  "latest_message": "A failed API-backend turn wrote the error's message to its log, and that message repeats what the service, or a proxy in front of it, answered, which can includ",
+  "latest_commit": "ad0a68a",
+  "latest_commit_date": "2026-11-17T02:52:44+07:00",
+  "latest_message": "Find a Windows game's program in its folder on Linux and macOS (R2.4) (#1809)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 674,
-    "revisions_7d": 302,
+    "revisions": 696,
+    "revisions_7d": 324,
     "last_revision": {
-      "ts": "2026-11-16T10:59:57Z",
+      "ts": "2026-11-16T19:52:44Z",
       "kind": "content",
-      "commit": "3ef1181",
-      "commit_full": "3ef118107eda962c3a5994dd554bf6eab0cd76a0",
-      "message": "A failed API-backend turn wrote the error's message to its log, and that message repeats what the service, or a proxy in front of it, answered, which can includ"
+      "commit": "ad0a68a",
+      "commit_full": "ad0a68a596c88f302836040e7f165ecfafa0a283",
+      "message": "Find a Windows game's program in its folder on Linux and macOS (R2.4) (#1809)"
     },
     "last_update": {
-      "ts": "2026-11-16T10:59:57Z",
+      "ts": "2026-11-16T19:52:44Z",
       "kind": "content",
-      "commit": "3ef1181",
-      "commit_full": "3ef118107eda962c3a5994dd554bf6eab0cd76a0",
-      "message": "A failed API-backend turn wrote the error's message to its log, and that message repeats what the service, or a proxy in front of it, answered, which can includ"
+      "commit": "ad0a68a",
+      "commit_full": "ad0a68a596c88f302836040e7f165ecfafa0a283",
+      "message": "Find a Windows game's program in its folder on Linux and macOS (R2.4) (#1809)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 25.4,
+    "score": 27.0,
     "active_days_7d": 7,
-    "changes_7d": 342,
-    "changes_14d": 772,
-    "housekeeping_7d": 11,
+    "changes_7d": 364,
+    "changes_14d": 794,
+    "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-16T11:04:55Z",
-      "commit": "8dec784",
-      "commit_full": "8dec78492de82b2b478a7a16088900dbf0406508",
-      "subject": "The process and UI source-policy gates stopped at a file's first test attribute, so production code below an interleaved test module escaped them. They now read"
+      "ts": "2026-11-16T19:52:44Z",
+      "commit": "ad0a68a",
+      "commit_full": "ad0a68a596c88f302836040e7f165ecfafa0a283",
+      "subject": "Find a Windows game's program in its folder on Linux and macOS (R2.4) (#1809)"
     },
-    "last_commit_ts": "2026-11-16T11:04:55Z",
+    "last_commit_ts": "2026-11-16T19:52:44Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       88,
@@ -93,7 +93,7 @@
       6,
       33,
       33,
-      10
+      32
     ],
     "days": [
       {
@@ -394,20 +394,20 @@
       },
       {
         "d": "2026-11-16",
-        "code": 10,
-        "other": 2,
+        "code": 32,
+        "other": 3,
         "samples": [
           {
-            "commit": "8dec784",
-            "subject": "The process and UI source-policy gates stopped at a file's first test attribute, so production code below an interleaved test module escaped them. They now read"
+            "commit": "ad0a68a",
+            "subject": "Find a Windows game's program in its folder on Linux and macOS (R2.4) (#1809)"
           },
           {
-            "commit": "3ef1181",
-            "subject": "A failed API-backend turn wrote the error's message to its log, and that message repeats what the service, or a proxy in front of it, answered, which can includ"
+            "commit": "9b8d6c2",
+            "subject": "A pin size estimate that finished after the person cancelled, or after they opened another project's Pin dialog, wrote its size into the open dialog, and a late"
           },
           {
-            "commit": "9460af2",
-            "subject": "Let Claude Code use the model its own settings name by default (#921)"
+            "commit": "d42418b",
+            "subject": "build_file_read read the whole file into memory before returning its 256 KiB page, so a multi-gigabyte generated file under the project could freeze or kill the"
           }
         ]
       }
@@ -5252,8 +5252,162 @@
       "commit": "3ef1181",
       "commit_full": "3ef118107eda962c3a5994dd554bf6eab0cd76a0",
       "message": "A failed API-backend turn wrote the error's message to its log, and that message repeats what the service, or a proxy in front of it, answered, which can includ"
+    },
+    {
+      "ts": "2026-11-16T12:15:30Z",
+      "kind": "content",
+      "commit": "7b11321",
+      "commit_full": "7b113213da121e892d6dc90d23b34da4afabb2e4",
+      "message": "Play, pins and the build checks looked only in app/target, so a project whose Cargo settings move the output (CARGO_TARGET_DIR, or build.target-dir in a .cargo "
+    },
+    {
+      "ts": "2026-11-16T12:29:30Z",
+      "kind": "content",
+      "commit": "5538adb",
+      "commit_full": "5538adbc58f5109d324336bb10744242134f00bb",
+      "message": "Tell a builder why a build refused a tool that needs consent, instead of \"the user said no\" (R5.5) (#1944)"
+    },
+    {
+      "ts": "2026-11-16T12:29:37Z",
+      "kind": "content",
+      "commit": "8d8fbc7",
+      "commit_full": "8d8fbc7daa8691bd527ed551797e7e11cd8d3658",
+      "message": "Docs only: the guided install was tried on a clean Debian 13 and a Debian 13 desktop, followed by a Deep-mode decompile. macOS stays open, and a new roadmap lin"
+    },
+    {
+      "ts": "2026-11-16T12:41:14Z",
+      "kind": "content",
+      "commit": "a897fff",
+      "commit_full": "a897fff072b51b46a3fd4613b36985a5e4a6593d",
+      "message": "Choose each AI's builder tool list in Settings → AI and with `ai tools` (R5.4) (#1946)"
+    },
+    {
+      "ts": "2026-11-16T12:50:55Z",
+      "kind": "content",
+      "commit": "6d0fa34",
+      "commit_full": "6d0fa34750de7708b9f54cb88a74eb31caec4de3",
+      "message": "Follow-up to #1941. Where a program is about to start or be checked (Play, making a pin, the build's run and screenshot checks), Cargo itself is asked for its t"
+    },
+    {
+      "ts": "2026-11-16T13:32:08Z",
+      "kind": "content",
+      "commit": "b8d31ff",
+      "commit_full": "b8d31ff4b424b66d6d3bfc2b9020424118627718",
+      "message": "A Ghidra folder setting that named a file was run as the headless launcher whatever it was. A start script for Ghidra's window (as Linux packages put on PATH) w"
+    },
+    {
+      "ts": "2026-11-16T13:40:58Z",
+      "kind": "content",
+      "commit": "239dc05",
+      "commit_full": "239dc0536a7fb5a91d6f2300cb41d727a6bd2d9a",
+      "message": "Take target file signatures from the shared craft-sniff table (R3.12) (#1948)"
+    },
+    {
+      "ts": "2026-11-16T14:13:05Z",
+      "kind": "content",
+      "commit": "fb16dab",
+      "commit_full": "fb16dab9be7fa868d6af83dd0176f8763287df96",
+      "message": "Ghidra's guided setup unpacks Java into the engine store's `jdk` folder, but the Java runtime engine was looked for under `java`, so after that setup the listin"
+    },
+    {
+      "ts": "2026-11-16T14:26:27Z",
+      "kind": "content",
+      "commit": "6be79a7",
+      "commit_full": "6be79a710f4f7893e8f82ba098adec7db116299e",
+      "message": "A script whose type only resembled a JavaScript type (`application/javascript123`, or one with parameters such as `module; charset=utf-8`) was reported as execu"
+    },
+    {
+      "ts": "2026-11-16T14:28:36Z",
+      "kind": "content",
+      "commit": "99fd4a5",
+      "commit_full": "99fd4a56c3fd99d82b6db3a1595daa03eb413880",
+      "message": "A comment between an operation keyword and its name hid the name, and a parenthesis inside a header comment could hide the whole operation. Comments and ignored"
+    },
+    {
+      "ts": "2026-11-16T14:28:42Z",
+      "kind": "content",
+      "commit": "36c3325",
+      "commit_full": "36c3325e4bbfcb45e06b1b14f030c66f33d59bd1",
+      "message": "The lexer fallback read `require(\"./\\141pp.js\")` as a different module path and mis-decoded zero-padded braced Unicode escapes. Legacy octal escapes, every esca"
+    },
+    {
+      "ts": "2026-11-16T14:28:49Z",
+      "kind": "content",
+      "commit": "62f1202",
+      "commit_full": "62f120294c4e3d998d1f0ce39dea49ae11c46053",
+      "message": "The lexer fallback reported `const hook = trpc.users.list.useQuery` as a client call although it only reads a property. An opening call parenthesis (or an optio"
+    },
+    {
+      "ts": "2026-11-16T14:28:55Z",
+      "kind": "content",
+      "commit": "e70b577",
+      "commit_full": "e70b577550caf584091e890db46860d03cc54a03",
+      "message": "Recovering `with ({undefined: 42}) { result = void 0; }` rewrote `void 0` to `undefined`, which the `with` object can supply, changing the result. Files contain"
+    },
+    {
+      "ts": "2026-11-16T14:32:18Z",
+      "kind": "content",
+      "commit": "edbeee7",
+      "commit_full": "edbeee75d96659707450b9f883ad4c43ee11a13c",
+      "message": "Follow-up to #1949. A script that runs the headless launcher is kept as the launcher even when it sits in Ghidra's own folder, so what it sets up (its Java, say"
+    },
+    {
+      "ts": "2026-11-16T15:13:31Z",
+      "kind": "content",
+      "commit": "6d16f5a",
+      "commit_full": "6d16f5a14bc459b3656fe7bd4a97b71687fa39a0",
+      "message": "While Settings → Engines showed Ghidra as installed, the hover text looked the launcher up on every frame, which searches folders and may read a start script wh"
+    },
+    {
+      "ts": "2026-11-16T16:15:16Z",
+      "kind": "content",
+      "commit": "47cc7c7",
+      "commit_full": "47cc7c75921d864e4bfb1b2a60c59884dd7c00af",
+      "message": "JADX's launcher finds Java only through JAVA_HOME or PATH, and neither was passed, so on a computer with no system Java the Java source of an Android class fail"
+    },
+    {
+      "ts": "2026-11-16T16:55:43Z",
+      "kind": "content",
+      "commit": "88b2490",
+      "commit_full": "88b2490892e26f49c9cfb6eb277b7b8819ece885",
+      "message": "A path set in Settings → Engines counted as found whenever it existed, so a JDK's folder set for the Java runtime was listed as installed and then run as a prog"
+    },
+    {
+      "ts": "2026-11-16T17:04:33Z",
+      "kind": "content",
+      "commit": "44293b4",
+      "commit_full": "44293b47f0fa5b01a43857dd52b62e94103b0ee1",
+      "message": "A session that opened one project and then another kept the first project's evidence and open questions in its ledger, so the second project's report and eviden"
+    },
+    {
+      "ts": "2026-11-16T17:13:01Z",
+      "kind": "content",
+      "commit": "59f2e3f",
+      "commit_full": "59f2e3f49fb76c5dc1ea51ca096b8669e57e565b",
+      "message": "A build folder shared by several projects holds every project's programs, and a same-named one there was taken for this project's: Play started it and a new pin"
+    },
+    {
+      "ts": "2026-11-16T18:07:18Z",
+      "kind": "content",
+      "commit": "d42418b",
+      "commit_full": "d42418bdbeaa3ab625503f7fd0cfa29e99a8e0a4",
+      "message": "build_file_read read the whole file into memory before returning its 256 KiB page, so a multi-gigabyte generated file under the project could freeze or kill the"
+    },
+    {
+      "ts": "2026-11-16T18:47:35Z",
+      "kind": "content",
+      "commit": "9b8d6c2",
+      "commit_full": "9b8d6c2b176e05c0c781c8569e8b4cb52e686b3e",
+      "message": "A pin size estimate that finished after the person cancelled, or after they opened another project's Pin dialog, wrote its size into the open dialog, and a late"
+    },
+    {
+      "ts": "2026-11-16T19:52:44Z",
+      "kind": "content",
+      "commit": "ad0a68a",
+      "commit_full": "ad0a68a596c88f302836040e7f165ecfafa0a283",
+      "message": "Find a Windows game's program in its folder on Linux and macOS (R2.4) (#1809)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-16T11:54:51+00:00"
+  "updated_at": "2026-11-16T21:21:54+00:00"
 }

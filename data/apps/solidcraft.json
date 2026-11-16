@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 37.8,
+    "score": 38.6,
     "active_days_7d": 7,
-    "changes_7d": 1273,
-    "changes_14d": 1928,
-    "housekeeping_7d": 55,
+    "changes_7d": 1378,
+    "changes_14d": 2033,
+    "housekeeping_7d": 59,
     "last_code_change": {
-      "ts": "2026-11-16T11:36:20Z",
-      "commit": "51dd03d",
-      "commit_full": "51dd03d0496ca1485d5e781fbf54d63a1ad96a32",
-      "subject": "solidcore: the 10876 ledge case is held to 1e-11 and drawn as it now builds (#17763)"
+      "ts": "2026-11-16T21:01:06Z",
+      "commit": "6e92e25",
+      "commit_full": "6e92e25b1e446f3e6f57c0d45c5c3f5798a2734a",
+      "subject": "solidcore: retire fillet_overflow_trim_at_creases and fillet_overflow_crease_along_edge (WR-695, WR-717) (#17586)"
     },
-    "last_commit_ts": "2026-11-16T11:36:20Z",
+    "last_commit_ts": "2026-11-16T21:01:06Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       38,
@@ -93,7 +93,7 @@
       203,
       198,
       156,
-      137
+      242
     ],
     "days": [
       {
@@ -858,20 +858,20 @@
       },
       {
         "d": "2026-11-16",
-        "code": 137,
-        "other": 0,
+        "code": 242,
+        "other": 4,
         "samples": [
           {
-            "commit": "51dd03d",
-            "subject": "solidcore: the 10876 ledge case is held to 1e-11 and drawn as it now builds (#17763)"
+            "commit": "6e92e25",
+            "subject": "solidcore: retire fillet_overflow_trim_at_creases and fillet_overflow_crease_along_edge (WR-695, WR-717) (#17586)"
           },
           {
-            "commit": "489d9c4",
-            "subject": "Curvature near cylinder ends reports the nearest wall correctly (#16630) (#17819)"
+            "commit": "7d4445c",
+            "subject": "Problem reports: a ticket request no longer hangs until \"timeout: global\" (#17979)"
           },
           {
-            "commit": "1e1aef7",
-            "subject": "Booleans: a cylinder that dips a hair into a parallel flat face joins it, instead of failing with status 1001 (#16877) (#17757)"
+            "commit": "e41064f",
+            "subject": "solidcore-ops: the distance of points to a face's untrimmed surface, where they lie over it (#17490) (#17984)"
           }
         ]
       }
@@ -2465,5 +2465,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-16T11:55:04+00:00"
+  "updated_at": "2026-11-16T21:22:08+00:00"
 }
