@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "7626d56",
-  "latest_commit_date": "2026-11-16T04:28:28+07:00",
-  "latest_message": "ROADMAP: Indonesian is listed with the catalog that ships (#7943)",
+  "latest_commit": "765334b",
+  "latest_commit_date": "2026-11-16T09:33:03+07:00",
+  "latest_message": "Path Precision Tools: Tangent Circle draws the circles that touch two or three shapes (#8010)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -339,6 +339,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-15",
+        "text": "Tangent Circle joins the Path Precision Tools add-on (Object › Plug-ins › Path Precision Tools): the circles that touch two selected paths or compound paths at a set radius, or three of them (up to eight for three circles), touching each outline without crossing it; circles, rotated ellipses and other paths alike. A dialog that previews every circle or one picked by number, the current paint, one undo step (addon.pathtools.tangentCircle). A VectorCraft addition: headline numbers unchanged."
+      },
+      {
         "date": "2026-11-14",
         "text": "Built-in symbol library Weather Icons: adds a sixth procedural symbol library (Window › Symbol Libraries, the Symbols panel's Symbol Libraries Menu) containing six original vector symbols (Sun, Moon, Cloud, Rain, Thunder, Snow) generated in code without default 9-slice guides (part of Gap 5). Headline numbers unchanged."
       },
@@ -493,10 +497,6 @@
       {
         "date": "2026-10-22",
         "text": "Pen tilt, bearing and barrel rotation (part of #764): Calligraphic and Scatter brushes take Tilt, Bearing and Rotation beside Pressure, the Paintbrush records them along each stroke, and the app reads a pen's tilt and an Art Pen's barrel rotation from XInput2 on Linux under X11 and XWayland and from AppKit's tablet events on macOS. Headline numbers unchanged."
-      },
-      {
-        "date": "2026-10-21",
-        "text": "3D lighting: four original lighting presets shared by Revolve, Extrude & Bevel, Inflate and Rotate, with command access and manual Custom settings; scores and estimates unchanged."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 236,
+    "revisions_since": 238,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,42 +536,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 237,
-    "revisions_7d": 18,
+    "revisions": 239,
+    "revisions_7d": 17,
     "last_revision": {
-      "ts": "2026-11-15T21:28:28Z",
+      "ts": "2026-11-16T02:33:03Z",
       "kind": "content",
-      "commit": "7626d56",
-      "commit_full": "7626d56bdd83fc214d793eed170882b00b107016",
-      "message": "ROADMAP: Indonesian is listed with the catalog that ships (#7943)"
+      "commit": "765334b",
+      "commit_full": "765334b9a6a6a1b2f86d7519966763c8936ce8d5",
+      "message": "Path Precision Tools: Tangent Circle draws the circles that touch two or three shapes (#8010)"
     },
     "last_update": {
-      "ts": "2026-11-15T21:28:28Z",
+      "ts": "2026-11-16T02:33:03Z",
       "kind": "content",
-      "commit": "7626d56",
-      "commit_full": "7626d56bdd83fc214d793eed170882b00b107016",
-      "message": "ROADMAP: Indonesian is listed with the catalog that ships (#7943)"
+      "commit": "765334b",
+      "commit_full": "765334b9a6a6a1b2f86d7519966763c8936ce8d5",
+      "message": "Path Precision Tools: Tangent Circle draws the circles that touch two or three shapes (#8010)"
     },
     "self_reported": "2026-11-15"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 38.5,
+    "score": 36.1,
     "active_days_7d": 7,
-    "changes_7d": 1258,
-    "changes_14d": 2097,
-    "housekeeping_7d": 49,
+    "changes_7d": 1223,
+    "changes_14d": 2030,
+    "housekeeping_7d": 47,
     "last_code_change": {
-      "ts": "2026-11-15T22:28:04Z",
-      "commit": "8ee5acc",
-      "commit_full": "8ee5acc04ef01dfcc1c9661d4ed41ffc5b9f5f40",
-      "subject": "Use shared streaming native format writer (#7866)"
+      "ts": "2026-11-16T02:33:12Z",
+      "commit": "628726d",
+      "commit_full": "628726d857acc56f2f7231882c3585e6b0da3d90",
+      "subject": "i18n: script interpreter core errors are translated in every complete-message catalog (#7468)"
     },
-    "last_commit_ts": "2026-11-15T22:28:04Z",
+    "last_commit_ts": "2026-11-16T02:33:12Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
-      113,
       117,
       187,
       121,
@@ -584,7 +583,8 @@
       254,
       240,
       283,
-      196
+      214,
+      28
     ],
     "days": [
       {
@@ -1450,20 +1450,39 @@
       },
       {
         "d": "2026-11-15",
-        "code": 196,
-        "other": 6,
+        "code": 214,
+        "other": 7,
         "samples": [
           {
-            "commit": "8ee5acc",
-            "subject": "Use shared streaming native format writer (#7866)"
+            "commit": "cad4bb0",
+            "subject": "i18n: Liquify's skip warning shows its tool and object kinds in the interface language (#7834)"
           },
           {
-            "commit": "613f203",
-            "subject": "i18n: custom toolbar command errors are translated in every complete-message catalog (#7493)"
+            "commit": "4a33a01",
+            "subject": "Keyboard Shortcuts: Export Text… also saves the list as a CSV file (#7930)"
           },
           {
-            "commit": "f6bbaf5",
-            "subject": "Panels: the double triangle on a panel's tab strip cycles its display sizes (#7889)"
+            "commit": "43e4e66",
+            "subject": "Fix #7944: New Document opens in the General units and keeps units chosen in its menu (#7978)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-16",
+        "code": 28,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "628726d",
+            "subject": "i18n: script interpreter core errors are translated in every complete-message catalog (#7468)"
+          },
+          {
+            "commit": "765334b",
+            "subject": "Path Precision Tools: Tangent Circle draws the circles that touch two or three shapes (#8010)"
+          },
+          {
+            "commit": "03cb751",
+            "subject": "Command Palette: a Recent Commands list beside the search field runs the last five picks again (#7908)"
           }
         ]
       }
@@ -7908,7 +7927,59 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "5a13733",
+      "commit_full": "5a13733e3aa9deacad6e3439dc41fe112d8e33ac",
+      "commit_date": "2026-11-16T06:53:58+07:00",
+      "ts": "2026-11-15T23:53:58Z",
+      "message": "Docs: menu-breadth counts match the current menu tree (#7955)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
+    },
+    {
+      "commit": "765334b",
+      "commit_full": "765334b9a6a6a1b2f86d7519966763c8936ce8d5",
+      "commit_date": "2026-11-16T09:33:03+07:00",
+      "ts": "2026-11-16T02:33:03Z",
+      "message": "Path Precision Tools: Tangent Circle draws the circles that touch two or three shapes (#8010)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-15T23:37:49+00:00"
+  "updated_at": "2026-11-16T03:29:58+00:00"
 }

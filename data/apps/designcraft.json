@@ -505,21 +505,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.4,
+    "score": 16.9,
     "active_days_7d": 7,
-    "changes_7d": 125,
+    "changes_7d": 122,
     "changes_14d": 217,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-15T23:22:18Z",
-      "commit": "4828d96",
-      "commit_full": "4828d96ba20c9430633828ab39cc97180801dc1a",
-      "subject": "Layer Options: Lock Guides, as InDesign's (and IDML's LockGuides) (#1516)"
+      "ts": "2026-11-16T00:40:07Z",
+      "commit": "11ad84f",
+      "commit_full": "11ad84fd696c596931870396564d067d367439b7",
+      "subject": "fix(ci): initialize guide lock in EPUB layer fixture (#2857)"
     },
-    "last_commit_ts": "2026-11-15T23:22:18Z",
+    "last_commit_ts": "2026-11-16T00:40:07Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
-      3,
       40,
       26,
       8,
@@ -532,7 +531,8 @@
       56,
       5,
       12,
-      20
+      22,
+      1
     ],
     "days": [
       {
@@ -1342,20 +1342,31 @@
       },
       {
         "d": "2026-11-15",
-        "code": 20,
+        "code": 22,
         "other": 1,
         "samples": [
           {
+            "commit": "278aba4",
+            "subject": "cli: pin the argument surface, and fix the argument bugs pinning it found (photocraft#7071) (#1482)"
+          },
+          {
+            "commit": "b949f0f",
+            "subject": "Compose: apply 禁則 push-in/push-out priorities (JIS X 4051) (#1502)"
+          },
+          {
             "commit": "4828d96",
             "subject": "Layer Options: Lock Guides, as InDesign's (and IDML's LockGuides) (#1516)"
-          },
+          }
+        ]
+      },
+      {
+        "d": "2026-11-16",
+        "code": 1,
+        "other": 0,
+        "samples": [
           {
-            "commit": "f405f89",
-            "subject": "Formats: port the craft-libs cutover follow-ups from #2734 to main (#2838)"
-          },
-          {
-            "commit": "6dadc22",
-            "subject": "fix: preserve selections when resolving tracked changes (#2851)"
+            "commit": "11ad84f",
+            "subject": "fix(ci): initialize guide lock in EPUB layer fixture (#2857)"
           }
         ]
       }
@@ -6653,5 +6664,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-15T23:38:16+00:00"
+  "updated_at": "2026-11-16T03:30:22+00:00"
 }

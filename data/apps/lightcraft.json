@@ -433,21 +433,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.6,
+    "score": 13.4,
     "active_days_7d": 7,
-    "changes_7d": 45,
+    "changes_7d": 43,
     "changes_14d": 146,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-15T21:42:04Z",
-      "commit": "2dcb258",
-      "commit_full": "2dcb258ba40738230a07484a95eb27dc84ed66fe",
-      "subject": "codecs: use shared JPEG encoder (#4274)"
+      "ts": "2026-11-16T02:47:28Z",
+      "commit": "a4676b1",
+      "commit_full": "a4676b12497d8a8213fae0dca715c29fef7c3149",
+      "subject": "print: delegate multi-image PDF serialization to craft-pdf (#4341)"
     },
-    "last_commit_ts": "2026-11-15T21:42:04Z",
+    "last_commit_ts": "2026-11-16T02:47:28Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
-      2,
       9,
       17,
       52,
@@ -460,7 +459,8 @@
       7,
       1,
       11,
-      7
+      7,
+      2
     ],
     "days": [
       {
@@ -1247,6 +1247,21 @@
             "subject": "Reuse shared Base64 encoding in masks, MCP and slideshow (#4297)"
           }
         ]
+      },
+      {
+        "d": "2026-11-16",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "a4676b1",
+            "subject": "print: delegate multi-image PDF serialization to craft-pdf (#4341)"
+          },
+          {
+            "commit": "f5da4a2",
+            "subject": "Read the PSD header and image resources with craft-psd (#4167)"
+          }
+        ]
       }
     ]
   },
@@ -1880,5 +1895,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-15T23:38:00+00:00"
+  "updated_at": "2026-11-16T03:30:07+00:00"
 }

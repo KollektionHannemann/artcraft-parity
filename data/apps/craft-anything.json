@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "febf096",
-  "latest_commit_date": "2026-11-16T01:15:53+07:00",
-  "latest_message": "Keep a failure log when an MCP plugin doesn't start, and say what it printed (R5.5) (#1921)",
+  "latest_commit": "0e32cd4",
+  "latest_commit_date": "2026-11-16T08:29:11+07:00",
+  "latest_message": "A walkthrough asked to keep response bodies keeps them for the first 200 requests and said nothing about the rest, so a request without a body read as a respons",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,42 +45,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 664,
-    "revisions_7d": 443,
+    "revisions": 666,
+    "revisions_7d": 294,
     "last_revision": {
-      "ts": "2026-11-15T18:15:53Z",
+      "ts": "2026-11-16T01:29:11Z",
       "kind": "content",
-      "commit": "febf096",
-      "commit_full": "febf096ea4d1416e72135bc6491710d1448f229d",
-      "message": "Keep a failure log when an MCP plugin doesn't start, and say what it printed (R5.5) (#1921)"
+      "commit": "0e32cd4",
+      "commit_full": "0e32cd474c6834989131989479273f5867e2f9cd",
+      "message": "A walkthrough asked to keep response bodies keeps them for the first 200 requests and said nothing about the rest, so a request without a body read as a respons"
     },
     "last_update": {
-      "ts": "2026-11-15T18:15:53Z",
+      "ts": "2026-11-16T01:29:11Z",
       "kind": "content",
-      "commit": "febf096",
-      "commit_full": "febf096ea4d1416e72135bc6491710d1448f229d",
-      "message": "Keep a failure log when an MCP plugin doesn't start, and say what it printed (R5.5) (#1921)"
+      "commit": "0e32cd4",
+      "commit_full": "0e32cd474c6834989131989479273f5867e2f9cd",
+      "message": "A walkthrough asked to keep response bodies keeps them for the first 200 requests and said nothing about the rest, so a request without a body read as a respons"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 27.3,
+    "score": 23.6,
     "active_days_7d": 7,
-    "changes_7d": 489,
-    "changes_14d": 879,
-    "housekeeping_7d": 17,
+    "changes_7d": 334,
+    "changes_14d": 764,
+    "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-15T18:15:53Z",
-      "commit": "febf096",
-      "commit_full": "febf096ea4d1416e72135bc6491710d1448f229d",
-      "subject": "Keep a failure log when an MCP plugin doesn't start, and say what it printed (R5.5) (#1921)"
+      "ts": "2026-11-16T01:29:11Z",
+      "commit": "0e32cd4",
+      "commit_full": "0e32cd474c6834989131989479273f5867e2f9cd",
+      "subject": "A walkthrough asked to keep response bodies keeps them for the first 200 requests and said nothing about the rest, so a request without a body read as a respons"
     },
-    "last_commit_ts": "2026-11-15T18:15:53Z",
+    "last_commit_ts": "2026-11-16T01:29:11Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
-      117,
       88,
       49,
       1,
@@ -93,7 +92,8 @@
       49,
       6,
       33,
-      33
+      33,
+      2
     ],
     "days": [
       {
@@ -389,6 +389,21 @@
           {
             "commit": "773ed61",
             "subject": "Fix Codex's approval guidance for the inline tools table (R2.2) (#1918)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-16",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "0e32cd4",
+            "subject": "A walkthrough asked to keep response bodies keeps them for the first 200 requests and said nothing about the rest, so a request without a body read as a respons"
+          },
+          {
+            "commit": "0d16837",
+            "subject": "Follow-up to #1921. A credential in a plugin argument that no flag names, such as a token in a URL, is now hidden in the failure log's command. A local server t"
           }
         ]
       }
@@ -5163,8 +5178,22 @@
       "commit": "febf096",
       "commit_full": "febf096ea4d1416e72135bc6491710d1448f229d",
       "message": "Keep a failure log when an MCP plugin doesn't start, and say what it printed (R5.5) (#1921)"
+    },
+    {
+      "ts": "2026-11-16T00:51:29Z",
+      "kind": "content",
+      "commit": "0d16837",
+      "commit_full": "0d16837d60d190605765994c24648efe6e5f4261",
+      "message": "Follow-up to #1921. A credential in a plugin argument that no flag names, such as a token in a URL, is now hidden in the failure log's command. A local server t"
+    },
+    {
+      "ts": "2026-11-16T01:29:11Z",
+      "kind": "content",
+      "commit": "0e32cd4",
+      "commit_full": "0e32cd474c6834989131989479273f5867e2f9cd",
+      "message": "A walkthrough asked to keep response bodies keeps them for the first 200 requests and said nothing about the rest, so a request without a body read as a respons"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-15T19:53:54+00:00"
+  "updated_at": "2026-11-16T03:30:47+00:00"
 }

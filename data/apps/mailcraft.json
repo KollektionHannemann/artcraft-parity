@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/UCS-Care-Group/mailcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/UCS-Care-Group/mailcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "ffff3d7",
-  "latest_commit_date": "2026-11-15T21:16:03+01:00",
-  "latest_message": "#950: Send later and Undo Send (#1469)",
+  "latest_commit": "7cc41f7",
+  "latest_commit_date": "2026-11-16T02:52:43+01:00",
+  "latest_message": "i18n: Polish as a preview language (#1487)",
   "parsed": {
     "stage": "public beta",
     "next_stage": "leaving",
@@ -208,7 +208,7 @@
     "value_since": "2026-10-12T18:17:00Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 250,
+    "revisions_since": 251,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -216,42 +216,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 254,
+    "revisions": 255,
     "revisions_7d": 14,
     "last_revision": {
-      "ts": "2026-11-15T20:16:03Z",
+      "ts": "2026-11-16T01:52:43Z",
       "kind": "content",
-      "commit": "ffff3d7",
-      "commit_full": "ffff3d729b87c79315bd23d63e51522f4c3ec5fb",
-      "message": "#950: Send later and Undo Send (#1469)"
+      "commit": "7cc41f7",
+      "commit_full": "7cc41f7e19738eafb48e4d333d76c168b09e84c2",
+      "message": "i18n: Polish as a preview language (#1487)"
     },
     "last_update": {
-      "ts": "2026-11-15T20:16:03Z",
+      "ts": "2026-11-16T01:52:43Z",
       "kind": "content",
-      "commit": "ffff3d7",
-      "commit_full": "ffff3d729b87c79315bd23d63e51522f4c3ec5fb",
-      "message": "#950: Send later and Undo Send (#1469)"
+      "commit": "7cc41f7",
+      "commit_full": "7cc41f7e19738eafb48e4d333d76c168b09e84c2",
+      "message": "i18n: Polish as a preview language (#1487)"
     },
     "self_reported": "2026-11-14"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 23.2,
+    "score": 20.9,
     "active_days_7d": 7,
-    "changes_7d": 168,
+    "changes_7d": 165,
     "changes_14d": 252,
-    "housekeeping_7d": 21,
+    "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-11-15T22:32:38Z",
-      "commit": "6bb68b3",
-      "commit_full": "6bb68b37075dccb219ee8e95cbf28dd6444abf0d",
-      "subject": "#209 D1: subscribed calendars (#1459)"
+      "ts": "2026-11-16T03:22:48Z",
+      "commit": "2325091",
+      "commit_full": "232509171b8aceeb8b981fdda4adcd4360d929f5",
+      "subject": "MB3.7: Android pictures (#1304)"
     },
-    "last_commit_ts": "2026-11-15T22:32:38Z",
+    "last_commit_ts": "2026-11-16T03:22:48Z",
     "repo_since": "2026-10-12T18:17:00Z",
     "window": [
-      4,
       12,
       17,
       11,
@@ -264,7 +263,8 @@
       15,
       42,
       41,
-      22
+      23,
+      3
     ],
     "days": [
       {
@@ -907,9 +907,13 @@
       },
       {
         "d": "2026-11-15",
-        "code": 22,
+        "code": 23,
         "other": 4,
         "samples": [
+          {
+            "commit": "cfc2200",
+            "subject": "#948: follow-up reminders (#1470)"
+          },
           {
             "commit": "6bb68b3",
             "subject": "#209 D1: subscribed calendars (#1459)"
@@ -917,10 +921,25 @@
           {
             "commit": "ffff3d7",
             "subject": "#950: Send later and Undo Send (#1469)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-16",
+        "code": 3,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "2325091",
+            "subject": "MB3.7: Android pictures (#1304)"
           },
           {
-            "commit": "45630cc",
-            "subject": "#209 D2: DAV protocol layer (#1456)"
+            "commit": "7cc41f7",
+            "subject": "i18n: Polish as a preview language (#1487)"
+          },
+          {
+            "commit": "1b5ba51",
+            "subject": "i18n: search operators stay in English (Italian, Hungarian) (#1488)"
           }
         ]
       }
@@ -6213,7 +6232,27 @@
       "breadth_pct": null,
       "full_prev": 25.0,
       "kind": "content"
+    },
+    {
+      "commit": "7cc41f7",
+      "commit_full": "7cc41f7e19738eafb48e4d333d76c168b09e84c2",
+      "commit_date": "2026-11-16T02:52:43+01:00",
+      "ts": "2026-11-16T01:52:43Z",
+      "message": "i18n: Polish as a preview language (#1487)",
+      "stage": "public beta",
+      "next_stage": "leaving",
+      "last_updated": "2026-11-14",
+      "full_pct": 25.0,
+      "full_range": null,
+      "full_hours": null,
+      "full_label": "Ready for real work with a real account",
+      "target": "Microsoft Outlook (Microsoft 365, classic desktop)",
+      "mainstream_pct": null,
+      "essentials_pct": null,
+      "breadth_pct": null,
+      "full_prev": 25.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-15T23:39:07+00:00"
+  "updated_at": "2026-11-16T03:31:11+00:00"
 }

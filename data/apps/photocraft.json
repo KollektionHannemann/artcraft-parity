@@ -383,21 +383,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 30.8,
+    "score": 27.7,
     "active_days_7d": 7,
-    "changes_7d": 524,
-    "changes_14d": 842,
+    "changes_7d": 486,
+    "changes_14d": 840,
     "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-11-15T23:23:32Z",
-      "commit": "51e8a99",
-      "commit_full": "51e8a99bf07199c6728512920c84514fef44e760",
-      "subject": "Windows: PhotoCraft starts without prntvpt.dll (#8272) (#8455)"
+      "ts": "2026-11-16T02:59:00Z",
+      "commit": "ea6ced0",
+      "commit_full": "ea6ced03b13d04c5601e5b1947f28e832027be00",
+      "subject": "Use shared PSD Duotone ink records and block assembly (#15191)"
     },
-    "last_commit_ts": "2026-11-15T23:23:32Z",
+    "last_commit_ts": "2026-11-16T02:59:00Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
-      7,
       24,
       27,
       47,
@@ -410,7 +409,8 @@
       45,
       74,
       30,
-      77
+      77,
+      5
     ],
     "days": [
       {
@@ -1305,6 +1305,25 @@
             "subject": "Artboards to Files order test: expect the new file names (#15170) (#15171)"
           }
         ]
+      },
+      {
+        "d": "2026-11-16",
+        "code": 5,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "ea6ced0",
+            "subject": "Use shared PSD Duotone ink records and block assembly (#15191)"
+          },
+          {
+            "commit": "e76ca37",
+            "subject": "Use shared PSD guides resource decoding (#15189)"
+          },
+          {
+            "commit": "99657bb",
+            "subject": "io: cut PSD annotation records over to shared codec (#15148)"
+          }
+        ]
       }
     ]
   },
@@ -1793,5 +1812,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-15T23:37:41+00:00"
+  "updated_at": "2026-11-16T03:29:50+00:00"
 }
