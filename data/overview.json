@@ -52,12 +52,23 @@
       "id": "solidcraft",
       "name": "SolidCraft",
       "type": "release",
+      "ts": "2026-11-16T05:34:34Z",
+      "tag": "v0.43.0-nightly.20261116.139.1",
+      "kind": "patch",
+      "changes": 25,
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.43.0-nightly.20261116.139.1",
+      "prerelease": true
+    },
+    {
+      "id": "solidcraft",
+      "name": "SolidCraft",
+      "type": "release",
       "ts": "2026-11-16T03:20:18Z",
       "tag": "v0.43.0",
       "kind": "minor",
       "changes": 267,
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.43.0",
-      "prerelease": true
+      "prerelease": false
     },
     {
       "id": "solidcraft",
@@ -79,17 +90,6 @@
       "kind": "minor",
       "changes": null,
       "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.13.0",
-      "prerelease": false
-    },
-    {
-      "id": "solidcraft",
-      "name": "SolidCraft",
-      "type": "release",
-      "ts": "2026-11-14T19:55:43Z",
-      "tag": "v0.42.0",
-      "kind": "minor",
-      "changes": 347,
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.42.0",
       "prerelease": false
     },
     {
@@ -487,6 +487,17 @@
   ],
   "release_waves": [
     {
+      "day": "2026-11-16",
+      "apps": 1,
+      "changes": 267,
+      "largest": {
+        "id": "solidcraft",
+        "name": "SolidCraft",
+        "tag": "v0.43.0",
+        "changes": 267
+      }
+    },
+    {
       "day": "2026-11-15",
       "apps": 1,
       "changes": 0,
@@ -519,45 +530,6 @@
         "tag": "v0.6.1",
         "changes": 286
       }
-    },
-    {
-      "day": "2026-11-11",
-      "apps": 16,
-      "changes": 981,
-      "largest": {
-        "id": "photocraft",
-        "name": "PhotoCraft",
-        "tag": "v0.23.0",
-        "changes": 265
-      }
-    },
-    {
-      "day": "2026-11-10",
-      "apps": 1,
-      "changes": 8,
-      "largest": {
-        "id": "effectcraft",
-        "name": "EffectCraft",
-        "tag": "v0.23.1",
-        "changes": 8
-      }
-    },
-    {
-      "day": "2026-11-09",
-      "apps": 16,
-      "changes": 1448,
-      "largest": {
-        "id": "vectorcraft",
-        "name": "VectorCraft",
-        "tag": "v0.23.0",
-        "changes": 331
-      }
-    },
-    {
-      "day": "2026-11-08",
-      "apps": 1,
-      "changes": 0,
-      "largest": null
     }
   ],
   "apps": [
@@ -596,7 +568,7 @@
         "value_since": "2026-10-10T18:11:14Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 238,
+        "revisions_since": 240,
         "hours_since": null,
         "areas_since": {
           "up": 3,
@@ -627,39 +599,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 239,
-        "revisions_7d": 17,
+        "revisions": 241,
+        "revisions_7d": 19,
         "last_revision": {
-          "ts": "2026-11-16T02:33:03Z",
+          "ts": "2026-11-16T04:38:07Z",
           "kind": "content",
-          "commit": "765334b",
-          "commit_full": "765334b9a6a6a1b2f86d7519966763c8936ce8d5",
-          "message": "Path Precision Tools: Tangent Circle draws the circles that touch two or three shapes (#8010)"
+          "commit": "8cf9cb9",
+          "commit_full": "8cf9cb9dca10d941b974313cf008f49e52cc99d9",
+          "message": "Line Segment: a line from one curve to another snaps to their common tangent (#8007)"
         },
         "last_update": {
-          "ts": "2026-11-16T02:33:03Z",
+          "ts": "2026-11-16T04:38:07Z",
           "kind": "content",
-          "commit": "765334b",
-          "commit_full": "765334b9a6a6a1b2f86d7519966763c8936ce8d5",
-          "message": "Path Precision Tools: Tangent Circle draws the circles that touch two or three shapes (#8010)"
+          "commit": "8cf9cb9",
+          "commit_full": "8cf9cb9dca10d941b974313cf008f49e52cc99d9",
+          "message": "Line Segment: a line from one curve to another snaps to their common tangent (#8007)"
         },
         "self_reported": "2026-11-15"
       },
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 36.1,
+        "score": 37.0,
         "active_days_7d": 7,
-        "changes_7d": 1223,
-        "changes_14d": 2030,
+        "changes_7d": 1249,
+        "changes_14d": 2056,
         "housekeeping_7d": 47,
         "last_code_change": {
-          "ts": "2026-11-16T02:33:12Z",
-          "commit": "628726d",
-          "commit_full": "628726d857acc56f2f7231882c3585e6b0da3d90",
-          "subject": "i18n: script interpreter core errors are translated in every complete-message catalog (#7468)"
+          "ts": "2026-11-16T11:50:00Z",
+          "commit": "7452b6f",
+          "commit_full": "7452b6f383e386a040de13c970acbd220e92a2e7",
+          "subject": "refactor(codecs): partial shared image-codec cutover, preserving remaining readers (#7669)"
         },
-        "last_commit_ts": "2026-11-16T02:33:12Z",
+        "last_commit_ts": "2026-11-16T11:50:00Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           117,
@@ -675,7 +647,7 @@
           240,
           283,
           214,
-          28
+          54
         ]
       },
       "release": {
@@ -701,11 +673,11 @@
           "v": 62.0
         },
         {
-          "t": "2026-11-16T02:33:03Z",
+          "t": "2026-11-16T04:38:07Z",
           "v": 62.0
         }
       ],
-      "history_len": 239
+      "history_len": 241
     },
     {
       "repo_url": "https://github.com/storytold/lightcraft",
@@ -739,7 +711,7 @@
         "value_since": "2026-11-05T21:23:31Z",
         "releases_since": 4,
         "releases_since_capped": false,
-        "revisions_since": 1,
+        "revisions_since": 2,
         "hours_since": null,
         "areas_since": null,
         "changes": 1,
@@ -756,39 +728,39 @@
         }
       },
       "roadmap": {
-        "revisions": 18,
-        "revisions_7d": 0,
+        "revisions": 19,
+        "revisions_7d": 1,
         "last_revision": {
-          "ts": "2026-11-07T14:56:03Z",
+          "ts": "2026-11-16T09:23:32Z",
           "kind": "content",
-          "commit": "10db03b",
-          "commit_full": "10db03b09127a57d3f53b4fcd03fb53c74d27824",
-          "message": "LR-IMP-FORMATS: withdraw compressed ORF decoding pending provenance review (#3916)"
+          "commit": "6be6451",
+          "commit_full": "6be64516e250d7d588bd5d4ba7f734e04a1df32f",
+          "message": "docs: bring ROADMAP.md and parity assessment current through 2026-11-15 (#4277)"
         },
         "last_update": {
-          "ts": "2026-11-07T14:56:03Z",
+          "ts": "2026-11-16T09:23:32Z",
           "kind": "content",
-          "commit": "10db03b",
-          "commit_full": "10db03b09127a57d3f53b4fcd03fb53c74d27824",
-          "message": "LR-IMP-FORMATS: withdraw compressed ORF decoding pending provenance review (#3916)"
+          "commit": "6be6451",
+          "commit_full": "6be64516e250d7d588bd5d4ba7f734e04a1df32f",
+          "message": "docs: bring ROADMAP.md and parity assessment current through 2026-11-15 (#4277)"
         },
         "self_reported": null
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.4,
+        "score": 15.0,
         "active_days_7d": 7,
-        "changes_7d": 43,
-        "changes_14d": 146,
-        "housekeeping_7d": 5,
+        "changes_7d": 49,
+        "changes_14d": 152,
+        "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-16T02:47:28Z",
-          "commit": "a4676b1",
-          "commit_full": "a4676b12497d8a8213fae0dca715c29fef7c3149",
-          "subject": "print: delegate multi-image PDF serialization to craft-pdf (#4341)"
+          "ts": "2026-11-16T11:27:23Z",
+          "commit": "a349817",
+          "commit_full": "a34981762e02302d2da77799a4fc0498d4ed7cad",
+          "subject": "Use coverage-aware deadlines for asynchronous UI checks (#4323)"
         },
-        "last_commit_ts": "2026-11-16T02:47:28Z",
+        "last_commit_ts": "2026-11-16T11:27:23Z",
         "repo_since": "2026-09-30T14:04:12Z",
         "window": [
           9,
@@ -804,7 +776,7 @@
           1,
           11,
           7,
-          2
+          8
         ]
       },
       "release": {
@@ -834,11 +806,11 @@
           "v": 62.0
         },
         {
-          "t": "2026-11-07T14:56:03Z",
+          "t": "2026-11-16T09:23:32Z",
           "v": 62.0
         }
       ],
-      "history_len": 18
+      "history_len": 19
     },
     {
       "repo_url": "https://github.com/storytold/wordcraft",
@@ -872,7 +844,7 @@
         "value_since": "2026-10-10T18:11:53Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 597,
+        "revisions_since": 601,
         "hours_since": null,
         "areas_since": {
           "up": 2,
@@ -897,39 +869,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 601,
-        "revisions_7d": 11,
+        "revisions": 605,
+        "revisions_7d": 15,
         "last_revision": {
-          "ts": "2026-11-15T11:12:27Z",
+          "ts": "2026-11-16T10:06:53Z",
           "kind": "content",
-          "commit": "bc0e51e",
-          "commit_full": "bc0e51ee4db1f23940ac30fc626da02c09541adc",
-          "message": "Interface size: Auto is capped to what fits the screen, Ctrl+Shift+0 returns to Auto (#4030) (#5203)"
+          "commit": "8a1f101",
+          "commit_full": "8a1f101c4653112cf3077c91d6185742f665fe13",
+          "message": "Save As and Export: Browse in WordCraft when the system dialog doesn't appear (#3535) (#3801) (#5790)"
         },
         "last_update": {
-          "ts": "2026-11-15T11:12:27Z",
+          "ts": "2026-11-16T10:06:53Z",
           "kind": "content",
-          "commit": "bc0e51e",
-          "commit_full": "bc0e51ee4db1f23940ac30fc626da02c09541adc",
-          "message": "Interface size: Auto is capped to what fits the screen, Ctrl+Shift+0 returns to Auto (#4030) (#5203)"
+          "commit": "8a1f101",
+          "commit_full": "8a1f101c4653112cf3077c91d6185742f665fe13",
+          "message": "Save As and Export: Browse in WordCraft when the system dialog doesn't appear (#3535) (#3801) (#5790)"
         },
-        "self_reported": "2026-11-12"
+        "self_reported": "2026-11-16"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.3,
-        "active_days_7d": 6,
-        "changes_7d": 52,
-        "changes_14d": 272,
+        "score": 17.6,
+        "active_days_7d": 7,
+        "changes_7d": 61,
+        "changes_14d": 281,
         "housekeeping_7d": 8,
         "last_code_change": {
-          "ts": "2026-11-15T21:49:58Z",
-          "commit": "cc90520",
-          "commit_full": "cc90520b9d8fb0d1e6be2c2688e6f915319e850a",
-          "subject": "geom: satisfy Clippy pedantic lints (M14) (#5073)"
+          "ts": "2026-11-16T10:08:59Z",
+          "commit": "fe8a8a8",
+          "commit_full": "fe8a8a838cde68b272ac68429e53049347feab40",
+          "subject": "Header pictures: while editing the header, a click selects its Behind Text picture wherever no header text covers it (#5601)"
         },
-        "last_commit_ts": "2026-11-15T21:49:58Z",
+        "last_commit_ts": "2026-11-16T10:08:59Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
           19,
@@ -945,7 +917,7 @@
           11,
           8,
           5,
-          0
+          9
         ]
       },
       "release": {
@@ -971,11 +943,11 @@
           "v": 60.0
         },
         {
-          "t": "2026-11-15T11:12:27Z",
+          "t": "2026-11-16T10:06:53Z",
           "v": 60.0
         }
       ],
-      "history_len": 601
+      "history_len": 605
     },
     {
       "repo_url": "https://github.com/storytold/filmcraft",
@@ -1038,18 +1010,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 16.7,
+        "score": 19.4,
         "active_days_7d": 7,
-        "changes_7d": 76,
-        "changes_14d": 204,
+        "changes_7d": 98,
+        "changes_14d": 226,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-16T01:05:09Z",
-          "commit": "7215e46",
-          "commit_full": "7215e46c8ff42d40bd4aa73f9fb688baf5524b18",
-          "subject": "export: use shared OpenEXR scanline writer (#4860)"
+          "ts": "2026-11-16T11:45:40Z",
+          "commit": "50092c2",
+          "commit_full": "50092c21933e7c13d2d5f8dfc5a52cc3705e4043",
+          "subject": "interchange: read and write ALE through craft-timeline (#4899)"
         },
-        "last_commit_ts": "2026-11-16T01:05:09Z",
+        "last_commit_ts": "2026-11-16T11:45:40Z",
         "repo_since": "2026-09-30T09:22:00Z",
         "window": [
           55,
@@ -1065,7 +1037,7 @@
           11,
           6,
           9,
-          3
+          25
         ]
       },
       "release": {
@@ -1129,7 +1101,7 @@
         "value_since": "2026-10-10T18:09:21Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 136,
+        "revisions_since": 137,
         "hours_since": null,
         "areas_since": {
           "up": 1,
@@ -1148,39 +1120,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 140,
-        "revisions_7d": 3,
+        "revisions": 141,
+        "revisions_7d": 4,
         "last_revision": {
-          "ts": "2026-11-13T16:28:51Z",
+          "ts": "2026-11-16T09:22:24Z",
           "kind": "content",
-          "commit": "7a24b20",
-          "commit_full": "7a24b20c8e82fdbd3317f90f237f290e0d1c38be",
-          "message": "Document the PPTX slide-list import limit (#2103)"
+          "commit": "596ec54",
+          "commit_full": "596ec54b592dc6c3492c7e149b79684824ba508a",
+          "message": "Slide show: play a slide's animations again when the show advances to it (#2090) (#2126)"
         },
         "last_update": {
-          "ts": "2026-11-13T16:28:51Z",
+          "ts": "2026-11-16T09:22:24Z",
           "kind": "content",
-          "commit": "7a24b20",
-          "commit_full": "7a24b20c8e82fdbd3317f90f237f290e0d1c38be",
-          "message": "Document the PPTX slide-list import limit (#2103)"
+          "commit": "596ec54",
+          "commit_full": "596ec54b592dc6c3492c7e149b79684824ba508a",
+          "message": "Slide show: play a slide's animations again when the show advances to it (#2090) (#2126)"
         },
-        "self_reported": "2026-11-11"
+        "self_reported": "2026-11-14"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 12.3,
-        "active_days_7d": 6,
-        "changes_7d": 63,
-        "changes_14d": 144,
+        "score": 15.4,
+        "active_days_7d": 7,
+        "changes_7d": 71,
+        "changes_14d": 152,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-15T23:27:58Z",
-          "commit": "bb2c225",
-          "commit_full": "bb2c2254ee60761b2b4dab2053fe33d7190b6804",
-          "subject": "Native format: take the .deckcraft package layer from craft-deckcraft-format (#2170)"
+          "ts": "2026-11-16T11:45:45Z",
+          "commit": "62af9fa",
+          "commit_full": "62af9fa11499df93c40178d5d1abb5b016224d55",
+          "subject": "color: DrawingML colours come from craft-drawingml (craft-libs#778, #792) (#2179)"
         },
-        "last_commit_ts": "2026-11-15T23:27:58Z",
+        "last_commit_ts": "2026-11-16T11:45:45Z",
         "repo_since": "2026-10-06T02:13:02Z",
         "window": [
           31,
@@ -1196,7 +1168,7 @@
           15,
           2,
           9,
-          0
+          8
         ]
       },
       "release": {
@@ -1222,11 +1194,11 @@
           "v": 55.0
         },
         {
-          "t": "2026-11-13T16:28:51Z",
+          "t": "2026-11-16T09:22:24Z",
           "v": 55.0
         }
       ],
-      "history_len": 140
+      "history_len": 141
     },
     {
       "repo_url": "https://github.com/storytold/figcraft",
@@ -1315,14 +1287,14 @@
         }
       },
       "roadmap": {
-        "revisions": 278,
+        "revisions": 279,
         "revisions_7d": 2,
         "last_revision": {
-          "ts": "2026-11-12T06:12:10Z",
-          "kind": "content",
-          "commit": "dfd9ddf",
-          "commit_full": "dfd9ddf9db8fdf885d73953c8f69e5c4f72e3660",
-          "message": "M4: Boolean groups: a corner radius rounds the result (#2222) (#2224)"
+          "ts": "2026-11-16T09:23:21Z",
+          "kind": "editorial",
+          "commit": "559c952",
+          "commit_full": "559c952d107f781c4f770041c7d5cc368ebc4fa0",
+          "message": "docs: bring ROADMAP.md and parity assessment current through 2026-11-15 (#2378)"
         },
         "last_update": {
           "ts": "2026-11-12T06:12:10Z",
@@ -1331,7 +1303,7 @@
           "commit_full": "dfd9ddf9db8fdf885d73953c8f69e5c4f72e3660",
           "message": "M4: Boolean groups: a corner radius rounds the result (#2222) (#2224)"
         },
-        "self_reported": "2026-11-10"
+        "self_reported": "2026-11-15"
       },
       "milestone": null,
       "activity": {
@@ -1340,14 +1312,14 @@
         "active_days_7d": 7,
         "changes_7d": 128,
         "changes_14d": 295,
-        "housekeeping_7d": 7,
+        "housekeeping_7d": 8,
         "last_code_change": {
           "ts": "2026-11-16T00:07:38Z",
           "commit": "64132ad",
           "commit_full": "64132ad9e0ff5e14594575d5150e3a47cacdd35b",
           "subject": "M1: the Frame tool's panel has New from selection above the presets (#1683) (#1699)"
         },
-        "last_commit_ts": "2026-11-16T00:07:38Z",
+        "last_commit_ts": "2026-11-16T09:23:21Z",
         "repo_since": "2026-10-09T15:38:50Z",
         "window": [
           16,
@@ -1405,11 +1377,11 @@
           "v": 53.0
         },
         {
-          "t": "2026-11-12T06:12:10Z",
+          "t": "2026-11-16T09:23:21Z",
           "v": 53.0
         }
       ],
-      "history_len": 278
+      "history_len": 279
     },
     {
       "repo_url": "https://github.com/storytold/pdfcraft",
@@ -1443,7 +1415,7 @@
         "value_since": "2026-10-15T06:21:11Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 151,
+        "revisions_since": 152,
         "hours_since": null,
         "areas_since": null,
         "changes": 1,
@@ -1460,39 +1432,39 @@
         }
       },
       "roadmap": {
-        "revisions": 240,
-        "revisions_7d": 18,
+        "revisions": 242,
+        "revisions_7d": 19,
         "last_revision": {
-          "ts": "2026-11-15T21:55:35Z",
+          "ts": "2026-11-16T10:51:05Z",
           "kind": "content",
-          "commit": "e191b0e",
-          "commit_full": "e191b0ea69b7dcc4e554c1c4e51b6214bec1c590",
-          "message": "M3: select text across pages (view.text-select)"
+          "commit": "9d061a7",
+          "commit_full": "9d061a76683b17f0bff2458baa7c2dc245eeedd6",
+          "message": "Ctrl+M opens the Comments panel (#3741) (#3762)"
         },
         "last_update": {
-          "ts": "2026-11-15T21:55:35Z",
+          "ts": "2026-11-16T10:51:05Z",
           "kind": "content",
-          "commit": "e191b0e",
-          "commit_full": "e191b0ea69b7dcc4e554c1c4e51b6214bec1c590",
-          "message": "M3: select text across pages (view.text-select)"
+          "commit": "9d061a7",
+          "commit_full": "9d061a76683b17f0bff2458baa7c2dc245eeedd6",
+          "message": "Ctrl+M opens the Comments panel (#3741) (#3762)"
         },
-        "self_reported": "2026-11-09"
+        "self_reported": "2026-11-16"
       },
       "milestone": null,
       "activity": {
-        "level": "active",
-        "score": 17.8,
-        "active_days_7d": 6,
-        "changes_7d": 148,
-        "changes_14d": 485,
-        "housekeeping_7d": 9,
+        "level": "buzzing",
+        "score": 20.6,
+        "active_days_7d": 7,
+        "changes_7d": 154,
+        "changes_14d": 491,
+        "housekeeping_7d": 10,
         "last_code_change": {
-          "ts": "2026-11-15T21:55:35Z",
-          "commit": "e191b0e",
-          "commit_full": "e191b0ea69b7dcc4e554c1c4e51b6214bec1c590",
-          "subject": "M3: select text across pages (view.text-select)"
+          "ts": "2026-11-16T11:33:12Z",
+          "commit": "207a50e",
+          "commit_full": "207a50ef133a99d051d94ad655a9d1cf40745199",
+          "subject": "test(create): fail explicitly for invalid one-bit RGB fixtures (#7344)"
         },
-        "last_commit_ts": "2026-11-15T21:55:35Z",
+        "last_commit_ts": "2026-11-16T11:33:12Z",
         "repo_since": "2026-09-30T09:17:08Z",
         "window": [
           26,
@@ -1508,7 +1480,7 @@
           14,
           10,
           12,
-          0
+          6
         ]
       },
       "release": {
@@ -1538,11 +1510,11 @@
           "v": 50.0
         },
         {
-          "t": "2026-11-15T21:55:35Z",
+          "t": "2026-11-16T10:51:05Z",
           "v": 50.0
         }
       ],
-      "history_len": 240
+      "history_len": 242
     },
     {
       "repo_url": "https://github.com/storytold/gridcraft",
@@ -1576,7 +1548,7 @@
         "value_since": "2026-10-10T18:09:06Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 102,
+        "revisions_since": 103,
         "hours_since": null,
         "areas_since": null,
         "changes": 0,
@@ -1584,39 +1556,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 104,
-        "revisions_7d": 9,
+        "revisions": 106,
+        "revisions_7d": 10,
         "last_revision": {
-          "ts": "2026-11-15T16:55:04Z",
-          "kind": "content",
-          "commit": "1d0b311",
-          "commit_full": "1d0b311b4a943e19c86f1bfaf85927c3116ea92a",
-          "message": "Preserve Arabic cell direction and RTL sheet layout in PDF exports (#955)"
+          "ts": "2026-11-16T09:24:34Z",
+          "kind": "editorial",
+          "commit": "91f153d",
+          "commit_full": "91f153de5b06cb523afdf3ba23c772916ca16cfa",
+          "message": "docs: bring ROADMAP.md and parity assessment current through 2026-11-15 (#4247)"
         },
         "last_update": {
-          "ts": "2026-11-15T16:55:04Z",
-          "kind": "content",
-          "commit": "1d0b311",
-          "commit_full": "1d0b311b4a943e19c86f1bfaf85927c3116ea92a",
-          "message": "Preserve Arabic cell direction and RTL sheet layout in PDF exports (#955)"
+          "ts": "2026-11-16T07:59:28Z",
+          "kind": "estimates",
+          "commit": "ef99f1e",
+          "commit_full": "ef99f1e51f5f971a7c83da5acbc4dc7bcc62f2c5",
+          "message": "Functions: GETPIVOTDATA (#284) (#290)"
         },
-        "self_reported": "2026-11-05"
+        "self_reported": "2026-11-15"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.0,
+        "score": 15.6,
         "active_days_7d": 6,
-        "changes_7d": 83,
-        "changes_14d": 175,
-        "housekeeping_7d": 4,
+        "changes_7d": 87,
+        "changes_14d": 179,
+        "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-16T01:14:28Z",
-          "commit": "19f07f3",
-          "commit_full": "19f07f3a25939a70c53471641890b11b82abf3d0",
-          "subject": "Native JSON workbook: read and write through craft-gridcraft-format (#4320)"
+          "ts": "2026-11-16T09:25:43Z",
+          "commit": "1476d4e",
+          "commit_full": "1476d4e7abef470886aeb5a1a7d870c9377a3050",
+          "subject": "engine: Subtotal groups every row under the grand total (#3945) (#4184)"
         },
-        "last_commit_ts": "2026-11-16T01:14:28Z",
+        "last_commit_ts": "2026-11-16T09:25:43Z",
         "repo_since": "2026-10-06T02:09:42Z",
         "window": [
           36,
@@ -1632,7 +1604,7 @@
           0,
           8,
           8,
-          1
+          5
         ]
       },
       "release": {
@@ -1658,11 +1630,11 @@
           "v": 50.0
         },
         {
-          "t": "2026-11-15T16:55:04Z",
+          "t": "2026-11-16T09:24:34Z",
           "v": 50.0
         }
       ],
-      "history_len": 104
+      "history_len": 106
     },
     {
       "repo_url": "https://github.com/storytold/designcraft",
@@ -1845,18 +1817,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 27.7,
+        "score": 28.7,
         "active_days_7d": 7,
-        "changes_7d": 486,
-        "changes_14d": 840,
+        "changes_7d": 492,
+        "changes_14d": 846,
         "housekeeping_7d": 14,
         "last_code_change": {
-          "ts": "2026-11-16T02:59:00Z",
-          "commit": "ea6ced0",
-          "commit_full": "ea6ced03b13d04c5601e5b1947f28e832027be00",
-          "subject": "Use shared PSD Duotone ink records and block assembly (#15191)"
+          "ts": "2026-11-16T10:57:45Z",
+          "commit": "d53b5ed",
+          "commit_full": "d53b5edb600d2e9215104fbea6c4ebc15619ff19",
+          "subject": "test(algo): pin the Gaussian blur edge profile and its ATN identity (#11566)"
         },
-        "last_commit_ts": "2026-11-16T02:59:00Z",
+        "last_commit_ts": "2026-11-16T10:57:45Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           24,
@@ -1872,7 +1844,7 @@
           74,
           30,
           77,
-          5
+          11
         ]
       },
       "release": {
@@ -1944,14 +1916,14 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 16,
+        "revisions": 17,
         "revisions_7d": 0,
         "last_revision": {
-          "ts": "2026-11-13T19:27:01Z",
+          "ts": "2026-11-16T09:27:08Z",
           "kind": "editorial",
-          "commit": "05fc7f2",
-          "commit_full": "05fc7f28352361f8f183da900ac5f4dfc9b69799",
-          "message": "Tests: give the nested knockout draw-budget test two minutes, not twenty seconds, on a loaded runner (#3650)"
+          "commit": "e250f8f",
+          "commit_full": "e250f8fcb64af2b0889d79bbe3bbdcdba4ab223d",
+          "message": "docs: bring ROADMAP.md and parity assessment current through 2026-11-15 (#3707)"
         },
         "last_update": {
           "ts": "2026-11-05T21:45:23Z",
@@ -1960,23 +1932,23 @@
           "commit_full": "a408d990b23d0b60a17186d31ea715c8e0be9437",
           "message": "Export: use conformant ProRes alpha run termination (#2225)"
         },
-        "self_reported": "2026-11-05"
+        "self_reported": "2026-11-15"
       },
       "milestone": null,
       "activity": {
-        "level": "active",
-        "score": 16.2,
-        "active_days_7d": 6,
-        "changes_7d": 144,
-        "changes_14d": 272,
-        "housekeeping_7d": 5,
+        "level": "buzzing",
+        "score": 20.5,
+        "active_days_7d": 7,
+        "changes_7d": 163,
+        "changes_14d": 291,
+        "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-15T23:03:34Z",
-          "commit": "6c70694",
-          "commit_full": "6c70694a049552219643cb498556c32e297ae3de",
-          "subject": "encoding: replace four local Base64 writers with existing craft-mime (#3742)"
+          "ts": "2026-11-16T11:04:47Z",
+          "commit": "6ddcd5e",
+          "commit_full": "6ddcd5ee9c6743b1a64940eb6f91b330d8868907",
+          "subject": "media, export: drop the filmcraft-mpegts, -vp9, -hevc and -av1 pins for craft-libs (#781) (#3765)"
         },
-        "last_commit_ts": "2026-11-15T23:03:34Z",
+        "last_commit_ts": "2026-11-16T11:04:47Z",
         "repo_since": "2026-10-01T16:48:39Z",
         "window": [
           46,
@@ -1992,7 +1964,7 @@
           10,
           24,
           4,
-          0
+          19
         ]
       },
       "release": {
@@ -2018,11 +1990,11 @@
           "v": 45.0
         },
         {
-          "t": "2026-11-13T19:27:01Z",
+          "t": "2026-11-16T09:27:08Z",
           "v": 45.0
         }
       ],
-      "history_len": 16
+      "history_len": 17
     },
     {
       "repo_url": "https://github.com/storytold/soundcraft",
@@ -2085,18 +2057,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 9.8,
-        "active_days_7d": 6,
-        "changes_7d": 48,
-        "changes_14d": 91,
+        "score": 10.8,
+        "active_days_7d": 7,
+        "changes_7d": 49,
+        "changes_14d": 92,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-15T21:14:40Z",
-          "commit": "4898ff0",
-          "commit_full": "4898ff03eed9c2a44914d2cd2415c1ea9a5e9427",
-          "subject": "Add Brazilian Portuguese UI localization"
+          "ts": "2026-11-16T05:55:01Z",
+          "commit": "5976545",
+          "commit_full": "5976545fe1ddc1b2de85a483362876ecda8bbdcd",
+          "subject": "Use shared XML escaping for MusicXML and SVG scores (#1585)"
         },
-        "last_commit_ts": "2026-11-15T21:14:40Z",
+        "last_commit_ts": "2026-11-16T05:55:01Z",
         "repo_since": "2026-10-06T00:08:04Z",
         "window": [
           21,
@@ -2112,7 +2084,7 @@
           20,
           1,
           2,
-          0
+          1
         ]
       },
       "release": {
@@ -2205,18 +2177,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 11.0,
+        "score": 13.4,
         "active_days_7d": 7,
-        "changes_7d": 36,
-        "changes_14d": 95,
+        "changes_7d": 45,
+        "changes_14d": 104,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-16T00:30:49Z",
-          "commit": "2974d74",
-          "commit_full": "2974d74bdc55cf6264f69a28c3d70d2241093a0f",
-          "subject": "Use shared raster image codecs (#3189)"
+          "ts": "2026-11-16T09:22:06Z",
+          "commit": "2ccf587",
+          "commit_full": "2ccf5874b00145dd8c1293f84a1830339839eadf",
+          "subject": "LISP: findfile finds folders (#2985) (#3165)"
         },
-        "last_commit_ts": "2026-11-16T00:30:49Z",
+        "last_commit_ts": "2026-11-16T09:22:06Z",
         "repo_since": "2026-10-06T00:15:47Z",
         "window": [
           29,
@@ -2232,7 +2204,7 @@
           1,
           3,
           8,
-          1
+          10
         ]
       },
       "release": {
@@ -2322,18 +2294,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 20.9,
+        "score": 21.7,
         "active_days_7d": 7,
-        "changes_7d": 165,
-        "changes_14d": 252,
+        "changes_7d": 168,
+        "changes_14d": 255,
         "housekeeping_7d": 17,
         "last_code_change": {
-          "ts": "2026-11-16T03:22:48Z",
-          "commit": "2325091",
-          "commit_full": "232509171b8aceeb8b981fdda4adcd4360d929f5",
-          "subject": "MB3.7: Android pictures (#1304)"
+          "ts": "2026-11-16T08:18:41Z",
+          "commit": "073d3d1",
+          "commit_full": "073d3d11dd00779141e40eeade1eff7d9dbe6661",
+          "subject": "#209 D3: CalDAV/CardDAV discovery and host trust (#1495)"
         },
-        "last_commit_ts": "2026-11-16T03:22:48Z",
+        "last_commit_ts": "2026-11-16T08:18:41Z",
         "repo_since": "2026-10-12T18:17:00Z",
         "window": [
           12,
@@ -2349,7 +2321,7 @@
           42,
           41,
           23,
-          3
+          6
         ]
       },
       "release": {
@@ -2439,18 +2411,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.1,
+        "score": 16.5,
         "active_days_7d": 7,
-        "changes_7d": 53,
-        "changes_14d": 96,
+        "changes_7d": 62,
+        "changes_14d": 105,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-16T00:16:45Z",
-          "commit": "cce9ada",
-          "commit_full": "cce9adafb84f1c1759888fb9e6ff9d7f15200e30",
-          "subject": "Assets panel pass 1: the reference's layout (4-column grid, one-line labels, type row, breadcrumb, side panes, toolbar) (#412)"
+          "ts": "2026-11-16T10:44:22Z",
+          "commit": "2951f3c",
+          "commit_full": "2951f3c3885a9250a8cf1fde12061f662924ea96",
+          "subject": "Use the shared OBJ reader (#528)"
         },
-        "last_commit_ts": "2026-11-16T00:16:45Z",
+        "last_commit_ts": "2026-11-16T10:44:22Z",
         "repo_since": "2026-10-14T18:33:13Z",
         "window": [
           8,
@@ -2466,7 +2438,7 @@
           9,
           4,
           11,
-          1
+          10
         ]
       },
       "release": {
@@ -2547,18 +2519,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 10.8,
+        "score": 11.8,
         "active_days_7d": 7,
-        "changes_7d": 24,
-        "changes_14d": 112,
+        "changes_7d": 26,
+        "changes_14d": 114,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-16T00:37:11Z",
-          "commit": "627fbed",
-          "commit_full": "627fbedd37ce39b08ecae32c4024974779a080da",
-          "subject": "Use shared DDS float surface decoding (#254)"
+          "ts": "2026-11-16T11:14:36Z",
+          "commit": "b71c02c",
+          "commit_full": "b71c02cacd8dca8517657dc17349ec0d7dec8b09",
+          "subject": "#789: read SVG resources through craft-svg's bounded tree and draw (#259)"
         },
-        "last_commit_ts": "2026-11-16T00:37:11Z",
+        "last_commit_ts": "2026-11-16T11:14:36Z",
         "repo_since": "2026-11-01T19:58:46Z",
         "window": [
           3,
@@ -2574,7 +2546,7 @@
           1,
           7,
           4,
-          1
+          3
         ]
       },
       "release": {
@@ -2634,39 +2606,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 666,
-        "revisions_7d": 294,
+        "revisions": 674,
+        "revisions_7d": 302,
         "last_revision": {
-          "ts": "2026-11-16T01:29:11Z",
+          "ts": "2026-11-16T10:59:57Z",
           "kind": "content",
-          "commit": "0e32cd4",
-          "commit_full": "0e32cd474c6834989131989479273f5867e2f9cd",
-          "message": "A walkthrough asked to keep response bodies keeps them for the first 200 requests and said nothing about the rest, so a request without a body read as a respons"
+          "commit": "3ef1181",
+          "commit_full": "3ef118107eda962c3a5994dd554bf6eab0cd76a0",
+          "message": "A failed API-backend turn wrote the error's message to its log, and that message repeats what the service, or a proxy in front of it, answered, which can includ"
         },
         "last_update": {
-          "ts": "2026-11-16T01:29:11Z",
+          "ts": "2026-11-16T10:59:57Z",
           "kind": "content",
-          "commit": "0e32cd4",
-          "commit_full": "0e32cd474c6834989131989479273f5867e2f9cd",
-          "message": "A walkthrough asked to keep response bodies keeps them for the first 200 requests and said nothing about the rest, so a request without a body read as a respons"
+          "commit": "3ef1181",
+          "commit_full": "3ef118107eda962c3a5994dd554bf6eab0cd76a0",
+          "message": "A failed API-backend turn wrote the error's message to its log, and that message repeats what the service, or a proxy in front of it, answered, which can includ"
         },
         "self_reported": null
       },
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 23.6,
+        "score": 25.4,
         "active_days_7d": 7,
-        "changes_7d": 334,
-        "changes_14d": 764,
-        "housekeeping_7d": 9,
+        "changes_7d": 342,
+        "changes_14d": 772,
+        "housekeeping_7d": 11,
         "last_code_change": {
-          "ts": "2026-11-16T01:29:11Z",
-          "commit": "0e32cd4",
-          "commit_full": "0e32cd474c6834989131989479273f5867e2f9cd",
-          "subject": "A walkthrough asked to keep response bodies keeps them for the first 200 requests and said nothing about the rest, so a request without a body read as a respons"
+          "ts": "2026-11-16T11:04:55Z",
+          "commit": "8dec784",
+          "commit_full": "8dec78492de82b2b478a7a16088900dbf0406508",
+          "subject": "The process and UI source-policy gates stopped at a file's first test attribute, so production code below an interleaved test module escaped them. They now read"
         },
-        "last_commit_ts": "2026-11-16T01:29:11Z",
+        "last_commit_ts": "2026-11-16T11:04:55Z",
         "repo_since": "2026-10-31T14:52:14Z",
         "window": [
           88,
@@ -2682,7 +2654,7 @@
           6,
           33,
           33,
-          2
+          10
         ]
       },
       "release": {
@@ -2763,18 +2735,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 36.4,
+        "score": 37.8,
         "active_days_7d": 7,
-        "changes_7d": 1189,
-        "changes_14d": 1844,
+        "changes_7d": 1273,
+        "changes_14d": 1928,
         "housekeeping_7d": 55,
         "last_code_change": {
-          "ts": "2026-11-16T03:08:50Z",
-          "commit": "649a953",
-          "commit_full": "649a9532904471822fb57f743d34294b65966648",
-          "subject": "solidcore: the mesh path keeps a slit loop's sides where it passes a vertex twice (#17651)"
+          "ts": "2026-11-16T11:36:20Z",
+          "commit": "51dd03d",
+          "commit_full": "51dd03d0496ca1485d5e781fbf54d63a1ad96a32",
+          "subject": "solidcore: the 10876 ledge case is held to 1e-11 and drawn as it now builds (#17763)"
         },
-        "last_commit_ts": "2026-11-16T03:08:50Z",
+        "last_commit_ts": "2026-11-16T11:36:20Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           38,
@@ -2790,15 +2762,15 @@
           203,
           198,
           156,
-          53
+          137
         ]
       },
       "release": {
-        "tag": "v0.42.0",
-        "name": "SolidCraft v0.42.0",
-        "ts": "2026-11-14T19:55:43Z",
-        "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.42.0",
-        "changes": 347,
+        "tag": "v0.43.0",
+        "name": "SolidCraft v0.43.0",
+        "ts": "2026-11-16T03:20:18Z",
+        "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.43.0",
+        "changes": 267,
         "new_contributors": 8,
         "platforms": [
           "macOS",
@@ -2859,18 +2831,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.2,
+        "score": 15.8,
         "active_days_7d": 7,
-        "changes_7d": 90,
-        "changes_14d": 133,
+        "changes_7d": 91,
+        "changes_14d": 134,
         "housekeeping_7d": 11,
         "last_code_change": {
-          "ts": "2026-11-16T03:11:39Z",
-          "commit": "9f423e6",
-          "commit_full": "9f423e6abbd1e30236d0dc4b74315fa547e62bea",
-          "subject": "Use shared bounded APNG container assembly (#375)"
+          "ts": "2026-11-16T05:41:46Z",
+          "commit": "3854164",
+          "commit_full": "38541642cbc25a32181e02d412f9c04efdc3df00",
+          "subject": "Reuse shared HTML escaping with existing control policies (#381)"
         },
-        "last_commit_ts": "2026-11-16T03:11:39Z",
+        "last_commit_ts": "2026-11-16T05:41:46Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
           0,
@@ -2886,7 +2858,7 @@
           14,
           14,
           7,
-          1
+          2
         ]
       },
       "release": {
@@ -2996,5 +2968,5 @@
     "missing": [],
     "candidates": []
   },
-  "generated_at": "2026-11-16T03:31:17+00:00"
+  "generated_at": "2026-11-16T11:55:11+00:00"
 }

@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 36.4,
+    "score": 37.8,
     "active_days_7d": 7,
-    "changes_7d": 1189,
-    "changes_14d": 1844,
+    "changes_7d": 1273,
+    "changes_14d": 1928,
     "housekeeping_7d": 55,
     "last_code_change": {
-      "ts": "2026-11-16T03:08:50Z",
-      "commit": "649a953",
-      "commit_full": "649a9532904471822fb57f743d34294b65966648",
-      "subject": "solidcore: the mesh path keeps a slit loop's sides where it passes a vertex twice (#17651)"
+      "ts": "2026-11-16T11:36:20Z",
+      "commit": "51dd03d",
+      "commit_full": "51dd03d0496ca1485d5e781fbf54d63a1ad96a32",
+      "subject": "solidcore: the 10876 ledge case is held to 1e-11 and drawn as it now builds (#17763)"
     },
-    "last_commit_ts": "2026-11-16T03:08:50Z",
+    "last_commit_ts": "2026-11-16T11:36:20Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       38,
@@ -93,7 +93,7 @@
       203,
       198,
       156,
-      53
+      137
     ],
     "days": [
       {
@@ -858,26 +858,43 @@
       },
       {
         "d": "2026-11-16",
-        "code": 53,
+        "code": 137,
         "other": 0,
         "samples": [
           {
-            "commit": "649a953",
-            "subject": "solidcore: the mesh path keeps a slit loop's sides where it passes a vertex twice (#17651)"
+            "commit": "51dd03d",
+            "subject": "solidcore: the 10876 ledge case is held to 1e-11 and drawn as it now builds (#17763)"
           },
           {
-            "commit": "f13b626",
-            "subject": "solidcore: a lone round between cylinders rolls over a seam onto the rest of the wall (#17395)"
+            "commit": "489d9c4",
+            "subject": "Curvature near cylinder ends reports the nearest wall correctly (#16630) (#17819)"
           },
           {
-            "commit": "5d3d908",
-            "subject": "solidcore: retire query_statuses_pass_on (queries pass on the statuses SMLib drops) (#16957)"
+            "commit": "1e1aef7",
+            "subject": "Booleans: a cylinder that dips a hair into a parallel flat face joins it, instead of failing with status 1001 (#16877) (#17757)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.43.0-nightly.20261116.139.1",
+      "name": "SolidCraft v0.43.0-nightly.20261116.139.1 (nightly)",
+      "ts": "2026-11-16T05:34:34Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.43.0-nightly.20261116.139.1",
+      "changes": 25,
+      "new_contributors": 1,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "patch"
+    },
     {
       "tag": "v0.43.0",
       "name": "SolidCraft v0.43.0",
@@ -891,7 +908,7 @@
         "Linux",
         "Web"
       ],
-      "prerelease": true,
+      "prerelease": false,
       "source": "release",
       "kind": "minor"
     },
@@ -961,7 +978,7 @@
       ],
       "prerelease": false,
       "source": "release",
-      "kind": "minor"
+      "kind": null
     },
     {
       "tag": "v0.40.0",
@@ -978,7 +995,7 @@
       ],
       "prerelease": true,
       "source": "release",
-      "kind": "minor"
+      "kind": null
     },
     {
       "tag": "v0.40.0-rc.4",
@@ -995,7 +1012,7 @@
       ],
       "prerelease": true,
       "source": "release",
-      "kind": "minor"
+      "kind": null
     },
     {
       "tag": "v0.40.0-nightly.20261110.117.1",
@@ -1012,7 +1029,7 @@
       ],
       "prerelease": true,
       "source": "release",
-      "kind": "minor"
+      "kind": null
     },
     {
       "tag": "v0.40.0-rc.3",
@@ -1029,7 +1046,7 @@
       ],
       "prerelease": true,
       "source": "release",
-      "kind": "minor"
+      "kind": null
     },
     {
       "tag": "v0.40.0-rc.2",
@@ -1046,7 +1063,7 @@
       ],
       "prerelease": true,
       "source": "release",
-      "kind": "minor"
+      "kind": null
     },
     {
       "tag": "v0.40.0-rc.1",
@@ -1062,23 +1079,6 @@
         "Web"
       ],
       "prerelease": true,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.30.1",
-      "name": "v0.30.1",
-      "ts": "2026-11-02T17:21:52Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.30.1",
-      "changes": null,
-      "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
       "source": "release",
       "kind": null
     }
@@ -2465,5 +2465,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-16T03:31:07+00:00"
+  "updated_at": "2026-11-16T11:55:04+00:00"
 }

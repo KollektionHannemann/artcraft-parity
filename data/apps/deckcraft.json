@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/deckcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/deckcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "7a24b20",
-  "latest_commit_date": "2026-11-13T16:28:51Z",
-  "latest_message": "Document the PPTX slide-list import limit (#2103)",
+  "latest_commit": "596ec54",
+  "latest_commit_date": "2026-11-16T10:22:24+01:00",
+  "latest_message": "Slide show: play a slide's animations again when the show advances to it (#2090) (#2126)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
-    "last_updated": "2026-11-11",
+    "last_updated": "2026-11-14",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -319,6 +319,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-14",
+        "text": "Slide show: a slide the show advances to again (click, →, Space, automatic advance or a loop) starts over, so its animations play again, as in PowerPoint. Back and links still show it as it was left (#2090)"
+      },
+      {
         "date": "2026-11-11",
         "text": "Media: the Opus decoder and the Ogg, MP4/MOV and Matroska demuxers are craft-audio and craft-media from craft-libs; DeckCraft's own copies and re-export crates are removed"
       },
@@ -473,10 +477,6 @@
       {
         "date": "2026-10-24",
         "text": "Format Shape and Format Background ▸ Pattern fill: a gallery of the 48 preset patterns PowerPoint offers, drawn in the current colors, with Foreground and Background color menus. Format Shape could only set 25 % in accent 1 on background 1, and Format Background listed 10 presets by their XML names"
-      },
-      {
-        "date": "2026-10-24",
-        "text": "Edit Points: hold Shift, Ctrl or Alt while dragging a point's handle to make it a smooth, straight or corner point, as in PowerPoint (Cmd and Option work as Ctrl and Alt on the Mac); the point keeps that type for the next drag"
       }
     ]
   },
@@ -485,7 +485,7 @@
     "value_since": "2026-10-10T18:09:21Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 136,
+    "revisions_since": 137,
     "hours_since": null,
     "areas_since": {
       "up": 1,
@@ -504,39 +504,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 140,
-    "revisions_7d": 3,
+    "revisions": 141,
+    "revisions_7d": 4,
     "last_revision": {
-      "ts": "2026-11-13T16:28:51Z",
+      "ts": "2026-11-16T09:22:24Z",
       "kind": "content",
-      "commit": "7a24b20",
-      "commit_full": "7a24b20c8e82fdbd3317f90f237f290e0d1c38be",
-      "message": "Document the PPTX slide-list import limit (#2103)"
+      "commit": "596ec54",
+      "commit_full": "596ec54b592dc6c3492c7e149b79684824ba508a",
+      "message": "Slide show: play a slide's animations again when the show advances to it (#2090) (#2126)"
     },
     "last_update": {
-      "ts": "2026-11-13T16:28:51Z",
+      "ts": "2026-11-16T09:22:24Z",
       "kind": "content",
-      "commit": "7a24b20",
-      "commit_full": "7a24b20c8e82fdbd3317f90f237f290e0d1c38be",
-      "message": "Document the PPTX slide-list import limit (#2103)"
+      "commit": "596ec54",
+      "commit_full": "596ec54b592dc6c3492c7e149b79684824ba508a",
+      "message": "Slide show: play a slide's animations again when the show advances to it (#2090) (#2126)"
     },
-    "self_reported": "2026-11-11"
+    "self_reported": "2026-11-14"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 12.3,
-    "active_days_7d": 6,
-    "changes_7d": 63,
-    "changes_14d": 144,
+    "score": 15.4,
+    "active_days_7d": 7,
+    "changes_7d": 71,
+    "changes_14d": 152,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-15T23:27:58Z",
-      "commit": "bb2c225",
-      "commit_full": "bb2c2254ee60761b2b4dab2053fe33d7190b6804",
-      "subject": "Native format: take the .deckcraft package layer from craft-deckcraft-format (#2170)"
+      "ts": "2026-11-16T11:45:45Z",
+      "commit": "62af9fa",
+      "commit_full": "62af9fa11499df93c40178d5d1abb5b016224d55",
+      "subject": "color: DrawingML colours come from craft-drawingml (craft-libs#778, #792) (#2179)"
     },
-    "last_commit_ts": "2026-11-15T23:27:58Z",
+    "last_commit_ts": "2026-11-16T11:45:45Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
       31,
@@ -552,7 +552,7 @@
       15,
       2,
       9,
-      0
+      8
     ],
     "days": [
       {
@@ -1236,6 +1236,25 @@
           {
             "commit": "e51ff1a",
             "subject": "Reuse shared RTF text escaping and code-page decoding (#2159)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-16",
+        "code": 8,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "62af9fa",
+            "subject": "color: DrawingML colours come from craft-drawingml (craft-libs#778, #792) (#2179)"
+          },
+          {
+            "commit": "3b6f9e7",
+            "subject": "#792: read password-protected decks with craft-cfb and drop the local PNG encoder (#2176)"
+          },
+          {
+            "commit": "596ec54",
+            "subject": "Slide show: play a slide's animations again when the show advances to it (#2090) (#2126)"
           }
         ]
       }
@@ -4675,7 +4694,30 @@
       "breadth_pct": 62.0,
       "full_prev": 55.0,
       "kind": "content"
+    },
+    {
+      "commit": "596ec54",
+      "commit_full": "596ec54b592dc6c3492c7e149b79684824ba508a",
+      "commit_date": "2026-11-16T10:22:24+01:00",
+      "ts": "2026-11-16T09:22:24Z",
+      "message": "Slide show: play a slide's animations again when the show advances to it (#2090) (#2126)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-14",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-16T03:30:35+00:00"
+  "updated_at": "2026-11-16T11:54:41+00:00"
 }

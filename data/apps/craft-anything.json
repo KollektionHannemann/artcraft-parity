@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "0e32cd4",
-  "latest_commit_date": "2026-11-16T08:29:11+07:00",
-  "latest_message": "A walkthrough asked to keep response bodies keeps them for the first 200 requests and said nothing about the rest, so a request without a body read as a respons",
+  "latest_commit": "3ef1181",
+  "latest_commit_date": "2026-11-16T17:59:57+07:00",
+  "latest_message": "A failed API-backend turn wrote the error's message to its log, and that message repeats what the service, or a proxy in front of it, answered, which can includ",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 666,
-    "revisions_7d": 294,
+    "revisions": 674,
+    "revisions_7d": 302,
     "last_revision": {
-      "ts": "2026-11-16T01:29:11Z",
+      "ts": "2026-11-16T10:59:57Z",
       "kind": "content",
-      "commit": "0e32cd4",
-      "commit_full": "0e32cd474c6834989131989479273f5867e2f9cd",
-      "message": "A walkthrough asked to keep response bodies keeps them for the first 200 requests and said nothing about the rest, so a request without a body read as a respons"
+      "commit": "3ef1181",
+      "commit_full": "3ef118107eda962c3a5994dd554bf6eab0cd76a0",
+      "message": "A failed API-backend turn wrote the error's message to its log, and that message repeats what the service, or a proxy in front of it, answered, which can includ"
     },
     "last_update": {
-      "ts": "2026-11-16T01:29:11Z",
+      "ts": "2026-11-16T10:59:57Z",
       "kind": "content",
-      "commit": "0e32cd4",
-      "commit_full": "0e32cd474c6834989131989479273f5867e2f9cd",
-      "message": "A walkthrough asked to keep response bodies keeps them for the first 200 requests and said nothing about the rest, so a request without a body read as a respons"
+      "commit": "3ef1181",
+      "commit_full": "3ef118107eda962c3a5994dd554bf6eab0cd76a0",
+      "message": "A failed API-backend turn wrote the error's message to its log, and that message repeats what the service, or a proxy in front of it, answered, which can includ"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 23.6,
+    "score": 25.4,
     "active_days_7d": 7,
-    "changes_7d": 334,
-    "changes_14d": 764,
-    "housekeeping_7d": 9,
+    "changes_7d": 342,
+    "changes_14d": 772,
+    "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-11-16T01:29:11Z",
-      "commit": "0e32cd4",
-      "commit_full": "0e32cd474c6834989131989479273f5867e2f9cd",
-      "subject": "A walkthrough asked to keep response bodies keeps them for the first 200 requests and said nothing about the rest, so a request without a body read as a respons"
+      "ts": "2026-11-16T11:04:55Z",
+      "commit": "8dec784",
+      "commit_full": "8dec78492de82b2b478a7a16088900dbf0406508",
+      "subject": "The process and UI source-policy gates stopped at a file's first test attribute, so production code below an interleaved test module escaped them. They now read"
     },
-    "last_commit_ts": "2026-11-16T01:29:11Z",
+    "last_commit_ts": "2026-11-16T11:04:55Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       88,
@@ -93,7 +93,7 @@
       6,
       33,
       33,
-      2
+      10
     ],
     "days": [
       {
@@ -394,16 +394,20 @@
       },
       {
         "d": "2026-11-16",
-        "code": 2,
-        "other": 0,
+        "code": 10,
+        "other": 2,
         "samples": [
           {
-            "commit": "0e32cd4",
-            "subject": "A walkthrough asked to keep response bodies keeps them for the first 200 requests and said nothing about the rest, so a request without a body read as a respons"
+            "commit": "8dec784",
+            "subject": "The process and UI source-policy gates stopped at a file's first test attribute, so production code below an interleaved test module escaped them. They now read"
           },
           {
-            "commit": "0d16837",
-            "subject": "Follow-up to #1921. A credential in a plugin argument that no flag names, such as a token in a URL, is now hidden in the failure log's command. A local server t"
+            "commit": "3ef1181",
+            "subject": "A failed API-backend turn wrote the error's message to its log, and that message repeats what the service, or a proxy in front of it, answered, which can includ"
+          },
+          {
+            "commit": "9460af2",
+            "subject": "Let Claude Code use the model its own settings name by default (#921)"
           }
         ]
       }
@@ -5192,8 +5196,64 @@
       "commit": "0e32cd4",
       "commit_full": "0e32cd474c6834989131989479273f5867e2f9cd",
       "message": "A walkthrough asked to keep response bodies keeps them for the first 200 requests and said nothing about the rest, so a request without a body read as a respons"
+    },
+    {
+      "ts": "2026-11-16T05:37:41Z",
+      "kind": "content",
+      "commit": "d2d5213",
+      "commit_full": "d2d52137ea6074d5285fb03dce5bb895e13cde2b",
+      "message": "Use the Windows manual proxy for engine downloads when no proxy variable is set (R2.9) (#1930)"
+    },
+    {
+      "ts": "2026-11-16T06:24:16Z",
+      "kind": "content",
+      "commit": "15972b4",
+      "commit_full": "15972b4fbbb740f54e403e879a945fec9332ac96",
+      "message": "Stop the build at a used-up Claude Code plan limit instead of retrying it (R5.3) (#1931)"
+    },
+    {
+      "ts": "2026-11-16T06:46:01Z",
+      "kind": "content",
+      "commit": "5a3fba9",
+      "commit_full": "5a3fba9286b917b38f18fa4eb8d6239934c77e98",
+      "message": "Keep the plan-limit advice on the turn's closing error (R5.3) (#1933)"
+    },
+    {
+      "ts": "2026-11-16T07:12:01Z",
+      "kind": "content",
+      "commit": "21ffa65",
+      "commit_full": "21ffa656ca5d091eede6801d104cc92a0dc4d339",
+      "message": "Line numbers in JavaScript facts counted only LF, so anything after a bare CR, U+2028 or U+2029 was reported on the previous line. The line index now counts eve"
+    },
+    {
+      "ts": "2026-11-16T07:59:20Z",
+      "kind": "content",
+      "commit": "9460af2",
+      "commit_full": "9460af211fc53c48e2180b90aa973de230b6c105",
+      "message": "Let Claude Code use the model its own settings name by default (#921)"
+    },
+    {
+      "ts": "2026-11-16T09:15:08Z",
+      "kind": "content",
+      "commit": "090188d",
+      "commit_full": "090188d70545477d0e8ed0b218a53986903f0e78",
+      "message": "On a clean Debian or Ubuntu system the README's package list left out a C compiler, so the first build stopped with \"linker cc not found\". The package line in t"
+    },
+    {
+      "ts": "2026-11-16T10:38:43Z",
+      "kind": "content",
+      "commit": "7aebf09",
+      "commit_full": "7aebf09ae30617ebd43dfca2374704a45b5c845b",
+      "message": "On a clean Ubuntu 24.04 under X11 the app stopped before its window because the package list left out the X11 half of xkbcommon. The package line in the README "
+    },
+    {
+      "ts": "2026-11-16T10:59:57Z",
+      "kind": "content",
+      "commit": "3ef1181",
+      "commit_full": "3ef118107eda962c3a5994dd554bf6eab0cd76a0",
+      "message": "A failed API-backend turn wrote the error's message to its log, and that message repeats what the service, or a proxy in front of it, answered, which can includ"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-16T03:30:47+00:00"
+  "updated_at": "2026-11-16T11:54:51+00:00"
 }

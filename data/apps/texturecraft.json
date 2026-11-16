@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.1,
+    "score": 16.5,
     "active_days_7d": 7,
-    "changes_7d": 53,
-    "changes_14d": 96,
+    "changes_7d": 62,
+    "changes_14d": 105,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-16T00:16:45Z",
-      "commit": "cce9ada",
-      "commit_full": "cce9adafb84f1c1759888fb9e6ff9d7f15200e30",
-      "subject": "Assets panel pass 1: the reference's layout (4-column grid, one-line labels, type row, breadcrumb, side panes, toolbar) (#412)"
+      "ts": "2026-11-16T10:44:22Z",
+      "commit": "2951f3c",
+      "commit_full": "2951f3c3885a9250a8cf1fde12061f662924ea96",
+      "subject": "Use the shared OBJ reader (#528)"
     },
-    "last_commit_ts": "2026-11-16T00:16:45Z",
+    "last_commit_ts": "2026-11-16T10:44:22Z",
     "repo_since": "2026-10-14T18:33:13Z",
     "window": [
       8,
@@ -93,7 +93,7 @@
       9,
       4,
       11,
-      1
+      10
     ],
     "days": [
       {
@@ -459,12 +459,20 @@
       },
       {
         "d": "2026-11-16",
-        "code": 1,
+        "code": 10,
         "other": 0,
         "samples": [
           {
-            "commit": "cce9ada",
-            "subject": "Assets panel pass 1: the reference's layout (4-column grid, one-line labels, type row, breadcrumb, side panes, toolbar) (#412)"
+            "commit": "2951f3c",
+            "subject": "Use the shared OBJ reader (#528)"
+          },
+          {
+            "commit": "893d6fb",
+            "subject": "Use shared FBX scene and package readers (#527)"
+          },
+          {
+            "commit": "5f99396",
+            "subject": "Use bounded shared USD integer delta encoding (#534)"
           }
         ]
       }
@@ -866,5 +874,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-16T03:30:43+00:00"
+  "updated_at": "2026-11-16T11:54:48+00:00"
 }

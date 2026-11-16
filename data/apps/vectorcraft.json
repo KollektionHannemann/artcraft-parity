@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "765334b",
-  "latest_commit_date": "2026-11-16T09:33:03+07:00",
-  "latest_message": "Path Precision Tools: Tangent Circle draws the circles that touch two or three shapes (#8010)",
+  "latest_commit": "8cf9cb9",
+  "latest_commit_date": "2026-11-16T11:38:07+07:00",
+  "latest_message": "Line Segment: a line from one curve to another snaps to their common tangent (#8007)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -340,7 +340,19 @@
     "progress": [
       {
         "date": "2026-11-15",
+        "text": "With Smart Guides and Snap to Tangent on, a circle drawn from its center with the Ellipse tool (Alt and Shift) snaps its radius so that the circle touches a nearby path (a straight segment, a curve, or another circle from outside or inside) when the radius comes within the snapping tolerance of that size, and the touch point shows the \"tangent\" label. A VectorCraft addition: headline numbers unchanged."
+      },
+      {
+        "date": "2026-11-15",
         "text": "Tangent Circle joins the Path Precision Tools add-on (Object › Plug-ins › Path Precision Tools): the circles that touch two selected paths or compound paths at a set radius, or three of them (up to eight for three circles), touching each outline without crossing it; circles, rotated ellipses and other paths alike. A dialog that previews every circle or one picked by number, the current paint, one undo step (addon.pathtools.tangentCircle). A VectorCraft addition: headline numbers unchanged."
+      },
+      {
+        "date": "2026-11-15",
+        "text": "Common Tangents in the Path Precision Tools add-on (Object › Plug-ins › Path Precision Tools): the straight lines that touch two selected convex closed paths (ellipses at any rotation and scale, or convex Bézier paths) without crossing either are added as open paths with the current stroke: external, internal or all, and the line joining the centers if asked; a path inside the other has none unless the two touch, and a message says why; a dialog with Preview, one undo step (addon.pathtools.commonTangents, #7845). A VectorCraft addition: headline numbers unchanged."
+      },
+      {
+        "date": "2026-11-15",
+        "text": "With Smart Guides and Snap to Tangent on, a Line Segment drag pressed on one convex curved path and dragged near another lands on a common tangent of the two: both ends move to where the line touches the paths, each labeled \"tangent\" (#7845). A VectorCraft addition: headline numbers unchanged."
       },
       {
         "date": "2026-11-14",
@@ -485,18 +497,6 @@
       {
         "date": "2026-10-22",
         "text": "Effect › Sketch › Conté Crayon: a black crayon in the dark areas and a white one in the light areas, on mid-grey paper whose texture (Brick, Burlap, Canvas, Sandstone; Scaling, Relief, Light Direction, Invert) breaks the strokes, with Foreground Level and Background Level; an original approximation, defaults unverified. Every Photoshop-style filter is now in (57/57); the Effect Gallery remains (4–6 h)."
-      },
-      {
-        "date": "2026-10-22",
-        "text": "Ruby (ふりがな) for live text: type.ruby sets or removes a reading over a byte range of the selected type — above it in horizontal type, right of the column in vertical type (or below/left), start/centre/end aligned, at 1–100% of the base size (default half), overhanging or squeezed to the base width. It is saved in the native file, laid out with its line growing (following lines move on), drawn on the canvas, and written in SVG and PDF as outlines where ruby is present. UI panel and type on a path are next. Headline numbers unchanged."
-      },
-      {
-        "date": "2026-10-22",
-        "text": "PDF accessibility: titled exports set /ViewerPreferences << /DisplayDocTitle true >>, so viewers show the document title rather than the file name and title checks can pass (#3646). Headline numbers unchanged."
-      },
-      {
-        "date": "2026-10-22",
-        "text": "Pen tilt, bearing and barrel rotation (part of #764): Calligraphic and Scatter brushes take Tilt, Bearing and Rotation beside Pressure, the Paintbrush records them along each stroke, and the app reads a pen's tilt and an Art Pen's barrel rotation from XInput2 on Linux under X11 and XWayland and from AppKit's tablet events on macOS. Headline numbers unchanged."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 238,
+    "revisions_since": 240,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,39 +536,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 239,
-    "revisions_7d": 17,
+    "revisions": 241,
+    "revisions_7d": 19,
     "last_revision": {
-      "ts": "2026-11-16T02:33:03Z",
+      "ts": "2026-11-16T04:38:07Z",
       "kind": "content",
-      "commit": "765334b",
-      "commit_full": "765334b9a6a6a1b2f86d7519966763c8936ce8d5",
-      "message": "Path Precision Tools: Tangent Circle draws the circles that touch two or three shapes (#8010)"
+      "commit": "8cf9cb9",
+      "commit_full": "8cf9cb9dca10d941b974313cf008f49e52cc99d9",
+      "message": "Line Segment: a line from one curve to another snaps to their common tangent (#8007)"
     },
     "last_update": {
-      "ts": "2026-11-16T02:33:03Z",
+      "ts": "2026-11-16T04:38:07Z",
       "kind": "content",
-      "commit": "765334b",
-      "commit_full": "765334b9a6a6a1b2f86d7519966763c8936ce8d5",
-      "message": "Path Precision Tools: Tangent Circle draws the circles that touch two or three shapes (#8010)"
+      "commit": "8cf9cb9",
+      "commit_full": "8cf9cb9dca10d941b974313cf008f49e52cc99d9",
+      "message": "Line Segment: a line from one curve to another snaps to their common tangent (#8007)"
     },
     "self_reported": "2026-11-15"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 36.1,
+    "score": 37.0,
     "active_days_7d": 7,
-    "changes_7d": 1223,
-    "changes_14d": 2030,
+    "changes_7d": 1249,
+    "changes_14d": 2056,
     "housekeeping_7d": 47,
     "last_code_change": {
-      "ts": "2026-11-16T02:33:12Z",
-      "commit": "628726d",
-      "commit_full": "628726d857acc56f2f7231882c3585e6b0da3d90",
-      "subject": "i18n: script interpreter core errors are translated in every complete-message catalog (#7468)"
+      "ts": "2026-11-16T11:50:00Z",
+      "commit": "7452b6f",
+      "commit_full": "7452b6f383e386a040de13c970acbd220e92a2e7",
+      "subject": "refactor(codecs): partial shared image-codec cutover, preserving remaining readers (#7669)"
     },
-    "last_commit_ts": "2026-11-16T02:33:12Z",
+    "last_commit_ts": "2026-11-16T11:50:00Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       117,
@@ -584,7 +584,7 @@
       240,
       283,
       214,
-      28
+      54
     ],
     "days": [
       {
@@ -1469,20 +1469,20 @@
       },
       {
         "d": "2026-11-16",
-        "code": 28,
+        "code": 54,
         "other": 1,
         "samples": [
           {
-            "commit": "628726d",
-            "subject": "i18n: script interpreter core errors are translated in every complete-message catalog (#7468)"
+            "commit": "7452b6f",
+            "subject": "refactor(codecs): partial shared image-codec cutover, preserving remaining readers (#7669)"
           },
           {
-            "commit": "765334b",
-            "subject": "Path Precision Tools: Tangent Circle draws the circles that touch two or three shapes (#8010)"
+            "commit": "ed6f22a",
+            "subject": "i18n: French rows use a no-break space before : ; ? ! and inside « » (#7848)"
           },
           {
-            "commit": "03cb751",
-            "subject": "Command Palette: a Recent Commands list beside the search field runs the last five picks again (#7908)"
+            "commit": "7180d01",
+            "subject": "MCP: confined exports refuse native files that name a linked JavaScript file outside the read roots (#7600)"
           }
         ]
       }
@@ -7979,7 +7979,59 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "6d6dd28",
+      "commit_full": "6d6dd28fadb8dbba3250338043706a1d39cb0d46",
+      "commit_date": "2026-11-16T10:35:17+07:00",
+      "ts": "2026-11-16T03:35:17Z",
+      "message": "Ellipse: a circle drawn from its center snaps its radius to touch a nearby path (#8018)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
+    },
+    {
+      "commit": "8cf9cb9",
+      "commit_full": "8cf9cb9dca10d941b974313cf008f49e52cc99d9",
+      "commit_date": "2026-11-16T11:38:07+07:00",
+      "ts": "2026-11-16T04:38:07Z",
+      "message": "Line Segment: a line from one curve to another snaps to their common tangent (#8007)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-16T03:29:58+00:00"
+  "updated_at": "2026-11-16T11:54:13+00:00"
 }
