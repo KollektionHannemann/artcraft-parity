@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 36.8,
+    "score": 38.0,
     "active_days_7d": 7,
-    "changes_7d": 1218,
-    "changes_14d": 2074,
+    "changes_7d": 1268,
+    "changes_14d": 2124,
     "housekeeping_7d": 52,
     "last_code_change": {
-      "ts": "2026-11-17T03:08:25Z",
-      "commit": "1ad2057",
-      "commit_full": "1ad2057b9ba44d8028d90be7cedcc39833112aca",
-      "subject": "Extrude To Object: a Join up to a cylinder builds when the sketch's projected edges include a very short arc (#17707) (#18044)"
+      "ts": "2026-11-17T13:01:55Z",
+      "commit": "780dc81",
+      "commit_full": "780dc81361973a61e69c59e996dd3217e307e862",
+      "subject": "Features and History: selecting an offset construction plane highlights it in the view, like the origin planes (#17007)"
     },
-    "last_commit_ts": "2026-11-17T03:08:25Z",
+    "last_commit_ts": "2026-11-17T13:01:55Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       158,
@@ -93,7 +93,7 @@
       198,
       156,
       281,
-      40
+      90
     ],
     "days": [
       {
@@ -877,26 +877,43 @@
       },
       {
         "d": "2026-11-17",
-        "code": 40,
+        "code": 90,
         "other": 1,
         "samples": [
           {
-            "commit": "1ad2057",
-            "subject": "Extrude To Object: a Join up to a cylinder builds when the sketch's projected edges include a very short arc (#17707) (#18044)"
+            "commit": "780dc81",
+            "subject": "Features and History: selecting an offset construction plane highlights it in the view, like the origin planes (#17007)"
           },
           {
-            "commit": "1296cd4",
-            "subject": "Add a local document browser and startup screen preference (#2717)"
+            "commit": "757ad32",
+            "subject": "Web viewport: select multiple items with Apple Pencil taps (#15756)"
           },
           {
-            "commit": "ccd21d0",
-            "subject": "solidcore-ops: a call gives the same result whatever ran on its kernel before (#18248)"
+            "commit": "8b3e286",
+            "subject": "Loft: regression test for arches offset to 97 and 193 points, which ran foot to crown and spoiled a cut (#15701) (#17945)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.44.0-nightly.20261117.140.1",
+      "name": "SolidCraft v0.44.0-nightly.20261117.140.1 (nightly)",
+      "ts": "2026-11-17T05:46:58Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.44.0-nightly.20261117.140.1",
+      "changes": 259,
+      "new_contributors": 11,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.43.0-nightly.20261116.139.1",
       "name": "SolidCraft v0.43.0-nightly.20261116.139.1 (nightly)",
@@ -1072,23 +1089,6 @@
       "name": "SolidCraft v0.40.0-rc.2",
       "ts": "2026-11-03T22:11:37Z",
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.40.0-rc.2",
-      "changes": null,
-      "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": true,
-      "source": "release",
-      "kind": null
-    },
-    {
-      "tag": "v0.40.0-rc.1",
-      "name": "SolidCraft v0.40.0-rc.1",
-      "ts": "2026-11-03T08:26:40Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.40.0-rc.1",
       "changes": null,
       "new_contributors": null,
       "platforms": [
@@ -2484,5 +2484,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-17T04:03:40+00:00"
+  "updated_at": "2026-11-17T13:42:18+00:00"
 }

@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/figcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "559c952",
-  "latest_commit_date": "2026-11-16T10:23:21+01:00",
-  "latest_message": "docs: bring ROADMAP.md and parity assessment current through 2026-11-15 (#2378)",
+  "latest_commit": "0acbf52",
+  "latest_commit_date": "2026-11-17T18:06:26+07:00",
+  "latest_message": "M0.9: escape terminal controls in CLI operation errors (#2402)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -505,7 +505,7 @@
     "value_since": "2026-10-11T21:41:28Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 228,
+    "revisions_since": 229,
     "hours_since": {
       "from": [
         273,
@@ -560,39 +560,39 @@
     }
   },
   "roadmap": {
-    "revisions": 279,
-    "revisions_7d": 2,
+    "revisions": 280,
+    "revisions_7d": 3,
     "last_revision": {
-      "ts": "2026-11-16T09:23:21Z",
-      "kind": "editorial",
-      "commit": "559c952",
-      "commit_full": "559c952d107f781c4f770041c7d5cc368ebc4fa0",
-      "message": "docs: bring ROADMAP.md and parity assessment current through 2026-11-15 (#2378)"
+      "ts": "2026-11-17T11:06:26Z",
+      "kind": "content",
+      "commit": "0acbf52",
+      "commit_full": "0acbf524fc80d5435b1dbe4922448b0543e1093d",
+      "message": "M0.9: escape terminal controls in CLI operation errors (#2402)"
     },
     "last_update": {
-      "ts": "2026-11-12T06:12:10Z",
+      "ts": "2026-11-17T11:06:26Z",
       "kind": "content",
-      "commit": "dfd9ddf",
-      "commit_full": "dfd9ddf9db8fdf885d73953c8f69e5c4f72e3660",
-      "message": "M4: Boolean groups: a corner radius rounds the result (#2222) (#2224)"
+      "commit": "0acbf52",
+      "commit_full": "0acbf524fc80d5435b1dbe4922448b0543e1093d",
+      "message": "M0.9: escape terminal controls in CLI operation errors (#2402)"
     },
     "self_reported": "2026-11-15"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.2,
+    "score": 17.0,
     "active_days_7d": 7,
-    "changes_7d": 130,
-    "changes_14d": 283,
-    "housekeeping_7d": 9,
+    "changes_7d": 148,
+    "changes_14d": 301,
+    "housekeeping_7d": 10,
     "last_code_change": {
-      "ts": "2026-11-17T02:58:22Z",
-      "commit": "954687f",
-      "commit_full": "954687fcf7c15fdb94d5343d72be95c5832e4710",
-      "subject": "ci: lock workflow actions through an actions.lock lockfile (#2300)"
+      "ts": "2026-11-17T11:26:23Z",
+      "commit": "da2792c",
+      "commit_full": "da2792cb4aaa4d14ecd84929297e804eeb67669f",
+      "subject": "M8: going back to a page shows it where it was left, not fitted again (#2427)"
     },
-    "last_commit_ts": "2026-11-17T02:58:22Z",
+    "last_commit_ts": "2026-11-17T11:26:23Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       23,
@@ -608,7 +608,7 @@
       1,
       5,
       3,
-      2
+      20
     ],
     "days": [
       {
@@ -1312,16 +1312,20 @@
       },
       {
         "d": "2026-11-17",
-        "code": 2,
-        "other": 1,
+        "code": 20,
+        "other": 2,
         "samples": [
           {
-            "commit": "954687f",
-            "subject": "ci: lock workflow actions through an actions.lock lockfile (#2300)"
+            "commit": "da2792c",
+            "subject": "M8: going back to a page shows it where it was left, not fitted again (#2427)"
           },
           {
-            "commit": "6963e0d",
-            "subject": "Use shared Sketch container while retaining Fig document projection (#2418)"
+            "commit": "6b6e86e",
+            "subject": "M8: a pan past the canvas image shows a coarse image of the area around the view, not the bare page colour (#2425)"
+          },
+          {
+            "commit": "bf29f77",
+            "subject": "fix: escape Windows device names in generated exports (#2391)"
           }
         ]
       }
@@ -8223,7 +8227,30 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "editorial"
+    },
+    {
+      "commit": "0acbf52",
+      "commit_full": "0acbf524fc80d5435b1dbe4922448b0543e1093d",
+      "commit_date": "2026-11-17T18:06:26+07:00",
+      "ts": "2026-11-17T11:06:26Z",
+      "message": "M0.9: escape terminal controls in CLI operation errors (#2402)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-17T04:02:51+00:00"
+  "updated_at": "2026-11-17T13:41:30+00:00"
 }

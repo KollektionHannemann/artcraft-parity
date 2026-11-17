@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/texturecraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/texturecraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "ffa53fa",
-  "latest_commit_date": "2026-11-16T20:08:16-05:00",
-  "latest_message": "Detailed parity checked (#547)",
+  "latest_commit": "067ed03",
+  "latest_commit_date": "2026-11-17T00:23:04-05:00",
+  "latest_message": "Anchor points in masks, generator micro detail, effect rename (#395)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -253,7 +253,7 @@
     "value_since": "2026-11-17T01:08:16Z",
     "releases_since": 0,
     "releases_since_capped": false,
-    "revisions_since": 0,
+    "revisions_since": 1,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -261,33 +261,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 1,
-    "revisions_7d": 0,
+    "revisions": 2,
+    "revisions_7d": 1,
     "last_revision": {
-      "ts": "2026-11-17T01:08:16Z",
-      "kind": "first",
-      "commit": "ffa53fa",
-      "commit_full": "ffa53fab563be5263a6265b6737a5a8f712b7b55",
-      "message": "Detailed parity checked (#547)"
+      "ts": "2026-11-17T05:23:04Z",
+      "kind": "content",
+      "commit": "067ed03",
+      "commit_full": "067ed039eb7bd38c3c3a71cdc53f0dd8822576f1",
+      "message": "Anchor points in masks, generator micro detail, effect rename (#395)"
     },
-    "last_update": null,
+    "last_update": {
+      "ts": "2026-11-17T05:23:04Z",
+      "kind": "content",
+      "commit": "067ed03",
+      "commit_full": "067ed039eb7bd38c3c3a71cdc53f0dd8822576f1",
+      "message": "Anchor points in masks, generator micro detail, effect rename (#395)"
+    },
     "self_reported": "2026-11-16"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.9,
+    "score": 16.9,
     "active_days_7d": 7,
-    "changes_7d": 54,
-    "changes_14d": 99,
+    "changes_7d": 63,
+    "changes_14d": 108,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-17T02:23:33Z",
-      "commit": "fef301c",
-      "commit_full": "fef301cf580014e8516e1c02dafce03e602854ba",
-      "subject": "Decode XML entities in COLLADA attribute values and text (#336)"
+      "ts": "2026-11-17T12:19:04Z",
+      "commit": "9c1b9cb",
+      "commit_full": "9c1b9cbc7b1e5541cffa03b80a8fa6bd1366a54d",
+      "subject": "Bent normal maps bake in tangent space, so materials and imported maps read them correctly (#542)"
     },
-    "last_commit_ts": "2026-11-17T02:59:54Z",
+    "last_commit_ts": "2026-11-17T12:19:04Z",
     "repo_since": "2026-10-14T18:33:13Z",
     "window": [
       4,
@@ -303,7 +309,7 @@
       4,
       11,
       10,
-      2
+      11
     ],
     "days": [
       {
@@ -688,16 +694,20 @@
       },
       {
         "d": "2026-11-17",
-        "code": 2,
+        "code": 11,
         "other": 2,
         "samples": [
           {
-            "commit": "fef301c",
-            "subject": "Decode XML entities in COLLADA attribute values and text (#336)"
+            "commit": "9c1b9cb",
+            "subject": "Bent normal maps bake in tangent space, so materials and imported maps read them correctly (#542)"
           },
           {
-            "commit": "7ff482a",
-            "subject": "Reject signs and extra digits in hex colour strings (#339)"
+            "commit": "2cf9947",
+            "subject": "Curvature and edge wear stay even on rounded surfaces at every bake size (#537)"
+          },
+          {
+            "commit": "41b18e5",
+            "subject": "Undo snapshots share the tile table of images they don't change (#225)"
           }
         ]
       }
@@ -879,7 +889,27 @@
       "breadth_pct": 80.0,
       "full_prev": null,
       "kind": "first"
+    },
+    {
+      "commit": "067ed03",
+      "commit_full": "067ed039eb7bd38c3c3a71cdc53f0dd8822576f1",
+      "commit_date": "2026-11-17T00:23:04-05:00",
+      "ts": "2026-11-17T05:23:04Z",
+      "message": "Anchor points in masks, generator micro detail, effect rename (#395)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-16",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": null,
+      "full_label": "Full scoped target",
+      "target": "reference app 12.2.0",
+      "mainstream_pct": 60.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-17T04:03:13+00:00"
+  "updated_at": "2026-11-17T13:41:52+00:00"
 }

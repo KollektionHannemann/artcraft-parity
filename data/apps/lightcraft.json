@@ -433,18 +433,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.0,
+    "score": 14.8,
     "active_days_7d": 7,
-    "changes_7d": 48,
-    "changes_14d": 148,
+    "changes_7d": 50,
+    "changes_14d": 150,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-17T02:58:44Z",
-      "commit": "7bb9165",
-      "commit_full": "7bb9165c6bc46652db41ef5e19054a2bb017435f",
-      "subject": "Delegate TIFF RAW classification to shared codecs (#4311)"
+      "ts": "2026-11-17T13:14:04Z",
+      "commit": "27b755a",
+      "commit_full": "27b755a93c8091a6f0c71151184a88f0b90144ce",
+      "subject": "raw: cut DCP camera-profile files over to craft-raw (#4332)"
     },
-    "last_commit_ts": "2026-11-17T02:58:44Z",
+    "last_commit_ts": "2026-11-17T13:14:04Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
       17,
@@ -460,7 +460,7 @@
       11,
       7,
       11,
-      2
+      4
     ],
     "days": [
       {
@@ -1269,16 +1269,20 @@
       },
       {
         "d": "2026-11-17",
-        "code": 2,
+        "code": 4,
         "other": 0,
         "samples": [
           {
-            "commit": "7bb9165",
-            "subject": "Delegate TIFF RAW classification to shared codecs (#4311)"
+            "commit": "27b755a",
+            "subject": "raw: cut DCP camera-profile files over to craft-raw (#4332)"
           },
           {
-            "commit": "9de9333",
-            "subject": "Use shared HEIF metadata and preserve location checks (#4315)"
+            "commit": "c71580a",
+            "subject": "pipeline: cut Cube profile parsing over to craft-cms (#4339)"
+          },
+          {
+            "commit": "7bb9165",
+            "subject": "Delegate TIFF RAW classification to shared codecs (#4311)"
           }
         ]
       }
@@ -1937,5 +1941,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-17T04:02:27+00:00"
+  "updated_at": "2026-11-17T13:41:09+00:00"
 }

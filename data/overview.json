@@ -52,6 +52,17 @@
       "id": "solidcraft",
       "name": "SolidCraft",
       "type": "release",
+      "ts": "2026-11-17T05:46:58Z",
+      "tag": "v0.44.0-nightly.20261117.140.1",
+      "kind": "minor",
+      "changes": 259,
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.44.0-nightly.20261117.140.1",
+      "prerelease": true
+    },
+    {
+      "id": "solidcraft",
+      "name": "SolidCraft",
+      "type": "release",
       "ts": "2026-11-16T05:34:34Z",
       "tag": "v0.43.0-nightly.20261116.139.1",
       "kind": "patch",
@@ -69,17 +80,6 @@
       "changes": 267,
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.43.0",
       "prerelease": false
-    },
-    {
-      "id": "solidcraft",
-      "name": "SolidCraft",
-      "type": "release",
-      "ts": "2026-11-15T05:33:57Z",
-      "tag": "v0.42.0-nightly.20261115.134.1",
-      "kind": "patch",
-      "changes": 95,
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.42.0-nightly.20261115.134.1",
-      "prerelease": true
     },
     {
       "id": "mailcraft",
@@ -620,18 +620,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 36.4,
+        "score": 37.0,
         "active_days_7d": 7,
-        "changes_7d": 1268,
-        "changes_14d": 2039,
+        "changes_7d": 1295,
+        "changes_14d": 2066,
         "housekeeping_7d": 45,
         "last_code_change": {
-          "ts": "2026-11-17T03:34:09Z",
-          "commit": "09fbf82",
-          "commit_full": "09fbf82e0e2fe82a5a69d2fdc78f46a141c613f1",
-          "subject": "cad: use shared HP-GL byte lexer, preserve interpreter and writer (#8282)"
+          "ts": "2026-11-17T12:51:37Z",
+          "commit": "0f8040e",
+          "commit_full": "0f8040ef59b88d33dd97563dbb87e8efedf046ff",
+          "subject": "Legacy .ai: image samples are written as hex through a digit table (#8202)"
         },
-        "last_commit_ts": "2026-11-17T03:34:09Z",
+        "last_commit_ts": "2026-11-17T12:51:37Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           187,
@@ -647,7 +647,7 @@
           283,
           214,
           103,
-          51
+          78
         ]
       },
       "release": {
@@ -749,18 +749,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.0,
+        "score": 14.8,
         "active_days_7d": 7,
-        "changes_7d": 48,
-        "changes_14d": 148,
+        "changes_7d": 50,
+        "changes_14d": 150,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-17T02:58:44Z",
-          "commit": "7bb9165",
-          "commit_full": "7bb9165c6bc46652db41ef5e19054a2bb017435f",
-          "subject": "Delegate TIFF RAW classification to shared codecs (#4311)"
+          "ts": "2026-11-17T13:14:04Z",
+          "commit": "27b755a",
+          "commit_full": "27b755a93c8091a6f0c71151184a88f0b90144ce",
+          "subject": "raw: cut DCP camera-profile files over to craft-raw (#4332)"
         },
-        "last_commit_ts": "2026-11-17T02:58:44Z",
+        "last_commit_ts": "2026-11-17T13:14:04Z",
         "repo_since": "2026-09-30T14:04:12Z",
         "window": [
           17,
@@ -776,7 +776,7 @@
           11,
           7,
           11,
-          2
+          4
         ]
       },
       "release": {
@@ -844,7 +844,7 @@
         "value_since": "2026-10-10T18:11:53Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 602,
+        "revisions_since": 604,
         "hours_since": null,
         "areas_since": {
           "up": 2,
@@ -869,39 +869,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 606,
-        "revisions_7d": 15,
+        "revisions": 608,
+        "revisions_7d": 17,
         "last_revision": {
-          "ts": "2026-11-17T02:19:00Z",
+          "ts": "2026-11-17T12:24:29Z",
           "kind": "content",
-          "commit": "ff0823f",
-          "commit_full": "ff0823f40d3e0591f4b194ba1a7c8704aa6719c5",
-          "message": "Track Changes: a deleted list item's number is drawn as deleted text (#4828) (#4836)"
+          "commit": "1a56d04",
+          "commit_full": "1a56d041defe28f0d35de501ba7e40268a549d26",
+          "message": "Dependencies: take craft-libs main at 453b0da782 (#6886)"
         },
         "last_update": {
-          "ts": "2026-11-17T02:19:00Z",
+          "ts": "2026-11-17T12:24:29Z",
           "kind": "content",
-          "commit": "ff0823f",
-          "commit_full": "ff0823f40d3e0591f4b194ba1a7c8704aa6719c5",
-          "message": "Track Changes: a deleted list item's number is drawn as deleted text (#4828) (#4836)"
+          "commit": "1a56d04",
+          "commit_full": "1a56d041defe28f0d35de501ba7e40268a549d26",
+          "message": "Dependencies: take craft-libs main at 453b0da782 (#6886)"
         },
         "self_reported": "2026-11-16"
       },
       "milestone": null,
       "activity": {
-        "level": "active",
-        "score": 19.1,
+        "level": "buzzing",
+        "score": 20.9,
         "active_days_7d": 7,
-        "changes_7d": 86,
-        "changes_14d": 292,
-        "housekeeping_7d": 15,
+        "changes_7d": 118,
+        "changes_14d": 324,
+        "housekeeping_7d": 17,
         "last_code_change": {
-          "ts": "2026-11-17T03:16:20Z",
-          "commit": "8e8ab63",
-          "commit_full": "8e8ab631fd74cef5d295a68baa4fb618d15da76f",
-          "subject": "M14: document optional run commands and PNG save options (#6687)"
+          "ts": "2026-11-17T12:24:29Z",
+          "commit": "1a56d04",
+          "commit_full": "1a56d041defe28f0d35de501ba7e40268a549d26",
+          "subject": "Dependencies: take craft-libs main at 453b0da782 (#6886)"
         },
-        "last_commit_ts": "2026-11-17T04:00:18Z",
+        "last_commit_ts": "2026-11-17T12:24:29Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
           32,
@@ -917,7 +917,7 @@
           8,
           5,
           27,
-          12
+          44
         ]
       },
       "release": {
@@ -943,11 +943,11 @@
           "v": 60.0
         },
         {
-          "t": "2026-11-17T02:19:00Z",
+          "t": "2026-11-17T12:24:29Z",
           "v": 60.0
         }
       ],
-      "history_len": 606
+      "history_len": 608
     },
     {
       "repo_url": "https://github.com/storytold/texturecraft",
@@ -978,7 +978,7 @@
         "value_since": "2026-11-17T01:08:16Z",
         "releases_since": 0,
         "releases_since_capped": false,
-        "revisions_since": 0,
+        "revisions_since": 1,
         "hours_since": null,
         "areas_since": null,
         "changes": 0,
@@ -986,33 +986,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 1,
-        "revisions_7d": 0,
+        "revisions": 2,
+        "revisions_7d": 1,
         "last_revision": {
-          "ts": "2026-11-17T01:08:16Z",
-          "kind": "first",
-          "commit": "ffa53fa",
-          "commit_full": "ffa53fab563be5263a6265b6737a5a8f712b7b55",
-          "message": "Detailed parity checked (#547)"
+          "ts": "2026-11-17T05:23:04Z",
+          "kind": "content",
+          "commit": "067ed03",
+          "commit_full": "067ed039eb7bd38c3c3a71cdc53f0dd8822576f1",
+          "message": "Anchor points in masks, generator micro detail, effect rename (#395)"
         },
-        "last_update": null,
+        "last_update": {
+          "ts": "2026-11-17T05:23:04Z",
+          "kind": "content",
+          "commit": "067ed03",
+          "commit_full": "067ed039eb7bd38c3c3a71cdc53f0dd8822576f1",
+          "message": "Anchor points in masks, generator micro detail, effect rename (#395)"
+        },
         "self_reported": "2026-11-16"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.9,
+        "score": 16.9,
         "active_days_7d": 7,
-        "changes_7d": 54,
-        "changes_14d": 99,
+        "changes_7d": 63,
+        "changes_14d": 108,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-17T02:23:33Z",
-          "commit": "fef301c",
-          "commit_full": "fef301cf580014e8516e1c02dafce03e602854ba",
-          "subject": "Decode XML entities in COLLADA attribute values and text (#336)"
+          "ts": "2026-11-17T12:19:04Z",
+          "commit": "9c1b9cb",
+          "commit_full": "9c1b9cbc7b1e5541cffa03b80a8fa6bd1366a54d",
+          "subject": "Bent normal maps bake in tangent space, so materials and imported maps read them correctly (#542)"
         },
-        "last_commit_ts": "2026-11-17T02:59:54Z",
+        "last_commit_ts": "2026-11-17T12:19:04Z",
         "repo_since": "2026-10-14T18:33:13Z",
         "window": [
           4,
@@ -1028,7 +1034,7 @@
           4,
           11,
           10,
-          2
+          11
         ]
       },
       "release": {
@@ -1052,9 +1058,13 @@
         {
           "t": "2026-11-17T01:08:16Z",
           "v": 60.0
+        },
+        {
+          "t": "2026-11-17T05:23:04Z",
+          "v": 60.0
         }
       ],
-      "history_len": 1
+      "history_len": 2
     },
     {
       "repo_url": "https://github.com/storytold/filmcraft",
@@ -1117,18 +1127,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 17.5,
+        "score": 18.2,
         "active_days_7d": 7,
-        "changes_7d": 104,
-        "changes_14d": 183,
+        "changes_7d": 106,
+        "changes_14d": 185,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-17T02:58:27Z",
-          "commit": "d896af6",
-          "commit_full": "d896af61cedf51dee48da1fdd4464ef8ab57195b",
-          "subject": "Stills: integrate shared YCbCr TIFF decoder and contributor orientation work (#4925)"
+          "ts": "2026-11-17T05:05:26Z",
+          "commit": "93a88a8",
+          "commit_full": "93a88a839aae370740b09434fdec410abb8c24ca",
+          "subject": "Stills: share strict PSD PackBits rows without allocation overhead (#4926)"
         },
-        "last_commit_ts": "2026-11-17T02:58:27Z",
+        "last_commit_ts": "2026-11-17T05:05:26Z",
         "repo_since": "2026-09-30T09:22:00Z",
         "window": [
           20,
@@ -1144,7 +1154,7 @@
           6,
           9,
           35,
-          2
+          4
         ]
       },
       "release": {
@@ -1248,18 +1258,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.3,
+        "score": 15.3,
         "active_days_7d": 7,
-        "changes_7d": 73,
-        "changes_14d": 126,
+        "changes_7d": 76,
+        "changes_14d": 129,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-17T02:58:00Z",
-          "commit": "5c69849",
-          "commit_full": "5c698493bc1f7ec36f90deb29df247b93330e654",
-          "subject": "ci: lock workflow actions through an actions.lock lockfile (#2078)"
+          "ts": "2026-11-17T13:13:56Z",
+          "commit": "1629e4d",
+          "commit_full": "1629e4d9533f1864b0fddd8ea976723eff03f5f6",
+          "subject": "Tables: cap the grid and merge area before edits allocate or walk them (#1742)"
         },
-        "last_commit_ts": "2026-11-17T02:58:00Z",
+        "last_commit_ts": "2026-11-17T13:13:56Z",
         "repo_since": "2026-10-06T02:13:02Z",
         "window": [
           27,
@@ -1275,7 +1285,7 @@
           2,
           9,
           11,
-          2
+          5
         ]
       },
       "release": {
@@ -1339,7 +1349,7 @@
         "value_since": "2026-10-11T21:41:28Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 228,
+        "revisions_since": 229,
         "hours_since": {
           "from": [
             273,
@@ -1394,39 +1404,39 @@
         }
       },
       "roadmap": {
-        "revisions": 279,
-        "revisions_7d": 2,
+        "revisions": 280,
+        "revisions_7d": 3,
         "last_revision": {
-          "ts": "2026-11-16T09:23:21Z",
-          "kind": "editorial",
-          "commit": "559c952",
-          "commit_full": "559c952d107f781c4f770041c7d5cc368ebc4fa0",
-          "message": "docs: bring ROADMAP.md and parity assessment current through 2026-11-15 (#2378)"
+          "ts": "2026-11-17T11:06:26Z",
+          "kind": "content",
+          "commit": "0acbf52",
+          "commit_full": "0acbf524fc80d5435b1dbe4922448b0543e1093d",
+          "message": "M0.9: escape terminal controls in CLI operation errors (#2402)"
         },
         "last_update": {
-          "ts": "2026-11-12T06:12:10Z",
+          "ts": "2026-11-17T11:06:26Z",
           "kind": "content",
-          "commit": "dfd9ddf",
-          "commit_full": "dfd9ddf9db8fdf885d73953c8f69e5c4f72e3660",
-          "message": "M4: Boolean groups: a corner radius rounds the result (#2222) (#2224)"
+          "commit": "0acbf52",
+          "commit_full": "0acbf524fc80d5435b1dbe4922448b0543e1093d",
+          "message": "M0.9: escape terminal controls in CLI operation errors (#2402)"
         },
         "self_reported": "2026-11-15"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.2,
+        "score": 17.0,
         "active_days_7d": 7,
-        "changes_7d": 130,
-        "changes_14d": 283,
-        "housekeeping_7d": 9,
+        "changes_7d": 148,
+        "changes_14d": 301,
+        "housekeeping_7d": 10,
         "last_code_change": {
-          "ts": "2026-11-17T02:58:22Z",
-          "commit": "954687f",
-          "commit_full": "954687fcf7c15fdb94d5343d72be95c5832e4710",
-          "subject": "ci: lock workflow actions through an actions.lock lockfile (#2300)"
+          "ts": "2026-11-17T11:26:23Z",
+          "commit": "da2792c",
+          "commit_full": "da2792cb4aaa4d14ecd84929297e804eeb67669f",
+          "subject": "M8: going back to a page shows it where it was left, not fitted again (#2427)"
         },
-        "last_commit_ts": "2026-11-17T02:58:22Z",
+        "last_commit_ts": "2026-11-17T11:26:23Z",
         "repo_since": "2026-10-09T15:38:50Z",
         "window": [
           23,
@@ -1442,7 +1452,7 @@
           1,
           5,
           3,
-          2
+          20
         ]
       },
       "release": {
@@ -1484,11 +1494,11 @@
           "v": 53.0
         },
         {
-          "t": "2026-11-16T09:23:21Z",
+          "t": "2026-11-17T11:06:26Z",
           "v": 53.0
         }
       ],
-      "history_len": 279
+      "history_len": 280
     },
     {
       "repo_url": "https://github.com/storytold/pdfcraft",
@@ -1560,18 +1570,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 19.1,
+        "score": 19.6,
         "active_days_7d": 7,
-        "changes_7d": 97,
-        "changes_14d": 470,
+        "changes_7d": 99,
+        "changes_14d": 472,
         "housekeeping_7d": 11,
         "last_code_change": {
-          "ts": "2026-11-17T02:59:18Z",
-          "commit": "9892160",
-          "commit_full": "9892160ed693cd9d7ff51e0f5089ec04bee389d3",
-          "subject": "fix(platform): confine staging names; private temp dirs for tests and macOS signing (#5923)"
+          "ts": "2026-11-17T07:16:26Z",
+          "commit": "271e479",
+          "commit_full": "271e479c53723b1b294c866d5cb2f27604601b29",
+          "subject": "Export: use shared extracted-text Markdown writer with exact output parity (#7591)"
         },
-        "last_commit_ts": "2026-11-17T02:59:18Z",
+        "last_commit_ts": "2026-11-17T07:16:26Z",
         "repo_since": "2026-09-30T09:17:08Z",
         "window": [
           23,
@@ -1587,7 +1597,7 @@
           10,
           12,
           7,
-          4
+          6
         ]
       },
       "release": {
@@ -1928,14 +1938,14 @@
         "active_days_7d": 7,
         "changes_7d": 427,
         "changes_14d": 832,
-        "housekeeping_7d": 15,
+        "housekeeping_7d": 16,
         "last_code_change": {
           "ts": "2026-11-17T02:59:41Z",
           "commit": "2163bd4",
           "commit_full": "2163bd45afc0c963749e84e55d1a078665b7cb31",
           "subject": "security(doc): resolve slice visibility in one sweep, cap resolved slice count (#10959)"
         },
-        "last_commit_ts": "2026-11-17T02:59:41Z",
+        "last_commit_ts": "2026-11-17T04:28:19Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           27,
@@ -2043,19 +2053,19 @@
       },
       "milestone": null,
       "activity": {
-        "level": "active",
-        "score": 19.5,
+        "level": "buzzing",
+        "score": 21.0,
         "active_days_7d": 7,
-        "changes_7d": 151,
-        "changes_14d": 259,
+        "changes_7d": 162,
+        "changes_14d": 270,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-17T02:58:09Z",
-          "commit": "41da144",
-          "commit_full": "41da144555a1c8ddbbe94876a00259832322d00c",
-          "subject": "Shape operators: cap each expanding operator's output (#2948)"
+          "ts": "2026-11-17T13:33:14Z",
+          "commit": "4c38f78",
+          "commit_full": "4c38f78307e21a07021333c8a109e6fc49d66c3b",
+          "subject": "Radial Blur: Amount takes After Effects' range 0..1000 (#3817)"
         },
-        "last_commit_ts": "2026-11-17T02:58:09Z",
+        "last_commit_ts": "2026-11-17T13:33:14Z",
         "repo_since": "2026-10-01T16:48:39Z",
         "window": [
           4,
@@ -2071,7 +2081,7 @@
           24,
           4,
           28,
-          5
+          16
         ]
       },
       "release": {
@@ -2164,18 +2174,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 10.1,
+        "score": 10.7,
         "active_days_7d": 7,
-        "changes_7d": 48,
-        "changes_14d": 73,
+        "changes_7d": 49,
+        "changes_14d": 74,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-17T02:59:45Z",
-          "commit": "9676d49",
-          "commit_full": "9676d492dba964af82bb18b160af6a104f5f9f53",
-          "subject": "refactor(score): use shared MusicXML and SVG writers with contributor tie fixes (#1598)"
+          "ts": "2026-11-17T08:19:04Z",
+          "commit": "b47a586",
+          "commit_full": "b47a58653c291f320179d20db3eafb40e70b88a7",
+          "subject": "chore(score): pin writers to merged shared revision (#1607)"
         },
-        "last_commit_ts": "2026-11-17T02:59:50Z",
+        "last_commit_ts": "2026-11-17T08:19:04Z",
         "repo_since": "2026-10-06T00:08:04Z",
         "window": [
           3,
@@ -2191,7 +2201,7 @@
           1,
           2,
           2,
-          1
+          2
         ]
       },
       "release": {
@@ -2375,7 +2385,7 @@
         "value_since": "2026-10-12T18:17:00Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 252,
+        "revisions_since": 253,
         "hours_since": null,
         "areas_since": null,
         "changes": 0,
@@ -2383,39 +2393,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 256,
-        "revisions_7d": 15,
+        "revisions": 257,
+        "revisions_7d": 16,
         "last_revision": {
-          "ts": "2026-11-16T22:58:06Z",
+          "ts": "2026-11-17T09:52:02Z",
           "kind": "estimates",
-          "commit": "fbdbb82",
-          "commit_full": "fbdbb826100c161aad89c41ee3e50c8422a2daf6",
-          "message": "ROADMAP: audience estimates, by dimension, Ready and Hours by area (#1550)"
+          "commit": "aa2d4a8",
+          "commit_full": "aa2d4a8ee8f2e84aab2e5dfb54116f711168a4c2",
+          "message": "i18n: Czech as a preview language (#1545)"
         },
         "last_update": {
-          "ts": "2026-11-16T22:58:06Z",
+          "ts": "2026-11-17T09:52:02Z",
           "kind": "estimates",
-          "commit": "fbdbb82",
-          "commit_full": "fbdbb826100c161aad89c41ee3e50c8422a2daf6",
-          "message": "ROADMAP: audience estimates, by dimension, Ready and Hours by area (#1550)"
+          "commit": "aa2d4a8",
+          "commit_full": "aa2d4a8ee8f2e84aab2e5dfb54116f711168a4c2",
+          "message": "i18n: Czech as a preview language (#1545)"
         },
         "self_reported": "2026-11-14"
       },
       "milestone": null,
       "activity": {
-        "level": "active",
-        "score": 18.9,
-        "active_days_7d": 6,
-        "changes_7d": 160,
-        "changes_14d": 257,
-        "housekeeping_7d": 13,
+        "level": "buzzing",
+        "score": 23.1,
+        "active_days_7d": 7,
+        "changes_7d": 177,
+        "changes_14d": 274,
+        "housekeeping_7d": 14,
         "last_code_change": {
-          "ts": "2026-11-16T23:20:45Z",
-          "commit": "e3aec14",
-          "commit_full": "e3aec14d37978a29958d199990bf9bd1f28fd189",
-          "subject": "MB3.13: People, Tasks and Today on Android (#1303)"
+          "ts": "2026-11-17T09:52:02Z",
+          "commit": "aa2d4a8",
+          "commit_full": "aa2d4a8ee8f2e84aab2e5dfb54116f711168a4c2",
+          "subject": "i18n: Czech as a preview language (#1545)"
         },
-        "last_commit_ts": "2026-11-16T23:20:45Z",
+        "last_commit_ts": "2026-11-17T09:52:02Z",
         "repo_since": "2026-10-12T18:17:00Z",
         "window": [
           17,
@@ -2431,7 +2441,7 @@
           41,
           23,
           20,
-          0
+          17
         ]
       },
       "release": {
@@ -2457,11 +2467,11 @@
           "v": 25.0
         },
         {
-          "t": "2026-11-16T22:58:06Z",
+          "t": "2026-11-17T09:52:02Z",
           "v": 25.0
         }
       ],
-      "history_len": 256
+      "history_len": 257
     },
     {
       "repo_url": "https://github.com/storytold/materialcraft",
@@ -2521,18 +2531,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 11.1,
+        "score": 12.1,
         "active_days_7d": 7,
-        "changes_7d": 24,
-        "changes_14d": 114,
+        "changes_7d": 26,
+        "changes_14d": 116,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-17T00:25:35Z",
-          "commit": "b2c7b0e",
-          "commit_full": "b2c7b0e83d296be3b1e6eb7a68f1962dca123aa3",
-          "subject": "Function node parity (#258)"
+          "ts": "2026-11-17T06:02:14Z",
+          "commit": "60cb2a1",
+          "commit_full": "60cb2a13a481a490904a90f61d8583d354d83d54",
+          "subject": "Pin texture dependency group to merged craft-libs revision (#267)"
         },
-        "last_commit_ts": "2026-11-17T02:59:00Z",
+        "last_commit_ts": "2026-11-17T06:02:14Z",
         "repo_since": "2026-11-01T19:58:46Z",
         "window": [
           5,
@@ -2548,7 +2558,7 @@
           7,
           4,
           5,
-          1
+          3
         ]
       },
       "release": {
@@ -2608,39 +2618,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 714,
-        "revisions_7d": 240,
+        "revisions": 730,
+        "revisions_7d": 256,
         "last_revision": {
-          "ts": "2026-11-17T03:44:47Z",
+          "ts": "2026-11-17T10:05:37Z",
           "kind": "content",
-          "commit": "5acce07",
-          "commit_full": "5acce07c675dbbe5e4cc20b0d59a9877a5f2d894",
-          "message": "An Android manifest with a minimum SDK of 23 and no target SDK reported a provider as exported by default. Android takes the minimum SDK as the target when none"
+          "commit": "db8b977",
+          "commit_full": "db8b9777e26a1dc79c10238931fbcda77b2c9a02",
+          "message": "Run Vineflower and JADX on the Java folder set for Ghidra (R5.7) (#2023)"
         },
         "last_update": {
-          "ts": "2026-11-17T03:44:47Z",
+          "ts": "2026-11-17T10:05:37Z",
           "kind": "content",
-          "commit": "5acce07",
-          "commit_full": "5acce07c675dbbe5e4cc20b0d59a9877a5f2d894",
-          "message": "An Android manifest with a minimum SDK of 23 and no target SDK reported a provider as exported by default. Android takes the minimum SDK as the target when none"
+          "commit": "db8b977",
+          "commit_full": "db8b9777e26a1dc79c10238931fbcda77b2c9a02",
+          "message": "Run Vineflower and JADX on the Java folder set for Ghidra (R5.7) (#2023)"
         },
         "self_reported": null
       },
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 26.2,
+        "score": 27.3,
         "active_days_7d": 7,
-        "changes_7d": 274,
-        "changes_14d": 727,
+        "changes_7d": 297,
+        "changes_14d": 750,
         "housekeeping_7d": 12,
         "last_code_change": {
-          "ts": "2026-11-17T03:44:47Z",
-          "commit": "5acce07",
-          "commit_full": "5acce07c675dbbe5e4cc20b0d59a9877a5f2d894",
-          "subject": "An Android manifest with a minimum SDK of 23 and no target SDK reported a provider as exported by default. Android takes the minimum SDK as the target when none"
+          "ts": "2026-11-17T13:13:48Z",
+          "commit": "5979f9b",
+          "commit_full": "5979f9b13f16dcf1df3c7ae7f8e7735f452866f2",
+          "subject": "Use shared Source Map v3 parser and lookup core (#2027)"
         },
-        "last_commit_ts": "2026-11-17T03:44:47Z",
+        "last_commit_ts": "2026-11-17T13:13:48Z",
         "repo_since": "2026-10-31T14:52:14Z",
         "window": [
           49,
@@ -2656,7 +2666,7 @@
           33,
           33,
           33,
-          20
+          43
         ]
       },
       "release": {
@@ -2737,18 +2747,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 36.8,
+        "score": 38.0,
         "active_days_7d": 7,
-        "changes_7d": 1218,
-        "changes_14d": 2074,
+        "changes_7d": 1268,
+        "changes_14d": 2124,
         "housekeeping_7d": 52,
         "last_code_change": {
-          "ts": "2026-11-17T03:08:25Z",
-          "commit": "1ad2057",
-          "commit_full": "1ad2057b9ba44d8028d90be7cedcc39833112aca",
-          "subject": "Extrude To Object: a Join up to a cylinder builds when the sketch's projected edges include a very short arc (#17707) (#18044)"
+          "ts": "2026-11-17T13:01:55Z",
+          "commit": "780dc81",
+          "commit_full": "780dc81361973a61e69c59e996dd3217e307e862",
+          "subject": "Features and History: selecting an offset construction plane highlights it in the view, like the origin planes (#17007)"
         },
-        "last_commit_ts": "2026-11-17T03:08:25Z",
+        "last_commit_ts": "2026-11-17T13:01:55Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           158,
@@ -2764,7 +2774,7 @@
           198,
           156,
           281,
-          40
+          90
         ]
       },
       "release": {
@@ -2833,18 +2843,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.3,
+        "score": 16.4,
         "active_days_7d": 7,
-        "changes_7d": 76,
-        "changes_14d": 138,
+        "changes_7d": 81,
+        "changes_14d": 143,
         "housekeeping_7d": 8,
         "last_code_change": {
-          "ts": "2026-11-17T03:44:21Z",
-          "commit": "41a0da7",
-          "commit_full": "41a0da716670a6bce33c051749084e28e84c4e57",
-          "subject": "refactor(audio): delegate streaming WAV serialization to craft-audio (M5) (#395)"
+          "ts": "2026-11-17T13:13:42Z",
+          "commit": "cd5bdf9",
+          "commit_full": "cd5bdf95f79c1ac91e08922a4268dc9aa1fd3634",
+          "subject": "fix(engine): size-check library image import; exclusive unguessable temp files (#125)"
         },
-        "last_commit_ts": "2026-11-17T03:44:21Z",
+        "last_commit_ts": "2026-11-17T13:13:42Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
           0,
@@ -2860,7 +2870,7 @@
           14,
           7,
           3,
-          3
+          8
         ]
       },
       "release": {
@@ -2970,5 +2980,5 @@
     "missing": [],
     "candidates": []
   },
-  "generated_at": "2026-11-17T04:03:54+00:00"
+  "generated_at": "2026-11-17T13:42:31+00:00"
 }

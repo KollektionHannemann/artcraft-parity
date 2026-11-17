@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "5acce07",
-  "latest_commit_date": "2026-11-17T10:44:47+07:00",
-  "latest_message": "An Android manifest with a minimum SDK of 23 and no target SDK reported a provider as exported by default. Android takes the minimum SDK as the target when none",
+  "latest_commit": "db8b977",
+  "latest_commit_date": "2026-11-17T17:05:37+07:00",
+  "latest_message": "Run Vineflower and JADX on the Java folder set for Ghidra (R5.7) (#2023)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 714,
-    "revisions_7d": 240,
+    "revisions": 730,
+    "revisions_7d": 256,
     "last_revision": {
-      "ts": "2026-11-17T03:44:47Z",
+      "ts": "2026-11-17T10:05:37Z",
       "kind": "content",
-      "commit": "5acce07",
-      "commit_full": "5acce07c675dbbe5e4cc20b0d59a9877a5f2d894",
-      "message": "An Android manifest with a minimum SDK of 23 and no target SDK reported a provider as exported by default. Android takes the minimum SDK as the target when none"
+      "commit": "db8b977",
+      "commit_full": "db8b9777e26a1dc79c10238931fbcda77b2c9a02",
+      "message": "Run Vineflower and JADX on the Java folder set for Ghidra (R5.7) (#2023)"
     },
     "last_update": {
-      "ts": "2026-11-17T03:44:47Z",
+      "ts": "2026-11-17T10:05:37Z",
       "kind": "content",
-      "commit": "5acce07",
-      "commit_full": "5acce07c675dbbe5e4cc20b0d59a9877a5f2d894",
-      "message": "An Android manifest with a minimum SDK of 23 and no target SDK reported a provider as exported by default. Android takes the minimum SDK as the target when none"
+      "commit": "db8b977",
+      "commit_full": "db8b9777e26a1dc79c10238931fbcda77b2c9a02",
+      "message": "Run Vineflower and JADX on the Java folder set for Ghidra (R5.7) (#2023)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 26.2,
+    "score": 27.3,
     "active_days_7d": 7,
-    "changes_7d": 274,
-    "changes_14d": 727,
+    "changes_7d": 297,
+    "changes_14d": 750,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-17T03:44:47Z",
-      "commit": "5acce07",
-      "commit_full": "5acce07c675dbbe5e4cc20b0d59a9877a5f2d894",
-      "subject": "An Android manifest with a minimum SDK of 23 and no target SDK reported a provider as exported by default. Android takes the minimum SDK as the target when none"
+      "ts": "2026-11-17T13:13:48Z",
+      "commit": "5979f9b",
+      "commit_full": "5979f9b13f16dcf1df3c7ae7f8e7735f452866f2",
+      "subject": "Use shared Source Map v3 parser and lookup core (#2027)"
     },
-    "last_commit_ts": "2026-11-17T03:44:47Z",
+    "last_commit_ts": "2026-11-17T13:13:48Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       49,
@@ -93,7 +93,7 @@
       33,
       33,
       33,
-      20
+      43
     ],
     "days": [
       {
@@ -413,20 +413,20 @@
       },
       {
         "d": "2026-11-17",
-        "code": 20,
+        "code": 43,
         "other": 2,
         "samples": [
           {
-            "commit": "5acce07",
-            "subject": "An Android manifest with a minimum SDK of 23 and no target SDK reported a provider as exported by default. Android takes the minimum SDK as the target when none"
+            "commit": "5979f9b",
+            "subject": "Use shared Source Map v3 parser and lookup core (#2027)"
           },
           {
-            "commit": "891d078",
-            "subject": "Recording a form POST that returned JSON wrote the response's type, application/json, as the request body's type too. The request body now takes its type from t"
+            "commit": "0b8238f",
+            "subject": "Use shared PE headers and bounded Rich header reader (#2025)"
           },
           {
-            "commit": "a3fc005",
-            "subject": "On the lexer fallback, `import(\"./data.json\", { with: { type: \"json\" } })` lost its dependency, because only a closing parenthesis was accepted after the path. "
+            "commit": "e5c9c94",
+            "subject": "Use shared Mach-O universal and thread-state primitives (#2024)"
           }
         ]
       }
@@ -5551,8 +5551,120 @@
       "commit": "5acce07",
       "commit_full": "5acce07c675dbbe5e4cc20b0d59a9877a5f2d894",
       "message": "An Android manifest with a minimum SDK of 23 and no target SDK reported a provider as exported by default. Android takes the minimum SDK as the target when none"
+    },
+    {
+      "ts": "2026-11-17T04:06:27Z",
+      "kind": "content",
+      "commit": "67c70df",
+      "commit_full": "67c70dfb14b9e51560884f223b936e089e139aaa",
+      "message": "In a WITHOUT ROWID table whose primary key names one column twice with different collations, SQLite stores a key slot for each. The reader collapsed them into o"
+    },
+    {
+      "ts": "2026-11-17T04:10:12Z",
+      "kind": "content",
+      "commit": "9610789",
+      "commit_full": "961078950daf3f56ba9496670fe32d3b4f7bf8d5",
+      "message": "A ZIP member using the original Zstandard method number, 20, was listed with an unknown method and could not be extracted or found in firmware scans. It now goe"
+    },
+    {
+      "ts": "2026-11-17T04:15:32Z",
+      "kind": "content",
+      "commit": "2708ee3",
+      "commit_full": "2708ee35c88c2949581ea69fe4e2ec5b0aa3b854",
+      "message": "A page with two meta Content-Security-Policy declarations reported only the last one, and an empty later declaration could hide an earlier policy. Every non-emp"
+    },
+    {
+      "ts": "2026-11-17T04:16:02Z",
+      "kind": "content",
+      "commit": "6f07bad",
+      "commit_full": "6f07bad8c4794d75f34ff1646199e510b968b094",
+      "message": "A script whose type was the module keyword with spaces around it was listed as a classic script, and a whitespace-only type was listed too, although browsers ru"
+    },
+    {
+      "ts": "2026-11-17T04:28:14Z",
+      "kind": "content",
+      "commit": "b87fce6",
+      "commit_full": "b87fce648a93a436e51420e69a4bf74705a9a589",
+      "message": "The Mach-O readers took the whole remainder of a load command as a library name or runpath when its path had no terminating NUL, so a command that never finishe"
+    },
+    {
+      "ts": "2026-11-17T04:42:21Z",
+      "kind": "content",
+      "commit": "75b0788",
+      "commit_full": "75b078888bda7e177aa111e9089d3abc69fbab4a",
+      "message": "An indexed source map that also carried a top-level `sources` list reported those names as part of the bundle although no section maps to them, and they could p"
+    },
+    {
+      "ts": "2026-11-17T04:45:41Z",
+      "kind": "content",
+      "commit": "11fad9b",
+      "commit_full": "11fad9bb2edd96f5d61b579d77ff6d3de871dd6d",
+      "message": "An IPv6 packet whose Next Header is 59 (no next header) got an invented \"other\" transport record that included any bytes after the header. Transport decoding no"
+    },
+    {
+      "ts": "2026-11-17T04:46:35Z",
+      "kind": "content",
+      "commit": "e32b09b",
+      "commit_full": "e32b09b910da2ccc92f0b702beb6c9154639fc41",
+      "message": "A TAR member with a valid PAX size still stopped the archive walk when its superseded size field held invalid octal, so later members vanished from the listing."
+    },
+    {
+      "ts": "2026-11-17T04:46:41Z",
+      "kind": "content",
+      "commit": "f87737c",
+      "commit_full": "f87737c21301fe53a91e4e38bb51297ea9527a8b",
+      "message": "Follow-up to #1964, which made a pin without a recorded program look only inside its own folder. A saved Live pin has no copy: its folder is the project's own a"
+    },
+    {
+      "ts": "2026-11-17T04:48:08Z",
+      "kind": "content",
+      "commit": "cf749a9",
+      "commit_full": "cf749a926d4008da611391f77b962eacba8a119a",
+      "message": "A Java class file that ended partway through a class-level attribute was read with no warning, so source or signature details after the cut were silently missin"
+    },
+    {
+      "ts": "2026-11-17T05:02:08Z",
+      "kind": "content",
+      "commit": "ecaa102",
+      "commit_full": "ecaa1027e6116a4d7c6a3d0a28f022de5f36ea79",
+      "message": "The DOS header report took any \"PE\" prefix at the extended-header offset for a Windows extension, including a cut-off signature or \"PENA\" in unrelated bytes. Th"
+    },
+    {
+      "ts": "2026-11-17T05:02:46Z",
+      "kind": "content",
+      "commit": "854f50e",
+      "commit_full": "854f50e12968a2a8a7e406b69ecb4c0d49475ac4",
+      "message": "SQLite accepts a primary key written as PRIMARY KEY((a), b) in a WITHOUT ROWID table. The reader stopped at the first closing parenthesis and could not work out"
+    },
+    {
+      "ts": "2026-11-17T05:05:33Z",
+      "kind": "content",
+      "commit": "1b0f502",
+      "commit_full": "1b0f5025fb2e77354767046c6eba9bd5c1bd6402",
+      "message": "A page that opens an alert while loading waits for someone to close it, and nothing did, so opening the site always ran into its deadline and a rebuild could no"
+    },
+    {
+      "ts": "2026-11-17T05:05:54Z",
+      "kind": "content",
+      "commit": "4402d17",
+      "commit_full": "4402d170f94bfd25d6c12df114de580724576c5a",
+      "message": "A script tag with language=\"VBScript\" and no type was listed as JavaScript. When type is absent a browser uses the legacy language value to pick the script's ty"
+    },
+    {
+      "ts": "2026-11-17T06:49:15Z",
+      "kind": "content",
+      "commit": "acacd13",
+      "commit_full": "acacd13b4a8298b2255f24c4613c69d34af202e5",
+      "message": "Say what's wrong with an engine path set for adb, Frida, GDB, Rizin, lldb, JADX, Apktool or tshark (#2021)"
+    },
+    {
+      "ts": "2026-11-17T10:05:37Z",
+      "kind": "content",
+      "commit": "db8b977",
+      "commit_full": "db8b9777e26a1dc79c10238931fbcda77b2c9a02",
+      "message": "Run Vineflower and JADX on the Java folder set for Ghidra (R5.7) (#2023)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-17T04:03:18+00:00"
+  "updated_at": "2026-11-17T13:41:57+00:00"
 }

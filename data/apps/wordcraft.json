@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "ff0823f",
-  "latest_commit_date": "2026-11-17T03:19:00+01:00",
-  "latest_message": "Track Changes: a deleted list item's number is drawn as deleted text (#4828) (#4836)",
+  "latest_commit": "1a56d04",
+  "latest_commit_date": "2026-11-17T07:24:29-05:00",
+  "latest_message": "Dependencies: take craft-libs main at 453b0da782 (#6886)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -329,6 +329,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-17",
+        "text": "DOCX charts keep each series' fill, line, markers, smooth lines, data labels and number format, and each axis's title, bounds, number format, gridlines, labels and line, through an open and a save; a vertical axis title is drawn turned. Change Chart Type between a pie or doughnut chart and another type gives the value axis the new type's gridlines and axis line unless it was changed. Picture frame shapes open as rectangles, and a gutter set at the top (w:gutterAtTop) is kept on save; layout does not move the gutter to the top. Readiness unchanged."
+      },
+      {
         "date": "2026-11-14",
         "text": "Save As and Export (also the formats on the Print page) offer Browse in WordCraft… on Linux and the BSDs, as File › Open does, for when the system file dialog doesn't appear (#3535, from VoiceLessQ's #3801). Exporting in the built-in browser lists Export's formats as the types; the chosen type is the format and its extension, which replaces a known document extension on a typed name (notes.docx as plain text is notes.txt). An export the system dialog's name makes impossible (Word XML over an existing .xml) is refused on the Export page itself, not only the hidden status bar. Readiness estimates unchanged."
       },
@@ -483,10 +487,6 @@
       {
         "date": "2026-11-05",
         "text": "A Word template (.dotx, .dotm, .dot) opened from the file manager, the command line or the Finder starts a new, untitled document based on it, as Word's default verb for a template does (#3433). It opened the template itself, so Save (and AutoSave) wrote over it. The new document is attached to the template and Save asks where to write; a protected template asks for its password and still starts a new document. File › Open and a file dropped on the window still open a template itself, to edit it."
-      },
-      {
-        "date": "2026-11-05",
-        "text": "Arabic letters join across a change of formatting (gap 16, #4093). Each run was shaped on its own, so a letter at a run's edge took the form of a word's start or end: a coloured letter stood apart, and a word edited with Track Changes on read with a space in it (ال ذكاء). Each run is now shaped knowing the text shown on either side, past hidden or deleted text left out of the view, as for Syriac, Mongolian and the other joining scripts. Readiness estimates unchanged."
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 602,
+    "revisions_since": 604,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 606,
-    "revisions_7d": 15,
+    "revisions": 608,
+    "revisions_7d": 17,
     "last_revision": {
-      "ts": "2026-11-17T02:19:00Z",
+      "ts": "2026-11-17T12:24:29Z",
       "kind": "content",
-      "commit": "ff0823f",
-      "commit_full": "ff0823f40d3e0591f4b194ba1a7c8704aa6719c5",
-      "message": "Track Changes: a deleted list item's number is drawn as deleted text (#4828) (#4836)"
+      "commit": "1a56d04",
+      "commit_full": "1a56d041defe28f0d35de501ba7e40268a549d26",
+      "message": "Dependencies: take craft-libs main at 453b0da782 (#6886)"
     },
     "last_update": {
-      "ts": "2026-11-17T02:19:00Z",
+      "ts": "2026-11-17T12:24:29Z",
       "kind": "content",
-      "commit": "ff0823f",
-      "commit_full": "ff0823f40d3e0591f4b194ba1a7c8704aa6719c5",
-      "message": "Track Changes: a deleted list item's number is drawn as deleted text (#4828) (#4836)"
+      "commit": "1a56d04",
+      "commit_full": "1a56d041defe28f0d35de501ba7e40268a549d26",
+      "message": "Dependencies: take craft-libs main at 453b0da782 (#6886)"
     },
     "self_reported": "2026-11-16"
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 19.1,
+    "level": "buzzing",
+    "score": 20.9,
     "active_days_7d": 7,
-    "changes_7d": 86,
-    "changes_14d": 292,
-    "housekeeping_7d": 15,
+    "changes_7d": 118,
+    "changes_14d": 324,
+    "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-11-17T03:16:20Z",
-      "commit": "8e8ab63",
-      "commit_full": "8e8ab631fd74cef5d295a68baa4fb618d15da76f",
-      "subject": "M14: document optional run commands and PNG save options (#6687)"
+      "ts": "2026-11-17T12:24:29Z",
+      "commit": "1a56d04",
+      "commit_full": "1a56d041defe28f0d35de501ba7e40268a549d26",
+      "subject": "Dependencies: take craft-libs main at 453b0da782 (#6886)"
     },
-    "last_commit_ts": "2026-11-17T04:00:18Z",
+    "last_commit_ts": "2026-11-17T12:24:29Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       32,
@@ -568,7 +568,7 @@
       8,
       5,
       27,
-      12
+      44
     ],
     "days": [
       {
@@ -1314,20 +1314,20 @@
       },
       {
         "d": "2026-11-17",
-        "code": 12,
-        "other": 4,
+        "code": 44,
+        "other": 6,
         "samples": [
           {
-            "commit": "8e8ab63",
-            "subject": "M14: document optional run commands and PNG save options (#6687)"
+            "commit": "1a56d04",
+            "subject": "Dependencies: take craft-libs main at 453b0da782 (#6886)"
           },
           {
-            "commit": "8a9d04e",
-            "subject": "M14: restore save stamps after immediate web-save errors (#6824)"
+            "commit": "880cda9",
+            "subject": "M14: clarify finite positive CLI scale errors (#6691)"
           },
           {
-            "commit": "266407e",
-            "subject": "M14: expose file-browser row names and selection (#6790)"
+            "commit": "24885e8",
+            "subject": "Recovery: removing a record's folder waits for files Windows is still deleting (#6666)"
           }
         ]
       }
@@ -15496,7 +15496,53 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "2dd0f9a",
+      "commit_full": "2dd0f9a67bc7f0261b4ca9d142c34ad9b8e1a9ab",
+      "commit_date": "2026-11-17T05:37:06+01:00",
+      "ts": "2026-11-17T04:37:06Z",
+      "message": "Field dialog: text fields have a Format list for capitalization (#5062)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-16",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "1a56d04",
+      "commit_full": "1a56d041defe28f0d35de501ba7e40268a549d26",
+      "commit_date": "2026-11-17T07:24:29-05:00",
+      "ts": "2026-11-17T12:24:29Z",
+      "message": "Dependencies: take craft-libs main at 453b0da782 (#6886)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-16",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-17T04:02:56+00:00"
+  "updated_at": "2026-11-17T13:41:34+00:00"
 }

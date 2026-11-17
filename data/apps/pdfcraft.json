@@ -497,18 +497,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.1,
+    "score": 19.6,
     "active_days_7d": 7,
-    "changes_7d": 97,
-    "changes_14d": 470,
+    "changes_7d": 99,
+    "changes_14d": 472,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-11-17T02:59:18Z",
-      "commit": "9892160",
-      "commit_full": "9892160ed693cd9d7ff51e0f5089ec04bee389d3",
-      "subject": "fix(platform): confine staging names; private temp dirs for tests and macOS signing (#5923)"
+      "ts": "2026-11-17T07:16:26Z",
+      "commit": "271e479",
+      "commit_full": "271e479c53723b1b294c866d5cb2f27604601b29",
+      "subject": "Export: use shared extracted-text Markdown writer with exact output parity (#7591)"
     },
-    "last_commit_ts": "2026-11-17T02:59:18Z",
+    "last_commit_ts": "2026-11-17T07:16:26Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       23,
@@ -524,7 +524,7 @@
       10,
       12,
       7,
-      4
+      6
     ],
     "days": [
       {
@@ -1428,20 +1428,20 @@
       },
       {
         "d": "2026-11-17",
-        "code": 4,
+        "code": 6,
         "other": 1,
         "samples": [
           {
+            "commit": "271e479",
+            "subject": "Export: use shared extracted-text Markdown writer with exact output parity (#7591)"
+          },
+          {
+            "commit": "a499493",
+            "subject": "fix(test): allow the unused mut on Windows in the private test folders (#7595)"
+          },
+          {
             "commit": "9892160",
             "subject": "fix(platform): confine staging names; private temp dirs for tests and macOS signing (#5923)"
-          },
-          {
-            "commit": "f8197e2",
-            "subject": "fix(fonts): a CMap's codespace ranges are at most four bytes and listed once (#6075)"
-          },
-          {
-            "commit": "0bb5fcc",
-            "subject": "fix(fonts): the licence policy reads name-table records one at a time within a total allowance (#7044)"
           }
         ]
       }
@@ -7222,5 +7222,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-17T04:02:37+00:00"
+  "updated_at": "2026-11-17T13:41:16+00:00"
 }
