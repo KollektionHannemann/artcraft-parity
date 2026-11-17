@@ -444,7 +444,7 @@
   },
   "roadmap": {
     "revisions": 106,
-    "revisions_7d": 10,
+    "revisions_7d": 9,
     "last_revision": {
       "ts": "2026-11-16T09:24:34Z",
       "kind": "editorial",
@@ -464,21 +464,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.6,
+    "score": 15.8,
     "active_days_7d": 6,
-    "changes_7d": 87,
-    "changes_14d": 179,
+    "changes_7d": 82,
+    "changes_14d": 152,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-16T09:25:43Z",
-      "commit": "1476d4e",
-      "commit_full": "1476d4e7abef470886aeb5a1a7d870c9377a3050",
-      "subject": "engine: Subtotal groups every row under the grand total (#3945) (#4184)"
+      "ts": "2026-11-17T03:44:24Z",
+      "commit": "d60709a",
+      "commit_full": "d60709a1738d4f02c7f507848441306c0aacf692",
+      "subject": "pdf: follow up shared writer cutover with merged-library pin (#4407)"
     },
-    "last_commit_ts": "2026-11-16T12:51:45Z",
+    "last_commit_ts": "2026-11-17T03:44:24Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
-      36,
       16,
       8,
       1,
@@ -491,7 +490,8 @@
       0,
       8,
       8,
-      5
+      5,
+      9
     ],
     "days": [
       {
@@ -1179,6 +1179,25 @@
           {
             "commit": "e114723",
             "subject": "engine: custom-list sort puts unlisted values A to Z after the list (#3949) (#4182)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-17",
+        "code": 9,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "d60709a",
+            "subject": "pdf: follow up shared writer cutover with merged-library pin (#4407)"
+          },
+          {
+            "commit": "0e5a82f",
+            "subject": "ci: lock workflow actions through an actions.lock lockfile (#3879)"
+          },
+          {
+            "commit": "4c94367",
+            "subject": "pdf: move object and xref envelope writing to craft-pdf (#4398)"
           }
         ]
       }
@@ -3831,5 +3850,5 @@
       "kind": "editorial"
     }
   ],
-  "updated_at": "2026-11-16T21:21:48+00:00"
+  "updated_at": "2026-11-17T04:03:09+00:00"
 }

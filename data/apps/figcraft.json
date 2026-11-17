@@ -581,21 +581,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.3,
+    "score": 14.2,
     "active_days_7d": 7,
-    "changes_7d": 129,
-    "changes_14d": 296,
-    "housekeeping_7d": 8,
+    "changes_7d": 130,
+    "changes_14d": 283,
+    "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-16T16:21:17Z",
-      "commit": "4548d6c",
-      "commit_full": "4548d6c00953dd051ee36af3bada376d1a80d05c",
-      "subject": "SVG: reuse shared XML escaping and character validation (#2410)"
+      "ts": "2026-11-17T02:58:22Z",
+      "commit": "954687f",
+      "commit_full": "954687fcf7c15fdb94d5343d72be95c5832e4710",
+      "subject": "ci: lock workflow actions through an actions.lock lockfile (#2300)"
     },
-    "last_commit_ts": "2026-11-16T16:21:17Z",
+    "last_commit_ts": "2026-11-17T02:58:22Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
-      16,
       23,
       8,
       0,
@@ -608,6 +607,7 @@
       36,
       1,
       5,
+      3,
       2
     ],
     "days": [
@@ -1293,9 +1293,13 @@
       },
       {
         "d": "2026-11-16",
-        "code": 2,
+        "code": 3,
         "other": 1,
         "samples": [
+          {
+            "commit": "f0a34a1",
+            "subject": "M6: i18n catalog test reads cargo metadata for the host only (#2413)"
+          },
           {
             "commit": "4548d6c",
             "subject": "SVG: reuse shared XML escaping and character validation (#2410)"
@@ -1303,6 +1307,21 @@
           {
             "commit": "64132ad",
             "subject": "M1: the Frame tool's panel has New from selection above the presets (#1683) (#1699)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-17",
+        "code": 2,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "954687f",
+            "subject": "ci: lock workflow actions through an actions.lock lockfile (#2300)"
+          },
+          {
+            "commit": "6963e0d",
+            "subject": "Use shared Sketch container while retaining Fig document projection (#2418)"
           }
         ]
       }
@@ -8206,5 +8225,5 @@
       "kind": "editorial"
     }
   ],
-  "updated_at": "2026-11-16T21:21:35+00:00"
+  "updated_at": "2026-11-17T04:02:51+00:00"
 }

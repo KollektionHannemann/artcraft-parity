@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/UCS-Care-Group/mailcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/UCS-Care-Group/mailcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "7cc41f7",
-  "latest_commit_date": "2026-11-16T02:52:43+01:00",
-  "latest_message": "i18n: Polish as a preview language (#1487)",
+  "latest_commit": "fbdbb82",
+  "latest_commit_date": "2026-11-16T23:58:06+01:00",
+  "latest_message": "ROADMAP: audience estimates, by dimension, Ready and Hours by area (#1550)",
   "parsed": {
     "stage": "public beta",
     "next_stage": "leaving",
@@ -21,25 +21,224 @@
     "last_updated": "2026-11-14",
     "metrics": {
       "full": {
-        "label": "Ready for real work with a real account",
+        "label": "Full target (everything Outlook does)",
         "pct": 25.0,
         "range": null,
-        "hours": null
+        "hours": [
+          410,
+          800
+        ]
       },
-      "mainstream": null,
-      "essentials": null,
+      "mainstream": {
+        "label": "Mainstream practitioner (the everyday Outlook user)",
+        "pct": 35.0,
+        "range": null,
+        "hours": [
+          180,
+          340
+        ]
+      },
+      "essentials": {
+        "label": "Essentials user (one Microsoft account: read, file, search, reply, answer meetings)",
+        "pct": 50.0,
+        "range": null,
+        "hours": [
+          60,
+          120
+        ]
+      },
       "ready": {
         "label": "Ready for real work with a real account",
         "pct": 25.0,
         "range": null,
         "hours": null
       },
-      "breadth": null
+      "breadth": {
+        "label": "Feature breadth (ribbon and menu catalog with a command)",
+        "pct": 79.4,
+        "range": null,
+        "hours": null
+      }
     },
-    "audiences": [],
-    "dimensions": [],
-    "features": [],
-    "upcoming": [],
+    "audiences": [
+      {
+        "audience": "essentials",
+        "label": "Essentials user (one Microsoft account: read, file, search, reply, answer meetings)",
+        "pct": 50.0,
+        "range": null,
+        "hours": [
+          60,
+          120
+        ]
+      },
+      {
+        "audience": "mainstream",
+        "label": "Mainstream practitioner (the everyday Outlook user)",
+        "pct": 35.0,
+        "range": null,
+        "hours": [
+          180,
+          340
+        ]
+      },
+      {
+        "audience": "full",
+        "label": "Full target (everything Outlook does)",
+        "pct": 25.0,
+        "range": null,
+        "hours": [
+          410,
+          800
+        ]
+      }
+    ],
+    "dimensions": [
+      {
+        "label": "Features (depth: how closely what has a command behaves as Outlook's does)",
+        "pct": 45.0
+      },
+      {
+        "label": "Interface fidelity (classic Outlook's shape and look)",
+        "pct": 60.0
+      },
+      {
+        "label": "Servers and keeping in step",
+        "pct": 45.0
+      },
+      {
+        "label": "Calendar and meetings",
+        "pct": 55.0
+      },
+      {
+        "label": "File formats",
+        "pct": 60.0
+      },
+      {
+        "label": "Performance at scale (200,000 messages)",
+        "pct": 80.0
+      },
+      {
+        "label": "Platforms and signed builds",
+        "pct": 60.0
+      },
+      {
+        "label": "Languages (one complete, nine previews)",
+        "pct": 20.0
+      },
+      {
+        "label": "Privacy and safety by default",
+        "pct": 100.0
+      },
+      {
+        "label": "Agent control",
+        "pct": 100.0
+      }
+    ],
+    "features": [
+      {
+        "label": "Reading and triage",
+        "pct": 70.0,
+        "hours": [
+          15,
+          30
+        ]
+      },
+      {
+        "label": "Search",
+        "pct": 70.0,
+        "hours": [
+          5,
+          15
+        ]
+      },
+      {
+        "label": "Rendering mail",
+        "pct": 75.0,
+        "hours": [
+          30,
+          60
+        ]
+      },
+      {
+        "label": "Writing mail",
+        "pct": 55.0,
+        "hours": [
+          25,
+          50
+        ]
+      },
+      {
+        "label": "Servers",
+        "pct": 45.0,
+        "hours": [
+          100,
+          195
+        ]
+      },
+      {
+        "label": "Calendar",
+        "pct": 55.0,
+        "hours": [
+          36,
+          62
+        ]
+      },
+      {
+        "label": "People",
+        "pct": 45.0,
+        "hours": [
+          15,
+          30
+        ]
+      },
+      {
+        "label": "Tasks",
+        "pct": 50.0,
+        "hours": [
+          10,
+          20
+        ]
+      },
+      {
+        "label": "Files",
+        "pct": 55.0,
+        "hours": [
+          50,
+          100
+        ]
+      },
+      {
+        "label": "Platforms",
+        "pct": 60.0,
+        "hours": [
+          49,
+          98
+        ]
+      },
+      {
+        "label": "Agents",
+        "pct": 100.0,
+        "hours": null
+      },
+      {
+        "label": "Privacy and safety",
+        "pct": 70.0,
+        "hours": [
+          40,
+          80
+        ]
+      }
+    ],
+    "upcoming": [
+      "Printing",
+      "Paragraph alignment",
+      "Message list columns",
+      "The To-Do Bar",
+      "The calendar's List view",
+      "Rules",
+      "JMAP and DAV accounts",
+      "Sending later and Undo Send"
+    ],
     "progress": [
       {
         "date": "2026-11-14",
@@ -208,7 +407,7 @@
     "value_since": "2026-10-12T18:17:00Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 251,
+    "revisions_since": 252,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -216,42 +415,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 255,
-    "revisions_7d": 14,
+    "revisions": 256,
+    "revisions_7d": 15,
     "last_revision": {
-      "ts": "2026-11-16T01:52:43Z",
-      "kind": "content",
-      "commit": "7cc41f7",
-      "commit_full": "7cc41f7e19738eafb48e4d333d76c168b09e84c2",
-      "message": "i18n: Polish as a preview language (#1487)"
+      "ts": "2026-11-16T22:58:06Z",
+      "kind": "estimates",
+      "commit": "fbdbb82",
+      "commit_full": "fbdbb826100c161aad89c41ee3e50c8422a2daf6",
+      "message": "ROADMAP: audience estimates, by dimension, Ready and Hours by area (#1550)"
     },
     "last_update": {
-      "ts": "2026-11-16T01:52:43Z",
-      "kind": "content",
-      "commit": "7cc41f7",
-      "commit_full": "7cc41f7e19738eafb48e4d333d76c168b09e84c2",
-      "message": "i18n: Polish as a preview language (#1487)"
+      "ts": "2026-11-16T22:58:06Z",
+      "kind": "estimates",
+      "commit": "fbdbb82",
+      "commit_full": "fbdbb826100c161aad89c41ee3e50c8422a2daf6",
+      "message": "ROADMAP: audience estimates, by dimension, Ready and Hours by area (#1550)"
     },
     "self_reported": "2026-11-14"
   },
   "milestone": null,
   "activity": {
-    "level": "buzzing",
-    "score": 22.7,
-    "active_days_7d": 7,
-    "changes_7d": 175,
-    "changes_14d": 262,
-    "housekeeping_7d": 17,
+    "level": "active",
+    "score": 18.9,
+    "active_days_7d": 6,
+    "changes_7d": 160,
+    "changes_14d": 257,
+    "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-11-16T19:55:06Z",
-      "commit": "0d3d909",
-      "commit_full": "0d3d9090e23643992356ca9bcd5b0202b57363a9",
-      "subject": "The message list scrolls to the selected message when you change how it is sorted or arranged (#1512)"
+      "ts": "2026-11-16T23:20:45Z",
+      "commit": "e3aec14",
+      "commit_full": "e3aec14d37978a29958d199990bf9bd1f28fd189",
+      "subject": "MB3.13: People, Tasks and Today on Android (#1303)"
     },
-    "last_commit_ts": "2026-11-16T19:55:06Z",
+    "last_commit_ts": "2026-11-16T23:20:45Z",
     "repo_since": "2026-10-12T18:17:00Z",
     "window": [
-      12,
       17,
       11,
       17,
@@ -264,7 +462,8 @@
       42,
       41,
       23,
-      13
+      20,
+      0
     ],
     "days": [
       {
@@ -926,20 +1125,20 @@
       },
       {
         "d": "2026-11-16",
-        "code": 13,
-        "other": 0,
+        "code": 20,
+        "other": 1,
         "samples": [
           {
-            "commit": "0d3d909",
-            "subject": "The message list scrolls to the selected message when you change how it is sorted or arranged (#1512)"
+            "commit": "e3aec14",
+            "subject": "MB3.13: People, Tasks and Today on Android (#1303)"
           },
           {
-            "commit": "af3a629",
-            "subject": "#969: an unknown font leaves the rest of a run's look; Consolas, Menlo and DejaVu Sans Mono come in as Courier New (#1458)"
+            "commit": "7ea2d2a",
+            "subject": "#509: send warnings before a message goes (#829)"
           },
           {
-            "commit": "c6d76d6",
-            "subject": "MB3.10: Android system integration (mailto: links and share into a new message) (#1341)"
+            "commit": "1f12cb7",
+            "subject": "MB3.11: Android calendar and task reminders while the app is closed (#1521)"
           }
         ]
       }
@@ -6252,7 +6451,30 @@
       "breadth_pct": null,
       "full_prev": 25.0,
       "kind": "content"
+    },
+    {
+      "commit": "fbdbb82",
+      "commit_full": "fbdbb826100c161aad89c41ee3e50c8422a2daf6",
+      "commit_date": "2026-11-16T23:58:06+01:00",
+      "ts": "2026-11-16T22:58:06Z",
+      "message": "ROADMAP: audience estimates, by dimension, Ready and Hours by area (#1550)",
+      "stage": "public beta",
+      "next_stage": "leaving",
+      "last_updated": "2026-11-14",
+      "full_pct": 25.0,
+      "full_range": null,
+      "full_hours": [
+        410,
+        800
+      ],
+      "full_label": "Full target (everything Outlook does)",
+      "target": "Microsoft Outlook (Microsoft 365, classic desktop)",
+      "mainstream_pct": 35.0,
+      "essentials_pct": 50.0,
+      "breadth_pct": 79.4,
+      "full_prev": 25.0,
+      "kind": "estimates"
     }
   ],
-  "updated_at": "2026-11-16T21:22:12+00:00"
+  "updated_at": "2026-11-17T04:03:47+00:00"
 }

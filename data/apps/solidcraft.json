@@ -66,21 +66,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 38.6,
+    "score": 36.8,
     "active_days_7d": 7,
-    "changes_7d": 1378,
-    "changes_14d": 2033,
-    "housekeeping_7d": 59,
+    "changes_7d": 1218,
+    "changes_14d": 2074,
+    "housekeeping_7d": 52,
     "last_code_change": {
-      "ts": "2026-11-16T21:01:06Z",
-      "commit": "6e92e25",
-      "commit_full": "6e92e25b1e446f3e6f57c0d45c5c3f5798a2734a",
-      "subject": "solidcore: retire fillet_overflow_trim_at_creases and fillet_overflow_crease_along_edge (WR-695, WR-717) (#17586)"
+      "ts": "2026-11-17T03:08:25Z",
+      "commit": "1ad2057",
+      "commit_full": "1ad2057b9ba44d8028d90be7cedcc39833112aca",
+      "subject": "Extrude To Object: a Join up to a cylinder builds when the sketch's projected edges include a very short arc (#17707) (#18044)"
     },
-    "last_commit_ts": "2026-11-16T21:01:06Z",
+    "last_commit_ts": "2026-11-17T03:08:25Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
-      38,
       158,
       109,
       44,
@@ -93,7 +92,8 @@
       203,
       198,
       156,
-      242
+      281,
+      40
     ],
     "days": [
       {
@@ -858,20 +858,39 @@
       },
       {
         "d": "2026-11-16",
-        "code": 242,
-        "other": 4,
+        "code": 281,
+        "other": 5,
         "samples": [
           {
-            "commit": "6e92e25",
-            "subject": "solidcore: retire fillet_overflow_trim_at_creases and fillet_overflow_crease_along_edge (WR-695, WR-717) (#17586)"
+            "commit": "682b547",
+            "subject": "Construction lines: the pointer's coordinates in grey, typed as X and Y, and the length at the segment's middle, as the Line tool shows them (#15618) (#15788)"
           },
           {
-            "commit": "7d4445c",
-            "subject": "Problem reports: a ticket request no longer hangs until \"timeout: global\" (#17979)"
+            "commit": "684b1c9",
+            "subject": "Surface validation: detect spline surfaces pinched to a point (#17108) (#18188)"
           },
           {
-            "commit": "e41064f",
-            "subject": "solidcore-ops: the distance of points to a face's untrimmed surface, where they lie over it (#17490) (#17984)"
+            "commit": "51404ea",
+            "subject": "Forms: an arc that needs five quarters of its grid has a form cut to it, not one past a whole turn (#18200)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-17",
+        "code": 40,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "1ad2057",
+            "subject": "Extrude To Object: a Join up to a cylinder builds when the sketch's projected edges include a very short arc (#17707) (#18044)"
+          },
+          {
+            "commit": "1296cd4",
+            "subject": "Add a local document browser and startup screen preference (#2717)"
+          },
+          {
+            "commit": "ccd21d0",
+            "subject": "solidcore-ops: a call gives the same result whatever ran on its kernel before (#18248)"
           }
         ]
       }
@@ -2465,5 +2484,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-16T21:22:08+00:00"
+  "updated_at": "2026-11-17T04:03:40+00:00"
 }

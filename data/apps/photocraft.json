@@ -383,21 +383,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 29.0,
+    "score": 26.0,
     "active_days_7d": 7,
-    "changes_7d": 495,
-    "changes_14d": 849,
-    "housekeeping_7d": 14,
+    "changes_7d": 427,
+    "changes_14d": 832,
+    "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-11-16T20:23:28Z",
-      "commit": "6a82de1",
-      "commit_full": "6a82de14116499cca0df985a430bfdb5448085f6",
-      "subject": "Content-Aware Fill: keep the workspace open while a background fill runs (#15338)"
+      "ts": "2026-11-17T02:59:41Z",
+      "commit": "2163bd4",
+      "commit_full": "2163bd45afc0c963749e84e55d1a078665b7cb31",
+      "subject": "security(doc): resolve slice visibility in one sweep, cap resolved slice count (#10959)"
     },
-    "last_commit_ts": "2026-11-16T20:23:28Z",
+    "last_commit_ts": "2026-11-17T02:59:41Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
-      24,
       27,
       47,
       48,
@@ -410,7 +409,8 @@
       74,
       30,
       77,
-      14
+      17,
+      4
     ],
     "days": [
       {
@@ -1308,20 +1308,39 @@
       },
       {
         "d": "2026-11-16",
-        "code": 14,
+        "code": 17,
         "other": 0,
         "samples": [
           {
-            "commit": "6a82de1",
-            "subject": "Content-Aware Fill: keep the workspace open while a background fill runs (#15338)"
+            "commit": "957b10c",
+            "subject": "test(ui-egui): hold the background redraw in tests that need it still running (#15359)"
           },
           {
-            "commit": "02e9907",
-            "subject": "Retain IJG and SIMD notices for shared JPEG encoding (#15162)"
+            "commit": "ee2482c",
+            "subject": "psd: preserve lenient TySh recovery through craft-psd (#15341)"
           },
           {
-            "commit": "097a7a7",
-            "subject": "PSD type: take the TySh envelope from craft-psd (#778) (#15301)"
+            "commit": "5663755",
+            "subject": "perf: open the benches' PSD files under a benchmark memory budget (#15340)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-17",
+        "code": 4,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "2163bd4",
+            "subject": "security(doc): resolve slice visibility in one sweep, cap resolved slice count (#10959)"
+          },
+          {
+            "commit": "d71e9fd",
+            "subject": "text: bound copies of preserved style data and font names (#11046)"
+          },
+          {
+            "commit": "43c2d1b",
+            "subject": "Camera Raw sidecar read: one nonblocking open judged by the opened handle (#13359)"
           }
         ]
       }
@@ -1812,5 +1831,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-16T21:21:07+00:00"
+  "updated_at": "2026-11-17T04:02:07+00:00"
 }

@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "8a1f101",
-  "latest_commit_date": "2026-11-16T10:06:53Z",
-  "latest_message": "Save As and Export: Browse in WordCraft when the system dialog doesn't appear (#3535) (#3801) (#5790)",
+  "latest_commit": "ff0823f",
+  "latest_commit_date": "2026-11-17T03:19:00+01:00",
+  "latest_message": "Track Changes: a deleted list item's number is drawn as deleted text (#4828) (#4836)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 601,
+    "revisions_since": 602,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,42 +520,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 605,
+    "revisions": 606,
     "revisions_7d": 15,
     "last_revision": {
-      "ts": "2026-11-16T10:06:53Z",
+      "ts": "2026-11-17T02:19:00Z",
       "kind": "content",
-      "commit": "8a1f101",
-      "commit_full": "8a1f101c4653112cf3077c91d6185742f665fe13",
-      "message": "Save As and Export: Browse in WordCraft when the system dialog doesn't appear (#3535) (#3801) (#5790)"
+      "commit": "ff0823f",
+      "commit_full": "ff0823f40d3e0591f4b194ba1a7c8704aa6719c5",
+      "message": "Track Changes: a deleted list item's number is drawn as deleted text (#4828) (#4836)"
     },
     "last_update": {
-      "ts": "2026-11-16T10:06:53Z",
+      "ts": "2026-11-17T02:19:00Z",
       "kind": "content",
-      "commit": "8a1f101",
-      "commit_full": "8a1f101c4653112cf3077c91d6185742f665fe13",
-      "message": "Save As and Export: Browse in WordCraft when the system dialog doesn't appear (#3535) (#3801) (#5790)"
+      "commit": "ff0823f",
+      "commit_full": "ff0823f40d3e0591f4b194ba1a7c8704aa6719c5",
+      "message": "Track Changes: a deleted list item's number is drawn as deleted text (#4828) (#4836)"
     },
     "self_reported": "2026-11-16"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.6,
+    "score": 19.1,
     "active_days_7d": 7,
-    "changes_7d": 71,
-    "changes_14d": 291,
-    "housekeeping_7d": 8,
+    "changes_7d": 86,
+    "changes_14d": 292,
+    "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-11-16T21:15:32Z",
-      "commit": "83c3b58",
-      "commit_full": "83c3b5890bb208ba4af4c5b67c7f96b1734d450e",
-      "subject": "M14: describe all accepted mail-merge sort forms (#6724)"
+      "ts": "2026-11-17T03:16:20Z",
+      "commit": "8e8ab63",
+      "commit_full": "8e8ab631fd74cef5d295a68baa4fb618d15da76f",
+      "subject": "M14: document optional run commands and PNG save options (#6687)"
     },
-    "last_commit_ts": "2026-11-16T21:15:32Z",
+    "last_commit_ts": "2026-11-17T04:00:18Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
-      19,
       32,
       43,
       20,
@@ -568,7 +567,8 @@
       11,
       8,
       5,
-      19
+      27,
+      12
     ],
     "days": [
       {
@@ -1295,20 +1295,39 @@
       },
       {
         "d": "2026-11-16",
-        "code": 19,
-        "other": 0,
+        "code": 27,
+        "other": 3,
         "samples": [
           {
-            "commit": "83c3b58",
-            "subject": "M14: describe all accepted mail-merge sort forms (#6724)"
+            "commit": "b2306fe",
+            "subject": "M3: explain invalid font name values (#6698)"
           },
           {
-            "commit": "f472620",
-            "subject": "M14: explain invalid field code values (#6725)"
+            "commit": "4a347e0",
+            "subject": "M14: expose required command inputs in discovery (#6703)"
           },
           {
-            "commit": "5467f99",
-            "subject": "Tests: set the fit-one-page fixtures in bundled Inter so FreeBSD pages them like other hosts (#6887)"
+            "commit": "3bf4c05",
+            "subject": "M14: explain the bookmark name rules in validation errors (#6706)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-17",
+        "code": 12,
+        "other": 4,
+        "samples": [
+          {
+            "commit": "8e8ab63",
+            "subject": "M14: document optional run commands and PNG save options (#6687)"
+          },
+          {
+            "commit": "8a9d04e",
+            "subject": "M14: restore save stamps after immediate web-save errors (#6824)"
+          },
+          {
+            "commit": "266407e",
+            "subject": "M14: expose file-browser row names and selection (#6790)"
           }
         ]
       }
@@ -15454,7 +15473,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "ff0823f",
+      "commit_full": "ff0823f40d3e0591f4b194ba1a7c8704aa6719c5",
+      "commit_date": "2026-11-17T03:19:00+01:00",
+      "ts": "2026-11-17T02:19:00Z",
+      "message": "Track Changes: a deleted list item's number is drawn as deleted text (#4828) (#4836)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-16",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-16T21:21:39+00:00"
+  "updated_at": "2026-11-17T04:02:56+00:00"
 }

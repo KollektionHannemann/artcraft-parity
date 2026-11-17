@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "ad0a68a",
-  "latest_commit_date": "2026-11-17T02:52:44+07:00",
-  "latest_message": "Find a Windows game's program in its folder on Linux and macOS (R2.4) (#1809)",
+  "latest_commit": "5acce07",
+  "latest_commit_date": "2026-11-17T10:44:47+07:00",
+  "latest_message": "An Android manifest with a minimum SDK of 23 and no target SDK reported a provider as exported by default. Android takes the minimum SDK as the target when none",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,42 +45,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 696,
-    "revisions_7d": 324,
+    "revisions": 714,
+    "revisions_7d": 240,
     "last_revision": {
-      "ts": "2026-11-16T19:52:44Z",
+      "ts": "2026-11-17T03:44:47Z",
       "kind": "content",
-      "commit": "ad0a68a",
-      "commit_full": "ad0a68a596c88f302836040e7f165ecfafa0a283",
-      "message": "Find a Windows game's program in its folder on Linux and macOS (R2.4) (#1809)"
+      "commit": "5acce07",
+      "commit_full": "5acce07c675dbbe5e4cc20b0d59a9877a5f2d894",
+      "message": "An Android manifest with a minimum SDK of 23 and no target SDK reported a provider as exported by default. Android takes the minimum SDK as the target when none"
     },
     "last_update": {
-      "ts": "2026-11-16T19:52:44Z",
+      "ts": "2026-11-17T03:44:47Z",
       "kind": "content",
-      "commit": "ad0a68a",
-      "commit_full": "ad0a68a596c88f302836040e7f165ecfafa0a283",
-      "message": "Find a Windows game's program in its folder on Linux and macOS (R2.4) (#1809)"
+      "commit": "5acce07",
+      "commit_full": "5acce07c675dbbe5e4cc20b0d59a9877a5f2d894",
+      "message": "An Android manifest with a minimum SDK of 23 and no target SDK reported a provider as exported by default. Android takes the minimum SDK as the target when none"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 27.0,
+    "score": 26.2,
     "active_days_7d": 7,
-    "changes_7d": 364,
-    "changes_14d": 794,
+    "changes_7d": 274,
+    "changes_14d": 727,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-16T19:52:44Z",
-      "commit": "ad0a68a",
-      "commit_full": "ad0a68a596c88f302836040e7f165ecfafa0a283",
-      "subject": "Find a Windows game's program in its folder on Linux and macOS (R2.4) (#1809)"
+      "ts": "2026-11-17T03:44:47Z",
+      "commit": "5acce07",
+      "commit_full": "5acce07c675dbbe5e4cc20b0d59a9877a5f2d894",
+      "subject": "An Android manifest with a minimum SDK of 23 and no target SDK reported a provider as exported by default. Android takes the minimum SDK as the target when none"
     },
-    "last_commit_ts": "2026-11-16T19:52:44Z",
+    "last_commit_ts": "2026-11-17T03:44:47Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
-      88,
       49,
       1,
       64,
@@ -93,7 +92,8 @@
       6,
       33,
       33,
-      32
+      33,
+      20
     ],
     "days": [
       {
@@ -394,9 +394,13 @@
       },
       {
         "d": "2026-11-16",
-        "code": 32,
+        "code": 33,
         "other": 3,
         "samples": [
+          {
+            "commit": "86c2dd0",
+            "subject": "Reject '+' signs in hex of EVM metadata solc and ipfs values (#1971)"
+          },
           {
             "commit": "ad0a68a",
             "subject": "Find a Windows game's program in its folder on Linux and macOS (R2.4) (#1809)"
@@ -404,10 +408,25 @@
           {
             "commit": "9b8d6c2",
             "subject": "A pin size estimate that finished after the person cancelled, or after they opened another project's Pin dialog, wrote its size into the open dialog, and a late"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-17",
+        "code": 20,
+        "other": 2,
+        "samples": [
+          {
+            "commit": "5acce07",
+            "subject": "An Android manifest with a minimum SDK of 23 and no target SDK reported a provider as exported by default. Android takes the minimum SDK as the target when none"
           },
           {
-            "commit": "d42418b",
-            "subject": "build_file_read read the whole file into memory before returning its 256 KiB page, so a multi-gigabyte generated file under the project could freeze or kill the"
+            "commit": "891d078",
+            "subject": "Recording a form POST that returned JSON wrote the response's type, application/json, as the request body's type too. The request body now takes its type from t"
+          },
+          {
+            "commit": "a3fc005",
+            "subject": "On the lexer fallback, `import(\"./data.json\", { with: { type: \"json\" } })` lost its dependency, because only a closing parenthesis was accepted after the path. "
           }
         ]
       }
@@ -5406,8 +5425,134 @@
       "commit": "ad0a68a",
       "commit_full": "ad0a68a596c88f302836040e7f165ecfafa0a283",
       "message": "Find a Windows game's program in its folder on Linux and macOS (R2.4) (#1809)"
+    },
+    {
+      "ts": "2026-11-17T00:21:22Z",
+      "kind": "content",
+      "commit": "b8d468b",
+      "commit_full": "b8d468bbb132cc5718f99afa8aa31c1095875209",
+      "message": "An old GNU sparse member can carry several 512-byte map blocks between its header and its stored data. The listing took the first map block for file data and st"
+    },
+    {
+      "ts": "2026-11-17T00:37:53Z",
+      "kind": "content",
+      "commit": "61d947b",
+      "commit_full": "61d947b0da075d94dd8ac5020900e8a8bf27dff4",
+      "message": "SQLite accepts a quoted column type such as `id \"INTEGER\" PRIMARY KEY`, which makes the column an alias for the rowid. The reader kept the quotes, so it showed "
+    },
+    {
+      "ts": "2026-11-17T00:37:59Z",
+      "kind": "content",
+      "commit": "e78462b",
+      "commit_full": "e78462bc773684ebc8635fd7b31851bad21c4174",
+      "message": "An escaped triple quote inside a GraphQL block string was taken as the end of the string, so braces and comment marks after it were read as document syntax and "
+    },
+    {
+      "ts": "2026-11-17T00:38:04Z",
+      "kind": "content",
+      "commit": "5b3067c",
+      "commit_full": "5b3067ca3ef3818e984d2b50f56ef02686c79db8",
+      "message": "The source map annotation reader split lines on LF only, so a sourceMappingURL comment after a lone CR, U+2028 or U+2029 was missed. It now scans backward over "
+    },
+    {
+      "ts": "2026-11-17T00:38:10Z",
+      "kind": "content",
+      "commit": "9437e05",
+      "commit_full": "9437e05641f12252fc10abd07734295424fd108a",
+      "message": "Browsers also close a comment at `--!>`, `<!-->` and `<!--->`. The scanner looked only for `-->`, so it missed scripts and preloads after such a comment. It now"
+    },
+    {
+      "ts": "2026-11-17T01:23:32Z",
+      "kind": "content",
+      "commit": "c301f9c",
+      "commit_full": "c301f9c33ce84568b9bc67b971a9a00c81b9e4a0",
+      "message": "Follow-up to #1974. A quoted INTEGER followed by GENERATED was taken for a rowid alias although SQLite stores that key separately, and one followed by DEFERRABL"
+    },
+    {
+      "ts": "2026-11-17T01:23:38Z",
+      "kind": "content",
+      "commit": "72dfda7",
+      "commit_full": "72dfda7653140dedc2e7c2fd9d565c0a1bf7b86c",
+      "message": "A valid WebAssembly component showed an empty layout, because the inspector stopped once it had identified the component header. The outer section framing is no"
+    },
+    {
+      "ts": "2026-11-17T01:23:45Z",
+      "kind": "content",
+      "commit": "3f45a9b",
+      "commit_full": "3f45a9b1c3e088fb8490efcb7a96a0c86e709e05",
+      "message": "The HTML scanner reported a script found inside `<!unknown ...>` or a malformed end tag, text that browsers treat as a comment up to the first `>`. That text is"
+    },
+    {
+      "ts": "2026-11-17T01:23:52Z",
+      "kind": "content",
+      "commit": "105c95d",
+      "commit_full": "105c95dcd162f310bb81475fba80f29a67d879e7",
+      "message": "A TCP SYN with flag byte 0xc2 was reported as SYN only. The ECE and CWR bits are now named with the other flags; existing flag strings keep their order. (#1981)"
+    },
+    {
+      "ts": "2026-11-17T01:23:59Z",
+      "kind": "content",
+      "commit": "cd4ecad",
+      "commit_full": "cd4ecad58527c845c7b9cdc3d00938e97be8ea94",
+      "message": "The operation reader accepted a raw CR inside a regular quoted GraphQL string, and a raw line break after a backslash, both invalid GraphQL. Both line terminato"
+    },
+    {
+      "ts": "2026-11-17T01:24:48Z",
+      "kind": "content",
+      "commit": "aba7ad0",
+      "commit_full": "aba7ad0a1ee50e67f2f73c8b5240bf5a4f56aefd",
+      "message": "GNU cpio's crc format stores a symbolic link's target as the member body and leaves its checksum field at zero. The reader summed the target and warned that the"
+    },
+    {
+      "ts": "2026-11-17T01:35:31Z",
+      "kind": "content",
+      "commit": "2b36d3a",
+      "commit_full": "2b36d3a97efbdfa8e3b4f48e1a9cdc22ef850e47",
+      "message": "An unfinished `/*# sourceMappingURL=` comment overrode an earlier complete one, and a line with two `*/` could return a URL containing text outside the comment."
+    },
+    {
+      "ts": "2026-11-17T03:19:20Z",
+      "kind": "content",
+      "commit": "046ffa7",
+      "commit_full": "046ffa7ccd6afa9dd5fcccf1d3923d20da035009",
+      "message": "Read OpenCode's typed error from stdout, so its 503 is retried and its reason shown (#1990)"
+    },
+    {
+      "ts": "2026-11-17T03:28:06Z",
+      "kind": "content",
+      "commit": "e4ba479",
+      "commit_full": "e4ba479004868314afd0355b6b3693fa7d5d24b6",
+      "message": "A capture cut off inside a tag, such as one ending in `<script src=app.js`, reported a script no browser would run; cut-off link, title and meta tags could supp"
+    },
+    {
+      "ts": "2026-11-17T03:30:27Z",
+      "kind": "content",
+      "commit": "dd1efd2",
+      "commit_full": "dd1efd29233280b83e991f73940f999c56cfdd2e",
+      "message": "A permission declared with the older `uses-permission-sdk-m` tag was left out of the manifest's permission list. Android treats that tag like `uses-permission-s"
+    },
+    {
+      "ts": "2026-11-17T03:32:27Z",
+      "kind": "content",
+      "commit": "a3fc005",
+      "commit_full": "a3fc0056d377ddf831deb666872290f7fc572b6d",
+      "message": "On the lexer fallback, `import(\"./data.json\", { with: { type: \"json\" } })` lost its dependency, because only a closing parenthesis was accepted after the path. "
+    },
+    {
+      "ts": "2026-11-17T03:33:39Z",
+      "kind": "content",
+      "commit": "891d078",
+      "commit_full": "891d07819a9ac133e70a386957226f68023cf606",
+      "message": "Recording a form POST that returned JSON wrote the response's type, application/json, as the request body's type too. The request body now takes its type from t"
+    },
+    {
+      "ts": "2026-11-17T03:44:47Z",
+      "kind": "content",
+      "commit": "5acce07",
+      "commit_full": "5acce07c675dbbe5e4cc20b0d59a9877a5f2d894",
+      "message": "An Android manifest with a minimum SDK of 23 and no target SDK reported a provider as exported by default. Android takes the minimum SDK as the target when none"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-16T21:21:54+00:00"
+  "updated_at": "2026-11-17T04:03:18+00:00"
 }

@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/materialcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/materialcraft/commits/main/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "d6c7f21",
-  "latest_commit_date": "2026-11-08T19:11:55-05:00",
-  "latest_message": "Standard Functions Library Parity (#171)",
+  "latest_commit": "b2c7b0e",
+  "latest_commit_date": "2026-11-16T19:25:35-05:00",
+  "latest_message": "Function node parity (#258)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -31,6 +31,14 @@
     "features": [],
     "upcoming": [],
     "progress": [
+      {
+        "date": "2026-11-16",
+        "text": "Corrected six atomic nodes: filter kernels and Float32 arithmetic, rectangular scaling, independent tiling, channel selection and save/load, and empty Text/SVG backgrounds. Behavior and validation"
+      },
+      {
+        "date": "2026-11-15",
+        "text": "Corrected node defaults, typed unconnected inputs, missing-texture output and SBS serialization; updated catalog counts and remaining validation scope"
+      },
       {
         "date": "2026-11-08",
         "text": "Explorer folder hierarchy and package/folder/graph context menus, native SBS empty folders and resource paths, undoable copy/move/rename/remove, and package reload/save-copy actions"
@@ -66,42 +74,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 5,
-    "revisions_7d": 0,
+    "revisions": 6,
+    "revisions_7d": 1,
     "last_revision": {
-      "ts": "2026-11-09T00:11:55Z",
+      "ts": "2026-11-17T00:25:35Z",
       "kind": "content",
-      "commit": "d6c7f21",
-      "commit_full": "d6c7f2126dd6374e58474560516aa52ed039ea0c",
-      "message": "Standard Functions Library Parity (#171)"
+      "commit": "b2c7b0e",
+      "commit_full": "b2c7b0e83d296be3b1e6eb7a68f1962dca123aa3",
+      "message": "Function node parity (#258)"
     },
     "last_update": {
-      "ts": "2026-11-09T00:11:55Z",
+      "ts": "2026-11-17T00:25:35Z",
       "kind": "content",
-      "commit": "d6c7f21",
-      "commit_full": "d6c7f2126dd6374e58474560516aa52ed039ea0c",
-      "message": "Standard Functions Library Parity (#171)"
+      "commit": "b2c7b0e",
+      "commit_full": "b2c7b0e83d296be3b1e6eb7a68f1962dca123aa3",
+      "message": "Function node parity (#258)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 12.4,
+    "score": 11.1,
     "active_days_7d": 7,
-    "changes_7d": 28,
-    "changes_14d": 116,
+    "changes_7d": 24,
+    "changes_14d": 114,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-16T21:12:24Z",
-      "commit": "e9b270e",
-      "commit_full": "e9b270eb9439d60802fcd1e5c7c005641fc49b3f",
-      "subject": "web: ship the SBS library's bitmaps beside the wasm, not inside it (#263)"
+      "ts": "2026-11-17T00:25:35Z",
+      "commit": "b2c7b0e",
+      "commit_full": "b2c7b0e83d296be3b1e6eb7a68f1962dca123aa3",
+      "subject": "Function node parity (#258)"
     },
-    "last_commit_ts": "2026-11-16T21:12:24Z",
+    "last_commit_ts": "2026-11-17T02:59:00Z",
     "repo_since": "2026-11-01T19:58:46Z",
     "window": [
-      3,
       5,
       54,
       8,
@@ -114,7 +121,8 @@
       1,
       7,
       4,
-      5
+      5,
+      1
     ],
     "days": [
       {
@@ -404,6 +412,17 @@
             "subject": "#789: read SVG resources through craft-svg's bounded tree and draw (#259)"
           }
         ]
+      },
+      {
+        "d": "2026-11-17",
+        "code": 1,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "b2c7b0e",
+            "subject": "Function node parity (#258)"
+          }
+        ]
       }
     ]
   },
@@ -563,8 +582,15 @@
       "commit": "d6c7f21",
       "commit_full": "d6c7f2126dd6374e58474560516aa52ed039ea0c",
       "message": "Standard Functions Library Parity (#171)"
+    },
+    {
+      "ts": "2026-11-17T00:25:35Z",
+      "kind": "content",
+      "commit": "b2c7b0e",
+      "commit_full": "b2c7b0e83d296be3b1e6eb7a68f1962dca123aa3",
+      "message": "Function node parity (#258)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-16T21:21:52+00:00"
+  "updated_at": "2026-11-17T04:03:16+00:00"
 }

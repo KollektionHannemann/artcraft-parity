@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "36c1f37",
-  "latest_commit_date": "2026-11-16T23:08:07+07:00",
-  "latest_message": "Packaging Tools: Check Fold Lines finds the panels and hinges of a blank and lists what is wrong (#8096)",
+  "latest_commit": "973a33e",
+  "latest_commit_date": "2026-11-17T09:49:57+07:00",
+  "latest_message": "Shapes: draw the circle through three points (#7949)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -348,6 +348,10 @@
       },
       {
         "date": "2026-11-15",
+        "text": "Circle through three points: three Shift-clicks with the Ellipse tool, or shape.circleThroughPoints with three points or three selected anchor points, draw the circle whose edge passes through them, with the current paint, in one undo step; after two points the tool previews the circle through the pointer, and two points that are the same or three on one line are refused with a message. Scores and estimates unchanged."
+      },
+      {
+        "date": "2026-11-15",
         "text": "Tangent Circle joins the Path Precision Tools add-on (Object › Plug-ins › Path Precision Tools): the circles that touch two selected paths or compound paths at a set radius, or three of them (up to eight for three circles), touching each outline without crossing it; circles, rotated ellipses and other paths alike. A dialog that previews every circle or one picked by number, the current paint, one undo step (addon.pathtools.tangentCircle). A VectorCraft addition: headline numbers unchanged."
       },
       {
@@ -493,10 +497,6 @@
       {
         "date": "2026-10-22",
         "text": "The Effect Gallery shipped (#2883): Effect › Effect Gallery… browses the Artistic, Brush Strokes, Distort, Sketch, Stylize and Texture filters, edits each filter's settings, builds an ordered stack (add, reorder, hide, remove) with a live canvas preview, and OK applies it as separate appearance effects in one undo step. Filter thumbnails and a preview area inside the dialog remain (Filter Gallery overview). Raster effects 82% → 85% (estimated); headline numbers unchanged."
-      },
-      {
-        "date": "2026-10-22",
-        "text": "Colour emoji fonts with bitmap glyphs draw and export: sbix (Apple Color Emoji, macOS's emoji font) and CBDT (bitmap Noto Color Emoji) glyphs show as their pictures on the canvas, whatever the type's fill, scale and turn with the type, and export to PDF (in the font's Type 3 glyphs, or as images), SVG (images when type is outlined; live text leaves emoji to the viewer), EPS and legacy .ai (images); Create Outlines turns them into embedded images. Fonts with bitmaps but no outlines, such as Noto Color Emoji, are now found among the installed fonts. COLR and OpenType SVG fonts remain; headline numbers unchanged."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 241,
+    "revisions_since": 242,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,42 +536,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 242,
+    "revisions": 243,
     "revisions_7d": 20,
     "last_revision": {
-      "ts": "2026-11-16T16:08:07Z",
+      "ts": "2026-11-17T02:49:57Z",
       "kind": "content",
-      "commit": "36c1f37",
-      "commit_full": "36c1f37ac6731a53fdea6feecd750f4654f0ff90",
-      "message": "Packaging Tools: Check Fold Lines finds the panels and hinges of a blank and lists what is wrong (#8096)"
+      "commit": "973a33e",
+      "commit_full": "973a33e1fb450e282aea3435c43dc4e049478788",
+      "message": "Shapes: draw the circle through three points (#7949)"
     },
     "last_update": {
-      "ts": "2026-11-16T16:08:07Z",
+      "ts": "2026-11-17T02:49:57Z",
       "kind": "content",
-      "commit": "36c1f37",
-      "commit_full": "36c1f37ac6731a53fdea6feecd750f4654f0ff90",
-      "message": "Packaging Tools: Check Fold Lines finds the panels and hinges of a blank and lists what is wrong (#8096)"
+      "commit": "973a33e",
+      "commit_full": "973a33e1fb450e282aea3435c43dc4e049478788",
+      "message": "Shapes: draw the circle through three points (#7949)"
     },
     "self_reported": "2026-11-15"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 38.0,
+    "score": 36.4,
     "active_days_7d": 7,
-    "changes_7d": 1297,
-    "changes_14d": 2104,
-    "housekeeping_7d": 47,
+    "changes_7d": 1268,
+    "changes_14d": 2039,
+    "housekeeping_7d": 45,
     "last_code_change": {
-      "ts": "2026-11-16T20:55:40Z",
-      "commit": "9c61c0b",
-      "commit_full": "9c61c0b66e39082b1c0c448cbf59fd323736ff9c",
-      "subject": "refactor(eps): delegate PostScript write primitives to craft-ps (#8103)"
+      "ts": "2026-11-17T03:34:09Z",
+      "commit": "09fbf82",
+      "commit_full": "09fbf82e0e2fe82a5a69d2fdc78f46a141c613f1",
+      "subject": "cad: use shared HP-GL byte lexer, preserve interpreter and writer (#8282)"
     },
-    "last_commit_ts": "2026-11-16T20:55:40Z",
+    "last_commit_ts": "2026-11-17T03:34:09Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
-      117,
       187,
       121,
       46,
@@ -584,7 +583,8 @@
       240,
       283,
       214,
-      102
+      103,
+      51
     ],
     "days": [
       {
@@ -1469,9 +1469,13 @@
       },
       {
         "d": "2026-11-16",
-        "code": 102,
+        "code": 103,
         "other": 1,
         "samples": [
+          {
+            "commit": "9a01d26",
+            "subject": "refactor: share TIFF and EPS PackBits encoding (#8152)"
+          },
           {
             "commit": "9c61c0b",
             "subject": "refactor(eps): delegate PostScript write primitives to craft-ps (#8103)"
@@ -1479,10 +1483,25 @@
           {
             "commit": "5fd8cf2",
             "subject": "i18n: SVG filter refusals are translated, and side-by-side menu items differ (#7378)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-17",
+        "code": 51,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "09fbf82",
+            "subject": "cad: use shared HP-GL byte lexer, preserve interpreter and writer (#8282)"
           },
           {
-            "commit": "014caef",
-            "subject": "Task bar: the Recolor check stops at the first color (#8176)"
+            "commit": "23ba5c8",
+            "subject": "SVG: use the shared standard Base64 encoder (#8280)"
+          },
+          {
+            "commit": "973a33e",
+            "subject": "Shapes: draw the circle through three points (#7949)"
           }
         ]
       }
@@ -8057,7 +8076,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "973a33e",
+      "commit_full": "973a33e1fb450e282aea3435c43dc4e049478788",
+      "commit_date": "2026-11-17T09:49:57+07:00",
+      "ts": "2026-11-17T02:49:57Z",
+      "message": "Shapes: draw the circle through three points (#7949)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-16T21:21:13+00:00"
+  "updated_at": "2026-11-17T04:02:16+00:00"
 }

@@ -477,7 +477,7 @@
   },
   "roadmap": {
     "revisions": 242,
-    "revisions_7d": 19,
+    "revisions_7d": 5,
     "last_revision": {
       "ts": "2026-11-16T10:51:05Z",
       "kind": "content",
@@ -496,22 +496,21 @@
   },
   "milestone": null,
   "activity": {
-    "level": "buzzing",
-    "score": 20.8,
+    "level": "active",
+    "score": 19.1,
     "active_days_7d": 7,
-    "changes_7d": 155,
-    "changes_14d": 492,
+    "changes_7d": 97,
+    "changes_14d": 470,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-11-16T13:54:16Z",
-      "commit": "412e696",
-      "commit_full": "412e6963b56c62d6cc6f29cb4cb10d521dc825a4",
-      "subject": "refactor(content): re-export craft_pdf::cos::content (#7529)"
+      "ts": "2026-11-17T02:59:18Z",
+      "commit": "9892160",
+      "commit_full": "9892160ed693cd9d7ff51e0f5089ec04bee389d3",
+      "subject": "fix(platform): confine staging names; private temp dirs for tests and macOS signing (#5923)"
     },
-    "last_commit_ts": "2026-11-16T16:20:43Z",
+    "last_commit_ts": "2026-11-17T02:59:18Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
-      26,
       23,
       36,
       9,
@@ -524,7 +523,8 @@
       14,
       10,
       12,
-      7
+      7,
+      4
     ],
     "days": [
       {
@@ -1423,6 +1423,25 @@
           {
             "commit": "9d061a7",
             "subject": "Ctrl+M opens the Comments panel (#3741) (#3762)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-17",
+        "code": 4,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "9892160",
+            "subject": "fix(platform): confine staging names; private temp dirs for tests and macOS signing (#5923)"
+          },
+          {
+            "commit": "f8197e2",
+            "subject": "fix(fonts): a CMap's codespace ranges are at most four bytes and listed once (#6075)"
+          },
+          {
+            "commit": "0bb5fcc",
+            "subject": "fix(fonts): the licence policy reads name-table records one at a time within a total allowance (#7044)"
           }
         ]
       }
@@ -7203,5 +7222,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-16T21:21:26+00:00"
+  "updated_at": "2026-11-17T04:02:37+00:00"
 }
