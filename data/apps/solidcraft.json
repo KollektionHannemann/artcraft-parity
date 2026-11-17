@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 38.0,
+    "score": 38.8,
     "active_days_7d": 7,
-    "changes_7d": 1268,
-    "changes_14d": 2124,
-    "housekeeping_7d": 52,
+    "changes_7d": 1338,
+    "changes_14d": 2194,
+    "housekeeping_7d": 54,
     "last_code_change": {
-      "ts": "2026-11-17T13:01:55Z",
-      "commit": "780dc81",
-      "commit_full": "780dc81361973a61e69c59e996dd3217e307e862",
-      "subject": "Features and History: selecting an offset construction plane highlights it in the view, like the origin planes (#17007)"
+      "ts": "2026-11-17T21:25:13Z",
+      "commit": "bf685d1",
+      "commit_full": "bf685d1b31c6852e9b2a737051d7d85c819a86aa",
+      "subject": "STEP import: a thread's crest face whose seam ends beside a joint of the thread's edge is no longer left out (#18665)"
     },
-    "last_commit_ts": "2026-11-17T13:01:55Z",
+    "last_commit_ts": "2026-11-17T21:25:13Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       158,
@@ -93,7 +93,7 @@
       198,
       156,
       281,
-      90
+      160
     ],
     "days": [
       {
@@ -877,26 +877,60 @@
       },
       {
         "d": "2026-11-17",
-        "code": 90,
-        "other": 1,
+        "code": 160,
+        "other": 3,
         "samples": [
           {
-            "commit": "780dc81",
-            "subject": "Features and History: selecting an offset construction plane highlights it in the view, like the origin planes (#17007)"
+            "commit": "bf685d1",
+            "subject": "STEP import: a thread's crest face whose seam ends beside a joint of the thread's edge is no longer left out (#18665)"
           },
           {
-            "commit": "757ad32",
-            "subject": "Web viewport: select multiple items with Apple Pencil taps (#15756)"
+            "commit": "e90de20",
+            "subject": "Offset Face: a flat face with a small hole far from the origin moves, instead of being refused for an uncertified reach (#18286) (#18484)"
           },
           {
-            "commit": "8b3e286",
-            "subject": "Loft: regression test for arches offset to 97 and 193 points, which ran foot to crown and spoiled a cut (#15701) (#17945)"
+            "commit": "a39b74e",
+            "subject": "solidcore: retire G5 blend-corner flags (mitre concave corners, ring-fillet removal) (#18479)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.44.1",
+      "name": "SolidCraft v0.44.1",
+      "ts": "2026-11-17T19:23:15Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.44.1",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "patch"
+    },
+    {
+      "tag": "v0.44.0",
+      "name": "SolidCraft v0.44.0",
+      "ts": "2026-11-17T17:36:37Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.44.0",
+      "changes": 359,
+      "new_contributors": 16,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.44.0-nightly.20261117.140.1",
       "name": "SolidCraft v0.44.0-nightly.20261117.140.1 (nightly)",
@@ -1057,40 +1091,6 @@
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.40.0-nightly.20261110.117.1",
       "changes": 424,
       "new_contributors": 33,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": true,
-      "source": "release",
-      "kind": null
-    },
-    {
-      "tag": "v0.40.0-rc.3",
-      "name": "SolidCraft v0.40.0-rc.3",
-      "ts": "2026-11-07T22:46:21Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.40.0-rc.3",
-      "changes": null,
-      "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": true,
-      "source": "release",
-      "kind": null
-    },
-    {
-      "tag": "v0.40.0-rc.2",
-      "name": "SolidCraft v0.40.0-rc.2",
-      "ts": "2026-11-03T22:11:37Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.40.0-rc.2",
-      "changes": null,
-      "new_contributors": null,
       "platforms": [
         "macOS",
         "Windows",
@@ -2484,5 +2484,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-17T13:42:18+00:00"
+  "updated_at": "2026-11-17T21:57:56+00:00"
 }

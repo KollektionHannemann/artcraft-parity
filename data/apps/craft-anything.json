@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "db8b977",
-  "latest_commit_date": "2026-11-17T17:05:37+07:00",
-  "latest_message": "Run Vineflower and JADX on the Java folder set for Ghidra (R5.7) (#2023)",
+  "latest_commit": "e3af36f",
+  "latest_commit_date": "2026-11-18T01:14:24+07:00",
+  "latest_message": "Finishes #2037 for the last four page tools: bundle analysis, page watch, WebMCP tool discovery and the screenshot. They now answer a page's own dialogs the sam",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 730,
-    "revisions_7d": 256,
+    "revisions": 734,
+    "revisions_7d": 260,
     "last_revision": {
-      "ts": "2026-11-17T10:05:37Z",
+      "ts": "2026-11-17T18:14:24Z",
       "kind": "content",
-      "commit": "db8b977",
-      "commit_full": "db8b9777e26a1dc79c10238931fbcda77b2c9a02",
-      "message": "Run Vineflower and JADX on the Java folder set for Ghidra (R5.7) (#2023)"
+      "commit": "e3af36f",
+      "commit_full": "e3af36f2f355284c81f5a387852e3171d5ec1ccc",
+      "message": "Finishes #2037 for the last four page tools: bundle analysis, page watch, WebMCP tool discovery and the screenshot. They now answer a page's own dialogs the sam"
     },
     "last_update": {
-      "ts": "2026-11-17T10:05:37Z",
+      "ts": "2026-11-17T18:14:24Z",
       "kind": "content",
-      "commit": "db8b977",
-      "commit_full": "db8b9777e26a1dc79c10238931fbcda77b2c9a02",
-      "message": "Run Vineflower and JADX on the Java folder set for Ghidra (R5.7) (#2023)"
+      "commit": "e3af36f",
+      "commit_full": "e3af36f2f355284c81f5a387852e3171d5ec1ccc",
+      "message": "Finishes #2037 for the last four page tools: bundle analysis, page watch, WebMCP tool discovery and the screenshot. They now answer a page's own dialogs the sam"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 27.3,
+    "score": 27.6,
     "active_days_7d": 7,
-    "changes_7d": 297,
-    "changes_14d": 750,
+    "changes_7d": 308,
+    "changes_14d": 761,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-17T13:13:48Z",
-      "commit": "5979f9b",
-      "commit_full": "5979f9b13f16dcf1df3c7ae7f8e7735f452866f2",
-      "subject": "Use shared Source Map v3 parser and lookup core (#2027)"
+      "ts": "2026-11-17T21:21:57Z",
+      "commit": "dcd5187",
+      "commit_full": "dcd5187cd58c3fdd72f64b692e94754c3dc689c8",
+      "subject": "Use shared PCAP and per-frame protocol inspection (#2031)"
     },
-    "last_commit_ts": "2026-11-17T13:13:48Z",
+    "last_commit_ts": "2026-11-17T21:21:57Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       49,
@@ -93,7 +93,7 @@
       33,
       33,
       33,
-      43
+      54
     ],
     "days": [
       {
@@ -413,20 +413,20 @@
       },
       {
         "d": "2026-11-17",
-        "code": 43,
+        "code": 54,
         "other": 2,
         "samples": [
           {
-            "commit": "5979f9b",
-            "subject": "Use shared Source Map v3 parser and lookup core (#2027)"
+            "commit": "dcd5187",
+            "subject": "Use shared PCAP and per-frame protocol inspection (#2031)"
           },
           {
-            "commit": "0b8238f",
-            "subject": "Use shared PE headers and bounded Rich header reader (#2025)"
+            "commit": "13845b5",
+            "subject": "Use shared lenient ZIP inspection and bounded seekable reads (#2020)"
           },
           {
-            "commit": "e5c9c94",
-            "subject": "Use shared Mach-O universal and thread-state primitives (#2024)"
+            "commit": "4e99363",
+            "subject": "Use shared WebAssembly inspection and validation reports (#2029)"
           }
         ]
       }
@@ -5663,8 +5663,36 @@
       "commit": "db8b977",
       "commit_full": "db8b9777e26a1dc79c10238931fbcda77b2c9a02",
       "message": "Run Vineflower and JADX on the Java folder set for Ghidra (R5.7) (#2023)"
+    },
+    {
+      "ts": "2026-11-17T16:03:51Z",
+      "kind": "content",
+      "commit": "5af9ec5",
+      "commit_full": "5af9ec5aec68793c5dd1ab767e79ec427f026255",
+      "message": "Follow-up to #1965. build_file_edit read the whole file into memory before editing, so an oversized generated file could freeze or kill the app. It now uses the"
+    },
+    {
+      "ts": "2026-11-17T16:51:58Z",
+      "kind": "content",
+      "commit": "a31e995",
+      "commit_full": "a31e995858f4312e0f1d59a007112da191ef2d26",
+      "message": "Follow-up to #2011, which answered a page's own dialogs only for the website session. The tools that connect to a page on their own (page show, walkthrough, cov"
+    },
+    {
+      "ts": "2026-11-17T17:46:16Z",
+      "kind": "content",
+      "commit": "5420a81",
+      "commit_full": "5420a81632291de6c08b916b61208566497573ca",
+      "message": "A look at one game's folder or archive could finish after the person had picked another, and its list, profile or error then showed under the new pick. A finish"
+    },
+    {
+      "ts": "2026-11-17T18:14:24Z",
+      "kind": "content",
+      "commit": "e3af36f",
+      "commit_full": "e3af36f2f355284c81f5a387852e3171d5ec1ccc",
+      "message": "Finishes #2037 for the last four page tools: bundle analysis, page watch, WebMCP tool discovery and the screenshot. They now answer a page's own dialogs the sam"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-17T13:41:57+00:00"
+  "updated_at": "2026-11-17T21:57:38+00:00"
 }

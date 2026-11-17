@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "1a56d04",
-  "latest_commit_date": "2026-11-17T07:24:29-05:00",
-  "latest_message": "Dependencies: take craft-libs main at 453b0da782 (#6886)",
+  "latest_commit": "22a73d9",
+  "latest_commit_date": "2026-11-17T21:31:05Z",
+  "latest_message": "#778: progress log: file formats, codecs and protocols come from craft-libs (#6962)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
-    "last_updated": "2026-11-16",
+    "last_updated": "2026-11-17",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -330,7 +330,23 @@
     "progress": [
       {
         "date": "2026-11-17",
+        "text": "File formats, codecs and protocols now come from the shared libraries (storytold/craft-libs#778): legacy code pages (craft-codepage, #6785), plain-text encoding detection (craft-mime, #6950), the ZIP entry-count guard (craft-zip, #6948), Read Aloud's Speech Dispatcher wire format (craft-ssip, #6951), picture probes for clipboard DIBs, JPEG memory, PNG and WebP (craft-image-codecs, #6949, #6955) and the MCP stdio server (craft-mcp-server, #6956), all with craft-libs pinned at main 93dac78c (#6954, #6960). Opening documents and pictures behaves as before, except that large non-interleaved JPEGs are refused sooner (a 4:4:4 picture from about 60 Mpx, was 67 Mpx), invalid PNGs are refused more strictly, a lossless WebP's transparency is now seen, and MCP clients get tool errors for unknown or mistyped arguments and a 1,000-message batch cap (docs/mcp.md). The old code stays as test-only references the shared code is checked against."
+      },
+      {
+        "date": "2026-11-17",
         "text": "DOCX charts keep each series' fill, line, markers, smooth lines, data labels and number format, and each axis's title, bounds, number format, gridlines, labels and line, through an open and a save; a vertical axis title is drawn turned. Change Chart Type between a pie or doughnut chart and another type gives the value axis the new type's gridlines and axis line unless it was changed. Picture frame shapes open as rectangles, and a gutter set at the top (w:gutterAtTop) is kept on save; layout does not move the gutter to the top. Readiness unchanged."
+      },
+      {
+        "date": "2026-11-17",
+        "text": "trivial · Progress log: file formats, codecs and protocols come from craft-libs (#778)"
+      },
+      {
+        "date": "2026-11-15",
+        "text": "Get the Missing Fonts. A document opened from a file that is missing fonts their publisher gives away (Microsoft's Aptos family, the default in recent Word documents; Cascadia Code and Mono) brings up a box naming each font, the font drawn instead, the publisher's download page and how to install the download, with Don't show this again. font.missing reports the same page, so agents get it without the box. WordCraft links to the page only; it downloads and bundles nothing."
+      },
+      {
+        "date": "2026-11-15",
+        "text": "trivial · Progress log: Get the Missing Fonts (download pages for missing fonts their publisher gives away)"
       },
       {
         "date": "2026-11-14",
@@ -471,22 +487,6 @@
       {
         "date": "2026-11-05",
         "text": "ODT: a watermark added, changed or removed, and Different Odd & Even Pages turned on or off, in a file read from ODT are saved."
-      },
-      {
-        "date": "2026-11-05",
-        "text": "ODT font declarations are kept (gap 19): replacing them made LibreOffice pick other substitutes for fonts not installed, reflowing a document from 83 pages to 70 on a save with no edits."
-      },
-      {
-        "date": "2026-11-05",
-        "text": "ODT pictures offered in several formats show and survive a save (gap 19): LibreOffice's letter templates lost theirs."
-      },
-      {
-        "date": "2026-11-05",
-        "text": "Linux: a WordCraft started by an AppImage app no longer takes that app's file for its own (#5653). The AppImage runtime's APPIMAGE, APPDIR, ARGV0 and OWD pass to whatever the app starts, so an installed WordCraft opened through xdg-open saw another program's APPIMAGE, and its self-update replaced that program's file. The app now starts over without those variables unless its executable is under APPDIR, so the update goes through the package or plain file it really is. Should starting over fail, the self-update is off in that window and Help › Check for Updates says why. Readiness estimates unchanged."
-      },
-      {
-        "date": "2026-11-05",
-        "text": "A Word template (.dotx, .dotm, .dot) opened from the file manager, the command line or the Finder starts a new, untitled document based on it, as Word's default verb for a template does (#3433). It opened the template itself, so Save (and AutoSave) wrote over it. The new document is attached to the template and Save asks where to write; a protected template asks for its password and still starts a new document. File › Open and a file dropped on the window still open a template itself, to edit it."
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 604,
+    "revisions_since": 607,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 608,
-    "revisions_7d": 17,
+    "revisions": 611,
+    "revisions_7d": 20,
     "last_revision": {
-      "ts": "2026-11-17T12:24:29Z",
+      "ts": "2026-11-17T21:31:05Z",
       "kind": "content",
-      "commit": "1a56d04",
-      "commit_full": "1a56d041defe28f0d35de501ba7e40268a549d26",
-      "message": "Dependencies: take craft-libs main at 453b0da782 (#6886)"
+      "commit": "22a73d9",
+      "commit_full": "22a73d9f2d10de6ee52780ab4a6019b864d9c598",
+      "message": "#778: progress log: file formats, codecs and protocols come from craft-libs (#6962)"
     },
     "last_update": {
-      "ts": "2026-11-17T12:24:29Z",
+      "ts": "2026-11-17T21:31:05Z",
       "kind": "content",
-      "commit": "1a56d04",
-      "commit_full": "1a56d041defe28f0d35de501ba7e40268a549d26",
-      "message": "Dependencies: take craft-libs main at 453b0da782 (#6886)"
+      "commit": "22a73d9",
+      "commit_full": "22a73d9f2d10de6ee52780ab4a6019b864d9c598",
+      "message": "#778: progress log: file formats, codecs and protocols come from craft-libs (#6962)"
     },
-    "self_reported": "2026-11-16"
+    "self_reported": "2026-11-17"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.9,
+    "score": 21.3,
     "active_days_7d": 7,
-    "changes_7d": 118,
-    "changes_14d": 324,
-    "housekeeping_7d": 17,
+    "changes_7d": 133,
+    "changes_14d": 339,
+    "housekeeping_7d": 18,
     "last_code_change": {
-      "ts": "2026-11-17T12:24:29Z",
-      "commit": "1a56d04",
-      "commit_full": "1a56d041defe28f0d35de501ba7e40268a549d26",
-      "subject": "Dependencies: take craft-libs main at 453b0da782 (#6886)"
+      "ts": "2026-11-17T21:19:16Z",
+      "commit": "dfd51a3",
+      "commit_full": "dfd51a3cdc073b6dad10e7685cc7101aa9299ccb",
+      "subject": "#778: land the picture-probe and MCP cutovers (#6955, #6956) on main (#6960)"
     },
-    "last_commit_ts": "2026-11-17T12:24:29Z",
+    "last_commit_ts": "2026-11-17T21:31:05Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       32,
@@ -568,7 +568,7 @@
       8,
       5,
       27,
-      44
+      59
     ],
     "days": [
       {
@@ -1314,20 +1314,20 @@
       },
       {
         "d": "2026-11-17",
-        "code": 44,
-        "other": 6,
+        "code": 59,
+        "other": 7,
         "samples": [
           {
-            "commit": "1a56d04",
-            "subject": "Dependencies: take craft-libs main at 453b0da782 (#6886)"
+            "commit": "dfd51a3",
+            "subject": "#778: land the picture-probe and MCP cutovers (#6955, #6956) on main (#6960)"
           },
           {
-            "commit": "880cda9",
-            "subject": "M14: clarify finite positive CLI scale errors (#6691)"
+            "commit": "c39b0e5",
+            "subject": "doc: cut legacy encoding tables over to craft-codepage (#6785)"
           },
           {
-            "commit": "24885e8",
-            "subject": "Recovery: removing a record's folder waits for files Windows is still deleting (#6666)"
+            "commit": "d2bfcd4",
+            "subject": "#778: speech: use craft-ssip for the SSIP wire helpers (#6951)"
           }
         ]
       }
@@ -15542,7 +15542,76 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "65212d6",
+      "commit_full": "65212d68567ea59af6f790f9b3237720b39a741c",
+      "commit_date": "2026-11-17T15:59:23+01:00",
+      "ts": "2026-11-17T14:59:23Z",
+      "message": "Shapes: lines move by their body and resize by their ends (#4393)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-16",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "8331f2e",
+      "commit_full": "8331f2e68d5cdad32c73915b00337074099be781",
+      "commit_date": "2026-11-17T21:05:13+01:00",
+      "ts": "2026-11-17T20:05:13Z",
+      "message": "Fonts: tell where a missing font can be downloaded (Get the Missing Fonts) (#6826)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-16",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "22a73d9",
+      "commit_full": "22a73d9f2d10de6ee52780ab4a6019b864d9c598",
+      "commit_date": "2026-11-17T21:31:05Z",
+      "ts": "2026-11-17T21:31:05Z",
+      "message": "#778: progress log: file formats, codecs and protocols come from craft-libs (#6962)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-17",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-17T13:41:34+00:00"
+  "updated_at": "2026-11-17T21:57:18+00:00"
 }

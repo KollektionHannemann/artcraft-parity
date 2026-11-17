@@ -378,18 +378,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.0,
+    "score": 21.1,
     "active_days_7d": 7,
-    "changes_7d": 162,
-    "changes_14d": 270,
+    "changes_7d": 163,
+    "changes_14d": 271,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-17T13:33:14Z",
-      "commit": "4c38f78",
-      "commit_full": "4c38f78307e21a07021333c8a109e6fc49d66c3b",
-      "subject": "Radial Blur: Amount takes After Effects' range 0..1000 (#3817)"
+      "ts": "2026-11-17T16:23:35Z",
+      "commit": "cd9ee1e",
+      "commit_full": "cd9ee1e46a87d2a0951f038e62306058ceaaf621",
+      "subject": "Drop Shadow: Softness takes After Effects' range, and keeps its blur past the padding budget (#3822)"
     },
-    "last_commit_ts": "2026-11-17T13:33:14Z",
+    "last_commit_ts": "2026-11-17T16:23:35Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       4,
@@ -405,7 +405,7 @@
       24,
       4,
       28,
-      16
+      17
     ],
     "days": [
       {
@@ -1231,9 +1231,13 @@
       },
       {
         "d": "2026-11-17",
-        "code": 16,
+        "code": 17,
         "other": 0,
         "samples": [
+          {
+            "commit": "cd9ee1e",
+            "subject": "Drop Shadow: Softness takes After Effects' range, and keeps its blur past the padding budget (#3822)"
+          },
           {
             "commit": "4c38f78",
             "subject": "Radial Blur: Amount takes After Effects' range 0..1000 (#3817)"
@@ -1241,10 +1245,6 @@
           {
             "commit": "0bd848c",
             "subject": "fix(effects): parse_cube rejects a hostile LUT_3D_SIZE before cubing it (#3153)"
-          },
-          {
-            "commit": "e679859",
-            "subject": "Gaussian Blur: Blurriness takes After Effects' range 0..30000 (#3460) (#3814)"
           }
         ]
       }
@@ -1850,5 +1850,5 @@
       "kind": "editorial"
     }
   ],
-  "updated_at": "2026-11-17T13:41:21+00:00"
+  "updated_at": "2026-11-17T21:57:07+00:00"
 }

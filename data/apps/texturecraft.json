@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/texturecraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/texturecraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "067ed03",
-  "latest_commit_date": "2026-11-17T00:23:04-05:00",
-  "latest_message": "Anchor points in masks, generator micro detail, effect rename (#395)",
+  "latest_commit": "1bdca09",
+  "latest_commit_date": "2026-11-17T11:19:04-05:00",
+  "latest_message": "Import a folder, files or zip of PBR textures as one fill layer (#263)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -253,7 +253,7 @@
     "value_since": "2026-11-17T01:08:16Z",
     "releases_since": 0,
     "releases_since_capped": false,
-    "revisions_since": 1,
+    "revisions_since": 2,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -261,39 +261,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 2,
-    "revisions_7d": 1,
+    "revisions": 3,
+    "revisions_7d": 2,
     "last_revision": {
-      "ts": "2026-11-17T05:23:04Z",
+      "ts": "2026-11-17T16:19:04Z",
       "kind": "content",
-      "commit": "067ed03",
-      "commit_full": "067ed039eb7bd38c3c3a71cdc53f0dd8822576f1",
-      "message": "Anchor points in masks, generator micro detail, effect rename (#395)"
+      "commit": "1bdca09",
+      "commit_full": "1bdca09fc0bbc9bb1db4d8c71e01152c07dedff0",
+      "message": "Import a folder, files or zip of PBR textures as one fill layer (#263)"
     },
     "last_update": {
-      "ts": "2026-11-17T05:23:04Z",
+      "ts": "2026-11-17T16:19:04Z",
       "kind": "content",
-      "commit": "067ed03",
-      "commit_full": "067ed039eb7bd38c3c3a71cdc53f0dd8822576f1",
-      "message": "Anchor points in masks, generator micro detail, effect rename (#395)"
+      "commit": "1bdca09",
+      "commit_full": "1bdca09fc0bbc9bb1db4d8c71e01152c07dedff0",
+      "message": "Import a folder, files or zip of PBR textures as one fill layer (#263)"
     },
     "self_reported": "2026-11-16"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.9,
+    "score": 17.6,
     "active_days_7d": 7,
-    "changes_7d": 63,
-    "changes_14d": 108,
+    "changes_7d": 70,
+    "changes_14d": 115,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-17T12:19:04Z",
-      "commit": "9c1b9cb",
-      "commit_full": "9c1b9cbc7b1e5541cffa03b80a8fa6bd1366a54d",
-      "subject": "Bent normal maps bake in tangent space, so materials and imported maps read them correctly (#542)"
+      "ts": "2026-11-17T21:06:03Z",
+      "commit": "97f6b81",
+      "commit_full": "97f6b819846b40b1f7f5272858f643ca285068b9",
+      "subject": "Brush presets: save your own named brushes (#259)"
     },
-    "last_commit_ts": "2026-11-17T12:19:04Z",
+    "last_commit_ts": "2026-11-17T21:06:03Z",
     "repo_since": "2026-10-14T18:33:13Z",
     "window": [
       4,
@@ -309,7 +309,7 @@
       4,
       11,
       10,
-      11
+      18
     ],
     "days": [
       {
@@ -694,20 +694,20 @@
       },
       {
         "d": "2026-11-17",
-        "code": 11,
+        "code": 18,
         "other": 2,
         "samples": [
           {
-            "commit": "9c1b9cb",
-            "subject": "Bent normal maps bake in tangent space, so materials and imported maps read them correctly (#542)"
+            "commit": "97f6b81",
+            "subject": "Brush presets: save your own named brushes (#259)"
           },
           {
-            "commit": "2cf9947",
-            "subject": "Curvature and edge wear stay even on rounded surfaces at every bake size (#537)"
+            "commit": "8347da6",
+            "subject": "chore(usdz): pin aligned ZIP writer to merged revision (#556)"
           },
           {
-            "commit": "41b18e5",
-            "subject": "Undo snapshots share the tile table of images they don't change (#225)"
+            "commit": "3f06367",
+            "subject": "Rebuild mips only over the uploaded region; skip display kinds a set can't show (#226)"
           }
         ]
       }
@@ -909,7 +909,27 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "1bdca09",
+      "commit_full": "1bdca09fc0bbc9bb1db4d8c71e01152c07dedff0",
+      "commit_date": "2026-11-17T11:19:04-05:00",
+      "ts": "2026-11-17T16:19:04Z",
+      "message": "Import a folder, files or zip of PBR textures as one fill layer (#263)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-16",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": null,
+      "full_label": "Full scoped target",
+      "target": "reference app 12.2.0",
+      "mainstream_pct": 60.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-17T13:41:52+00:00"
+  "updated_at": "2026-11-17T21:57:33+00:00"
 }

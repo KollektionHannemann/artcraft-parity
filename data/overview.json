@@ -52,34 +52,34 @@
       "id": "solidcraft",
       "name": "SolidCraft",
       "type": "release",
+      "ts": "2026-11-17T19:23:15Z",
+      "tag": "v0.44.1",
+      "kind": "patch",
+      "changes": null,
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.44.1",
+      "prerelease": false
+    },
+    {
+      "id": "solidcraft",
+      "name": "SolidCraft",
+      "type": "release",
+      "ts": "2026-11-17T17:36:37Z",
+      "tag": "v0.44.0",
+      "kind": "minor",
+      "changes": 359,
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.44.0",
+      "prerelease": false
+    },
+    {
+      "id": "solidcraft",
+      "name": "SolidCraft",
+      "type": "release",
       "ts": "2026-11-17T05:46:58Z",
       "tag": "v0.44.0-nightly.20261117.140.1",
       "kind": "minor",
       "changes": 259,
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.44.0-nightly.20261117.140.1",
       "prerelease": true
-    },
-    {
-      "id": "solidcraft",
-      "name": "SolidCraft",
-      "type": "release",
-      "ts": "2026-11-16T05:34:34Z",
-      "tag": "v0.43.0-nightly.20261116.139.1",
-      "kind": "patch",
-      "changes": 25,
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.43.0-nightly.20261116.139.1",
-      "prerelease": true
-    },
-    {
-      "id": "solidcraft",
-      "name": "SolidCraft",
-      "type": "release",
-      "ts": "2026-11-16T03:20:18Z",
-      "tag": "v0.43.0",
-      "kind": "minor",
-      "changes": 267,
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.43.0",
-      "prerelease": false
     },
     {
       "id": "mailcraft",
@@ -487,6 +487,17 @@
   ],
   "release_waves": [
     {
+      "day": "2026-11-17",
+      "apps": 1,
+      "changes": 359,
+      "largest": {
+        "id": "solidcraft",
+        "name": "SolidCraft",
+        "tag": "v0.44.0",
+        "changes": 359
+      }
+    },
+    {
       "day": "2026-11-16",
       "apps": 1,
       "changes": 267,
@@ -620,18 +631,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 37.0,
+        "score": 37.6,
         "active_days_7d": 7,
-        "changes_7d": 1295,
-        "changes_14d": 2066,
+        "changes_7d": 1331,
+        "changes_14d": 2102,
         "housekeeping_7d": 45,
         "last_code_change": {
-          "ts": "2026-11-17T12:51:37Z",
-          "commit": "0f8040e",
-          "commit_full": "0f8040ef59b88d33dd97563dbb87e8efedf046ff",
-          "subject": "Legacy .ai: image samples are written as hex through a digit table (#8202)"
+          "ts": "2026-11-17T20:23:55Z",
+          "commit": "ee60c51",
+          "commit_full": "ee60c51fd978838559f923fb92c6d018fc907c55",
+          "subject": "Fix #8316: preserve CMYK PSD images when placed or relinked (#8323)"
         },
-        "last_commit_ts": "2026-11-17T12:51:37Z",
+        "last_commit_ts": "2026-11-17T20:23:55Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           187,
@@ -647,7 +658,7 @@
           283,
           214,
           103,
-          78
+          114
         ]
       },
       "release": {
@@ -844,7 +855,7 @@
         "value_since": "2026-10-10T18:11:53Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 604,
+        "revisions_since": 607,
         "hours_since": null,
         "areas_since": {
           "up": 2,
@@ -869,39 +880,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 608,
-        "revisions_7d": 17,
+        "revisions": 611,
+        "revisions_7d": 20,
         "last_revision": {
-          "ts": "2026-11-17T12:24:29Z",
+          "ts": "2026-11-17T21:31:05Z",
           "kind": "content",
-          "commit": "1a56d04",
-          "commit_full": "1a56d041defe28f0d35de501ba7e40268a549d26",
-          "message": "Dependencies: take craft-libs main at 453b0da782 (#6886)"
+          "commit": "22a73d9",
+          "commit_full": "22a73d9f2d10de6ee52780ab4a6019b864d9c598",
+          "message": "#778: progress log: file formats, codecs and protocols come from craft-libs (#6962)"
         },
         "last_update": {
-          "ts": "2026-11-17T12:24:29Z",
+          "ts": "2026-11-17T21:31:05Z",
           "kind": "content",
-          "commit": "1a56d04",
-          "commit_full": "1a56d041defe28f0d35de501ba7e40268a549d26",
-          "message": "Dependencies: take craft-libs main at 453b0da782 (#6886)"
+          "commit": "22a73d9",
+          "commit_full": "22a73d9f2d10de6ee52780ab4a6019b864d9c598",
+          "message": "#778: progress log: file formats, codecs and protocols come from craft-libs (#6962)"
         },
-        "self_reported": "2026-11-16"
+        "self_reported": "2026-11-17"
       },
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 20.9,
+        "score": 21.3,
         "active_days_7d": 7,
-        "changes_7d": 118,
-        "changes_14d": 324,
-        "housekeeping_7d": 17,
+        "changes_7d": 133,
+        "changes_14d": 339,
+        "housekeeping_7d": 18,
         "last_code_change": {
-          "ts": "2026-11-17T12:24:29Z",
-          "commit": "1a56d04",
-          "commit_full": "1a56d041defe28f0d35de501ba7e40268a549d26",
-          "subject": "Dependencies: take craft-libs main at 453b0da782 (#6886)"
+          "ts": "2026-11-17T21:19:16Z",
+          "commit": "dfd51a3",
+          "commit_full": "dfd51a3cdc073b6dad10e7685cc7101aa9299ccb",
+          "subject": "#778: land the picture-probe and MCP cutovers (#6955, #6956) on main (#6960)"
         },
-        "last_commit_ts": "2026-11-17T12:24:29Z",
+        "last_commit_ts": "2026-11-17T21:31:05Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
           32,
@@ -917,7 +928,7 @@
           8,
           5,
           27,
-          44
+          59
         ]
       },
       "release": {
@@ -943,11 +954,11 @@
           "v": 60.0
         },
         {
-          "t": "2026-11-17T12:24:29Z",
+          "t": "2026-11-17T21:31:05Z",
           "v": 60.0
         }
       ],
-      "history_len": 608
+      "history_len": 611
     },
     {
       "repo_url": "https://github.com/storytold/texturecraft",
@@ -978,7 +989,7 @@
         "value_since": "2026-11-17T01:08:16Z",
         "releases_since": 0,
         "releases_since_capped": false,
-        "revisions_since": 1,
+        "revisions_since": 2,
         "hours_since": null,
         "areas_since": null,
         "changes": 0,
@@ -986,39 +997,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 2,
-        "revisions_7d": 1,
+        "revisions": 3,
+        "revisions_7d": 2,
         "last_revision": {
-          "ts": "2026-11-17T05:23:04Z",
+          "ts": "2026-11-17T16:19:04Z",
           "kind": "content",
-          "commit": "067ed03",
-          "commit_full": "067ed039eb7bd38c3c3a71cdc53f0dd8822576f1",
-          "message": "Anchor points in masks, generator micro detail, effect rename (#395)"
+          "commit": "1bdca09",
+          "commit_full": "1bdca09fc0bbc9bb1db4d8c71e01152c07dedff0",
+          "message": "Import a folder, files or zip of PBR textures as one fill layer (#263)"
         },
         "last_update": {
-          "ts": "2026-11-17T05:23:04Z",
+          "ts": "2026-11-17T16:19:04Z",
           "kind": "content",
-          "commit": "067ed03",
-          "commit_full": "067ed039eb7bd38c3c3a71cdc53f0dd8822576f1",
-          "message": "Anchor points in masks, generator micro detail, effect rename (#395)"
+          "commit": "1bdca09",
+          "commit_full": "1bdca09fc0bbc9bb1db4d8c71e01152c07dedff0",
+          "message": "Import a folder, files or zip of PBR textures as one fill layer (#263)"
         },
         "self_reported": "2026-11-16"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 16.9,
+        "score": 17.6,
         "active_days_7d": 7,
-        "changes_7d": 63,
-        "changes_14d": 108,
+        "changes_7d": 70,
+        "changes_14d": 115,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-17T12:19:04Z",
-          "commit": "9c1b9cb",
-          "commit_full": "9c1b9cbc7b1e5541cffa03b80a8fa6bd1366a54d",
-          "subject": "Bent normal maps bake in tangent space, so materials and imported maps read them correctly (#542)"
+          "ts": "2026-11-17T21:06:03Z",
+          "commit": "97f6b81",
+          "commit_full": "97f6b819846b40b1f7f5272858f643ca285068b9",
+          "subject": "Brush presets: save your own named brushes (#259)"
         },
-        "last_commit_ts": "2026-11-17T12:19:04Z",
+        "last_commit_ts": "2026-11-17T21:06:03Z",
         "repo_since": "2026-10-14T18:33:13Z",
         "window": [
           4,
@@ -1034,7 +1045,7 @@
           4,
           11,
           10,
-          11
+          18
         ]
       },
       "release": {
@@ -1060,11 +1071,11 @@
           "v": 60.0
         },
         {
-          "t": "2026-11-17T05:23:04Z",
+          "t": "2026-11-17T16:19:04Z",
           "v": 60.0
         }
       ],
-      "history_len": 2
+      "history_len": 3
     },
     {
       "repo_url": "https://github.com/storytold/filmcraft",
@@ -1258,18 +1269,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.3,
+        "score": 15.5,
         "active_days_7d": 7,
-        "changes_7d": 76,
-        "changes_14d": 129,
+        "changes_7d": 77,
+        "changes_14d": 130,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-17T13:13:56Z",
-          "commit": "1629e4d",
-          "commit_full": "1629e4d9533f1864b0fddd8ea976723eff03f5f6",
-          "subject": "Tables: cap the grid and merge area before edits allocate or walk them (#1742)"
+          "ts": "2026-11-17T17:11:29Z",
+          "commit": "e0f7fc8",
+          "commit_full": "e0f7fc8c38b7990a23e553f0d0b0be2845a8c818",
+          "subject": "Use shared DrawingML table style XML writer (#2201)"
         },
-        "last_commit_ts": "2026-11-17T13:13:56Z",
+        "last_commit_ts": "2026-11-17T17:11:29Z",
         "repo_since": "2026-10-06T02:13:02Z",
         "window": [
           27,
@@ -1285,7 +1296,7 @@
           2,
           9,
           11,
-          5
+          6
         ]
       },
       "release": {
@@ -1814,18 +1825,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.4,
-        "active_days_7d": 6,
-        "changes_7d": 119,
-        "changes_14d": 179,
+        "score": 15.4,
+        "active_days_7d": 7,
+        "changes_7d": 120,
+        "changes_14d": 180,
         "housekeeping_7d": 8,
         "last_code_change": {
-          "ts": "2026-11-16T16:00:05Z",
-          "commit": "47ef1ec",
-          "commit_full": "47ef1ec411d53e98a31c576d80a1d0e20ef5eb04",
-          "subject": "Pages panel: a right-to-left spread label reads left page first (#2601) (#2844)"
+          "ts": "2026-11-17T13:55:25Z",
+          "commit": "3930cff",
+          "commit_full": "3930cff80da27a4bdbc4b6ab27a13609bfcf6a93",
+          "subject": "Create Outlines: vertical text keeps its upright glyphs and its columns (#2904)"
         },
-        "last_commit_ts": "2026-11-16T16:00:05Z",
+        "last_commit_ts": "2026-11-17T13:55:25Z",
         "repo_since": "2026-10-01T13:00:02Z",
         "window": [
           26,
@@ -1841,7 +1852,7 @@
           12,
           22,
           3,
-          0
+          1
         ]
       },
       "release": {
@@ -1934,18 +1945,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 26.0,
+        "score": 26.7,
         "active_days_7d": 7,
-        "changes_7d": 427,
-        "changes_14d": 832,
-        "housekeeping_7d": 16,
+        "changes_7d": 430,
+        "changes_14d": 835,
+        "housekeeping_7d": 18,
         "last_code_change": {
-          "ts": "2026-11-17T02:59:41Z",
-          "commit": "2163bd4",
-          "commit_full": "2163bd45afc0c963749e84e55d1a078665b7cb31",
-          "subject": "security(doc): resolve slice visibility in one sweep, cap resolved slice count (#10959)"
+          "ts": "2026-11-17T15:49:07Z",
+          "commit": "01a5b5a",
+          "commit_full": "01a5b5a389acc93f081e5ce6a8d0580d6438774a",
+          "subject": "Test speed: no font scan in test processes, CMYK profile once, raw-develop at one depth (#15377) (#15381)"
         },
-        "last_commit_ts": "2026-11-17T04:28:19Z",
+        "last_commit_ts": "2026-11-17T17:05:56Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           27,
@@ -1961,7 +1972,7 @@
           30,
           77,
           17,
-          4
+          7
         ]
       },
       "release": {
@@ -2054,18 +2065,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 21.0,
+        "score": 21.1,
         "active_days_7d": 7,
-        "changes_7d": 162,
-        "changes_14d": 270,
+        "changes_7d": 163,
+        "changes_14d": 271,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-17T13:33:14Z",
-          "commit": "4c38f78",
-          "commit_full": "4c38f78307e21a07021333c8a109e6fc49d66c3b",
-          "subject": "Radial Blur: Amount takes After Effects' range 0..1000 (#3817)"
+          "ts": "2026-11-17T16:23:35Z",
+          "commit": "cd9ee1e",
+          "commit_full": "cd9ee1e46a87d2a0951f038e62306058ceaaf621",
+          "subject": "Drop Shadow: Softness takes After Effects' range, and keeps its blur past the padding budget (#3822)"
         },
-        "last_commit_ts": "2026-11-17T13:33:14Z",
+        "last_commit_ts": "2026-11-17T16:23:35Z",
         "repo_since": "2026-10-01T16:48:39Z",
         "window": [
           4,
@@ -2081,7 +2092,7 @@
           24,
           4,
           28,
-          16
+          17
         ]
       },
       "release": {
@@ -2385,7 +2396,7 @@
         "value_since": "2026-10-12T18:17:00Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 253,
+        "revisions_since": 255,
         "hours_since": null,
         "areas_since": null,
         "changes": 0,
@@ -2393,39 +2404,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 257,
-        "revisions_7d": 16,
+        "revisions": 259,
+        "revisions_7d": 18,
         "last_revision": {
-          "ts": "2026-11-17T09:52:02Z",
-          "kind": "estimates",
-          "commit": "aa2d4a8",
-          "commit_full": "aa2d4a8ee8f2e84aab2e5dfb54116f711168a4c2",
-          "message": "i18n: Czech as a preview language (#1545)"
+          "ts": "2026-11-17T18:29:08Z",
+          "kind": "content",
+          "commit": "56cb371",
+          "commit_full": "56cb371c968a85369ed9cca07f763613db146f11",
+          "message": "#603: Hebrew and Arabic paragraphs stand at the right in the reading pane (#903)"
         },
         "last_update": {
-          "ts": "2026-11-17T09:52:02Z",
-          "kind": "estimates",
-          "commit": "aa2d4a8",
-          "commit_full": "aa2d4a8ee8f2e84aab2e5dfb54116f711168a4c2",
-          "message": "i18n: Czech as a preview language (#1545)"
+          "ts": "2026-11-17T18:29:08Z",
+          "kind": "content",
+          "commit": "56cb371",
+          "commit_full": "56cb371c968a85369ed9cca07f763613db146f11",
+          "message": "#603: Hebrew and Arabic paragraphs stand at the right in the reading pane (#903)"
         },
         "self_reported": "2026-11-14"
       },
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 23.1,
+        "score": 23.9,
         "active_days_7d": 7,
-        "changes_7d": 177,
-        "changes_14d": 274,
-        "housekeeping_7d": 14,
+        "changes_7d": 192,
+        "changes_14d": 289,
+        "housekeeping_7d": 15,
         "last_code_change": {
-          "ts": "2026-11-17T09:52:02Z",
-          "commit": "aa2d4a8",
-          "commit_full": "aa2d4a8ee8f2e84aab2e5dfb54116f711168a4c2",
-          "subject": "i18n: Czech as a preview language (#1545)"
+          "ts": "2026-11-17T20:44:00Z",
+          "commit": "87b4d75",
+          "commit_full": "87b4d7522c52378290ac7f0f2b71f08c0f22a2c3",
+          "subject": "i18n: add more german translations (#744)"
         },
-        "last_commit_ts": "2026-11-17T09:52:02Z",
+        "last_commit_ts": "2026-11-17T20:44:00Z",
         "repo_since": "2026-10-12T18:17:00Z",
         "window": [
           17,
@@ -2441,7 +2452,7 @@
           41,
           23,
           20,
-          17
+          32
         ]
       },
       "release": {
@@ -2467,11 +2478,11 @@
           "v": 25.0
         },
         {
-          "t": "2026-11-17T09:52:02Z",
+          "t": "2026-11-17T18:29:08Z",
           "v": 25.0
         }
       ],
-      "history_len": 257
+      "history_len": 259
     },
     {
       "repo_url": "https://github.com/storytold/materialcraft",
@@ -2531,18 +2542,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 12.1,
+        "score": 12.4,
         "active_days_7d": 7,
-        "changes_7d": 26,
-        "changes_14d": 116,
+        "changes_7d": 27,
+        "changes_14d": 117,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-17T06:02:14Z",
-          "commit": "60cb2a1",
-          "commit_full": "60cb2a13a481a490904a90f61d8583d354d83d54",
-          "subject": "Pin texture dependency group to merged craft-libs revision (#267)"
+          "ts": "2026-11-17T16:31:26Z",
+          "commit": "04ec741",
+          "commit_full": "04ec741aa15566e005eca6bf1d22c64fe0f84ad5",
+          "subject": "221 fixing 2d view settings pairity (#245)"
         },
-        "last_commit_ts": "2026-11-17T06:02:14Z",
+        "last_commit_ts": "2026-11-17T16:31:26Z",
         "repo_since": "2026-11-01T19:58:46Z",
         "window": [
           5,
@@ -2558,7 +2569,7 @@
           7,
           4,
           5,
-          3
+          4
         ]
       },
       "release": {
@@ -2618,39 +2629,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 730,
-        "revisions_7d": 256,
+        "revisions": 734,
+        "revisions_7d": 260,
         "last_revision": {
-          "ts": "2026-11-17T10:05:37Z",
+          "ts": "2026-11-17T18:14:24Z",
           "kind": "content",
-          "commit": "db8b977",
-          "commit_full": "db8b9777e26a1dc79c10238931fbcda77b2c9a02",
-          "message": "Run Vineflower and JADX on the Java folder set for Ghidra (R5.7) (#2023)"
+          "commit": "e3af36f",
+          "commit_full": "e3af36f2f355284c81f5a387852e3171d5ec1ccc",
+          "message": "Finishes #2037 for the last four page tools: bundle analysis, page watch, WebMCP tool discovery and the screenshot. They now answer a page's own dialogs the sam"
         },
         "last_update": {
-          "ts": "2026-11-17T10:05:37Z",
+          "ts": "2026-11-17T18:14:24Z",
           "kind": "content",
-          "commit": "db8b977",
-          "commit_full": "db8b9777e26a1dc79c10238931fbcda77b2c9a02",
-          "message": "Run Vineflower and JADX on the Java folder set for Ghidra (R5.7) (#2023)"
+          "commit": "e3af36f",
+          "commit_full": "e3af36f2f355284c81f5a387852e3171d5ec1ccc",
+          "message": "Finishes #2037 for the last four page tools: bundle analysis, page watch, WebMCP tool discovery and the screenshot. They now answer a page's own dialogs the sam"
         },
         "self_reported": null
       },
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 27.3,
+        "score": 27.6,
         "active_days_7d": 7,
-        "changes_7d": 297,
-        "changes_14d": 750,
+        "changes_7d": 308,
+        "changes_14d": 761,
         "housekeeping_7d": 12,
         "last_code_change": {
-          "ts": "2026-11-17T13:13:48Z",
-          "commit": "5979f9b",
-          "commit_full": "5979f9b13f16dcf1df3c7ae7f8e7735f452866f2",
-          "subject": "Use shared Source Map v3 parser and lookup core (#2027)"
+          "ts": "2026-11-17T21:21:57Z",
+          "commit": "dcd5187",
+          "commit_full": "dcd5187cd58c3fdd72f64b692e94754c3dc689c8",
+          "subject": "Use shared PCAP and per-frame protocol inspection (#2031)"
         },
-        "last_commit_ts": "2026-11-17T13:13:48Z",
+        "last_commit_ts": "2026-11-17T21:21:57Z",
         "repo_since": "2026-10-31T14:52:14Z",
         "window": [
           49,
@@ -2666,7 +2677,7 @@
           33,
           33,
           33,
-          43
+          54
         ]
       },
       "release": {
@@ -2747,18 +2758,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 38.0,
+        "score": 38.8,
         "active_days_7d": 7,
-        "changes_7d": 1268,
-        "changes_14d": 2124,
-        "housekeeping_7d": 52,
+        "changes_7d": 1338,
+        "changes_14d": 2194,
+        "housekeeping_7d": 54,
         "last_code_change": {
-          "ts": "2026-11-17T13:01:55Z",
-          "commit": "780dc81",
-          "commit_full": "780dc81361973a61e69c59e996dd3217e307e862",
-          "subject": "Features and History: selecting an offset construction plane highlights it in the view, like the origin planes (#17007)"
+          "ts": "2026-11-17T21:25:13Z",
+          "commit": "bf685d1",
+          "commit_full": "bf685d1b31c6852e9b2a737051d7d85c819a86aa",
+          "subject": "STEP import: a thread's crest face whose seam ends beside a joint of the thread's edge is no longer left out (#18665)"
         },
-        "last_commit_ts": "2026-11-17T13:01:55Z",
+        "last_commit_ts": "2026-11-17T21:25:13Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           158,
@@ -2774,16 +2785,16 @@
           198,
           156,
           281,
-          90
+          160
         ]
       },
       "release": {
-        "tag": "v0.43.0",
-        "name": "SolidCraft v0.43.0",
-        "ts": "2026-11-16T03:20:18Z",
-        "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.43.0",
-        "changes": 267,
-        "new_contributors": 8,
+        "tag": "v0.44.1",
+        "name": "SolidCraft v0.44.1",
+        "ts": "2026-11-17T19:23:15Z",
+        "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.44.1",
+        "changes": null,
+        "new_contributors": null,
         "platforms": [
           "macOS",
           "Windows",
@@ -2792,7 +2803,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
+        "kind": "patch"
       },
       "series": [],
       "history_len": 0
@@ -2843,18 +2854,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 16.4,
+        "score": 16.7,
         "active_days_7d": 7,
-        "changes_7d": 81,
-        "changes_14d": 143,
+        "changes_7d": 83,
+        "changes_14d": 145,
         "housekeeping_7d": 8,
         "last_code_change": {
-          "ts": "2026-11-17T13:13:42Z",
-          "commit": "cd5bdf9",
-          "commit_full": "cd5bdf95f79c1ac91e08922a4268dc9aa1fd3634",
-          "subject": "fix(engine): size-check library image import; exclusive unguessable temp files (#125)"
+          "ts": "2026-11-17T21:45:59Z",
+          "commit": "e1b09fd",
+          "commit_full": "e1b09fd0f68eb1c74787a9e823c4854eda375acf",
+          "subject": "feat(bones): mixed armatures, symbol instances and shapes in one armature (M7) (#397)"
         },
-        "last_commit_ts": "2026-11-17T13:13:42Z",
+        "last_commit_ts": "2026-11-17T21:45:59Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
           0,
@@ -2870,7 +2881,7 @@
           14,
           7,
           3,
-          8
+          10
         ]
       },
       "release": {
@@ -2938,18 +2949,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.2,
-        "active_days_7d": 4,
-        "changes_7d": 57,
-        "changes_14d": 438,
-        "housekeeping_7d": 5,
+        "score": 16.6,
+        "active_days_7d": 5,
+        "changes_7d": 61,
+        "changes_14d": 442,
+        "housekeeping_7d": 10,
         "last_code_change": {
-          "ts": "2026-11-16T15:22:17Z",
-          "commit": "0bcc1f8",
-          "commit_full": "0bcc1f8d681609233d2f6f0d1f4e359e994079e0",
-          "subject": "Unsent comments: a final CI fix comment waits on a person, the item bar and repost read the right rows, stored patches stay until their retries are used"
+          "ts": "2026-11-17T17:03:32Z",
+          "commit": "d8e45b5",
+          "commit_full": "d8e45b5d480da7ab43600180c951761496b7b43d",
+          "subject": "The runner reconciles one repo a day off its tick, giving way to the minute sync"
         },
-        "last_commit_ts": "2026-11-17T03:07:36Z",
+        "last_commit_ts": "2026-11-17T17:03:32Z",
         "repo_since": "2026-11-02T14:36:17Z",
         "window": [
           143,
@@ -2965,7 +2976,7 @@
           21,
           7,
           13,
-          0
+          4
         ]
       },
       "release": null,
@@ -2980,5 +2991,5 @@
     "missing": [],
     "candidates": []
   },
-  "generated_at": "2026-11-17T13:42:31+00:00"
+  "generated_at": "2026-11-17T21:58:07+00:00"
 }
