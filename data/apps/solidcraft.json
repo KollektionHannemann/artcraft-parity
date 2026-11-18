@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 36.3,
+    "score": 38.0,
     "active_days_7d": 7,
-    "changes_7d": 1236,
-    "changes_14d": 2083,
+    "changes_7d": 1298,
+    "changes_14d": 2145,
     "housekeeping_7d": 53,
     "last_code_change": {
-      "ts": "2026-11-18T02:48:25Z",
-      "commit": "27cbf2e",
-      "commit_full": "27cbf2e47d58437228270cd5f8698cef90e23f13",
-      "subject": "Save: explain when a requested model cache was omitted (#18815) (#18842)"
+      "ts": "2026-11-18T11:36:58Z",
+      "commit": "bd66a6e",
+      "commit_full": "bd66a6e9fbd335e9dfedc905383bdee954d61b89",
+      "subject": "Assistant: add UnoRouter as an OpenAI-compatible provider preset (#17068) (#18993)"
     },
-    "last_commit_ts": "2026-11-18T02:48:25Z",
+    "last_commit_ts": "2026-11-18T11:36:58Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       109,
@@ -93,7 +93,7 @@
       156,
       281,
       181,
-      26
+      88
     ],
     "days": [
       {
@@ -896,26 +896,77 @@
       },
       {
         "d": "2026-11-18",
-        "code": 26,
+        "code": 88,
         "other": 1,
         "samples": [
           {
-            "commit": "27cbf2e",
-            "subject": "Save: explain when a requested model cache was omitted (#18815) (#18842)"
+            "commit": "bd66a6e",
+            "subject": "Assistant: add UnoRouter as an OpenAI-compatible provider preset (#17068) (#18993)"
           },
           {
-            "commit": "82cbf27",
-            "subject": "Booleans: a wedge whose round reaches into a part's smaller rounds cuts and joins it instead of failing with 'already related' (#17118) (#17119)"
+            "commit": "cc5acc8",
+            "subject": "Rib: close against a face that curves across the rib's thickness (#18261) (#18752)"
           },
           {
-            "commit": "9398dbd",
-            "subject": "STEP import: rational spline faces whose trims end a few µm past their patch keep the part a solid (#15999) (#18620)"
+            "commit": "13fa755",
+            "subject": "Surface intersection: keep nearby touches distinct in smooth charts (#17755) (#18610)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.45.0-rc.2",
+      "name": "SolidCraft v0.45.0-rc.2",
+      "ts": "2026-11-18T11:59:19Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.45.0-rc.2",
+      "changes": 50,
+      "new_contributors": 1,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.45.0-rc.1",
+      "name": "SolidCraft v0.45.0-rc.1",
+      "ts": "2026-11-18T10:00:45Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.45.0-rc.1",
+      "changes": 265,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.45.0-nightly.20261118.144.1",
+      "name": "SolidCraft v0.45.0-nightly.20261118.144.1 (nightly)",
+      "ts": "2026-11-18T06:14:58Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.45.0-nightly.20261118.144.1",
+      "changes": 280,
+      "new_contributors": 3,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.44.1",
       "name": "SolidCraft v0.44.1",
@@ -1066,57 +1117,6 @@
         "Web"
       ],
       "prerelease": false,
-      "source": "release",
-      "kind": null
-    },
-    {
-      "tag": "v0.40.0",
-      "name": "SolidCraft v0.40.0",
-      "ts": "2026-11-11T20:04:50Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.40.0",
-      "changes": null,
-      "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": true,
-      "source": "release",
-      "kind": null
-    },
-    {
-      "tag": "v0.40.0-rc.4",
-      "name": "SolidCraft v0.40.0-rc.4",
-      "ts": "2026-11-11T01:44:57Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.40.0-rc.4",
-      "changes": null,
-      "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": true,
-      "source": "release",
-      "kind": null
-    },
-    {
-      "tag": "v0.40.0-nightly.20261110.117.1",
-      "name": "SolidCraft v0.40.0-nightly.20261110.117.1 (nightly)",
-      "ts": "2026-11-10T14:59:32Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.40.0-nightly.20261110.117.1",
-      "changes": 424,
-      "new_contributors": 33,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": true,
       "source": "release",
       "kind": null
     }
@@ -2517,5 +2517,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-18T03:16:46+00:00"
+  "updated_at": "2026-11-18T11:59:52+00:00"
 }

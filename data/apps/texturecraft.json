@@ -282,18 +282,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.3,
-    "active_days_7d": 6,
-    "changes_7d": 60,
-    "changes_14d": 111,
+    "score": 16.9,
+    "active_days_7d": 7,
+    "changes_7d": 65,
+    "changes_14d": 116,
     "housekeeping_7d": 4,
     "last_code_change": {
-      "ts": "2026-11-17T21:06:03Z",
-      "commit": "97f6b81",
-      "commit_full": "97f6b819846b40b1f7f5272858f643ca285068b9",
-      "subject": "Brush presets: save your own named brushes (#259)"
+      "ts": "2026-11-18T11:13:25Z",
+      "commit": "4651e7d",
+      "commit_full": "4651e7dee0fccdd3448edc94379573550a42e18d",
+      "subject": "Preserve separate OBJ parts with matching names for Submesh ID baking (#487)"
     },
-    "last_commit_ts": "2026-11-17T21:06:03Z",
+    "last_commit_ts": "2026-11-18T11:13:25Z",
     "repo_since": "2026-10-14T18:33:13Z",
     "window": [
       7,
@@ -309,7 +309,7 @@
       11,
       10,
       18,
-      0
+      5
     ],
     "days": [
       {
@@ -710,6 +710,25 @@
             "subject": "Rebuild mips only over the uploaded region; skip display kinds a set can't show (#226)"
           }
         ]
+      },
+      {
+        "d": "2026-11-18",
+        "code": 5,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "4651e7d",
+            "subject": "Preserve separate OBJ parts with matching names for Submesh ID baking (#487)"
+          },
+          {
+            "commit": "c77e179",
+            "subject": "Use shared strict glTF URI percent decoding (#643)"
+          },
+          {
+            "commit": "ac9e4ec",
+            "subject": "Generators: Tile Generator pattern, pattern resolution and the fill source picker (#550)"
+          }
+        ]
       }
     ]
   },
@@ -931,5 +950,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-18T03:16:20+00:00"
+  "updated_at": "2026-11-18T11:59:35+00:00"
 }

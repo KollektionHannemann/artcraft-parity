@@ -444,18 +444,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.7,
+    "score": 18.4,
     "active_days_7d": 7,
-    "changes_7d": 79,
-    "changes_14d": 166,
+    "changes_7d": 90,
+    "changes_14d": 177,
     "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-18T00:40:28Z",
-      "commit": "1b0f9f8",
-      "commit_full": "1b0f9f8e7b0584a4b65d0486100e71107527db57",
-      "subject": "Export: software MJPEG through shared JPEG encoder (#5006)"
+      "ts": "2026-11-18T09:49:31Z",
+      "commit": "176d072",
+      "commit_full": "176d072983a05fcbeca9d16355ba8bf2c6b6c26d",
+      "subject": "Read a hyphen as minus only at the start of a number"
     },
-    "last_commit_ts": "2026-11-18T00:40:28Z",
+    "last_commit_ts": "2026-11-18T09:49:31Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       11,
@@ -471,7 +471,7 @@
       9,
       35,
       4,
-      1
+      12
     ],
     "days": [
       {
@@ -1342,12 +1342,20 @@
       },
       {
         "d": "2026-11-18",
-        "code": 1,
+        "code": 12,
         "other": 0,
         "samples": [
           {
-            "commit": "1b0f9f8",
-            "subject": "Export: software MJPEG through shared JPEG encoder (#5006)"
+            "commit": "176d072",
+            "subject": "Read a hyphen as minus only at the start of a number"
+          },
+          {
+            "commit": "9ad3e41",
+            "subject": "fix(fcpxml): import and export adjust-conform (fit by default) (#2218)"
+          },
+          {
+            "commit": "427992f",
+            "subject": "export: parts of a job reuse the frame renderers of the previous part (#4741)"
           }
         ]
       }
@@ -1930,5 +1938,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-18T03:15:32+00:00"
+  "updated_at": "2026-11-18T11:59:06+00:00"
 }

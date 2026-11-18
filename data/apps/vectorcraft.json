@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "36195c5",
-  "latest_commit_date": "2026-11-18T10:12:41+07:00",
-  "latest_message": "Workspace: Tools dropped on the canvas's left edge docks there, and the setting follows (#8338)",
+  "latest_commit": "ff0f7dc",
+  "latest_commit_date": "2026-11-18T18:25:50+07:00",
+  "latest_message": "Path Precision Tools: Common Tangents draws the lines from a point to a closed path (#8506)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -339,12 +339,24 @@
     ],
     "progress": [
       {
+        "date": "2026-11-18",
+        "text": "Common Tangents also takes a point (a path of one anchor) and a convex closed path: the lines from the point that touch the path, and the line from the point to the path's center if asked; a point on the outline gets the one tangent there, and a point inside gets none, with a message (#7846). A VectorCraft addition: headline numbers unchanged."
+      },
+      {
         "date": "2026-11-17",
         "text": "The canvas's left edge docks a floating Tools panel whichever way Keep Tools Beside the Canvas is set: a drop there, right of panels docked on the left, turns the setting on, and a drop on the window's left edge turns it off (#7837). Headline numbers unchanged."
       },
       {
+        "date": "2026-11-17",
+        "text": "Circle tool (after the Ellipse tool in its group): two clicks or a drag draw the circle on that diameter, and a click followed by a drag from a second point to a third draws the circle through the three; Shift keeps the diameter at 45° steps, Alt rounds a two-point circle's diameter to the rulers' ticks at the current zoom, points snap to Smart Guides, and the tool shows the circle, its center, its radii and its diameter until the release, or \"Circle too large\" for points on one line or a circle past the canvas. shape.circleThroughPoints also takes two points or two selected anchor points as the ends of a diameter. One undo step per circle. A VectorCraft addition: headline numbers unchanged."
+      },
+      {
         "date": "2026-11-16",
         "text": "Check Fold Lines in the Packaging Tools add-on (Object › Plug-ins › Packaging Tools, and the Fold Lines panel's Check button): the fold lines of the selection or the document are split into blanks, panels and hinges (cut lines bound the material, and creases, partial cuts and perforations divide it into panels), and 15 kinds of issue are listed, errors and warnings, each naming its lines: cut lines that enclose nothing or end loose, gaps closed within a tolerance, a cut on top of a crease, duplicate lines, creases that end inside a panel, divide nothing, lie outside the blank or are not straight, gaps too narrow to map, fold lines in a hole, panels joined by no crease, and fold lines on a non-printing layer. The panel lists the issues in the interface language; clicking one selects its lines (addon.packaging.check). A VectorCraft addition: headline numbers unchanged."
+      },
+      {
+        "date": "2026-11-16",
+        "text": "Fold Preview in the Packaging Tools add-on (Object › Plug-ins › Packaging Tools, and the Fold Lines panel's Fold Preview button): a window that folds the document's blank into its 3D shape about its largest panel, or the panel double-clicked, with the printed art on the outside of each panel (fold lines and non-printing layers left out, unless Show Fold Lines is on) and the board's inside color on the back. Creases and perforations fold 90° away from the print and partial cuts 90° toward it; a Fold slider goes from flat to folded, and the view turns by dragging and the arrow keys, zooms, moves and takes a perspective and seven view presets. The status line says when a joint does not close or two panels pass through each other (addon.packaging.fold, ui.foldPreview). A VectorCraft addition: headline numbers unchanged."
       },
       {
         "date": "2026-11-15",
@@ -367,6 +379,10 @@
         "text": "With Smart Guides and Snap to Tangent on, a Line Segment drag pressed on one convex curved path and dragged near another lands on a common tangent of the two: both ends move to where the line touches the paths, each labeled \"tangent\" (#7845). A VectorCraft addition: headline numbers unchanged."
       },
       {
+        "date": "2026-11-15",
+        "text": "Smooth Bridge joins the Path Precision Tools add-on (Object › Plug-ins › Path Precision Tools): two selected circles become one closed outline joined by two concave arcs that touch both circles, so every anchor is smooth; the arcs' radius is a percentage of the smaller circle's radius (1 to 1000%, 100% by default), and Keep Originals adds the outline above the circles instead of replacing them. A dialog with Preview, one undo step (addon.pathtools.bridge). A VectorCraft addition: headline numbers unchanged."
+      },
+      {
         "date": "2026-11-14",
         "text": "Built-in symbol library Weather Icons: adds a sixth procedural symbol library (Window › Symbol Libraries, the Symbols panel's Symbol Libraries Menu) containing six original vector symbols (Sun, Moon, Cloud, Rain, Thunder, Snow) generated in code without default 9-slice guides (part of Gap 5). Headline numbers unchanged."
       },
@@ -377,6 +393,10 @@
       {
         "date": "2026-11-14",
         "text": "Nest Shapes in the Cutting Tools add-on (Object › Plug-ins › Cutting Tools): the selected objects move close together onto an artboard, a sheet of a set size or a roll of a set width, packed by their bounding boxes with a margin inside the edges and a spacing between them, optionally turning objects 90° to fit; objects that do not fit go in a column beside the sheet; a dialog with Preview, one undo step (addon.cutting.nest). A VectorCraft addition: headline numbers unchanged."
+      },
+      {
+        "date": "2026-11-14",
+        "text": "Unit Converter add-on (Object › Plug-ins › Unit Converter): a panel with one field per unit (pt, picas, in, mm, cm, px, ft & in, m, yd, ft, Q, Ha) where a length typed in any field updates the others as it is typed; From Selection reads the selection's width or height, Apply sets it as one undo step, and each field copies its value with or without the unit (addon.units.convert, addon.units.selectionSize, #5528). A VectorCraft addition: headline numbers unchanged."
       },
       {
         "date": "2026-11-14",
@@ -477,26 +497,6 @@
       {
         "date": "2026-10-30",
         "text": "Gradient panel presets: a Presets menu applies one of the built-in gradient libraries' presets (grouped by theme) or a saved one to the gradient behind the active proxy, keeping its placement, as one undo step; the panel menu saves the current gradient as a preset, kept with the preferences, and deletes saved ones (gradient.presets.list/apply/save/delete)."
-      },
-      {
-        "date": "2026-10-29",
-        "text": "Linux: the Flatpak on GNOME copies and pastes text with other apps through the compositor's core Wayland protocol (smithay-clipboard on the window's connection), where arboard has neither data-control nor X11. Scores and estimates unchanged."
-      },
-      {
-        "date": "2026-10-29",
-        "text": "Linux: a clipboard that can't be opened (the Flatpak on GNOME, where arboard has neither data-control nor X11) is retried after 1 s, doubling to a minute, and logged once, where the background Paste check used to reconnect and log a warning every 250 ms (267k warnings in 18 h). Scores and estimates unchanged."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "Pathfinder › Trap: the Pathfinder panel's Trap… and Effect › Pathfinder › Trap… add a thin overprinting strip of the lighter colour inside the darker one where two solid colours meet, so misregistered plates leave no gap (trapping), with Thickness, Height/Width, Tint Reduction, Traps with Process Color and Reverse Traps. Illustrator effects 49/50 (SVG Filters remains); Live vector effects hours 6–10 → 4–8; headline numbers unchanged."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "OpenType SVG colour fonts draw as vector art: each glyph's SVG document is read by the SVG importer, in the text's colours where it asks for them, and draws, exports and outlines as COLR glyphs do; all colour font formats are now drawn."
-      },
-      {
-        "date": "2026-10-23",
-        "text": "COLR colour fonts (v0 and v1, as in Noto Color Emoji's vector build, Segoe UI Emoji, Nabla) draw as vector art: their layers' colours, gradients, clips and blend modes on the canvas and in SVG, EPS, legacy .ai and PDF, and as editable paths with Create Outlines; glyphs using sweep gradients or compositing modes are drawn as images of the glyph."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 243,
+    "revisions_since": 248,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,39 +536,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 244,
-    "revisions_7d": 21,
+    "revisions": 249,
+    "revisions_7d": 26,
     "last_revision": {
-      "ts": "2026-11-18T03:12:41Z",
+      "ts": "2026-11-18T11:25:50Z",
       "kind": "content",
-      "commit": "36195c5",
-      "commit_full": "36195c57f93af9105ec1b6bb3d8faef09d3d5bfe",
-      "message": "Workspace: Tools dropped on the canvas's left edge docks there, and the setting follows (#8338)"
+      "commit": "ff0f7dc",
+      "commit_full": "ff0f7dcac56c266f9d51b0a8c15fd44d841115a0",
+      "message": "Path Precision Tools: Common Tangents draws the lines from a point to a closed path (#8506)"
     },
     "last_update": {
-      "ts": "2026-11-18T03:12:41Z",
+      "ts": "2026-11-18T11:25:50Z",
       "kind": "content",
-      "commit": "36195c5",
-      "commit_full": "36195c57f93af9105ec1b6bb3d8faef09d3d5bfe",
-      "message": "Workspace: Tools dropped on the canvas's left edge docks there, and the setting follows (#8338)"
+      "commit": "ff0f7dc",
+      "commit_full": "ff0f7dcac56c266f9d51b0a8c15fd44d841115a0",
+      "message": "Path Precision Tools: Common Tangents draws the lines from a point to a closed path (#8506)"
     },
     "self_reported": "2026-11-15"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 34.6,
+    "score": 37.7,
     "active_days_7d": 7,
-    "changes_7d": 1226,
-    "changes_14d": 1933,
-    "housekeeping_7d": 32,
+    "changes_7d": 1376,
+    "changes_14d": 2083,
+    "housekeeping_7d": 33,
     "last_code_change": {
-      "ts": "2026-11-18T03:15:07Z",
-      "commit": "dd3a188",
-      "commit_full": "dd3a1886a6e61b4e919400ceb95ef492e22f403c",
-      "subject": "Variables: Import Data Sets reads % columns of graph data files (#7764)"
+      "ts": "2026-11-18T11:41:39Z",
+      "commit": "8664338",
+      "commit_full": "866433867b70819a33007f732fd4da2fa0968410",
+      "subject": "Brushes: Add original Pressure Sensitive library (#8406)"
     },
-    "last_commit_ts": "2026-11-18T03:15:07Z",
+    "last_commit_ts": "2026-11-18T11:41:39Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       121,
@@ -584,7 +584,7 @@
       214,
       103,
       114,
-      18
+      168
     ],
     "days": [
       {
@@ -1507,20 +1507,20 @@
       },
       {
         "d": "2026-11-18",
-        "code": 18,
-        "other": 0,
+        "code": 168,
+        "other": 1,
         "samples": [
           {
-            "commit": "dd3a188",
-            "subject": "Variables: Import Data Sets reads % columns of graph data files (#7764)"
+            "commit": "8664338",
+            "subject": "Brushes: Add original Pressure Sensitive library (#8406)"
           },
           {
-            "commit": "2b91d93",
-            "subject": "MCP: confined native output refuses linked and data set image paths outside the read roots and leaves out an export folder outside them (#8118)"
+            "commit": "61d3e9e",
+            "subject": "Command Palette: the highlighted result points to where it lives (#8257)"
           },
           {
-            "commit": "1124cb3",
-            "subject": "Fix #8034: Other Library… brings a .ai library's pattern swatches with their patterns (#8081)"
+            "commit": "a97b205",
+            "subject": "Save for Web: double-clicking a color-table swatch shifts that color (#8524)"
           }
         ]
       }
@@ -8147,7 +8147,137 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "1380e9c",
+      "commit_full": "1380e9c480339aebfb3451864fbd27699f497997",
+      "commit_date": "2026-11-18T10:16:26+07:00",
+      "ts": "2026-11-18T03:16:26Z",
+      "message": "Unit Converter: one length in every unit, read from and applied to the selection (#7675)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
+    },
+    {
+      "commit": "bbf6165",
+      "commit_full": "bbf6165fc8ecf8ecf24b475b8cc07cc775d81802",
+      "commit_date": "2026-11-18T10:30:50+07:00",
+      "ts": "2026-11-18T03:30:50Z",
+      "message": "Packaging Tools: Fold Preview folds the blank in 3D with the printed art on its panels (#8206)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
+    },
+    {
+      "commit": "62d9937",
+      "commit_full": "62d9937c75c88e04e1cc554640ababc49b13e7c5",
+      "commit_date": "2026-11-18T13:09:51+07:00",
+      "ts": "2026-11-18T06:09:51Z",
+      "message": "Shapes: the Circle tool draws a circle through two or three points (#8448)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
+    },
+    {
+      "commit": "20d8217",
+      "commit_full": "20d82173126139954a87358402ee217c5fa4a0c9",
+      "commit_date": "2026-11-18T13:12:40+07:00",
+      "ts": "2026-11-18T06:12:40Z",
+      "message": "Path Precision Tools: Smooth Bridge joins two circles with concave arcs (#7950)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
+    },
+    {
+      "commit": "ff0f7dc",
+      "commit_full": "ff0f7dcac56c266f9d51b0a8c15fd44d841115a0",
+      "commit_date": "2026-11-18T18:25:50+07:00",
+      "ts": "2026-11-18T11:25:50Z",
+      "message": "Path Precision Tools: Common Tangents draws the lines from a point to a closed path (#8506)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-18T03:15:27+00:00"
+  "updated_at": "2026-11-18T11:59:02+00:00"
 }

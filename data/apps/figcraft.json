@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/figcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "44d61a5",
-  "latest_commit_date": "2026-11-17T19:40:24-05:00",
-  "latest_message": "M6: use the shared Android VectorDrawable XML writer (#2436)",
+  "latest_commit": "55413ff",
+  "latest_commit_date": "2026-11-18T17:10:17+07:00",
+  "latest_message": "M10: render Persian and Arabic in default web builds (#2073)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Figma Design (desktop app 126.10.7)",
-    "last_updated": "2026-11-17",
+    "last_updated": "2026-11-18",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -339,6 +339,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-07",
+        "text": "· M10, #1902: web builds with craft-fonts embed Noto Sans Arabic Regular by default, so Persian and Arabic text has a fallback without FIGCRAFTEMBEDSCRIPTS=Arab; required web builds reject catalogs without that face. Web faces are compressed losslessly at build time and restored once at runtime to keep the default catalog within the WASM size budget. A decode failure logs the unavailable face once; a compiler regression checks generated catalog initialization. Additional scripts remain opt-in. Exact Iran Sans appearance still needs the installed font through supported browsers' local font access. Numbers unchanged."
+      },
+      {
         "date": "2026-11-05",
         "text": "· M2, #1823: Suggest auto layout is its own command. layout.suggest used to run layout.add and made one row of everything. It now splits a frame's layers into rows or columns by the gaps between them, wraps each band of several layers in a hugging frame without fill and repeats inside it, so the design gets as many auto layout frames as it needs and keeps its placement where the gaps are even (the frame keeps its size). Uneven gaps, bands that start at different offsets across the flow (lined up at the smallest) and layers that overlap along both axes are reported as warnings, and instances and layers inside them are refused. layout.add is unchanged. Tests in layoutsuggesttests.rs. Numbers unchanged."
       },
@@ -493,10 +497,6 @@
       {
         "date": "2026-10-15",
         "text": "· Zoom previews (M8, #312): when renders from scratch are slow, a new zoom shows the whole view coarsely first, then refines it. Numbers unchanged."
-      },
-      {
-        "date": "2026-10-15",
-        "text": "· Web clipboard (M1, #375): copy and paste in the browser go through the system clipboard. Numbers unchanged."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-11T21:41:28Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 230,
+    "revisions_since": 232,
     "hours_since": {
       "from": [
         273,
@@ -560,39 +560,39 @@
     }
   },
   "roadmap": {
-    "revisions": 281,
-    "revisions_7d": 3,
+    "revisions": 283,
+    "revisions_7d": 5,
     "last_revision": {
-      "ts": "2026-11-18T00:40:24Z",
+      "ts": "2026-11-18T10:10:17Z",
       "kind": "content",
-      "commit": "44d61a5",
-      "commit_full": "44d61a5aef02cc1e6d07e73209198c555b3ae3a2",
-      "message": "M6: use the shared Android VectorDrawable XML writer (#2436)"
+      "commit": "55413ff",
+      "commit_full": "55413ffc89b51b9a921aea0cbd480a6cfdb269b9",
+      "message": "M10: render Persian and Arabic in default web builds (#2073)"
     },
     "last_update": {
-      "ts": "2026-11-18T00:40:24Z",
+      "ts": "2026-11-18T10:10:17Z",
       "kind": "content",
-      "commit": "44d61a5",
-      "commit_full": "44d61a5aef02cc1e6d07e73209198c555b3ae3a2",
-      "message": "M6: use the shared Android VectorDrawable XML writer (#2436)"
+      "commit": "55413ff",
+      "commit_full": "55413ffc89b51b9a921aea0cbd480a6cfdb269b9",
+      "message": "M10: render Persian and Arabic in default web builds (#2073)"
     },
-    "self_reported": "2026-11-17"
+    "self_reported": "2026-11-18"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.7,
+    "score": 17.3,
     "active_days_7d": 7,
-    "changes_7d": 132,
-    "changes_14d": 279,
+    "changes_7d": 142,
+    "changes_14d": 289,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-18T00:40:24Z",
-      "commit": "44d61a5",
-      "commit_full": "44d61a5aef02cc1e6d07e73209198c555b3ae3a2",
-      "subject": "M6: use the shared Android VectorDrawable XML writer (#2436)"
+      "ts": "2026-11-18T11:31:20Z",
+      "commit": "d494fad",
+      "commit_full": "d494fad166c2fe9b4a15a131122c0a34c37b4826",
+      "subject": "M2: Fill across a hugging axis takes the line, as Figma does"
     },
-    "last_commit_ts": "2026-11-18T00:40:24Z",
+    "last_commit_ts": "2026-11-18T11:31:20Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       8,
@@ -608,7 +608,7 @@
       5,
       3,
       20,
-      1
+      11
     ],
     "days": [
       {
@@ -1331,12 +1331,20 @@
       },
       {
         "d": "2026-11-18",
-        "code": 1,
+        "code": 11,
         "other": 0,
         "samples": [
           {
-            "commit": "44d61a5",
-            "subject": "M6: use the shared Android VectorDrawable XML writer (#2436)"
+            "commit": "d494fad",
+            "subject": "M2: Fill across a hugging axis takes the line, as Figma does"
+          },
+          {
+            "commit": "55413ff",
+            "subject": "M10: render Persian and Arabic in default web builds (#2073)"
+          },
+          {
+            "commit": "eb8b35d",
+            "subject": "M9: the browser build uses team libraries and plugin directories on a server (#1737)"
           }
         ]
       }
@@ -8284,7 +8292,53 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "eb8b35d",
+      "commit_full": "eb8b35d51c577b468ce43a8e8cc5f1270df2e215",
+      "commit_date": "2026-11-18T16:19:08+07:00",
+      "ts": "2026-11-18T09:19:08Z",
+      "message": "M9: the browser build uses team libraries and plugin directories on a server (#1737)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-18",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "55413ff",
+      "commit_full": "55413ffc89b51b9a921aea0cbd480a6cfdb269b9",
+      "commit_date": "2026-11-18T17:10:17+07:00",
+      "ts": "2026-11-18T10:10:17Z",
+      "message": "M10: render Persian and Arabic in default web builds (#2073)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-18",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-18T03:15:57+00:00"
+  "updated_at": "2026-11-18T11:59:22+00:00"
 }

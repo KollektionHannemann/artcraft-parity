@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/soundcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/soundcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "4898ff0",
-  "latest_commit_date": "2026-11-15T22:14:40+01:00",
-  "latest_message": "Add Brazilian Portuguese UI localization",
+  "latest_commit": "b5392da",
+  "latest_commit_date": "2026-11-18T17:11:17+07:00",
+  "latest_message": "Add automation points with Command-click (#1395)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
     "target": "Avid Pro Tools Ultimate 2026.4.1",
-    "last_updated": "2026-10-27",
+    "last_updated": "2026-11-08",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -260,12 +260,24 @@
       "Alpha blocker: audio interfaces: device and buffer-size choice, duplex stream, ASIO; record to disk (G-01, G-06). 35–55 h.",
       "Alpha blocker: MIDI devices: record from keyboards, play instruments live, output (G-02). 20–35 h.",
       "Alpha blocker: AAF/OMF import and export (G-03). 50–90 h.",
-      "macOS plugin entitlement (#153), then AU editors (G-05). 1 h for the entitlement (needed for the mix row), then 15–25 h.",
+      "macOS plugin entitlement (#153), then AU editors and embedded CLAP editors on macOS (G-05). 1 h for the entitlement (needed for the mix row), then 10–15 h.",
       "Land the open bug-fix PRs and clear the correctness backlog (G-04). 15–25 h.",
       "PR CI running cargo xtask ci on three OSes (G-14). 5–10 h.",
       "Fidelity harness against Pro Tools (G-07). 20–30 h."
     ],
     "progress": [
+      {
+        "date": "2026-11-08",
+        "text": "Command-click near an existing automation breakpoint keeps that point as the click target with every active tool, and existing fade and clip-gain controls retain their normal priority. Empty automation space shows a crosshair and an insertion hint while Command is held. The active tool's drag gestures stay unchanged. No readiness percentage change."
+      },
+      {
+        "date": "2026-11-05",
+        "text": "Command-click in an automation lane adds a point at the clicked time and value with the current editing tool (#1394), using the existing Pencil mapping. Command-click preserves the existing selection and also works on the fallback volume lanes of Master, Aux and VCA tracks. Plain clicks and clip contents stay unchanged, and one Undo removes the new point. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-27",
+        "text": "(plugin editors on Linux): VST3 editors and embedded CLAP editors open in a SoundCraft X11 host window on Linux and the BSDs (XWayland on Wayland desktops), resized on request and closed from its title bar; the host run loop (VST3 Linux::IRunLoop, CLAP timer-support and posix-fd-support) lets X11 editors read their display connection and repaint. Verified with Graillon 3 and Surge XT Effects (JUCE) in both formats (#527). No readiness percentage change."
+      },
       {
         "date": "2026-10-25",
         "text": "Alt+Shift+E (view.zoomtogglecancel) and an Alt-click on the Zoom Toggle button cancel Zoom Toggle and keep the current view: the zoom, the scroll and the track heights stay as they are, and the button is no longer lit. The next Zoom Toggle zooms in from that view and goes back to it. No readiness percentage change."
@@ -413,18 +425,6 @@
       {
         "date": "2026-10-12",
         "text": "(audio device settings): Setup › Playback Engine chooses the audio system, output and input device, sample rate and buffer size, kept per machine with the preferences; 16/32-bit integer devices are converted; ASIO is available behind the opt-in asio build feature (verified with an SSL 2+ at 128 samples). Channel routing, one duplex clock and latency compensation remain (G-01). No readiness percentage change."
-      },
-      {
-        "date": "2026-10-10",
-        "text": "(UI docking): Tracks and Groups, Clips, MIDI Editor, Memory Locations, and Undo History use movable panels. Edit and Mix retain separate arrangements; Clips and MIDI Editor belong to Edit. Transport, plug-in, and specialist utility windows retain their existing hosts. Panel moves and reset are available as UI commands, and saved UI preferences retain arrangements. Common toolbar and track record-enable buttons share interaction, accessible labels and keyboard focus through craft-ui, retaining blue tool selection and red record-arm states. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-10",
-        "text": "— Stage re-normalized to pre-alpha by the core-workflow gate (interface recording, MIDI recording and session interchange fail). Full re-measure against Pro Tools Ultimate 2026.4.1 and the progress docs"
-      },
-      {
-        "date": "2026-10-09",
-        "text": "— Light theme and live system appearance, clip-gain fader and nudge, missing-media"
       }
     ]
   },
@@ -433,7 +433,7 @@
     "value_since": "2026-10-10T18:08:49Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 24,
+    "revisions_since": 27,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -441,39 +441,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 25,
-    "revisions_7d": 2,
+    "revisions": 28,
+    "revisions_7d": 5,
     "last_revision": {
-      "ts": "2026-11-15T21:14:40Z",
+      "ts": "2026-11-18T10:11:17Z",
       "kind": "content",
-      "commit": "4898ff0",
-      "commit_full": "4898ff03eed9c2a44914d2cd2415c1ea9a5e9427",
-      "message": "Add Brazilian Portuguese UI localization"
+      "commit": "b5392da",
+      "commit_full": "b5392da2a2fbd513bfca7de74090dafde2ce7816",
+      "message": "Add automation points with Command-click (#1395)"
     },
     "last_update": {
-      "ts": "2026-11-15T21:14:40Z",
+      "ts": "2026-11-18T10:11:17Z",
       "kind": "content",
-      "commit": "4898ff0",
-      "commit_full": "4898ff03eed9c2a44914d2cd2415c1ea9a5e9427",
-      "message": "Add Brazilian Portuguese UI localization"
+      "commit": "b5392da",
+      "commit_full": "b5392da2a2fbd513bfca7de74090dafde2ce7816",
+      "message": "Add automation points with Command-click (#1395)"
     },
-    "self_reported": "2026-10-27"
+    "self_reported": "2026-11-08"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 8.6,
-    "active_days_7d": 6,
-    "changes_7d": 29,
-    "changes_14d": 71,
+    "score": 11.6,
+    "active_days_7d": 7,
+    "changes_7d": 36,
+    "changes_14d": 78,
     "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-17T08:19:04Z",
-      "commit": "b47a586",
-      "commit_full": "b47a58653c291f320179d20db3eafb40e70b88a7",
-      "subject": "chore(score): pin writers to merged shared revision (#1607)"
+      "ts": "2026-11-18T10:11:17Z",
+      "commit": "b5392da",
+      "commit_full": "b5392da2a2fbd513bfca7de74090dafde2ce7816",
+      "subject": "Add automation points with Command-click (#1395)"
     },
-    "last_commit_ts": "2026-11-17T08:19:04Z",
+    "last_commit_ts": "2026-11-18T10:11:17Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
       6,
@@ -489,7 +489,7 @@
       2,
       2,
       2,
-      0
+      7
     ],
     "days": [
       {
@@ -1156,6 +1156,25 @@
           {
             "commit": "9676d49",
             "subject": "refactor(score): use shared MusicXML and SVG writers with contributor tie fixes (#1598)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-18",
+        "code": 7,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "b5392da",
+            "subject": "Add automation points with Command-click (#1395)"
+          },
+          {
+            "commit": "d570045",
+            "subject": "Keep the crossfade when a clip of it is processed in place (#1379)"
+          },
+          {
+            "commit": "c27ccac",
+            "subject": "Mark the selection in the ruler with a split arrow and keep the edit cursor drawn while playing (#973)"
           }
         ]
       }
@@ -1943,7 +1962,76 @@
       "breadth_pct": 70.0,
       "full_prev": 40.0,
       "kind": "content"
+    },
+    {
+      "commit": "0c85e78",
+      "commit_full": "0c85e784d2140490b78c338de591c60e73cfa028",
+      "commit_date": "2026-11-18T16:36:01+07:00",
+      "ts": "2026-11-18T09:36:01Z",
+      "message": "Plugin editor windows on Linux (VST3 and embedded CLAP, X11) (#533)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-27",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
+    },
+    {
+      "commit": "248f0e4",
+      "commit_full": "248f0e4e25aff8d184487f07d979a54ba7468ac6",
+      "commit_date": "2026-11-18T16:36:33+07:00",
+      "ts": "2026-11-18T09:36:33Z",
+      "message": "Edit window: the Delete and Backspace keys clear the selection (#404) (#480)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-10-27",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
+    },
+    {
+      "commit": "b5392da",
+      "commit_full": "b5392da2a2fbd513bfca7de74090dafde2ce7816",
+      "commit_date": "2026-11-18T17:11:17+07:00",
+      "ts": "2026-11-18T10:11:17Z",
+      "message": "Add automation points with Command-click (#1395)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-08",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-18T03:16:05+00:00"
+  "updated_at": "2026-11-18T11:59:27+00:00"
 }

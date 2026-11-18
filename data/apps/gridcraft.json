@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/gridcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/gridcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "807cf23",
-  "latest_commit_date": "2026-11-18T08:43:41+07:00",
-  "latest_message": "Sort: Custom Sort dialog redesign (#1593)",
+  "latest_commit": "5b1d89f",
+  "latest_commit_date": "2026-11-18T16:27:25+07:00",
+  "latest_message": "UI: Brazilian Portuguese function help (#3047)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -435,7 +435,7 @@
     "value_since": "2026-10-10T18:09:06Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 104,
+    "revisions_since": 106,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -443,39 +443,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 107,
-    "revisions_7d": 9,
+    "revisions": 109,
+    "revisions_7d": 11,
     "last_revision": {
-      "ts": "2026-11-18T01:43:41Z",
+      "ts": "2026-11-18T09:27:25Z",
       "kind": "content",
-      "commit": "807cf23",
-      "commit_full": "807cf23b024332ad0a3d7ad8f044a4c9fec5f84f",
-      "message": "Sort: Custom Sort dialog redesign (#1593)"
+      "commit": "5b1d89f",
+      "commit_full": "5b1d89f8679c420258b8dac47eea9e93c7246f16",
+      "message": "UI: Brazilian Portuguese function help (#3047)"
     },
     "last_update": {
-      "ts": "2026-11-18T01:43:41Z",
+      "ts": "2026-11-18T09:27:25Z",
       "kind": "content",
-      "commit": "807cf23",
-      "commit_full": "807cf23b024332ad0a3d7ad8f044a4c9fec5f84f",
-      "message": "Sort: Custom Sort dialog redesign (#1593)"
+      "commit": "5b1d89f",
+      "commit_full": "5b1d89f8679c420258b8dac47eea9e93c7246f16",
+      "message": "UI: Brazilian Portuguese function help (#3047)"
     },
     "self_reported": "2026-11-15"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.3,
+    "score": 17.2,
     "active_days_7d": 6,
-    "changes_7d": 43,
-    "changes_14d": 138,
+    "changes_7d": 63,
+    "changes_14d": 158,
     "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-18T01:44:04Z",
-      "commit": "4c388df",
-      "commit_full": "4c388df9490ac50e48969fe6946865faee973252",
-      "subject": "Flush a saved workbook to disk before replacing the old one (#3178)"
+      "ts": "2026-11-18T09:45:30Z",
+      "commit": "c9d2883",
+      "commit_full": "c9d2883b86bd29bf31764f05759ac6b71b82a2db",
+      "subject": "xtask: `parity --check` accepts a CRLF checkout of the checklist (#2028)"
     },
-    "last_commit_ts": "2026-11-18T01:44:04Z",
+    "last_commit_ts": "2026-11-18T09:45:30Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       8,
@@ -491,7 +491,7 @@
       8,
       5,
       9,
-      2
+      22
     ],
     "days": [
       {
@@ -1203,16 +1203,20 @@
       },
       {
         "d": "2026-11-18",
-        "code": 2,
+        "code": 22,
         "other": 0,
         "samples": [
           {
-            "commit": "4c388df",
-            "subject": "Flush a saved workbook to disk before replacing the old one (#3178)"
+            "commit": "c9d2883",
+            "subject": "xtask: `parity --check` accepts a CRLF checkout of the checklist (#2028)"
           },
           {
-            "commit": "807cf23",
-            "subject": "Sort: Custom Sort dialog redesign (#1593)"
+            "commit": "a3119f5",
+            "subject": "xlsx/csv: cap secondary reader allocations (#2159) (#2199)"
+          },
+          {
+            "commit": "272ae54",
+            "subject": "Delete separate rows or columns in one pass (#2385)"
           }
         ]
       }
@@ -3886,7 +3890,53 @@
       "breadth_pct": 75.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "1f0d416",
+      "commit_full": "1f0d416f740f5459f2783acfde6686e869d67706",
+      "commit_date": "2026-11-18T16:27:02+07:00",
+      "ts": "2026-11-18T09:27:02Z",
+      "message": "Calc: a contested spill area stays with its array on full recalc and reopening (#964) (#3046)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "5b1d89f",
+      "commit_full": "5b1d89f8679c420258b8dac47eea9e93c7246f16",
+      "commit_date": "2026-11-18T16:27:25+07:00",
+      "ts": "2026-11-18T09:27:25Z",
+      "message": "UI: Brazilian Portuguese function help (#3047)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-18T03:16:15+00:00"
+  "updated_at": "2026-11-18T11:59:33+00:00"
 }

@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "9d061a7",
-  "latest_commit_date": "2026-11-16T11:51:05+01:00",
-  "latest_message": "Ctrl+M opens the Comments panel (#3741) (#3762)",
+  "latest_commit": "0c39992",
+  "latest_commit_date": "2026-11-18T16:31:06+07:00",
+  "latest_message": "Print: make a long printer list easier to browse and search (#4399)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 152,
+    "revisions_since": 153,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 242,
-    "revisions_7d": 3,
+    "revisions": 243,
+    "revisions_7d": 4,
     "last_revision": {
-      "ts": "2026-11-16T10:51:05Z",
+      "ts": "2026-11-18T09:31:06Z",
       "kind": "content",
-      "commit": "9d061a7",
-      "commit_full": "9d061a76683b17f0bff2458baa7c2dc245eeedd6",
-      "message": "Ctrl+M opens the Comments panel (#3741) (#3762)"
+      "commit": "0c39992",
+      "commit_full": "0c39992c99f76e68e5d0cef4093f134e8e5b7791",
+      "message": "Print: make a long printer list easier to browse and search (#4399)"
     },
     "last_update": {
-      "ts": "2026-11-16T10:51:05Z",
+      "ts": "2026-11-18T09:31:06Z",
       "kind": "content",
-      "commit": "9d061a7",
-      "commit_full": "9d061a76683b17f0bff2458baa7c2dc245eeedd6",
-      "message": "Ctrl+M opens the Comments panel (#3741) (#3762)"
+      "commit": "0c39992",
+      "commit_full": "0c39992c99f76e68e5d0cef4093f134e8e5b7791",
+      "message": "Print: make a long printer list easier to browse and search (#4399)"
     },
     "self_reported": "2026-11-16"
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 15.8,
-    "active_days_7d": 6,
-    "changes_7d": 54,
-    "changes_14d": 449,
+    "level": "buzzing",
+    "score": 20.6,
+    "active_days_7d": 7,
+    "changes_7d": 81,
+    "changes_14d": 476,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-17T07:16:26Z",
-      "commit": "271e479",
-      "commit_full": "271e479c53723b1b294c866d5cb2f27604601b29",
-      "subject": "Export: use shared extracted-text Markdown writer with exact output parity (#7591)"
+      "ts": "2026-11-18T10:41:12Z",
+      "commit": "e56b03f",
+      "commit_full": "e56b03fbaeb8c37f78f0b917c20bc7d93dbfbfe6",
+      "subject": "test(annot): assert URL scan work instead of wall-clock speed (#7695)"
     },
-    "last_commit_ts": "2026-11-17T07:16:26Z",
+    "last_commit_ts": "2026-11-18T10:41:12Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       36,
@@ -524,7 +524,7 @@
       12,
       7,
       6,
-      0
+      27
     ],
     "days": [
       {
@@ -1442,6 +1442,25 @@
           {
             "commit": "9892160",
             "subject": "fix(platform): confine staging names; private temp dirs for tests and macOS signing (#5923)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-18",
+        "code": 27,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "e56b03f",
+            "subject": "test(annot): assert URL scan work instead of wall-clock speed (#7695)"
+          },
+          {
+            "commit": "30c1e44",
+            "subject": "fix(export): package a repeated picture once in PPTX and bound HTML embedded pictures (#5933)"
+          },
+          {
+            "commit": "8949046",
+            "subject": "Form-data import says when the form refused every value"
           }
         ]
       }
@@ -7220,7 +7239,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "0c39992",
+      "commit_full": "0c39992c99f76e68e5d0cef4093f134e8e5b7791",
+      "commit_date": "2026-11-18T16:31:06+07:00",
+      "ts": "2026-11-18T09:31:06Z",
+      "message": "Print: make a long printer list easier to browse and search (#4399)",
+      "stage": null,
+      "next_stage": null,
+      "last_updated": "2026-11-16",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-18T03:15:44+00:00"
+  "updated_at": "2026-11-18T11:59:14+00:00"
 }

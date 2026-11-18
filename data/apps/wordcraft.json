@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "22a73d9",
-  "latest_commit_date": "2026-11-17T21:31:05Z",
-  "latest_message": "#778: progress log: file formats, codecs and protocols come from craft-libs (#6962)",
+  "latest_commit": "3ff3f39",
+  "latest_commit_date": "2026-11-18T17:09:47+07:00",
+  "latest_message": "fix(styles): pair w:bCs and w:iCs with w:b and w:i in built-in styles (#4198) (#4219)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
-    "last_updated": "2026-11-17",
+    "last_updated": "2026-11-18",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 607,
+    "revisions_since": 612,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 611,
-    "revisions_7d": 18,
+    "revisions": 616,
+    "revisions_7d": 23,
     "last_revision": {
-      "ts": "2026-11-17T21:31:05Z",
+      "ts": "2026-11-18T10:09:47Z",
       "kind": "content",
-      "commit": "22a73d9",
-      "commit_full": "22a73d9f2d10de6ee52780ab4a6019b864d9c598",
-      "message": "#778: progress log: file formats, codecs and protocols come from craft-libs (#6962)"
+      "commit": "3ff3f39",
+      "commit_full": "3ff3f39727ebd1bf265aa4ba5c1ccd46ef4afd89",
+      "message": "fix(styles): pair w:bCs and w:iCs with w:b and w:i in built-in styles (#4198) (#4219)"
     },
     "last_update": {
-      "ts": "2026-11-17T21:31:05Z",
+      "ts": "2026-11-18T10:09:47Z",
       "kind": "content",
-      "commit": "22a73d9",
-      "commit_full": "22a73d9f2d10de6ee52780ab4a6019b864d9c598",
-      "message": "#778: progress log: file formats, codecs and protocols come from craft-libs (#6962)"
+      "commit": "3ff3f39",
+      "commit_full": "3ff3f39727ebd1bf265aa4ba5c1ccd46ef4afd89",
+      "message": "fix(styles): pair w:bCs and w:iCs with w:b and w:i in built-in styles (#4198) (#4219)"
     },
-    "self_reported": "2026-11-17"
+    "self_reported": "2026-11-18"
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 17.2,
-    "active_days_7d": 6,
-    "changes_7d": 114,
-    "changes_14d": 307,
+    "level": "buzzing",
+    "score": 20.9,
+    "active_days_7d": 7,
+    "changes_7d": 126,
+    "changes_14d": 319,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-11-17T21:19:16Z",
-      "commit": "dfd51a3",
-      "commit_full": "dfd51a3cdc073b6dad10e7685cc7101aa9299ccb",
-      "subject": "#778: land the picture-probe and MCP cutovers (#6955, #6956) on main (#6960)"
+      "ts": "2026-11-18T11:57:56Z",
+      "commit": "3ab2e53",
+      "commit_full": "3ab2e53a8975d39acadc180e14a8d5278b6d9509",
+      "subject": "Screen readers: headings and list items come one level too deep (#3173)"
     },
-    "last_commit_ts": "2026-11-17T21:31:05Z",
+    "last_commit_ts": "2026-11-18T11:57:56Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       43,
@@ -568,7 +568,7 @@
       5,
       27,
       59,
-      0
+      12
     ],
     "days": [
       {
@@ -1328,6 +1328,25 @@
           {
             "commit": "d2bfcd4",
             "subject": "#778: speech: use craft-ssip for the SSIP wire helpers (#6951)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-18",
+        "code": 12,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "3ab2e53",
+            "subject": "Screen readers: headings and list items come one level too deep (#3173)"
+          },
+          {
+            "commit": "07c0a89",
+            "subject": "IME: the composition is drawn in the text's font and size, and CJK in it no longer shows boxes"
+          },
+          {
+            "commit": "c1e2e6b",
+            "subject": "fix(engine): a drag between narrow columns leaves them as they are (#4964)"
           }
         ]
       }
@@ -15611,7 +15630,122 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "32b4ab5",
+      "commit_full": "32b4ab57241c9ad4e9f7817c8d16b7cef7afa0a5",
+      "commit_date": "2026-11-18T16:29:00+07:00",
+      "ts": "2026-11-18T09:29:00Z",
+      "message": "Paragraph dialog: Special box sets First line and Hanging indents",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-17",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "5bf3ffb",
+      "commit_full": "5bf3ffb92038b603c8bce427ef4c03eb6553ba38",
+      "commit_date": "2026-11-18T16:29:27+07:00",
+      "ts": "2026-11-18T09:29:27Z",
+      "message": "Tables: percentage cell widths size their columns whichever rows give them",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-17",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "1e1bd7e",
+      "commit_full": "1e1bd7e0024feabe0588611f3b99da83a147295a",
+      "commit_date": "2026-11-18T16:29:51+07:00",
+      "ts": "2026-11-18T09:29:51Z",
+      "message": "Fields: PDFs and prints show body PAGEREF pages, as Word fills them in",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-17",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "7831216",
+      "commit_full": "7831216b2cea45c636583c3dd29214ffb4979d28",
+      "commit_date": "2026-11-18T16:33:13+07:00",
+      "ts": "2026-11-18T09:33:13Z",
+      "message": "Borders: lines meet in closed corners, as in Word",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "3ff3f39",
+      "commit_full": "3ff3f39727ebd1bf265aa4ba5c1ccd46ef4afd89",
+      "commit_date": "2026-11-18T17:09:47+07:00",
+      "ts": "2026-11-18T10:09:47Z",
+      "message": "fix(styles): pair w:bCs and w:iCs with w:b and w:i in built-in styles (#4198) (#4219)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-18T03:16:02+00:00"
+  "updated_at": "2026-11-18T11:59:25+00:00"
 }

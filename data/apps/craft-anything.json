@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "118b105",
-  "latest_commit_date": "2026-11-18T09:36:17+07:00",
-  "latest_message": "When an app's files named the same library more than once, with a version in one place and without one in another, comparing two versions of the app kept only t",
+  "latest_commit": "cf6f1d1",
+  "latest_commit_date": "2026-11-18T18:54:47+07:00",
+  "latest_message": "Follow-up to #2107. Listing a result's pageable lists looked each list name up from the top of the result again, so a large result with many names took one full",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 763,
-    "revisions_7d": 198,
+    "revisions": 802,
+    "revisions_7d": 237,
     "last_revision": {
-      "ts": "2026-11-18T02:36:17Z",
+      "ts": "2026-11-18T11:54:47Z",
       "kind": "content",
-      "commit": "118b105",
-      "commit_full": "118b1054522b4497dcff26a5b354bb2f34cc988e",
-      "message": "When an app's files named the same library more than once, with a version in one place and without one in another, comparing two versions of the app kept only t"
+      "commit": "cf6f1d1",
+      "commit_full": "cf6f1d1a7fa665101fc222b9000df8d049fda04f",
+      "message": "Follow-up to #2107. Listing a result's pageable lists looked each list name up from the top of the result again, so a large result with many names took one full"
     },
     "last_update": {
-      "ts": "2026-11-18T02:36:17Z",
+      "ts": "2026-11-18T11:54:47Z",
       "kind": "content",
-      "commit": "118b105",
-      "commit_full": "118b1054522b4497dcff26a5b354bb2f34cc988e",
-      "message": "When an app's files named the same library more than once, with a version in one place and without one in another, comparing two versions of the app kept only t"
+      "commit": "cf6f1d1",
+      "commit_full": "cf6f1d1a7fa665101fc222b9000df8d049fda04f",
+      "message": "Follow-up to #2107. Listing a result's pageable lists looked each list name up from the top of the result again, so a large result with many names took one full"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 26.9,
+    "score": 28.4,
     "active_days_7d": 7,
-    "changes_7d": 238,
-    "changes_14d": 742,
+    "changes_7d": 278,
+    "changes_14d": 782,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-18T02:36:17Z",
-      "commit": "118b105",
-      "commit_full": "118b1054522b4497dcff26a5b354bb2f34cc988e",
-      "subject": "When an app's files named the same library more than once, with a version in one place and without one in another, comparing two versions of the app kept only t"
+      "ts": "2026-11-18T11:54:47Z",
+      "commit": "cf6f1d1",
+      "commit_full": "cf6f1d1a7fa665101fc222b9000df8d049fda04f",
+      "subject": "Follow-up to #2107. Listing a result's pageable lists looked each list name up from the top of the result again, so a large result with many names took one full"
     },
-    "last_commit_ts": "2026-11-18T02:36:17Z",
+    "last_commit_ts": "2026-11-18T11:54:47Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       1,
@@ -93,7 +93,7 @@
       33,
       33,
       63,
-      21
+      61
     ],
     "days": [
       {
@@ -432,20 +432,20 @@
       },
       {
         "d": "2026-11-18",
-        "code": 21,
+        "code": 61,
         "other": 0,
         "samples": [
           {
-            "commit": "118b105",
-            "subject": "When an app's files named the same library more than once, with a version in one place and without one in another, comparing two versions of the app kept only t"
+            "commit": "cf6f1d1",
+            "subject": "Follow-up to #2107. Listing a result's pageable lists looked each list name up from the top of the result again, so a large result with many names took one full"
           },
           {
-            "commit": "c1413ad",
-            "subject": "The same gap as #2053, in the live browser and Electron capture tools: a value declared as secret could still appear when it was written the way a form posts it"
+            "commit": "7871fc2",
+            "subject": "Follow-up to #2114. An argument loaded from memory was written into the call that follows it, also when a store in between could have changed that memory: `ldr "
           },
           {
-            "commit": "e03c651",
-            "subject": "The pseudo-C folded an argument's assignment into the call that follows, even when a register that assignment read had been overwritten in between: `rsi = rdi; "
+            "commit": "e364d88",
+            "subject": "Follow-up to #2100. A page script written as a `data:` or `blob:` URL was read as a local path, so `data:text/javascript,0//../../boot.js` became a dependency o"
           }
         ]
       }
@@ -5913,8 +5913,281 @@
       "commit": "118b105",
       "commit_full": "118b1054522b4497dcff26a5b354bb2f34cc988e",
       "message": "When an app's files named the same library more than once, with a version in one place and without one in another, comparing two versions of the app kept only t"
+    },
+    {
+      "ts": "2026-11-18T03:26:27Z",
+      "kind": "content",
+      "commit": "1e55067",
+      "commit_full": "1e55067102273609fbf1cdfae8f4259e04e2d7f1",
+      "message": "Saving the scripts of a web capture planned two files for URLs that differed only in letter case; on Windows and on a default Mac disk those are one file, so th"
+    },
+    {
+      "ts": "2026-11-18T03:28:02Z",
+      "kind": "content",
+      "commit": "77ca096",
+      "commit_full": "77ca0968742d3134d87f35b28870b51e579017c5",
+      "message": "Matching C# source declarations against a .NET program's metadata reported methods as different when they were the same, in four cases: a parameter of a nested "
+    },
+    {
+      "ts": "2026-11-18T03:39:21Z",
+      "kind": "content",
+      "commit": "b9f9a2a",
+      "commit_full": "b9f9a2a9ea04504f37efa06785b039c38587d272",
+      "message": "The live browser and Electron capture tools had their own copy of the code that hides declared secrets, and only that copy hid two secrets that overlap: in a ne"
+    },
+    {
+      "ts": "2026-11-18T03:53:09Z",
+      "kind": "content",
+      "commit": "c66f36f",
+      "commit_full": "c66f36f8db1992835fc113d0e1be35f20129b562",
+      "message": "Two modules recovered from a bundle whose paths differed only in letter case (`X.js` and `x.js`) were given both names. On Windows and on a default Mac disk tho"
+    },
+    {
+      "ts": "2026-11-18T04:05:55Z",
+      "kind": "content",
+      "commit": "50a9e7a",
+      "commit_full": "50a9e7aa522229d6a2b865124f7538c7a6817695",
+      "message": "Setup refused a Hermes `config.yaml` whose server list was written `{ }`, `Null` or `NULL`, though each means an empty list; those are accepted now. A server en"
+    },
+    {
+      "ts": "2026-11-18T04:15:34Z",
+      "kind": "content",
+      "commit": "5e555c9",
+      "commit_full": "5e555c9c413ada0a762405e0d766d976c42490f7",
+      "message": "A 32-bit ARM shared library has no entry point, so it was always decoded as ARM code, also when it was built as Thumb, and came out as nonsense. The mode is now"
+    },
+    {
+      "ts": "2026-11-18T04:56:40Z",
+      "kind": "content",
+      "commit": "2a96867",
+      "commit_full": "2a96867125f498f789eb128c71ee8b441b1ca8ac",
+      "message": "In eBPF and Solana programs, `ja32` (opcode 0x06) is an unconditional jump whose distance is in the 32-bit immediate. It was decoded as a conditional branch usi"
+    },
+    {
+      "ts": "2026-11-18T04:56:47Z",
+      "kind": "content",
+      "commit": "00f4265",
+      "commit_full": "00f426522cb85045aaf2d41d635fb77ad4c183b4",
+      "message": "Follow-up to #2076, which stopped a program's own `App.String` being read as `string` but left two conversion operators unmatched against a .NET program's metad"
+    },
+    {
+      "ts": "2026-11-18T05:21:45Z",
+      "kind": "content",
+      "commit": "e05b3b7",
+      "commit_full": "e05b3b7242b749f58fd0689a271b46a05595f278",
+      "message": "Recovering a bundle's modules and saving a capture's scripts each had their own copy of the code that decides whether two paths are one file on a disk that igno"
+    },
+    {
+      "ts": "2026-11-18T05:46:33Z",
+      "kind": "content",
+      "commit": "768d24a",
+      "commit_full": "768d24a49e83f1241f7ab03a0f1ccdc6094e80c0",
+      "message": "32-bit ARM code keeps constants and addresses in small pools beside the code and loads them with `ldr rX, [pc, #off]`. Those loads recorded no reference, so str"
+    },
+    {
+      "ts": "2026-11-18T05:57:03Z",
+      "kind": "content",
+      "commit": "4a66500",
+      "commit_full": "4a6650030441725d6de5ccbe509120ecc91c83b7",
+      "message": "A backtick string with no `${}` in it is a plain string, but several readers took its text as written in the source, escapes and all, or ignored it: ``require(`"
+    },
+    {
+      "ts": "2026-11-18T06:01:23Z",
+      "kind": "content",
+      "commit": "f061694",
+      "commit_full": "f0616948db84646c888db479c42ee0f59d7c379a",
+      "message": "For a type nested in a generic type, .NET metadata lists the type arguments of the whole chain together. They were all written after the last name, so `Outer<in"
+    },
+    {
+      "ts": "2026-11-18T06:04:11Z",
+      "kind": "content",
+      "commit": "d2f31c1",
+      "commit_full": "d2f31c11ac520d4b9bc02108353e0b4c008f0eab",
+      "message": "Reading a source folder with its `.gitignore` files applied differed from git in four ways. A pattern starting with a backslash to mean a literal `*`, `[` or `?"
+    },
+    {
+      "ts": "2026-11-18T06:43:33Z",
+      "kind": "content",
+      "commit": "3f8e1eb",
+      "commit_full": "3f8e1eb3de52a6d89f701cb1a3a9cb4ff813082c",
+      "message": "Someone who moves Qoder's configuration folder with `QODER_CONFIG_DIR` got its settings written there but the skill written under `~/.qoder`, where their Qoder "
+    },
+    {
+      "ts": "2026-11-18T06:53:12Z",
+      "kind": "content",
+      "commit": "f6c6543",
+      "commit_full": "f6c654371385483484bf145825352ae179ab8d0e",
+      "message": "When a script can't be parsed, a simpler reader lists what it can from the script's words. It listed the address of a `fetch(\"https://…\")` call twice and repeat"
+    },
+    {
+      "ts": "2026-11-18T06:54:02Z",
+      "kind": "content",
+      "commit": "f1e70b1",
+      "commit_full": "f1e70b10a2468a5e6c7736ae42ec807a45c053ab",
+      "message": "A console command sent to GDB with a line break in it was written as two lines, so its second line ran as a command of its own; line breaks, tabs and other cont"
+    },
+    {
+      "ts": "2026-11-18T06:58:46Z",
+      "kind": "content",
+      "commit": "51f1f2b",
+      "commit_full": "51f1f2b34f1f8b5ed03b0b52c3014b4a2e3e0e23",
+      "message": "Fields, properties and local variables of a generic .NET type already showed its type parameters by name, but an event's type and everything a method body refer"
+    },
+    {
+      "ts": "2026-11-18T06:58:47Z",
+      "kind": "content",
+      "commit": "bd0f023",
+      "commit_full": "bd0f0235c7c8799e2326c5308d72127a1f72dec9",
+      "message": "Tracing where a value goes in a function leaves out the stack pointer and program counter, which every instruction touches. On 32-bit ARM those are `r13` and `r"
+    },
+    {
+      "ts": "2026-11-18T07:11:50Z",
+      "kind": "content",
+      "commit": "642179c",
+      "commit_full": "642179c6ab07894049e13b4f56b78970266904be",
+      "message": "Follow-up to #2080. `nint`, `nuint` and `dynamic` are only keywords when nothing in scope has that name, but a conversion operator to a program's own type calle"
+    },
+    {
+      "ts": "2026-11-18T07:58:22Z",
+      "kind": "content",
+      "commit": "a955c18",
+      "commit_full": "a955c188fb02b7b030e3ed7c658d7ed85e21d2fa",
+      "message": "Windows drops a dot at the end of a file or folder name, so `pkg./a.js` and `pkg/a.js`, or a host written `ex.test.` and `ex.test`, were planned as two files an"
+    },
+    {
+      "ts": "2026-11-18T08:19:46Z",
+      "kind": "content",
+      "commit": "d60732c",
+      "commit_full": "d60732c4c0041d578eebcf083de69033133befbd",
+      "message": "A call through a register (`blx r3`, `call rcx`, `call [rdi + 16]`) reads that register to find its target. The pseudo-C treated the register's assignment as an"
+    },
+    {
+      "ts": "2026-11-18T08:27:48Z",
+      "kind": "content",
+      "commit": "e047eda",
+      "commit_full": "e047eda07d9dceb4ae0bf26b08c04fa2368f73f3",
+      "message": "Follow-up to #2083, which stopped an unawaited `import(\"x\")` being taken for the module itself. Bundled code often writes the awaited form as `await (0, import("
+    },
+    {
+      "ts": "2026-11-18T08:47:04Z",
+      "kind": "content",
+      "commit": "f21b14d",
+      "commit_full": "f21b14d00113e9f6a255af7286f125db9c84c50a",
+      "message": "In a TypeScript project that hasn't been built, `import \"./util.js\"` means the file `util.ts`: the import names what the file will be called after building. Map"
+    },
+    {
+      "ts": "2026-11-18T08:58:28Z",
+      "kind": "content",
+      "commit": "d319fa1",
+      "commit_full": "d319fa17941fda494f01635a996d93970bb0836f",
+      "message": "Read a folder only as far as the walk's limits, and report entries that couldn't be read (R3.11) (#2069)"
+    },
+    {
+      "ts": "2026-11-18T09:08:41Z",
+      "kind": "content",
+      "commit": "788642e",
+      "commit_full": "788642e487c5d39a4a0f8823c07024c301761861",
+      "message": "Offer Simple / Advanced on the Make screen, and always show Clean room / Deep there (R2.9) (#1286)"
+    },
+    {
+      "ts": "2026-11-18T09:30:33Z",
+      "kind": "content",
+      "commit": "f6bc868",
+      "commit_full": "f6bc86889cf72b7541520b695f4cdfd6ce32995f",
+      "message": "Follow-up to #2097. A path written in code, such as a preload of `bridge.js`, was matched to a `bridge.ts` beside the code before a file really named `bridge.js"
+    },
+    {
+      "ts": "2026-11-18T09:39:42Z",
+      "kind": "content",
+      "commit": "f06476a",
+      "commit_full": "f06476a6dcfb3e710e8729482df8f1434954744b",
+      "message": "When uninstall couldn't safely take our entry out of another app's config file, it reported the wording of setup: \"Can't add our entry…\" and \"run setup again\". "
+    },
+    {
+      "ts": "2026-11-18T09:46:26Z",
+      "kind": "content",
+      "commit": "2cba74c",
+      "commit_full": "2cba74c195acf80dfb7ab59fb6d7d901f6cef62d",
+      "message": "Follow-up to #2093. A conversion to `List<IntPtr>` or `List<UIntPtr>` is to the built-in `nint` or `nuint`, but when the program also imported a type of its own"
+    },
+    {
+      "ts": "2026-11-18T09:50:08Z",
+      "kind": "content",
+      "commit": "a33263a",
+      "commit_full": "a33263a52351ccdaf9c1f68e95a6b669faac5e62",
+      "message": "Follow-up to #2087. In a `.gitignore` pattern such as `a/**\\/b.js`, the slash after `**` is written with a backslash, and `**` was then read as a single `*`, so"
+    },
+    {
+      "ts": "2026-11-18T09:54:39Z",
+      "kind": "content",
+      "commit": "8f97eeb",
+      "commit_full": "8f97eebfc1e3c3ab156e7ae40e0be22558ac6528",
+      "message": "The ledger of what a rebuilt JavaScript app must do names, for each entry, the place in the app's map it came from. For storage uses, requests with no method an"
+    },
+    {
+      "ts": "2026-11-18T09:59:31Z",
+      "kind": "content",
+      "commit": "ab28f10",
+      "commit_full": "ab28f10099596e72b919b416366089013c311104",
+      "message": "A tool's result says which of its lists can be paged through, up to 64 of them. Names were gathered depth first and counted before checking that each really led"
+    },
+    {
+      "ts": "2026-11-18T10:06:48Z",
+      "kind": "content",
+      "commit": "26e977b",
+      "commit_full": "26e977bb8582601db6fa18698a9265817ddd7860",
+      "message": "SQLite accepts a `CREATE TABLE` with no spaces between its parts, and reading one went wrong in three ways. A constraint written straight after a type (`REAL(8)"
+    },
+    {
+      "ts": "2026-11-18T10:25:35Z",
+      "kind": "content",
+      "commit": "63801a6",
+      "commit_full": "63801a686eaa66ea91f8a252025088d6a54992e3",
+      "message": "Follow-up to #2104. `craft-anything-cli uninstall` named the app whose config blocked it and nothing more; it now prints the reason and what to do. The advice a"
+    },
+    {
+      "ts": "2026-11-18T10:43:27Z",
+      "kind": "content",
+      "commit": "b60cca5",
+      "commit_full": "b60cca57d48faf2df4aa33a6ceed847cb71dda85",
+      "message": "Follow-up to #2096 and #2084. A call through a table reached from a register (`mov rdi, obj; call [rdi + 16]`) is usually a method call on that object, with the"
+    },
+    {
+      "ts": "2026-11-18T11:07:21Z",
+      "kind": "content",
+      "commit": "5a17df3",
+      "commit_full": "5a17df35def8be732ebf7bd84b1c9e1565e0cde4",
+      "message": "Follow-up to #2105. While the rebuild ledger was being built, the same piece of evidence was looked up several times. A check result saved in between could fail"
+    },
+    {
+      "ts": "2026-11-18T11:20:44Z",
+      "kind": "content",
+      "commit": "e76683e",
+      "commit_full": "e76683e8f9db0ee464dc72461bbe4615839848ef",
+      "message": "Show the app's version in Settings → About on every system (R2.9) (#1301)"
+    },
+    {
+      "ts": "2026-11-18T11:43:32Z",
+      "kind": "content",
+      "commit": "e364d88",
+      "commit_full": "e364d88b1a5aa733350e5c081f0952e60ec85cb8",
+      "message": "Follow-up to #2100. A page script written as a `data:` or `blob:` URL was read as a local path, so `data:text/javascript,0//../../boot.js` became a dependency o"
+    },
+    {
+      "ts": "2026-11-18T11:48:59Z",
+      "kind": "content",
+      "commit": "7871fc2",
+      "commit_full": "7871fc266aa3d0aca797fb72b1c79a28b2eacfb6",
+      "message": "Follow-up to #2114. An argument loaded from memory was written into the call that follows it, also when a store in between could have changed that memory: `ldr "
+    },
+    {
+      "ts": "2026-11-18T11:54:47Z",
+      "kind": "content",
+      "commit": "cf6f1d1",
+      "commit_full": "cf6f1d1a7fa665101fc222b9000df8d049fda04f",
+      "message": "Follow-up to #2107. Listing a result's pageable lists looked each list name up from the top of the result again, so a large result with many names took one full"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-18T03:16:25+00:00"
+  "updated_at": "2026-11-18T11:59:39+00:00"
 }
