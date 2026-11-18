@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/tangency-labs/solidcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/tangency-labs/solidcraft/commits/main/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "0edbdcc",
-  "latest_commit_date": "2026-11-14T14:13:14Z",
-  "latest_message": "Emboss: text and profiles wrap onto the inside wall of a cylinder (a bore) as well as the outside (#16689)",
+  "latest_commit": "66f97b3",
+  "latest_commit_date": "2026-11-18T01:00:03Z",
+  "latest_message": "Roadmap: one copy of the developer detail, in docs/roadmap-detail.md (#16369)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,42 +45,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 197,
-    "revisions_7d": 2,
+    "revisions": 199,
+    "revisions_7d": 3,
     "last_revision": {
-      "ts": "2026-11-14T14:13:14Z",
+      "ts": "2026-11-18T01:00:03Z",
       "kind": "content",
-      "commit": "0edbdcc",
-      "commit_full": "0edbdcc425debb026f9caddc9a67f8a5c37ca743",
-      "message": "Emboss: text and profiles wrap onto the inside wall of a cylinder (a bore) as well as the outside (#16689)"
+      "commit": "66f97b3",
+      "commit_full": "66f97b3caf87eb18ffb831198818fc89cff06237",
+      "message": "Roadmap: one copy of the developer detail, in docs/roadmap-detail.md (#16369)"
     },
     "last_update": {
-      "ts": "2026-11-14T14:13:14Z",
+      "ts": "2026-11-18T01:00:03Z",
       "kind": "content",
-      "commit": "0edbdcc",
-      "commit_full": "0edbdcc425debb026f9caddc9a67f8a5c37ca743",
-      "message": "Emboss: text and profiles wrap onto the inside wall of a cylinder (a bore) as well as the outside (#16689)"
+      "commit": "66f97b3",
+      "commit_full": "66f97b3caf87eb18ffb831198818fc89cff06237",
+      "message": "Roadmap: one copy of the developer detail, in docs/roadmap-detail.md (#16369)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 38.8,
+    "score": 36.3,
     "active_days_7d": 7,
-    "changes_7d": 1338,
-    "changes_14d": 2194,
-    "housekeeping_7d": 54,
+    "changes_7d": 1236,
+    "changes_14d": 2083,
+    "housekeeping_7d": 53,
     "last_code_change": {
-      "ts": "2026-11-17T21:25:13Z",
-      "commit": "bf685d1",
-      "commit_full": "bf685d1b31c6852e9b2a737051d7d85c819a86aa",
-      "subject": "STEP import: a thread's crest face whose seam ends beside a joint of the thread's edge is no longer left out (#18665)"
+      "ts": "2026-11-18T02:48:25Z",
+      "commit": "27cbf2e",
+      "commit_full": "27cbf2e47d58437228270cd5f8698cef90e23f13",
+      "subject": "Save: explain when a requested model cache was omitted (#18815) (#18842)"
     },
-    "last_commit_ts": "2026-11-17T21:25:13Z",
+    "last_commit_ts": "2026-11-18T02:48:25Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
-      158,
       109,
       44,
       85,
@@ -93,7 +92,8 @@
       198,
       156,
       281,
-      160
+      181,
+      26
     ],
     "days": [
       {
@@ -877,20 +877,39 @@
       },
       {
         "d": "2026-11-17",
-        "code": 160,
-        "other": 3,
+        "code": 181,
+        "other": 5,
         "samples": [
           {
-            "commit": "bf685d1",
-            "subject": "STEP import: a thread's crest face whose seam ends beside a joint of the thread's edge is no longer left out (#18665)"
+            "commit": "52aece6",
+            "subject": "Plugin dialogs: retain their positions when reopened (#18684) (#18737)"
           },
           {
-            "commit": "e90de20",
-            "subject": "Offset Face: a flat face with a small hole far from the origin moves, instead of being refused for an uncertified reach (#18286) (#18484)"
+            "commit": "c17aa4b",
+            "subject": "Create Sketch and Offset Plane: the flat end face of a revolved part with a modelled Thread keeps its attachment (#18481)"
           },
           {
-            "commit": "a39b74e",
-            "subject": "solidcore: retire G5 blend-corner flags (mitre concave corners, ring-fillet removal) (#18479)"
+            "commit": "49e7d4d",
+            "subject": "Lofted and extended faces: an edge's trim curve turns its corner on the surface's knot line, instead of in a tiny notch beside it (#18391)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-18",
+        "code": 26,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "27cbf2e",
+            "subject": "Save: explain when a requested model cache was omitted (#18815) (#18842)"
+          },
+          {
+            "commit": "82cbf27",
+            "subject": "Booleans: a wedge whose round reaches into a part's smaller rounds cuts and joins it instead of failing with 'already related' (#17118) (#17119)"
+          },
+          {
+            "commit": "9398dbd",
+            "subject": "STEP import: rational spline faces whose trims end a few µm past their patch keep the part a solid (#15999) (#18620)"
           }
         ]
       }
@@ -2481,8 +2500,22 @@
       "commit": "0edbdcc",
       "commit_full": "0edbdcc425debb026f9caddc9a67f8a5c37ca743",
       "message": "Emboss: text and profiles wrap onto the inside wall of a cylinder (a bore) as well as the outside (#16689)"
+    },
+    {
+      "ts": "2026-11-17T23:59:56Z",
+      "kind": "content",
+      "commit": "c2ffd48",
+      "commit_full": "c2ffd48e27062a1651399b4e67efaa9e9c0176e5",
+      "message": "Drawings: land the drawings branch (#8 milestone) (#18615)"
+    },
+    {
+      "ts": "2026-11-18T01:00:03Z",
+      "kind": "content",
+      "commit": "66f97b3",
+      "commit_full": "66f97b3caf87eb18ffb831198818fc89cff06237",
+      "message": "Roadmap: one copy of the developer detail, in docs/roadmap-detail.md (#16369)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-17T21:57:56+00:00"
+  "updated_at": "2026-11-18T03:16:46+00:00"
 }

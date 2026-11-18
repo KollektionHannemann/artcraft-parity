@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "973a33e",
-  "latest_commit_date": "2026-11-17T09:49:57+07:00",
-  "latest_message": "Shapes: draw the circle through three points (#7949)",
+  "latest_commit": "36195c5",
+  "latest_commit_date": "2026-11-18T10:12:41+07:00",
+  "latest_message": "Workspace: Tools dropped on the canvas's left edge docks there, and the setting follows (#8338)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -339,6 +339,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-17",
+        "text": "The canvas's left edge docks a floating Tools panel whichever way Keep Tools Beside the Canvas is set: a drop there, right of panels docked on the left, turns the setting on, and a drop on the window's left edge turns it off (#7837). Headline numbers unchanged."
+      },
+      {
         "date": "2026-11-16",
         "text": "Check Fold Lines in the Packaging Tools add-on (Object › Plug-ins › Packaging Tools, and the Fold Lines panel's Check button): the fold lines of the selection or the document are split into blanks, panels and hinges (cut lines bound the material, and creases, partial cuts and perforations divide it into panels), and 15 kinds of issue are listed, errors and warnings, each naming its lines: cut lines that enclose nothing or end loose, gaps closed within a tolerance, a cut on top of a crease, duplicate lines, creases that end inside a panel, divide nothing, lie outside the blank or are not straight, gaps too narrow to map, fold lines in a hole, panels joined by no crease, and fold lines on a non-printing layer. The panel lists the issues in the interface language; clicking one selects its lines (addon.packaging.check). A VectorCraft addition: headline numbers unchanged."
       },
@@ -493,10 +497,6 @@
       {
         "date": "2026-10-23",
         "text": "COLR colour fonts (v0 and v1, as in Noto Color Emoji's vector build, Segoe UI Emoji, Nabla) draw as vector art: their layers' colours, gradients, clips and blend modes on the canvas and in SVG, EPS, legacy .ai and PDF, and as editable paths with Create Outlines; glyphs using sweep gradients or compositing modes are drawn as images of the glyph."
-      },
-      {
-        "date": "2026-10-22",
-        "text": "The Effect Gallery shipped (#2883): Effect › Effect Gallery… browses the Artistic, Brush Strokes, Distort, Sketch, Stylize and Texture filters, edits each filter's settings, builds an ordered stack (add, reorder, hide, remove) with a live canvas preview, and OK applies it as separate appearance effects in one undo step. Filter thumbnails and a preview area inside the dialog remain (Filter Gallery overview). Raster effects 82% → 85% (estimated); headline numbers unchanged."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 242,
+    "revisions_since": 243,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,42 +536,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 243,
-    "revisions_7d": 20,
+    "revisions": 244,
+    "revisions_7d": 21,
     "last_revision": {
-      "ts": "2026-11-17T02:49:57Z",
+      "ts": "2026-11-18T03:12:41Z",
       "kind": "content",
-      "commit": "973a33e",
-      "commit_full": "973a33e1fb450e282aea3435c43dc4e049478788",
-      "message": "Shapes: draw the circle through three points (#7949)"
+      "commit": "36195c5",
+      "commit_full": "36195c57f93af9105ec1b6bb3d8faef09d3d5bfe",
+      "message": "Workspace: Tools dropped on the canvas's left edge docks there, and the setting follows (#8338)"
     },
     "last_update": {
-      "ts": "2026-11-17T02:49:57Z",
+      "ts": "2026-11-18T03:12:41Z",
       "kind": "content",
-      "commit": "973a33e",
-      "commit_full": "973a33e1fb450e282aea3435c43dc4e049478788",
-      "message": "Shapes: draw the circle through three points (#7949)"
+      "commit": "36195c5",
+      "commit_full": "36195c57f93af9105ec1b6bb3d8faef09d3d5bfe",
+      "message": "Workspace: Tools dropped on the canvas's left edge docks there, and the setting follows (#8338)"
     },
     "self_reported": "2026-11-15"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 37.6,
+    "score": 34.6,
     "active_days_7d": 7,
-    "changes_7d": 1331,
-    "changes_14d": 2102,
-    "housekeeping_7d": 45,
+    "changes_7d": 1226,
+    "changes_14d": 1933,
+    "housekeeping_7d": 32,
     "last_code_change": {
-      "ts": "2026-11-17T20:23:55Z",
-      "commit": "ee60c51",
-      "commit_full": "ee60c51fd978838559f923fb92c6d018fc907c55",
-      "subject": "Fix #8316: preserve CMYK PSD images when placed or relinked (#8323)"
+      "ts": "2026-11-18T03:15:07Z",
+      "commit": "dd3a188",
+      "commit_full": "dd3a1886a6e61b4e919400ceb95ef492e22f403c",
+      "subject": "Variables: Import Data Sets reads % columns of graph data files (#7764)"
     },
-    "last_commit_ts": "2026-11-17T20:23:55Z",
+    "last_commit_ts": "2026-11-18T03:15:07Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
-      187,
       121,
       46,
       56,
@@ -584,7 +583,8 @@
       283,
       214,
       103,
-      114
+      114,
+      18
     ],
     "days": [
       {
@@ -1502,6 +1502,25 @@
           {
             "commit": "aab753f",
             "subject": "Export 3D Object: mapped graphics export as textures of their faces (#7819)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-18",
+        "code": 18,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "dd3a188",
+            "subject": "Variables: Import Data Sets reads % columns of graph data files (#7764)"
+          },
+          {
+            "commit": "2b91d93",
+            "subject": "MCP: confined native output refuses linked and data set image paths outside the read roots and leaves out an export folder outside them (#8118)"
+          },
+          {
+            "commit": "1124cb3",
+            "subject": "Fix #8034: Other Library… brings a .ai library's pattern swatches with their patterns (#8081)"
           }
         ]
       }
@@ -8102,7 +8121,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "36195c5",
+      "commit_full": "36195c57f93af9105ec1b6bb3d8faef09d3d5bfe",
+      "commit_date": "2026-11-18T10:12:41+07:00",
+      "ts": "2026-11-18T03:12:41Z",
+      "message": "Workspace: Tools dropped on the canvas's left edge docks there, and the setting follows (#8338)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-17T21:56:46+00:00"
+  "updated_at": "2026-11-18T03:15:27+00:00"
 }

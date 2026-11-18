@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/UCS-Care-Group/mailcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/UCS-Care-Group/mailcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "56cb371",
-  "latest_commit_date": "2026-11-17T18:29:08Z",
-  "latest_message": "#603: Hebrew and Arabic paragraphs stand at the right in the reading pane (#903)",
+  "latest_commit": "2771686",
+  "latest_commit_date": "2026-11-17T22:19:21Z",
+  "latest_message": "#601: pictures behind a table, a cell or the whole message are shown (#828)",
   "parsed": {
     "stage": "public beta",
     "next_stage": "leaving",
@@ -407,7 +407,7 @@
     "value_since": "2026-10-12T18:17:00Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 255,
+    "revisions_since": 256,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -415,42 +415,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 259,
-    "revisions_7d": 18,
+    "revisions": 260,
+    "revisions_7d": 17,
     "last_revision": {
-      "ts": "2026-11-17T18:29:08Z",
+      "ts": "2026-11-17T22:19:21Z",
       "kind": "content",
-      "commit": "56cb371",
-      "commit_full": "56cb371c968a85369ed9cca07f763613db146f11",
-      "message": "#603: Hebrew and Arabic paragraphs stand at the right in the reading pane (#903)"
+      "commit": "2771686",
+      "commit_full": "27716869faec5ab0422bfa9514c67766861d2117",
+      "message": "#601: pictures behind a table, a cell or the whole message are shown (#828)"
     },
     "last_update": {
-      "ts": "2026-11-17T18:29:08Z",
+      "ts": "2026-11-17T22:19:21Z",
       "kind": "content",
-      "commit": "56cb371",
-      "commit_full": "56cb371c968a85369ed9cca07f763613db146f11",
-      "message": "#603: Hebrew and Arabic paragraphs stand at the right in the reading pane (#903)"
+      "commit": "2771686",
+      "commit_full": "27716869faec5ab0422bfa9514c67766861d2117",
+      "message": "#601: pictures behind a table, a cell or the whole message are shown (#828)"
     },
     "self_reported": "2026-11-14"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 23.9,
+    "score": 21.0,
     "active_days_7d": 7,
-    "changes_7d": 192,
-    "changes_14d": 289,
-    "housekeeping_7d": 15,
+    "changes_7d": 176,
+    "changes_14d": 275,
+    "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-11-17T20:44:00Z",
-      "commit": "87b4d75",
-      "commit_full": "87b4d7522c52378290ac7f0f2b71f08c0f22a2c3",
-      "subject": "i18n: add more german translations (#744)"
+      "ts": "2026-11-18T01:39:29Z",
+      "commit": "730f0f3",
+      "commit_full": "730f0f3e33d3261b87d9113be133ac9d3fb8604d",
+      "subject": "#1558: sign-in redirect never uses a port browsers block (#1610)"
     },
-    "last_commit_ts": "2026-11-17T20:44:00Z",
+    "last_commit_ts": "2026-11-18T01:39:29Z",
     "repo_since": "2026-10-12T18:17:00Z",
     "window": [
-      17,
       11,
       17,
       15,
@@ -463,7 +462,8 @@
       41,
       23,
       20,
-      32
+      33,
+      2
     ],
     "days": [
       {
@@ -1144,9 +1144,13 @@
       },
       {
         "d": "2026-11-17",
-        "code": 32,
+        "code": 33,
         "other": 2,
         "samples": [
+          {
+            "commit": "2771686",
+            "subject": "#601: pictures behind a table, a cell or the whole message are shown (#828)"
+          },
           {
             "commit": "87b4d75",
             "subject": "i18n: add more german translations (#744)"
@@ -1154,10 +1158,21 @@
           {
             "commit": "465a6cd",
             "subject": "Save Message As writes the message as it was received (part 1 of #1561) (#1598)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-18",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "730f0f3",
+            "subject": "#1558: sign-in redirect never uses a port browsers block (#1610)"
           },
           {
-            "commit": "2bb3fa0",
-            "subject": "EWS: meeting requests, responses and cancellations are listed with their dates, sender and size (#1573)"
+            "commit": "5327a77",
+            "subject": "#1576 follow-up: a finished calendar or to-do job wakes the sync driver (#1592)"
           }
         ]
       }
@@ -6562,7 +6577,30 @@
       "breadth_pct": 79.4,
       "full_prev": 25.0,
       "kind": "content"
+    },
+    {
+      "commit": "2771686",
+      "commit_full": "27716869faec5ab0422bfa9514c67766861d2117",
+      "commit_date": "2026-11-17T22:19:21Z",
+      "ts": "2026-11-17T22:19:21Z",
+      "message": "#601: pictures behind a table, a cell or the whole message are shown (#828)",
+      "stage": "public beta",
+      "next_stage": "leaving",
+      "last_updated": "2026-11-14",
+      "full_pct": 25.0,
+      "full_range": null,
+      "full_hours": [
+        410,
+        800
+      ],
+      "full_label": "Full target (everything Outlook does)",
+      "target": "Microsoft Outlook (Microsoft 365, classic desktop)",
+      "mainstream_pct": 35.0,
+      "essentials_pct": 50.0,
+      "breadth_pct": 79.4,
+      "full_prev": 25.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-17T21:58:02+00:00"
+  "updated_at": "2026-11-18T03:16:52+00:00"
 }

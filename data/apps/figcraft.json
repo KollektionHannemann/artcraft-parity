@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/figcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "0acbf52",
-  "latest_commit_date": "2026-11-17T18:06:26+07:00",
-  "latest_message": "M0.9: escape terminal controls in CLI operation errors (#2402)",
+  "latest_commit": "44d61a5",
+  "latest_commit_date": "2026-11-17T19:40:24-05:00",
+  "latest_message": "M6: use the shared Android VectorDrawable XML writer (#2436)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Figma Design (desktop app 126.10.7)",
-    "last_updated": "2026-11-15",
+    "last_updated": "2026-11-17",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -505,7 +505,7 @@
     "value_since": "2026-10-11T21:41:28Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 229,
+    "revisions_since": 230,
     "hours_since": {
       "from": [
         273,
@@ -560,42 +560,41 @@
     }
   },
   "roadmap": {
-    "revisions": 280,
+    "revisions": 281,
     "revisions_7d": 3,
     "last_revision": {
-      "ts": "2026-11-17T11:06:26Z",
+      "ts": "2026-11-18T00:40:24Z",
       "kind": "content",
-      "commit": "0acbf52",
-      "commit_full": "0acbf524fc80d5435b1dbe4922448b0543e1093d",
-      "message": "M0.9: escape terminal controls in CLI operation errors (#2402)"
+      "commit": "44d61a5",
+      "commit_full": "44d61a5aef02cc1e6d07e73209198c555b3ae3a2",
+      "message": "M6: use the shared Android VectorDrawable XML writer (#2436)"
     },
     "last_update": {
-      "ts": "2026-11-17T11:06:26Z",
+      "ts": "2026-11-18T00:40:24Z",
       "kind": "content",
-      "commit": "0acbf52",
-      "commit_full": "0acbf524fc80d5435b1dbe4922448b0543e1093d",
-      "message": "M0.9: escape terminal controls in CLI operation errors (#2402)"
+      "commit": "44d61a5",
+      "commit_full": "44d61a5aef02cc1e6d07e73209198c555b3ae3a2",
+      "message": "M6: use the shared Android VectorDrawable XML writer (#2436)"
     },
-    "self_reported": "2026-11-15"
+    "self_reported": "2026-11-17"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.0,
+    "score": 14.7,
     "active_days_7d": 7,
-    "changes_7d": 148,
-    "changes_14d": 301,
-    "housekeeping_7d": 10,
+    "changes_7d": 132,
+    "changes_14d": 279,
+    "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-17T11:26:23Z",
-      "commit": "da2792c",
-      "commit_full": "da2792cb4aaa4d14ecd84929297e804eeb67669f",
-      "subject": "M8: going back to a page shows it where it was left, not fitted again (#2427)"
+      "ts": "2026-11-18T00:40:24Z",
+      "commit": "44d61a5",
+      "commit_full": "44d61a5aef02cc1e6d07e73209198c555b3ae3a2",
+      "subject": "M6: use the shared Android VectorDrawable XML writer (#2436)"
     },
-    "last_commit_ts": "2026-11-17T11:26:23Z",
+    "last_commit_ts": "2026-11-18T00:40:24Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
-      23,
       8,
       0,
       112,
@@ -608,7 +607,8 @@
       1,
       5,
       3,
-      20
+      20,
+      1
     ],
     "days": [
       {
@@ -1326,6 +1326,17 @@
           {
             "commit": "bf29f77",
             "subject": "fix: escape Windows device names in generated exports (#2391)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-18",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "44d61a5",
+            "subject": "M6: use the shared Android VectorDrawable XML writer (#2436)"
           }
         ]
       }
@@ -8250,7 +8261,30 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "44d61a5",
+      "commit_full": "44d61a5aef02cc1e6d07e73209198c555b3ae3a2",
+      "commit_date": "2026-11-17T19:40:24-05:00",
+      "ts": "2026-11-18T00:40:24Z",
+      "message": "M6: use the shared Android VectorDrawable XML writer (#2436)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-17",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-17T13:41:30+00:00"
+  "updated_at": "2026-11-18T03:15:57+00:00"
 }

@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "e3af36f",
-  "latest_commit_date": "2026-11-18T01:14:24+07:00",
-  "latest_message": "Finishes #2037 for the last four page tools: bundle analysis, page watch, WebMCP tool discovery and the screenshot. They now answer a page's own dialogs the sam",
+  "latest_commit": "118b105",
+  "latest_commit_date": "2026-11-18T09:36:17+07:00",
+  "latest_message": "When an app's files named the same library more than once, with a version in one place and without one in another, comparing two versions of the app kept only t",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,42 +45,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 734,
-    "revisions_7d": 260,
+    "revisions": 763,
+    "revisions_7d": 198,
     "last_revision": {
-      "ts": "2026-11-17T18:14:24Z",
+      "ts": "2026-11-18T02:36:17Z",
       "kind": "content",
-      "commit": "e3af36f",
-      "commit_full": "e3af36f2f355284c81f5a387852e3171d5ec1ccc",
-      "message": "Finishes #2037 for the last four page tools: bundle analysis, page watch, WebMCP tool discovery and the screenshot. They now answer a page's own dialogs the sam"
+      "commit": "118b105",
+      "commit_full": "118b1054522b4497dcff26a5b354bb2f34cc988e",
+      "message": "When an app's files named the same library more than once, with a version in one place and without one in another, comparing two versions of the app kept only t"
     },
     "last_update": {
-      "ts": "2026-11-17T18:14:24Z",
+      "ts": "2026-11-18T02:36:17Z",
       "kind": "content",
-      "commit": "e3af36f",
-      "commit_full": "e3af36f2f355284c81f5a387852e3171d5ec1ccc",
-      "message": "Finishes #2037 for the last four page tools: bundle analysis, page watch, WebMCP tool discovery and the screenshot. They now answer a page's own dialogs the sam"
+      "commit": "118b105",
+      "commit_full": "118b1054522b4497dcff26a5b354bb2f34cc988e",
+      "message": "When an app's files named the same library more than once, with a version in one place and without one in another, comparing two versions of the app kept only t"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 27.6,
+    "score": 26.9,
     "active_days_7d": 7,
-    "changes_7d": 308,
-    "changes_14d": 761,
-    "housekeeping_7d": 12,
+    "changes_7d": 238,
+    "changes_14d": 742,
+    "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-17T21:21:57Z",
-      "commit": "dcd5187",
-      "commit_full": "dcd5187cd58c3fdd72f64b692e94754c3dc689c8",
-      "subject": "Use shared PCAP and per-frame protocol inspection (#2031)"
+      "ts": "2026-11-18T02:36:17Z",
+      "commit": "118b105",
+      "commit_full": "118b1054522b4497dcff26a5b354bb2f34cc988e",
+      "subject": "When an app's files named the same library more than once, with a version in one place and without one in another, comparing two versions of the app kept only t"
     },
-    "last_commit_ts": "2026-11-17T21:21:57Z",
+    "last_commit_ts": "2026-11-18T02:36:17Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
-      49,
       1,
       64,
       34,
@@ -93,7 +92,8 @@
       33,
       33,
       33,
-      54
+      63,
+      21
     ],
     "days": [
       {
@@ -413,20 +413,39 @@
       },
       {
         "d": "2026-11-17",
-        "code": 54,
+        "code": 63,
         "other": 2,
         "samples": [
           {
-            "commit": "dcd5187",
-            "subject": "Use shared PCAP and per-frame protocol inspection (#2031)"
+            "commit": "7877d3b",
+            "subject": "The SquashFS reader ended the inode table at the directory table and the directory table at the fragment or id table. An image with an export or xattr table in "
           },
           {
-            "commit": "13845b5",
-            "subject": "Use shared lenient ZIP inspection and bounded seekable reads (#2020)"
+            "commit": "743d896",
+            "subject": "A C# member or parameter named with a verbatim identifier (`@class`, `@namespace`, `@event`, `@operator`) had its `@` dropped and was then read as the keyword, "
           },
           {
-            "commit": "4e99363",
-            "subject": "Use shared WebAssembly inspection and validation reports (#2029)"
+            "commit": "5d14417",
+            "subject": "An Android manifest flag stored as an integer (`exported` = 0, `debuggable` = 1) was read as not set, so a component marked not exported could be reported as ex"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-18",
+        "code": 21,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "118b105",
+            "subject": "When an app's files named the same library more than once, with a version in one place and without one in another, comparing two versions of the app kept only t"
+          },
+          {
+            "commit": "c1413ad",
+            "subject": "The same gap as #2053, in the live browser and Electron capture tools: a value declared as secret could still appear when it was written the way a form posts it"
+          },
+          {
+            "commit": "e03c651",
+            "subject": "The pseudo-C folded an argument's assignment into the call that follows, even when a register that assignment read had been overwritten in between: `rsi = rdi; "
           }
         ]
       }
@@ -5691,8 +5710,211 @@
       "commit": "e3af36f",
       "commit_full": "e3af36f2f355284c81f5a387852e3171d5ec1ccc",
       "message": "Finishes #2037 for the last four page tools: bundle analysis, page watch, WebMCP tool discovery and the screenshot. They now answer a page's own dialogs the sam"
+    },
+    {
+      "ts": "2026-11-17T22:49:43Z",
+      "kind": "content",
+      "commit": "6efe485",
+      "commit_full": "6efe4858137e8720dfe43c74edd0d98d870d4512",
+      "message": "Tracing a generated location through a source map made of sections found the original position but read the source snippet, the ignore flag and the source count"
+    },
+    {
+      "ts": "2026-11-17T22:55:16Z",
+      "kind": "content",
+      "commit": "b9b1e73",
+      "commit_full": "b9b1e733596374a2ec7b8bfac88a9daea371aeec",
+      "message": "When setup edits another app's YAML config, a key written with a space before its colon (`mcp_servers :`) was not found, so a second block was appended, and a p"
+    },
+    {
+      "ts": "2026-11-17T22:55:23Z",
+      "kind": "content",
+      "commit": "72aef67",
+      "commit_full": "72aef6762c93494f729fd0c248ed09a1b916fabb",
+      "message": "An imported function named with a symbol version (`memcpy@GLIBC_2.14`), a stub suffix (`@plt`) or a Darwin variant (`$UNIX2003`) was not found in the argument-c"
+    },
+    {
+      "ts": "2026-11-17T22:55:29Z",
+      "kind": "content",
+      "commit": "fa4788e",
+      "commit_full": "fa4788e0d29c52634c0c11469b570501f99ff61a",
+      "message": "A reference into the middle of a string skipped that many characters, not bytes, so pseudo-C showed the wrong tail for wide strings and for text with multi-byte"
+    },
+    {
+      "ts": "2026-11-17T22:55:36Z",
+      "kind": "content",
+      "commit": "bc6198e",
+      "commit_full": "bc6198ee75c75ef004d750fa45a39f0c8cbbe989",
+      "message": "A GraphQL document that also declared a type-system definition without braces (`scalar`, `union`, `directive`, `extend`) or began with a description lost the op"
+    },
+    {
+      "ts": "2026-11-17T22:55:43Z",
+      "kind": "content",
+      "commit": "5d14417",
+      "commit_full": "5d144178335ecc6f11a2c7d93c90fe259dfad447",
+      "message": "An Android manifest flag stored as an integer (`exported` = 0, `debuggable` = 1) was read as not set, so a component marked not exported could be reported as ex"
+    },
+    {
+      "ts": "2026-11-17T22:55:50Z",
+      "kind": "content",
+      "commit": "743d896",
+      "commit_full": "743d89609467a641c29eb1669637087efdc93484",
+      "message": "A C# member or parameter named with a verbatim identifier (`@class`, `@namespace`, `@event`, `@operator`) had its `@` dropped and was then read as the keyword, "
+    },
+    {
+      "ts": "2026-11-17T22:55:57Z",
+      "kind": "content",
+      "commit": "7877d3b",
+      "commit_full": "7877d3bf9c938aaae55082517f884edec7a6dcab",
+      "message": "The SquashFS reader ended the inode table at the directory table and the directory table at the fragment or id table. An image with an export or xattr table in "
+    },
+    {
+      "ts": "2026-11-18T00:02:40Z",
+      "kind": "content",
+      "commit": "9dff98c",
+      "commit_full": "9dff98c696e4df0ac22dac3413495f598684a3bf",
+      "message": "In an Apple keyed archive, a string whose bytes were stored as a reference to another object was shown as raw data, and a date stored as a whole number of secon"
+    },
+    {
+      "ts": "2026-11-18T00:14:23Z",
+      "kind": "content",
+      "commit": "4a6eb48",
+      "commit_full": "4a6eb485c76bfe3ad72a67ee571ebf50fa0391ee",
+      "message": "Follow-up to #2049. A conversion operator whose target type is named `@checked` was read as a checked operator with no target type, because the `@` was lost bef"
+    },
+    {
+      "ts": "2026-11-18T00:16:32Z",
+      "kind": "content",
+      "commit": "eb64560",
+      "commit_full": "eb64560bbbe5d4eb6790a0926d8fd8bba774f447",
+      "message": "Follow-up to #2047. GraphQL allows spaces, commas and comments between `@` and a directive's name; a document written that way was rejected and its operations w"
+    },
+    {
+      "ts": "2026-11-18T00:26:26Z",
+      "kind": "content",
+      "commit": "5a86212",
+      "commit_full": "5a86212ea493e446d8d64c33fa3a7c6226858e88",
+      "message": "A value the person declared as hidden could still appear in a network capture view or a stand-in when it was written the way a form posts it (spaces as `+` with"
+    },
+    {
+      "ts": "2026-11-18T00:40:28Z",
+      "kind": "content",
+      "commit": "f2f8d49",
+      "commit_full": "f2f8d492ab1403a6e637425fdde852c189291dd0",
+      "message": "When another app's config.toml wrote its server list inline (`mcp_servers = {}` or `mcp_servers = { other = … }`), setup refused with \"exists but is not a table"
+    },
+    {
+      "ts": "2026-11-18T00:44:11Z",
+      "kind": "content",
+      "commit": "83580ca",
+      "commit_full": "83580ca3f4a29e6ee9359f24cbd45877832603b7",
+      "message": "Comparing two versions of a JavaScript app matched each old module against every rule before moving to the next, so an earlier module's weaker match (same struc"
+    },
+    {
+      "ts": "2026-11-18T00:47:27Z",
+      "kind": "content",
+      "commit": "6701cfa",
+      "commit_full": "6701cfa207f4d24bccd67ed3826ba4e47dea9612",
+      "message": "On AArch64, a `cmn` followed by a conditional branch was shown as `if (wzr == 0)`, and writes to the zero register appeared as statements (`wzr = w0 + 1;`). The"
+    },
+    {
+      "ts": "2026-11-18T00:53:23Z",
+      "kind": "content",
+      "commit": "9db8830",
+      "commit_full": "9db8830a1a9691a7840c2cdfb5a8bc4813549dab",
+      "message": "An indexed source map (one made of sections) always reported 0 sources with embedded content, because only the top level was counted; the count now includes eve"
+    },
+    {
+      "ts": "2026-11-18T01:18:57Z",
+      "kind": "content",
+      "commit": "743a2f6",
+      "commit_full": "743a2f6a937f7078d739113be556bcbfbdc524c6",
+      "message": "SQLite lets table constraints follow each other without a comma (`UNIQUE(v) PRIMARY KEY(id)`) and lets a key column sit in extra parentheses (`PRIMARY KEY((id))"
+    },
+    {
+      "ts": "2026-11-18T01:21:07Z",
+      "kind": "content",
+      "commit": "aa2e6b9",
+      "commit_full": "aa2e6b9095fe1973692669c0848b020e110b40f0",
+      "message": "For ARM32 and Thumb `pop`, `push`, `ldm` and `stm`, only the first listed register was treated as written and the rest as read, so `pop {r0, r1}` looked as if i"
+    },
+    {
+      "ts": "2026-11-18T01:44:16Z",
+      "kind": "content",
+      "commit": "de4ff76",
+      "commit_full": "de4ff76c29577e1bdace5a45c565e7c66cdd1657",
+      "message": "Ask which model to use when a server added by address lists several (R5.4) (#1436)"
+    },
+    {
+      "ts": "2026-11-18T01:44:39Z",
+      "kind": "content",
+      "commit": "5faaa95",
+      "commit_full": "5faaa95ca1a1500d1730ff2dbc0b37774d50a02a",
+      "message": "Add a System theme that follows the system's light or dark appearance (R2.9) (#1234)"
+    },
+    {
+      "ts": "2026-11-18T01:46:18Z",
+      "kind": "content",
+      "commit": "787a688",
+      "commit_full": "787a68892b19283131cbeff2b357f9e67b705210",
+      "message": "The JavaScript reader remembered a variable's first string, number or required module and kept using it after the variable was assigned again, so a later fetch("
+    },
+    {
+      "ts": "2026-11-18T01:46:22Z",
+      "kind": "content",
+      "commit": "f63ff7b",
+      "commit_full": "f63ff7b3042c8dc5ebc1ba5a0737b2701da1212d",
+      "message": "When two modules recovered from a bundle had the same path, the second was renamed with a `.js` ending whatever it was, so a duplicate `.ts`, `.css` or `.json` "
+    },
+    {
+      "ts": "2026-11-18T02:06:47Z",
+      "kind": "content",
+      "commit": "db1792b",
+      "commit_full": "db1792b8d16b64f4f4f9a2185b293c4bb39250b5",
+      "message": "Don't save over a config.toml link whose target is missing (R2.9) (#2070)"
+    },
+    {
+      "ts": "2026-11-18T02:14:07Z",
+      "kind": "content",
+      "commit": "7fb205e",
+      "commit_full": "7fb205e7fb61839bc83da5fab8b99db47902c4a0",
+      "message": "Say a refused settings save in the UI's language, with what to do (R2.9) (#2071)"
+    },
+    {
+      "ts": "2026-11-18T02:14:14Z",
+      "kind": "content",
+      "commit": "34e7c90",
+      "commit_full": "34e7c90c9bcc75a208c43fb610dde25ebad0b28d",
+      "message": "Keep a folder inventory's entries in path order before the cut (R3.11) (#2072)"
+    },
+    {
+      "ts": "2026-11-18T02:14:27Z",
+      "kind": "content",
+      "commit": "f9c1690",
+      "commit_full": "f9c16904f3b58d08b422dce4366deb473b29bf7a",
+      "message": "When a function was scanned before the next function's start was known, it could run on into it; the second, trimmed scan fixed its blocks, but the references t"
+    },
+    {
+      "ts": "2026-11-18T02:29:40Z",
+      "kind": "content",
+      "commit": "e03c651",
+      "commit_full": "e03c651588588b9ce956e63ed42ab19c2c7b5e05",
+      "message": "The pseudo-C folded an argument's assignment into the call that follows, even when a register that assignment read had been overwritten in between: `rsi = rdi; "
+    },
+    {
+      "ts": "2026-11-18T02:34:19Z",
+      "kind": "content",
+      "commit": "c1413ad",
+      "commit_full": "c1413ad009704d140b7ffa4f9d91fec54c341212",
+      "message": "The same gap as #2053, in the live browser and Electron capture tools: a value declared as secret could still appear when it was written the way a form posts it"
+    },
+    {
+      "ts": "2026-11-18T02:36:17Z",
+      "kind": "content",
+      "commit": "118b105",
+      "commit_full": "118b1054522b4497dcff26a5b354bb2f34cc988e",
+      "message": "When an app's files named the same library more than once, with a version in one place and without one in another, comparing two versions of the app kept only t"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-17T21:57:38+00:00"
+  "updated_at": "2026-11-18T03:16:25+00:00"
 }
