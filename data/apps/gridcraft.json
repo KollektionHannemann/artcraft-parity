@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/gridcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/gridcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "5b1d89f",
-  "latest_commit_date": "2026-11-18T16:27:25+07:00",
-  "latest_message": "UI: Brazilian Portuguese function help (#3047)",
+  "latest_commit": "00e8f4f",
+  "latest_commit_date": "2026-11-18T21:53:00+07:00",
+  "latest_message": "Drag a selected chart's data outline to change its range (#4389, #4390) (#4391)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Microsoft Excel (Microsoft 365)",
-    "last_updated": "2026-11-15",
+    "last_updated": "2026-11-16",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -269,6 +269,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-16",
+        "text": "A selected chart outlines its data as Excel does (series names red, category labels purple, values one blue block), and dragging a corner of the values outline changes the cells the chart plots: series keep their formatting, a wider block adds series, aligned names and labels follow, one undo step, Esc cancels; chart.setValuesRange does the same for scripts, the CLI and MCP (#4389, #4390)"
+      },
+      {
         "date": "2026-11-06",
         "text": "A sheet keeps its own scroll position when sheets are inserted, deleted or moved before it: a new PivotTable or inserted sheet opens at the top instead of where its neighbour was scrolled; a closed window's positions are let go (#3485)"
       },
@@ -423,10 +427,6 @@
       {
         "date": "2026-10-20",
         "text": "Japanese interface catalog covers every key the Brazilian Portuguese catalog translates: the 398-label shared core plus 545 dialog, message, Backstage and menu strings (943 total, ~43% of ~2,200). A test parses pt.rs's source, so the two catalogs stay in step"
-      },
-      {
-        "date": "2026-10-20",
-        "text": "Interface translated into Dutch (518 labels: ribbon, context menus, File view, dialog titles, Options); nl, nl-NL, nl-BE locale tags resolve to Dutch"
       }
     ]
   },
@@ -435,7 +435,7 @@
     "value_since": "2026-10-10T18:09:06Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 106,
+    "revisions_since": 108,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -443,39 +443,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 109,
-    "revisions_7d": 11,
+    "revisions": 111,
+    "revisions_7d": 13,
     "last_revision": {
-      "ts": "2026-11-18T09:27:25Z",
+      "ts": "2026-11-18T14:53:00Z",
       "kind": "content",
-      "commit": "5b1d89f",
-      "commit_full": "5b1d89f8679c420258b8dac47eea9e93c7246f16",
-      "message": "UI: Brazilian Portuguese function help (#3047)"
+      "commit": "00e8f4f",
+      "commit_full": "00e8f4fae06d6db324ff551080edf9e0453ccd6e",
+      "message": "Drag a selected chart's data outline to change its range (#4389, #4390) (#4391)"
     },
     "last_update": {
-      "ts": "2026-11-18T09:27:25Z",
+      "ts": "2026-11-18T14:53:00Z",
       "kind": "content",
-      "commit": "5b1d89f",
-      "commit_full": "5b1d89f8679c420258b8dac47eea9e93c7246f16",
-      "message": "UI: Brazilian Portuguese function help (#3047)"
+      "commit": "00e8f4f",
+      "commit_full": "00e8f4fae06d6db324ff551080edf9e0453ccd6e",
+      "message": "Drag a selected chart's data outline to change its range (#4389, #4390) (#4391)"
     },
-    "self_reported": "2026-11-15"
+    "self_reported": "2026-11-16"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.2,
+    "score": 17.4,
     "active_days_7d": 6,
-    "changes_7d": 63,
-    "changes_14d": 158,
+    "changes_7d": 67,
+    "changes_14d": 162,
     "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-18T09:45:30Z",
-      "commit": "c9d2883",
-      "commit_full": "c9d2883b86bd29bf31764f05759ac6b71b82a2db",
-      "subject": "xtask: `parity --check` accepts a CRLF checkout of the checklist (#2028)"
+      "ts": "2026-11-18T14:53:00Z",
+      "commit": "00e8f4f",
+      "commit_full": "00e8f4fae06d6db324ff551080edf9e0453ccd6e",
+      "subject": "Drag a selected chart's data outline to change its range (#4389, #4390) (#4391)"
     },
-    "last_commit_ts": "2026-11-18T09:45:30Z",
+    "last_commit_ts": "2026-11-18T14:53:00Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       8,
@@ -491,7 +491,7 @@
       8,
       5,
       9,
-      22
+      26
     ],
     "days": [
       {
@@ -1203,20 +1203,20 @@
       },
       {
         "d": "2026-11-18",
-        "code": 22,
+        "code": 26,
         "other": 0,
         "samples": [
           {
-            "commit": "c9d2883",
-            "subject": "xtask: `parity --check` accepts a CRLF checkout of the checklist (#2028)"
+            "commit": "00e8f4f",
+            "subject": "Drag a selected chart's data outline to change its range (#4389, #4390) (#4391)"
           },
           {
-            "commit": "a3119f5",
-            "subject": "xlsx/csv: cap secondary reader allocations (#2159) (#2199)"
+            "commit": "f8af138",
+            "subject": "XLSX: read, evaluate and write Excel 2010 conditional formats (#717)"
           },
           {
-            "commit": "272ae54",
-            "subject": "Delete separate rows or columns in one pass (#2385)"
+            "commit": "aef4ceb",
+            "subject": "RATE follows Excel's iteration (#2502)"
           }
         ]
       }
@@ -3936,7 +3936,53 @@
       "breadth_pct": 75.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "aef4ceb",
+      "commit_full": "aef4ceb10dd62dcd0f06e611485ab32635ba7c58",
+      "commit_date": "2026-11-18T20:39:57+07:00",
+      "ts": "2026-11-18T13:39:57Z",
+      "message": "RATE follows Excel's iteration (#2502)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "00e8f4f",
+      "commit_full": "00e8f4fae06d6db324ff551080edf9e0453ccd6e",
+      "commit_date": "2026-11-18T21:53:00+07:00",
+      "ts": "2026-11-18T14:53:00Z",
+      "message": "Drag a selected chart's data outline to change its range (#4389, #4390) (#4391)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-16",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-18T11:59:33+00:00"
+  "updated_at": "2026-11-18T19:59:33+00:00"
 }

@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "cf6f1d1",
-  "latest_commit_date": "2026-11-18T18:54:47+07:00",
-  "latest_message": "Follow-up to #2107. Listing a result's pageable lists looked each list name up from the top of the result again, so a large result with many names took one full",
+  "latest_commit": "5fee837",
+  "latest_commit_date": "2026-11-19T01:55:15+07:00",
+  "latest_message": "The notice shown on Make and at build starts when a project's saved AI is off or gone now comes (#2140)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 802,
-    "revisions_7d": 237,
+    "revisions": 812,
+    "revisions_7d": 247,
     "last_revision": {
-      "ts": "2026-11-18T11:54:47Z",
+      "ts": "2026-11-18T18:55:15Z",
       "kind": "content",
-      "commit": "cf6f1d1",
-      "commit_full": "cf6f1d1a7fa665101fc222b9000df8d049fda04f",
-      "message": "Follow-up to #2107. Listing a result's pageable lists looked each list name up from the top of the result again, so a large result with many names took one full"
+      "commit": "5fee837",
+      "commit_full": "5fee83713f782c1dd67489f308cf1c68e4563ccc",
+      "message": "The notice shown on Make and at build starts when a project's saved AI is off or gone now comes (#2140)"
     },
     "last_update": {
-      "ts": "2026-11-18T11:54:47Z",
+      "ts": "2026-11-18T18:55:15Z",
       "kind": "content",
-      "commit": "cf6f1d1",
-      "commit_full": "cf6f1d1a7fa665101fc222b9000df8d049fda04f",
-      "message": "Follow-up to #2107. Listing a result's pageable lists looked each list name up from the top of the result again, so a large result with many names took one full"
+      "commit": "5fee837",
+      "commit_full": "5fee83713f782c1dd67489f308cf1c68e4563ccc",
+      "message": "The notice shown on Make and at build starts when a project's saved AI is off or gone now comes (#2140)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 28.4,
+    "score": 28.7,
     "active_days_7d": 7,
-    "changes_7d": 278,
-    "changes_14d": 782,
+    "changes_7d": 292,
+    "changes_14d": 796,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-18T11:54:47Z",
-      "commit": "cf6f1d1",
-      "commit_full": "cf6f1d1a7fa665101fc222b9000df8d049fda04f",
-      "subject": "Follow-up to #2107. Listing a result's pageable lists looked each list name up from the top of the result again, so a large result with many names took one full"
+      "ts": "2026-11-18T18:55:15Z",
+      "commit": "5fee837",
+      "commit_full": "5fee83713f782c1dd67489f308cf1c68e4563ccc",
+      "subject": "The notice shown on Make and at build starts when a project's saved AI is off or gone now comes (#2140)"
     },
-    "last_commit_ts": "2026-11-18T11:54:47Z",
+    "last_commit_ts": "2026-11-18T18:55:15Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       1,
@@ -93,7 +93,7 @@
       33,
       33,
       63,
-      61
+      75
     ],
     "days": [
       {
@@ -432,20 +432,20 @@
       },
       {
         "d": "2026-11-18",
-        "code": 61,
+        "code": 75,
         "other": 0,
         "samples": [
           {
-            "commit": "cf6f1d1",
-            "subject": "Follow-up to #2107. Listing a result's pageable lists looked each list name up from the top of the result again, so a large result with many names took one full"
+            "commit": "5fee837",
+            "subject": "The notice shown on Make and at build starts when a project's saved AI is off or gone now comes (#2140)"
           },
           {
-            "commit": "7871fc2",
-            "subject": "Follow-up to #2114. An argument loaded from memory was written into the call that follows it, also when a store in between could have changed that memory: `ldr "
+            "commit": "5895463",
+            "subject": "The check reports partial coverage, with no total, when a .cs file under the source folder may (#2136)"
           },
           {
-            "commit": "e364d88",
-            "subject": "Follow-up to #2100. A page script written as a `data:` or `blob:` URL was read as a local path, so `data:text/javascript,0//../../boot.js` became a dependency o"
+            "commit": "4932cca",
+            "subject": "Use merged DEX bounds and completeness repairs (#2130)"
           }
         ]
       }
@@ -6186,8 +6186,78 @@
       "commit": "cf6f1d1",
       "commit_full": "cf6f1d1a7fa665101fc222b9000df8d049fda04f",
       "message": "Follow-up to #2107. Listing a result's pageable lists looked each list name up from the top of the result again, so a large result with many names took one full"
+    },
+    {
+      "ts": "2026-11-18T12:04:07Z",
+      "kind": "content",
+      "commit": "5633b51",
+      "commit_full": "5633b513ffaf19648e2c37b3c59fa43f9dbbf379",
+      "message": "Follow-up to #2108. A column added later to a SQLite table fills older rows with its default. Two kinds of default were read as empty: a blob written with a plu"
+    },
+    {
+      "ts": "2026-11-18T12:38:01Z",
+      "kind": "content",
+      "commit": "194442d",
+      "commit_full": "194442dae505c60593f807e4ef75d4e232528ead",
+      "message": "Follow-up to #2119, which stopped a load being shown after a store that may have changed the memory it read, but still let it through in several cases: on 64-bi"
+    },
+    {
+      "ts": "2026-11-18T12:47:46Z",
+      "kind": "content",
+      "commit": "de20759",
+      "commit_full": "de20759323fea3fc32cec01848383bbacd879813",
+      "message": "Follow-up to #2116. A result with thousands of lists at its top level was still gone through in full, though its first 64 already decide what is listed. The top"
+    },
+    {
+      "ts": "2026-11-18T13:26:30Z",
+      "kind": "content",
+      "commit": "b935cb3",
+      "commit_full": "b935cb33bfe616c921cc4e953c9a1be912df5406",
+      "message": "Follow-up to #2113. A window loading `file://localhost/ui/index.html` was looked up as `localhost/ui/index.html`, which could match the wrong page; `localhost` "
+    },
+    {
+      "ts": "2026-11-18T14:27:16Z",
+      "kind": "content",
+      "commit": "9c9f5a1",
+      "commit_full": "9c9f5a10d27b43de652e39dbc62aede62a28a6f1",
+      "message": "Follow-up to #2124. The pseudo-C could still show an argument's load in the call line after an instruction that overwrote the bytes it read, for writes the deco"
+    },
+    {
+      "ts": "2026-11-18T14:35:57Z",
+      "kind": "content",
+      "commit": "5e09595",
+      "commit_full": "5e09595d5533e6926f51817841f16060956c5bba",
+      "message": "Let Settings → AI choose Codex's model (#2129)"
+    },
+    {
+      "ts": "2026-11-18T15:53:40Z",
+      "kind": "content",
+      "commit": "f9fbd77",
+      "commit_full": "f9fbd77d1b2dadd58930b80b2e3b6eb949d0eef0",
+      "message": "Name the folders a walk couldn't list in every tool that walks one (R3.11) (#2106)"
+    },
+    {
+      "ts": "2026-11-18T16:47:48Z",
+      "kind": "content",
+      "commit": "3b0a7ec",
+      "commit_full": "3b0a7ec1d41cd6d4144b0de7c7a55d9b670e64d2",
+      "message": "Picking game A, then B, then A again while the first look at A was still running could show the older result, because the screen matched an answer to the folder"
+    },
+    {
+      "ts": "2026-11-18T18:18:35Z",
+      "kind": "content",
+      "commit": "5895463",
+      "commit_full": "5895463ed6701328baa18bd577a66217d52ab0d4",
+      "message": "The check reports partial coverage, with no total, when a .cs file under the source folder may (#2136)"
+    },
+    {
+      "ts": "2026-11-18T18:55:15Z",
+      "kind": "content",
+      "commit": "5fee837",
+      "commit_full": "5fee83713f782c1dd67489f308cf1c68e4563ccc",
+      "message": "The notice shown on Make and at build starts when a project's saved AI is off or gone now comes (#2140)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-18T11:59:39+00:00"
+  "updated_at": "2026-11-18T19:59:43+00:00"
 }

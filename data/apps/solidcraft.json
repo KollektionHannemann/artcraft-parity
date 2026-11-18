@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 38.0,
+    "score": 38.8,
     "active_days_7d": 7,
-    "changes_7d": 1298,
-    "changes_14d": 2145,
-    "housekeeping_7d": 53,
+    "changes_7d": 1359,
+    "changes_14d": 2206,
+    "housekeeping_7d": 56,
     "last_code_change": {
-      "ts": "2026-11-18T11:36:58Z",
-      "commit": "bd66a6e",
-      "commit_full": "bd66a6e9fbd335e9dfedc905383bdee954d61b89",
-      "subject": "Assistant: add UnoRouter as an OpenAI-compatible provider preset (#17068) (#18993)"
+      "ts": "2026-11-18T19:16:07Z",
+      "commit": "26d2f72",
+      "commit_full": "26d2f7227fc5c8fefc2a98f5ed4856857af36809",
+      "subject": "Fillet: round a sphere's rim, socket or nub, when the rim runs through the sphere's poles (#18826) (#18840)"
     },
-    "last_commit_ts": "2026-11-18T11:36:58Z",
+    "last_commit_ts": "2026-11-18T19:16:07Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       109,
@@ -93,7 +93,7 @@
       156,
       281,
       181,
-      88
+      149
     ],
     "days": [
       {
@@ -896,26 +896,43 @@
       },
       {
         "d": "2026-11-18",
-        "code": 88,
-        "other": 1,
+        "code": 149,
+        "other": 4,
         "samples": [
           {
-            "commit": "bd66a6e",
-            "subject": "Assistant: add UnoRouter as an OpenAI-compatible provider preset (#17068) (#18993)"
+            "commit": "26d2f72",
+            "subject": "Fillet: round a sphere's rim, socket or nub, when the rim runs through the sphere's poles (#18826) (#18840)"
           },
           {
-            "commit": "cc5acc8",
-            "subject": "Rib: close against a face that curves across the rib's thickness (#18261) (#18752)"
+            "commit": "c737518",
+            "subject": "STEP import with cadmpeg: bodies and faces show the file's colours, names and transparency, as with SolidCraft's own reader (#18176)"
           },
           {
-            "commit": "13fa755",
-            "subject": "Surface intersection: keep nearby touches distinct in smooth charts (#17755) (#18610)"
+            "commit": "e59d19b",
+            "subject": "Draft far from the origin: read back a circle as the export wrote it (#19164)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.45.0-rc.3",
+      "name": "SolidCraft v0.45.0-rc.3",
+      "ts": "2026-11-18T17:47:13Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.45.0-rc.3",
+      "changes": 34,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.45.0-rc.2",
       "name": "SolidCraft v0.45.0-rc.2",
@@ -1091,23 +1108,6 @@
       "name": "SolidCraft v0.41.0",
       "ts": "2026-11-13T04:19:07Z",
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.41.0",
-      "changes": null,
-      "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.40.1",
-      "name": "SolidCraft v0.40.1",
-      "ts": "2026-11-12T03:10:48Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.40.1",
       "changes": null,
       "new_contributors": null,
       "platforms": [
@@ -2517,5 +2517,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-18T11:59:52+00:00"
+  "updated_at": "2026-11-18T20:00:06+00:00"
 }

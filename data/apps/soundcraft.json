@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/soundcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/soundcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "b5392da",
-  "latest_commit_date": "2026-11-18T17:11:17+07:00",
-  "latest_message": "Add automation points with Command-click (#1395)",
+  "latest_commit": "56d5c38",
+  "latest_commit_date": "2026-11-18T20:53:20+07:00",
+  "latest_message": "Add a built-in Frequency Shifter plugin (#1479)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
     "target": "Avid Pro Tools Ultimate 2026.4.1",
-    "last_updated": "2026-11-08",
+    "last_updated": "2026-11-09",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -267,6 +267,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-09",
+        "text": "A built-in Frequency Shifter (freqshifter) moves every frequency in the signal by the same number of hertz, from 0.01 Hz to 5 kHz: up, down, both ways at once, or down on the left and up on the right of a stereo track. The unwanted sideband stays at least 100 dB down from 20 Hz to 20 Hz below Nyquist at 44.1 to 96 kHz. Feedback sends the output round again for a trail of further shifts, Mix blends in the dry signal, and every change glides without a click. No readiness percentage change."
+      },
+      {
         "date": "2026-11-08",
         "text": "Command-click near an existing automation breakpoint keeps that point as the click target with every active tool, and existing fade and clip-gain controls retain their normal priority. Empty automation space shows a crosshair and an insertion hint while Command is held. The active tool's drag gestures stay unchanged. No readiness percentage change."
       },
@@ -421,10 +425,6 @@
       {
         "date": "2026-10-12",
         "text": "(Mix in a separate window): Window › Mix in Separate Window shows the Mix window in its own native window, so Edit and Mix can be on screen at once (e.g. one per monitor), as in Pro Tools. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-12",
-        "text": "(audio device settings): Setup › Playback Engine chooses the audio system, output and input device, sample rate and buffer size, kept per machine with the preferences; 16/32-bit integer devices are converted; ASIO is available behind the opt-in asio build feature (verified with an SSL 2+ at 128 samples). Channel routing, one duplex clock and latency compensation remain (G-01). No readiness percentage change."
       }
     ]
   },
@@ -433,7 +433,7 @@
     "value_since": "2026-10-10T18:08:49Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 27,
+    "revisions_since": 28,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -441,39 +441,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 28,
-    "revisions_7d": 5,
+    "revisions": 29,
+    "revisions_7d": 6,
     "last_revision": {
-      "ts": "2026-11-18T10:11:17Z",
+      "ts": "2026-11-18T13:53:20Z",
       "kind": "content",
-      "commit": "b5392da",
-      "commit_full": "b5392da2a2fbd513bfca7de74090dafde2ce7816",
-      "message": "Add automation points with Command-click (#1395)"
+      "commit": "56d5c38",
+      "commit_full": "56d5c38547fbfd5a9eb1543da9b7558f3a836a8d",
+      "message": "Add a built-in Frequency Shifter plugin (#1479)"
     },
     "last_update": {
-      "ts": "2026-11-18T10:11:17Z",
+      "ts": "2026-11-18T13:53:20Z",
       "kind": "content",
-      "commit": "b5392da",
-      "commit_full": "b5392da2a2fbd513bfca7de74090dafde2ce7816",
-      "message": "Add automation points with Command-click (#1395)"
+      "commit": "56d5c38",
+      "commit_full": "56d5c38547fbfd5a9eb1543da9b7558f3a836a8d",
+      "message": "Add a built-in Frequency Shifter plugin (#1479)"
     },
-    "self_reported": "2026-11-08"
+    "self_reported": "2026-11-09"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 11.6,
+    "score": 11.9,
     "active_days_7d": 7,
-    "changes_7d": 36,
-    "changes_14d": 78,
+    "changes_7d": 38,
+    "changes_14d": 80,
     "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-18T10:11:17Z",
-      "commit": "b5392da",
-      "commit_full": "b5392da2a2fbd513bfca7de74090dafde2ce7816",
-      "subject": "Add automation points with Command-click (#1395)"
+      "ts": "2026-11-18T13:53:20Z",
+      "commit": "56d5c38",
+      "commit_full": "56d5c38547fbfd5a9eb1543da9b7558f3a836a8d",
+      "subject": "Add a built-in Frequency Shifter plugin (#1479)"
     },
-    "last_commit_ts": "2026-11-18T10:11:17Z",
+    "last_commit_ts": "2026-11-18T13:53:20Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
       6,
@@ -489,7 +489,7 @@
       2,
       2,
       2,
-      7
+      9
     ],
     "days": [
       {
@@ -1161,20 +1161,20 @@
       },
       {
         "d": "2026-11-18",
-        "code": 7,
+        "code": 9,
         "other": 0,
         "samples": [
           {
+            "commit": "56d5c38",
+            "subject": "Add a built-in Frequency Shifter plugin (#1479)"
+          },
+          {
+            "commit": "42d7fa3",
+            "subject": "sonar: leave the locale catalogs out of duplication detection (#1631)"
+          },
+          {
             "commit": "b5392da",
             "subject": "Add automation points with Command-click (#1395)"
-          },
-          {
-            "commit": "d570045",
-            "subject": "Keep the crossfade when a clip of it is processed in place (#1379)"
-          },
-          {
-            "commit": "c27ccac",
-            "subject": "Mark the selection in the ruler with a split arrow and keep the edit cursor drawn while playing (#973)"
           }
         ]
       }
@@ -2031,7 +2031,30 @@
       "breadth_pct": 70.0,
       "full_prev": 40.0,
       "kind": "content"
+    },
+    {
+      "commit": "56d5c38",
+      "commit_full": "56d5c38547fbfd5a9eb1543da9b7558f3a836a8d",
+      "commit_date": "2026-11-18T20:53:20+07:00",
+      "ts": "2026-11-18T13:53:20Z",
+      "message": "Add a built-in Frequency Shifter plugin (#1479)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-09",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-18T11:59:27+00:00"
+  "updated_at": "2026-11-18T19:59:22+00:00"
 }
