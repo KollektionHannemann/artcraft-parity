@@ -537,7 +537,7 @@
   },
   "roadmap": {
     "revisions": 250,
-    "revisions_7d": 27,
+    "revisions_7d": 22,
     "last_revision": {
       "ts": "2026-11-18T18:29:14Z",
       "kind": "content",
@@ -557,21 +557,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 38.1,
+    "score": 33.4,
     "active_days_7d": 7,
-    "changes_7d": 1419,
-    "changes_14d": 2126,
-    "housekeeping_7d": 33,
+    "changes_7d": 1178,
+    "changes_14d": 2018,
+    "housekeeping_7d": 28,
     "last_code_change": {
-      "ts": "2026-11-18T18:53:26Z",
-      "commit": "e34bf8c",
-      "commit_full": "e34bf8c82fbdef6d384596f0d800621ce164d22d",
-      "subject": "tests: fix two main test failures from crossed merges (#8601)"
+      "ts": "2026-11-19T01:22:38Z",
+      "commit": "1233b23",
+      "commit_full": "1233b23b192edc7162e1054524cfdc519d5d2736",
+      "subject": "Revert #8627 (palette_io through craft-cms) and its two test fixes: messages leave the catalogs (#8636)"
     },
-    "last_commit_ts": "2026-11-18T18:53:26Z",
+    "last_commit_ts": "2026-11-19T01:22:38Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
-      121,
       46,
       56,
       199,
@@ -584,7 +583,8 @@
       214,
       103,
       114,
-      211
+      219,
+      5
     ],
     "days": [
       {
@@ -1507,20 +1507,39 @@
       },
       {
         "d": "2026-11-18",
-        "code": 211,
+        "code": 219,
         "other": 1,
         "samples": [
           {
-            "commit": "e34bf8c",
-            "subject": "tests: fix two main test failures from crossed merges (#8601)"
+            "commit": "96a34ff",
+            "subject": "Revert #8612 (craft-cms cutover) and its fmt fix #8616: main fails to build (#8618)"
           },
           {
-            "commit": "be2e4af",
-            "subject": "i18n: fix main's catalog test (duplicate Gujarati Panel row) (#8600)"
+            "commit": "760c91f",
+            "subject": "color: format the craft-cms import in cms/icc.rs (#8616)"
           },
           {
-            "commit": "18a5b41",
-            "subject": "Land 21 dotCooCoo PRs, with main merged in (#8599)"
+            "commit": "4d73308",
+            "subject": "color: cut over cms/icc.rs to craft-cms (#8612)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-19",
+        "code": 5,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "1233b23",
+            "subject": "Revert #8627 (palette_io through craft-cms) and its two test fixes: messages leave the catalogs (#8636)"
+          },
+          {
+            "commit": "fc2a525",
+            "subject": "color: an .ase library over the cap gets VectorCraft's own, translated message again (#8635)"
+          },
+          {
+            "commit": "bab45a9",
+            "subject": "Revert #8626 (HP-GL/2 through craft-plotter) and fix #8627's palette tests: main fails to build (#8631)"
           }
         ]
       }
@@ -8305,5 +8324,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-18T19:58:41+00:00"
+  "updated_at": "2026-11-19T01:41:56+00:00"
 }

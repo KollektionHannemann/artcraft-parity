@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "5fee837",
-  "latest_commit_date": "2026-11-19T01:55:15+07:00",
-  "latest_message": "The notice shown on Make and at build starts when a project's saved AI is off or gone now comes (#2140)",
+  "latest_commit": "bbfd517",
+  "latest_commit_date": "2026-11-19T07:06:09+07:00",
+  "latest_message": "The scan read every squashfs region's block size at offset 12, where only version 4 keeps it; (#2155)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,42 +45,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 812,
-    "revisions_7d": 247,
+    "revisions": 817,
+    "revisions_7d": 210,
     "last_revision": {
-      "ts": "2026-11-18T18:55:15Z",
+      "ts": "2026-11-19T00:06:09Z",
       "kind": "content",
-      "commit": "5fee837",
-      "commit_full": "5fee83713f782c1dd67489f308cf1c68e4563ccc",
-      "message": "The notice shown on Make and at build starts when a project's saved AI is off or gone now comes (#2140)"
+      "commit": "bbfd517",
+      "commit_full": "bbfd5177f0501fbef384fee69937cbef91329a2e",
+      "message": "The scan read every squashfs region's block size at offset 12, where only version 4 keeps it; (#2155)"
     },
     "last_update": {
-      "ts": "2026-11-18T18:55:15Z",
+      "ts": "2026-11-19T00:06:09Z",
       "kind": "content",
-      "commit": "5fee837",
-      "commit_full": "5fee83713f782c1dd67489f308cf1c68e4563ccc",
-      "message": "The notice shown on Make and at build starts when a project's saved AI is off or gone now comes (#2140)"
+      "commit": "bbfd517",
+      "commit_full": "bbfd5177f0501fbef384fee69937cbef91329a2e",
+      "message": "The scan read every squashfs region's block size at offset 12, where only version 4 keeps it; (#2155)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 28.7,
+    "score": 24.6,
     "active_days_7d": 7,
-    "changes_7d": 292,
-    "changes_14d": 796,
+    "changes_7d": 249,
+    "changes_14d": 801,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-18T18:55:15Z",
-      "commit": "5fee837",
-      "commit_full": "5fee83713f782c1dd67489f308cf1c68e4563ccc",
-      "subject": "The notice shown on Make and at build starts when a project's saved AI is off or gone now comes (#2140)"
+      "ts": "2026-11-19T00:06:09Z",
+      "commit": "bbfd517",
+      "commit_full": "bbfd5177f0501fbef384fee69937cbef91329a2e",
+      "subject": "The scan read every squashfs region's block size at offset 12, where only version 4 keeps it; (#2155)"
     },
-    "last_commit_ts": "2026-11-18T18:55:15Z",
+    "last_commit_ts": "2026-11-19T00:06:09Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
-      1,
       64,
       34,
       37,
@@ -93,7 +92,8 @@
       33,
       33,
       63,
-      75
+      80,
+      1
     ],
     "days": [
       {
@@ -432,20 +432,31 @@
       },
       {
         "d": "2026-11-18",
-        "code": 75,
+        "code": 80,
         "other": 0,
         "samples": [
           {
-            "commit": "5fee837",
-            "subject": "The notice shown on Make and at build starts when a project's saved AI is off or gone now comes (#2140)"
+            "commit": "cf91402",
+            "subject": "Update craft-tar to storytold/craft-libs main (#2151)"
           },
           {
-            "commit": "5895463",
-            "subject": "The check reports partial coverage, with no total, when a .cs file under the source folder may (#2136)"
+            "commit": "7f0c877",
+            "subject": "The build steps filled {editor}, {player} and {ext} with chained replace calls, so an editor (#2147)"
           },
           {
-            "commit": "4932cca",
-            "subject": "Use merged DEX bounds and completeness repairs (#2130)"
+            "commit": "d6a1f88",
+            "subject": "Answers to questions now carry the replaced and replacing AI names as an optional (#2142)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-19",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "bbfd517",
+            "subject": "The scan read every squashfs region's block size at offset 12, where only version 4 keeps it; (#2155)"
           }
         ]
       }
@@ -6256,8 +6267,43 @@
       "commit": "5fee837",
       "commit_full": "5fee83713f782c1dd67489f308cf1c68e4563ccc",
       "message": "The notice shown on Make and at build starts when a project's saved AI is off or gone now comes (#2140)"
+    },
+    {
+      "ts": "2026-11-18T20:14:03Z",
+      "kind": "content",
+      "commit": "ebfbd99",
+      "commit_full": "ebfbd999be9dc48145bd633e9d54e7fe7dcdf13f",
+      "message": "The check compared .cs files against the sizes its folder walk recorded, then read each one (#2144)"
+    },
+    {
+      "ts": "2026-11-18T20:23:38Z",
+      "kind": "content",
+      "commit": "8f69309",
+      "commit_full": "8f693094b59c29f39a1c509baf01adf5c73f37df",
+      "message": "i18n::trf filled {name} placeholders with one replace per argument, so a value that looked like (#2143)"
+    },
+    {
+      "ts": "2026-11-18T21:11:01Z",
+      "kind": "content",
+      "commit": "d6a1f88",
+      "commit_full": "d6a1f888aa93120134525c5fa4120e23ad9d6713",
+      "message": "Answers to questions now carry the replaced and replacing AI names as an optional (#2142)"
+    },
+    {
+      "ts": "2026-11-18T21:58:24Z",
+      "kind": "content",
+      "commit": "7f0c877",
+      "commit_full": "7f0c877f8cecbe22f5037e4569729f18fd3b62c9",
+      "message": "The build steps filled {editor}, {player} and {ext} with chained replace calls, so an editor (#2147)"
+    },
+    {
+      "ts": "2026-11-19T00:06:09Z",
+      "kind": "content",
+      "commit": "bbfd517",
+      "commit_full": "bbfd5177f0501fbef384fee69937cbef91329a2e",
+      "message": "The scan read every squashfs region's block size at offset 12, where only version 4 keeps it; (#2155)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-18T19:59:43+00:00"
+  "updated_at": "2026-11-19T01:42:31+00:00"
 }

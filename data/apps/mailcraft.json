@@ -416,7 +416,7 @@
   },
   "roadmap": {
     "revisions": 262,
-    "revisions_7d": 19,
+    "revisions_7d": 16,
     "last_revision": {
       "ts": "2026-11-18T13:29:54Z",
       "kind": "content",
@@ -436,21 +436,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 23.8,
+    "score": 21.6,
     "active_days_7d": 7,
-    "changes_7d": 194,
-    "changes_14d": 293,
-    "housekeeping_7d": 14,
+    "changes_7d": 189,
+    "changes_14d": 292,
+    "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-11-18T13:35:03Z",
-      "commit": "191e49a",
-      "commit_full": "191e49a9dff785c53cc79e8a8106f20e1ae09cd5",
-      "subject": "Add configurable swipe gestures to the message list (#1616)"
+      "ts": "2026-11-19T00:35:32Z",
+      "commit": "5767981",
+      "commit_full": "5767981600c1de944ea4a75b3ad59e07102172ac",
+      "subject": "Fix #1651: a renamed signature keeps its name however the field is left (#1681)"
     },
-    "last_commit_ts": "2026-11-18T13:35:03Z",
+    "last_commit_ts": "2026-11-19T00:35:32Z",
     "repo_since": "2026-10-12T18:17:00Z",
     "window": [
-      11,
       17,
       15,
       8,
@@ -463,7 +462,8 @@
       23,
       20,
       33,
-      20
+      27,
+      3
     ],
     "days": [
       {
@@ -1163,20 +1163,39 @@
       },
       {
         "d": "2026-11-18",
-        "code": 20,
-        "other": 1,
+        "code": 27,
+        "other": 3,
         "samples": [
           {
-            "commit": "191e49a",
-            "subject": "Add configurable swipe gestures to the message list (#1616)"
+            "commit": "07e91e7",
+            "subject": "Say plainly what the Your name hint is for (#1671)"
           },
           {
-            "commit": "ef686cd",
-            "subject": "Preserve pasted spreadsheet tables in the HTML composer (#1381)"
+            "commit": "498733c",
+            "subject": "Folder search matches from the start of each word (#1670)"
           },
           {
-            "commit": "f7810af",
-            "subject": "Georgian as a preview language (#1010) (#1412)"
+            "commit": "3e7e00c",
+            "subject": "Refuse copying a calendar item that has files attached (#1669)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-19",
+        "code": 3,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "5767981",
+            "subject": "Fix #1651: a renamed signature keeps its name however the field is left (#1681)"
+          },
+          {
+            "commit": "9a08427",
+            "subject": "Fix #1513: a mouse wheel notch scrolls three lines (#1679)"
+          },
+          {
+            "commit": "ae47c49",
+            "subject": "Fix #1282: pop-out composer comes back to the front after Attach File (#1678)"
           }
         ]
       }
@@ -6652,5 +6671,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-18T20:00:13+00:00"
+  "updated_at": "2026-11-19T01:42:45+00:00"
 }

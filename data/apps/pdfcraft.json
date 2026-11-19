@@ -496,22 +496,21 @@
   },
   "milestone": null,
   "activity": {
-    "level": "buzzing",
-    "score": 21.1,
+    "level": "active",
+    "score": 19.0,
     "active_days_7d": 7,
-    "changes_7d": 92,
-    "changes_14d": 487,
-    "housekeeping_7d": 6,
+    "changes_7d": 93,
+    "changes_14d": 457,
+    "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-18T17:57:14Z",
-      "commit": "bad6ac7",
-      "commit_full": "bad6ac7fa2ced2f522c557b793bd4ee169a6a485",
-      "subject": "Use merged XFA namespace and BOM safety fixes (#7779)"
+      "ts": "2026-11-19T01:12:39Z",
+      "commit": "5b8cb8a",
+      "commit_full": "5b8cb8ab61cd0d0f8dd91845f16d3f5a40a546d9",
+      "subject": "Restore plain PPTX tables and shared-writer regression checks (#7830)"
     },
-    "last_commit_ts": "2026-11-18T17:57:14Z",
+    "last_commit_ts": "2026-11-19T01:12:39Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
-      36,
       9,
       6,
       31,
@@ -524,7 +523,8 @@
       12,
       7,
       6,
-      38
+      41,
+      3
     ],
     "days": [
       {
@@ -1447,20 +1447,39 @@
       },
       {
         "d": "2026-11-18",
-        "code": 38,
+        "code": 41,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "8f4f4ea",
+            "subject": "Cut over pptx export to craft-pptx (#7823)"
+          },
+          {
+            "commit": "d03b99e",
+            "subject": "Export: Word through craft-docx, from the shared word model (rebased #7592) (#7814)"
+          },
+          {
+            "commit": "56f19a3",
+            "subject": "test: avoid racing startup password completion order (#7811)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-19",
+        "code": 3,
         "other": 0,
         "samples": [
           {
-            "commit": "bad6ac7",
-            "subject": "Use merged XFA namespace and BOM safety fixes (#7779)"
+            "commit": "5b8cb8a",
+            "subject": "Restore plain PPTX tables and shared-writer regression checks (#7830)"
           },
           {
-            "commit": "b11d37c",
-            "subject": "fix(sign): consume standard OCSP certificate wrapper parsing (#7795)"
+            "commit": "21a9d8b",
+            "subject": "test(ui): await native button-script completion (#7825)"
           },
           {
-            "commit": "dbf59f4",
-            "subject": "test(sign): keep embedded OCSP certificate oracle independent (#7786)"
+            "commit": "79477f3",
+            "subject": "Point hayro-postscript to storytold/craft-libs (storytold/craft-libs#790) (#7828)"
           }
         ]
       }
@@ -7264,5 +7283,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-18T19:59:00+00:00"
+  "updated_at": "2026-11-19T01:42:06+00:00"
 }

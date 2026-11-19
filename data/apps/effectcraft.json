@@ -377,22 +377,21 @@
   },
   "milestone": null,
   "activity": {
-    "level": "buzzing",
-    "score": 20.8,
+    "level": "active",
+    "score": 18.7,
     "active_days_7d": 7,
-    "changes_7d": 122,
-    "changes_14d": 279,
+    "changes_7d": 100,
+    "changes_14d": 269,
     "housekeeping_7d": 1,
     "last_code_change": {
-      "ts": "2026-11-18T19:14:16Z",
-      "commit": "f9e81b8",
-      "commit_full": "f9e81b8a0fa5d0202d61f6389979ee581116e39c",
-      "subject": "psd: share bounded TySh text-prefix reading (#3907)"
+      "ts": "2026-11-19T00:24:22Z",
+      "commit": "686fb3f",
+      "commit_full": "686fb3fa0485ab4af74c60e343203572fc37138f",
+      "subject": "psd: delegate raw brightness and exposure writers (#3922)"
     },
-    "last_commit_ts": "2026-11-18T19:14:16Z",
+    "last_commit_ts": "2026-11-19T00:24:22Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
-      15,
       41,
       0,
       11,
@@ -405,7 +404,8 @@
       4,
       28,
       17,
-      12
+      15,
+      2
     ],
     "days": [
       {
@@ -1250,20 +1250,35 @@
       },
       {
         "d": "2026-11-18",
-        "code": 12,
+        "code": 15,
         "other": 0,
         "samples": [
           {
-            "commit": "f9e81b8",
-            "subject": "psd: share bounded TySh text-prefix reading (#3907)"
+            "commit": "2e6150b",
+            "subject": "psd: remove unused reader after shared parser integration (#3931)"
           },
           {
-            "commit": "a0e8308",
-            "subject": "psd: share recovering section-divider framing (#3902)"
+            "commit": "851642f",
+            "subject": "psd: share recovering descriptor-block headers (#3921)"
           },
           {
-            "commit": "f3c2866",
-            "subject": "psd: read vector mask records through craft-psd (#3894)"
+            "commit": "ad95291",
+            "subject": "psd: share scalar layer-block reading (#3916)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-19",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "686fb3f",
+            "subject": "psd: delegate raw brightness and exposure writers (#3922)"
+          },
+          {
+            "commit": "f6ed0b2",
+            "subject": "#3391: a Views 1 | 2 | 4 switch in the Composition viewer's control row (#3848)"
           }
         ]
       }
@@ -1869,5 +1884,5 @@
       "kind": "editorial"
     }
   ],
-  "updated_at": "2026-11-18T19:59:05+00:00"
+  "updated_at": "2026-11-19T01:42:09+00:00"
 }

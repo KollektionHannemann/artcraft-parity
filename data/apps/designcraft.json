@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/designcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "14fb342",
-  "latest_commit_date": "2026-11-18T20:00:41+07:00",
-  "latest_message": "Story Editor: View › Story Editor › Show/Hide Style Name Column, and a draggable column width (#1797)",
+  "latest_commit": "c0721c0",
+  "latest_commit_date": "2026-11-19T08:37:12+07:00",
+  "latest_message": "fix(canvas): restart the text caret blink on typing, caret moves and clicks (#1953)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -339,6 +339,10 @@
       },
       {
         "date": "2026-11-13",
+        "text": "· A placed Photoshop file comes in at its own resolution (ResolutionInfo), as other rasters do since #1991: a 300 ppi PSD was placed four times too large at 72 ppi. No readiness percentage change."
+      },
+      {
+        "date": "2026-11-13",
         "text": "· PDF exports outside PDF/X-1a and PDF/A-2b attach the CMYK working space's ICC profile as /DefaultCMYK ([/ICCBased …]) on every page, inherited /Pages resource dict, Form XObject, SMask form, tiling pattern, and Type3 font resource scope (#2743). Plain print exports and booklets embed one shared Flate-compressed /N 4 profile stream without adding /OutputIntents or /Trapped; PDF/X-4 reuses its catalog /DestOutputProfile; RGB-blend documents attach /DefaultCMYK when they draw in DeviceCMYK and skip it for pure RGB. Viewers that honor /DefaultCMYK instead of /OutputIntents (including Apple Quartz and MuPDF) now render CMYK colors consistently with the working space across both plain and PDF/X-4 exports. No readiness percentage change."
       },
       {
@@ -464,10 +468,6 @@
       {
         "date": "2026-10-30",
         "text": "· Without facing pages, a page of a multi-page spread shows the parent page in its place, as in InDesign: the second page of a two-page spread shows the parent's second page. Every single-sided page showed the parent's first page, so an InDesign book set up without facing pages but laid out in two-page spreads repeated the left parent page's items (a black heading bar) on its right pages and lost the right parent page's. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-30",
-        "text": "· Dropping images from the file manager works as in InDesign: images dropped together load the place cursor in the order they came, and one image dropped off a frame that takes it loads the place cursor instead of being placed at once (on a frame it still fills it). Documents and text files dropped keep opening and flowing as before. Ported from #1307 and #1666; see multi-image placement. No readiness percentage change."
       }
     ]
   },
@@ -476,7 +476,7 @@
     "value_since": "2026-10-10T18:09:17Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 223,
+    "revisions_since": 225,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -484,42 +484,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 224,
-    "revisions_7d": 29,
+    "revisions": 226,
+    "revisions_7d": 15,
     "last_revision": {
-      "ts": "2026-11-18T13:00:41Z",
+      "ts": "2026-11-19T01:37:12Z",
       "kind": "content",
-      "commit": "14fb342",
-      "commit_full": "14fb342b2671e73b71e6accaa534901a63ff98ab",
-      "message": "Story Editor: View › Story Editor › Show/Hide Style Name Column, and a draggable column width (#1797)"
+      "commit": "c0721c0",
+      "commit_full": "c0721c08b4c4d9b0f90b507f1339d490467714be",
+      "message": "fix(canvas): restart the text caret blink on typing, caret moves and clicks (#1953)"
     },
     "last_update": {
-      "ts": "2026-11-18T13:00:41Z",
+      "ts": "2026-11-19T01:37:12Z",
       "kind": "content",
-      "commit": "14fb342",
-      "commit_full": "14fb342b2671e73b71e6accaa534901a63ff98ab",
-      "message": "Story Editor: View › Story Editor › Show/Hide Style Name Column, and a draggable column width (#1797)"
+      "commit": "c0721c0",
+      "commit_full": "c0721c08b4c4d9b0f90b507f1339d490467714be",
+      "message": "fix(canvas): restart the text caret blink on typing, caret moves and clicks (#1953)"
     },
     "self_reported": "2026-11-15"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.8,
+    "score": 14.5,
     "active_days_7d": 7,
-    "changes_7d": 109,
-    "changes_14d": 164,
+    "changes_7d": 57,
+    "changes_14d": 160,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-18T15:00:20Z",
-      "commit": "5ce1219",
-      "commit_full": "5ce12193afe46550a2ad034894e3df15ce29cc3f",
-      "subject": "Data Merge: count fields after reopening IDML (#2694) (#2954)"
+      "ts": "2026-11-19T01:37:12Z",
+      "commit": "c0721c0",
+      "commit_full": "c0721c08b4c4d9b0f90b507f1339d490467714be",
+      "subject": "fix(canvas): restart the text caret blink on typing, caret moves and clicks (#1953)"
     },
-    "last_commit_ts": "2026-11-18T15:00:20Z",
+    "last_commit_ts": "2026-11-19T01:37:12Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
-      8,
       4,
       3,
       8,
@@ -532,7 +531,8 @@
       22,
       3,
       1,
-      10
+      12,
+      2
     ],
     "days": [
       {
@@ -1391,20 +1391,35 @@
       },
       {
         "d": "2026-11-18",
-        "code": 10,
+        "code": 12,
         "other": 0,
         "samples": [
           {
+            "commit": "a73e3de",
+            "subject": "Place: a Photoshop file comes in at its own resolution (#2550)"
+          },
+          {
+            "commit": "12fe81c",
+            "subject": "images: cut over EPS bounding_box and is_eps to craft-ps (#2972)"
+          },
+          {
             "commit": "5ce1219",
             "subject": "Data Merge: count fields after reopening IDML (#2694) (#2954)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-19",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "c0721c0",
+            "subject": "fix(canvas): restart the text caret blink on typing, caret moves and clicks (#1953)"
           },
           {
-            "commit": "f5a9495",
-            "subject": "Separations: say when the resolution was lowered to fit the plate size (#2946)"
-          },
-          {
-            "commit": "14fb342",
-            "subject": "Story Editor: View › Story Editor › Show/Hide Style Name Column, and a draggable column width (#1797)"
+            "commit": "a8f6be8",
+            "subject": "cutover: use craft_jpeg::decode_reduced (#2991)"
           }
         ]
       }
@@ -6769,7 +6784,53 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "a73e3de",
+      "commit_full": "a73e3def5388dd1b669c07186cd652bbdfcf7388",
+      "commit_date": "2026-11-18T18:02:40-05:00",
+      "ts": "2026-11-18T23:02:40Z",
+      "message": "Place: a Photoshop file comes in at its own resolution (#2550)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-15",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "c0721c0",
+      "commit_full": "c0721c08b4c4d9b0f90b507f1339d490467714be",
+      "commit_date": "2026-11-19T08:37:12+07:00",
+      "ts": "2026-11-19T01:37:12Z",
+      "message": "fix(canvas): restart the text caret blink on typing, caret moves and clicks (#1953)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-15",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-18T19:59:10+00:00"
+  "updated_at": "2026-11-19T01:42:11+00:00"
 }

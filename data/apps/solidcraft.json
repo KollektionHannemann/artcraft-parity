@@ -66,21 +66,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 38.8,
+    "score": 35.0,
     "active_days_7d": 7,
-    "changes_7d": 1359,
-    "changes_14d": 2206,
-    "housekeeping_7d": 56,
+    "changes_7d": 1206,
+    "changes_14d": 2135,
+    "housekeeping_7d": 40,
     "last_code_change": {
-      "ts": "2026-11-18T19:16:07Z",
-      "commit": "26d2f72",
-      "commit_full": "26d2f7227fc5c8fefc2a98f5ed4856857af36809",
-      "subject": "Fillet: round a sphere's rim, socket or nub, when the rim runs through the sphere's poles (#18826) (#18840)"
+      "ts": "2026-11-19T00:47:34Z",
+      "commit": "b695a9b",
+      "commit_full": "b695a9b352949f3d14c5ac47c6b8a8f97a15830d",
+      "subject": "Cut: test that a round notch 0.00001 mm from an extruded spline outline's closing point is cut (#18556) (#19171)"
     },
-    "last_commit_ts": "2026-11-18T19:16:07Z",
+    "last_commit_ts": "2026-11-19T00:47:34Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
-      109,
       44,
       85,
       70,
@@ -93,7 +92,8 @@
       156,
       281,
       181,
-      149
+      177,
+      10
     ],
     "days": [
       {
@@ -896,26 +896,62 @@
       },
       {
         "d": "2026-11-18",
-        "code": 149,
+        "code": 177,
         "other": 4,
         "samples": [
           {
-            "commit": "26d2f72",
-            "subject": "Fillet: round a sphere's rim, socket or nub, when the rim runs through the sphere's poles (#18826) (#18840)"
+            "commit": "86a955f",
+            "subject": "Check Drawing: a held sheet's balloons and notes show as out of date (#19137)"
           },
           {
-            "commit": "c737518",
-            "subject": "STEP import with cadmpeg: bodies and faces show the file's colours, names and transparency, as with SolidCraft's own reader (#18176)"
+            "commit": "fe20fa4",
+            "subject": "Sketch: a saved text whose font is missing falls back instead of losing its outlines (#19230) (#19271)"
           },
           {
-            "commit": "e59d19b",
-            "subject": "Draft far from the origin: read back a circle as the export wrote it (#19164)"
+            "commit": "11c9c88",
+            "subject": "Sketch Project: preserve source splines and selected trims (#14389)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-19",
+        "code": 10,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "b695a9b",
+            "subject": "Cut: test that a round notch 0.00001 mm from an extruded spline outline's closing point is cut (#18556) (#19171)"
+          },
+          {
+            "commit": "b3f94d8",
+            "subject": "Offset Face: keep a hollowed body's void instead of filling it in (#18570) (#19231)"
+          },
+          {
+            "commit": "679c3b8",
+            "subject": "Sheet metal: a fold folds a plate whose outline has a round-ended notch across the bend zone (#18577)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.45.0-rc.4",
+      "name": "SolidCraft v0.45.0-rc.4",
+      "ts": "2026-11-19T01:11:49Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.45.0-rc.4",
+      "changes": 63,
+      "new_contributors": 3,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.45.0-rc.3",
       "name": "SolidCraft v0.45.0-rc.3",
@@ -1093,23 +1129,6 @@
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.42.0",
       "changes": 347,
       "new_contributors": 8,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.41.0",
-      "name": "SolidCraft v0.41.0",
-      "ts": "2026-11-13T04:19:07Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.41.0",
-      "changes": null,
-      "new_contributors": null,
       "platforms": [
         "macOS",
         "Windows",
@@ -2517,5 +2536,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-18T20:00:06+00:00"
+  "updated_at": "2026-11-19T01:42:42+00:00"
 }

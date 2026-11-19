@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/soundcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/soundcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "56d5c38",
-  "latest_commit_date": "2026-11-18T20:53:20+07:00",
-  "latest_message": "Add a built-in Frequency Shifter plugin (#1479)",
+  "latest_commit": "a02d892",
+  "latest_commit_date": "2026-11-19T08:37:06+07:00",
+  "latest_message": "MIDI input devices: live play-through and MIDI recording (#493)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
     "target": "Avid Pro Tools Ultimate 2026.4.1",
-    "last_updated": "2026-11-09",
+    "last_updated": "2026-11-18",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -258,7 +258,7 @@
     ],
     "upcoming": [
       "Alpha blocker: audio interfaces: device and buffer-size choice, duplex stream, ASIO; record to disk (G-01, G-06). 35–55 h.",
-      "Alpha blocker: MIDI devices: record from keyboards, play instruments live, output (G-02). 20–35 h.",
+      "Alpha blocker: MIDI devices: keyboard input, live play and recording are in (checked on Linux only; macOS and Windows type-checked, none on FreeBSD or the web); output, clock and loop/merge recording remain (G-02). 12–22 h.",
       "Alpha blocker: AAF/OMF import and export (G-03). 50–90 h.",
       "macOS plugin entitlement (#153), then AU editors and embedded CLAP editors on macOS (G-05). 1 h for the entitlement (needed for the mix row), then 10–15 h.",
       "Land the open bug-fix PRs and clear the correctness backlog (G-04). 15–25 h.",
@@ -266,6 +266,10 @@
       "Fidelity harness against Pro Tools (G-07). 20–30 h."
     ],
     "progress": [
+      {
+        "date": "2026-11-18",
+        "text": "(MIDI input): MIDI input devices: keyboards play record-enabled and input-monitored MIDI and instrument tracks live and are recorded into MIDI clips, with a device and channel choice per track. The device switches are in the MIDI inputs section of Setup › Playback Engine (Setup › MIDI › MIDI Input Devices opens the same window) and are kept in the app preferences, per computer, not in the session. Controllers, pitch bend and aftertouch reach the instrument live; a pitch held on two devices or channels sounds until both release it; a full input queue releases the notes of its device and marks the take incomplete. On Linux, live play was checked with a hardware keyboard (Akai MPK mini 3) and recording with a virtual one; macOS and Windows are type-checked only, and there is no MIDI input on FreeBSD or the web. Guide: docs/midi-input.md. No readiness percentage change until that is measured."
+      },
       {
         "date": "2026-11-09",
         "text": "A built-in Frequency Shifter (freqshifter) moves every frequency in the signal by the same number of hertz, from 0.01 Hz to 5 kHz: up, down, both ways at once, or down on the left and up on the right of a stereo track. The unwanted sideband stays at least 100 dB down from 20 Hz to 20 Hz below Nyquist at 44.1 to 96 kHz. Feedback sends the output round again for a trail of further shifts, Mix blends in the dry signal, and every change glides without a click. No readiness percentage change."
@@ -421,10 +425,6 @@
       {
         "date": "2026-10-12",
         "text": "(plugin editors on Windows): VST3 editors and embedded CLAP editors open in a SoundCraft host window on Windows (owned by the app window, resized on request, closed from its title bar); verified with a JUCE VST3 compressor and a CLAP effect. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-12",
-        "text": "(Mix in a separate window): Window › Mix in Separate Window shows the Mix window in its own native window, so Edit and Mix can be on screen at once (e.g. one per monitor), as in Pro Tools. No readiness percentage change."
       }
     ]
   },
@@ -433,7 +433,7 @@
     "value_since": "2026-10-10T18:08:49Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 28,
+    "revisions_since": 29,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -441,42 +441,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 29,
-    "revisions_7d": 6,
+    "revisions": 30,
+    "revisions_7d": 7,
     "last_revision": {
-      "ts": "2026-11-18T13:53:20Z",
+      "ts": "2026-11-19T01:37:06Z",
       "kind": "content",
-      "commit": "56d5c38",
-      "commit_full": "56d5c38547fbfd5a9eb1543da9b7558f3a836a8d",
-      "message": "Add a built-in Frequency Shifter plugin (#1479)"
+      "commit": "a02d892",
+      "commit_full": "a02d892f831f0a4e1220e0357c7b941030b9cd6f",
+      "message": "MIDI input devices: live play-through and MIDI recording (#493)"
     },
     "last_update": {
-      "ts": "2026-11-18T13:53:20Z",
+      "ts": "2026-11-19T01:37:06Z",
       "kind": "content",
-      "commit": "56d5c38",
-      "commit_full": "56d5c38547fbfd5a9eb1543da9b7558f3a836a8d",
-      "message": "Add a built-in Frequency Shifter plugin (#1479)"
+      "commit": "a02d892",
+      "commit_full": "a02d892f831f0a4e1220e0357c7b941030b9cd6f",
+      "message": "MIDI input devices: live play-through and MIDI recording (#493)"
     },
-    "self_reported": "2026-11-09"
+    "self_reported": "2026-11-18"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 11.9,
+    "score": 10.8,
     "active_days_7d": 7,
-    "changes_7d": 38,
-    "changes_14d": 80,
+    "changes_7d": 39,
+    "changes_14d": 77,
     "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-18T13:53:20Z",
-      "commit": "56d5c38",
-      "commit_full": "56d5c38547fbfd5a9eb1543da9b7558f3a836a8d",
-      "subject": "Add a built-in Frequency Shifter plugin (#1479)"
+      "ts": "2026-11-19T01:37:06Z",
+      "commit": "a02d892",
+      "commit_full": "a02d892f831f0a4e1220e0357c7b941030b9cd6f",
+      "subject": "MIDI input devices: live play-through and MIDI recording (#493)"
     },
-    "last_commit_ts": "2026-11-18T13:53:20Z",
+    "last_commit_ts": "2026-11-19T01:37:06Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
-      6,
       2,
       3,
       4,
@@ -489,7 +488,8 @@
       2,
       2,
       2,
-      9
+      11,
+      1
     ],
     "days": [
       {
@@ -1161,20 +1161,31 @@
       },
       {
         "d": "2026-11-18",
-        "code": 9,
+        "code": 11,
         "other": 0,
         "samples": [
           {
+            "commit": "0089a99",
+            "subject": "Keep locked clips whole when a range is cleared or a clip is placed over them (#1532)"
+          },
+          {
+            "commit": "65daf0e",
+            "subject": "fix(automation): Remote drops a connection whose reply is not its own (#894) (#1538)"
+          },
+          {
             "commit": "56d5c38",
             "subject": "Add a built-in Frequency Shifter plugin (#1479)"
-          },
+          }
+        ]
+      },
+      {
+        "d": "2026-11-19",
+        "code": 1,
+        "other": 0,
+        "samples": [
           {
-            "commit": "42d7fa3",
-            "subject": "sonar: leave the locale catalogs out of duplication detection (#1631)"
-          },
-          {
-            "commit": "b5392da",
-            "subject": "Add automation points with Command-click (#1395)"
+            "commit": "a02d892",
+            "subject": "MIDI input devices: live play-through and MIDI recording (#493)"
           }
         ]
       }
@@ -2054,7 +2065,30 @@
       "breadth_pct": 70.0,
       "full_prev": 40.0,
       "kind": "content"
+    },
+    {
+      "commit": "a02d892",
+      "commit_full": "a02d892f831f0a4e1220e0357c7b941030b9cd6f",
+      "commit_date": "2026-11-19T08:37:06+07:00",
+      "ts": "2026-11-19T01:37:06Z",
+      "message": "MIDI input devices: live play-through and MIDI recording (#493)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-18",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-18T19:59:22+00:00"
+  "updated_at": "2026-11-19T01:42:19+00:00"
 }
