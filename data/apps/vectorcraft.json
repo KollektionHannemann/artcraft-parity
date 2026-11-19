@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "aceafcd",
-  "latest_commit_date": "2026-11-19T15:27:43+07:00",
-  "latest_message": "G5: Add built-in Media Controls symbol library (#8645) (#8674)",
+  "latest_commit": "8729c74",
+  "latest_commit_date": "2026-11-19T23:17:33+07:00",
+  "latest_message": "Brushes: Add original Paint library (#8399) (#8733)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -339,8 +339,16 @@
     ],
     "progress": [
       {
+        "date": "2026-11-19",
+        "text": "Quick Pen tool, in the Pen tool's group (Alt+P, Option+P on macOS): clicks or drags add straight lines, continuous arcs or sharp-corner arcs; Alt tapped on its own switches the action, C flips the last arc, [ and ] size it, a click on the first point closes the path and a click on an open end continues it (path.quickPen, part of #2660). Headline numbers unchanged."
+      },
+      {
         "date": "2026-11-18",
         "text": "Built-in symbol library Media Controls: adds a seventh procedural symbol library (Window › Symbol Libraries, the Symbols panel's Symbol Libraries Menu) containing six original vector symbols (Play, Pause, Stop, Skip Next, Shuffle, Repeat) generated in code without default 9-slice guides (part of Gap 5). Headline numbers unchanged."
+      },
+      {
+        "date": "2026-11-18",
+        "text": "Built-in Paint brush library: Flat Sweep, Dry Drag, Loaded Stroke and Fan Sweep, original art brushes generated in code that take the stroke color as tints. Thirteen built-in brush libraries; headline numbers unchanged."
       },
       {
         "date": "2026-11-18",
@@ -369,6 +377,10 @@
       {
         "date": "2026-11-17",
         "text": "Tangent Circle Tool joins the Path Precision Tools add-on (Object › Plug-ins › Path Precision Tools, and the All Tools drawer): click a path segment, then another, to draw the circle tangent to the first where it was clicked that touches the second; Shift uses the tool's radius and a drag from the second segment sets the radius (Shift in round steps, Cmd/Ctrl slowly), the circle then touching the first segment anywhere along it. The circle shows with its center and radii before the click, one undo step (tangentCircle). A VectorCraft addition: headline numbers unchanged."
+      },
+      {
+        "date": "2026-11-17",
+        "text": "Three-Point Arc tool, in the Line Segment tool's group after the Arc tool: two ends placed by a drag or two clicks, then a third point the open circular arc passes through, or with Third Point Sets Direction (Tool Options, or ] while drawing) the direction the arc leaves an end in; it previews the arc, its center and, with Measurement Labels on, its radius, and draws it in one undo step (shape.threePointArc). Points with no arc are refused with a message. A VectorCraft addition: headline numbers unchanged."
       },
       {
         "date": "2026-11-16",
@@ -485,18 +497,6 @@
       {
         "date": "2026-11-01",
         "text": "Sort Objects joins the Arrange Tools add-on (Object › Plug-ins › Arrange Tools): the selected objects are sorted by width, height, area, position, opacity or stacking order (small to large, large to small or at random) and take another of those in that order, trading their values or stepping them evenly, as one undo step (addon.arrange.sort, #4917)."
-      },
-      {
-        "date": "2026-11-01",
-        "text": "New Symbols from Layers joins the Document Tools add-on (Object › Plug-ins › Document Tools): one symbol of each top-level layer's art (the layers highlighted in the Layers panel when two or more are, else every layer), named after the layer, made as New Symbol makes one; Convert Layers to Symbols also puts an instance of each in place of its layer's art. Empty layers are skipped and reported; one undo step. A VectorCraft addition: headline numbers unchanged."
-      },
-      {
-        "date": "2026-11-01",
-        "text": "Document Tools, a built-in add-on (Object › Plug-ins › Document Tools), starts with Save a Timestamped Copy: a copy of the document named <name>YYYY-MM-DDHH-MM (UTC; -2, -3… when that name is taken) goes next to it, or into a folder picked for a document never saved, written as File › Save a Copy writes it, so the document keeps its path, title and modified state. Off on the web, which has no clock. A VectorCraft addition: headline numbers unchanged."
-      },
-      {
-        "date": "2026-11-01",
-        "text": "Divide into Dashes joins the Path Precision Tools add-on (Object › Plug-ins › Path Precision Tools): the selected paths, or only their direct-selected segments, are cut into separate open paths of a dash length measured along the curve, with an optional gap (left empty, or kept as pieces), each keeping the path's appearance; Fit to Corners and Ends stretches or squeezes the lengths so every run starts and ends on a dash. A dialog with Preview, one undo step, at most 100000 pieces. A VectorCraft addition: headline numbers unchanged."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 253,
+    "revisions_since": 256,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,39 +536,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 254,
-    "revisions_7d": 26,
+    "revisions": 257,
+    "revisions_7d": 29,
     "last_revision": {
-      "ts": "2026-11-19T08:27:43Z",
+      "ts": "2026-11-19T16:17:33Z",
       "kind": "content",
-      "commit": "aceafcd",
-      "commit_full": "aceafcda494cf5d0fe82ab76f4246de7f66851d6",
-      "message": "G5: Add built-in Media Controls symbol library (#8645) (#8674)"
+      "commit": "8729c74",
+      "commit_full": "8729c7470539b87ef66ac2daa8ad9b7025d49293",
+      "message": "Brushes: Add original Paint library (#8399) (#8733)"
     },
     "last_update": {
-      "ts": "2026-11-19T08:27:43Z",
+      "ts": "2026-11-19T16:17:33Z",
       "kind": "content",
-      "commit": "aceafcd",
-      "commit_full": "aceafcda494cf5d0fe82ab76f4246de7f66851d6",
-      "message": "G5: Add built-in Media Controls symbol library (#8645) (#8674)"
+      "commit": "8729c74",
+      "commit_full": "8729c7470539b87ef66ac2daa8ad9b7025d49293",
+      "message": "Brushes: Add original Paint library (#8399) (#8733)"
     },
     "self_reported": "2026-11-15"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 37.4,
+    "score": 37.9,
     "active_days_7d": 7,
-    "changes_7d": 1265,
-    "changes_14d": 2105,
-    "housekeeping_7d": 32,
+    "changes_7d": 1307,
+    "changes_14d": 2147,
+    "housekeeping_7d": 33,
     "last_code_change": {
-      "ts": "2026-11-19T09:13:39Z",
-      "commit": "644f5bc",
-      "commit_full": "644f5bc8e377730d093ac5af8967dcd055051a16",
-      "subject": "i18n: Indonesian translates the PSD, CDR and CMX import notes (#8683)"
+      "ts": "2026-11-19T18:40:48Z",
+      "commit": "770fbd2",
+      "commit_full": "770fbd27ce9c93732d086e3f28758855f98bd272",
+      "subject": "Canvas (web): an edit while a heavy document's view moves draws only what it changed (#8736) (#8764)"
     },
-    "last_commit_ts": "2026-11-19T09:13:39Z",
+    "last_commit_ts": "2026-11-19T18:40:48Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       46,
@@ -584,7 +584,7 @@
       103,
       114,
       219,
-      92
+      134
     ],
     "days": [
       {
@@ -1526,20 +1526,20 @@
       },
       {
         "d": "2026-11-19",
-        "code": 92,
-        "other": 4,
+        "code": 134,
+        "other": 5,
         "samples": [
           {
-            "commit": "644f5bc",
-            "subject": "i18n: Indonesian translates the PSD, CDR and CMX import notes (#8683)"
+            "commit": "770fbd2",
+            "subject": "Canvas (web): an edit while a heavy document's view moves draws only what it changed (#8736) (#8764)"
           },
           {
-            "commit": "f1dca92",
-            "subject": "Canvas: a tool drag held near an edge of the canvas scrolls the view (#8551) (#8554) (#8682)"
+            "commit": "06ba610",
+            "subject": "Symbols: the Symbol Shifter, Sizer, Stainer and Styler take Shift (#7739) (#8732)"
           },
           {
-            "commit": "0a2c9bf",
-            "subject": "Part of #5941: scroll bars show while the pointer is elsewhere (#8419)"
+            "commit": "1c75bf4",
+            "subject": "Illustrator editing data keeps dynamic symbols and per-instance changes (#8747)"
           }
         ]
       }
@@ -8426,7 +8426,85 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "9ea58e5",
+      "commit_full": "9ea58e5c426d2f95654a856cc966140bd2f15317",
+      "commit_date": "2026-11-19T17:53:08+07:00",
+      "ts": "2026-11-19T10:53:08Z",
+      "message": "Pen: Quick Pen tool draws lines, continuous arcs and sharp-corner arcs (#8690)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
+    },
+    {
+      "commit": "4170a62",
+      "commit_full": "4170a620a2746937f8f566f7e2e1e44b8ec51a89",
+      "commit_date": "2026-11-19T22:22:16+07:00",
+      "ts": "2026-11-19T15:22:16Z",
+      "message": "Tools: a Three-Point Arc tool draws an arc between two ends and a third point (#8455) (#8724)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
+    },
+    {
+      "commit": "8729c74",
+      "commit_full": "8729c7470539b87ef66ac2daa8ad9b7025d49293",
+      "commit_date": "2026-11-19T23:17:33+07:00",
+      "ts": "2026-11-19T16:17:33Z",
+      "message": "Brushes: Add original Paint library (#8399) (#8733)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-19T09:36:21+00:00"
+  "updated_at": "2026-11-19T18:43:17+00:00"
 }

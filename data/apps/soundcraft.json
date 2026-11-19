@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/soundcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/soundcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "a02d892",
-  "latest_commit_date": "2026-11-19T08:37:06+07:00",
-  "latest_message": "MIDI input devices: live play-through and MIDI recording (#493)",
+  "latest_commit": "0acf572",
+  "latest_commit_date": "2026-11-19T10:43:36-06:00",
+  "latest_message": "Import external-WAV AAF as editable session data (pure Rust) (#799)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -259,7 +259,7 @@
     "upcoming": [
       "Alpha blocker: audio interfaces: device and buffer-size choice, duplex stream, ASIO; record to disk (G-01, G-06). 35–55 h.",
       "Alpha blocker: MIDI devices: keyboard input, live play and recording are in (checked on Linux only; macOS and Windows type-checked, none on FreeBSD or the web); output, clock and loop/merge recording remain (G-02). 12–22 h.",
-      "Alpha blocker: AAF/OMF import and export (G-03). 50–90 h.",
+      "Alpha blocker: complete AAF/OMF interchange (G-03): strict external-WAV AAF import works; AAF export and OMF import/export remain. 50–90 h.",
       "macOS plugin entitlement (#153), then AU editors and embedded CLAP editors on macOS (G-05). 1 h for the entitlement (needed for the mix row), then 10–15 h.",
       "Land the open bug-fix PRs and clear the correctness backlog (G-04). 15–25 h.",
       "PR CI running cargo xtask ci on three OSes (G-14). 5–10 h.",
@@ -269,6 +269,10 @@
       {
         "date": "2026-11-18",
         "text": "(MIDI input): MIDI input devices: keyboards play record-enabled and input-monitored MIDI and instrument tracks live and are recorded into MIDI clips, with a device and channel choice per track. The device switches are in the MIDI inputs section of Setup › Playback Engine (Setup › MIDI › MIDI Input Devices opens the same window) and are kept in the app preferences, per computer, not in the session. Controllers, pitch bend and aftertouch reach the instrument live; a pitch held on two devices or channels sounds until both release it; a full input queue releases the notes of its device and marks the take incomplete. On Linux, live play was checked with a hardware keyboard (Akai MPK mini 3) and recording with a virtual one; macOS and Windows are type-checked only, and there is no MIDI input on FreeBSD or the web. Guide: docs/midi-input.md. No readiness percentage change until that is measured."
+      },
+      {
+        "date": "2026-11-14",
+        "text": "AAF import supports a strict CompositionMob SourceClip/Filler subset with external mono/stereo PCM WAV media, editable clips and handles, relink and absolute or relative timecode mapping. The reader shares cached object properties, caps retained property data at 128 MiB and rejects duplicate local references before expansion. AAF export, OMF and .ptx remain missing. No readiness percentage change."
       },
       {
         "date": "2026-11-09",
@@ -421,10 +425,6 @@
       {
         "date": "2026-10-12",
         "text": "session.formattime with the smallest bar number no longer fails with an internal error: the bar offset saturates (#249)"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "(plugin editors on Windows): VST3 editors and embedded CLAP editors open in a SoundCraft host window on Windows (owned by the app window, resized on request, closed from its title bar); verified with a JUCE VST3 compressor and a CLAP effect. No readiness percentage change."
       }
     ]
   },
@@ -433,7 +433,7 @@
     "value_since": "2026-10-10T18:08:49Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 29,
+    "revisions_since": 30,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -441,39 +441,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 30,
-    "revisions_7d": 7,
+    "revisions": 31,
+    "revisions_7d": 8,
     "last_revision": {
-      "ts": "2026-11-19T01:37:06Z",
+      "ts": "2026-11-19T16:43:36Z",
       "kind": "content",
-      "commit": "a02d892",
-      "commit_full": "a02d892f831f0a4e1220e0357c7b941030b9cd6f",
-      "message": "MIDI input devices: live play-through and MIDI recording (#493)"
+      "commit": "0acf572",
+      "commit_full": "0acf57228b2be362b0e7a61f41630aa09607fb5a",
+      "message": "Import external-WAV AAF as editable session data (pure Rust) (#799)"
     },
     "last_update": {
-      "ts": "2026-11-19T01:37:06Z",
+      "ts": "2026-11-19T16:43:36Z",
       "kind": "content",
-      "commit": "a02d892",
-      "commit_full": "a02d892f831f0a4e1220e0357c7b941030b9cd6f",
-      "message": "MIDI input devices: live play-through and MIDI recording (#493)"
+      "commit": "0acf572",
+      "commit_full": "0acf57228b2be362b0e7a61f41630aa09607fb5a",
+      "message": "Import external-WAV AAF as editable session data (pure Rust) (#799)"
     },
     "self_reported": "2026-11-18"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 10.8,
+    "score": 11.4,
     "active_days_7d": 7,
-    "changes_7d": 39,
-    "changes_14d": 77,
+    "changes_7d": 40,
+    "changes_14d": 78,
     "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-19T01:37:06Z",
-      "commit": "a02d892",
-      "commit_full": "a02d892f831f0a4e1220e0357c7b941030b9cd6f",
-      "subject": "MIDI input devices: live play-through and MIDI recording (#493)"
+      "ts": "2026-11-19T16:43:36Z",
+      "commit": "0acf572",
+      "commit_full": "0acf57228b2be362b0e7a61f41630aa09607fb5a",
+      "subject": "Import external-WAV AAF as editable session data (pure Rust) (#799)"
     },
-    "last_commit_ts": "2026-11-19T01:37:06Z",
+    "last_commit_ts": "2026-11-19T16:43:36Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
       2,
@@ -489,7 +489,7 @@
       2,
       2,
       11,
-      1
+      2
     ],
     "days": [
       {
@@ -1180,9 +1180,13 @@
       },
       {
         "d": "2026-11-19",
-        "code": 1,
+        "code": 2,
         "other": 0,
         "samples": [
+          {
+            "commit": "0acf572",
+            "subject": "Import external-WAV AAF as editable session data (pure Rust) (#799)"
+          },
           {
             "commit": "a02d892",
             "subject": "MIDI input devices: live play-through and MIDI recording (#493)"
@@ -2088,7 +2092,30 @@
       "breadth_pct": 70.0,
       "full_prev": 40.0,
       "kind": "content"
+    },
+    {
+      "commit": "0acf572",
+      "commit_full": "0acf57228b2be362b0e7a61f41630aa09607fb5a",
+      "commit_date": "2026-11-19T10:43:36-06:00",
+      "ts": "2026-11-19T16:43:36Z",
+      "message": "Import external-WAV AAF as editable session data (pure Rust) (#799)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-18",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-19T01:42:19+00:00"
+  "updated_at": "2026-11-19T18:43:51+00:00"
 }

@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/designcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "c0721c0",
-  "latest_commit_date": "2026-11-19T08:37:12+07:00",
-  "latest_message": "fix(canvas): restart the text caret blink on typing, caret moves and clicks (#1953)",
+  "latest_commit": "17a557c",
+  "latest_commit_date": "2026-11-19T23:17:54+07:00",
+  "latest_message": "fix(ui): discover installed Arabic fallback fonts (#3019)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -476,7 +476,7 @@
     "value_since": "2026-10-10T18:09:17Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 225,
+    "revisions_since": 226,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -484,39 +484,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 226,
-    "revisions_7d": 15,
+    "revisions": 227,
+    "revisions_7d": 16,
     "last_revision": {
-      "ts": "2026-11-19T01:37:12Z",
+      "ts": "2026-11-19T16:17:54Z",
       "kind": "content",
-      "commit": "c0721c0",
-      "commit_full": "c0721c08b4c4d9b0f90b507f1339d490467714be",
-      "message": "fix(canvas): restart the text caret blink on typing, caret moves and clicks (#1953)"
+      "commit": "17a557c",
+      "commit_full": "17a557c79d038e84ce31ab83d7cae061b9a1694a",
+      "message": "fix(ui): discover installed Arabic fallback fonts (#3019)"
     },
     "last_update": {
-      "ts": "2026-11-19T01:37:12Z",
+      "ts": "2026-11-19T16:17:54Z",
       "kind": "content",
-      "commit": "c0721c0",
-      "commit_full": "c0721c08b4c4d9b0f90b507f1339d490467714be",
-      "message": "fix(canvas): restart the text caret blink on typing, caret moves and clicks (#1953)"
+      "commit": "17a557c",
+      "commit_full": "17a557c79d038e84ce31ab83d7cae061b9a1694a",
+      "message": "fix(ui): discover installed Arabic fallback fonts (#3019)"
     },
     "self_reported": "2026-11-15"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.9,
+    "score": 15.7,
     "active_days_7d": 7,
-    "changes_7d": 58,
-    "changes_14d": 161,
+    "changes_7d": 61,
+    "changes_14d": 164,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-19T04:20:04Z",
-      "commit": "88f5a00",
-      "commit_full": "88f5a00e389b5378816dc2daa8c180d90081b393",
-      "subject": "test(images): fit 1-component progressive JPEG test under 512 MiB decoder budget (#2998)"
+      "ts": "2026-11-19T16:19:53Z",
+      "commit": "129abd9",
+      "commit_full": "129abd936b3094bb1fcae22774252ccbe188e86e",
+      "subject": "Images: use the shared BMP density probe (#3017)"
     },
-    "last_commit_ts": "2026-11-19T04:20:04Z",
+    "last_commit_ts": "2026-11-19T16:19:53Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       4,
@@ -532,7 +532,7 @@
       3,
       1,
       12,
-      3
+      6
     ],
     "days": [
       {
@@ -1410,20 +1410,20 @@
       },
       {
         "d": "2026-11-19",
-        "code": 3,
+        "code": 6,
         "other": 0,
         "samples": [
           {
-            "commit": "88f5a00",
-            "subject": "test(images): fit 1-component progressive JPEG test under 512 MiB decoder budget (#2998)"
+            "commit": "129abd9",
+            "subject": "Images: use the shared BMP density probe (#3017)"
           },
           {
-            "commit": "c0721c0",
-            "subject": "fix(canvas): restart the text caret blink on typing, caret moves and clicks (#1953)"
+            "commit": "17a557c",
+            "subject": "fix(ui): discover installed Arabic fallback fonts (#3019)"
           },
           {
-            "commit": "a8f6be8",
-            "subject": "cutover: use craft_jpeg::decode_reduced (#2991)"
+            "commit": "209c8ab",
+            "subject": "Dependencies: unify craft-libs at 30a568b97 for shared cutovers (#2889)"
           }
         ]
       }
@@ -6834,7 +6834,30 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "17a557c",
+      "commit_full": "17a557c79d038e84ce31ab83d7cae061b9a1694a",
+      "commit_date": "2026-11-19T23:17:54+07:00",
+      "ts": "2026-11-19T16:17:54Z",
+      "message": "fix(ui): discover installed Arabic fallback fonts (#3019)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-15",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-19T09:36:46+00:00"
+  "updated_at": "2026-11-19T18:43:41+00:00"
 }

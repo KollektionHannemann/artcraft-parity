@@ -25,6 +25,17 @@
   ],
   "latest_events": [
     {
+      "id": "mailcraft",
+      "name": "MailCraft",
+      "type": "release",
+      "ts": "2026-11-19T17:08:29Z",
+      "tag": "v0.14.0",
+      "kind": "minor",
+      "changes": null,
+      "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.14.0",
+      "prerelease": false
+    },
+    {
       "id": "solidcraft",
       "name": "SolidCraft",
       "type": "release",
@@ -448,20 +459,15 @@
       "changes": 11,
       "url": "https://github.com/storytold/anicraft/releases/tag/v0.2.0",
       "prerelease": false
-    },
-    {
-      "id": "anicraft",
-      "name": "AniCraft",
-      "type": "release",
-      "ts": "2026-11-11T01:03:14Z",
-      "tag": "v0.1.0",
-      "kind": null,
-      "changes": 69,
-      "url": "https://github.com/storytold/anicraft/releases/tag/v0.1.0",
-      "prerelease": false
     }
   ],
   "release_waves": [
+    {
+      "day": "2026-11-19",
+      "apps": 1,
+      "changes": 0,
+      "largest": null
+    },
     {
       "day": "2026-11-17",
       "apps": 1,
@@ -521,7 +527,7 @@
         "value_since": "2026-10-10T18:11:14Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 253,
+        "revisions_since": 256,
         "hours_since": null,
         "areas_since": {
           "up": 3,
@@ -552,39 +558,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 254,
-        "revisions_7d": 26,
+        "revisions": 257,
+        "revisions_7d": 29,
         "last_revision": {
-          "ts": "2026-11-19T08:27:43Z",
+          "ts": "2026-11-19T16:17:33Z",
           "kind": "content",
-          "commit": "aceafcd",
-          "commit_full": "aceafcda494cf5d0fe82ab76f4246de7f66851d6",
-          "message": "G5: Add built-in Media Controls symbol library (#8645) (#8674)"
+          "commit": "8729c74",
+          "commit_full": "8729c7470539b87ef66ac2daa8ad9b7025d49293",
+          "message": "Brushes: Add original Paint library (#8399) (#8733)"
         },
         "last_update": {
-          "ts": "2026-11-19T08:27:43Z",
+          "ts": "2026-11-19T16:17:33Z",
           "kind": "content",
-          "commit": "aceafcd",
-          "commit_full": "aceafcda494cf5d0fe82ab76f4246de7f66851d6",
-          "message": "G5: Add built-in Media Controls symbol library (#8645) (#8674)"
+          "commit": "8729c74",
+          "commit_full": "8729c7470539b87ef66ac2daa8ad9b7025d49293",
+          "message": "Brushes: Add original Paint library (#8399) (#8733)"
         },
         "self_reported": "2026-11-15"
       },
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 37.4,
+        "score": 37.9,
         "active_days_7d": 7,
-        "changes_7d": 1265,
-        "changes_14d": 2105,
-        "housekeeping_7d": 32,
+        "changes_7d": 1307,
+        "changes_14d": 2147,
+        "housekeeping_7d": 33,
         "last_code_change": {
-          "ts": "2026-11-19T09:13:39Z",
-          "commit": "644f5bc",
-          "commit_full": "644f5bc8e377730d093ac5af8967dcd055051a16",
-          "subject": "i18n: Indonesian translates the PSD, CDR and CMX import notes (#8683)"
+          "ts": "2026-11-19T18:40:48Z",
+          "commit": "770fbd2",
+          "commit_full": "770fbd27ce9c93732d086e3f28758855f98bd272",
+          "subject": "Canvas (web): an edit while a heavy document's view moves draws only what it changed (#8736) (#8764)"
         },
-        "last_commit_ts": "2026-11-19T09:13:39Z",
+        "last_commit_ts": "2026-11-19T18:40:48Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           46,
@@ -600,7 +606,7 @@
           103,
           114,
           219,
-          92
+          134
         ]
       },
       "release": {
@@ -626,11 +632,11 @@
           "v": 62.0
         },
         {
-          "t": "2026-11-19T08:27:43Z",
+          "t": "2026-11-19T16:17:33Z",
           "v": 62.0
         }
       ],
-      "history_len": 254
+      "history_len": 257
     },
     {
       "repo_url": "https://github.com/storytold/lightcraft",
@@ -702,18 +708,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.9,
+        "score": 14.5,
         "active_days_7d": 7,
-        "changes_7d": 54,
-        "changes_14d": 101,
+        "changes_7d": 55,
+        "changes_14d": 102,
         "housekeeping_7d": 3,
         "last_code_change": {
-          "ts": "2026-11-19T04:27:04Z",
-          "commit": "5a24289",
-          "commit_full": "5a24289898fd26abd1c4c127d98ba587b15f169d",
-          "subject": "raw: consume merged DJI DNG and Sony ZV-E10 fixes (#4532)"
+          "ts": "2026-11-19T14:14:32Z",
+          "commit": "78b5756",
+          "commit_full": "78b575658a61d17bd392b4b81b64c92c8beecbac",
+          "subject": "fetch: delegate HTTP URL and redirect syntax to craft-http-url (#4337)"
         },
-        "last_commit_ts": "2026-11-19T04:27:04Z",
+        "last_commit_ts": "2026-11-19T14:14:32Z",
         "repo_since": "2026-09-30T14:04:12Z",
         "window": [
           17,
@@ -729,7 +735,7 @@
           11,
           4,
           19,
-          1
+          2
         ]
       },
       "release": {
@@ -1523,18 +1529,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 19.4,
+        "score": 19.6,
         "active_days_7d": 7,
-        "changes_7d": 94,
-        "changes_14d": 458,
+        "changes_7d": 95,
+        "changes_14d": 459,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-19T02:50:30Z",
-          "commit": "eeee51f",
-          "commit_full": "eeee51ff7b805b52652a7e00305cc8cf91748239",
-          "subject": "Export: bound RTF pictures per placement, bake their rotations, report the pages that lose one (#7572)"
+          "ts": "2026-11-19T14:20:37Z",
+          "commit": "f0bbce5",
+          "commit_full": "f0bbce5b3076e6b694ea3c4ffe015d7a62f809f3",
+          "subject": "Issue #2385: audit finds thick strokes, black highlights and white boxes over text (#2408)"
         },
-        "last_commit_ts": "2026-11-19T02:50:30Z",
+        "last_commit_ts": "2026-11-19T14:20:37Z",
         "repo_since": "2026-09-30T09:17:08Z",
         "window": [
           9,
@@ -1550,7 +1556,7 @@
           7,
           6,
           41,
-          4
+          5
         ]
       },
       "release": {
@@ -1738,7 +1744,7 @@
         "value_since": "2026-10-10T18:09:17Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 225,
+        "revisions_since": 226,
         "hours_since": null,
         "areas_since": null,
         "changes": 0,
@@ -1746,39 +1752,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 226,
-        "revisions_7d": 15,
+        "revisions": 227,
+        "revisions_7d": 16,
         "last_revision": {
-          "ts": "2026-11-19T01:37:12Z",
+          "ts": "2026-11-19T16:17:54Z",
           "kind": "content",
-          "commit": "c0721c0",
-          "commit_full": "c0721c08b4c4d9b0f90b507f1339d490467714be",
-          "message": "fix(canvas): restart the text caret blink on typing, caret moves and clicks (#1953)"
+          "commit": "17a557c",
+          "commit_full": "17a557c79d038e84ce31ab83d7cae061b9a1694a",
+          "message": "fix(ui): discover installed Arabic fallback fonts (#3019)"
         },
         "last_update": {
-          "ts": "2026-11-19T01:37:12Z",
+          "ts": "2026-11-19T16:17:54Z",
           "kind": "content",
-          "commit": "c0721c0",
-          "commit_full": "c0721c08b4c4d9b0f90b507f1339d490467714be",
-          "message": "fix(canvas): restart the text caret blink on typing, caret moves and clicks (#1953)"
+          "commit": "17a557c",
+          "commit_full": "17a557c79d038e84ce31ab83d7cae061b9a1694a",
+          "message": "fix(ui): discover installed Arabic fallback fonts (#3019)"
         },
         "self_reported": "2026-11-15"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.9,
+        "score": 15.7,
         "active_days_7d": 7,
-        "changes_7d": 58,
-        "changes_14d": 161,
+        "changes_7d": 61,
+        "changes_14d": 164,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-19T04:20:04Z",
-          "commit": "88f5a00",
-          "commit_full": "88f5a00e389b5378816dc2daa8c180d90081b393",
-          "subject": "test(images): fit 1-component progressive JPEG test under 512 MiB decoder budget (#2998)"
+          "ts": "2026-11-19T16:19:53Z",
+          "commit": "129abd9",
+          "commit_full": "129abd936b3094bb1fcae22774252ccbe188e86e",
+          "subject": "Images: use the shared BMP density probe (#3017)"
         },
-        "last_commit_ts": "2026-11-19T04:20:04Z",
+        "last_commit_ts": "2026-11-19T16:19:53Z",
         "repo_since": "2026-10-01T13:00:02Z",
         "window": [
           4,
@@ -1794,7 +1800,7 @@
           3,
           1,
           12,
-          3
+          6
         ]
       },
       "release": {
@@ -1820,11 +1826,11 @@
           "v": 47.0
         },
         {
-          "t": "2026-11-19T01:37:12Z",
+          "t": "2026-11-19T16:17:54Z",
           "v": 47.0
         }
       ],
-      "history_len": 226
+      "history_len": 227
     },
     {
       "repo_url": "https://github.com/storytold/photocraft",
@@ -1887,18 +1893,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 24.6,
+        "score": 26.9,
         "active_days_7d": 7,
-        "changes_7d": 246,
-        "changes_14d": 802,
+        "changes_7d": 279,
+        "changes_14d": 835,
         "housekeeping_7d": 14,
         "last_code_change": {
-          "ts": "2026-11-19T06:05:30Z",
-          "commit": "856f865",
-          "commit_full": "856f865cf98d7e4817f6f955980f47fb4ead8c32",
-          "subject": "Test profile: framework runtime at opt-level 1, engine at opt-level 0 (#15699)"
+          "ts": "2026-11-19T18:34:13Z",
+          "commit": "833778d",
+          "commit_full": "833778dd0372d2c50b70c5537fbe5fdf51a30b85",
+          "subject": "fix(type-tool): record a history state for an unchanged text edit (#12132)"
         },
-        "last_commit_ts": "2026-11-19T06:05:30Z",
+        "last_commit_ts": "2026-11-19T18:34:13Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           48,
@@ -1914,7 +1920,7 @@
           17,
           7,
           34,
-          7
+          40
         ]
       },
       "release": {
@@ -2007,18 +2013,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 19.4,
+        "score": 19.7,
         "active_days_7d": 7,
-        "changes_7d": 102,
-        "changes_14d": 271,
+        "changes_7d": 103,
+        "changes_14d": 272,
         "housekeeping_7d": 1,
         "last_code_change": {
-          "ts": "2026-11-19T02:55:05Z",
-          "commit": "665bfac",
-          "commit_full": "665bfac0b33904b1dcda6de889f43f43a94ad3f8",
-          "subject": "export: cut over exr_out to craft-exr (#3937)"
+          "ts": "2026-11-19T14:05:38Z",
+          "commit": "13e6e6c",
+          "commit_full": "13e6e6c67e805f443a87e3bd3160095d30b5cf3a",
+          "subject": "Caching rebuilt: footage decoded once, one RAM budget for all caches, eviction by value, idle caching on (#3301)"
         },
-        "last_commit_ts": "2026-11-19T02:55:05Z",
+        "last_commit_ts": "2026-11-19T14:05:38Z",
         "repo_since": "2026-10-01T16:48:39Z",
         "window": [
           41,
@@ -2034,7 +2040,7 @@
           28,
           17,
           15,
-          4
+          5
         ]
       },
       "release": {
@@ -2098,7 +2104,7 @@
         "value_since": "2026-10-10T18:08:49Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 29,
+        "revisions_since": 30,
         "hours_since": null,
         "areas_since": null,
         "changes": 0,
@@ -2106,39 +2112,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 30,
-        "revisions_7d": 7,
+        "revisions": 31,
+        "revisions_7d": 8,
         "last_revision": {
-          "ts": "2026-11-19T01:37:06Z",
+          "ts": "2026-11-19T16:43:36Z",
           "kind": "content",
-          "commit": "a02d892",
-          "commit_full": "a02d892f831f0a4e1220e0357c7b941030b9cd6f",
-          "message": "MIDI input devices: live play-through and MIDI recording (#493)"
+          "commit": "0acf572",
+          "commit_full": "0acf57228b2be362b0e7a61f41630aa09607fb5a",
+          "message": "Import external-WAV AAF as editable session data (pure Rust) (#799)"
         },
         "last_update": {
-          "ts": "2026-11-19T01:37:06Z",
+          "ts": "2026-11-19T16:43:36Z",
           "kind": "content",
-          "commit": "a02d892",
-          "commit_full": "a02d892f831f0a4e1220e0357c7b941030b9cd6f",
-          "message": "MIDI input devices: live play-through and MIDI recording (#493)"
+          "commit": "0acf572",
+          "commit_full": "0acf57228b2be362b0e7a61f41630aa09607fb5a",
+          "message": "Import external-WAV AAF as editable session data (pure Rust) (#799)"
         },
         "self_reported": "2026-11-18"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 10.8,
+        "score": 11.4,
         "active_days_7d": 7,
-        "changes_7d": 39,
-        "changes_14d": 77,
+        "changes_7d": 40,
+        "changes_14d": 78,
         "housekeeping_7d": 3,
         "last_code_change": {
-          "ts": "2026-11-19T01:37:06Z",
-          "commit": "a02d892",
-          "commit_full": "a02d892f831f0a4e1220e0357c7b941030b9cd6f",
-          "subject": "MIDI input devices: live play-through and MIDI recording (#493)"
+          "ts": "2026-11-19T16:43:36Z",
+          "commit": "0acf572",
+          "commit_full": "0acf57228b2be362b0e7a61f41630aa09607fb5a",
+          "subject": "Import external-WAV AAF as editable session data (pure Rust) (#799)"
         },
-        "last_commit_ts": "2026-11-19T01:37:06Z",
+        "last_commit_ts": "2026-11-19T16:43:36Z",
         "repo_since": "2026-10-06T00:08:04Z",
         "window": [
           2,
@@ -2154,7 +2160,7 @@
           2,
           2,
           11,
-          1
+          2
         ]
       },
       "release": {
@@ -2180,11 +2186,11 @@
           "v": 40.0
         },
         {
-          "t": "2026-11-19T01:37:06Z",
+          "t": "2026-11-19T16:43:36Z",
           "v": 40.0
         }
       ],
-      "history_len": 30
+      "history_len": 31
     },
     {
       "repo_url": "https://github.com/storytold/cadcraft",
@@ -2338,7 +2344,7 @@
         "value_since": "2026-10-12T18:17:00Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 258,
+        "revisions_since": 259,
         "hours_since": null,
         "areas_since": null,
         "changes": 0,
@@ -2346,39 +2352,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 262,
-        "revisions_7d": 16,
+        "revisions": 263,
+        "revisions_7d": 17,
         "last_revision": {
-          "ts": "2026-11-18T13:29:54Z",
-          "kind": "content",
-          "commit": "f7810af",
-          "commit_full": "f7810af7e33439dde455375aa7a45e450fa8db83",
-          "message": "Georgian as a preview language (#1010) (#1412)"
+          "ts": "2026-11-19T14:53:36Z",
+          "kind": "estimates",
+          "commit": "979953f",
+          "commit_full": "979953f012636fa7c2380124fd307152404c29bf",
+          "message": "Release 0.14.0 (#1701)"
         },
         "last_update": {
-          "ts": "2026-11-18T13:29:54Z",
-          "kind": "content",
-          "commit": "f7810af",
-          "commit_full": "f7810af7e33439dde455375aa7a45e450fa8db83",
-          "message": "Georgian as a preview language (#1010) (#1412)"
+          "ts": "2026-11-19T14:53:36Z",
+          "kind": "estimates",
+          "commit": "979953f",
+          "commit_full": "979953f012636fa7c2380124fd307152404c29bf",
+          "message": "Release 0.14.0 (#1701)"
         },
-        "self_reported": "2026-11-14"
+        "self_reported": "2026-11-18"
       },
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 22.2,
+        "score": 22.4,
         "active_days_7d": 7,
-        "changes_7d": 191,
-        "changes_14d": 294,
-        "housekeeping_7d": 16,
+        "changes_7d": 192,
+        "changes_14d": 295,
+        "housekeeping_7d": 17,
         "last_code_change": {
-          "ts": "2026-11-19T01:21:33Z",
-          "commit": "04e51bb",
-          "commit_full": "04e51bb3c23b01f9f5537c5438783848f51465af",
-          "subject": "#797: an account can send from several addresses, and replies go from the one a message came to (#905)"
+          "ts": "2026-11-19T14:53:36Z",
+          "commit": "979953f",
+          "commit_full": "979953f012636fa7c2380124fd307152404c29bf",
+          "subject": "Release 0.14.0 (#1701)"
         },
-        "last_commit_ts": "2026-11-19T01:21:33Z",
+        "last_commit_ts": "2026-11-19T18:04:42Z",
         "repo_since": "2026-10-12T18:17:00Z",
         "window": [
           17,
@@ -2394,14 +2400,14 @@
           20,
           33,
           27,
-          5
+          6
         ]
       },
       "release": {
-        "tag": "v0.13.0",
-        "name": "MailCraft v0.13.0",
-        "ts": "2026-11-15T00:17:18Z",
-        "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.13.0",
+        "tag": "v0.14.0",
+        "name": "MailCraft v0.14.0",
+        "ts": "2026-11-19T17:08:29Z",
+        "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.14.0",
         "changes": null,
         "new_contributors": null,
         "platforms": [
@@ -2420,11 +2426,11 @@
           "v": 25.0
         },
         {
-          "t": "2026-11-18T13:29:54Z",
+          "t": "2026-11-19T14:53:36Z",
           "v": 25.0
         }
       ],
-      "history_len": 262
+      "history_len": 263
     },
     {
       "repo_url": "https://github.com/storytold/materialcraft",
@@ -2571,39 +2577,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 822,
-        "revisions_7d": 215,
+        "revisions": 823,
+        "revisions_7d": 216,
         "last_revision": {
-          "ts": "2026-11-19T07:36:50Z",
+          "ts": "2026-11-19T13:02:00Z",
           "kind": "content",
-          "commit": "6e11ce4",
-          "commit_full": "6e11ce469f01e8c06fbffec6739d15bb3e3c03ad",
-          "message": "A squashfs 2.x or 3.x superblock was taken as a filesystem on its magic, version and bytes used (#2163)"
+          "commit": "df22709",
+          "commit_full": "df2270904c36d6904883ba4442fb80fb383ed350",
+          "message": "A readable sqlite_schema row could still hold a partial value (an overflow chain that ends (#2165)"
         },
         "last_update": {
-          "ts": "2026-11-19T07:36:50Z",
+          "ts": "2026-11-19T13:02:00Z",
           "kind": "content",
-          "commit": "6e11ce4",
-          "commit_full": "6e11ce469f01e8c06fbffec6739d15bb3e3c03ad",
-          "message": "A squashfs 2.x or 3.x superblock was taken as a filesystem on its magic, version and bytes used (#2163)"
+          "commit": "df22709",
+          "commit_full": "df2270904c36d6904883ba4442fb80fb383ed350",
+          "message": "A readable sqlite_schema row could still hold a partial value (an overflow chain that ends (#2165)"
         },
         "self_reported": null
       },
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 26.6,
+        "score": 27.0,
         "active_days_7d": 7,
-        "changes_7d": 255,
-        "changes_14d": 807,
+        "changes_7d": 258,
+        "changes_14d": 810,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-19T07:36:50Z",
-          "commit": "6e11ce4",
-          "commit_full": "6e11ce469f01e8c06fbffec6739d15bb3e3c03ad",
-          "subject": "A squashfs 2.x or 3.x superblock was taken as a filesystem on its magic, version and bytes used (#2163)"
+          "ts": "2026-11-19T13:02:00Z",
+          "commit": "df22709",
+          "commit_full": "df2270904c36d6904883ba4442fb80fb383ed350",
+          "subject": "A readable sqlite_schema row could still hold a partial value (an overflow chain that ends (#2165)"
         },
-        "last_commit_ts": "2026-11-19T07:36:50Z",
+        "last_commit_ts": "2026-11-19T13:02:00Z",
         "repo_since": "2026-10-31T14:52:14Z",
         "window": [
           64,
@@ -2619,7 +2625,7 @@
           33,
           63,
           80,
-          7
+          10
         ]
       },
       "release": {
@@ -2700,18 +2706,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 38.2,
+        "score": 39.0,
         "active_days_7d": 7,
-        "changes_7d": 1294,
-        "changes_14d": 2223,
-        "housekeeping_7d": 40,
+        "changes_7d": 1370,
+        "changes_14d": 2299,
+        "housekeeping_7d": 42,
         "last_code_change": {
-          "ts": "2026-11-19T09:15:34Z",
-          "commit": "5c2eb68",
-          "commit_full": "5c2eb68dc05fbfa6fd544f957c368e264bf1d23b",
-          "subject": "Panels: the remembered layout is decoded once, not on every frame (#19432)"
+          "ts": "2026-11-19T18:10:55Z",
+          "commit": "4154877",
+          "commit_full": "4154877a105fbff393132d2e18e5111ffe5118e9",
+          "subject": "Workspaces: the switcher lists Design, Drawing and Render, in that order (#19539)"
         },
-        "last_commit_ts": "2026-11-19T09:15:34Z",
+        "last_commit_ts": "2026-11-19T18:10:55Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           44,
@@ -2727,7 +2733,7 @@
           281,
           181,
           177,
-          98
+          174
         ]
       },
       "release": {
@@ -2796,18 +2802,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.8,
-        "active_days_7d": 6,
-        "changes_7d": 67,
-        "changes_14d": 164,
+        "score": 15.8,
+        "active_days_7d": 7,
+        "changes_7d": 68,
+        "changes_14d": 165,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-18T23:15:34Z",
-          "commit": "bcfea81",
-          "commit_full": "bcfea816478f2a00ab172cefe67f0bd5696b3886",
-          "subject": "chore(svg): bump craft-svg to craft-libs main (010702ee) (#473)"
+          "ts": "2026-11-19T18:25:20Z",
+          "commit": "2cd14de",
+          "commit_full": "2cd14dee581ca8f33313e52483c4a257364051b8",
+          "subject": "svg: keep object-bounds gradients for converted Q/T quadratics (#491)"
         },
-        "last_commit_ts": "2026-11-18T23:15:34Z",
+        "last_commit_ts": "2026-11-19T18:25:20Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
           4,
@@ -2823,7 +2829,7 @@
           3,
           12,
           17,
-          0
+          1
         ]
       },
       "release": {
@@ -2933,5 +2939,5 @@
     "missing": [],
     "candidates": []
   },
-  "generated_at": "2026-11-19T09:37:46+00:00"
+  "generated_at": "2026-11-19T18:44:44+00:00"
 }
