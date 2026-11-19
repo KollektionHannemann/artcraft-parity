@@ -497,18 +497,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 19.0,
+    "score": 19.4,
     "active_days_7d": 7,
-    "changes_7d": 93,
-    "changes_14d": 457,
+    "changes_7d": 94,
+    "changes_14d": 458,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-19T01:12:39Z",
-      "commit": "5b8cb8a",
-      "commit_full": "5b8cb8ab61cd0d0f8dd91845f16d3f5a40a546d9",
-      "subject": "Restore plain PPTX tables and shared-writer regression checks (#7830)"
+      "ts": "2026-11-19T02:50:30Z",
+      "commit": "eeee51f",
+      "commit_full": "eeee51ff7b805b52652a7e00305cc8cf91748239",
+      "subject": "Export: bound RTF pictures per placement, bake their rotations, report the pages that lose one (#7572)"
     },
-    "last_commit_ts": "2026-11-19T01:12:39Z",
+    "last_commit_ts": "2026-11-19T02:50:30Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       9,
@@ -524,7 +524,7 @@
       7,
       6,
       41,
-      3
+      4
     ],
     "days": [
       {
@@ -1466,9 +1466,13 @@
       },
       {
         "d": "2026-11-19",
-        "code": 3,
+        "code": 4,
         "other": 0,
         "samples": [
+          {
+            "commit": "eeee51f",
+            "subject": "Export: bound RTF pictures per placement, bake their rotations, report the pages that lose one (#7572)"
+          },
           {
             "commit": "5b8cb8a",
             "subject": "Restore plain PPTX tables and shared-writer regression checks (#7830)"
@@ -1476,10 +1480,6 @@
           {
             "commit": "21a9d8b",
             "subject": "test(ui): await native button-script completion (#7825)"
-          },
-          {
-            "commit": "79477f3",
-            "subject": "Point hayro-postscript to storytold/craft-libs (storytold/craft-libs#790) (#7828)"
           }
         ]
       }
@@ -7283,5 +7283,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-19T01:42:06+00:00"
+  "updated_at": "2026-11-19T09:36:37+00:00"
 }

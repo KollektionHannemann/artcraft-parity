@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "18a5b41",
-  "latest_commit_date": "2026-11-19T01:29:14+07:00",
-  "latest_message": "Land 21 dotCooCoo PRs, with main merged in (#8599)",
+  "latest_commit": "aceafcd",
+  "latest_commit_date": "2026-11-19T15:27:43+07:00",
+  "latest_message": "G5: Add built-in Media Controls symbol library (#8645) (#8674)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -340,6 +340,10 @@
     "progress": [
       {
         "date": "2026-11-18",
+        "text": "Built-in symbol library Media Controls: adds a seventh procedural symbol library (Window › Symbol Libraries, the Symbols panel's Symbol Libraries Menu) containing six original vector symbols (Play, Pause, Stop, Skip Next, Shuffle, Repeat) generated in code without default 9-slice guides (part of Gap 5). Headline numbers unchanged."
+      },
+      {
+        "date": "2026-11-18",
         "text": "Common Tangents also takes a point (a path of one anchor) and a convex closed path: the lines from the point that touch the path, and the line from the point to the path's center if asked; a point on the outline gets the one tangent there, and a point inside gets none, with a message (#7846). A VectorCraft addition: headline numbers unchanged."
       },
       {
@@ -352,7 +356,19 @@
       },
       {
         "date": "2026-11-17",
+        "text": "Curvature Circle tool (after the Circle tool in its group): a click on a path draws the circle that touches it there and bends as it bends, on the side it bends toward, or with Shift on the other side; a segment that is the usual cubic of a circular arc of 90° or less gives the arc's own radius, so a click on a circle draws that circle; the tool shows the circle, its center and its radius (with an asterisk for an arc's radius) until the click, or \"Straight segment\", \"Cusp\", \"Corner\" or \"Circle too large\" where it draws none (shape.curvatureCircle). One undo step per circle. A VectorCraft addition: headline numbers unchanged."
+      },
+      {
+        "date": "2026-11-17",
         "text": "Circle tool (after the Ellipse tool in its group): two clicks or a drag draw the circle on that diameter, and a click followed by a drag from a second point to a third draws the circle through the three; Shift keeps the diameter at 45° steps, Alt rounds a two-point circle's diameter to the rulers' ticks at the current zoom, points snap to Smart Guides, and the tool shows the circle, its center, its radii and its diameter until the release, or \"Circle too large\" for points on one line or a circle past the canvas. shape.circleThroughPoints also takes two points or two selected anchor points as the ends of a diameter. One undo step per circle. A VectorCraft addition: headline numbers unchanged."
+      },
+      {
+        "date": "2026-11-17",
+        "text": "Add Bounding Rectangle and Add Bounding Circle join the Path Precision Tools add-on (Object › Plug-ins › Path Precision Tools): a live rectangle on the selection's geometric bounding box, or the smallest live circle that holds its outlines, around the whole selection or around each object, with the current paint and one undo step; the menu items open a dialog with Offset, One per Object and Preview (addon.pathtools.boundingRectangle, addon.pathtools.boundingCircle, #6966). A VectorCraft addition: headline numbers unchanged."
+      },
+      {
+        "date": "2026-11-17",
+        "text": "Tangent Circle Tool joins the Path Precision Tools add-on (Object › Plug-ins › Path Precision Tools, and the All Tools drawer): click a path segment, then another, to draw the circle tangent to the first where it was clicked that touches the second; Shift uses the tool's radius and a drag from the second segment sets the radius (Shift in round steps, Cmd/Ctrl slowly), the circle then touching the first segment anywhere along it. The circle shows with its center and radii before the click, one undo step (tangentCircle). A VectorCraft addition: headline numbers unchanged."
       },
       {
         "date": "2026-11-16",
@@ -481,22 +497,6 @@
       {
         "date": "2026-11-01",
         "text": "Divide into Dashes joins the Path Precision Tools add-on (Object › Plug-ins › Path Precision Tools): the selected paths, or only their direct-selected segments, are cut into separate open paths of a dash length measured along the curve, with an optional gap (left empty, or kept as pieces), each keeping the path's appearance; Fit to Corners and Ends stretches or squeezes the lengths so every run starts and ends on a dash. A dialog with Preview, one undo step, at most 100000 pieces. A VectorCraft addition: headline numbers unchanged."
-      },
-      {
-        "date": "2026-11-01",
-        "text": "Group Overlapping Objects joins the Arrange Tools add-on (Object › Plug-ins › Arrange Tools): the selected objects whose visual bounds overlap or touch, chains included, go into one group each, within their own layer or group, at the stacking place of their frontmost member; objects that overlap nothing stay as they are. One undo step, a sweep along x so thousands of loose pieces group quickly (at most 20000 objects). A VectorCraft addition: headline numbers unchanged."
-      },
-      {
-        "date": "2026-10-31",
-        "text": "Pattern libraries: Window › Swatch Libraries › Patterns and the Swatches panel's library menu open Geometric Patterns, a built-in library of eleven pattern swatches (dots, stripes, checks, a grid and shapes); clicking one adds its pattern and swatch to the document, once, and applies it to the active fill or stroke (swatch.library.add)."
-      },
-      {
-        "date": "2026-10-31",
-        "text": "Export for Screens works as the reference app's dialog: Artboards and Assets tabs with a grid or list of thumbnails, Clear Selection and Prefix, Create Sub-folders by Scale or Format (on by default), Export PDFs As Single File (the chosen artboards as one PDF's pages, pdfs: \"single\") or Multiple Files, iOS and Android rows, format presets in a ☰ menu, and a count of the files the export writes (#4895). About 55 community PRs and fixes landed the same day: Find Font, Replace Font, Outline Stroke and Expand leave hidden and locked art alone (with a warning); DXF export writes LINE and ELLIPSE entities and outlines only the strokes a CAD line can't draw; Blob Brush Angle and Roundness; Shift-constrained Perspective Selection; Grid Repeat Options Preview; a gradient mesh from a file budgeted at about a million quads; width-profile strokes keep their shape zoomed out; .ai/EPS import fidelity (area type, envelopes, transparency in dictionaries, character styles); PDF import finds hyphenated and CMap-suffixed font names; Windows renders follow the process's core affinity; Enter or Escape in a floating panel's field no longer reaches the canvas (#4803); Properties shows Blend Options for any selected blend (#4817); Artwork Cleanup finds doubled type (#4835) and joins stacked lines into one object (Join Point Text, #4826). Headline numbers unchanged."
-      },
-      {
-        "date": "2026-10-31",
-        "text": "Arrange Tools, a built-in add-on (Object › Plug-ins › Arrange Tools): Arrange in Grid lays the selected objects out in rows and columns, a row or a column with gaps, from the selection's top-left or centred on the artboard; Swap Objects swaps two objects' places (and, with Swap Objects and Sizes, their sizes); Replace with Top Object puts a copy of the topmost selected object in place of each of the others, kept, stretched or fitted in proportion; Set Size of Each gives every selected object an exact width and/or height about a reference point; Zoom to Selection fits the view to the selection. Each is one undo step with a previewed dialog where it has options. A VectorCraft addition: headline numbers unchanged."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 249,
+    "revisions_since": 253,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,39 +536,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 250,
-    "revisions_7d": 22,
+    "revisions": 254,
+    "revisions_7d": 26,
     "last_revision": {
-      "ts": "2026-11-18T18:29:14Z",
+      "ts": "2026-11-19T08:27:43Z",
       "kind": "content",
-      "commit": "18a5b41",
-      "commit_full": "18a5b41f31a980e9d40a25fe540cab7c1553e9fc",
-      "message": "Land 21 dotCooCoo PRs, with main merged in (#8599)"
+      "commit": "aceafcd",
+      "commit_full": "aceafcda494cf5d0fe82ab76f4246de7f66851d6",
+      "message": "G5: Add built-in Media Controls symbol library (#8645) (#8674)"
     },
     "last_update": {
-      "ts": "2026-11-18T18:29:14Z",
+      "ts": "2026-11-19T08:27:43Z",
       "kind": "content",
-      "commit": "18a5b41",
-      "commit_full": "18a5b41f31a980e9d40a25fe540cab7c1553e9fc",
-      "message": "Land 21 dotCooCoo PRs, with main merged in (#8599)"
+      "commit": "aceafcd",
+      "commit_full": "aceafcda494cf5d0fe82ab76f4246de7f66851d6",
+      "message": "G5: Add built-in Media Controls symbol library (#8645) (#8674)"
     },
     "self_reported": "2026-11-15"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 33.4,
+    "score": 37.4,
     "active_days_7d": 7,
-    "changes_7d": 1178,
-    "changes_14d": 2018,
-    "housekeeping_7d": 28,
+    "changes_7d": 1265,
+    "changes_14d": 2105,
+    "housekeeping_7d": 32,
     "last_code_change": {
-      "ts": "2026-11-19T01:22:38Z",
-      "commit": "1233b23",
-      "commit_full": "1233b23b192edc7162e1054524cfdc519d5d2736",
-      "subject": "Revert #8627 (palette_io through craft-cms) and its two test fixes: messages leave the catalogs (#8636)"
+      "ts": "2026-11-19T09:13:39Z",
+      "commit": "644f5bc",
+      "commit_full": "644f5bc8e377730d093ac5af8967dcd055051a16",
+      "subject": "i18n: Indonesian translates the PSD, CDR and CMX import notes (#8683)"
     },
-    "last_commit_ts": "2026-11-19T01:22:38Z",
+    "last_commit_ts": "2026-11-19T09:13:39Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       46,
@@ -584,7 +584,7 @@
       103,
       114,
       219,
-      5
+      92
     ],
     "days": [
       {
@@ -1526,20 +1526,20 @@
       },
       {
         "d": "2026-11-19",
-        "code": 5,
-        "other": 0,
+        "code": 92,
+        "other": 4,
         "samples": [
           {
-            "commit": "1233b23",
-            "subject": "Revert #8627 (palette_io through craft-cms) and its two test fixes: messages leave the catalogs (#8636)"
+            "commit": "644f5bc",
+            "subject": "i18n: Indonesian translates the PSD, CDR and CMX import notes (#8683)"
           },
           {
-            "commit": "fc2a525",
-            "subject": "color: an .ase library over the cap gets VectorCraft's own, translated message again (#8635)"
+            "commit": "f1dca92",
+            "subject": "Canvas: a tool drag held near an edge of the canvas scrolls the view (#8551) (#8554) (#8682)"
           },
           {
-            "commit": "bab45a9",
-            "subject": "Revert #8626 (HP-GL/2 through craft-plotter) and fix #8627's palette tests: main fails to build (#8631)"
+            "commit": "0a2c9bf",
+            "subject": "Part of #5941: scroll bars show while the pointer is elsewhere (#8419)"
           }
         ]
       }
@@ -8322,7 +8322,111 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "de32f5c",
+      "commit_full": "de32f5cf9622796894c57ac163de62e96d430b06",
+      "commit_date": "2026-11-19T15:01:00+07:00",
+      "ts": "2026-11-19T08:01:00Z",
+      "message": "Path Precision Tools: Add Bounding Rectangle and Add Bounding Circle enclose the selection (#8525)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
+    },
+    {
+      "commit": "1fa8b7f",
+      "commit_full": "1fa8b7f5351b5aaefd9ecc3f734a44aec8e2cbf6",
+      "commit_date": "2026-11-19T15:01:11+07:00",
+      "ts": "2026-11-19T08:01:11Z",
+      "message": "Path Precision Tools: the Tangent Circle Tool draws a circle on two clicked segments (#8526)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
+    },
+    {
+      "commit": "7784d2f",
+      "commit_full": "7784d2f1a59b7a3a062e33444835923003f15af5",
+      "commit_date": "2026-11-19T15:01:28+07:00",
+      "ts": "2026-11-19T08:01:28Z",
+      "message": "Shapes: the Curvature Circle tool draws the circle a path bends along (#8528)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
+    },
+    {
+      "commit": "aceafcd",
+      "commit_full": "aceafcda494cf5d0fe82ab76f4246de7f66851d6",
+      "commit_date": "2026-11-19T15:27:43+07:00",
+      "ts": "2026-11-19T08:27:43Z",
+      "message": "G5: Add built-in Media Controls symbol library (#8645) (#8674)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-19T01:41:56+00:00"
+  "updated_at": "2026-11-19T09:36:21+00:00"
 }

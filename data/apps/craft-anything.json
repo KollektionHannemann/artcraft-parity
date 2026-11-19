@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "bbfd517",
-  "latest_commit_date": "2026-11-19T07:06:09+07:00",
-  "latest_message": "The scan read every squashfs region's block size at offset 12, where only version 4 keeps it; (#2155)",
+  "latest_commit": "6e11ce4",
+  "latest_commit_date": "2026-11-19T14:36:50+07:00",
+  "latest_message": "A squashfs 2.x or 3.x superblock was taken as a filesystem on its magic, version and bytes used (#2163)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 817,
-    "revisions_7d": 210,
+    "revisions": 822,
+    "revisions_7d": 215,
     "last_revision": {
-      "ts": "2026-11-19T00:06:09Z",
+      "ts": "2026-11-19T07:36:50Z",
       "kind": "content",
-      "commit": "bbfd517",
-      "commit_full": "bbfd5177f0501fbef384fee69937cbef91329a2e",
-      "message": "The scan read every squashfs region's block size at offset 12, where only version 4 keeps it; (#2155)"
+      "commit": "6e11ce4",
+      "commit_full": "6e11ce469f01e8c06fbffec6739d15bb3e3c03ad",
+      "message": "A squashfs 2.x or 3.x superblock was taken as a filesystem on its magic, version and bytes used (#2163)"
     },
     "last_update": {
-      "ts": "2026-11-19T00:06:09Z",
+      "ts": "2026-11-19T07:36:50Z",
       "kind": "content",
-      "commit": "bbfd517",
-      "commit_full": "bbfd5177f0501fbef384fee69937cbef91329a2e",
-      "message": "The scan read every squashfs region's block size at offset 12, where only version 4 keeps it; (#2155)"
+      "commit": "6e11ce4",
+      "commit_full": "6e11ce469f01e8c06fbffec6739d15bb3e3c03ad",
+      "message": "A squashfs 2.x or 3.x superblock was taken as a filesystem on its magic, version and bytes used (#2163)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 24.6,
+    "score": 26.6,
     "active_days_7d": 7,
-    "changes_7d": 249,
-    "changes_14d": 801,
+    "changes_7d": 255,
+    "changes_14d": 807,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-19T00:06:09Z",
-      "commit": "bbfd517",
-      "commit_full": "bbfd5177f0501fbef384fee69937cbef91329a2e",
-      "subject": "The scan read every squashfs region's block size at offset 12, where only version 4 keeps it; (#2155)"
+      "ts": "2026-11-19T07:36:50Z",
+      "commit": "6e11ce4",
+      "commit_full": "6e11ce469f01e8c06fbffec6739d15bb3e3c03ad",
+      "subject": "A squashfs 2.x or 3.x superblock was taken as a filesystem on its magic, version and bytes used (#2163)"
     },
-    "last_commit_ts": "2026-11-19T00:06:09Z",
+    "last_commit_ts": "2026-11-19T07:36:50Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       64,
@@ -93,7 +93,7 @@
       33,
       63,
       80,
-      1
+      7
     ],
     "days": [
       {
@@ -451,12 +451,20 @@
       },
       {
         "d": "2026-11-19",
-        "code": 1,
+        "code": 7,
         "other": 0,
         "samples": [
           {
-            "commit": "bbfd517",
-            "subject": "The scan read every squashfs region's block size at offset 12, where only version 4 keeps it; (#2155)"
+            "commit": "6e11ce4",
+            "subject": "A squashfs 2.x or 3.x superblock was taken as a filesystem on its magic, version and bytes used (#2163)"
+          },
+          {
+            "commit": "ecf6504",
+            "subject": "Hand notes to an API-backend builder between tool calls (R2.2) (#2162)"
+          },
+          {
+            "commit": "c28f8ba",
+            "subject": "formats: reuse shared definite TLV reader (partial PKCS#7 cutover) (#2149)"
           }
         ]
       }
@@ -6302,8 +6310,43 @@
       "commit": "bbfd517",
       "commit_full": "bbfd5177f0501fbef384fee69937cbef91329a2e",
       "message": "The scan read every squashfs region's block size at offset 12, where only version 4 keeps it; (#2155)"
+    },
+    {
+      "ts": "2026-11-19T01:56:40Z",
+      "kind": "content",
+      "commit": "dcd23a8",
+      "commit_full": "dcd23a8fc0aaacc8dde6dd3897252b1e764c4ac7",
+      "message": "Walk a folder tree in path order, so a cut inventory is a prefix of the tree (R3.11) (#2101)"
+    },
+    {
+      "ts": "2026-11-19T02:17:53Z",
+      "kind": "content",
+      "commit": "893aa76",
+      "commit_full": "893aa766467dfdd5196e2c9c028ef387232dee9b",
+      "message": "The schema listing dropped its b-tree walk's incomplete flag and notes, so a schema with an (#2156)"
+    },
+    {
+      "ts": "2026-11-19T02:26:57Z",
+      "kind": "content",
+      "commit": "a9130ca",
+      "commit_full": "a9130cabed7bca04cf6744850558915479695b18",
+      "message": "Say in the feed when a request waits for its rate limit (#2158)"
+    },
+    {
+      "ts": "2026-11-19T05:52:25Z",
+      "kind": "content",
+      "commit": "ecf6504",
+      "commit_full": "ecf650402c84decc6355820b93b5350b5d490a3d",
+      "message": "Hand notes to an API-backend builder between tool calls (R2.2) (#2162)"
+    },
+    {
+      "ts": "2026-11-19T07:36:50Z",
+      "kind": "content",
+      "commit": "6e11ce4",
+      "commit_full": "6e11ce469f01e8c06fbffec6739d15bb3e3c03ad",
+      "message": "A squashfs 2.x or 3.x superblock was taken as a filesystem on its magic, version and bytes used (#2163)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-19T01:42:31+00:00"
+  "updated_at": "2026-11-19T09:37:14+00:00"
 }
