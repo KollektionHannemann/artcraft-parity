@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/soundcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/soundcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "0acf572",
-  "latest_commit_date": "2026-11-19T10:43:36-06:00",
-  "latest_message": "Import external-WAV AAF as editable session data (pure Rust) (#799)",
+  "latest_commit": "5806129",
+  "latest_commit_date": "2026-11-20T21:04:15+07:00",
+  "latest_message": "Recording: a take too long for one file goes on in a new file and lands whole (#888) (#1205)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -257,7 +257,7 @@
       }
     ],
     "upcoming": [
-      "Alpha blocker: audio interfaces: device and buffer-size choice, duplex stream, ASIO; record to disk (G-01, G-06). 35–55 h.",
+      "Alpha blocker: audio interfaces: device and buffer-size choice, duplex stream, ASIO (G-01). 35–55 h.",
       "Alpha blocker: MIDI devices: keyboard input, live play and recording are in (checked on Linux only; macOS and Windows type-checked, none on FreeBSD or the web); output, clock and loop/merge recording remain (G-02). 12–22 h.",
       "Alpha blocker: complete AAF/OMF interchange (G-03): strict external-WAV AAF import works; AAF export and OMF import/export remain. 50–90 h.",
       "macOS plugin entitlement (#153), then AU editors and embedded CLAP editors on macOS (G-05). 1 h for the entitlement (needed for the mix row), then 10–15 h.",
@@ -285,6 +285,10 @@
       {
         "date": "2026-11-05",
         "text": "Command-click in an automation lane adds a point at the clicked time and value with the current editing tool (#1394), using the existing Pencil mapping. Command-click preserves the existing selection and also works on the fallback volume lanes of Master, Aux and VCA tracks. Plain clicks and clip contents stay unchanged, and one Undo removes the new point. No readiness percentage change."
+      },
+      {
+        "date": "2026-10-30",
+        "text": "A take too long for one file is recorded into several (Vox01.wav, Vox01-2.wav, …), each small enough to be read back, and all of it lands on the track as clips butted end to end; loop recording and punch-in cut their passes across the files, and crash recovery places every file of an unfinished take. Before, a take past about 1 G samples (46 min of stereo at 192 kHz) stayed on disk but never reached the session (#888). No readiness percentage change."
       },
       {
         "date": "2026-10-27",
@@ -421,10 +425,6 @@
       {
         "date": "2026-10-12",
         "text": "Timecode labels with huge fields no longer overflow: frame counts are computed in 128 bits and clamp, so setup.currenttimecode and session.formattime saturate instead of failing (#248)"
-      },
-      {
-        "date": "2026-10-12",
-        "text": "session.formattime with the smallest bar number no longer fails with an internal error: the bar offset saturates (#249)"
       }
     ]
   },
@@ -433,7 +433,7 @@
     "value_since": "2026-10-10T18:08:49Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 30,
+    "revisions_since": 31,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -441,39 +441,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 31,
-    "revisions_7d": 7,
+    "revisions": 32,
+    "revisions_7d": 8,
     "last_revision": {
-      "ts": "2026-11-19T16:43:36Z",
+      "ts": "2026-11-20T14:04:15Z",
       "kind": "content",
-      "commit": "0acf572",
-      "commit_full": "0acf57228b2be362b0e7a61f41630aa09607fb5a",
-      "message": "Import external-WAV AAF as editable session data (pure Rust) (#799)"
+      "commit": "5806129",
+      "commit_full": "5806129897e600cac8c02ee4e43dfff56f9f5bef",
+      "message": "Recording: a take too long for one file goes on in a new file and lands whole (#888) (#1205)"
     },
     "last_update": {
-      "ts": "2026-11-19T16:43:36Z",
+      "ts": "2026-11-20T14:04:15Z",
       "kind": "content",
-      "commit": "0acf572",
-      "commit_full": "0acf57228b2be362b0e7a61f41630aa09607fb5a",
-      "message": "Import external-WAV AAF as editable session data (pure Rust) (#799)"
+      "commit": "5806129",
+      "commit_full": "5806129897e600cac8c02ee4e43dfff56f9f5bef",
+      "message": "Recording: a take too long for one file goes on in a new file and lands whole (#888) (#1205)"
     },
     "self_reported": "2026-11-18"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 9.9,
-    "active_days_7d": 6,
-    "changes_7d": 22,
-    "changes_14d": 78,
-    "housekeeping_7d": 1,
+    "score": 11.5,
+    "active_days_7d": 7,
+    "changes_7d": 24,
+    "changes_14d": 80,
+    "housekeeping_7d": 2,
     "last_code_change": {
-      "ts": "2026-11-19T23:43:25Z",
-      "commit": "f0338e6",
-      "commit_full": "f0338e662c3114a9aa753da818ad0ed1aa03338b",
-      "subject": "test(video): verify playback and seek parity on H.264, ProRes, and MJPEG routes (#1660)"
+      "ts": "2026-11-20T16:32:21Z",
+      "commit": "85623f2",
+      "commit_full": "85623f28f99a9a788123f0f6b48829f95f07962f",
+      "subject": "mcp: add protocol transcript tests for initialize, cancel, and batch (#1673)"
     },
-    "last_commit_ts": "2026-11-19T23:43:25Z",
+    "last_commit_ts": "2026-11-20T16:32:21Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
       3,
@@ -489,7 +489,7 @@
       2,
       11,
       4,
-      0
+      2
     ],
     "days": [
       {
@@ -1194,6 +1194,21 @@
           {
             "commit": "0acf572",
             "subject": "Import external-WAV AAF as editable session data (pure Rust) (#799)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-20",
+        "code": 2,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "85623f2",
+            "subject": "mcp: add protocol transcript tests for initialize, cancel, and batch (#1673)"
+          },
+          {
+            "commit": "5806129",
+            "subject": "Recording: a take too long for one file goes on in a new file and lands whole (#888) (#1205)"
           }
         ]
       }
@@ -2119,7 +2134,30 @@
       "breadth_pct": 70.0,
       "full_prev": 40.0,
       "kind": "content"
+    },
+    {
+      "commit": "5806129",
+      "commit_full": "5806129897e600cac8c02ee4e43dfff56f9f5bef",
+      "commit_date": "2026-11-20T21:04:15+07:00",
+      "ts": "2026-11-20T14:04:15Z",
+      "message": "Recording: a take too long for one file goes on in a new file and lands whole (#888) (#1205)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-18",
+      "full_pct": 40.0,
+      "full_range": null,
+      "full_hours": [
+        950,
+        1450
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Avid Pro Tools Ultimate 2026.4.1",
+      "mainstream_pct": 36.0,
+      "essentials_pct": 57.0,
+      "breadth_pct": 70.0,
+      "full_prev": 40.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-20T00:58:19+00:00"
+  "updated_at": "2026-11-20T16:43:11+00:00"
 }

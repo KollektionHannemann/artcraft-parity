@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "0c39992",
-  "latest_commit_date": "2026-11-18T16:31:06+07:00",
-  "latest_message": "Print: make a long printer list easier to browse and search (#4399)",
+  "latest_commit": "3f3b3e6",
+  "latest_commit_date": "2026-11-20T18:10:17+07:00",
+  "latest_message": "Adopt the shared AGENTS.md (RFC-0072) (#7937)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 153,
+    "revisions_since": 154,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 243,
-    "revisions_7d": 4,
+    "revisions": 244,
+    "revisions_7d": 5,
     "last_revision": {
-      "ts": "2026-11-18T09:31:06Z",
+      "ts": "2026-11-20T11:10:17Z",
       "kind": "content",
-      "commit": "0c39992",
-      "commit_full": "0c39992c99f76e68e5d0cef4093f134e8e5b7791",
-      "message": "Print: make a long printer list easier to browse and search (#4399)"
+      "commit": "3f3b3e6",
+      "commit_full": "3f3b3e634aa84a5667f40fa14515aa71b101339f",
+      "message": "Adopt the shared AGENTS.md (RFC-0072) (#7937)"
     },
     "last_update": {
-      "ts": "2026-11-18T09:31:06Z",
+      "ts": "2026-11-20T11:10:17Z",
       "kind": "content",
-      "commit": "0c39992",
-      "commit_full": "0c39992c99f76e68e5d0cef4093f134e8e5b7791",
-      "message": "Print: make a long printer list easier to browse and search (#4399)"
+      "commit": "3f3b3e6",
+      "commit_full": "3f3b3e634aa84a5667f40fa14515aa71b101339f",
+      "message": "Adopt the shared AGENTS.md (RFC-0072) (#7937)"
     },
     "self_reported": "2026-11-16"
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 19.1,
+    "level": "buzzing",
+    "score": 20.2,
     "active_days_7d": 7,
-    "changes_7d": 90,
-    "changes_14d": 459,
+    "changes_7d": 97,
+    "changes_14d": 466,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-20T07:53:23Z",
-      "commit": "20830d0",
-      "commit_full": "20830d092cf144f380db206decc53fdc7205d3c3",
-      "subject": "Route PDF parsing and rendering through shared craft-pdf (#2068)"
+      "ts": "2026-11-20T14:46:33Z",
+      "commit": "1feb7c3",
+      "commit_full": "1feb7c3f05e02fe65d89a8abd8fe43727c4e6f2c",
+      "subject": "fix(ui): split view's active-pane line is drawn under open menus (#7010) (#7147)"
     },
-    "last_commit_ts": "2026-11-20T07:53:23Z",
+    "last_commit_ts": "2026-11-20T14:46:33Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       6,
@@ -524,7 +524,7 @@
       6,
       41,
       9,
-      5
+      12
     ],
     "days": [
       {
@@ -1485,20 +1485,20 @@
       },
       {
         "d": "2026-11-20",
-        "code": 5,
+        "code": 12,
         "other": 0,
         "samples": [
           {
-            "commit": "20830d0",
-            "subject": "Route PDF parsing and rendering through shared craft-pdf (#2068)"
+            "commit": "1feb7c3",
+            "subject": "fix(ui): split view's active-pane line is drawn under open menus (#7010) (#7147)"
           },
           {
-            "commit": "0a53d7c",
-            "subject": "create: use shared JPEG and JP2 embedding probes from craft-image-codecs (#778) (#7939)"
+            "commit": "13770dc",
+            "subject": "render: enforce max_coverage via craft-libs #2546 (storytold/craft-libs#778) (#7961)"
           },
           {
-            "commit": "006e79b",
-            "subject": "Restore JPEG metadata preflight parity (#7930)"
+            "commit": "b50a17f",
+            "subject": "fix(redact): refuse annotations with unreadable bounds (#7180)"
           }
         ]
       }
@@ -7300,7 +7300,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "3f3b3e6",
+      "commit_full": "3f3b3e634aa84a5667f40fa14515aa71b101339f",
+      "commit_date": "2026-11-20T18:10:17+07:00",
+      "ts": "2026-11-20T11:10:17Z",
+      "message": "Adopt the shared AGENTS.md (RFC-0072) (#7937)",
+      "stage": null,
+      "next_stage": null,
+      "last_updated": "2026-11-16",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-20T07:59:29+00:00"
+  "updated_at": "2026-11-20T16:42:50+00:00"
 }

@@ -37,18 +37,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.9,
+    "score": 17.6,
     "active_days_7d": 6,
-    "changes_7d": 110,
-    "changes_14d": 243,
-    "housekeeping_7d": 11,
+    "changes_7d": 120,
+    "changes_14d": 253,
+    "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-20T07:10:17Z",
-      "commit": "2828bf4",
-      "commit_full": "2828bf46340c0e2cecd6a4bd0a88a47b006404c0",
-      "subject": "Merge taker-loss: Task Runners that take different repos — jobs skip work no runner can take, calls with no taker for 10 minutes are withdrawn, single-repo batc"
+      "ts": "2026-11-20T15:33:21Z",
+      "commit": "4a8cec6",
+      "commit_full": "4a8cec6087680fad9aad81de69a1f41e2dc3710c",
+      "subject": "A pre-approved merge lifts the label gate: Queue items, merge queue comments, queue_pr and fix-up then merge accept a PR whose label gets no review or has not s"
     },
-    "last_commit_ts": "2026-11-20T07:10:17Z",
+    "last_commit_ts": "2026-11-20T15:33:21Z",
     "repo_since": "2026-11-02T14:36:17Z",
     "window": [
       44,
@@ -64,7 +64,7 @@
       4,
       0,
       49,
-      16
+      26
     ],
     "days": [
       {
@@ -354,20 +354,20 @@
       },
       {
         "d": "2026-11-20",
-        "code": 16,
-        "other": 0,
+        "code": 26,
+        "other": 1,
         "samples": [
           {
-            "commit": "2828bf4",
-            "subject": "Merge taker-loss: Task Runners that take different repos — jobs skip work no runner can take, calls with no taker for 10 minutes are withdrawn, single-repo batc"
+            "commit": "4a8cec6",
+            "subject": "A pre-approved merge lifts the label gate: Queue items, merge queue comments, queue_pr and fix-up then merge accept a PR whose label gets no review or has not s"
           },
           {
-            "commit": "75c585a",
-            "subject": "Merge room-repos: model call room counts only Task Runners that may take the job's repos, and only the queued calls they could take; remote-no-taker health chec"
+            "commit": "2ffbbd2",
+            "subject": "Queue items refused for a PR that gets no code review names why: backlog, duplicate, draft, an open scope question, a label that gets no review, or a classifica"
           },
           {
-            "commit": "8fcf49f",
-            "subject": "Merge item-backlog: Backlog on any open item, before AutoCraft asks a question; Reopen and Undo release it"
+            "commit": "dac03f8",
+            "subject": "Merge #22 with fixes: @<app> autorepin <pull request> repins a PR's Cargo git dependencies to another tracked repo's merge commit once it is merged (comment re-"
           }
         ]
       }
@@ -376,5 +376,5 @@
   "releases": [],
   "roadmap_history": [],
   "history": [],
-  "updated_at": "2026-11-20T08:00:42+00:00"
+  "updated_at": "2026-11-20T16:44:12+00:00"
 }

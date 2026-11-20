@@ -581,18 +581,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.4,
+    "score": 17.9,
     "active_days_7d": 7,
-    "changes_7d": 79,
-    "changes_14d": 320,
-    "housekeeping_7d": 3,
+    "changes_7d": 81,
+    "changes_14d": 322,
+    "housekeeping_7d": 4,
     "last_code_change": {
-      "ts": "2026-11-20T04:55:48Z",
-      "commit": "d4d4b57",
-      "commit_full": "d4d4b5760a8d2b2b78b20f8cae0fe11ad74e9fe0",
-      "subject": "render: preserve float thumbnail precision and verify output/ICC parity (#2518)"
+      "ts": "2026-11-20T14:28:36Z",
+      "commit": "f7acb63",
+      "commit_full": "f7acb637f0e579ac4cdc2395e560b1b41087894e",
+      "subject": "M6: restore full JPEG export chroma (#2521)"
     },
-    "last_commit_ts": "2026-11-20T04:55:48Z",
+    "last_commit_ts": "2026-11-20T14:28:36Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       112,
@@ -608,7 +608,7 @@
       20,
       39,
       7,
-      4
+      6
     ],
     "days": [
       {
@@ -1369,20 +1369,20 @@
       },
       {
         "d": "2026-11-20",
-        "code": 4,
-        "other": 0,
+        "code": 6,
+        "other": 1,
         "samples": [
+          {
+            "commit": "f7acb63",
+            "subject": "M6: restore full JPEG export chroma (#2521)"
+          },
+          {
+            "commit": "48ebd1b",
+            "subject": "fix(render): clamp non-finite samples in thumbnail_f32 (#2525)"
+          },
           {
             "commit": "d4d4b57",
             "subject": "render: preserve float thumbnail precision and verify output/ICC parity (#2518)"
-          },
-          {
-            "commit": "e97b644",
-            "subject": "Preserve 16-bit precision when scaling thumbnails (#2515)"
-          },
-          {
-            "commit": "c745cc6",
-            "subject": "Preserve stored raster orientation in FigCraft (#2513)"
           }
         ]
       }
@@ -8470,5 +8470,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-20T07:59:40+00:00"
+  "updated_at": "2026-11-20T16:43:03+00:00"
 }

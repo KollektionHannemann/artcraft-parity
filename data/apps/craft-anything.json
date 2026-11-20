@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 27.0,
+    "score": 27.1,
     "active_days_7d": 7,
-    "changes_7d": 286,
-    "changes_14d": 780,
-    "housekeeping_7d": 16,
+    "changes_7d": 287,
+    "changes_14d": 781,
+    "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-11-20T04:25:00Z",
-      "commit": "b8d7d79",
-      "commit_full": "b8d7d79090871af648c55b4b57641b7d6be5fe20",
-      "subject": "formats: add CMS SignedData/SignerInfo framing parity tests (#2200)"
+      "ts": "2026-11-20T13:42:52Z",
+      "commit": "827be60",
+      "commit_full": "827be601e781daea91ce2013fa0f64d658abd028",
+      "subject": "formats, mcp: add SQLite, GPU texture, and MCP transcript parity tests (#2233)"
     },
-    "last_commit_ts": "2026-11-20T04:25:00Z",
+    "last_commit_ts": "2026-11-20T13:42:52Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       34,
@@ -93,7 +93,7 @@
       63,
       80,
       28,
-      16
+      17
     ],
     "days": [
       {
@@ -470,9 +470,13 @@
       },
       {
         "d": "2026-11-20",
-        "code": 16,
-        "other": 7,
+        "code": 17,
+        "other": 8,
         "samples": [
+          {
+            "commit": "827be60",
+            "subject": "formats, mcp: add SQLite, GPU texture, and MCP transcript parity tests (#2233)"
+          },
           {
             "commit": "b8d7d79",
             "subject": "formats: add CMS SignedData/SignerInfo framing parity tests (#2200)"
@@ -480,10 +484,6 @@
           {
             "commit": "506e963",
             "subject": "Call a loopback session again when the call is interrupted, instead of saying nothing answered (R5.2) (#2198)"
-          },
-          {
-            "commit": "9b5a08e",
-            "subject": "Offer Requesty by name when its key is set (#808)"
           }
         ]
       }
@@ -6598,5 +6598,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-20T08:00:06+00:00"
+  "updated_at": "2026-11-20T16:43:32+00:00"
 }

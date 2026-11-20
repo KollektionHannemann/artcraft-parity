@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "64683a7",
-  "latest_commit_date": "2026-11-18T21:05:40+07:00",
-  "latest_message": "Wayland: 600 pt minimum width for GNOME split window tiling (#5886) (#5912)",
+  "latest_commit": "eb5a5a4",
+  "latest_commit_date": "2026-11-20T22:54:59+07:00",
+  "latest_message": "#3172: dialogs, their tabs and colour fields say what they are (#5057)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 614,
+    "revisions_since": 615,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 618,
-    "revisions_7d": 19,
+    "revisions": 619,
+    "revisions_7d": 20,
     "last_revision": {
-      "ts": "2026-11-18T14:05:40Z",
+      "ts": "2026-11-20T15:54:59Z",
       "kind": "content",
-      "commit": "64683a7",
-      "commit_full": "64683a7d0b634d83985cd04b47d9d5a99c9d810e",
-      "message": "Wayland: 600 pt minimum width for GNOME split window tiling (#5886) (#5912)"
+      "commit": "eb5a5a4",
+      "commit_full": "eb5a5a451c4935142ff1545ee8a608f7a4b8a983",
+      "message": "#3172: dialogs, their tabs and colour fields say what they are (#5057)"
     },
     "last_update": {
-      "ts": "2026-11-18T14:05:40Z",
+      "ts": "2026-11-20T15:54:59Z",
       "kind": "content",
-      "commit": "64683a7",
-      "commit_full": "64683a7d0b634d83985cd04b47d9d5a99c9d810e",
-      "message": "Wayland: 600 pt minimum width for GNOME split window tiling (#5886) (#5912)"
+      "commit": "eb5a5a4",
+      "commit_full": "eb5a5a451c4935142ff1545ee8a608f7a4b8a983",
+      "message": "#3172: dialogs, their tabs and colour fields say what they are (#5057)"
     },
     "self_reported": "2026-11-18"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.7,
+    "score": 16.0,
     "active_days_7d": 6,
-    "changes_7d": 115,
-    "changes_14d": 260,
-    "housekeeping_7d": 12,
+    "changes_7d": 118,
+    "changes_14d": 263,
+    "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-11-20T00:03:26Z",
-      "commit": "f8ec3cc",
-      "commit_full": "f8ec3cc0fa884369c4f3ebbd9ca3085398f5ec31",
-      "subject": "zotero: add wire framing bounds and interrupted-read tests (#7099)"
+      "ts": "2026-11-20T15:54:59Z",
+      "commit": "eb5a5a4",
+      "commit_full": "eb5a5a451c4935142ff1545ee8a608f7a4b8a983",
+      "subject": "#3172: dialogs, their tabs and colour fields say what they are (#5057)"
     },
-    "last_commit_ts": "2026-11-20T00:03:26Z",
+    "last_commit_ts": "2026-11-20T15:54:59Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       3,
@@ -568,7 +568,7 @@
       59,
       15,
       0,
-      1
+      4
     ],
     "days": [
       {
@@ -1352,12 +1352,20 @@
       },
       {
         "d": "2026-11-20",
-        "code": 1,
-        "other": 0,
+        "code": 4,
+        "other": 1,
         "samples": [
           {
-            "commit": "f8ec3cc",
-            "subject": "zotero: add wire framing bounds and interrupted-read tests (#7099)"
+            "commit": "eb5a5a4",
+            "subject": "#3172: dialogs, their tabs and colour fields say what they are (#5057)"
+          },
+          {
+            "commit": "b5e0be7",
+            "subject": "Port the UI onto the craft framework (#7101)"
+          },
+          {
+            "commit": "09faec4",
+            "subject": "fix(render): frame shapes draw with a hole; frame presets open as frames (#6162)"
           }
         ]
       }
@@ -15802,7 +15810,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "eb5a5a4",
+      "commit_full": "eb5a5a451c4935142ff1545ee8a608f7a4b8a983",
+      "commit_date": "2026-11-20T22:54:59+07:00",
+      "ts": "2026-11-20T15:54:59Z",
+      "message": "#3172: dialogs, their tabs and colour fields say what they are (#5057)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-18",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-20T00:58:17+00:00"
+  "updated_at": "2026-11-20T16:43:08+00:00"
 }
