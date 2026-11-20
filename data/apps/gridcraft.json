@@ -464,21 +464,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.0,
+    "score": 14.0,
     "active_days_7d": 6,
-    "changes_7d": 63,
+    "changes_7d": 64,
     "changes_14d": 161,
     "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-19T07:52:33Z",
-      "commit": "1687a9c",
-      "commit_full": "1687a9c05b0c54fdfd0f40bc13698015e94cf494",
-      "subject": "Preserve OMML import fallback after shared math cutover (#4523)"
+      "ts": "2026-11-19T20:56:40Z",
+      "commit": "ba2bcb7",
+      "commit_full": "ba2bcb79e06d3ce15f39e5136c34c5d09a6ba10f",
+      "subject": "mcp: delegate server framing to craft-mcp-server (#4553)"
     },
-    "last_commit_ts": "2026-11-19T07:52:33Z",
+    "last_commit_ts": "2026-11-19T20:56:40Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
-      1,
       10,
       13,
       8,
@@ -491,7 +490,8 @@
       5,
       9,
       27,
-      6
+      7,
+      0
     ],
     "days": [
       {
@@ -1222,9 +1222,13 @@
       },
       {
         "d": "2026-11-19",
-        "code": 6,
+        "code": 7,
         "other": 0,
         "samples": [
+          {
+            "commit": "ba2bcb7",
+            "subject": "mcp: delegate server framing to craft-mcp-server (#4553)"
+          },
           {
             "commit": "1687a9c",
             "subject": "Preserve OMML import fallback after shared math cutover (#4523)"
@@ -1232,10 +1236,6 @@
           {
             "commit": "952a3b3",
             "subject": "Shapes: select, resize from every handle and rotate (#1321)"
-          },
-          {
-            "commit": "3b06206",
-            "subject": "Wire craft-xls and craft-drawingml from craft-libs main (#4516)"
           }
         ]
       }
@@ -4003,5 +4003,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-19T09:37:05+00:00"
+  "updated_at": "2026-11-20T00:58:25+00:00"
 }

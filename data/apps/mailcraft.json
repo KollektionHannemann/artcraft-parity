@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/UCS-Care-Group/mailcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/UCS-Care-Group/mailcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "979953f",
-  "latest_commit_date": "2026-11-19T14:53:36Z",
-  "latest_message": "Release 0.14.0 (#1701)",
+  "latest_commit": "3c25e79",
+  "latest_commit_date": "2026-11-19T19:58:04Z",
+  "latest_message": "Add local multilingual spelling in the desktop composer (#1635)",
   "parsed": {
     "stage": "public beta",
     "next_stage": "leaving",
@@ -407,7 +407,7 @@
     "value_since": "2026-10-12T18:17:00Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 259,
+    "revisions_since": 260,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -415,42 +415,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 263,
-    "revisions_7d": 17,
+    "revisions": 264,
+    "revisions_7d": 16,
     "last_revision": {
-      "ts": "2026-11-19T14:53:36Z",
-      "kind": "estimates",
-      "commit": "979953f",
-      "commit_full": "979953f012636fa7c2380124fd307152404c29bf",
-      "message": "Release 0.14.0 (#1701)"
+      "ts": "2026-11-19T19:58:04Z",
+      "kind": "content",
+      "commit": "3c25e79",
+      "commit_full": "3c25e79934a3316b2c7a7d674de2f96a5ade3986",
+      "message": "Add local multilingual spelling in the desktop composer (#1635)"
     },
     "last_update": {
-      "ts": "2026-11-19T14:53:36Z",
-      "kind": "estimates",
-      "commit": "979953f",
-      "commit_full": "979953f012636fa7c2380124fd307152404c29bf",
-      "message": "Release 0.14.0 (#1701)"
+      "ts": "2026-11-19T19:58:04Z",
+      "kind": "content",
+      "commit": "3c25e79",
+      "commit_full": "3c25e79934a3316b2c7a7d674de2f96a5ade3986",
+      "message": "Add local multilingual spelling in the desktop composer (#1635)"
     },
     "self_reported": "2026-11-18"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.4,
+    "score": 20.1,
     "active_days_7d": 7,
-    "changes_7d": 192,
-    "changes_14d": 295,
-    "housekeeping_7d": 17,
+    "changes_7d": 159,
+    "changes_14d": 287,
+    "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-11-19T14:53:36Z",
-      "commit": "979953f",
-      "commit_full": "979953f012636fa7c2380124fd307152404c29bf",
-      "subject": "Release 0.14.0 (#1701)"
+      "ts": "2026-11-20T00:28:28Z",
+      "commit": "b1e2d1c",
+      "commit_full": "b1e2d1ce0aa9b1e780dcec57e658df261b5bc452",
+      "subject": "deps: bump the crates group across 1 directory with 10 updates (#1706)"
     },
-    "last_commit_ts": "2026-11-19T18:04:42Z",
+    "last_commit_ts": "2026-11-20T00:28:28Z",
     "repo_since": "2026-10-12T18:17:00Z",
     "window": [
-      17,
       15,
       8,
       7,
@@ -463,7 +462,8 @@
       20,
       33,
       27,
-      6
+      14,
+      1
     ],
     "days": [
       {
@@ -1182,20 +1182,31 @@
       },
       {
         "d": "2026-11-19",
-        "code": 6,
-        "other": 1,
+        "code": 14,
+        "other": 2,
         "samples": [
           {
-            "commit": "979953f",
-            "subject": "Release 0.14.0 (#1701)"
+            "commit": "198fac9",
+            "subject": "No failed check for outside mail Exchange Online didn't enforce DMARC on (#1599)"
           },
           {
-            "commit": "04e51bb",
-            "subject": "#797: an account can send from several addresses, and replies go from the one a message came to (#905)"
+            "commit": "9350a77",
+            "subject": "Fix #1314: a window restored while the main window is minimized responds again (#1707)"
           },
           {
-            "commit": "4a30833",
-            "subject": "Signatures: the Colour menu stays open for a colour of your own (#1464) (#1676)"
+            "commit": "7f8318b",
+            "subject": "#1674: Undo restores only the events its step touched (#1710)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-20",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "b1e2d1c",
+            "subject": "deps: bump the crates group across 1 directory with 10 updates (#1706)"
           }
         ]
       }
@@ -6692,7 +6703,30 @@
       "breadth_pct": 79.4,
       "full_prev": 25.0,
       "kind": "estimates"
+    },
+    {
+      "commit": "3c25e79",
+      "commit_full": "3c25e79934a3316b2c7a7d674de2f96a5ade3986",
+      "commit_date": "2026-11-19T19:58:04Z",
+      "ts": "2026-11-19T19:58:04Z",
+      "message": "Add local multilingual spelling in the desktop composer (#1635)",
+      "stage": "public beta",
+      "next_stage": "leaving",
+      "last_updated": "2026-11-18",
+      "full_pct": 25.0,
+      "full_range": null,
+      "full_hours": [
+        410,
+        800
+      ],
+      "full_label": "Full target (everything Outlook does)",
+      "target": "Microsoft Outlook (Microsoft 365, classic desktop)",
+      "mainstream_pct": 35.0,
+      "essentials_pct": 50.0,
+      "breadth_pct": 79.4,
+      "full_prev": 25.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-19T18:44:38+00:00"
+  "updated_at": "2026-11-20T00:58:50+00:00"
 }

@@ -442,7 +442,7 @@
   },
   "roadmap": {
     "revisions": 31,
-    "revisions_7d": 8,
+    "revisions_7d": 7,
     "last_revision": {
       "ts": "2026-11-19T16:43:36Z",
       "kind": "content",
@@ -462,21 +462,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 11.4,
-    "active_days_7d": 7,
-    "changes_7d": 40,
+    "score": 9.9,
+    "active_days_7d": 6,
+    "changes_7d": 22,
     "changes_14d": 78,
-    "housekeeping_7d": 3,
+    "housekeeping_7d": 1,
     "last_code_change": {
-      "ts": "2026-11-19T16:43:36Z",
-      "commit": "0acf572",
-      "commit_full": "0acf57228b2be362b0e7a61f41630aa09607fb5a",
-      "subject": "Import external-WAV AAF as editable session data (pure Rust) (#799)"
+      "ts": "2026-11-19T23:43:25Z",
+      "commit": "f0338e6",
+      "commit_full": "f0338e662c3114a9aa753da818ad0ed1aa03338b",
+      "subject": "test(video): verify playback and seek parity on H.264, ProRes, and MJPEG routes (#1660)"
     },
-    "last_commit_ts": "2026-11-19T16:43:36Z",
+    "last_commit_ts": "2026-11-19T23:43:25Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
-      2,
       3,
       4,
       4,
@@ -489,7 +488,8 @@
       2,
       2,
       11,
-      2
+      4,
+      0
     ],
     "days": [
       {
@@ -1180,16 +1180,20 @@
       },
       {
         "d": "2026-11-19",
-        "code": 2,
+        "code": 4,
         "other": 0,
         "samples": [
           {
-            "commit": "0acf572",
-            "subject": "Import external-WAV AAF as editable session data (pure Rust) (#799)"
+            "commit": "f0338e6",
+            "subject": "test(video): verify playback and seek parity on H.264, ProRes, and MJPEG routes (#1660)"
           },
           {
-            "commit": "a02d892",
-            "subject": "MIDI input devices: live play-through and MIDI recording (#493)"
+            "commit": "cecb51c",
+            "subject": "automation(mcp): delegate MCP framing to craft-mcp-server (#1656)"
+          },
+          {
+            "commit": "0acf572",
+            "subject": "Import external-WAV AAF as editable session data (pure Rust) (#799)"
           }
         ]
       }
@@ -2117,5 +2121,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-19T18:43:51+00:00"
+  "updated_at": "2026-11-20T00:58:19+00:00"
 }

@@ -383,21 +383,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 26.9,
+    "score": 23.0,
     "active_days_7d": 7,
-    "changes_7d": 279,
-    "changes_14d": 835,
-    "housekeeping_7d": 14,
+    "changes_7d": 216,
+    "changes_14d": 798,
+    "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-11-19T18:34:13Z",
-      "commit": "833778d",
-      "commit_full": "833778dd0372d2c50b70c5537fbe5fdf51a30b85",
-      "subject": "fix(type-tool): record a history state for an unchanged text edit (#12132)"
+      "ts": "2026-11-20T00:50:16Z",
+      "commit": "7a2dbc9",
+      "commit_full": "7a2dbc9b6fa7eb93bedea93113413dc6967fd024",
+      "subject": "CI: keep the Actions cache within its budget (trim saved entries, prune replaced ones as they land) (#15828)"
     },
-    "last_commit_ts": "2026-11-19T18:34:13Z",
+    "last_commit_ts": "2026-11-20T00:50:16Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
-      48,
       85,
       80,
       43,
@@ -410,7 +409,8 @@
       17,
       7,
       34,
-      40
+      50,
+      1
     ],
     "days": [
       {
@@ -1365,20 +1365,31 @@
       },
       {
         "d": "2026-11-19",
-        "code": 40,
+        "code": 50,
         "other": 0,
         "samples": [
           {
-            "commit": "833778d",
-            "subject": "fix(type-tool): record a history state for an unchanged text edit (#12132)"
+            "commit": "470324e",
+            "subject": "Web CI: skip wasm-opt --converge on pull requests (#15817)"
           },
           {
-            "commit": "a217037",
-            "subject": "Engine command table in per-owner fragments (#15710) (#15780)"
+            "commit": "eb7fae1",
+            "subject": "control_exit_code: drop the in-test exit deadline (#15819)"
           },
           {
-            "commit": "01ce583",
-            "subject": "Rebuild the command catalog and keyed command states only on change (#15709) (#15777)"
+            "commit": "6cef4c2",
+            "subject": "Key document queries on revisions instead of per-frame walks (#15709) (#15813)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-20",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "7a2dbc9",
+            "subject": "CI: keep the Actions cache within its budget (trim saved entries, prune replaced ones as they land) (#15828)"
           }
         ]
       }
@@ -1869,5 +1880,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-19T18:43:09+00:00"
+  "updated_at": "2026-11-20T00:57:48+00:00"
 }

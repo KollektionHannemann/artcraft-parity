@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "8729c74",
-  "latest_commit_date": "2026-11-19T23:17:33+07:00",
-  "latest_message": "Brushes: Add original Paint library (#8399) (#8733)",
+  "latest_commit": "b366dad",
+  "latest_commit_date": "2026-11-20T05:45:42+07:00",
+  "latest_message": "Quick Pen: on-canvas toolbar with its actions, Flip Arc and More menu (#8763) (#8789)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -343,6 +343,10 @@
         "text": "Quick Pen tool, in the Pen tool's group (Alt+P, Option+P on macOS): clicks or drags add straight lines, continuous arcs or sharp-corner arcs; Alt tapped on its own switches the action, C flips the last arc, [ and ] size it, a click on the first point closes the path and a click on an open end continues it (path.quickPen, part of #2660). Headline numbers unchanged."
       },
       {
+        "date": "2026-11-19",
+        "text": "Quick Pen toolbar on the canvas while the tool is active: Straight Line, Continuous Arc and Sharp Corner Arc, Flip Arc, and More Options with Hide Toolbar, Pin Toolbar Position and Reset Toolbar Position; it follows the drawing beside the path's last point and its handle drags it (tool.quickPen.flipArc, window.quickPenToolbar, Window › Quick Pen Toolbar; part of #2660). Headline numbers unchanged."
+      },
+      {
         "date": "2026-11-18",
         "text": "Built-in symbol library Media Controls: adds a seventh procedural symbol library (Window › Symbol Libraries, the Symbols panel's Symbol Libraries Menu) containing six original vector symbols (Play, Pause, Stop, Skip Next, Shuffle, Repeat) generated in code without default 9-slice guides (part of Gap 5). Headline numbers unchanged."
       },
@@ -369,6 +373,10 @@
       {
         "date": "2026-11-17",
         "text": "Circle tool (after the Ellipse tool in its group): two clicks or a drag draw the circle on that diameter, and a click followed by a drag from a second point to a third draws the circle through the three; Shift keeps the diameter at 45° steps, Alt rounds a two-point circle's diameter to the rulers' ticks at the current zoom, points snap to Smart Guides, and the tool shows the circle, its center, its radii and its diameter until the release, or \"Circle too large\" for points on one line or a circle past the canvas. shape.circleThroughPoints also takes two points or two selected anchor points as the ends of a diameter. One undo step per circle. A VectorCraft addition: headline numbers unchanged."
+      },
+      {
+        "date": "2026-11-17",
+        "text": "Circle Tool Options (double-click the Circle tool): Show Center, Show Radii and Show Diameter switch what the tool shows while a circle is drawn, Color sets the color of the center cross and radius lines, Anchors at Standard Positions off puts the circle's anchors at the points it was drawn through (shape.circleThroughPoints {anchors: \"points\"}), and Third Point by Dragging off draws a three-point circle with three clicks and a two-point circle with a double-click on the second point. A VectorCraft addition: headline numbers unchanged."
       },
       {
         "date": "2026-11-17",
@@ -489,14 +497,6 @@
       {
         "date": "2026-11-01",
         "text": "Expand Dashes into Paths joins the Path Precision Tools add-on (Object › Plug-ins › Path Precision Tools): each selected path's dashed stroke becomes separate open paths, one per dash, laid out exactly as the stroke draws them (pattern, offset, Align Dashes to Corners and Path Ends), each keeping the stroke with the dashes off, so the gaps are real gaps for cutters and plotters, as one undo step (addon.pathtools.expandDashes, #4922)."
-      },
-      {
-        "date": "2026-11-01",
-        "text": "Randomize Opacity joins the Arrange Tools add-on (Object › Plug-ins › Arrange Tools): each selected object gets its own opacity at random between a minimum and a maximum percent, with a seed that repeats the result, as one undo step (addon.arrange.randomizeOpacity, #4925)."
-      },
-      {
-        "date": "2026-11-01",
-        "text": "Sort Objects joins the Arrange Tools add-on (Object › Plug-ins › Arrange Tools): the selected objects are sorted by width, height, area, position, opacity or stacking order (small to large, large to small or at random) and take another of those in that order, trading their values or stepping them evenly, as one undo step (addon.arrange.sort, #4917)."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 256,
+    "revisions_since": 258,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,42 +536,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 257,
+    "revisions": 259,
     "revisions_7d": 29,
     "last_revision": {
-      "ts": "2026-11-19T16:17:33Z",
+      "ts": "2026-11-19T22:45:42Z",
       "kind": "content",
-      "commit": "8729c74",
-      "commit_full": "8729c7470539b87ef66ac2daa8ad9b7025d49293",
-      "message": "Brushes: Add original Paint library (#8399) (#8733)"
+      "commit": "b366dad",
+      "commit_full": "b366dad3868828e72b42d09f1c3b181f47885156",
+      "message": "Quick Pen: on-canvas toolbar with its actions, Flip Arc and More menu (#8763) (#8789)"
     },
     "last_update": {
-      "ts": "2026-11-19T16:17:33Z",
+      "ts": "2026-11-19T22:45:42Z",
       "kind": "content",
-      "commit": "8729c74",
-      "commit_full": "8729c7470539b87ef66ac2daa8ad9b7025d49293",
-      "message": "Brushes: Add original Paint library (#8399) (#8733)"
+      "commit": "b366dad",
+      "commit_full": "b366dad3868828e72b42d09f1c3b181f47885156",
+      "message": "Quick Pen: on-canvas toolbar with its actions, Flip Arc and More menu (#8763) (#8789)"
     },
     "self_reported": "2026-11-15"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 37.9,
+    "score": 33.6,
     "active_days_7d": 7,
-    "changes_7d": 1307,
-    "changes_14d": 2147,
-    "housekeeping_7d": 33,
+    "changes_7d": 1111,
+    "changes_14d": 2145,
+    "housekeeping_7d": 26,
     "last_code_change": {
-      "ts": "2026-11-19T18:40:48Z",
-      "commit": "770fbd2",
-      "commit_full": "770fbd27ce9c93732d086e3f28758855f98bd272",
-      "subject": "Canvas (web): an edit while a heavy document's view moves draws only what it changed (#8736) (#8764)"
+      "ts": "2026-11-20T00:37:24Z",
+      "commit": "7a519ee",
+      "commit_full": "7a519eea686c5f3d38ebb134781785f77c514cd4",
+      "subject": "Retype: a tracking that translucent glyphs cannot take no longer drops the tracked prefix already found (#8787)"
     },
-    "last_commit_ts": "2026-11-19T18:40:48Z",
+    "last_commit_ts": "2026-11-20T00:37:24Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
-      46,
       56,
       199,
       81,
@@ -584,7 +583,8 @@
       103,
       114,
       219,
-      134
+      173,
+      5
     ],
     "days": [
       {
@@ -1526,20 +1526,39 @@
       },
       {
         "d": "2026-11-19",
-        "code": 134,
-        "other": 5,
+        "code": 173,
+        "other": 6,
         "samples": [
           {
-            "commit": "770fbd2",
-            "subject": "Canvas (web): an edit while a heavy document's view moves draws only what it changed (#8736) (#8764)"
+            "commit": "9d0ae30",
+            "subject": "Brushes: Add original Ornamental library (#8383) (#8730)"
           },
           {
-            "commit": "06ba610",
-            "subject": "Symbols: the Symbol Shifter, Sizer, Stainer and Styler take Shift (#7739) (#8732)"
+            "commit": "78d135c",
+            "subject": "Panels: give floating panels and the restored window each monitor's work area (#8786)"
           },
           {
-            "commit": "1c75bf4",
-            "subject": "Illustrator editing data keeps dynamic symbols and per-instance changes (#8747)"
+            "commit": "1015927",
+            "subject": "doc: delegate JPEG ICC replacement to craft-image-codecs (#8731)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-20",
+        "code": 5,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "7a519ee",
+            "subject": "Retype: a tracking that translucent glyphs cannot take no longer drops the tracked prefix already found (#8787)"
+          },
+          {
+            "commit": "e34c919",
+            "subject": "Layers: keep the targeted ring visible around the appearance dot (#8711) (#8757)"
+          },
+          {
+            "commit": "b9227b0",
+            "subject": "Symbols: Add original Nature Icons library (#8336) (#8756)"
           }
         ]
       }
@@ -8504,7 +8523,59 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "f11c8da",
+      "commit_full": "f11c8da760d46af078e240454e3cff7d9985f8fa",
+      "commit_date": "2026-11-20T05:15:55+07:00",
+      "ts": "2026-11-19T22:15:55Z",
+      "message": "Shapes: Circle Tool Options set what the Circle tool shows and where its anchors go (#8494) (#8746)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
+    },
+    {
+      "commit": "b366dad",
+      "commit_full": "b366dad3868828e72b42d09f1c3b181f47885156",
+      "commit_date": "2026-11-20T05:45:42+07:00",
+      "ts": "2026-11-19T22:45:42Z",
+      "message": "Quick Pen: on-canvas toolbar with its actions, Flip Arc and More menu (#8763) (#8789)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-19T18:43:17+00:00"
+  "updated_at": "2026-11-20T00:57:55+00:00"
 }

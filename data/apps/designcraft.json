@@ -485,7 +485,7 @@
   },
   "roadmap": {
     "revisions": 227,
-    "revisions_7d": 16,
+    "revisions_7d": 15,
     "last_revision": {
       "ts": "2026-11-19T16:17:54Z",
       "kind": "content",
@@ -505,21 +505,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.7,
-    "active_days_7d": 7,
-    "changes_7d": 61,
-    "changes_14d": 164,
-    "housekeeping_7d": 5,
+    "score": 13.1,
+    "active_days_7d": 6,
+    "changes_7d": 58,
+    "changes_14d": 162,
+    "housekeeping_7d": 4,
     "last_code_change": {
-      "ts": "2026-11-19T16:19:53Z",
-      "commit": "129abd9",
-      "commit_full": "129abd936b3094bb1fcae22774252ccbe188e86e",
-      "subject": "Images: use the shared BMP density probe (#3017)"
+      "ts": "2026-11-19T23:56:55Z",
+      "commit": "a354990",
+      "commit_full": "a354990c2b6c1d7c8abe1345f71c5e7950e7b46e",
+      "subject": "idml: separate designmap schema emission to craft-idml (#778) (#3044)"
     },
-    "last_commit_ts": "2026-11-19T16:19:53Z",
+    "last_commit_ts": "2026-11-19T23:56:55Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
-      4,
       3,
       8,
       6,
@@ -532,7 +531,8 @@
       3,
       1,
       12,
-      6
+      8,
+      0
     ],
     "days": [
       {
@@ -1410,20 +1410,20 @@
       },
       {
         "d": "2026-11-19",
-        "code": 6,
+        "code": 8,
         "other": 0,
         "samples": [
           {
+            "commit": "a354990",
+            "subject": "idml: separate designmap schema emission to craft-idml (#778) (#3044)"
+          },
+          {
+            "commit": "2ac602c",
+            "subject": "mcp: cut over JSON-RPC/MCP framing to craft-mcp-server (#3042)"
+          },
+          {
             "commit": "129abd9",
             "subject": "Images: use the shared BMP density probe (#3017)"
-          },
-          {
-            "commit": "17a557c",
-            "subject": "fix(ui): discover installed Arabic fallback fonts (#3019)"
-          },
-          {
-            "commit": "209c8ab",
-            "subject": "Dependencies: unify craft-libs at 30a568b97 for shared cutovers (#2889)"
           }
         ]
       }
@@ -6859,5 +6859,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-19T18:43:41+00:00"
+  "updated_at": "2026-11-20T00:58:12+00:00"
 }

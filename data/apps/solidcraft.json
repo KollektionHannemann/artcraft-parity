@@ -66,21 +66,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 39.0,
+    "score": 34.7,
     "active_days_7d": 7,
-    "changes_7d": 1370,
-    "changes_14d": 2299,
-    "housekeeping_7d": 42,
+    "changes_7d": 1214,
+    "changes_14d": 2302,
+    "housekeeping_7d": 37,
     "last_code_change": {
-      "ts": "2026-11-19T18:10:55Z",
-      "commit": "4154877",
-      "commit_full": "4154877a105fbff393132d2e18e5111ffe5118e9",
-      "subject": "Workspaces: the switcher lists Design, Drawing and Render, in that order (#19539)"
+      "ts": "2026-11-20T00:38:22Z",
+      "commit": "7a8320c",
+      "commit_full": "7a8320ca0d069b8eb6a50525f09a0f5df277597c",
+      "subject": "Path tracer: the thin-lens focus test allows the f32 rounding the GPU readback carries (#13425) (#19566)"
     },
-    "last_commit_ts": "2026-11-19T18:10:55Z",
+    "last_commit_ts": "2026-11-20T00:38:22Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
-      44,
       85,
       70,
       151,
@@ -93,7 +92,8 @@
       281,
       181,
       177,
-      174
+      215,
+      6
     ],
     "days": [
       {
@@ -915,26 +915,62 @@
       },
       {
         "d": "2026-11-19",
-        "code": 174,
+        "code": 215,
         "other": 2,
         "samples": [
           {
-            "commit": "4154877",
-            "subject": "Workspaces: the switcher lists Design, Drawing and Render, in that order (#19539)"
+            "commit": "7648b91",
+            "subject": "Edit: a hole's position given as expressions goes to the field that follows them (#19632) (#19668)"
           },
           {
-            "commit": "0153b73",
-            "subject": "Drawing W36: break geometry and developer example, first slice (#7578) (#7579)"
+            "commit": "f5aa87b",
+            "subject": "Drawings: export a sheet or the whole drawing as a vector PDF at true paper size (#19709)"
           },
           {
-            "commit": "b6ce961",
-            "subject": "STEP import: a part whose check fails is checked once, not twice, when the tolerance heal has nothing to edit (#19574)"
+            "commit": "38a10b2",
+            "subject": "Point clouds: open and insert E57 scan files (#8841) (#19605)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-20",
+        "code": 6,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "7a8320c",
+            "subject": "Path tracer: the thin-lens focus test allows the f32 rounding the GPU readback carries (#13425) (#19566)"
+          },
+          {
+            "commit": "4c2809d",
+            "subject": "Sheet metal: remove flat-model leftovers the surface model doesn't use (after #9245) (#18605)"
+          },
+          {
+            "commit": "6972602",
+            "subject": "Sketch: a sketch moved onto a parallel midplane keeps its world place and moves straight up (#18260) (#18528)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.45.0",
+      "name": "SolidCraft v0.45.0",
+      "ts": "2026-11-19T21:15:24Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.45.0",
+      "changes": 597,
+      "new_contributors": 7,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.45.0-nightly.20261119.148.1",
       "name": "SolidCraft v0.45.0-nightly.20261119.148.1 (nightly)",
@@ -1119,23 +1155,6 @@
         "Web"
       ],
       "prerelease": false,
-      "source": "release",
-      "kind": null
-    },
-    {
-      "tag": "v0.42.0-nightly.20261115.134.1",
-      "name": "SolidCraft v0.42.0-nightly.20261115.134.1 (nightly)",
-      "ts": "2026-11-15T05:33:57Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.42.0-nightly.20261115.134.1",
-      "changes": 95,
-      "new_contributors": 3,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": true,
       "source": "release",
       "kind": null
     }
@@ -2536,5 +2555,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-19T18:44:32+00:00"
+  "updated_at": "2026-11-20T00:58:46+00:00"
 }

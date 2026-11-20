@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "df22709",
-  "latest_commit_date": "2026-11-19T20:02:00+07:00",
-  "latest_message": "A readable sqlite_schema row could still hold a partial value (an overflow chain that ends (#2165)",
+  "latest_commit": "ad9660f",
+  "latest_commit_date": "2026-11-19T16:07:01-07:00",
+  "latest_message": "Plan honest usage counts and a cost-limit design in the roadmap (R5.3) (#1162)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,42 +45,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 823,
-    "revisions_7d": 216,
+    "revisions": 840,
+    "revisions_7d": 228,
     "last_revision": {
-      "ts": "2026-11-19T13:02:00Z",
+      "ts": "2026-11-19T23:07:01Z",
       "kind": "content",
-      "commit": "df22709",
-      "commit_full": "df2270904c36d6904883ba4442fb80fb383ed350",
-      "message": "A readable sqlite_schema row could still hold a partial value (an overflow chain that ends (#2165)"
+      "commit": "ad9660f",
+      "commit_full": "ad9660febb7dfc927fc71d3c3e047b8dca1bf94d",
+      "message": "Plan honest usage counts and a cost-limit design in the roadmap (R5.3) (#1162)"
     },
     "last_update": {
-      "ts": "2026-11-19T13:02:00Z",
+      "ts": "2026-11-19T23:07:01Z",
       "kind": "content",
-      "commit": "df22709",
-      "commit_full": "df2270904c36d6904883ba4442fb80fb383ed350",
-      "message": "A readable sqlite_schema row could still hold a partial value (an overflow chain that ends (#2165)"
+      "commit": "ad9660f",
+      "commit_full": "ad9660febb7dfc927fc71d3c3e047b8dca1bf94d",
+      "message": "Plan honest usage counts and a cost-limit design in the roadmap (R5.3) (#1162)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 27.0,
-    "active_days_7d": 7,
-    "changes_7d": 258,
-    "changes_14d": 810,
-    "housekeeping_7d": 7,
+    "score": 22.9,
+    "active_days_7d": 6,
+    "changes_7d": 270,
+    "changes_14d": 764,
+    "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-19T13:02:00Z",
-      "commit": "df22709",
-      "commit_full": "df2270904c36d6904883ba4442fb80fb383ed350",
-      "subject": "A readable sqlite_schema row could still hold a partial value (an overflow chain that ends (#2165)"
+      "ts": "2026-11-19T23:57:31Z",
+      "commit": "539dc20",
+      "commit_full": "539dc205a569f95805af94ad09e18ab27d95b154",
+      "subject": "formats: cut over SQLite varint and serial-type length decoding to craft-sqlite (#2190)"
     },
-    "last_commit_ts": "2026-11-19T13:02:00Z",
+    "last_commit_ts": "2026-11-19T23:57:31Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
-      64,
       34,
       37,
       157,
@@ -93,7 +92,8 @@
       33,
       63,
       80,
-      10
+      28,
+      0
     ],
     "days": [
       {
@@ -451,20 +451,20 @@
       },
       {
         "d": "2026-11-19",
-        "code": 10,
-        "other": 0,
+        "code": 28,
+        "other": 2,
         "samples": [
           {
-            "commit": "df22709",
-            "subject": "A readable sqlite_schema row could still hold a partial value (an overflow chain that ends (#2165)"
+            "commit": "539dc20",
+            "subject": "formats: cut over SQLite varint and serial-type length decoding to craft-sqlite (#2190)"
           },
           {
-            "commit": "642d5a2",
-            "subject": "formats: use shared CMS inspection for certificate listings (#2167)"
+            "commit": "1e95b35",
+            "subject": "formats: cut over CMS SignedData/SignerInfo framing to craft-pkcs7 (#2189)"
           },
           {
-            "commit": "640fd94",
-            "subject": "formats: use shared DER inspection length metadata (#2166)"
+            "commit": "e030b33",
+            "subject": "Validate MCP HTTP URLs, refuse HTTPS downgrades, and keep loopback redirects on this computer (R1.5) (#2098)"
           }
         ]
       }
@@ -6352,8 +6352,127 @@
       "commit": "df22709",
       "commit_full": "df2270904c36d6904883ba4442fb80fb383ed350",
       "message": "A readable sqlite_schema row could still hold a partial value (an overflow chain that ends (#2165)"
+    },
+    {
+      "ts": "2026-11-19T21:54:59Z",
+      "kind": "content",
+      "commit": "f3329b5",
+      "commit_full": "f3329b57699fb7e35cb2557d096c650470b2c7de",
+      "message": "Correct what Arch's Ghidra package installs, and what a Ghidra file setting accepts (#2174)"
+    },
+    {
+      "ts": "2026-11-19T22:02:02Z",
+      "kind": "content",
+      "commit": "5dd662d",
+      "commit_full": "5dd662d6e035ec9011e9f907d1b3e8b2ea4a7d83",
+      "message": "Ask the GPU for its own texture limit so very wide displays don't abort the app (#1641)"
+    },
+    {
+      "ts": "2026-11-19T22:02:13Z",
+      "kind": "content",
+      "commit": "a6f2a49",
+      "commit_full": "a6f2a491cd1ef9f1248be5f710572a47a066f492",
+      "message": "Drop Claude's stale thinking blocks after a summary instead of failing the build (#1586)"
+    },
+    {
+      "ts": "2026-11-19T22:02:34Z",
+      "kind": "content",
+      "commit": "c9e21e8",
+      "commit_full": "c9e21e82a55fc1ffb8a80ce95266568078b1b3d8",
+      "message": "Start a new Claude Code conversation when the saved one has grown too long (R2.9) (#2043)"
+    },
+    {
+      "ts": "2026-11-19T22:02:41Z",
+      "kind": "content",
+      "commit": "d6b0e58",
+      "commit_full": "d6b0e584c5379c0acced6556afbaa32c51a27dd1",
+      "message": "Report unreadable folder names without merging file identities (R3.11) (#2176)"
+    },
+    {
+      "ts": "2026-11-19T22:14:57Z",
+      "kind": "content",
+      "commit": "35c9c60",
+      "commit_full": "35c9c60f7d5692a85c4052cc92e9884039e6bced",
+      "message": "Format in batches that fit Windows' command line: cargo xtask fmt (R5.2) (#1779)"
+    },
+    {
+      "ts": "2026-11-19T22:15:06Z",
+      "kind": "content",
+      "commit": "c71cef7",
+      "commit_full": "c71cef7df57fb458fe4ff506a85ef3e9e6cac9b1",
+      "message": "Drop an AI list read before the one already shown, so a save isn't undone (#1721)"
+    },
+    {
+      "ts": "2026-11-19T22:15:14Z",
+      "kind": "content",
+      "commit": "7c38175",
+      "commit_full": "7c381754a3bacf766128602ac760bcc36d855e4d",
+      "message": "Take a pasted JSON array as a plugin's arguments (R2.9) (#2154)"
+    },
+    {
+      "ts": "2026-11-19T22:15:22Z",
+      "kind": "content",
+      "commit": "71b4e50",
+      "commit_full": "71b4e50844181cae400f9bd56cc24ac4b09e30e5",
+      "message": "Verify existing Go projects with real build and test checks (R2.7) (#1849)"
+    },
+    {
+      "ts": "2026-11-19T22:28:28Z",
+      "kind": "content",
+      "commit": "92d2d2e",
+      "commit_full": "92d2d2e7811cce6db486f510d74b4a32890947d0",
+      "message": "Build development code with line tables only and dependencies without debug information (R5.2) (#1622)"
+    },
+    {
+      "ts": "2026-11-19T22:28:36Z",
+      "kind": "content",
+      "commit": "9bc38e2",
+      "commit_full": "9bc38e24457bc537069b35089f16fa66229e4d8f",
+      "message": "Find a Rust build only Cargo places (workspace member, CARGO_BUILD_TARGET_DIR, Cargo's home config) by reading files (#2180)"
+    },
+    {
+      "ts": "2026-11-19T22:28:44Z",
+      "kind": "content",
+      "commit": "ad91fdb",
+      "commit_full": "ad91fdbb17baf1203a97039a5f6ce392284a6c9b",
+      "message": "Say that OpenRouter takes its own key when it rejects one from the model's maker (#1507)"
+    },
+    {
+      "ts": "2026-11-19T22:29:03Z",
+      "kind": "content",
+      "commit": "6204350",
+      "commit_full": "62043503804060ec9f8a8ca87568d688dba3c87f",
+      "message": "Let a Codex builder call the paid asset tools within the project's budget (#1464) (#2016)"
+    },
+    {
+      "ts": "2026-11-19T22:29:12Z",
+      "kind": "content",
+      "commit": "04ef228",
+      "commit_full": "04ef228d1ff1e7febc9a5b3e27a9f0e73c200872",
+      "message": "Check when list summaries build nested lookup tables (R5.7) (#2127)"
+    },
+    {
+      "ts": "2026-11-19T23:06:46Z",
+      "kind": "content",
+      "commit": "936bfff",
+      "commit_full": "936bfff9b67f65d3cc1a34fc619827a54f8c5421",
+      "message": "Check both comparison backends before building either (R2.9) (#1009)"
+    },
+    {
+      "ts": "2026-11-19T23:06:53Z",
+      "kind": "content",
+      "commit": "e030b33",
+      "commit_full": "e030b330fc4cbf39458f15bb8b7a4f21c9bdd2c5",
+      "message": "Validate MCP HTTP URLs, refuse HTTPS downgrades, and keep loopback redirects on this computer (R1.5) (#2098)"
+    },
+    {
+      "ts": "2026-11-19T23:07:01Z",
+      "kind": "content",
+      "commit": "ad9660f",
+      "commit_full": "ad9660febb7dfc927fc71d3c3e047b8dca1bf94d",
+      "message": "Plan honest usage counts and a cost-limit design in the roadmap (R5.3) (#1162)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-19T18:44:09+00:00"
+  "updated_at": "2026-11-20T00:58:31+00:00"
 }

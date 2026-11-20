@@ -37,21 +37,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 10.4,
-    "active_days_7d": 4,
-    "changes_7d": 45,
-    "changes_14d": 223,
-    "housekeeping_7d": 10,
+    "score": 14.4,
+    "active_days_7d": 6,
+    "changes_7d": 96,
+    "changes_14d": 229,
+    "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-11-17T17:03:32Z",
-      "commit": "d8e45b5",
-      "commit_full": "d8e45b5d480da7ab43600180c951761496b7b43d",
-      "subject": "The runner reconciles one repo a day off its tick, giving way to the minute sync"
+      "ts": "2026-11-20T00:08:44Z",
+      "commit": "269383d",
+      "commit_full": "269383d1526541e8ff5aa8f42790cac93e7e4d67",
+      "subject": "Merge branch 'rb-repolist': My repos as an alphabetized checkbox list"
     },
-    "last_commit_ts": "2026-11-17T17:03:32Z",
+    "last_commit_ts": "2026-11-20T00:08:44Z",
     "repo_since": "2026-11-02T14:36:17Z",
     "window": [
-      45,
       44,
       27,
       27,
@@ -64,7 +63,8 @@
       13,
       4,
       0,
-      0
+      49,
+      2
     ],
     "days": [
       {
@@ -332,11 +332,45 @@
             "subject": "Merge #10: the Needs you badge counts the picked project on pages without one"
           }
         ]
+      },
+      {
+        "d": "2026-11-19",
+        "code": 49,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "cbb212f",
+            "subject": "Merge branch 'rb-timescale' into rb-int"
+          },
+          {
+            "commit": "b51b534",
+            "subject": "Merge branch 'rb-fix': review fixes"
+          },
+          {
+            "commit": "9ca70c7",
+            "subject": "Merge branch 'rb-t5-sched' into rb-int"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-20",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "269383d",
+            "subject": "Merge branch 'rb-repolist': My repos as an alphabetized checkbox list"
+          },
+          {
+            "commit": "860eec1",
+            "subject": "Load rig: per-scenario time scale, scenario 6 at 0.5 in its own process with calls queued over 25 s, scenario 5 gives the failing helper 5 slots, scenario 3 che"
+          }
+        ]
       }
     ]
   },
   "releases": [],
   "roadmap_history": [],
   "history": [],
-  "updated_at": "2026-11-19T01:42:48+00:00"
+  "updated_at": "2026-11-20T00:58:53+00:00"
 }

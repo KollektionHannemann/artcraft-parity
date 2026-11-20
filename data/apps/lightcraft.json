@@ -433,21 +433,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.5,
+    "score": 13.0,
     "active_days_7d": 7,
-    "changes_7d": 55,
-    "changes_14d": 102,
-    "housekeeping_7d": 3,
+    "changes_7d": 56,
+    "changes_14d": 87,
+    "housekeeping_7d": 2,
     "last_code_change": {
-      "ts": "2026-11-19T14:14:32Z",
-      "commit": "78b5756",
-      "commit_full": "78b575658a61d17bd392b4b81b64c92c8beecbac",
-      "subject": "fetch: delegate HTTP URL and redirect syntax to craft-http-url (#4337)"
+      "ts": "2026-11-20T00:53:31Z",
+      "commit": "7c79659",
+      "commit_full": "7c7965989bed30d92b1f797a23f5304771cdebfa",
+      "subject": "codecs(psd): share PSD recovery framing with craft_psd::HeadView (#4562)"
     },
-    "last_commit_ts": "2026-11-19T14:14:32Z",
+    "last_commit_ts": "2026-11-20T00:53:31Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
-      17,
       3,
       1,
       4,
@@ -460,7 +459,8 @@
       11,
       4,
       19,
-      2
+      3,
+      1
     ],
     "days": [
       {
@@ -1307,9 +1307,13 @@
       },
       {
         "d": "2026-11-19",
-        "code": 2,
+        "code": 3,
         "other": 0,
         "samples": [
+          {
+            "commit": "1901762",
+            "subject": "engine: read Lightroom backup zip via craft-zip (#4555)"
+          },
           {
             "commit": "78b5756",
             "subject": "fetch: delegate HTTP URL and redirect syntax to craft-http-url (#4337)"
@@ -1317,6 +1321,17 @@
           {
             "commit": "5a24289",
             "subject": "raw: consume merged DJI DNG and Sony ZV-E10 fixes (#4532)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-20",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "7c79659",
+            "subject": "codecs(psd): share PSD recovery framing with craft_psd::HeadView (#4562)"
           }
         ]
       }
@@ -1975,5 +1990,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-19T18:43:26+00:00"
+  "updated_at": "2026-11-20T00:58:01+00:00"
 }
