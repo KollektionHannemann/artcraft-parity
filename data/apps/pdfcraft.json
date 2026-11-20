@@ -497,18 +497,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.5,
-    "active_days_7d": 6,
-    "changes_7d": 85,
-    "changes_14d": 454,
+    "score": 19.1,
+    "active_days_7d": 7,
+    "changes_7d": 90,
+    "changes_14d": 459,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-19T23:38:34Z",
-      "commit": "d7f4c6a",
-      "commit_full": "d7f4c6a6688a2e30fac5e7c70f46a2e9012fd10e",
-      "subject": "mcp: delegate stdio framing and JSON-RPC envelopes to craft-mcp-server and craft-jsonrpc (#7910)"
+      "ts": "2026-11-20T07:53:23Z",
+      "commit": "20830d0",
+      "commit_full": "20830d092cf144f380db206decc53fdc7205d3c3",
+      "subject": "Route PDF parsing and rendering through shared craft-pdf (#2068)"
     },
-    "last_commit_ts": "2026-11-19T23:38:34Z",
+    "last_commit_ts": "2026-11-20T07:53:23Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       6,
@@ -524,7 +524,7 @@
       6,
       41,
       9,
-      0
+      5
     ],
     "days": [
       {
@@ -1480,6 +1480,25 @@
           {
             "commit": "cbcacac",
             "subject": "create: share JPEG and JP2 embedding probes without re-encoding (#7902)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-20",
+        "code": 5,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "20830d0",
+            "subject": "Route PDF parsing and rendering through shared craft-pdf (#2068)"
+          },
+          {
+            "commit": "0a53d7c",
+            "subject": "create: use shared JPEG and JP2 embedding probes from craft-image-codecs (#778) (#7939)"
+          },
+          {
+            "commit": "006e79b",
+            "subject": "Restore JPEG metadata preflight parity (#7930)"
           }
         ]
       }
@@ -7283,5 +7302,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-20T00:58:06+00:00"
+  "updated_at": "2026-11-20T07:59:29+00:00"
 }

@@ -433,18 +433,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 13.0,
+    "score": 14.6,
     "active_days_7d": 7,
-    "changes_7d": 56,
-    "changes_14d": 87,
+    "changes_7d": 60,
+    "changes_14d": 91,
     "housekeeping_7d": 2,
     "last_code_change": {
-      "ts": "2026-11-20T00:53:31Z",
-      "commit": "7c79659",
-      "commit_full": "7c7965989bed30d92b1f797a23f5304771cdebfa",
-      "subject": "codecs(psd): share PSD recovery framing with craft_psd::HeadView (#4562)"
+      "ts": "2026-11-20T04:32:35Z",
+      "commit": "2d905e0",
+      "commit_full": "2d905e0ab3aa5f7014231f8f83025171fd4b440a",
+      "subject": "fix(engine): reject duplicate .lrcat central directory records in Lightroom backups (#4574)"
     },
-    "last_commit_ts": "2026-11-20T00:53:31Z",
+    "last_commit_ts": "2026-11-20T04:32:35Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
       3,
@@ -460,7 +460,7 @@
       4,
       19,
       3,
-      1
+      5
     ],
     "days": [
       {
@@ -1326,12 +1326,20 @@
       },
       {
         "d": "2026-11-20",
-        "code": 1,
+        "code": 5,
         "other": 0,
         "samples": [
           {
-            "commit": "7c79659",
-            "subject": "codecs(psd): share PSD recovery framing with craft_psd::HeadView (#4562)"
+            "commit": "2d905e0",
+            "subject": "fix(engine): reject duplicate .lrcat central directory records in Lightroom backups (#4574)"
+          },
+          {
+            "commit": "976f52a",
+            "subject": "geocode: use craft-zip for GeoNames downloads (#4566)"
+          },
+          {
+            "commit": "a3f65b6",
+            "subject": "fetch: use shared craft_http_url::parse_content_range (#4546)"
           }
         ]
       }
@@ -1990,5 +1998,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-20T00:58:01+00:00"
+  "updated_at": "2026-11-20T07:59:22+00:00"
 }

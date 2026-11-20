@@ -581,18 +581,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.7,
+    "score": 17.4,
     "active_days_7d": 7,
-    "changes_7d": 77,
-    "changes_14d": 318,
+    "changes_7d": 79,
+    "changes_14d": 320,
     "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-20T00:44:17Z",
-      "commit": "c745cc6",
-      "commit_full": "c745cc615df7a311f5317724ecac328940e73c27",
-      "subject": "Preserve stored raster orientation in FigCraft (#2513)"
+      "ts": "2026-11-20T04:55:48Z",
+      "commit": "d4d4b57",
+      "commit_full": "d4d4b5760a8d2b2b78b20f8cae0fe11ad74e9fe0",
+      "subject": "render: preserve float thumbnail precision and verify output/ICC parity (#2518)"
     },
-    "last_commit_ts": "2026-11-20T00:44:17Z",
+    "last_commit_ts": "2026-11-20T04:55:48Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       112,
@@ -608,7 +608,7 @@
       20,
       39,
       7,
-      2
+      4
     ],
     "days": [
       {
@@ -1369,16 +1369,20 @@
       },
       {
         "d": "2026-11-20",
-        "code": 2,
+        "code": 4,
         "other": 0,
         "samples": [
           {
-            "commit": "c745cc6",
-            "subject": "Preserve stored raster orientation in FigCraft (#2513)"
+            "commit": "d4d4b57",
+            "subject": "render: preserve float thumbnail precision and verify output/ICC parity (#2518)"
           },
           {
-            "commit": "dcd2783",
-            "subject": "SVG export: share path commands without changing coordinate bytes (#2516)"
+            "commit": "e97b644",
+            "subject": "Preserve 16-bit precision when scaling thumbnails (#2515)"
+          },
+          {
+            "commit": "c745cc6",
+            "subject": "Preserve stored raster orientation in FigCraft (#2513)"
           }
         ]
       }
@@ -8466,5 +8470,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-20T00:58:14+00:00"
+  "updated_at": "2026-11-20T07:59:40+00:00"
 }

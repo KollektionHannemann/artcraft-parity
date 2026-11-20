@@ -383,18 +383,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 23.0,
+    "score": 24.3,
     "active_days_7d": 7,
-    "changes_7d": 216,
-    "changes_14d": 798,
-    "housekeeping_7d": 11,
+    "changes_7d": 219,
+    "changes_14d": 801,
+    "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-11-20T00:50:16Z",
-      "commit": "7a2dbc9",
-      "commit_full": "7a2dbc9b6fa7eb93bedea93113413dc6967fd024",
-      "subject": "CI: keep the Actions cache within its budget (trim saved entries, prune replaced ones as they land) (#15828)"
+      "ts": "2026-11-20T02:30:55Z",
+      "commit": "d661194",
+      "commit_full": "d661194b8620117d757d779a9ea94235b3598fa4",
+      "subject": "Preserve clipping resource flatness edits in PSD export (#15885)"
     },
-    "last_commit_ts": "2026-11-20T00:50:16Z",
+    "last_commit_ts": "2026-11-20T03:01:20Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       85,
@@ -410,7 +410,7 @@
       7,
       34,
       50,
-      1
+      4
     ],
     "days": [
       {
@@ -1384,12 +1384,20 @@
       },
       {
         "d": "2026-11-20",
-        "code": 1,
-        "other": 0,
+        "code": 4,
+        "other": 2,
         "samples": [
           {
-            "commit": "7a2dbc9",
-            "subject": "CI: keep the Actions cache within its budget (trim saved entries, prune replaced ones as they land) (#15828)"
+            "commit": "d661194",
+            "subject": "Preserve clipping resource flatness edits in PSD export (#15885)"
+          },
+          {
+            "commit": "8c52649",
+            "subject": "Merge queue batch #15852: #15167, #15101, #12094, #15212, #15045, #13888, #14738, #13571, #14424, #15007, #14542, #14657, #14529, #14505, #14387, #14146, #14044"
+          },
+          {
+            "commit": "4d91c2e",
+            "subject": "CI: one test archive per shard, balanced by recorded test times (#15826)"
           }
         ]
       }
@@ -1880,5 +1888,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-20T00:57:48+00:00"
+  "updated_at": "2026-11-20T07:59:04+00:00"
 }

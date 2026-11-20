@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 34.7,
+    "score": 38.1,
     "active_days_7d": 7,
-    "changes_7d": 1214,
-    "changes_14d": 2302,
-    "housekeeping_7d": 37,
+    "changes_7d": 1278,
+    "changes_14d": 2366,
+    "housekeeping_7d": 40,
     "last_code_change": {
-      "ts": "2026-11-20T00:38:22Z",
-      "commit": "7a8320c",
-      "commit_full": "7a8320ca0d069b8eb6a50525f09a0f5df277597c",
-      "subject": "Path tracer: the thin-lens focus test allows the f32 rounding the GPU readback carries (#13425) (#19566)"
+      "ts": "2026-11-20T07:35:49Z",
+      "commit": "2132b0f",
+      "commit_full": "2132b0f2e5bca0e31daff8ed67cfa63cf15f8b55",
+      "subject": "Region split: give a void joined only at vertices its own sides (#18851) (#19319)"
     },
-    "last_commit_ts": "2026-11-20T00:38:22Z",
+    "last_commit_ts": "2026-11-20T07:35:49Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       85,
@@ -93,7 +93,7 @@
       181,
       177,
       215,
-      6
+      70
     ],
     "days": [
       {
@@ -934,26 +934,43 @@
       },
       {
         "d": "2026-11-20",
-        "code": 6,
-        "other": 0,
+        "code": 70,
+        "other": 3,
         "samples": [
           {
-            "commit": "7a8320c",
-            "subject": "Path tracer: the thin-lens focus test allows the f32 rounding the GPU readback carries (#13425) (#19566)"
+            "commit": "2132b0f",
+            "subject": "Region split: give a void joined only at vertices its own sides (#18851) (#19319)"
           },
           {
-            "commit": "4c2809d",
-            "subject": "Sheet metal: remove flat-model leftovers the surface model doesn't use (after #9245) (#18605)"
+            "commit": "9db03c7",
+            "subject": "Drawings: a drawing's images are saved as binary parts, not base64 in its record (#19875)"
           },
           {
-            "commit": "6972602",
-            "subject": "Sketch: a sketch moved onto a parallel midplane keeps its world place and moves straight up (#18260) (#18528)"
+            "commit": "688bdc7",
+            "subject": "Local gate: the shared-crate rules pass again (a panel-layout README; a ui-kit test kept in its crate) (#19872)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.45.0-nightly.20261120.150.1",
+      "name": "SolidCraft v0.45.0-nightly.20261120.150.1 (nightly)",
+      "ts": "2026-11-20T05:39:23Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.45.0-nightly.20261120.150.1",
+      "changes": 78,
+      "new_contributors": 5,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "patch"
+    },
     {
       "tag": "v0.45.0",
       "name": "SolidCraft v0.45.0",
@@ -1105,7 +1122,7 @@
       ],
       "prerelease": false,
       "source": "release",
-      "kind": "minor"
+      "kind": null
     },
     {
       "tag": "v0.44.0-nightly.20261117.140.1",
@@ -1122,7 +1139,7 @@
       ],
       "prerelease": true,
       "source": "release",
-      "kind": "minor"
+      "kind": null
     },
     {
       "tag": "v0.43.0-nightly.20261116.139.1",
@@ -1138,23 +1155,6 @@
         "Web"
       ],
       "prerelease": true,
-      "source": "release",
-      "kind": "patch"
-    },
-    {
-      "tag": "v0.43.0",
-      "name": "SolidCraft v0.43.0",
-      "ts": "2026-11-16T03:20:18Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.43.0",
-      "changes": 267,
-      "new_contributors": 8,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
       "source": "release",
       "kind": null
     }
@@ -2555,5 +2555,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-20T00:58:46+00:00"
+  "updated_at": "2026-11-20T08:00:29+00:00"
 }

@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "ad9660f",
-  "latest_commit_date": "2026-11-19T16:07:01-07:00",
-  "latest_message": "Plan honest usage counts and a cost-limit design in the roadmap (R5.3) (#1162)",
+  "latest_commit": "506e963",
+  "latest_commit_date": "2026-11-19T20:41:28-07:00",
+  "latest_message": "Call a loopback session again when the call is interrupted, instead of saying nothing answered (R5.2) (#2198)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 840,
-    "revisions_7d": 228,
+    "revisions": 855,
+    "revisions_7d": 243,
     "last_revision": {
-      "ts": "2026-11-19T23:07:01Z",
+      "ts": "2026-11-20T03:41:28Z",
       "kind": "content",
-      "commit": "ad9660f",
-      "commit_full": "ad9660febb7dfc927fc71d3c3e047b8dca1bf94d",
-      "message": "Plan honest usage counts and a cost-limit design in the roadmap (R5.3) (#1162)"
+      "commit": "506e963",
+      "commit_full": "506e9632fbcbd57b93e91fd1222e575e88360c2c",
+      "message": "Call a loopback session again when the call is interrupted, instead of saying nothing answered (R5.2) (#2198)"
     },
     "last_update": {
-      "ts": "2026-11-19T23:07:01Z",
+      "ts": "2026-11-20T03:41:28Z",
       "kind": "content",
-      "commit": "ad9660f",
-      "commit_full": "ad9660febb7dfc927fc71d3c3e047b8dca1bf94d",
-      "message": "Plan honest usage counts and a cost-limit design in the roadmap (R5.3) (#1162)"
+      "commit": "506e963",
+      "commit_full": "506e9632fbcbd57b93e91fd1222e575e88360c2c",
+      "message": "Call a loopback session again when the call is interrupted, instead of saying nothing answered (R5.2) (#2198)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.9,
-    "active_days_7d": 6,
-    "changes_7d": 270,
-    "changes_14d": 764,
-    "housekeeping_7d": 9,
+    "score": 27.0,
+    "active_days_7d": 7,
+    "changes_7d": 286,
+    "changes_14d": 780,
+    "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-11-19T23:57:31Z",
-      "commit": "539dc20",
-      "commit_full": "539dc205a569f95805af94ad09e18ab27d95b154",
-      "subject": "formats: cut over SQLite varint and serial-type length decoding to craft-sqlite (#2190)"
+      "ts": "2026-11-20T04:25:00Z",
+      "commit": "b8d7d79",
+      "commit_full": "b8d7d79090871af648c55b4b57641b7d6be5fe20",
+      "subject": "formats: add CMS SignedData/SignerInfo framing parity tests (#2200)"
     },
-    "last_commit_ts": "2026-11-19T23:57:31Z",
+    "last_commit_ts": "2026-11-20T04:25:00Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       34,
@@ -93,7 +93,7 @@
       63,
       80,
       28,
-      0
+      16
     ],
     "days": [
       {
@@ -465,6 +465,25 @@
           {
             "commit": "e030b33",
             "subject": "Validate MCP HTTP URLs, refuse HTTPS downgrades, and keep loopback redirects on this computer (R1.5) (#2098)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-20",
+        "code": 16,
+        "other": 7,
+        "samples": [
+          {
+            "commit": "b8d7d79",
+            "subject": "formats: add CMS SignedData/SignerInfo framing parity tests (#2200)"
+          },
+          {
+            "commit": "506e963",
+            "subject": "Call a loopback session again when the call is interrupted, instead of saying nothing answered (R5.2) (#2198)"
+          },
+          {
+            "commit": "9b5a08e",
+            "subject": "Offer Requesty by name when its key is set (#808)"
           }
         ]
       }
@@ -6471,8 +6490,113 @@
       "commit": "ad9660f",
       "commit_full": "ad9660febb7dfc927fc71d3c3e047b8dca1bf94d",
       "message": "Plan honest usage counts and a cost-limit design in the roadmap (R5.3) (#1162)"
+    },
+    {
+      "ts": "2026-11-20T02:34:11Z",
+      "kind": "content",
+      "commit": "aa21ef7",
+      "commit_full": "aa21ef79f1c5097ecb87fd2e049134ebea715ef9",
+      "message": "Record the gaps found in this week's reviews (R2.9, R5.2, R1.5, R2.7) (#2187)"
+    },
+    {
+      "ts": "2026-11-20T02:37:06Z",
+      "kind": "content",
+      "commit": "1c8d406",
+      "commit_full": "1c8d406ae723ab894b66768367516a2931ba36a2",
+      "message": "Keep GGUF names that aren't UTF-8 as escaped, flagged entries (R3.12) (#1742)"
+    },
+    {
+      "ts": "2026-11-20T02:37:15Z",
+      "kind": "content",
+      "commit": "a14e94f",
+      "commit_full": "a14e94fbde1f7e3bb8f5685030c033f3de898ee7",
+      "message": "Sign in to a website from Make (R2.9) (#2182)"
+    },
+    {
+      "ts": "2026-11-20T02:46:51Z",
+      "kind": "content",
+      "commit": "49d5f02",
+      "commit_full": "49d5f026d4b00e8252443bb8cc525b2df38ec46c",
+      "message": "Let a message to an API model carry pictures (#1175)"
+    },
+    {
+      "ts": "2026-11-20T02:47:02Z",
+      "kind": "content",
+      "commit": "1ec0a37",
+      "commit_full": "1ec0a37db95545224c71d89d5605548db5140647",
+      "message": "Use one text size in Simple and Advanced, so switching modes doesn't zoom (R2.9) (#1236)"
+    },
+    {
+      "ts": "2026-11-20T03:01:19Z",
+      "kind": "content",
+      "commit": "d63c89e",
+      "commit_full": "d63c89ef5c26826860f52e1400042c1e0ce675e8",
+      "message": "Say a project's usage is unknown when its record can't be read (R5.3) (#2195)"
+    },
+    {
+      "ts": "2026-11-20T03:01:37Z",
+      "kind": "content",
+      "commit": "f644230",
+      "commit_full": "f64423062bbe0dce104ee464bf9a5bda8de5af94",
+      "message": "List craft-anything-cli in the AppStream metainfo (R5.1) (#2120)"
+    },
+    {
+      "ts": "2026-11-20T03:05:43Z",
+      "kind": "content",
+      "commit": "9e9be90",
+      "commit_full": "9e9be90a70bb0e4a500af4211edcd5114dc2d642",
+      "message": "Keep an https plugin's headers and session on its own address when it redirects (R1.5) (#2197)"
+    },
+    {
+      "ts": "2026-11-20T03:08:56Z",
+      "kind": "content",
+      "commit": "e550761",
+      "commit_full": "e550761c289da3759707b9c75e98f543ed990ff8",
+      "message": "Check the Node runtimes used by the release workflow (R5.2) (#1116)"
+    },
+    {
+      "ts": "2026-11-20T03:09:05Z",
+      "kind": "content",
+      "commit": "6349875",
+      "commit_full": "6349875c50278fe97b2c721ddf82e89295090844",
+      "message": "Add an accessibility floor (R2.5) and a requested-language check (R2.7) (#1164)"
+    },
+    {
+      "ts": "2026-11-20T03:09:14Z",
+      "kind": "content",
+      "commit": "44d8d8b",
+      "commit_full": "44d8d8b1f5cbab5200ed8f229aac09a4f1b78f42",
+      "message": "Plan saying what a rebuilt site can't carry over from a hosted platform (R2.9) (#1165)"
+    },
+    {
+      "ts": "2026-11-20T03:09:23Z",
+      "kind": "content",
+      "commit": "7890b7f",
+      "commit_full": "7890b7fd07f3baf736def21b9aa50d7a33c5725a",
+      "message": "Plan carrying a project's stated purpose to its approval card (R2.9) (#1166)"
+    },
+    {
+      "ts": "2026-11-20T03:10:12Z",
+      "kind": "content",
+      "commit": "4666186",
+      "commit_full": "466618611f4463b57dbb0a26289b093d627b9cfa",
+      "message": "Point AGENTS.md and the release page at craft-contrib instead of the retired craftrules (R5.2) (#1934)"
+    },
+    {
+      "ts": "2026-11-20T03:20:31Z",
+      "kind": "content",
+      "commit": "29f4660",
+      "commit_full": "29f4660497b737d9a920167070a96bac5e594948",
+      "message": "Say when a plugin's bracketed arguments aren't a list of quoted words (R2.9) (#2196)"
+    },
+    {
+      "ts": "2026-11-20T03:41:28Z",
+      "kind": "content",
+      "commit": "506e963",
+      "commit_full": "506e9632fbcbd57b93e91fd1222e575e88360c2c",
+      "message": "Call a loopback session again when the call is interrupted, instead of saying nothing answered (R5.2) (#2198)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-20T00:58:31+00:00"
+  "updated_at": "2026-11-20T08:00:06+00:00"
 }

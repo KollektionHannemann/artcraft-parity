@@ -37,18 +37,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.4,
+    "score": 16.9,
     "active_days_7d": 6,
-    "changes_7d": 96,
-    "changes_14d": 229,
+    "changes_7d": 110,
+    "changes_14d": 243,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-11-20T00:08:44Z",
-      "commit": "269383d",
-      "commit_full": "269383d1526541e8ff5aa8f42790cac93e7e4d67",
-      "subject": "Merge branch 'rb-repolist': My repos as an alphabetized checkbox list"
+      "ts": "2026-11-20T07:10:17Z",
+      "commit": "2828bf4",
+      "commit_full": "2828bf46340c0e2cecd6a4bd0a88a47b006404c0",
+      "subject": "Merge taker-loss: Task Runners that take different repos — jobs skip work no runner can take, calls with no taker for 10 minutes are withdrawn, single-repo batc"
     },
-    "last_commit_ts": "2026-11-20T00:08:44Z",
+    "last_commit_ts": "2026-11-20T07:10:17Z",
     "repo_since": "2026-11-02T14:36:17Z",
     "window": [
       44,
@@ -64,7 +64,7 @@
       4,
       0,
       49,
-      2
+      16
     ],
     "days": [
       {
@@ -354,16 +354,20 @@
       },
       {
         "d": "2026-11-20",
-        "code": 2,
+        "code": 16,
         "other": 0,
         "samples": [
           {
-            "commit": "269383d",
-            "subject": "Merge branch 'rb-repolist': My repos as an alphabetized checkbox list"
+            "commit": "2828bf4",
+            "subject": "Merge taker-loss: Task Runners that take different repos — jobs skip work no runner can take, calls with no taker for 10 minutes are withdrawn, single-repo batc"
           },
           {
-            "commit": "860eec1",
-            "subject": "Load rig: per-scenario time scale, scenario 6 at 0.5 in its own process with calls queued over 25 s, scenario 5 gives the failing helper 5 slots, scenario 3 che"
+            "commit": "75c585a",
+            "subject": "Merge room-repos: model call room counts only Task Runners that may take the job's repos, and only the queued calls they could take; remote-no-taker health chec"
+          },
+          {
+            "commit": "8fcf49f",
+            "subject": "Merge item-backlog: Backlog on any open item, before AutoCraft asks a question; Reopen and Undo release it"
           }
         ]
       }
@@ -372,5 +376,5 @@
   "releases": [],
   "roadmap_history": [],
   "history": [],
-  "updated_at": "2026-11-20T00:58:53+00:00"
+  "updated_at": "2026-11-20T08:00:42+00:00"
 }
