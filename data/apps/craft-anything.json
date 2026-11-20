@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 27.1,
+    "score": 27.2,
     "active_days_7d": 7,
-    "changes_7d": 287,
-    "changes_14d": 781,
+    "changes_7d": 288,
+    "changes_14d": 782,
     "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-11-20T13:42:52Z",
-      "commit": "827be60",
-      "commit_full": "827be601e781daea91ce2013fa0f64d658abd028",
-      "subject": "formats, mcp: add SQLite, GPU texture, and MCP transcript parity tests (#2233)"
+      "ts": "2026-11-20T19:59:35Z",
+      "commit": "44c89ba",
+      "commit_full": "44c89badd69c76eca7fd79315263a9ae80b5770f",
+      "subject": "mcp: test cancellation of an already-started running job (#2253)"
     },
-    "last_commit_ts": "2026-11-20T13:42:52Z",
+    "last_commit_ts": "2026-11-20T19:59:35Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       34,
@@ -93,7 +93,7 @@
       63,
       80,
       28,
-      17
+      18
     ],
     "days": [
       {
@@ -470,9 +470,13 @@
       },
       {
         "d": "2026-11-20",
-        "code": 17,
+        "code": 18,
         "other": 8,
         "samples": [
+          {
+            "commit": "44c89ba",
+            "subject": "mcp: test cancellation of an already-started running job (#2253)"
+          },
           {
             "commit": "827be60",
             "subject": "formats, mcp: add SQLite, GPU texture, and MCP transcript parity tests (#2233)"
@@ -480,10 +484,6 @@
           {
             "commit": "b8d7d79",
             "subject": "formats: add CMS SignedData/SignerInfo framing parity tests (#2200)"
-          },
-          {
-            "commit": "506e963",
-            "subject": "Call a loopback session again when the call is interrupted, instead of saying nothing answered (R5.2) (#2198)"
           }
         ]
       }
@@ -6598,5 +6598,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-20T16:43:32+00:00"
+  "updated_at": "2026-11-20T22:52:37+00:00"
 }
