@@ -505,18 +505,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.0,
+    "score": 15.5,
     "active_days_7d": 7,
-    "changes_7d": 55,
-    "changes_14d": 168,
+    "changes_7d": 57,
+    "changes_14d": 170,
     "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-21T18:00:28Z",
-      "commit": "a6d82e9",
-      "commit_full": "a6d82e9a3c65507b19c788cc4395ece38adb2f7d",
-      "subject": "Images: decode TIFF screen and link proxies at a reduced size (#2381) (#3016)"
+      "ts": "2026-11-21T23:12:31Z",
+      "commit": "00bf1e6",
+      "commit_full": "00bf1e6963cc386a36c1d6f48d144aaa11440640",
+      "subject": "test(images): assert asymmetric pixel placement for orientation 6 reduced TIFF (#3127)"
     },
-    "last_commit_ts": "2026-11-21T18:00:28Z",
+    "last_commit_ts": "2026-11-21T23:12:31Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       8,
@@ -532,7 +532,7 @@
       12,
       8,
       5,
-      4
+      6
     ],
     "days": [
       {
@@ -1448,20 +1448,20 @@
       },
       {
         "d": "2026-11-21",
-        "code": 4,
+        "code": 6,
         "other": 0,
         "samples": [
           {
+            "commit": "00bf1e6",
+            "subject": "test(images): assert asymmetric pixel placement for orientation 6 reduced TIFF (#3127)"
+          },
+          {
+            "commit": "1d166a8",
+            "subject": "test(images): expect upright swapped dimensions for orientation 6 reduced TIFF (#3125)"
+          },
+          {
             "commit": "a6d82e9",
             "subject": "Images: decode TIFF screen and link proxies at a reduced size (#2381) (#3016)"
-          },
-          {
-            "commit": "d7401b6",
-            "subject": "images: restore strict JPEG APP1 EXIF scan (craft-libs#785) (#3105)"
-          },
-          {
-            "commit": "0fc7a78",
-            "subject": "images: replace local JPEG EXIF and PNG pHYs scans with shared readers (craft-libs#785) (#3101)"
           }
         ]
       }
@@ -6920,5 +6920,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-21T18:23:29+00:00"
+  "updated_at": "2026-11-21T23:30:15+00:00"
 }

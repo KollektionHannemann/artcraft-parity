@@ -37,18 +37,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.4,
+    "score": 18.6,
     "active_days_7d": 6,
-    "changes_7d": 119,
-    "changes_14d": 229,
+    "changes_7d": 122,
+    "changes_14d": 232,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-11-21T18:01:52Z",
-      "commit": "648d6de",
-      "commit_full": "648d6dee95e288d95a5b6a61888d9d198f94d31d",
-      "subject": "Build pods: each step copies the pristine tree's children into /src, since the pod's user cannot set the times of the /src mount point"
+      "ts": "2026-11-21T20:32:31Z",
+      "commit": "871c5b2",
+      "commit_full": "871c5b22c42c98f8ce560ba4f9c0f052b5df6cd8",
+      "subject": "Merge restart without draining: jobs a runner stop interrupts resume under the same id (at most twice), adopt their open Task Runner calls by bundle hash, make "
     },
-    "last_commit_ts": "2026-11-21T18:08:58Z",
+    "last_commit_ts": "2026-11-21T20:32:31Z",
     "repo_since": "2026-11-02T14:36:17Z",
     "window": [
       27,
@@ -64,7 +64,7 @@
       0,
       49,
       28,
-      18
+      21
     ],
     "days": [
       {
@@ -373,20 +373,20 @@
       },
       {
         "d": "2026-11-21",
-        "code": 18,
+        "code": 21,
         "other": 2,
         "samples": [
           {
-            "commit": "648d6de",
-            "subject": "Build pods: each step copies the pristine tree's children into /src, since the pod's user cannot set the times of the /src mount point"
+            "commit": "871c5b2",
+            "subject": "Merge restart without draining: jobs a runner stop interrupts resume under the same id (at most twice), adopt their open Task Runner calls by bundle hash, make "
           },
           {
-            "commit": "84080bf",
-            "subject": "Merge async codemod: scripts/codemod-async.ts (TS 5 tool) turns the synchronous node:sqlite code into async code over Db, with sequential array helpers, the flo"
+            "commit": "b70b808",
+            "subject": "The process's shared database handle ignores close() from modules that were given it; only closeDb closes it, so a job step closing its handle no longer ends th"
           },
           {
-            "commit": "8c008d6",
-            "subject": "Merge build pods: a kubernetes build environment runs each untrusted build task as short-lived pods (task, source, steps as init containers, upload) on a per-ta"
+            "commit": "147bee2",
+            "subject": "Merge async database layer on SQLite: every database call is async over the Db handle (codemod plus hand work), async interleaving fixes, tests converted; plann"
           }
         ]
       }
@@ -395,5 +395,5 @@
   "releases": [],
   "roadmap_history": [],
   "history": [],
-  "updated_at": "2026-11-21T18:24:29+00:00"
+  "updated_at": "2026-11-21T23:31:18+00:00"
 }

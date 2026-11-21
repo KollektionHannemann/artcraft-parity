@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 38.6,
+    "score": 38.8,
     "active_days_7d": 7,
-    "changes_7d": 1297,
-    "changes_14d": 2498,
-    "housekeeping_7d": 27,
+    "changes_7d": 1313,
+    "changes_14d": 2514,
+    "housekeeping_7d": 28,
     "last_code_change": {
-      "ts": "2026-11-21T17:57:57Z",
-      "commit": "94096b8",
-      "commit_full": "94096b84f0fdf9744ac8047e1ca28b5400ade4a7",
-      "subject": "Plugins: a plugin reads and writes its files in a design as bytes, not base64 (#19891)"
+      "ts": "2026-11-21T22:03:49Z",
+      "commit": "fe20baa",
+      "commit_full": "fe20baabd9c0e78be97bd00df8802fe96b3b5589",
+      "subject": "Views: remove Sketch from the design view kinds (#19652)"
     },
-    "last_commit_ts": "2026-11-21T17:57:57Z",
+    "last_commit_ts": "2026-11-21T22:03:49Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       70,
@@ -93,7 +93,7 @@
       177,
       215,
       189,
-      98
+      114
     ],
     "days": [
       {
@@ -953,26 +953,43 @@
       },
       {
         "d": "2026-11-21",
-        "code": 98,
-        "other": 5,
+        "code": 114,
+        "other": 6,
         "samples": [
           {
-            "commit": "94096b8",
-            "subject": "Plugins: a plugin reads and writes its files in a design as bytes, not base64 (#19891)"
+            "commit": "fe20baa",
+            "subject": "Views: remove Sketch from the design view kinds (#19652)"
           },
           {
-            "commit": "a85a684",
-            "subject": "Open: a design is read once, and its document, model, signature, provenance records and check all come from that reading (#20440)"
+            "commit": "5b9a0ca",
+            "subject": "Drawings: a note can start at, end at or be centred on its point, and a new note starts at it (#20128)"
           },
           {
-            "commit": "dfc6276",
-            "subject": "Look replace: the schemas appearance.replace already answered with (#20420)"
+            "commit": "df08599",
+            "subject": "Windows: pop-out windows with their own settings and menu, the design ribbon and panels, an edge top bar and their own interface size (#20479)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.46.1",
+      "name": "SolidCraft v0.46.1",
+      "ts": "2026-11-21T22:44:12Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.46.1",
+      "changes": null,
+      "new_contributors": 2,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.46.0",
       "name": "SolidCraft v0.46.0",
@@ -1150,23 +1167,6 @@
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.44.1",
       "changes": null,
       "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "patch"
-    },
-    {
-      "tag": "v0.44.0",
-      "name": "SolidCraft v0.44.0",
-      "ts": "2026-11-17T17:36:37Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.44.0",
-      "changes": 359,
-      "new_contributors": 16,
       "platforms": [
         "macOS",
         "Windows",
@@ -2581,5 +2581,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-21T18:24:17+00:00"
+  "updated_at": "2026-11-21T23:31:05+00:00"
 }
