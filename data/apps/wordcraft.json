@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "70ecef8",
-  "latest_commit_date": "2026-11-21T10:08:42Z",
-  "latest_message": "#7124: mcp refuses to start without both automation roots, and refuses --connect (#7157)",
+  "latest_commit": "8b73226",
+  "latest_commit_date": "2026-11-21T17:00:25Z",
+  "latest_message": "Newspaper columns keep a paragraph's last lines together, as Word does (#6828)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
-    "last_updated": "2026-11-20",
+    "last_updated": "2026-11-21",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -329,12 +329,24 @@
     ],
     "progress": [
       {
+        "date": "2026-11-21",
+        "text": "Layout: strict column balancing measures a kept paragraph again in each candidate column, so a float in one column does not make the paragraph skip another where it fits (#6821). Readiness estimates unchanged."
+      },
+      {
         "date": "2026-11-20",
         "text": "wordcraft-cli mcp starts only with both --automation-read-root and --automation-write-root (shared rule 18, #7124); without them it stops with an error naming the two flags, where it used to serve with access to every file the user can reach. mcp --connect is refused until the desktop app confines its control channel to the same roots (#3695, #5819). The help, docs/mcp.md, the README and AGENTS.md pass both roots in every example."
       },
       {
         "date": "2026-11-20",
         "text": "trivial · Progress log: wordcraft-cli mcp needs both automation roots; --connect refused (#7124)"
+      },
+      {
+        "date": "2026-11-19",
+        "text": "Layout: when strict column balancing moves an anchor line to the next column, it releases the floating object's wrap area from the abandoned column (#6821). Readiness estimates unchanged."
+      },
+      {
+        "date": "2026-11-19",
+        "text": "Legacy header floats (#6805): three short header lines stay in place around a narrow Square, Tight or Through logo in mode 14 and flow beside it in mode 15. Measured in Word for Windows with a synthetic document. Overall readiness unchanged"
       },
       {
         "date": "2026-11-17",
@@ -349,6 +361,10 @@
         "text": "trivial · Progress log: file formats, codecs and protocols come from craft-libs (#778)"
       },
       {
+        "date": "2026-11-16",
+        "text": "Layout: a row of hyphens after a gap wraps at any hyphen, as in Word (it fills the line and its rest goes on the next), where the whole row moved to the next line."
+      },
+      {
         "date": "2026-11-15",
         "text": "Native, built-in and web Insert/Change Picture choosers offer both TIFF extensions (.tif, .tiff) alongside other supported pictures; native drops, picked-file inbox dispatch and pasted picture paths recognize the same suffixes (#6704). TIFF decoding remains limited to supported compression."
       },
@@ -358,7 +374,19 @@
       },
       {
         "date": "2026-11-15",
+        "text": "Layout: from Word 2013's layout (compatibility mode 15), balancing the columns before a continuous break keeps the last two, three or five lines of a paragraph that began on the page before together, keeps a two- or three-line paragraph that begins the last page whole, and holds a paragraph with keep lines together (or keep with next) whole in the first column when the strict rules fit. Synthetic tests also cover a footnote and a float (#6821); mode 14 splits them as before. Readiness estimates unchanged."
+      },
+      {
+        "date": "2026-11-15",
         "text": "trivial · Progress log: Get the Missing Fonts (download pages for missing fonts their publisher gives away)"
+      },
+      {
+        "date": "2026-11-15",
+        "text": "Headers in Word 2010 layout or older (#6805): Outside header table cells, legacy layout keeps header lines beside narrow Square, Tight and Through floats. A Top and Bottom float reaching below the text can make the header taller. In mode 15, text moves below Top and Bottom floats and can still flow beside narrow Square, Tight and Through floats. These cases were measured in Word for Windows with synthetic documents. Footer and header table-cell coverage remains open. Overall readiness unchanged"
+      },
+      {
+        "date": "2026-11-15",
+        "text": "Layout: the first paragraph of a table cell on a page can split even when only one line fits, if the row starts at the top (possibly below its own headers) or continues from the previous page, and a non-exact row marked Can't Split that is taller than a page splits at the page's end, as in Word, instead of the row running off the bottom of the page (#6823). Readiness estimates unchanged."
       },
       {
         "date": "2026-11-14",
@@ -459,34 +487,6 @@
       {
         "date": "2026-11-06",
         "text": "Windows print submissions run in separate helper processes (#5710). A helper acknowledges cancellation before it stops, so a driver stalled in a cancelled job cannot hold another job’s provider lock. A private temporary PDF and bounded settings messages cross the process boundary; normal shutdown reaps helpers and removes their inputs. The helper erases its plaintext inputs before driver work; a hard app crash during startup can still leave private temporary files. Jobs already sending still complete. Readiness estimates unchanged."
-      },
-      {
-        "date": "2026-11-06",
-        "text": "File › Print: before sending starts, Cancel printing stops a waiting job, frees the Print page and keeps the settings; a successfully cancelled job is never sent. Cancellation remains available after the last document closes. Quitting cancels waiting jobs and joins jobs already sending (#5710). On Windows, winprint repeats the DEVMODE conversion after sending starts. A stall during that repeat prevents cancellation and can keep shutdown waiting, even before a native job exists. Readiness estimates unchanged."
-      },
-      {
-        "date": "2026-11-06",
-        "text": "File › Print on Windows no longer waits on printer drivers to list printers (#5710). The list used to wait until each printer's driver said whether it prints on both sides, and a networked printer asleep in power save could keep it empty with Refresh unavailable; now discovery asks no driver (the Windows spooler still supplies the list), and printing still checks the job's options with the driver. The reporter's sleeping printer has not been retested yet. Readiness estimates unchanged."
-      },
-      {
-        "date": "2026-11-06",
-        "text": "Accept All and Reject All no longer restyle the paragraph after an empty one carrying a section break (#5667): a Compare that added a section, then Reject All, left Body in the removed paragraph's Normal style and indents. The empty paragraph now goes whole and its section joins the following one, as deleting the break does."
-      },
-      {
-        "date": "2026-11-05",
-        "text": "ODT tables with a usable width keep their column proportions when the file gives only shares (gap 19): LibreOffice's CV template opened and saved with equal columns."
-      },
-      {
-        "date": "2026-11-05",
-        "text": "ODT font sizes reach Asian and complex-script text (gap 19): Chinese text set to 24 pt stayed at the default size in LibreOffice."
-      },
-      {
-        "date": "2026-11-05",
-        "text": "ODT text can turn off what its style turns on (gap 19): a word not bold in a bold heading showed bold, and came back bold in LibreOffice after a save."
-      },
-      {
-        "date": "2026-11-05",
-        "text": "ODT pictures keep the size their file gives (gap 19): opening a file shrank ones wider than the text, so a save with no edit to them changed how LibreOffice laid them out."
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 620,
+    "revisions_since": 624,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 624,
-    "revisions_7d": 24,
+    "revisions": 628,
+    "revisions_7d": 28,
     "last_revision": {
-      "ts": "2026-11-21T10:08:42Z",
+      "ts": "2026-11-21T17:00:25Z",
       "kind": "content",
-      "commit": "70ecef8",
-      "commit_full": "70ecef86df6d37b7efe8df84c686e2081e382656",
-      "message": "#7124: mcp refuses to start without both automation roots, and refuses --connect (#7157)"
+      "commit": "8b73226",
+      "commit_full": "8b732263758a33cd986224d972015939ea79e18c",
+      "message": "Newspaper columns keep a paragraph's last lines together, as Word does (#6828)"
     },
     "last_update": {
-      "ts": "2026-11-21T10:08:42Z",
+      "ts": "2026-11-21T17:00:25Z",
       "kind": "content",
-      "commit": "70ecef8",
-      "commit_full": "70ecef86df6d37b7efe8df84c686e2081e382656",
-      "message": "#7124: mcp refuses to start without both automation roots, and refuses --connect (#7157)"
+      "commit": "8b73226",
+      "commit_full": "8b732263758a33cd986224d972015939ea79e18c",
+      "message": "Newspaper columns keep a paragraph's last lines together, as Word does (#6828)"
     },
-    "self_reported": "2026-11-20"
+    "self_reported": "2026-11-21"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.1,
+    "score": 17.4,
     "active_days_7d": 6,
-    "changes_7d": 120,
-    "changes_14d": 270,
+    "changes_7d": 126,
+    "changes_14d": 276,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-21T10:55:17Z",
-      "commit": "8a047c3",
-      "commit_full": "8a047c333b239e5c5d5c9d91e2dae2cc84185439",
-      "subject": "mcp: --connect=… gets the --connect refusal, not unknown option (#7186)"
+      "ts": "2026-11-21T17:00:25Z",
+      "commit": "8b73226",
+      "commit_full": "8b732263758a33cd986224d972015939ea79e18c",
+      "subject": "Newspaper columns keep a paragraph's last lines together, as Word does (#6828)"
     },
-    "last_commit_ts": "2026-11-21T10:55:17Z",
+    "last_commit_ts": "2026-11-21T17:00:25Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       90,
@@ -568,7 +568,7 @@
       15,
       0,
       11,
-      3
+      9
     ],
     "days": [
       {
@@ -1371,20 +1371,20 @@
       },
       {
         "d": "2026-11-21",
-        "code": 3,
+        "code": 9,
         "other": 0,
         "samples": [
           {
-            "commit": "8a047c3",
-            "subject": "mcp: --connect=… gets the --connect refusal, not unknown option (#7186)"
+            "commit": "8b73226",
+            "subject": "Newspaper columns keep a paragraph's last lines together, as Word does (#6828)"
           },
           {
-            "commit": "70ecef8",
-            "subject": "#7124: mcp refuses to start without both automation roots, and refuses --connect (#7157)"
+            "commit": "e15a3f9",
+            "subject": "A header with a logo and title in an older-layout document no longer pushes the page body down, as in Word (#6809)"
           },
           {
-            "commit": "60ac6f5",
-            "subject": "Rotation preview test: compare only the preview's texture across moves (#7175)"
+            "commit": "05fe5c0",
+            "subject": "Layout: a row of hyphens wraps at any hyphen, as in Word (#6856)"
           }
         ]
       }
@@ -15967,7 +15967,99 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "f44b2e4",
+      "commit_full": "f44b2e41653c49593fc7aa44be73aff4d8de5feb",
+      "commit_date": "2026-11-21T15:32:16Z",
+      "ts": "2026-11-21T15:32:16Z",
+      "message": "A table row split across pages no longer runs off the bottom of the page (#6827)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-21",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "05fe5c0",
+      "commit_full": "05fe5c0598cebd1cc0fdfdaf8bfc508cc5627fa6",
+      "commit_date": "2026-11-21T16:14:39Z",
+      "ts": "2026-11-21T16:14:39Z",
+      "message": "Layout: a row of hyphens wraps at any hyphen, as in Word (#6856)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-21",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "e15a3f9",
+      "commit_full": "e15a3f98618fdd9e928520194a9e3290187ac75a",
+      "commit_date": "2026-11-21T16:37:17Z",
+      "ts": "2026-11-21T16:37:17Z",
+      "message": "A header with a logo and title in an older-layout document no longer pushes the page body down, as in Word (#6809)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-21",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
+    },
+    {
+      "commit": "8b73226",
+      "commit_full": "8b732263758a33cd986224d972015939ea79e18c",
+      "commit_date": "2026-11-21T17:00:25Z",
+      "ts": "2026-11-21T17:00:25Z",
+      "message": "Newspaper columns keep a paragraph's last lines together, as Word does (#6828)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-21",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-21T11:53:31+00:00"
+  "updated_at": "2026-11-21T18:23:37+00:00"
 }

@@ -282,18 +282,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.2,
+    "score": 17.3,
     "active_days_7d": 7,
-    "changes_7d": 78,
-    "changes_14d": 133,
+    "changes_7d": 79,
+    "changes_14d": 134,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-21T07:59:27Z",
-      "commit": "fe8ee1b",
-      "commit_full": "fe8ee1bdb0243335560d3e726633cc0433ee99fc",
-      "subject": "fix(formats): raise Alembic nesting depth limit from 64 to 256 (#728)"
+      "ts": "2026-11-21T18:00:40Z",
+      "commit": "eb126f6",
+      "commit_full": "eb126f6f591ff28d237747beb2d4e74337ede4e0",
+      "subject": "Account for banded PNG memory in MCMAT cooks (#729)"
     },
-    "last_commit_ts": "2026-11-21T07:59:27Z",
+    "last_commit_ts": "2026-11-21T18:00:40Z",
     "repo_since": "2026-10-14T18:33:13Z",
     "window": [
       7,
@@ -309,7 +309,7 @@
       12,
       3,
       18,
-      6
+      7
     ],
     "days": [
       {
@@ -770,9 +770,13 @@
       },
       {
         "d": "2026-11-21",
-        "code": 6,
+        "code": 7,
         "other": 0,
         "samples": [
+          {
+            "commit": "eb126f6",
+            "subject": "Account for banded PNG memory in MCMAT cooks (#729)"
+          },
           {
             "commit": "fe8ee1b",
             "subject": "fix(formats): raise Alembic nesting depth limit from 64 to 256 (#728)"
@@ -780,10 +784,6 @@
           {
             "commit": "29f6a79",
             "subject": "test(formats): cover mixed glTF primitive UVs (#724)"
-          },
-          {
-            "commit": "c263233",
-            "subject": "perf(formats): remove remaining O(N^2) lookups in glTF import and mesh geometry (#720)"
           }
         ]
       }
@@ -1007,5 +1007,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-21T11:53:49+00:00"
+  "updated_at": "2026-11-21T18:23:51+00:00"
 }

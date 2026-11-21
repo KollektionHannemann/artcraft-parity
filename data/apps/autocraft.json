@@ -37,18 +37,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.6,
+    "score": 18.4,
     "active_days_7d": 6,
-    "changes_7d": 111,
-    "changes_14d": 221,
-    "housekeeping_7d": 11,
+    "changes_7d": 119,
+    "changes_14d": 229,
+    "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-11-21T09:15:50Z",
-      "commit": "739d3b8",
-      "commit_full": "739d3b87b56c773075828f09fbef08bcd3a5fb7f",
-      "subject": "Merge CA-198: a planner pass reads ~49 MB instead of ~235 MB (PR issue links stored at sync, comment text read only when needed, stored plans kept between passe"
+      "ts": "2026-11-21T18:01:52Z",
+      "commit": "648d6de",
+      "commit_full": "648d6dee95e288d95a5b6a61888d9d198f94d31d",
+      "subject": "Build pods: each step copies the pristine tree's children into /src, since the pod's user cannot set the times of the /src mount point"
     },
-    "last_commit_ts": "2026-11-21T09:15:50Z",
+    "last_commit_ts": "2026-11-21T18:08:58Z",
     "repo_since": "2026-11-02T14:36:17Z",
     "window": [
       27,
@@ -64,7 +64,7 @@
       0,
       49,
       28,
-      10
+      18
     ],
     "days": [
       {
@@ -373,20 +373,20 @@
       },
       {
         "d": "2026-11-21",
-        "code": 10,
-        "other": 0,
+        "code": 18,
+        "other": 2,
         "samples": [
           {
-            "commit": "739d3b8",
-            "subject": "Merge CA-198: a planner pass reads ~49 MB instead of ~235 MB (PR issue links stored at sync, comment text read only when needed, stored plans kept between passe"
+            "commit": "648d6de",
+            "subject": "Build pods: each step copies the pristine tree's children into /src, since the pod's user cannot set the times of the /src mount point"
           },
           {
-            "commit": "4b75c8f",
-            "subject": "Merge: the flow summary has its own live topic outside the planner's inputs, and a stage paused until an operator acts no longer wakes the planner every minute"
+            "commit": "84080bf",
+            "subject": "Merge async codemod: scripts/codemod-async.ts (TS 5 tool) turns the synchronous node:sqlite code into async code over Db, with sequential array helpers, the flo"
           },
           {
-            "commit": "04e7e2c",
-            "subject": "Merge: the planner stops queueing pipeline jobs that can only handle nothing (no Task Runner takes their calls, or the GitHub write budget is used up), which re"
+            "commit": "8c008d6",
+            "subject": "Merge build pods: a kubernetes build environment runs each untrusted build task as short-lived pods (task, source, steps as init containers, upload) on a per-ta"
           }
         ]
       }
@@ -395,5 +395,5 @@
   "releases": [],
   "roadmap_history": [],
   "history": [],
-  "updated_at": "2026-11-21T11:54:35+00:00"
+  "updated_at": "2026-11-21T18:24:29+00:00"
 }
