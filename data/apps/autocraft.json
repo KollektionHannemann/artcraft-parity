@@ -37,18 +37,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.7,
+    "score": 17.6,
     "active_days_7d": 6,
-    "changes_7d": 103,
-    "changes_14d": 213,
+    "changes_7d": 111,
+    "changes_14d": 221,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-11-21T00:31:59Z",
-      "commit": "9c4ce07",
-      "commit_full": "9c4ce07694f6e35f0870dfb18482d5afab5669f3",
-      "subject": "Merge #27 with fixes: My tasks items, a user's Task Runners take only fast-tracked items or only the items they fast-tracked (or have queued); pools, room and l"
+      "ts": "2026-11-21T09:15:50Z",
+      "commit": "739d3b8",
+      "commit_full": "739d3b87b56c773075828f09fbef08bcd3a5fb7f",
+      "subject": "Merge CA-198: a planner pass reads ~49 MB instead of ~235 MB (PR issue links stored at sync, comment text read only when needed, stored plans kept between passe"
     },
-    "last_commit_ts": "2026-11-21T00:31:59Z",
+    "last_commit_ts": "2026-11-21T09:15:50Z",
     "repo_since": "2026-11-02T14:36:17Z",
     "window": [
       27,
@@ -64,7 +64,7 @@
       0,
       49,
       28,
-      2
+      10
     ],
     "days": [
       {
@@ -373,16 +373,20 @@
       },
       {
         "d": "2026-11-21",
-        "code": 2,
+        "code": 10,
         "other": 0,
         "samples": [
           {
-            "commit": "9c4ce07",
-            "subject": "Merge #27 with fixes: My tasks items, a user's Task Runners take only fast-tracked items or only the items they fast-tracked (or have queued); pools, room and l"
+            "commit": "739d3b8",
+            "subject": "Merge CA-198: a planner pass reads ~49 MB instead of ~235 MB (PR issue links stored at sync, comment text read only when needed, stored plans kept between passe"
           },
           {
-            "commit": "e4dbe3c",
-            "subject": "Merge #29 with fixes: autorepin via a branch pins to the first commit of that branch that holds the merge, waiting without counting tries (every 15 minutes, at "
+            "commit": "4b75c8f",
+            "subject": "Merge: the flow summary has its own live topic outside the planner's inputs, and a stage paused until an operator acts no longer wakes the planner every minute"
+          },
+          {
+            "commit": "04e7e2c",
+            "subject": "Merge: the planner stops queueing pipeline jobs that can only handle nothing (no Task Runner takes their calls, or the GitHub write budget is used up), which re"
           }
         ]
       }
@@ -391,5 +395,5 @@
   "releases": [],
   "roadmap_history": [],
   "history": [],
-  "updated_at": "2026-11-21T03:38:10+00:00"
+  "updated_at": "2026-11-21T11:54:35+00:00"
 }

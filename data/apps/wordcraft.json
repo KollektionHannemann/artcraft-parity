@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "6858692",
-  "latest_commit_date": "2026-11-20T20:37:12Z",
-  "latest_message": "Proofing: support freestanding custom.dic dictionary files (#5840) (#5899)",
+  "latest_commit": "70ecef8",
+  "latest_commit_date": "2026-11-21T10:08:42Z",
+  "latest_message": "#7124: mcp refuses to start without both automation roots, and refuses --connect (#7157)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -329,6 +329,14 @@
     ],
     "progress": [
       {
+        "date": "2026-11-20",
+        "text": "wordcraft-cli mcp starts only with both --automation-read-root and --automation-write-root (shared rule 18, #7124); without them it stops with an error naming the two flags, where it used to serve with access to every file the user can reach. mcp --connect is refused until the desktop app confines its control channel to the same roots (#3695, #5819). The help, docs/mcp.md, the README and AGENTS.md pass both roots in every example."
+      },
+      {
+        "date": "2026-11-20",
+        "text": "trivial · Progress log: wordcraft-cli mcp needs both automation roots; --connect refused (#7124)"
+      },
+      {
         "date": "2026-11-17",
         "text": "File formats, codecs and protocols now come from the shared libraries (storytold/craft-libs#778): legacy code pages (craft-codepage, #6785), plain-text encoding detection (craft-mime, #6950), the ZIP entry-count guard (craft-zip, #6948), Read Aloud's Speech Dispatcher wire format (craft-ssip, #6951), picture probes for clipboard DIBs, JPEG memory, PNG and WebP (craft-image-codecs, #6949, #6955) and the MCP stdio server (craft-mcp-server, #6956), all with craft-libs pinned at main 93dac78c (#6954, #6960). Opening documents and pictures behaves as before, except that large non-interleaved JPEGs are refused sooner (a 4:4:4 picture from about 60 Mpx, was 67 Mpx), invalid PNGs are refused more strictly, a lossless WebP's transparency is now seen, and MCP clients get tool errors for unknown or mistyped arguments and a 1,000-message batch cap (docs/mcp.md). The old code stays as test-only references the shared code is checked against."
       },
@@ -479,14 +487,6 @@
       {
         "date": "2026-11-05",
         "text": "ODT pictures keep the size their file gives (gap 19): opening a file shrank ones wider than the text, so a save with no edit to them changed how LibreOffice laid them out."
-      },
-      {
-        "date": "2026-11-05",
-        "text": "ODT frames keep the page they are anchored to (gap 19): written without its number, a frame on page 3 came back on page 1 in LibreOffice after a save."
-      },
-      {
-        "date": "2026-11-05",
-        "text": "ODT documents keep their language (gap 19). It was lost on save after numbering or a new style, and LibreOffice then showed the document in its own default language; a document in another language was also proofed as English."
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 619,
+    "revisions_since": 620,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 623,
-    "revisions_7d": 23,
+    "revisions": 624,
+    "revisions_7d": 24,
     "last_revision": {
-      "ts": "2026-11-20T20:37:12Z",
+      "ts": "2026-11-21T10:08:42Z",
       "kind": "content",
-      "commit": "6858692",
-      "commit_full": "685869239f31c890c6365f264c14b29ef48fcb7f",
-      "message": "Proofing: support freestanding custom.dic dictionary files (#5840) (#5899)"
+      "commit": "70ecef8",
+      "commit_full": "70ecef86df6d37b7efe8df84c686e2081e382656",
+      "message": "#7124: mcp refuses to start without both automation roots, and refuses --connect (#7157)"
     },
     "last_update": {
-      "ts": "2026-11-20T20:37:12Z",
+      "ts": "2026-11-21T10:08:42Z",
       "kind": "content",
-      "commit": "6858692",
-      "commit_full": "685869239f31c890c6365f264c14b29ef48fcb7f",
-      "message": "Proofing: support freestanding custom.dic dictionary files (#5840) (#5899)"
+      "commit": "70ecef8",
+      "commit_full": "70ecef86df6d37b7efe8df84c686e2081e382656",
+      "message": "#7124: mcp refuses to start without both automation roots, and refuses --connect (#7157)"
     },
     "self_reported": "2026-11-20"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.1,
-    "active_days_7d": 5,
-    "changes_7d": 117,
-    "changes_14d": 267,
+    "score": 16.1,
+    "active_days_7d": 6,
+    "changes_7d": 120,
+    "changes_14d": 270,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-20T23:59:43Z",
-      "commit": "22314f5",
-      "commit_full": "22314f552dc1b14e25267ec1e9cec8489f966bfb",
-      "subject": "Make the seven ui-egui tests that failed on macOS platform-aware (#7144)"
+      "ts": "2026-11-21T10:55:17Z",
+      "commit": "8a047c3",
+      "commit_full": "8a047c333b239e5c5d5c9d91e2dae2cc84185439",
+      "subject": "mcp: --connect=… gets the --connect refusal, not unknown option (#7186)"
     },
-    "last_commit_ts": "2026-11-20T23:59:43Z",
+    "last_commit_ts": "2026-11-21T10:55:17Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       90,
@@ -568,7 +568,7 @@
       15,
       0,
       11,
-      0
+      3
     ],
     "days": [
       {
@@ -1366,6 +1366,25 @@
           {
             "commit": "f5f29dc",
             "subject": "PDF export: tracked changes take the Track Changes Options colours (#5232) (#6144)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-21",
+        "code": 3,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "8a047c3",
+            "subject": "mcp: --connect=… gets the --connect refusal, not unknown option (#7186)"
+          },
+          {
+            "commit": "70ecef8",
+            "subject": "#7124: mcp refuses to start without both automation roots, and refuses --connect (#7157)"
+          },
+          {
+            "commit": "60ac6f5",
+            "subject": "Rotation preview test: compare only the preview's texture across moves (#7175)"
           }
         ]
       }
@@ -15925,7 +15944,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "70ecef8",
+      "commit_full": "70ecef86df6d37b7efe8df84c686e2081e382656",
+      "commit_date": "2026-11-21T10:08:42Z",
+      "ts": "2026-11-21T10:08:42Z",
+      "message": "#7124: mcp refuses to start without both automation roots, and refuses --connect (#7157)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-20",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-21T03:37:33+00:00"
+  "updated_at": "2026-11-21T11:53:31+00:00"
 }

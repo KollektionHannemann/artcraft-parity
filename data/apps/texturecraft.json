@@ -282,18 +282,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.9,
+    "score": 17.2,
     "active_days_7d": 7,
-    "changes_7d": 77,
-    "changes_14d": 132,
+    "changes_7d": 78,
+    "changes_14d": 133,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-21T03:09:31Z",
-      "commit": "29f6a79",
-      "commit_full": "29f6a79d560778adfd722d427119730c0968b048",
-      "subject": "test(formats): cover mixed glTF primitive UVs (#724)"
+      "ts": "2026-11-21T07:59:27Z",
+      "commit": "fe8ee1b",
+      "commit_full": "fe8ee1bdb0243335560d3e726633cc0433ee99fc",
+      "subject": "fix(formats): raise Alembic nesting depth limit from 64 to 256 (#728)"
     },
-    "last_commit_ts": "2026-11-21T03:09:31Z",
+    "last_commit_ts": "2026-11-21T07:59:27Z",
     "repo_since": "2026-10-14T18:33:13Z",
     "window": [
       7,
@@ -309,7 +309,7 @@
       12,
       3,
       18,
-      5
+      6
     ],
     "days": [
       {
@@ -770,9 +770,13 @@
       },
       {
         "d": "2026-11-21",
-        "code": 5,
+        "code": 6,
         "other": 0,
         "samples": [
+          {
+            "commit": "fe8ee1b",
+            "subject": "fix(formats): raise Alembic nesting depth limit from 64 to 256 (#728)"
+          },
           {
             "commit": "29f6a79",
             "subject": "test(formats): cover mixed glTF primitive UVs (#724)"
@@ -780,10 +784,6 @@
           {
             "commit": "c263233",
             "subject": "perf(formats): remove remaining O(N^2) lookups in glTF import and mesh geometry (#720)"
-          },
-          {
-            "commit": "89252a0",
-            "subject": "fix(export): enforce batch-atomic OBJ/GLB/raster publication and parity tests (#722)"
           }
         ]
       }
@@ -1007,5 +1007,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-21T03:37:45+00:00"
+  "updated_at": "2026-11-21T11:53:49+00:00"
 }

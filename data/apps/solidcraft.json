@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/tangency-labs/solidcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/tangency-labs/solidcraft/commits/main/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "66f97b3",
-  "latest_commit_date": "2026-11-18T01:00:03Z",
-  "latest_message": "Roadmap: one copy of the developer detail, in docs/roadmap-detail.md (#16369)",
+  "latest_commit": "3052b5d",
+  "latest_commit_date": "2026-11-21T02:20:18Z",
+  "latest_message": "Docs: drop the old kernel's limits from the roadmap and docs (#20203)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 199,
-    "revisions_7d": 2,
+    "revisions": 200,
+    "revisions_7d": 3,
     "last_revision": {
-      "ts": "2026-11-18T01:00:03Z",
+      "ts": "2026-11-21T02:20:18Z",
       "kind": "content",
-      "commit": "66f97b3",
-      "commit_full": "66f97b3caf87eb18ffb831198818fc89cff06237",
-      "message": "Roadmap: one copy of the developer detail, in docs/roadmap-detail.md (#16369)"
+      "commit": "3052b5d",
+      "commit_full": "3052b5d7a2f4513c677ef6b8215a6060789a0d55",
+      "message": "Docs: drop the old kernel's limits from the roadmap and docs (#20203)"
     },
     "last_update": {
-      "ts": "2026-11-18T01:00:03Z",
+      "ts": "2026-11-21T02:20:18Z",
       "kind": "content",
-      "commit": "66f97b3",
-      "commit_full": "66f97b3caf87eb18ffb831198818fc89cff06237",
-      "message": "Roadmap: one copy of the developer detail, in docs/roadmap-detail.md (#16369)"
+      "commit": "3052b5d",
+      "commit_full": "3052b5d7a2f4513c677ef6b8215a6060789a0d55",
+      "message": "Docs: drop the old kernel's limits from the roadmap and docs (#20203)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 37.0,
+    "score": 38.2,
     "active_days_7d": 7,
-    "changes_7d": 1230,
-    "changes_14d": 2431,
-    "housekeeping_7d": 24,
+    "changes_7d": 1274,
+    "changes_14d": 2475,
+    "housekeeping_7d": 25,
     "last_code_change": {
-      "ts": "2026-11-21T02:07:13Z",
-      "commit": "0e124c7",
-      "commit_full": "0e124c7808fb955ddec369c2825b2821674e868e",
-      "subject": "Dynamics: simulate an assembly (motion.simulate) (refs #9719) (#11518)"
+      "ts": "2026-11-21T11:31:05Z",
+      "commit": "6358f12",
+      "commit_full": "6358f12fbcfe1aa661822bc1f96f47f5e24f3b90",
+      "subject": "Insert Design: a linked design brings its canvases and decals into the assembly (#20325)"
     },
-    "last_commit_ts": "2026-11-21T02:07:13Z",
+    "last_commit_ts": "2026-11-21T11:31:05Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       70,
@@ -93,7 +93,7 @@
       177,
       215,
       189,
-      31
+      75
     ],
     "days": [
       {
@@ -953,26 +953,43 @@
       },
       {
         "d": "2026-11-21",
-        "code": 31,
-        "other": 2,
+        "code": 75,
+        "other": 3,
         "samples": [
           {
-            "commit": "0e124c7",
-            "subject": "Dynamics: simulate an assembly (motion.simulate) (refs #9719) (#11518)"
+            "commit": "6358f12",
+            "subject": "Insert Design: a linked design brings its canvases and decals into the assembly (#20325)"
           },
           {
-            "commit": "f5de80b",
-            "subject": "Windows: moving the window to a monitor with another scale resizes it once (#9336) (#9578)"
+            "commit": "8759fa3",
+            "subject": "Extrude: symmetric offset with clearance gap across symmetry plane (#16932) (#16933)"
           },
           {
-            "commit": "b775e26",
-            "subject": "FreeCAD and Rhino import: a file name's umlauts and accents stay in the body name (#8795) (#8798)"
+            "commit": "67ecd4e",
+            "subject": "View navigator: a custom body is stored as plain numbers, not base64 (#20341)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.45.0-nightly.20261121.151.1",
+      "name": "SolidCraft v0.45.0-nightly.20261121.151.1 (nightly)",
+      "ts": "2026-11-21T05:41:06Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.45.0-nightly.20261121.151.1",
+      "changes": 190,
+      "new_contributors": 21,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "patch"
+    },
     {
       "tag": "v0.45.0-nightly.20261120.150.1",
       "name": "SolidCraft v0.45.0-nightly.20261120.150.1 (nightly)",
@@ -1150,23 +1167,6 @@
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.44.0-nightly.20261117.140.1",
       "changes": 259,
       "new_contributors": 11,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": true,
-      "source": "release",
-      "kind": null
-    },
-    {
-      "tag": "v0.43.0-nightly.20261116.139.1",
-      "name": "SolidCraft v0.43.0-nightly.20261116.139.1 (nightly)",
-      "ts": "2026-11-16T05:34:34Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.43.0-nightly.20261116.139.1",
-      "changes": 25,
-      "new_contributors": 1,
       "platforms": [
         "macOS",
         "Windows",
@@ -2571,8 +2571,15 @@
       "commit": "66f97b3",
       "commit_full": "66f97b3caf87eb18ffb831198818fc89cff06237",
       "message": "Roadmap: one copy of the developer detail, in docs/roadmap-detail.md (#16369)"
+    },
+    {
+      "ts": "2026-11-21T02:20:18Z",
+      "kind": "content",
+      "commit": "3052b5d",
+      "commit_full": "3052b5d7a2f4513c677ef6b8215a6060789a0d55",
+      "message": "Docs: drop the old kernel's limits from the roadmap and docs (#20203)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-21T03:38:03+00:00"
+  "updated_at": "2026-11-21T11:54:21+00:00"
 }
