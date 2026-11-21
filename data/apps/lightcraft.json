@@ -433,21 +433,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.2,
+    "score": 15.6,
     "active_days_7d": 7,
-    "changes_7d": 73,
-    "changes_14d": 104,
+    "changes_7d": 68,
+    "changes_14d": 107,
     "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-20T20:41:46Z",
-      "commit": "6b637dd",
-      "commit_full": "6b637dd3b9059898382a057b5475ef2284e3ae01",
-      "subject": "test(engine): cover Lightroom ZIP64 backup recovery (#4595)"
+      "ts": "2026-11-21T01:57:14Z",
+      "commit": "be760ee",
+      "commit_full": "be760ee5242cad1ed01baea37272429c011f4c98",
+      "subject": "engine: adopt shared craft-sqlite page/record helpers and cross-app parity tests (#4605)"
     },
-    "last_commit_ts": "2026-11-20T20:41:46Z",
+    "last_commit_ts": "2026-11-21T01:57:14Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
-      3,
       1,
       4,
       6,
@@ -460,7 +459,8 @@
       4,
       19,
       3,
-      18
+      20,
+      4
     ],
     "days": [
       {
@@ -1326,20 +1326,39 @@
       },
       {
         "d": "2026-11-20",
-        "code": 18,
+        "code": 20,
         "other": 1,
         "samples": [
           {
+            "commit": "a0d2c1c",
+            "subject": "test(engine): cover late slideshow video cancellation (#4600)"
+          },
+          {
+            "commit": "6d03033",
+            "subject": "test(codecs): complete image metadata framing and sniff parity coverage (#4603)"
+          },
+          {
             "commit": "6b637dd",
             "subject": "test(engine): cover Lightroom ZIP64 backup recovery (#4595)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-21",
+        "code": 4,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "be760ee",
+            "subject": "engine: adopt shared craft-sqlite page/record helpers and cross-app parity tests (#4605)"
           },
           {
-            "commit": "442d510",
-            "subject": "test(codecs): assert explicit zero pad and sniff/decode on odd WebP EXIF (#4594)"
+            "commit": "1c778f1",
+            "subject": "pipeline,color: use shared 1024-entry LUT composition and tone/finish math (#587) (#4598)"
           },
           {
-            "commit": "cb91d69",
-            "subject": "perf(raw): hot-pixel candidates skip the neighbour sort when they can't pass (#4592)"
+            "commit": "a8b482a",
+            "subject": "codecs,engine: validate video sample packets and expand AV1/mux round-trip tests (#4604)"
           }
         ]
       }
@@ -1998,5 +2017,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-20T22:51:53+00:00"
+  "updated_at": "2026-11-21T03:37:17+00:00"
 }

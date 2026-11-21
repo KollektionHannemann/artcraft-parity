@@ -46,7 +46,7 @@
   },
   "roadmap": {
     "revisions": 855,
-    "revisions_7d": 243,
+    "revisions_7d": 220,
     "last_revision": {
       "ts": "2026-11-20T03:41:28Z",
       "kind": "content",
@@ -66,21 +66,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 27.2,
+    "score": 23.0,
     "active_days_7d": 7,
-    "changes_7d": 288,
-    "changes_14d": 782,
-    "housekeeping_7d": 17,
+    "changes_7d": 256,
+    "changes_14d": 749,
+    "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-11-20T19:59:35Z",
-      "commit": "44c89ba",
-      "commit_full": "44c89badd69c76eca7fd79315263a9ae80b5770f",
-      "subject": "mcp: test cancellation of an already-started running job (#2253)"
+      "ts": "2026-11-21T00:55:30Z",
+      "commit": "e64d7cb",
+      "commit_full": "e64d7cb73d7f39323b7040a984e0f9b3f7981146",
+      "subject": "formats: adopt shared craft-sqlite page/record helpers and cross-app parity tests (#2260)"
     },
-    "last_commit_ts": "2026-11-20T19:59:35Z",
+    "last_commit_ts": "2026-11-21T00:55:30Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
-      34,
       37,
       157,
       111,
@@ -93,7 +92,8 @@
       63,
       80,
       28,
-      18
+      18,
+      1
     ],
     "days": [
       {
@@ -484,6 +484,17 @@
           {
             "commit": "b8d7d79",
             "subject": "formats: add CMS SignedData/SignerInfo framing parity tests (#2200)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-21",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "e64d7cb",
+            "subject": "formats: adopt shared craft-sqlite page/record helpers and cross-app parity tests (#2260)"
           }
         ]
       }
@@ -6598,5 +6609,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-20T22:52:37+00:00"
+  "updated_at": "2026-11-21T03:37:48+00:00"
 }

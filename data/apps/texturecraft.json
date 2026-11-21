@@ -282,21 +282,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.5,
+    "score": 16.9,
     "active_days_7d": 7,
-    "changes_7d": 74,
-    "changes_14d": 129,
+    "changes_7d": 77,
+    "changes_14d": 132,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-20T21:05:44Z",
-      "commit": "b2775bf",
-      "commit_full": "b2775bfa48af0474a42638a8ed46da700c387353",
-      "subject": "test(formats): fix XML selector in dae_preserves_multiple_cameras_on_one_node (#716)"
+      "ts": "2026-11-21T03:09:31Z",
+      "commit": "29f6a79",
+      "commit_full": "29f6a79d560778adfd722d427119730c0968b048",
+      "subject": "test(formats): cover mixed glTF primitive UVs (#724)"
     },
-    "last_commit_ts": "2026-11-20T21:05:44Z",
+    "last_commit_ts": "2026-11-21T03:09:31Z",
     "repo_since": "2026-10-14T18:33:13Z",
     "window": [
-      4,
       7,
       7,
       10,
@@ -309,7 +308,8 @@
       18,
       12,
       3,
-      16
+      18,
+      5
     ],
     "days": [
       {
@@ -751,20 +751,39 @@
       },
       {
         "d": "2026-11-20",
-        "code": 16,
+        "code": 18,
         "other": 2,
         "samples": [
           {
+            "commit": "a64cbdb",
+            "subject": "test(formats): prove USDA/USDC parity, limits, warnings, and USDZ round trips (#778) (#721)"
+          },
+          {
+            "commit": "fca28d7",
+            "subject": "fix(formats): preserve Alembic mesh archive order (#719)"
+          },
+          {
             "commit": "b2775bf",
             "subject": "test(formats): fix XML selector in dae_preserves_multiple_cameras_on_one_node (#716)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-21",
+        "code": 5,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "29f6a79",
+            "subject": "test(formats): cover mixed glTF primitive UVs (#724)"
           },
           {
-            "commit": "cf37994",
-            "subject": "fix(formats): preserve multiple COLLADA node cameras and optimize glTF material lookup (#715)"
+            "commit": "c263233",
+            "subject": "perf(formats): remove remaining O(N^2) lookups in glTF import and mesh geometry (#720)"
           },
           {
-            "commit": "2bbd262",
-            "subject": "fix(formats): preserve empty COLLADA material bindings (#714)"
+            "commit": "89252a0",
+            "subject": "fix(export): enforce batch-atomic OBJ/GLB/raster publication and parity tests (#722)"
           }
         ]
       }
@@ -988,5 +1007,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-20T22:52:32+00:00"
+  "updated_at": "2026-11-21T03:37:45+00:00"
 }

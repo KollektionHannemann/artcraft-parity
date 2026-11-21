@@ -37,21 +37,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.7,
+    "score": 15.7,
     "active_days_7d": 6,
-    "changes_7d": 122,
-    "changes_14d": 255,
-    "housekeeping_7d": 12,
+    "changes_7d": 103,
+    "changes_14d": 213,
+    "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-11-20T16:00:15Z",
-      "commit": "bf7402e",
-      "commit_full": "bf7402e6f20d07a8d6e06e52048981c7c9e8317f",
-      "subject": "Merge #24 with fixes: My tasks, each user picks which kinds of work their Task Runners take; the task counts in claims, room, takers, the planner, pools, the ru"
+      "ts": "2026-11-21T00:31:59Z",
+      "commit": "9c4ce07",
+      "commit_full": "9c4ce07694f6e35f0870dfb18482d5afab5669f3",
+      "subject": "Merge #27 with fixes: My tasks items, a user's Task Runners take only fast-tracked items or only the items they fast-tracked (or have queued); pools, room and l"
     },
-    "last_commit_ts": "2026-11-20T16:00:15Z",
+    "last_commit_ts": "2026-11-21T00:31:59Z",
     "repo_since": "2026-11-02T14:36:17Z",
     "window": [
-      44,
       27,
       27,
       19,
@@ -64,7 +63,8 @@
       4,
       0,
       49,
-      28
+      28,
+      2
     ],
     "days": [
       {
@@ -370,11 +370,26 @@
             "subject": "A pre-approved merge lifts the label gate: Queue items, merge queue comments, queue_pr and fix-up then merge accept a PR whose label gets no review or has not s"
           }
         ]
+      },
+      {
+        "d": "2026-11-21",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "9c4ce07",
+            "subject": "Merge #27 with fixes: My tasks items, a user's Task Runners take only fast-tracked items or only the items they fast-tracked (or have queued); pools, room and l"
+          },
+          {
+            "commit": "e4dbe3c",
+            "subject": "Merge #29 with fixes: autorepin via a branch pins to the first commit of that branch that holds the merge, waiting without counting tries (every 15 minutes, at "
+          }
+        ]
       }
     ]
   },
   "releases": [],
   "roadmap_history": [],
   "history": [],
-  "updated_at": "2026-11-20T22:53:16+00:00"
+  "updated_at": "2026-11-21T03:38:10+00:00"
 }

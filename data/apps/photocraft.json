@@ -383,21 +383,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 26.3,
-    "active_days_7d": 7,
-    "changes_7d": 234,
-    "changes_14d": 816,
-    "housekeeping_7d": 14,
+    "score": 21.3,
+    "active_days_7d": 6,
+    "changes_7d": 205,
+    "changes_14d": 732,
+    "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-11-20T18:17:06Z",
-      "commit": "877d588",
-      "commit_full": "877d58844029967b80e36a964902d309de1be158",
-      "subject": "Release fixes: pin craft-libs next (submenus, overlays, drag lag); tool overlays clip to the view (#15897)"
+      "ts": "2026-11-20T23:45:52Z",
+      "commit": "06afeff",
+      "commit_full": "06afefff534fb18ca7ea2725a9f476fe477dbd29",
+      "subject": "Repin craft-libs next (memoized views, Home screen, scroll bars, dialog fixes, default agent folder) (#16002)"
     },
-    "last_commit_ts": "2026-11-20T18:17:06Z",
+    "last_commit_ts": "2026-11-20T23:45:52Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
-      85,
       80,
       43,
       75,
@@ -410,7 +409,8 @@
       7,
       34,
       50,
-      19
+      20,
+      0
     ],
     "days": [
       {
@@ -1384,9 +1384,13 @@
       },
       {
         "d": "2026-11-20",
-        "code": 19,
+        "code": 20,
         "other": 3,
         "samples": [
+          {
+            "commit": "06afeff",
+            "subject": "Repin craft-libs next (memoized views, Home screen, scroll bars, dialog fixes, default agent folder) (#16002)"
+          },
           {
             "commit": "877d588",
             "subject": "Release fixes: pin craft-libs next (submenus, overlays, drag lag); tool overlays clip to the view (#15897)"
@@ -1394,10 +1398,6 @@
           {
             "commit": "ec247bd",
             "subject": "Cover Move selection and transform clicks before the UI split (#15970)"
-          },
-          {
-            "commit": "c0771fe",
-            "subject": "Build the CI archive driver without framework-only lint dependencies (#15963)"
           }
         ]
       }
@@ -1888,5 +1888,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-20T22:51:34+00:00"
+  "updated_at": "2026-11-21T03:37:04+00:00"
 }

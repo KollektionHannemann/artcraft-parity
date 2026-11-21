@@ -46,7 +46,7 @@
   },
   "roadmap": {
     "revisions": 199,
-    "revisions_7d": 3,
+    "revisions_7d": 2,
     "last_revision": {
       "ts": "2026-11-18T01:00:03Z",
       "kind": "content",
@@ -66,21 +66,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 39.5,
+    "score": 37.0,
     "active_days_7d": 7,
-    "changes_7d": 1393,
-    "changes_14d": 2481,
-    "housekeeping_7d": 40,
+    "changes_7d": 1230,
+    "changes_14d": 2431,
+    "housekeeping_7d": 24,
     "last_code_change": {
-      "ts": "2026-11-20T22:25:36Z",
-      "commit": "20bacb6",
-      "commit_full": "20bacb6ebf7a35fe441555f173d391e1d316817b",
-      "subject": "Managed deployment: policies on macOS and Linux, and a UsageStatistics policy (#20137)"
+      "ts": "2026-11-21T02:07:13Z",
+      "commit": "0e124c7",
+      "commit_full": "0e124c7808fb955ddec369c2825b2821674e868e",
+      "subject": "Dynamics: simulate an assembly (motion.simulate) (refs #9719) (#11518)"
     },
-    "last_commit_ts": "2026-11-20T22:25:36Z",
+    "last_commit_ts": "2026-11-21T02:07:13Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
-      85,
       70,
       151,
       239,
@@ -93,7 +92,8 @@
       181,
       177,
       215,
-      185
+      189,
+      31
     ],
     "days": [
       {
@@ -934,20 +934,39 @@
       },
       {
         "d": "2026-11-20",
-        "code": 185,
+        "code": 189,
         "other": 3,
         "samples": [
           {
-            "commit": "20bacb6",
-            "subject": "Managed deployment: policies on macOS and Linux, and a UsageStatistics policy (#20137)"
+            "commit": "8b7617f",
+            "subject": "STEP import: Chinese body names stay readable when the file also has UTF-8 strings (#19750) (#19945)"
           },
           {
-            "commit": "67c4d4c",
-            "subject": "Hole: a counterbore into a slanted face opens the whole face (#20045) (#20098)"
+            "commit": "09c3f18",
+            "subject": "Usage statistics: count, keep and send anonymous daily reports (inert until the notice) (#20155)"
           },
           {
-            "commit": "44bbe8a",
-            "subject": "Extrude: From and To on slanted faces cuts the material between them (#18825) (#18835)"
+            "commit": "b4a5169",
+            "subject": "Kernel: the release test no longer leaves which cached state survives to a clock (#20154)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-21",
+        "code": 31,
+        "other": 2,
+        "samples": [
+          {
+            "commit": "0e124c7",
+            "subject": "Dynamics: simulate an assembly (motion.simulate) (refs #9719) (#11518)"
+          },
+          {
+            "commit": "f5de80b",
+            "subject": "Windows: moving the window to a monitor with another scale resizes it once (#9336) (#9578)"
+          },
+          {
+            "commit": "b775e26",
+            "subject": "FreeCAD and Rhino import: a file name's umlauts and accents stay in the body name (#8795) (#8798)"
           }
         ]
       }
@@ -2555,5 +2574,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-20T22:53:04+00:00"
+  "updated_at": "2026-11-21T03:38:03+00:00"
 }
