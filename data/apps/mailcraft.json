@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/UCS-Care-Group/mailcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/UCS-Care-Group/mailcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "e0e21da",
-  "latest_commit_date": "2026-11-22T00:59:49Z",
-  "latest_message": "#566 part 2: more of Outlook's rule conditions, exceptions and actions, and a desktop alert (#765)",
+  "latest_commit": "448ad7a",
+  "latest_commit_date": "2026-11-22T18:33:49Z",
+  "latest_message": "Release 0.15.0 (#1840)",
   "parsed": {
     "stage": "public beta",
     "next_stage": "leaving",
     "target": "Microsoft Outlook (Microsoft 365, classic desktop)",
-    "last_updated": "2026-11-18",
+    "last_updated": "2026-11-20",
     "metrics": {
       "full": {
         "label": "Full target (everything Outlook does)",
@@ -241,8 +241,56 @@
     ],
     "progress": [
       {
+        "date": "2026-11-20",
+        "text": "#1787: an empty folder or a search with no results keeps the message list's height and leaves its splitter usable with the reading pane at the bottom"
+      },
+      {
+        "date": "2026-11-19",
+        "text": "#1745: the question before an agent's Undo or Redo no longer counts a subscribed calendar's events among those it would take away, also when the calendar was subscribed after the step or the clock has moved since; Undo and Redo keep them"
+      },
+      {
+        "date": "2026-11-19",
+        "text": "#1734: with the reading pane off (Preview view too), selecting a message leaves it unread; opening it in its own window, or turning the pane on, marks it read"
+      },
+      {
+        "date": "2026-11-19",
+        "text": "#1721: Paste Text Only in the right-click menu of a message's body and a signature being edited: the clipboard's text alone, without the HTML or picture beside it, so it comes in the message's own formatting; greyed with no host clipboard (the browser), not offered in one-line fields, and nothing when the clipboard has no text"
+      },
+      {
+        "date": "2026-11-19",
+        "text": "#1712: a dialog opened from a popped-out compose window's ribbon or keys (Insert Link, Word Count, Date & Time, Find…) comes up over that window, not over the main window behind it, where it was hidden"
+      },
+      {
+        "date": "2026-11-19",
+        "text": "#1657: Message list readability: darker row lines, unread senders in the accent, Shade Alternate Rows"
+      },
+      {
+        "date": "2026-11-19",
+        "text": "#1514: folders within an account and the Favorites kept in MailCraft are put in the owner's order, by dragging a row or with Move Up and Move Down in its menu (folder.reorder, folder.reorderFavorite); the order is kept in the mailbox, never sent to a server; Inbox, Drafts, Sent Items and Deleted Items stay at the top, and Outlook's own Favorites keep Outlook's order"
+      },
+      {
+        "date": "2026-11-19",
+        "text": "#1310: Pictures in the message being written are resized by dragging the bottom-right corner of a selected one (an outline follows the pointer, and letting go sets the width), or by its width or height in pixels in the Picture size strip along the foot of the message, with Reset Size for its own width; the height stays in proportion, and the width is the one the picture is shown and sent at (compose.picture.set, at most 1920 px; null for its own width). Each change is one step of the message's own undo; a signature's pictures are still sized in File › Signatures"
+      },
+      {
+        "date": "2026-11-18",
+        "text": "#954: Local desktop dictionaries for spelling on Windows and macOS"
+      },
+      {
+        "date": "2026-11-18",
+        "text": "#1674: Undo and Redo put back only the events their step changed, with the changes those were waiting to send; what downloads brought for the other events since stays, and their servers are told nothing of it"
+      },
+      {
         "date": "2026-11-18",
         "text": "#1527: Save Mailbox As writes one message at a time instead of loading all content and buffering the whole file; regression coverage includes 40,000 synthetic messages, compatible headers, reader size limits and failed exports"
+      },
+      {
+        "date": "2026-11-17",
+        "text": "#1568: mail that reaches Microsoft 365 through a filtering gateway no longer shows a failed check for every outside sender: Exchange Online's compauth=none reason=905 says it didn't enforce DMARC because the mail came through another service first; a sender at the account's own domain keeps the warning"
+      },
+      {
+        "date": "2026-11-17",
+        "text": "#851: renaming a category on a Microsoft account gives the new name to the mail and events on the server that aren't kept on this computer too (in every folder, and in the account's own calendars), before the old name is deleted from Outlook's list; Undo gives them the old name again."
       },
       {
         "date": "2026-11-17",
@@ -302,6 +350,10 @@
       },
       {
         "date": "2026-11-16",
+        "text": "#1663: in the calendar grid, the all-day row and Month, a click selects one item, Ctrl+click toggles, Shift+click takes the range and Ctrl+A takes what is shown (up to 200, saying when there is more); Copy, Cut and Paste act on the whole set, from the keys, an item's menu, the Home tab's Clipboard group and Command Search, a cut left in place until the paste moves it, an ordinary appointment moved in its own calendar keeping its id, UID and details, its length and its spacing, and a day of a series changed as that day; one Undo for the set, and a paste that cannot be done whole changes nothing; a delete or a cut that writes to people asks once for the set, naming each item's account, time and people (somebody without an address counted too), and each meeting the account's server keeps is queued as a change of its own. Engine and egui regression tests cover selected-set and clipboard behaviour, including modeled window-focus guards. Real OS focus and system-level pointer modifiers, rendered pixels, browser interactions and live accounts remain outside that coverage; manual and native acceptance are unperformed"
+      },
+      {
+        "date": "2026-11-16",
         "text": "#544: The optional system tray icon shows a red circle at its top left while an Inbox of the owner’s own server accounts has unread mail, with the account and folder scope of new-mail alerts. Shared mailboxes, local and imported mail, Archive and custom folders do not count. Reading or removing the last unread Inbox message clears it; reopening the window does not. The artwork is shared across desktop platforms; checked on Fedora 45 and macOS, with Windows runtime checks still pending. The badge works independently of desktop-alert settings, with the folder pane’s cached counts."
       },
       {
@@ -347,58 +399,6 @@
       {
         "date": "2026-11-16",
         "text": "#1511: changing how the message list is arranged (Arrange By, Reverse Sort, conversations, groups, single line, preview lines, ready-made views, tighter spacing, Reset View) scrolls the list to the selected message and centres it, in the window and when an agent drives it through the control channel; nothing selected, nothing scrolls. Arranged by Size, equal sizes are in date order, newest first, as equal senders and subjects already were. The commands that arrange the list are named in keys::REARRANGESLIST and asked for at the end of MailApp::execute"
-      },
-      {
-        "date": "2026-11-16",
-        "text": "Czech as a preview language: every interface text translated and marked as not yet reviewed, Čeština (náhled) in File › Options, Automatic following cs-CZ, day first dates with a 24-hour clock and Monday first, and Czech's three plural forms"
-      },
-      {
-        "date": "2026-11-16",
-        "text": "Shift+Delete (#1438) deletes permanently: on Windows the window layer hands the press to the system's cut function, so the permanent delete's shortcut never arrived as a key — the window now recognises the shift cut as the shortcut (only when no text field keeps the keyboard, and only the shift one, not the text fields' Ctrl+X cut), and a Delete pressed with Shift held in the ribbon runs as Delete Permanently, as in Outlook. Regression tests for both paths."
-      },
-      {
-        "date": "2026-11-15",
-        "text": "MB3.14: Settings on Android: Mail to keep offline for each account (a month on a phone; a shorter window takes older mail back to its headers, a longer one asks first when the phone is short of room) with the phone's storage cap beside it (250 MB to 10 GB, 500 MB to start, what is kept now shown against it; Core.devicestorage, Core.setstoragecap over account.deviceLimits, older mail then thinned by account.trimDevice); notifications (the privacy switch, New mail only: a notification says \"New mail\" and nothing of the sender, subject or count, on the lock screen or off it, decided in the core by Core.setnotifynewmailonly and kept by MailNotifier too; Primary mail only; and the system's own settings for each channel); Remove local data (Core.deletelocaldata after a question; when the core says older sign-ins may remain, its notice is shown and signinsnoticeshown is called when it has been read); the picture switches (off), a signature for each account, and About with the licences and the privacy statement"
-      },
-      {
-        "date": "2026-11-15",
-        "text": "MB3.14, known gaps: the free-space question before a sync (SettingsController.waitForRoom) is asked today only when a window is widened, with a rough size (40 MB a month); the Android sync driver (MB3.11) and the shared sync decisions (MB1.9) are to call it before a first sync, with a count from the server where there is one (the first sync of a new account asks it since MB3.3, 2026-11-17). Thinning older mail after a shorter window still runs from Settings (with a count and a Stop) until the sync driver takes it over at its next tick. Primary mail only is kept as a switch but nothing reads it yet. The Licences screen is checked against the dependency report by cargo xtask mobile; About links to the app privacy notice at mailcraft.work"
-      },
-      {
-        "date": "2026-11-15",
-        "text": "#209 D3: DAV discovery and host trust in crates/dav (discovery.rs: the SRV and well-known search, evidence before any password, where the password may go, Microsoft and Google hosts stop it), caldavs.tcp / carddavs.tcp SRV and TXT path= look-ups, iCloud and Fastmail DAV hosts, the DAV and ETag headers of an answer, a fuzz target; nothing user-visible yet"
-      },
-      {
-        "date": "2026-11-15",
-        "text": "#209 D3 review fixes: the owner is asked before any request to an off-domain host that is nobody's; what was found is kept when a later step stops the search; a typed host behind proxy sign-in can be added; hosts by number refused; a grant type only discovery makes; DAV classes kept whole; international domains; fuzz target tightened"
-      },
-      {
-        "date": "2026-11-15",
-        "text": "#209 D3 delta review fixes: loopback and numbered hosts refused from a server's word, DAV classes read to the same cap as the net keeps, an unproven typed host gets the password once, IDN input checked, the request cap before the question"
-      },
-      {
-        "date": "2026-11-15",
-        "text": "#209 D3 second delta fixes: trailing-dot hosts, hex names, an unproven host ending the search on a lost connection, the request cap before the password question, more IDN forms refused"
-      },
-      {
-        "date": "2026-11-15",
-        "text": "MB3.17: the phone fetches mail it holds only the headers of: a message the owner opens comes whole at once (one job at a time per account, a small queue, called off on shutdown, an account's removal or \"remove my data\", nothing half kept), recent mail up to the Download messages in full (1 MB) comes in small batches between rounds on a connection that isn't metered and rests while the phone's storage is nearly full, an attachment comes with its message and is judged by its kind as the desktop judges it, and a search on the server brings the headers of older mail onto the phone for the session; the core gives the app openmessage, fetchattachment, searchserver and the MessageFetched and FetchFailed events, and a Graph fetch can be asked to keep each message and the batch within a size"
-      },
-      {
-        "date": "2026-11-15",
-        "text": "MB3.16: the phone keeps less than a computer: a Microsoft account added on it keeps one month of mail, fetches a message whole in the background only up to 1 MB and lists no mail older than its window, not even headers; at most 500 MB of mail and a number of messages from the platform's memory budget, past which the oldest mail goes back to its headers and then leaves the phone (never the server, never mail not yet sent or uploaded); Add Account offers the window and the space with those defaults chosen, the core can read and change them later, and a phone set up before is moved to them once"
-      },
-      {
-        "date": "2026-11-15",
-        "text": "MB3.12: the Android app has a Calendar tab (agenda, day, month, event editor, invitations, .ics) on the shared binding, read again whenever the mailbox changes (a sync included) and dated in the phone's zone and language; the current-time line and answering invitations from the agenda wait for later steps"
-      },
-      {
-        "date": "2026-11-15",
-        "text": "MB3.11 (Android): Send/Receive while the app is closed, a WorkManager check about every 15 minutes with a network and a battery that isn't low, through the app's one core (opened off the main thread when no window has) and within four minutes, then saved; new-mail notifications from what the core sends (sender and subject, \"New mail\" alone on a lock screen, off when the owner turned them off in the system's settings), tapping opens the app, the right to notify asked once after the first account is added; a Send/Receive the mail list's pull to refresh calls. No Play Services, no foreground service"
-      },
-      {
-        "date": "2026-11-15",
-        "text": "Public documents brought up to date with main: headline numbers recomputed (parity from cargo xtask parity, tests from cargo xtask stats), the beta run's status, release count, crate list, S/MIME and OpenPGP checking, Hungarian, the Android app under way"
       }
     ]
   },
@@ -407,7 +407,7 @@
     "value_since": "2026-10-12T18:17:00Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 261,
+    "revisions_since": 262,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -415,39 +415,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 265,
-    "revisions_7d": 11,
+    "revisions": 266,
+    "revisions_7d": 12,
     "last_revision": {
-      "ts": "2026-11-22T00:59:49Z",
+      "ts": "2026-11-22T18:33:49Z",
       "kind": "content",
-      "commit": "e0e21da",
-      "commit_full": "e0e21da54b0e0ae394a358dd04e0ef3ea8624fbb",
-      "message": "#566 part 2: more of Outlook's rule conditions, exceptions and actions, and a desktop alert (#765)"
+      "commit": "448ad7a",
+      "commit_full": "448ad7a7026d97b9dd8538bce55ff6232f9ae94c",
+      "message": "Release 0.15.0 (#1840)"
     },
     "last_update": {
-      "ts": "2026-11-22T00:59:49Z",
+      "ts": "2026-11-22T18:33:49Z",
       "kind": "content",
-      "commit": "e0e21da",
-      "commit_full": "e0e21da54b0e0ae394a358dd04e0ef3ea8624fbb",
-      "message": "#566 part 2: more of Outlook's rule conditions, exceptions and actions, and a desktop alert (#765)"
+      "commit": "448ad7a",
+      "commit_full": "448ad7a7026d97b9dd8538bce55ff6232f9ae94c",
+      "message": "Release 0.15.0 (#1840)"
     },
-    "self_reported": "2026-11-18"
+    "self_reported": "2026-11-20"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.1,
+    "score": 20.2,
     "active_days_7d": 7,
-    "changes_7d": 119,
-    "changes_14d": 288,
+    "changes_7d": 120,
+    "changes_14d": 289,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-11-22T17:15:53Z",
-      "commit": "59b1c96",
-      "commit_full": "59b1c96ae01aba2f06df8001890a94282fa69fa1",
-      "subject": "Merge commit from fork"
+      "ts": "2026-11-22T18:33:49Z",
+      "commit": "448ad7a",
+      "commit_full": "448ad7a7026d97b9dd8538bce55ff6232f9ae94c",
+      "subject": "Release 0.15.0 (#1840)"
     },
-    "last_commit_ts": "2026-11-22T17:15:53Z",
+    "last_commit_ts": "2026-11-22T18:33:49Z",
     "repo_since": "2026-10-12T18:17:00Z",
     "window": [
       7,
@@ -463,7 +463,7 @@
       14,
       13,
       4,
-      8
+      9
     ],
     "days": [
       {
@@ -1239,9 +1239,13 @@
       },
       {
         "d": "2026-11-22",
-        "code": 8,
+        "code": 9,
         "other": 1,
         "samples": [
+          {
+            "commit": "448ad7a",
+            "subject": "Release 0.15.0 (#1840)"
+          },
           {
             "commit": "59b1c96",
             "subject": "Merge commit from fork"
@@ -1249,16 +1253,29 @@
           {
             "commit": "636c350",
             "subject": "Merge commit from fork"
-          },
-          {
-            "commit": "ee414d4",
-            "subject": "Merge commit from fork"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.15.0",
+      "name": "MailCraft v0.15.0",
+      "ts": "2026-11-22T19:37:59Z",
+      "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.15.0",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.14.0",
       "name": "MailCraft v0.14.0",
@@ -1434,23 +1451,6 @@
       "name": "MailCraft v0.7.0",
       "ts": "2026-10-22T21:20:58Z",
       "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.7.0",
-      "changes": null,
-      "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.6.0",
-      "name": "MailCraft v0.6.0",
-      "ts": "2026-10-20T23:30:11Z",
-      "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.6.0",
       "changes": null,
       "new_contributors": null,
       "platforms": [
@@ -6795,7 +6795,30 @@
       "breadth_pct": 79.4,
       "full_prev": 25.0,
       "kind": "content"
+    },
+    {
+      "commit": "448ad7a",
+      "commit_full": "448ad7a7026d97b9dd8538bce55ff6232f9ae94c",
+      "commit_date": "2026-11-22T18:33:49Z",
+      "ts": "2026-11-22T18:33:49Z",
+      "message": "Release 0.15.0 (#1840)",
+      "stage": "public beta",
+      "next_stage": "leaving",
+      "last_updated": "2026-11-20",
+      "full_pct": 25.0,
+      "full_range": null,
+      "full_hours": [
+        410,
+        800
+      ],
+      "full_label": "Full target (everything Outlook does)",
+      "target": "Microsoft Outlook (Microsoft 365, classic desktop)",
+      "mainstream_pct": 35.0,
+      "essentials_pct": 50.0,
+      "breadth_pct": 79.4,
+      "full_prev": 25.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-22T18:47:43+00:00"
+  "updated_at": "2026-11-22T23:56:44+00:00"
 }

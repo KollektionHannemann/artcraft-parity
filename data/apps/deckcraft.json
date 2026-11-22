@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/deckcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/deckcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "8bdc96d",
-  "latest_commit_date": "2026-11-19T23:13:45-05:00",
-  "latest_message": "Open PowerPoint 97-2003 .ppt/.pot/.pps files (#239) (#1137)",
+  "latest_commit": "7fbdc08",
+  "latest_commit_date": "2026-11-23T05:59:10+07:00",
+  "latest_message": "#2069: WMF scale and offset mapping records place sub-pictures (#2266)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
-    "last_updated": "2026-11-16",
+    "last_updated": "2026-11-20",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -319,6 +319,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-20",
+        "text": "WMF pictures that draw sub-pictures through the scale and offset mapping records (charts and clip art from older Office versions) place each one in its part of the frame (#2069)"
+      },
+      {
         "date": "2026-11-16",
         "text": "Export: every slide as its own PNG or JPEG picture from File › Export › Change File Type and File › Save As; the Export… dialog adds JPEG images (all slides) (#2019)"
       },
@@ -473,10 +477,6 @@
       {
         "date": "2026-10-24",
         "text": "Tables: while the caret is in a cell, dragging into another cell selects that range of cells (shaded, merged cells taken in whole), and Shift+arrow grows or shrinks it; formatting applies to the selected cells only, and Delete clears their text and keeps the table"
-      },
-      {
-        "date": "2026-10-24",
-        "text": "Preferences ▸ Measurement units: inches or centimetres. The Format pane's Size and Position fields, Shape Format ▸ Size on the ribbon, the Slide Size dialog and the ruler show and take the chosen unit; the deck still stores points (#1326)"
       }
     ]
   },
@@ -485,7 +485,7 @@
     "value_since": "2026-10-10T18:09:21Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 141,
+    "revisions_since": 142,
     "hours_since": null,
     "areas_since": {
       "up": 1,
@@ -504,39 +504,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 145,
-    "revisions_7d": 5,
+    "revisions": 146,
+    "revisions_7d": 6,
     "last_revision": {
-      "ts": "2026-11-20T04:13:45Z",
+      "ts": "2026-11-22T22:59:10Z",
       "kind": "content",
-      "commit": "8bdc96d",
-      "commit_full": "8bdc96db64e22ff64e17c616e1a94043a9d3f1a0",
-      "message": "Open PowerPoint 97-2003 .ppt/.pot/.pps files (#239) (#1137)"
+      "commit": "7fbdc08",
+      "commit_full": "7fbdc085ebfd6ded43abd3d12a87377a7a0fa852",
+      "message": "#2069: WMF scale and offset mapping records place sub-pictures (#2266)"
     },
     "last_update": {
-      "ts": "2026-11-20T04:13:45Z",
+      "ts": "2026-11-22T22:59:10Z",
       "kind": "content",
-      "commit": "8bdc96d",
-      "commit_full": "8bdc96db64e22ff64e17c616e1a94043a9d3f1a0",
-      "message": "Open PowerPoint 97-2003 .ppt/.pot/.pps files (#239) (#1137)"
+      "commit": "7fbdc08",
+      "commit_full": "7fbdc085ebfd6ded43abd3d12a87377a7a0fa852",
+      "message": "#2069: WMF scale and offset mapping records place sub-pictures (#2266)"
     },
-    "self_reported": "2026-11-16"
+    "self_reported": "2026-11-20"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 11.6,
-    "active_days_7d": 6,
-    "changes_7d": 42,
-    "changes_14d": 107,
+    "score": 12.6,
+    "active_days_7d": 7,
+    "changes_7d": 43,
+    "changes_14d": 108,
     "housekeeping_7d": 2,
     "last_code_change": {
-      "ts": "2026-11-21T17:25:33Z",
-      "commit": "0ccc68f",
-      "commit_full": "0ccc68f61ce171393d53b30b1c6cc45ac40be738",
-      "subject": "test(pptx): require named chart and edited series values in PPTX/POTX/PPSX parity test (#2295)"
+      "ts": "2026-11-22T22:59:10Z",
+      "commit": "7fbdc08",
+      "commit_full": "7fbdc085ebfd6ded43abd3d12a87377a7a0fa852",
+      "subject": "#2069: WMF scale and offset mapping records place sub-pictures (#2266)"
     },
-    "last_commit_ts": "2026-11-21T17:25:33Z",
+    "last_commit_ts": "2026-11-22T22:59:10Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
       2,
@@ -552,7 +552,7 @@
       4,
       8,
       2,
-      0
+      1
     ],
     "days": [
       {
@@ -1346,6 +1346,17 @@
           {
             "commit": "c355c06",
             "subject": "format: use shared craft-rtf tokenizer for RTF input (#2289)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-22",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "7fbdc08",
+            "subject": "#2069: WMF scale and offset mapping records place sub-pictures (#2266)"
           }
         ]
       }
@@ -4900,7 +4911,30 @@
       "breadth_pct": 62.0,
       "full_prev": 55.0,
       "kind": "content"
+    },
+    {
+      "commit": "7fbdc08",
+      "commit_full": "7fbdc085ebfd6ded43abd3d12a87377a7a0fa852",
+      "commit_date": "2026-11-23T05:59:10+07:00",
+      "ts": "2026-11-22T22:59:10Z",
+      "message": "#2069: WMF scale and offset mapping records place sub-pictures (#2266)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-20",
+      "full_pct": 55.0,
+      "full_range": null,
+      "full_hours": [
+        340,
+        600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft PowerPoint for Mac 16.113 (Microsoft 365)",
+      "mainstream_pct": 53.0,
+      "essentials_pct": 62.0,
+      "breadth_pct": 62.0,
+      "full_prev": 55.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-22T03:23:24+00:00"
+  "updated_at": "2026-11-22T23:56:13+00:00"
 }
