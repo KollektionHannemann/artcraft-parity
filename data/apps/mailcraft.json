@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/UCS-Care-Group/mailcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/UCS-Care-Group/mailcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "3c25e79",
-  "latest_commit_date": "2026-11-19T19:58:04Z",
-  "latest_message": "Add local multilingual spelling in the desktop composer (#1635)",
+  "latest_commit": "e0e21da",
+  "latest_commit_date": "2026-11-22T00:59:49Z",
+  "latest_message": "#566 part 2: more of Outlook's rule conditions, exceptions and actions, and a desktop alert (#765)",
   "parsed": {
     "stage": "public beta",
     "next_stage": "leaving",
@@ -407,7 +407,7 @@
     "value_since": "2026-10-12T18:17:00Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 260,
+    "revisions_since": 261,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -415,42 +415,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 264,
-    "revisions_7d": 13,
+    "revisions": 265,
+    "revisions_7d": 11,
     "last_revision": {
-      "ts": "2026-11-19T19:58:04Z",
+      "ts": "2026-11-22T00:59:49Z",
       "kind": "content",
-      "commit": "3c25e79",
-      "commit_full": "3c25e79934a3316b2c7a7d674de2f96a5ade3986",
-      "message": "Add local multilingual spelling in the desktop composer (#1635)"
+      "commit": "e0e21da",
+      "commit_full": "e0e21da54b0e0ae394a358dd04e0ef3ea8624fbb",
+      "message": "#566 part 2: more of Outlook's rule conditions, exceptions and actions, and a desktop alert (#765)"
     },
     "last_update": {
-      "ts": "2026-11-19T19:58:04Z",
+      "ts": "2026-11-22T00:59:49Z",
       "kind": "content",
-      "commit": "3c25e79",
-      "commit_full": "3c25e79934a3316b2c7a7d674de2f96a5ade3986",
-      "message": "Add local multilingual spelling in the desktop composer (#1635)"
+      "commit": "e0e21da",
+      "commit_full": "e0e21da54b0e0ae394a358dd04e0ef3ea8624fbb",
+      "message": "#566 part 2: more of Outlook's rule conditions, exceptions and actions, and a desktop alert (#765)"
     },
     "self_reported": "2026-11-18"
   },
   "milestone": null,
   "activity": {
-    "level": "buzzing",
-    "score": 20.8,
+    "level": "active",
+    "score": 18.5,
     "active_days_7d": 7,
-    "changes_7d": 134,
-    "changes_14d": 288,
-    "housekeeping_7d": 14,
+    "changes_7d": 113,
+    "changes_14d": 282,
+    "housekeeping_7d": 10,
     "last_code_change": {
-      "ts": "2026-11-21T16:48:17Z",
-      "commit": "7528f83",
-      "commit_full": "7528f83a5863771afbc68c5889f4f52e60087ea9",
-      "subject": "Unsubscribe from the lists of several messages (#1207, part 2) (#1286)"
+      "ts": "2026-11-22T02:19:05Z",
+      "commit": "8e6df5b",
+      "commit_full": "8e6df5b4f5289357cfdd77630ae813d26a2885bc",
+      "subject": "#1663: select several calendar items and copy, cut, paste or delete them together (#1665)"
     },
-    "last_commit_ts": "2026-11-21T16:48:17Z",
+    "last_commit_ts": "2026-11-22T02:19:05Z",
     "repo_since": "2026-10-12T18:17:00Z",
     "window": [
-      8,
       7,
       22,
       19,
@@ -463,7 +462,8 @@
       27,
       14,
       13,
-      4
+      4,
+      2
     ],
     "days": [
       {
@@ -1234,6 +1234,21 @@
           {
             "commit": "37c8fa0",
             "subject": "Feature #1310: resize a picture in the message by its corner or its size (#1769)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-22",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "8e6df5b",
+            "subject": "#1663: select several calendar items and copy, cut, paste or delete them together (#1665)"
+          },
+          {
+            "commit": "e0e21da",
+            "subject": "#566 part 2: more of Outlook's rule conditions, exceptions and actions, and a desktop alert (#765)"
           }
         ]
       }
@@ -6753,7 +6768,30 @@
       "breadth_pct": 79.4,
       "full_prev": 25.0,
       "kind": "content"
+    },
+    {
+      "commit": "e0e21da",
+      "commit_full": "e0e21da54b0e0ae394a358dd04e0ef3ea8624fbb",
+      "commit_date": "2026-11-22T00:59:49Z",
+      "ts": "2026-11-22T00:59:49Z",
+      "message": "#566 part 2: more of Outlook's rule conditions, exceptions and actions, and a desktop alert (#765)",
+      "stage": "public beta",
+      "next_stage": "leaving",
+      "last_updated": "2026-11-18",
+      "full_pct": 25.0,
+      "full_range": null,
+      "full_hours": [
+        410,
+        800
+      ],
+      "full_label": "Full target (everything Outlook does)",
+      "target": "Microsoft Outlook (Microsoft 365, classic desktop)",
+      "mainstream_pct": 35.0,
+      "essentials_pct": 50.0,
+      "breadth_pct": 79.4,
+      "full_prev": 25.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-21T18:24:22+00:00"
+  "updated_at": "2026-11-22T03:24:34+00:00"
 }

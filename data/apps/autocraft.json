@@ -37,21 +37,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.6,
+    "score": 18.4,
     "active_days_7d": 6,
-    "changes_7d": 122,
-    "changes_14d": 232,
-    "housekeeping_7d": 13,
+    "changes_7d": 125,
+    "changes_14d": 215,
+    "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-21T20:32:31Z",
-      "commit": "871c5b2",
-      "commit_full": "871c5b22c42c98f8ce560ba4f9c0f052b5df6cd8",
-      "subject": "Merge restart without draining: jobs a runner stop interrupts resume under the same id (at most twice), adopt their open Task Runner calls by bundle hash, make "
+      "ts": "2026-11-22T03:21:11Z",
+      "commit": "398614a",
+      "commit_full": "398614af5fea035d519079861cce820dbd14ceb6",
+      "subject": "The reads started early and awaited later are marked as deliberately handled with void"
     },
-    "last_commit_ts": "2026-11-21T20:32:31Z",
+    "last_commit_ts": "2026-11-22T03:21:11Z",
     "repo_since": "2026-11-02T14:36:17Z",
     "window": [
-      27,
       27,
       19,
       16,
@@ -64,7 +63,8 @@
       0,
       49,
       28,
-      21
+      21,
+      10
     ],
     "days": [
       {
@@ -389,11 +389,30 @@
             "subject": "Merge async database layer on SQLite: every database call is async over the Db handle (codemod plus hand work), async interleaving fixes, tests converted; plann"
           }
         ]
+      },
+      {
+        "d": "2026-11-22",
+        "code": 10,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "398614a",
+            "subject": "The reads started early and awaited later are marked as deliberately handled with void"
+          },
+          {
+            "commit": "0c20cab",
+            "subject": "Merge Postgres latency F2: planner passes read each input once, write plan history and items in multi-row statements and run independent per-PR reads together; "
+          },
+          {
+            "commit": "92bcb74",
+            "subject": "Merge Postgres latency F1: the runner runs the pre-approval pass only when its inputs change or a wake time comes, and a Task Runner claim reads its state in on"
+          }
+        ]
       }
     ]
   },
   "releases": [],
   "roadmap_history": [],
   "history": [],
-  "updated_at": "2026-11-21T23:31:18+00:00"
+  "updated_at": "2026-11-22T03:24:44+00:00"
 }

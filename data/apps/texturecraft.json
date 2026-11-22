@@ -282,21 +282,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.5,
+    "score": 15.2,
     "active_days_7d": 7,
-    "changes_7d": 80,
-    "changes_14d": 135,
-    "housekeeping_7d": 6,
+    "changes_7d": 70,
+    "changes_14d": 129,
+    "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-21T18:34:41Z",
-      "commit": "391c98a",
-      "commit_full": "391c98afa2805b39d34e6b87a0eb9413d15cb5bc",
-      "subject": "Decode imported PNG resources with the shared codec (#733)"
+      "ts": "2026-11-22T01:01:09Z",
+      "commit": "b2c18f5",
+      "commit_full": "b2c18f57e303ffc4b8e9362673e1976bec50cb7a",
+      "subject": "formats: use shared PNG decoding for linked-material cooks (#752)"
     },
-    "last_commit_ts": "2026-11-21T18:34:41Z",
+    "last_commit_ts": "2026-11-22T01:01:09Z",
     "repo_since": "2026-10-14T18:33:13Z",
     "window": [
-      7,
       7,
       10,
       10,
@@ -309,7 +308,8 @@
       12,
       3,
       18,
-      8
+      8,
+      1
     ],
     "days": [
       {
@@ -786,6 +786,17 @@
             "subject": "fix(formats): raise Alembic nesting depth limit from 64 to 256 (#728)"
           }
         ]
+      },
+      {
+        "d": "2026-11-22",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "b2c18f5",
+            "subject": "formats: use shared PNG decoding for linked-material cooks (#752)"
+          }
+        ]
       }
     ]
   },
@@ -1007,5 +1018,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-21T23:30:37+00:00"
+  "updated_at": "2026-11-22T03:23:40+00:00"
 }
