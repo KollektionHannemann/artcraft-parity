@@ -461,19 +461,19 @@
   },
   "milestone": null,
   "activity": {
-    "level": "quiet",
-    "score": 7.5,
-    "active_days_7d": 5,
-    "changes_7d": 21,
-    "changes_14d": 73,
+    "level": "active",
+    "score": 8.5,
+    "active_days_7d": 6,
+    "changes_7d": 22,
+    "changes_14d": 74,
     "housekeeping_7d": 2,
     "last_code_change": {
-      "ts": "2026-11-20T16:32:21Z",
-      "commit": "85623f2",
-      "commit_full": "85623f28f99a9a788123f0f6b48829f95f07962f",
-      "subject": "mcp: add protocol transcript tests for initialize, cancel, and batch (#1673)"
+      "ts": "2026-11-22T16:27:56Z",
+      "commit": "915481b",
+      "commit_full": "915481be1b49d7e0502e07b059d0c0198c61911a",
+      "subject": "test(automation): wait until a write on the reset socket fails (#1709)"
     },
-    "last_commit_ts": "2026-11-20T16:32:21Z",
+    "last_commit_ts": "2026-11-22T16:27:56Z",
     "repo_since": "2026-10-06T00:08:04Z",
     "window": [
       4,
@@ -489,7 +489,7 @@
       4,
       2,
       0,
-      0
+      1
     ],
     "days": [
       {
@@ -1209,6 +1209,17 @@
           {
             "commit": "5806129",
             "subject": "Recording: a take too long for one file goes on in a new file and lands whole (#888) (#1205)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-22",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "915481b",
+            "subject": "test(automation): wait until a write on the reset socket fails (#1709)"
           }
         ]
       }
@@ -2159,5 +2170,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-22T03:23:19+00:00"
+  "updated_at": "2026-11-22T18:46:59+00:00"
 }

@@ -464,18 +464,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 11.6,
-    "active_days_7d": 5,
-    "changes_7d": 61,
-    "changes_14d": 151,
+    "score": 13.2,
+    "active_days_7d": 6,
+    "changes_7d": 63,
+    "changes_14d": 153,
     "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-20T21:45:35Z",
-      "commit": "11a5711",
-      "commit_full": "11a5711ab11c4b94acce63faa07bb42c058c124f",
-      "subject": "xlsx: drop unresolved/non-workbook XLSB external formulas before remapping (#4601)"
+      "ts": "2026-11-22T16:34:15Z",
+      "commit": "927d4d6",
+      "commit_full": "927d4d60a6da2db2971b82994f0b79ac7aba3faf",
+      "subject": "test(io): tolerate errno 45 as ENOTSUP when this host's std does (#4656)"
     },
-    "last_commit_ts": "2026-11-20T21:45:35Z",
+    "last_commit_ts": "2026-11-22T16:34:15Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       8,
@@ -491,7 +491,7 @@
       7,
       13,
       0,
-      0
+      2
     ],
     "days": [
       {
@@ -1255,6 +1255,21 @@
           {
             "commit": "606fa7a",
             "subject": "xlsx: emit placeholder externalLink part and r:id for missing XLSB link slots (#4598)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-22",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "927d4d6",
+            "subject": "test(io): tolerate errno 45 as ENOTSUP when this host's std does (#4656)"
+          },
+          {
+            "commit": "62e594c",
+            "subject": "i18n: fill-handle and Home › Fill menu labels in every catalog (#4459)"
           }
         ]
       }
@@ -4022,5 +4037,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-22T03:23:33+00:00"
+  "updated_at": "2026-11-22T18:47:08+00:00"
 }

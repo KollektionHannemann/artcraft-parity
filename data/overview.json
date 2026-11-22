@@ -24,7 +24,7 @@
       "type": "release",
       "ts": "2026-11-22T05:40:55Z",
       "tag": "v0.46.2-nightly.20261122.155.1",
-      "kind": "minor",
+      "kind": "patch",
       "changes": 4,
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.46.2-nightly.20261122.155.1",
       "prerelease": true
@@ -38,7 +38,7 @@
       "kind": "minor",
       "changes": null,
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.46.2",
-      "prerelease": true
+      "prerelease": false
     },
     {
       "id": "solidcraft",
@@ -457,6 +457,12 @@
   ],
   "release_waves": [
     {
+      "day": "2026-11-22",
+      "apps": 1,
+      "changes": 0,
+      "largest": null
+    },
+    {
       "day": "2026-11-19",
       "apps": 2,
       "changes": 597,
@@ -558,16 +564,16 @@
         "level": "buzzing",
         "score": 32.8,
         "active_days_7d": 7,
-        "changes_7d": 708,
-        "changes_14d": 1984,
+        "changes_7d": 709,
+        "changes_14d": 1985,
         "housekeeping_7d": 16,
         "last_code_change": {
-          "ts": "2026-11-22T04:38:53Z",
-          "commit": "db9acab",
-          "commit_full": "db9acab4da715945ea12c865e6ec54a5589588c9",
-          "subject": "Retype: a glyph in an even-odd compound matches with only some of its contours reversed (#9004)"
+          "ts": "2026-11-22T18:16:18Z",
+          "commit": "bcaeb29",
+          "commit_full": "bcaeb2973787484746f81defbb4af8cfb3e4125b",
+          "subject": "metafile: use shared EMF and WMF writers (#9112)"
         },
-        "last_commit_ts": "2026-11-22T04:38:53Z",
+        "last_commit_ts": "2026-11-22T18:16:18Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           81,
@@ -583,7 +589,7 @@
           173,
           19,
           38,
-          42
+          43
         ]
       },
       "release": {
@@ -685,18 +691,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.6,
+        "score": 16.2,
         "active_days_7d": 7,
-        "changes_7d": 69,
-        "changes_14d": 114,
+        "changes_7d": 71,
+        "changes_14d": 116,
         "housekeeping_7d": 3,
         "last_code_change": {
-          "ts": "2026-11-22T04:14:00Z",
-          "commit": "08179b9",
-          "commit_full": "08179b9bc3f75dc54134b1ce402cfd2d0a841b38",
-          "subject": "develop,pipeline,color: add Process::V9 checked warm-green WB fallback (#587) (#4599)"
+          "ts": "2026-11-22T15:35:12Z",
+          "commit": "8d9016a",
+          "commit_full": "8d9016a6063b67af9a54397ae0545c148c5968ee",
+          "subject": "engine: check saved RAW process rendering and GPU cache parity (#4651)"
         },
-        "last_commit_ts": "2026-11-22T04:14:00Z",
+        "last_commit_ts": "2026-11-22T15:35:12Z",
         "repo_since": "2026-09-30T14:04:12Z",
         "window": [
           4,
@@ -712,7 +718,7 @@
           3,
           20,
           9,
-          3
+          5
         ]
       },
       "release": {
@@ -826,18 +832,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 16.2,
+        "score": 17.7,
         "active_days_7d": 6,
-        "changes_7d": 125,
-        "changes_14d": 190,
+        "changes_7d": 134,
+        "changes_14d": 199,
         "housekeeping_7d": 12,
         "last_code_change": {
-          "ts": "2026-11-22T06:59:47Z",
-          "commit": "33d874c",
-          "commit_full": "33d874c1f5b3e60dfc27bbf9a4c519ab38e8d701",
-          "subject": "Tests: run the app window as an eframe app (fixes the intermittent Windows perf failure) (#7337)"
+          "ts": "2026-11-22T17:40:08Z",
+          "commit": "d7085aa",
+          "commit_full": "d7085aabde0574396e6ff3acfa11a69ddb5617ac",
+          "subject": "Ribbon: bind command IDs for Table Styles, Borders, Delete, and AutoFit menus (#7324) (#7328)"
         },
-        "last_commit_ts": "2026-11-22T06:59:47Z",
+        "last_commit_ts": "2026-11-22T17:40:08Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
           13,
@@ -853,7 +859,7 @@
           0,
           11,
           9,
-          4
+          13
         ]
       },
       "release": {
@@ -943,18 +949,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.8,
+        "score": 16.2,
         "active_days_7d": 7,
-        "changes_7d": 71,
-        "changes_14d": 130,
+        "changes_7d": 72,
+        "changes_14d": 131,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-22T04:48:52Z",
-          "commit": "b8afd89",
-          "commit_full": "b8afd896fa7e9a23fdfbecf977a422a1c3beec20",
-          "subject": "formats: share PNG inspection for GLB and USD export (#751)"
+          "ts": "2026-11-22T11:44:54Z",
+          "commit": "fc21815",
+          "commit_full": "fc21815f50447c47852d7667a389dddad42a3046",
+          "subject": "Properties (1/5, base of the stack): panel shell - header bar, popups, minimum width, scroll place (#761)"
         },
-        "last_commit_ts": "2026-11-22T04:48:52Z",
+        "last_commit_ts": "2026-11-22T11:44:54Z",
         "repo_since": "2026-10-14T18:33:13Z",
         "window": [
           7,
@@ -970,7 +976,7 @@
           3,
           18,
           8,
-          2
+          3
         ]
       },
       "release": {
@@ -1630,18 +1636,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 11.6,
-        "active_days_7d": 5,
-        "changes_7d": 61,
-        "changes_14d": 151,
+        "score": 13.2,
+        "active_days_7d": 6,
+        "changes_7d": 63,
+        "changes_14d": 153,
         "housekeeping_7d": 3,
         "last_code_change": {
-          "ts": "2026-11-20T21:45:35Z",
-          "commit": "11a5711",
-          "commit_full": "11a5711ab11c4b94acce63faa07bb42c058c124f",
-          "subject": "xlsx: drop unresolved/non-workbook XLSB external formulas before remapping (#4601)"
+          "ts": "2026-11-22T16:34:15Z",
+          "commit": "927d4d6",
+          "commit_full": "927d4d60a6da2db2971b82994f0b79ac7aba3faf",
+          "subject": "test(io): tolerate errno 45 as ENOTSUP when this host's std does (#4656)"
         },
-        "last_commit_ts": "2026-11-20T21:45:35Z",
+        "last_commit_ts": "2026-11-22T16:34:15Z",
         "repo_since": "2026-10-06T02:09:42Z",
         "window": [
           8,
@@ -1657,7 +1663,7 @@
           7,
           13,
           0,
-          0
+          2
         ]
       },
       "release": {
@@ -1870,18 +1876,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 23.1,
+        "score": 24.2,
         "active_days_7d": 7,
-        "changes_7d": 147,
-        "changes_14d": 671,
-        "housekeeping_7d": 12,
+        "changes_7d": 156,
+        "changes_14d": 680,
+        "housekeeping_7d": 14,
         "last_code_change": {
-          "ts": "2026-11-22T10:26:25Z",
-          "commit": "6e0e587",
-          "commit_full": "6e0e587d9680c7151985c6fa67de1169523ae4e6",
-          "subject": "test(raw): verify Camera Raw exposure migration after native reopen (#16387)"
+          "ts": "2026-11-22T18:03:36Z",
+          "commit": "406ac67",
+          "commit_full": "406ac677e15248cd78f3cdf68377c52e90437d9d",
+          "subject": "raw: cap shared Bayer develop strip memory (#16420)"
         },
-        "last_commit_ts": "2026-11-22T10:26:25Z",
+        "last_commit_ts": "2026-11-22T18:03:36Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           43,
@@ -1897,7 +1903,7 @@
           50,
           20,
           12,
-          7
+          16
         ]
       },
       "release": {
@@ -1990,18 +1996,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 17.6,
-        "active_days_7d": 6,
-        "changes_7d": 126,
-        "changes_14d": 281,
+        "score": 18.6,
+        "active_days_7d": 7,
+        "changes_7d": 127,
+        "changes_14d": 282,
         "housekeeping_7d": 3,
         "last_code_change": {
-          "ts": "2026-11-21T21:58:34Z",
-          "commit": "171e92b",
-          "commit_full": "171e92b0772019357fa3bea724067a32c5875ad7",
-          "subject": "media: cover legacy Motion JPEG MOV import without FFmpeg (#4064)"
+          "ts": "2026-11-22T16:28:40Z",
+          "commit": "108e636",
+          "commit_full": "108e6362609c05e94570d20f1e456b8fb33ad2d4",
+          "subject": "test(ui): pump and wait longer while prefetch setup fills the cache (#4096)"
         },
-        "last_commit_ts": "2026-11-21T21:58:34Z",
+        "last_commit_ts": "2026-11-22T16:28:40Z",
         "repo_since": "2026-10-01T16:48:39Z",
         "window": [
           11,
@@ -2017,7 +2023,7 @@
           8,
           9,
           49,
-          0
+          1
         ]
       },
       "release": {
@@ -2109,19 +2115,19 @@
       },
       "milestone": null,
       "activity": {
-        "level": "quiet",
-        "score": 7.5,
-        "active_days_7d": 5,
-        "changes_7d": 21,
-        "changes_14d": 73,
+        "level": "active",
+        "score": 8.5,
+        "active_days_7d": 6,
+        "changes_7d": 22,
+        "changes_14d": 74,
         "housekeeping_7d": 2,
         "last_code_change": {
-          "ts": "2026-11-20T16:32:21Z",
-          "commit": "85623f2",
-          "commit_full": "85623f28f99a9a788123f0f6b48829f95f07962f",
-          "subject": "mcp: add protocol transcript tests for initialize, cancel, and batch (#1673)"
+          "ts": "2026-11-22T16:27:56Z",
+          "commit": "915481b",
+          "commit_full": "915481be1b49d7e0502e07b059d0c0198c61911a",
+          "subject": "test(automation): wait until a write on the reset socket fails (#1709)"
         },
-        "last_commit_ts": "2026-11-20T16:32:21Z",
+        "last_commit_ts": "2026-11-22T16:27:56Z",
         "repo_since": "2026-10-06T00:08:04Z",
         "window": [
           4,
@@ -2137,7 +2143,7 @@
           4,
           2,
           0,
-          0
+          1
         ]
       },
       "release": {
@@ -2349,19 +2355,19 @@
       },
       "milestone": null,
       "activity": {
-        "level": "active",
-        "score": 19.2,
+        "level": "buzzing",
+        "score": 20.1,
         "active_days_7d": 7,
-        "changes_7d": 115,
-        "changes_14d": 284,
+        "changes_7d": 119,
+        "changes_14d": 288,
         "housekeeping_7d": 11,
         "last_code_change": {
-          "ts": "2026-11-22T09:58:23Z",
-          "commit": "5d137b4",
-          "commit_full": "5d137b45fa8af9d490c8b1291ae560d7434fd2ac",
-          "subject": "#1493: show all installed fonts in the font selector (#1494)"
+          "ts": "2026-11-22T17:15:53Z",
+          "commit": "59b1c96",
+          "commit_full": "59b1c96ae01aba2f06df8001890a94282fa69fa1",
+          "subject": "Merge commit from fork"
         },
-        "last_commit_ts": "2026-11-22T09:58:23Z",
+        "last_commit_ts": "2026-11-22T17:15:53Z",
         "repo_since": "2026-10-12T18:17:00Z",
         "window": [
           7,
@@ -2377,7 +2383,7 @@
           14,
           13,
           4,
-          4
+          8
         ]
       },
       "release": {
@@ -2683,18 +2689,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 36.9,
+        "score": 38.2,
         "active_days_7d": 7,
-        "changes_7d": 1202,
-        "changes_14d": 2489,
-        "housekeeping_7d": 25,
+        "changes_7d": 1263,
+        "changes_14d": 2550,
+        "housekeeping_7d": 26,
         "last_code_change": {
-          "ts": "2026-11-22T10:38:46Z",
-          "commit": "312917b",
-          "commit_full": "312917ba6c55b74c6a780c9471d361cf29679495",
-          "subject": "Spanish (es-ES): translate 168 messages (#20751)"
+          "ts": "2026-11-22T18:07:15Z",
+          "commit": "a445ea9",
+          "commit_full": "a445ea9c7bb1d0132cb5316800b6d5dd7df8f518",
+          "subject": "Emboss: wrap text onto a cylinder face of any solid, not only a plain tube (#12029) (#19765)"
         },
-        "last_commit_ts": "2026-11-22T10:38:46Z",
+        "last_commit_ts": "2026-11-22T18:07:15Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           151,
@@ -2710,16 +2716,16 @@
           215,
           189,
           120,
-          39
+          100
         ]
       },
       "release": {
-        "tag": "v0.45.0",
-        "name": "SolidCraft v0.45.0",
-        "ts": "2026-11-19T21:15:24Z",
-        "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.45.0",
-        "changes": 597,
-        "new_contributors": 7,
+        "tag": "v0.46.2",
+        "name": "SolidCraft v0.46.2",
+        "ts": "2026-11-22T03:20:44Z",
+        "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.46.2",
+        "changes": null,
+        "new_contributors": null,
         "platforms": [
           "macOS",
           "Windows",
@@ -2728,7 +2734,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": null
+        "kind": "minor"
       },
       "series": [],
       "history_len": 0
@@ -2873,19 +2879,19 @@
       },
       "milestone": null,
       "activity": {
-        "level": "active",
-        "score": 19.6,
+        "level": "buzzing",
+        "score": 20.6,
         "active_days_7d": 6,
-        "changes_7d": 139,
-        "changes_14d": 229,
-        "housekeeping_7d": 12,
+        "changes_7d": 165,
+        "changes_14d": 255,
+        "housekeeping_7d": 13,
         "last_code_change": {
-          "ts": "2026-11-22T07:57:01Z",
-          "commit": "01018ac",
-          "commit_full": "01018acd11faa0647a2cbfca42ec6fc4d1bfb184",
-          "subject": "Merge pg-rank: rank reads verdicts in one query, writes in multi-row statements"
+          "ts": "2026-11-22T17:06:53Z",
+          "commit": "0b8e18f",
+          "commit_full": "0b8e18f68b9c841ec90228019ace2025246bc5f9",
+          "subject": "Merge tab: a queued issue being implemented sits in the build group"
         },
-        "last_commit_ts": "2026-11-22T07:57:01Z",
+        "last_commit_ts": "2026-11-22T17:06:53Z",
         "repo_since": "2026-11-02T14:36:17Z",
         "window": [
           27,
@@ -2901,7 +2907,7 @@
           49,
           28,
           21,
-          24
+          50
         ]
       },
       "release": null,
@@ -2916,5 +2922,5 @@
     "missing": [],
     "candidates": []
   },
-  "generated_at": "2026-11-22T11:45:08+00:00"
+  "generated_at": "2026-11-22T18:47:49+00:00"
 }

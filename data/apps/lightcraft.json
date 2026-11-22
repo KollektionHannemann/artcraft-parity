@@ -433,18 +433,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.6,
+    "score": 16.2,
     "active_days_7d": 7,
-    "changes_7d": 69,
-    "changes_14d": 114,
+    "changes_7d": 71,
+    "changes_14d": 116,
     "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-22T04:14:00Z",
-      "commit": "08179b9",
-      "commit_full": "08179b9bc3f75dc54134b1ce402cfd2d0a841b38",
-      "subject": "develop,pipeline,color: add Process::V9 checked warm-green WB fallback (#587) (#4599)"
+      "ts": "2026-11-22T15:35:12Z",
+      "commit": "8d9016a",
+      "commit_full": "8d9016a6063b67af9a54397ae0545c148c5968ee",
+      "subject": "engine: check saved RAW process rendering and GPU cache parity (#4651)"
     },
-    "last_commit_ts": "2026-11-22T04:14:00Z",
+    "last_commit_ts": "2026-11-22T15:35:12Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
       4,
@@ -460,7 +460,7 @@
       3,
       20,
       9,
-      3
+      5
     ],
     "days": [
       {
@@ -1364,20 +1364,20 @@
       },
       {
         "d": "2026-11-22",
-        "code": 3,
+        "code": 5,
         "other": 0,
         "samples": [
           {
+            "commit": "8d9016a",
+            "subject": "engine: check saved RAW process rendering and GPU cache parity (#4651)"
+          },
+          {
+            "commit": "fdcfc4e",
+            "subject": "deps: align LightCraft on merged craft-libs (#4645)"
+          },
+          {
             "commit": "08179b9",
             "subject": "develop,pipeline,color: add Process::V9 checked warm-green WB fallback (#587) (#4599)"
-          },
-          {
-            "commit": "03be6b4",
-            "subject": "codecs: borrow EXIF when reading PSD headers (#4640)"
-          },
-          {
-            "commit": "b24a5b2",
-            "subject": "Use the shared PSD and PSB prefix check for file routing (#4639)"
           }
         ]
       }
@@ -2036,5 +2036,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-22T11:44:16+00:00"
+  "updated_at": "2026-11-22T18:46:36+00:00"
 }
