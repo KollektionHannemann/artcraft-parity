@@ -37,18 +37,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.4,
+    "score": 19.6,
     "active_days_7d": 6,
-    "changes_7d": 125,
-    "changes_14d": 215,
+    "changes_7d": 139,
+    "changes_14d": 229,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-22T03:21:11Z",
-      "commit": "398614a",
-      "commit_full": "398614af5fea035d519079861cce820dbd14ceb6",
-      "subject": "The reads started early and awaited later are marked as deliberately handled with void"
+      "ts": "2026-11-22T07:57:01Z",
+      "commit": "01018ac",
+      "commit_full": "01018acd11faa0647a2cbfca42ec6fc4d1bfb184",
+      "subject": "Merge pg-rank: rank reads verdicts in one query, writes in multi-row statements"
     },
-    "last_commit_ts": "2026-11-22T03:21:11Z",
+    "last_commit_ts": "2026-11-22T07:57:01Z",
     "repo_since": "2026-11-02T14:36:17Z",
     "window": [
       27,
@@ -64,7 +64,7 @@
       49,
       28,
       21,
-      10
+      24
     ],
     "days": [
       {
@@ -392,20 +392,20 @@
       },
       {
         "d": "2026-11-22",
-        "code": 10,
+        "code": 24,
         "other": 0,
         "samples": [
           {
-            "commit": "398614a",
-            "subject": "The reads started early and awaited later are marked as deliberately handled with void"
+            "commit": "01018ac",
+            "subject": "Merge pg-rank: rank reads verdicts in one query, writes in multi-row statements"
           },
           {
-            "commit": "0c20cab",
-            "subject": "Merge Postgres latency F2: planner passes read each input once, write plan history and items in multi-row statements and run independent per-PR reads together; "
+            "commit": "1c2f382",
+            "subject": "Merge build-sccache-smoke2: enqueue-test --build reads the CI gate"
           },
           {
-            "commit": "92bcb74",
-            "subject": "Merge Postgres latency F1: the runner runs the pre-approval pass only when its inputs change or a wake time comes, and a Task Runner claim reads its state in on"
+            "commit": "b5cab3e",
+            "subject": "Merge build-sccache-smoke: tasks enqueue-test --build"
           }
         ]
       }
@@ -414,5 +414,5 @@
   "releases": [],
   "roadmap_history": [],
   "history": [],
-  "updated_at": "2026-11-22T03:24:44+00:00"
+  "updated_at": "2026-11-22T11:45:08+00:00"
 }

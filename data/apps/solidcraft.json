@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 34.9,
+    "score": 36.9,
     "active_days_7d": 7,
-    "changes_7d": 1172,
-    "changes_14d": 2459,
+    "changes_7d": 1202,
+    "changes_14d": 2489,
     "housekeeping_7d": 25,
     "last_code_change": {
-      "ts": "2026-11-22T02:54:10Z",
-      "commit": "7ce3978",
-      "commit_full": "7ce3978ed21836e2aadcc8584d5b75b27fa4837e",
-      "subject": "Sketch: keep sketch mode in its design view (#19653)"
+      "ts": "2026-11-22T10:38:46Z",
+      "commit": "312917b",
+      "commit_full": "312917ba6c55b74c6a780c9471d361cf29679495",
+      "subject": "Spanish (es-ES): translate 168 messages (#20751)"
     },
-    "last_commit_ts": "2026-11-22T02:54:10Z",
+    "last_commit_ts": "2026-11-22T10:38:46Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       151,
@@ -93,7 +93,7 @@
       215,
       189,
       120,
-      9
+      39
     ],
     "days": [
       {
@@ -972,26 +972,43 @@
       },
       {
         "d": "2026-11-22",
-        "code": 9,
+        "code": 39,
         "other": 0,
         "samples": [
           {
-            "commit": "7ce3978",
-            "subject": "Sketch: keep sketch mode in its design view (#19653)"
+            "commit": "312917b",
+            "subject": "Spanish (es-ES): translate 168 messages (#20751)"
           },
           {
-            "commit": "217b89c",
-            "subject": "CI: shared panel test failures block the build again (#20613)"
+            "commit": "fb8338d",
+            "subject": "Assistant: real section lines and dimensions on drawings, never free lines or text (#20731) (#20749)"
           },
           {
-            "commit": "336fbfd",
-            "subject": "Release 0.46.2 (#20609)"
+            "commit": "6f4ea5d",
+            "subject": "fix(kernel): omit internal B-rep error details in unclosable delete face refusal (#20671) (#20743)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.46.2-nightly.20261122.155.1",
+      "name": "SolidCraft v0.46.2-nightly.20261122.155.1 (nightly)",
+      "ts": "2026-11-22T05:40:55Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.46.2-nightly.20261122.155.1",
+      "changes": 4,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.46.2",
       "name": "SolidCraft v0.46.2",
@@ -1169,23 +1186,6 @@
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.45.0-rc.1",
       "changes": 265,
       "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": true,
-      "source": "release",
-      "kind": null
-    },
-    {
-      "tag": "v0.45.0-nightly.20261118.144.1",
-      "name": "SolidCraft v0.45.0-nightly.20261118.144.1 (nightly)",
-      "ts": "2026-11-18T06:14:58Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.45.0-nightly.20261118.144.1",
-      "changes": 280,
-      "new_contributors": 3,
       "platforms": [
         "macOS",
         "Windows",
@@ -2600,5 +2600,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-22T03:24:24+00:00"
+  "updated_at": "2026-11-22T11:45:00+00:00"
 }
