@@ -444,21 +444,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.0,
+    "score": 13.7,
     "active_days_7d": 7,
-    "changes_7d": 70,
-    "changes_14d": 148,
+    "changes_7d": 37,
+    "changes_14d": 145,
     "housekeeping_7d": 1,
     "last_code_change": {
-      "ts": "2026-11-22T22:58:33Z",
-      "commit": "e7345f6",
-      "commit_full": "e7345f6e04a9bb921c2613a6aa92d162edf39b3b",
-      "subject": "chore(deps): update shared pins without changing FilmCraft schema v17 (#5191)"
+      "ts": "2026-11-23T03:13:53Z",
+      "commit": "17221b5",
+      "commit_full": "17221b5d90d2d44f8dd4985c6996f197309e1c5c",
+      "subject": "778: use the shared writer for 16-bit RGBA TIFF stills (#5192)"
     },
-    "last_commit_ts": "2026-11-22T22:58:33Z",
+    "last_commit_ts": "2026-11-23T03:13:53Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
-      5,
       6,
       28,
       13,
@@ -471,7 +470,8 @@
       5,
       3,
       5,
-      4
+      4,
+      2
     ],
     "days": [
       {
@@ -1434,6 +1434,21 @@
             "subject": "export: use shared craft-png writer for 16-bit PNG stills (#5174)"
           }
         ]
+      },
+      {
+        "d": "2026-11-23",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "17221b5",
+            "subject": "778: use the shared writer for 16-bit RGBA TIFF stills (#5192)"
+          },
+          {
+            "commit": "117876b",
+            "subject": "project: resolve pin target indices once per layout (#4904)"
+          }
+        ]
       }
     ]
   },
@@ -2014,5 +2029,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-22T23:55:49+00:00"
+  "updated_at": "2026-11-23T04:35:04+00:00"
 }

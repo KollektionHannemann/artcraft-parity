@@ -505,21 +505,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.1,
+    "score": 12.4,
     "active_days_7d": 7,
-    "changes_7d": 37,
-    "changes_14d": 164,
-    "housekeeping_7d": 2,
+    "changes_7d": 35,
+    "changes_14d": 159,
+    "housekeeping_7d": 1,
     "last_code_change": {
-      "ts": "2026-11-22T23:46:54Z",
-      "commit": "967e571",
-      "commit_full": "967e57101151fc5ae8f1a28dfa53f0bc162f1e8d",
-      "subject": "build: pin craft-libs to main 33be356 (craft-libs#778) (#3148)"
+      "ts": "2026-11-23T00:16:50Z",
+      "commit": "d3190ef",
+      "commit_full": "d3190ef798460d8f75bb54505266c4c8f5ba144c",
+      "subject": "images: read JPEG EXIF orientation through the shared strict reader (craft-libs#778) (#3149)"
     },
-    "last_commit_ts": "2026-11-22T23:46:54Z",
+    "last_commit_ts": "2026-11-23T00:16:50Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
-      6,
       5,
       21,
       56,
@@ -532,7 +531,8 @@
       8,
       5,
       6,
-      2
+      2,
+      1
     ],
     "days": [
       {
@@ -1477,6 +1477,17 @@
           {
             "commit": "2d9b83b",
             "subject": "fix(links): preserve freshly placed artwork on immediate save (#3143)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-23",
+        "code": 1,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "d3190ef",
+            "subject": "images: read JPEG EXIF orientation through the shared strict reader (craft-libs#778) (#3149)"
           }
         ]
       }
@@ -6935,5 +6946,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-22T23:56:03+00:00"
+  "updated_at": "2026-11-23T04:35:33+00:00"
 }

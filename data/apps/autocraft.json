@@ -37,21 +37,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 21.1,
+    "score": 21.0,
     "active_days_7d": 6,
-    "changes_7d": 185,
-    "changes_14d": 275,
+    "changes_7d": 187,
+    "changes_14d": 263,
     "housekeeping_7d": 13,
     "last_code_change": {
-      "ts": "2026-11-22T23:50:14Z",
-      "commit": "697ae10",
-      "commit_full": "697ae10356d3a9fc3833f5e5585722face1c31fc",
-      "subject": "Merge discord-priority: interactive slots per Task Runner for calls a person waits on (Discord); Task Runner 1.4.0 runs the interactive lane, older runners keep"
+      "ts": "2026-11-23T03:47:51Z",
+      "commit": "0c24fee",
+      "commit_full": "0c24fee9528d666b1f4ef5026419b61a57971b33",
+      "subject": "Warm publish: the manifest header records the repo as owner/name, passed to the publish container"
     },
-    "last_commit_ts": "2026-11-22T23:50:14Z",
+    "last_commit_ts": "2026-11-23T03:47:51Z",
     "repo_since": "2026-11-02T14:36:17Z",
     "window": [
-      27,
       19,
       16,
       0,
@@ -64,7 +63,8 @@
       49,
       28,
       21,
-      70
+      70,
+      15
     ],
     "days": [
       {
@@ -408,11 +408,30 @@
             "subject": "Merge mirror-wait: mirror pods wait for the crate mirror before their first network step"
           }
         ]
+      },
+      {
+        "d": "2026-11-23",
+        "code": 15,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "0c24fee",
+            "subject": "Warm publish: the manifest header records the repo as owner/name, passed to the publish container"
+          },
+          {
+            "commit": "b2c6335",
+            "subject": "Discord search: warm the embedder and vector index at start; batch candidate lookups; one public-repo query per issue form"
+          },
+          {
+            "commit": "5717834",
+            "subject": "Discord issue panel: choose the follow-up questions in the background from submit so None of these stays one press"
+          }
+        ]
       }
     ]
   },
   "releases": [],
   "roadmap_history": [],
   "history": [],
-  "updated_at": "2026-11-22T23:56:48+00:00"
+  "updated_at": "2026-11-23T04:37:04+00:00"
 }

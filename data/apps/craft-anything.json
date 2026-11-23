@@ -46,7 +46,7 @@
   },
   "roadmap": {
     "revisions": 855,
-    "revisions_7d": 191,
+    "revisions_7d": 159,
     "last_revision": {
       "ts": "2026-11-20T03:41:28Z",
       "kind": "content",
@@ -65,22 +65,21 @@
   },
   "milestone": null,
   "activity": {
-    "level": "buzzing",
-    "score": 20.1,
+    "level": "active",
+    "score": 17.6,
     "active_days_7d": 7,
-    "changes_7d": 225,
-    "changes_14d": 714,
-    "housekeeping_7d": 15,
+    "changes_7d": 194,
+    "changes_14d": 559,
+    "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-22T23:52:42Z",
-      "commit": "d49e53c",
-      "commit_full": "d49e53cf1787f225c551b1dd078814efa3ee59d8",
-      "subject": "Put all craft-libs crates at one revision on main (#2344)"
+      "ts": "2026-11-23T03:30:36Z",
+      "commit": "a5bd260",
+      "commit_full": "a5bd26013f060fdc5d18e8b2e09b512f6c6f85cb",
+      "subject": "Read Android XML and resource tables through craft-android-res (#2346)"
     },
-    "last_commit_ts": "2026-11-22T23:52:42Z",
+    "last_commit_ts": "2026-11-23T03:30:36Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
-      157,
       111,
       100,
       49,
@@ -93,6 +92,7 @@
       28,
       18,
       1,
+      2,
       2
     ],
     "days": [
@@ -510,6 +510,21 @@
           {
             "commit": "8cec25d",
             "subject": "formats: keep SQLite serial types within the record header (#2270)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-23",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "a5bd260",
+            "subject": "Read Android XML and resource tables through craft-android-res (#2346)"
+          },
+          {
+            "commit": "b390709",
+            "subject": "Pin craft-libs at b9c7b697 for the shared Android resource readers (#2345)"
           }
         ]
       }
@@ -6624,5 +6639,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-22T23:56:24+00:00"
+  "updated_at": "2026-11-23T04:36:14+00:00"
 }

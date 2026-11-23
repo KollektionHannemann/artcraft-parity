@@ -19,6 +19,28 @@
   ],
   "latest_events": [
     {
+      "id": "pdfcraft",
+      "name": "PdfCraft",
+      "type": "release",
+      "ts": "2026-11-23T03:45:29Z",
+      "tag": "v0.22.0",
+      "kind": "minor",
+      "changes": 130,
+      "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.22.0",
+      "prerelease": false
+    },
+    {
+      "id": "solidcraft",
+      "name": "SolidCraft",
+      "type": "release",
+      "ts": "2026-11-23T01:35:43Z",
+      "tag": "v0.47.0",
+      "kind": "minor",
+      "changes": null,
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.47.0",
+      "prerelease": false
+    },
+    {
       "id": "mailcraft",
       "name": "MailCraft",
       "type": "release",
@@ -50,17 +72,6 @@
       "changes": null,
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.46.2",
       "prerelease": false
-    },
-    {
-      "id": "solidcraft",
-      "name": "SolidCraft",
-      "type": "release",
-      "ts": "2026-11-21T22:44:12Z",
-      "tag": "v0.46.1",
-      "kind": "minor",
-      "changes": null,
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.46.1",
-      "prerelease": true
     },
     {
       "id": "mailcraft",
@@ -442,20 +453,20 @@
       "changes": 12,
       "url": "https://github.com/storytold/deckcraft/releases/tag/v0.18.0",
       "prerelease": false
-    },
-    {
-      "id": "anicraft",
-      "name": "AniCraft",
-      "type": "release",
-      "ts": "2026-11-11T16:08:50Z",
-      "tag": "v0.2.0",
-      "kind": "minor",
-      "changes": 11,
-      "url": "https://github.com/storytold/anicraft/releases/tag/v0.2.0",
-      "prerelease": false
     }
   ],
   "release_waves": [
+    {
+      "day": "2026-11-23",
+      "apps": 2,
+      "changes": 130,
+      "largest": {
+        "id": "pdfcraft",
+        "name": "PdfCraft",
+        "tag": "v0.22.0",
+        "changes": 130
+      }
+    },
     {
       "day": "2026-11-22",
       "apps": 2,
@@ -542,7 +553,7 @@
       },
       "roadmap": {
         "revisions": 259,
-        "revisions_7d": 21,
+        "revisions_7d": 17,
         "last_revision": {
           "ts": "2026-11-19T22:45:42Z",
           "kind": "content",
@@ -562,21 +573,20 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 32.9,
+        "score": 28.2,
         "active_days_7d": 7,
-        "changes_7d": 712,
-        "changes_14d": 1988,
+        "changes_7d": 612,
+        "changes_14d": 1910,
         "housekeeping_7d": 16,
         "last_code_change": {
-          "ts": "2026-11-22T22:21:09Z",
-          "commit": "409d821",
-          "commit_full": "409d821751b9504d780b849b79a31233a07a22ce",
-          "subject": "Use the shared EMF and WMF EOF diagnostic (#9125)"
+          "ts": "2026-11-23T01:24:58Z",
+          "commit": "15001f7",
+          "commit_full": "15001f7dfcd5c0677121a36c9de770e393516c81",
+          "subject": "metafile: delegate QuickDraw PICT parsing to craft-metafile (#9123)"
         },
-        "last_commit_ts": "2026-11-22T22:21:09Z",
+        "last_commit_ts": "2026-11-23T03:58:37Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
-          81,
           81,
           123,
           254,
@@ -589,7 +599,8 @@
           173,
           19,
           38,
-          46
+          47,
+          2
         ]
       },
       "release": {
@@ -671,7 +682,7 @@
       },
       "roadmap": {
         "revisions": 19,
-        "revisions_7d": 1,
+        "revisions_7d": 0,
         "last_revision": {
           "ts": "2026-11-16T09:23:32Z",
           "kind": "content",
@@ -691,21 +702,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 17.2,
+        "score": 15.9,
         "active_days_7d": 7,
-        "changes_7d": 77,
-        "changes_14d": 122,
-        "housekeeping_7d": 3,
+        "changes_7d": 69,
+        "changes_14d": 121,
+        "housekeeping_7d": 1,
         "last_code_change": {
-          "ts": "2026-11-22T21:57:48Z",
-          "commit": "f3aa598",
-          "commit_full": "f3aa598c697fb5a01724dc6127306d02f6dd2f1d",
-          "subject": "pipeline, raw, inpaint: delegate extracted #587 modules to craft-develop (#4656)"
+          "ts": "2026-11-23T02:29:48Z",
+          "commit": "2525239",
+          "commit_full": "25252399dbe948c3a1d876aca7dbe63d86a1be20",
+          "subject": "build: pin craft-libs to main 2be967e (craft-libs#778) (#4670)"
         },
-        "last_commit_ts": "2026-11-22T21:57:48Z",
+        "last_commit_ts": "2026-11-23T02:29:48Z",
         "repo_since": "2026-09-30T14:04:12Z",
         "window": [
-          4,
           6,
           9,
           7,
@@ -718,7 +728,8 @@
           3,
           20,
           9,
-          11
+          11,
+          3
         ]
       },
       "release": {
@@ -812,7 +823,7 @@
       },
       "roadmap": {
         "revisions": 628,
-        "revisions_7d": 27,
+        "revisions_7d": 23,
         "last_revision": {
           "ts": "2026-11-21T17:00:25Z",
           "kind": "content",
@@ -832,11 +843,11 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 18.1,
-        "active_days_7d": 6,
-        "changes_7d": 139,
-        "changes_14d": 204,
-        "housekeeping_7d": 12,
+        "score": 14.6,
+        "active_days_7d": 5,
+        "changes_7d": 112,
+        "changes_14d": 191,
+        "housekeeping_7d": 9,
         "last_code_change": {
           "ts": "2026-11-22T18:52:36Z",
           "commit": "c369c3a",
@@ -846,7 +857,6 @@
         "last_commit_ts": "2026-11-22T18:52:36Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
-          13,
           5,
           19,
           4,
@@ -859,7 +869,8 @@
           0,
           11,
           9,
-          18
+          18,
+          0
         ]
       },
       "release": {
@@ -949,21 +960,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 16.8,
+        "score": 14.6,
         "active_days_7d": 7,
-        "changes_7d": 74,
-        "changes_14d": 133,
-        "housekeeping_7d": 5,
+        "changes_7d": 65,
+        "changes_14d": 127,
+        "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-22T23:29:19Z",
-          "commit": "7748b44",
-          "commit_full": "7748b4414c4ec52b33eb652129b0d10d149898a9",
-          "subject": "Properties (3/5, stacked on #762): Material tab, colour picker, swatches and eyedropper (#763)"
+          "ts": "2026-11-23T01:29:29Z",
+          "commit": "f46ee81",
+          "commit_full": "f46ee813e19502a11b43910f51fcad0ae7d26154",
+          "subject": "Properties (4/5, stacked on #763): effects, masks, folders and instances (#764)"
         },
-        "last_commit_ts": "2026-11-22T23:29:19Z",
+        "last_commit_ts": "2026-11-23T01:29:29Z",
         "repo_since": "2026-10-14T18:33:13Z",
         "window": [
-          7,
           10,
           10,
           8,
@@ -976,7 +986,8 @@
           3,
           18,
           8,
-          5
+          5,
+          1
         ]
       },
       "release": {
@@ -1069,21 +1080,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.0,
+        "score": 13.7,
         "active_days_7d": 7,
-        "changes_7d": 70,
-        "changes_14d": 148,
+        "changes_7d": 37,
+        "changes_14d": 145,
         "housekeeping_7d": 1,
         "last_code_change": {
-          "ts": "2026-11-22T22:58:33Z",
-          "commit": "e7345f6",
-          "commit_full": "e7345f6e04a9bb921c2613a6aa92d162edf39b3b",
-          "subject": "chore(deps): update shared pins without changing FilmCraft schema v17 (#5191)"
+          "ts": "2026-11-23T03:13:53Z",
+          "commit": "17221b5",
+          "commit_full": "17221b5d90d2d44f8dd4985c6996f197309e1c5c",
+          "subject": "778: use the shared writer for 16-bit RGBA TIFF stills (#5192)"
         },
-        "last_commit_ts": "2026-11-22T22:58:33Z",
+        "last_commit_ts": "2026-11-23T03:13:53Z",
         "repo_since": "2026-09-30T09:22:00Z",
         "window": [
-          5,
           6,
           28,
           13,
@@ -1096,7 +1106,8 @@
           5,
           3,
           5,
-          4
+          4,
+          2
         ]
       },
       "release": {
@@ -1180,7 +1191,7 @@
       },
       "roadmap": {
         "revisions": 146,
-        "revisions_7d": 6,
+        "revisions_7d": 5,
         "last_revision": {
           "ts": "2026-11-22T22:59:10Z",
           "kind": "content",
@@ -1200,10 +1211,10 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 12.6,
-        "active_days_7d": 7,
-        "changes_7d": 43,
-        "changes_14d": 108,
+        "score": 10.2,
+        "active_days_7d": 6,
+        "changes_7d": 32,
+        "changes_14d": 106,
         "housekeeping_7d": 2,
         "last_code_change": {
           "ts": "2026-11-22T22:59:10Z",
@@ -1214,7 +1225,6 @@
         "last_commit_ts": "2026-11-22T22:59:10Z",
         "repo_since": "2026-10-06T02:13:02Z",
         "window": [
-          2,
           3,
           27,
           7,
@@ -1227,7 +1237,8 @@
           4,
           8,
           2,
-          1
+          1,
+          0
         ]
       },
       "release": {
@@ -1367,11 +1378,11 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.7,
-        "active_days_7d": 7,
-        "changes_7d": 81,
-        "changes_14d": 214,
-        "housekeeping_7d": 4,
+        "score": 11.8,
+        "active_days_7d": 6,
+        "changes_7d": 78,
+        "changes_14d": 208,
+        "housekeeping_7d": 3,
         "last_code_change": {
           "ts": "2026-11-22T04:48:49Z",
           "commit": "bbf7ad4",
@@ -1381,7 +1392,6 @@
         "last_commit_ts": "2026-11-22T04:48:49Z",
         "repo_since": "2026-10-09T15:38:50Z",
         "window": [
-          6,
           2,
           17,
           66,
@@ -1394,7 +1404,8 @@
           7,
           8,
           1,
-          3
+          3,
+          0
         ]
       },
       "release": {
@@ -1492,7 +1503,7 @@
       },
       "roadmap": {
         "revisions": 244,
-        "revisions_7d": 3,
+        "revisions_7d": 2,
         "last_revision": {
           "ts": "2026-11-20T11:10:17Z",
           "kind": "content",
@@ -1512,21 +1523,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.3,
+        "score": 12.3,
         "active_days_7d": 6,
-        "changes_7d": 79,
-        "changes_14d": 433,
-        "housekeeping_7d": 4,
+        "changes_7d": 73,
+        "changes_14d": 228,
+        "housekeeping_7d": 3,
         "last_code_change": {
-          "ts": "2026-11-22T23:47:33Z",
-          "commit": "a18498e",
-          "commit_full": "a18498e8356768c626592448e8e90227c830cdb2",
-          "subject": "Merge release v0.22.0 back to main (#8108)"
+          "ts": "2026-11-23T01:29:51Z",
+          "commit": "993889a",
+          "commit_full": "993889aff1d29965a2fa86ebaaf6005386ef5ff7",
+          "subject": "fix(packaging): keep the macOS signing keychain after a successful import (#8110)"
         },
-        "last_commit_ts": "2026-11-22T23:47:33Z",
+        "last_commit_ts": "2026-11-23T03:03:44Z",
         "repo_since": "2026-09-30T09:17:08Z",
         "window": [
-          206,
           62,
           45,
           5,
@@ -1539,16 +1549,17 @@
           9,
           15,
           0,
+          1,
           1
         ]
       },
       "release": {
-        "tag": "v0.21.1",
-        "name": "PdfCraft v0.21.1",
-        "ts": "2026-11-12T02:18:37Z",
-        "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.21.1",
-        "changes": 22,
-        "new_contributors": null,
+        "tag": "v0.22.0",
+        "name": "PdfCraft v0.22.0",
+        "ts": "2026-11-23T03:45:29Z",
+        "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.22.0",
+        "changes": 130,
+        "new_contributors": 13,
         "platforms": [
           "macOS",
           "Windows",
@@ -1557,7 +1568,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "patch"
+        "kind": "minor"
       },
       "series": [
         {
@@ -1616,7 +1627,7 @@
       },
       "roadmap": {
         "revisions": 111,
-        "revisions_7d": 6,
+        "revisions_7d": 5,
         "last_revision": {
           "ts": "2026-11-18T14:53:00Z",
           "kind": "content",
@@ -1636,11 +1647,11 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.2,
-        "active_days_7d": 6,
-        "changes_7d": 63,
-        "changes_14d": 153,
-        "housekeeping_7d": 3,
+        "score": 10.6,
+        "active_days_7d": 5,
+        "changes_7d": 58,
+        "changes_14d": 145,
+        "housekeeping_7d": 1,
         "last_code_change": {
           "ts": "2026-11-22T16:34:15Z",
           "commit": "927d4d6",
@@ -1650,7 +1661,6 @@
         "last_commit_ts": "2026-11-22T16:34:15Z",
         "repo_since": "2026-10-06T02:09:42Z",
         "window": [
-          8,
           14,
           41,
           11,
@@ -1663,7 +1673,8 @@
           7,
           13,
           0,
-          2
+          2,
+          0
         ]
       },
       "release": {
@@ -1756,21 +1767,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.1,
+        "score": 12.4,
         "active_days_7d": 7,
-        "changes_7d": 37,
-        "changes_14d": 164,
-        "housekeeping_7d": 2,
+        "changes_7d": 35,
+        "changes_14d": 159,
+        "housekeeping_7d": 1,
         "last_code_change": {
-          "ts": "2026-11-22T23:46:54Z",
-          "commit": "967e571",
-          "commit_full": "967e57101151fc5ae8f1a28dfa53f0bc162f1e8d",
-          "subject": "build: pin craft-libs to main 33be356 (craft-libs#778) (#3148)"
+          "ts": "2026-11-23T00:16:50Z",
+          "commit": "d3190ef",
+          "commit_full": "d3190ef798460d8f75bb54505266c4c8f5ba144c",
+          "subject": "images: read JPEG EXIF orientation through the shared strict reader (craft-libs#778) (#3149)"
         },
-        "last_commit_ts": "2026-11-22T23:46:54Z",
+        "last_commit_ts": "2026-11-23T00:16:50Z",
         "repo_since": "2026-10-01T13:00:02Z",
         "window": [
-          6,
           5,
           21,
           56,
@@ -1783,7 +1793,8 @@
           8,
           5,
           6,
-          2
+          2,
+          1
         ]
       },
       "release": {
@@ -1876,21 +1887,20 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 24.8,
+        "score": 22.0,
         "active_days_7d": 7,
-        "changes_7d": 165,
-        "changes_14d": 689,
+        "changes_7d": 151,
+        "changes_14d": 649,
         "housekeeping_7d": 14,
         "last_code_change": {
-          "ts": "2026-11-22T23:35:40Z",
-          "commit": "dbad7de",
-          "commit_full": "dbad7de99a03dff83718eb7bbbd703420125e494",
-          "subject": "Toolbar docks only in dock columns (#16467) (#16468)"
+          "ts": "2026-11-23T02:57:00Z",
+          "commit": "b2811c4",
+          "commit_full": "b2811c4c04d54b2d12f2c6b3c1a78c4300edcf10",
+          "subject": "Engine split step 5: session slots, Session state types in core, action recording split (#16473)"
         },
-        "last_commit_ts": "2026-11-22T23:35:40Z",
+        "last_commit_ts": "2026-11-23T02:57:00Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
-          43,
           75,
           180,
           45,
@@ -1903,7 +1913,8 @@
           50,
           20,
           12,
-          25
+          25,
+          3
         ]
       },
       "release": {
@@ -1995,22 +2006,21 @@
       },
       "milestone": null,
       "activity": {
-        "level": "buzzing",
-        "score": 20.4,
+        "level": "active",
+        "score": 17.5,
         "active_days_7d": 7,
-        "changes_7d": 132,
-        "changes_14d": 287,
-        "housekeeping_7d": 3,
+        "changes_7d": 105,
+        "changes_14d": 277,
+        "housekeeping_7d": 2,
         "last_code_change": {
-          "ts": "2026-11-22T20:58:13Z",
-          "commit": "7e2d025",
-          "commit_full": "7e2d0256209974ffb92a29d8bdb6f2a49078f51f",
-          "subject": "media: cover generated Motion JPEG AVI and PCM (#4069)"
+          "ts": "2026-11-23T03:48:11Z",
+          "commit": "d7c7d0d",
+          "commit_full": "d7c7d0d737527c35e1b41378ab37641217729e87",
+          "subject": "chore(deps): move EffectCraft's media pins to craft-libs 33be3562 and FilmCraft e7345f6e (#4104)"
         },
-        "last_commit_ts": "2026-11-22T20:58:13Z",
+        "last_commit_ts": "2026-11-23T03:48:11Z",
         "repo_since": "2026-10-01T16:48:39Z",
         "window": [
-          11,
           26,
           53,
           27,
@@ -2023,7 +2033,8 @@
           8,
           9,
           49,
-          6
+          6,
+          1
         ]
       },
       "release": {
@@ -2116,21 +2127,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 8.5,
+        "score": 8.4,
         "active_days_7d": 6,
         "changes_7d": 22,
-        "changes_14d": 74,
+        "changes_14d": 72,
         "housekeeping_7d": 2,
         "last_code_change": {
-          "ts": "2026-11-22T16:27:56Z",
-          "commit": "915481b",
-          "commit_full": "915481be1b49d7e0502e07b059d0c0198c61911a",
-          "subject": "test(automation): wait until a write on the reset socket fails (#1709)"
+          "ts": "2026-11-23T02:15:38Z",
+          "commit": "3d5916e",
+          "commit_full": "3d5916e42cb231ae52da6479ddfac7a857c07bce",
+          "subject": "interchange: frame AAF property streams through craft-aaf (craft-libs#778) (#1713)"
         },
-        "last_commit_ts": "2026-11-22T16:27:56Z",
+        "last_commit_ts": "2026-11-23T02:15:38Z",
         "repo_since": "2026-10-06T00:08:04Z",
         "window": [
-          4,
           3,
           20,
           2,
@@ -2143,7 +2153,8 @@
           4,
           2,
           0,
-          1
+          1,
+          2
         ]
       },
       "release": {
@@ -2236,11 +2247,11 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 10.0,
-        "active_days_7d": 5,
-        "changes_7d": 46,
-        "changes_14d": 85,
-        "housekeeping_7d": 4,
+        "score": 8.0,
+        "active_days_7d": 4,
+        "changes_7d": 36,
+        "changes_14d": 81,
+        "housekeeping_7d": 3,
         "last_code_change": {
           "ts": "2026-11-21T10:27:26Z",
           "commit": "a70b9b0",
@@ -2250,7 +2261,6 @@
         "last_commit_ts": "2026-11-21T10:27:26Z",
         "repo_since": "2026-10-06T00:15:47Z",
         "window": [
-          4,
           2,
           19,
           2,
@@ -2263,6 +2273,7 @@
           1,
           20,
           2,
+          0,
           0
         ]
       },
@@ -2336,7 +2347,7 @@
       },
       "roadmap": {
         "revisions": 266,
-        "revisions_7d": 12,
+        "revisions_7d": 10,
         "last_revision": {
           "ts": "2026-11-22T18:33:49Z",
           "kind": "content",
@@ -2355,22 +2366,21 @@
       },
       "milestone": null,
       "activity": {
-        "level": "buzzing",
-        "score": 20.2,
+        "level": "active",
+        "score": 17.4,
         "active_days_7d": 7,
-        "changes_7d": 120,
-        "changes_14d": 289,
-        "housekeeping_7d": 11,
+        "changes_7d": 101,
+        "changes_14d": 283,
+        "housekeeping_7d": 10,
         "last_code_change": {
-          "ts": "2026-11-22T18:33:49Z",
-          "commit": "448ad7a",
-          "commit_full": "448ad7a7026d97b9dd8538bce55ff6232f9ae94c",
-          "subject": "Release 0.15.0 (#1840)"
+          "ts": "2026-11-23T01:01:40Z",
+          "commit": "7781eee",
+          "commit_full": "7781eeef093b3ef760bee2ac45a0092042a1a914",
+          "subject": "Fix FreeBSD: host connect test no longer races for a freed port (#1848)"
         },
-        "last_commit_ts": "2026-11-22T18:33:49Z",
+        "last_commit_ts": "2026-11-23T01:01:40Z",
         "repo_since": "2026-10-12T18:17:00Z",
         "window": [
-          7,
           22,
           19,
           15,
@@ -2383,7 +2393,8 @@
           14,
           13,
           4,
-          9
+          9,
+          1
         ]
       },
       "release": {
@@ -2473,10 +2484,10 @@
       "milestone": null,
       "activity": {
         "level": "quiet",
-        "score": 7.2,
-        "active_days_7d": 5,
-        "changes_7d": 18,
-        "changes_14d": 47,
+        "score": 5.8,
+        "active_days_7d": 4,
+        "changes_7d": 13,
+        "changes_14d": 41,
         "housekeeping_7d": 2,
         "last_code_change": {
           "ts": "2026-11-20T07:31:10Z",
@@ -2487,7 +2498,6 @@
         "last_commit_ts": "2026-11-20T11:10:09Z",
         "repo_since": "2026-11-01T19:58:46Z",
         "window": [
-          6,
           5,
           5,
           1,
@@ -2499,6 +2509,7 @@
           3,
           2,
           4,
+          0,
           0,
           0
         ]
@@ -2561,7 +2572,7 @@
       },
       "roadmap": {
         "revisions": 855,
-        "revisions_7d": 191,
+        "revisions_7d": 159,
         "last_revision": {
           "ts": "2026-11-20T03:41:28Z",
           "kind": "content",
@@ -2580,22 +2591,21 @@
       },
       "milestone": null,
       "activity": {
-        "level": "buzzing",
-        "score": 20.1,
+        "level": "active",
+        "score": 17.6,
         "active_days_7d": 7,
-        "changes_7d": 225,
-        "changes_14d": 714,
-        "housekeeping_7d": 15,
+        "changes_7d": 194,
+        "changes_14d": 559,
+        "housekeeping_7d": 12,
         "last_code_change": {
-          "ts": "2026-11-22T23:52:42Z",
-          "commit": "d49e53c",
-          "commit_full": "d49e53cf1787f225c551b1dd078814efa3ee59d8",
-          "subject": "Put all craft-libs crates at one revision on main (#2344)"
+          "ts": "2026-11-23T03:30:36Z",
+          "commit": "a5bd260",
+          "commit_full": "a5bd26013f060fdc5d18e8b2e09b512f6c6f85cb",
+          "subject": "Read Android XML and resource tables through craft-android-res (#2346)"
         },
-        "last_commit_ts": "2026-11-22T23:52:42Z",
+        "last_commit_ts": "2026-11-23T03:30:36Z",
         "repo_since": "2026-10-31T14:52:14Z",
         "window": [
-          157,
           111,
           100,
           49,
@@ -2608,6 +2618,7 @@
           28,
           18,
           1,
+          2,
           2
         ]
       },
@@ -2689,21 +2700,20 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 39.2,
+        "score": 37.1,
         "active_days_7d": 7,
-        "changes_7d": 1366,
-        "changes_14d": 2653,
-        "housekeeping_7d": 31,
+        "changes_7d": 1125,
+        "changes_14d": 2542,
+        "housekeeping_7d": 26,
         "last_code_change": {
-          "ts": "2026-11-22T23:22:02Z",
-          "commit": "cd4f88a",
-          "commit_full": "cd4f88a899a57114815fd48e15cbd735499ad2f5",
-          "subject": "Typed errors (TE-O-03, part 1 of 4): the B-rep editor's face construction, surface transfer and face copy failures become named causes or reviewed defects (#198"
+          "ts": "2026-11-23T04:09:43Z",
+          "commit": "9aa2ce4",
+          "commit_full": "9aa2ce47e79c4142044ace86f7dfad268f0b314a",
+          "subject": "Sheet metal: Unfold keeps a chosen flat panel where it is (fixed point) (#21065)"
         },
-        "last_commit_ts": "2026-11-22T23:22:02Z",
+        "last_commit_ts": "2026-11-23T04:09:43Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
-          151,
           239,
           149,
           191,
@@ -2716,16 +2726,17 @@
           215,
           189,
           120,
-          203
+          203,
+          40
         ]
       },
       "release": {
-        "tag": "v0.46.2",
-        "name": "SolidCraft v0.46.2",
-        "ts": "2026-11-22T03:20:44Z",
-        "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.46.2",
+        "tag": "v0.47.0",
+        "name": "SolidCraft v0.47.0",
+        "ts": "2026-11-23T01:35:43Z",
+        "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.47.0",
         "changes": null,
-        "new_contributors": null,
+        "new_contributors": 5,
         "platforms": [
           "macOS",
           "Windows",
@@ -2785,10 +2796,10 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.0,
-        "active_days_7d": 6,
-        "changes_7d": 48,
-        "changes_14d": 157,
+        "score": 10.4,
+        "active_days_7d": 5,
+        "changes_7d": 45,
+        "changes_14d": 137,
         "housekeeping_7d": 3,
         "last_code_change": {
           "ts": "2026-11-21T20:41:22Z",
@@ -2799,7 +2810,6 @@
         "last_commit_ts": "2026-11-21T20:41:22Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
-          20,
           19,
           18,
           17,
@@ -2812,6 +2822,7 @@
           4,
           9,
           3,
+          0,
           0
         ]
       },
@@ -2880,21 +2891,20 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 21.1,
+        "score": 21.0,
         "active_days_7d": 6,
-        "changes_7d": 185,
-        "changes_14d": 275,
+        "changes_7d": 187,
+        "changes_14d": 263,
         "housekeeping_7d": 13,
         "last_code_change": {
-          "ts": "2026-11-22T23:50:14Z",
-          "commit": "697ae10",
-          "commit_full": "697ae10356d3a9fc3833f5e5585722face1c31fc",
-          "subject": "Merge discord-priority: interactive slots per Task Runner for calls a person waits on (Discord); Task Runner 1.4.0 runs the interactive lane, older runners keep"
+          "ts": "2026-11-23T03:47:51Z",
+          "commit": "0c24fee",
+          "commit_full": "0c24fee9528d666b1f4ef5026419b61a57971b33",
+          "subject": "Warm publish: the manifest header records the repo as owner/name, passed to the publish container"
         },
-        "last_commit_ts": "2026-11-22T23:50:14Z",
+        "last_commit_ts": "2026-11-23T03:47:51Z",
         "repo_since": "2026-11-02T14:36:17Z",
         "window": [
-          27,
           19,
           16,
           0,
@@ -2907,7 +2917,8 @@
           49,
           28,
           21,
-          70
+          70,
+          15
         ]
       },
       "release": null,
@@ -2922,5 +2933,5 @@
     "missing": [],
     "candidates": []
   },
-  "generated_at": "2026-11-22T23:56:48+00:00"
+  "generated_at": "2026-11-23T04:37:04+00:00"
 }

@@ -537,7 +537,7 @@
   },
   "roadmap": {
     "revisions": 259,
-    "revisions_7d": 21,
+    "revisions_7d": 17,
     "last_revision": {
       "ts": "2026-11-19T22:45:42Z",
       "kind": "content",
@@ -557,21 +557,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 32.9,
+    "score": 28.2,
     "active_days_7d": 7,
-    "changes_7d": 712,
-    "changes_14d": 1988,
+    "changes_7d": 612,
+    "changes_14d": 1910,
     "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-11-22T22:21:09Z",
-      "commit": "409d821",
-      "commit_full": "409d821751b9504d780b849b79a31233a07a22ce",
-      "subject": "Use the shared EMF and WMF EOF diagnostic (#9125)"
+      "ts": "2026-11-23T01:24:58Z",
+      "commit": "15001f7",
+      "commit_full": "15001f7dfcd5c0677121a36c9de770e393516c81",
+      "subject": "metafile: delegate QuickDraw PICT parsing to craft-metafile (#9123)"
     },
-    "last_commit_ts": "2026-11-22T22:21:09Z",
+    "last_commit_ts": "2026-11-23T03:58:37Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
-      81,
       81,
       123,
       254,
@@ -584,7 +583,8 @@
       173,
       19,
       38,
-      46
+      47,
+      2
     ],
     "days": [
       {
@@ -1583,9 +1583,13 @@
       },
       {
         "d": "2026-11-22",
-        "code": 46,
+        "code": 47,
         "other": 0,
         "samples": [
+          {
+            "commit": "369b8bf",
+            "subject": "deps: pin shared EPS prefix decoders (#9014)"
+          },
           {
             "commit": "409d821",
             "subject": "Use the shared EMF and WMF EOF diagnostic (#9125)"
@@ -1593,10 +1597,21 @@
           {
             "commit": "76b8839",
             "subject": "SVG: share XML attribute escaping (#9030)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-23",
+        "code": 2,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "15001f7",
+            "subject": "metafile: delegate QuickDraw PICT parsing to craft-metafile (#9123)"
           },
           {
-            "commit": "eb3a9ba",
-            "subject": "Import: share Mac Roman decoding across legacy formats (#9042)"
+            "commit": "5af36ba",
+            "subject": "Fix #4568: PDF import keeps embedded fonts for text whose family isn't installed (#4569)"
           }
         ]
       }
@@ -8615,5 +8630,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-22T23:55:46+00:00"
+  "updated_at": "2026-11-23T04:34:58+00:00"
 }
