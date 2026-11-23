@@ -557,18 +557,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 28.2,
+    "score": 29.0,
     "active_days_7d": 7,
-    "changes_7d": 612,
-    "changes_14d": 1910,
-    "housekeeping_7d": 16,
+    "changes_7d": 614,
+    "changes_14d": 1912,
+    "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-11-23T01:24:58Z",
-      "commit": "15001f7",
-      "commit_full": "15001f7dfcd5c0677121a36c9de770e393516c81",
-      "subject": "metafile: delegate QuickDraw PICT parsing to craft-metafile (#9123)"
+      "ts": "2026-11-23T06:33:44Z",
+      "commit": "cd13884",
+      "commit_full": "cd1388444831995b6438e98a5699c6b54752e2d8",
+      "subject": "metafile: take WMF and EMF unit facts from craft-metafile (craft-libs#778) (#9144)"
     },
-    "last_commit_ts": "2026-11-23T03:58:37Z",
+    "last_commit_ts": "2026-11-23T14:34:26Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       81,
@@ -584,7 +584,7 @@
       19,
       38,
       47,
-      2
+      4
     ],
     "days": [
       {
@@ -1602,16 +1602,20 @@
       },
       {
         "d": "2026-11-23",
-        "code": 2,
-        "other": 1,
+        "code": 4,
+        "other": 2,
         "samples": [
+          {
+            "commit": "cd13884",
+            "subject": "metafile: take WMF and EMF unit facts from craft-metafile (craft-libs#778) (#9144)"
+          },
+          {
+            "commit": "0b25f2a",
+            "subject": "deps: pin all craft-libs crates to 205042e (craft-libs#778) (#9160)"
+          },
           {
             "commit": "15001f7",
             "subject": "metafile: delegate QuickDraw PICT parsing to craft-metafile (#9123)"
-          },
-          {
-            "commit": "5af36ba",
-            "subject": "Fix #4568: PDF import keeps embedded fonts for text whose family isn't installed (#4569)"
           }
         ]
       }
@@ -8630,5 +8634,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-23T04:34:58+00:00"
+  "updated_at": "2026-11-23T15:29:31+00:00"
 }

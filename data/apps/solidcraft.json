@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 37.1,
+    "score": 38.7,
     "active_days_7d": 7,
-    "changes_7d": 1125,
-    "changes_14d": 2542,
-    "housekeeping_7d": 26,
+    "changes_7d": 1212,
+    "changes_14d": 2629,
+    "housekeeping_7d": 28,
     "last_code_change": {
-      "ts": "2026-11-23T04:09:43Z",
-      "commit": "9aa2ce4",
-      "commit_full": "9aa2ce47e79c4142044ace86f7dfad268f0b314a",
-      "subject": "Sheet metal: Unfold keeps a chosen flat panel where it is (fixed point) (#21065)"
+      "ts": "2026-11-23T14:55:19Z",
+      "commit": "27e6085",
+      "commit_full": "27e60854bdd363b6803fbd309fa1d27db76190c3",
+      "subject": "Sweep: a body face can be the profile, like in Extrude and Revolve (#14456) (#20933)"
     },
-    "last_commit_ts": "2026-11-23T04:09:43Z",
+    "last_commit_ts": "2026-11-23T14:55:19Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       239,
@@ -93,7 +93,7 @@
       189,
       120,
       203,
-      40
+      127
     ],
     "days": [
       {
@@ -991,26 +991,43 @@
       },
       {
         "d": "2026-11-23",
-        "code": 40,
-        "other": 0,
+        "code": 127,
+        "other": 2,
         "samples": [
           {
-            "commit": "9aa2ce4",
-            "subject": "Sheet metal: Unfold keeps a chosen flat panel where it is (fixed point) (#21065)"
+            "commit": "27e6085",
+            "subject": "Sweep: a body face can be the profile, like in Extrude and Revolve (#14456) (#20933)"
           },
           {
-            "commit": "652c962",
-            "subject": "solidcore: each file's phrase and stage site count is its own pin file (#21054)"
+            "commit": "53ee473",
+            "subject": "Shell: a refused wall names a thinner wall only after building it, and says plainly when none builds (#20781) (#20794)"
           },
           {
-            "commit": "36ba25f",
-            "subject": "Kernel: swept faces are traced to their profile and path from exact edges, not the display mesh (#21036)"
+            "commit": "fd5d368",
+            "subject": "Windows: an auto-hide taskbar reappears over a maximized SolidCraft window (#18493)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.47.0-nightly.20261123.157.1",
+      "name": "SolidCraft v0.47.0-nightly.20261123.157.1 (nightly)",
+      "ts": "2026-11-23T05:41:46Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.47.0-nightly.20261123.157.1",
+      "changes": 41,
+      "new_contributors": 4,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "patch"
+    },
     {
       "tag": "v0.47.0",
       "name": "SolidCraft v0.47.0",
@@ -1188,23 +1205,6 @@
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.45.0-rc.3",
       "changes": 34,
       "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": true,
-      "source": "release",
-      "kind": null
-    },
-    {
-      "tag": "v0.45.0-rc.2",
-      "name": "SolidCraft v0.45.0-rc.2",
-      "ts": "2026-11-18T11:59:19Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.45.0-rc.2",
-      "changes": 50,
-      "new_contributors": 1,
       "platforms": [
         "macOS",
         "Windows",
@@ -2626,5 +2626,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-23T04:36:46+00:00"
+  "updated_at": "2026-11-23T15:31:21+00:00"
 }
