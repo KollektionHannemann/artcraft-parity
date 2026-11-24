@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "46e3780",
-  "latest_commit_date": "2026-11-24T19:11:27+07:00",
-  "latest_message": "Decode dynamically replaceable Swift key, variable and thunk symbols (R3.12) (#2296) (#2419)",
+  "latest_commit": "941c440",
+  "latest_commit_date": "2026-11-24T15:20:35-07:00",
+  "latest_message": "Add roadmap lines for gaps found in review: lock held while refreshing records, three OpenCode session leftovers, the UI tests' demo session (#2437)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 903,
-    "revisions_7d": 161,
+    "revisions": 912,
+    "revisions_7d": 170,
     "last_revision": {
-      "ts": "2026-11-24T12:11:27Z",
+      "ts": "2026-11-24T22:20:35Z",
       "kind": "content",
-      "commit": "46e3780",
-      "commit_full": "46e37809076fe2886a352c18997d947d5e15d20f",
-      "message": "Decode dynamically replaceable Swift key, variable and thunk symbols (R3.12) (#2296) (#2419)"
+      "commit": "941c440",
+      "commit_full": "941c440ce8bb79116044a199aa20f690c9f5d56a",
+      "message": "Add roadmap lines for gaps found in review: lock held while refreshing records, three OpenCode session leftovers, the UI tests' demo session (#2437)"
     },
     "last_update": {
-      "ts": "2026-11-24T12:11:27Z",
+      "ts": "2026-11-24T22:20:35Z",
       "kind": "content",
-      "commit": "46e3780",
-      "commit_full": "46e37809076fe2886a352c18997d947d5e15d20f",
-      "message": "Decode dynamically replaceable Swift key, variable and thunk symbols (R3.12) (#2296) (#2419)"
+      "commit": "941c440",
+      "commit_full": "941c440ce8bb79116044a199aa20f690c9f5d56a",
+      "message": "Add roadmap lines for gaps found in review: lock held while refreshing records, three OpenCode session leftovers, the UI tests' demo session (#2437)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.5,
+    "score": 20.7,
     "active_days_7d": 7,
-    "changes_7d": 199,
-    "changes_14d": 516,
-    "housekeeping_7d": 14,
+    "changes_7d": 214,
+    "changes_14d": 531,
+    "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-11-24T12:34:35Z",
-      "commit": "572877e",
-      "commit_full": "572877eded9911e523a0d70ffc6207a1d4c31ba6",
-      "subject": "Let people paste a different key for an AI provider found in the environment (#2381) (#2420)"
+      "ts": "2026-11-24T22:25:46Z",
+      "commit": "4f0f744",
+      "commit_full": "4f0f744b7e2ad16198a7b08b9edc53286b1b8b67",
+      "subject": "fix(cli): list CSV and TSV output formats (#2284)"
     },
-    "last_commit_ts": "2026-11-24T12:34:35Z",
+    "last_commit_ts": "2026-11-24T22:25:46Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       100,
@@ -93,7 +93,7 @@
       1,
       2,
       3,
-      67
+      82
     ],
     "days": [
       {
@@ -534,20 +534,20 @@
       },
       {
         "d": "2026-11-24",
-        "code": 67,
-        "other": 3,
+        "code": 82,
+        "other": 6,
         "samples": [
           {
-            "commit": "572877e",
-            "subject": "Let people paste a different key for an AI provider found in the environment (#2381) (#2420)"
+            "commit": "4f0f744",
+            "subject": "fix(cli): list CSV and TSV output formats (#2284)"
           },
           {
-            "commit": "46e3780",
-            "subject": "Decode dynamically replaceable Swift key, variable and thunk symbols (R3.12) (#2296) (#2419)"
+            "commit": "f1ee073",
+            "subject": "Count the tokens a Claude Code turn writes to the prompt cache as input (R5.4) (#2343)"
           },
           {
-            "commit": "2464253",
-            "subject": "Decode Swift generic specialization symbols (R3.12) (#2297) (#2418)"
+            "commit": "51813be",
+            "subject": "Read a Claude API conversation so far from the prompt cache on each step (R5.5) (#2342)"
           }
         ]
       }
@@ -6995,8 +6995,71 @@
       "commit": "46e3780",
       "commit_full": "46e37809076fe2886a352c18997d947d5e15d20f",
       "message": "Decode dynamically replaceable Swift key, variable and thunk symbols (R3.12) (#2296) (#2419)"
+    },
+    {
+      "ts": "2026-11-24T21:35:01Z",
+      "kind": "content",
+      "commit": "2a87b19",
+      "commit_full": "2a87b199a335259111748ac8f342816e69144719",
+      "message": "Check an SSH host for the agent before adding it (R2.2) (#2135)"
+    },
+    {
+      "ts": "2026-11-24T21:35:09Z",
+      "kind": "content",
+      "commit": "0836c64",
+      "commit_full": "0836c645ab8e9ad5e277e162b9828bfba56b23e9",
+      "message": "Let a replayed write move a stand-in's later reads on to what was recorded after it (R3.11) (#2161)"
+    },
+    {
+      "ts": "2026-11-24T21:38:47Z",
+      "kind": "content",
+      "commit": "405de9d",
+      "commit_full": "405de9da325536b1414d11171ada480b432d4764",
+      "message": "Keep the opt-in Go test's build cache and module folder in its temp folder (R2.7) (#2213)"
+    },
+    {
+      "ts": "2026-11-24T21:38:56Z",
+      "kind": "content",
+      "commit": "66b9f00",
+      "commit_full": "66b9f00c5c9a44d48e5848f348d6be2f548ec020",
+      "message": "Close a pictured program politely before killing it (R2.4) (#2244)"
+    },
+    {
+      "ts": "2026-11-24T21:39:09Z",
+      "kind": "content",
+      "commit": "b8dd88c",
+      "commit_full": "b8dd88cf7181c020f114aaf23d5bb44808eb5b96",
+      "message": "Reuse unchanged investigation records after checking their bytes (R2.2) (#2211)"
+    },
+    {
+      "ts": "2026-11-24T22:02:18Z",
+      "kind": "content",
+      "commit": "d3e7053",
+      "commit_full": "d3e70538031d0c11cd123c249d9fc727aba12675",
+      "message": "Read IL2CPP metadata version 39 (R3.11) (#2282)"
+    },
+    {
+      "ts": "2026-11-24T22:03:54Z",
+      "kind": "content",
+      "commit": "51813be",
+      "commit_full": "51813bea0cf23f79a9f456f03d901f48235849fb",
+      "message": "Read a Claude API conversation so far from the prompt cache on each step (R5.5) (#2342)"
+    },
+    {
+      "ts": "2026-11-24T22:04:05Z",
+      "kind": "content",
+      "commit": "f1ee073",
+      "commit_full": "f1ee073dcfcc29ccdc2dd0051544d6f97aa6d64b",
+      "message": "Count the tokens a Claude Code turn writes to the prompt cache as input (R5.4) (#2343)"
+    },
+    {
+      "ts": "2026-11-24T22:20:35Z",
+      "kind": "content",
+      "commit": "941c440",
+      "commit_full": "941c440ce8bb79116044a199aa20f690c9f5d56a",
+      "message": "Add roadmap lines for gaps found in review: lock held while refreshing records, three OpenCode session leftovers, the UI tests' demo session (#2437)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-24T12:48:27+00:00"
+  "updated_at": "2026-11-24T22:51:08+00:00"
 }
