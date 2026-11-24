@@ -37,21 +37,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.1,
+    "score": 20.6,
     "active_days_7d": 6,
-    "changes_7d": 206,
-    "changes_14d": 282,
-    "housekeeping_7d": 13,
+    "changes_7d": 233,
+    "changes_14d": 294,
+    "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-23T08:17:57Z",
-      "commit": "0c359e3",
-      "commit_full": "0c359e3964ed7da3ef88f921260a57c46982f6b0",
-      "subject": "Warm trees never carry cargo lock files: publish skips them, apply gives each empty file its own inode, restores and copies delete them"
+      "ts": "2026-11-24T02:24:56Z",
+      "commit": "727ef52",
+      "commit_full": "727ef5298364d784a9ed44129fa81d44b465e521",
+      "subject": "Merge branch 'discord-channels-fold'"
     },
-    "last_commit_ts": "2026-11-23T08:17:57Z",
+    "last_commit_ts": "2026-11-24T02:24:56Z",
     "repo_since": "2026-11-02T14:36:17Z",
     "window": [
-      19,
       16,
       0,
       0,
@@ -64,7 +63,8 @@
       28,
       21,
       70,
-      34
+      62,
+      3
     ],
     "days": [
       {
@@ -411,20 +411,39 @@
       },
       {
         "d": "2026-11-23",
-        "code": 34,
+        "code": 62,
         "other": 0,
         "samples": [
           {
-            "commit": "0c359e3",
-            "subject": "Warm trees never carry cargo lock files: publish skips them, apply gives each empty file its own inode, restores and copies delete them"
+            "commit": "6d9ce5c",
+            "subject": "Merge branch 'runner-login-gap'"
           },
           {
-            "commit": "3f8bcb8",
-            "subject": "Warm versions are readable to every uid: normalize modes on publish and apply, fix older versions at agent start, name unreadable files in the copy error"
+            "commit": "bc53025",
+            "subject": "Merge branch 'app-allowed-owners'"
           },
           {
-            "commit": "5600acb",
-            "subject": "Merge branch 'self-update'"
+            "commit": "bde59d5",
+            "subject": "Merge branch 'migrate-retry'"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-24",
+        "code": 3,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "727ef52",
+            "subject": "Merge branch 'discord-channels-fold'"
+          },
+          {
+            "commit": "fbb327d",
+            "subject": "Merge branch 'discord-attachments'"
+          },
+          {
+            "commit": "7c5feb9",
+            "subject": "Merge branch 'discord-find-search'"
           }
         ]
       }
@@ -433,5 +452,5 @@
   "releases": [],
   "roadmap_history": [],
   "history": [],
-  "updated_at": "2026-11-23T15:31:39+00:00"
+  "updated_at": "2026-11-24T02:30:33+00:00"
 }

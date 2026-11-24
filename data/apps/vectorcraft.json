@@ -537,7 +537,7 @@
   },
   "roadmap": {
     "revisions": 259,
-    "revisions_7d": 17,
+    "revisions_7d": 16,
     "last_revision": {
       "ts": "2026-11-19T22:45:42Z",
       "kind": "content",
@@ -557,21 +557,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 29.0,
+    "score": 26.1,
     "active_days_7d": 7,
-    "changes_7d": 614,
-    "changes_14d": 1912,
-    "housekeeping_7d": 17,
+    "changes_7d": 506,
+    "changes_14d": 1837,
+    "housekeeping_7d": 18,
     "last_code_change": {
-      "ts": "2026-11-23T06:33:44Z",
-      "commit": "cd13884",
-      "commit_full": "cd1388444831995b6438e98a5699c6b54752e2d8",
-      "subject": "metafile: take WMF and EMF unit facts from craft-metafile (craft-libs#778) (#9144)"
+      "ts": "2026-11-24T02:03:43Z",
+      "commit": "3935fcb",
+      "commit_full": "3935fcb28cb19b5c9a5723f27ee22141f9df09d3",
+      "subject": "Tests: the native Appearance window's Delete test presses the Fill row's empty space just right of its label, found from the label's rect, instead of a fixed of"
     },
-    "last_commit_ts": "2026-11-23T14:34:26Z",
+    "last_commit_ts": "2026-11-24T02:03:43Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
-      81,
       123,
       254,
       240,
@@ -584,6 +583,7 @@
       19,
       38,
       47,
+      6,
       4
     ],
     "days": [
@@ -1602,20 +1602,39 @@
       },
       {
         "d": "2026-11-23",
-        "code": 4,
-        "other": 2,
+        "code": 6,
+        "other": 4,
         "samples": [
+          {
+            "commit": "ce5af98",
+            "subject": "Fix #6929: NHM Writer's legacy Tamil keymaps (symbol fonts) type their characters on Windows (#6930)"
+          },
+          {
+            "commit": "5688239",
+            "subject": "Merge pull request #9179 from dotCooCoo/fix/scriptcheck-unread-code-folder"
+          },
           {
             "commit": "cd13884",
             "subject": "metafile: take WMF and EMF unit facts from craft-metafile (craft-libs#778) (#9144)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-24",
+        "code": 4,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "3935fcb",
+            "subject": "Tests: the native Appearance window's Delete test presses the Fill row's empty space just right of its label, found from the label's rect, instead of a fixed of"
           },
           {
-            "commit": "0b25f2a",
-            "subject": "deps: pin all craft-libs crates to 205042e (craft-libs#778) (#9160)"
+            "commit": "bcb3de2",
+            "subject": "Tests: the wheel-drag test finds the handles from the rows and the wheel's size, as production's test did, since mid-drag the markers' names lag one move behind"
           },
           {
-            "commit": "15001f7",
-            "subject": "metafile: delegate QuickDraw PICT parsing to craft-metafile (#9123)"
+            "commit": "d2871a0",
+            "subject": "Tests: space_moves_a_text_edit_zoom_marquee_after_cmd_is_let_go presses on the canvas just under the Contextual Task Bar, read from the frame's accessibility tr"
           }
         ]
       }
@@ -8634,5 +8653,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-23T15:29:31+00:00"
+  "updated_at": "2026-11-24T02:29:04+00:00"
 }

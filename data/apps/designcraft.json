@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/designcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "a6d82e9",
-  "latest_commit_date": "2026-11-21T13:00:28-05:00",
-  "latest_message": "Images: decode TIFF screen and link proxies at a reduced size (#2381) (#3016)",
+  "latest_commit": "211b667",
+  "latest_commit_date": "2026-11-23T09:39:36-06:00",
+  "latest_message": "Text: validate explicit targets before reading or editing a story (#1809)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -476,7 +476,7 @@
     "value_since": "2026-10-10T18:09:17Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 227,
+    "revisions_since": 228,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -484,42 +484,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 228,
-    "revisions_7d": 7,
+    "revisions": 229,
+    "revisions_7d": 8,
     "last_revision": {
-      "ts": "2026-11-21T18:00:28Z",
+      "ts": "2026-11-23T15:39:36Z",
       "kind": "content",
-      "commit": "a6d82e9",
-      "commit_full": "a6d82e9a3c65507b19c788cc4395ece38adb2f7d",
-      "message": "Images: decode TIFF screen and link proxies at a reduced size (#2381) (#3016)"
+      "commit": "211b667",
+      "commit_full": "211b6675942e9dada1a73ce7120fea25e8a36a38",
+      "message": "Text: validate explicit targets before reading or editing a story (#1809)"
     },
     "last_update": {
-      "ts": "2026-11-21T18:00:28Z",
+      "ts": "2026-11-23T15:39:36Z",
       "kind": "content",
-      "commit": "a6d82e9",
-      "commit_full": "a6d82e9a3c65507b19c788cc4395ece38adb2f7d",
-      "message": "Images: decode TIFF screen and link proxies at a reduced size (#2381) (#3016)"
+      "commit": "211b667",
+      "commit_full": "211b6675942e9dada1a73ce7120fea25e8a36a38",
+      "message": "Text: validate explicit targets before reading or editing a story (#1809)"
     },
     "self_reported": "2026-11-15"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 12.4,
-    "active_days_7d": 7,
-    "changes_7d": 35,
-    "changes_14d": 159,
-    "housekeeping_7d": 2,
+    "score": 11.7,
+    "active_days_7d": 6,
+    "changes_7d": 40,
+    "changes_14d": 160,
+    "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-23T00:16:50Z",
-      "commit": "d3190ef",
-      "commit_full": "d3190ef798460d8f75bb54505266c4c8f5ba144c",
-      "subject": "images: read JPEG EXIF orientation through the shared strict reader (craft-libs#778) (#3149)"
+      "ts": "2026-11-23T18:38:03Z",
+      "commit": "7fc6b09",
+      "commit_full": "7fc6b09707fc349e8e2f0b849624929fa05c3a49",
+      "subject": "Layers: Delete Unused Layers keeps layers used by grouped and anchored objects (#3184)"
     },
-    "last_commit_ts": "2026-11-23T14:33:36Z",
+    "last_commit_ts": "2026-11-23T19:44:55Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
-      5,
       21,
       56,
       5,
@@ -532,7 +531,8 @@
       5,
       6,
       2,
-      1
+      7,
+      0
     ],
     "days": [
       {
@@ -1482,18 +1482,43 @@
       },
       {
         "d": "2026-11-23",
-        "code": 1,
-        "other": 1,
+        "code": 7,
+        "other": 4,
         "samples": [
           {
-            "commit": "d3190ef",
-            "subject": "images: read JPEG EXIF orientation through the shared strict reader (craft-libs#778) (#3149)"
+            "commit": "7fc6b09",
+            "subject": "Layers: Delete Unused Layers keeps layers used by grouped and anchored objects (#3184)"
+          },
+          {
+            "commit": "211b667",
+            "subject": "Text: validate explicit targets before reading or editing a story (#1809)"
+          },
+          {
+            "commit": "bbd4b33",
+            "subject": "Edit: cutting an object clears an earlier text copy (#3158)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.21.1",
+      "name": "DesignCraft v0.21.1",
+      "ts": "2026-11-23T20:22:22Z",
+      "url": "https://github.com/storytold/designcraft/releases/tag/v0.21.1",
+      "changes": 155,
+      "new_contributors": 8,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.20.1",
       "name": "DesignCraft v0.20.1",
@@ -1671,23 +1696,6 @@
       "url": "https://github.com/storytold/designcraft/releases/tag/v0.13.0",
       "changes": 101,
       "new_contributors": 3,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.12.0",
-      "name": "DesignCraft v0.12.0",
-      "ts": "2026-10-22T20:50:19Z",
-      "url": "https://github.com/storytold/designcraft/releases/tag/v0.12.0",
-      "changes": 24,
-      "new_contributors": 2,
       "platforms": [
         "macOS",
         "Windows",
@@ -6944,7 +6952,30 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "211b667",
+      "commit_full": "211b6675942e9dada1a73ce7120fea25e8a36a38",
+      "commit_date": "2026-11-23T09:39:36-06:00",
+      "ts": "2026-11-23T15:39:36Z",
+      "message": "Text: validate explicit targets before reading or editing a story (#1809)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-15",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-23T15:30:05+00:00"
+  "updated_at": "2026-11-24T02:29:30+00:00"
 }

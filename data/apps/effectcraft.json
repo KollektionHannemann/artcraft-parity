@@ -378,21 +378,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.5,
-    "active_days_7d": 7,
-    "changes_7d": 107,
-    "changes_14d": 279,
-    "housekeeping_7d": 3,
+    "score": 15.4,
+    "active_days_7d": 6,
+    "changes_7d": 92,
+    "changes_14d": 255,
+    "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-23T14:02:47Z",
-      "commit": "e981c45",
-      "commit_full": "e981c45d031448b87ac414128c3c441ba922ecf2",
-      "subject": "media: open YUV4MPEG2 through the shared craft-media-source reader (#4109)"
+      "ts": "2026-11-23T17:07:49Z",
+      "commit": "53f1312",
+      "commit_full": "53f1312448b9d87ddf9d4ec7ce62112a02da6fa9",
+      "subject": "fix(media): queue source decode roots before entering Rayon (#4074) (#4110)"
     },
-    "last_commit_ts": "2026-11-23T14:33:40Z",
+    "last_commit_ts": "2026-11-23T19:45:01Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
-      26,
       53,
       27,
       10,
@@ -405,7 +404,8 @@
       9,
       49,
       6,
-      3
+      5,
+      0
     ],
     "days": [
       {
@@ -1345,26 +1345,43 @@
       },
       {
         "d": "2026-11-23",
-        "code": 3,
-        "other": 1,
+        "code": 5,
+        "other": 4,
         "samples": [
+          {
+            "commit": "53f1312",
+            "subject": "fix(media): queue source decode roots before entering Rayon (#4074) (#4110)"
+          },
+          {
+            "commit": "e17252b",
+            "subject": "fix(gpu): bring the colour kernel's cold compile time back to release level (#4111)"
+          },
           {
             "commit": "e981c45",
             "subject": "media: open YUV4MPEG2 through the shared craft-media-source reader (#4109)"
-          },
-          {
-            "commit": "1738360",
-            "subject": "export: write Targa sequences through craft-tga (craft-libs#778) (#4105)"
-          },
-          {
-            "commit": "d7c7d0d",
-            "subject": "chore(deps): move EffectCraft's media pins to craft-libs 33be3562 and FilmCraft e7345f6e (#4104)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.25.1",
+      "name": "EffectCraft v0.25.1",
+      "ts": "2026-11-23T21:25:21Z",
+      "url": "https://github.com/storytold/effectcraft/releases/tag/v0.25.1",
+      "changes": 212,
+      "new_contributors": 4,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.24.1",
       "name": "EffectCraft v0.24.1",
@@ -1542,23 +1559,6 @@
       "url": "https://github.com/storytold/effectcraft/releases/tag/v0.17.0",
       "changes": 99,
       "new_contributors": 15,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.16.0",
-      "name": "EffectCraft v0.16.0",
-      "ts": "2026-10-23T00:35:00Z",
-      "url": "https://github.com/storytold/effectcraft/releases/tag/v0.16.0",
-      "changes": 2,
-      "new_contributors": null,
       "platforms": [
         "macOS",
         "Windows",
@@ -1964,5 +1964,5 @@
       "kind": "editorial"
     }
   ],
-  "updated_at": "2026-11-23T15:30:00+00:00"
+  "updated_at": "2026-11-24T02:29:26+00:00"
 }

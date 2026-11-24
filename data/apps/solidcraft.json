@@ -46,7 +46,7 @@
   },
   "roadmap": {
     "revisions": 201,
-    "revisions_7d": 4,
+    "revisions_7d": 3,
     "last_revision": {
       "ts": "2026-11-22T18:27:37Z",
       "kind": "content",
@@ -66,21 +66,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 38.7,
+    "score": 36.3,
     "active_days_7d": 7,
-    "changes_7d": 1212,
-    "changes_14d": 2629,
-    "housekeeping_7d": 28,
+    "changes_7d": 1193,
+    "changes_14d": 2552,
+    "housekeeping_7d": 30,
     "last_code_change": {
-      "ts": "2026-11-23T14:55:19Z",
-      "commit": "27e6085",
-      "commit_full": "27e60854bdd363b6803fbd309fa1d27db76190c3",
-      "subject": "Sweep: a body face can be the profile, like in Extrude and Revolve (#14456) (#20933)"
+      "ts": "2026-11-24T01:57:03Z",
+      "commit": "0717f2d",
+      "commit_full": "0717f2d93bab393879605ebdbe2a27e26d5ca925",
+      "subject": "Motion: a study's collision check runs in the background, so the window keeps answering (#15333) (#20852)"
     },
-    "last_commit_ts": "2026-11-23T14:55:19Z",
+    "last_commit_ts": "2026-11-24T01:57:03Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
-      239,
       149,
       191,
       203,
@@ -93,7 +92,8 @@
       189,
       120,
       203,
-      127
+      272,
+      17
     ],
     "days": [
       {
@@ -991,26 +991,62 @@
       },
       {
         "d": "2026-11-23",
-        "code": 127,
-        "other": 2,
+        "code": 272,
+        "other": 9,
         "samples": [
           {
-            "commit": "27e6085",
-            "subject": "Sweep: a body face can be the profile, like in Extrude and Revolve (#14456) (#20933)"
+            "commit": "0c4245c",
+            "subject": "solidcore: solve each closest point once in curve_on_surfaces (#21413)"
           },
           {
-            "commit": "53ee473",
-            "subject": "Shell: a refused wall names a thinner wall only after building it, and says plainly when none builds (#20781) (#20794)"
+            "commit": "8912754",
+            "subject": "solidcore: interval product from the two ends the signs pick (#21412)"
           },
           {
-            "commit": "fd5d368",
-            "subject": "Windows: an auto-hide taskbar reappears over a maximized SolidCraft window (#18493)"
+            "commit": "8e33e72",
+            "subject": "Plugins: a new plugin version's first file opens in seconds, and later sessions load its fast code (#21089)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-24",
+        "code": 17,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "0717f2d",
+            "subject": "Motion: a study's collision check runs in the background, so the window keeps answering (#15333) (#20852)"
+          },
+          {
+            "commit": "6a13827",
+            "subject": "solidcore: retire the fillet_refuse_overlapping_bands flag (#18915) (#21285)"
+          },
+          {
+            "commit": "2ccc1c7",
+            "subject": "Serve control requests without waiting for a window frame (#743) (#7978)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.48.0",
+      "name": "SolidCraft v0.48.0",
+      "ts": "2026-11-24T02:13:34Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.48.0",
+      "changes": 283,
+      "new_contributors": 9,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.47.0-nightly.20261123.157.1",
       "name": "SolidCraft v0.47.0-nightly.20261123.157.1 (nightly)",
@@ -1188,23 +1224,6 @@
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.45.0-rc.4",
       "changes": 63,
       "new_contributors": 3,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": true,
-      "source": "release",
-      "kind": null
-    },
-    {
-      "tag": "v0.45.0-rc.3",
-      "name": "SolidCraft v0.45.0-rc.3",
-      "ts": "2026-11-18T17:47:13Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.45.0-rc.3",
-      "changes": 34,
-      "new_contributors": null,
       "platforms": [
         "macOS",
         "Windows",
@@ -2626,5 +2645,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-23T15:31:21+00:00"
+  "updated_at": "2026-11-24T02:30:24+00:00"
 }

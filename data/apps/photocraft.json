@@ -352,7 +352,7 @@
   "parity": {
     "tracked_since": "2026-10-10T19:09:04Z",
     "value_since": "2026-10-10T19:09:04Z",
-    "releases_since": 12,
+    "releases_since": 11,
     "releases_since_capped": true,
     "revisions_since": 11,
     "hours_since": null,
@@ -383,21 +383,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 23.8,
+    "score": 21.1,
     "active_days_7d": 7,
     "changes_7d": 161,
-    "changes_14d": 659,
-    "housekeeping_7d": 17,
+    "changes_14d": 591,
+    "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-11-23T14:49:12Z",
-      "commit": "033ed7d",
-      "commit_full": "033ed7d34c3d8b079498bd522434f6220563a2e2",
-      "subject": "Show fonts installed while PhotoCraft runs without a restart (#16063)"
+      "ts": "2026-11-24T00:42:14Z",
+      "commit": "089ce87",
+      "commit_full": "089ce879e03752530150e3281f027f49189538f7",
+      "subject": "Engine tests and split scripts before the vector cut (#16587)"
     },
-    "last_commit_ts": "2026-11-23T14:49:12Z",
+    "last_commit_ts": "2026-11-24T00:42:14Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
-      75,
       180,
       45,
       74,
@@ -410,7 +409,8 @@
       20,
       12,
       25,
-      13
+      18,
+      2
     ],
     "days": [
       {
@@ -1441,26 +1441,58 @@
       },
       {
         "d": "2026-11-23",
-        "code": 13,
-        "other": 3,
+        "code": 18,
+        "other": 5,
         "samples": [
           {
-            "commit": "033ed7d",
-            "subject": "Show fonts installed while PhotoCraft runs without a restart (#16063)"
+            "commit": "88b71cb",
+            "subject": "Add the Apple-silicon Nightly build (#16559)"
           },
           {
-            "commit": "b0b1718",
-            "subject": "Drop a link scan taken against the old folder after Save As (#16499)"
+            "commit": "f078999",
+            "subject": "Engine split step 7: the paint crate (photocraft-engine-paint) (#16539)"
           },
           {
-            "commit": "6f20a6b",
-            "subject": "gpu, camera_raw: develop Detail on the GPU using craft_develop (#13519, #587) (#16480)"
+            "commit": "5d3bca7",
+            "subject": "Merge queue batch: 8 PRs (#15400, #15435, #15289, #15060, #15352, #15355, #15383, #15629) (#16408)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-24",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "089ce87",
+            "subject": "Engine tests and split scripts before the vector cut (#16587)"
+          },
+          {
+            "commit": "a545419",
+            "subject": "Prepare dormant PhotoCraft release-ref nightly callers (#16459)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.24.0-rc.1",
+      "name": "PhotoCraft v0.24.0-rc.1",
+      "ts": "2026-11-23T21:48:45Z",
+      "url": "https://github.com/storytold/photocraft/releases/tag/v0.24.0-rc.1",
+      "changes": 649,
+      "new_contributors": 14,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.23.1",
       "name": "PhotoCraft v0.23.1",
@@ -1638,23 +1670,6 @@
       "url": "https://github.com/storytold/photocraft/releases/tag/v0.15.1",
       "changes": 28,
       "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.14.0",
-      "name": "PhotoCraft v0.14.0",
-      "ts": "2026-10-23T00:43:42Z",
-      "url": "https://github.com/storytold/photocraft/releases/tag/v0.14.0",
-      "changes": 8,
-      "new_contributors": 1,
       "platforms": [
         "macOS",
         "Windows",
@@ -1945,5 +1960,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-23T15:29:17+00:00"
+  "updated_at": "2026-11-24T02:28:54+00:00"
 }

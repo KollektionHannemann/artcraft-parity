@@ -37,21 +37,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 10.4,
-    "active_days_7d": 5,
-    "changes_7d": 45,
-    "changes_14d": 137,
-    "housekeeping_7d": 4,
+    "score": 11.1,
+    "active_days_7d": 6,
+    "changes_7d": 37,
+    "changes_14d": 122,
+    "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-21T20:41:22Z",
-      "commit": "2df7775",
-      "commit_full": "2df7775907d1458ce653e7e6314ec8a5d7d565f5",
-      "subject": "docs(review): principal-engineer review of AniCraft's own decisions, with seven fixes (M8) (#525)"
+      "ts": "2026-11-24T02:03:49Z",
+      "commit": "837c3ed",
+      "commit_full": "837c3edfd69956a41c1bda21db2718a67dfb5ee6",
+      "subject": "feat(text): mixed directions read right, and letters a font lacks come from a fallback face (M5) (#598)"
     },
-    "last_commit_ts": "2026-11-23T14:33:09Z",
+    "last_commit_ts": "2026-11-24T02:03:49Z",
     "repo_since": "2026-11-06T06:58:25Z",
     "window": [
-      19,
       18,
       17,
       14,
@@ -64,7 +63,8 @@
       9,
       3,
       0,
-      0
+      1,
+      3
     ],
     "days": [
       {
@@ -354,9 +354,33 @@
       },
       {
         "d": "2026-11-23",
-        "code": 0,
-        "other": 1,
-        "samples": []
+        "code": 1,
+        "other": 3,
+        "samples": [
+          {
+            "commit": "49b6331",
+            "subject": "fix(test): reliability pass: a render-cache race fixed, the command fuzz split per start (M8) (#557)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-24",
+        "code": 3,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "837c3ed",
+            "subject": "feat(text): mixed directions read right, and letters a font lacks come from a fallback face (M5) (#598)"
+          },
+          {
+            "commit": "59b195b",
+            "subject": "fix(brush): a long Brush stroke never freezes the window; Free Transform on a skewed symbol tested (M8) (#559)"
+          },
+          {
+            "commit": "766b867",
+            "subject": "fix(doc): a work allowance nothing nests past, guided shape-tween outlines, and small fixes from outside (M8) (#558)"
+          }
+        ]
       }
     ]
   },
@@ -412,5 +436,5 @@
   ],
   "roadmap_history": [],
   "history": [],
-  "updated_at": "2026-11-23T15:31:23+00:00"
+  "updated_at": "2026-11-24T02:30:25+00:00"
 }

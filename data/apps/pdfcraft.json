@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "3f3b3e6",
-  "latest_commit_date": "2026-11-20T18:10:17+07:00",
-  "latest_message": "Adopt the shared AGENTS.md (RFC-0072) (#7937)",
+  "latest_commit": "97d53c4",
+  "latest_commit_date": "2026-11-23T15:01:26-05:00",
+  "latest_message": "Land the craft framework UI port (#8160)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 154,
+    "revisions_since": 155,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,42 +476,41 @@
     }
   },
   "roadmap": {
-    "revisions": 244,
-    "revisions_7d": 2,
+    "revisions": 245,
+    "revisions_7d": 3,
     "last_revision": {
-      "ts": "2026-11-20T11:10:17Z",
+      "ts": "2026-11-23T20:01:26Z",
       "kind": "content",
-      "commit": "3f3b3e6",
-      "commit_full": "3f3b3e634aa84a5667f40fa14515aa71b101339f",
-      "message": "Adopt the shared AGENTS.md (RFC-0072) (#7937)"
+      "commit": "97d53c4",
+      "commit_full": "97d53c471d43be444ab02a9b7026be057229cb28",
+      "message": "Land the craft framework UI port (#8160)"
     },
     "last_update": {
-      "ts": "2026-11-20T11:10:17Z",
+      "ts": "2026-11-23T20:01:26Z",
       "kind": "content",
-      "commit": "3f3b3e6",
-      "commit_full": "3f3b3e634aa84a5667f40fa14515aa71b101339f",
-      "message": "Adopt the shared AGENTS.md (RFC-0072) (#7937)"
+      "commit": "97d53c4",
+      "commit_full": "97d53c471d43be444ab02a9b7026be057229cb28",
+      "message": "Land the craft framework UI port (#8160)"
     },
     "self_reported": "2026-11-16"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 12.3,
-    "active_days_7d": 6,
-    "changes_7d": 73,
-    "changes_14d": 228,
-    "housekeeping_7d": 4,
+    "score": 11.0,
+    "active_days_7d": 5,
+    "changes_7d": 71,
+    "changes_14d": 170,
+    "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-23T01:29:51Z",
-      "commit": "993889a",
-      "commit_full": "993889aff1d29965a2fa86ebaaf6005386ef5ff7",
-      "subject": "fix(packaging): keep the macOS signing keychain after a successful import (#8110)"
+      "ts": "2026-11-23T21:07:14Z",
+      "commit": "6e91067",
+      "commit_full": "6e910675c68dd5092e889065cfe8d0274c1b2742",
+      "subject": "CI: clippy clean on all targets; fix the Windows print dialog build (#8168)"
     },
-    "last_commit_ts": "2026-11-23T14:34:10Z",
+    "last_commit_ts": "2026-11-23T21:07:14Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
-      62,
       45,
       5,
       14,
@@ -524,7 +523,8 @@
       15,
       0,
       1,
-      1
+      5,
+      0
     ],
     "days": [
       {
@@ -1515,12 +1515,20 @@
       },
       {
         "d": "2026-11-23",
-        "code": 1,
-        "other": 2,
+        "code": 5,
+        "other": 4,
         "samples": [
           {
-            "commit": "993889a",
-            "subject": "fix(packaging): keep the macOS signing keychain after a successful import (#8110)"
+            "commit": "6e91067",
+            "subject": "CI: clippy clean on all targets; fix the Windows print dialog build (#8168)"
+          },
+          {
+            "commit": "c2764c9",
+            "subject": "parity: point evidence at the craft-port UI tests (#8165)"
+          },
+          {
+            "commit": "cbe6790",
+            "subject": "CI: pin the shared PDF reader check to craft-libs 0a6e42b80 (#8163)"
           }
         ]
       }
@@ -7345,7 +7353,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "97d53c4",
+      "commit_full": "97d53c471d43be444ab02a9b7026be057229cb28",
+      "commit_date": "2026-11-23T15:01:26-05:00",
+      "ts": "2026-11-23T20:01:26Z",
+      "message": "Land the craft framework UI port (#8160)",
+      "stage": null,
+      "next_stage": null,
+      "last_updated": "2026-11-16",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-23T15:29:53+00:00"
+  "updated_at": "2026-11-24T02:29:21+00:00"
 }

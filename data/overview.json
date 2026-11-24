@@ -22,6 +22,50 @@
       "id": "solidcraft",
       "name": "SolidCraft",
       "type": "release",
+      "ts": "2026-11-24T02:13:34Z",
+      "tag": "v0.48.0",
+      "kind": "minor",
+      "changes": 283,
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.48.0",
+      "prerelease": true
+    },
+    {
+      "id": "photocraft",
+      "name": "PhotoCraft",
+      "type": "release",
+      "ts": "2026-11-23T21:48:45Z",
+      "tag": "v0.24.0-rc.1",
+      "kind": "minor",
+      "changes": 649,
+      "url": "https://github.com/storytold/photocraft/releases/tag/v0.24.0-rc.1",
+      "prerelease": true
+    },
+    {
+      "id": "effectcraft",
+      "name": "EffectCraft",
+      "type": "release",
+      "ts": "2026-11-23T21:25:21Z",
+      "tag": "v0.25.1",
+      "kind": "minor",
+      "changes": 212,
+      "url": "https://github.com/storytold/effectcraft/releases/tag/v0.25.1",
+      "prerelease": false
+    },
+    {
+      "id": "designcraft",
+      "name": "DesignCraft",
+      "type": "release",
+      "ts": "2026-11-23T20:22:22Z",
+      "tag": "v0.21.1",
+      "kind": "minor",
+      "changes": 155,
+      "url": "https://github.com/storytold/designcraft/releases/tag/v0.21.1",
+      "prerelease": false
+    },
+    {
+      "id": "solidcraft",
+      "name": "SolidCraft",
+      "type": "release",
       "ts": "2026-11-23T05:41:46Z",
       "tag": "v0.47.0-nightly.20261123.157.1",
       "kind": "patch",
@@ -61,17 +105,6 @@
       "changes": null,
       "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.15.0",
       "prerelease": false
-    },
-    {
-      "id": "solidcraft",
-      "name": "SolidCraft",
-      "type": "release",
-      "ts": "2026-11-22T05:40:55Z",
-      "tag": "v0.46.2-nightly.20261122.155.1",
-      "kind": "patch",
-      "changes": 4,
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.46.2-nightly.20261122.155.1",
-      "prerelease": true
     },
     {
       "id": "mailcraft",
@@ -420,51 +453,18 @@
       "changes": 10,
       "url": "https://github.com/storytold/designcraft/releases/tag/v0.20.0",
       "prerelease": false
-    },
-    {
-      "id": "cadcraft",
-      "name": "CADCraft",
-      "type": "release",
-      "ts": "2026-11-11T16:31:01Z",
-      "tag": "v0.20.0",
-      "kind": "minor",
-      "changes": 16,
-      "url": "https://github.com/storytold/cadcraft/releases/tag/v0.20.0",
-      "prerelease": false
-    },
-    {
-      "id": "texturecraft",
-      "name": "TextureCraft",
-      "type": "release",
-      "ts": "2026-11-11T16:25:02Z",
-      "tag": "v0.6.0",
-      "kind": "minor",
-      "changes": 24,
-      "url": "https://github.com/storytold/texturecraft/releases/tag/v0.6.0",
-      "prerelease": false
-    },
-    {
-      "id": "deckcraft",
-      "name": "DeckCraft",
-      "type": "release",
-      "ts": "2026-11-11T16:16:55Z",
-      "tag": "v0.18.0",
-      "kind": "minor",
-      "changes": 12,
-      "url": "https://github.com/storytold/deckcraft/releases/tag/v0.18.0",
-      "prerelease": false
     }
   ],
   "release_waves": [
     {
       "day": "2026-11-23",
-      "apps": 2,
-      "changes": 130,
+      "apps": 4,
+      "changes": 497,
       "largest": {
-        "id": "pdfcraft",
-        "name": "PdfCraft",
-        "tag": "v0.22.0",
-        "changes": 130
+        "id": "effectcraft",
+        "name": "EffectCraft",
+        "tag": "v0.25.1",
+        "changes": 212
       }
     },
     {
@@ -553,7 +553,7 @@
       },
       "roadmap": {
         "revisions": 259,
-        "revisions_7d": 17,
+        "revisions_7d": 16,
         "last_revision": {
           "ts": "2026-11-19T22:45:42Z",
           "kind": "content",
@@ -573,21 +573,20 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 29.0,
+        "score": 26.1,
         "active_days_7d": 7,
-        "changes_7d": 614,
-        "changes_14d": 1912,
-        "housekeeping_7d": 17,
+        "changes_7d": 506,
+        "changes_14d": 1837,
+        "housekeeping_7d": 18,
         "last_code_change": {
-          "ts": "2026-11-23T06:33:44Z",
-          "commit": "cd13884",
-          "commit_full": "cd1388444831995b6438e98a5699c6b54752e2d8",
-          "subject": "metafile: take WMF and EMF unit facts from craft-metafile (craft-libs#778) (#9144)"
+          "ts": "2026-11-24T02:03:43Z",
+          "commit": "3935fcb",
+          "commit_full": "3935fcb28cb19b5c9a5723f27ee22141f9df09d3",
+          "subject": "Tests: the native Appearance window's Delete test presses the Fill row's empty space just right of its label, found from the label's rect, instead of a fixed of"
         },
-        "last_commit_ts": "2026-11-23T14:34:26Z",
+        "last_commit_ts": "2026-11-24T02:03:43Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
-          81,
           123,
           254,
           240,
@@ -600,6 +599,7 @@
           19,
           38,
           47,
+          6,
           4
         ]
       },
@@ -702,21 +702,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.9,
-        "active_days_7d": 7,
-        "changes_7d": 69,
-        "changes_14d": 121,
-        "housekeeping_7d": 2,
+        "score": 13.2,
+        "active_days_7d": 6,
+        "changes_7d": 66,
+        "changes_14d": 116,
+        "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-23T02:29:48Z",
-          "commit": "2525239",
-          "commit_full": "25252399dbe948c3a1d876aca7dbe63d86a1be20",
-          "subject": "build: pin craft-libs to main 2be967e (craft-libs#778) (#4670)"
+          "ts": "2026-11-23T19:39:04Z",
+          "commit": "44f67fe",
+          "commit_full": "44f67feaad7461f36cd2a6da9effd60b8757a5b1",
+          "subject": "LR-BEHAV-RENDER-FIDELITY: process V13, Shadows / negative Texture / Global wheel measured against Lightroom (#523) (#3923)"
         },
-        "last_commit_ts": "2026-11-23T14:34:00Z",
+        "last_commit_ts": "2026-11-23T19:45:22Z",
         "repo_since": "2026-09-30T14:04:12Z",
         "window": [
-          6,
           9,
           7,
           1,
@@ -729,7 +728,8 @@
           20,
           9,
           11,
-          3
+          4,
+          0
         ]
       },
       "release": {
@@ -823,7 +823,7 @@
       },
       "roadmap": {
         "revisions": 628,
-        "revisions_7d": 23,
+        "revisions_7d": 17,
         "last_revision": {
           "ts": "2026-11-21T17:00:25Z",
           "kind": "content",
@@ -843,21 +843,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 16.6,
+        "score": 16.9,
         "active_days_7d": 6,
-        "changes_7d": 115,
-        "changes_14d": 194,
-        "housekeeping_7d": 10,
+        "changes_7d": 65,
+        "changes_14d": 198,
+        "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-23T13:48:51Z",
-          "commit": "6837508",
-          "commit_full": "6837508ec9cba5f594e2a5477758798ec860f89d",
-          "subject": "i18n audit: ignore clock data and URLs, and never call GitHub (#7463) (#7487)"
+          "ts": "2026-11-24T01:50:21Z",
+          "commit": "bf2be3c",
+          "commit_full": "bf2be3cad86d6c6a72d604676ab6ff3f0aa9478d",
+          "subject": "fix(dialogs): adapt chart types tile grid to craft-libs GridZoom API (#7697) (#7698)"
         },
-        "last_commit_ts": "2026-11-23T14:34:31Z",
+        "last_commit_ts": "2026-11-24T01:50:21Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
-          5,
           19,
           4,
           11,
@@ -870,7 +869,8 @@
           11,
           9,
           18,
-          3
+          5,
+          7
         ]
       },
       "release": {
@@ -931,7 +931,7 @@
         "value_since": "2026-11-17T01:08:16Z",
         "releases_since": 0,
         "releases_since_capped": false,
-        "revisions_since": 2,
+        "revisions_since": 3,
         "hours_since": null,
         "areas_since": null,
         "changes": 0,
@@ -939,42 +939,41 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 3,
-        "revisions_7d": 2,
+        "revisions": 4,
+        "revisions_7d": 1,
         "last_revision": {
-          "ts": "2026-11-17T16:19:04Z",
+          "ts": "2026-11-23T21:55:24Z",
           "kind": "content",
-          "commit": "1bdca09",
-          "commit_full": "1bdca09fc0bbc9bb1db4d8c71e01152c07dedff0",
-          "message": "Import a folder, files or zip of PBR textures as one fill layer (#263)"
+          "commit": "2037b6b",
+          "commit_full": "2037b6b823d41b94938be483e7f3aa5ebeb07ace",
+          "message": "Export OpenPBR MaterialX from the export window (#784)"
         },
         "last_update": {
-          "ts": "2026-11-17T16:19:04Z",
+          "ts": "2026-11-23T21:55:24Z",
           "kind": "content",
-          "commit": "1bdca09",
-          "commit_full": "1bdca09fc0bbc9bb1db4d8c71e01152c07dedff0",
-          "message": "Import a folder, files or zip of PBR textures as one fill layer (#263)"
+          "commit": "2037b6b",
+          "commit_full": "2037b6b823d41b94938be483e7f3aa5ebeb07ace",
+          "message": "Export OpenPBR MaterialX from the export window (#784)"
         },
         "self_reported": "2026-11-16"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.2,
-        "active_days_7d": 7,
-        "changes_7d": 66,
-        "changes_14d": 128,
+        "score": 12.8,
+        "active_days_7d": 6,
+        "changes_7d": 50,
+        "changes_14d": 120,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-23T08:02:45Z",
-          "commit": "2e8337e",
-          "commit_full": "2e8337ed62860ec2a5e14eddb221c96735f406ee",
-          "subject": "Properties (5/5, stacked on #764): filters (#765)"
+          "ts": "2026-11-23T21:55:24Z",
+          "commit": "2037b6b",
+          "commit_full": "2037b6b823d41b94938be483e7f3aa5ebeb07ace",
+          "subject": "Export OpenPBR MaterialX from the export window (#784)"
         },
-        "last_commit_ts": "2026-11-23T14:34:20Z",
+        "last_commit_ts": "2026-11-23T21:55:24Z",
         "repo_since": "2026-10-14T18:33:13Z",
         "window": [
-          10,
           10,
           8,
           9,
@@ -987,7 +986,8 @@
           18,
           8,
           5,
-          2
+          4,
+          0
         ]
       },
       "release": {
@@ -1013,11 +1013,11 @@
           "v": 60.0
         },
         {
-          "t": "2026-11-17T16:19:04Z",
+          "t": "2026-11-23T21:55:24Z",
           "v": 60.0
         }
       ],
-      "history_len": 3
+      "history_len": 4
     },
     {
       "repo_url": "https://github.com/storytold/filmcraft",
@@ -1080,21 +1080,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.7,
-        "active_days_7d": 7,
-        "changes_7d": 37,
-        "changes_14d": 145,
-        "housekeeping_7d": 2,
+        "score": 11.4,
+        "active_days_7d": 6,
+        "changes_7d": 34,
+        "changes_14d": 140,
+        "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-23T03:13:53Z",
-          "commit": "17221b5",
-          "commit_full": "17221b5d90d2d44f8dd4985c6996f197309e1c5c",
-          "subject": "778: use the shared writer for 16-bit RGBA TIFF stills (#5192)"
+          "ts": "2026-11-23T23:33:20Z",
+          "commit": "ba6fe10",
+          "commit_full": "ba6fe10529c7bf5d2a9283f9de2e35c0ccff926c",
+          "subject": "export: GPU-rendered SDR exports read back the finished sRGB RGBA8 frame (1.6x faster NVENC export) (#2119)"
         },
-        "last_commit_ts": "2026-11-23T14:33:50Z",
+        "last_commit_ts": "2026-11-23T23:33:20Z",
         "repo_since": "2026-09-30T09:22:00Z",
         "window": [
-          6,
           28,
           13,
           11,
@@ -1107,7 +1106,8 @@
           3,
           5,
           4,
-          2
+          3,
+          0
         ]
       },
       "release": {
@@ -1171,7 +1171,7 @@
         "value_since": "2026-10-10T18:09:21Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 142,
+        "revisions_since": 143,
         "hours_since": null,
         "areas_since": {
           "up": 1,
@@ -1190,42 +1190,41 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 146,
-        "revisions_7d": 5,
+        "revisions": 147,
+        "revisions_7d": 6,
         "last_revision": {
-          "ts": "2026-11-22T22:59:10Z",
+          "ts": "2026-11-23T22:45:43Z",
           "kind": "content",
-          "commit": "7fbdc08",
-          "commit_full": "7fbdc085ebfd6ded43abd3d12a87377a7a0fa852",
-          "message": "#2069: WMF scale and offset mapping records place sub-pictures (#2266)"
+          "commit": "9db2fa0",
+          "commit_full": "9db2fa0ca994ad8ae8d9cc5032d860ae985477d5",
+          "message": "docs: bring ROADMAP.md current through 2026-11-15 (#2138)"
         },
         "last_update": {
-          "ts": "2026-11-22T22:59:10Z",
+          "ts": "2026-11-23T22:45:43Z",
           "kind": "content",
-          "commit": "7fbdc08",
-          "commit_full": "7fbdc085ebfd6ded43abd3d12a87377a7a0fa852",
-          "message": "#2069: WMF scale and offset mapping records place sub-pictures (#2266)"
+          "commit": "9db2fa0",
+          "commit_full": "9db2fa0ca994ad8ae8d9cc5032d860ae985477d5",
+          "message": "docs: bring ROADMAP.md current through 2026-11-15 (#2138)"
         },
         "self_reported": "2026-11-20"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 10.2,
-        "active_days_7d": 6,
-        "changes_7d": 32,
-        "changes_14d": 106,
-        "housekeeping_7d": 3,
+        "score": 8.3,
+        "active_days_7d": 5,
+        "changes_7d": 26,
+        "changes_14d": 103,
+        "housekeeping_7d": 5,
         "last_code_change": {
           "ts": "2026-11-22T22:59:10Z",
           "commit": "7fbdc08",
           "commit_full": "7fbdc085ebfd6ded43abd3d12a87377a7a0fa852",
           "subject": "#2069: WMF scale and offset mapping records place sub-pictures (#2266)"
         },
-        "last_commit_ts": "2026-11-23T14:33:31Z",
+        "last_commit_ts": "2026-11-23T22:45:43Z",
         "repo_since": "2026-10-06T02:13:02Z",
         "window": [
-          3,
           27,
           7,
           15,
@@ -1238,6 +1237,7 @@
           8,
           2,
           1,
+          0,
           0
         ]
       },
@@ -1264,11 +1264,11 @@
           "v": 55.0
         },
         {
-          "t": "2026-11-22T22:59:10Z",
+          "t": "2026-11-23T22:45:43Z",
           "v": 55.0
         }
       ],
-      "history_len": 146
+      "history_len": 147
     },
     {
       "repo_url": "https://github.com/storytold/figcraft",
@@ -1358,7 +1358,7 @@
       },
       "roadmap": {
         "revisions": 287,
-        "revisions_7d": 7,
+        "revisions_7d": 6,
         "last_revision": {
           "ts": "2026-11-19T00:12:03Z",
           "kind": "content",
@@ -1378,10 +1378,10 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 11.8,
-        "active_days_7d": 6,
-        "changes_7d": 78,
-        "changes_14d": 208,
+        "score": 9.6,
+        "active_days_7d": 5,
+        "changes_7d": 58,
+        "changes_14d": 206,
         "housekeeping_7d": 4,
         "last_code_change": {
           "ts": "2026-11-22T04:48:49Z",
@@ -1389,10 +1389,9 @@
           "commit_full": "bbf7ad418f3e02d89546a6c7b044e51df67177f0",
           "subject": "format: resolve Penpot media IDs per file (#2538)"
         },
-        "last_commit_ts": "2026-11-23T14:33:45Z",
+        "last_commit_ts": "2026-11-23T19:45:06Z",
         "repo_since": "2026-10-09T15:38:50Z",
         "window": [
-          2,
           17,
           66,
           36,
@@ -1405,6 +1404,7 @@
           8,
           1,
           3,
+          0,
           0
         ]
       },
@@ -1485,7 +1485,7 @@
         "value_since": "2026-10-15T06:21:11Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 154,
+        "revisions_since": 155,
         "hours_since": null,
         "areas_since": null,
         "changes": 1,
@@ -1502,42 +1502,41 @@
         }
       },
       "roadmap": {
-        "revisions": 244,
-        "revisions_7d": 2,
+        "revisions": 245,
+        "revisions_7d": 3,
         "last_revision": {
-          "ts": "2026-11-20T11:10:17Z",
+          "ts": "2026-11-23T20:01:26Z",
           "kind": "content",
-          "commit": "3f3b3e6",
-          "commit_full": "3f3b3e634aa84a5667f40fa14515aa71b101339f",
-          "message": "Adopt the shared AGENTS.md (RFC-0072) (#7937)"
+          "commit": "97d53c4",
+          "commit_full": "97d53c471d43be444ab02a9b7026be057229cb28",
+          "message": "Land the craft framework UI port (#8160)"
         },
         "last_update": {
-          "ts": "2026-11-20T11:10:17Z",
+          "ts": "2026-11-23T20:01:26Z",
           "kind": "content",
-          "commit": "3f3b3e6",
-          "commit_full": "3f3b3e634aa84a5667f40fa14515aa71b101339f",
-          "message": "Adopt the shared AGENTS.md (RFC-0072) (#7937)"
+          "commit": "97d53c4",
+          "commit_full": "97d53c471d43be444ab02a9b7026be057229cb28",
+          "message": "Land the craft framework UI port (#8160)"
         },
         "self_reported": "2026-11-16"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 12.3,
-        "active_days_7d": 6,
-        "changes_7d": 73,
-        "changes_14d": 228,
-        "housekeeping_7d": 4,
+        "score": 11.0,
+        "active_days_7d": 5,
+        "changes_7d": 71,
+        "changes_14d": 170,
+        "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-23T01:29:51Z",
-          "commit": "993889a",
-          "commit_full": "993889aff1d29965a2fa86ebaaf6005386ef5ff7",
-          "subject": "fix(packaging): keep the macOS signing keychain after a successful import (#8110)"
+          "ts": "2026-11-23T21:07:14Z",
+          "commit": "6e91067",
+          "commit_full": "6e910675c68dd5092e889065cfe8d0274c1b2742",
+          "subject": "CI: clippy clean on all targets; fix the Windows print dialog build (#8168)"
         },
-        "last_commit_ts": "2026-11-23T14:34:10Z",
+        "last_commit_ts": "2026-11-23T21:07:14Z",
         "repo_since": "2026-09-30T09:17:08Z",
         "window": [
-          62,
           45,
           5,
           14,
@@ -1550,7 +1549,8 @@
           15,
           0,
           1,
-          1
+          5,
+          0
         ]
       },
       "release": {
@@ -1580,11 +1580,11 @@
           "v": 50.0
         },
         {
-          "t": "2026-11-20T11:10:17Z",
+          "t": "2026-11-23T20:01:26Z",
           "v": 50.0
         }
       ],
-      "history_len": 244
+      "history_len": 245
     },
     {
       "repo_url": "https://github.com/storytold/gridcraft",
@@ -1618,7 +1618,7 @@
         "value_since": "2026-10-10T18:09:06Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 108,
+        "revisions_since": 109,
         "hours_since": null,
         "areas_since": null,
         "changes": 0,
@@ -1626,42 +1626,41 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 111,
-        "revisions_7d": 5,
+        "revisions": 112,
+        "revisions_7d": 6,
         "last_revision": {
-          "ts": "2026-11-18T14:53:00Z",
+          "ts": "2026-11-23T23:32:01Z",
           "kind": "content",
-          "commit": "00e8f4f",
-          "commit_full": "00e8f4fae06d6db324ff551080edf9e0453ccd6e",
-          "message": "Drag a selected chart's data outline to change its range (#4389, #4390) (#4391)"
+          "commit": "f9af787",
+          "commit_full": "f9af787c7b011440402433d48487993650aa2eca",
+          "message": "Dropdown filter (#2119)"
         },
         "last_update": {
-          "ts": "2026-11-18T14:53:00Z",
+          "ts": "2026-11-23T23:32:01Z",
           "kind": "content",
-          "commit": "00e8f4f",
-          "commit_full": "00e8f4fae06d6db324ff551080edf9e0453ccd6e",
-          "message": "Drag a selected chart's data outline to change its range (#4389, #4390) (#4391)"
+          "commit": "f9af787",
+          "commit_full": "f9af787c7b011440402433d48487993650aa2eca",
+          "message": "Dropdown filter (#2119)"
         },
         "self_reported": "2026-11-16"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 10.6,
+        "score": 10.4,
         "active_days_7d": 5,
-        "changes_7d": 58,
-        "changes_14d": 145,
-        "housekeeping_7d": 2,
+        "changes_7d": 53,
+        "changes_14d": 135,
+        "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-22T16:34:15Z",
-          "commit": "927d4d6",
-          "commit_full": "927d4d60a6da2db2971b82994f0b79ac7aba3faf",
-          "subject": "test(io): tolerate errno 45 as ENOTSUP when this host's std does (#4656)"
+          "ts": "2026-11-23T23:52:03Z",
+          "commit": "1b92ec0",
+          "commit_full": "1b92ec071e407895f4245b238bf4063ef1efdb68",
+          "subject": "PivotTables: Distinct Count as a value summary (#3385)"
         },
-        "last_commit_ts": "2026-11-23T14:33:55Z",
+        "last_commit_ts": "2026-11-23T23:52:03Z",
         "repo_since": "2026-10-06T02:09:42Z",
         "window": [
-          14,
           41,
           11,
           0,
@@ -1674,6 +1673,7 @@
           13,
           0,
           2,
+          4,
           0
         ]
       },
@@ -1700,11 +1700,11 @@
           "v": 50.0
         },
         {
-          "t": "2026-11-18T14:53:00Z",
+          "t": "2026-11-23T23:32:01Z",
           "v": 50.0
         }
       ],
-      "history_len": 111
+      "history_len": 112
     },
     {
       "repo_url": "https://github.com/storytold/designcraft",
@@ -1738,7 +1738,7 @@
         "value_since": "2026-10-10T18:09:17Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 227,
+        "revisions_since": 228,
         "hours_since": null,
         "areas_since": null,
         "changes": 0,
@@ -1746,42 +1746,41 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 228,
-        "revisions_7d": 7,
+        "revisions": 229,
+        "revisions_7d": 8,
         "last_revision": {
-          "ts": "2026-11-21T18:00:28Z",
+          "ts": "2026-11-23T15:39:36Z",
           "kind": "content",
-          "commit": "a6d82e9",
-          "commit_full": "a6d82e9a3c65507b19c788cc4395ece38adb2f7d",
-          "message": "Images: decode TIFF screen and link proxies at a reduced size (#2381) (#3016)"
+          "commit": "211b667",
+          "commit_full": "211b6675942e9dada1a73ce7120fea25e8a36a38",
+          "message": "Text: validate explicit targets before reading or editing a story (#1809)"
         },
         "last_update": {
-          "ts": "2026-11-21T18:00:28Z",
+          "ts": "2026-11-23T15:39:36Z",
           "kind": "content",
-          "commit": "a6d82e9",
-          "commit_full": "a6d82e9a3c65507b19c788cc4395ece38adb2f7d",
-          "message": "Images: decode TIFF screen and link proxies at a reduced size (#2381) (#3016)"
+          "commit": "211b667",
+          "commit_full": "211b6675942e9dada1a73ce7120fea25e8a36a38",
+          "message": "Text: validate explicit targets before reading or editing a story (#1809)"
         },
         "self_reported": "2026-11-15"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 12.4,
-        "active_days_7d": 7,
-        "changes_7d": 35,
-        "changes_14d": 159,
-        "housekeeping_7d": 2,
+        "score": 11.7,
+        "active_days_7d": 6,
+        "changes_7d": 40,
+        "changes_14d": 160,
+        "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-23T00:16:50Z",
-          "commit": "d3190ef",
-          "commit_full": "d3190ef798460d8f75bb54505266c4c8f5ba144c",
-          "subject": "images: read JPEG EXIF orientation through the shared strict reader (craft-libs#778) (#3149)"
+          "ts": "2026-11-23T18:38:03Z",
+          "commit": "7fc6b09",
+          "commit_full": "7fc6b09707fc349e8e2f0b849624929fa05c3a49",
+          "subject": "Layers: Delete Unused Layers keeps layers used by grouped and anchored objects (#3184)"
         },
-        "last_commit_ts": "2026-11-23T14:33:36Z",
+        "last_commit_ts": "2026-11-23T19:44:55Z",
         "repo_since": "2026-10-01T13:00:02Z",
         "window": [
-          5,
           21,
           56,
           5,
@@ -1794,16 +1793,17 @@
           5,
           6,
           2,
-          1
+          7,
+          0
         ]
       },
       "release": {
-        "tag": "v0.20.1",
-        "name": "DesignCraft v0.20.1",
-        "ts": "2026-11-12T00:16:10Z",
-        "url": "https://github.com/storytold/designcraft/releases/tag/v0.20.1",
-        "changes": 1,
-        "new_contributors": null,
+        "tag": "v0.21.1",
+        "name": "DesignCraft v0.21.1",
+        "ts": "2026-11-23T20:22:22Z",
+        "url": "https://github.com/storytold/designcraft/releases/tag/v0.21.1",
+        "changes": 155,
+        "new_contributors": 8,
         "platforms": [
           "macOS",
           "Windows",
@@ -1812,7 +1812,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "patch"
+        "kind": "minor"
       },
       "series": [
         {
@@ -1820,11 +1820,11 @@
           "v": 47.0
         },
         {
-          "t": "2026-11-21T18:00:28Z",
+          "t": "2026-11-23T15:39:36Z",
           "v": 47.0
         }
       ],
-      "history_len": 228
+      "history_len": 229
     },
     {
       "repo_url": "https://github.com/storytold/photocraft",
@@ -1856,7 +1856,7 @@
       "parity": {
         "tracked_since": "2026-10-10T19:09:04Z",
         "value_since": "2026-10-10T19:09:04Z",
-        "releases_since": 12,
+        "releases_since": 11,
         "releases_since_capped": true,
         "revisions_since": 11,
         "hours_since": null,
@@ -1887,21 +1887,20 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 23.8,
+        "score": 21.1,
         "active_days_7d": 7,
         "changes_7d": 161,
-        "changes_14d": 659,
-        "housekeeping_7d": 17,
+        "changes_14d": 591,
+        "housekeeping_7d": 15,
         "last_code_change": {
-          "ts": "2026-11-23T14:49:12Z",
-          "commit": "033ed7d",
-          "commit_full": "033ed7d34c3d8b079498bd522434f6220563a2e2",
-          "subject": "Show fonts installed while PhotoCraft runs without a restart (#16063)"
+          "ts": "2026-11-24T00:42:14Z",
+          "commit": "089ce87",
+          "commit_full": "089ce879e03752530150e3281f027f49189538f7",
+          "subject": "Engine tests and split scripts before the vector cut (#16587)"
         },
-        "last_commit_ts": "2026-11-23T14:49:12Z",
+        "last_commit_ts": "2026-11-24T00:42:14Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
-          75,
           180,
           45,
           74,
@@ -1914,7 +1913,8 @@
           20,
           12,
           25,
-          13
+          18,
+          2
         ]
       },
       "release": {
@@ -2007,21 +2007,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 18.5,
-        "active_days_7d": 7,
-        "changes_7d": 107,
-        "changes_14d": 279,
-        "housekeeping_7d": 3,
+        "score": 15.4,
+        "active_days_7d": 6,
+        "changes_7d": 92,
+        "changes_14d": 255,
+        "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-23T14:02:47Z",
-          "commit": "e981c45",
-          "commit_full": "e981c45d031448b87ac414128c3c441ba922ecf2",
-          "subject": "media: open YUV4MPEG2 through the shared craft-media-source reader (#4109)"
+          "ts": "2026-11-23T17:07:49Z",
+          "commit": "53f1312",
+          "commit_full": "53f1312448b9d87ddf9d4ec7ce62112a02da6fa9",
+          "subject": "fix(media): queue source decode roots before entering Rayon (#4074) (#4110)"
         },
-        "last_commit_ts": "2026-11-23T14:33:40Z",
+        "last_commit_ts": "2026-11-23T19:45:01Z",
         "repo_since": "2026-10-01T16:48:39Z",
         "window": [
-          26,
           53,
           27,
           10,
@@ -2034,16 +2033,17 @@
           9,
           49,
           6,
-          3
+          5,
+          0
         ]
       },
       "release": {
-        "tag": "v0.24.1",
-        "name": "EffectCraft v0.24.1",
-        "ts": "2026-11-12T00:23:40Z",
-        "url": "https://github.com/storytold/effectcraft/releases/tag/v0.24.1",
-        "changes": 38,
-        "new_contributors": null,
+        "tag": "v0.25.1",
+        "name": "EffectCraft v0.25.1",
+        "ts": "2026-11-23T21:25:21Z",
+        "url": "https://github.com/storytold/effectcraft/releases/tag/v0.25.1",
+        "changes": 212,
+        "new_contributors": 4,
         "platforms": [
           "macOS",
           "Windows",
@@ -2052,7 +2052,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "patch"
+        "kind": "minor"
       },
       "series": [
         {
@@ -2126,22 +2126,21 @@
       },
       "milestone": null,
       "activity": {
-        "level": "active",
-        "score": 8.8,
-        "active_days_7d": 6,
-        "changes_7d": 23,
-        "changes_14d": 73,
-        "housekeeping_7d": 3,
+        "level": "quiet",
+        "score": 7.1,
+        "active_days_7d": 5,
+        "changes_7d": 21,
+        "changes_14d": 70,
+        "housekeeping_7d": 4,
         "last_code_change": {
           "ts": "2026-11-23T13:56:08Z",
           "commit": "0929d69",
           "commit_full": "0929d693ee4a9ac35956bb55f5ed1f88c00178cd",
           "subject": "fix(interchange): a rooted AAF locator is a full path on Windows too (#1658)"
         },
-        "last_commit_ts": "2026-11-23T14:34:15Z",
+        "last_commit_ts": "2026-11-23T19:45:36Z",
         "repo_since": "2026-10-06T00:08:04Z",
         "window": [
-          3,
           20,
           2,
           20,
@@ -2154,7 +2153,8 @@
           2,
           0,
           1,
-          3
+          3,
+          0
         ]
       },
       "release": {
@@ -2247,21 +2247,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 8.0,
-        "active_days_7d": 4,
-        "changes_7d": 36,
-        "changes_14d": 81,
-        "housekeeping_7d": 4,
+        "score": 10.0,
+        "active_days_7d": 6,
+        "changes_7d": 44,
+        "changes_14d": 87,
+        "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-21T10:27:26Z",
-          "commit": "a70b9b0",
-          "commit_full": "a70b9b02e4fb7f2c3b50902d33e8daf96d904053",
-          "subject": "Object snaps: Tab cycles every candidate snap under the cursor, not one per mode (#1673)"
+          "ts": "2026-11-24T00:12:17Z",
+          "commit": "ddb9a42",
+          "commit_full": "ddb9a424ef4af8191e668009cf930c9f4a8435f3",
+          "subject": "Land #2697: draw the proxy graphics of objects from other applications (#3423)"
         },
-        "last_commit_ts": "2026-11-23T14:33:17Z",
+        "last_commit_ts": "2026-11-24T00:12:17Z",
         "repo_since": "2026-10-06T00:15:47Z",
         "window": [
-          2,
           19,
           2,
           1,
@@ -2274,7 +2273,8 @@
           20,
           2,
           0,
-          0
+          7,
+          1
         ]
       },
       "release": {
@@ -2305,126 +2305,6 @@
         }
       ],
       "history_len": 15
-    },
-    {
-      "repo_url": "https://github.com/UCS-Care-Group/mailcraft",
-      "branch": "main",
-      "kind": "community",
-      "roadmap_url": "https://github.com/UCS-Care-Group/mailcraft/blob/main/ROADMAP.md",
-      "roadmap_history_url": "https://github.com/UCS-Care-Group/mailcraft/commits/main/ROADMAP.md",
-      "metric_status": "available",
-      "id": "mailcraft",
-      "name": "MailCraft",
-      "adobe": "Outlook",
-      "category": "Mail, calendar and contacts",
-      "color": "#0f68f0",
-      "added": "2026-11-10",
-      "is_new": true,
-      "target": "Microsoft Outlook (Microsoft 365, classic desktop)",
-      "order": 19,
-      "stage": "public beta",
-      "next_stage": "leaving",
-      "full_pct": 25.0,
-      "full_range": null,
-      "full_hours": [
-        410,
-        800
-      ],
-      "mainstream_pct": 35.0,
-      "essentials_pct": 50.0,
-      "breadth_pct": 79.4,
-      "parity": {
-        "tracked_since": "2026-10-12T18:17:00Z",
-        "value_since": "2026-10-12T18:17:00Z",
-        "releases_since": 12,
-        "releases_since_capped": true,
-        "revisions_since": 262,
-        "hours_since": null,
-        "areas_since": null,
-        "changes": 0,
-        "truncated": false,
-        "last_change": null
-      },
-      "roadmap": {
-        "revisions": 266,
-        "revisions_7d": 10,
-        "last_revision": {
-          "ts": "2026-11-22T18:33:49Z",
-          "kind": "content",
-          "commit": "448ad7a",
-          "commit_full": "448ad7a7026d97b9dd8538bce55ff6232f9ae94c",
-          "message": "Release 0.15.0 (#1840)"
-        },
-        "last_update": {
-          "ts": "2026-11-22T18:33:49Z",
-          "kind": "content",
-          "commit": "448ad7a",
-          "commit_full": "448ad7a7026d97b9dd8538bce55ff6232f9ae94c",
-          "message": "Release 0.15.0 (#1840)"
-        },
-        "self_reported": "2026-11-20"
-      },
-      "milestone": null,
-      "activity": {
-        "level": "active",
-        "score": 17.4,
-        "active_days_7d": 7,
-        "changes_7d": 101,
-        "changes_14d": 283,
-        "housekeeping_7d": 10,
-        "last_code_change": {
-          "ts": "2026-11-23T01:01:40Z",
-          "commit": "7781eee",
-          "commit_full": "7781eeef093b3ef760bee2ac45a0092042a1a914",
-          "subject": "Fix FreeBSD: host connect test no longer races for a freed port (#1848)"
-        },
-        "last_commit_ts": "2026-11-23T01:01:40Z",
-        "repo_since": "2026-10-12T18:17:00Z",
-        "window": [
-          22,
-          19,
-          15,
-          42,
-          41,
-          23,
-          20,
-          33,
-          27,
-          14,
-          13,
-          4,
-          9,
-          1
-        ]
-      },
-      "release": {
-        "tag": "v0.15.0",
-        "name": "MailCraft v0.15.0",
-        "ts": "2026-11-22T19:37:59Z",
-        "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.15.0",
-        "changes": null,
-        "new_contributors": null,
-        "platforms": [
-          "macOS",
-          "Windows",
-          "Linux",
-          "Web"
-        ],
-        "prerelease": false,
-        "source": "release",
-        "kind": "minor"
-      },
-      "series": [
-        {
-          "t": "2026-10-12T18:17:00Z",
-          "v": 25.0
-        },
-        {
-          "t": "2026-11-22T18:33:49Z",
-          "v": 25.0
-        }
-      ],
-      "history_len": 266
     },
     {
       "repo_url": "https://github.com/storytold/materialcraft",
@@ -2464,7 +2344,7 @@
       },
       "roadmap": {
         "revisions": 6,
-        "revisions_7d": 1,
+        "revisions_7d": 0,
         "last_revision": {
           "ts": "2026-11-17T00:25:35Z",
           "kind": "content",
@@ -2484,21 +2364,20 @@
       "milestone": null,
       "activity": {
         "level": "quiet",
-        "score": 5.8,
-        "active_days_7d": 4,
-        "changes_7d": 13,
-        "changes_14d": 41,
-        "housekeeping_7d": 3,
+        "score": 4.6,
+        "active_days_7d": 3,
+        "changes_7d": 9,
+        "changes_14d": 36,
+        "housekeeping_7d": 4,
         "last_code_change": {
           "ts": "2026-11-20T07:31:10Z",
           "commit": "1f45b28",
           "commit_full": "1f45b28a1648d6f7639bf4e381c98f0d84695ab6",
           "subject": "formats: pin craft-texture to craft-libs main and test DDS edge cases (#285)"
         },
-        "last_commit_ts": "2026-11-23T14:34:04Z",
+        "last_commit_ts": "2026-11-23T19:45:27Z",
         "repo_since": "2026-11-01T19:58:46Z",
         "window": [
-          5,
           5,
           1,
           1,
@@ -2509,6 +2388,7 @@
           3,
           2,
           4,
+          0,
           0,
           0,
           0
@@ -2572,7 +2452,7 @@
       },
       "roadmap": {
         "revisions": 855,
-        "revisions_7d": 159,
+        "revisions_7d": 113,
         "last_revision": {
           "ts": "2026-11-20T03:41:28Z",
           "kind": "content",
@@ -2592,11 +2472,11 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 18.0,
-        "active_days_7d": 7,
-        "changes_7d": 195,
-        "changes_14d": 560,
-        "housekeeping_7d": 13,
+        "score": 14.4,
+        "active_days_7d": 6,
+        "changes_7d": 132,
+        "changes_14d": 449,
+        "housekeeping_7d": 11,
         "last_code_change": {
           "ts": "2026-11-23T04:53:59Z",
           "commit": "3d5eb25",
@@ -2606,7 +2486,6 @@
         "last_commit_ts": "2026-11-23T14:33:26Z",
         "repo_since": "2026-10-31T14:52:14Z",
         "window": [
-          111,
           100,
           49,
           6,
@@ -2619,7 +2498,8 @@
           18,
           1,
           2,
-          3
+          3,
+          0
         ]
       },
       "release": {
@@ -2680,7 +2560,7 @@
       },
       "roadmap": {
         "revisions": 201,
-        "revisions_7d": 4,
+        "revisions_7d": 3,
         "last_revision": {
           "ts": "2026-11-22T18:27:37Z",
           "kind": "content",
@@ -2700,21 +2580,20 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 38.7,
+        "score": 36.3,
         "active_days_7d": 7,
-        "changes_7d": 1212,
-        "changes_14d": 2629,
-        "housekeeping_7d": 28,
+        "changes_7d": 1193,
+        "changes_14d": 2552,
+        "housekeeping_7d": 30,
         "last_code_change": {
-          "ts": "2026-11-23T14:55:19Z",
-          "commit": "27e6085",
-          "commit_full": "27e60854bdd363b6803fbd309fa1d27db76190c3",
-          "subject": "Sweep: a body face can be the profile, like in Extrude and Revolve (#14456) (#20933)"
+          "ts": "2026-11-24T01:57:03Z",
+          "commit": "0717f2d",
+          "commit_full": "0717f2d93bab393879605ebdbe2a27e26d5ca925",
+          "subject": "Motion: a study's collision check runs in the background, so the window keeps answering (#15333) (#20852)"
         },
-        "last_commit_ts": "2026-11-23T14:55:19Z",
+        "last_commit_ts": "2026-11-24T01:57:03Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
-          239,
           149,
           191,
           203,
@@ -2727,7 +2606,8 @@
           189,
           120,
           203,
-          127
+          272,
+          17
         ]
       },
       "release": {
@@ -2796,21 +2676,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 10.4,
-        "active_days_7d": 5,
-        "changes_7d": 45,
-        "changes_14d": 137,
-        "housekeeping_7d": 4,
+        "score": 11.1,
+        "active_days_7d": 6,
+        "changes_7d": 37,
+        "changes_14d": 122,
+        "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-21T20:41:22Z",
-          "commit": "2df7775",
-          "commit_full": "2df7775907d1458ce653e7e6314ec8a5d7d565f5",
-          "subject": "docs(review): principal-engineer review of AniCraft's own decisions, with seven fixes (M8) (#525)"
+          "ts": "2026-11-24T02:03:49Z",
+          "commit": "837c3ed",
+          "commit_full": "837c3edfd69956a41c1bda21db2718a67dfb5ee6",
+          "subject": "feat(text): mixed directions read right, and letters a font lacks come from a fallback face (M5) (#598)"
         },
-        "last_commit_ts": "2026-11-23T14:33:09Z",
+        "last_commit_ts": "2026-11-24T02:03:49Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
-          19,
           18,
           17,
           14,
@@ -2823,7 +2702,8 @@
           9,
           3,
           0,
-          0
+          1,
+          3
         ]
       },
       "release": {
@@ -2841,6 +2721,102 @@
         "prerelease": false,
         "source": "release",
         "kind": "patch"
+      },
+      "series": [],
+      "history_len": 0
+    },
+    {
+      "repo_url": "https://github.com/UCSLabs/mailcraft",
+      "branch": "main",
+      "kind": "community",
+      "roadmap_url": null,
+      "roadmap_history_url": null,
+      "metric_status": "roadmap_missing",
+      "id": "mailcraft",
+      "name": "MailCraft",
+      "adobe": "Outlook",
+      "category": "Mail, calendar and contacts",
+      "color": "#0f68f0",
+      "added": "2026-11-10",
+      "is_new": true,
+      "target": null,
+      "order": 19,
+      "stage": null,
+      "next_stage": null,
+      "full_pct": null,
+      "full_range": null,
+      "full_hours": null,
+      "mainstream_pct": null,
+      "essentials_pct": null,
+      "breadth_pct": null,
+      "parity": {
+        "tracked_since": null,
+        "value_since": null,
+        "releases_since": 0,
+        "releases_since_capped": false,
+        "revisions_since": 0,
+        "hours_since": null,
+        "areas_since": null,
+        "changes": 0,
+        "truncated": false,
+        "last_change": null
+      },
+      "roadmap": {
+        "revisions": 0,
+        "revisions_7d": 0,
+        "last_revision": null,
+        "last_update": null,
+        "self_reported": null
+      },
+      "milestone": null,
+      "activity": {
+        "level": "active",
+        "score": 17.4,
+        "active_days_7d": 7,
+        "changes_7d": 101,
+        "changes_14d": 283,
+        "housekeeping_7d": 10,
+        "last_code_change": {
+          "ts": "2026-11-23T01:01:40Z",
+          "commit": "7781eee",
+          "commit_full": "7781eeef093b3ef760bee2ac45a0092042a1a914",
+          "subject": "Fix FreeBSD: host connect test no longer races for a freed port (#1848)"
+        },
+        "last_commit_ts": "2026-11-23T01:01:40Z",
+        "repo_since": "2026-10-12T18:17:00Z",
+        "window": [
+          22,
+          19,
+          15,
+          42,
+          41,
+          23,
+          20,
+          33,
+          27,
+          14,
+          13,
+          4,
+          9,
+          1
+        ]
+      },
+      "release": {
+        "tag": "v0.15.0",
+        "name": "MailCraft v0.15.0",
+        "ts": "2026-11-22T19:37:59Z",
+        "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.15.0",
+        "changes": null,
+        "new_contributors": null,
+        "platforms": [
+          "macOS",
+          "Windows",
+          "Linux",
+          "Web"
+        ],
+        "prerelease": false,
+        "source": "release",
+        "kind": "minor"
       },
       "series": [],
       "history_len": 0
@@ -2891,21 +2867,20 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 22.1,
+        "score": 20.6,
         "active_days_7d": 6,
-        "changes_7d": 206,
-        "changes_14d": 282,
-        "housekeeping_7d": 13,
+        "changes_7d": 233,
+        "changes_14d": 294,
+        "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-23T08:17:57Z",
-          "commit": "0c359e3",
-          "commit_full": "0c359e3964ed7da3ef88f921260a57c46982f6b0",
-          "subject": "Warm trees never carry cargo lock files: publish skips them, apply gives each empty file its own inode, restores and copies delete them"
+          "ts": "2026-11-24T02:24:56Z",
+          "commit": "727ef52",
+          "commit_full": "727ef5298364d784a9ed44129fa81d44b465e521",
+          "subject": "Merge branch 'discord-channels-fold'"
         },
-        "last_commit_ts": "2026-11-23T08:17:57Z",
+        "last_commit_ts": "2026-11-24T02:24:56Z",
         "repo_since": "2026-11-02T14:36:17Z",
         "window": [
-          19,
           16,
           0,
           0,
@@ -2918,7 +2893,8 @@
           28,
           21,
           70,
-          34
+          62,
+          3
         ]
       },
       "release": null,
@@ -2926,12 +2902,15 @@
       "history_len": 0
     }
   ],
-  "errors": [],
+  "errors": [
+    "discovery: default branch of UCSLabs/mailcraft unavailable (HTTP Error 404: Not Found)",
+    "mailcraft: git access failed (fatal: could not read Username for 'https://github.com': No such device or address)"
+  ],
   "discovery": {
     "catalog_count": 19,
     "tracked_from_catalog": 19,
     "missing": [],
     "candidates": []
   },
-  "generated_at": "2026-11-23T15:31:39+00:00"
+  "generated_at": "2026-11-24T02:30:33+00:00"
 }

@@ -521,7 +521,7 @@
   },
   "roadmap": {
     "revisions": 628,
-    "revisions_7d": 23,
+    "revisions_7d": 17,
     "last_revision": {
       "ts": "2026-11-21T17:00:25Z",
       "kind": "content",
@@ -541,21 +541,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.6,
+    "score": 16.9,
     "active_days_7d": 6,
-    "changes_7d": 115,
-    "changes_14d": 194,
-    "housekeeping_7d": 10,
+    "changes_7d": 65,
+    "changes_14d": 198,
+    "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-23T13:48:51Z",
-      "commit": "6837508",
-      "commit_full": "6837508ec9cba5f594e2a5477758798ec860f89d",
-      "subject": "i18n audit: ignore clock data and URLs, and never call GitHub (#7463) (#7487)"
+      "ts": "2026-11-24T01:50:21Z",
+      "commit": "bf2be3c",
+      "commit_full": "bf2be3cad86d6c6a72d604676ab6ff3f0aa9478d",
+      "subject": "fix(dialogs): adapt chart types tile grid to craft-libs GridZoom API (#7697) (#7698)"
     },
-    "last_commit_ts": "2026-11-23T14:34:31Z",
+    "last_commit_ts": "2026-11-24T01:50:21Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
-      5,
       19,
       4,
       11,
@@ -568,7 +567,8 @@
       11,
       9,
       18,
-      3
+      5,
+      7
     ],
     "days": [
       {
@@ -1409,20 +1409,39 @@
       },
       {
         "d": "2026-11-23",
-        "code": 3,
-        "other": 1,
+        "code": 5,
+        "other": 3,
         "samples": [
+          {
+            "commit": "4700018",
+            "subject": "deps: bump craft-libs pin to next for the Styles gallery well and PageView spacing (#7371) (#7379)"
+          },
+          {
+            "commit": "7fd0136",
+            "subject": "Missing Fonts: one compact framed row per font (#7283) (#7578)"
+          },
           {
             "commit": "6837508",
             "subject": "i18n audit: ignore clock data and URLs, and never call GitHub (#7463) (#7487)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-24",
+        "code": 7,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "bf2be3c",
+            "subject": "fix(dialogs): adapt chart types tile grid to craft-libs GridZoom API (#7697) (#7698)"
           },
           {
-            "commit": "262d036",
-            "subject": "Mini toolbar: anchor at the selection's start in right-to-left paragraphs (#7464) (#7488)"
+            "commit": "805fb54",
+            "subject": "deps: bump craft-libs pin to next b436ae9925 (shared FontPicker fixes) (#7670)"
           },
           {
-            "commit": "eb7d54c",
-            "subject": "Window title: strip NUL from every title source (#3634) (#7545)"
+            "commit": "73de5b5",
+            "subject": "Ribbon: use large 3:2 thumbnails in Table Design › Table Styles gallery (#7317) (#7689)"
           }
         ]
       }
@@ -16099,5 +16118,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-23T15:30:16+00:00"
+  "updated_at": "2026-11-24T02:29:37+00:00"
 }
