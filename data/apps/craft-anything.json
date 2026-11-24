@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "506e963",
-  "latest_commit_date": "2026-11-19T20:41:28-07:00",
-  "latest_message": "Call a loopback session again when the call is interrupted, instead of saying nothing answered (R5.2) (#2198)",
+  "latest_commit": "46e3780",
+  "latest_commit_date": "2026-11-24T19:11:27+07:00",
+  "latest_message": "Decode dynamically replaceable Swift key, variable and thunk symbols (R3.12) (#2296) (#2419)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 855,
-    "revisions_7d": 113,
+    "revisions": 903,
+    "revisions_7d": 161,
     "last_revision": {
-      "ts": "2026-11-20T03:41:28Z",
+      "ts": "2026-11-24T12:11:27Z",
       "kind": "content",
-      "commit": "506e963",
-      "commit_full": "506e9632fbcbd57b93e91fd1222e575e88360c2c",
-      "message": "Call a loopback session again when the call is interrupted, instead of saying nothing answered (R5.2) (#2198)"
+      "commit": "46e3780",
+      "commit_full": "46e37809076fe2886a352c18997d947d5e15d20f",
+      "message": "Decode dynamically replaceable Swift key, variable and thunk symbols (R3.12) (#2296) (#2419)"
     },
     "last_update": {
-      "ts": "2026-11-20T03:41:28Z",
+      "ts": "2026-11-24T12:11:27Z",
       "kind": "content",
-      "commit": "506e963",
-      "commit_full": "506e9632fbcbd57b93e91fd1222e575e88360c2c",
-      "message": "Call a loopback session again when the call is interrupted, instead of saying nothing answered (R5.2) (#2198)"
+      "commit": "46e3780",
+      "commit_full": "46e37809076fe2886a352c18997d947d5e15d20f",
+      "message": "Decode dynamically replaceable Swift key, variable and thunk symbols (R3.12) (#2296) (#2419)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 14.4,
-    "active_days_7d": 6,
-    "changes_7d": 132,
-    "changes_14d": 449,
-    "housekeeping_7d": 11,
+    "level": "buzzing",
+    "score": 20.5,
+    "active_days_7d": 7,
+    "changes_7d": 199,
+    "changes_14d": 516,
+    "housekeeping_7d": 14,
     "last_code_change": {
-      "ts": "2026-11-23T04:53:59Z",
-      "commit": "3d5eb25",
-      "commit_full": "3d5eb2577397ac632fb6dfffd94aa9787ad17acc",
-      "subject": "Pin craft-libs at cdee9b8a for partial resource table reporting (#2349)"
+      "ts": "2026-11-24T12:34:35Z",
+      "commit": "572877e",
+      "commit_full": "572877eded9911e523a0d70ffc6207a1d4c31ba6",
+      "subject": "Let people paste a different key for an AI provider found in the environment (#2381) (#2420)"
     },
-    "last_commit_ts": "2026-11-23T14:33:26Z",
+    "last_commit_ts": "2026-11-24T12:34:35Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       100,
@@ -93,7 +93,7 @@
       1,
       2,
       3,
-      0
+      67
     ],
     "days": [
       {
@@ -529,6 +529,25 @@
           {
             "commit": "b390709",
             "subject": "Pin craft-libs at b9c7b697 for the shared Android resource readers (#2345)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-24",
+        "code": 67,
+        "other": 3,
+        "samples": [
+          {
+            "commit": "572877e",
+            "subject": "Let people paste a different key for an AI provider found in the environment (#2381) (#2420)"
+          },
+          {
+            "commit": "46e3780",
+            "subject": "Decode dynamically replaceable Swift key, variable and thunk symbols (R3.12) (#2296) (#2419)"
+          },
+          {
+            "commit": "2464253",
+            "subject": "Decode Swift generic specialization symbols (R3.12) (#2297) (#2418)"
           }
         ]
       }
@@ -6640,8 +6659,344 @@
       "commit": "506e963",
       "commit_full": "506e9632fbcbd57b93e91fd1222e575e88360c2c",
       "message": "Call a loopback session again when the call is interrupted, instead of saying nothing answered (R5.2) (#2198)"
+    },
+    {
+      "ts": "2026-11-24T05:57:16Z",
+      "kind": "content",
+      "commit": "c971aa4",
+      "commit_full": "c971aa404b11817ee4a6dde0ff8f038a7d48b3b7",
+      "message": "Find npm on Windows when PATH has unexpanded entries or doesn't name Node's folder (#2178) (#2201)"
+    },
+    {
+      "ts": "2026-11-24T06:00:59Z",
+      "kind": "content",
+      "commit": "8ee5372",
+      "commit_full": "8ee537265788bc2f314296dc3d8ce5216442da9f",
+      "message": "Give each language a folder of catalog files, joined at build time (R5.2) (#1860)"
+    },
+    {
+      "ts": "2026-11-24T06:01:52Z",
+      "kind": "content",
+      "commit": "44060c6",
+      "commit_full": "44060c657cc33b0b9b03dceb021ca39b3bd5bb82",
+      "message": "Hand a note taken by a lost conversation on to the new one (R2.9) (#2205)"
+    },
+    {
+      "ts": "2026-11-24T06:05:43Z",
+      "kind": "content",
+      "commit": "92e9412",
+      "commit_full": "92e941246135bd85a80a950383eebdb641a0681a",
+      "message": "Check a build moved to another language in that language (#2099)"
+    },
+    {
+      "ts": "2026-11-24T06:06:09Z",
+      "kind": "content",
+      "commit": "a8e5f66",
+      "commit_full": "a8e5f668f22b3a34f4ef0d76d91054be682a51fc",
+      "message": "Let the window cross to a screen with different scaling on Windows 11 (R2.9) (#1935)"
+    },
+    {
+      "ts": "2026-11-24T06:55:10Z",
+      "kind": "content",
+      "commit": "b4454e2",
+      "commit_full": "b4454e2236579670ac1a12f37f8a521aba6aa30b",
+      "message": "Stop Ghidra's analysis from the project and keep it off until a new request (R1.5) (#1903) (#2384)"
+    },
+    {
+      "ts": "2026-11-24T06:56:01Z",
+      "kind": "content",
+      "commit": "c98e7d0",
+      "commit_full": "c98e7d04c3b974c6bbe9bd0ea5774978eefeaabf",
+      "message": "Give each API-key build an engine of its own, so builds can run side by side (R5.5) (#943) (#2385)"
+    },
+    {
+      "ts": "2026-11-24T11:10:56Z",
+      "kind": "content",
+      "commit": "08f8817",
+      "commit_full": "08f88171f77f44b1fffa5700e36ac601c980e1a3",
+      "message": "Disable StartupNotify in the Linux .desktop file (R5.1, #1929) (#2056)"
+    },
+    {
+      "ts": "2026-11-24T11:11:24Z",
+      "kind": "content",
+      "commit": "51bb5a5",
+      "commit_full": "51bb5a5d907c3b542fb5cbf67b05797ab146433d",
+      "message": "Close a project's targets when another project opens (R2.9) (#2172)"
+    },
+    {
+      "ts": "2026-11-24T11:11:51Z",
+      "kind": "content",
+      "commit": "15ac673",
+      "commit_full": "15ac6739be7eacb75c89dc0855e1b8d120f58353",
+      "message": "Fit Settings inside small windows at high zoom (R2.9) (#2148)"
+    },
+    {
+      "ts": "2026-11-24T11:12:18Z",
+      "kind": "content",
+      "commit": "b13c338",
+      "commit_full": "b13c3382fe1a854fe1129c470ab7915ac448ed06",
+      "message": "Read a number a model wrote as text as the number the tool asks for (#1842)"
+    },
+    {
+      "ts": "2026-11-24T11:12:38Z",
+      "kind": "content",
+      "commit": "89513ff",
+      "commit_full": "89513ff7e7ab7a1b70caa3aa045babb8e3152a8f",
+      "message": "Give the build details box a height you can drag, wrapping and a window of its own (R2.9) (#1484)"
+    },
+    {
+      "ts": "2026-11-24T11:13:00Z",
+      "kind": "content",
+      "commit": "b4792db",
+      "commit_full": "b4792db174da159cc485ec5187833bc3bda72a57",
+      "message": "Inspect Python 3.15 bytecode and frozen constants (R3.12) (#2370)"
+    },
+    {
+      "ts": "2026-11-24T11:15:14Z",
+      "kind": "content",
+      "commit": "84ce557",
+      "commit_full": "84ce557b0decea913ea67f9cdb8af29e8d98f765",
+      "message": "Check cancellation while searching byte patterns (R3.11) (#2359)"
+    },
+    {
+      "ts": "2026-11-24T11:17:47Z",
+      "kind": "content",
+      "commit": "13cd5f0",
+      "commit_full": "13cd5f0cb60521f99a8120aaace8b642399740a8",
+      "message": "Detect WebAssembly memory and table type changes (R3.12) (#2356) (#2392)"
+    },
+    {
+      "ts": "2026-11-24T11:18:46Z",
+      "kind": "content",
+      "commit": "27554cb",
+      "commit_full": "27554cb074099e1184116691799ad2de66f175c2",
+      "message": "Keep model and option saves ordered with Settings refreshes (R5.2) (#2207) (#2393)"
+    },
+    {
+      "ts": "2026-11-24T11:19:42Z",
+      "kind": "content",
+      "commit": "cc7e671",
+      "commit_full": "cc7e671254c02709ac2c2c98733c638d118f8f21",
+      "message": "Recover a turned-off chat AI without losing the question (R2.9) (#2210) (#2394)"
+    },
+    {
+      "ts": "2026-11-24T11:21:21Z",
+      "kind": "content",
+      "commit": "11f3ae9",
+      "commit_full": "11f3ae95291cb7641ec2f1bc1c907fb92ef9f5c2",
+      "message": "Match gitignore globstars without rescanning path suffixes (R3.12) (#2368) (#2395)"
+    },
+    {
+      "ts": "2026-11-24T11:22:38Z",
+      "kind": "content",
+      "commit": "d1efad8",
+      "commit_full": "d1efad8986f0a14b44aab344f4f318b9b6e9e0ec",
+      "message": "Inspect keyed archives without copying their object tables (R3.12) (#2369) (#2396)"
+    },
+    {
+      "ts": "2026-11-24T11:23:30Z",
+      "kind": "content",
+      "commit": "ee8eabc",
+      "commit_full": "ee8eabc48b2ed94f397338dcf7b6a50516e14baa",
+      "message": "Send Maki its message on stdin, off the command line (R2.2) (#1920)"
+    },
+    {
+      "ts": "2026-11-24T11:24:42Z",
+      "kind": "content",
+      "commit": "c399989",
+      "commit_full": "c39998910c571d40893346ebd2206423b71c4eb3",
+      "message": "Add Kimi Code CLI as a coding agent over ACP (R2.2) (#2230)"
+    },
+    {
+      "ts": "2026-11-24T11:25:50Z",
+      "kind": "content",
+      "commit": "fe93651",
+      "commit_full": "fe93651a2ca99854a89a71152234b7bcdbd60861",
+      "message": "Give the pin and Project screen tests their own Cargo environment (R2.9) (#2214)"
+    },
+    {
+      "ts": "2026-11-24T11:26:03Z",
+      "kind": "content",
+      "commit": "0482647",
+      "commit_full": "04826479f514b0582fbf872a274ccb464ed1d37a",
+      "message": "Check that a plugin's program is there, and test a plugin before adding it (R2.9) (#2217)"
+    },
+    {
+      "ts": "2026-11-24T11:26:15Z",
+      "kind": "content",
+      "commit": "83423bd",
+      "commit_full": "83423bdbbc9a34047859cf03ebadfbc6a8eec748",
+      "message": "Say on Make when a site's sign-in is saved, offer to forget it, and offer sign-in for an address in the request (R2.9) (#2235)"
+    },
+    {
+      "ts": "2026-11-24T11:29:14Z",
+      "kind": "content",
+      "commit": "47e9c5b",
+      "commit_full": "47e9c5bf133498fb01ba558851e622d3cf12736e",
+      "message": "Show what the last run used next to Try again (R5.3) (#2236) (#2397)"
+    },
+    {
+      "ts": "2026-11-24T11:31:03Z",
+      "kind": "content",
+      "commit": "828e57d",
+      "commit_full": "828e57d0f419da0bcb52eb009f309e14da16f742",
+      "message": "Export Unreal sounds as the WAV or Ogg file they are stored in (R3.9) (#2238) (#2398)"
+    },
+    {
+      "ts": "2026-11-24T11:31:40Z",
+      "kind": "content",
+      "commit": "7995c0c",
+      "commit_full": "7995c0cb97b9eb0500f0702f0cec267bb9e1c37e",
+      "message": "List what a website build can't carry over and which pictures the owner supplies (R2.9) (#2243) (#2399)"
+    },
+    {
+      "ts": "2026-11-24T11:32:42Z",
+      "kind": "content",
+      "commit": "808520d",
+      "commit_full": "808520d848615e0539637ad51848392bac213442",
+      "message": "Let the person hold a website build to an accessibility floor of its own (R2.5) (#2246) (#2400)"
+    },
+    {
+      "ts": "2026-11-24T11:32:59Z",
+      "kind": "content",
+      "commit": "191b61c",
+      "commit_full": "191b61cb43bb7bfd9df939cd12aedc1f743c4718",
+      "message": "Picture a program's window on Linux through the X display (R2.4) (#2241)"
+    },
+    {
+      "ts": "2026-11-24T11:37:00Z",
+      "kind": "content",
+      "commit": "e8dd27d",
+      "commit_full": "e8dd27d73a37901dcdae26702a3bf4c5b83d26e8",
+      "message": "Print the Swift `(extension in Module):` prefix where swift-demangle prints it (R3.12) (#2320)"
+    },
+    {
+      "ts": "2026-11-24T11:37:12Z",
+      "kind": "content",
+      "commit": "84ff6e1",
+      "commit_full": "84ff6e134fe52c84570152e1cda63eb7bce289d2",
+      "message": "Decode Swift protocol requirements base descriptor symbols (R3.12) (#2287)"
+    },
+    {
+      "ts": "2026-11-24T11:37:24Z",
+      "kind": "content",
+      "commit": "82e7af6",
+      "commit_full": "82e7af618e44199b981a352c2556e9f3c52ef54a",
+      "message": "Decode Swift opaque type descriptors (R3.12) (#2293)"
+    },
+    {
+      "ts": "2026-11-24T11:38:05Z",
+      "kind": "content",
+      "commit": "c958b7c",
+      "commit_full": "c958b7ce9cb30525a5a5cc8cec27a76b1bacd524",
+      "message": "Decode Swift associated type descriptors (R3.12) (#2289) (#2402)"
+    },
+    {
+      "ts": "2026-11-24T11:39:11Z",
+      "kind": "content",
+      "commit": "167ba35",
+      "commit_full": "167ba351d83892a2319688f9d46b41b1824a07ae",
+      "message": "Decode Swift generic parameters at depth greater than zero (R3.12) (#2322) (#2403)"
+    },
+    {
+      "ts": "2026-11-24T11:40:16Z",
+      "kind": "content",
+      "commit": "35908aa",
+      "commit_full": "35908aad5e107164aa3db346871f80d54defe193",
+      "message": "Decode Swift variadic parameter types (R3.12) (#2312) (#2405)"
+    },
+    {
+      "ts": "2026-11-24T11:41:00Z",
+      "kind": "content",
+      "commit": "de7a599",
+      "commit_full": "de7a599cc8ebb160ec9d3c1a9c2cee5c774b05e5",
+      "message": "Decode Swift __shared parameter ownership (R3.12) (#2311) (#2406)"
+    },
+    {
+      "ts": "2026-11-24T11:41:44Z",
+      "kind": "content",
+      "commit": "55bb3f0",
+      "commit_full": "55bb3f0aefb79fd34dde34f3737a9b766c08f5e7",
+      "message": "Decode Swift builtin types (R3.12) (#2308) (#2407)"
+    },
+    {
+      "ts": "2026-11-24T11:42:32Z",
+      "kind": "content",
+      "commit": "6f72671",
+      "commit_full": "6f72671b3151d3c67f34e5b858dfc6bf324daf0b",
+      "message": "Decode Swift `__owned` parameter ownership symbols (R3.12) (#2310) (#2408)"
+    },
+    {
+      "ts": "2026-11-24T11:43:18Z",
+      "kind": "content",
+      "commit": "f0a2d39",
+      "commit_full": "f0a2d39639e0e67a5f8ce8780eea8285eaf2afa9",
+      "message": "Decode Swift property-wrapper backing initializer and projected-value initializer symbols (R3.12) (#2294) (#2409)"
+    },
+    {
+      "ts": "2026-11-24T11:44:01Z",
+      "kind": "content",
+      "commit": "451e03f",
+      "commit_full": "451e03fff6718317e4a7a065c7338ee67fd09c5e",
+      "message": "Decode Swift distributed thunk and accessor symbols (R3.12) (#2295) (#2410)"
+    },
+    {
+      "ts": "2026-11-24T11:44:44Z",
+      "kind": "content",
+      "commit": "77c22f7",
+      "commit_full": "77c22f7fa18d5c9626a371ea2ceaf9ec11488086",
+      "message": "Decode Swift `_const` and `isolated` parameter attributes (R3.12) (#2309) (#2411)"
+    },
+    {
+      "ts": "2026-11-24T11:45:28Z",
+      "kind": "content",
+      "commit": "6feb6d4",
+      "commit_full": "6feb6d471c047d05871514888f37b0d442172088",
+      "message": "Decode Swift protocol metatypes (`pm`) as `.Protocol` (R3.12) (#2316) (#2412)"
+    },
+    {
+      "ts": "2026-11-24T11:46:37Z",
+      "kind": "content",
+      "commit": "4dca4bf",
+      "commit_full": "4dca4bfd32ad1095b7061c29e7c7c86c8966efdf",
+      "message": "Decode Swift punycode-encoded identifiers (R3.12) (#2315) (#2413)"
+    },
+    {
+      "ts": "2026-11-24T11:47:31Z",
+      "kind": "content",
+      "commit": "e70297d",
+      "commit_full": "e70297d6b575aaea2675f82dd9281482674e60d2",
+      "message": "Decode Swift generic parameter names past Z as AB, BB (R3.12) (#2317) (#2414)"
+    },
+    {
+      "ts": "2026-11-24T11:55:28Z",
+      "kind": "content",
+      "commit": "e8e7de1",
+      "commit_full": "e8e7de1f42349095f5746ab296c58f771fdb27bb",
+      "message": "Study a site through the person's own running browser (R2.9) (#2242) (#2416)"
+    },
+    {
+      "ts": "2026-11-24T12:02:51Z",
+      "kind": "content",
+      "commit": "e44eba1",
+      "commit_full": "e44eba1ec4d77ad338d2832187068f3cf2cb35cc",
+      "message": "Decode Swift associated conformance descriptor symbols (R3.12) (#2291) (#2417)"
+    },
+    {
+      "ts": "2026-11-24T12:07:23Z",
+      "kind": "content",
+      "commit": "2464253",
+      "commit_full": "2464253e307e9c4e179a1aa459c4b6ab43b59d51",
+      "message": "Decode Swift generic specialization symbols (R3.12) (#2297) (#2418)"
+    },
+    {
+      "ts": "2026-11-24T12:11:27Z",
+      "kind": "content",
+      "commit": "46e3780",
+      "commit_full": "46e37809076fe2886a352c18997d947d5e15d20f",
+      "message": "Decode dynamically replaceable Swift key, variable and thunk symbols (R3.12) (#2296) (#2419)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-24T02:29:58+00:00"
+  "updated_at": "2026-11-24T12:48:27+00:00"
 }

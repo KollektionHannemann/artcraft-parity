@@ -22,12 +22,34 @@
       "id": "solidcraft",
       "name": "SolidCraft",
       "type": "release",
+      "ts": "2026-11-24T05:40:11Z",
+      "tag": "v0.48.0-nightly.20261124.161.1",
+      "kind": "patch",
+      "changes": 42,
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.48.0-nightly.20261124.161.1",
+      "prerelease": true
+    },
+    {
+      "id": "solidcraft",
+      "name": "SolidCraft",
+      "type": "release",
+      "ts": "2026-11-24T05:12:06Z",
+      "tag": "v0.48.1",
+      "kind": "patch",
+      "changes": 2,
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.48.1",
+      "prerelease": false
+    },
+    {
+      "id": "solidcraft",
+      "name": "SolidCraft",
+      "type": "release",
       "ts": "2026-11-24T02:13:34Z",
       "tag": "v0.48.0",
       "kind": "minor",
       "changes": 283,
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.48.0",
-      "prerelease": true
+      "prerelease": false
     },
     {
       "id": "photocraft",
@@ -63,17 +85,6 @@
       "prerelease": false
     },
     {
-      "id": "solidcraft",
-      "name": "SolidCraft",
-      "type": "release",
-      "ts": "2026-11-23T05:41:46Z",
-      "tag": "v0.47.0-nightly.20261123.157.1",
-      "kind": "patch",
-      "changes": 41,
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.47.0-nightly.20261123.157.1",
-      "prerelease": true
-    },
-    {
       "id": "pdfcraft",
       "name": "PdfCraft",
       "type": "release",
@@ -82,17 +93,6 @@
       "kind": "minor",
       "changes": 130,
       "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.22.0",
-      "prerelease": false
-    },
-    {
-      "id": "solidcraft",
-      "name": "SolidCraft",
-      "type": "release",
-      "ts": "2026-11-23T01:35:43Z",
-      "tag": "v0.47.0",
-      "kind": "minor",
-      "changes": null,
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.47.0",
       "prerelease": false
     },
     {
@@ -457,6 +457,17 @@
   ],
   "release_waves": [
     {
+      "day": "2026-11-24",
+      "apps": 1,
+      "changes": 285,
+      "largest": {
+        "id": "solidcraft",
+        "name": "SolidCraft",
+        "tag": "v0.48.0",
+        "changes": 283
+      }
+    },
+    {
       "day": "2026-11-23",
       "apps": 4,
       "changes": 497,
@@ -573,18 +584,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 26.1,
+        "score": 29.0,
         "active_days_7d": 7,
-        "changes_7d": 506,
-        "changes_14d": 1837,
-        "housekeeping_7d": 18,
+        "changes_7d": 539,
+        "changes_14d": 1870,
+        "housekeeping_7d": 20,
         "last_code_change": {
-          "ts": "2026-11-24T02:03:43Z",
-          "commit": "3935fcb",
-          "commit_full": "3935fcb28cb19b5c9a5723f27ee22141f9df09d3",
-          "subject": "Tests: the native Appearance window's Delete test presses the Fill row's empty space just right of its label, found from the label's rect, instead of a fixed of"
+          "ts": "2026-11-24T11:39:35Z",
+          "commit": "18d2939",
+          "commit_full": "18d2939ffccf68ac1aa66e78622461fcee0002d5",
+          "subject": "Look like production: control heights, padding, gaps, type and corners (#9221)"
         },
-        "last_commit_ts": "2026-11-24T02:03:43Z",
+        "last_commit_ts": "2026-11-24T11:39:35Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           123,
@@ -600,7 +611,7 @@
           38,
           47,
           6,
-          4
+          37
         ]
       },
       "release": {
@@ -702,18 +713,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.2,
-        "active_days_7d": 6,
-        "changes_7d": 66,
-        "changes_14d": 116,
+        "score": 14.7,
+        "active_days_7d": 7,
+        "changes_7d": 68,
+        "changes_14d": 118,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-23T19:39:04Z",
-          "commit": "44f67fe",
-          "commit_full": "44f67feaad7461f36cd2a6da9effd60b8757a5b1",
-          "subject": "LR-BEHAV-RENDER-FIDELITY: process V13, Shadows / negative Texture / Global wheel measured against Lightroom (#523) (#3923)"
+          "ts": "2026-11-24T06:23:16Z",
+          "commit": "5a29fe6",
+          "commit_full": "5a29fe602b5a2680d6771890a43380cd6bc34558",
+          "subject": "LR-UI-DROPDOWNS: Crop panel Overlay and Upright, and the Remove panel's tool mode, changed to Dropdown (#3975)"
         },
-        "last_commit_ts": "2026-11-23T19:45:22Z",
+        "last_commit_ts": "2026-11-24T06:23:16Z",
         "repo_since": "2026-09-30T14:04:12Z",
         "window": [
           9,
@@ -729,7 +740,7 @@
           9,
           11,
           4,
-          0
+          2
         ]
       },
       "release": {
@@ -843,18 +854,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 16.9,
+        "score": 17.4,
         "active_days_7d": 6,
-        "changes_7d": 65,
-        "changes_14d": 198,
+        "changes_7d": 68,
+        "changes_14d": 201,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-24T01:50:21Z",
-          "commit": "bf2be3c",
-          "commit_full": "bf2be3cad86d6c6a72d604676ab6ff3f0aa9478d",
-          "subject": "fix(dialogs): adapt chart types tile grid to craft-libs GridZoom API (#7697) (#7698)"
+          "ts": "2026-11-24T11:50:56Z",
+          "commit": "352042d",
+          "commit_full": "352042d41f688c88a3c10c8215c972c525f9b3c6",
+          "subject": "Canvas: size Web Layout from PageView's side gutter instead of rail width (#7687) (#7701)"
         },
-        "last_commit_ts": "2026-11-24T01:50:21Z",
+        "last_commit_ts": "2026-11-24T11:50:56Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
           19,
@@ -870,7 +881,7 @@
           9,
           18,
           5,
-          7
+          10
         ]
       },
       "release": {
@@ -960,18 +971,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 12.8,
-        "active_days_7d": 6,
-        "changes_7d": 50,
-        "changes_14d": 120,
+        "score": 14.8,
+        "active_days_7d": 7,
+        "changes_7d": 53,
+        "changes_14d": 123,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-23T21:55:24Z",
-          "commit": "2037b6b",
-          "commit_full": "2037b6b823d41b94938be483e7f3aa5ebeb07ace",
-          "subject": "Export OpenPBR MaterialX from the export window (#784)"
+          "ts": "2026-11-24T11:00:16Z",
+          "commit": "021ff6f",
+          "commit_full": "021ff6fe8b04760a4d75b54e03d088f8e4b3828c",
+          "subject": "Align top menus, default workspace, and dialogs (#794)"
         },
-        "last_commit_ts": "2026-11-23T21:55:24Z",
+        "last_commit_ts": "2026-11-24T11:00:16Z",
         "repo_since": "2026-10-14T18:33:13Z",
         "window": [
           10,
@@ -987,7 +998,7 @@
           8,
           5,
           4,
-          0
+          3
         ]
       },
       "release": {
@@ -1887,18 +1898,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 21.1,
+        "score": 22.7,
         "active_days_7d": 7,
-        "changes_7d": 161,
-        "changes_14d": 591,
+        "changes_7d": 167,
+        "changes_14d": 597,
         "housekeeping_7d": 15,
         "last_code_change": {
-          "ts": "2026-11-24T00:42:14Z",
-          "commit": "089ce87",
-          "commit_full": "089ce879e03752530150e3281f027f49189538f7",
-          "subject": "Engine tests and split scripts before the vector cut (#16587)"
+          "ts": "2026-11-24T11:30:30Z",
+          "commit": "27c629f",
+          "commit_full": "27c629f78903a483cc8de1c111758bd7296ebbed",
+          "subject": "fix(cmyk): preserve accurate CMYK values across color picking, sampling and painting (#13421)"
         },
-        "last_commit_ts": "2026-11-24T00:42:14Z",
+        "last_commit_ts": "2026-11-24T11:30:30Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           180,
@@ -1914,7 +1925,7 @@
           12,
           25,
           18,
-          2
+          8
         ]
       },
       "release": {
@@ -2126,19 +2137,19 @@
       },
       "milestone": null,
       "activity": {
-        "level": "quiet",
-        "score": 7.1,
-        "active_days_7d": 5,
-        "changes_7d": 21,
-        "changes_14d": 70,
+        "level": "active",
+        "score": 8.1,
+        "active_days_7d": 6,
+        "changes_7d": 22,
+        "changes_14d": 71,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-23T13:56:08Z",
-          "commit": "0929d69",
-          "commit_full": "0929d693ee4a9ac35956bb55f5ed1f88c00178cd",
-          "subject": "fix(interchange): a rooted AAF locator is a full path on Windows too (#1658)"
+          "ts": "2026-11-24T02:48:21Z",
+          "commit": "7391fc7",
+          "commit_full": "7391fc7465b45f0159c8044a521d77b0a309de7f",
+          "subject": "build: pin craft-libs for shared AAF descriptors (#1722)"
         },
-        "last_commit_ts": "2026-11-23T19:45:36Z",
+        "last_commit_ts": "2026-11-24T02:48:21Z",
         "repo_since": "2026-10-06T00:08:04Z",
         "window": [
           20,
@@ -2154,7 +2165,7 @@
           0,
           1,
           3,
-          0
+          1
         ]
       },
       "release": {
@@ -2451,39 +2462,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 855,
-        "revisions_7d": 113,
+        "revisions": 903,
+        "revisions_7d": 161,
         "last_revision": {
-          "ts": "2026-11-20T03:41:28Z",
+          "ts": "2026-11-24T12:11:27Z",
           "kind": "content",
-          "commit": "506e963",
-          "commit_full": "506e9632fbcbd57b93e91fd1222e575e88360c2c",
-          "message": "Call a loopback session again when the call is interrupted, instead of saying nothing answered (R5.2) (#2198)"
+          "commit": "46e3780",
+          "commit_full": "46e37809076fe2886a352c18997d947d5e15d20f",
+          "message": "Decode dynamically replaceable Swift key, variable and thunk symbols (R3.12) (#2296) (#2419)"
         },
         "last_update": {
-          "ts": "2026-11-20T03:41:28Z",
+          "ts": "2026-11-24T12:11:27Z",
           "kind": "content",
-          "commit": "506e963",
-          "commit_full": "506e9632fbcbd57b93e91fd1222e575e88360c2c",
-          "message": "Call a loopback session again when the call is interrupted, instead of saying nothing answered (R5.2) (#2198)"
+          "commit": "46e3780",
+          "commit_full": "46e37809076fe2886a352c18997d947d5e15d20f",
+          "message": "Decode dynamically replaceable Swift key, variable and thunk symbols (R3.12) (#2296) (#2419)"
         },
         "self_reported": null
       },
       "milestone": null,
       "activity": {
-        "level": "active",
-        "score": 14.4,
-        "active_days_7d": 6,
-        "changes_7d": 132,
-        "changes_14d": 449,
-        "housekeeping_7d": 11,
+        "level": "buzzing",
+        "score": 20.5,
+        "active_days_7d": 7,
+        "changes_7d": 199,
+        "changes_14d": 516,
+        "housekeeping_7d": 14,
         "last_code_change": {
-          "ts": "2026-11-23T04:53:59Z",
-          "commit": "3d5eb25",
-          "commit_full": "3d5eb2577397ac632fb6dfffd94aa9787ad17acc",
-          "subject": "Pin craft-libs at cdee9b8a for partial resource table reporting (#2349)"
+          "ts": "2026-11-24T12:34:35Z",
+          "commit": "572877e",
+          "commit_full": "572877eded9911e523a0d70ffc6207a1d4c31ba6",
+          "subject": "Let people paste a different key for an AI provider found in the environment (#2381) (#2420)"
         },
-        "last_commit_ts": "2026-11-23T14:33:26Z",
+        "last_commit_ts": "2026-11-24T12:34:35Z",
         "repo_since": "2026-10-31T14:52:14Z",
         "window": [
           100,
@@ -2499,7 +2510,7 @@
           1,
           2,
           3,
-          0
+          67
         ]
       },
       "release": {
@@ -2580,18 +2591,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 36.3,
+        "score": 39.4,
         "active_days_7d": 7,
-        "changes_7d": 1193,
-        "changes_14d": 2552,
-        "housekeeping_7d": 30,
+        "changes_7d": 1327,
+        "changes_14d": 2686,
+        "housekeeping_7d": 33,
         "last_code_change": {
-          "ts": "2026-11-24T01:57:03Z",
-          "commit": "0717f2d",
-          "commit_full": "0717f2d93bab393879605ebdbe2a27e26d5ca925",
-          "subject": "Motion: a study's collision check runs in the background, so the window keeps answering (#15333) (#20852)"
+          "ts": "2026-11-24T12:02:17Z",
+          "commit": "fc74246",
+          "commit_full": "fc74246dda5bd4d43a378497cbe8cd37f253cef2",
+          "subject": "Document browser: drag a design into the model view to insert it (#21545) (#21546)"
         },
-        "last_commit_ts": "2026-11-24T01:57:03Z",
+        "last_commit_ts": "2026-11-24T12:02:17Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           149,
@@ -2607,16 +2618,16 @@
           120,
           203,
           272,
-          17
+          151
         ]
       },
       "release": {
-        "tag": "v0.47.0",
-        "name": "SolidCraft v0.47.0",
-        "ts": "2026-11-23T01:35:43Z",
-        "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.47.0",
-        "changes": null,
-        "new_contributors": 5,
+        "tag": "v0.48.1",
+        "name": "SolidCraft v0.48.1",
+        "ts": "2026-11-24T05:12:06Z",
+        "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.48.1",
+        "changes": 2,
+        "new_contributors": null,
         "platforms": [
           "macOS",
           "Windows",
@@ -2625,7 +2636,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
+        "kind": "patch"
       },
       "series": [],
       "history_len": 0
@@ -2750,11 +2761,11 @@
       "essentials_pct": null,
       "breadth_pct": null,
       "parity": {
-        "tracked_since": null,
-        "value_since": null,
-        "releases_since": 0,
-        "releases_since_capped": false,
-        "revisions_since": 0,
+        "tracked_since": "2026-10-12T18:17:00Z",
+        "value_since": "2026-10-12T18:17:00Z",
+        "releases_since": 12,
+        "releases_since_capped": true,
+        "revisions_since": 262,
         "hours_since": null,
         "areas_since": null,
         "changes": 0,
@@ -2762,11 +2773,23 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 0,
-        "revisions_7d": 0,
-        "last_revision": null,
-        "last_update": null,
-        "self_reported": null
+        "revisions": 266,
+        "revisions_7d": 6,
+        "last_revision": {
+          "ts": "2026-11-22T18:33:49Z",
+          "kind": "content",
+          "commit": "448ad7a",
+          "commit_full": "448ad7a7026d97b9dd8538bce55ff6232f9ae94c",
+          "message": "Release 0.15.0 (#1840)"
+        },
+        "last_update": {
+          "ts": "2026-11-22T18:33:49Z",
+          "kind": "content",
+          "commit": "448ad7a",
+          "commit_full": "448ad7a7026d97b9dd8538bce55ff6232f9ae94c",
+          "message": "Release 0.15.0 (#1840)"
+        },
+        "self_reported": "2026-11-20"
       },
       "milestone": null,
       "activity": {
@@ -2818,8 +2841,17 @@
         "source": "release",
         "kind": "minor"
       },
-      "series": [],
-      "history_len": 0
+      "series": [
+        {
+          "t": "2026-10-12T18:17:00Z",
+          "v": 25.0
+        },
+        {
+          "t": "2026-11-22T18:33:49Z",
+          "v": 25.0
+        }
+      ],
+      "history_len": 266
     },
     {
       "repo_url": "https://github.com/storytold/autocraft",
@@ -2867,18 +2899,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 20.6,
+        "score": 23.1,
         "active_days_7d": 6,
-        "changes_7d": 233,
-        "changes_14d": 294,
+        "changes_7d": 251,
+        "changes_14d": 312,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-24T02:24:56Z",
-          "commit": "727ef52",
-          "commit_full": "727ef5298364d784a9ed44129fa81d44b465e521",
-          "subject": "Merge branch 'discord-channels-fold'"
+          "ts": "2026-11-24T07:51:52Z",
+          "commit": "9e23575",
+          "commit_full": "9e23575bcf899466d86492b62f6524f56e880271",
+          "subject": "Merge branch 'fetch-after-warm'"
         },
-        "last_commit_ts": "2026-11-24T02:24:56Z",
+        "last_commit_ts": "2026-11-24T07:51:52Z",
         "repo_since": "2026-11-02T14:36:17Z",
         "window": [
           16,
@@ -2894,7 +2926,7 @@
           21,
           70,
           62,
-          3
+          21
         ]
       },
       "release": null,
@@ -2903,7 +2935,6 @@
     }
   ],
   "errors": [
-    "discovery: default branch of UCSLabs/mailcraft unavailable (HTTP Error 404: Not Found)",
     "mailcraft: git access failed (fatal: could not read Username for 'https://github.com': No such device or address)"
   ],
   "discovery": {
@@ -2912,5 +2943,5 @@
     "missing": [],
     "candidates": []
   },
-  "generated_at": "2026-11-24T02:30:33+00:00"
+  "generated_at": "2026-11-24T12:48:47+00:00"
 }
