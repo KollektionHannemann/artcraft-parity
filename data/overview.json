@@ -22,33 +22,33 @@
       "id": "solidcraft",
       "name": "SolidCraft",
       "type": "release",
-      "ts": "2026-11-25T02:20:04Z",
-      "tag": "v0.49.0",
-      "kind": "minor",
-      "changes": null,
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.49.0",
+      "ts": "2026-11-25T12:40:48Z",
+      "tag": "v0.49.1",
+      "kind": "patch",
+      "changes": 64,
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.49.1",
       "prerelease": false
     },
     {
       "id": "solidcraft",
       "name": "SolidCraft",
       "type": "release",
-      "ts": "2026-11-24T05:40:11Z",
-      "tag": "v0.48.0-nightly.20261124.161.1",
+      "ts": "2026-11-25T05:43:42Z",
+      "tag": "v0.49.0-nightly.20261125.163.1",
       "kind": "patch",
-      "changes": 42,
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.48.0-nightly.20261124.161.1",
+      "changes": 58,
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.49.0-nightly.20261125.163.1",
       "prerelease": true
     },
     {
       "id": "solidcraft",
       "name": "SolidCraft",
       "type": "release",
-      "ts": "2026-11-24T05:12:06Z",
-      "tag": "v0.48.1",
-      "kind": "patch",
-      "changes": 2,
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.48.1",
+      "ts": "2026-11-25T02:20:04Z",
+      "tag": "v0.49.0",
+      "kind": "minor",
+      "changes": null,
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.49.0",
       "prerelease": false
     },
     {
@@ -455,8 +455,13 @@
     {
       "day": "2026-11-25",
       "apps": 1,
-      "changes": 0,
-      "largest": null
+      "changes": 64,
+      "largest": {
+        "id": "solidcraft",
+        "name": "SolidCraft",
+        "tag": "v0.49.1",
+        "changes": 64
+      }
     },
     {
       "day": "2026-11-24",
@@ -575,18 +580,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 28.5,
+        "score": 29.9,
         "active_days_7d": 7,
-        "changes_7d": 358,
-        "changes_14d": 1785,
-        "housekeeping_7d": 19,
+        "changes_7d": 407,
+        "changes_14d": 1834,
+        "housekeeping_7d": 21,
         "last_code_change": {
-          "ts": "2026-11-25T04:34:38Z",
-          "commit": "b1a1c0b",
-          "commit_full": "b1a1c0b7a83e872268a9cf9332bf103d1a7438d1",
-          "subject": "New Document: Orientation shows a page icon for Portrait and for Landscape (#9265)"
+          "ts": "2026-11-25T12:56:15Z",
+          "commit": "2a5dbc4",
+          "commit_full": "2a5dbc479fa593b045ca203607358ee2b9da33a2",
+          "subject": "Tests: the frame helpers give the runtime its input once per frame (#9272)"
         },
-        "last_commit_ts": "2026-11-25T04:34:38Z",
+        "last_commit_ts": "2026-11-25T12:56:15Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           254,
@@ -602,7 +607,7 @@
           47,
           6,
           45,
-          30
+          79
         ]
       },
       "release": {
@@ -704,18 +709,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 12.5,
-        "active_days_7d": 6,
-        "changes_7d": 51,
-        "changes_14d": 111,
+        "score": 13.5,
+        "active_days_7d": 7,
+        "changes_7d": 52,
+        "changes_14d": 112,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-24T20:22:16Z",
-          "commit": "ddc0eef",
-          "commit_full": "ddc0eef377a771a51f3574f8c26ef75be12c7aab",
-          "subject": "raw, engine: demosaic full-size raws on the white-balanced mosaic (#1328) (#4680)"
+          "ts": "2026-11-25T07:43:25Z",
+          "commit": "ea033fb",
+          "commit_full": "ea033fbe1c6dacdc7e1e99ee5a3e9fa0ce35d78c",
+          "subject": "packaging(linux): support co-installable nightly packages (#4723)"
         },
-        "last_commit_ts": "2026-11-24T20:22:16Z",
+        "last_commit_ts": "2026-11-25T07:43:25Z",
         "repo_since": "2026-09-30T14:04:12Z",
         "window": [
           7,
@@ -731,7 +736,7 @@
           11,
           4,
           4,
-          0
+          1
         ]
       },
       "release": {
@@ -845,18 +850,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.7,
+        "score": 19.9,
         "active_days_7d": 6,
-        "changes_7d": 62,
-        "changes_14d": 191,
+        "changes_7d": 99,
+        "changes_14d": 228,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-25T01:00:35Z",
-          "commit": "c179a31",
-          "commit_full": "c179a31619632d96728653f00c56246ba374e928",
-          "subject": "packaging(linux): support co-installable nightly packages (#7746)"
+          "ts": "2026-11-25T15:38:40Z",
+          "commit": "a272715",
+          "commit_full": "a27271519438894344cfc52eae4c07b926111c9c",
+          "subject": "test(windows): restore #117 window title test and cover root promotion (#7702)"
         },
-        "last_commit_ts": "2026-11-25T01:00:35Z",
+        "last_commit_ts": "2026-11-25T15:38:40Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
           4,
@@ -872,7 +877,7 @@
           18,
           5,
           18,
-          1
+          38
         ]
       },
       "release": {
@@ -962,18 +967,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.8,
+        "score": 14.2,
         "active_days_7d": 7,
-        "changes_7d": 44,
-        "changes_14d": 116,
-        "housekeeping_7d": 5,
+        "changes_7d": 45,
+        "changes_14d": 117,
+        "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-25T04:50:18Z",
-          "commit": "201f32f",
-          "commit_full": "201f32fac4f7efe30c66c49bdd8d98717fb05561",
-          "subject": "Export templates: subfolders in file names and spec-based URP and USD templates (#824)"
+          "ts": "2026-11-25T06:07:29Z",
+          "commit": "14f6502",
+          "commit_full": "14f650202974b509524950048305f1f36fee4282",
+          "subject": "Layers: open context menus from material and mask thumbnails (#771)"
         },
-        "last_commit_ts": "2026-11-25T04:50:18Z",
+        "last_commit_ts": "2026-11-25T13:33:00Z",
         "repo_since": "2026-10-14T18:33:13Z",
         "window": [
           8,
@@ -989,7 +994,7 @@
           5,
           4,
           4,
-          2
+          3
         ]
       },
       "release": {
@@ -1082,18 +1087,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 10.1,
+        "score": 10.6,
         "active_days_7d": 6,
-        "changes_7d": 21,
-        "changes_14d": 113,
+        "changes_7d": 22,
+        "changes_14d": 114,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-25T02:55:33Z",
-          "commit": "740adb3",
-          "commit_full": "740adb32cc38a9c685ef531c2d6a8e57cde66203",
-          "subject": "FilmCraft: move to craft-libs next (minimal port) (#5214)"
+          "ts": "2026-11-25T10:50:13Z",
+          "commit": "2d1d1b6",
+          "commit_full": "2d1d1b6920cf14c166e1b2bc73ba8208def150c9",
+          "subject": "packaging(linux): support co-installable nightly packages (#5225)"
         },
-        "last_commit_ts": "2026-11-25T02:55:33Z",
+        "last_commit_ts": "2026-11-25T10:50:13Z",
         "repo_since": "2026-09-30T09:22:00Z",
         "window": [
           13,
@@ -1109,7 +1114,7 @@
           4,
           3,
           0,
-          1
+          2
         ]
       },
       "release": {
@@ -1889,18 +1894,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 21.0,
+        "score": 22.0,
         "active_days_7d": 7,
-        "changes_7d": 146,
-        "changes_14d": 430,
+        "changes_7d": 150,
+        "changes_14d": 434,
         "housekeeping_7d": 11,
         "last_code_change": {
-          "ts": "2026-11-25T04:14:17Z",
-          "commit": "e22facf",
-          "commit_full": "e22facf45b0e7f0fbeb3b439ed44a950da9783b4",
-          "subject": "fix(cmyk): preserve native CMYK in vector shape fills and strokes (#16894)"
+          "ts": "2026-11-25T15:11:58Z",
+          "commit": "830316b",
+          "commit_full": "830316b775f1f6734498ac6e39fd1298955ff93f",
+          "subject": "RAW Develop's window moves and resizes again (#16905) (#16955)"
         },
-        "last_commit_ts": "2026-11-25T04:14:17Z",
+        "last_commit_ts": "2026-11-25T15:11:58Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           45,
@@ -1916,7 +1921,7 @@
           25,
           18,
           18,
-          3
+          7
         ]
       },
       "release": {
@@ -2369,18 +2374,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.7,
+        "score": 18.2,
         "active_days_7d": 7,
-        "changes_7d": 53,
-        "changes_14d": 254,
+        "changes_7d": 62,
+        "changes_14d": 263,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-25T01:29:07Z",
-          "commit": "3e6045a",
-          "commit_full": "3e6045a27dfbcecf4a9b7e1745bb307c007f207d",
-          "subject": "R10: GitHub org name UCS-Care-Group → UCSLabs (#1862)"
+          "ts": "2026-11-25T14:36:02Z",
+          "commit": "d96e31e",
+          "commit_full": "d96e31ebe79245dc3b0a2c74ed1199561a410e86",
+          "subject": "CS10: JMAP contacts down and up (#1942)"
         },
-        "last_commit_ts": "2026-11-25T03:21:39Z",
+        "last_commit_ts": "2026-11-25T14:36:02Z",
         "repo_since": "2026-10-12T18:17:00Z",
         "window": [
           15,
@@ -2396,7 +2401,7 @@
           9,
           6,
           6,
-          1
+          10
         ]
       },
       "release": {
@@ -2573,39 +2578,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 912,
-        "revisions_7d": 96,
+        "revisions": 918,
+        "revisions_7d": 102,
         "last_revision": {
-          "ts": "2026-11-24T22:20:35Z",
+          "ts": "2026-11-25T12:50:42Z",
           "kind": "content",
-          "commit": "941c440",
-          "commit_full": "941c440ce8bb79116044a199aa20f690c9f5d56a",
-          "message": "Add roadmap lines for gaps found in review: lock held while refreshing records, three OpenCode session leftovers, the UI tests' demo session (#2437)"
+          "commit": "0a4e66b",
+          "commit_full": "0a4e66ba75c81ffa9a860c2987064d1ad61ab305",
+          "message": "Decode Swift non-class type deinitializers as deinit instead of __deallocating_deinit (R3.12) (#2319)"
         },
         "last_update": {
-          "ts": "2026-11-24T22:20:35Z",
+          "ts": "2026-11-25T12:50:42Z",
           "kind": "content",
-          "commit": "941c440",
-          "commit_full": "941c440ce8bb79116044a199aa20f690c9f5d56a",
-          "message": "Add roadmap lines for gaps found in review: lock held while refreshing records, three OpenCode session leftovers, the UI tests' demo session (#2437)"
+          "commit": "0a4e66b",
+          "commit_full": "0a4e66ba75c81ffa9a860c2987064d1ad61ab305",
+          "message": "Decode Swift non-class type deinitializers as deinit instead of __deallocating_deinit (R3.12) (#2319)"
         },
         "self_reported": null
       },
       "milestone": null,
       "activity": {
-        "level": "active",
-        "score": 16.6,
-        "active_days_7d": 6,
-        "changes_7d": 134,
-        "changes_14d": 431,
+        "level": "buzzing",
+        "score": 20.6,
+        "active_days_7d": 7,
+        "changes_7d": 149,
+        "changes_14d": 446,
         "housekeeping_7d": 17,
         "last_code_change": {
-          "ts": "2026-11-24T22:25:46Z",
-          "commit": "4f0f744",
-          "commit_full": "4f0f744b7e2ad16198a7b08b9edc53286b1b8b67",
-          "subject": "fix(cli): list CSV and TSV output formats (#2284)"
+          "ts": "2026-11-25T12:50:42Z",
+          "commit": "0a4e66b",
+          "commit_full": "0a4e66ba75c81ffa9a860c2987064d1ad61ab305",
+          "subject": "Decode Swift non-class type deinitializers as deinit instead of __deallocating_deinit (R3.12) (#2319)"
         },
-        "last_commit_ts": "2026-11-24T22:25:46Z",
+        "last_commit_ts": "2026-11-25T12:50:42Z",
         "repo_since": "2026-10-31T14:52:14Z",
         "window": [
           49,
@@ -2621,7 +2626,7 @@
           2,
           3,
           82,
-          0
+          15
         ]
       },
       "release": {
@@ -2702,18 +2707,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 38.7,
+        "score": 40.0,
         "active_days_7d": 7,
-        "changes_7d": 1361,
-        "changes_14d": 2748,
-        "housekeeping_7d": 40,
+        "changes_7d": 1454,
+        "changes_14d": 2841,
+        "housekeeping_7d": 42,
         "last_code_change": {
-          "ts": "2026-11-25T04:37:52Z",
-          "commit": "9ef680c",
-          "commit_full": "9ef680c87ecfe6ba7187955bf88212478fb44b6a",
-          "subject": "solidcore-ops: arcs on one circle joined, curved sections lofted to a point, and flat-sided lofts planar (#21967)"
+          "ts": "2026-11-25T15:23:20Z",
+          "commit": "2cd3e8e",
+          "commit_full": "2cd3e8ea844aa6c8775208abad0ba79faf567fd8",
+          "subject": "Merge #21865: fix(doc): recover revolve edge references across seam profile naming migration (#21739)"
         },
-        "last_commit_ts": "2026-11-25T04:37:52Z",
+        "last_commit_ts": "2026-11-25T15:23:20Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           191,
@@ -2729,16 +2734,16 @@
           203,
           272,
           299,
-          63
+          156
         ]
       },
       "release": {
-        "tag": "v0.49.0",
-        "name": "SolidCraft v0.49.0",
-        "ts": "2026-11-25T02:20:04Z",
-        "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.49.0",
-        "changes": null,
-        "new_contributors": 24,
+        "tag": "v0.49.1",
+        "name": "SolidCraft v0.49.1",
+        "ts": "2026-11-25T12:40:48Z",
+        "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.49.1",
+        "changes": 64,
+        "new_contributors": 2,
         "platforms": [
           "macOS",
           "Windows",
@@ -2747,7 +2752,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
+        "kind": "patch"
       },
       "series": [],
       "history_len": 0
@@ -2798,18 +2803,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 11.5,
+        "score": 11.8,
         "active_days_7d": 6,
-        "changes_7d": 26,
-        "changes_14d": 110,
+        "changes_7d": 27,
+        "changes_14d": 111,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-25T04:36:28Z",
-          "commit": "f779879",
-          "commit_full": "f7798795ad92d89c1588c955d61e7b1dce69aef0",
-          "subject": "fix: fifteen small outside fixes, with unknown CLI options refused everywhere (M8) (#616)"
+          "ts": "2026-11-25T05:11:02Z",
+          "commit": "87e3c46",
+          "commit_full": "87e3c465f19eceada4d7604e9dbb1ef9ad69680e",
+          "subject": "feat(fla): open Flash 8 to CS4 binary .fla files, with dashed and dotted strokes (M4) (#617)"
         },
-        "last_commit_ts": "2026-11-25T04:36:28Z",
+        "last_commit_ts": "2026-11-25T05:11:02Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
           17,
@@ -2825,7 +2830,7 @@
           0,
           1,
           6,
-          3
+          4
         ]
       },
       "release": {
@@ -2895,16 +2900,16 @@
         "level": "buzzing",
         "score": 24.1,
         "active_days_7d": 7,
-        "changes_7d": 297,
-        "changes_14d": 342,
+        "changes_7d": 298,
+        "changes_14d": 343,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-25T05:02:42Z",
-          "commit": "4d4090c",
-          "commit_full": "4d4090ce72ffa5b6f794070e533da4c7a3253cc2",
-          "subject": "A claim waits for the end of its caller's pick of a call the caller may no longer take, so the pick is gone when the claim answers"
+          "ts": "2026-11-25T05:31:52Z",
+          "commit": "ac77770",
+          "commit_full": "ac77770be4ac82b4d47a95c927d535813ca43c54",
+          "subject": "Merge token-refresh: one GitHub token refresh per login across processes, outside the writer lock"
         },
-        "last_commit_ts": "2026-11-25T05:02:42Z",
+        "last_commit_ts": "2026-11-25T05:31:52Z",
         "repo_since": "2026-11-02T14:36:17Z",
         "window": [
           0,
@@ -2920,7 +2925,7 @@
           70,
           62,
           44,
-          23
+          24
         ]
       },
       "release": null,
@@ -3015,5 +3020,5 @@
     "missing": [],
     "candidates": []
   },
-  "generated_at": "2026-11-25T05:11:25+00:00"
+  "generated_at": "2026-11-25T15:54:10+00:00"
 }

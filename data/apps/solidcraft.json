@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 38.7,
+    "score": 40.0,
     "active_days_7d": 7,
-    "changes_7d": 1361,
-    "changes_14d": 2748,
-    "housekeeping_7d": 40,
+    "changes_7d": 1454,
+    "changes_14d": 2841,
+    "housekeeping_7d": 42,
     "last_code_change": {
-      "ts": "2026-11-25T04:37:52Z",
-      "commit": "9ef680c",
-      "commit_full": "9ef680c87ecfe6ba7187955bf88212478fb44b6a",
-      "subject": "solidcore-ops: arcs on one circle joined, curved sections lofted to a point, and flat-sided lofts planar (#21967)"
+      "ts": "2026-11-25T15:23:20Z",
+      "commit": "2cd3e8e",
+      "commit_full": "2cd3e8ea844aa6c8775208abad0ba79faf567fd8",
+      "subject": "Merge #21865: fix(doc): recover revolve edge references across seam profile naming migration (#21739)"
     },
-    "last_commit_ts": "2026-11-25T04:37:52Z",
+    "last_commit_ts": "2026-11-25T15:23:20Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       191,
@@ -93,7 +93,7 @@
       203,
       272,
       299,
-      63
+      156
     ],
     "days": [
       {
@@ -1029,26 +1029,60 @@
       },
       {
         "d": "2026-11-25",
-        "code": 63,
-        "other": 3,
+        "code": 156,
+        "other": 5,
         "samples": [
           {
-            "commit": "9ef680c",
-            "subject": "solidcore-ops: arcs on one circle joined, curved sections lofted to a point, and flat-sided lofts planar (#21967)"
+            "commit": "2cd3e8e",
+            "subject": "Merge #21865: fix(doc): recover revolve edge references across seam profile naming migration (#21739)"
           },
           {
-            "commit": "cf086d2",
-            "subject": "solidcore-ops: faces picked by point, and offsets and drafts that say why they refuse (#21962)"
+            "commit": "5b4b374",
+            "subject": "Merge #21209: Drawings: the Dimension tool says why it can't dimension a curve (#21034)"
           },
           {
-            "commit": "a5c49d6",
-            "subject": "solidcore-ops: a body's own order, located points, a scoped check and the largest edge/face gap (#21961)"
+            "commit": "d1a857a",
+            "subject": "Merge #18004: Sheet metal: a fold whose bend zone takes in a corner of the outline folds"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.49.1",
+      "name": "SolidCraft v0.49.1",
+      "ts": "2026-11-25T12:40:48Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.49.1",
+      "changes": 64,
+      "new_contributors": 2,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "patch"
+    },
+    {
+      "tag": "v0.49.0-nightly.20261125.163.1",
+      "name": "SolidCraft v0.49.0-nightly.20261125.163.1 (nightly)",
+      "ts": "2026-11-25T05:43:42Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.49.0-nightly.20261125.163.1",
+      "changes": 58,
+      "new_contributors": 1,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "patch"
+    },
     {
       "tag": "v0.49.0",
       "name": "SolidCraft v0.49.0",
@@ -1209,40 +1243,6 @@
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.46.0",
       "changes": null,
       "new_contributors": 27,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": true,
-      "source": "release",
-      "kind": null
-    },
-    {
-      "tag": "v0.45.0-nightly.20261121.151.1",
-      "name": "SolidCraft v0.45.0-nightly.20261121.151.1 (nightly)",
-      "ts": "2026-11-21T05:41:06Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.45.0-nightly.20261121.151.1",
-      "changes": 190,
-      "new_contributors": 21,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": true,
-      "source": "release",
-      "kind": null
-    },
-    {
-      "tag": "v0.45.0-nightly.20261120.150.1",
-      "name": "SolidCraft v0.45.0-nightly.20261120.150.1 (nightly)",
-      "ts": "2026-11-20T05:39:23Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.45.0-nightly.20261120.150.1",
-      "changes": 78,
-      "new_contributors": 5,
       "platforms": [
         "macOS",
         "Windows",
@@ -2664,5 +2664,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-25T05:10:51+00:00"
+  "updated_at": "2026-11-25T15:53:41+00:00"
 }

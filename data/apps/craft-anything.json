@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "941c440",
-  "latest_commit_date": "2026-11-24T15:20:35-07:00",
-  "latest_message": "Add roadmap lines for gaps found in review: lock held while refreshing records, three OpenCode session leftovers, the UI tests' demo session (#2437)",
+  "latest_commit": "0a4e66b",
+  "latest_commit_date": "2026-11-25T19:50:42+07:00",
+  "latest_message": "Decode Swift non-class type deinitializers as deinit instead of __deallocating_deinit (R3.12) (#2319)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 912,
-    "revisions_7d": 96,
+    "revisions": 918,
+    "revisions_7d": 102,
     "last_revision": {
-      "ts": "2026-11-24T22:20:35Z",
+      "ts": "2026-11-25T12:50:42Z",
       "kind": "content",
-      "commit": "941c440",
-      "commit_full": "941c440ce8bb79116044a199aa20f690c9f5d56a",
-      "message": "Add roadmap lines for gaps found in review: lock held while refreshing records, three OpenCode session leftovers, the UI tests' demo session (#2437)"
+      "commit": "0a4e66b",
+      "commit_full": "0a4e66ba75c81ffa9a860c2987064d1ad61ab305",
+      "message": "Decode Swift non-class type deinitializers as deinit instead of __deallocating_deinit (R3.12) (#2319)"
     },
     "last_update": {
-      "ts": "2026-11-24T22:20:35Z",
+      "ts": "2026-11-25T12:50:42Z",
       "kind": "content",
-      "commit": "941c440",
-      "commit_full": "941c440ce8bb79116044a199aa20f690c9f5d56a",
-      "message": "Add roadmap lines for gaps found in review: lock held while refreshing records, three OpenCode session leftovers, the UI tests' demo session (#2437)"
+      "commit": "0a4e66b",
+      "commit_full": "0a4e66ba75c81ffa9a860c2987064d1ad61ab305",
+      "message": "Decode Swift non-class type deinitializers as deinit instead of __deallocating_deinit (R3.12) (#2319)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 16.6,
-    "active_days_7d": 6,
-    "changes_7d": 134,
-    "changes_14d": 431,
+    "level": "buzzing",
+    "score": 20.6,
+    "active_days_7d": 7,
+    "changes_7d": 149,
+    "changes_14d": 446,
     "housekeeping_7d": 17,
     "last_code_change": {
-      "ts": "2026-11-24T22:25:46Z",
-      "commit": "4f0f744",
-      "commit_full": "4f0f744b7e2ad16198a7b08b9edc53286b1b8b67",
-      "subject": "fix(cli): list CSV and TSV output formats (#2284)"
+      "ts": "2026-11-25T12:50:42Z",
+      "commit": "0a4e66b",
+      "commit_full": "0a4e66ba75c81ffa9a860c2987064d1ad61ab305",
+      "subject": "Decode Swift non-class type deinitializers as deinit instead of __deallocating_deinit (R3.12) (#2319)"
     },
-    "last_commit_ts": "2026-11-24T22:25:46Z",
+    "last_commit_ts": "2026-11-25T12:50:42Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       49,
@@ -93,7 +93,7 @@
       2,
       3,
       82,
-      0
+      15
     ],
     "days": [
       {
@@ -548,6 +548,25 @@
           {
             "commit": "51813be",
             "subject": "Read a Claude API conversation so far from the prompt cache on each step (R5.5) (#2342)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-25",
+        "code": 15,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "0a4e66b",
+            "subject": "Decode Swift non-class type deinitializers as deinit instead of __deallocating_deinit (R3.12) (#2319)"
+          },
+          {
+            "commit": "ebf59e4",
+            "subject": "Decode Swift protocol self-conformance symbols (R3.12) (#2299)"
+          },
+          {
+            "commit": "f310c8c",
+            "subject": "Guide Windows Flutter triage to the installed app folder (R3.12) (#2338)"
           }
         ]
       }
@@ -7058,8 +7077,50 @@
       "commit": "941c440",
       "commit_full": "941c440ce8bb79116044a199aa20f690c9f5d56a",
       "message": "Add roadmap lines for gaps found in review: lock held while refreshing records, three OpenCode session leftovers, the UI tests' demo session (#2437)"
+    },
+    {
+      "ts": "2026-11-25T12:39:45Z",
+      "kind": "content",
+      "commit": "1fde98d",
+      "commit_full": "1fde98d51e1535503f4936a7c3a792490f2e3be5",
+      "message": "Keep Esc in a project's prompt box on the project (R2.9, #2434) (#2446)"
+    },
+    {
+      "ts": "2026-11-25T12:39:57Z",
+      "kind": "content",
+      "commit": "5f09939",
+      "commit_full": "5f099398168170d9dfab47956d70722d717c4d04",
+      "message": "Use the memory set for Ghidra below 4 GB too (R1.5, #2425) (#2443)"
+    },
+    {
+      "ts": "2026-11-25T12:42:16Z",
+      "kind": "content",
+      "commit": "4a3fec5",
+      "commit_full": "4a3fec5615925d9ccf368a7d4d242eac01ea520c",
+      "message": "Move the Approvals link away from Send under the prompt box (R2.9, #2435) (#2447) (#2450)"
+    },
+    {
+      "ts": "2026-11-25T12:45:29Z",
+      "kind": "content",
+      "commit": "9fbcd89",
+      "commit_full": "9fbcd89c25c008074734865bd980af1cbfb0c208",
+      "message": "Report interrupted MCP calls without replaying their POSTs (R5.2) (#2206)"
+    },
+    {
+      "ts": "2026-11-25T12:50:30Z",
+      "kind": "content",
+      "commit": "ebf59e4",
+      "commit_full": "ebf59e452a9f727d9daec71f7b5acaf4853a7e69",
+      "message": "Decode Swift protocol self-conformance symbols (R3.12) (#2299)"
+    },
+    {
+      "ts": "2026-11-25T12:50:42Z",
+      "kind": "content",
+      "commit": "0a4e66b",
+      "commit_full": "0a4e66ba75c81ffa9a860c2987064d1ad61ab305",
+      "message": "Decode Swift non-class type deinitializers as deinit instead of __deallocating_deinit (R3.12) (#2319)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-25T05:10:04+00:00"
+  "updated_at": "2026-11-25T15:52:49+00:00"
 }

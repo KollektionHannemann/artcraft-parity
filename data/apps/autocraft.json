@@ -39,16 +39,16 @@
     "level": "buzzing",
     "score": 24.1,
     "active_days_7d": 7,
-    "changes_7d": 297,
-    "changes_14d": 342,
+    "changes_7d": 298,
+    "changes_14d": 343,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-25T05:02:42Z",
-      "commit": "4d4090c",
-      "commit_full": "4d4090ce72ffa5b6f794070e533da4c7a3253cc2",
-      "subject": "A claim waits for the end of its caller's pick of a call the caller may no longer take, so the pick is gone when the claim answers"
+      "ts": "2026-11-25T05:31:52Z",
+      "commit": "ac77770",
+      "commit_full": "ac77770be4ac82b4d47a95c927d535813ca43c54",
+      "subject": "Merge token-refresh: one GitHub token refresh per login across processes, outside the writer lock"
     },
-    "last_commit_ts": "2026-11-25T05:02:42Z",
+    "last_commit_ts": "2026-11-25T05:31:52Z",
     "repo_since": "2026-11-02T14:36:17Z",
     "window": [
       0,
@@ -64,7 +64,7 @@
       70,
       62,
       44,
-      23
+      24
     ],
     "days": [
       {
@@ -449,9 +449,13 @@
       },
       {
         "d": "2026-11-25",
-        "code": 23,
+        "code": 24,
         "other": 0,
         "samples": [
+          {
+            "commit": "ac77770",
+            "subject": "Merge token-refresh: one GitHub token refresh per login across processes, outside the writer lock"
+          },
           {
             "commit": "4d4090c",
             "subject": "A claim waits for the end of its caller's pick of a call the caller may no longer take, so the pick is gone when the claim answers"
@@ -459,10 +463,6 @@
           {
             "commit": "b32d1d7",
             "subject": "A merge entry whose approver has no sign-in yet proposes no merge job, and the state line says who it waits for"
-          },
-          {
-            "commit": "88e7326",
-            "subject": "The state line names the approver's Task Runner a pre-merge check waits for and why it cannot claim (offline, usage limit, cooling off, not ready)"
           }
         ]
       }
@@ -471,5 +471,5 @@
   "releases": [],
   "roadmap_history": [],
   "history": [],
-  "updated_at": "2026-11-25T05:11:18+00:00"
+  "updated_at": "2026-11-25T15:54:04+00:00"
 }
