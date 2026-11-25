@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "b366dad",
-  "latest_commit_date": "2026-11-20T05:45:42+07:00",
-  "latest_message": "Quick Pen: on-canvas toolbar with its actions, Flip Arc and More menu (#8763) (#8789)",
+  "latest_commit": "617f5d6",
+  "latest_commit_date": "2026-11-25T11:27:35+07:00",
+  "latest_message": "Path Precision Tools: Add Inscribed Circle draws the largest circle inside a path (#9066)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -339,8 +339,16 @@
     ],
     "progress": [
       {
+        "date": "2026-11-22",
+        "text": "Add Inscribed Circle joins the Path Precision Tools add-on (Object › Plug-ins › Path Precision Tools): the largest live circle inside each selected closed path or compound path, in the area it fills under its fill rule, with the current paint and one undo step (addon.pathtools.inscribedCircle, #6966). A VectorCraft addition: headline numbers unchanged."
+      },
+      {
         "date": "2026-11-19",
         "text": "Quick Pen tool, in the Pen tool's group (Alt+P, Option+P on macOS): clicks or drags add straight lines, continuous arcs or sharp-corner arcs; Alt tapped on its own switches the action, C flips the last arc, [ and ] size it, a click on the first point closes the path and a click on an open end continues it (path.quickPen, part of #2660). Headline numbers unchanged."
+      },
+      {
+        "date": "2026-11-19",
+        "text": "Quick Pen length handles: a handle beyond the start and the end of the path being drawn, or of the selected path, makes the line or arc there longer or shorter when dragged; a line keeps its direction and an arc its circle (path.quickPenLength, part of #2660). Headline numbers unchanged."
       },
       {
         "date": "2026-11-19",
@@ -489,14 +497,6 @@
       {
         "date": "2026-11-02",
         "text": "Mouse wheel over a closed font-family field in Character, Properties or Control changes selected text through the family list using saved font filters (excluding search text), one undo step per notch, stopping at the ends (#5253). Scores and estimates unchanged."
-      },
-      {
-        "date": "2026-11-01",
-        "text": "Find Nearest Swatch joins the Color Effects add-on (Object › Plug-ins › Color Effects): for each colour of the selection, the closest swatches of the document, a built-in library or a library or colour book the user loaded, with their CIEDE2000 difference; Apply gives each colour its nearest swatch as one undo step, linking global and spot swatches and adding a library's to the document first, so a process colour becomes the closest spot colour (addon.color.nearestSwatch, addon.color.applyNearestSwatch, #4923)."
-      },
-      {
-        "date": "2026-11-01",
-        "text": "Expand Dashes into Paths joins the Path Precision Tools add-on (Object › Plug-ins › Path Precision Tools): each selected path's dashed stroke becomes separate open paths, one per dash, laid out exactly as the stroke draws them (pattern, offset, Align Dashes to Corners and Path Ends), each keeping the stroke with the dashes off, so the gaps are real gaps for cutters and plotters, as one undo step (addon.pathtools.expandDashes, #4922)."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 258,
+    "revisions_since": 260,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,42 +536,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 259,
-    "revisions_7d": 16,
+    "revisions": 261,
+    "revisions_7d": 11,
     "last_revision": {
-      "ts": "2026-11-19T22:45:42Z",
+      "ts": "2026-11-25T04:27:35Z",
       "kind": "content",
-      "commit": "b366dad",
-      "commit_full": "b366dad3868828e72b42d09f1c3b181f47885156",
-      "message": "Quick Pen: on-canvas toolbar with its actions, Flip Arc and More menu (#8763) (#8789)"
+      "commit": "617f5d6",
+      "commit_full": "617f5d6d71ef60ec9db75b74483383279ac6e908",
+      "message": "Path Precision Tools: Add Inscribed Circle draws the largest circle inside a path (#9066)"
     },
     "last_update": {
-      "ts": "2026-11-19T22:45:42Z",
+      "ts": "2026-11-25T04:27:35Z",
       "kind": "content",
-      "commit": "b366dad",
-      "commit_full": "b366dad3868828e72b42d09f1c3b181f47885156",
-      "message": "Quick Pen: on-canvas toolbar with its actions, Flip Arc and More menu (#8763) (#8789)"
+      "commit": "617f5d6",
+      "commit_full": "617f5d6d71ef60ec9db75b74483383279ac6e908",
+      "message": "Path Precision Tools: Add Inscribed Circle draws the largest circle inside a path (#9066)"
     },
     "self_reported": "2026-11-15"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 29.2,
+    "score": 28.5,
     "active_days_7d": 7,
-    "changes_7d": 546,
-    "changes_14d": 1877,
-    "housekeeping_7d": 20,
+    "changes_7d": 358,
+    "changes_14d": 1785,
+    "housekeeping_7d": 19,
     "last_code_change": {
-      "ts": "2026-11-24T17:56:02Z",
-      "commit": "8e7a614",
-      "commit_full": "8e7a6142fccc26f6aba3e1627e30202a1a9f79de",
-      "subject": "JavaScript: a trailing comma ends call arguments and parameter lists (#9189)"
+      "ts": "2026-11-25T04:34:38Z",
+      "commit": "b1a1c0b",
+      "commit_full": "b1a1c0b7a83e872268a9cf9332bf103d1a7438d1",
+      "subject": "New Document: Orientation shows a page icon for Portrait and for Landscape (#9265)"
     },
-    "last_commit_ts": "2026-11-24T17:56:02Z",
+    "last_commit_ts": "2026-11-25T04:34:38Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
-      123,
       254,
       240,
       283,
@@ -584,7 +583,8 @@
       38,
       47,
       6,
-      44
+      45,
+      30
     ],
     "days": [
       {
@@ -1621,9 +1621,13 @@
       },
       {
         "d": "2026-11-24",
-        "code": 44,
+        "code": 45,
         "other": 2,
         "samples": [
+          {
+            "commit": "9d050d2",
+            "subject": "Libraries panel: graphic and pattern thumbnails come from the framework's thumbnail store (Thumbnails with a ThumbSource), decoded a few a frame and kept per it"
+          },
           {
             "commit": "8e7a614",
             "subject": "JavaScript: a trailing comma ends call arguments and parameter lists (#9189)"
@@ -1631,10 +1635,25 @@
           {
             "commit": "4c60269",
             "subject": "Select: adding objects one at a time checks and reads only the added ones (#9145)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-25",
+        "code": 30,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "b1a1c0b",
+            "subject": "New Document: Orientation shows a page icon for Portrait and for Landscape (#9265)"
           },
           {
-            "commit": "5f35daa",
-            "subject": "Scripts: File and Folder give their localizedName (#9185)"
+            "commit": "d564c76",
+            "subject": "Export for Screens: an artboard's picture keeps its proportions in its tile and row thumbnail (#9264)"
+          },
+          {
+            "commit": "fad4f11",
+            "subject": "Tracing Presets: the selected preset's settings sit beside the list, under its name in strong type (#9263)"
           }
         ]
       }
@@ -8651,7 +8670,59 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "2fb75e8",
+      "commit_full": "2fb75e810085fb3a163114e9292fa98f44667c10",
+      "commit_date": "2026-11-25T11:26:26+07:00",
+      "ts": "2026-11-25T04:26:26Z",
+      "message": "Pen: Quick Pen handles at a path's ends make its line or arc longer or shorter (#8788)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
+    },
+    {
+      "commit": "617f5d6",
+      "commit_full": "617f5d6d71ef60ec9db75b74483383279ac6e908",
+      "commit_date": "2026-11-25T11:27:35+07:00",
+      "ts": "2026-11-25T04:27:35Z",
+      "message": "Path Precision Tools: Add Inscribed Circle draws the largest circle inside a path (#9066)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-24T22:50:10+00:00"
+  "updated_at": "2026-11-25T05:08:35+00:00"
 }

@@ -8,19 +8,406 @@
   "repo_url": "https://github.com/UCSLabs/mailcraft",
   "branch": "main",
   "kind": "community",
-  "roadmap_url": null,
-  "roadmap_history_url": null,
-  "metric_status": "roadmap_missing",
-  "latest_commit": "448ad7a",
-  "latest_commit_date": "2026-11-22T18:33:49Z",
-  "latest_message": "Release 0.15.0 (#1840)",
-  "parsed": null,
+  "roadmap_url": "https://github.com/UCSLabs/mailcraft/blob/main/ROADMAP.md",
+  "roadmap_history_url": "https://github.com/UCSLabs/mailcraft/commits/main/ROADMAP.md",
+  "metric_status": "available",
+  "latest_commit": "3e6045a",
+  "latest_commit_date": "2026-11-25T01:29:07Z",
+  "latest_message": "R10: GitHub org name UCS-Care-Group → UCSLabs (#1862)",
+  "parsed": {
+    "stage": "public beta",
+    "next_stage": "leaving",
+    "target": "Microsoft Outlook (Microsoft 365, classic desktop)",
+    "last_updated": "2026-11-20",
+    "metrics": {
+      "full": {
+        "label": "Full target (everything Outlook does)",
+        "pct": 25.0,
+        "range": null,
+        "hours": [
+          410,
+          800
+        ]
+      },
+      "mainstream": {
+        "label": "Mainstream practitioner (the everyday Outlook user)",
+        "pct": 35.0,
+        "range": null,
+        "hours": [
+          180,
+          340
+        ]
+      },
+      "essentials": {
+        "label": "Essentials user (one Microsoft account: read, file, search, reply, answer meetings)",
+        "pct": 50.0,
+        "range": null,
+        "hours": [
+          60,
+          120
+        ]
+      },
+      "ready": {
+        "label": "Ready for real work with a real account",
+        "pct": 25.0,
+        "range": null,
+        "hours": null
+      },
+      "breadth": {
+        "label": "Feature breadth (ribbon and menu catalog with a command)",
+        "pct": 79.4,
+        "range": null,
+        "hours": null
+      }
+    },
+    "audiences": [
+      {
+        "audience": "essentials",
+        "label": "Essentials user (one Microsoft account: read, file, search, reply, answer meetings)",
+        "pct": 50.0,
+        "range": null,
+        "hours": [
+          60,
+          120
+        ]
+      },
+      {
+        "audience": "mainstream",
+        "label": "Mainstream practitioner (the everyday Outlook user)",
+        "pct": 35.0,
+        "range": null,
+        "hours": [
+          180,
+          340
+        ]
+      },
+      {
+        "audience": "full",
+        "label": "Full target (everything Outlook does)",
+        "pct": 25.0,
+        "range": null,
+        "hours": [
+          410,
+          800
+        ]
+      }
+    ],
+    "dimensions": [
+      {
+        "label": "Features (depth: how closely what has a command behaves as Outlook's does)",
+        "pct": 45.0
+      },
+      {
+        "label": "Interface fidelity (classic Outlook's shape and look)",
+        "pct": 60.0
+      },
+      {
+        "label": "Servers and keeping in step",
+        "pct": 45.0
+      },
+      {
+        "label": "Calendar and meetings",
+        "pct": 55.0
+      },
+      {
+        "label": "File formats",
+        "pct": 60.0
+      },
+      {
+        "label": "Performance at scale (200,000 messages)",
+        "pct": 80.0
+      },
+      {
+        "label": "Platforms and signed builds",
+        "pct": 60.0
+      },
+      {
+        "label": "Languages (one complete, eleven previews)",
+        "pct": 20.0
+      },
+      {
+        "label": "Privacy and safety by default",
+        "pct": 100.0
+      },
+      {
+        "label": "Agent control",
+        "pct": 100.0
+      }
+    ],
+    "features": [
+      {
+        "label": "Reading and triage",
+        "pct": 70.0,
+        "hours": [
+          15,
+          30
+        ]
+      },
+      {
+        "label": "Search",
+        "pct": 70.0,
+        "hours": [
+          5,
+          15
+        ]
+      },
+      {
+        "label": "Rendering mail",
+        "pct": 75.0,
+        "hours": [
+          30,
+          60
+        ]
+      },
+      {
+        "label": "Writing mail",
+        "pct": 55.0,
+        "hours": [
+          25,
+          50
+        ]
+      },
+      {
+        "label": "Servers",
+        "pct": 45.0,
+        "hours": [
+          100,
+          195
+        ]
+      },
+      {
+        "label": "Calendar",
+        "pct": 55.0,
+        "hours": [
+          36,
+          62
+        ]
+      },
+      {
+        "label": "People",
+        "pct": 45.0,
+        "hours": [
+          15,
+          30
+        ]
+      },
+      {
+        "label": "Tasks",
+        "pct": 50.0,
+        "hours": [
+          10,
+          20
+        ]
+      },
+      {
+        "label": "Files",
+        "pct": 55.0,
+        "hours": [
+          50,
+          100
+        ]
+      },
+      {
+        "label": "Platforms",
+        "pct": 60.0,
+        "hours": [
+          49,
+          98
+        ]
+      },
+      {
+        "label": "Agents",
+        "pct": 100.0,
+        "hours": null
+      },
+      {
+        "label": "Privacy and safety",
+        "pct": 70.0,
+        "hours": [
+          40,
+          80
+        ]
+      }
+    ],
+    "upcoming": [
+      "Printing",
+      "Paragraph alignment",
+      "Message list columns",
+      "The To-Do Bar",
+      "The calendar's List view",
+      "Rules",
+      "JMAP and DAV accounts",
+      "Sending later and Undo Send"
+    ],
+    "progress": [
+      {
+        "date": "2026-11-20",
+        "text": "#1787: an empty folder or a search with no results keeps the message list's height and leaves its splitter usable with the reading pane at the bottom"
+      },
+      {
+        "date": "2026-11-19",
+        "text": "#1745: the question before an agent's Undo or Redo no longer counts a subscribed calendar's events among those it would take away, also when the calendar was subscribed after the step or the clock has moved since; Undo and Redo keep them"
+      },
+      {
+        "date": "2026-11-19",
+        "text": "#1734: with the reading pane off (Preview view too), selecting a message leaves it unread; opening it in its own window, or turning the pane on, marks it read"
+      },
+      {
+        "date": "2026-11-19",
+        "text": "#1721: Paste Text Only in the right-click menu of a message's body and a signature being edited: the clipboard's text alone, without the HTML or picture beside it, so it comes in the message's own formatting; greyed with no host clipboard (the browser), not offered in one-line fields, and nothing when the clipboard has no text"
+      },
+      {
+        "date": "2026-11-19",
+        "text": "#1712: a dialog opened from a popped-out compose window's ribbon or keys (Insert Link, Word Count, Date & Time, Find…) comes up over that window, not over the main window behind it, where it was hidden"
+      },
+      {
+        "date": "2026-11-19",
+        "text": "#1657: Message list readability: darker row lines, unread senders in the accent, Shade Alternate Rows"
+      },
+      {
+        "date": "2026-11-19",
+        "text": "#1514: folders within an account and the Favorites kept in MailCraft are put in the owner's order, by dragging a row or with Move Up and Move Down in its menu (folder.reorder, folder.reorderFavorite); the order is kept in the mailbox, never sent to a server; Inbox, Drafts, Sent Items and Deleted Items stay at the top, and Outlook's own Favorites keep Outlook's order"
+      },
+      {
+        "date": "2026-11-19",
+        "text": "#1310: Pictures in the message being written are resized by dragging the bottom-right corner of a selected one (an outline follows the pointer, and letting go sets the width), or by its width or height in pixels in the Picture size strip along the foot of the message, with Reset Size for its own width; the height stays in proportion, and the width is the one the picture is shown and sent at (compose.picture.set, at most 1920 px; null for its own width). Each change is one step of the message's own undo; a signature's pictures are still sized in File › Signatures"
+      },
+      {
+        "date": "2026-11-18",
+        "text": "#954: Local desktop dictionaries for spelling on Windows and macOS"
+      },
+      {
+        "date": "2026-11-18",
+        "text": "#1674: Undo and Redo put back only the events their step changed, with the changes those were waiting to send; what downloads brought for the other events since stays, and their servers are told nothing of it"
+      },
+      {
+        "date": "2026-11-18",
+        "text": "#1527: Save Mailbox As writes one message at a time instead of loading all content and buffering the whole file; regression coverage includes 40,000 synthetic messages, compatible headers, reader size limits and failed exports"
+      },
+      {
+        "date": "2026-11-17",
+        "text": "#1568: mail that reaches Microsoft 365 through a filtering gateway no longer shows a failed check for every outside sender: Exchange Online's compauth=none reason=905 says it didn't enforce DMARC because the mail came through another service first; a sender at the account's own domain keeps the warning"
+      },
+      {
+        "date": "2026-11-17",
+        "text": "#851: renaming a category on a Microsoft account gives the new name to the mail and events on the server that aren't kept on this computer too (in every folder, and in the account's own calendars), before the old name is deleted from Outlook's list; Undo gives them the old name again."
+      },
+      {
+        "date": "2026-11-17",
+        "text": "MB3.18: the phone keeps the calendar and Microsoft To Do in step on its own. The calendar's and the to-dos' jobs in flight moved below the window into mailcraft-host (calendarjob, tasksjob), which the desktop and the phone both call; what is due stays the engine's. The phone runs them between rounds and at the end of each round, its background run included, which also brings the bodies of new mail on a connection that is not metered; a to-do job whose sign-in doesn't cover Tasks.ReadWrite asks the app to put the question, never a page by itself, and the reminders' schedule follows what the jobs take in"
+      },
+      {
+        "date": "2026-11-17",
+        "text": "MB3.15: the Android app end to end on an emulator against the Graph stand-in: sign in, Send/Receive, read a message, answer it (the stand-in has the answer in Sent Items) and a calendar reminder's notification, in one instrumented test (connectedDebugAndroidTest with -Pmailcraft.e2e=true, whose Rust library sends the sign-in's token endpoint and Graph to the stand-in on the device's loopback address and refuses to make a release app; the test plays the sign-in page). The stand-in gains a token endpoint and --e2e data dated now. CI runs it every week, by hand and from the release workflow, never on a pull request (android-e2e.yml); docs/android.md says how to run it locally. The reminder's meeting is made on the phone until calendars come down from the server there"
+      },
+      {
+        "date": "2026-11-17",
+        "text": "MB3.18: a calendar or To Do job's answer that comes back with somebody else's sign-in is refused whole, on the desktop and the phone alike: one check in mailcraft-host (jobsignin), applied in the job itself as soon as its sign-in is renewed, before anything goes up or is read (the To Do run, and the Graph run for a calendar job, judged by the owner's sign-in for a shared mailbox's calendar), and again as the job in flight hands its answer back (CalendarJobs::poll, TasksJobs::poll), so that nothing is sent with it, nothing of it reaches the mailbox, its token isn't kept, and the owner is told in the words each front end already uses for a sign-in of somebody else's; mail's Microsoft Graph runs (the Outbox, a Send/Receive, the Inbox pass, a shared mailbox's) are checked the same way, with the account's own sign-in or a shared mailbox's owner's, before their first request"
+      },
+      {
+        "date": "2026-11-17",
+        "text": "MB3.3: on Android a sign-in that works (a new account, or one signed in again) starts Send/Receive at once through the same path as a pull to refresh, so the list shows it updating; before, nothing came until the 15-minute background run or the next start. A new account's first sync goes through the room gate first, for its window's estimated size held to the space the owner gave its mail in Add Account (the core can't yet say how much mail the server holds), and a no starts nothing"
+      },
+      {
+        "date": "2026-11-17",
+        "text": "MB3.3: a new account's first sync that the owner answers \"Not now\" for want of room holds the account back in the core (Core.holdbackgroundsync), kept as account ids in a small app preference and said to the core again at every start and before each background run, as the worker may start without the window; \"Sync anyway\" or a pull to refresh lets it go"
+      },
+      {
+        "date": "2026-11-17",
+        "text": "Desktop message-list swipes: choose Delete, Archive, Mark as Read, Flag or None for each direction in File › Options; both start off. A row follows the gesture, reveals the action and settles back or slides away before the command runs. It acts on the messages the row held at the start; on Windows horizontal mouse-wheel scrolling can trigger it too"
+      },
+      {
+        "date": "2026-11-17",
+        "text": "MB3.12: the Android Calendar tab has a Week view (seven columns from the locale's first day, an hour grid with overlapping events side by side as in the day view, whole-day events above, today tinted; a touch on a day's head opens that day), and the day, week and month views are swiped between pages (a pager with one page for each day, week or month, anchored on the controller's day, so Previous, Next and Today turn it too and it keeps its page when the phone is turned); the views read the page on either side so a swipe shows its events as it comes in"
+      },
+      {
+        "date": "2026-11-17",
+        "text": "#1594: One Microsoft permission request, step 2: a sign-in's page asks for the shared mailboxes' and calendars' permissions (Mail.ReadWrite.Shared, Mail.Send.Shared, Calendars.ReadWrite.Shared) with everything else, and asks again without them when it won't have them; their questions of their own and their Ask again lines are gone, and an account that signed in before is put the one question of keeping in step with Outlook, whose page asks for everything it lacks"
+      },
+      {
+        "date": "2026-11-17",
+        "text": "#1587: the ASCII stand-in of a non-ASCII attachment name keeps the extension."
+      },
+      {
+        "date": "2026-11-17",
+        "text": "#1581: a message that can't be downloaded over IMAP (a connection error or a refusal) no longer stops the run: a fresh connection and on with the next message and folder; held against the message only when the fresh connection works, counted per folder (Folder::failing), left out after three runs and said once, and taken up again by sync.retryFailed; a TLS record that fails its check says what to look at"
+      },
+      {
+        "date": "2026-11-17",
+        "text": "#1561 part 1: Save Message As writes a message as it was received, byte for byte: the bytes a signed or encrypted message keeps, or the server's own copy of a Microsoft, Exchange server or JMAP message, fetched for the save and held only until it is written; anything else is written from what this computer keeps and the status bar says so; a message only part of which is here is refused, never saved as if it were whole. Several at once, IMAP's own copy and streaming large messages to the file are still to come."
+      },
+      {
+        "date": "2026-11-17",
+        "text": "#1558: the sign-in's loopback redirect skips the ports browsers block as unsafe (the Fetch standard's bad-port list), within its existing eight tries."
+      },
+      {
+        "date": "2026-11-17",
+        "text": "#1552: File › Signatures › Link opens the composer's own Insert Link dialog for the signature's text instead of doing nothing; Ctrl+K works there too, and the keyboard goes back to the signature's text when the dialog closes"
+      },
+      {
+        "date": "2026-11-17",
+        "text": "#1468: the first automatic Send/Receive round waits for the background read of the credential store, so accounts with a remembered password are fetched at start-up"
+      },
+      {
+        "date": "2026-11-16",
+        "text": "#1663: in the calendar grid, the all-day row and Month, a click selects one item, Ctrl+click toggles, Shift+click takes the range and Ctrl+A takes what is shown (up to 200, saying when there is more); Copy, Cut and Paste act on the whole set, from the keys, an item's menu, the Home tab's Clipboard group and Command Search, a cut left in place until the paste moves it, an ordinary appointment moved in its own calendar keeping its id, UID and details, its length and its spacing, and a day of a series changed as that day; one Undo for the set, and a paste that cannot be done whole changes nothing; a delete or a cut that writes to people asks once for the set, naming each item's account, time and people (somebody without an address counted too), and each meeting the account's server keeps is queued as a change of its own. Engine and egui regression tests cover selected-set and clipboard behaviour, including modeled window-focus guards. Real OS focus and system-level pointer modifiers, rendered pixels, browser interactions and live accounts remain outside that coverage; manual and native acceptance are unperformed"
+      },
+      {
+        "date": "2026-11-16",
+        "text": "#544: The optional system tray icon shows a red circle at its top left while an Inbox of the owner’s own server accounts has unread mail, with the account and folder scope of new-mail alerts. Shared mailboxes, local and imported mail, Archive and custom folders do not count. Reading or removing the last unread Inbox message clears it; reopening the window does not. The artwork is shared across desktop platforms; checked on Fedora 45 and macOS, with Windows runtime checks still pending. The badge works independently of desktop-alert settings, with the folder pane’s cached counts."
+      },
+      {
+        "date": "2026-11-16",
+        "text": "#1176, follow-up: Move Items, Copy Items and the Move to Folder and Copy to Folder menus list the folders of every account, the one in view's first and the others' under their names, with a search that finds a folder by its mailbox too"
+      },
+      {
+        "date": "2026-11-16",
+        "text": "#1176, follow-up: the Move to Folder and Copy to Folder menus build every account's folder tree once, when the menu opens, in one pass over the folders (as Move Items does) instead of on every frame, and fold a folder's search text once"
+      },
+      {
+        "date": "2026-11-16",
+        "text": "MB3.14, review fixes: Back in About's Licences leaves to About from the toolbar as from the system; a window or cap chosen while another goes through is applied after it, and a new window choice ends an earlier thinning run; a signature is cut by characters, never mid-pair; the phone's signature box never replaces a signature with formatting or links, a signature shared by accounts is copied for the one edited, and clearing it clears new and reply defaults; \"Primary mail only\" now holds back notifications for Gmail mail outside Primary (Microsoft's Focused and Other are not kept by the mailbox yet, so those are not told apart)"
+      },
+      {
+        "date": "2026-11-16",
+        "text": "MB3.11: Android reminders. The core gives the next 64 calendar and task reminders with the instant each is due and a key that holds from one ask to the next (Core.reminderschedule, over the engine's new view::upcomingreminders), and says when they changed (ReminderScheduleChanged). The app sets an alarm for each (exact through USEEXACTALARM, within the system's window when exact alarms aren't allowed), replaces or calls off those of events that moved or were deleted, and sets them again at every open, after a restart, an update and a change of the clock or the zone. A reminder's notification has its own channel, Dismiss and Snooze, and shows only \"Reminders\" on a lock screen that hides private content; the Settings switch Reminders calls off every alarm"
+      },
+      {
+        "date": "2026-11-16",
+        "text": "#209 D4: account DAV settings (DavServer, per-collection state, hosts checked as text, a password per origin, never borrowed) and the six commands account.davSet, account.davOff, sync.davRequest, sync.applyDav, sync.davChanges, sync.applyDavUploaded, behind MAILCRAFTDAV=1 and refusing until D5/D6; agents cannot choose where a DAV password goes; nothing user-visible"
+      },
+      {
+        "date": "2026-11-16",
+        "text": "#209 D3 CodeRabbit fixes: TXT strings read one attribute each, fuzz oracle corrected"
+      },
+      {
+        "date": "2026-11-16",
+        "text": "#209 D3 home-set fixes: every home read, a home that is a collection, containers one level down, a TXT record with an escape passed over"
+      },
+      {
+        "date": "2026-11-16",
+        "text": "#209 D3 per-origin homes: Located names every home and says collections keep their own origin; a Microsoft, Google or refusing home fails only itself"
+      },
+      {
+        "date": "2026-11-16",
+        "text": "#209 D3 unproven home 401: an unproven origin that refuses in the listing phase fails only that home and is sent the password no more"
+      },
+      {
+        "date": "2026-11-16",
+        "text": "#1544: React. A message can be answered with one emoji (👍 ❤️ 🎉 😂 😮 😢) from a button beside Forward in the reading pane, or with mail.react: a short reply to the sender in the mail-standard form (RFC 9078), sent through the account's normal sending and filed in Sent Items; it waits as long as Undo Send says; IMAP, JMAP and local accounts only (Microsoft and Exchange server accounts are refused), and not for drafts, own mail, Junk E-mail, automated mail or a message with a sender warning; it goes to the sender only, never to the Reply-To, and the row shows the address. Reactions that come in are not shown yet"
+      },
+      {
+        "date": "2026-11-16",
+        "text": "#1511: changing how the message list is arranged (Arrange By, Reverse Sort, conversations, groups, single line, preview lines, ready-made views, tighter spacing, Reset View) scrolls the list to the selected message and centres it, in the window and when an agent drives it through the control channel; nothing selected, nothing scrolls. Arranged by Size, equal sizes are in date order, newest first, as equal senders and subjects already were. The commands that arrange the list are named in keys::REARRANGESLIST and asked for at the end of MailApp::execute"
+      }
+    ]
+  },
   "parity": {
     "tracked_since": "2026-10-12T18:17:00Z",
     "value_since": "2026-10-12T18:17:00Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 262,
+    "revisions_since": 264,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -28,43 +415,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 266,
+    "revisions": 269,
     "revisions_7d": 6,
     "last_revision": {
-      "ts": "2026-11-22T18:33:49Z",
-      "kind": "content",
-      "commit": "448ad7a",
-      "commit_full": "448ad7a7026d97b9dd8538bce55ff6232f9ae94c",
-      "message": "Release 0.15.0 (#1840)"
+      "ts": "2026-11-25T01:29:07Z",
+      "kind": "editorial",
+      "commit": "3e6045a",
+      "commit_full": "3e6045a27dfbcecf4a9b7e1745bb307c007f207d",
+      "message": "R10: GitHub org name UCS-Care-Group → UCSLabs (#1862)"
     },
     "last_update": {
-      "ts": "2026-11-22T18:33:49Z",
+      "ts": "2026-11-23T17:39:46Z",
       "kind": "content",
-      "commit": "448ad7a",
-      "commit_full": "448ad7a7026d97b9dd8538bce55ff6232f9ae94c",
-      "message": "Release 0.15.0 (#1840)"
+      "commit": "e6cb5f1",
+      "commit_full": "e6cb5f1f7fd96679010db7001e68ca8379417872",
+      "message": "#1799: Undo Send waits up to two minutes; its rules written down and tested (#1854)"
     },
     "self_reported": "2026-11-20"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.4,
+    "score": 15.7,
     "active_days_7d": 7,
-    "changes_7d": 101,
-    "changes_14d": 283,
-    "housekeeping_7d": 10,
+    "changes_7d": 53,
+    "changes_14d": 254,
+    "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-23T01:01:40Z",
-      "commit": "7781eee",
-      "commit_full": "7781eeef093b3ef760bee2ac45a0092042a1a914",
-      "subject": "Fix FreeBSD: host connect test no longer races for a freed port (#1848)"
+      "ts": "2026-11-25T01:29:07Z",
+      "commit": "3e6045a",
+      "commit_full": "3e6045a27dfbcecf4a9b7e1745bb307c007f207d",
+      "subject": "R10: GitHub org name UCS-Care-Group → UCSLabs (#1862)"
     },
-    "last_commit_ts": "2026-11-23T01:01:40Z",
+    "last_commit_ts": "2026-11-25T03:21:39Z",
     "repo_since": "2026-10-12T18:17:00Z",
     "window": [
-      22,
-      19,
       15,
       42,
       41,
@@ -76,6 +461,8 @@
       13,
       4,
       9,
+      6,
+      6,
       1
     ],
     "days": [
@@ -871,12 +1258,50 @@
       },
       {
         "d": "2026-11-23",
-        "code": 1,
+        "code": 6,
         "other": 0,
         "samples": [
           {
-            "commit": "7781eee",
-            "subject": "Fix FreeBSD: host connect test no longer races for a freed port (#1848)"
+            "commit": "37b6f27",
+            "subject": "#1821: more interface text through the catalogue; no eliding boxes (#1852)"
+          },
+          {
+            "commit": "75841d6",
+            "subject": "#1800: choose a 12-hour or 24-hour clock, independent of the language (#1855)"
+          },
+          {
+            "commit": "e6cb5f1",
+            "subject": "#1799: Undo Send waits up to two minutes; its rules written down and tested (#1854)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-24",
+        "code": 6,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "e9ec9e3",
+            "subject": "MB3.x gap: Android reading view actions, header and light page (#1926)"
+          },
+          {
+            "commit": "69e8279",
+            "subject": "MB3.x gap: Android People: New person form (#1927)"
+          },
+          {
+            "commit": "4e512f2",
+            "subject": "MB3.x gap: Calendar day and week hour rows shorter (#1924)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-25",
+        "code": 1,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "3e6045a",
+            "subject": "R10: GitHub org name UCS-Care-Group → UCSLabs (#1862)"
           }
         ]
       }
@@ -887,7 +1312,7 @@
       "tag": "v0.15.0",
       "name": "MailCraft v0.15.0",
       "ts": "2026-11-22T19:37:59Z",
-      "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.15.0",
+      "url": "https://github.com/UCSLabs/mailcraft/releases/tag/v0.15.0",
       "changes": null,
       "new_contributors": null,
       "platforms": [
@@ -904,7 +1329,7 @@
       "tag": "v0.14.0",
       "name": "MailCraft v0.14.0",
       "ts": "2026-11-19T17:08:29Z",
-      "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.14.0",
+      "url": "https://github.com/UCSLabs/mailcraft/releases/tag/v0.14.0",
       "changes": null,
       "new_contributors": null,
       "platforms": [
@@ -921,7 +1346,7 @@
       "tag": "v0.13.0",
       "name": "MailCraft v0.13.0",
       "ts": "2026-11-15T00:17:18Z",
-      "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.13.0",
+      "url": "https://github.com/UCSLabs/mailcraft/releases/tag/v0.13.0",
       "changes": null,
       "new_contributors": null,
       "platforms": [
@@ -938,7 +1363,7 @@
       "tag": "v0.12.0",
       "name": "MailCraft v0.12.0",
       "ts": "2026-11-12T02:12:06Z",
-      "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.12.0",
+      "url": "https://github.com/UCSLabs/mailcraft/releases/tag/v0.12.0",
       "changes": null,
       "new_contributors": null,
       "platforms": [
@@ -955,7 +1380,7 @@
       "tag": "v0.11.1",
       "name": "MailCraft v0.11.1",
       "ts": "2026-11-08T12:24:26Z",
-      "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.11.1",
+      "url": "https://github.com/UCSLabs/mailcraft/releases/tag/v0.11.1",
       "changes": null,
       "new_contributors": null,
       "platforms": [
@@ -972,7 +1397,7 @@
       "tag": "v0.11.0",
       "name": "MailCraft v0.11.0",
       "ts": "2026-11-06T21:14:37Z",
-      "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.11.0",
+      "url": "https://github.com/UCSLabs/mailcraft/releases/tag/v0.11.0",
       "changes": null,
       "new_contributors": null,
       "platforms": [
@@ -989,7 +1414,7 @@
       "tag": "v0.10.0",
       "name": "MailCraft v0.10.0",
       "ts": "2026-11-02T10:23:20Z",
-      "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.10.0",
+      "url": "https://github.com/UCSLabs/mailcraft/releases/tag/v0.10.0",
       "changes": null,
       "new_contributors": null,
       "platforms": [
@@ -1006,7 +1431,7 @@
       "tag": "v0.9.0",
       "name": "MailCraft v0.9.0",
       "ts": "2026-10-30T20:52:29Z",
-      "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.9.0",
+      "url": "https://github.com/UCSLabs/mailcraft/releases/tag/v0.9.0",
       "changes": null,
       "new_contributors": null,
       "platforms": [
@@ -1023,7 +1448,7 @@
       "tag": "v0.8.2",
       "name": "MailCraft v0.8.2",
       "ts": "2026-10-27T22:36:38Z",
-      "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.8.2",
+      "url": "https://github.com/UCSLabs/mailcraft/releases/tag/v0.8.2",
       "changes": null,
       "new_contributors": null,
       "platforms": [
@@ -1040,7 +1465,7 @@
       "tag": "v0.8.1",
       "name": "MailCraft v0.8.1",
       "ts": "2026-10-26T08:50:48Z",
-      "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.8.1",
+      "url": "https://github.com/UCSLabs/mailcraft/releases/tag/v0.8.1",
       "changes": null,
       "new_contributors": null,
       "platforms": [
@@ -1057,7 +1482,7 @@
       "tag": "v0.8.0",
       "name": "MailCraft v0.8.0",
       "ts": "2026-10-24T23:30:37Z",
-      "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.8.0",
+      "url": "https://github.com/UCSLabs/mailcraft/releases/tag/v0.8.0",
       "changes": null,
       "new_contributors": null,
       "platforms": [
@@ -1074,7 +1499,7 @@
       "tag": "v0.7.0",
       "name": "MailCraft v0.7.0",
       "ts": "2026-10-22T21:20:58Z",
-      "url": "https://github.com/UCS-Care-Group/mailcraft/releases/tag/v0.7.0",
+      "url": "https://github.com/UCSLabs/mailcraft/releases/tag/v0.7.0",
       "changes": null,
       "new_contributors": null,
       "platforms": [
@@ -6442,7 +6867,76 @@
       "breadth_pct": 79.4,
       "full_prev": 25.0,
       "kind": "content"
+    },
+    {
+      "commit": "5bdd017",
+      "commit_full": "5bdd017951a4fb488e7ac608545fb921e23197c3",
+      "commit_date": "2026-11-23T17:39:42Z",
+      "ts": "2026-11-23T17:39:42Z",
+      "message": "#625: All Accounts: every account's Inbox, Drafts, Sent Items, Deleted Items and Archive in one list (#1853)",
+      "stage": "public beta",
+      "next_stage": "leaving",
+      "last_updated": "2026-11-20",
+      "full_pct": 25.0,
+      "full_range": null,
+      "full_hours": [
+        410,
+        800
+      ],
+      "full_label": "Full target (everything Outlook does)",
+      "target": "Microsoft Outlook (Microsoft 365, classic desktop)",
+      "mainstream_pct": 35.0,
+      "essentials_pct": 50.0,
+      "breadth_pct": 79.4,
+      "full_prev": 25.0,
+      "kind": "content"
+    },
+    {
+      "commit": "e6cb5f1",
+      "commit_full": "e6cb5f1f7fd96679010db7001e68ca8379417872",
+      "commit_date": "2026-11-23T17:39:46Z",
+      "ts": "2026-11-23T17:39:46Z",
+      "message": "#1799: Undo Send waits up to two minutes; its rules written down and tested (#1854)",
+      "stage": "public beta",
+      "next_stage": "leaving",
+      "last_updated": "2026-11-20",
+      "full_pct": 25.0,
+      "full_range": null,
+      "full_hours": [
+        410,
+        800
+      ],
+      "full_label": "Full target (everything Outlook does)",
+      "target": "Microsoft Outlook (Microsoft 365, classic desktop)",
+      "mainstream_pct": 35.0,
+      "essentials_pct": 50.0,
+      "breadth_pct": 79.4,
+      "full_prev": 25.0,
+      "kind": "content"
+    },
+    {
+      "commit": "3e6045a",
+      "commit_full": "3e6045a27dfbcecf4a9b7e1745bb307c007f207d",
+      "commit_date": "2026-11-25T01:29:07Z",
+      "ts": "2026-11-25T01:29:07Z",
+      "message": "R10: GitHub org name UCS-Care-Group → UCSLabs (#1862)",
+      "stage": "public beta",
+      "next_stage": "leaving",
+      "last_updated": "2026-11-20",
+      "full_pct": 25.0,
+      "full_range": null,
+      "full_hours": [
+        410,
+        800
+      ],
+      "full_label": "Full target (everything Outlook does)",
+      "target": "Microsoft Outlook (Microsoft 365, classic desktop)",
+      "mainstream_pct": 35.0,
+      "essentials_pct": 50.0,
+      "breadth_pct": 79.4,
+      "full_prev": 25.0,
+      "kind": "editorial"
     }
   ],
-  "updated_at": "2026-11-24T12:48:43+00:00"
+  "updated_at": "2026-11-25T05:11:06+00:00"
 }

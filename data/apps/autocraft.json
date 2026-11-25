@@ -37,21 +37,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 23.8,
-    "active_days_7d": 6,
-    "changes_7d": 266,
-    "changes_14d": 327,
+    "score": 24.1,
+    "active_days_7d": 7,
+    "changes_7d": 297,
+    "changes_14d": 342,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-24T22:07:16Z",
-      "commit": "28aa397",
-      "commit_full": "28aa39720b3708d9e72808474e7c8ad8ec29706f",
-      "subject": "Merge branch 'wf-b4'"
+      "ts": "2026-11-25T05:02:42Z",
+      "commit": "4d4090c",
+      "commit_full": "4d4090ce72ffa5b6f794070e533da4c7a3253cc2",
+      "subject": "A claim waits for the end of its caller's pick of a call the caller may no longer take, so the pick is gone when the claim answers"
     },
-    "last_commit_ts": "2026-11-24T22:07:16Z",
+    "last_commit_ts": "2026-11-25T05:02:42Z",
     "repo_since": "2026-11-02T14:36:17Z",
     "window": [
-      16,
       0,
       0,
       21,
@@ -64,7 +63,8 @@
       21,
       70,
       62,
-      36
+      44,
+      23
     ],
     "days": [
       {
@@ -430,20 +430,39 @@
       },
       {
         "d": "2026-11-24",
-        "code": 36,
+        "code": 44,
         "other": 1,
         "samples": [
           {
-            "commit": "28aa397",
-            "subject": "Merge branch 'wf-b4'"
+            "commit": "7a25bad",
+            "subject": "Merge branch 'perf-n1'"
           },
           {
-            "commit": "012931d",
-            "subject": "Merge branch 'wf-b4'"
+            "commit": "e234930",
+            "subject": "Merge branch 'wf-own-lane'"
           },
           {
-            "commit": "3404780",
-            "subject": "Merge branch 'wf-base'"
+            "commit": "9ea9e38",
+            "subject": "Merge branch 'fix-classify-select' into deploy3"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-25",
+        "code": 23,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "4d4090c",
+            "subject": "A claim waits for the end of its caller's pick of a call the caller may no longer take, so the pick is gone when the claim answers"
+          },
+          {
+            "commit": "b32d1d7",
+            "subject": "A merge entry whose approver has no sign-in yet proposes no merge job, and the state line says who it waits for"
+          },
+          {
+            "commit": "88e7326",
+            "subject": "The state line names the approver's Task Runner a pre-merge check waits for and why it cannot claim (offline, usage limit, cooling off, not ready)"
           }
         ]
       }
@@ -452,5 +471,5 @@
   "releases": [],
   "roadmap_history": [],
   "history": [],
-  "updated_at": "2026-11-24T22:51:47+00:00"
+  "updated_at": "2026-11-25T05:11:18+00:00"
 }

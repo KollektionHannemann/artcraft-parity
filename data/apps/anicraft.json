@@ -37,21 +37,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 11.4,
+    "score": 11.5,
     "active_days_7d": 6,
-    "changes_7d": 38,
-    "changes_14d": 123,
+    "changes_7d": 26,
+    "changes_14d": 110,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-24T22:09:07Z",
-      "commit": "754cf8a",
-      "commit_full": "754cf8a844f1c8b0bb7b6b4ae67f5556f564808e",
-      "subject": "fix(timeline): several layers selected together, the ruler click, new masks locked, and panel fixes (M8) (#599)"
+      "ts": "2026-11-25T04:36:28Z",
+      "commit": "f779879",
+      "commit_full": "f7798795ad92d89c1588c955d61e7b1dce69aef0",
+      "subject": "fix: fifteen small outside fixes, with unknown CLI options refused everywhere (M8) (#616)"
     },
-    "last_commit_ts": "2026-11-24T22:09:07Z",
+    "last_commit_ts": "2026-11-25T04:36:28Z",
     "repo_since": "2026-11-06T06:58:25Z",
     "window": [
-      18,
       17,
       14,
       14,
@@ -64,7 +63,8 @@
       3,
       0,
       1,
-      4
+      6,
+      3
     ],
     "days": [
       {
@@ -365,20 +365,39 @@
       },
       {
         "d": "2026-11-24",
-        "code": 4,
+        "code": 6,
         "other": 1,
         "samples": [
           {
+            "commit": "51ddbee",
+            "subject": "fix(xfl): an Animate shape is never cut down quietly (M4) (#601)"
+          },
+          {
+            "commit": "e78cb82",
+            "subject": "fix(render): memory and frame time stay flat: picture sets, a zoom at rest, edges nobody sees (M8) (#600)"
+          },
+          {
             "commit": "754cf8a",
             "subject": "fix(timeline): several layers selected together, the ruler click, new masks locked, and panel fixes (M8) (#599)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-25",
+        "code": 3,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "f779879",
+            "subject": "fix: fifteen small outside fixes, with unknown CLI options refused everywhere (M8) (#616)"
           },
           {
-            "commit": "837c3ed",
-            "subject": "feat(text): mixed directions read right, and letters a font lacks come from a fallback face (M5) (#598)"
+            "commit": "3c04048",
+            "subject": "fix(parity): nineteen outside pull requests on parity and editing, merged with fixes (M8) (#625)"
           },
           {
-            "commit": "59b195b",
-            "subject": "fix(brush): a long Brush stroke never freezes the window; Free Transform on a skewed symbol tested (M8) (#559)"
+            "commit": "1bf696b",
+            "subject": "packaging(linux): support co-installable nightly packages (#610)"
           }
         ]
       }
@@ -436,5 +455,5 @@
   ],
   "roadmap_history": [],
   "history": [],
-  "updated_at": "2026-11-24T22:51:39+00:00"
+  "updated_at": "2026-11-25T05:10:53+00:00"
 }

@@ -383,21 +383,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 23.7,
+    "score": 21.0,
     "active_days_7d": 7,
-    "changes_7d": 176,
-    "changes_14d": 606,
-    "housekeeping_7d": 15,
+    "changes_7d": 146,
+    "changes_14d": 430,
+    "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-11-24T22:44:15Z",
-      "commit": "dd56106",
-      "commit_full": "dd56106df20f8f13924f8fa1662e299727b9acfe",
-      "subject": "Merge queue batch #16705: #14467, #16250, #16290, #15965, #16318, #16308"
+      "ts": "2026-11-25T04:14:17Z",
+      "commit": "e22facf",
+      "commit_full": "e22facf45b0e7f0fbeb3b439ed44a950da9783b4",
+      "subject": "fix(cmyk): preserve native CMYK in vector shape fills and strokes (#16894)"
     },
-    "last_commit_ts": "2026-11-24T22:44:15Z",
+    "last_commit_ts": "2026-11-25T04:14:17Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
-      180,
       45,
       74,
       30,
@@ -410,7 +409,8 @@
       12,
       25,
       18,
-      17
+      18,
+      3
     ],
     "days": [
       {
@@ -1460,9 +1460,13 @@
       },
       {
         "d": "2026-11-24",
-        "code": 17,
+        "code": 18,
         "other": 0,
         "samples": [
+          {
+            "commit": "9283262",
+            "subject": "RAW #587: choose the actual frame budget for shared CFA development (#16699)"
+          },
           {
             "commit": "dd56106",
             "subject": "Merge queue batch #16705: #14467, #16250, #16290, #15965, #16318, #16308"
@@ -1470,10 +1474,25 @@
           {
             "commit": "32f53c8",
             "subject": "Merge queue batch #16687: #16079, #16122"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-25",
+        "code": 3,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "e22facf",
+            "subject": "fix(cmyk): preserve native CMYK in vector shape fills and strokes (#16894)"
           },
           {
-            "commit": "db14029",
-            "subject": "Merge queue batch #16679: #16655, #13486, #15281"
+            "commit": "8a3ff6c",
+            "subject": "PhotoCraft 0.24 on craft-libs next, with the RAW Develop window fix (#16665 + #16598) (#16691)"
+          },
+          {
+            "commit": "ac2e39a",
+            "subject": "Merge queue batch #16717: #15767, #15421, #16049, #15092, #16446"
           }
         ]
       }
@@ -1964,5 +1983,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-24T22:49:58+00:00"
+  "updated_at": "2026-11-25T05:08:21+00:00"
 }

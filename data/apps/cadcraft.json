@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/cadcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/cadcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "97dccaf",
-  "latest_commit_date": "2026-11-20T16:54:58-07:00",
-  "latest_message": "Parity docs: batch for 2026-11-19 and 2026-11-20, alpha-blocker marks follow the six-row gate (#3348)",
+  "latest_commit": "b11e2a9",
+  "latest_commit_date": "2026-11-24T21:12:44-07:00",
+  "latest_message": "Parity docs: rows updated for what merged from 2026-11-21 to 2026-11-25 (#3469)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
     "target": "Autodesk AutoCAD 2027",
-    "last_updated": "2026-11-20",
+    "last_updated": "2026-11-25",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -319,7 +319,7 @@
     "value_since": "2026-10-10T18:13:04Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 14,
+    "revisions_since": 15,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -327,42 +327,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 15,
-    "revisions_7d": 2,
+    "revisions": 16,
+    "revisions_7d": 3,
     "last_revision": {
-      "ts": "2026-11-20T23:54:58Z",
+      "ts": "2026-11-25T04:12:44Z",
       "kind": "content",
-      "commit": "97dccaf",
-      "commit_full": "97dccaf9e79cfe5f86a9741c7e2ee1388b563ce2",
-      "message": "Parity docs: batch for 2026-11-19 and 2026-11-20, alpha-blocker marks follow the six-row gate (#3348)"
+      "commit": "b11e2a9",
+      "commit_full": "b11e2a94ac8831d1c4a761a985a57701e94abf07",
+      "message": "Parity docs: rows updated for what merged from 2026-11-21 to 2026-11-25 (#3469)"
     },
     "last_update": {
-      "ts": "2026-11-20T23:54:58Z",
+      "ts": "2026-11-25T04:12:44Z",
       "kind": "content",
-      "commit": "97dccaf",
-      "commit_full": "97dccaf9e79cfe5f86a9741c7e2ee1388b563ce2",
-      "message": "Parity docs: batch for 2026-11-19 and 2026-11-20, alpha-blocker marks follow the six-row gate (#3348)"
+      "commit": "b11e2a9",
+      "commit_full": "b11e2a94ac8831d1c4a761a985a57701e94abf07",
+      "message": "Parity docs: rows updated for what merged from 2026-11-21 to 2026-11-25 (#3469)"
     },
-    "self_reported": "2026-11-20"
+    "self_reported": "2026-11-25"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 11.3,
+    "score": 12.0,
     "active_days_7d": 6,
-    "changes_7d": 47,
-    "changes_14d": 90,
-    "housekeeping_7d": 6,
+    "changes_7d": 41,
+    "changes_14d": 78,
+    "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-24T22:31:19Z",
-      "commit": "d538a46",
-      "commit_full": "d538a468e429cc4552bc096d081de9059fa753ae",
-      "subject": "Land #3368, #3390, #3399, #3405, #3392, #3411, #3366: Thai PDF text, layout plot settings, Polish strings, dimension inline editor, table cell text, ATTDIA, sys"
+      "ts": "2026-11-25T05:01:30Z",
+      "commit": "0d4b100",
+      "commit_full": "0d4b100209990e485891d85c70ff465c8e709156",
+      "subject": "Land #3235, #3382, #2808: dynamic block stretch of wipeouts, arcs and hatches; TRIM/EXTEND part highlight; EXTRIM (#3471)"
     },
-    "last_commit_ts": "2026-11-24T22:31:19Z",
+    "last_commit_ts": "2026-11-25T05:01:30Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
-      19,
       2,
       1,
       3,
@@ -375,7 +374,8 @@
       2,
       0,
       7,
-      4
+      5,
+      6
     ],
     "days": [
       {
@@ -1119,9 +1119,13 @@
       },
       {
         "d": "2026-11-24",
-        "code": 4,
+        "code": 5,
         "other": 0,
         "samples": [
+          {
+            "commit": "2ce75fc",
+            "subject": "Land #3444, #3446, #3431, #3151, #3152, #2972, #3453, #2977, #2969, #3097, #2903, #3445: spline prompts, DIMSPACE, image limits, mitred wide polylines, DIMASSOC"
+          },
           {
             "commit": "d538a46",
             "subject": "Land #3368, #3390, #3399, #3405, #3392, #3411, #3366: Thai PDF text, layout plot settings, Polish strings, dimension inline editor, table cell text, ATTDIA, sys"
@@ -1129,10 +1133,25 @@
           {
             "commit": "f80dbb4",
             "subject": "Land #3425, #3426, #3095, #3435, #3439, #3437: hatch edge, dependency prune, tilt check, proxy graphics follow-ups, kept dimensions (#3454)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-25",
+        "code": 6,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "0d4b100",
+            "subject": "Land #3235, #3382, #2808: dynamic block stretch of wipeouts, arcs and hatches; TRIM/EXTEND part highlight; EXTRIM (#3471)"
           },
           {
-            "commit": "c1f771d",
-            "subject": "Land #963, #993, #1752 (with #1030, #1098, #1699, #1723): dynamic block references rotate, flip, array, scale, align and look up (#3424)"
+            "commit": "966d128",
+            "subject": "Land #3373, #3290, #3105: download docs, paste spreadsheet text as a TABLE, Tamil (#3470)"
+          },
+          {
+            "commit": "6e48d4b",
+            "subject": "Land #3231, #3394, #3457: Dynamic Input Tab cycle, Array window, lone user alias opens its dialog (#3467)"
           }
         ]
       }
@@ -1690,7 +1709,30 @@
       "breadth_pct": 50.0,
       "full_prev": 38.0,
       "kind": "content"
+    },
+    {
+      "commit": "b11e2a9",
+      "commit_full": "b11e2a94ac8831d1c4a761a985a57701e94abf07",
+      "commit_date": "2026-11-24T21:12:44-07:00",
+      "ts": "2026-11-25T04:12:44Z",
+      "message": "Parity docs: rows updated for what merged from 2026-11-21 to 2026-11-25 (#3469)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-25",
+      "full_pct": 38.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1850
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Autodesk AutoCAD 2027",
+      "mainstream_pct": 28.0,
+      "essentials_pct": 46.0,
+      "breadth_pct": 50.0,
+      "full_prev": 38.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-24T22:50:54+00:00"
+  "updated_at": "2026-11-25T05:09:43+00:00"
 }

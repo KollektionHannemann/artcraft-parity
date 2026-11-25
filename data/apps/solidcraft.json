@@ -46,7 +46,7 @@
   },
   "roadmap": {
     "revisions": 201,
-    "revisions_7d": 3,
+    "revisions_7d": 2,
     "last_revision": {
       "ts": "2026-11-22T18:27:37Z",
       "kind": "content",
@@ -66,21 +66,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 40.3,
+    "score": 38.7,
     "active_days_7d": 7,
-    "changes_7d": 1449,
-    "changes_14d": 2808,
-    "housekeeping_7d": 39,
+    "changes_7d": 1361,
+    "changes_14d": 2748,
+    "housekeeping_7d": 40,
     "last_code_change": {
-      "ts": "2026-11-24T22:25:54Z",
-      "commit": "8352665",
-      "commit_full": "8352665e10c8223ad3e5b86c041f3df9edb643d7",
-      "subject": "Sketch: M opens Move/Copy while editing a sketch (#18794) (#18795)"
+      "ts": "2026-11-25T04:37:52Z",
+      "commit": "9ef680c",
+      "commit_full": "9ef680c87ecfe6ba7187955bf88212478fb44b6a",
+      "subject": "solidcore-ops: arcs on one circle joined, curved sections lofted to a point, and flat-sided lofts planar (#21967)"
     },
-    "last_commit_ts": "2026-11-24T22:25:54Z",
+    "last_commit_ts": "2026-11-25T04:37:52Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
-      149,
       191,
       203,
       198,
@@ -93,7 +92,8 @@
       120,
       203,
       272,
-      273
+      299,
+      63
     ],
     "days": [
       {
@@ -1010,26 +1010,62 @@
       },
       {
         "d": "2026-11-24",
-        "code": 273,
-        "other": 9,
+        "code": 299,
+        "other": 11,
         "samples": [
           {
-            "commit": "8352665",
-            "subject": "Sketch: M opens Move/Copy while editing a sketch (#18794) (#18795)"
+            "commit": "b5cd39c",
+            "subject": "fix(io): report specific body and feature when model cache fails round-trip (#21727)"
           },
           {
-            "commit": "9d0a511",
-            "subject": "Booleans: open a blind bore at a clipped sphere’s rim (#20844)"
+            "commit": "3c41cb2",
+            "subject": "Pattern: keep source material and appearance when editing a body pattern (#21429)"
           },
           {
-            "commit": "1b9ae7a",
-            "subject": "KiCad import: copper pours no longer show stray lines between their holes (#21810)"
+            "commit": "ff1db8e",
+            "subject": "Kernel: the UI, renderer and benches call solidcore through SolidCraft's kernel interface (#21858)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-25",
+        "code": 63,
+        "other": 3,
+        "samples": [
+          {
+            "commit": "9ef680c",
+            "subject": "solidcore-ops: arcs on one circle joined, curved sections lofted to a point, and flat-sided lofts planar (#21967)"
+          },
+          {
+            "commit": "cf086d2",
+            "subject": "solidcore-ops: faces picked by point, and offsets and drafts that say why they refuse (#21962)"
+          },
+          {
+            "commit": "a5c49d6",
+            "subject": "solidcore-ops: a body's own order, located points, a scoped check and the largest edge/face gap (#21961)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.49.0",
+      "name": "SolidCraft v0.49.0",
+      "ts": "2026-11-25T02:20:04Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.49.0",
+      "changes": null,
+      "new_contributors": 24,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.48.0-nightly.20261124.161.1",
       "name": "SolidCraft v0.48.0-nightly.20261124.161.1 (nightly)",
@@ -1147,7 +1183,7 @@
       ],
       "prerelease": false,
       "source": "release",
-      "kind": "minor"
+      "kind": null
     },
     {
       "tag": "v0.46.1",
@@ -1164,7 +1200,7 @@
       ],
       "prerelease": true,
       "source": "release",
-      "kind": "minor"
+      "kind": null
     },
     {
       "tag": "v0.46.0",
@@ -1181,7 +1217,7 @@
       ],
       "prerelease": true,
       "source": "release",
-      "kind": "minor"
+      "kind": null
     },
     {
       "tag": "v0.45.0-nightly.20261121.151.1",
@@ -1198,7 +1234,7 @@
       ],
       "prerelease": true,
       "source": "release",
-      "kind": "patch"
+      "kind": null
     },
     {
       "tag": "v0.45.0-nightly.20261120.150.1",
@@ -1214,23 +1250,6 @@
         "Web"
       ],
       "prerelease": true,
-      "source": "release",
-      "kind": "patch"
-    },
-    {
-      "tag": "v0.45.0",
-      "name": "SolidCraft v0.45.0",
-      "ts": "2026-11-19T21:15:24Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.45.0",
-      "changes": 597,
-      "new_contributors": 7,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
       "source": "release",
       "kind": null
     }
@@ -2645,5 +2664,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-24T22:51:38+00:00"
+  "updated_at": "2026-11-25T05:10:51+00:00"
 }
