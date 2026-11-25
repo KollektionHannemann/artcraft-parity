@@ -37,18 +37,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 24.1,
+    "score": 24.5,
     "active_days_7d": 7,
-    "changes_7d": 298,
-    "changes_14d": 343,
+    "changes_7d": 305,
+    "changes_14d": 350,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-25T05:31:52Z",
-      "commit": "ac77770",
-      "commit_full": "ac77770be4ac82b4d47a95c927d535813ca43c54",
-      "subject": "Merge token-refresh: one GitHub token refresh per login across processes, outside the writer lock"
+      "ts": "2026-11-25T23:28:27Z",
+      "commit": "bfa4ae0",
+      "commit_full": "bfa4ae0c9329998c3a234ac38760a3ed4f2a4604",
+      "subject": "The answer deadline's late-answer catch is a deliberate fire-and-forget"
     },
-    "last_commit_ts": "2026-11-25T05:31:52Z",
+    "last_commit_ts": "2026-11-25T23:28:27Z",
     "repo_since": "2026-11-02T14:36:17Z",
     "window": [
       0,
@@ -64,7 +64,7 @@
       70,
       62,
       44,
-      24
+      31
     ],
     "days": [
       {
@@ -449,20 +449,20 @@
       },
       {
         "d": "2026-11-25",
-        "code": 24,
+        "code": 31,
         "other": 0,
         "samples": [
           {
-            "commit": "ac77770",
-            "subject": "Merge token-refresh: one GitHub token refresh per login across processes, outside the writer lock"
+            "commit": "bfa4ae0",
+            "subject": "The answer deadline's late-answer catch is a deliberate fire-and-forget"
           },
           {
-            "commit": "4d4090c",
-            "subject": "A claim waits for the end of its caller's pick of a call the caller may no longer take, so the pick is gone when the claim answers"
+            "commit": "397a3ac",
+            "subject": "The lock and listening connections send their first keepalive probe after 10 s idle, as pool connections do"
           },
           {
-            "commit": "b32d1d7",
-            "subject": "A merge entry whose approver has no sign-in yet proposes no merge job, and the state line says who it waits for"
+            "commit": "afbbe2d",
+            "subject": "Each chore after a sync run has a 15-minute limit; a run that left one behind exits"
           }
         ]
       }
@@ -471,5 +471,5 @@
   "releases": [],
   "roadmap_history": [],
   "history": [],
-  "updated_at": "2026-11-25T15:54:04+00:00"
+  "updated_at": "2026-11-25T23:51:42+00:00"
 }

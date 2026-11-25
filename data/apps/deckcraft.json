@@ -524,19 +524,19 @@
   },
   "milestone": null,
   "activity": {
-    "level": "quiet",
-    "score": 7.5,
+    "level": "active",
+    "score": 8.1,
     "active_days_7d": 5,
-    "changes_7d": 16,
-    "changes_14d": 77,
+    "changes_7d": 17,
+    "changes_14d": 78,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-25T01:00:44Z",
-      "commit": "02f7fcd",
-      "commit_full": "02f7fcdf734bf37396112bdfa634f27d0d424fbf",
-      "subject": "packaging(linux): support co-installable nightly packages (#2350)"
+      "ts": "2026-11-25T22:16:45Z",
+      "commit": "08ba507",
+      "commit_full": "08ba5072a7586909d99bb6e14e5ca73d2b2608ee",
+      "subject": "Use the shared nightly launcher template (#2367)"
     },
-    "last_commit_ts": "2026-11-25T01:00:44Z",
+    "last_commit_ts": "2026-11-25T22:16:45Z",
     "repo_since": "2026-10-06T02:13:02Z",
     "window": [
       7,
@@ -552,7 +552,7 @@
       1,
       0,
       0,
-      1
+      2
     ],
     "days": [
       {
@@ -1368,9 +1368,13 @@
       },
       {
         "d": "2026-11-25",
-        "code": 1,
+        "code": 2,
         "other": 0,
         "samples": [
+          {
+            "commit": "08ba507",
+            "subject": "Use the shared nightly launcher template (#2367)"
+          },
           {
             "commit": "02f7fcd",
             "subject": "packaging(linux): support co-installable nightly packages (#2350)"
@@ -1380,6 +1384,23 @@
     ]
   },
   "releases": [
+    {
+      "tag": "v0.19.1",
+      "name": "DeckCraft v0.19.1",
+      "ts": "2026-11-25T19:29:37Z",
+      "url": "https://github.com/storytold/deckcraft/releases/tag/v0.19.1",
+      "changes": 85,
+      "new_contributors": 10,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.18.1",
       "name": "DeckCraft v0.18.1",
@@ -1557,23 +1578,6 @@
       "url": "https://github.com/storytold/deckcraft/releases/tag/v0.10.0",
       "changes": 12,
       "new_contributors": 4,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.9.0",
-      "name": "DeckCraft v0.9.0",
-      "ts": "2026-10-21T07:46:17Z",
-      "url": "https://github.com/storytold/deckcraft/releases/tag/v0.9.0",
-      "changes": 23,
-      "new_contributors": 1,
       "platforms": [
         "macOS",
         "Windows",
@@ -4976,5 +4980,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-25T05:09:39+00:00"
+  "updated_at": "2026-11-25T23:51:03+00:00"
 }

@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "617f5d6",
-  "latest_commit_date": "2026-11-25T11:27:35+07:00",
-  "latest_message": "Path Precision Tools: Add Inscribed Circle draws the largest circle inside a path (#9066)",
+  "latest_commit": "2bc121e",
+  "latest_commit_date": "2026-11-26T01:43:40+07:00",
+  "latest_message": "Docs: ROADMAP Upcoming names G11's remaining bugs (#8314) (#9076)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Adobe Illustrator 2026 (30.x)",
-    "last_updated": "2026-11-15",
+    "last_updated": "2026-11-22",
     "metrics": {
       "full": {
         "label": "Full Illustrator (ready for real work; decides the stage)",
@@ -334,7 +334,7 @@
       "Interaction-fidelity pass (G1), tool by tool from ui-parity.md: 60–90 h.",
       ".ai files from real users (G9): layer structure, guides, speed: 10–20 h.",
       "Launch and stability on real machines (G10): 20–35 h.",
-      "Core-tool correctness (G11: Shape Builder regions, Asset Export borders): 8–15 h.",
+      "Core-tool correctness (G11: the unit preference reverting to points, #864, SVG export units fixed; a Transform effect in a fill's or stroke's own effects, #885; Shape Builder regions and Asset Export borders are fixed): 6–13 h.",
       "Then: type core and advanced type (G4), the Illustrator 2026 additions (G13), 3D (G3). The Effect Gallery's filter thumbnails and in-dialog preview are in (G2)."
     ],
     "progress": [
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 260,
+    "revisions_since": 261,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,39 +536,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 261,
-    "revisions_7d": 11,
+    "revisions": 262,
+    "revisions_7d": 12,
     "last_revision": {
-      "ts": "2026-11-25T04:27:35Z",
+      "ts": "2026-11-25T18:43:40Z",
       "kind": "content",
-      "commit": "617f5d6",
-      "commit_full": "617f5d6d71ef60ec9db75b74483383279ac6e908",
-      "message": "Path Precision Tools: Add Inscribed Circle draws the largest circle inside a path (#9066)"
+      "commit": "2bc121e",
+      "commit_full": "2bc121e681c8902bf27daf9ea6b9a222cf28f0c8",
+      "message": "Docs: ROADMAP Upcoming names G11's remaining bugs (#8314) (#9076)"
     },
     "last_update": {
-      "ts": "2026-11-25T04:27:35Z",
+      "ts": "2026-11-25T18:43:40Z",
       "kind": "content",
-      "commit": "617f5d6",
-      "commit_full": "617f5d6d71ef60ec9db75b74483383279ac6e908",
-      "message": "Path Precision Tools: Add Inscribed Circle draws the largest circle inside a path (#9066)"
+      "commit": "2bc121e",
+      "commit_full": "2bc121e681c8902bf27daf9ea6b9a222cf28f0c8",
+      "message": "Docs: ROADMAP Upcoming names G11's remaining bugs (#8314) (#9076)"
     },
-    "self_reported": "2026-11-15"
+    "self_reported": "2026-11-22"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 29.9,
+    "score": 30.1,
     "active_days_7d": 7,
-    "changes_7d": 407,
-    "changes_14d": 1834,
-    "housekeeping_7d": 21,
+    "changes_7d": 420,
+    "changes_14d": 1847,
+    "housekeeping_7d": 22,
     "last_code_change": {
-      "ts": "2026-11-25T12:56:15Z",
-      "commit": "2a5dbc4",
-      "commit_full": "2a5dbc479fa593b045ca203607358ee2b9da33a2",
-      "subject": "Tests: the frame helpers give the runtime its input once per frame (#9272)"
+      "ts": "2026-11-25T22:17:47Z",
+      "commit": "016ead2",
+      "commit_full": "016ead2572d7d931d15d198ed44f66867b7893c7",
+      "subject": "Use the shared nightly launcher template (#9316)"
     },
-    "last_commit_ts": "2026-11-25T12:56:15Z",
+    "last_commit_ts": "2026-11-25T22:17:47Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       254,
@@ -584,7 +584,7 @@
       47,
       6,
       45,
-      79
+      92
     ],
     "days": [
       {
@@ -1640,20 +1640,20 @@
       },
       {
         "d": "2026-11-25",
-        "code": 79,
-        "other": 2,
+        "code": 92,
+        "other": 3,
         "samples": [
           {
-            "commit": "2a5dbc4",
-            "subject": "Tests: the frame helpers give the runtime its input once per frame (#9272)"
+            "commit": "016ead2",
+            "subject": "Use the shared nightly launcher template (#9316)"
           },
           {
-            "commit": "9ddc6b6",
-            "subject": "Eyedropper: Object Highlighting outlines the object a click would act on (#8906)"
+            "commit": "694f66a",
+            "subject": "Look: Home's Learn below the presets, and the title bar's menus, cursor and tab close as production's (#9322)"
           },
           {
-            "commit": "5f875f9",
-            "subject": "Canvas: Color Settings and a reloaded profile render the art again through the new conversion (#8896)"
+            "commit": "3ce5379",
+            "subject": "docs(cli): correct artboard color export help (#8850) (#9011)"
           }
         ]
       }
@@ -8722,7 +8722,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "2bc121e",
+      "commit_full": "2bc121e681c8902bf27daf9ea6b9a222cf28f0c8",
+      "commit_date": "2026-11-26T01:43:40+07:00",
+      "ts": "2026-11-25T18:43:40Z",
+      "message": "Docs: ROADMAP Upcoming names G11's remaining bugs (#8314) (#9076)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-22",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-25T15:51:15+00:00"
+  "updated_at": "2026-11-25T23:50:35+00:00"
 }

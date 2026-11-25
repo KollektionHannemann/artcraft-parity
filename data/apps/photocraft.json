@@ -352,7 +352,7 @@
   "parity": {
     "tracked_since": "2026-10-10T19:09:04Z",
     "value_since": "2026-10-10T19:09:04Z",
-    "releases_since": 11,
+    "releases_since": 10,
     "releases_since_capped": true,
     "revisions_since": 11,
     "hours_since": null,
@@ -383,18 +383,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 22.0,
+    "score": 22.7,
     "active_days_7d": 7,
-    "changes_7d": 150,
-    "changes_14d": 434,
+    "changes_7d": 155,
+    "changes_14d": 439,
     "housekeeping_7d": 11,
     "last_code_change": {
-      "ts": "2026-11-25T15:11:58Z",
-      "commit": "830316b",
-      "commit_full": "830316b775f1f6734498ac6e39fd1298955ff93f",
-      "subject": "RAW Develop's window moves and resizes again (#16905) (#16955)"
+      "ts": "2026-11-25T22:49:52Z",
+      "commit": "d827906",
+      "commit_full": "d827906d6f0d5a58f2b8bbedd507013e64bfedb5",
+      "subject": "Merge queue batch #17001: #14868, #16986"
     },
-    "last_commit_ts": "2026-11-25T15:11:58Z",
+    "last_commit_ts": "2026-11-25T22:49:52Z",
     "repo_since": "2026-09-30T06:12:04Z",
     "window": [
       45,
@@ -410,7 +410,7 @@
       25,
       18,
       18,
-      7
+      12
     ],
     "days": [
       {
@@ -1479,26 +1479,43 @@
       },
       {
         "d": "2026-11-25",
-        "code": 7,
+        "code": 12,
         "other": 0,
         "samples": [
           {
-            "commit": "830316b",
-            "subject": "RAW Develop's window moves and resizes again (#16905) (#16955)"
+            "commit": "d827906",
+            "subject": "Merge queue batch #17001: #14868, #16986"
           },
           {
-            "commit": "1d5af64",
-            "subject": "Merge queue batch #16952: #16686, #16417, #16945, #16935, #16012, #16534"
+            "commit": "dbd1915",
+            "subject": "Sign PhotoCraft nightlies on the dedicated nightly-signer branch (#16906)"
           },
           {
-            "commit": "9d317c5",
-            "subject": "Enable the PhotoCraft nightly for supervised manual runs (#16594)"
+            "commit": "b5c7620",
+            "subject": "Merge queue batch #16992: #16970, #16973"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.24.0-rc.2",
+      "name": "PhotoCraft v0.24.0-rc.2",
+      "ts": "2026-11-25T19:17:12Z",
+      "url": "https://github.com/storytold/photocraft/releases/tag/v0.24.0-rc.2",
+      "changes": 95,
+      "new_contributors": 2,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.24.0-rc.1",
       "name": "PhotoCraft v0.24.0-rc.1",
@@ -1676,23 +1693,6 @@
       "url": "https://github.com/storytold/photocraft/releases/tag/v0.16.0",
       "changes": 122,
       "new_contributors": 24,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.15.1",
-      "name": "PhotoCraft v0.15.1",
-      "ts": "2026-10-23T22:44:33Z",
-      "url": "https://github.com/storytold/photocraft/releases/tag/v0.15.1",
-      "changes": 28,
-      "new_contributors": null,
       "platforms": [
         "macOS",
         "Windows",
@@ -1983,5 +1983,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-25T15:51:00+00:00"
+  "updated_at": "2026-11-25T23:50:28+00:00"
 }

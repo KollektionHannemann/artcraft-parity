@@ -19,6 +19,39 @@
   ],
   "latest_events": [
     {
+      "id": "deckcraft",
+      "name": "DeckCraft",
+      "type": "release",
+      "ts": "2026-11-25T19:29:37Z",
+      "tag": "v0.19.1",
+      "kind": "minor",
+      "changes": 85,
+      "url": "https://github.com/storytold/deckcraft/releases/tag/v0.19.1",
+      "prerelease": false
+    },
+    {
+      "id": "wordcraft",
+      "name": "WordCraft",
+      "type": "release",
+      "ts": "2026-11-25T19:29:33Z",
+      "tag": "v0.19.1",
+      "kind": "minor",
+      "changes": 145,
+      "url": "https://github.com/storytold/wordcraft/releases/tag/v0.19.1",
+      "prerelease": false
+    },
+    {
+      "id": "photocraft",
+      "name": "PhotoCraft",
+      "type": "release",
+      "ts": "2026-11-25T19:17:12Z",
+      "tag": "v0.24.0-rc.2",
+      "kind": "minor",
+      "changes": 95,
+      "url": "https://github.com/storytold/photocraft/releases/tag/v0.24.0-rc.2",
+      "prerelease": true
+    },
+    {
       "id": "solidcraft",
       "name": "SolidCraft",
       "type": "release",
@@ -352,17 +385,6 @@
       "prerelease": false
     },
     {
-      "id": "photocraft",
-      "name": "PhotoCraft",
-      "type": "release",
-      "ts": "2026-11-11T21:59:33Z",
-      "tag": "v0.23.0",
-      "kind": "minor",
-      "changes": 265,
-      "url": "https://github.com/storytold/photocraft/releases/tag/v0.23.0",
-      "prerelease": false
-    },
-    {
       "id": "lightcraft",
       "name": "LightCraft",
       "type": "release",
@@ -427,40 +449,18 @@
       "changes": 45,
       "url": "https://github.com/storytold/effectcraft/releases/tag/v0.24.0",
       "prerelease": false
-    },
-    {
-      "id": "gridcraft",
-      "name": "GridCraft",
-      "type": "release",
-      "ts": "2026-11-11T16:54:48Z",
-      "tag": "v0.19.0",
-      "kind": "minor",
-      "changes": 49,
-      "url": "https://github.com/storytold/gridcraft/releases/tag/v0.19.0",
-      "prerelease": false
-    },
-    {
-      "id": "filmcraft",
-      "name": "FilmCraft",
-      "type": "release",
-      "ts": "2026-11-11T16:35:54Z",
-      "tag": "v0.20.0",
-      "kind": "minor",
-      "changes": 26,
-      "url": "https://github.com/storytold/filmcraft/releases/tag/v0.20.0",
-      "prerelease": false
     }
   ],
   "release_waves": [
     {
       "day": "2026-11-25",
-      "apps": 1,
-      "changes": 64,
+      "apps": 3,
+      "changes": 294,
       "largest": {
-        "id": "solidcraft",
-        "name": "SolidCraft",
-        "tag": "v0.49.1",
-        "changes": 64
+        "id": "wordcraft",
+        "name": "WordCraft",
+        "tag": "v0.19.1",
+        "changes": 145
       }
     },
     {
@@ -528,7 +528,7 @@
         "value_since": "2026-10-10T18:11:14Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 260,
+        "revisions_since": 261,
         "hours_since": null,
         "areas_since": {
           "up": 3,
@@ -559,39 +559,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 261,
-        "revisions_7d": 11,
+        "revisions": 262,
+        "revisions_7d": 12,
         "last_revision": {
-          "ts": "2026-11-25T04:27:35Z",
+          "ts": "2026-11-25T18:43:40Z",
           "kind": "content",
-          "commit": "617f5d6",
-          "commit_full": "617f5d6d71ef60ec9db75b74483383279ac6e908",
-          "message": "Path Precision Tools: Add Inscribed Circle draws the largest circle inside a path (#9066)"
+          "commit": "2bc121e",
+          "commit_full": "2bc121e681c8902bf27daf9ea6b9a222cf28f0c8",
+          "message": "Docs: ROADMAP Upcoming names G11's remaining bugs (#8314) (#9076)"
         },
         "last_update": {
-          "ts": "2026-11-25T04:27:35Z",
+          "ts": "2026-11-25T18:43:40Z",
           "kind": "content",
-          "commit": "617f5d6",
-          "commit_full": "617f5d6d71ef60ec9db75b74483383279ac6e908",
-          "message": "Path Precision Tools: Add Inscribed Circle draws the largest circle inside a path (#9066)"
+          "commit": "2bc121e",
+          "commit_full": "2bc121e681c8902bf27daf9ea6b9a222cf28f0c8",
+          "message": "Docs: ROADMAP Upcoming names G11's remaining bugs (#8314) (#9076)"
         },
-        "self_reported": "2026-11-15"
+        "self_reported": "2026-11-22"
       },
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 29.9,
+        "score": 30.1,
         "active_days_7d": 7,
-        "changes_7d": 407,
-        "changes_14d": 1834,
-        "housekeeping_7d": 21,
+        "changes_7d": 420,
+        "changes_14d": 1847,
+        "housekeeping_7d": 22,
         "last_code_change": {
-          "ts": "2026-11-25T12:56:15Z",
-          "commit": "2a5dbc4",
-          "commit_full": "2a5dbc479fa593b045ca203607358ee2b9da33a2",
-          "subject": "Tests: the frame helpers give the runtime its input once per frame (#9272)"
+          "ts": "2026-11-25T22:17:47Z",
+          "commit": "016ead2",
+          "commit_full": "016ead2572d7d931d15d198ed44f66867b7893c7",
+          "subject": "Use the shared nightly launcher template (#9316)"
         },
-        "last_commit_ts": "2026-11-25T12:56:15Z",
+        "last_commit_ts": "2026-11-25T22:17:47Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           254,
@@ -607,7 +607,7 @@
           47,
           6,
           45,
-          79
+          92
         ]
       },
       "release": {
@@ -633,11 +633,11 @@
           "v": 62.0
         },
         {
-          "t": "2026-11-25T04:27:35Z",
+          "t": "2026-11-25T18:43:40Z",
           "v": 62.0
         }
       ],
-      "history_len": 261
+      "history_len": 262
     },
     {
       "repo_url": "https://github.com/storytold/lightcraft",
@@ -709,18 +709,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.5,
+        "score": 14.1,
         "active_days_7d": 7,
-        "changes_7d": 52,
-        "changes_14d": 112,
+        "changes_7d": 53,
+        "changes_14d": 113,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-25T07:43:25Z",
-          "commit": "ea033fb",
-          "commit_full": "ea033fbe1c6dacdc7e1e99ee5a3e9fa0ce35d78c",
-          "subject": "packaging(linux): support co-installable nightly packages (#4723)"
+          "ts": "2026-11-25T22:17:24Z",
+          "commit": "5bdb4e7",
+          "commit_full": "5bdb4e7a6955fde3cb9ebda36576bbea6a0c6d7d",
+          "subject": "Use the shared nightly launcher template (#4740)"
         },
-        "last_commit_ts": "2026-11-25T07:43:25Z",
+        "last_commit_ts": "2026-11-25T22:17:24Z",
         "repo_since": "2026-09-30T14:04:12Z",
         "window": [
           7,
@@ -736,7 +736,7 @@
           11,
           4,
           4,
-          1
+          2
         ]
       },
       "release": {
@@ -804,7 +804,7 @@
         "value_since": "2026-10-10T18:11:53Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 624,
+        "revisions_since": 625,
         "hours_since": null,
         "areas_since": {
           "up": 2,
@@ -829,39 +829,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 628,
-        "revisions_7d": 10,
+        "revisions": 629,
+        "revisions_7d": 11,
         "last_revision": {
-          "ts": "2026-11-21T17:00:25Z",
+          "ts": "2026-11-25T20:48:59Z",
           "kind": "content",
-          "commit": "8b73226",
-          "commit_full": "8b732263758a33cd986224d972015939ea79e18c",
-          "message": "Newspaper columns keep a paragraph's last lines together, as Word does (#6828)"
+          "commit": "4e00d00",
+          "commit_full": "4e00d007797f24f90030e4628ad7e692caf4c783",
+          "message": "ROADMAP: remove a stray branch-name line from the progress log (#6917)"
         },
         "last_update": {
-          "ts": "2026-11-21T17:00:25Z",
+          "ts": "2026-11-25T20:48:59Z",
           "kind": "content",
-          "commit": "8b73226",
-          "commit_full": "8b732263758a33cd986224d972015939ea79e18c",
-          "message": "Newspaper columns keep a paragraph's last lines together, as Word does (#6828)"
+          "commit": "4e00d00",
+          "commit_full": "4e00d007797f24f90030e4628ad7e692caf4c783",
+          "message": "ROADMAP: remove a stray branch-name line from the progress log (#6917)"
         },
         "self_reported": "2026-11-21"
       },
       "milestone": null,
       "activity": {
-        "level": "active",
-        "score": 19.9,
+        "level": "buzzing",
+        "score": 20.0,
         "active_days_7d": 6,
-        "changes_7d": 99,
-        "changes_14d": 228,
-        "housekeeping_7d": 5,
+        "changes_7d": 101,
+        "changes_14d": 230,
+        "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-25T15:38:40Z",
-          "commit": "a272715",
-          "commit_full": "a27271519438894344cfc52eae4c07b926111c9c",
-          "subject": "test(windows): restore #117 window title test and cover root promotion (#7702)"
+          "ts": "2026-11-25T22:17:53Z",
+          "commit": "77a530b",
+          "commit_full": "77a530b1796b7d19cfac3242502bf294751606b9",
+          "subject": "Use the shared nightly launcher template (#7829)"
         },
-        "last_commit_ts": "2026-11-25T15:38:40Z",
+        "last_commit_ts": "2026-11-25T22:17:53Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
           4,
@@ -877,16 +877,16 @@
           18,
           5,
           18,
-          38
+          40
         ]
       },
       "release": {
-        "tag": "v0.18.1",
-        "name": "WordCraft v0.18.1",
-        "ts": "2026-11-12T00:04:47Z",
-        "url": "https://github.com/storytold/wordcraft/releases/tag/v0.18.1",
-        "changes": 4,
-        "new_contributors": null,
+        "tag": "v0.19.1",
+        "name": "WordCraft v0.19.1",
+        "ts": "2026-11-25T19:29:33Z",
+        "url": "https://github.com/storytold/wordcraft/releases/tag/v0.19.1",
+        "changes": 145,
+        "new_contributors": 8,
         "platforms": [
           "macOS",
           "Windows",
@@ -895,7 +895,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "patch"
+        "kind": "minor"
       },
       "series": [
         {
@@ -903,11 +903,11 @@
           "v": 60.0
         },
         {
-          "t": "2026-11-21T17:00:25Z",
+          "t": "2026-11-25T20:48:59Z",
           "v": 60.0
         }
       ],
-      "history_len": 628
+      "history_len": 629
     },
     {
       "repo_url": "https://github.com/storytold/texturecraft",
@@ -967,18 +967,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.2,
+        "score": 15.9,
         "active_days_7d": 7,
-        "changes_7d": 45,
-        "changes_14d": 117,
+        "changes_7d": 54,
+        "changes_14d": 126,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-25T06:07:29Z",
-          "commit": "14f6502",
-          "commit_full": "14f650202974b509524950048305f1f36fee4282",
-          "subject": "Layers: open context menus from material and mask thumbnails (#771)"
+          "ts": "2026-11-25T23:43:18Z",
+          "commit": "cd4e296",
+          "commit_full": "cd4e296743328b9c5f83b9573d10d17d34770940",
+          "subject": "Reject invalid export preset save options (#738)"
         },
-        "last_commit_ts": "2026-11-25T13:33:00Z",
+        "last_commit_ts": "2026-11-25T23:43:18Z",
         "repo_since": "2026-10-14T18:33:13Z",
         "window": [
           8,
@@ -994,7 +994,7 @@
           5,
           4,
           4,
-          3
+          12
         ]
       },
       "release": {
@@ -1087,18 +1087,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 10.6,
+        "score": 11.1,
         "active_days_7d": 6,
-        "changes_7d": 22,
-        "changes_14d": 114,
+        "changes_7d": 23,
+        "changes_14d": 115,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-25T10:50:13Z",
-          "commit": "2d1d1b6",
-          "commit_full": "2d1d1b6920cf14c166e1b2bc73ba8208def150c9",
-          "subject": "packaging(linux): support co-installable nightly packages (#5225)"
+          "ts": "2026-11-25T22:17:11Z",
+          "commit": "7303127",
+          "commit_full": "7303127462ae5e943f33047c89679accff554cf3",
+          "subject": "Use the shared nightly launcher template (#5251)"
         },
-        "last_commit_ts": "2026-11-25T10:50:13Z",
+        "last_commit_ts": "2026-11-25T22:17:11Z",
         "repo_since": "2026-09-30T09:22:00Z",
         "window": [
           13,
@@ -1114,7 +1114,7 @@
           4,
           3,
           0,
-          2
+          3
         ]
       },
       "release": {
@@ -1217,19 +1217,19 @@
       },
       "milestone": null,
       "activity": {
-        "level": "quiet",
-        "score": 7.5,
+        "level": "active",
+        "score": 8.1,
         "active_days_7d": 5,
-        "changes_7d": 16,
-        "changes_14d": 77,
+        "changes_7d": 17,
+        "changes_14d": 78,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-25T01:00:44Z",
-          "commit": "02f7fcd",
-          "commit_full": "02f7fcdf734bf37396112bdfa634f27d0d424fbf",
-          "subject": "packaging(linux): support co-installable nightly packages (#2350)"
+          "ts": "2026-11-25T22:16:45Z",
+          "commit": "08ba507",
+          "commit_full": "08ba5072a7586909d99bb6e14e5ca73d2b2608ee",
+          "subject": "Use the shared nightly launcher template (#2367)"
         },
-        "last_commit_ts": "2026-11-25T01:00:44Z",
+        "last_commit_ts": "2026-11-25T22:16:45Z",
         "repo_since": "2026-10-06T02:13:02Z",
         "window": [
           7,
@@ -1245,16 +1245,16 @@
           1,
           0,
           0,
-          1
+          2
         ]
       },
       "release": {
-        "tag": "v0.18.1",
-        "name": "DeckCraft v0.18.1",
-        "ts": "2026-11-12T00:07:42Z",
-        "url": "https://github.com/storytold/deckcraft/releases/tag/v0.18.1",
-        "changes": 1,
-        "new_contributors": null,
+        "tag": "v0.19.1",
+        "name": "DeckCraft v0.19.1",
+        "ts": "2026-11-25T19:29:37Z",
+        "url": "https://github.com/storytold/deckcraft/releases/tag/v0.19.1",
+        "changes": 85,
+        "new_contributors": 10,
         "platforms": [
           "macOS",
           "Windows",
@@ -1263,7 +1263,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "patch"
+        "kind": "minor"
       },
       "series": [
         {
@@ -1385,18 +1385,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 8.6,
+        "score": 9.2,
         "active_days_7d": 5,
-        "changes_7d": 20,
-        "changes_14d": 190,
+        "changes_7d": 21,
+        "changes_14d": 191,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-25T00:55:17Z",
-          "commit": "ef2a9ee",
-          "commit_full": "ef2a9eeefc7af519fe7c26cc4c4b31d2284b09af",
-          "subject": "packaging(linux): support co-installable nightly packages (#2603)"
+          "ts": "2026-11-25T22:17:05Z",
+          "commit": "39c1f94",
+          "commit_full": "39c1f94a4f9356f030de996de1ee28d8588f7ad2",
+          "subject": "Use the shared nightly launcher template (#2628)"
         },
-        "last_commit_ts": "2026-11-25T00:55:17Z",
+        "last_commit_ts": "2026-11-25T22:17:05Z",
         "repo_since": "2026-10-09T15:38:50Z",
         "window": [
           66,
@@ -1412,7 +1412,7 @@
           3,
           0,
           0,
-          1
+          2
         ]
       },
       "release": {
@@ -1654,18 +1654,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 9.2,
+        "score": 9.7,
         "active_days_7d": 5,
-        "changes_7d": 27,
-        "changes_14d": 95,
+        "changes_7d": 28,
+        "changes_14d": 96,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-25T00:29:20Z",
-          "commit": "33bb593",
-          "commit_full": "33bb59307b89c3a9fc8e4f20ce7ab4818a994a04",
-          "subject": "packaging(linux): support co-installable nightly packages (#4733)"
+          "ts": "2026-11-25T22:17:18Z",
+          "commit": "3a37c2e",
+          "commit_full": "3a37c2e88295a61e91942ddc0866a28bab02bf5d",
+          "subject": "Use the shared nightly launcher template (#4758)"
         },
-        "last_commit_ts": "2026-11-25T00:29:20Z",
+        "last_commit_ts": "2026-11-25T22:17:18Z",
         "repo_since": "2026-10-06T02:09:42Z",
         "window": [
           11,
@@ -1681,7 +1681,7 @@
           2,
           4,
           0,
-          1
+          2
         ]
       },
       "release": {
@@ -1774,18 +1774,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 10.3,
+        "score": 10.9,
         "active_days_7d": 6,
-        "changes_7d": 29,
-        "changes_14d": 140,
+        "changes_7d": 30,
+        "changes_14d": 141,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-25T01:16:55Z",
-          "commit": "cdd650c",
-          "commit_full": "cdd650ccddcd945bc3bd050f40299955a7dd1c4b",
-          "subject": "packaging(linux): support co-installable nightly packages (#3206)"
+          "ts": "2026-11-25T22:16:52Z",
+          "commit": "127315b",
+          "commit_full": "127315b40ef9b71482bdd470df8a950e4bb74ec8",
+          "subject": "Use the shared nightly launcher template (#3246)"
         },
-        "last_commit_ts": "2026-11-25T01:16:55Z",
+        "last_commit_ts": "2026-11-25T22:16:52Z",
         "repo_since": "2026-10-01T13:00:02Z",
         "window": [
           56,
@@ -1801,7 +1801,7 @@
           2,
           7,
           0,
-          1
+          2
         ]
       },
       "release": {
@@ -1863,7 +1863,7 @@
       "parity": {
         "tracked_since": "2026-10-10T19:09:04Z",
         "value_since": "2026-10-10T19:09:04Z",
-        "releases_since": 11,
+        "releases_since": 10,
         "releases_since_capped": true,
         "revisions_since": 11,
         "hours_since": null,
@@ -1894,18 +1894,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 22.0,
+        "score": 22.7,
         "active_days_7d": 7,
-        "changes_7d": 150,
-        "changes_14d": 434,
+        "changes_7d": 155,
+        "changes_14d": 439,
         "housekeeping_7d": 11,
         "last_code_change": {
-          "ts": "2026-11-25T15:11:58Z",
-          "commit": "830316b",
-          "commit_full": "830316b775f1f6734498ac6e39fd1298955ff93f",
-          "subject": "RAW Develop's window moves and resizes again (#16905) (#16955)"
+          "ts": "2026-11-25T22:49:52Z",
+          "commit": "d827906",
+          "commit_full": "d827906d6f0d5a58f2b8bbedd507013e64bfedb5",
+          "subject": "Merge queue batch #17001: #14868, #16986"
         },
-        "last_commit_ts": "2026-11-25T15:11:58Z",
+        "last_commit_ts": "2026-11-25T22:49:52Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           45,
@@ -1921,7 +1921,7 @@
           25,
           18,
           18,
-          7
+          12
         ]
       },
       "release": {
@@ -2014,18 +2014,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.1,
+        "score": 14.7,
         "active_days_7d": 7,
-        "changes_7d": 79,
-        "changes_14d": 204,
+        "changes_7d": 80,
+        "changes_14d": 205,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-25T01:38:19Z",
-          "commit": "59aed45",
-          "commit_full": "59aed45057561ff2ca0e3c27ab849eebbfaf71dc",
-          "subject": "packaging(linux): support co-installable nightly packages (#4154)"
+          "ts": "2026-11-25T22:16:58Z",
+          "commit": "5eccc05",
+          "commit_full": "5eccc055ce77e74efa492efe3cb6ad3d2a180c6f",
+          "subject": "Use the shared nightly launcher template (#4169)"
         },
-        "last_commit_ts": "2026-11-25T01:38:19Z",
+        "last_commit_ts": "2026-11-25T22:16:58Z",
         "repo_since": "2026-10-01T16:48:39Z",
         "window": [
           27,
@@ -2041,7 +2041,7 @@
           6,
           5,
           1,
-          1
+          2
         ]
       },
       "release": {
@@ -2133,19 +2133,19 @@
       },
       "milestone": null,
       "activity": {
-        "level": "quiet",
-        "score": 7.8,
+        "level": "active",
+        "score": 8.4,
         "active_days_7d": 6,
-        "changes_7d": 13,
-        "changes_14d": 53,
+        "changes_7d": 14,
+        "changes_14d": 54,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-25T00:55:08Z",
-          "commit": "768c0f9",
-          "commit_full": "768c0f972d6fce82224eb8db001094868a0c321a",
-          "subject": "packaging(linux): support co-installable nightly packages (#1740)"
+          "ts": "2026-11-25T22:17:35Z",
+          "commit": "97e38ba",
+          "commit_full": "97e38ba3c35e22cb4953d99c93914f6d31813dc6",
+          "subject": "Use the shared nightly launcher template (#1787)"
         },
-        "last_commit_ts": "2026-11-25T00:55:08Z",
+        "last_commit_ts": "2026-11-25T22:17:35Z",
         "repo_since": "2026-10-06T00:08:04Z",
         "window": [
           2,
@@ -2161,7 +2161,7 @@
           1,
           3,
           2,
-          1
+          2
         ]
       },
       "release": {
@@ -2254,18 +2254,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 12.0,
+        "score": 12.2,
         "active_days_7d": 6,
-        "changes_7d": 41,
-        "changes_14d": 78,
+        "changes_7d": 42,
+        "changes_14d": 79,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-25T05:01:30Z",
-          "commit": "0d4b100",
-          "commit_full": "0d4b100209990e485891d85c70ff465c8e709156",
-          "subject": "Land #3235, #3382, #2808: dynamic block stretch of wipeouts, arcs and hatches; TRIM/EXTEND part highlight; EXTRIM (#3471)"
+          "ts": "2026-11-25T22:16:38Z",
+          "commit": "29baf19",
+          "commit_full": "29baf193f71cb5964e92c2f16c3ef47451f4aeb6",
+          "subject": "Use the shared nightly launcher template (#3518)"
         },
-        "last_commit_ts": "2026-11-25T05:01:30Z",
+        "last_commit_ts": "2026-11-25T22:16:38Z",
         "repo_since": "2026-10-06T00:15:47Z",
         "window": [
           2,
@@ -2281,7 +2281,7 @@
           0,
           7,
           5,
-          6
+          7
         ]
       },
       "release": {
@@ -2374,18 +2374,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 18.2,
+        "score": 18.5,
         "active_days_7d": 7,
-        "changes_7d": 62,
-        "changes_14d": 263,
+        "changes_7d": 65,
+        "changes_14d": 266,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-25T14:36:02Z",
-          "commit": "d96e31e",
-          "commit_full": "d96e31ebe79245dc3b0a2c74ed1199561a410e86",
-          "subject": "CS10: JMAP contacts down and up (#1942)"
+          "ts": "2026-11-25T20:07:29Z",
+          "commit": "8accb30",
+          "commit_full": "8accb3023616e5b47b02fdb85ab2a9ed2c52e4de",
+          "subject": "CS5.1: Move to contacts folder follow-up (#1144) (#1951)"
         },
-        "last_commit_ts": "2026-11-25T14:36:02Z",
+        "last_commit_ts": "2026-11-25T20:07:29Z",
         "repo_since": "2026-10-12T18:17:00Z",
         "window": [
           15,
@@ -2401,7 +2401,7 @@
           9,
           6,
           6,
-          10
+          13
         ]
       },
       "release": {
@@ -2491,18 +2491,18 @@
       "milestone": null,
       "activity": {
         "level": "quiet",
-        "score": 5.4,
+        "score": 6.0,
         "active_days_7d": 4,
-        "changes_7d": 8,
-        "changes_14d": 33,
+        "changes_7d": 9,
+        "changes_14d": 34,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-25T00:32:43Z",
-          "commit": "a52a8ff",
-          "commit_full": "a52a8ff951f4a9ba2941067749775a8340cc0c01",
-          "subject": "packaging(linux): support co-installable nightly packages (#319)"
+          "ts": "2026-11-25T22:17:30Z",
+          "commit": "83e7d01",
+          "commit_full": "83e7d0112b271d5dc43bdb3785ba28b028abab13",
+          "subject": "Use the shared nightly launcher template (#321)"
         },
-        "last_commit_ts": "2026-11-25T00:32:43Z",
+        "last_commit_ts": "2026-11-25T22:17:30Z",
         "repo_since": "2026-11-01T19:58:46Z",
         "window": [
           1,
@@ -2518,7 +2518,7 @@
           0,
           0,
           1,
-          1
+          2
         ]
       },
       "release": {
@@ -2707,18 +2707,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 40.0,
+        "score": 41.2,
         "active_days_7d": 7,
-        "changes_7d": 1454,
-        "changes_14d": 2841,
-        "housekeeping_7d": 42,
+        "changes_7d": 1660,
+        "changes_14d": 3047,
+        "housekeeping_7d": 45,
         "last_code_change": {
-          "ts": "2026-11-25T15:23:20Z",
-          "commit": "2cd3e8e",
-          "commit_full": "2cd3e8ea844aa6c8775208abad0ba79faf567fd8",
-          "subject": "Merge #21865: fix(doc): recover revolve edge references across seam profile naming migration (#21739)"
+          "ts": "2026-11-25T23:20:09Z",
+          "commit": "6742901",
+          "commit_full": "6742901b26b920e1d994968d0b44b17cfd9131e7",
+          "subject": "Merge #22062: Patterns/Mirror: follow pattern copies moved to root when reusing a linked component"
         },
-        "last_commit_ts": "2026-11-25T15:23:20Z",
+        "last_commit_ts": "2026-11-25T23:20:09Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           191,
@@ -2734,7 +2734,7 @@
           203,
           272,
           299,
-          156
+          362
         ]
       },
       "release": {
@@ -2803,18 +2803,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 11.8,
+        "score": 12.1,
         "active_days_7d": 6,
-        "changes_7d": 27,
-        "changes_14d": 111,
+        "changes_7d": 28,
+        "changes_14d": 112,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-25T05:11:02Z",
-          "commit": "87e3c46",
-          "commit_full": "87e3c465f19eceada4d7604e9dbb1ef9ad69680e",
-          "subject": "feat(fla): open Flash 8 to CS4 binary .fla files, with dashed and dotted strokes (M4) (#617)"
+          "ts": "2026-11-25T22:16:32Z",
+          "commit": "7512a9b",
+          "commit_full": "7512a9bd9d5763ae577255257da6efbd45c250cf",
+          "subject": "Use the shared nightly launcher template (#648)"
         },
-        "last_commit_ts": "2026-11-25T05:11:02Z",
+        "last_commit_ts": "2026-11-25T22:16:32Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
           17,
@@ -2830,7 +2830,7 @@
           0,
           1,
           6,
-          4
+          5
         ]
       },
       "release": {
@@ -2898,18 +2898,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 24.1,
+        "score": 24.5,
         "active_days_7d": 7,
-        "changes_7d": 298,
-        "changes_14d": 343,
+        "changes_7d": 305,
+        "changes_14d": 350,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-25T05:31:52Z",
-          "commit": "ac77770",
-          "commit_full": "ac77770be4ac82b4d47a95c927d535813ca43c54",
-          "subject": "Merge token-refresh: one GitHub token refresh per login across processes, outside the writer lock"
+          "ts": "2026-11-25T23:28:27Z",
+          "commit": "bfa4ae0",
+          "commit_full": "bfa4ae0c9329998c3a234ac38760a3ed4f2a4604",
+          "subject": "The answer deadline's late-answer catch is a deliberate fire-and-forget"
         },
-        "last_commit_ts": "2026-11-25T05:31:52Z",
+        "last_commit_ts": "2026-11-25T23:28:27Z",
         "repo_since": "2026-11-02T14:36:17Z",
         "window": [
           0,
@@ -2925,7 +2925,7 @@
           70,
           62,
           44,
-          24
+          31
         ]
       },
       "release": null,
@@ -3020,5 +3020,5 @@
     "missing": [],
     "candidates": []
   },
-  "generated_at": "2026-11-25T15:54:10+00:00"
+  "generated_at": "2026-11-25T23:51:45+00:00"
 }

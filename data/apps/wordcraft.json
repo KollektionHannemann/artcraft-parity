@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "8b73226",
-  "latest_commit_date": "2026-11-21T17:00:25Z",
-  "latest_message": "Newspaper columns keep a paragraph's last lines together, as Word does (#6828)",
+  "latest_commit": "4e00d00",
+  "latest_commit_date": "2026-11-25T20:48:59Z",
+  "latest_message": "ROADMAP: remove a stray branch-name line from the progress log (#6917)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 624,
+    "revisions_since": 625,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 628,
-    "revisions_7d": 10,
+    "revisions": 629,
+    "revisions_7d": 11,
     "last_revision": {
-      "ts": "2026-11-21T17:00:25Z",
+      "ts": "2026-11-25T20:48:59Z",
       "kind": "content",
-      "commit": "8b73226",
-      "commit_full": "8b732263758a33cd986224d972015939ea79e18c",
-      "message": "Newspaper columns keep a paragraph's last lines together, as Word does (#6828)"
+      "commit": "4e00d00",
+      "commit_full": "4e00d007797f24f90030e4628ad7e692caf4c783",
+      "message": "ROADMAP: remove a stray branch-name line from the progress log (#6917)"
     },
     "last_update": {
-      "ts": "2026-11-21T17:00:25Z",
+      "ts": "2026-11-25T20:48:59Z",
       "kind": "content",
-      "commit": "8b73226",
-      "commit_full": "8b732263758a33cd986224d972015939ea79e18c",
-      "message": "Newspaper columns keep a paragraph's last lines together, as Word does (#6828)"
+      "commit": "4e00d00",
+      "commit_full": "4e00d007797f24f90030e4628ad7e692caf4c783",
+      "message": "ROADMAP: remove a stray branch-name line from the progress log (#6917)"
     },
     "self_reported": "2026-11-21"
   },
   "milestone": null,
   "activity": {
-    "level": "active",
-    "score": 19.9,
+    "level": "buzzing",
+    "score": 20.0,
     "active_days_7d": 6,
-    "changes_7d": 99,
-    "changes_14d": 228,
-    "housekeeping_7d": 5,
+    "changes_7d": 101,
+    "changes_14d": 230,
+    "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-25T15:38:40Z",
-      "commit": "a272715",
-      "commit_full": "a27271519438894344cfc52eae4c07b926111c9c",
-      "subject": "test(windows): restore #117 window title test and cover root promotion (#7702)"
+      "ts": "2026-11-25T22:17:53Z",
+      "commit": "77a530b",
+      "commit_full": "77a530b1796b7d19cfac3242502bf294751606b9",
+      "subject": "Use the shared nightly launcher template (#7829)"
     },
-    "last_commit_ts": "2026-11-25T15:38:40Z",
+    "last_commit_ts": "2026-11-25T22:17:53Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       4,
@@ -568,7 +568,7 @@
       18,
       5,
       18,
-      38
+      40
     ],
     "days": [
       {
@@ -1447,26 +1447,43 @@
       },
       {
         "d": "2026-11-25",
-        "code": 38,
-        "other": 0,
+        "code": 40,
+        "other": 1,
         "samples": [
+          {
+            "commit": "77a530b",
+            "subject": "Use the shared nightly launcher template (#7829)"
+          },
+          {
+            "commit": "26b1d89",
+            "subject": "fix(dialogs): restore table style dialog v0.18.1 layout, preview, and alignment test (#7317) (#7645)"
+          },
           {
             "commit": "a272715",
             "subject": "test(windows): restore #117 window title test and cover root promotion (#7702)"
-          },
-          {
-            "commit": "ff90488",
-            "subject": "test(credits): cover Models table refit in narrowed About dialog (#7646)"
-          },
-          {
-            "commit": "bc629b7",
-            "subject": "test(control_server): adapt params.token / params.key auth test post-#7101 (#7729) (#7629)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.19.1",
+      "name": "WordCraft v0.19.1",
+      "ts": "2026-11-25T19:29:33Z",
+      "url": "https://github.com/storytold/wordcraft/releases/tag/v0.19.1",
+      "changes": 145,
+      "new_contributors": 8,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.18.1",
       "name": "WordCraft v0.18.1",
@@ -1644,23 +1661,6 @@
       "url": "https://github.com/storytold/wordcraft/releases/tag/v0.11.0",
       "changes": 121,
       "new_contributors": 18,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.10.0",
-      "name": "WordCraft v0.10.0",
-      "ts": "2026-10-22T20:44:31Z",
-      "url": "https://github.com/storytold/wordcraft/releases/tag/v0.10.0",
-      "changes": 202,
-      "new_contributors": 29,
       "platforms": [
         "macOS",
         "Windows",
@@ -16135,7 +16135,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "4e00d00",
+      "commit_full": "4e00d007797f24f90030e4628ad7e692caf4c783",
+      "commit_date": "2026-11-25T20:48:59Z",
+      "ts": "2026-11-25T20:48:59Z",
+      "message": "ROADMAP: remove a stray branch-name line from the progress log (#6917)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-21",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-25T15:52:13+00:00"
+  "updated_at": "2026-11-25T23:50:59+00:00"
 }
