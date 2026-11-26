@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "2bc121e",
-  "latest_commit_date": "2026-11-26T01:43:40+07:00",
-  "latest_message": "Docs: ROADMAP Upcoming names G11's remaining bugs (#8314) (#9076)",
+  "latest_commit": "30f6381",
+  "latest_commit_date": "2026-11-26T08:47:08+07:00",
+  "latest_message": "Shapes: the Circle tool draws a circle from its center through a point (#8493)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -388,6 +388,10 @@
       },
       {
         "date": "2026-11-17",
+        "text": "Circle tool, From Center (a Control bar checkbox, tool.setOption fromCenter): the first point is the circle's center and the outline passes through the pointer, which snaps to Smart Guides and anchor points, so a circle centered on one corner of a rectangle can pass through the opposite corner; shape.circleThroughPoints {center, points: [[x, y]]} draws it. One undo step per circle. A VectorCraft addition: headline numbers unchanged."
+      },
+      {
+        "date": "2026-11-17",
         "text": "Add Bounding Rectangle and Add Bounding Circle join the Path Precision Tools add-on (Object › Plug-ins › Path Precision Tools): a live rectangle on the selection's geometric bounding box, or the smallest live circle that holds its outlines, around the whole selection or around each object, with the current paint and one undo step; the menu items open a dialog with Offset, One per Object and Preview (addon.pathtools.boundingRectangle, addon.pathtools.boundingCircle, #6966). A VectorCraft addition: headline numbers unchanged."
       },
       {
@@ -493,10 +497,6 @@
       {
         "date": "2026-11-03",
         "text": "Text Tweaker, the first tool of the Type Tools add-on (Object › Plug-ins › Type Tools): one character attribute (size, baseline shift, rotation, horizontal or vertical scale, tracking, leading or stroke weight) goes letter by letter from a start value to an end value along a straight ramp, an ease, a bow, a spike or at random with a seed, set as the Character panel sets it, while the text stays live; a dialog with Preview, one undo step (addon.type.textTweaker, #4924). A VectorCraft addition: headline numbers unchanged."
-      },
-      {
-        "date": "2026-11-02",
-        "text": "Mouse wheel over a closed font-family field in Character, Properties or Control changes selected text through the family list using saved font filters (excluding search text), one undo step per notch, stopping at the ends (#5253). Scores and estimates unchanged."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 261,
+    "revisions_since": 262,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,42 +536,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 262,
-    "revisions_7d": 12,
+    "revisions": 263,
+    "revisions_7d": 4,
     "last_revision": {
-      "ts": "2026-11-25T18:43:40Z",
+      "ts": "2026-11-26T01:47:08Z",
       "kind": "content",
-      "commit": "2bc121e",
-      "commit_full": "2bc121e681c8902bf27daf9ea6b9a222cf28f0c8",
-      "message": "Docs: ROADMAP Upcoming names G11's remaining bugs (#8314) (#9076)"
+      "commit": "30f6381",
+      "commit_full": "30f63816186493dfb48ec37c725505bcc6b724bc",
+      "message": "Shapes: the Circle tool draws a circle from its center through a point (#8493)"
     },
     "last_update": {
-      "ts": "2026-11-25T18:43:40Z",
+      "ts": "2026-11-26T01:47:08Z",
       "kind": "content",
-      "commit": "2bc121e",
-      "commit_full": "2bc121e681c8902bf27daf9ea6b9a222cf28f0c8",
-      "message": "Docs: ROADMAP Upcoming names G11's remaining bugs (#8314) (#9076)"
+      "commit": "30f6381",
+      "commit_full": "30f63816186493dfb48ec37c725505bcc6b724bc",
+      "message": "Shapes: the Circle tool draws a circle from its center through a point (#8493)"
     },
     "self_reported": "2026-11-22"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 30.1,
+    "score": 29.5,
     "active_days_7d": 7,
-    "changes_7d": 420,
-    "changes_14d": 1847,
-    "housekeeping_7d": 22,
+    "changes_7d": 286,
+    "changes_14d": 1632,
+    "housekeeping_7d": 16,
     "last_code_change": {
-      "ts": "2026-11-25T22:17:47Z",
-      "commit": "016ead2",
-      "commit_full": "016ead2572d7d931d15d198ed44f66867b7893c7",
-      "subject": "Use the shared nightly launcher template (#9316)"
+      "ts": "2026-11-26T04:01:11Z",
+      "commit": "2b7dd67",
+      "commit_full": "2b7dd67ac0186d408766d69cef303c9c3512dce5",
+      "subject": "Color Wheel: the contrast cache keys on tool_paints, which replaced bucket_paints (#9352)"
     },
-    "last_commit_ts": "2026-11-25T22:17:47Z",
+    "last_commit_ts": "2026-11-26T04:01:11Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
-      254,
       240,
       283,
       214,
@@ -584,7 +583,8 @@
       47,
       6,
       45,
-      92
+      92,
+      39
     ],
     "days": [
       {
@@ -1654,6 +1654,25 @@
           {
             "commit": "3ce5379",
             "subject": "docs(cli): correct artboard color export help (#8850) (#9011)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-26",
+        "code": 39,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "2b7dd67",
+            "subject": "Color Wheel: the contrast cache keys on tool_paints, which replaced bucket_paints (#9352)"
+          },
+          {
+            "commit": "a54d288",
+            "subject": "Color Wheel: Show Contrast reports the WCAG contrast against the color behind the selection (#7718)"
+          },
+          {
+            "commit": "050f7cf",
+            "subject": "Scripts: app gives scripts the open documents, their selection and page items (#9019)"
           }
         ]
       }
@@ -8748,7 +8767,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "30f6381",
+      "commit_full": "30f63816186493dfb48ec37c725505bcc6b724bc",
+      "commit_date": "2026-11-26T08:47:08+07:00",
+      "ts": "2026-11-26T01:47:08Z",
+      "message": "Shapes: the Circle tool draws a circle from its center through a point (#8493)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-22",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-25T23:50:35+00:00"
+  "updated_at": "2026-11-26T05:43:22+00:00"
 }

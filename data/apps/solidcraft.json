@@ -66,21 +66,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 41.2,
+    "score": 39.0,
     "active_days_7d": 7,
-    "changes_7d": 1660,
-    "changes_14d": 3047,
-    "housekeeping_7d": 45,
+    "changes_7d": 1517,
+    "changes_14d": 2928,
+    "housekeeping_7d": 47,
     "last_code_change": {
-      "ts": "2026-11-25T23:20:09Z",
-      "commit": "6742901",
-      "commit_full": "6742901b26b920e1d994968d0b44b17cfd9131e7",
-      "subject": "Merge #22062: Patterns/Mirror: follow pattern copies moved to root when reusing a linked component"
+      "ts": "2026-11-26T05:05:16Z",
+      "commit": "debe0f6",
+      "commit_full": "debe0f6d1d195061b57c888b4675c7bcfcb20714",
+      "subject": "Merge #22446: solidcore: the vertex check solves each vertex use's UV point once, not twice"
     },
-    "last_commit_ts": "2026-11-25T23:20:09Z",
+    "last_commit_ts": "2026-11-26T05:05:16Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
-      191,
       203,
       198,
       156,
@@ -93,7 +92,8 @@
       203,
       272,
       299,
-      362
+      387,
+      47
     ],
     "days": [
       {
@@ -1029,26 +1029,79 @@
       },
       {
         "d": "2026-11-25",
-        "code": 362,
+        "code": 387,
         "other": 8,
         "samples": [
           {
-            "commit": "6742901",
-            "subject": "Merge #22062: Patterns/Mirror: follow pattern copies moved to root when reusing a linked component"
+            "commit": "bbb9256",
+            "subject": "Merge #22014: Revolve: a turn of almost nothing is refused, instead of building a full ring with both caps on its seam"
           },
           {
-            "commit": "3ff523e",
-            "subject": "Merge #22256: Sketch Move: the value box follows the dragged axis or ring, and Tab cycles its fields"
+            "commit": "178f236",
+            "subject": "Merge #21832: STEP import: a straight edge stored as a spline no longer turns into a huge arc that stops the solid from importing"
           },
           {
-            "commit": "d30432a",
-            "subject": "Merge #22011: Cone, coil and hole: the axis and the direction take expressions, as the cylinder's axis does (#21932)"
+            "commit": "a2aad26",
+            "subject": "Merge #21761: Drawings: weld symbols, a validated weld record and its provisional paper strokes (#7259)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-26",
+        "code": 47,
+        "other": 4,
+        "samples": [
+          {
+            "commit": "debe0f6",
+            "subject": "Merge #22446: solidcore: the vertex check solves each vertex use's UV point once, not twice"
+          },
+          {
+            "commit": "08bda20",
+            "subject": "Merge #22447: solidcore: point classification and edge intersection skip work that never changes their answer"
+          },
+          {
+            "commit": "31bdd06",
+            "subject": "Merge #22439: solidcore: the edge check evaluates each edge use's binormal once, not up to three times"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.50.0-nightly.20261126.166.1",
+      "name": "SolidCraft v0.50.0-nightly.20261126.166.1 (nightly)",
+      "ts": "2026-11-26T05:43:51Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.50.0-nightly.20261126.166.1",
+      "changes": 10,
+      "new_contributors": 1,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "minor"
+    },
+    {
+      "tag": "v0.50.0",
+      "name": "SolidCraft v0.50.0",
+      "ts": "2026-11-26T04:31:45Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.50.0",
+      "changes": 301,
+      "new_contributors": 21,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.49.1",
       "name": "SolidCraft v0.49.1",
@@ -1216,40 +1269,6 @@
         "Web"
       ],
       "prerelease": false,
-      "source": "release",
-      "kind": null
-    },
-    {
-      "tag": "v0.46.1",
-      "name": "SolidCraft v0.46.1",
-      "ts": "2026-11-21T22:44:12Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.46.1",
-      "changes": null,
-      "new_contributors": 2,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": true,
-      "source": "release",
-      "kind": null
-    },
-    {
-      "tag": "v0.46.0",
-      "name": "SolidCraft v0.46.0",
-      "ts": "2026-11-21T16:02:12Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.46.0",
-      "changes": null,
-      "new_contributors": 27,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": true,
       "source": "release",
       "kind": null
     }
@@ -2664,5 +2683,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-25T23:51:34+00:00"
+  "updated_at": "2026-11-26T05:44:19+00:00"
 }

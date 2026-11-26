@@ -11,55 +11,43 @@
   "roadmap_url": "https://github.com/storytold/texturecraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/texturecraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "2037b6b",
-  "latest_commit_date": "2026-11-23T16:55:24-05:00",
-  "latest_message": "Export OpenPBR MaterialX from the export window (#784)",
+  "latest_commit": "d45bb2c",
+  "latest_commit_date": "2026-11-25T22:59:50-05:00",
+  "latest_message": "Docs: update the roadmap after the November 25 audit (#848)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "reference app 12.2.0",
-    "last_updated": "2026-11-16",
+    "last_updated": "2026-11-25",
     "metrics": {
       "full": {
         "label": "Full scoped target",
-        "pct": 60.0,
+        "pct": 68.0,
         "range": null,
         "hours": null
       },
       "mainstream": {
         "label": "Mainstream practitioner",
-        "pct": 60.0,
-        "range": [
-          50.0,
-          70.0
-        ],
+        "pct": 70.0,
+        "range": null,
         "hours": null
       },
       "essentials": {
         "label": "Essentials user",
-        "pct": 75.0,
-        "range": [
-          65.0,
-          85.0
-        ],
+        "pct": 85.0,
+        "range": null,
         "hours": null
       },
       "ready": {
         "label": "Ready for real work",
-        "pct": 60.0,
-        "range": [
-          50.0,
-          70.0
-        ],
+        "pct": 68.0,
+        "range": null,
         "hours": null
       },
       "breadth": {
         "label": "Feature breadth",
-        "pct": 80.0,
-        "range": [
-          75.0,
-          85.0
-        ],
+        "pct": 90.0,
+        "range": null,
         "hours": null
       }
     },
@@ -67,41 +55,35 @@
       {
         "audience": "mainstream",
         "label": "Mainstream practitioner",
-        "pct": 60.0,
-        "range": [
-          50.0,
-          70.0
-        ],
+        "pct": 70.0,
+        "range": null,
         "hours": null
       },
       {
         "audience": "essentials",
         "label": "Essentials user",
-        "pct": 75.0,
-        "range": [
-          65.0,
-          85.0
-        ],
+        "pct": 85.0,
+        "range": null,
         "hours": null
       },
       {
         "audience": "full",
         "label": "Full scoped target",
-        "pct": 60.0,
+        "pct": 68.0,
         "range": null,
         "hours": null
       },
       {
         "audience": "mainstream",
         "label": "Mainstream practitioner",
-        "pct": 60.0,
+        "pct": 70.0,
         "range": null,
         "hours": null
       },
       {
         "audience": "essentials",
         "label": "Essentials user",
-        "pct": 75.0,
+        "pct": 85.0,
         "range": null,
         "hours": null
       }
@@ -109,15 +91,15 @@
     "dimensions": [
       {
         "label": "Features (depth)",
-        "pct": 65.0
+        "pct": 80.0
       },
       {
         "label": "UI/UX fidelity",
-        "pct": 65.0
+        "pct": 75.0
       },
       {
         "label": "File formats / interchange",
-        "pct": 60.0
+        "pct": 70.0
       },
       {
         "label": "Hardware (GPU, pen, displays)",
@@ -129,60 +111,60 @@
       },
       {
         "label": "Performance",
-        "pct": 40.0
+        "pct": 45.0
       },
       {
         "label": "Stability",
-        "pct": 55.0
+        "pct": 60.0
       },
       {
         "label": "Platforms",
-        "pct": 65.0
+        "pct": 70.0
       },
       {
         "label": "Automation / ecosystem",
-        "pct": 75.0
+        "pct": 80.0
       }
     ],
     "features": [
       {
         "label": "Projects and files",
-        "pct": 80.0,
+        "pct": 85.0,
         "hours": null
       },
       {
         "label": "Texture sets and UDIM",
-        "pct": 80.0,
+        "pct": 85.0,
         "hours": null
       },
       {
         "label": "Layers, masks and effects",
-        "pct": 75.0,
+        "pct": 85.0,
         "hours": null
       },
       {
         "label": "Painting and precise 2D work",
-        "pct": 70.0,
+        "pct": 75.0,
         "hours": null
       },
       {
         "label": "Generators and smart masks",
-        "pct": 45.0,
+        "pct": 75.0,
         "hours": null
       },
       {
         "label": "Materials and asset library",
-        "pct": 60.0,
+        "pct": 70.0,
         "hours": null
       },
       {
         "label": "Baking",
-        "pct": 60.0,
+        "pct": 75.0,
         "hours": null
       },
       {
         "label": "Viewport, shading and rendering",
-        "pct": 70.0,
+        "pct": 75.0,
         "hours": null
       },
       {
@@ -192,7 +174,7 @@
       },
       {
         "label": "Texture and scene export",
-        "pct": 75.0,
+        "pct": 85.0,
         "hours": null
       },
       {
@@ -202,26 +184,30 @@
       },
       {
         "label": "Workspace, panels and preferences",
-        "pct": 65.0,
+        "pct": 75.0,
         "hours": null
       },
       {
         "label": "Automation",
-        "pct": 80.0,
+        "pct": 85.0,
         "hours": null
       }
     ],
     "upcoming": [
-      "1 · Reliable startup and project safety across the supported GPU/platform matrix; reproduce startup/GPU reports and exercise recovery/large saves (#541, #489) · TBD after reproduction",
+      "1 · Verify empty-workspace startup, reproduce the DirectX startup report on affected hardware, and exercise large saves and recovery across supported platforms. #489, #541 · TBD after reproduction",
       "2 · Define .tcraft and output-package direction, scope any reworks, and establish versioning, migration and producer/consumer acceptance cases · Unestimated; design scope open",
-      "3 · Plan/adopt the incoming ArtCraft UI refactor and shared-library changes; preserve command reachability and repeat UI/persistence/platform checks after adoption · TBD after upstream contracts and consumer scope",
-      "4 · Bring in the completed MaterialCraft .mcmat contract: agree the supported MaterialX/resources/controls subset, implement the consumer through shared APIs and validate folder/archive outputs from named versions · Upstream-dependent; format unfinished",
-      "5 · Bake fidelity and dependable smart-material wear: matched assets/settings at multiple resolutions, all ten maps, high/low pairs and documented differences (#536, #538) · TBD after map corpus",
-      "6 · Generator, anchor and property depth; finish the artist-facing control inventory while preserving existing shared controls (#374, #389, #433) · TBD after control audit",
+      "3 · Scope ArtCraft UI adoption and remaining shared-library cutovers. Consolidate the current multiple craft-libs pins in a dedicated update, preserve command reachability and rerun acceptance checks · TBD after adoption scope",
+      "4 · Set the supported MaterialCraft and TextureCraft release pair and verify its installed CLI. Extend the source-build check to bundled resources, presets, resolution changes, reopen, missing CLI behavior and v1/v2 republish guidance · TBD after producer/consumer matrix",
+      "5 · Measure bake fidelity and wear across resolutions, high/low pairs, all ten maps and CPU/GPU paths. Include automatic cages, name matching, settings sync and final output versus live preview · TBD after map corpus",
+      "6 · Exercise the expanded generator, anchor and property controls on production assets. Finish uncovered inputs and workflows after rechecking #374 and #433 against main · TBD after control audit",
       "7 · Brush/pen precision, feedback and discoverability; complete 3D/2D/trim-sheet tasks and set responsiveness budgets (#545, #485, #306) · TBD after task tests",
       "8 · Color-managed pipeline and destination checks for USD, glTF/GLB, MaterialX and texture maps, including UDIM, complex materials and the adopted output packages · TBD after consumer matrix"
     ],
     "progress": [
+      {
+        "date": "2026-11-25",
+        "text": "Audited main at 3c026860. Recorded the expanded generator catalog, mask and fill controls, Bake Mode, UV rebuilds, export migrations, the v3 material handoff and supervised nightlies. Raised estimated breadth from ~80% to ~90% and weighted readiness from ~60% to ~68%"
+      },
       {
         "date": "2026-11-16",
         "text": "Added possible native/output-package reworks, unfinished MaterialCraft .mcmat integration and incoming ArtCraft UI/shared-library work as explicit roadmap tracks. Current audit scores stay tied to the tested revision; migration scope and effort remain unestimated"
@@ -250,53 +236,61 @@
   },
   "parity": {
     "tracked_since": "2026-11-17T01:08:16Z",
-    "value_since": "2026-11-17T01:08:16Z",
+    "value_since": "2026-11-26T03:59:50Z",
     "releases_since": 0,
     "releases_since_capped": false,
-    "revisions_since": 3,
+    "revisions_since": 0,
     "hours_since": null,
     "areas_since": null,
-    "changes": 0,
+    "changes": 1,
     "truncated": false,
-    "last_change": null
+    "last_change": {
+      "ts": "2026-11-26T03:59:50Z",
+      "from": 60.0,
+      "to": 68.0,
+      "delta": 8.0,
+      "commit": "d45bb2c",
+      "commit_full": "d45bb2cad803ba76e944f22ab1c4b40248444f24",
+      "message": "Docs: update the roadmap after the November 25 audit (#848)",
+      "label_changed": false
+    }
   },
   "roadmap": {
-    "revisions": 4,
-    "revisions_7d": 1,
+    "revisions": 5,
+    "revisions_7d": 2,
     "last_revision": {
-      "ts": "2026-11-23T21:55:24Z",
-      "kind": "content",
-      "commit": "2037b6b",
-      "commit_full": "2037b6b823d41b94938be483e7f3aa5ebeb07ace",
-      "message": "Export OpenPBR MaterialX from the export window (#784)"
+      "ts": "2026-11-26T03:59:50Z",
+      "kind": "parity",
+      "commit": "d45bb2c",
+      "commit_full": "d45bb2cad803ba76e944f22ab1c4b40248444f24",
+      "message": "Docs: update the roadmap after the November 25 audit (#848)"
     },
     "last_update": {
-      "ts": "2026-11-23T21:55:24Z",
-      "kind": "content",
-      "commit": "2037b6b",
-      "commit_full": "2037b6b823d41b94938be483e7f3aa5ebeb07ace",
-      "message": "Export OpenPBR MaterialX from the export window (#784)"
+      "ts": "2026-11-26T03:59:50Z",
+      "kind": "parity",
+      "commit": "d45bb2c",
+      "commit_full": "d45bb2cad803ba76e944f22ab1c4b40248444f24",
+      "message": "Docs: update the roadmap after the November 25 audit (#848)"
     },
-    "self_reported": "2026-11-16"
+    "self_reported": "2026-11-25"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.9,
+    "score": 16.0,
     "active_days_7d": 7,
-    "changes_7d": 54,
-    "changes_14d": 126,
-    "housekeeping_7d": 6,
+    "changes_7d": 60,
+    "changes_14d": 127,
+    "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-25T23:43:18Z",
-      "commit": "cd4e296",
-      "commit_full": "cd4e296743328b9c5f83b9573d10d17d34770940",
-      "subject": "Reject invalid export preset save options (#738)"
+      "ts": "2026-11-26T05:27:34Z",
+      "commit": "4ff7cb6",
+      "commit_full": "4ff7cb6165f425079de3e8275cb3a8d03a1053a8",
+      "subject": "TextureCraft: minimal port to craft-libs next (#800)"
     },
-    "last_commit_ts": "2026-11-25T23:43:18Z",
+    "last_commit_ts": "2026-11-26T05:27:34Z",
     "repo_since": "2026-10-14T18:33:13Z",
     "window": [
-      8,
       9,
       4,
       11,
@@ -309,7 +303,8 @@
       5,
       4,
       4,
-      12
+      14,
+      7
     ],
     "days": [
       {
@@ -846,20 +841,39 @@
       },
       {
         "d": "2026-11-25",
-        "code": 12,
+        "code": 14,
         "other": 1,
         "samples": [
           {
+            "commit": "5590b73",
+            "subject": "docs: document the FreeBSD arm64 download (#734)"
+          },
+          {
+            "commit": "3b5afd3",
+            "subject": "fix(cli): reject invalid paths in batch scripts (#735)"
+          },
+          {
             "commit": "cd4e296",
             "subject": "Reject invalid export preset save options (#738)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-26",
+        "code": 7,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "4ff7cb6",
+            "subject": "TextureCraft: minimal port to craft-libs next (#800)"
           },
           {
-            "commit": "d3f02c6",
-            "subject": "Keep the current view when camera selection is invalid (#744)"
+            "commit": "3c02686",
+            "subject": "Highlight texture sets in the 3D viewport on hover (#775)"
           },
           {
-            "commit": "c3b354a",
-            "subject": "fix(resources): preserve text labels that contain path separators (#741)"
+            "commit": "c57d404",
+            "subject": "Switch on supervised nightlies on the nightly-signer branch (#838)"
           }
         ]
       }
@@ -1101,7 +1115,84 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "d45bb2c",
+      "commit_full": "d45bb2cad803ba76e944f22ab1c4b40248444f24",
+      "commit_date": "2026-11-25T22:59:50-05:00",
+      "ts": "2026-11-26T03:59:50Z",
+      "message": "Docs: update the roadmap after the November 25 audit (#848)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-25",
+      "full_pct": 68.0,
+      "full_range": null,
+      "full_hours": null,
+      "full_label": "Full scoped target",
+      "target": "reference app 12.2.0",
+      "mainstream_pct": 70.0,
+      "essentials_pct": 85.0,
+      "breadth_pct": 90.0,
+      "area_moves": [
+        {
+          "label": "Projects and files",
+          "from": 80.0,
+          "to": 85.0
+        },
+        {
+          "label": "Texture sets and UDIM",
+          "from": 80.0,
+          "to": 85.0
+        },
+        {
+          "label": "Layers, masks and effects",
+          "from": 75.0,
+          "to": 85.0
+        },
+        {
+          "label": "Painting and precise 2D work",
+          "from": 70.0,
+          "to": 75.0
+        },
+        {
+          "label": "Generators and smart masks",
+          "from": 45.0,
+          "to": 75.0
+        },
+        {
+          "label": "Materials and asset library",
+          "from": 60.0,
+          "to": 70.0
+        },
+        {
+          "label": "Baking",
+          "from": 60.0,
+          "to": 75.0
+        },
+        {
+          "label": "Viewport, shading and rendering",
+          "from": 70.0,
+          "to": 75.0
+        },
+        {
+          "label": "Texture and scene export",
+          "from": 75.0,
+          "to": 85.0
+        },
+        {
+          "label": "Workspace, panels and preferences",
+          "from": 65.0,
+          "to": 75.0
+        },
+        {
+          "label": "Automation",
+          "from": 80.0,
+          "to": 85.0
+        }
+      ],
+      "full_prev": 60.0,
+      "kind": "parity"
     }
   ],
-  "updated_at": "2026-11-25T23:51:10+00:00"
+  "updated_at": "2026-11-26T05:43:56+00:00"
 }

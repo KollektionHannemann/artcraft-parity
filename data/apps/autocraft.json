@@ -37,21 +37,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 24.5,
+    "score": 25.9,
     "active_days_7d": 7,
-    "changes_7d": 305,
-    "changes_14d": 350,
+    "changes_7d": 437,
+    "changes_14d": 531,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-25T23:28:27Z",
-      "commit": "bfa4ae0",
-      "commit_full": "bfa4ae0c9329998c3a234ac38760a3ed4f2a4604",
-      "subject": "The answer deadline's late-answer catch is a deliberate fire-and-forget"
+      "ts": "2026-11-26T04:50:57Z",
+      "commit": "90dee00",
+      "commit_full": "90dee00a50d33ff2bc5f9784c5f31ca7c3f4f04c",
+      "subject": "Merge branch 'perf-embed'"
     },
-    "last_commit_ts": "2026-11-25T23:28:27Z",
+    "last_commit_ts": "2026-11-26T04:50:57Z",
     "repo_since": "2026-11-02T14:36:17Z",
     "window": [
-      0,
       0,
       21,
       7,
@@ -64,7 +63,8 @@
       70,
       62,
       44,
-      31
+      201,
+      11
     ],
     "days": [
       {
@@ -449,20 +449,39 @@
       },
       {
         "d": "2026-11-25",
-        "code": 31,
+        "code": 201,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "34cf293",
+            "subject": "Merge branch 'help-port' into decisions"
+          },
+          {
+            "commit": "c6fab54",
+            "subject": "After CI, beside a merge, reads as the merge it is, on the command's line or a later one"
+          },
+          {
+            "commit": "f823da7",
+            "subject": "A reading of a message that carves something out (except, without, other than) is proposed, never run"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-26",
+        "code": 11,
         "other": 0,
         "samples": [
           {
-            "commit": "bfa4ae0",
-            "subject": "The answer deadline's late-answer catch is a deliberate fire-and-forget"
+            "commit": "90dee00",
+            "subject": "Merge branch 'perf-embed'"
           },
           {
-            "commit": "397a3ac",
-            "subject": "The lock and listening connections send their first keepalive probe after 10 s idle, as pool connections do"
+            "commit": "ee5efe5",
+            "subject": "Merge branch 'perf-snapshot'"
           },
           {
-            "commit": "afbbe2d",
-            "subject": "Each chore after a sync run has a 15-minute limit; a run that left one behind exits"
+            "commit": "3dbeaf8",
+            "subject": "Merge branch 'perf-snapshot'"
           }
         ]
       }
@@ -471,5 +490,5 @@
   "releases": [],
   "roadmap_history": [],
   "history": [],
-  "updated_at": "2026-11-25T23:51:42+00:00"
+  "updated_at": "2026-11-26T05:44:29+00:00"
 }

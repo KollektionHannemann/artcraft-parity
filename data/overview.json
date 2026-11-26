@@ -19,6 +19,39 @@
   ],
   "latest_events": [
     {
+      "id": "solidcraft",
+      "name": "SolidCraft",
+      "type": "release",
+      "ts": "2026-11-26T05:43:51Z",
+      "tag": "v0.50.0-nightly.20261126.166.1",
+      "kind": "minor",
+      "changes": 10,
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.50.0-nightly.20261126.166.1",
+      "prerelease": true
+    },
+    {
+      "id": "solidcraft",
+      "name": "SolidCraft",
+      "type": "release",
+      "ts": "2026-11-26T04:31:45Z",
+      "tag": "v0.50.0",
+      "kind": "minor",
+      "changes": 301,
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.50.0",
+      "prerelease": true
+    },
+    {
+      "id": "texturecraft",
+      "name": "TextureCraft",
+      "type": "parity",
+      "ts": "2026-11-26T03:59:50Z",
+      "from": 60.0,
+      "to": 68.0,
+      "delta": 8.0,
+      "commit": "d45bb2c",
+      "message": "Docs: update the roadmap after the November 25 audit (#848)"
+    },
+    {
       "id": "deckcraft",
       "name": "DeckCraft",
       "type": "release",
@@ -60,28 +93,6 @@
       "kind": "patch",
       "changes": 64,
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.49.1",
-      "prerelease": false
-    },
-    {
-      "id": "solidcraft",
-      "name": "SolidCraft",
-      "type": "release",
-      "ts": "2026-11-25T05:43:42Z",
-      "tag": "v0.49.0-nightly.20261125.163.1",
-      "kind": "patch",
-      "changes": 58,
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.49.0-nightly.20261125.163.1",
-      "prerelease": true
-    },
-    {
-      "id": "solidcraft",
-      "name": "SolidCraft",
-      "type": "release",
-      "ts": "2026-11-25T02:20:04Z",
-      "tag": "v0.49.0",
-      "kind": "minor",
-      "changes": null,
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.49.0",
       "prerelease": false
     },
     {
@@ -438,17 +449,6 @@
       "changes": 11,
       "url": "https://github.com/storytold/materialcraft/releases/tag/v0.4.0",
       "prerelease": false
-    },
-    {
-      "id": "effectcraft",
-      "name": "EffectCraft",
-      "type": "release",
-      "ts": "2026-11-11T17:01:40Z",
-      "tag": "v0.24.0",
-      "kind": "minor",
-      "changes": 45,
-      "url": "https://github.com/storytold/effectcraft/releases/tag/v0.24.0",
-      "prerelease": false
     }
   ],
   "release_waves": [
@@ -494,6 +494,132 @@
   ],
   "apps": [
     {
+      "repo_url": "https://github.com/storytold/texturecraft",
+      "branch": "main",
+      "kind": "official",
+      "roadmap_url": "https://github.com/storytold/texturecraft/blob/main/ROADMAP.md",
+      "roadmap_history_url": "https://github.com/storytold/texturecraft/commits/main/ROADMAP.md",
+      "metric_status": "available",
+      "id": "texturecraft",
+      "name": "TextureCraft",
+      "adobe": "Substance 3D Painter",
+      "category": "3D texturing",
+      "color": "#c2672b",
+      "added": "2026-11-03",
+      "is_new": false,
+      "target": "reference app 12.2.0",
+      "order": 14,
+      "stage": "alpha",
+      "next_stage": "beta",
+      "full_pct": 68.0,
+      "full_range": null,
+      "full_hours": null,
+      "mainstream_pct": 70.0,
+      "essentials_pct": 85.0,
+      "breadth_pct": 90.0,
+      "parity": {
+        "tracked_since": "2026-11-17T01:08:16Z",
+        "value_since": "2026-11-26T03:59:50Z",
+        "releases_since": 0,
+        "releases_since_capped": false,
+        "revisions_since": 0,
+        "hours_since": null,
+        "areas_since": null,
+        "changes": 1,
+        "truncated": false,
+        "last_change": {
+          "ts": "2026-11-26T03:59:50Z",
+          "from": 60.0,
+          "to": 68.0,
+          "delta": 8.0,
+          "commit": "d45bb2c",
+          "commit_full": "d45bb2cad803ba76e944f22ab1c4b40248444f24",
+          "message": "Docs: update the roadmap after the November 25 audit (#848)",
+          "label_changed": false
+        }
+      },
+      "roadmap": {
+        "revisions": 5,
+        "revisions_7d": 2,
+        "last_revision": {
+          "ts": "2026-11-26T03:59:50Z",
+          "kind": "parity",
+          "commit": "d45bb2c",
+          "commit_full": "d45bb2cad803ba76e944f22ab1c4b40248444f24",
+          "message": "Docs: update the roadmap after the November 25 audit (#848)"
+        },
+        "last_update": {
+          "ts": "2026-11-26T03:59:50Z",
+          "kind": "parity",
+          "commit": "d45bb2c",
+          "commit_full": "d45bb2cad803ba76e944f22ab1c4b40248444f24",
+          "message": "Docs: update the roadmap after the November 25 audit (#848)"
+        },
+        "self_reported": "2026-11-25"
+      },
+      "milestone": null,
+      "activity": {
+        "level": "active",
+        "score": 16.0,
+        "active_days_7d": 7,
+        "changes_7d": 60,
+        "changes_14d": 127,
+        "housekeeping_7d": 7,
+        "last_code_change": {
+          "ts": "2026-11-26T05:27:34Z",
+          "commit": "4ff7cb6",
+          "commit_full": "4ff7cb6165f425079de3e8275cb3a8d03a1053a8",
+          "subject": "TextureCraft: minimal port to craft-libs next (#800)"
+        },
+        "last_commit_ts": "2026-11-26T05:27:34Z",
+        "repo_since": "2026-10-14T18:33:13Z",
+        "window": [
+          9,
+          4,
+          11,
+          10,
+          18,
+          12,
+          3,
+          18,
+          8,
+          5,
+          4,
+          4,
+          14,
+          7
+        ]
+      },
+      "release": {
+        "tag": "v0.6.1",
+        "name": "TextureCraft v0.6.1",
+        "ts": "2026-11-12T00:43:50Z",
+        "url": "https://github.com/storytold/texturecraft/releases/tag/v0.6.1",
+        "changes": 4,
+        "new_contributors": null,
+        "platforms": [
+          "macOS",
+          "Windows",
+          "Linux",
+          "Web"
+        ],
+        "prerelease": false,
+        "source": "release",
+        "kind": "patch"
+      },
+      "series": [
+        {
+          "t": "2026-11-17T01:08:16Z",
+          "v": 60.0
+        },
+        {
+          "t": "2026-11-26T03:59:50Z",
+          "v": 68.0
+        }
+      ],
+      "history_len": 5
+    },
+    {
       "repo_url": "https://github.com/storytold/vectorcraft",
       "branch": "main",
       "kind": "official",
@@ -528,7 +654,7 @@
         "value_since": "2026-10-10T18:11:14Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 261,
+        "revisions_since": 262,
         "hours_since": null,
         "areas_since": {
           "up": 3,
@@ -559,42 +685,41 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 262,
-        "revisions_7d": 12,
+        "revisions": 263,
+        "revisions_7d": 4,
         "last_revision": {
-          "ts": "2026-11-25T18:43:40Z",
+          "ts": "2026-11-26T01:47:08Z",
           "kind": "content",
-          "commit": "2bc121e",
-          "commit_full": "2bc121e681c8902bf27daf9ea6b9a222cf28f0c8",
-          "message": "Docs: ROADMAP Upcoming names G11's remaining bugs (#8314) (#9076)"
+          "commit": "30f6381",
+          "commit_full": "30f63816186493dfb48ec37c725505bcc6b724bc",
+          "message": "Shapes: the Circle tool draws a circle from its center through a point (#8493)"
         },
         "last_update": {
-          "ts": "2026-11-25T18:43:40Z",
+          "ts": "2026-11-26T01:47:08Z",
           "kind": "content",
-          "commit": "2bc121e",
-          "commit_full": "2bc121e681c8902bf27daf9ea6b9a222cf28f0c8",
-          "message": "Docs: ROADMAP Upcoming names G11's remaining bugs (#8314) (#9076)"
+          "commit": "30f6381",
+          "commit_full": "30f63816186493dfb48ec37c725505bcc6b724bc",
+          "message": "Shapes: the Circle tool draws a circle from its center through a point (#8493)"
         },
         "self_reported": "2026-11-22"
       },
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 30.1,
+        "score": 29.5,
         "active_days_7d": 7,
-        "changes_7d": 420,
-        "changes_14d": 1847,
-        "housekeeping_7d": 22,
+        "changes_7d": 286,
+        "changes_14d": 1632,
+        "housekeeping_7d": 16,
         "last_code_change": {
-          "ts": "2026-11-25T22:17:47Z",
-          "commit": "016ead2",
-          "commit_full": "016ead2572d7d931d15d198ed44f66867b7893c7",
-          "subject": "Use the shared nightly launcher template (#9316)"
+          "ts": "2026-11-26T04:01:11Z",
+          "commit": "2b7dd67",
+          "commit_full": "2b7dd67ac0186d408766d69cef303c9c3512dce5",
+          "subject": "Color Wheel: the contrast cache keys on tool_paints, which replaced bucket_paints (#9352)"
         },
-        "last_commit_ts": "2026-11-25T22:17:47Z",
+        "last_commit_ts": "2026-11-26T04:01:11Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
-          254,
           240,
           283,
           214,
@@ -607,7 +732,8 @@
           47,
           6,
           45,
-          92
+          92,
+          39
         ]
       },
       "release": {
@@ -633,11 +759,11 @@
           "v": 62.0
         },
         {
-          "t": "2026-11-25T18:43:40Z",
+          "t": "2026-11-26T01:47:08Z",
           "v": 62.0
         }
       ],
-      "history_len": 262
+      "history_len": 263
     },
     {
       "repo_url": "https://github.com/storytold/lightcraft",
@@ -709,21 +835,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.1,
+        "score": 12.4,
         "active_days_7d": 7,
-        "changes_7d": 53,
-        "changes_14d": 113,
+        "changes_7d": 51,
+        "changes_14d": 107,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-25T22:17:24Z",
-          "commit": "5bdb4e7",
-          "commit_full": "5bdb4e7a6955fde3cb9ebda36576bbea6a0c6d7d",
-          "subject": "Use the shared nightly launcher template (#4740)"
+          "ts": "2026-11-26T03:07:31Z",
+          "commit": "afa18c6",
+          "commit_full": "afa18c675bb616317d27eab40ef6b04fb2868d8b",
+          "subject": "Switch on supervised nightlies on the nightly-signer branch (#4749)"
         },
-        "last_commit_ts": "2026-11-25T22:17:24Z",
+        "last_commit_ts": "2026-11-26T03:07:31Z",
         "repo_since": "2026-09-30T14:04:12Z",
         "window": [
-          7,
           1,
           11,
           7,
@@ -736,7 +861,8 @@
           11,
           4,
           4,
-          2
+          2,
+          1
         ]
       },
       "release": {
@@ -849,22 +975,21 @@
       },
       "milestone": null,
       "activity": {
-        "level": "buzzing",
-        "score": 20.0,
-        "active_days_7d": 6,
-        "changes_7d": 101,
-        "changes_14d": 230,
-        "housekeeping_7d": 6,
+        "level": "active",
+        "score": 17.3,
+        "active_days_7d": 7,
+        "changes_7d": 102,
+        "changes_14d": 227,
+        "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-25T22:17:53Z",
-          "commit": "77a530b",
-          "commit_full": "77a530b1796b7d19cfac3242502bf294751606b9",
-          "subject": "Use the shared nightly launcher template (#7829)"
+          "ts": "2026-11-26T01:52:59Z",
+          "commit": "765abcc",
+          "commit_full": "765abcc790bc7d851ddab377e1ca656dbee77b03",
+          "subject": "Switch on supervised nightlies on the nightly-signer branch (#7839)"
         },
-        "last_commit_ts": "2026-11-25T22:17:53Z",
+        "last_commit_ts": "2026-11-26T01:52:59Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
-          4,
           11,
           8,
           5,
@@ -877,7 +1002,8 @@
           18,
           5,
           18,
-          40
+          40,
+          1
         ]
       },
       "release": {
@@ -908,123 +1034,6 @@
         }
       ],
       "history_len": 629
-    },
-    {
-      "repo_url": "https://github.com/storytold/texturecraft",
-      "branch": "main",
-      "kind": "official",
-      "roadmap_url": "https://github.com/storytold/texturecraft/blob/main/ROADMAP.md",
-      "roadmap_history_url": "https://github.com/storytold/texturecraft/commits/main/ROADMAP.md",
-      "metric_status": "available",
-      "id": "texturecraft",
-      "name": "TextureCraft",
-      "adobe": "Substance 3D Painter",
-      "category": "3D texturing",
-      "color": "#c2672b",
-      "added": "2026-11-03",
-      "is_new": false,
-      "target": "reference app 12.2.0",
-      "order": 14,
-      "stage": "alpha",
-      "next_stage": "beta",
-      "full_pct": 60.0,
-      "full_range": null,
-      "full_hours": null,
-      "mainstream_pct": 60.0,
-      "essentials_pct": 75.0,
-      "breadth_pct": 80.0,
-      "parity": {
-        "tracked_since": "2026-11-17T01:08:16Z",
-        "value_since": "2026-11-17T01:08:16Z",
-        "releases_since": 0,
-        "releases_since_capped": false,
-        "revisions_since": 3,
-        "hours_since": null,
-        "areas_since": null,
-        "changes": 0,
-        "truncated": false,
-        "last_change": null
-      },
-      "roadmap": {
-        "revisions": 4,
-        "revisions_7d": 1,
-        "last_revision": {
-          "ts": "2026-11-23T21:55:24Z",
-          "kind": "content",
-          "commit": "2037b6b",
-          "commit_full": "2037b6b823d41b94938be483e7f3aa5ebeb07ace",
-          "message": "Export OpenPBR MaterialX from the export window (#784)"
-        },
-        "last_update": {
-          "ts": "2026-11-23T21:55:24Z",
-          "kind": "content",
-          "commit": "2037b6b",
-          "commit_full": "2037b6b823d41b94938be483e7f3aa5ebeb07ace",
-          "message": "Export OpenPBR MaterialX from the export window (#784)"
-        },
-        "self_reported": "2026-11-16"
-      },
-      "milestone": null,
-      "activity": {
-        "level": "active",
-        "score": 15.9,
-        "active_days_7d": 7,
-        "changes_7d": 54,
-        "changes_14d": 126,
-        "housekeeping_7d": 6,
-        "last_code_change": {
-          "ts": "2026-11-25T23:43:18Z",
-          "commit": "cd4e296",
-          "commit_full": "cd4e296743328b9c5f83b9573d10d17d34770940",
-          "subject": "Reject invalid export preset save options (#738)"
-        },
-        "last_commit_ts": "2026-11-25T23:43:18Z",
-        "repo_since": "2026-10-14T18:33:13Z",
-        "window": [
-          8,
-          9,
-          4,
-          11,
-          10,
-          18,
-          12,
-          3,
-          18,
-          8,
-          5,
-          4,
-          4,
-          12
-        ]
-      },
-      "release": {
-        "tag": "v0.6.1",
-        "name": "TextureCraft v0.6.1",
-        "ts": "2026-11-12T00:43:50Z",
-        "url": "https://github.com/storytold/texturecraft/releases/tag/v0.6.1",
-        "changes": 4,
-        "new_contributors": null,
-        "platforms": [
-          "macOS",
-          "Windows",
-          "Linux",
-          "Web"
-        ],
-        "prerelease": false,
-        "source": "release",
-        "kind": "patch"
-      },
-      "series": [
-        {
-          "t": "2026-11-17T01:08:16Z",
-          "v": 60.0
-        },
-        {
-          "t": "2026-11-23T21:55:24Z",
-          "v": 60.0
-        }
-      ],
-      "history_len": 4
     },
     {
       "repo_url": "https://github.com/storytold/filmcraft",
@@ -1087,21 +1096,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 11.1,
+        "score": 9.8,
         "active_days_7d": 6,
-        "changes_7d": 23,
-        "changes_14d": 115,
+        "changes_7d": 19,
+        "changes_14d": 103,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-25T22:17:11Z",
-          "commit": "7303127",
-          "commit_full": "7303127462ae5e943f33047c89679accff554cf3",
-          "subject": "Use the shared nightly launcher template (#5251)"
+          "ts": "2026-11-26T01:52:26Z",
+          "commit": "f731571",
+          "commit_full": "f731571277192072a78eb8fec56eb8ab723b7217",
+          "subject": "Switch on supervised nightlies on the nightly-signer branch (#5256)"
         },
-        "last_commit_ts": "2026-11-25T22:17:11Z",
+        "last_commit_ts": "2026-11-26T01:52:26Z",
         "repo_since": "2026-09-30T09:22:00Z",
         "window": [
-          13,
           11,
           6,
           9,
@@ -1114,7 +1122,8 @@
           4,
           3,
           0,
-          3
+          3,
+          1
         ]
       },
       "release": {
@@ -1218,21 +1227,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 8.1,
+        "score": 8.0,
         "active_days_7d": 5,
-        "changes_7d": 17,
-        "changes_14d": 78,
+        "changes_7d": 15,
+        "changes_14d": 73,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-25T22:16:45Z",
-          "commit": "08ba507",
-          "commit_full": "08ba5072a7586909d99bb6e14e5ca73d2b2608ee",
-          "subject": "Use the shared nightly launcher template (#2367)"
+          "ts": "2026-11-26T04:08:47Z",
+          "commit": "5b7b22d",
+          "commit_full": "5b7b22dc5128eb329ca647d920797e37cb255224",
+          "subject": "DeckCraft: move to craft-libs next (minimal port) (#2346)"
         },
-        "last_commit_ts": "2026-11-25T22:16:45Z",
+        "last_commit_ts": "2026-11-26T04:08:47Z",
         "repo_since": "2026-10-06T02:13:02Z",
         "window": [
-          7,
           15,
           2,
           9,
@@ -1245,6 +1253,7 @@
           1,
           0,
           0,
+          2,
           2
         ]
       },
@@ -1365,7 +1374,7 @@
       },
       "roadmap": {
         "revisions": 287,
-        "revisions_7d": 1,
+        "revisions_7d": 0,
         "last_revision": {
           "ts": "2026-11-19T00:12:03Z",
           "kind": "content",
@@ -1385,21 +1394,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 9.2,
+        "score": 8.8,
         "active_days_7d": 5,
-        "changes_7d": 21,
-        "changes_14d": 191,
+        "changes_7d": 16,
+        "changes_14d": 127,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-25T22:17:05Z",
-          "commit": "39c1f94",
-          "commit_full": "39c1f94a4f9356f030de996de1ee28d8588f7ad2",
-          "subject": "Use the shared nightly launcher template (#2628)"
+          "ts": "2026-11-26T04:08:20Z",
+          "commit": "aee91e4",
+          "commit_full": "aee91e495259fe616122b636d4106460559e51d9",
+          "subject": "FigCraft: move to craft-libs next (minimal port) (#2602)"
         },
-        "last_commit_ts": "2026-11-25T22:17:05Z",
+        "last_commit_ts": "2026-11-26T04:08:20Z",
         "repo_since": "2026-10-09T15:38:50Z",
         "window": [
-          66,
           36,
           1,
           5,
@@ -1412,6 +1420,7 @@
           3,
           0,
           0,
+          2,
           2
         ]
       },
@@ -1529,11 +1538,11 @@
       },
       "milestone": null,
       "activity": {
-        "level": "active",
-        "score": 8.7,
-        "active_days_7d": 4,
-        "changes_7d": 30,
-        "changes_14d": 125,
+        "level": "quiet",
+        "score": 7.0,
+        "active_days_7d": 3,
+        "changes_7d": 21,
+        "changes_14d": 120,
         "housekeeping_7d": 4,
         "last_code_change": {
           "ts": "2026-11-23T21:07:14Z",
@@ -1544,7 +1553,6 @@
         "last_commit_ts": "2026-11-23T21:07:14Z",
         "repo_since": "2026-09-30T09:17:08Z",
         "window": [
-          5,
           14,
           10,
           12,
@@ -1556,6 +1564,7 @@
           0,
           1,
           5,
+          0,
           0,
           0
         ]
@@ -1654,21 +1663,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 9.7,
+        "score": 9.3,
         "active_days_7d": 5,
-        "changes_7d": 28,
-        "changes_14d": 96,
+        "changes_7d": 23,
+        "changes_14d": 87,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-25T22:17:18Z",
-          "commit": "3a37c2e",
-          "commit_full": "3a37c2e88295a61e91942ddc0866a28bab02bf5d",
-          "subject": "Use the shared nightly launcher template (#4758)"
+          "ts": "2026-11-26T02:44:49Z",
+          "commit": "b1216a1",
+          "commit_full": "b1216a17e8f13ba6fab276bcb6dcfec79ba86601",
+          "subject": "Switch on supervised nightlies on the nightly-signer branch (#4767)"
         },
-        "last_commit_ts": "2026-11-25T22:17:18Z",
+        "last_commit_ts": "2026-11-26T02:44:49Z",
         "repo_since": "2026-10-06T02:09:42Z",
         "window": [
-          11,
           0,
           8,
           8,
@@ -1681,6 +1689,7 @@
           2,
           4,
           0,
+          2,
           2
         ]
       },
@@ -1754,7 +1763,7 @@
       },
       "roadmap": {
         "revisions": 229,
-        "revisions_7d": 4,
+        "revisions_7d": 2,
         "last_revision": {
           "ts": "2026-11-23T15:39:36Z",
           "kind": "content",
@@ -1774,21 +1783,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 10.9,
+        "score": 10.1,
         "active_days_7d": 6,
-        "changes_7d": 30,
-        "changes_14d": 141,
+        "changes_7d": 24,
+        "changes_14d": 87,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-25T22:16:52Z",
-          "commit": "127315b",
-          "commit_full": "127315b40ef9b71482bdd470df8a950e4bb74ec8",
-          "subject": "Use the shared nightly launcher template (#3246)"
+          "ts": "2026-11-26T02:44:19Z",
+          "commit": "f5c004a",
+          "commit_full": "f5c004a84893d1c92eead3f2b9275c5dedfac2e3",
+          "subject": "Switch on supervised nightlies on the nightly-signer branch (#3250)"
         },
-        "last_commit_ts": "2026-11-25T22:16:52Z",
+        "last_commit_ts": "2026-11-26T02:44:19Z",
         "repo_since": "2026-10-01T13:00:02Z",
         "window": [
-          56,
           5,
           12,
           22,
@@ -1801,6 +1809,7 @@
           2,
           7,
           0,
+          2,
           2
         ]
       },
@@ -1894,21 +1903,20 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 22.7,
+        "score": 21.1,
         "active_days_7d": 7,
-        "changes_7d": 155,
-        "changes_14d": 439,
-        "housekeeping_7d": 11,
+        "changes_7d": 111,
+        "changes_14d": 400,
+        "housekeeping_7d": 12,
         "last_code_change": {
-          "ts": "2026-11-25T22:49:52Z",
-          "commit": "d827906",
-          "commit_full": "d827906d6f0d5a58f2b8bbedd507013e64bfedb5",
-          "subject": "Merge queue batch #17001: #14868, #16986"
+          "ts": "2026-11-26T00:59:52Z",
+          "commit": "c5aea7e",
+          "commit_full": "c5aea7e75ea598b4c926c1c60aa90129839d5c39",
+          "subject": "Make the ui-egui library tests compile again (#17027) (#17028)"
         },
-        "last_commit_ts": "2026-11-25T22:49:52Z",
+        "last_commit_ts": "2026-11-26T02:20:06Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
-          45,
           74,
           30,
           77,
@@ -1921,7 +1929,8 @@
           25,
           18,
           18,
-          12
+          12,
+          6
         ]
       },
       "release": {
@@ -2014,21 +2023,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.7,
+        "score": 13.3,
         "active_days_7d": 7,
-        "changes_7d": 80,
-        "changes_14d": 205,
+        "changes_7d": 74,
+        "changes_14d": 180,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-25T22:16:58Z",
-          "commit": "5eccc05",
-          "commit_full": "5eccc055ce77e74efa492efe3cb6ad3d2a180c6f",
-          "subject": "Use the shared nightly launcher template (#4169)"
+          "ts": "2026-11-26T04:09:14Z",
+          "commit": "47ab68c",
+          "commit_full": "47ab68c2182cef495ee66162564cf3958a91a862",
+          "subject": "EffectCraft: move to craft-libs next (minimal port) (#4153)"
         },
-        "last_commit_ts": "2026-11-25T22:16:58Z",
+        "last_commit_ts": "2026-11-26T04:09:14Z",
         "repo_since": "2026-10-01T16:48:39Z",
         "window": [
-          27,
           10,
           24,
           4,
@@ -2041,6 +2049,7 @@
           6,
           5,
           1,
+          2,
           2
         ]
       },
@@ -2114,7 +2123,7 @@
       },
       "roadmap": {
         "revisions": 32,
-        "revisions_7d": 3,
+        "revisions_7d": 1,
         "last_revision": {
           "ts": "2026-11-20T14:04:15Z",
           "kind": "content",
@@ -2136,19 +2145,18 @@
         "level": "active",
         "score": 8.4,
         "active_days_7d": 6,
-        "changes_7d": 14,
+        "changes_7d": 12,
         "changes_14d": 54,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-25T22:17:35Z",
-          "commit": "97e38ba",
-          "commit_full": "97e38ba3c35e22cb4953d99c93914f6d31813dc6",
-          "subject": "Use the shared nightly launcher template (#1787)"
+          "ts": "2026-11-26T04:08:34Z",
+          "commit": "af9f210",
+          "commit_full": "af9f2109ff4d194159f782d6574d4e85c8245197",
+          "subject": "SoundCraft: move to craft-libs next (minimal port) (#1738)"
         },
-        "last_commit_ts": "2026-11-25T22:17:35Z",
+        "last_commit_ts": "2026-11-26T04:08:34Z",
         "repo_since": "2026-10-06T00:08:04Z",
         "window": [
-          2,
           20,
           1,
           2,
@@ -2160,6 +2168,7 @@
           0,
           1,
           3,
+          2,
           2,
           2
         ]
@@ -2254,21 +2263,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 12.2,
+        "score": 13.5,
         "active_days_7d": 6,
-        "changes_7d": 42,
-        "changes_14d": 79,
+        "changes_7d": 52,
+        "changes_14d": 88,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-25T22:16:38Z",
-          "commit": "29baf19",
-          "commit_full": "29baf193f71cb5964e92c2f16c3ef47451f4aeb6",
-          "subject": "Use the shared nightly launcher template (#3518)"
+          "ts": "2026-11-26T05:13:20Z",
+          "commit": "ba344a8",
+          "commit_full": "ba344a894ba64fb181ffd534318090b82b38b433",
+          "subject": "JOIN: ends meet at the same height; objects facing the other way stay out (#2790)"
         },
-        "last_commit_ts": "2026-11-25T22:16:38Z",
+        "last_commit_ts": "2026-11-26T05:13:20Z",
         "repo_since": "2026-10-06T00:15:47Z",
         "window": [
-          2,
           1,
           3,
           8,
@@ -2281,7 +2289,8 @@
           0,
           7,
           5,
-          7
+          7,
+          11
         ]
       },
       "release": {
@@ -2354,7 +2363,7 @@
       },
       "roadmap": {
         "revisions": 269,
-        "revisions_7d": 6,
+        "revisions_7d": 4,
         "last_revision": {
           "ts": "2026-11-25T01:29:07Z",
           "kind": "editorial",
@@ -2374,21 +2383,20 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 18.5,
+        "score": 17.3,
         "active_days_7d": 7,
-        "changes_7d": 65,
-        "changes_14d": 266,
-        "housekeeping_7d": 7,
+        "changes_7d": 55,
+        "changes_14d": 255,
+        "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-25T20:07:29Z",
-          "commit": "8accb30",
-          "commit_full": "8accb3023616e5b47b02fdb85ab2a9ed2c52e4de",
-          "subject": "CS5.1: Move to contacts folder follow-up (#1144) (#1951)"
+          "ts": "2026-11-26T04:49:24Z",
+          "commit": "477b427",
+          "commit_full": "477b427bee7d128fa7d0cdebb52e3c9f7c7c1c73",
+          "subject": "Fix: a picture the HTML shows by cid: is not an attachment (#1970)"
         },
-        "last_commit_ts": "2026-11-25T20:07:29Z",
+        "last_commit_ts": "2026-11-26T04:49:24Z",
         "repo_since": "2026-10-12T18:17:00Z",
         "window": [
-          15,
           42,
           41,
           23,
@@ -2401,7 +2409,8 @@
           9,
           6,
           6,
-          13
+          13,
+          4
         ]
       },
       "release": {
@@ -2491,21 +2500,20 @@
       "milestone": null,
       "activity": {
         "level": "quiet",
-        "score": 6.0,
+        "score": 6.4,
         "active_days_7d": 4,
         "changes_7d": 9,
-        "changes_14d": 34,
+        "changes_14d": 35,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-25T22:17:30Z",
-          "commit": "83e7d01",
-          "commit_full": "83e7d0112b271d5dc43bdb3785ba28b028abab13",
-          "subject": "Use the shared nightly launcher template (#321)"
+          "ts": "2026-11-26T04:09:00Z",
+          "commit": "665e5fa",
+          "commit_full": "665e5fa28618db5b2d9342412d9d8eb327cc7c24",
+          "subject": "MaterialCraft: move to craft-libs next (minimal port) (#318)"
         },
-        "last_commit_ts": "2026-11-25T22:17:30Z",
+        "last_commit_ts": "2026-11-26T04:09:00Z",
         "repo_since": "2026-11-01T19:58:46Z",
         "window": [
-          1,
           1,
           7,
           4,
@@ -2518,6 +2526,7 @@
           0,
           0,
           1,
+          2,
           2
         ]
       },
@@ -2579,7 +2588,7 @@
       },
       "roadmap": {
         "revisions": 918,
-        "revisions_7d": 102,
+        "revisions_7d": 78,
         "last_revision": {
           "ts": "2026-11-25T12:50:42Z",
           "kind": "content",
@@ -2598,12 +2607,12 @@
       },
       "milestone": null,
       "activity": {
-        "level": "buzzing",
-        "score": 20.6,
-        "active_days_7d": 7,
-        "changes_7d": 149,
-        "changes_14d": 446,
-        "housekeeping_7d": 17,
+        "level": "active",
+        "score": 16.5,
+        "active_days_7d": 6,
+        "changes_7d": 121,
+        "changes_14d": 397,
+        "housekeeping_7d": 15,
         "last_code_change": {
           "ts": "2026-11-25T12:50:42Z",
           "commit": "0a4e66b",
@@ -2613,7 +2622,6 @@
         "last_commit_ts": "2026-11-25T12:50:42Z",
         "repo_since": "2026-10-31T14:52:14Z",
         "window": [
-          49,
           6,
           33,
           33,
@@ -2626,7 +2634,8 @@
           2,
           3,
           82,
-          15
+          15,
+          0
         ]
       },
       "release": {
@@ -2707,21 +2716,20 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 41.2,
+        "score": 39.0,
         "active_days_7d": 7,
-        "changes_7d": 1660,
-        "changes_14d": 3047,
-        "housekeeping_7d": 45,
+        "changes_7d": 1517,
+        "changes_14d": 2928,
+        "housekeeping_7d": 47,
         "last_code_change": {
-          "ts": "2026-11-25T23:20:09Z",
-          "commit": "6742901",
-          "commit_full": "6742901b26b920e1d994968d0b44b17cfd9131e7",
-          "subject": "Merge #22062: Patterns/Mirror: follow pattern copies moved to root when reusing a linked component"
+          "ts": "2026-11-26T05:05:16Z",
+          "commit": "debe0f6",
+          "commit_full": "debe0f6d1d195061b57c888b4675c7bcfcb20714",
+          "subject": "Merge #22446: solidcore: the vertex check solves each vertex use's UV point once, not twice"
         },
-        "last_commit_ts": "2026-11-25T23:20:09Z",
+        "last_commit_ts": "2026-11-26T05:05:16Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
-          191,
           203,
           198,
           156,
@@ -2734,7 +2742,8 @@
           203,
           272,
           299,
-          362
+          387,
+          47
         ]
       },
       "release": {
@@ -2803,10 +2812,10 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 12.1,
-        "active_days_7d": 6,
-        "changes_7d": 28,
-        "changes_14d": 112,
+        "score": 9.7,
+        "active_days_7d": 5,
+        "changes_7d": 24,
+        "changes_14d": 95,
         "housekeeping_7d": 6,
         "last_code_change": {
           "ts": "2026-11-25T22:16:32Z",
@@ -2817,7 +2826,6 @@
         "last_commit_ts": "2026-11-25T22:16:32Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
-          17,
           14,
           14,
           7,
@@ -2830,7 +2838,8 @@
           0,
           1,
           6,
-          5
+          5,
+          0
         ]
       },
       "release": {
@@ -2898,21 +2907,20 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 24.5,
+        "score": 25.9,
         "active_days_7d": 7,
-        "changes_7d": 305,
-        "changes_14d": 350,
+        "changes_7d": 437,
+        "changes_14d": 531,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-25T23:28:27Z",
-          "commit": "bfa4ae0",
-          "commit_full": "bfa4ae0c9329998c3a234ac38760a3ed4f2a4604",
-          "subject": "The answer deadline's late-answer catch is a deliberate fire-and-forget"
+          "ts": "2026-11-26T04:50:57Z",
+          "commit": "90dee00",
+          "commit_full": "90dee00a50d33ff2bc5f9784c5f31ca7c3f4f04c",
+          "subject": "Merge branch 'perf-embed'"
         },
-        "last_commit_ts": "2026-11-25T23:28:27Z",
+        "last_commit_ts": "2026-11-26T04:50:57Z",
         "repo_since": "2026-11-02T14:36:17Z",
         "window": [
-          0,
           0,
           21,
           7,
@@ -2925,7 +2933,8 @@
           70,
           62,
           44,
-          31
+          201,
+          11
         ]
       },
       "release": null,
@@ -2977,19 +2986,19 @@
       },
       "milestone": null,
       "activity": {
-        "level": "cold",
-        "score": 0.0,
-        "active_days_7d": 0,
-        "changes_7d": 0,
-        "changes_14d": 0,
+        "level": "quiet",
+        "score": 2.0,
+        "active_days_7d": 1,
+        "changes_7d": 3,
+        "changes_14d": 3,
         "housekeeping_7d": 1,
         "last_code_change": {
-          "ts": "2026-07-26T19:26:10Z",
-          "commit": "9ca8f07",
-          "commit_full": "9ca8f07d0db15f5d2060b6e8c73ab705ad92fdac",
-          "subject": "kling client"
+          "ts": "2026-11-26T04:37:10Z",
+          "commit": "713689a",
+          "commit_full": "713689a0a3a820e0f6b817eab04949a88d2be279",
+          "subject": "Connect the Vercel console to the hosted gateway"
         },
-        "last_commit_ts": "2026-11-24T20:35:20Z",
+        "last_commit_ts": "2026-11-26T04:37:10Z",
         "repo_since": "2026-07-04T17:45:50Z",
         "window": [
           0,
@@ -3005,7 +3014,7 @@
           0,
           0,
           0,
-          0
+          3
         ]
       },
       "release": null,
@@ -3020,5 +3029,5 @@
     "missing": [],
     "candidates": []
   },
-  "generated_at": "2026-11-25T23:51:45+00:00"
+  "generated_at": "2026-11-26T05:44:31+00:00"
 }
