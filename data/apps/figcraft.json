@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/figcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "6cc578c",
-  "latest_commit_date": "2026-11-19T07:12:03+07:00",
-  "latest_message": "M10: panel rows and the layers list mirror in a right-to-left UI (#1810)",
+  "latest_commit": "f6638e1",
+  "latest_commit_date": "2026-11-26T15:45:01+01:00",
+  "latest_message": "M12: Boards: mind maps in the toolbar, with keys for children and siblings (#2226, step 2) (#2231)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -505,7 +505,7 @@
     "value_since": "2026-10-11T21:41:28Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 235,
+    "revisions_since": 236,
     "hours_since": {
       "from": [
         273,
@@ -560,39 +560,39 @@
     }
   },
   "roadmap": {
-    "revisions": 287,
-    "revisions_7d": 0,
+    "revisions": 288,
+    "revisions_7d": 1,
     "last_revision": {
-      "ts": "2026-11-19T00:12:03Z",
+      "ts": "2026-11-26T14:45:01Z",
       "kind": "content",
-      "commit": "6cc578c",
-      "commit_full": "6cc578cede15fc51c6056879d3e5f0e9c09a0c03",
-      "message": "M10: panel rows and the layers list mirror in a right-to-left UI (#1810)"
+      "commit": "f6638e1",
+      "commit_full": "f6638e15bf7f5561d57f15043a25c5692dc72747",
+      "message": "M12: Boards: mind maps in the toolbar, with keys for children and siblings (#2226, step 2) (#2231)"
     },
     "last_update": {
-      "ts": "2026-11-19T00:12:03Z",
+      "ts": "2026-11-26T14:45:01Z",
       "kind": "content",
-      "commit": "6cc578c",
-      "commit_full": "6cc578cede15fc51c6056879d3e5f0e9c09a0c03",
-      "message": "M10: panel rows and the layers list mirror in a right-to-left UI (#1810)"
+      "commit": "f6638e1",
+      "commit_full": "f6638e15bf7f5561d57f15043a25c5692dc72747",
+      "message": "M12: Boards: mind maps in the toolbar, with keys for children and siblings (#2226, step 2) (#2231)"
     },
     "self_reported": "2026-11-19"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 8.8,
+    "score": 10.0,
     "active_days_7d": 5,
-    "changes_7d": 16,
-    "changes_14d": 127,
+    "changes_7d": 20,
+    "changes_14d": 131,
     "housekeeping_7d": 4,
     "last_code_change": {
-      "ts": "2026-11-26T04:08:20Z",
-      "commit": "aee91e4",
-      "commit_full": "aee91e495259fe616122b636d4106460559e51d9",
-      "subject": "FigCraft: move to craft-libs next (minimal port) (#2602)"
+      "ts": "2026-11-26T14:45:01Z",
+      "commit": "f6638e1",
+      "commit_full": "f6638e15bf7f5561d57f15043a25c5692dc72747",
+      "subject": "M12: Boards: mind maps in the toolbar, with keys for children and siblings (#2226, step 2) (#2231)"
     },
-    "last_commit_ts": "2026-11-26T04:08:20Z",
+    "last_commit_ts": "2026-11-26T14:45:01Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       36,
@@ -608,7 +608,7 @@
       0,
       0,
       2,
-      2
+      6
     ],
     "days": [
       {
@@ -1439,16 +1439,20 @@
       },
       {
         "d": "2026-11-26",
-        "code": 2,
+        "code": 6,
         "other": 0,
         "samples": [
           {
-            "commit": "aee91e4",
-            "subject": "FigCraft: move to craft-libs next (minimal port) (#2602)"
+            "commit": "f6638e1",
+            "subject": "M12: Boards: mind maps in the toolbar, with keys for children and siblings (#2226, step 2) (#2231)"
           },
           {
-            "commit": "79ba889",
-            "subject": "Switch on supervised nightlies on the nightly-signer branch (#2636)"
+            "commit": "e1361cb",
+            "subject": "Canvas: a dragged layer moves with its outline, drawn from a sprite while the base stays put (#2033) (#2144)"
+          },
+          {
+            "commit": "fc85937",
+            "subject": "Scale tool: variable-bound lengths stay bound on an instance at value x its scale, and bake elsewhere (#2090) (#2134)"
           }
         ]
       }
@@ -8534,7 +8538,30 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "f6638e1",
+      "commit_full": "f6638e15bf7f5561d57f15043a25c5692dc72747",
+      "commit_date": "2026-11-26T15:45:01+01:00",
+      "ts": "2026-11-26T14:45:01Z",
+      "message": "M12: Boards: mind maps in the toolbar, with keys for children and siblings (#2226, step 2) (#2231)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-19",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-26T05:43:41+00:00"
+  "updated_at": "2026-11-26T15:55:52+00:00"
 }

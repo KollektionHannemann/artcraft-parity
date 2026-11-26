@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/gridcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/gridcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "f9af787",
-  "latest_commit_date": "2026-11-23T17:32:01-06:00",
-  "latest_message": "Dropdown filter (#2119)",
+  "latest_commit": "b6ef428",
+  "latest_commit_date": "2026-11-26T16:39:39+01:00",
+  "latest_message": "Fill handle: Linear Trend and Growth Trend on the right-drag menu for numbers (#2628)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -334,6 +334,10 @@
       },
       {
         "date": "2026-10-26",
+        "text": "Paste Special ▸ Transpose turns a formula's references with the cell that carries it, as Excel does: the row offset becomes the column offset and the other way round, so =A3+1 copied from A3:A4 and pasted at C3 reads the cell to its left (=C3+1) instead of keeping the offset it had in the column; a reference pinned with $ is left standing, a whole row or column comes back as a cell range open to the sheet's edge, and one off the grid is #REF! (#2450)"
+      },
+      {
+        "date": "2026-10-26",
         "text": "PDF preserves Context/LTR/RTL reading direction through wrapping and drawing; RTL sheet cells, borders, headings, objects and sparklines mirror consistently"
       },
       {
@@ -347,6 +351,10 @@
       {
         "date": "2026-10-26",
         "text": "Arabic text shows in cells and the interface through a system, fontconfig or craft-fonts Arabic face; workbook fonts keep their script fallbacks"
+      },
+      {
+        "date": "2026-10-25",
+        "text": "Fill handle: from numbers, the right-drag menu offers Linear Trend and Growth Trend, which continue the best-fit line or exponential curve of the source (1, 2 gives 3, 4, 5 or 4, 8, 16)"
       },
       {
         "date": "2026-10-25",
@@ -419,14 +427,6 @@
       {
         "date": "2026-10-21",
         "text": "Data validation lists are searchable: typing into the cell filters the dropdown to entries with a word starting with the typed text (case ignored, and the accents of Latin letters such as é, ç, ß, ł, ș, ǎ and Vietnamese ộ: Latin-1, Latin Extended-A and -B, Latin Extended Additional; other scripts keep their marks), and Enter or Tab takes the highlighted entry; data.validationList exposes the same search to the CLI, MCP and agents"
-      },
-      {
-        "date": "2026-10-21",
-        "text": "Page Setup paper sizes match Japanese Excel: B4/B5/B6 are the JIS sizes (ISO B4/B5/B6 stay reachable by name), so a Japanese B5 worksheet prints at 182×257 mm; Japanese Postcard (100×148 mm), Double Postcard (148×200 mm), Envelope #3/#4 (120×235/90×205 mm), Kaku #2/#3 (240×332/216×277 mm) and A6 are added, both sizes reach the PDF page (file.exportPdf/file.print MediaBox) and the size survives an XLSX round-trip; the Page Layout Size menu lists them. B4/B5 used to be the ISO sizes, which is changed here"
-      },
-      {
-        "date": "2026-10-21",
-        "text": "Macro engine (macros.md): typed, declarative macros saved in the workbook (a JSON field; hidden names in xlsx); declared inputs checked with messages that name the cells; tokens (Input.col(2), Row, Output, Name:Total, {{…}} in formulas); one undo step with full rollback; a footprint dry run with ask, fail, overwrite, shift down or shift right; a policy that keeps macros away from files and the app, with approval for macros in opened files; Repeat, If and Stop steps; a debugger; a relative recorder; macro. commands beside the unchanged Automate scripts"
       }
     ]
   },
@@ -435,7 +435,7 @@
     "value_since": "2026-10-10T18:09:06Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 109,
+    "revisions_since": 113,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -443,39 +443,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 112,
-    "revisions_7d": 1,
+    "revisions": 116,
+    "revisions_7d": 5,
     "last_revision": {
-      "ts": "2026-11-23T23:32:01Z",
+      "ts": "2026-11-26T15:39:39Z",
       "kind": "content",
-      "commit": "f9af787",
-      "commit_full": "f9af787c7b011440402433d48487993650aa2eca",
-      "message": "Dropdown filter (#2119)"
+      "commit": "b6ef428",
+      "commit_full": "b6ef428a899a145e30a1e916539a7f3232cc52a7",
+      "message": "Fill handle: Linear Trend and Growth Trend on the right-drag menu for numbers (#2628)"
     },
     "last_update": {
-      "ts": "2026-11-23T23:32:01Z",
+      "ts": "2026-11-26T15:39:39Z",
       "kind": "content",
-      "commit": "f9af787",
-      "commit_full": "f9af787c7b011440402433d48487993650aa2eca",
-      "message": "Dropdown filter (#2119)"
+      "commit": "b6ef428",
+      "commit_full": "b6ef428a899a145e30a1e916539a7f3232cc52a7",
+      "message": "Fill handle: Linear Trend and Growth Trend on the right-drag menu for numbers (#2628)"
     },
     "self_reported": "2026-11-16"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 9.3,
+    "score": 12.5,
     "active_days_7d": 5,
-    "changes_7d": 23,
-    "changes_14d": 87,
-    "housekeeping_7d": 4,
+    "changes_7d": 46,
+    "changes_14d": 110,
+    "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-26T02:44:49Z",
-      "commit": "b1216a1",
-      "commit_full": "b1216a17e8f13ba6fab276bcb6dcfec79ba86601",
-      "subject": "Switch on supervised nightlies on the nightly-signer branch (#4767)"
+      "ts": "2026-11-26T15:52:27Z",
+      "commit": "404c71b",
+      "commit_full": "404c71b9c35822997bec324ff9f68db96584e640",
+      "subject": "LAMBDA tail recursion reaches Excel's depth (5,459) (#2660)"
     },
-    "last_commit_ts": "2026-11-26T02:44:49Z",
+    "last_commit_ts": "2026-11-26T15:52:27Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       0,
@@ -491,7 +491,7 @@
       4,
       0,
       2,
-      2
+      25
     ],
     "days": [
       {
@@ -1309,16 +1309,20 @@
       },
       {
         "d": "2026-11-26",
-        "code": 2,
-        "other": 0,
+        "code": 25,
+        "other": 1,
         "samples": [
           {
-            "commit": "b1216a1",
-            "subject": "Switch on supervised nightlies on the nightly-signer branch (#4767)"
+            "commit": "404c71b",
+            "subject": "LAMBDA tail recursion reaches Excel's depth (5,459) (#2660)"
           },
           {
-            "commit": "15373a0",
-            "subject": "GridCraft: minimal port to craft-libs next (#4732)"
+            "commit": "b6ef428",
+            "subject": "Fill handle: Linear Trend and Growth Trend on the right-drag menu for numbers (#2628)"
+          },
+          {
+            "commit": "03fcfaa",
+            "subject": "nightly: forward the signer's secrets from the caller, and allow just those (#4779)"
           }
         ]
       }
@@ -4107,7 +4111,99 @@
       "breadth_pct": 75.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "8fc8aa7",
+      "commit_full": "8fc8aa7857e243390f5117196bf03ca07a9ed012",
+      "commit_date": "2026-11-26T10:09:19+01:00",
+      "ts": "2026-11-26T09:09:19Z",
+      "message": "UI: Quick Analysis (Ctrl+Q) (#791) (#795)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-16",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "2798b67",
+      "commit_full": "2798b67d0977f363f7709562369c2152ec3c53a8",
+      "commit_date": "2026-11-26T15:11:17+01:00",
+      "ts": "2026-11-26T14:11:17Z",
+      "message": "SORT, SORTBY and Data > Sort order numbers exactly, like Excel (#2503)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-16",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "01be559",
+      "commit_full": "01be559f9d86ebf8181579007c02baeaeb6d2933",
+      "commit_date": "2026-11-26T15:22:03+01:00",
+      "ts": "2026-11-26T14:22:03Z",
+      "message": "Paste Special: a transposed paste turns formula references as Excel does (fixes #2450) (#2606)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-16",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "b6ef428",
+      "commit_full": "b6ef428a899a145e30a1e916539a7f3232cc52a7",
+      "commit_date": "2026-11-26T16:39:39+01:00",
+      "ts": "2026-11-26T15:39:39Z",
+      "message": "Fill handle: Linear Trend and Growth Trend on the right-drag menu for numbers (#2628)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-16",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-26T05:43:53+00:00"
+  "updated_at": "2026-11-26T15:56:13+00:00"
 }

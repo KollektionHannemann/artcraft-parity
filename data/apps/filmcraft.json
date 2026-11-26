@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/filmcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/filmcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "41977ba",
-  "latest_commit_date": "2026-11-09T04:45:53+01:00",
-  "latest_message": "Naming: Color Grading and Video Scopes for Lumetri; External Video Output (#1880)",
+  "latest_commit": "a7dcaa2",
+  "latest_commit_date": "2026-11-26T14:54:21+01:00",
+  "latest_message": "docs: bring ROADMAP.md and parity assessment current through 2026-11-15 (#4816)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
     "target": "Adobe Premiere Pro 2026 (26.5.2)",
-    "last_updated": "2026-11-08",
+    "last_updated": "2026-11-15",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -423,14 +423,14 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 16,
+    "revisions": 17,
     "revisions_7d": 0,
     "last_revision": {
-      "ts": "2026-11-09T03:45:53Z",
-      "kind": "content",
-      "commit": "41977ba",
-      "commit_full": "41977bab41737247c7eb6a86e751f79a3bf9fc45",
-      "message": "Naming: Color Grading and Video Scopes for Lumetri; External Video Output (#1880)"
+      "ts": "2026-11-26T13:54:21Z",
+      "kind": "editorial",
+      "commit": "a7dcaa2",
+      "commit_full": "a7dcaa22fba3e8849e5eeb2432581f3063d6d593",
+      "message": "docs: bring ROADMAP.md and parity assessment current through 2026-11-15 (#4816)"
     },
     "last_update": {
       "ts": "2026-11-09T03:45:53Z",
@@ -439,23 +439,23 @@
       "commit_full": "41977bab41737247c7eb6a86e751f79a3bf9fc45",
       "message": "Naming: Color Grading and Video Scopes for Lumetri; External Video Output (#1880)"
     },
-    "self_reported": "2026-11-08"
+    "self_reported": "2026-11-15"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 9.8,
+    "score": 11.6,
     "active_days_7d": 6,
-    "changes_7d": 19,
-    "changes_14d": 103,
-    "housekeeping_7d": 4,
+    "changes_7d": 24,
+    "changes_14d": 108,
+    "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-26T01:52:26Z",
-      "commit": "f731571",
-      "commit_full": "f731571277192072a78eb8fec56eb8ab723b7217",
-      "subject": "Switch on supervised nightlies on the nightly-signer branch (#5256)"
+      "ts": "2026-11-26T15:38:17Z",
+      "commit": "010efc7",
+      "commit_full": "010efc756ef752f25809189381becfe5e4f67123",
+      "subject": "Double-click the value graph to add a keyframe (#1311)"
     },
-    "last_commit_ts": "2026-11-26T01:52:26Z",
+    "last_commit_ts": "2026-11-26T15:38:17Z",
     "repo_since": "2026-09-30T09:22:00Z",
     "window": [
       11,
@@ -471,7 +471,7 @@
       3,
       0,
       3,
-      1
+      6
     ],
     "days": [
       {
@@ -1475,12 +1475,20 @@
       },
       {
         "d": "2026-11-26",
-        "code": 1,
-        "other": 0,
+        "code": 6,
+        "other": 1,
         "samples": [
           {
-            "commit": "f731571",
-            "subject": "Switch on supervised nightlies on the nightly-signer branch (#5256)"
+            "commit": "010efc7",
+            "subject": "Double-click the value graph to add a keyframe (#1311)"
+          },
+          {
+            "commit": "4fb20a0",
+            "subject": "markers: validate markers.add durationFrames (#4841)"
+          },
+          {
+            "commit": "482ef04",
+            "subject": "export: mix the loudness range once and refine over the stored mix (#4657) (#4669)"
           }
         ]
       }
@@ -2061,7 +2069,30 @@
       "breadth_pct": 86.0,
       "full_prev": 56.0,
       "kind": "content"
+    },
+    {
+      "commit": "a7dcaa2",
+      "commit_full": "a7dcaa22fba3e8849e5eeb2432581f3063d6d593",
+      "commit_date": "2026-11-26T14:54:21+01:00",
+      "ts": "2026-11-26T13:54:21Z",
+      "message": "docs: bring ROADMAP.md and parity assessment current through 2026-11-15 (#4816)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-15",
+      "full_pct": 56.0,
+      "full_range": null,
+      "full_hours": [
+        1450,
+        2600
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe Premiere Pro 2026 (26.5.2)",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 60.0,
+      "breadth_pct": 86.0,
+      "full_prev": 56.0,
+      "kind": "editorial"
     }
   ],
-  "updated_at": "2026-11-26T05:43:25+00:00"
+  "updated_at": "2026-11-26T15:55:21+00:00"
 }

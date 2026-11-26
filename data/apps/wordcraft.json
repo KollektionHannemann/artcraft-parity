@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "4e00d00",
-  "latest_commit_date": "2026-11-25T20:48:59Z",
-  "latest_message": "ROADMAP: remove a stray branch-name line from the progress log (#6917)",
+  "latest_commit": "44719ec",
+  "latest_commit_date": "2026-11-26T15:17:36Z",
+  "latest_message": "Paste: a copied table in a table cell inserts rows or overwrites cells, as Word does (#6742)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -329,6 +329,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-24",
+        "text": "Pasting a plain table over selected cells overwrites from the selection's top-left, even when the copy is wider than the selection (#6742)."
+      },
+      {
         "date": "2026-11-21",
         "text": "Layout: strict column balancing measures a kept paragraph again in each candidate column, so a float in one column does not make the paragraph skip another where it fits (#6821). Readiness estimates unchanged."
       },
@@ -483,10 +487,6 @@
       {
         "date": "2026-11-06",
         "text": "Line numbers take the document's \"Line Number\" style over its defaults, as in Word (Aptos 12 pt black in a manuscript whose defaults are Aptos 12 pt, measured in Word for Mac), instead of a fixed 10 pt grey. Readiness estimates unchanged."
-      },
-      {
-        "date": "2026-11-06",
-        "text": "Windows print submissions run in separate helper processes (#5710). A helper acknowledges cancellation before it stops, so a driver stalled in a cancelled job cannot hold another job’s provider lock. A private temporary PDF and bounded settings messages cross the process boundary; normal shutdown reaps helpers and removes their inputs. The helper erases its plaintext inputs before driver work; a hard app crash during startup can still leave private temporary files. Jobs already sending still complete. Readiness estimates unchanged."
       }
     ]
   },
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 625,
+    "revisions_since": 626,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 629,
-    "revisions_7d": 11,
+    "revisions": 630,
+    "revisions_7d": 12,
     "last_revision": {
-      "ts": "2026-11-25T20:48:59Z",
+      "ts": "2026-11-26T15:17:36Z",
       "kind": "content",
-      "commit": "4e00d00",
-      "commit_full": "4e00d007797f24f90030e4628ad7e692caf4c783",
-      "message": "ROADMAP: remove a stray branch-name line from the progress log (#6917)"
+      "commit": "44719ec",
+      "commit_full": "44719ece99e14c776e0143393b219da8586b4567",
+      "message": "Paste: a copied table in a table cell inserts rows or overwrites cells, as Word does (#6742)"
     },
     "last_update": {
-      "ts": "2026-11-25T20:48:59Z",
+      "ts": "2026-11-26T15:17:36Z",
       "kind": "content",
-      "commit": "4e00d00",
-      "commit_full": "4e00d007797f24f90030e4628ad7e692caf4c783",
-      "message": "ROADMAP: remove a stray branch-name line from the progress log (#6917)"
+      "commit": "44719ec",
+      "commit_full": "44719ece99e14c776e0143393b219da8586b4567",
+      "message": "Paste: a copied table in a table cell inserts rows or overwrites cells, as Word does (#6742)"
     },
     "self_reported": "2026-11-21"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 17.3,
+    "score": 18.9,
     "active_days_7d": 7,
-    "changes_7d": 102,
-    "changes_14d": 227,
+    "changes_7d": 106,
+    "changes_14d": 231,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-26T01:52:59Z",
-      "commit": "765abcc",
-      "commit_full": "765abcc790bc7d851ddab377e1ca656dbee77b03",
-      "subject": "Switch on supervised nightlies on the nightly-signer branch (#7839)"
+      "ts": "2026-11-26T15:17:36Z",
+      "commit": "44719ec",
+      "commit_full": "44719ece99e14c776e0143393b219da8586b4567",
+      "subject": "Paste: a copied table in a table cell inserts rows or overwrites cells, as Word does (#6742)"
     },
-    "last_commit_ts": "2026-11-26T01:52:59Z",
+    "last_commit_ts": "2026-11-26T15:17:36Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       11,
@@ -568,7 +568,7 @@
       5,
       18,
       40,
-      1
+      5
     ],
     "days": [
       {
@@ -1466,12 +1466,20 @@
       },
       {
         "d": "2026-11-26",
-        "code": 1,
+        "code": 5,
         "other": 1,
         "samples": [
           {
-            "commit": "765abcc",
-            "subject": "Switch on supervised nightlies on the nightly-signer branch (#7839)"
+            "commit": "44719ec",
+            "subject": "Paste: a copied table in a table cell inserts rows or overwrites cells, as Word does (#6742)"
+          },
+          {
+            "commit": "6c6ac69",
+            "subject": "Layout: a paragraph with a hidden mark is shown on one line with the next one (#3986) (#6913)"
+          },
+          {
+            "commit": "68c024a",
+            "subject": "Nightly: open the Launcher's files rather than its `--`, and stop blocking a refused launch on macOS (#7849)"
           }
         ]
       }
@@ -16169,7 +16177,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "44719ec",
+      "commit_full": "44719ece99e14c776e0143393b219da8586b4567",
+      "commit_date": "2026-11-26T15:17:36Z",
+      "ts": "2026-11-26T15:17:36Z",
+      "message": "Paste: a copied table in a table cell inserts rows or overwrites cells, as Word does (#6742)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-21",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-26T05:43:45+00:00"
+  "updated_at": "2026-11-26T15:55:58+00:00"
 }

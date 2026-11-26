@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "97d53c4",
-  "latest_commit_date": "2026-11-23T15:01:26-05:00",
-  "latest_message": "Land the craft framework UI port (#8160)",
+  "latest_commit": "bb4df81",
+  "latest_commit_date": "2026-11-26T16:45:08+01:00",
+  "latest_message": "Text: paragraphs respect typography and filled panels (#3539)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -293,6 +293,10 @@
     ],
     "progress": [
       {
+        "date": "2026-11-18",
+        "text": "(M7, #7687): PDF-page watermarks clip the source CropBox to MediaBox before sizing and rotating the imported form. Synthetic geometry and save/reopen render regressions cover oversized and partially overlapping crops; estimates unchanged."
+      },
+      {
         "date": "2026-11-16",
         "text": "(M5, #3741): Ctrl+M opens Comments on Windows/Linux and repeated activation keeps it open. macOS leaves Command+M unbound for Minimize. Dispatch, menus, palette, shortcut help and control/headless metadata resolve the platform-specific registry binding. Mapping and real-input regressions are retained through the rebase; estimates unchanged."
       },
@@ -327,6 +331,10 @@
       {
         "date": "2026-11-05",
         "text": "(M2, #5889): A non-embedded Arial set as a TrueType CID font (CIDFontType2, Identity-H, as Word and PDFMaker write it) draws the glyphs its codes name. Those codes are glyph indexes in the author's Arial, whose first 258 glyphs follow the standard Macintosh order, so the standard substitute now draws each glyph by name (vendored hayro-interpret patch 76). Before, it took each code as one of its own glyph indexes, and \"Low Power\" drew as \"@ck 'Dck Yf\". Arial Narrow, Black and Unicode MS, and CIDFontType0 fonts, are not read this way. Copying or searching those runs still needs a /ToUnicode."
+      },
+      {
+        "date": "2026-11-04",
+        "text": "(M7, paragraph boundaries): Editable paragraphs separate across large row-size changes, font-family changes and filled rectangular panel boundaries, while compatible multiline text and inline style runs stay together. Panel identity is page-wide across content streams and transformed form invocations; rectangle construction/fill splits retain their transforms and path semantics. Synthetic regressions cover isolated-panel edits through save/reopen and preserve the delayed-background rewrite checks for #2377. Estimates unchanged."
       },
       {
         "date": "2026-11-03",
@@ -443,14 +451,6 @@
       {
         "date": "2026-10-28",
         "text": "(M2, PR #4172): Integrated main 5af10276, preserving both roadmap histories and reviewing auto-merged export tests and accessibility UI changes. Validation: 488 scoped tests passed (18 engine, 412 renderer unit, 43 renderer integration, 15 Combine; one existing renderer integration test ignored); scoped all-target Clippy with -D warnings, formatting, layers, assets, parity and renderer/engine WASM checks passed. Viewer-only CJK fallback and print/output font policy remain unchanged; estimates unchanged."
-      },
-      {
-        "date": "2026-10-28",
-        "text": "(M10, #1595): Export to Markdown: docexportoffice with a .md or .markdown path writes CommonMark with GitHub pipe tables (headings, paragraphs with bold and italic, tables with their first row as the header, a rule between pages); text that Markdown would read as markup is escaped. Images, lists and links are not in the export's layout model and are left out. No menu item yet. Estimates unchanged."
-      },
-      {
-        "date": "2026-10-27",
-        "text": "(M10, #5005): Vector printing retains each annotation's optional-content membership when drawing its appearance."
       }
     ]
   },
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 155,
+    "revisions_since": 159,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,39 +476,39 @@
     }
   },
   "roadmap": {
-    "revisions": 245,
-    "revisions_7d": 2,
+    "revisions": 249,
+    "revisions_7d": 6,
     "last_revision": {
-      "ts": "2026-11-23T20:01:26Z",
+      "ts": "2026-11-26T15:45:08Z",
       "kind": "content",
-      "commit": "97d53c4",
-      "commit_full": "97d53c471d43be444ab02a9b7026be057229cb28",
-      "message": "Land the craft framework UI port (#8160)"
+      "commit": "bb4df81",
+      "commit_full": "bb4df817aacfbb18da9bf564916d01505454c7c5",
+      "message": "Text: paragraphs respect typography and filled panels (#3539)"
     },
     "last_update": {
-      "ts": "2026-11-23T20:01:26Z",
+      "ts": "2026-11-26T15:45:08Z",
       "kind": "content",
-      "commit": "97d53c4",
-      "commit_full": "97d53c471d43be444ab02a9b7026be057229cb28",
-      "message": "Land the craft framework UI port (#8160)"
+      "commit": "bb4df81",
+      "commit_full": "bb4df817aacfbb18da9bf564916d01505454c7c5",
+      "message": "Text: paragraphs respect typography and filled panels (#3539)"
     },
     "self_reported": "2026-11-16"
   },
   "milestone": null,
   "activity": {
-    "level": "quiet",
-    "score": 7.0,
-    "active_days_7d": 3,
-    "changes_7d": 21,
-    "changes_14d": 120,
-    "housekeeping_7d": 4,
+    "level": "active",
+    "score": 11.7,
+    "active_days_7d": 4,
+    "changes_7d": 46,
+    "changes_14d": 145,
+    "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-23T21:07:14Z",
-      "commit": "6e91067",
-      "commit_full": "6e910675c68dd5092e889065cfe8d0274c1b2742",
-      "subject": "CI: clippy clean on all targets; fix the Windows print dialog build (#8168)"
+      "ts": "2026-11-26T15:53:39Z",
+      "commit": "4825ebf",
+      "commit_full": "4825ebfbf2b1dc1b7d06530a0f7acfcd53f37781",
+      "subject": "M12: a negative XFA text indent hangs the first line (#3526)"
     },
-    "last_commit_ts": "2026-11-23T21:07:14Z",
+    "last_commit_ts": "2026-11-26T15:53:39Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
       14,
@@ -524,7 +524,7 @@
       5,
       0,
       0,
-      0
+      25
     ],
     "days": [
       {
@@ -1529,6 +1529,25 @@
           {
             "commit": "cbe6790",
             "subject": "CI: pin the shared PDF reader check to craft-libs 0a6e42b80 (#8163)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-26",
+        "code": 25,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "4825ebf",
+            "subject": "M12: a negative XFA text indent hangs the first line (#3526)"
+          },
+          {
+            "commit": "c2bd7c1",
+            "subject": "M12: an XFA form laid out again by its scripts rebuilds its pages in the view (#4603) (#4604)"
+          },
+          {
+            "commit": "814e19b",
+            "subject": "Refuse image arrange and crop removal that change nothing (#6590)"
           }
         ]
       }
@@ -7376,7 +7395,99 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "38cebe8",
+      "commit_full": "38cebe8f284ee03a5a7e12a953fc1030cdfa6c34",
+      "commit_date": "2026-11-26T14:00:24+01:00",
+      "ts": "2026-11-26T13:00:24Z",
+      "message": "fix(organize): keep attachments when inserting pages from a file (#2896)",
+      "stage": null,
+      "next_stage": null,
+      "last_updated": "2026-11-16",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "ed1b40a",
+      "commit_full": "ed1b40aa06689ba88b7dcb285ea1dfeb1c147294",
+      "commit_date": "2026-11-26T14:11:08+01:00",
+      "ts": "2026-11-26T13:11:08Z",
+      "message": "M3: hand the launcher's activation token back from the first window (Linux) (#3972)",
+      "stage": null,
+      "next_stage": null,
+      "last_updated": "2026-11-16",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "d3850a7",
+      "commit_full": "d3850a77b05f64c7317dbe961ff8cc2e189e8117",
+      "commit_date": "2026-11-26T15:37:24+01:00",
+      "ts": "2026-11-26T14:37:24Z",
+      "message": "Fix PDF watermark source clipping to visible page bounds (#7704)",
+      "stage": null,
+      "next_stage": null,
+      "last_updated": "2026-11-16",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "bb4df81",
+      "commit_full": "bb4df817aacfbb18da9bf564916d01505454c7c5",
+      "commit_date": "2026-11-26T16:45:08+01:00",
+      "ts": "2026-11-26T15:45:08Z",
+      "message": "Text: paragraphs respect typography and filled panels (#3539)",
+      "stage": null,
+      "next_stage": null,
+      "last_updated": "2026-11-16",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-26T05:43:33+00:00"
+  "updated_at": "2026-11-26T15:55:36+00:00"
 }

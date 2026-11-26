@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "0a4e66b",
-  "latest_commit_date": "2026-11-25T19:50:42+07:00",
-  "latest_message": "Decode Swift non-class type deinitializers as deinit instead of __deallocating_deinit (R3.12) (#2319)",
+  "latest_commit": "e68363d",
+  "latest_commit_date": "2026-11-26T16:10:14+07:00",
+  "latest_message": "Report a timed-out or cut fal.ai generation as possibly billed (R5.5) (#2426)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 918,
-    "revisions_7d": 78,
+    "revisions": 922,
+    "revisions_7d": 82,
     "last_revision": {
-      "ts": "2026-11-25T12:50:42Z",
+      "ts": "2026-11-26T09:10:14Z",
       "kind": "content",
-      "commit": "0a4e66b",
-      "commit_full": "0a4e66ba75c81ffa9a860c2987064d1ad61ab305",
-      "message": "Decode Swift non-class type deinitializers as deinit instead of __deallocating_deinit (R3.12) (#2319)"
+      "commit": "e68363d",
+      "commit_full": "e68363d0f4182a2e083b459c96f652ef8cca38b7",
+      "message": "Report a timed-out or cut fal.ai generation as possibly billed (R5.5) (#2426)"
     },
     "last_update": {
-      "ts": "2026-11-25T12:50:42Z",
+      "ts": "2026-11-26T09:10:14Z",
       "kind": "content",
-      "commit": "0a4e66b",
-      "commit_full": "0a4e66ba75c81ffa9a860c2987064d1ad61ab305",
-      "message": "Decode Swift non-class type deinitializers as deinit instead of __deallocating_deinit (R3.12) (#2319)"
+      "commit": "e68363d",
+      "commit_full": "e68363d0f4182a2e083b459c96f652ef8cca38b7",
+      "message": "Report a timed-out or cut fal.ai generation as possibly billed (R5.5) (#2426)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 16.5,
-    "active_days_7d": 6,
-    "changes_7d": 121,
-    "changes_14d": 397,
+    "score": 19.4,
+    "active_days_7d": 7,
+    "changes_7d": 127,
+    "changes_14d": 403,
     "housekeeping_7d": 15,
     "last_code_change": {
-      "ts": "2026-11-25T12:50:42Z",
-      "commit": "0a4e66b",
-      "commit_full": "0a4e66ba75c81ffa9a860c2987064d1ad61ab305",
-      "subject": "Decode Swift non-class type deinitializers as deinit instead of __deallocating_deinit (R3.12) (#2319)"
+      "ts": "2026-11-26T10:48:41Z",
+      "commit": "3e59a9c",
+      "commit_full": "3e59a9c368d8767810b4a4a09764c924810aa45b",
+      "subject": "Keep two test helpers off SonarCloud's security list (#2468)"
     },
-    "last_commit_ts": "2026-11-25T12:50:42Z",
+    "last_commit_ts": "2026-11-26T10:48:41Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       6,
@@ -93,7 +93,7 @@
       3,
       82,
       15,
-      0
+      6
     ],
     "days": [
       {
@@ -567,6 +567,25 @@
           {
             "commit": "f310c8c",
             "subject": "Guide Windows Flutter triage to the installed app folder (R3.12) (#2338)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-26",
+        "code": 6,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "3e59a9c",
+            "subject": "Keep two test helpers off SonarCloud's security list (#2468)"
+          },
+          {
+            "commit": "e68363d",
+            "subject": "Report a timed-out or cut fal.ai generation as possibly billed (R5.5) (#2426)"
+          },
+          {
+            "commit": "fac1e43",
+            "subject": "Report an interrupted AI call as interrupted, not unreachable (R5.5) (#2424)"
           }
         ]
       }
@@ -7119,8 +7138,36 @@
       "commit": "0a4e66b",
       "commit_full": "0a4e66ba75c81ffa9a860c2987064d1ad61ab305",
       "message": "Decode Swift non-class type deinitializers as deinit instead of __deallocating_deinit (R3.12) (#2319)"
+    },
+    {
+      "ts": "2026-11-26T09:05:22Z",
+      "kind": "content",
+      "commit": "577fc91",
+      "commit_full": "577fc915fd1ed27682f5562f3252919a7d635ac1",
+      "message": "Use Ghidra for resumable pseudo-C exports (R3.11) (#2202)"
+    },
+    {
+      "ts": "2026-11-26T09:05:30Z",
+      "kind": "content",
+      "commit": "4852ff4",
+      "commit_full": "4852ff4b2684323b71c4f92110aae00b31fb96bc",
+      "message": "Keep queued build requests across restarts (R2.9) (#2216)"
+    },
+    {
+      "ts": "2026-11-26T09:09:55Z",
+      "kind": "content",
+      "commit": "fac1e43",
+      "commit_full": "fac1e4306b7646e0d697ede4de09bc49cefa0ad9",
+      "message": "Report an interrupted AI call as interrupted, not unreachable (R5.5) (#2424)"
+    },
+    {
+      "ts": "2026-11-26T09:10:14Z",
+      "kind": "content",
+      "commit": "e68363d",
+      "commit_full": "e68363d0f4182a2e083b459c96f652ef8cca38b7",
+      "message": "Report a timed-out or cut fal.ai generation as possibly billed (R5.5) (#2426)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-26T05:43:59+00:00"
+  "updated_at": "2026-11-26T15:56:27+00:00"
 }

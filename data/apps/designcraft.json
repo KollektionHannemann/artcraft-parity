@@ -11,14 +11,14 @@
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/designcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "211b667",
-  "latest_commit_date": "2026-11-23T09:39:36-06:00",
-  "latest_message": "Text: validate explicit targets before reading or editing a story (#1809)",
+  "latest_commit": "d4010f0",
+  "latest_commit_date": "2026-11-26T16:31:22+01:00",
+  "latest_message": "View: link badge on pictures placed from a file, as in InDesign (#1423)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
     "target": "Adobe InDesign 2026",
-    "last_updated": "2026-11-15",
+    "last_updated": "2026-11-19",
     "metrics": {
       "full": {
         "label": "Full target (ready for real work)",
@@ -314,6 +314,10 @@
         "text": "· A placed TIFF drawn at a half, a quarter or an eighth of its pixel size or less (or past the 1 GiB full-size RGBA cap, #2381) is decoded a band at a time (TiffBands) into that reduced size, so large print TIFFs draw on the canvas, in page thumbnails and in linked-file proxies without a full-size decode. No readiness percentage change."
       },
       {
+        "date": "2026-11-18",
+        "text": "· View › Extras › Show/Hide Link Badge: frames showing a linked picture carry a link badge on their top edge, a warning when the file changed and a stop when it is missing; hidden in Preview. No readiness percentage change."
+      },
+      {
         "date": "2026-11-15",
         "text": "· Removed the obsolete gap saying pull requests have no test workflow: CI runs the shared quality gate on every pull request and push to main (#1352). No readiness percentage change."
       },
@@ -464,10 +468,6 @@
       {
         "date": "2026-10-30",
         "text": "· Import warnings about a story have a Show button: it closes the warnings (the status line keeps them) and selects the story's first frame, fitted in the window. file.open returns warningItems, the frame each IDML or InDesign warning is about (or null), matching the converter's INDD story numbers (story 30892, written to IDML as u78ac) and IDML Self names to the imported stories. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-30",
-        "text": "· Parent pages: a running-header variable shows its name in angle brackets on the parent itself (it was blank), as InDesign shows it; on the document pages, and in text with no page, it shows its text as before. No readiness percentage change."
       }
     ]
   },
@@ -476,7 +476,7 @@
     "value_since": "2026-10-10T18:09:17Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 228,
+    "revisions_since": 232,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -484,39 +484,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 229,
-    "revisions_7d": 2,
+    "revisions": 233,
+    "revisions_7d": 6,
     "last_revision": {
-      "ts": "2026-11-23T15:39:36Z",
+      "ts": "2026-11-26T15:31:22Z",
       "kind": "content",
-      "commit": "211b667",
-      "commit_full": "211b6675942e9dada1a73ce7120fea25e8a36a38",
-      "message": "Text: validate explicit targets before reading or editing a story (#1809)"
+      "commit": "d4010f0",
+      "commit_full": "d4010f0ba797ff7f552368a847e9a365267cbca0",
+      "message": "View: link badge on pictures placed from a file, as in InDesign (#1423)"
     },
     "last_update": {
-      "ts": "2026-11-23T15:39:36Z",
+      "ts": "2026-11-26T15:31:22Z",
       "kind": "content",
-      "commit": "211b667",
-      "commit_full": "211b6675942e9dada1a73ce7120fea25e8a36a38",
-      "message": "Text: validate explicit targets before reading or editing a story (#1809)"
+      "commit": "d4010f0",
+      "commit_full": "d4010f0ba797ff7f552368a847e9a365267cbca0",
+      "message": "View: link badge on pictures placed from a file, as in InDesign (#1423)"
     },
-    "self_reported": "2026-11-15"
+    "self_reported": "2026-11-19"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 10.1,
+    "score": 12.4,
     "active_days_7d": 6,
-    "changes_7d": 24,
-    "changes_14d": 87,
+    "changes_7d": 35,
+    "changes_14d": 98,
     "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-26T02:44:19Z",
-      "commit": "f5c004a",
-      "commit_full": "f5c004a84893d1c92eead3f2b9275c5dedfac2e3",
-      "subject": "Switch on supervised nightlies on the nightly-signer branch (#3250)"
+      "ts": "2026-11-26T15:44:24Z",
+      "commit": "32e86ea",
+      "commit_full": "32e86eaad48bc310288ce20ad971e19f066d6d5e",
+      "subject": "[added feature] Definable default Save format (#1105)"
     },
-    "last_commit_ts": "2026-11-26T02:44:19Z",
+    "last_commit_ts": "2026-11-26T15:44:24Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
       5,
@@ -532,7 +532,7 @@
       7,
       0,
       2,
-      2
+      13
     ],
     "days": [
       {
@@ -1516,16 +1516,20 @@
       },
       {
         "d": "2026-11-26",
-        "code": 2,
+        "code": 13,
         "other": 0,
         "samples": [
           {
-            "commit": "f5c004a",
-            "subject": "Switch on supervised nightlies on the nightly-signer branch (#3250)"
+            "commit": "32e86ea",
+            "subject": "[added feature] Definable default Save format (#1105)"
           },
           {
-            "commit": "516a936",
-            "subject": "Damage: editing an anchored text frame's story repaints the view (#2330)"
+            "commit": "d4010f0",
+            "subject": "View: link badge on pictures placed from a file, as in InDesign (#1423)"
+          },
+          {
+            "commit": "8d103cf",
+            "subject": "[fix] Web relink of images (#1244)"
           }
         ]
       }
@@ -7005,7 +7009,99 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "37fac22",
+      "commit_full": "37fac22e965b72896f4c29f47a102c6c20dd2d45",
+      "commit_date": "2026-11-26T13:46:02+01:00",
+      "ts": "2026-11-26T12:46:02Z",
+      "message": "Hide character marks with hidden frames and layers (#1994) (#2007)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-19",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "aab3b67",
+      "commit_full": "aab3b675daea9b0b4378d7ed90b301dbb2964f4b",
+      "commit_date": "2026-11-26T15:51:08+01:00",
+      "ts": "2026-11-26T14:51:08Z",
+      "message": "Story Editor: View › Story Editor › Show/Hide Paragraph Break Marks (#1801)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-19",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "8d103cf",
+      "commit_full": "8d103cf65d95e40e3aa29fc5e2c4c603b8633083",
+      "commit_date": "2026-11-26T16:07:46+01:00",
+      "ts": "2026-11-26T15:07:46Z",
+      "message": "[fix] Web relink of images (#1244)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-19",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "d4010f0",
+      "commit_full": "d4010f0ba797ff7f552368a847e9a365267cbca0",
+      "commit_date": "2026-11-26T16:31:22+01:00",
+      "ts": "2026-11-26T15:31:22Z",
+      "message": "View: link badge on pictures placed from a file, as in InDesign (#1423)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-19",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-26T05:43:39+00:00"
+  "updated_at": "2026-11-26T15:55:48+00:00"
 }

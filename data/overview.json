@@ -24,7 +24,7 @@
       "type": "release",
       "ts": "2026-11-26T05:43:51Z",
       "tag": "v0.50.0-nightly.20261126.166.1",
-      "kind": "minor",
+      "kind": "patch",
       "changes": 10,
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.50.0-nightly.20261126.166.1",
       "prerelease": true
@@ -38,7 +38,7 @@
       "kind": "minor",
       "changes": 301,
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.50.0",
-      "prerelease": true
+      "prerelease": false
     },
     {
       "id": "texturecraft",
@@ -453,6 +453,17 @@
   ],
   "release_waves": [
     {
+      "day": "2026-11-26",
+      "apps": 1,
+      "changes": 301,
+      "largest": {
+        "id": "solidcraft",
+        "name": "SolidCraft",
+        "tag": "v0.50.0",
+        "changes": 301
+      }
+    },
+    {
       "day": "2026-11-25",
       "apps": 3,
       "changes": 294,
@@ -560,18 +571,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 16.0,
+        "score": 16.7,
         "active_days_7d": 7,
-        "changes_7d": 60,
-        "changes_14d": 127,
+        "changes_7d": 65,
+        "changes_14d": 132,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-26T05:27:34Z",
-          "commit": "4ff7cb6",
-          "commit_full": "4ff7cb6165f425079de3e8275cb3a8d03a1053a8",
-          "subject": "TextureCraft: minimal port to craft-libs next (#800)"
+          "ts": "2026-11-26T15:54:16Z",
+          "commit": "1f78ba3",
+          "commit_full": "1f78ba35781f40c0d10f33f778abf583bc596238",
+          "subject": "Isolate TextureCraft UI language on each thread (#797)"
         },
-        "last_commit_ts": "2026-11-26T05:27:34Z",
+        "last_commit_ts": "2026-11-26T15:54:16Z",
         "repo_since": "2026-10-14T18:33:13Z",
         "window": [
           9,
@@ -587,7 +598,7 @@
           4,
           4,
           14,
-          7
+          12
         ]
       },
       "release": {
@@ -706,18 +717,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 29.5,
+        "score": 30.8,
         "active_days_7d": 7,
-        "changes_7d": 286,
-        "changes_14d": 1632,
-        "housekeeping_7d": 16,
+        "changes_7d": 340,
+        "changes_14d": 1686,
+        "housekeeping_7d": 17,
         "last_code_change": {
-          "ts": "2026-11-26T04:01:11Z",
-          "commit": "2b7dd67",
-          "commit_full": "2b7dd67ac0186d408766d69cef303c9c3512dce5",
-          "subject": "Color Wheel: the contrast cache keys on tool_paints, which replaced bucket_paints (#9352)"
+          "ts": "2026-11-26T15:45:13Z",
+          "commit": "2a1b573",
+          "commit_full": "2a1b573a78fd6bb522d641cf03ed42ea33d6ee46",
+          "subject": "History panel: add row context menu (New Document from State, Step to State, Clear History) (#8845)"
         },
-        "last_commit_ts": "2026-11-26T04:01:11Z",
+        "last_commit_ts": "2026-11-26T15:45:13Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           240,
@@ -733,7 +744,7 @@
           6,
           45,
           92,
-          39
+          93
         ]
       },
       "release": {
@@ -835,18 +846,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 12.4,
+        "score": 16.9,
         "active_days_7d": 7,
-        "changes_7d": 51,
-        "changes_14d": 107,
-        "housekeeping_7d": 4,
+        "changes_7d": 97,
+        "changes_14d": 153,
+        "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-26T03:07:31Z",
-          "commit": "afa18c6",
-          "commit_full": "afa18c675bb616317d27eab40ef6b04fb2868d8b",
-          "subject": "Switch on supervised nightlies on the nightly-signer branch (#4749)"
+          "ts": "2026-11-26T15:17:00Z",
+          "commit": "fc10a3f",
+          "commit_full": "fc10a3faa6d66b7ff9310f9ec4e8045a33df0293",
+          "subject": "Import: preserve embedded rating, flag and label from file metadata (#1995)"
         },
-        "last_commit_ts": "2026-11-26T03:07:31Z",
+        "last_commit_ts": "2026-11-26T15:17:00Z",
         "repo_since": "2026-09-30T14:04:12Z",
         "window": [
           1,
@@ -862,7 +873,7 @@
           4,
           4,
           2,
-          1
+          47
         ]
       },
       "release": {
@@ -930,7 +941,7 @@
         "value_since": "2026-10-10T18:11:53Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 625,
+        "revisions_since": 626,
         "hours_since": null,
         "areas_since": {
           "up": 2,
@@ -955,39 +966,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 629,
-        "revisions_7d": 11,
+        "revisions": 630,
+        "revisions_7d": 12,
         "last_revision": {
-          "ts": "2026-11-25T20:48:59Z",
+          "ts": "2026-11-26T15:17:36Z",
           "kind": "content",
-          "commit": "4e00d00",
-          "commit_full": "4e00d007797f24f90030e4628ad7e692caf4c783",
-          "message": "ROADMAP: remove a stray branch-name line from the progress log (#6917)"
+          "commit": "44719ec",
+          "commit_full": "44719ece99e14c776e0143393b219da8586b4567",
+          "message": "Paste: a copied table in a table cell inserts rows or overwrites cells, as Word does (#6742)"
         },
         "last_update": {
-          "ts": "2026-11-25T20:48:59Z",
+          "ts": "2026-11-26T15:17:36Z",
           "kind": "content",
-          "commit": "4e00d00",
-          "commit_full": "4e00d007797f24f90030e4628ad7e692caf4c783",
-          "message": "ROADMAP: remove a stray branch-name line from the progress log (#6917)"
+          "commit": "44719ec",
+          "commit_full": "44719ece99e14c776e0143393b219da8586b4567",
+          "message": "Paste: a copied table in a table cell inserts rows or overwrites cells, as Word does (#6742)"
         },
         "self_reported": "2026-11-21"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 17.3,
+        "score": 18.9,
         "active_days_7d": 7,
-        "changes_7d": 102,
-        "changes_14d": 227,
+        "changes_7d": 106,
+        "changes_14d": 231,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-26T01:52:59Z",
-          "commit": "765abcc",
-          "commit_full": "765abcc790bc7d851ddab377e1ca656dbee77b03",
-          "subject": "Switch on supervised nightlies on the nightly-signer branch (#7839)"
+          "ts": "2026-11-26T15:17:36Z",
+          "commit": "44719ec",
+          "commit_full": "44719ece99e14c776e0143393b219da8586b4567",
+          "subject": "Paste: a copied table in a table cell inserts rows or overwrites cells, as Word does (#6742)"
         },
-        "last_commit_ts": "2026-11-26T01:52:59Z",
+        "last_commit_ts": "2026-11-26T15:17:36Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
           11,
@@ -1003,7 +1014,7 @@
           5,
           18,
           40,
-          1
+          5
         ]
       },
       "release": {
@@ -1029,11 +1040,11 @@
           "v": 60.0
         },
         {
-          "t": "2026-11-25T20:48:59Z",
+          "t": "2026-11-26T15:17:36Z",
           "v": 60.0
         }
       ],
-      "history_len": 629
+      "history_len": 630
     },
     {
       "repo_url": "https://github.com/storytold/filmcraft",
@@ -1075,14 +1086,14 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 16,
+        "revisions": 17,
         "revisions_7d": 0,
         "last_revision": {
-          "ts": "2026-11-09T03:45:53Z",
-          "kind": "content",
-          "commit": "41977ba",
-          "commit_full": "41977bab41737247c7eb6a86e751f79a3bf9fc45",
-          "message": "Naming: Color Grading and Video Scopes for Lumetri; External Video Output (#1880)"
+          "ts": "2026-11-26T13:54:21Z",
+          "kind": "editorial",
+          "commit": "a7dcaa2",
+          "commit_full": "a7dcaa22fba3e8849e5eeb2432581f3063d6d593",
+          "message": "docs: bring ROADMAP.md and parity assessment current through 2026-11-15 (#4816)"
         },
         "last_update": {
           "ts": "2026-11-09T03:45:53Z",
@@ -1091,23 +1102,23 @@
           "commit_full": "41977bab41737247c7eb6a86e751f79a3bf9fc45",
           "message": "Naming: Color Grading and Video Scopes for Lumetri; External Video Output (#1880)"
         },
-        "self_reported": "2026-11-08"
+        "self_reported": "2026-11-15"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 9.8,
+        "score": 11.6,
         "active_days_7d": 6,
-        "changes_7d": 19,
-        "changes_14d": 103,
-        "housekeeping_7d": 4,
+        "changes_7d": 24,
+        "changes_14d": 108,
+        "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-26T01:52:26Z",
-          "commit": "f731571",
-          "commit_full": "f731571277192072a78eb8fec56eb8ab723b7217",
-          "subject": "Switch on supervised nightlies on the nightly-signer branch (#5256)"
+          "ts": "2026-11-26T15:38:17Z",
+          "commit": "010efc7",
+          "commit_full": "010efc756ef752f25809189381becfe5e4f67123",
+          "subject": "Double-click the value graph to add a keyframe (#1311)"
         },
-        "last_commit_ts": "2026-11-26T01:52:26Z",
+        "last_commit_ts": "2026-11-26T15:38:17Z",
         "repo_since": "2026-09-30T09:22:00Z",
         "window": [
           11,
@@ -1123,7 +1134,7 @@
           3,
           0,
           3,
-          1
+          6
         ]
       },
       "release": {
@@ -1149,11 +1160,11 @@
           "v": 56.0
         },
         {
-          "t": "2026-11-09T03:45:53Z",
+          "t": "2026-11-26T13:54:21Z",
           "v": 56.0
         }
       ],
-      "history_len": 16
+      "history_len": 17
     },
     {
       "repo_url": "https://github.com/storytold/deckcraft",
@@ -1227,18 +1238,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 8.0,
+        "score": 9.6,
         "active_days_7d": 5,
-        "changes_7d": 15,
-        "changes_14d": 73,
+        "changes_7d": 21,
+        "changes_14d": 79,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-26T04:08:47Z",
-          "commit": "5b7b22d",
-          "commit_full": "5b7b22dc5128eb329ca647d920797e37cb255224",
-          "subject": "DeckCraft: move to craft-libs next (minimal port) (#2346)"
+          "ts": "2026-11-26T13:52:01Z",
+          "commit": "74591ab",
+          "commit_full": "74591abae8e70617b6b7ad092026262d0c562115",
+          "subject": "text: a hanging indent is the first tab stop (#1683) (#2155)"
         },
-        "last_commit_ts": "2026-11-26T04:08:47Z",
+        "last_commit_ts": "2026-11-26T13:52:01Z",
         "repo_since": "2026-10-06T02:13:02Z",
         "window": [
           15,
@@ -1254,7 +1265,7 @@
           0,
           0,
           2,
-          2
+          8
         ]
       },
       "release": {
@@ -1318,7 +1329,7 @@
         "value_since": "2026-10-11T21:41:28Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 235,
+        "revisions_since": 236,
         "hours_since": {
           "from": [
             273,
@@ -1373,39 +1384,39 @@
         }
       },
       "roadmap": {
-        "revisions": 287,
-        "revisions_7d": 0,
+        "revisions": 288,
+        "revisions_7d": 1,
         "last_revision": {
-          "ts": "2026-11-19T00:12:03Z",
+          "ts": "2026-11-26T14:45:01Z",
           "kind": "content",
-          "commit": "6cc578c",
-          "commit_full": "6cc578cede15fc51c6056879d3e5f0e9c09a0c03",
-          "message": "M10: panel rows and the layers list mirror in a right-to-left UI (#1810)"
+          "commit": "f6638e1",
+          "commit_full": "f6638e15bf7f5561d57f15043a25c5692dc72747",
+          "message": "M12: Boards: mind maps in the toolbar, with keys for children and siblings (#2226, step 2) (#2231)"
         },
         "last_update": {
-          "ts": "2026-11-19T00:12:03Z",
+          "ts": "2026-11-26T14:45:01Z",
           "kind": "content",
-          "commit": "6cc578c",
-          "commit_full": "6cc578cede15fc51c6056879d3e5f0e9c09a0c03",
-          "message": "M10: panel rows and the layers list mirror in a right-to-left UI (#1810)"
+          "commit": "f6638e1",
+          "commit_full": "f6638e15bf7f5561d57f15043a25c5692dc72747",
+          "message": "M12: Boards: mind maps in the toolbar, with keys for children and siblings (#2226, step 2) (#2231)"
         },
         "self_reported": "2026-11-19"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 8.8,
+        "score": 10.0,
         "active_days_7d": 5,
-        "changes_7d": 16,
-        "changes_14d": 127,
+        "changes_7d": 20,
+        "changes_14d": 131,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-26T04:08:20Z",
-          "commit": "aee91e4",
-          "commit_full": "aee91e495259fe616122b636d4106460559e51d9",
-          "subject": "FigCraft: move to craft-libs next (minimal port) (#2602)"
+          "ts": "2026-11-26T14:45:01Z",
+          "commit": "f6638e1",
+          "commit_full": "f6638e15bf7f5561d57f15043a25c5692dc72747",
+          "subject": "M12: Boards: mind maps in the toolbar, with keys for children and siblings (#2226, step 2) (#2231)"
         },
-        "last_commit_ts": "2026-11-26T04:08:20Z",
+        "last_commit_ts": "2026-11-26T14:45:01Z",
         "repo_since": "2026-10-09T15:38:50Z",
         "window": [
           36,
@@ -1421,7 +1432,7 @@
           0,
           0,
           2,
-          2
+          6
         ]
       },
       "release": {
@@ -1463,11 +1474,11 @@
           "v": 53.0
         },
         {
-          "t": "2026-11-19T00:12:03Z",
+          "t": "2026-11-26T14:45:01Z",
           "v": 53.0
         }
       ],
-      "history_len": 287
+      "history_len": 288
     },
     {
       "repo_url": "https://github.com/storytold/pdfcraft",
@@ -1501,7 +1512,7 @@
         "value_since": "2026-10-15T06:21:11Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 155,
+        "revisions_since": 159,
         "hours_since": null,
         "areas_since": null,
         "changes": 1,
@@ -1518,39 +1529,39 @@
         }
       },
       "roadmap": {
-        "revisions": 245,
-        "revisions_7d": 2,
+        "revisions": 249,
+        "revisions_7d": 6,
         "last_revision": {
-          "ts": "2026-11-23T20:01:26Z",
+          "ts": "2026-11-26T15:45:08Z",
           "kind": "content",
-          "commit": "97d53c4",
-          "commit_full": "97d53c471d43be444ab02a9b7026be057229cb28",
-          "message": "Land the craft framework UI port (#8160)"
+          "commit": "bb4df81",
+          "commit_full": "bb4df817aacfbb18da9bf564916d01505454c7c5",
+          "message": "Text: paragraphs respect typography and filled panels (#3539)"
         },
         "last_update": {
-          "ts": "2026-11-23T20:01:26Z",
+          "ts": "2026-11-26T15:45:08Z",
           "kind": "content",
-          "commit": "97d53c4",
-          "commit_full": "97d53c471d43be444ab02a9b7026be057229cb28",
-          "message": "Land the craft framework UI port (#8160)"
+          "commit": "bb4df81",
+          "commit_full": "bb4df817aacfbb18da9bf564916d01505454c7c5",
+          "message": "Text: paragraphs respect typography and filled panels (#3539)"
         },
         "self_reported": "2026-11-16"
       },
       "milestone": null,
       "activity": {
-        "level": "quiet",
-        "score": 7.0,
-        "active_days_7d": 3,
-        "changes_7d": 21,
-        "changes_14d": 120,
-        "housekeeping_7d": 4,
+        "level": "active",
+        "score": 11.7,
+        "active_days_7d": 4,
+        "changes_7d": 46,
+        "changes_14d": 145,
+        "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-23T21:07:14Z",
-          "commit": "6e91067",
-          "commit_full": "6e910675c68dd5092e889065cfe8d0274c1b2742",
-          "subject": "CI: clippy clean on all targets; fix the Windows print dialog build (#8168)"
+          "ts": "2026-11-26T15:53:39Z",
+          "commit": "4825ebf",
+          "commit_full": "4825ebfbf2b1dc1b7d06530a0f7acfcd53f37781",
+          "subject": "M12: a negative XFA text indent hangs the first line (#3526)"
         },
-        "last_commit_ts": "2026-11-23T21:07:14Z",
+        "last_commit_ts": "2026-11-26T15:53:39Z",
         "repo_since": "2026-09-30T09:17:08Z",
         "window": [
           14,
@@ -1566,7 +1577,7 @@
           5,
           0,
           0,
-          0
+          25
         ]
       },
       "release": {
@@ -1596,11 +1607,11 @@
           "v": 50.0
         },
         {
-          "t": "2026-11-23T20:01:26Z",
+          "t": "2026-11-26T15:45:08Z",
           "v": 50.0
         }
       ],
-      "history_len": 245
+      "history_len": 249
     },
     {
       "repo_url": "https://github.com/storytold/gridcraft",
@@ -1634,7 +1645,7 @@
         "value_since": "2026-10-10T18:09:06Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 109,
+        "revisions_since": 113,
         "hours_since": null,
         "areas_since": null,
         "changes": 0,
@@ -1642,39 +1653,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 112,
-        "revisions_7d": 1,
+        "revisions": 116,
+        "revisions_7d": 5,
         "last_revision": {
-          "ts": "2026-11-23T23:32:01Z",
+          "ts": "2026-11-26T15:39:39Z",
           "kind": "content",
-          "commit": "f9af787",
-          "commit_full": "f9af787c7b011440402433d48487993650aa2eca",
-          "message": "Dropdown filter (#2119)"
+          "commit": "b6ef428",
+          "commit_full": "b6ef428a899a145e30a1e916539a7f3232cc52a7",
+          "message": "Fill handle: Linear Trend and Growth Trend on the right-drag menu for numbers (#2628)"
         },
         "last_update": {
-          "ts": "2026-11-23T23:32:01Z",
+          "ts": "2026-11-26T15:39:39Z",
           "kind": "content",
-          "commit": "f9af787",
-          "commit_full": "f9af787c7b011440402433d48487993650aa2eca",
-          "message": "Dropdown filter (#2119)"
+          "commit": "b6ef428",
+          "commit_full": "b6ef428a899a145e30a1e916539a7f3232cc52a7",
+          "message": "Fill handle: Linear Trend and Growth Trend on the right-drag menu for numbers (#2628)"
         },
         "self_reported": "2026-11-16"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 9.3,
+        "score": 12.5,
         "active_days_7d": 5,
-        "changes_7d": 23,
-        "changes_14d": 87,
-        "housekeeping_7d": 4,
+        "changes_7d": 46,
+        "changes_14d": 110,
+        "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-26T02:44:49Z",
-          "commit": "b1216a1",
-          "commit_full": "b1216a17e8f13ba6fab276bcb6dcfec79ba86601",
-          "subject": "Switch on supervised nightlies on the nightly-signer branch (#4767)"
+          "ts": "2026-11-26T15:52:27Z",
+          "commit": "404c71b",
+          "commit_full": "404c71b9c35822997bec324ff9f68db96584e640",
+          "subject": "LAMBDA tail recursion reaches Excel's depth (5,459) (#2660)"
         },
-        "last_commit_ts": "2026-11-26T02:44:49Z",
+        "last_commit_ts": "2026-11-26T15:52:27Z",
         "repo_since": "2026-10-06T02:09:42Z",
         "window": [
           0,
@@ -1690,7 +1701,7 @@
           4,
           0,
           2,
-          2
+          25
         ]
       },
       "release": {
@@ -1716,11 +1727,11 @@
           "v": 50.0
         },
         {
-          "t": "2026-11-23T23:32:01Z",
+          "t": "2026-11-26T15:39:39Z",
           "v": 50.0
         }
       ],
-      "history_len": 112
+      "history_len": 116
     },
     {
       "repo_url": "https://github.com/storytold/designcraft",
@@ -1754,7 +1765,7 @@
         "value_since": "2026-10-10T18:09:17Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 228,
+        "revisions_since": 232,
         "hours_since": null,
         "areas_since": null,
         "changes": 0,
@@ -1762,39 +1773,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 229,
-        "revisions_7d": 2,
+        "revisions": 233,
+        "revisions_7d": 6,
         "last_revision": {
-          "ts": "2026-11-23T15:39:36Z",
+          "ts": "2026-11-26T15:31:22Z",
           "kind": "content",
-          "commit": "211b667",
-          "commit_full": "211b6675942e9dada1a73ce7120fea25e8a36a38",
-          "message": "Text: validate explicit targets before reading or editing a story (#1809)"
+          "commit": "d4010f0",
+          "commit_full": "d4010f0ba797ff7f552368a847e9a365267cbca0",
+          "message": "View: link badge on pictures placed from a file, as in InDesign (#1423)"
         },
         "last_update": {
-          "ts": "2026-11-23T15:39:36Z",
+          "ts": "2026-11-26T15:31:22Z",
           "kind": "content",
-          "commit": "211b667",
-          "commit_full": "211b6675942e9dada1a73ce7120fea25e8a36a38",
-          "message": "Text: validate explicit targets before reading or editing a story (#1809)"
+          "commit": "d4010f0",
+          "commit_full": "d4010f0ba797ff7f552368a847e9a365267cbca0",
+          "message": "View: link badge on pictures placed from a file, as in InDesign (#1423)"
         },
-        "self_reported": "2026-11-15"
+        "self_reported": "2026-11-19"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 10.1,
+        "score": 12.4,
         "active_days_7d": 6,
-        "changes_7d": 24,
-        "changes_14d": 87,
+        "changes_7d": 35,
+        "changes_14d": 98,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-26T02:44:19Z",
-          "commit": "f5c004a",
-          "commit_full": "f5c004a84893d1c92eead3f2b9275c5dedfac2e3",
-          "subject": "Switch on supervised nightlies on the nightly-signer branch (#3250)"
+          "ts": "2026-11-26T15:44:24Z",
+          "commit": "32e86ea",
+          "commit_full": "32e86eaad48bc310288ce20ad971e19f066d6d5e",
+          "subject": "[added feature] Definable default Save format (#1105)"
         },
-        "last_commit_ts": "2026-11-26T02:44:19Z",
+        "last_commit_ts": "2026-11-26T15:44:24Z",
         "repo_since": "2026-10-01T13:00:02Z",
         "window": [
           5,
@@ -1810,7 +1821,7 @@
           7,
           0,
           2,
-          2
+          13
         ]
       },
       "release": {
@@ -1836,11 +1847,11 @@
           "v": 47.0
         },
         {
-          "t": "2026-11-23T15:39:36Z",
+          "t": "2026-11-26T15:31:22Z",
           "v": 47.0
         }
       ],
-      "history_len": 229
+      "history_len": 233
     },
     {
       "repo_url": "https://github.com/storytold/photocraft",
@@ -1903,18 +1914,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 21.1,
+        "score": 21.7,
         "active_days_7d": 7,
-        "changes_7d": 111,
-        "changes_14d": 400,
-        "housekeeping_7d": 12,
+        "changes_7d": 115,
+        "changes_14d": 404,
+        "housekeeping_7d": 13,
         "last_code_change": {
-          "ts": "2026-11-26T00:59:52Z",
-          "commit": "c5aea7e",
-          "commit_full": "c5aea7e75ea598b4c926c1c60aa90129839d5c39",
-          "subject": "Make the ui-egui library tests compile again (#17027) (#17028)"
+          "ts": "2026-11-26T14:42:56Z",
+          "commit": "038d035",
+          "commit_full": "038d035110c8aaa0c8551d8166f90f8fed411e30",
+          "subject": "Merge queue batch #17085: #16401, #15961, #16961, #17062, #17068"
         },
-        "last_commit_ts": "2026-11-26T02:20:06Z",
+        "last_commit_ts": "2026-11-26T14:42:56Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           74,
@@ -1930,7 +1941,7 @@
           18,
           18,
           12,
-          6
+          10
         ]
       },
       "release": {
@@ -2023,18 +2034,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.3,
+        "score": 15.3,
         "active_days_7d": 7,
-        "changes_7d": 74,
-        "changes_14d": 180,
-        "housekeeping_7d": 6,
+        "changes_7d": 83,
+        "changes_14d": 189,
+        "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-26T04:09:14Z",
-          "commit": "47ab68c",
-          "commit_full": "47ab68c2182cef495ee66162564cf3958a91a862",
-          "subject": "EffectCraft: move to craft-libs next (minimal port) (#4153)"
+          "ts": "2026-11-26T15:42:14Z",
+          "commit": "48ff596",
+          "commit_full": "48ff5961cc2c930755b10a8d6591f28edec4e08d",
+          "subject": "The camera tools offer After Effects' eight Orbit, Pan and Dolly variants in each slot's flyout (#3259)"
         },
-        "last_commit_ts": "2026-11-26T04:09:14Z",
+        "last_commit_ts": "2026-11-26T15:42:14Z",
         "repo_since": "2026-10-01T16:48:39Z",
         "window": [
           10,
@@ -2050,7 +2061,7 @@
           5,
           1,
           2,
-          2
+          11
         ]
       },
       "release": {
@@ -2143,18 +2154,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 8.4,
+        "score": 10.1,
         "active_days_7d": 6,
-        "changes_7d": 12,
-        "changes_14d": 54,
+        "changes_7d": 19,
+        "changes_14d": 61,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-26T04:08:34Z",
-          "commit": "af9f210",
-          "commit_full": "af9f2109ff4d194159f782d6574d4e85c8245197",
-          "subject": "SoundCraft: move to craft-libs next (minimal port) (#1738)"
+          "ts": "2026-11-26T14:44:29Z",
+          "commit": "81766ee",
+          "commit_full": "81766eebb6a0d275f6e592c90f83676be2302f85",
+          "subject": "test(clap): use portable descriptor readiness fixture (#1795)"
         },
-        "last_commit_ts": "2026-11-26T04:08:34Z",
+        "last_commit_ts": "2026-11-26T14:44:29Z",
         "repo_since": "2026-10-06T00:08:04Z",
         "window": [
           20,
@@ -2170,7 +2181,7 @@
           3,
           2,
           2,
-          2
+          9
         ]
       },
       "release": {
@@ -2263,18 +2274,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.5,
+        "score": 15.0,
         "active_days_7d": 6,
-        "changes_7d": 52,
-        "changes_14d": 88,
-        "housekeeping_7d": 7,
+        "changes_7d": 74,
+        "changes_14d": 110,
+        "housekeeping_7d": 8,
         "last_code_change": {
-          "ts": "2026-11-26T05:13:20Z",
-          "commit": "ba344a8",
-          "commit_full": "ba344a894ba64fb181ffd534318090b82b38b433",
-          "subject": "JOIN: ends meet at the same height; objects facing the other way stay out (#2790)"
+          "ts": "2026-11-26T12:43:40Z",
+          "commit": "b3bc4a7",
+          "commit_full": "b3bc4a7618e87c65096889855d7b4e296660d5c3",
+          "subject": "Faster CJK-heavy drawings: per-thread font caches, offscreen glyphs left out (#666, #662) (#997)"
         },
-        "last_commit_ts": "2026-11-26T05:13:20Z",
+        "last_commit_ts": "2026-11-26T14:12:38Z",
         "repo_since": "2026-10-06T00:15:47Z",
         "window": [
           1,
@@ -2290,7 +2301,7 @@
           7,
           5,
           7,
-          11
+          33
         ]
       },
       "release": {
@@ -2383,18 +2394,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 17.3,
+        "score": 18.3,
         "active_days_7d": 7,
-        "changes_7d": 55,
-        "changes_14d": 255,
+        "changes_7d": 60,
+        "changes_14d": 260,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-26T04:49:24Z",
-          "commit": "477b427",
-          "commit_full": "477b427bee7d128fa7d0cdebb52e3c9f7c7c1c73",
-          "subject": "Fix: a picture the HTML shows by cid: is not an attachment (#1970)"
+          "ts": "2026-11-26T15:27:42Z",
+          "commit": "96f8789",
+          "commit_full": "96f87896589210201ee91eeff25d17e12ca8532f",
+          "subject": "#1981: Android pull to refresh brings the account on screen and stops when its mail is in (#1983)"
         },
-        "last_commit_ts": "2026-11-26T04:49:24Z",
+        "last_commit_ts": "2026-11-26T15:27:42Z",
         "repo_since": "2026-10-12T18:17:00Z",
         "window": [
           42,
@@ -2410,7 +2421,7 @@
           6,
           6,
           13,
-          4
+          9
         ]
       },
       "release": {
@@ -2500,18 +2511,18 @@
       "milestone": null,
       "activity": {
         "level": "quiet",
-        "score": 6.4,
+        "score": 6.9,
         "active_days_7d": 4,
-        "changes_7d": 9,
-        "changes_14d": 35,
+        "changes_7d": 10,
+        "changes_14d": 36,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-26T04:09:00Z",
-          "commit": "665e5fa",
-          "commit_full": "665e5fa28618db5b2d9342412d9d8eb327cc7c24",
-          "subject": "MaterialCraft: move to craft-libs next (minimal port) (#318)"
+          "ts": "2026-11-26T06:47:07Z",
+          "commit": "e7ec9cb",
+          "commit_full": "e7ec9cb6bd9789514ac5889f07f9e70df7bd35c5",
+          "subject": "Nightly: stop blocking a refused launch on macOS (#323)"
         },
-        "last_commit_ts": "2026-11-26T04:09:00Z",
+        "last_commit_ts": "2026-11-26T06:47:07Z",
         "repo_since": "2026-11-01T19:58:46Z",
         "window": [
           1,
@@ -2527,7 +2538,7 @@
           0,
           1,
           2,
-          2
+          3
         ]
       },
       "release": {
@@ -2587,39 +2598,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 918,
-        "revisions_7d": 78,
+        "revisions": 922,
+        "revisions_7d": 82,
         "last_revision": {
-          "ts": "2026-11-25T12:50:42Z",
+          "ts": "2026-11-26T09:10:14Z",
           "kind": "content",
-          "commit": "0a4e66b",
-          "commit_full": "0a4e66ba75c81ffa9a860c2987064d1ad61ab305",
-          "message": "Decode Swift non-class type deinitializers as deinit instead of __deallocating_deinit (R3.12) (#2319)"
+          "commit": "e68363d",
+          "commit_full": "e68363d0f4182a2e083b459c96f652ef8cca38b7",
+          "message": "Report a timed-out or cut fal.ai generation as possibly billed (R5.5) (#2426)"
         },
         "last_update": {
-          "ts": "2026-11-25T12:50:42Z",
+          "ts": "2026-11-26T09:10:14Z",
           "kind": "content",
-          "commit": "0a4e66b",
-          "commit_full": "0a4e66ba75c81ffa9a860c2987064d1ad61ab305",
-          "message": "Decode Swift non-class type deinitializers as deinit instead of __deallocating_deinit (R3.12) (#2319)"
+          "commit": "e68363d",
+          "commit_full": "e68363d0f4182a2e083b459c96f652ef8cca38b7",
+          "message": "Report a timed-out or cut fal.ai generation as possibly billed (R5.5) (#2426)"
         },
         "self_reported": null
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 16.5,
-        "active_days_7d": 6,
-        "changes_7d": 121,
-        "changes_14d": 397,
+        "score": 19.4,
+        "active_days_7d": 7,
+        "changes_7d": 127,
+        "changes_14d": 403,
         "housekeeping_7d": 15,
         "last_code_change": {
-          "ts": "2026-11-25T12:50:42Z",
-          "commit": "0a4e66b",
-          "commit_full": "0a4e66ba75c81ffa9a860c2987064d1ad61ab305",
-          "subject": "Decode Swift non-class type deinitializers as deinit instead of __deallocating_deinit (R3.12) (#2319)"
+          "ts": "2026-11-26T10:48:41Z",
+          "commit": "3e59a9c",
+          "commit_full": "3e59a9c368d8767810b4a4a09764c924810aa45b",
+          "subject": "Keep two test helpers off SonarCloud's security list (#2468)"
         },
-        "last_commit_ts": "2026-11-25T12:50:42Z",
+        "last_commit_ts": "2026-11-26T10:48:41Z",
         "repo_since": "2026-10-31T14:52:14Z",
         "window": [
           6,
@@ -2635,7 +2646,7 @@
           3,
           82,
           15,
-          0
+          6
         ]
       },
       "release": {
@@ -2716,18 +2727,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 39.0,
+        "score": 40.8,
         "active_days_7d": 7,
-        "changes_7d": 1517,
-        "changes_14d": 2928,
-        "housekeeping_7d": 47,
+        "changes_7d": 1634,
+        "changes_14d": 3045,
+        "housekeeping_7d": 50,
         "last_code_change": {
-          "ts": "2026-11-26T05:05:16Z",
-          "commit": "debe0f6",
-          "commit_full": "debe0f6d1d195061b57c888b4675c7bcfcb20714",
-          "subject": "Merge #22446: solidcore: the vertex check solves each vertex use's UV point once, not twice"
+          "ts": "2026-11-26T15:18:19Z",
+          "commit": "fdbe621",
+          "commit_full": "fdbe621e301ffa31d6b7af2c37654a85bac7deba",
+          "subject": "Merge #20457: Assembly: the Joint window shows an icon for each joint type, and a click on an icon selects that type (#20401)"
         },
-        "last_commit_ts": "2026-11-26T05:05:16Z",
+        "last_commit_ts": "2026-11-26T15:18:19Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           203,
@@ -2743,16 +2754,16 @@
           272,
           299,
           387,
-          47
+          164
         ]
       },
       "release": {
-        "tag": "v0.49.1",
-        "name": "SolidCraft v0.49.1",
-        "ts": "2026-11-25T12:40:48Z",
-        "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.49.1",
-        "changes": 64,
-        "new_contributors": 2,
+        "tag": "v0.50.0",
+        "name": "SolidCraft v0.50.0",
+        "ts": "2026-11-26T04:31:45Z",
+        "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.50.0",
+        "changes": 301,
+        "new_contributors": 21,
         "platforms": [
           "macOS",
           "Windows",
@@ -2761,7 +2772,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "patch"
+        "kind": "minor"
       },
       "series": [],
       "history_len": 0
@@ -2812,18 +2823,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 9.7,
-        "active_days_7d": 5,
-        "changes_7d": 24,
-        "changes_14d": 95,
+        "score": 10.7,
+        "active_days_7d": 6,
+        "changes_7d": 25,
+        "changes_14d": 96,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-25T22:16:32Z",
-          "commit": "7512a9b",
-          "commit_full": "7512a9bd9d5763ae577255257da6efbd45c250cf",
-          "subject": "Use the shared nightly launcher template (#648)"
+          "ts": "2026-11-26T06:45:52Z",
+          "commit": "259566a",
+          "commit_full": "259566a0338706a8545b4bc19506ef49c1fbab71",
+          "subject": "Nightly: stop blocking a refused launch on macOS (#654)"
         },
-        "last_commit_ts": "2026-11-25T22:16:32Z",
+        "last_commit_ts": "2026-11-26T06:45:52Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
           14,
@@ -2839,7 +2850,7 @@
           1,
           6,
           5,
-          0
+          1
         ]
       },
       "release": {
@@ -2907,18 +2918,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 25.9,
+        "score": 27.9,
         "active_days_7d": 7,
-        "changes_7d": 437,
-        "changes_14d": 531,
+        "changes_7d": 475,
+        "changes_14d": 569,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-26T04:50:57Z",
-          "commit": "90dee00",
-          "commit_full": "90dee00a50d33ff2bc5f9784c5f31ca7c3f4f04c",
-          "subject": "Merge branch 'perf-embed'"
+          "ts": "2026-11-26T15:16:27Z",
+          "commit": "7267b87",
+          "commit_full": "7267b876b4d3b7338f233687e692319feaea860d",
+          "subject": "Decide the review round in src/core: the approved head and whether a PR waits for its round come from core/author-round.ts, which the review step and the review"
         },
-        "last_commit_ts": "2026-11-26T04:50:57Z",
+        "last_commit_ts": "2026-11-26T15:16:27Z",
         "repo_since": "2026-11-02T14:36:17Z",
         "window": [
           0,
@@ -2934,7 +2945,7 @@
           62,
           44,
           201,
-          11
+          49
         ]
       },
       "release": null,
@@ -2987,18 +2998,18 @@
       "milestone": null,
       "activity": {
         "level": "quiet",
-        "score": 2.0,
+        "score": 3.3,
         "active_days_7d": 1,
-        "changes_7d": 3,
-        "changes_14d": 3,
+        "changes_7d": 9,
+        "changes_14d": 9,
         "housekeeping_7d": 1,
         "last_code_change": {
-          "ts": "2026-11-26T04:37:10Z",
-          "commit": "713689a",
-          "commit_full": "713689a0a3a820e0f6b817eab04949a88d2be279",
-          "subject": "Connect the Vercel console to the hosted gateway"
+          "ts": "2026-11-26T15:39:34Z",
+          "commit": "b4a3b3f",
+          "commit_full": "b4a3b3f54ed81e784abe08c704a1655afa82335a",
+          "subject": "Organize hosted Docs and publish the release OpenAPI snapshot"
         },
-        "last_commit_ts": "2026-11-26T04:37:10Z",
+        "last_commit_ts": "2026-11-26T15:39:34Z",
         "repo_since": "2026-07-04T17:45:50Z",
         "window": [
           0,
@@ -3014,7 +3025,7 @@
           0,
           0,
           0,
-          3
+          9
         ]
       },
       "release": null,
@@ -3029,5 +3040,5 @@
     "missing": [],
     "candidates": []
   },
-  "generated_at": "2026-11-26T05:44:31+00:00"
+  "generated_at": "2026-11-26T15:57:34+00:00"
 }
