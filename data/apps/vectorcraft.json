@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "26c4bfd",
-  "latest_commit_date": "2026-11-27T05:08:59+07:00",
-  "latest_message": "Pen: Quick Pen drags move a selected path's anchors and segments, and its context menu deletes (#8801)",
+  "latest_commit": "b9bf253",
+  "latest_commit_date": "2026-11-26T21:31:37-08:00",
+  "latest_message": "Color conversion: index global swatch lookups (#8807)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -344,6 +344,10 @@
       },
       {
         "date": "2026-11-20",
+        "text": "Color conversion indexes global swatch bases and linked-paint lookups (#8804); scores, estimates and measured budgets unchanged."
+      },
+      {
+        "date": "2026-11-20",
         "text": "Curvature Circle Tool Options (double-click the Curvature Circle tool): Snap Tolerance sets how near a path pulls the pointer, Snap with Smart Guides Off unchecked keeps it within the selection tolerance while Smart Guides are off, Annotate Radius hides the radius label, Anchors at Standard Positions off puts an anchor where the circle touches the path and one every 90° from there, and Use the Radius of Circular Arcs off gives a circular arc's own cubic curvature (tool.setOption {tool: \"curvatureCircle\"}). A VectorCraft addition: headline numbers unchanged."
       },
       {
@@ -493,10 +497,6 @@
       {
         "date": "2026-11-11",
         "text": "Window › Swatch Libraries › Gradients › Holographic: seven foils (opaque linear gradients of six narrow pastel and pearl bands with off-center midpoints) and seven glows (radial gradients from a bright center out to a clear edge), mixed with the Perceptual method; they also list in the Swatches panel's library menu, swatch.library.list and the Gradient panel's Presets."
-      },
-      {
-        "date": "2026-11-05",
-        "text": "Window › Toolbars › Keep Tools Beside the Canvas, off by default, docks the Tools panel between left-side panels and the canvas instead of at the window's left edge, and the canvas's left edge then also docks a floating Tools panel (window.toolsBesideCanvas, #5395). Workspaces keep the setting; workspaces saved without it keep Tools at the window's edge. An optional VectorCraft layout choice; headline numbers unchanged."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 265,
+    "revisions_since": 266,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,39 +536,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 266,
-    "revisions_7d": 7,
+    "revisions": 267,
+    "revisions_7d": 8,
     "last_revision": {
-      "ts": "2026-11-26T22:08:59Z",
+      "ts": "2026-11-27T05:31:37Z",
       "kind": "content",
-      "commit": "26c4bfd",
-      "commit_full": "26c4bfdd4d03400d2e1f693aac327dc50cd92361",
-      "message": "Pen: Quick Pen drags move a selected path's anchors and segments, and its context menu deletes (#8801)"
+      "commit": "b9bf253",
+      "commit_full": "b9bf25356b816e8e2159c9201be3bec282b2b9a8",
+      "message": "Color conversion: index global swatch lookups (#8807)"
     },
     "last_update": {
-      "ts": "2026-11-26T22:08:59Z",
+      "ts": "2026-11-27T05:31:37Z",
       "kind": "content",
-      "commit": "26c4bfd",
-      "commit_full": "26c4bfdd4d03400d2e1f693aac327dc50cd92361",
-      "message": "Pen: Quick Pen drags move a selected path's anchors and segments, and its context menu deletes (#8801)"
+      "commit": "b9bf253",
+      "commit_full": "b9bf25356b816e8e2159c9201be3bec282b2b9a8",
+      "message": "Color conversion: index global swatch lookups (#8807)"
     },
     "self_reported": "2026-11-22"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 25.6,
-    "active_days_7d": 6,
-    "changes_7d": 426,
-    "changes_14d": 1551,
+    "score": 33.4,
+    "active_days_7d": 7,
+    "changes_7d": 638,
+    "changes_14d": 1763,
     "housekeeping_7d": 18,
     "last_code_change": {
-      "ts": "2026-11-26T23:28:28Z",
-      "commit": "5c7bbee",
-      "commit_full": "5c7bbeecaa1e9481eb784f1ffc2062529872505d",
-      "subject": "Properties: the stroke-profile check asks tool_paints, which replaced bucket_paints (#9506)"
+      "ts": "2026-11-27T05:57:58Z",
+      "commit": "97da102",
+      "commit_full": "97da102592ef820346e0f88839fe1b4a37997a71",
+      "subject": "Use the resolution typed into Transparency Flattener dialogs (#9692)"
     },
-    "last_commit_ts": "2026-11-26T23:28:28Z",
+    "last_commit_ts": "2026-11-27T05:57:58Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       283,
@@ -584,7 +584,7 @@
       45,
       92,
       198,
-      0
+      212
     ],
     "days": [
       {
@@ -1673,6 +1673,25 @@
           {
             "commit": "990887e",
             "subject": "Keep Document Setup changes with their document (#9487)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-27",
+        "code": 212,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "97da102",
+            "subject": "Use the resolution typed into Transparency Flattener dialogs (#9692)"
+          },
+          {
+            "commit": "f566e56",
+            "subject": "Apply edited Fill, Stroke, and Gradient settings in Expand (#9712)"
+          },
+          {
+            "commit": "949e8bc",
+            "subject": "Keep immediate paste approvals with their original drawing (#9708)"
           }
         ]
       }
@@ -8871,7 +8890,33 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "b9bf253",
+      "commit_full": "b9bf25356b816e8e2159c9201be3bec282b2b9a8",
+      "commit_date": "2026-11-26T21:31:37-08:00",
+      "ts": "2026-11-27T05:31:37Z",
+      "message": "Color conversion: index global swatch lookups (#8807)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-22",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-27T00:08:50+00:00"
+  "updated_at": "2026-11-27T08:51:33+00:00"
 }

@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 33.3,
-    "active_days_7d": 6,
-    "changes_7d": 1510,
-    "changes_14d": 2907,
-    "housekeeping_7d": 53,
+    "score": 39.7,
+    "active_days_7d": 7,
+    "changes_7d": 1609,
+    "changes_14d": 3006,
+    "housekeeping_7d": 54,
     "last_code_change": {
-      "ts": "2026-11-26T23:36:49Z",
-      "commit": "afb24ba",
-      "commit_full": "afb24babebf93e3d84e0443780ecfc94b8e9cec6",
-      "subject": "Merge #21288: solidcore: retire the offset-surface extension flags (#18921)"
+      "ts": "2026-11-27T08:18:49Z",
+      "commit": "a5ef51f",
+      "commit_full": "a5ef51f39270f206eb73cacece05663dc6cb1b1b",
+      "subject": "Merge #23027: Shell: a refusal at every wall names the kernel's reason unless the wall really folds"
     },
-    "last_commit_ts": "2026-11-26T23:36:49Z",
+    "last_commit_ts": "2026-11-27T08:18:49Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       198,
@@ -92,8 +92,8 @@
       272,
       299,
       387,
-      229,
-      0
+      253,
+      75
     ],
     "days": [
       {
@@ -1048,26 +1048,62 @@
       },
       {
         "d": "2026-11-26",
-        "code": 229,
+        "code": 253,
         "other": 13,
         "samples": [
           {
-            "commit": "afb24ba",
-            "subject": "Merge #21288: solidcore: retire the offset-surface extension flags (#18921)"
+            "commit": "0cd414f",
+            "subject": "Merge #21626: Kernel: direct chamfer and fillet sessions handle corners beside cutouts"
           },
           {
-            "commit": "2a28547",
-            "subject": "Merge #18641: Extrude pull: step sizes follow design units (#9035)"
+            "commit": "058c3aa",
+            "subject": "Merge #22863: Tests: fix the healed-import model cache test that failed at random under load"
           },
           {
-            "commit": "2b84feb",
-            "subject": "Merge #20988: Drawings: lines have round ends and corners, on screen and in SVG, PNG and PDF"
+            "commit": "5eb6818",
+            "subject": "Merge #22833: Kernel: the sketch solver's cancel token and failure codes go through the kernel interface"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-27",
+        "code": 75,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "a5ef51f",
+            "subject": "Merge #23027: Shell: a refusal at every wall names the kernel's reason unless the wall really folds"
+          },
+          {
+            "commit": "dc12276",
+            "subject": "Merge #23020: Shell: a dome on a chamfered base shells again instead of \"not a manifold solid\""
+          },
+          {
+            "commit": "0ec92b7",
+            "subject": "Merge #23022: Kernel: a router slot for an opt-in second kernel, off by default"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.51.0-nightly.20261127.168.1",
+      "name": "SolidCraft v0.51.0-nightly.20261127.168.1 (nightly)",
+      "ts": "2026-11-27T05:44:25Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.51.0-nightly.20261127.168.1",
+      "changes": 282,
+      "new_contributors": 16,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.50.0-nightly.20261126.166.1",
       "name": "SolidCraft v0.50.0-nightly.20261126.166.1 (nightly)",
@@ -1236,7 +1272,7 @@
       ],
       "prerelease": false,
       "source": "release",
-      "kind": "minor"
+      "kind": null
     },
     {
       "tag": "v0.46.2-nightly.20261122.155.1",
@@ -1252,23 +1288,6 @@
         "Web"
       ],
       "prerelease": true,
-      "source": "release",
-      "kind": "patch"
-    },
-    {
-      "tag": "v0.46.2",
-      "name": "SolidCraft v0.46.2",
-      "ts": "2026-11-22T03:20:44Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.46.2",
-      "changes": null,
-      "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
       "source": "release",
       "kind": null
     }
@@ -2683,5 +2702,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-27T00:09:49+00:00"
+  "updated_at": "2026-11-27T08:52:56+00:00"
 }

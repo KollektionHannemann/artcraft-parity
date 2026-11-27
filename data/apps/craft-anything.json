@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "e68363d",
-  "latest_commit_date": "2026-11-26T16:10:14+07:00",
-  "latest_message": "Report a timed-out or cut fal.ai generation as possibly billed (R5.5) (#2426)",
+  "latest_commit": "32d1c42",
+  "latest_commit_date": "2026-11-27T13:19:06+07:00",
+  "latest_message": "Keep the project row under the prompt box reachable at 200% zoom (#2474)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,39 +45,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 922,
-    "revisions_7d": 67,
+    "revisions": 926,
+    "revisions_7d": 71,
     "last_revision": {
-      "ts": "2026-11-26T09:10:14Z",
+      "ts": "2026-11-27T06:19:06Z",
       "kind": "content",
-      "commit": "e68363d",
-      "commit_full": "e68363d0f4182a2e083b459c96f652ef8cca38b7",
-      "message": "Report a timed-out or cut fal.ai generation as possibly billed (R5.5) (#2426)"
+      "commit": "32d1c42",
+      "commit_full": "32d1c4245e9ed900fbcaf71bc9a432fd045e2b70",
+      "message": "Keep the project row under the prompt box reachable at 200% zoom (#2474)"
     },
     "last_update": {
-      "ts": "2026-11-26T09:10:14Z",
+      "ts": "2026-11-27T06:19:06Z",
       "kind": "content",
-      "commit": "e68363d",
-      "commit_full": "e68363d0f4182a2e083b459c96f652ef8cca38b7",
-      "message": "Report a timed-out or cut fal.ai generation as possibly billed (R5.5) (#2426)"
+      "commit": "32d1c42",
+      "commit_full": "32d1c4245e9ed900fbcaf71bc9a432fd045e2b70",
+      "message": "Keep the project row under the prompt box reachable at 200% zoom (#2474)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.7,
-    "active_days_7d": 6,
-    "changes_7d": 109,
-    "changes_14d": 397,
+    "score": 18.7,
+    "active_days_7d": 7,
+    "changes_7d": 116,
+    "changes_14d": 404,
     "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-26T10:48:41Z",
-      "commit": "3e59a9c",
-      "commit_full": "3e59a9c368d8767810b4a4a09764c924810aa45b",
-      "subject": "Keep two test helpers off SonarCloud's security list (#2468)"
+      "ts": "2026-11-27T06:47:29Z",
+      "commit": "8371374",
+      "commit_full": "837137462c6c6c3aef6c5d23eb468e8222fa4c18",
+      "subject": "Box the model context a worker hands back (#2487)"
     },
-    "last_commit_ts": "2026-11-26T10:48:41Z",
+    "last_commit_ts": "2026-11-27T06:47:29Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
       33,
@@ -93,7 +93,7 @@
       82,
       15,
       6,
-      0
+      7
     ],
     "days": [
       {
@@ -586,6 +586,25 @@
           {
             "commit": "fac1e43",
             "subject": "Report an interrupted AI call as interrupted, not unreachable (R5.5) (#2424)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-27",
+        "code": 7,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "8371374",
+            "subject": "Box the model context a worker hands back (#2487)"
+          },
+          {
+            "commit": "3572c28",
+            "subject": "Reject per-user MSI installs before writing machine-wide files and re… (#2473)"
+          },
+          {
+            "commit": "32d1c42",
+            "subject": "Keep the project row under the prompt box reachable at 200% zoom (#2474)"
           }
         ]
       }
@@ -7166,8 +7185,36 @@
       "commit": "e68363d",
       "commit_full": "e68363d0f4182a2e083b459c96f652ef8cca38b7",
       "message": "Report a timed-out or cut fal.ai generation as possibly billed (R5.5) (#2426)"
+    },
+    {
+      "ts": "2026-11-27T06:17:56Z",
+      "kind": "content",
+      "commit": "d06b1a4",
+      "commit_full": "d06b1a4278d619ee8db24e23fc8ba8d781ebf967",
+      "message": "Load stored target annotations when opening the first project (R2.9) (#2471)"
+    },
+    {
+      "ts": "2026-11-27T06:18:19Z",
+      "kind": "content",
+      "commit": "1b44b55",
+      "commit_full": "1b44b551fa384e82f0d01aaec7035231c019a56d",
+      "message": "Keep an unfinished SSH session record when its host cannot be reached (R2.2) (#2467)"
+    },
+    {
+      "ts": "2026-11-27T06:18:45Z",
+      "kind": "content",
+      "commit": "f8f934f",
+      "commit_full": "f8f934f6ac10ecc7f89b1722aa0d5191db1ad759",
+      "message": "Build the demo and UI test engine from an isolated session (R2.9) (#2469)"
+    },
+    {
+      "ts": "2026-11-27T06:19:06Z",
+      "kind": "content",
+      "commit": "32d1c42",
+      "commit_full": "32d1c4245e9ed900fbcaf71bc9a432fd045e2b70",
+      "message": "Keep the project row under the prompt box reachable at 200% zoom (#2474)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-27T00:09:29+00:00"
+  "updated_at": "2026-11-27T08:52:26+00:00"
 }
