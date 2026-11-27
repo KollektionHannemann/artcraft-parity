@@ -37,18 +37,18 @@
   "milestone": null,
   "activity": {
     "level": "quiet",
-    "score": 3.3,
+    "score": 3.0,
     "active_days_7d": 1,
-    "changes_7d": 9,
-    "changes_14d": 9,
-    "housekeeping_7d": 1,
+    "changes_7d": 12,
+    "changes_14d": 12,
+    "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-26T15:39:34Z",
-      "commit": "b4a3b3f",
-      "commit_full": "b4a3b3f54ed81e784abe08c704a1655afa82335a",
-      "subject": "Organize hosted Docs and publish the release OpenAPI snapshot"
+      "ts": "2026-11-26T15:57:58Z",
+      "commit": "06276c9",
+      "commit_full": "06276c924ad921a3b4b00a27d3a85b4b525b046c",
+      "subject": "Verify the hosted API behind the console proxy"
     },
-    "last_commit_ts": "2026-11-26T15:39:34Z",
+    "last_commit_ts": "2026-11-26T15:57:58Z",
     "repo_since": "2026-07-04T17:45:50Z",
     "window": [
       0,
@@ -63,8 +63,8 @@
       0,
       0,
       0,
-      0,
-      9
+      12,
+      0
     ],
     "days": [
       {
@@ -187,20 +187,20 @@
       },
       {
         "d": "2026-11-26",
-        "code": 9,
-        "other": 0,
+        "code": 12,
+        "other": 2,
         "samples": [
           {
-            "commit": "b4a3b3f",
-            "subject": "Organize hosted Docs and publish the release OpenAPI snapshot"
+            "commit": "06276c9",
+            "subject": "Verify the hosted API behind the console proxy"
           },
           {
-            "commit": "68052fe",
-            "subject": "Document the gateway API schema and every routed operation"
+            "commit": "d30d81e",
+            "subject": "Harden hosted startup and validate the live gateway contract"
           },
           {
-            "commit": "912c9d3",
-            "subject": "Integrate organization rate limits and cell autoscaling"
+            "commit": "44bf1c8",
+            "subject": "Patch gateway and frontend dependencies"
           }
         ]
       }
@@ -209,5 +209,5 @@
   "releases": [],
   "roadmap_history": [],
   "history": [],
-  "updated_at": "2026-11-26T15:57:34+00:00"
+  "updated_at": "2026-11-27T00:10:01+00:00"
 }

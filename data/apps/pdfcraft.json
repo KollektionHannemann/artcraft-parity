@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/pdfcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/pdfcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "bb4df81",
-  "latest_commit_date": "2026-11-26T16:45:08+01:00",
-  "latest_message": "Text: paragraphs respect typography and filled panels (#3539)",
+  "latest_commit": "36d9fd7",
+  "latest_commit_date": "2026-11-26T17:48:11+01:00",
+  "latest_message": "Refuse unsafe stream-qualified tag mutations (#3280)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -459,7 +459,7 @@
     "value_since": "2026-10-15T06:21:11Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 159,
+    "revisions_since": 160,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -476,42 +476,41 @@
     }
   },
   "roadmap": {
-    "revisions": 249,
+    "revisions": 250,
     "revisions_7d": 6,
     "last_revision": {
-      "ts": "2026-11-26T15:45:08Z",
+      "ts": "2026-11-26T16:48:11Z",
       "kind": "content",
-      "commit": "bb4df81",
-      "commit_full": "bb4df817aacfbb18da9bf564916d01505454c7c5",
-      "message": "Text: paragraphs respect typography and filled panels (#3539)"
+      "commit": "36d9fd7",
+      "commit_full": "36d9fd726804d87087aff6dce70d1242bb68d82e",
+      "message": "Refuse unsafe stream-qualified tag mutations (#3280)"
     },
     "last_update": {
-      "ts": "2026-11-26T15:45:08Z",
+      "ts": "2026-11-26T16:48:11Z",
       "kind": "content",
-      "commit": "bb4df81",
-      "commit_full": "bb4df817aacfbb18da9bf564916d01505454c7c5",
-      "message": "Text: paragraphs respect typography and filled panels (#3539)"
+      "commit": "36d9fd7",
+      "commit_full": "36d9fd726804d87087aff6dce70d1242bb68d82e",
+      "message": "Refuse unsafe stream-qualified tag mutations (#3280)"
     },
     "self_reported": "2026-11-16"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 11.7,
-    "active_days_7d": 4,
-    "changes_7d": 46,
-    "changes_14d": 145,
-    "housekeeping_7d": 5,
+    "score": 9.8,
+    "active_days_7d": 3,
+    "changes_7d": 43,
+    "changes_14d": 143,
+    "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-26T15:53:39Z",
-      "commit": "4825ebf",
-      "commit_full": "4825ebfbf2b1dc1b7d06530a0f7acfcd53f37781",
-      "subject": "M12: a negative XFA text indent hangs the first line (#3526)"
+      "ts": "2026-11-26T20:17:32Z",
+      "commit": "d492d88",
+      "commit_full": "d492d88902e3bf723f650b8eaf93958cf8904c56",
+      "subject": "XFA: a form saved with its pages is laid out when it requires dynamic rendering, unless signed (#4538)"
     },
-    "last_commit_ts": "2026-11-26T15:53:39Z",
+    "last_commit_ts": "2026-11-26T20:17:32Z",
     "repo_since": "2026-09-30T09:17:08Z",
     "window": [
-      14,
       10,
       12,
       7,
@@ -524,7 +523,8 @@
       5,
       0,
       0,
-      25
+      37,
+      0
     ],
     "days": [
       {
@@ -1534,20 +1534,20 @@
       },
       {
         "d": "2026-11-26",
-        "code": 25,
-        "other": 1,
+        "code": 37,
+        "other": 3,
         "samples": [
           {
-            "commit": "4825ebf",
-            "subject": "M12: a negative XFA text indent hangs the first line (#3526)"
+            "commit": "d492d88",
+            "subject": "XFA: a form saved with its pages is laid out when it requires dynamic rendering, unless signed (#4538)"
           },
           {
-            "commit": "c2bd7c1",
-            "subject": "M12: an XFA form laid out again by its scripts rebuilds its pages in the view (#4603) (#4604)"
+            "commit": "e862b77",
+            "subject": "M12: XFA check boxes and radio buttons run their click scripts when a click changes them (#4369)"
           },
           {
-            "commit": "814e19b",
-            "subject": "Refuse image arrange and crop removal that change nothing (#6590)"
+            "commit": "53b1227",
+            "subject": "fix(edit): unlink unused image resources on delete (#3523)"
           }
         ]
       }
@@ -7487,7 +7487,30 @@
       "breadth_pct": 67.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "36d9fd7",
+      "commit_full": "36d9fd726804d87087aff6dce70d1242bb68d82e",
+      "commit_date": "2026-11-26T17:48:11+01:00",
+      "ts": "2026-11-26T16:48:11Z",
+      "message": "Refuse unsafe stream-qualified tag mutations (#3280)",
+      "stage": null,
+      "next_stage": null,
+      "last_updated": "2026-11-16",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        780,
+        1400
+      ],
+      "full_label": "Full Acrobat Pro (ready for real work)",
+      "target": null,
+      "mainstream_pct": 55.0,
+      "essentials_pct": 66.0,
+      "breadth_pct": 67.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-26T15:55:36+00:00"
+  "updated_at": "2026-11-27T00:09:02+00:00"
 }

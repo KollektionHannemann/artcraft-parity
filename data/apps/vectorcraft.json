@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/vectorcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/vectorcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "30f6381",
-  "latest_commit_date": "2026-11-26T08:47:08+07:00",
-  "latest_message": "Shapes: the Circle tool draws a circle from its center through a point (#8493)",
+  "latest_commit": "26c4bfd",
+  "latest_commit_date": "2026-11-27T05:08:59+07:00",
+  "latest_message": "Pen: Quick Pen drags move a selected path's anchors and segments, and its context menu deletes (#8801)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -343,6 +343,14 @@
         "text": "Add Inscribed Circle joins the Path Precision Tools add-on (Object › Plug-ins › Path Precision Tools): the largest live circle inside each selected closed path or compound path, in the area it fills under its fill rule, with the current paint and one undo step (addon.pathtools.inscribedCircle, #6966). A VectorCraft addition: headline numbers unchanged."
       },
       {
+        "date": "2026-11-20",
+        "text": "Curvature Circle Tool Options (double-click the Curvature Circle tool): Snap Tolerance sets how near a path pulls the pointer, Snap with Smart Guides Off unchecked keeps it within the selection tolerance while Smart Guides are off, Annotate Radius hides the radius label, Anchors at Standard Positions off puts an anchor where the circle touches the path and one every 90° from there, and Use the Radius of Circular Arcs off gives a circular arc's own cubic curvature (tool.setOption {tool: \"curvatureCircle\"}). A VectorCraft addition: headline numbers unchanged."
+      },
+      {
+        "date": "2026-11-19",
+        "text": "Set Fold Angle in the Packaging Tools add-on (Object › Plug-ins › Packaging Tools, and a Fold Angle field with Reset in the Fold Lines panel): a crease, partial cut or perforation line can fold at its own angle, from -180° to 180°, instead of its role's 90° away from or toward the print; native files keep the angle, and the Fold Preview folds each hinge at the angle of the line with the most length in it (addon.packaging.setFoldAngle). A VectorCraft addition: headline numbers unchanged."
+      },
+      {
         "date": "2026-11-19",
         "text": "Quick Pen tool, in the Pen tool's group (Alt+P, Option+P on macOS): clicks or drags add straight lines, continuous arcs or sharp-corner arcs; Alt tapped on its own switches the action, C flips the last arc, [ and ] size it, a click on the first point closes the path and a click on an open end continues it (path.quickPen, part of #2660). Headline numbers unchanged."
       },
@@ -353,6 +361,10 @@
       {
         "date": "2026-11-19",
         "text": "Quick Pen toolbar on the canvas while the tool is active: Straight Line, Continuous Arc and Sharp Corner Arc, Flip Arc, and More Options with Hide Toolbar, Pin Toolbar Position and Reset Toolbar Position; it follows the drawing beside the path's last point and its handle drags it (tool.quickPen.flipArc, window.quickPenToolbar, Window › Quick Pen Toolbar; part of #2660). Headline numbers unchanged."
+      },
+      {
+        "date": "2026-11-19",
+        "text": "Quick Pen editing: with no path being drawn, a drag on an anchor or a segment of a selected path moves it, a line staying a line and an arc an arc beside a moved corner anchor (at a smooth anchor the handles stay in line and the segments bend to meet); a click selects an anchor, Shift-click adds one, and the canvas context menu's Delete removes the selected anchors (path.moveAnchors, edit.clear; #2660). Headline numbers unchanged."
       },
       {
         "date": "2026-11-18",
@@ -485,18 +497,6 @@
       {
         "date": "2026-11-05",
         "text": "Window › Toolbars › Keep Tools Beside the Canvas, off by default, docks the Tools panel between left-side panels and the canvas instead of at the window's left edge, and the canvas's left edge then also docks a floating Tools panel (window.toolsBesideCanvas, #5395). Workspaces keep the setting; workspaces saved without it keep Tools at the window's edge. An optional VectorCraft layout choice; headline numbers unchanged."
-      },
-      {
-        "date": "2026-11-05",
-        "text": "Release Type on a Path joins the Type Tools add-on (Object › Plug-ins › Type Tools): each selected type on a path splits into point type with the same text and attributes, on one straight line starting where its first character sat, and the plain path it was set on, with its exact shape and place in the stacking order and no paint; or keeps only the path or only the text, optionally leaving the original. A dialog with Preview, one undo step (addon.type.releasePath, #5532). A VectorCraft addition: headline numbers unchanged."
-      },
-      {
-        "date": "2026-11-04",
-        "text": "New Document: the units chosen in Preset Details now belong to the chosen document, as the pane's options are listed for the selected preset; the chosen card shows them, every other Recent and Saved card keeps the units its document or preset was made in, and the built-in tabs still follow the chosen units, so switching between inches and millimetres no longer restyles every recent template. Scores and estimates unchanged."
-      },
-      {
-        "date": "2026-11-03",
-        "text": "Text Tweaker, the first tool of the Type Tools add-on (Object › Plug-ins › Type Tools): one character attribute (size, baseline shift, rotation, horizontal or vertical scale, tracking, leading or stroke weight) goes letter by letter from a start value to an end value along a straight ramp, an ease, a bow, a spike or at random with a seed, set as the Character panel sets it, while the text stays live; a dialog with Preview, one undo step (addon.type.textTweaker, #4924). A VectorCraft addition: headline numbers unchanged."
       }
     ]
   },
@@ -505,7 +505,7 @@
     "value_since": "2026-10-10T18:11:14Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 262,
+    "revisions_since": 265,
     "hours_since": null,
     "areas_since": {
       "up": 3,
@@ -536,42 +536,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 263,
-    "revisions_7d": 4,
+    "revisions": 266,
+    "revisions_7d": 7,
     "last_revision": {
-      "ts": "2026-11-26T01:47:08Z",
+      "ts": "2026-11-26T22:08:59Z",
       "kind": "content",
-      "commit": "30f6381",
-      "commit_full": "30f63816186493dfb48ec37c725505bcc6b724bc",
-      "message": "Shapes: the Circle tool draws a circle from its center through a point (#8493)"
+      "commit": "26c4bfd",
+      "commit_full": "26c4bfdd4d03400d2e1f693aac327dc50cd92361",
+      "message": "Pen: Quick Pen drags move a selected path's anchors and segments, and its context menu deletes (#8801)"
     },
     "last_update": {
-      "ts": "2026-11-26T01:47:08Z",
+      "ts": "2026-11-26T22:08:59Z",
       "kind": "content",
-      "commit": "30f6381",
-      "commit_full": "30f63816186493dfb48ec37c725505bcc6b724bc",
-      "message": "Shapes: the Circle tool draws a circle from its center through a point (#8493)"
+      "commit": "26c4bfd",
+      "commit_full": "26c4bfdd4d03400d2e1f693aac327dc50cd92361",
+      "message": "Pen: Quick Pen drags move a selected path's anchors and segments, and its context menu deletes (#8801)"
     },
     "self_reported": "2026-11-22"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 30.8,
-    "active_days_7d": 7,
-    "changes_7d": 340,
-    "changes_14d": 1686,
-    "housekeeping_7d": 17,
+    "score": 25.6,
+    "active_days_7d": 6,
+    "changes_7d": 426,
+    "changes_14d": 1551,
+    "housekeeping_7d": 18,
     "last_code_change": {
-      "ts": "2026-11-26T15:45:13Z",
-      "commit": "2a1b573",
-      "commit_full": "2a1b573a78fd6bb522d641cf03ed42ea33d6ee46",
-      "subject": "History panel: add row context menu (New Document from State, Step to State, Clear History) (#8845)"
+      "ts": "2026-11-26T23:28:28Z",
+      "commit": "5c7bbee",
+      "commit_full": "5c7bbeecaa1e9481eb784f1ffc2062529872505d",
+      "subject": "Properties: the stroke-profile check asks tool_paints, which replaced bucket_paints (#9506)"
     },
-    "last_commit_ts": "2026-11-26T15:45:13Z",
+    "last_commit_ts": "2026-11-26T23:28:28Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
-      240,
       283,
       214,
       103,
@@ -584,7 +583,8 @@
       6,
       45,
       92,
-      93
+      198,
+      0
     ],
     "days": [
       {
@@ -1659,20 +1659,20 @@
       },
       {
         "d": "2026-11-26",
-        "code": 93,
-        "other": 1,
+        "code": 198,
+        "other": 4,
         "samples": [
           {
-            "commit": "2a1b573",
-            "subject": "History panel: add row context menu (New Document from State, Step to State, Clear History) (#8845)"
+            "commit": "5c7bbee",
+            "subject": "Properties: the stroke-profile check asks tool_paints, which replaced bucket_paints (#9506)"
           },
           {
-            "commit": "7966fca",
-            "subject": "Scale tool: a Shift-drag along one axis scales along it alone (#6989)"
+            "commit": "86d00a6",
+            "subject": "Keep saved Selection and View edits with their document (#9488)"
           },
           {
-            "commit": "ac8c203",
-            "subject": "Preferences: Reset Preferences resets Smart Guides, Snap to Grid and the Contextual Task Bar (#9149)"
+            "commit": "990887e",
+            "subject": "Keep Document Setup changes with their document (#9487)"
           }
         ]
       }
@@ -8793,7 +8793,85 @@
       "breadth_pct": 88.0,
       "full_prev": 62.0,
       "kind": "content"
+    },
+    {
+      "commit": "6a1b940",
+      "commit_full": "6a1b940f61495596e0840fa21482447e31110b3a",
+      "commit_date": "2026-11-27T00:52:58+07:00",
+      "ts": "2026-11-26T17:52:58Z",
+      "message": "Shapes: Curvature Circle Tool Options set its reach, label, anchors and arc rule (#8985)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-22",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
+    },
+    {
+      "commit": "20e2bfb",
+      "commit_full": "20e2bfbda3c9bb26e007d47c1cd0dd9a7d464f8f",
+      "commit_date": "2026-11-27T00:53:23+07:00",
+      "ts": "2026-11-26T17:53:23Z",
+      "message": "Packaging Tools: a crease, partial cut or perforation can fold at its own angle (#8872)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-22",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
+    },
+    {
+      "commit": "26c4bfd",
+      "commit_full": "26c4bfdd4d03400d2e1f693aac327dc50cd92361",
+      "commit_date": "2026-11-27T05:08:59+07:00",
+      "ts": "2026-11-26T22:08:59Z",
+      "message": "Pen: Quick Pen drags move a selected path's anchors and segments, and its context menu deletes (#8801)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-22",
+      "full_pct": 62.0,
+      "full_range": [
+        57.0,
+        67.0
+      ],
+      "full_hours": [
+        340,
+        560
+      ],
+      "full_label": "Full Illustrator (ready for real work; decides the stage)",
+      "target": "Adobe Illustrator 2026 (30.x)",
+      "mainstream_pct": 65.0,
+      "essentials_pct": 75.0,
+      "breadth_pct": 88.0,
+      "full_prev": 62.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-26T15:55:15+00:00"
+  "updated_at": "2026-11-27T00:08:50+00:00"
 }

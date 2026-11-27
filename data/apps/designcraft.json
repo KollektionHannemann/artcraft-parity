@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/designcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/designcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "d4010f0",
-  "latest_commit_date": "2026-11-26T16:31:22+01:00",
-  "latest_message": "View: link badge on pictures placed from a file, as in InDesign (#1423)",
+  "latest_commit": "ff1cb44",
+  "latest_commit_date": "2026-11-26T21:15:08+01:00",
+  "latest_message": "PDF export: keep live transparency in non-X-1a presets (#2370) (#2795)",
   "parsed": {
     "stage": "pre-alpha",
     "next_stage": "alpha",
@@ -318,6 +318,10 @@
         "text": "· View › Extras › Show/Hide Link Badge: frames showing a linked picture carry a link badge on their top edge, a warning when the file changed and a stop when it is missing; hidden in Preview. No readiness percentage change."
       },
       {
+        "date": "2026-11-16",
+        "text": "· Fitting a bottom-aligned text frame from its top handle keeps its bottom edge and text in place (#2880): double-clicking any selection handle passes the opposite local reference point (ref 0..=8) to object.fit, menu/panel/scripting fits without ref anchor to vertical justification (Bottom/Center/Top/Justify), and transform.resize keeps unchanged edges pinned across its 1e-3 scale clamp and flips. No readiness percentage change."
+      },
+      {
         "date": "2026-11-15",
         "text": "· Removed the obsolete gap saying pull requests have no test workflow: CI runs the shared quality gate on every pull request and push to main (#1352). No readiness percentage change."
       },
@@ -328,6 +332,10 @@
       {
         "date": "2026-11-15",
         "text": "· Format follow-ups to the craft-libs cutover (craft-libs#778; ported from #2734 by Dylan M. Taylor): IDML export keeps CDATA image contents and table spans such as inf reach the table edge; DOCX plain-text import leaves out deleted tracked changes and expands inline objects; an XLSX number cell that isn't a number shows as written; unmarked CMYK JPEGs keep the shared decoder's ink polarity; PPTX export writes exact opacity; PDF export repins craft-pdf and craft-prepress to craft-libs main. No readiness percentage change."
+      },
+      {
+        "date": "2026-11-14",
+        "text": "· PDF export presets other than PDF/X-1a:2003 keep transparency live instead of applying a 72 ppi Low Resolution flattener, and confirming or loading a named preset persists its flattener choice (flattenChosen) so the global flattener fallback does not override it on reopen or in Separations Preview (#2370). No readiness percentage change."
       },
       {
         "date": "2026-11-14",
@@ -402,6 +410,10 @@
         "text": "· An idle canvas frame no longer does work for the spreads out of view (part of #1343): page shadows, paper, guides, margins, frame edges and overset marks are painted for the spreads and objects in view, and only their stories are looked up. In a 400-page document with two frames a page, an idle frame painted 5,099 shapes and looked up 400 stories; it now paints 311 and looks up 1, the same as in a 4-page document. No readiness percentage change."
       },
       {
+        "date": "2026-11-07",
+        "text": "· Preferences › Type › Show Right-to-Left Features (on by default in a right-to-left interface) shows the right-to-left setup controls: Paragraph Direction buttons in the Control panel, the Paragraph panel and Properties, Paragraph Direction in Paragraph Style Options › Indents and Spacing, Binding buttons in New Document (file.new {binding}), Document Setup and Properties › Document, and the Table panel's Direction; a control whose setting is already right to left (a right-to-left paragraph, style, table or binding) shows in every interface. The Paragraph panel menu keeps its direction items in every interface. No readiness percentage change."
+      },
+      {
         "date": "2026-11-06",
         "text": "· Preflight warns about white or [Paper] set to overprint (#2401): a fill, stroke or stroke gap, or ruby and kenten, in [Paper] or a colour that lays down no ink (C=0 M=0 Y=0 K=0, a 0% tint; a spot ink, such as a white ink or a varnish, prints whatever colour stands in for it), is reported as whiteOverprint, since it disappears on press. Text itself has no overprint, so white text in a frame set to Overprint Fill still knocks out and prints, and is not reported. Preflight no longer says PDF export drops ruby and kenten overprint, which it writes. No readiness percentage change."
       },
@@ -456,18 +468,6 @@
       {
         "date": "2026-10-31",
         "text": "· A .designcraft file opened from bytes (file.openBytes with its file name, as a browser or host passes it) is titled without the extension, as an IDML file opened that way is. Saving it in the browser downloaded Brochure.designcraft.designcraft, and the File Name variable showed the doubled name. Browser Open and Drop pass the full file name, so only the engine removes the extension and a repeated suffix is kept in the title. Native and IDML content takes priority over a misleading .indd or .indt extension. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-30",
-        "text": "· The Color Picker takes an eyedropper: dragged from the picker onto the page, it takes the colour the canvas shows (proofed under Proof Colors). No readiness percentage change."
-      },
-      {
-        "date": "2026-10-30",
-        "text": "· The Color Picker is laid out as the reference app's: a field and slider for the component chosen, HSB, Lab, RGB and CMYK values, the old colour, and Add CMYK Swatch; Enter and Esc close it once. No readiness percentage change."
-      },
-      {
-        "date": "2026-10-30",
-        "text": "· Import warnings about a story have a Show button: it closes the warnings (the status line keeps them) and selects the story's first frame, fitted in the window. file.open returns warningItems, the frame each IDML or InDesign warning is about (or null), matching the converter's INDD story numbers (story 30892, written to IDML as u78ac) and IDML Self names to the imported stories. No readiness percentage change."
       }
     ]
   },
@@ -476,7 +476,7 @@
     "value_since": "2026-10-10T18:09:17Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 232,
+    "revisions_since": 237,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -484,42 +484,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 233,
-    "revisions_7d": 6,
+    "revisions": 238,
+    "revisions_7d": 11,
     "last_revision": {
-      "ts": "2026-11-26T15:31:22Z",
+      "ts": "2026-11-26T20:15:08Z",
       "kind": "content",
-      "commit": "d4010f0",
-      "commit_full": "d4010f0ba797ff7f552368a847e9a365267cbca0",
-      "message": "View: link badge on pictures placed from a file, as in InDesign (#1423)"
+      "commit": "ff1cb44",
+      "commit_full": "ff1cb448dd339c13ff6f16344485273ee634400e",
+      "message": "PDF export: keep live transparency in non-X-1a presets (#2370) (#2795)"
     },
     "last_update": {
-      "ts": "2026-11-26T15:31:22Z",
+      "ts": "2026-11-26T20:15:08Z",
       "kind": "content",
-      "commit": "d4010f0",
-      "commit_full": "d4010f0ba797ff7f552368a847e9a365267cbca0",
-      "message": "View: link badge on pictures placed from a file, as in InDesign (#1423)"
+      "commit": "ff1cb44",
+      "commit_full": "ff1cb448dd339c13ff6f16344485273ee634400e",
+      "message": "PDF export: keep live transparency in non-X-1a presets (#2370) (#2795)"
     },
     "self_reported": "2026-11-19"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 12.4,
-    "active_days_7d": 6,
-    "changes_7d": 35,
-    "changes_14d": 98,
-    "housekeeping_7d": 5,
+    "score": 10.5,
+    "active_days_7d": 5,
+    "changes_7d": 38,
+    "changes_14d": 101,
+    "housekeeping_7d": 4,
     "last_code_change": {
-      "ts": "2026-11-26T15:44:24Z",
-      "commit": "32e86ea",
-      "commit_full": "32e86eaad48bc310288ce20ad971e19f066d6d5e",
-      "subject": "[added feature] Definable default Save format (#1105)"
+      "ts": "2026-11-26T20:15:08Z",
+      "commit": "ff1cb44",
+      "commit_full": "ff1cb448dd339c13ff6f16344485273ee634400e",
+      "subject": "PDF export: keep live transparency in non-X-1a presets (#2370) (#2795)"
     },
-    "last_commit_ts": "2026-11-26T15:44:24Z",
+    "last_commit_ts": "2026-11-26T20:15:08Z",
     "repo_since": "2026-10-01T13:00:02Z",
     "window": [
-      5,
       12,
       22,
       3,
@@ -532,7 +531,8 @@
       7,
       0,
       2,
-      13
+      21,
+      0
     ],
     "days": [
       {
@@ -1516,20 +1516,20 @@
       },
       {
         "d": "2026-11-26",
-        "code": 13,
+        "code": 21,
         "other": 0,
         "samples": [
           {
-            "commit": "32e86ea",
-            "subject": "[added feature] Definable default Save format (#1105)"
+            "commit": "ff1cb44",
+            "subject": "PDF export: keep live transparency in non-X-1a presets (#2370) (#2795)"
           },
           {
-            "commit": "d4010f0",
-            "subject": "View: link badge on pictures placed from a file, as in InDesign (#1423)"
+            "commit": "4af0753",
+            "subject": "Perf: build list/footnote/endnote numbering starts once per document version (#1280)"
           },
           {
-            "commit": "8d103cf",
-            "subject": "[fix] Web relink of images (#1244)"
+            "commit": "5215fe3",
+            "subject": "Hyphenation: Croatian hyphenates with hyph-hr (hypher) (#2425)"
           }
         ]
       }
@@ -7101,7 +7101,122 @@
       "breadth_pct": 80.0,
       "full_prev": 47.0,
       "kind": "content"
+    },
+    {
+      "commit": "417c7f3",
+      "commit_full": "417c7f30033a32402765574d101d17a911c1b5f1",
+      "commit_date": "2026-11-26T17:48:55+01:00",
+      "ts": "2026-11-26T16:48:55Z",
+      "message": "2880: keep bottom-aligned text anchored when resizing or fitting from top (#2890)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-19",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "7067ac8",
+      "commit_full": "7067ac8e4c67f0dbfc230bf6d2d794781aed74a4",
+      "commit_date": "2026-11-26T18:23:16+01:00",
+      "ts": "2026-11-26T17:23:16Z",
+      "message": "Anchored objects: allow text frames in anchored.insert (#2338) (#2343)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-19",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "30a13af",
+      "commit_full": "30a13afd7dd8ee29ea9f91518b41aefefd1e1456",
+      "commit_date": "2026-11-26T18:37:16+01:00",
+      "ts": "2026-11-26T17:37:16Z",
+      "message": "RTL1: Show Right-to-Left Features: paragraph direction, binding and table direction controls (#2453)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-19",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "5215fe3",
+      "commit_full": "5215fe397905d4dfe238fd09e68da2244460c9b2",
+      "commit_date": "2026-11-26T18:54:51+01:00",
+      "ts": "2026-11-26T17:54:51Z",
+      "message": "Hyphenation: Croatian hyphenates with hyph-hr (hypher) (#2425)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-19",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
+    },
+    {
+      "commit": "ff1cb44",
+      "commit_full": "ff1cb448dd339c13ff6f16344485273ee634400e",
+      "commit_date": "2026-11-26T21:15:08+01:00",
+      "ts": "2026-11-26T20:15:08Z",
+      "message": "PDF export: keep live transparency in non-X-1a presets (#2370) (#2795)",
+      "stage": "pre-alpha",
+      "next_stage": "alpha",
+      "last_updated": "2026-11-19",
+      "full_pct": 47.0,
+      "full_range": null,
+      "full_hours": [
+        1150,
+        1950
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Adobe InDesign 2026",
+      "mainstream_pct": 42.0,
+      "essentials_pct": 54.0,
+      "breadth_pct": 80.0,
+      "full_prev": 47.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-26T15:55:48+00:00"
+  "updated_at": "2026-11-27T00:09:08+00:00"
 }

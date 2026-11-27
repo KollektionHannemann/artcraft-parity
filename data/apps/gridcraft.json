@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/gridcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/gridcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "b6ef428",
-  "latest_commit_date": "2026-11-26T16:39:39+01:00",
-  "latest_message": "Fill handle: Linear Trend and Growth Trend on the right-drag menu for numbers (#2628)",
+  "latest_commit": "16c9ef0",
+  "latest_commit_date": "2026-11-26T22:32:05+01:00",
+  "latest_message": "XLSX: keep an unedited embedded chart's XML on save (#1668) (#2404)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -334,6 +334,10 @@
       },
       {
         "date": "2026-10-26",
+        "text": "Excel open check (packaging/windows/excel-open-check): saves workbooks with gridcraft-cli, opens each in real Excel through COM so a repair counts as a failure, and records pass or the failure per file; 0.12.1 over 18 public fixtures and 7 feature scenarios: 24 of 25 open cleanly, the other is the legacy-formula slowness of #410"
+      },
+      {
+        "date": "2026-10-26",
         "text": "Paste Special ▸ Transpose turns a formula's references with the cell that carries it, as Excel does: the row offset becomes the column offset and the other way round, so =A3+1 copied from A3:A4 and pasted at C3 reads the cell to its left (=C3+1) instead of keeping the offset it had in the column; a reference pinned with $ is left standing, a whole row or column comes back as a cell range open to the sheet's edge, and one off the grid is #REF! (#2450)"
       },
       {
@@ -351,6 +355,14 @@
       {
         "date": "2026-10-26",
         "text": "Arabic text shows in cells and the interface through a system, fontconfig or craft-fonts Arabic face; workbook fonts keep their script fallbacks"
+      },
+      {
+        "date": "2026-10-26",
+        "text": "cargo xtask bench: ten fixed in-code workbooks (100k rows) time edits, formula entry, Calculate Now, sort and XLSX save/open, check their results and compare with a saved baseline. On an M2 Pro a 100k-dependent edit recalculates in 90–106 ms and 300k formulas in 395–455 ms"
+      },
+      {
+        "date": "2026-10-25",
+        "text": "Charts: 100% Stacked Line and 100% Stacked Line with Markers (insert.chart {type: \"line\", subtype: \"stacked100\"} and \"stacked100Markers\"), drawn as each value's share of its category's total; XLSX percentStacked line charts open as 100% stacked instead of stacked"
       },
       {
         "date": "2026-10-25",
@@ -397,36 +409,24 @@
         "text": "Charts: 100% Stacked Area (insert.chart {type: \"area\", subtype: \"stacked100\"}), drawn as each value's share of its category's total; XLSX percentStacked area charts open as 100% stacked instead of stacked"
       },
       {
+        "date": "2026-10-24",
+        "text": "XLSX charts keep what GridCraft doesn't model on save: an embedded chart that was not edited (moving or resizing aside) is written back from its original chart part, with its style, colour and user-shape parts, while every sheet its formulas name still exists; an edited chart is written from the model as before (#1668)"
+      },
+      {
+        "date": "2026-10-24",
+        "text": "XLSX: a password to modify (fileSharing) is kept on save, and opening such a file asks for the password or opens it read-only (never checked against Excel) (#921)"
+      },
+      {
+        "date": "2026-10-23",
+        "text": "File › Print › Settings offers Print Selection next to Print Active Sheets and Print Entire Workbook; several selected areas print one after the other, as in Excel"
+      },
+      {
         "date": "2026-10-23",
         "text": "Accounting negatives in text: $(1,234), $ (5) and (5)% read as negative numbers when typed, coerced by arithmetic or passed to VALUE, like Excel 365; (-5), ((5)), $5% and dates or times in parentheses stay text"
       },
       {
         "date": "2026-10-23",
         "text": "Calc: INDEX(A1:C3,2) (one index on a reference of several rows and columns) is #REF! as in Excel, instead of the whole row; INDEX(A1:C3,2,) still gives the row"
-      },
-      {
-        "date": "2026-10-22",
-        "text": "Formula hardening: digits too many for a finite number are text, so \"1 <400 digits>/<400 digits>\" no longer coerces to NaN; a NaN column index in VLOOKUP, HLOOKUP and the D-functions is #VALUE! instead of an index underflow; REGEXREPLACE stops building a result as soon as it can only be too long (a worst case went from 1 GB to 7 MB) (#2163, #2162)"
-      },
-      {
-        "date": "2026-10-22",
-        "text": "View › New Window and Arrange All on the ribbon. Arrange All tiles, stacks side by side or top to bottom, or cascades the native windows over the main window's monitor, the active one first. Two windows on one workbook show different sheets without copying the workbook or marking it changed; Save records the sheet of the window used last. A dialog stays in the window it was opened in"
-      },
-      {
-        "date": "2026-10-22",
-        "text": "On the desktop every workbook window is a native window of its own: New, Open and New Window open one, each keeps its own cell draft, dialog and ribbon, and the macOS menu bar acts on the window focused last. Closing one of several windows on a workbook doesn't ask; closing a workbook's last window, or quitting, asks about unsaved changes in that window. The last window closed quits on Windows and Linux; macOS keeps running with the menu bar. First craft-libs craft-window use (window list and viewport driver)"
-      },
-      {
-        "date": "2026-10-22",
-        "text": "View › New Window opens a second window on the same workbook (it used to open a copy whose Save overwrote the original): each window has its own selection, active sheet and scroll, titles read \"Book1:1\" / \"Book1:2\", and Switch Windows, Hide, Unhide and Close act per window. The control channel, CLI send and MCP tools take an optional window or doc id and default to the active window; window.list (MCP listwindows) lists the windows"
-      },
-      {
-        "date": "2026-10-22",
-        "text": "Typing in a cell and then choosing File › New no longer strands the first workbook: the entry is committed into its own workbook before any File or window command (a refused entry stays open and stops the command), View › Switch Windows and the macOS Window menu list the open workbooks with unsaved markers, view.switchWindows {doc} switches by a stable workbook id, and the macOS Quit item asks about unsaved workbooks"
-      },
-      {
-        "date": "2026-10-21",
-        "text": "Data validation lists are searchable: typing into the cell filters the dropdown to entries with a word starting with the typed text (case ignored, and the accents of Latin letters such as é, ç, ß, ł, ș, ǎ and Vietnamese ộ: Latin-1, Latin Extended-A and -B, Latin Extended Additional; other scripts keep their marks), and Enter or Tab takes the highlighted entry; data.validationList exposes the same search to the CLI, MCP and agents"
       }
     ]
   },
@@ -435,7 +435,7 @@
     "value_since": "2026-10-10T18:09:06Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 113,
+    "revisions_since": 124,
     "hours_since": null,
     "areas_since": null,
     "changes": 0,
@@ -443,42 +443,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 116,
-    "revisions_7d": 5,
+    "revisions": 127,
+    "revisions_7d": 16,
     "last_revision": {
-      "ts": "2026-11-26T15:39:39Z",
+      "ts": "2026-11-26T21:32:05Z",
       "kind": "content",
-      "commit": "b6ef428",
-      "commit_full": "b6ef428a899a145e30a1e916539a7f3232cc52a7",
-      "message": "Fill handle: Linear Trend and Growth Trend on the right-drag menu for numbers (#2628)"
+      "commit": "16c9ef0",
+      "commit_full": "16c9ef0b76aa9612c84450ccc2a08038888051cb",
+      "message": "XLSX: keep an unedited embedded chart's XML on save (#1668) (#2404)"
     },
     "last_update": {
-      "ts": "2026-11-26T15:39:39Z",
+      "ts": "2026-11-26T21:32:05Z",
       "kind": "content",
-      "commit": "b6ef428",
-      "commit_full": "b6ef428a899a145e30a1e916539a7f3232cc52a7",
-      "message": "Fill handle: Linear Trend and Growth Trend on the right-drag menu for numbers (#2628)"
+      "commit": "16c9ef0",
+      "commit_full": "16c9ef0b76aa9612c84450ccc2a08038888051cb",
+      "message": "XLSX: keep an unedited embedded chart's XML on save (#1668) (#2404)"
     },
     "self_reported": "2026-11-16"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 12.5,
-    "active_days_7d": 5,
-    "changes_7d": 46,
-    "changes_14d": 110,
-    "housekeeping_7d": 5,
+    "score": 11.1,
+    "active_days_7d": 4,
+    "changes_7d": 63,
+    "changes_14d": 140,
+    "housekeeping_7d": 4,
     "last_code_change": {
-      "ts": "2026-11-26T15:52:27Z",
-      "commit": "404c71b",
-      "commit_full": "404c71b9c35822997bec324ff9f68db96584e640",
-      "subject": "LAMBDA tail recursion reaches Excel's depth (5,459) (#2660)"
+      "ts": "2026-11-26T22:19:55Z",
+      "commit": "5aa0bd2",
+      "commit_full": "5aa0bd29e23ed62be139967240998f056dcc155e",
+      "subject": "XLSX: PivotCharts plot their cached points; deleted automatic titles stay off (#684)"
     },
-    "last_commit_ts": "2026-11-26T15:52:27Z",
+    "last_commit_ts": "2026-11-26T22:19:55Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
-      0,
       8,
       8,
       5,
@@ -491,7 +490,8 @@
       4,
       0,
       2,
-      25
+      55,
+      0
     ],
     "days": [
       {
@@ -1309,20 +1309,20 @@
       },
       {
         "d": "2026-11-26",
-        "code": 25,
+        "code": 55,
         "other": 1,
         "samples": [
           {
-            "commit": "404c71b",
-            "subject": "LAMBDA tail recursion reaches Excel's depth (5,459) (#2660)"
+            "commit": "5aa0bd2",
+            "subject": "XLSX: PivotCharts plot their cached points; deleted automatic titles stay off (#684)"
           },
           {
-            "commit": "b6ef428",
-            "subject": "Fill handle: Linear Trend and Growth Trend on the right-drag menu for numbers (#2628)"
+            "commit": "ed881a5",
+            "subject": "CSV: an Excel `sep=` first line names the delimiter (#1446) (#2270)"
           },
           {
-            "commit": "03fcfaa",
-            "subject": "nightly: forward the signer's secrets from the caller, and allow just those (#4779)"
+            "commit": "d88f56b",
+            "subject": "Set ő, ű and other Latin Extended-A letters in the Latin PDF font (#2556)"
           }
         ]
       }
@@ -4203,7 +4203,260 @@
       "breadth_pct": 75.0,
       "full_prev": 50.0,
       "kind": "content"
+    },
+    {
+      "commit": "21df25d",
+      "commit_full": "21df25dbed133fb3a8515da0c85c78fd1932e18f",
+      "commit_date": "2026-11-26T17:14:40+01:00",
+      "ts": "2026-11-26T16:14:40Z",
+      "message": "XLSX: keep self-contained workbook and sheet extLst entries on save (#2492)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-16",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "508caac",
+      "commit_full": "508caac2d1dc2747044504e469574c73fec83c94",
+      "commit_date": "2026-11-26T17:48:45+01:00",
+      "ts": "2026-11-26T16:48:45Z",
+      "message": "Keyboard: F8 Extend Selection and Shift+F8 Add or Remove Selection (#2395)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-16",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "203b41a",
+      "commit_full": "203b41a0c28ed467b57d30dbf67495be1a46ff81",
+      "commit_date": "2026-11-26T18:28:00+01:00",
+      "ts": "2026-11-26T17:28:00Z",
+      "message": "Conditional formatting: 2-/3-colour scale editor with per-stop thresholds (#1822)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-16",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "3dd804d",
+      "commit_full": "3dd804da3f4fbb2fccb5ea207d4fe3c411f21e09",
+      "commit_date": "2026-11-26T18:51:05+01:00",
+      "ts": "2026-11-26T17:51:05Z",
+      "message": "Excel open check: save workbooks with the CLI and open them in real Excel (#2650)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-16",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "f53f8ed",
+      "commit_full": "f53f8ede73b07a7c5c81d962ef6538c402c9cc23",
+      "commit_date": "2026-11-26T19:41:21+01:00",
+      "ts": "2026-11-26T18:41:21Z",
+      "message": "XLSX: keep PivotTables on a data connection, the Data Model or another workbook on save (#2499)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-16",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "34da568",
+      "commit_full": "34da5683a6f958c9f64ac223c28908e2a57d7c9e",
+      "commit_date": "2026-11-26T20:05:40+01:00",
+      "ts": "2026-11-26T19:05:40Z",
+      "message": "XIRR and IRR follow Excel's solvers (#2398)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-16",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "4b35af1",
+      "commit_full": "4b35af1609213126db4fabf64e8623fb12781c12",
+      "commit_date": "2026-11-26T20:17:22+01:00",
+      "ts": "2026-11-26T19:17:22Z",
+      "message": "Charts: 100% Stacked Line, with or without markers, draws values as shares of each category's total (#2602)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-16",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "6ec2bab",
+      "commit_full": "6ec2bab62b8e35fb3efbdfc1041e98b1567d8590",
+      "commit_date": "2026-11-26T20:29:34+01:00",
+      "ts": "2026-11-26T19:29:34Z",
+      "message": "XLSX: password to modify is kept on save and asked for on open (#2508)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-16",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "93e42af",
+      "commit_full": "93e42af30d9149d0464ca6323a5a5af61b909cbc",
+      "commit_date": "2026-11-26T20:57:04+01:00",
+      "ts": "2026-11-26T19:57:04Z",
+      "message": "Print: Print Selection in File > Print > Settings, several selected areas print one after the other (#2371)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-16",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "2f7ac98",
+      "commit_full": "2f7ac98c4421f50188a1cf0927eeb0f1e8620314",
+      "commit_date": "2026-11-26T22:19:57+01:00",
+      "ts": "2026-11-26T21:19:57Z",
+      "message": "cargo xtask bench: calculation benchmarks on fixed in-code workbooks (#2651)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-16",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
+    },
+    {
+      "commit": "16c9ef0",
+      "commit_full": "16c9ef0b76aa9612c84450ccc2a08038888051cb",
+      "commit_date": "2026-11-26T22:32:05+01:00",
+      "ts": "2026-11-26T21:32:05Z",
+      "message": "XLSX: keep an unedited embedded chart's XML on save (#1668) (#2404)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-16",
+      "full_pct": 50.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1050
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Excel (Microsoft 365)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 75.0,
+      "full_prev": 50.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-26T15:56:13+00:00"
+  "updated_at": "2026-11-27T00:09:22+00:00"
 }
