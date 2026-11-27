@@ -22,6 +22,28 @@
       "id": "solidcraft",
       "name": "SolidCraft",
       "type": "release",
+      "ts": "2026-11-27T17:33:47Z",
+      "tag": "v0.51.0",
+      "kind": "minor",
+      "changes": 408,
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.51.0",
+      "prerelease": true
+    },
+    {
+      "id": "gridcraft",
+      "name": "GridCraft",
+      "type": "release",
+      "ts": "2026-11-27T17:00:32Z",
+      "tag": "v0.19.1-nightly.20261127.46031350695.1.g6357908c69c0",
+      "kind": "patch",
+      "changes": null,
+      "url": "https://github.com/storytold/gridcraft/releases/tag/v0.19.1-nightly.20261127.46031350695.1.g6357908c69c0",
+      "prerelease": true
+    },
+    {
+      "id": "solidcraft",
+      "name": "SolidCraft",
+      "type": "release",
       "ts": "2026-11-27T05:44:25Z",
       "tag": "v0.51.0-nightly.20261127.168.1",
       "kind": "minor",
@@ -39,17 +61,6 @@
       "changes": 10,
       "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.50.0-nightly.20261126.166.1",
       "prerelease": true
-    },
-    {
-      "id": "solidcraft",
-      "name": "SolidCraft",
-      "type": "release",
-      "ts": "2026-11-26T04:31:45Z",
-      "tag": "v0.50.0",
-      "kind": "minor",
-      "changes": 301,
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.50.0",
-      "prerelease": false
     },
     {
       "id": "texturecraft",
@@ -438,17 +449,6 @@
       "changes": 132,
       "url": "https://github.com/storytold/pdfcraft/releases/tag/v0.21.0",
       "prerelease": false
-    },
-    {
-      "id": "materialcraft",
-      "name": "MaterialCraft",
-      "type": "release",
-      "ts": "2026-11-11T17:13:24Z",
-      "tag": "v0.4.0",
-      "kind": "minor",
-      "changes": 11,
-      "url": "https://github.com/storytold/materialcraft/releases/tag/v0.4.0",
-      "prerelease": false
     }
   ],
   "release_waves": [
@@ -569,14 +569,14 @@
         "active_days_7d": 7,
         "changes_7d": 54,
         "changes_14d": 130,
-        "housekeeping_7d": 5,
+        "housekeeping_7d": 6,
         "last_code_change": {
           "ts": "2026-11-27T05:33:42Z",
           "commit": "429d705",
           "commit_full": "429d705884d81048c35cc9a4528bd78607f0dd7d",
           "subject": "Bring dielectric reflections closer to OpenPBR (#750)"
         },
-        "last_commit_ts": "2026-11-27T05:33:42Z",
+        "last_commit_ts": "2026-11-27T14:19:38Z",
         "repo_since": "2026-10-14T18:33:13Z",
         "window": [
           4,
@@ -713,16 +713,16 @@
         "level": "buzzing",
         "score": 33.4,
         "active_days_7d": 7,
-        "changes_7d": 638,
-        "changes_14d": 1763,
-        "housekeeping_7d": 18,
+        "changes_7d": 642,
+        "changes_14d": 1767,
+        "housekeeping_7d": 19,
         "last_code_change": {
-          "ts": "2026-11-27T05:57:58Z",
-          "commit": "97da102",
-          "commit_full": "97da102592ef820346e0f88839fe1b4a37997a71",
-          "subject": "Use the resolution typed into Transparency Flattener dialogs (#9692)"
+          "ts": "2026-11-27T17:35:01Z",
+          "commit": "98b56f3",
+          "commit_full": "98b56f3d97ab34257caef16dd505e55974a6736b",
+          "subject": "feat(docinfo): add path area to Document Info (#6965) (#7068)"
         },
-        "last_commit_ts": "2026-11-27T05:57:58Z",
+        "last_commit_ts": "2026-11-27T17:35:01Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           283,
@@ -738,7 +738,7 @@
           45,
           92,
           198,
-          212
+          216
         ]
       },
       "release": {
@@ -935,7 +935,7 @@
         "value_since": "2026-10-10T18:11:53Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 627,
+        "revisions_since": 628,
         "hours_since": null,
         "areas_since": {
           "up": 2,
@@ -960,39 +960,39 @@
         "last_change": null
       },
       "roadmap": {
-        "revisions": 631,
-        "revisions_7d": 8,
+        "revisions": 632,
+        "revisions_7d": 9,
         "last_revision": {
-          "ts": "2026-11-26T19:39:18Z",
+          "ts": "2026-11-27T10:07:07Z",
           "kind": "content",
-          "commit": "5e129ac",
-          "commit_full": "5e129ac951a8059a51d28a22d009fbdcd23b070c",
-          "message": "Validate: add wordcraft validate, a structural integrity checker for .docx (#5875)"
+          "commit": "f83d554",
+          "commit_full": "f83d5543221a066a9b20e4e8d9288e1c283028af",
+          "message": "Pictures: an inserted or pasted picture fits the table cell, column or section it goes in (#5428) (#6903)"
         },
         "last_update": {
-          "ts": "2026-11-26T19:39:18Z",
+          "ts": "2026-11-27T10:07:07Z",
           "kind": "content",
-          "commit": "5e129ac",
-          "commit_full": "5e129ac951a8059a51d28a22d009fbdcd23b070c",
-          "message": "Validate: add wordcraft validate, a structural integrity checker for .docx (#5875)"
+          "commit": "f83d554",
+          "commit_full": "f83d5543221a066a9b20e4e8d9288e1c283028af",
+          "message": "Pictures: an inserted or pasted picture fits the table cell, column or section it goes in (#5428) (#6903)"
         },
         "self_reported": "2026-11-21"
       },
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 20.0,
+        "score": 20.7,
         "active_days_7d": 7,
-        "changes_7d": 132,
-        "changes_14d": 257,
-        "housekeeping_7d": 6,
+        "changes_7d": 136,
+        "changes_14d": 261,
+        "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-27T01:01:23Z",
-          "commit": "b322c3d",
-          "commit_full": "b322c3d816890559f2a7e1768f70029c27056d6a",
-          "subject": "test(keys): restore an_unrelated_keys_modifiers_do_not_steer_a_later_paste test (#7317) (#7602)"
+          "ts": "2026-11-27T10:07:07Z",
+          "commit": "f83d554",
+          "commit_full": "f83d5543221a066a9b20e4e8d9288e1c283028af",
+          "subject": "Pictures: an inserted or pasted picture fits the table cell, column or section it goes in (#5428) (#6903)"
         },
-        "last_commit_ts": "2026-11-27T01:01:23Z",
+        "last_commit_ts": "2026-11-27T14:17:48Z",
         "repo_since": "2026-10-06T00:23:39Z",
         "window": [
           8,
@@ -1008,7 +1008,7 @@
           18,
           40,
           37,
-          5
+          9
         ]
       },
       "release": {
@@ -1034,11 +1034,11 @@
           "v": 60.0
         },
         {
-          "t": "2026-11-26T19:39:18Z",
+          "t": "2026-11-27T10:07:07Z",
           "v": 60.0
         }
       ],
-      "history_len": 631
+      "history_len": 632
     },
     {
       "repo_url": "https://github.com/storytold/filmcraft",
@@ -1101,18 +1101,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 10.4,
-        "active_days_7d": 5,
-        "changes_7d": 31,
-        "changes_14d": 107,
-        "housekeeping_7d": 5,
+        "score": 11.4,
+        "active_days_7d": 6,
+        "changes_7d": 32,
+        "changes_14d": 108,
+        "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-26T21:35:09Z",
-          "commit": "7b8e522",
-          "commit_full": "7b8e522d63f2e2c1617dea4939feb48e769d6f2f",
-          "subject": "ui: Lumetri Scopes computed off the UI thread (#3232)"
+          "ts": "2026-11-27T09:23:02Z",
+          "commit": "8173ba3",
+          "commit_full": "8173ba3e018cf64c2afd00f7388655678992bc3e",
+          "subject": "Move craft-fcproj-format to craft-libs 33fb95c7 and use its shared schema v19 (#5319)"
         },
-        "last_commit_ts": "2026-11-26T21:35:09Z",
+        "last_commit_ts": "2026-11-27T14:18:45Z",
         "repo_since": "2026-09-30T09:22:00Z",
         "window": [
           6,
@@ -1128,7 +1128,7 @@
           0,
           3,
           16,
-          0
+          1
         ]
       },
       "release": {
@@ -1236,14 +1236,14 @@
         "active_days_7d": 4,
         "changes_7d": 13,
         "changes_14d": 64,
-        "housekeeping_7d": 4,
+        "housekeeping_7d": 5,
         "last_code_change": {
           "ts": "2026-11-26T13:52:01Z",
           "commit": "74591ab",
           "commit_full": "74591abae8e70617b6b7ad092026262d0c562115",
           "subject": "text: a hanging indent is the first tab stop (#1683) (#2155)"
         },
-        "last_commit_ts": "2026-11-26T13:52:01Z",
+        "last_commit_ts": "2026-11-27T14:17:57Z",
         "repo_since": "2026-10-06T02:13:02Z",
         "window": [
           2,
@@ -1323,7 +1323,7 @@
         "value_since": "2026-10-11T21:41:28Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 246,
+        "revisions_since": 249,
         "hours_since": {
           "from": [
             273,
@@ -1378,39 +1378,39 @@
         }
       },
       "roadmap": {
-        "revisions": 298,
-        "revisions_7d": 11,
+        "revisions": 301,
+        "revisions_7d": 14,
         "last_revision": {
-          "ts": "2026-11-27T08:46:37Z",
+          "ts": "2026-11-27T09:45:24Z",
           "kind": "content",
-          "commit": "5590eca",
-          "commit_full": "5590ecaf16bfe37443c509b3eaa1c36a6e8bff90",
-          "message": "M0.9: reject repeated CLI scale suffixes (#2400)"
+          "commit": "567762b",
+          "commit_full": "567762b9384cc024a7b6e6fe55ec8ba7b84ac496",
+          "message": "M5: fix document-scoped prototype controls and arrow-key aliases (#2387)"
         },
         "last_update": {
-          "ts": "2026-11-27T08:46:37Z",
+          "ts": "2026-11-27T09:45:24Z",
           "kind": "content",
-          "commit": "5590eca",
-          "commit_full": "5590ecaf16bfe37443c509b3eaa1c36a6e8bff90",
-          "message": "M0.9: reject repeated CLI scale suffixes (#2400)"
+          "commit": "567762b",
+          "commit_full": "567762b9384cc024a7b6e6fe55ec8ba7b84ac496",
+          "message": "M5: fix document-scoped prototype controls and arrow-key aliases (#2387)"
         },
         "self_reported": "2026-11-19"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.1,
+        "score": 14.4,
         "active_days_7d": 5,
-        "changes_7d": 87,
-        "changes_14d": 170,
-        "housekeeping_7d": 11,
+        "changes_7d": 105,
+        "changes_14d": 188,
+        "housekeeping_7d": 12,
         "last_code_change": {
-          "ts": "2026-11-27T08:49:48Z",
-          "commit": "4e83051",
-          "commit_full": "4e8305135909cebf4bb95ae97c4351fffadb1762",
-          "subject": "M10: sync shared branches across live sessions (#2643)"
+          "ts": "2026-11-27T11:30:28Z",
+          "commit": "e475fa0",
+          "commit_full": "e475fa09232ee75fd9e19ef71137830ed5d400b0",
+          "subject": "M7: a page's background can follow a colour variable in the page's mode (#2660)"
         },
-        "last_commit_ts": "2026-11-27T08:49:48Z",
+        "last_commit_ts": "2026-11-27T11:30:28Z",
         "repo_since": "2026-10-09T15:38:50Z",
         "window": [
           1,
@@ -1426,7 +1426,7 @@
           0,
           2,
           6,
-          75
+          93
         ]
       },
       "release": {
@@ -1468,11 +1468,11 @@
           "v": 53.0
         },
         {
-          "t": "2026-11-27T08:46:37Z",
+          "t": "2026-11-27T09:45:24Z",
           "v": 53.0
         }
       ],
-      "history_len": 298
+      "history_len": 301
     },
     {
       "repo_url": "https://github.com/storytold/pdfcraft",
@@ -1544,18 +1544,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 9.8,
-        "active_days_7d": 3,
-        "changes_7d": 43,
-        "changes_14d": 143,
+        "score": 10.8,
+        "active_days_7d": 4,
+        "changes_7d": 44,
+        "changes_14d": 144,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-26T20:17:32Z",
-          "commit": "d492d88",
-          "commit_full": "d492d88902e3bf723f650b8eaf93958cf8904c56",
-          "subject": "XFA: a form saved with its pages is laid out when it requires dynamic rendering, unless signed (#4538)"
+          "ts": "2026-11-27T12:38:56Z",
+          "commit": "c34c6c5",
+          "commit_full": "c34c6c5a0bd86d466f9f814c14b4cfdaa55cd7e2",
+          "subject": "CI: repair main's gate after #8168 (combines #8177–#8180, #8314, #8316, #8317) (#8435)"
         },
-        "last_commit_ts": "2026-11-26T20:17:32Z",
+        "last_commit_ts": "2026-11-27T12:38:56Z",
         "repo_since": "2026-09-30T09:17:08Z",
         "window": [
           10,
@@ -1571,7 +1571,7 @@
           0,
           0,
           37,
-          0
+          1
         ]
       },
       "release": {
@@ -1637,7 +1637,7 @@
       "parity": {
         "tracked_since": "2026-10-10T18:09:06Z",
         "value_since": "2026-10-10T18:09:06Z",
-        "releases_since": 12,
+        "releases_since": 11,
         "releases_since_capped": true,
         "revisions_since": 124,
         "hours_since": null,
@@ -1668,18 +1668,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.5,
+        "score": 13.7,
         "active_days_7d": 5,
-        "changes_7d": 67,
-        "changes_14d": 144,
-        "housekeeping_7d": 4,
+        "changes_7d": 68,
+        "changes_14d": 145,
+        "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-27T05:51:49Z",
-          "commit": "296a4bf",
-          "commit_full": "296a4bf9a64a738c255877b546548a8594264092",
-          "subject": "AutoFilter: match Unicode case-insensitively (#2912) (#3341)"
+          "ts": "2026-11-27T17:56:30Z",
+          "commit": "97f2754",
+          "commit_full": "97f2754c1ddf4caddff865015563d7f342b34c52",
+          "subject": "nightly: put macOS notices where Launcher expects them (#4851)"
         },
-        "last_commit_ts": "2026-11-27T05:51:49Z",
+        "last_commit_ts": "2026-11-27T17:56:30Z",
         "repo_since": "2026-10-06T02:09:42Z",
         "window": [
           8,
@@ -1695,7 +1695,7 @@
           0,
           2,
           55,
-          4
+          5
         ]
       },
       "release": {
@@ -1792,14 +1792,14 @@
         "active_days_7d": 6,
         "changes_7d": 42,
         "changes_14d": 105,
-        "housekeeping_7d": 4,
+        "housekeeping_7d": 5,
         "last_code_change": {
           "ts": "2026-11-27T04:57:42Z",
           "commit": "ecce20f",
           "commit_full": "ecce20f17241e78e4cb915b235506d33d7d62f0a",
           "subject": "PDF: Compress Images also compresses greyscale images coloured by a swatch (#3260)"
         },
-        "last_commit_ts": "2026-11-27T04:57:42Z",
+        "last_commit_ts": "2026-11-27T14:19:19Z",
         "repo_since": "2026-10-01T13:00:02Z",
         "window": [
           12,
@@ -1907,19 +1907,19 @@
       },
       "milestone": null,
       "activity": {
-        "level": "active",
-        "score": 19.2,
+        "level": "buzzing",
+        "score": 21.2,
         "active_days_7d": 7,
-        "changes_7d": 106,
-        "changes_14d": 341,
-        "housekeeping_7d": 10,
+        "changes_7d": 112,
+        "changes_14d": 347,
+        "housekeeping_7d": 11,
         "last_code_change": {
-          "ts": "2026-11-27T00:49:55Z",
-          "commit": "702da02",
-          "commit_full": "702da02787db0e1daeb4502c2cb355cd08a7bb2d",
-          "subject": "Merge queue batch #17136: #14621, #15962, #17117"
+          "ts": "2026-11-27T17:42:52Z",
+          "commit": "4a67487",
+          "commit_full": "4a67487a6500f5cdf0c1b50b2ebbbf555277d9b0",
+          "subject": "perf(ui): a pointer move that changes nothing under the pointer runs no frame (#17148) (#17149)"
         },
-        "last_commit_ts": "2026-11-27T00:49:55Z",
+        "last_commit_ts": "2026-11-27T17:42:52Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           30,
@@ -1935,7 +1935,7 @@
           18,
           12,
           20,
-          1
+          7
         ]
       },
       "release": {
@@ -2032,14 +2032,14 @@
         "active_days_7d": 6,
         "changes_7d": 80,
         "changes_14d": 185,
-        "housekeeping_7d": 6,
+        "housekeeping_7d": 7,
         "last_code_change": {
           "ts": "2026-11-26T20:44:52Z",
           "commit": "bfe6878",
           "commit_full": "bfe6878d6535573401aebd0217221afcda85ecc6",
           "subject": "GPU rendering is no longer slower than the CPU on comps with many large layers (up to about 10x faster) (#3737)"
         },
-        "last_commit_ts": "2026-11-26T20:44:52Z",
+        "last_commit_ts": "2026-11-27T14:19:54Z",
         "repo_since": "2026-10-01T16:48:39Z",
         "window": [
           24,
@@ -2152,14 +2152,14 @@
         "active_days_7d": 5,
         "changes_7d": 17,
         "changes_14d": 41,
-        "housekeeping_7d": 3,
+        "housekeeping_7d": 4,
         "last_code_change": {
           "ts": "2026-11-26T14:44:29Z",
           "commit": "81766ee",
           "commit_full": "81766eebb6a0d275f6e592c90f83676be2302f85",
           "subject": "test(clap): use portable descriptor readiness fixture (#1795)"
         },
-        "last_commit_ts": "2026-11-26T14:44:29Z",
+        "last_commit_ts": "2026-11-27T14:17:52Z",
         "repo_since": "2026-10-06T00:08:04Z",
         "window": [
           1,
@@ -2268,18 +2268,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 12.2,
-        "active_days_7d": 5,
-        "changes_7d": 54,
-        "changes_14d": 109,
-        "housekeeping_7d": 5,
+        "score": 15.6,
+        "active_days_7d": 6,
+        "changes_7d": 63,
+        "changes_14d": 118,
+        "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-26T12:43:40Z",
-          "commit": "b3bc4a7",
-          "commit_full": "b3bc4a7618e87c65096889855d7b4e296660d5c3",
-          "subject": "Faster CJK-heavy drawings: per-thread font caches, offscreen glyphs left out (#666, #662) (#997)"
+          "ts": "2026-11-27T13:43:50Z",
+          "commit": "717f952",
+          "commit_full": "717f9520d3acbd225b506a83d79d593ae504709c",
+          "subject": "Linetypes: a dash budget per build, and say when a run is drawn continuous (#3564)"
         },
-        "last_commit_ts": "2026-11-26T14:12:38Z",
+        "last_commit_ts": "2026-11-27T14:44:56Z",
         "repo_since": "2026-10-06T00:15:47Z",
         "window": [
           3,
@@ -2295,7 +2295,7 @@
           5,
           7,
           33,
-          0
+          9
         ]
       },
       "release": {
@@ -2388,18 +2388,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 17.4,
+        "score": 18.0,
         "active_days_7d": 7,
-        "changes_7d": 55,
-        "changes_14d": 226,
-        "housekeeping_7d": 3,
+        "changes_7d": 58,
+        "changes_14d": 229,
+        "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-27T06:06:55Z",
-          "commit": "5bc4566",
-          "commit_full": "5bc4566bfb7bb2e82da3177e35e16b4b03c9ce29",
-          "subject": "MR5: Android spacing follows the desktop more closely (#1966) (#2013)"
+          "ts": "2026-11-27T16:49:35Z",
+          "commit": "0ae50cc",
+          "commit_full": "0ae50cc0328625199a0bdb1a8f1a64df43e7da7f",
+          "subject": "MR9: Android data tables fit and span as on the desktop; right-to-left text (#2011)"
         },
-        "last_commit_ts": "2026-11-27T06:06:55Z",
+        "last_commit_ts": "2026-11-27T16:49:35Z",
         "repo_since": "2026-10-12T18:17:00Z",
         "window": [
           41,
@@ -2415,7 +2415,7 @@
           6,
           13,
           13,
-          4
+          7
         ]
       },
       "release": {
@@ -2509,14 +2509,14 @@
         "active_days_7d": 3,
         "changes_7d": 6,
         "changes_14d": 35,
-        "housekeeping_7d": 3,
+        "housekeeping_7d": 4,
         "last_code_change": {
           "ts": "2026-11-26T06:47:07Z",
           "commit": "e7ec9cb",
           "commit_full": "e7ec9cb6bd9789514ac5889f07f9e70df7bd35c5",
           "subject": "Nightly: stop blocking a refused launch on macOS (#323)"
         },
-        "last_commit_ts": "2026-11-26T06:47:07Z",
+        "last_commit_ts": "2026-11-27T14:17:55Z",
         "repo_since": "2026-11-01T19:58:46Z",
         "window": [
           7,
@@ -2617,14 +2617,14 @@
         "active_days_7d": 7,
         "changes_7d": 116,
         "changes_14d": 404,
-        "housekeeping_7d": 7,
+        "housekeeping_7d": 8,
         "last_code_change": {
           "ts": "2026-11-27T06:47:29Z",
           "commit": "8371374",
           "commit_full": "837137462c6c6c3aef6c5d23eb468e8222fa4c18",
           "subject": "Box the model context a worker hands back (#2487)"
         },
-        "last_commit_ts": "2026-11-27T06:47:29Z",
+        "last_commit_ts": "2026-11-27T14:18:07Z",
         "repo_since": "2026-10-31T14:52:14Z",
         "window": [
           33,
@@ -2721,18 +2721,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 39.7,
+        "score": 41.3,
         "active_days_7d": 7,
-        "changes_7d": 1609,
-        "changes_14d": 3006,
-        "housekeeping_7d": 54,
+        "changes_7d": 1760,
+        "changes_14d": 3157,
+        "housekeeping_7d": 56,
         "last_code_change": {
-          "ts": "2026-11-27T08:18:49Z",
-          "commit": "a5ef51f",
-          "commit_full": "a5ef51f39270f206eb73cacece05663dc6cb1b1b",
-          "subject": "Merge #23027: Shell: a refusal at every wall names the kernel's reason unless the wall really folds"
+          "ts": "2026-11-27T18:00:24Z",
+          "commit": "7b2565c",
+          "commit_full": "7b2565ce84587337c872f7dcb184843d09af46ee",
+          "subject": "Merge #23171: Sketch: starting a tool closes the open sketch window, so its size boxes take typing"
         },
-        "last_commit_ts": "2026-11-27T08:18:49Z",
+        "last_commit_ts": "2026-11-27T18:00:24Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           198,
@@ -2748,7 +2748,7 @@
           299,
           387,
           253,
-          75
+          226
         ]
       },
       "release": {
@@ -2817,18 +2817,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 8.5,
-        "active_days_7d": 5,
-        "changes_7d": 16,
-        "changes_14d": 82,
-        "housekeeping_7d": 5,
+        "score": 9.5,
+        "active_days_7d": 6,
+        "changes_7d": 17,
+        "changes_14d": 83,
+        "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-26T06:45:52Z",
-          "commit": "259566a",
-          "commit_full": "259566a0338706a8545b4bc19506ef49c1fbab71",
-          "subject": "Nightly: stop blocking a refused launch on macOS (#654)"
+          "ts": "2026-11-27T09:17:27Z",
+          "commit": "c44b0c9",
+          "commit_full": "c44b0c971d48c29b67693c2f624c9cc6bd2e3303",
+          "subject": "fix(engine): a batch taken just before forget_pictures is always thrown away (M8) (#672)"
         },
-        "last_commit_ts": "2026-11-26T06:45:52Z",
+        "last_commit_ts": "2026-11-27T14:19:06Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
           14,
@@ -2844,7 +2844,7 @@
           6,
           5,
           1,
-          0
+          1
         ]
       },
       "release": {
@@ -2912,18 +2912,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 28.2,
+        "score": 29.1,
         "active_days_7d": 7,
-        "changes_7d": 498,
-        "changes_14d": 620,
+        "changes_7d": 523,
+        "changes_14d": 645,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-27T06:43:19Z",
-          "commit": "5ced606",
-          "commit_full": "5ced606eec3b9e7b9db05c95c855bdd38c1f34ef",
-          "subject": "Merge branch 's-pool' into s-int3"
+          "ts": "2026-11-27T16:45:45Z",
+          "commit": "cb19771",
+          "commit_full": "cb19771f7a2ab35ca2e44bd603be10256933916c",
+          "subject": "Status comment pings: no option is named by a question or hedge, failed pings stand apart from edits and are given up after 3 tries, questions already shown are"
         },
-        "last_commit_ts": "2026-11-27T06:43:19Z",
+        "last_commit_ts": "2026-11-27T16:45:45Z",
         "repo_since": "2026-11-02T14:36:17Z",
         "window": [
           21,
@@ -2939,7 +2939,7 @@
           44,
           201,
           73,
-          27
+          52
         ]
       },
       "release": null,
@@ -3034,5 +3034,5 @@
     "missing": [],
     "candidates": []
   },
-  "generated_at": "2026-11-27T08:53:14+00:00"
+  "generated_at": "2026-11-27T18:35:11+00:00"
 }

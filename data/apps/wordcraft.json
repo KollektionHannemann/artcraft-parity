@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "5e129ac",
-  "latest_commit_date": "2026-11-26T20:39:18+01:00",
-  "latest_message": "Validate: add wordcraft validate, a structural integrity checker for .docx (#5875)",
+  "latest_commit": "f83d554",
+  "latest_commit_date": "2026-11-27T10:07:07Z",
+  "latest_message": "Pictures: an inserted or pasted picture fits the table cell, column or section it goes in (#5428) (#6903)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 627,
+    "revisions_since": 628,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,39 +520,39 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 631,
-    "revisions_7d": 8,
+    "revisions": 632,
+    "revisions_7d": 9,
     "last_revision": {
-      "ts": "2026-11-26T19:39:18Z",
+      "ts": "2026-11-27T10:07:07Z",
       "kind": "content",
-      "commit": "5e129ac",
-      "commit_full": "5e129ac951a8059a51d28a22d009fbdcd23b070c",
-      "message": "Validate: add wordcraft validate, a structural integrity checker for .docx (#5875)"
+      "commit": "f83d554",
+      "commit_full": "f83d5543221a066a9b20e4e8d9288e1c283028af",
+      "message": "Pictures: an inserted or pasted picture fits the table cell, column or section it goes in (#5428) (#6903)"
     },
     "last_update": {
-      "ts": "2026-11-26T19:39:18Z",
+      "ts": "2026-11-27T10:07:07Z",
       "kind": "content",
-      "commit": "5e129ac",
-      "commit_full": "5e129ac951a8059a51d28a22d009fbdcd23b070c",
-      "message": "Validate: add wordcraft validate, a structural integrity checker for .docx (#5875)"
+      "commit": "f83d554",
+      "commit_full": "f83d5543221a066a9b20e4e8d9288e1c283028af",
+      "message": "Pictures: an inserted or pasted picture fits the table cell, column or section it goes in (#5428) (#6903)"
     },
     "self_reported": "2026-11-21"
   },
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 20.0,
+    "score": 20.7,
     "active_days_7d": 7,
-    "changes_7d": 132,
-    "changes_14d": 257,
-    "housekeeping_7d": 6,
+    "changes_7d": 136,
+    "changes_14d": 261,
+    "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-27T01:01:23Z",
-      "commit": "b322c3d",
-      "commit_full": "b322c3d816890559f2a7e1768f70029c27056d6a",
-      "subject": "test(keys): restore an_unrelated_keys_modifiers_do_not_steer_a_later_paste test (#7317) (#7602)"
+      "ts": "2026-11-27T10:07:07Z",
+      "commit": "f83d554",
+      "commit_full": "f83d5543221a066a9b20e4e8d9288e1c283028af",
+      "subject": "Pictures: an inserted or pasted picture fits the table cell, column or section it goes in (#5428) (#6903)"
     },
-    "last_commit_ts": "2026-11-27T01:01:23Z",
+    "last_commit_ts": "2026-11-27T14:17:48Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
       8,
@@ -568,7 +568,7 @@
       18,
       40,
       37,
-      5
+      9
     ],
     "days": [
       {
@@ -1485,20 +1485,20 @@
       },
       {
         "d": "2026-11-27",
-        "code": 5,
-        "other": 0,
+        "code": 9,
+        "other": 1,
         "samples": [
           {
-            "commit": "b322c3d",
-            "subject": "test(keys): restore an_unrelated_keys_modifiers_do_not_steer_a_later_paste test (#7317) (#7602)"
+            "commit": "f83d554",
+            "subject": "Pictures: an inserted or pasted picture fits the table cell, column or section it goes in (#5428) (#6903)"
           },
           {
-            "commit": "64e297c",
-            "subject": "test(ui-egui): restore shortcuts_run_after_a_pane_resize test (#1756) (#7317) (#7579)"
+            "commit": "0f4e80a",
+            "subject": "#7165: Symbol drop-down has compact cells, and hover names the character (#7173)"
           },
           {
-            "commit": "ca8feb7",
-            "subject": "test(engine): Copy with a bare caret beside an object is disabled, like Cut (#7892)"
+            "commit": "bab08b7",
+            "subject": "#7841: dark-mode interface text gets the lighter Gamma(0.8) curve again (#7867)"
           }
         ]
       }
@@ -16242,7 +16242,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "f83d554",
+      "commit_full": "f83d5543221a066a9b20e4e8d9288e1c283028af",
+      "commit_date": "2026-11-27T10:07:07Z",
+      "ts": "2026-11-27T10:07:07Z",
+      "message": "Pictures: an inserted or pasted picture fits the table cell, column or section it goes in (#5428) (#6903)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-21",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-27T08:52:05+00:00"
+  "updated_at": "2026-11-27T18:33:04+00:00"
 }

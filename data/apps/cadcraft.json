@@ -348,18 +348,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 12.2,
-    "active_days_7d": 5,
-    "changes_7d": 54,
-    "changes_14d": 109,
-    "housekeeping_7d": 5,
+    "score": 15.6,
+    "active_days_7d": 6,
+    "changes_7d": 63,
+    "changes_14d": 118,
+    "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-26T12:43:40Z",
-      "commit": "b3bc4a7",
-      "commit_full": "b3bc4a7618e87c65096889855d7b4e296660d5c3",
-      "subject": "Faster CJK-heavy drawings: per-thread font caches, offscreen glyphs left out (#666, #662) (#997)"
+      "ts": "2026-11-27T13:43:50Z",
+      "commit": "717f952",
+      "commit_full": "717f9520d3acbd225b506a83d79d593ae504709c",
+      "subject": "Linetypes: a dash budget per build, and say when a run is drawn continuous (#3564)"
     },
-    "last_commit_ts": "2026-11-26T14:12:38Z",
+    "last_commit_ts": "2026-11-27T14:44:56Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
       3,
@@ -375,7 +375,7 @@
       5,
       7,
       33,
-      0
+      9
     ],
     "days": [
       {
@@ -1173,6 +1173,25 @@
             "subject": "SPLINE: closed fit-point splines built as AutoCAD 2024 builds them (#2705)"
           }
         ]
+      },
+      {
+        "d": "2026-11-27",
+        "code": 9,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "717f952",
+            "subject": "Linetypes: a dash budget per build, and say when a run is drawn continuous (#3564)"
+          },
+          {
+            "commit": "dd423db",
+            "subject": "LISP: an expression typed at a prompt gets a short step allowance (#3572)"
+          },
+          {
+            "commit": "fa6e282",
+            "subject": "fix(io): read VIEW and UCS records, and each layout's named UCS, without scanning, so crafted files don't open in quadratic time (#3562)"
+          }
+        ]
       }
     ]
   },
@@ -1753,5 +1772,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-27T00:09:20+00:00"
+  "updated_at": "2026-11-27T18:33:19+00:00"
 }

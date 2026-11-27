@@ -433,7 +433,7 @@
   "parity": {
     "tracked_since": "2026-10-10T18:09:06Z",
     "value_since": "2026-10-10T18:09:06Z",
-    "releases_since": 12,
+    "releases_since": 11,
     "releases_since_capped": true,
     "revisions_since": 124,
     "hours_since": null,
@@ -464,18 +464,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 13.5,
+    "score": 13.7,
     "active_days_7d": 5,
-    "changes_7d": 67,
-    "changes_14d": 144,
-    "housekeeping_7d": 4,
+    "changes_7d": 68,
+    "changes_14d": 145,
+    "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-27T05:51:49Z",
-      "commit": "296a4bf",
-      "commit_full": "296a4bf9a64a738c255877b546548a8594264092",
-      "subject": "AutoFilter: match Unicode case-insensitively (#2912) (#3341)"
+      "ts": "2026-11-27T17:56:30Z",
+      "commit": "97f2754",
+      "commit_full": "97f2754c1ddf4caddff865015563d7f342b34c52",
+      "subject": "nightly: put macOS notices where Launcher expects them (#4851)"
     },
-    "last_commit_ts": "2026-11-27T05:51:49Z",
+    "last_commit_ts": "2026-11-27T17:56:30Z",
     "repo_since": "2026-10-06T02:09:42Z",
     "window": [
       8,
@@ -491,7 +491,7 @@
       0,
       2,
       55,
-      4
+      5
     ],
     "days": [
       {
@@ -1328,9 +1328,13 @@
       },
       {
         "d": "2026-11-27",
-        "code": 4,
-        "other": 0,
+        "code": 5,
+        "other": 3,
         "samples": [
+          {
+            "commit": "97f2754",
+            "subject": "nightly: put macOS notices where Launcher expects them (#4851)"
+          },
           {
             "commit": "296a4bf",
             "subject": "AutoFilter: match Unicode case-insensitively (#2912) (#3341)"
@@ -1338,16 +1342,28 @@
           {
             "commit": "401041f",
             "subject": "fix(ui): keep dialog errors visible after Enter (#2189) (#3402)"
-          },
-          {
-            "commit": "959497c",
-            "subject": "fix(chart): render explicit Excel chart styles 1 and 9 (#2867)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.19.1-nightly.20261127.46031350695.1.g6357908c69c0",
+      "name": "gridcraft Nightly v0.19.1-nightly.20261127.46031350695.1.g6357908c69c0",
+      "ts": "2026-11-27T17:00:32Z",
+      "url": "https://github.com/storytold/gridcraft/releases/tag/v0.19.1-nightly.20261127.46031350695.1.g6357908c69c0",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "patch"
+    },
     {
       "tag": "v0.19.1",
       "name": "GridCraft v0.19.1",
@@ -1525,23 +1541,6 @@
       "url": "https://github.com/storytold/gridcraft/releases/tag/v0.11.1",
       "changes": 234,
       "new_contributors": 49,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.10.0",
-      "name": "GridCraft v0.10.0",
-      "ts": "2026-10-21T18:12:04Z",
-      "url": "https://github.com/storytold/gridcraft/releases/tag/v0.10.0",
-      "changes": 2,
-      "new_contributors": null,
       "platforms": [
         "macOS",
         "Windows",
@@ -4477,5 +4476,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-27T08:52:16+00:00"
+  "updated_at": "2026-11-27T18:33:24+00:00"
 }
