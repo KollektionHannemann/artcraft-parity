@@ -378,18 +378,18 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 10.2,
-    "active_days_7d": 5,
-    "changes_7d": 31,
-    "changes_14d": 161,
+    "score": 13.9,
+    "active_days_7d": 6,
+    "changes_7d": 43,
+    "changes_14d": 173,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-26T20:44:52Z",
-      "commit": "bfe6878",
-      "commit_full": "bfe6878d6535573401aebd0217221afcda85ecc6",
-      "subject": "GPU rendering is no longer slower than the CPU on comps with many large layers (up to about 10x faster) (#3737)"
+      "ts": "2026-11-28T09:10:16Z",
+      "commit": "143a835",
+      "commit_full": "143a8357dac34f965a5a6f594d8b3be80cb14069",
+      "subject": "Keep layer property targets when duplicating compositions (#4229)"
     },
-    "last_commit_ts": "2026-11-27T14:19:54Z",
+    "last_commit_ts": "2026-11-28T09:10:16Z",
     "repo_since": "2026-10-01T16:48:39Z",
     "window": [
       4,
@@ -405,7 +405,7 @@
       2,
       17,
       0,
-      0
+      12
     ],
     "days": [
       {
@@ -1412,6 +1412,25 @@
         "code": 0,
         "other": 1,
         "samples": []
+      },
+      {
+        "d": "2026-11-28",
+        "code": 12,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "143a835",
+            "subject": "Keep layer property targets when duplicating compositions (#4229)"
+          },
+          {
+            "commit": "01060e2",
+            "subject": "Retire the GPU context after a polling panic (#4230)"
+          },
+          {
+            "commit": "84c364f",
+            "subject": "Recover project state when a script host disconnects (#4232)"
+          }
+        ]
       }
     ]
   },
@@ -2015,5 +2034,5 @@
       "kind": "editorial"
     }
   ],
-  "updated_at": "2026-11-28T01:43:22+00:00"
+  "updated_at": "2026-11-28T09:33:23+00:00"
 }

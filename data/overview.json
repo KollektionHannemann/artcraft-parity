@@ -19,6 +19,28 @@
   ],
   "latest_events": [
     {
+      "id": "anicraft",
+      "name": "AniCraft",
+      "type": "release",
+      "ts": "2026-11-28T08:56:06Z",
+      "tag": "v0.3.0",
+      "kind": "minor",
+      "changes": 234,
+      "url": "https://github.com/storytold/anicraft/releases/tag/v0.3.0",
+      "prerelease": false
+    },
+    {
+      "id": "solidcraft",
+      "name": "SolidCraft",
+      "type": "release",
+      "ts": "2026-11-28T04:18:46Z",
+      "tag": "v0.51.2",
+      "kind": "patch",
+      "changes": 99,
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.51.2",
+      "prerelease": false
+    },
+    {
       "id": "cadcraft",
       "name": "CADCraft",
       "type": "release",
@@ -71,17 +93,6 @@
       "kind": "patch",
       "changes": null,
       "url": "https://github.com/storytold/gridcraft/releases/tag/v0.19.1-nightly.20261127.46031350695.1.g6357908c69c0",
-      "prerelease": true
-    },
-    {
-      "id": "solidcraft",
-      "name": "SolidCraft",
-      "type": "release",
-      "ts": "2026-11-27T05:44:25Z",
-      "tag": "v0.51.0-nightly.20261127.168.1",
-      "kind": "minor",
-      "changes": 282,
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.51.0-nightly.20261127.168.1",
       "prerelease": true
     },
     {
@@ -438,20 +449,20 @@
       "changes": 14,
       "url": "https://github.com/storytold/lightcraft/releases/tag/v0.21.0",
       "prerelease": false
-    },
-    {
-      "id": "wordcraft",
-      "name": "WordCraft",
-      "type": "release",
-      "ts": "2026-11-11T19:12:52Z",
-      "tag": "v0.18.0",
-      "kind": "minor",
-      "changes": 35,
-      "url": "https://github.com/storytold/wordcraft/releases/tag/v0.18.0",
-      "prerelease": false
     }
   ],
   "release_waves": [
+    {
+      "day": "2026-11-28",
+      "apps": 2,
+      "changes": 333,
+      "largest": {
+        "id": "anicraft",
+        "name": "AniCraft",
+        "tag": "v0.3.0",
+        "changes": 234
+      }
+    },
     {
       "day": "2026-11-27",
       "apps": 1,
@@ -565,18 +576,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 15.8,
+        "score": 17.1,
         "active_days_7d": 7,
-        "changes_7d": 55,
-        "changes_14d": 135,
+        "changes_7d": 61,
+        "changes_14d": 141,
         "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-28T01:21:37Z",
-          "commit": "95d90ee",
-          "commit_full": "95d90ee4532f6cb19e4cbfccf357e51b74ad6c3a",
-          "subject": "Parity: RFC-0052 headless column in the parity report (#888)"
+          "ts": "2026-11-28T08:09:53Z",
+          "commit": "5e8ccdb",
+          "commit_full": "5e8ccdb9d367e455ad593e96e5eb8e3a6dcec1fb",
+          "subject": "Make the project renamable (#857) (#864)"
         },
-        "last_commit_ts": "2026-11-28T01:21:37Z",
+        "last_commit_ts": "2026-11-28T08:09:53Z",
         "repo_since": "2026-10-14T18:33:13Z",
         "window": [
           11,
@@ -592,7 +603,7 @@
           14,
           18,
           7,
-          3
+          9
         ]
       },
       "release": {
@@ -715,18 +726,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 26.9,
-        "active_days_7d": 6,
-        "changes_7d": 607,
-        "changes_14d": 1487,
-        "housekeeping_7d": 14,
+        "score": 34.2,
+        "active_days_7d": 7,
+        "changes_7d": 767,
+        "changes_14d": 1647,
+        "housekeeping_7d": 18,
         "last_code_change": {
-          "ts": "2026-11-27T22:29:02Z",
-          "commit": "5d70217",
-          "commit_full": "5d70217e0cd095e90dd41e970d3d3fc4ddbf1867",
-          "subject": "M3: Copy complete information-panel readouts on click (#8826)"
+          "ts": "2026-11-28T09:24:42Z",
+          "commit": "cefcc8a",
+          "commit_full": "cefcc8a95582e0f067c9c4800250e08066397ae7",
+          "subject": "CI: the cold cache clear fails on a late warm leg before its job times out (#9882)"
         },
-        "last_commit_ts": "2026-11-27T22:29:02Z",
+        "last_commit_ts": "2026-11-28T09:24:42Z",
         "repo_since": "2026-09-30T09:12:46Z",
         "window": [
           214,
@@ -742,7 +753,7 @@
           92,
           198,
           219,
-          0
+          160
         ]
       },
       "release": {
@@ -844,18 +855,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 16.5,
+        "score": 17.3,
         "active_days_7d": 7,
-        "changes_7d": 105,
-        "changes_14d": 178,
+        "changes_7d": 108,
+        "changes_14d": 181,
         "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-28T01:04:23Z",
-          "commit": "6f08524",
-          "commit_full": "6f08524d58e4db8a89c85e1bdea4f2e38788e024",
-          "subject": "LR-EDIT-OPTICS-DEFRINGE: AI Defringe, running a defringe model the user installs (#4545)"
+          "ts": "2026-11-28T03:55:40Z",
+          "commit": "4d83814",
+          "commit_full": "4d8381409c20c2f90f284d68a5622ef981200808",
+          "subject": "LR-IMP-ADD-DIALOG: library.import reports what its folder walk skipped (#4319) (#4321)"
         },
-        "last_commit_ts": "2026-11-28T01:04:23Z",
+        "last_commit_ts": "2026-11-28T03:55:40Z",
         "repo_since": "2026-09-30T14:04:12Z",
         "window": [
           7,
@@ -871,7 +882,7 @@
           2,
           69,
           12,
-          3
+          6
         ]
       },
       "release": {
@@ -1327,7 +1338,7 @@
         "value_since": "2026-10-11T21:41:28Z",
         "releases_since": 12,
         "releases_since_capped": true,
-        "revisions_since": 249,
+        "revisions_since": 252,
         "hours_since": {
           "from": [
             273,
@@ -1382,39 +1393,39 @@
         }
       },
       "roadmap": {
-        "revisions": 301,
-        "revisions_7d": 14,
+        "revisions": 304,
+        "revisions_7d": 17,
         "last_revision": {
-          "ts": "2026-11-27T09:45:24Z",
+          "ts": "2026-11-28T08:06:27Z",
           "kind": "content",
-          "commit": "567762b",
-          "commit_full": "567762b9384cc024a7b6e6fe55ec8ba7b84ac496",
-          "message": "M5: fix document-scoped prototype controls and arrow-key aliases (#2387)"
+          "commit": "df66e8a",
+          "commit_full": "df66e8a406beaf05521cc25b64dfa19d05937105",
+          "message": "M6: Uno Platform C# Markup code target (layers and auto layout) (#2364)"
         },
         "last_update": {
-          "ts": "2026-11-27T09:45:24Z",
+          "ts": "2026-11-28T08:06:27Z",
           "kind": "content",
-          "commit": "567762b",
-          "commit_full": "567762b9384cc024a7b6e6fe55ec8ba7b84ac496",
-          "message": "M5: fix document-scoped prototype controls and arrow-key aliases (#2387)"
+          "commit": "df66e8a",
+          "commit_full": "df66e8a406beaf05521cc25b64dfa19d05937105",
+          "message": "M6: Uno Platform C# Markup code target (layers and auto layout) (#2364)"
         },
         "self_reported": "2026-11-19"
       },
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 13.4,
+        "score": 16.5,
         "active_days_7d": 5,
-        "changes_7d": 111,
-        "changes_14d": 194,
+        "changes_7d": 134,
+        "changes_14d": 217,
         "housekeeping_7d": 12,
         "last_code_change": {
-          "ts": "2026-11-28T01:41:04Z",
-          "commit": "5aca499",
-          "commit_full": "5aca499f21ff8f6cfaf295a40613f669cda466da",
-          "subject": "M4: superscript and subscript per range of characters (#2338) (#2668)"
+          "ts": "2026-11-28T09:32:36Z",
+          "commit": "745fe1a",
+          "commit_full": "745fe1aae763ee3503157f686094063c9448a7d3",
+          "subject": "i18n(sv): translate 51 new strings (#2682)"
         },
-        "last_commit_ts": "2026-11-28T01:41:04Z",
+        "last_commit_ts": "2026-11-28T09:32:36Z",
         "repo_since": "2026-10-09T15:38:50Z",
         "window": [
           5,
@@ -1430,7 +1441,7 @@
           2,
           6,
           98,
-          2
+          25
         ]
       },
       "release": {
@@ -1472,11 +1483,11 @@
           "v": 53.0
         },
         {
-          "t": "2026-11-27T09:45:24Z",
+          "t": "2026-11-28T08:06:27Z",
           "v": 53.0
         }
       ],
-      "history_len": 301
+      "history_len": 304
     },
     {
       "repo_url": "https://github.com/storytold/pdfcraft",
@@ -1912,18 +1923,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 18.8,
+        "score": 19.3,
         "active_days_7d": 7,
-        "changes_7d": 107,
-        "changes_14d": 324,
+        "changes_7d": 108,
+        "changes_14d": 325,
         "housekeeping_7d": 11,
         "last_code_change": {
-          "ts": "2026-11-28T01:00:02Z",
-          "commit": "301922c",
-          "commit_full": "301922ccef074624c9827d3b064416c9be274d03",
-          "subject": "Parity: RFC-0052 headless column from the engine registry (#17252)"
+          "ts": "2026-11-28T07:11:58Z",
+          "commit": "391cb01",
+          "commit_full": "391cb0171004a5cb6b7b5138ac96c1ceb5ed8ae1",
+          "subject": "--version: name the commit of a dev build from git (#5247) (#5300)"
         },
-        "last_commit_ts": "2026-11-28T01:00:02Z",
+        "last_commit_ts": "2026-11-28T07:11:58Z",
         "repo_since": "2026-09-30T06:12:04Z",
         "window": [
           77,
@@ -1939,7 +1950,7 @@
           12,
           20,
           13,
-          1
+          2
         ]
       },
       "release": {
@@ -2032,18 +2043,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 10.2,
-        "active_days_7d": 5,
-        "changes_7d": 31,
-        "changes_14d": 161,
+        "score": 13.9,
+        "active_days_7d": 6,
+        "changes_7d": 43,
+        "changes_14d": 173,
         "housekeeping_7d": 6,
         "last_code_change": {
-          "ts": "2026-11-26T20:44:52Z",
-          "commit": "bfe6878",
-          "commit_full": "bfe6878d6535573401aebd0217221afcda85ecc6",
-          "subject": "GPU rendering is no longer slower than the CPU on comps with many large layers (up to about 10x faster) (#3737)"
+          "ts": "2026-11-28T09:10:16Z",
+          "commit": "143a835",
+          "commit_full": "143a8357dac34f965a5a6f594d8b3be80cb14069",
+          "subject": "Keep layer property targets when duplicating compositions (#4229)"
         },
-        "last_commit_ts": "2026-11-27T14:19:54Z",
+        "last_commit_ts": "2026-11-28T09:10:16Z",
         "repo_since": "2026-10-01T16:48:39Z",
         "window": [
           4,
@@ -2059,7 +2070,7 @@
           2,
           17,
           0,
-          0
+          12
         ]
       },
       "release": {
@@ -2151,19 +2162,19 @@
       },
       "milestone": null,
       "activity": {
-        "level": "quiet",
-        "score": 7.4,
-        "active_days_7d": 6,
-        "changes_7d": 18,
-        "changes_14d": 41,
-        "housekeeping_7d": 4,
+        "level": "active",
+        "score": 10.9,
+        "active_days_7d": 7,
+        "changes_7d": 29,
+        "changes_14d": 52,
+        "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-27T22:14:32Z",
-          "commit": "4f91806",
-          "commit_full": "4f91806d62e9a7d8c9d5537136897cd109844961",
-          "subject": "parity: headless column from the engine registry (RFC-0052) (#1871)"
+          "ts": "2026-11-28T09:31:14Z",
+          "commit": "7478ee7",
+          "commit_full": "7478ee70a7dcc6a727eda52486e3d55352c6cfb0",
+          "subject": "mix.pan: a stereo track says which channel it pans (#1352)"
         },
-        "last_commit_ts": "2026-11-27T22:14:32Z",
+        "last_commit_ts": "2026-11-28T09:31:14Z",
         "repo_since": "2026-10-06T00:08:04Z",
         "window": [
           2,
@@ -2179,7 +2190,7 @@
           2,
           9,
           1,
-          0
+          11
         ]
       },
       "release": {
@@ -2392,18 +2403,18 @@
       "milestone": null,
       "activity": {
         "level": "active",
-        "score": 14.7,
-        "active_days_7d": 6,
-        "changes_7d": 56,
-        "changes_14d": 190,
-        "housekeeping_7d": 4,
+        "score": 19.6,
+        "active_days_7d": 7,
+        "changes_7d": 85,
+        "changes_14d": 219,
+        "housekeeping_7d": 5,
         "last_code_change": {
-          "ts": "2026-11-27T23:54:01Z",
-          "commit": "3f9d146",
-          "commit_full": "3f9d1469b70e0f6d1a80eba31d0af969f08e5150",
-          "subject": "MR5: cellpadding, Outlook's mso- spacing and coloured bars in HTML mail (#2021)"
+          "ts": "2026-11-28T09:03:26Z",
+          "commit": "022bf67",
+          "commit_full": "022bf67da2106beb3face8fbcc69d7f4ea740f05",
+          "subject": "Georgian: fill the 131 missing texts and shorten the ones that were cut off (#1822)"
         },
-        "last_commit_ts": "2026-11-27T23:54:01Z",
+        "last_commit_ts": "2026-11-28T09:03:26Z",
         "repo_since": "2026-10-12T18:17:00Z",
         "window": [
           23,
@@ -2419,7 +2430,7 @@
           13,
           13,
           9,
-          0
+          29
         ]
       },
       "release": {
@@ -2509,18 +2520,18 @@
       "milestone": null,
       "activity": {
         "level": "quiet",
-        "score": 4.4,
-        "active_days_7d": 3,
-        "changes_7d": 6,
-        "changes_14d": 28,
+        "score": 6.0,
+        "active_days_7d": 4,
+        "changes_7d": 8,
+        "changes_14d": 30,
         "housekeeping_7d": 4,
         "last_code_change": {
-          "ts": "2026-11-26T06:47:07Z",
-          "commit": "e7ec9cb",
-          "commit_full": "e7ec9cb6bd9789514ac5889f07f9e70df7bd35c5",
-          "subject": "Nightly: stop blocking a refused launch on macOS (#323)"
+          "ts": "2026-11-28T07:48:31Z",
+          "commit": "7a20298",
+          "commit_full": "7a20298e43b82e081d07568a88a862bad5b73e27",
+          "subject": "Accept whole-number floats for Int2/Int3/Int4 in coerce_json (#227)"
         },
-        "last_commit_ts": "2026-11-27T14:17:55Z",
+        "last_commit_ts": "2026-11-28T07:48:31Z",
         "repo_since": "2026-11-01T19:58:46Z",
         "window": [
           4,
@@ -2536,7 +2547,7 @@
           2,
           3,
           0,
-          0
+          2
         ]
       },
       "release": {
@@ -2725,18 +2736,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 37.5,
+        "score": 40.8,
         "active_days_7d": 7,
-        "changes_7d": 1740,
-        "changes_14d": 3059,
-        "housekeeping_7d": 52,
+        "changes_7d": 1853,
+        "changes_14d": 3172,
+        "housekeeping_7d": 55,
         "last_code_change": {
-          "ts": "2026-11-28T01:13:25Z",
-          "commit": "e2f6d07",
-          "commit_full": "e2f6d0737ba612e9441b55bf45498c4c539531a7",
-          "subject": "Merge #23279: Kernel interface: sweeps, helical sweeps and lofts go through the kernel trait"
+          "ts": "2026-11-28T08:32:10Z",
+          "commit": "3abab5b",
+          "commit_full": "3abab5b0a400895ee90642f15389213c6bada70b",
+          "subject": "Merge #23521: Patterns can repeat modelled tapered holes without a Loop Orientation refusal"
         },
-        "last_commit_ts": "2026-11-28T01:13:25Z",
+        "last_commit_ts": "2026-11-28T08:32:10Z",
         "repo_since": "2026-10-07T17:01:29Z",
         "window": [
           156,
@@ -2752,16 +2763,16 @@
           387,
           253,
           314,
-          12
+          125
         ]
       },
       "release": {
-        "tag": "v0.51.1",
-        "name": "SolidCraft v0.51.1",
-        "ts": "2026-11-27T20:42:50Z",
-        "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.51.1",
-        "changes": 73,
-        "new_contributors": 1,
+        "tag": "v0.51.2",
+        "name": "SolidCraft v0.51.2",
+        "ts": "2026-11-28T04:18:46Z",
+        "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.51.2",
+        "changes": 99,
+        "new_contributors": 5,
         "platforms": [
           "macOS",
           "Windows",
@@ -2770,7 +2781,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "minor"
+        "kind": "patch"
       },
       "series": [],
       "history_len": 0
@@ -2820,19 +2831,19 @@
       },
       "milestone": null,
       "activity": {
-        "level": "quiet",
-        "score": 7.5,
-        "active_days_7d": 5,
-        "changes_7d": 14,
-        "changes_14d": 69,
-        "housekeeping_7d": 6,
+        "level": "active",
+        "score": 9.9,
+        "active_days_7d": 6,
+        "changes_7d": 18,
+        "changes_14d": 73,
+        "housekeeping_7d": 7,
         "last_code_change": {
-          "ts": "2026-11-27T09:17:27Z",
-          "commit": "c44b0c9",
-          "commit_full": "c44b0c971d48c29b67693c2f624c9cc6bd2e3303",
-          "subject": "fix(engine): a batch taken just before forget_pictures is always thrown away (M8) (#672)"
+          "ts": "2026-11-28T06:52:43Z",
+          "commit": "30196dc",
+          "commit_full": "30196dc151227c725b41a9128e67f201f3fe1238",
+          "subject": "refactor(cli): anicraft-cli follows RFC-0018 (#665)"
         },
-        "last_commit_ts": "2026-11-28T00:43:01Z",
+        "last_commit_ts": "2026-11-28T08:10:53Z",
         "repo_since": "2026-11-06T06:58:25Z",
         "window": [
           7,
@@ -2848,16 +2859,16 @@
           5,
           1,
           1,
-          0
+          4
         ]
       },
       "release": {
-        "tag": "v0.2.1",
-        "name": "AniCraft v0.2.1",
-        "ts": "2026-11-12T01:41:19Z",
-        "url": "https://github.com/storytold/anicraft/releases/tag/v0.2.1",
-        "changes": 10,
-        "new_contributors": null,
+        "tag": "v0.3.0",
+        "name": "AniCraft v0.3.0",
+        "ts": "2026-11-28T08:56:06Z",
+        "url": "https://github.com/storytold/anicraft/releases/tag/v0.3.0",
+        "changes": 234,
+        "new_contributors": 25,
         "platforms": [
           "macOS",
           "Windows",
@@ -2865,7 +2876,7 @@
         ],
         "prerelease": false,
         "source": "release",
-        "kind": "patch"
+        "kind": "minor"
       },
       "series": [],
       "history_len": 0
@@ -2916,18 +2927,18 @@
       "milestone": null,
       "activity": {
         "level": "buzzing",
-        "score": 23.6,
-        "active_days_7d": 6,
-        "changes_7d": 502,
-        "changes_14d": 624,
+        "score": 29.2,
+        "active_days_7d": 7,
+        "changes_7d": 551,
+        "changes_14d": 673,
         "housekeeping_7d": 3,
         "last_code_change": {
-          "ts": "2026-11-27T16:45:45Z",
-          "commit": "cb19771",
-          "commit_full": "cb19771f7a2ab35ca2e44bd603be10256933916c",
-          "subject": "Status comment pings: no option is named by a question or hedge, failed pings stand apart from edits and are given up after 3 tries, questions already shown are"
+          "ts": "2026-11-28T09:18:44Z",
+          "commit": "ee72df5",
+          "commit_full": "ee72df54d096f5a1b6d9a29023c8ead90831ba51",
+          "subject": "Conversation turns get ended_at as an added column, so a new and an upgraded database have the same columns in the same order"
         },
-        "last_commit_ts": "2026-11-27T16:45:45Z",
+        "last_commit_ts": "2026-11-28T09:18:44Z",
         "repo_since": "2026-11-02T14:36:17Z",
         "window": [
           7,
@@ -2943,7 +2954,7 @@
           201,
           73,
           52,
-          0
+          49
         ]
       },
       "release": null,
@@ -3040,5 +3051,5 @@
     "missing": [],
     "candidates": []
   },
-  "generated_at": "2026-11-28T01:44:59+00:00"
+  "generated_at": "2026-11-28T09:34:59+00:00"
 }

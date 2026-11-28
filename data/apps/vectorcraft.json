@@ -557,18 +557,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 26.9,
-    "active_days_7d": 6,
-    "changes_7d": 607,
-    "changes_14d": 1487,
-    "housekeeping_7d": 14,
+    "score": 34.2,
+    "active_days_7d": 7,
+    "changes_7d": 767,
+    "changes_14d": 1647,
+    "housekeeping_7d": 18,
     "last_code_change": {
-      "ts": "2026-11-27T22:29:02Z",
-      "commit": "5d70217",
-      "commit_full": "5d70217e0cd095e90dd41e970d3d3fc4ddbf1867",
-      "subject": "M3: Copy complete information-panel readouts on click (#8826)"
+      "ts": "2026-11-28T09:24:42Z",
+      "commit": "cefcc8a",
+      "commit_full": "cefcc8a95582e0f067c9c4800250e08066397ae7",
+      "subject": "CI: the cold cache clear fails on a late warm leg before its job times out (#9882)"
     },
-    "last_commit_ts": "2026-11-27T22:29:02Z",
+    "last_commit_ts": "2026-11-28T09:24:42Z",
     "repo_since": "2026-09-30T09:12:46Z",
     "window": [
       214,
@@ -584,7 +584,7 @@
       92,
       198,
       219,
-      0
+      160
     ],
     "days": [
       {
@@ -1692,6 +1692,25 @@
           {
             "commit": "24e5b56",
             "subject": "Fix #5267: Outline Stroke is in the canvas context menu (#5439)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-28",
+        "code": 160,
+        "other": 4,
+        "samples": [
+          {
+            "commit": "cefcc8a",
+            "subject": "CI: the cold cache clear fails on a late warm leg before its job times out (#9882)"
+          },
+          {
+            "commit": "87b3dd9",
+            "subject": "Scripts: assigning documents throws in strict mode and is ignored otherwise (#9853)"
+          },
+          {
+            "commit": "ad6bf48",
+            "subject": "Fold Preview: preserve panel layer order (#9391)"
           }
         ]
       }
@@ -8918,5 +8937,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-28T01:42:58+00:00"
+  "updated_at": "2026-11-28T09:32:59+00:00"
 }

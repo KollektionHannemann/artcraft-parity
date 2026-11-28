@@ -37,18 +37,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 23.6,
-    "active_days_7d": 6,
-    "changes_7d": 502,
-    "changes_14d": 624,
+    "score": 29.2,
+    "active_days_7d": 7,
+    "changes_7d": 551,
+    "changes_14d": 673,
     "housekeeping_7d": 3,
     "last_code_change": {
-      "ts": "2026-11-27T16:45:45Z",
-      "commit": "cb19771",
-      "commit_full": "cb19771f7a2ab35ca2e44bd603be10256933916c",
-      "subject": "Status comment pings: no option is named by a question or hedge, failed pings stand apart from edits and are given up after 3 tries, questions already shown are"
+      "ts": "2026-11-28T09:18:44Z",
+      "commit": "ee72df5",
+      "commit_full": "ee72df54d096f5a1b6d9a29023c8ead90831ba51",
+      "subject": "Conversation turns get ended_at as an added column, so a new and an upgraded database have the same columns in the same order"
     },
-    "last_commit_ts": "2026-11-27T16:45:45Z",
+    "last_commit_ts": "2026-11-28T09:18:44Z",
     "repo_since": "2026-11-02T14:36:17Z",
     "window": [
       7,
@@ -64,7 +64,7 @@
       201,
       73,
       52,
-      0
+      49
     ],
     "days": [
       {
@@ -503,11 +503,30 @@
             "subject": "Status comments of started items go out in repos without the PR status switch: the pr-status step no longer refuses its job there, so the planner queues it and "
           }
         ]
+      },
+      {
+        "d": "2026-11-28",
+        "code": 49,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "ee72df5",
+            "subject": "Conversation turns get ended_at as an added column, so a new and an upgraded database have the same columns in the same order"
+          },
+          {
+            "commit": "31615bc",
+            "subject": "Merge branch 'main' into ask-question"
+          },
+          {
+            "commit": "7b41ec7",
+            "subject": "ask <question>: lost answers are swept from the runner once a minute and from Discord every 3 minutes by the turn's stored end, a question read by the model is "
+          }
+        ]
       }
     ]
   },
   "releases": [],
   "roadmap_history": [],
   "history": [],
-  "updated_at": "2026-11-28T01:44:54+00:00"
+  "updated_at": "2026-11-28T09:34:54+00:00"
 }

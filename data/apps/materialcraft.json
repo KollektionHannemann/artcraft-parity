@@ -95,18 +95,18 @@
   "milestone": null,
   "activity": {
     "level": "quiet",
-    "score": 4.4,
-    "active_days_7d": 3,
-    "changes_7d": 6,
-    "changes_14d": 28,
+    "score": 6.0,
+    "active_days_7d": 4,
+    "changes_7d": 8,
+    "changes_14d": 30,
     "housekeeping_7d": 4,
     "last_code_change": {
-      "ts": "2026-11-26T06:47:07Z",
-      "commit": "e7ec9cb",
-      "commit_full": "e7ec9cb6bd9789514ac5889f07f9e70df7bd35c5",
-      "subject": "Nightly: stop blocking a refused launch on macOS (#323)"
+      "ts": "2026-11-28T07:48:31Z",
+      "commit": "7a20298",
+      "commit_full": "7a20298e43b82e081d07568a88a862bad5b73e27",
+      "subject": "Accept whole-number floats for Int2/Int3/Int4 in coerce_json (#227)"
     },
-    "last_commit_ts": "2026-11-27T14:17:55Z",
+    "last_commit_ts": "2026-11-28T07:48:31Z",
     "repo_since": "2026-11-01T19:58:46Z",
     "window": [
       4,
@@ -122,7 +122,7 @@
       2,
       3,
       0,
-      0
+      2
     ],
     "days": [
       {
@@ -541,6 +541,21 @@
         "code": 0,
         "other": 1,
         "samples": []
+      },
+      {
+        "d": "2026-11-28",
+        "code": 2,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "7a20298",
+            "subject": "Accept whole-number floats for Int2/Int3/Int4 in coerce_json (#227)"
+          },
+          {
+            "commit": "fcfd65d",
+            "subject": "Open linked SBS source under a .mcraft filename (#310)"
+          }
+        ]
       }
     ]
   },
@@ -710,5 +725,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-28T01:43:58+00:00"
+  "updated_at": "2026-11-28T09:33:58+00:00"
 }

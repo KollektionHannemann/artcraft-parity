@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/figcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/figcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "567762b",
-  "latest_commit_date": "2026-11-27T16:45:24+07:00",
-  "latest_message": "M5: fix document-scoped prototype controls and arrow-key aliases (#2387)",
+  "latest_commit": "df66e8a",
+  "latest_commit_date": "2026-11-28T15:06:27+07:00",
+  "latest_message": "M6: Uno Platform C# Markup code target (layers and auto layout) (#2364)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -505,7 +505,7 @@
     "value_since": "2026-10-11T21:41:28Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 249,
+    "revisions_since": 252,
     "hours_since": {
       "from": [
         273,
@@ -560,39 +560,39 @@
     }
   },
   "roadmap": {
-    "revisions": 301,
-    "revisions_7d": 14,
+    "revisions": 304,
+    "revisions_7d": 17,
     "last_revision": {
-      "ts": "2026-11-27T09:45:24Z",
+      "ts": "2026-11-28T08:06:27Z",
       "kind": "content",
-      "commit": "567762b",
-      "commit_full": "567762b9384cc024a7b6e6fe55ec8ba7b84ac496",
-      "message": "M5: fix document-scoped prototype controls and arrow-key aliases (#2387)"
+      "commit": "df66e8a",
+      "commit_full": "df66e8a406beaf05521cc25b64dfa19d05937105",
+      "message": "M6: Uno Platform C# Markup code target (layers and auto layout) (#2364)"
     },
     "last_update": {
-      "ts": "2026-11-27T09:45:24Z",
+      "ts": "2026-11-28T08:06:27Z",
       "kind": "content",
-      "commit": "567762b",
-      "commit_full": "567762b9384cc024a7b6e6fe55ec8ba7b84ac496",
-      "message": "M5: fix document-scoped prototype controls and arrow-key aliases (#2387)"
+      "commit": "df66e8a",
+      "commit_full": "df66e8a406beaf05521cc25b64dfa19d05937105",
+      "message": "M6: Uno Platform C# Markup code target (layers and auto layout) (#2364)"
     },
     "self_reported": "2026-11-19"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 13.4,
+    "score": 16.5,
     "active_days_7d": 5,
-    "changes_7d": 111,
-    "changes_14d": 194,
+    "changes_7d": 134,
+    "changes_14d": 217,
     "housekeeping_7d": 12,
     "last_code_change": {
-      "ts": "2026-11-28T01:41:04Z",
-      "commit": "5aca499",
-      "commit_full": "5aca499f21ff8f6cfaf295a40613f669cda466da",
-      "subject": "M4: superscript and subscript per range of characters (#2338) (#2668)"
+      "ts": "2026-11-28T09:32:36Z",
+      "commit": "745fe1a",
+      "commit_full": "745fe1aae763ee3503157f686094063c9448a7d3",
+      "subject": "i18n(sv): translate 51 new strings (#2682)"
     },
-    "last_commit_ts": "2026-11-28T01:41:04Z",
+    "last_commit_ts": "2026-11-28T09:32:36Z",
     "repo_since": "2026-10-09T15:38:50Z",
     "window": [
       5,
@@ -608,7 +608,7 @@
       2,
       6,
       98,
-      2
+      25
     ],
     "days": [
       {
@@ -1477,16 +1477,20 @@
       },
       {
         "d": "2026-11-28",
-        "code": 2,
+        "code": 25,
         "other": 0,
         "samples": [
           {
-            "commit": "5aca499",
-            "subject": "M4: superscript and subscript per range of characters (#2338) (#2668)"
+            "commit": "745fe1a",
+            "subject": "i18n(sv): translate 51 new strings (#2682)"
           },
           {
-            "commit": "0bc000a",
-            "subject": "fix(ui-egui): scroll variant dropdown menus within viewport (#2662)"
+            "commit": "b0a4191",
+            "subject": "M3: Cmd/Ctrl+L with nothing selected copies the page's link (#2507) (#2680)"
+          },
+          {
+            "commit": "f184f85",
+            "subject": "M8: a downscaled image is filtered, so fine detail doesn't turn into moiré (#2673)"
           }
         ]
       }
@@ -8894,7 +8898,76 @@
       "breadth_pct": 85.0,
       "full_prev": 53.0,
       "kind": "content"
+    },
+    {
+      "commit": "ccc046f",
+      "commit_full": "ccc046f1a6e61a0f84f1b5d9f703a5c6308680f6",
+      "commit_date": "2026-11-28T14:08:00+07:00",
+      "ts": "2026-11-28T07:08:00Z",
+      "message": "M8: an agent can compare a capture of the page it built with the frame (#2661)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-19",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "0764b6c",
+      "commit_full": "0764b6cdd9e72f6fae84d7f94252b6cc7d102c21",
+      "commit_date": "2026-11-28T14:52:20+07:00",
+      "ts": "2026-11-28T07:52:20Z",
+      "message": "M7: Variables JSON: export and import text styles (#2173) (#2225)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-19",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
+    },
+    {
+      "commit": "df66e8a",
+      "commit_full": "df66e8a406beaf05521cc25b64dfa19d05937105",
+      "commit_date": "2026-11-28T15:06:27+07:00",
+      "ts": "2026-11-28T08:06:27Z",
+      "message": "M6: Uno Platform C# Markup code target (layers and auto layout) (#2364)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-19",
+      "full_pct": 53.0,
+      "full_range": null,
+      "full_hours": [
+        266,
+        518
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Figma Design (desktop app 126.10.7)",
+      "mainstream_pct": 50.0,
+      "essentials_pct": 59.0,
+      "breadth_pct": 85.0,
+      "full_prev": 53.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-28T01:43:30+00:00"
+  "updated_at": "2026-11-28T09:33:31+00:00"
 }

@@ -36,19 +36,19 @@
   },
   "milestone": null,
   "activity": {
-    "level": "quiet",
-    "score": 7.5,
-    "active_days_7d": 5,
-    "changes_7d": 14,
-    "changes_14d": 69,
-    "housekeeping_7d": 6,
+    "level": "active",
+    "score": 9.9,
+    "active_days_7d": 6,
+    "changes_7d": 18,
+    "changes_14d": 73,
+    "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-27T09:17:27Z",
-      "commit": "c44b0c9",
-      "commit_full": "c44b0c971d48c29b67693c2f624c9cc6bd2e3303",
-      "subject": "fix(engine): a batch taken just before forget_pictures is always thrown away (M8) (#672)"
+      "ts": "2026-11-28T06:52:43Z",
+      "commit": "30196dc",
+      "commit_full": "30196dc151227c725b41a9128e67f201f3fe1238",
+      "subject": "refactor(cli): anicraft-cli follows RFC-0018 (#665)"
     },
-    "last_commit_ts": "2026-11-28T00:43:01Z",
+    "last_commit_ts": "2026-11-28T08:10:53Z",
     "repo_since": "2026-11-06T06:58:25Z",
     "window": [
       7,
@@ -64,7 +64,7 @@
       5,
       1,
       1,
-      0
+      4
     ],
     "days": [
       {
@@ -425,13 +425,42 @@
       },
       {
         "d": "2026-11-28",
-        "code": 0,
-        "other": 1,
-        "samples": []
+        "code": 4,
+        "other": 2,
+        "samples": [
+          {
+            "commit": "30196dc",
+            "subject": "refactor(cli): anicraft-cli follows RFC-0018 (#665)"
+          },
+          {
+            "commit": "43b5659",
+            "subject": "Fix stage coordinates and keep fitted zoom on focus loss (#633)"
+          },
+          {
+            "commit": "ed1abc8",
+            "subject": "fix(stage): prevent stale pasteboard fragments during tile replacement (#669)"
+          }
+        ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.3.0",
+      "name": "AniCraft v0.3.0",
+      "ts": "2026-11-28T08:56:06Z",
+      "url": "https://github.com/storytold/anicraft/releases/tag/v0.3.0",
+      "changes": 234,
+      "new_contributors": 25,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.2.1",
       "name": "AniCraft v0.2.1",
@@ -483,5 +512,5 @@
   ],
   "roadmap_history": [],
   "history": [],
-  "updated_at": "2026-11-28T01:44:38+00:00"
+  "updated_at": "2026-11-28T09:34:37+00:00"
 }

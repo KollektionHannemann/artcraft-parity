@@ -66,18 +66,18 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 37.5,
+    "score": 40.8,
     "active_days_7d": 7,
-    "changes_7d": 1740,
-    "changes_14d": 3059,
-    "housekeeping_7d": 52,
+    "changes_7d": 1853,
+    "changes_14d": 3172,
+    "housekeeping_7d": 55,
     "last_code_change": {
-      "ts": "2026-11-28T01:13:25Z",
-      "commit": "e2f6d07",
-      "commit_full": "e2f6d0737ba612e9441b55bf45498c4c539531a7",
-      "subject": "Merge #23279: Kernel interface: sweeps, helical sweeps and lofts go through the kernel trait"
+      "ts": "2026-11-28T08:32:10Z",
+      "commit": "3abab5b",
+      "commit_full": "3abab5b0a400895ee90642f15389213c6bada70b",
+      "subject": "Merge #23521: Patterns can repeat modelled tapered holes without a Loop Orientation refusal"
     },
-    "last_commit_ts": "2026-11-28T01:13:25Z",
+    "last_commit_ts": "2026-11-28T08:32:10Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
       156,
@@ -93,7 +93,7 @@
       387,
       253,
       314,
-      12
+      125
     ],
     "days": [
       {
@@ -1086,26 +1086,43 @@
       },
       {
         "d": "2026-11-28",
-        "code": 12,
-        "other": 0,
+        "code": 125,
+        "other": 3,
         "samples": [
           {
-            "commit": "e2f6d07",
-            "subject": "Merge #23279: Kernel interface: sweeps, helical sweeps and lofts go through the kernel trait"
+            "commit": "3abab5b",
+            "subject": "Merge #23521: Patterns can repeat modelled tapered holes without a Loop Orientation refusal"
           },
           {
-            "commit": "e05258b",
-            "subject": "Merge #23306: Open CASCADE: the opt-in adapter builds extrudes and revolves, with solidcore's face names"
+            "commit": "8f7226b",
+            "subject": "Merge #23549: Agent chat: an LLMTR preset for OpenAI-compatible endpoints"
           },
           {
-            "commit": "cb8ab3c",
-            "subject": "Merge #15318: Mesh: Section Stack sketches a row of parallel sections through a mesh body, and can extrude them into slabs"
+            "commit": "2462c52",
+            "subject": "Merge #22231: Surfaces: morph a solid or sheet body by mapping a base surface onto a target surface"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.51.2",
+      "name": "SolidCraft v0.51.2",
+      "ts": "2026-11-28T04:18:46Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.51.2",
+      "changes": 99,
+      "new_contributors": 5,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "patch"
+    },
     {
       "tag": "v0.51.1",
       "name": "SolidCraft v0.51.1",
@@ -1290,23 +1307,6 @@
         "Web"
       ],
       "prerelease": false,
-      "source": "release",
-      "kind": null
-    },
-    {
-      "tag": "v0.47.0-nightly.20261123.157.1",
-      "name": "SolidCraft v0.47.0-nightly.20261123.157.1 (nightly)",
-      "ts": "2026-11-23T05:41:46Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.47.0-nightly.20261123.157.1",
-      "changes": 41,
-      "new_contributors": 4,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": true,
       "source": "release",
       "kind": null
     }
@@ -2721,5 +2721,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-28T01:44:36+00:00"
+  "updated_at": "2026-11-28T09:34:35+00:00"
 }
