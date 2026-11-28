@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/wordcraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/wordcraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "f83d554",
-  "latest_commit_date": "2026-11-27T10:07:07Z",
-  "latest_message": "Pictures: an inserted or pasted picture fits the table cell, column or section it goes in (#5428) (#6903)",
+  "latest_commit": "188be72",
+  "latest_commit_date": "2026-11-27T23:26:05+01:00",
+  "latest_message": "Layout: a justified line with a tab shrinks the spaces after its last tab (#5847) (#5887)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -495,7 +495,7 @@
     "value_since": "2026-10-10T18:11:53Z",
     "releases_since": 12,
     "releases_since_capped": true,
-    "revisions_since": 628,
+    "revisions_since": 629,
     "hours_since": null,
     "areas_since": {
       "up": 2,
@@ -520,42 +520,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 632,
-    "revisions_7d": 9,
+    "revisions": 633,
+    "revisions_7d": 5,
     "last_revision": {
-      "ts": "2026-11-27T10:07:07Z",
+      "ts": "2026-11-27T22:26:05Z",
       "kind": "content",
-      "commit": "f83d554",
-      "commit_full": "f83d5543221a066a9b20e4e8d9288e1c283028af",
-      "message": "Pictures: an inserted or pasted picture fits the table cell, column or section it goes in (#5428) (#6903)"
+      "commit": "188be72",
+      "commit_full": "188be727b7c1286745acaf4eed403c1453f894e9",
+      "message": "Layout: a justified line with a tab shrinks the spaces after its last tab (#5847) (#5887)"
     },
     "last_update": {
-      "ts": "2026-11-27T10:07:07Z",
+      "ts": "2026-11-27T22:26:05Z",
       "kind": "content",
-      "commit": "f83d554",
-      "commit_full": "f83d5543221a066a9b20e4e8d9288e1c283028af",
-      "message": "Pictures: an inserted or pasted picture fits the table cell, column or section it goes in (#5428) (#6903)"
+      "commit": "188be72",
+      "commit_full": "188be727b7c1286745acaf4eed403c1453f894e9",
+      "message": "Layout: a justified line with a tab shrinks the spaces after its last tab (#5847) (#5887)"
     },
     "self_reported": "2026-11-21"
   },
   "milestone": null,
   "activity": {
-    "level": "buzzing",
-    "score": 20.7,
-    "active_days_7d": 7,
-    "changes_7d": 136,
-    "changes_14d": 261,
-    "housekeeping_7d": 7,
+    "level": "active",
+    "score": 17.5,
+    "active_days_7d": 6,
+    "changes_7d": 134,
+    "changes_14d": 260,
+    "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-27T10:07:07Z",
-      "commit": "f83d554",
-      "commit_full": "f83d5543221a066a9b20e4e8d9288e1c283028af",
-      "subject": "Pictures: an inserted or pasted picture fits the table cell, column or section it goes in (#5428) (#6903)"
+      "ts": "2026-11-27T23:38:04Z",
+      "commit": "5796c66",
+      "commit_full": "5796c665b9fe9936c9decda2c7ff42930d24b6ad",
+      "subject": "ci(sonar): ignore S8707 path traversal in crates/validate developer scripts (#7994)"
     },
-    "last_commit_ts": "2026-11-27T14:17:48Z",
+    "last_commit_ts": "2026-11-27T23:38:04Z",
     "repo_since": "2026-10-06T00:23:39Z",
     "window": [
-      8,
       5,
       27,
       59,
@@ -568,7 +567,8 @@
       18,
       40,
       37,
-      9
+      16,
+      0
     ],
     "days": [
       {
@@ -1485,20 +1485,20 @@
       },
       {
         "d": "2026-11-27",
-        "code": 9,
+        "code": 16,
         "other": 1,
         "samples": [
           {
-            "commit": "f83d554",
-            "subject": "Pictures: an inserted or pasted picture fits the table cell, column or section it goes in (#5428) (#6903)"
+            "commit": "5796c66",
+            "subject": "ci(sonar): ignore S8707 path traversal in crates/validate developer scripts (#7994)"
           },
           {
-            "commit": "0f4e80a",
-            "subject": "#7165: Symbol drop-down has compact cells, and hover names the character (#7173)"
+            "commit": "e74e627",
+            "subject": "parity: headless column from the engine registry (RFC-0052) (#7969)"
           },
           {
-            "commit": "bab08b7",
-            "subject": "#7841: dark-mode interface text gets the lighter Gamma(0.8) curve again (#7867)"
+            "commit": "e9286c9",
+            "subject": "macOS: open the WordCraft About dialog from the application menu (#7183)"
           }
         ]
       }
@@ -16265,7 +16265,30 @@
       "breadth_pct": 80.0,
       "full_prev": 60.0,
       "kind": "content"
+    },
+    {
+      "commit": "188be72",
+      "commit_full": "188be727b7c1286745acaf4eed403c1453f894e9",
+      "commit_date": "2026-11-27T23:26:05+01:00",
+      "ts": "2026-11-27T22:26:05Z",
+      "message": "Layout: a justified line with a tab shrinks the spaces after its last tab (#5847) (#5887)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-21",
+      "full_pct": 60.0,
+      "full_range": null,
+      "full_hours": [
+        650,
+        1100
+      ],
+      "full_label": "Full target (ready for real work)",
+      "target": "Microsoft Word (Microsoft 365) for Mac 16.113.4",
+      "mainstream_pct": 55.0,
+      "essentials_pct": 63.0,
+      "breadth_pct": 80.0,
+      "full_prev": 60.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-27T18:33:04+00:00"
+  "updated_at": "2026-11-28T01:43:36+00:00"
 }

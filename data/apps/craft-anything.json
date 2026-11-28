@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/craft-anything/blob/main/docs/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/craft-anything/commits/main/docs/ROADMAP.md",
   "metric_status": "not_reported",
-  "latest_commit": "32d1c42",
-  "latest_commit_date": "2026-11-27T13:19:06+07:00",
-  "latest_message": "Keep the project row under the prompt box reachable at 200% zoom (#2474)",
+  "latest_commit": "14c502c",
+  "latest_commit_date": "2026-11-27T18:34:57-07:00",
+  "latest_message": "Let long prompts grow in the editor (R2.9) (#2152)",
   "parsed": {
     "stage": null,
     "next_stage": null,
@@ -45,42 +45,41 @@
     "last_change": null
   },
   "roadmap": {
-    "revisions": 926,
-    "revisions_7d": 71,
+    "revisions": 932,
+    "revisions_7d": 77,
     "last_revision": {
-      "ts": "2026-11-27T06:19:06Z",
+      "ts": "2026-11-28T01:34:57Z",
       "kind": "content",
-      "commit": "32d1c42",
-      "commit_full": "32d1c4245e9ed900fbcaf71bc9a432fd045e2b70",
-      "message": "Keep the project row under the prompt box reachable at 200% zoom (#2474)"
+      "commit": "14c502c",
+      "commit_full": "14c502c55751b04a7ed15833cbd2cfe8296f60f0",
+      "message": "Let long prompts grow in the editor (R2.9) (#2152)"
     },
     "last_update": {
-      "ts": "2026-11-27T06:19:06Z",
+      "ts": "2026-11-28T01:34:57Z",
       "kind": "content",
-      "commit": "32d1c42",
-      "commit_full": "32d1c4245e9ed900fbcaf71bc9a432fd045e2b70",
-      "message": "Keep the project row under the prompt box reachable at 200% zoom (#2474)"
+      "commit": "14c502c",
+      "commit_full": "14c502c55751b04a7ed15833cbd2cfe8296f60f0",
+      "message": "Let long prompts grow in the editor (R2.9) (#2152)"
     },
     "self_reported": null
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 18.7,
+    "score": 18.0,
     "active_days_7d": 7,
-    "changes_7d": 116,
-    "changes_14d": 404,
-    "housekeeping_7d": 8,
+    "changes_7d": 122,
+    "changes_14d": 378,
+    "housekeeping_7d": 9,
     "last_code_change": {
-      "ts": "2026-11-27T06:47:29Z",
-      "commit": "8371374",
-      "commit_full": "837137462c6c6c3aef6c5d23eb468e8222fa4c18",
-      "subject": "Box the model context a worker hands back (#2487)"
+      "ts": "2026-11-28T01:34:57Z",
+      "commit": "14c502c",
+      "commit_full": "14c502c55751b04a7ed15833cbd2cfe8296f60f0",
+      "subject": "Let long prompts grow in the editor (R2.9) (#2152)"
     },
-    "last_commit_ts": "2026-11-27T14:18:07Z",
+    "last_commit_ts": "2026-11-28T01:34:57Z",
     "repo_since": "2026-10-31T14:52:14Z",
     "window": [
-      33,
       33,
       33,
       63,
@@ -93,7 +92,8 @@
       82,
       15,
       6,
-      7
+      8,
+      6
     ],
     "days": [
       {
@@ -591,9 +591,13 @@
       },
       {
         "d": "2026-11-27",
-        "code": 7,
+        "code": 8,
         "other": 1,
         "samples": [
+          {
+            "commit": "836dc59",
+            "subject": "Headless parity: map the action table onto RFC-0052 (#2495)"
+          },
           {
             "commit": "8371374",
             "subject": "Box the model context a worker hands back (#2487)"
@@ -601,10 +605,25 @@
           {
             "commit": "3572c28",
             "subject": "Reject per-user MSI installs before writing machine-wide files and re… (#2473)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-28",
+        "code": 6,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "14c502c",
+            "subject": "Let long prompts grow in the editor (R2.9) (#2152)"
           },
           {
-            "commit": "32d1c42",
-            "subject": "Keep the project row under the prompt box reachable at 200% zoom (#2474)"
+            "commit": "3a976bd",
+            "subject": "ai: give DeepSeek Harness a model choice from the desktop profile (R2.2) (#2353)"
+          },
+          {
+            "commit": "05a55c6",
+            "subject": "Let the Cutter tests' stand-in session take a call made again (#2496)"
           }
         ]
       }
@@ -7213,8 +7232,50 @@
       "commit": "32d1c42",
       "commit_full": "32d1c4245e9ed900fbcaf71bc9a432fd045e2b70",
       "message": "Keep the project row under the prompt box reachable at 200% zoom (#2474)"
+    },
+    {
+      "ts": "2026-11-28T01:09:10Z",
+      "kind": "content",
+      "commit": "d84b46a",
+      "commit_full": "d84b46ad9765f66a7fdd77b012d4b7374df333df",
+      "message": "Offer to set an unreadable usage record aside and count a project's usage again (R5.3) (#2212)"
+    },
+    {
+      "ts": "2026-11-28T01:09:29Z",
+      "kind": "content",
+      "commit": "2ee9907",
+      "commit_full": "2ee9907022245d72c42ed2bcfd92c9dffa91655d",
+      "message": "Pin a website as a frozen copy served on its own port (R2.10) (#2239)"
+    },
+    {
+      "ts": "2026-11-28T01:31:12Z",
+      "kind": "content",
+      "commit": "869ff5f",
+      "commit_full": "869ff5fb513309522c8f742a28273d63fdb2d18e",
+      "message": "Add Italian README translation (#2173)"
+    },
+    {
+      "ts": "2026-11-28T01:34:25Z",
+      "kind": "content",
+      "commit": "05a55c6",
+      "commit_full": "05a55c6e4d910c3b9baf588519109dffe2fc03f1",
+      "message": "Let the Cutter tests' stand-in session take a call made again (#2496)"
+    },
+    {
+      "ts": "2026-11-28T01:34:44Z",
+      "kind": "content",
+      "commit": "3a976bd",
+      "commit_full": "3a976bd507a65a83b5836f06978477884656f96f",
+      "message": "ai: give DeepSeek Harness a model choice from the desktop profile (R2.2) (#2353)"
+    },
+    {
+      "ts": "2026-11-28T01:34:57Z",
+      "kind": "content",
+      "commit": "14c502c",
+      "commit_full": "14c502c55751b04a7ed15833cbd2cfe8296f60f0",
+      "message": "Let long prompts grow in the editor (R2.9) (#2152)"
     }
   ],
   "history": [],
-  "updated_at": "2026-11-27T18:33:41+00:00"
+  "updated_at": "2026-11-28T01:44:00+00:00"
 }

@@ -433,21 +433,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 14.3,
-    "active_days_7d": 6,
-    "changes_7d": 99,
-    "changes_14d": 174,
-    "housekeeping_7d": 4,
+    "score": 16.5,
+    "active_days_7d": 7,
+    "changes_7d": 105,
+    "changes_14d": 178,
+    "housekeeping_7d": 5,
     "last_code_change": {
-      "ts": "2026-11-26T20:40:32Z",
-      "commit": "5973d95",
-      "commit_full": "5973d956dfbb44ed96b83e53edcc04733f3f1ceb",
-      "subject": "LR-EDIT-GEOM-UPRIGHT: Upright corrects posts among people, and says why it found nothing (#2966)"
+      "ts": "2026-11-28T01:04:23Z",
+      "commit": "6f08524",
+      "commit_full": "6f08524d58e4db8a89c85e1bdea4f2e38788e024",
+      "subject": "LR-EDIT-OPTICS-DEFRINGE: AI Defringe, running a defringe model the user installs (#4545)"
     },
-    "last_commit_ts": "2026-11-26T20:40:32Z",
+    "last_commit_ts": "2026-11-28T01:04:23Z",
     "repo_since": "2026-09-30T14:04:12Z",
     "window": [
-      11,
       7,
       11,
       4,
@@ -460,7 +459,8 @@
       4,
       2,
       69,
-      0
+      12,
+      3
     ],
     "days": [
       {
@@ -1452,6 +1452,44 @@
             "subject": "LR-EDIT-COLOR-MIXER-HSL: the Color Mixer's HSL mode, laid out as in Lightroom Classic (#2955)"
           }
         ]
+      },
+      {
+        "d": "2026-11-27",
+        "code": 12,
+        "other": 1,
+        "samples": [
+          {
+            "commit": "ccbea5b",
+            "subject": "LR-LIB-PEOPLE: average each face with its mirror image before matching (#1920) (#4174)"
+          },
+          {
+            "commit": "e991c23",
+            "subject": "LR-UI-DROPDOWNS: Export dialog Format, Color space, Sharpen, Amount and Metadata changed to Dropdown (#4739)"
+          },
+          {
+            "commit": "973d852",
+            "subject": "Denoise test: the background install gets 30 s, not 3, on a loaded machine (#4502) (#4503)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-28",
+        "code": 3,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "6f08524",
+            "subject": "LR-EDIT-OPTICS-DEFRINGE: AI Defringe, running a defringe model the user installs (#4545)"
+          },
+          {
+            "commit": "d2cac03",
+            "subject": "KEY-TOGGLEZOOM: Space in the grid opens the active photo in Detail (#4417) (#4478)"
+          },
+          {
+            "commit": "454c52d",
+            "subject": "LR-PKG-FLATPAK: the Flatpak finds the host's cursor themes, so the pointer comes back on GNOME Wayland (#1657) (#3746)"
+          }
+        ]
       }
     ]
   },
@@ -2108,5 +2146,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-27T00:08:56+00:00"
+  "updated_at": "2026-11-28T01:43:09+00:00"
 }

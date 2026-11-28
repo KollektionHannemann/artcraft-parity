@@ -46,7 +46,7 @@
   },
   "roadmap": {
     "revisions": 201,
-    "revisions_7d": 2,
+    "revisions_7d": 1,
     "last_revision": {
       "ts": "2026-11-22T18:27:37Z",
       "kind": "content",
@@ -66,21 +66,20 @@
   "milestone": null,
   "activity": {
     "level": "buzzing",
-    "score": 41.3,
+    "score": 37.5,
     "active_days_7d": 7,
-    "changes_7d": 1760,
-    "changes_14d": 3157,
-    "housekeeping_7d": 56,
+    "changes_7d": 1740,
+    "changes_14d": 3059,
+    "housekeeping_7d": 52,
     "last_code_change": {
-      "ts": "2026-11-27T18:00:24Z",
-      "commit": "7b2565c",
-      "commit_full": "7b2565ce84587337c872f7dcb184843d09af46ee",
-      "subject": "Merge #23171: Sketch: starting a tool closes the open sketch window, so its size boxes take typing"
+      "ts": "2026-11-28T01:13:25Z",
+      "commit": "e2f6d07",
+      "commit_full": "e2f6d0737ba612e9441b55bf45498c4c539531a7",
+      "subject": "Merge #23279: Kernel interface: sweeps, helical sweeps and lofts go through the kernel trait"
     },
-    "last_commit_ts": "2026-11-27T18:00:24Z",
+    "last_commit_ts": "2026-11-28T01:13:25Z",
     "repo_since": "2026-10-07T17:01:29Z",
     "window": [
-      198,
       156,
       281,
       181,
@@ -93,7 +92,8 @@
       299,
       387,
       253,
-      226
+      314,
+      12
     ],
     "days": [
       {
@@ -1067,26 +1067,62 @@
       },
       {
         "d": "2026-11-27",
-        "code": 226,
-        "other": 3,
+        "code": 314,
+        "other": 5,
         "samples": [
           {
-            "commit": "7b2565c",
-            "subject": "Merge #23171: Sketch: starting a tool closes the open sketch window, so its size boxes take typing"
+            "commit": "4b559ca",
+            "subject": "Merge #23247: Keep patterned edge-referenced holes in their wall on shelled bodies"
           },
           {
-            "commit": "72d20fa",
-            "subject": "Merge #22580: Assistant: save the open conversation as Markdown"
+            "commit": "4882b51",
+            "subject": "Merge #23207: Circular Pattern: every feature added to a pattern is included in it (#14305)"
           },
           {
-            "commit": "7f8d23f",
-            "subject": "Merge #22645: Preferences search field: the shortcut pill names Cmd on macOS, not Ctrl (#22641)"
+            "commit": "e80910c",
+            "subject": "Merge #23287: Assembly Move: preview handle drags on the GPU and avoid redundant solves in joint.drive"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-28",
+        "code": 12,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "e2f6d07",
+            "subject": "Merge #23279: Kernel interface: sweeps, helical sweeps and lofts go through the kernel trait"
+          },
+          {
+            "commit": "e05258b",
+            "subject": "Merge #23306: Open CASCADE: the opt-in adapter builds extrudes and revolves, with solidcore's face names"
+          },
+          {
+            "commit": "cb8ab3c",
+            "subject": "Merge #15318: Mesh: Section Stack sketches a row of parallel sections through a mesh body, and can extrude them into slabs"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.51.1",
+      "name": "SolidCraft v0.51.1",
+      "ts": "2026-11-27T20:42:50Z",
+      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.51.1",
+      "changes": 73,
+      "new_contributors": 1,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux",
+        "Web"
+      ],
+      "prerelease": false,
+      "source": "release",
+      "kind": "minor"
+    },
     {
       "tag": "v0.51.0",
       "name": "SolidCraft v0.51.0",
@@ -1255,7 +1291,7 @@
       ],
       "prerelease": false,
       "source": "release",
-      "kind": "minor"
+      "kind": null
     },
     {
       "tag": "v0.47.0-nightly.20261123.157.1",
@@ -1271,23 +1307,6 @@
         "Web"
       ],
       "prerelease": true,
-      "source": "release",
-      "kind": "patch"
-    },
-    {
-      "tag": "v0.47.0",
-      "name": "SolidCraft v0.47.0",
-      "ts": "2026-11-23T01:35:43Z",
-      "url": "https://github.com/tangency-labs/solidcraft/releases/tag/v0.47.0",
-      "changes": null,
-      "new_contributors": 5,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
       "source": "release",
       "kind": null
     }
@@ -2702,5 +2721,5 @@
     }
   ],
   "history": [],
-  "updated_at": "2026-11-27T18:34:35+00:00"
+  "updated_at": "2026-11-28T01:44:36+00:00"
 }

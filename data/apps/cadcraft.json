@@ -317,7 +317,7 @@
   "parity": {
     "tracked_since": "2026-10-10T18:13:04Z",
     "value_since": "2026-10-10T18:13:04Z",
-    "releases_since": 12,
+    "releases_since": 11,
     "releases_since_capped": true,
     "revisions_since": 15,
     "hours_since": null,
@@ -348,21 +348,20 @@
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.6,
+    "score": 13.9,
     "active_days_7d": 6,
-    "changes_7d": 63,
+    "changes_7d": 64,
     "changes_14d": 118,
     "housekeeping_7d": 6,
     "last_code_change": {
-      "ts": "2026-11-27T13:43:50Z",
-      "commit": "717f952",
-      "commit_full": "717f9520d3acbd225b506a83d79d593ae504709c",
-      "subject": "Linetypes: a dash budget per build, and say when a run is drawn continuous (#3564)"
+      "ts": "2026-11-28T00:04:59Z",
+      "commit": "190d88f",
+      "commit_full": "190d88fc0394d8e22ee1fd079bbce4d1208500b6",
+      "subject": "Fix reopening CADCraft nightly after saving its profile (#3603)"
     },
-    "last_commit_ts": "2026-11-27T14:44:56Z",
+    "last_commit_ts": "2026-11-28T00:04:59Z",
     "repo_since": "2026-10-06T00:15:47Z",
     "window": [
-      3,
       8,
       10,
       0,
@@ -375,7 +374,8 @@
       5,
       7,
       33,
-      9
+      11,
+      1
     ],
     "days": [
       {
@@ -1176,26 +1176,53 @@
       },
       {
         "d": "2026-11-27",
-        "code": 9,
+        "code": 11,
         "other": 1,
         "samples": [
           {
+            "commit": "4c4d269",
+            "subject": "Parity: headless column (RFC-0052) (#3602)"
+          },
+          {
+            "commit": "f7adf3a",
+            "subject": "Prepare CADCraft nightly signing and Mac archive layout (#3598)"
+          },
+          {
             "commit": "717f952",
             "subject": "Linetypes: a dash budget per build, and say when a run is drawn continuous (#3564)"
-          },
+          }
+        ]
+      },
+      {
+        "d": "2026-11-28",
+        "code": 1,
+        "other": 0,
+        "samples": [
           {
-            "commit": "dd423db",
-            "subject": "LISP: an expression typed at a prompt gets a short step allowance (#3572)"
-          },
-          {
-            "commit": "fa6e282",
-            "subject": "fix(io): read VIEW and UCS records, and each layout's named UCS, without scanning, so crafted files don't open in quadratic time (#3562)"
+            "commit": "190d88f",
+            "subject": "Fix reopening CADCraft nightly after saving its profile (#3603)"
           }
         ]
       }
     ]
   },
   "releases": [
+    {
+      "tag": "v0.20.1-nightly.20261127.46074241695.1.gf7adf3ad561c",
+      "name": "cadcraft Nightly v0.20.1-nightly.20261127.46074241695.1.gf7adf3ad561c",
+      "ts": "2026-11-27T22:48:29Z",
+      "url": "https://github.com/storytold/cadcraft/releases/tag/v0.20.1-nightly.20261127.46074241695.1.gf7adf3ad561c",
+      "changes": null,
+      "new_contributors": null,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux"
+      ],
+      "prerelease": true,
+      "source": "release",
+      "kind": "patch"
+    },
     {
       "tag": "v0.20.1",
       "name": "CADCraft v0.20.1",
@@ -1373,23 +1400,6 @@
       "url": "https://github.com/storytold/cadcraft/releases/tag/v0.12.0",
       "changes": 13,
       "new_contributors": null,
-      "platforms": [
-        "macOS",
-        "Windows",
-        "Linux",
-        "Web"
-      ],
-      "prerelease": false,
-      "source": "release",
-      "kind": "minor"
-    },
-    {
-      "tag": "v0.11.0",
-      "name": "CADCraft v0.11.0",
-      "ts": "2026-10-22T20:44:38Z",
-      "url": "https://github.com/storytold/cadcraft/releases/tag/v0.11.0",
-      "changes": 17,
-      "new_contributors": 5,
       "platforms": [
         "macOS",
         "Windows",
@@ -1772,5 +1782,5 @@
       "kind": "content"
     }
   ],
-  "updated_at": "2026-11-27T18:33:19+00:00"
+  "updated_at": "2026-11-28T01:43:45+00:00"
 }

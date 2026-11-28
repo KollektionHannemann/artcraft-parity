@@ -11,9 +11,9 @@
   "roadmap_url": "https://github.com/storytold/texturecraft/blob/main/ROADMAP.md",
   "roadmap_history_url": "https://github.com/storytold/texturecraft/commits/main/ROADMAP.md",
   "metric_status": "available",
-  "latest_commit": "d45bb2c",
-  "latest_commit_date": "2026-11-25T22:59:50-05:00",
-  "latest_message": "Docs: update the roadmap after the November 25 audit (#848)",
+  "latest_commit": "c53813e",
+  "latest_commit_date": "2026-11-27T15:02:57-05:00",
+  "latest_message": "i18n: offer Russian in the language picker. (#691)",
   "parsed": {
     "stage": "alpha",
     "next_stage": "beta",
@@ -239,7 +239,7 @@
     "value_since": "2026-11-26T03:59:50Z",
     "releases_since": 0,
     "releases_since_capped": false,
-    "revisions_since": 0,
+    "revisions_since": 1,
     "hours_since": null,
     "areas_since": null,
     "changes": 1,
@@ -256,42 +256,41 @@
     }
   },
   "roadmap": {
-    "revisions": 5,
-    "revisions_7d": 2,
+    "revisions": 6,
+    "revisions_7d": 3,
     "last_revision": {
-      "ts": "2026-11-26T03:59:50Z",
-      "kind": "parity",
-      "commit": "d45bb2c",
-      "commit_full": "d45bb2cad803ba76e944f22ab1c4b40248444f24",
-      "message": "Docs: update the roadmap after the November 25 audit (#848)"
+      "ts": "2026-11-27T20:02:57Z",
+      "kind": "content",
+      "commit": "c53813e",
+      "commit_full": "c53813e6ac4f024001346f19f4dd6efbbacd372a",
+      "message": "i18n: offer Russian in the language picker. (#691)"
     },
     "last_update": {
-      "ts": "2026-11-26T03:59:50Z",
-      "kind": "parity",
-      "commit": "d45bb2c",
-      "commit_full": "d45bb2cad803ba76e944f22ab1c4b40248444f24",
-      "message": "Docs: update the roadmap after the November 25 audit (#848)"
+      "ts": "2026-11-27T20:02:57Z",
+      "kind": "content",
+      "commit": "c53813e",
+      "commit_full": "c53813e6ac4f024001346f19f4dd6efbbacd372a",
+      "message": "i18n: offer Russian in the language picker. (#691)"
     },
     "self_reported": "2026-11-25"
   },
   "milestone": null,
   "activity": {
     "level": "active",
-    "score": 15.0,
+    "score": 15.8,
     "active_days_7d": 7,
-    "changes_7d": 54,
-    "changes_14d": 130,
-    "housekeeping_7d": 6,
+    "changes_7d": 55,
+    "changes_14d": 135,
+    "housekeeping_7d": 7,
     "last_code_change": {
-      "ts": "2026-11-27T05:33:42Z",
-      "commit": "429d705",
-      "commit_full": "429d705884d81048c35cc9a4528bd78607f0dd7d",
-      "subject": "Bring dielectric reflections closer to OpenPBR (#750)"
+      "ts": "2026-11-28T01:21:37Z",
+      "commit": "95d90ee",
+      "commit_full": "95d90ee4532f6cb19e4cbfccf357e51b74ad6c3a",
+      "subject": "Parity: RFC-0052 headless column in the parity report (#888)"
     },
-    "last_commit_ts": "2026-11-27T14:19:38Z",
+    "last_commit_ts": "2026-11-28T01:21:37Z",
     "repo_since": "2026-10-14T18:33:13Z",
     "window": [
-      4,
       11,
       10,
       18,
@@ -304,7 +303,8 @@
       4,
       14,
       18,
-      1
+      7,
+      3
     ],
     "days": [
       {
@@ -879,12 +879,39 @@
       },
       {
         "d": "2026-11-27",
-        "code": 1,
-        "other": 1,
+        "code": 7,
+        "other": 2,
         "samples": [
           {
-            "commit": "429d705",
-            "subject": "Bring dielectric reflections closer to OpenPBR (#750)"
+            "commit": "4e8cdd6",
+            "subject": "Bake pass 3: the Baking Log, out-of-date mesh maps and Auto-rebake (#843)"
+          },
+          {
+            "commit": "ffb2ecf",
+            "subject": "Linux: open the window through Xwayland when a pen is attached on Wayland, so the pen works (#836)"
+          },
+          {
+            "commit": "ae054df",
+            "subject": "Add Russian translation (ru) for the Linux packaging metadata. (#759)"
+          }
+        ]
+      },
+      {
+        "d": "2026-11-28",
+        "code": 3,
+        "other": 0,
+        "samples": [
+          {
+            "commit": "95d90ee",
+            "subject": "Parity: RFC-0052 headless column in the parity report (#888)"
+          },
+          {
+            "commit": "ff18396",
+            "subject": "Keep the web build under its size gate by subsetting CJK fonts (#803)"
+          },
+          {
+            "commit": "bd03a04",
+            "subject": "texturecraft-cli: follow RFC-0018 (clap, thiserror, run(args, out, err), packaged completions and man pages) (#875)"
           }
         ]
       }
@@ -1203,7 +1230,27 @@
       ],
       "full_prev": 60.0,
       "kind": "parity"
+    },
+    {
+      "commit": "c53813e",
+      "commit_full": "c53813e6ac4f024001346f19f4dd6efbbacd372a",
+      "commit_date": "2026-11-27T15:02:57-05:00",
+      "ts": "2026-11-27T20:02:57Z",
+      "message": "i18n: offer Russian in the language picker. (#691)",
+      "stage": "alpha",
+      "next_stage": "beta",
+      "last_updated": "2026-11-25",
+      "full_pct": 68.0,
+      "full_range": null,
+      "full_hours": null,
+      "full_label": "Full scoped target",
+      "target": "reference app 12.2.0",
+      "mainstream_pct": 70.0,
+      "essentials_pct": 85.0,
+      "breadth_pct": 90.0,
+      "full_prev": 68.0,
+      "kind": "content"
     }
   ],
-  "updated_at": "2026-11-27T18:33:33+00:00"
+  "updated_at": "2026-11-28T01:43:55+00:00"
 }
